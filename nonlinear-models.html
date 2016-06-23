@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-06-20T10:21:20-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG Nonlinear Models</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic%7CSource+Code+Pro:400" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\alert}[1]{\mathbf{\color{magenta}{#1}}}
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+
+\newcommand\degree[0]{^{\circ}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading">
+<span class="title">Test chapter</span><span class="subtitle">test subtitle</span>
+</h1>
+<p class="byline">Katherine Yoshiwara</p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="chap3.html">Previous</a><a class="up-button button toolbar-item" href="chap3.html">Up</a><a class="next-button button toolbar-item" href="basic-functions.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chap3.html">Previous</a><a class="up-button button toolbar-item" href="chap3.html">Up</a><a class="next-button button toolbar-item" href="basic-functions.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="biography-1.html">Author Biography</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
+<li><a href="preface-2.html">Contributors to the 5\(^\mathrm{th}\) Edition</a></li>
+</ul>
+<h2 class="link active"><a href="chap3.html"><span class="codenumber">1</span><span class="title">Power Functions</span></a></h2>
+<ul>
+<li><a href="nonlinear-models.html" class="active">Nonlinear Models</a></li>
+<li><a href="basic-functions.html">Some Basic Functions</a></li>
+<li><a href="transformations.html">Transformations of Graphs</a></li>
+<li><a href="MathModels.html">Functions as Mathematical Models</a></li>
+<li><a href="AbsoluteValue.html">The Absolute Value Function</a></li>
+<li><a href="Domain-Range.html">Domain and Range</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="nonlinear-models"><header><h1 class="heading hide-type">
+<span class="type">Section</span><span class="codenumber">1.1</span><span class="title">Nonlinear Models</span><a href="nonlinear-models.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-42">
+    In Chapter 1, we considered models described by linear functions. In this chapter, we begin our study of nonlinear models.
+</p>
+<section class="subsection" id="subsection-1"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.1.1</span><span class="title">Solving Nonlinear Equations</span>
+</h1></header><div class="sidebyside" id="sidebyside-3">
+<figure class="left" id="fig-parabola" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-parabola.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.1</span></figcaption></figure><p id="p-43" class="right" style="width:48%;vertical-align:bottom;text-align:left;">
+    When studying nonlinear models, we will need to solve nonlinear equations. For example, in Investigation 3 we used a graph to solve the quadratic equation 
+    <div class="displaymath" id="me-3">\begin{equation*}18x − x^2 = 80\end{equation*}</div> 
+    Here is another example. <a knowl="./knowl/fig-parabola.html" knowl-id="xref-fig-parabola" alt="Figure 1.1.1 " title="Figure 1.1.1 ">Figure 1.1.1</a> shows a table and graph for the function \(y = 2x^2 − 5\).
+</p>
+</div>
+<figure class="figure-like" id="table-area-perimeter"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(-3\)</td>
+<td class="c m b1 r1 l0 t3">\(-2\)</td>
+<td class="c m b1 r1 l0 t3">\(-1\)</td>
+<td class="c m b1 r1 l0 t3">\(0\)</td>
+<td class="c m b1 r1 l0 t3">\(1\)</td>
+<td class="c m b1 r1 l0 t3">\(2\)</td>
+<td class="c m b1 r1 l0 t3">\(3\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(y\)</td>
+<td class="c m b1 r1 l0 t0">\(13\)</td>
+<td class="c m b1 r1 l0 t0">\(3\)</td>
+<td class="c m b1 r1 l0 t0">\(-3\)</td>
+<td class="c m b1 r1 l0 t0">\(-5\)</td>
+<td class="c m b1 r1 l0 t0">\(-3\)</td>
+<td class="c m b1 r1 l0 t0">\(3\)</td>
+<td class="c m b1 r1 l0 t0">\(13\)</td>
+</tr>
+</table></figure><p id="p-44">
+    You can see that there are two points on the graph for each \(y\)-value greater than \(−5\). For example, the two points with \(y\)-coordinate \(7\) are shown. To solve the equation 
+    <div class="displaymath" id="me-4">\begin{equation*}2x^2 − 5 = 7\end{equation*}</div> 
+    we need only find the x-coordinates of these points. From the graph, the solutions appear to be about 2.5 and −2.5.
+</p>
+<p id="p-45">
+    How can we solve this equation algebraically? The opposite operation for squaring a number is taking a square root. So we can undo the operation of squaring by extracting square roots. We first solve for \(x^2\) to get
+    \begin{align}
+    2x^2 \amp= 12 \\
+    x^2 \amp= 6\\
+    \end{align}
+    and then take square roots to find
+    <div class="displaymath" id="me-5">\begin{equation*}x = \pm\sqrt{6}\end{equation*}</div>
+</p>
+<p id="p-46">
+    Don't forget that every positive number has two square roots. The symbol \(\pm\) (read “plus or minus”) is a shorthand notation used to indicate both square roots of \(6\). The exact solutions are thus \(\sqrt{6}\) and \(-\sqrt{6}\). We can also find decimal approximations for the solutions using a calculator. Rounded to two decimal places, the approximate solutions are \(2.45\) and \(−2.45\).
+</p>
+<p id="p-47">
+    In general, wecan solve equations of the form 
+    \(ax^2 + c = 0\)
+    by isolating \(x^2\) on one side of the equation and then taking the square root of each side. This method for solving equations is called <em class="terminology">extraction of roots</em>.
+</p>
+<article class="paragraphs" id="paragraphs-3"><h5 class="heading"><span class="title">Extraction of Roots</span></h5>
+<p id="p-48">
+    To solve the equation
+    <div class="displaymath" id="me-6">\begin{equation*}ax^2 + c = 0\end{equation*}</div>
+    <ol style="list-style-type: decimal;">
+<li id="li-20">Isolate \(x^2\).</li>
+<li id="li-21">Take square roots of both sides. There are two solutions.</li>
+</ol>
+</p></article><article class="example-like" id="example-cat-falling"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.1.2</span>
+</h5>
+<p id="p-49">
+        If a cat falls off a tree branch 20 feet above the ground, its height t seconds later is given by \(h = 20 − 16t^2\).
+    </p>
+<ol style="list-style-type: lower-alpha;">
+<li id="li-22">What is the height of the cat \(0.5\) second later?</li>
+<li id="li-23">How long does the cat have to get in position to land on its feet before it reaches the ground?</li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+<li id="li-24">In this question, we are given the value of \(t\) and asked to find the corresponding value of \(h\). To do this, we evaluate the formula for \(t = 0.5\). We substitute \(\alert{0.5}\) for \(t\) into the formula and simplify.
+    \begin{align*}
+    h \amp= 20 − 16(\alert{0.5})^2 \amp\amp \text{Compute the power.}\\
+    \amp = 20 − 16 (0.25) \amp\amp \text{Multiply; then subtract.}\\
+    \amp = 20 − 4 = 16
+    \end{align*}
+    The cat is \(16\) feet above the ground after \(0.5\) second.</li>
+<li id="li-25">We would like to find the value of \(t\) when the height, \(h\), is known. We substitute \(h = \alert{0}\) into the equation to obtain
+    <div class="displaymath" id="me-7">\begin{equation*}\alert{0} = 20 − 16t^2\end{equation*}</div>
+    To solve this equation, we use extraction of roots. First isolate \(t^2\) on one side of the equation.
+    \begin{align*}
+    16t^2 \amp= 20 \amp\amp \text{Divide by 16.}\\
+    t^2 \amp= \frac{20}{16}=1.25
+    \end{align*}
+    Now take the square root of both sides of the equation to find
+    <div class="displaymath" id="me-8">\begin{equation*}t = \pm \sqrt{1.25} \approx \pm1.118\end{equation*}</div>
+</li>
+</ol></span></span></article><div class="sidebyside" id="sidebyside-4">
+<figure class="left" id="fig-cat-falling" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-cat-falling.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.3</span></figcaption></figure><p id="p-50" class="right" style="width:48%;vertical-align:bottom;text-align:left;">
+    Only the positive solution makes sense here, so the cat has approximately 1.12 seconds to get into position for landing. A graph of the cat’s height after t seconds is shown in Figure 2.3. The points corresponding to parts (a) and (b) are labeled.
+</p>
+</div>
+<p id="p-51">
+    Note that in <a knowl="./knowl/example-cat-falling.html" knowl-id="xref-example-cat-falling" alt="Example 1.1.2 " title="Example 1.1.2 ">Example 1.1.2</a> we evaluated the expression \(20 − 16t^2\) to find a value for \(h\), and in part (b) we solved the equation \(0 = 20 − 16t^2\) to find a value for \(t\).
+</p>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-extract-roots" id="exercise-extract-roots"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.1.4</span>
+</h5></a></div>
+<div id="hk-exercise-extract-roots" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-26"><div class="sidebyside" id="sidebyside-5">
+<p id="p-52" class="left" style="width:48%;vertical-align:bottom;text-align:left;">Solve by extracting roots
+            \(\frac{3x^2 − 8}{5}= 10\).</p>
+<p id="p-53" class="right" style="width:48%;vertical-align:bottom;text-align:left;">First, isolate \(x^2\).Take the square root of both sides.</p>
+</div></li>
+<li id="li-27">Give exact answers; then give approximations rounded to two decimal places.</li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-2"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.1.2</span><span class="title">Solving Formulas</span>
+</h1></header><p id="p-54">
+    We can use extraction of roots to solve many formulas involving the square of the variable.
+</p>
+<article class="example-like" id="example-volume-cone"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.1.5</span>
+</h5>
+<p id="p-55">The formula \(V = \frac{1}{3} πr^2h\) gives the volume of a cone in terms of its height and radius. Solve the formula for \(r\) in terms of \(V\) and \(h\).
+    </p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><span class="solution">
+    Because the variable we want is squared, we use extraction of roots. First, multiply both sides by \(3\) to clear the fraction.
+    <div class="displaymath" id="me-9">\begin{equation*}
+        \begin{align*}
+        3V \amp = 3(\frac{1}{3} πr^2h)\\
+        3V \amp = πr^2h \amp\amp \text{Divide both sides by } πh.\\
+        \frac{3V}{πh}\amp= r^2 \amp\amp \text{Take square roots.}\\
+        \pm\sqrt{\frac{3V}{πh}}\amp= r
+        \end{align*}
+    \end{equation*}</div>
+    Because the radius of a cone must be a positive number, we use only the positive square root: 
+    \(r = \sqrt{\frac{3V}{πh}}\).
+</span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-area-circle" id="exercise-area-circle"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.1.6</span>
+</h5></a></div>
+<div id="hk-exercise-area-circle" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-56">Find a formula for the radius of a circle in terms of its area.</p>
+<p id="p-57">Start with the formula for the area of a circle: \(A =\) _______________
+    Solve for \(r\) in terms of \(A\).</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-3"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.1.3</span><span class="title">More Extraction of Roots</span>
+</h1></header><p id="p-58">
+    Equations of the form
+    <div class="displaymath" id="me-10">\begin{equation*}a( px + q)^2 + r = 0\end{equation*}</div>
+    can also be solved by extraction of roots after isolating the squared expression, \((px + q)^2\).
+</p>
+<article class="example-like" id="example-extracting-roots"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.1.7</span>
+</h5>
+<p id="p-59">
+    Solve the equation \(3(x − 2)^2 = 48\).
+</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-3" id="solution-3"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-3" style="display: none;" class="tex2jax_ignore"><span class="solution">
+    First, isolate the perfect square, \((x − 2)^2\).
+    
+        \begin{aligned}
+        3(x − 2)^2 \amp = 48 \amp\amp\text{Divide both sides by }3.\\
+        (x − 2)^2 \amp = 16 \amp\amp\text{Take the square root of each side.}\\
+        x − 2 \amp = \pm\sqrt{16} = \pm 4
+        \end{aligned}
+    
+        This gives us two equations for \(x\), 
+        \begin{aligned}
+        x − 2 \amp =4 \amp\amp \text{or }\amp x − 2 \amp =−4\amp\amp\text {Solve each equation.}\\
+        x \amp=6 \amp\amp \text{or }\amp x \amp =−2
+        \end{aligned}
+        The solutions are \(6\) and \(−2\).
+</span></span></article><article class="paragraphs" id="paragraphs-4"><h5 class="heading"><span class="title">Extraction of Roots</span></h5>
+<p id="p-60">
+    To solve the equation
+    <div class="displaymath" id="me-11">\begin{equation*}a(px+q)^2 +r=0\end{equation*}</div>
+</p>
+<ol style="list-style-type: decimal;">
+<li id="li-28">Isolate the squared expression, \((px + q)^2\).</li>
+<li id="li-29">Take the square root of each side of the equation. Remember that a positive number has two square roots.</li>
+<li id="li-30">Solve each equation. There are two solutions.</li>
+</ol></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-extract-roots2" id="exercise-extract-roots2"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.1.8</span>
+</h5></a></div>
+<div id="hk-exercise-extract-roots2" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+    Solve \(2(5x + 3)^2 = 38\) by extracting roots.
+    <ol style="list-style-type: lower-alpha;">
+<li id="li-31">Give your answers as exact values.</li>
+<li id="li-32">Find approximations for the solutions to two decimal places.</li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-4"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.1.4</span><span class="title">Compound Interest and Inflation</span>
+</h1></header><p id="p-61">
+    Many savings institutions offer accounts on which the interest is <!--Style me with CSS--><em>compounded annually</em>. At the end of each year, the interest earned is added to the principal, and the interest for the next year is computed on this larger sum of money.
+</p>
+<article class="paragraphs" id="paragraphs-5"><h5 class="heading"><span class="title">Compound Interest</span></h5>
+<p id="p-62">
+    If interest is compounded annually for \(n\) years, the amount, \(A\), of money in an account is given by
+    <div class="displaymath" id="me-12">\begin{equation*}A = P(1 + r)^n\end{equation*}</div>
+    where \(P\) is the principal and \(r\) is the interest rate, expressed as a decimal fraction.
+</p></article><article class="example-like" id="example-compound-interest"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.1.9</span>
+</h5>
+<p id="p-63">
+    Carmella invests $3000 in an account that pays an interest rate, \(r\), compounded annually.
+    <ol style="list-style-type: lower-alpha;">
+<li id="li-33">Write an expression for the amount of money in Carmella’s account after two years.</li>
+<li id="li-34">What interest rate would be necessary for Carmella's account to grow to $3500 in two years?</li>
+</ol>
+</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+<li id="li-35">Use the formula above with \(P = 3000\) and \(n = 2\). Carmella’s account balance will be
+            <div class="displaymath" id="me-13">\begin{equation*}A = 3000(1 + r)^2\end{equation*}</div>
+</li>
+<li id="li-36">Substitute \(3500\) for \(A\) in the equation.
+        <div class="displaymath" id="me-14">\begin{equation*}\alert{3500} = 3000(1 + r)^2\end{equation*}</div>
+        We can solve this equation in \(r\) by extraction of roots. First, isolate the perfect square.
+        \begin{align}
+        3500 \amp = 3000(1 + r )^2 \amp\amp \text{Divide both sides by 3000.} \\
+        1.1\overline{6} \amp = (1 + r )^2 \amp\amp \text{Take the square root of both sides.} \\
+        \pm 1.0801 \amp\approx 1 + r \amp\amp \text{Subtract 1 from both sides.}
+        r \amp\approx 0.0801 \amp\amp \text{or }\amp r \approx −2.0801
+        \end{align}
+        Because the interest rate must be a positive number, we discard the negative solution. Carmella needs an account with interest rate \(r \approx 0.0801\), or just over 8%, to achieve an account balance of $3500 in two years.</li>
+</ol></span></span></article><p id="p-64">
+    The formula for compound interest also applies to the effects of inflation. For instance, if there is a steady inflation rate of 4% per year, in two years an item that now costs $100 will cost
+    \begin{align}
+    A \amp= P(1 + r)^2\\
+    \amp = 100(1 + 0.04)2 = \$108.16
+    \end{align}
+</p>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercixe-inflation" id="exercixe-inflation"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.1.10</span>
+</h5></a></div>
+<div id="hk-exercixe-inflation" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+    Two years ago, the average cost of dinner and a movie was $24. This year the average cost is $25.44. What was the rate of inflation over the past two years?
+</article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-5"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.1.5</span><span class="title">Other Nonlinear Equations</span>
+</h1></header><p id="p-65">
+    Because squaring and taking square roots are opposite operations, we can solve the equation
+    <div class="displaymath" id="me-15">\begin{equation*}\sqrt{x} = 8.2\end{equation*}</div>
+    by squaring both sides to get
+    \begin{align}
+    (\sqrt{x})^2 \amp= 8.2^2 \\
+    x \amp = 67.24
+    \end{align}
+    Similarly, we can solve
+    <div class="displaymath" id="me-16">\begin{equation*}x^3 = 258\end{equation*}</div>
+    by taking the cube root of both sides, because cubing and taking cube roots are opposite operations. Rounding to three places, we find 
+    \begin{align}
+    \sqrt[3]{x^3}\amp=258\\
+    x \amp \approx 6.366
+    \end{align}
+    The notion of undoing operations can help us solve a variety of simple nonlinear equations. The operation of taking a reciprocal is its own opposite, so we solve the equation
+    <div class="displaymath" id="me-17">\begin{equation*}\frac{1}{x} = 50\end{equation*}</div>
+    by taking the reciprocal of both sides to get
+    <div class="displaymath" id="me-18">\begin{equation*}x = \frac{1}{50}= 0.02\end{equation*}</div>
+</p>
+<article class="example-like" id="example-nonlinear-equation"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.1.11</span>
+</h5>
+<p id="p-66">
+        Solve \(\frac{3}{x − 2}= 4\).
+    </p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-5" id="solution-5"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-5" style="display: none;" class="tex2jax_ignore"><span class="solution">
+    We begin by taking the reciprocal of both sides of the equation to get
+    <div class="displaymath" id="me-19">\begin{equation*}\frac{x − 2}{3}= \frac{1}{4}\end{equation*}</div>
+    We continue to undo the operations in reverse order. Multiply both sides by \(3\).
+    \begin{align}
+    x − 2 \amp = \frac{3}{4} \amp\amp \text{Add 2 to both sides.}\\
+    x \amp = 2 + \frac{3}{4}= \frac{11}{4} \amp\amp \frac{2}{1}=\frac{8}{4}
+    \text{, so } \frac{2}{1}+ \frac{3}{4}=\frac{8}{4}+\frac{3}{4}=\frac{11}{4}
+    \end{align}
+    The solution is \(\frac{11}{4}\), or \(2.75\).
+</span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-nonlinear-equation" id="exercise-nonlinear-equation"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.1.12</span>
+</h5></a></div>
+<div id="hk-exercise-nonlinear-equation" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+    Solve \(2\sqrt{x + 4} = 6\).
+</article><div class="hidden-knowl-wrapper"></div>
+</div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-remark-1" id="remark-1"><article class="example-like"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.1.13</span><span class="title"><object type="image/svg+xml" style="width:8%; margin:auto; display:block;" data="images/icon-GC.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>Using the Intersect Feature</span>
+</h5></article></a></div>
+<div id="hk-remark-1" style="display: none;" class="tex2jax_ignore"><article class="example-like"><p id="p-67">We can use the <!--Style me with CSS--><em>intersect</em> feature on a graphing calculator to solve equations.</p></article></div>
+<article class="example-like" id="example-GC-nonlinear-equation"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.1.14</span>
+</h5>
+<p id="p-68">
+        Use a graphing calculator to solve \(\frac{3}{x −2}= 4.\)
+    </p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-6" id="solution-6"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-6" style="display: none;" class="tex2jax_ignore"><span class="solution">
+    We would like to find the points on the graph of \(y = \frac{3}{x −2}\) that have \(y\)-coordinate equal to \(4\). Graph the two functions
+    \begin{align}
+    Y_1 \amp = 3/(X − 2)  \\
+    Y_2 \amp = 4
+    \end{align}
+
+    in the window
+    \begin{align}
+    \text{Xmin} \amp = −9.4 \amp\amp \text{Xmax} = 9.4\\
+    \text{Ymin} \amp = −10 \amp\amp \text{Ymax} = 10
+    \end{align}
+    The point where the two graphs intersect locates the solution of the equation. If we trace along the graph of \(Y_1\), the closest we can get to the intersection point is \((2.8, 3.75)\), as shown in <a knowl="./knowl/fig-GC-nonlinear.html" knowl-id="xref-fig-GC-nonlinear" alt="Figure 1.1.15 " title="Figure 1.1.15 ">Figure 1.1.15</a>a. We get a better approximation using the <!--Style me with CSS--><em>intersect</em> feature.
+    <figure class="figure-like" id="fig-GC-nonlinear"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-GC-nonlinear.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.15</span></figcaption></figure>
+
+    Use the arrow keys to position the Trace bug as close to the intersection point as you can. Then press <object type="image/svg+xml" style="width:6%; margin:auto; display:block;" data="images/icon-2nd.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><object type="image/svg+xml" style="width:12%; margin:auto; display:block;" data="images/icon-trace.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> to see the Calculate menu. Press \(5\) for intersect; then respond to each of the calculator's questions, <!--Style me with CSS--><em>First curve?</em>, <!--Style me with CSS--><em>Second curve?</em>, and <!--Style me with CSS--><em>Guess?</em> by pressing <object type="image/svg+xml" style="width:11%; margin:auto; display:block;" data="images/icon-enter.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>. The calculator will then display the intersection point, \(x = 2.75\), \(y = 4\), as shown in <a knowl="./knowl/fig-GC-nonlinear.html" knowl-id="xref-fig-GC-nonlinear" alt="Figure 1.1.15 " title="Figure 1.1.15 ">Figure 1.1.15</a>b. The solution of the original equation is \(x = 2.75\).
+</span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-GC-nonlinear" id="exercise-GC-nonlinear"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.1.16</span>
+</h5></a></div>
+<div id="hk-exercise-GC-nonlinear" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+    Use the intersect feature to solve the equation \(2x^2 − 5 = 7\). Round your answers to three decimal places.
+</article><div class="hidden-knowl-wrapper"></div>
+</div></section></section></div></main>
+</div>
+</body>
+</html>

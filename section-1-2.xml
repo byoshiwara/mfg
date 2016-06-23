@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- <mathbook><book> -->
+
+<section xml:id="functions"   xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Functions</title>
+<subsection><title>Definition of Function</title>   
+<p>
+    We often want to predict values of one variable from the values of a related variable. For example, when a physician prescribes a drug in a certain dosage, she needs to know how long the dose will remain in the bloodstream. A sales manager needs to know how the price of his product will affect its sales. A <term index="yes">function</term> is a special type of relationship between variables that allows us to make such predictions.</p>
+<p>
+    Suppose it costs <dollar />800 for flying lessons, plus <dollar />30 per hour to rent a plane. If we let <m>C</m> represent the total cost for t hours of flying lessons, then
+    <me>C=800+305t ~~~~ (t\ge 0)</me>
+    Thus, for example
+</p>
+<table><tabular>
+    <col halign="right"  />
+    <col halign="left" />
+    <col halign="left" />
+    <row>
+        <cell>when</cell>
+        <cell><m>t=\alert{0}</m>,</cell>
+        <cell><m>C=800+30(\alert{0})=800</m></cell>
+    </row>
+    <row>
+        <cell>when</cell>
+        <cell><m>t=\alert{4}</m>,</cell>
+        <cell><m>C=800+30(\alert{4})=920</m></cell>
+    </row>
+    <row>
+        <cell>when</cell>
+        <cell><m>t=\alert{10}</m>,</cell>
+        <cell><m>C=800+30(\alert{10})=1100</m></cell>
+    </row>
+    </tabular>
+</table>
+<p>
+    The variable <m>t</m> is called the <term index="yes">input</term> or <term index="yes">independent</term> variable, and <m>C</m> is the <term index="yes">output</term> or <term index="yes">dependent</term> variable, because its values are determined by the value of <m>t</m>. We can display the relationship between two variables by a table or by ordered pairs. The input variable is the first component of the ordered pair, and the output variable is the second component.
+</p>
+<table><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+    <row bottom="minor">
+        <cell><m>t</m></cell>
+        <cell><m>C</m></cell>
+        <cell><m>(t,C)</m></cell>
+    </row>
+    <row>
+        <cell><m>0</m></cell>
+        <cell><m>800</m></cell>
+        <cell><m>(0, 800)</m></cell>
+    </row>
+    <row> 
+        <cell><m>4</m></cell>
+        <cell><m>920</m></cell>
+        <cell><m>(4, 920)</m></cell>
+    </row>
+    <row> 
+        <cell><m>10</m></cell>
+        <cell><m>1100</m></cell>
+        <cell><m>(10,1100)</m></cell>
+    </row>
+</tabular></table>
+<p>
+    For this relationship, we can find the value <m>C</m> of associated with any given value of <m>t</m>. All we have to do is substitute the value of <m>t</m> into the equation and solve for <m>C</m>. The result has no ambiguity: Only one value for <m>C</m> corresponds to each value of <m>t</m>. This type of relationship between variables is called a <term>function</term>. In general, we make the following definition.
+</p>
+<definition xml:id="definition-function">
+    <statement><p>Definition of Function</p>
+    <p>A <term index="yes">function</term> is a relationship between two variables for which a unique value of the <term index="yes">output</term> variable can be determined from a value of the <term index="yes">input</term> variable.
+    </p></statement>
+</definition>
+
+<p>
+    What distinguishes functions from other variable relationships? The definition of a function calls for a <em>unique value</em>—that is, <em>exactly one value</em> of the output variable corresponding to each value of the input variable. This property makes functions useful in applications because they can often be used to make predictions.
+</p>
+<example  xml:id="example-functions">
+    <p>
+        <ol label="*a*">
+            <li><p>The distance, <m>d</m>, traveled by a car in 2 hours is a function of its speed, <m>r</m>. If we know the speed of the car, we can determine the distance it travels by the formula <m>d = r \cdot 2</m>.</p></li>
+            <li><p>The cost of a fill-up with unleaded gasoline is a function of the number of gallons purchased. The gas pump represents the function by displaying the corresponding values of the input variable (number of gallons) and the output variable (cost).</p></li>
+            <li><p>Score on the Scholastic Aptitude Test (SAT) is not a function of score on an IQ test, because two people with the same score on an IQ test may score differently on the SAT; that is, a person’s score on the SAT is not uniquely determined by his or her score on an IQ test.</p></li>
+    </ol>
+
+    </p>
+</example>
+
+<exercise xml:id="exercise-functions">
+    <statement><p>
+    <ol label="*a*">
+        <li><p>As part of a project to improve the success rate of freshmen, the counseling department studied the grades earned by a group of students in English and algebra. Do you think that a student’s grade in algebra is a function of his or her grade in English? Explain why or why not.</p></li>
+        <li><p>Phatburger features a soda bar, where you can serve your own soft drinks in any size. Do you think that the number of calories in a serving of Zap Kola is a function of the number of fluid ounces? Explain why or why not.</p></li>
+    </ol></p></statement>
+</exercise>
+
+A function can be described in several different ways. In the following examples, we consider functions defined by tables, by graphs, and by equations.
+</subsection>
+
+<subsection><title>Functions Defined by Tables</title>
+    <p>When we use a table to describe a function, the first variable in the table (the left column of a vertical table or the top row of a horizontal table) is the input variable, and the second variable is the output. We say that the output variable is a function of the input.</p>
+
+    <example xml:id="example-table-functions">
+        <ol label="*a*">
+        <li><p><xref ref="table-auto-sales" autoname="yes" /> shows data on sales compiled over several years by the accounting office for Eau Claire Auto Parts, a division of Major Motors. In this example, the year is the input variable, and total sales is the output. We say that total sales, <m>S</m>, is a function of <m>t</m>.</p>
+        <table xml:id="table-auto-sales"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+        <row bottom="minor">
+            <cell><p>Year <m>(t)</m></p></cell>
+            <cell><p>Total sales <m>(S)</m></p></cell>
+        </row>
+        <row>
+            <cell>2000</cell>
+            <cell><dollar />612,000</cell>
+        </row>
+        <row> 
+            <cell>2001</cell>
+            <cell><dollar />663,000</cell>
+        </row>
+        <row> 
+            <cell>2002</cell>
+            <cell><dollar />692,000</cell>
+        </row>
+        <row> 
+            <cell>2003</cell>
+            <cell><dollar />749,000</cell>
+        </row>
+        <row> 
+            <cell>2004</cell>
+            <cell><dollar />904,000</cell>
+        </row>
+        </tabular><caption></caption></table>
+        </li>
+        <li><p><xref ref="table-postage" autoname="yes" /> gives the cost of sending printed material by first-class mail in 2016. </p>
+        <table xml:id="table-postage"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+        <row bottom="minor">
+            <cell>Weight in ounces <m>(w)</m></cell>
+            <cell>Postage <m>(P)</m></cell>
+        </row>
+        <row>
+            <cell><m>0 \lt w \le 1 </m></cell>
+            <cell><dollar />0.47</cell>
+        </row>
+        <row> 
+            <cell><m>1 \lt w \le 2 </m></cell>
+            <cell><dollar />0.68</cell>
+        </row>
+        <row> 
+            <cell><m>2 \lt w \le 3 </m></cell>
+            <cell><dollar />0.89</cell>
+        </row>
+        <row> 
+            <cell><m>3 \lt w \le 4 </m></cell>
+            <cell><dollar />1.10</cell>
+        </row>
+        <row> 
+            <cell><m>4 \lt w \le 5 </m></cell>
+            <cell><dollar />1.31</cell>
+        </row>
+        <row> 
+            <cell><m>5 \lt w \le 6 </m></cell>
+            <cell><dollar />1.52</cell>
+        </row>
+        <row> 
+            <cell><m>6 \lt w \le 7 </m></cell>
+            <cell><dollar />1.73</cell>
+        </row>
+    </tabular><caption></caption></table>
+
+        <p>If we know the weight of the article being shipped, we can determine the required postage from <xref ref="table-postage" autoname="yes" />. For instance, a catalog weighing 4.5 ounces would require <dollar />1.31 in postage. In this example, <m>w</m> is the input variable and <m>p</m> is the output variable. We say that <m>p</m> <em>is a function of</em> <m>w</m>.</p></li>
+
+        <li><p><xref ref="table-cholesterol" autoname="yes" /> records the age and cholesterol count for 20 patients tested in a hospital survey.</p>
+        <table xml:id="table-cholesterol"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+        <row bottom="minor">
+            <cell><p>Age</p></cell>
+            <cell><p>Cholesterol count</p></cell>
+            <cell></cell>
+            <cell><p>Age</p></cell>
+            <cell><p>Cholesterol count</p></cell>
+        </row>
+        <row>
+            <cell>53</cell>
+            <cell>217</cell>
+            <cell></cell>
+            <cell><m>\alert{51}</m></cell>
+            <cell><m>\alert{209}</m></cell>
+        </row>
+        <row> 
+            <cell>48</cell>
+            <cell>232</cell>
+            <cell></cell>
+            <cell>53</cell>
+            <cell>241</cell>
+        </row>
+        <row> 
+            <cell>55</cell>
+            <cell>198</cell>
+            <cell></cell>
+            <cell>49</cell>
+            <cell>186</cell>
+        </row>
+        <row>
+            <cell>56</cell>
+            <cell>238</cell>
+            <cell></cell>
+            <cell><m>\alert{51}</m></cell>
+            <cell><m>\alert{216}</m></cell>
+        </row>
+        <row> 
+            <cell><m>\alert{51}</m></cell>
+            <cell><m>\alert{227}</m></cell>
+            <cell></cell>
+            <cell>57</cell>
+            <cell>208</cell>
+        </row>
+        <row> 
+            <cell>52</cell>
+            <cell>264</cell>
+            <cell></cell>
+            <cell>52</cell>
+            <cell>248</cell>
+        </row>
+        <row> 
+            <cell>53</cell>
+            <cell>195</cell>
+            <cell></cell>
+            <cell>50</cell>
+            <cell>214</cell>
+        </row>
+        <row> 
+            <cell>47</cell>
+            <cell>203</cell>
+            <cell></cell>
+            <cell>56</cell>
+            <cell>271</cell>
+        </row>
+        <row> 
+            <cell>48</cell>
+            <cell>212</cell>
+            <cell></cell>
+            <cell>53</cell>
+            <cell>193</cell>
+        </row>
+        <row> 
+            <cell>50</cell>
+            <cell>234</cell>
+            <cell></cell>
+            <cell>48</cell>
+            <cell>172</cell>
+        </row>
+
+    </tabular><caption></caption></table>
+
+        <p>According to these data, cholesterol count is <em>not</em> a function of age, because several patients who are the same age have different cholesterol levels. For example, three different patients are 51 years old but have cholesterol counts of 227, 209, and 216, respectively. Thus, we cannot determine a <em>unique</em> value of the output variable (cholesterol count) from the value of the input variable (age). Other factors besides age must influence a person’s cholesterol count.</p></li>
+
+    </ol>
+    </example>
+
+<exercise>
+    <statement>Decide whether each table describes <m>y</m> as a function of <m>x</m>. Explain your choice.
+    <ol label="*a*">
+        <li> 
+            <table><tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
+            <cell><p><m>x</m></p></cell>
+            <cell><p>3.5</p></cell>
+            <cell><p>2.0</p></cell>
+            <cell><p>2.5</p></cell>
+            <cell><p>3.5</p></cell>
+            <cell><p>2.5</p></cell>
+            <cell><p>4.0</p></cell>
+            <cell><p>2.5</p></cell>
+            <cell><p>3.0</p></cell>
+            </row>
+            <row>
+            <cell><p><m>y</m></p></cell>
+            <cell><p>2.5</p></cell>
+            <cell><p>3.0</p></cell>
+            <cell><p>2.5</p></cell>
+            <cell><p>4.0</p></cell>
+            <cell><p>3.5</p></cell>
+            <cell><p>4.0</p></cell>
+            <cell><p>2.0</p></cell>
+            <cell><p>2.5</p></cell>
+            </row>
+            </tabular></table>
+        </li>
+        <li> 
+            <table><tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
+            <cell><p><m>x</m></p></cell>
+            <cell><p><m>-3</m></p></cell>
+            <cell><p><m>-2</m></p></cell>
+            <cell><p><m>-1</m></p></cell>
+            <cell><p><m>0</m></p></cell>
+            <cell><p><m>1</m></p></cell>
+            <cell><p><m>2</m></p></cell>
+            <cell><p><m>3</m></p></cell>
+        </row>
+        <row>
+            <cell><p><m>y</m></p></cell>
+            <cell><p><m>17</m></p></cell>
+            <cell><p><m>3</m></p></cell>
+            <cell><p><m>0</m></p></cell>
+            <cell><p><m>-1</m></p></cell>
+            <cell><p><m>0</m></p></cell>
+            <cell><p><m>3</m></p></cell>
+            <cell><p><m>17</m></p></cell>
+        </row>
+        </tabular></table>
+    </li>
+    </ol>
+    </statement>
+</exercise>
+</subsection>
+
+<subsection><title>Functions Defined by Graphs</title>
+<p>
+    A graph may also be used to define one variable as a function of another. The input variable is displayed on the horizontal axis, and the output variable on the vertical axis.
+</p>    
+
+<example xml:id="example-sun-hours">
+    <p><xref ref="fig-sun-hours" autoname="yes"/>  shows the number of hours, <m>H</m>, that the sun is above the horizon in Peoria, Illinois, on day <m>t</m>, where January 1 corresponds to <m>t = 0</m>.</p>
+    <sidebyside>
+        
+        <paragraphs>
+            <ol label="*a*">
+            <li><p>Which variable is the input, and which is the output?</p></li>
+            <li><p>Approximately how many hours of sunlight are there in Peoria on day 150?</p></li>
+            <li><p>On which days are there 12 hours of sunlight?</p></li>
+            <li><p>What are the maximum and minimum values of <m>H</m>, and when do these valuesoccur?</p></li>
+        </ol></paragraphs>
+        <figure xml:id="fig-sun-hours"><image source="images/fig-sun-hours" alt="Peoria sunlight hours"  width="90%"  /><caption></caption></figure>
+    </sidebyside>
+    <solution>
+        <ol label="*a*">
+            <li><p>The input variable, <m>t</m>, appears on the horizontal axis. The number of daylight hours, <m>H</m>, is a function of the date. The output variable appears on the vertical axis.</p></li>
+            <li><p>The point on the curve where <m>t = 150</m> has <m>H \approx 14.1</m>, so Peoria gets about 14.1 hours of daylight when <m>t = 150</m>, which is at the end of May.</p></li>
+            <li><p><m>H = 12</m> at the two points where <m>t \approx 85</m> (in late March) and <m>t \approx 270</m> (late September).</p></li>
+            <li><p>The maximum value of 14.4 hours occurs on the longest day of the year, when <m>t \approx 170</m>, about three weeks into June. The minimum of 9.6 hours occurs on the shortest day, when <m>t \approx 355</m>, about three weeks into December.</p></li>
+        </ol>
+    </solution>
+</example>
+
+<exercise xml:id="exercise-LA-marathon"><statement>
+    <xref ref="fig-LA-marathon" autoname="yes"/>  shows the elevation in feet, <m>a</m>, of the Los Angeles Marathon course at a distance <m>d</m> miles into the race. (Source: <em>Los Angeles Times</em>, March 3, 2005)
+    <figure xml:id="fig-LA-marathon"> <image source="images/fig-LA-marathon" alt="LA marathon elevation"  width="100%"  /><caption></caption></figure>
+    <ol label="*a*">
+        <li><p>Which variable is the input, and which is the output?</p></li>
+        <li><p>What is the elevation at mile 20?</p></li>
+        <li><p>At what distances is the elevation 150 feet?</p></li>
+        <li><p>What are the maximum and minimum values of <m>a</m>, and when do these values occur?</p></li>
+        <li><p>The runners pass by the Los Angeles Coliseum at about 4.2 miles into the race. What is the elevation there?</p></li>
+    </ol>
+
+
+</statement>
+</exercise>
+
+</subsection>
+
+<subsection><title>Functions Defined by Equations</title>
+<p> illustrates a function defined by an equation.</p>
+<example xml:id="example-falling-book">
+    <p>As of 2016,  One World Trade Center in New York City is the nation’s tallest building, at 1776 feet. If an algebra book is dropped from the top of the Sears Tower, its height above the ground after <m>t</m> seconds is given by the equation <me>h = 1776 − 16t^2</me> Thus, after <m>\alert{1}</m> second the book’s height is <me>h = 1776 − 16(\alert{1})^2 = 1760 \text{ feet}</me> After <m>\alert{2}</m> seconds its height is <me>h = 1776 − 16(\alert{2})^2 = 1712 \text{ feet}</me> For this function, <m>t</m> is the input variable and <m>h</m> is the output variable. For any value of <m>t</m>, a unique value of <m>h</m> can be determined from the equation for <m>h</m>. We say that <m>h</m> <em>is a function of</em> <m>t</m>.</p>
+ </example>  
+  
+
+<exercise><statement>Write an equation that gives the volume, <m>V</m>, of a sphere as a function of its radius, <m>r</m>.
+</statement></exercise>
+
+<remark>
+    <title><image source="images/icon-GC" alt="Graphing Calculator" width="8%"  />Making a Table of Values with a Calculator</title>
+    <p>We can use a graphing calculator to make a table of values for a function defined by an equation. For the function in <xref ref="example-falling-book" autoname="yes"/>, 
+    <me>h = 1776 − 16t^2</me>
+    we begin by entering the equation: Press the <image source="images/y-equals" alt="Y="  width="6%"  /> key, clear out any other equations, and define <m>Y_1 = 1776 − 16X^2.</m></p>
+    <p>Next, we choose the <m>x</m>-values for the table. Press <image source="images/icon-2nd" alt="2nd"  width="6%"  /> <image source="images/window" alt="Window"  width="12%"  /> to access the TblSet (Table Setup) menu and set it to look like <xref ref="fig-TblSetup" autoname="yes" />. This setting will give us an initial x-value of 0 <m>(TblStart = 0)</m> and an increment of one unit in the x-values, <m>(\Delta Tbl = 1)</m>. It also fills in values of both variables automatically. Now press <image source="images/icon-2nd" alt="2nd"  width="6%"  /> <image source="images/graph" alt="Graph"  width="12%"  /> to see the table of values, as shown in <xref ref="fig-GC-table" autoname="yes" />. From this table, we can check the heights we found in <xref ref="example-falling-book" autoname="yes"/>. Now try making a table of values with <m>TblStart = 0</m> and <m>\Delta Tbl = 0.5</m>. Use the <image source="images/icon-up" alt="up"  width="4%"  /> and <image source="images/icon-down" alt="down"  width="4%"  /> keys to scroll up and down the table.
+    </p>
+    <sidebyside>
+        <figure xml:id="fig-TblSetup"><image source="images/fig-TblSetup" alt="Tbl Setup"  width="90%" /><caption></caption></figure>
+        <figure xml:id="fig-GC-table"><image source="images/fig-GC-table" alt="table"  width="90%" /><caption></caption></figure>
+    </sidebyside>
+</remark>
+
+</subsection>
+
+<subsection><title>Function Notation</title>
+<p>There is a convenient notation for discussing functions. First, we choose a letter, such as <m>f</m>, <m>g</m>, or <m>h</m> (or <m>F</m>, <m>G</m>, or <m>H</m>), to name a particular function. (We can use any letter, but these are
+the most common choices.) For instance, in <xref ref="example-falling-book" autoname="yes"/>, the height, <m>h</m>, of a falling algebra book is a function of the elapsed time, <m>t</m>. We might call this function <m>f</m>. In other words, <m>f</m> is the name of the relationship between the variables <m>h</m> and <m>t</m>. We write 
+<me>h = f (t)</me>
+which means "<m>h</m> is a function of <m>t</m>, and <m>f</m> is the name of the function."</p>
+
+<p>The new symbol <m>f(t)</m>, read "<m>f</m> of <m>t</m>," is another name for the height, <m>h</m>. The parentheses in the symbol <m>f(t)</m> do not indicate multiplication. (It would not make sense to multiply the name of a function by a variable.) Think of the symbol <m>f(t)</m> as a single variable that represents
+the output value of the function.</p>
+
+<p>With this new notation we may write
+<me>h = f (t) = 1776 − 16t^2</me>
+or just
+<me>f (t) = 1776 − 16t^2</me>
+instead of
+<me>h = 1776 − 16t^2</me>
+to describe the function.</p>
+
+<p>Perhaps it seems complicated to introduce a new symbol for <m>h</m>, but the notation <m>f(t)</m> is very useful for showing the correspondence between specific values of the variables <m>h</m> and <m>t</m>.
+</p>   
+
+<example xml:id="example-falling-book-2">
+    <p>In <xref ref="example-falling-book" autoname="yes"/>, the height of an algebra book dropped from the top of the Sears Tower is given by the equation
+    <me>h = 1776 − 16t^2</me>
+We see that</p>
+    <table><tabular>
+        <col />
+            <row>
+                <cell>when <m>t=1</m></cell>
+                <cell></cell>
+                <cell><m>h=1760</m></cell>
+            </row>
+            <row>
+                <cell>when <m>t=2</m></cell>
+                <cell></cell>
+                <cell><m>h=1712</m></cell>
+            </row>
+     </tabular></table>
+<p>Using function notation, these relationships can be expressed more concisely as</p>
+    <table><tabular>
+        <col />
+            <row>
+                <cell><m>f(1)=1760</m></cell>
+                <cell> and </cell>
+                <cell><m>f(2)=1712</m></cell>
+            </row>
+     </tabular></table>
+<p>which we read as "<m>f</m> of 1 equals 1760" and "<m>f</m> of 2 equals 1712." The values for the input variable, <m>t</m>, appear <em>inside</em> the parentheses, and the values for the output variable, <m>h</m>, appear on the other side of the equation.</p>
+</example>  
+
+
+<p>Remember that when we write <m>y = f(x)</m>, the symbol <m>f(x)</m> is just another name for the output variable.</p>
+
+<paragraphs>
+    <title>Function Notation</title><line></line>
+    <image  source="images/fig-Function-Notation" alt="Function Notation"  width="70%" />
+</paragraphs>
+
+<exercise><statement>Let <m>F</m> be the name of the function defined by the graph in <xref ref="example-sun-hours" autoname="yes"/>, the number of hours of daylight in Peoria.
+<ol label="*a*">
+    <li><p>Use function notation to state that <m>H</m> is a function of <m>t</m>.</p></li>
+    <li><p>What does the statement <m>F(15) = 9.7</m> mean in the context of the problem?</p></li>
+</ol>
+</statement></exercise>
+</subsection>
+
+<subsection><title>Evaluating a Function</title>
+<p>
+    Finding the value of the output variable that corresponds to a particular value of the input variable is called <term index="yes">evaluating the function</term>.
+</p>
+
+<example xml:id="example-postage2">
+    <p>Let <m>g</m> be the name of the postage function defined by <xref ref="table-postage" autoname="yes"/>  in <xref ref="example-functions" autoname="yes"/>. Find <m>g(1)</m>, <m>g(3)</m>, and <m>g(6.75</m>).</p>
+    <solution>
+    <p>According to the table,
+    <table><tabular>
+        <col />
+            <row>
+                <cell>when <m>w=1</m>,</cell>
+                <cell></cell>
+                <cell><m>p=0.47</m></cell>
+                <cell> so </cell>
+                <cell><m>g(1)=0.47</m></cell>
+            </row>
+            <row>
+                <cell>when <m>w=3</m>,</cell>
+                <cell></cell>
+                <cell><m>p=0.89</m></cell>
+                <cell> so </cell>
+                <cell><m>g(3)=0.89</m></cell>
+            </row>
+            <row>
+                <cell>when <m>w=6.75</m>,</cell>
+                <cell></cell>
+                <cell><m>p=1.73</m></cell>
+                <cell> so </cell>
+                <cell><m>g(6.75)=1.73</m></cell>
+            </row>
+     </tabular></table>
+     Thus, a letter weighing 1 ounce costs <dollar />0.47 to mail, a letter weighing 3 ounces costs <dollar />0.89, and a letter weighing 6.75 ounces costs <dollar />1.73.</p>
+    </solution>
+</example>
+<exercise xml:id="exercise-heart-rate"><statement>
+    When you exercise, your heart rate should increase until it reaches your target heart rate. The table shows target heart rate, <m>r = f(a)</m>, as a function of age. 
+    <table><tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
+        <cell><p><m>a</m></p></cell>
+        <cell><p>20</p></cell>
+        <cell><p>25</p></cell>
+        <cell><p>30</p></cell>
+        <cell><p>35</p></cell>
+        <cell><p>40</p></cell>
+        <cell><p>45</p></cell>
+        <cell><p>50</p></cell>
+        <cell><p>55</p></cell>
+        <cell><p>60</p></cell>
+        <cell><p>65</p></cell>
+        <cell><p>70</p></cell>
+        </row>
+        <row>
+        <cell><p><m>r</m></p></cell>
+        <cell><p>150</p></cell>
+        <cell><p>146</p></cell>
+        <cell><p>142</p></cell>
+        <cell><p>139</p></cell>
+        <cell><p>135</p></cell>
+        <cell><p>131</p></cell>
+        <cell><p>127</p></cell>
+        <cell><p>124</p></cell>
+        <cell><p>120</p></cell>
+        <cell><p>116</p></cell>
+        <cell><p>112</p></cell>
+        </row>
+    </tabular></table>
+ 
+    <ol label="*a*">
+        <li><p>Find <m>f(25)</m> and <m>f(50)</m>.</p></li>
+        <li><p>Find a value of <m>a</m> for which <m>f(a) = 135</m>.</p></li>
+    </ol>
+</statement></exercise>
+
+<p>If a function is described by an equation, we simply substitute the given input value into the equation to find the corresponding output, or function value.</p>
+
+<example xml:id="example-evaluate-function">
+    <p>The function <m>H</m> is defined by <m>H=f(s) = \frac{\sqrt{s+3}}{s}</m>. Evaluate the function at the following values.</p>
+    <ol label = "*a*">
+        <li><p><m>s=6</m></p></li>
+        <li><p><m>s=-1</m></p></li>
+    </ol>
+
+    <solution>
+    <ol label = "*a*">
+        <li><p><m>f(\alert{6})=\frac{\sqrt{\alert{6}+3}}{\alert{6}}=
+            \frac{\sqrt{9}}{6}=\frac{3}{6}=\frac{1}{2}</m>. Thus, <m>f(6)=\frac{1}{2}</m>.</p></li>
+        <li><p><m>f(\alert{-1})=\frac{\sqrt{\alert{-1}+3}}{\alert{-1}}=
+            \frac{\sqrt{2}}{-1}=-\sqrt{2}</m>. Thus, <m>f(-1)=-\sqrt{2}</m>.</p></li>
+    </ol>
+    </solution>
+</example>
+
+<exercise xml:id="exercise-function-notation"><statement>
+    Complete the table displaying ordered pairs for the function <m>f(x) = 5 − x^3</m>. Evaluate the function to find the corresponding <m>f(x)</m>-value for each value of <m>x</m>.
+    <table><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+        <col halign="center"  />
+        <col halign="center" />
+        <col halign="left" />
+            <row bottom="minor">
+                <cell><p><m>x</m></p></cell>
+                <cell><p><m>f(x)</m></p></cell>
+                <cell></cell>
+            </row>
+            <row>
+                <cell><m>-2</m></cell>
+                <cell><m></m></cell>
+                <cell><m>f(\alert{-2})=5-(\alert{-2})^3=~</m> </cell>
+            </row>
+            <row> 
+                <cell><m>0</m></cell>
+                <cell><m></m></cell>
+                <cell><m>f(\alert{0})=5-\alert{0}^3=</m></cell>
+            </row>
+            <row> 
+                <cell><m>1</m></cell>
+                <cell><m></m></cell>
+                <cell><m>f(\alert{1})=5-\alert{1}^3=</m></cell>
+            </row>
+            <row> 
+                <cell><m>3</m></cell>
+                <cell><m></m></cell>
+                <cell><m>f(\alert{3})=5-\alert{3}^3=</m></cell>
+            </row>
+        </tabular>
+    </table>
+</statement></exercise>
+
+<remark>
+    <title><image source="images/icon-GC" alt="Graphing Calculator" width="8%"  />Evaluating a Function</title>
+    <p>We can use the table feature on a graphing calculator to evaluate functions. Consider the function of <xref ref="exercise-function-notation" autoname="yes"/>, <m>f(x) = 5 − x^3</m>.</p> 
+    <p>Press <image source="images/y-equals" alt="Y="  width="6%" />, clear any old functions, and enter
+    <me>Y_1 = 5−X \text{^} 3</me>
+    Then press TblSet (<image source="images/icon-2nd" alt="2nd"  width="6%"  /> <image source="images/window" alt="Window"  width="13%"  />) and choose Ask after Indpnt, as shown in <xref ref="fig-TblSetup2" autoname="yes" />, and press <image source="images/icon-enter" alt="enter" width="11%" />. This setting allows you to enter any x-values you like. Next, press TABLE (using <image source="images/icon-2nd" alt="2nd"  width="6%" /> <image source="images/graph" alt="Graph"  width="12%" />). To follow <xref ref="exercise-function-notation" autoname="yes"/>, key in <image source="images/icon-negative" alt="negative" width="5%" /> 2 <image source="images/icon-enter" alt="enter" width="11%" /> for the <m>x</m>-value, and the calculator will fill in the <m>y</m>-value. Continue by entering 0, 1, 3, or any other <m>x</m>-values you choose. One such table is shown in <xref ref="fig-GC-table2" autoname="yes" />. If you would like to evaluate a new function, you do not have to return to the <image source="images/y-equals" alt="Y="  width="6%" /> screen. Use the <image source="images/icon-right" alt="right"  width="4%" /> and <image source="images/icon-up" alt="up"  width="4%" /> keys to highlight <m>Y_1</m> at the top of the second column. The definition of <m>Y_1</m> will appear at the bottom of the display, as shown in <xref ref="fig-GC-table2" autoname="yes" />. You can key in a new definition here, and the second column will be updated automatically to show the <m>y</m>-values of the new function.
+    <sidebyside>
+        <figure xml:id="fig-TblSetup2"><image source="images/fig-TblSetup2" alt="Tbl Setup"  width="90%" /><caption></caption></figure>
+        <figure xml:id="fig-GC-table2"><image source="images/fig-GC-table2" alt="table"  width="90%" /><caption></caption></figure>
+    </sidebyside>
+    </p>
+</remark>
+
+<p>
+    To simplify the notation, we sometimes use the same letter for the output variable and
+for the name of the function. In the next example, <m>C</m> is used in this way.
+</p>
+
+<example xml:id="example-function-notation-abuse">
+    <p>TrailGear decides to market a line of backpacks. The cost, <m>C</m>, of manufacturing backpacks is a function of the number, <m>x</m>, of backpacks produced, given by the equation 
+    <me>C(x) = 3000 + 20x</me>
+    where <m>C(x)</m> is measured in dollars. Find the cost of producing 500 backpacks.</p>
+
+    <solution>To find the value of <m>C</m> that corresponds to <m>x = \alert{500}</m>, evaluate <m>C(500)</m>.
+    <me>C(\alert{500}) = 3000 + 20(\alert{500}) = 13,000</me>
+    The cost of producing 500 backpacks is <dollar />13,000.</solution>
+</example>
+
+<exercise xml:id="exercise-sphere-volume">
+    <statement>
+        The volume of a sphere of radius <m>r</m> centimeters is given by
+        <me>V = V(r) = \frac{4}{3}\pi r^3</me>
+        Evaluate <m>V(10)</m> and explain what it means.
+    </statement>
+</exercise>
+
+</subsection>
+
+<subsection><title>Operations with Function Notation</title>
+<p>Sometimes we need to evaluate a function at an algebraic expression rather than at a
+specific number.</p>    
+
+<example xml:id="example-backpacks">
+    <p>TrailGear manufactures backpacks at a cost of
+    <me>C(x) = 3000 + 20x</me>
+    for <m>x</m> backpacks. The company finds that the monthly demand for backpacks increases by 50% during the summer. The backpacks are produced at several small co-ops in different states.</p>
+    <ol label="*a*">
+        <li>If each co-op usually produces <m>b</m> backpacks per month, how many should it produce during the summer months?</li>
+        <li>What costs for producing backpacks should the company expect during the summer?</li>
+    </ol>
+    <solution>
+        <ol label="*a*">
+            <li>An increase of 50% means an additional 50% of the current production level, <m>b</m>. Therefore, a co-op that produced <m>b</m> backpacks per month during the winter should increase production to <m>b + 0.5b</m>, or <m>1.5b</m> backpacks per month in the summer.</li>
+            <li>The cost of producing <m>1.5b</m> backpacks will be
+            <me>C(\alert{1.5b}) = 3000 + 20(\alert{1.5b}) = 3000 + 30b</me></li>
+        </ol>
+    </solution>
+</example>
+
+<exercise xml:id="exercise-spherical-balloon">
+    <statement>
+        A spherical balloon has a radius of 10 centimeters.
+        <ol label="*a*">
+            <li>If we increase the radius by <m>h</m> centimeters, what will the new volume be?</li>
+            <li>If <m>h = 2</m>, how much did the volume increase?</li>
+        </ol>
+    </statement>
+</exercise>
+
+<example xml:id="example-evaluate-quadratic">
+    <p>Evaluate the function <m>f(x)=4x^2 − x + 5</m> for the following expressions.</p>
+    <ol label="*a*">
+        <li><m>x = 2h</m></li>
+        <li><m>x = a + 3</m></li>
+    </ol>
+    <solution><ol label="*a*">
+        <li><p><nbsp /> </p>\begin{align*}
+                f(\alert{2h}) <ampersand />= 4(\alert{2h})^2−(\alert{2h}) + 5<backslash /><backslash />
+                <ampersand />= 4(4h^2)−2h+5<backslash /><backslash /> 
+                <ampersand />= 16h^2 − 2h + 5<backslash /><backslash /> 
+                \end{align*}</li>
+        <li><p><nbsp /> </p>\begin{align*}
+                f(\alert{a+3}) <ampersand />= 4(\alert{a+3})^2−(\alert{a+3})+5<backslash /><backslash />
+                <ampersand />= 4(a^2+6a+9)−a-3+5<backslash /><backslash /> 
+                <ampersand />= 4a^2+24a+36 − a + 2<backslash /><backslash /> 
+                <ampersand />= 4a^2+23a + 38<backslash /><backslash /> 
+                \end{align*}</li>
+</ol>
+
+    </solution>
+</example>
+
+<paragraphs><title>CAUTION</title>
+    <p>In <xref ref="example-evaluate-quadratic" autoname="yes"/>, notice that
+<me>f(2h) \ne 2 f(h)</me>
+and
+<me>f(a + 3) \ne f(a) + f(3)</me>
+To compute <m>f(a) + f(3)</m>, we must first compute <m>f(a)</m> and <m>f(3)</m>, then add them:
+    \begin{align*}
+        f(a)+f(3)<ampersand />= (4a^2−a+5)+(4\cdot 3^2−3+5) <backslash /><backslash />
+                <ampersand />= 4a^2 − a + 43<backslash /><backslash /> 
+                \end{align*}
+In general, it is not true that <m>f(a + b) = f(a) + f(b)</m>. Remember that the parentheses in the expression <m>f(x)</m> do not indicate multiplication, so the distributive law does not apply to the expression <m>f(a + b)</m>.</p>
+</paragraphs>
+
+<exercise xml:id="exercise-function-notation2"><statement>
+    Let <m>f(x) = x^3 − 1</m> and evaluate each expression.
+    <ol label="*a*">
+        <li><m>f(2) + f(3)</m></li>
+        <li><m>f(2 + 3)</m></li>
+        <li><m>2 f(x) + 3</m></li>
+    </ol>
+</statement>
+</exercise>
+
+</subsection>
+
+
+</section> 
+<!-- </book>  </mathbook> -->
