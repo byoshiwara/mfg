@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- <mathbook><book> -->
+
+<section xml:id="linear-functions"   xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Linear Functions</title>
+<subsection><title>Slope-Intercept Form</title>   
+<p>
+    As we saw in <xref ref="LinMod" autoname="yes" />, many linear models <m>y = f (x)</m> have equations of the form
+    <me>f (x) = (\text{starting value}) + (\text{rate of change}) \cdot x</me>
+    The starting value, or the value of <m>y</m> at <m>x = 0</m>, is the <m>y</m>-intercept of the graph, and the rate of change is the slope of the graph. Thus, we can write the equation of a line as
+    <me>f (x) = b + mx</me>
+    where the constant term, <m>b</m>, is the <m>y</m>-intercept of the line, and <m>m</m>, the coefficient of <m>x</m>, is the slope of the line. This form for the equation of a line is called the <term index="yes">slope-intercept form</term>.
+</p>
+
+<paragraphs><title>Slope-Intercept Form</title><line></line>
+    <p>
+        If we write the equation of a linear function in the form,
+        <me>f (x) = b + mx</me>
+        then <m>m</m> is the <term index="yes">slope</term> of the line, and <m>b</m> is the <term><m>y</m>-intercept</term>.
+    </p>
+</paragraphs>
+<p>
+    (You may have encountered the slope-intercept equation in the equivalent form 
+    <m>y = mx + b</m>.) For example, consider the two linear functions and their graphs shown in <xref ref="fig-decreasing-line" autoname="yes" /> and <xref ref="fig-increasing-line" autoname="yes"/>.
+</p>
+
+<sidebyside>
+<table>
+    <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+        <row bottom="minor">
+            <cell><m>x</m></cell>
+            <cell><m>f(x)</m></cell>
+        </row>
+        <row>
+            <cell><m>0</m></cell>
+            <cell><m>10</m></cell>
+        </row>
+        <row>
+            <cell><m>1</m></cell>
+            <cell><m>7</m></cell>
+        </row>
+        <row>
+            <cell><m>2</m></cell>
+            <cell><m>4</m></cell>
+        </row>
+        <row>
+            <cell><m>3</m></cell>
+            <cell><m>1</m></cell>
+        </row>
+        <row>
+            <cell><m>4</m></cell>
+            <cell><m>-2</m></cell>
+        </row>
+    </tabular>
+    <caption><m>f (x) = 10 − 3x</m></caption>
+</table>
+<figure xml:id="fig-decreasing-line"><image source="images/fig-decreasing-line" alt="deceasing line"  width="90%"  /><caption></caption></figure>
+<!-- </sidebyside>
+<sidebyside> -->
+<table>
+    <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+        <row bottom="minor">
+            <cell><m>x</m></cell>
+            <cell><m>f(x)</m></cell>
+        </row>
+        <row>
+            <cell><m>0</m></cell>
+            <cell><m>-3</m></cell>
+        </row>
+        <row>
+            <cell><m>1</m></cell>
+            <cell><m>-1</m></cell>
+        </row>
+        <row>
+            <cell><m>2</m></cell>
+            <cell><m>1</m></cell>
+        </row>
+        <row>
+            <cell><m>3</m></cell>
+            <cell><m>3</m></cell>
+        </row>
+        <row>
+            <cell><m>4</m></cell>
+            <cell><m>5</m></cell>
+        </row>
+    </tabular>
+    <caption><m>g(x) = −3+2x</m></caption>
+</table>
+<figure xml:id="fig-increasing-line"><image source="images/fig-increasing-line" alt="inceasing line"  width="90%"  /><caption></caption></figure>
+</sidebyside>
+
+<p>
+    We can see that the <m>y</m>-intercept of each line is given by the constant term, <m>b</m>. By examining the table of values, we can also see why the coefficient of <m>x</m>gives the slope of the line: 
+    For <m>f (x)</m>, each time <m>x</m> increases by <m>1</m> unit, <m>y</m> decreases by <m>3</m> units. For <m>g(x)</m>, each time <m>x</m> increases by <m>1</m> unit, <m>y</m> increases by <m>2</m> units. For each graph, the coefficient of <m>x</m> is a scale factor that tells us how many units <m>y</m> changes for <m>1</m> unit increase in <m>x</m>. But that is exactly what the slope tells us about a line.
+</p>
+
+<example xml:id="example-internet-providers">
+    <p>Francine is choosing an Internet service provider. She paid <dollar />30 for a modem, and she is considering three companies for dialup service: Juno charges <dollar />14.95 per month, ISP.com charges <dollar/>12.95 per month, and peoplepc charges <dollar />15.95 per month. Match the graphs in <xref ref="fig-internet-providers" autoname="yes"/> to Francine’s Internet cost with each company.</p>
+    <solution>
+        <p>Francine pays the same initial amount, <dollar />30 for the modem, under each plan. The monthly fee is the rate of change of her total cost, in dollars per month. </p>
+    <sidebyside><p>We can write a formula for her cost under each plan.
+    <me>\text{Juno: } f (x) = 30 + 14.95x</me>
+    <me>\text{ISP.com: } g(x) = 30 + 12.95x</me>
+    <me>\text{peoplepc: } h(x) = 30 + 15.95x</me>
+    The graphs of these three functions all have the same <m>y</m>-intercept, but their slopes are determined by the monthly fees. The steepest graph, III, is the one with the largest monthly fee, peoplepc, and ISP.com, which has the lowest monthly fee, has the least steep graph, I.</p>    
+    <figure xml:id="fig-internet-providers"><image source="images/fig-internet-providers" alt="internet provider costs"  width="100%"  /><caption></caption></figure></sidebyside>
+    </solution>
+</example>
+
+<exercise xml:id="exercise-dsl-price"><statement>
+Delbert decides to use DSL for his Internet service. Earthlink charges a <dollar />99 activation fee and <dollar />39.95 per month, DigitalRain charges <dollar />50 for activation and <dollar />34.95 per month, and FreeAmerica charges <dollar />149 for activation and <dollar />34.95 per month.
+<ol label="*a*">
+    <li>Write a formula for Delbert's Internet costs under each plan.
+    </li>
+    <li>Match Delbert's Internet cost under each company with its graph in <xref ref="fig-dsl-price" autoname="yes" />.
+    </li>
+</ol>
+<figure xml:id="fig-dsl-price"><image source="images/fig-dsl-price" alt="dsl costs"  width="60%"  /><caption></caption></figure>
+</statement></exercise>
+
+<p>
+    In the equation <m>f (x) = b + mx</m>, we call <m>m</m> and <m>b</m> <term index="yes">parameters</term>. Their values are fixed for any particular linear equation; for example, in the equation <m>y = 2x + 3</m>, <m>m = 2</m> and <m>b = 3</m>, and the variables are <m>x</m> and <m>y</m>. By changing the values of <m>m</m> and <m>b</m>, we can write the equation for any line except a vertical line (see <xref ref="fig-slope-vs-intercept" autoname="yes"/>). The collection of all linear functions <m>f (x) = b + mx</m> is called a <term index="yes">two-parameter</term> family of functions.
+</p>
+<figure xml:id="fig-slope-vs-intercept"><image source="images/fig-slope-vs-intercept" alt="lines with common intercept or common slope"  width="100%"  /><caption></caption></figure>
+</subsection>
+
+<subsection><title>Slope-Intercept Method of Graphing</title>
+<p>
+    Look again at the lines in <xref ref="fig-slope-vs-intercept" autoname="yes"/>: There is only one line that has a given slope and passes through a particular point. That is, the values of <m>m</m> and <m>b</m> determine the particular line. The value of <m>b</m> gives us a starting point, and the value of <m>m</m> tells us which direction to go to plot a second point. Thus, we can graph a line given in slope-intercept form without having to make a table of values.
+</p>
+
+<example xml:id="example-slope-intercept">
+    <ol label="*a*">
+        <li>Write the equation <m>4x − 3y = 6</m> in slope-intercept form.</li>
+        <li>Graph the line by hand.</li>
+    </ol>
+<solution>
+    <ol label="*a*">
+        <li>We solve the equation for <m>y</m> in terms of <m>x</m>.
+            \begin{align*}
+                −3y <ampersand />=6 − 4x<backslash /><backslash />
+                y <ampersand />= \frac{6 − 4x}{-3}
+                =\frac{6}{-3}+\frac{-4x}{-3}<backslash /><backslash />
+                y <ampersand />= -2+\frac{4}{3}x
+            \end{align*}
+        </li>
+
+        <li>We see that the slope of the line is <m>m = \frac{4}{3}</m> and its <m>y</m>-intercept is <m>b = −2</m>. We begin by plotting the <m>y</m>-intercept, <m>(0, −2)</m>. We then use the slope to find another point on the line. We have
+        <me>m = \frac{\Delta y}{\Delta x}=\frac{4}{3}</me>
+        so starting at <m>(0, −2)</m>, we move <m>4</m> units in the <m>y</m>-direction and <m>3</m> units in the <m>x</m>-direction, to arrive at the point <m>(3, 2)</m>. Finally, we draw the line through these two points. (See <xref ref="fig-slope-intercept" />.)</li>
+    </ol>
+    <figure xml:id="fig-slope-intercept"><image source="images/fig-slope-intercept" alt="slope-intercept method"  width="60%"  /><caption></caption></figure>
+
+</solution>
+</example>
+
+<p>The slope of a line is a ratio and can be written in many equivalent ways. In <xref ref="example-slope-intercept" autoname="yes" />, the slope is equal to <m>\frac{8}{6}</m>, <m>\frac{12}{9}</m>, and <m>\frac{−4}{−3}</m>. We can use any of these fractions to locate a third
+point on the line as a check. If we use <m>m = \frac{\Delta y}{\Delta x}= \frac{−4}{−3}</m>, we move down <m>4</m> units and left <m>3</m> units from the <m>y</m>-intercept to find the point <m>(−3, −6)</m> on the line.</p>
+
+<paragraphs><title>Slope-Intercept Method for Graphing a Line</title><p>
+<ol label="*a*">
+    <li>Plot the <m>y</m>-intercept <m>(0, b)</m>.</li>
+    <li>Use the definition of slope to find a second point on the line: Starting at the <m>y</m>-intercept, move <m>\Delta y</m> units in the <m>y</m>-direction and <m>\Delta x</m> units in the <m>x</m>-direction. Plot a second point at this location.</li>
+    <li>Use an equivalent form of the slope to find a third point, and draw a line through the points.</li>
+</ol></p>
+<figure xml:id="fig-slope-intercept0"><image source="images/fig-slope-intercept0" alt="slope-intercept method"  width="60%"  /><caption></caption></figure></paragraphs>
+
+<exercise xml:id="exercise-slope-intercept"><statement>
+    <ol label="*a*">
+        <li>Write the equation <m>2y + 3x + 4 = 0</m> in slope-intercept form.</li>
+        <li>Use the slope-intercept method to graph the line.</li>
+    </ol>
+</statement></exercise>
+</subsection>
+
+<subsection><title>Finding a Linear Equation from a Graph</title>
+    <p>
+        We can also use the slope-intercept form to find the equation of a line from its graph. First, note the value of the <m>y</m>-intercept from the graph, and then calculate the slope using two convenient points.
+    </p>
+
+<example xml:id="example-lin-equation-from-graph">
+    <p>Find an equation for the line shown in <xref ref="fig-lin-equation-from-graph" autoname="yes" />.</p>
+    <solution>
+        <sidebyside><p>
+            The line crosses the <m>y</m>-axis at the point <m>(0, 3200)</m>, so the <m>y</m>-intercept is <m>3200</m>. To calculate the slope of the line, locate another point, say <m>(20, 6000)</m>, and compute:
+            \begin{align*}m <ampersand />= \frac{\Delta y}{\Delta x}
+                = \frac{6000 − 3200}{20 − 0}<backslash/><backslash/>
+                <ampersand/>=\frac{2800}{20}= 140
+            \end{align*}
+            The slope-intercept form of the equation, with <m>m = 140</m> and <m>b = 3200</m>, is <m>y = 3200 + 140x</m>.
+            </p>
+        <figure xml:id="fig-lin-equation-from-graph"><image source="images/fig-lin-equation-from-graph" alt="graph of line"  width="90%"  /><caption></caption></figure></sidebyside>
+    </solution>
+</example>
+
+<exercise xml:id="exercise-lin-equation-from-graph"><statement>
+    <sidebyside><p>Find an equation for the line shown in <xref ref="fig-lin-equation-from-graph2" autoname="yes"/>
+    \begin{align*}
+    b <ampersand/>= \quad\quad\quad<backslash/><backslash/>
+    m <ampersand/>=<backslash/><backslash/>
+    y <ampersand/>=<backslash/><backslash/>
+    \end{align*}
+</p>
+<figure xml:id="fig-lin-equation-from-graph2"><image source="images/fig-lin-equation-from-graph2" alt="graph of line"  width="90%"  /><caption></caption></figure></sidebyside></statement>
+</exercise>
+</subsection>
+
+
+<subsection><title>Point-Slope Form</title>
+<sidebyside><figure xml:id="fig-point-slope"><image source="images/fig-point-slope" alt="point slope"  width="90%"  /><caption></caption></figure>
+<p>
+    We can find the equation for a line if we know its slope and <m>y</m>-intercept. What if we do not know the <m>y</m>-intercept, but instead know some other point on the line? There is only one line that passes through a given point and has a given slope. For example, we can graph the line of slope <m>\frac{−3}{4}</m> that passes through the point <m>(1, −4)</m>. </p></sidebyside>
+    <p>We first plot the given point, <m>(1, −4)</m>, as shown in <xref ref="fig-point-slope" autoname="yes" />. Then we use the slope to find another point on the line. The slope is
+        <me>m =\frac{−3}{4}= \frac{\Delta y}{\Delta x}</me>
+    so we move down <m>3</m> units and then <m>4</m> units to the right, starting from <m>(1, −4)</m>. This brings us to the point <m>(5, −7)</m>. We can then draw the line through these two points.</p>
+    <p>We can also find an equation for the line, as shown in Example 4.</p>
+
+<example xml:id="example-point-slope">
+    <p>Find an equation for the line that passes through <m>(1, −4)</m> and has slope <m>\frac{−3}{4}</m>.</p>
+<solution>We will use the formula for slope,
+    <me>m = \frac{y_2 − y_1}{x_2 − x_1}</me>
+    We substitute <m>\frac{−3}{4}</m> for the slope, <m>m</m>, and <m>(1, −4)</m> for <m>(x_1, y_1)</m>. For the second point, <m>(x_2, y_2)</m>, we will use the variable point <m>(x, y)</m>. Substituting these values into the slope formula gives us
+    <me>\frac{−3}{4}= \frac{y − (−4)}{x − 1}=\frac{y + 4}{x − 1}</me>
+    To solve for <m>y</m> we first multiply both sides by <m>x − 1</m>.
+    \begin{align*}
+                \alert{(x-1)}\frac{−3}{4}<ampersand />
+                =\frac{y +4}{x − 1}\alert{(x-1)} <ampersand /><ampersand /><backslash /><backslash />
+                \frac{−3}{4}(x-1)<ampersand />=y+4  <ampersand /><ampersand />\text{Apply the distributive law.}<backslash /><backslash />
+                \frac{−3}{4}x+\frac{3}{4}<ampersand />=y+4   <ampersand /><ampersand /> 
+                \text{Subtract 4 from both sides.}<backslash /><backslash />
+                \frac{−3}{4}x-\frac{13}{4}<ampersand />=y <ampersand /><ampersand /> \frac{3}{4}-4=\frac{3}{4}-\frac{16}{4}=\frac{-13}{4}
+    \end{align*}
+</solution></example>
+
+<p>
+    When we use the slope formula in this way to find the equation of a line, we substitute a variable point <m>(x, y)</m> for the second point. This version of the formula, 
+    <me>m = \frac{y − y_1}{x − x_1}</me>
+    is called the <term index="yes">point-slope form</term> for a linear equation. It is sometimes stated in another form obtained by clearing the fraction to get
+    \begin{align*}
+                \alert{(x−x_1)}m<ampersand />
+                =\frac{y -y_1}{x − x_1}\alert{(x−x_1)} <ampersand /><ampersand />
+                \text{Multiply both sides by }(x − x_1)<backslash /><backslash />
+                (x − x_1) m<ampersand />=y-y_1  <ampersand /><ampersand />\text{Clear fractions and solve for }y\text{.}<backslash /><backslash />
+                y<ampersand />=y_1+m(x-x_1)
+    \end{align*}
+</p>
+
+<paragraphs><title>Point-Slope Form</title><line></line>
+<p>
+    The equation of the line that passes through the point <m>(x_1, y_1)</m> and has slope <m>m</m> is
+    <me>y= y_1 + m(x− x_1)</me>
+</p>
+</paragraphs>
+
+<exercise xml:id="exercise-point-slope"><statement>
+    Use the point-slope form to find the equation of the line that passes through the point <m>(−3, 5)</m> and has slope <m>−1.4</m>.
+    <sidebyside><p>
+        <me>y = y_1 + m(x − x_1)</me></p>
+        <p>Substitute <m>−1.4</m> for <m>m</m> and <m>(−3, 5)</m> for <m>(x_1, y_1)</m>. Simplify: Apply the distributive law.
+        </p></sidebyside>
+</statement></exercise>
+
+<p>The point-slope form is useful for modeling linear functions when we do not know the
+initial value but do know some other point on the line.</p>
+
+<example xml:id="example-income-tax">
+    <p>Under a proposed graduated income tax system, single taxpayers would owe <dollar/>1500 plus 20<percent/> of the amount of their income over <dollar/>13,000. (For example, if your income is <dollar/>18,000, you would pay <dollar/>1500 plus 20<percent/> of <dollar/>5000.)
+    <ol label="*a*">
+        <li>Complete the table of values for the tax, <m>T</m>, on various incomes, <m>I</m>.
+        <table><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+            <row bottom="minor">
+                <cell><m>I</m></cell>
+                <cell><m>15,000</m></cell>
+                <cell><m>20,000</m></cell>
+                <cell><m>22,000</m></cell>
+            </row>
+            <row>
+                <cell><m>T</m></cell>
+                <cell><p></p></cell>
+                <cell><p></p></cell>
+                <cell><p></p></cell>
+            </row>
+    </tabular></table>
+        </li>
+        <li>Write a linear equation in point-slope form for the tax, <m>T</m>, on an income <m>I</m>.</li>
+        <li>Write the equation in slope-intercept form.</li>
+    </ol></p>
+<solution>
+    <ol label="*a*">
+        <li>On an income of <dollar/>15,000, the amount of income over <dollar/>13,000 is <dollar/>15,000 − <dollar/>13,000 = <dollar/>2000, so you would pay <dollar/>1500 plus 20<percent/> of <dollar/>2000, or
+        <me>T = 1500 + 0.20(2000) = 1900</me>
+        You can compute the other function values in the same way.
+        <table><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+            <row bottom="minor">
+                <cell><m>I</m></cell>
+                <cell><m>15,000</m></cell>
+                <cell><m>20,000</m></cell>
+                <cell><m>22,000</m></cell>
+            </row>
+            <row>
+                <cell><m>T</m></cell>
+                <cell><m>1900</m></cell>
+                <cell><m>2900</m></cell>
+                <cell><m>3300</m></cell>
+            </row>
+    </tabular></table>
+            
+        </li>
+        <li>
+            On an income of <m>I</m>, the amount of income over <dollar/>13,000 is <m>I − $13,000</m>, so you would pay <dollar/>1500 plus 20<percent/> of <m>I − 13,000</m>, or
+            <me>T = 1500 + 0.20 (I − 13,000)</me>
+        </li>
+        <li>
+            Simplify the right side of the equation to get
+            \begin{align*}
+            T <ampersand/>= 1500 + 0.20I − 2600<backslash/><backslash/>
+            T <ampersand/>= −1100 + 0.20I
+            \end{align*}
+        </li>
+
+    </ol>
+</solution></example>
+
+<exercise xml:id="exercise-healthy-weight"><statement>
+    A healthy weight for a young woman of average height, 64 inches, is 120 pounds. To calculate a healthy weight for a woman taller than 64 inches, add 5 pounds for each inch of height over 64.
+    <ol label="*a*">
+        <li>Write a linear equation in point-slope form for the healthy weight, <m>W</m>, for a woman of height, <m>H</m>, in inches.</li>
+        <li>Write the equation in slope-intercept form.</li>
+    </ol>
+</statement>
+    
+</exercise>
+
+</subsection>
+
+</section> 
+<!-- </book>  </mathbook> -->

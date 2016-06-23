@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mathbook>
+<docinfo>
+    <macros>
+        \newcommand{\alert}[1]{\mathbf{\color{magenta}{#1}}}
+    </macros>
+</docinfo>
+<book xml:id="chapter1"> 
+    <chapter xml:id="chap1"  xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Functions and Their Graphs</title>
+        <introduction>
+            <p><image source="images/fig1.svg" alt="Sunrise through tree"  width="60%"  /></p>
+            <p>You may have heard that mathematics is the language of science.  In fact, professionals in nearly every discipline take advantage of mathematical methods to analyze data, identify trends, and predict the effects of change.  This process is called <term>mathematical modeling</term>.  A model is a simplified representation of reality that helps us understand a process or phenomenon.  Because it is a simplification, a model can never be completely accurate.  Instead, it should focus on those aspects of the real situation that will help us answer specific questions. Here is an example. </p>
+            
+            <p>The world's population is growing at different rates in different nations.  Many factors, including economic and social forces, influence the birth rate.  Is there a connection between birth rates and education levels?  The figure shows the birth rate plotted against the female literacy rate in 148 countries.  Although the data points do not all lie precisely on a line, we see a generally decreasing trend:  the higher the literacy rate, the lower the birth rate.  The <term>regression line</term> provides a model for this trend, and a tool for analyzing the data.  In this chapter we study the properties of linear models and some techniques for fitting a linear model to data.</p>
+            
+            <figure><image source="images/BirthRateVsFemaleLiteracy.svg" alt="Plot of birth rate vs female literacy"  width="100%"  /></figure>
+            
+            <Investigation></Investigation>
+            <paragraphs><title>Investigation: Sales on Commission</title><line></line>
+            <p>Delbert is offered a part-time job selling restaurant equipment. He will be paid <dollar />1000 per month plus a 6<percent /> commission on his sales. The sales manager tells Delbert he can expect to sell about <dollar />8000 worth of equipment per month. To help him decide whether to accept the job, Delbert does a few calculations.</p> 
+            <p>
+                <ol>
+                    <li><p>Based on the sales manager’s estimate, what monthly income can Delbert expect from this job? What annual salary would that provide?</p></li>
+                    <li><p>What would Delbert’s monthly salary be if he sold only <dollar />5000 of equipment per month? What would his salary be if he sold <dollar />10,000 worth per month? Compute monthly incomes for each sales total shown in the table.</p>
+                    <sidebyside >
+                        <table xml:id="table-commission">
+                            <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                                <row bottom="minor">
+                                    <cell><p>Sales</p></cell>
+                                     <cell><p>Income</p></cell>
+                                </row>
+                                <row> <cell>5000</cell><cell></cell></row>
+                                <row> <cell>8000</cell><cell></cell></row>
+                                <row> <cell>10,000</cell><cell></cell></row>
+                                <row> <cell>12,000</cell><cell></cell></row>
+                                <row> <cell>15,000</cell><cell></cell></row>
+                                <row> <cell>18,000</cell><cell></cell></row>
+                                <row> <cell>20,000</cell><cell></cell></row>
+                                <row> <cell>25,000</cell><cell></cell></row>
+                                <row> <cell>30,000</cell><cell></cell></row>
+                                <row> <cell>35,000</cell><cell></cell></row>
+                                <row> <cell><nbsp /></cell><cell></cell></row>
+                                <row> <cell><nbsp /></cell><cell></cell></row>
+                            </tabular>
+                        </table>
+                        <image source="images/Investigation1Grid.svg" alt="grid"  width="70%"  />
+                    </sidebyside>
+                    </li>
+                    <li><p>Plot your data points on a graph, using sales, <m>S</m>, on the horizontal axis and income, <m>I</m>, on the vertical axis, as shown in the figure. Connect the data points to show Delbert’s monthly income for all possible monthly sales totals.</p></li>
+                    <li><p> Add two new data points to the table by reading values from your graph.</p></li>
+                    <li><p> Write an algebraic expression for Delbert’s monthly income, <m>I</m>, in terms of his monthly sales, <m>S</m>. Use the description in the problem to help you:
+                    <line></line> 
+                    <line>He will be paid: <dollar />1000 . . . plus a 6<percent /> commission on his sales.</line><line><em>Income</em> <m>=</m>________________________ </line></p></li>
+                    <li><p>Test your formula from part (5) to see if it gives the same results as those you recorded in the table.</p></li>
+                    <li><p>Use your formula to find out what monthly sales total Delbert would need in order to have a monthly income of <dollar />2500.</p></li>
+                    <li><p>Each increase of <dollar />1000 in monthly sales increases Delbert’s monthly income by ______________.</p></li>
+                    <li><p>Summarize the results of your work: In your own words, describe the relationship between Delbert’s monthly sales and his monthly income. Include in your discussion a description of your graph.</p></li>
+                </ol></p>
+            </paragraphs>
+        </introduction>
+        <section xml:id="LinMod">
+            <title>Linear Models</title>
+                <subsection>
+                   <title>Tables, Graphs and Equations</title>   
+                   <p>The first step in creating a model is to describe relationships between variables.  In Investigation 1 <xref provisional="investigation-commission" />, we analyzed the relationship between Delbert's sales and his income.  Starting from the verbal description of his income, we represented the relationship by a table of values, a graph, and an algebraic equation.  Each of these mathematical tools is useful in a different way.</p>
+                   <ol>
+                       <li><p>A <term>table of values</term> displays specific data points with precise numerical values.</p></li>
+                       <li><p>A <term>graph</term> is a visual display of the data.  It is easier to spot trends and describe the overall behavior of the variables from a graph.</p></li>
+                       <li><p>An <term>algebraic equation</term> is a compact summary of the model.  It can be used to analyze the model and to make predictions</p></li>
+                   </ol>
+                    <p>We begin our study of modeling with some examples of <term>linear models</term>.  In the examples that follow, observe the interplay among the three modeling tools, and how each contributes to the model.</p>
+                    <example xml:id="example-Annelise">
+                        <p>Annelise is on vacation at a seaside resort.  She can rent a bicycle from her hotel for <dollar />3 an hour, plus a <dollar />5 insurance fee.  (A fraction of an hour is charged as the same fraction of <dollar />3.)</p>
+                    <ol>
+                        <li><p>Make a table of values showing the cost, <m>C</m>, of renting a bike for various lengths of time, <m>t</m>.</p></li>
+                        <li><p>Plot the points on a graph.  Draw a curve through the data points</p></li>.
+                        <li><p>Write an equation for <m>C</m> in terms of <m>t</m>.</p></li>
+                    </ol>
+                    <solution>
+                        <ol>
+                        <li><p>To find the cost, multiply the time by <dollar />3, and add the result to the <dollar />5 insurance fee.  For example, the cost of a 1-hour bike ride is
+                            <md><mrow>\text{Cost}\amp=(\$5\text{ insurance fee})+(\$3\text{ per hour})\times(\alert{1}\text{ hour})</mrow>
+                                <mrow>C\amp=5+3(\alert{1})=8</mrow></md>
+                            A 1-hour bike ride costs <dollar />8.  Record the results in a table, as shown here:</p>
+                <table xml:id="table-Annelise">
+                <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                    <row bottom="minor">
+                        <cell><p>Length of rental (hours)</p></cell>
+                        <cell><p>Cost of rental (dollars)</p></cell><cell></cell><cell><m>(t,C)</m></cell>
+                    </row>
+                    <row> <cell>1</cell><cell>8</cell><cell><m>C=5+3(\alert{1})</m></cell><cell><m>(1,8)</m></cell></row>
+                    <row> <cell>2</cell><cell>11</cell><cell><m>C=5+3(\alert{2})</m></cell><cell><m>(2,11)</m></cell></row>
+                    <row> <cell>3</cell><cell>14</cell><cell><m>C=5+3(\alert{3})</m></cell><cell><m>(3,14)</m></cell></row>
+                </tabular>
+            </table>
+        </li>
+        <li><p>Each pair of values represents a point on the graph.  The first value gives the horizontal coordinate of the point, and the second value gives the vertical coordinate.  The points lie on a straight line, as shown in the figure.  The line extends infinitely in only one direction, because negative values of <m>t</m> do not make sense here.</p>
+        <figure><image source="images/fig-Annelise-1.svg" alt="graph" width="50%" /></figure></li>
+        <li><p>To find an equation, let <m>C</m> represent the cost of the rental, and use <m>t</m> for the number of hours:
+        <md><mrow>\text{Cost}\amp=(\$5\text{ insurance fee})+(\$3\text{ per hour})\times\text{(number of hours)}</mrow>
+        <mrow>C\amp=5+3\cdot t=8</mrow></md> </p></li>
+    </ol>
+
+        </solution>
+
+</example>
+ 
+
+
+<example xml:id="example-6hrbike">
+    <p>Use the equation <m>C=5+3\cdot t</m> you found in <xref ref="example-Annelise" autoname="yes"/> to answer the following questions.  Then show how to find the answers by using the graph.</p>
+    <ol>
+        <li><p>How much will it cost Annelise to rent a bicycle for 6 hours?</p></li>
+        <li><p>How long can Annelise bicycle for <dollar />18.50?</p></li>
+    </ol>
+
+<solution>
+    <ol>
+        <li><p>Substitute <m>t=\alert{6}</m> into the expression for <m>C</m> to find <me>C=5+3(\alert{6})=23</me>A 6-hour bike ride will cost <dollar />23.  The point <m>P</m> on the graph in the figure represents the cost of a 6-hour bike ride.  The value on the <m>C</m>-axis at the same height as point <m>P</m> is 23, so a 6-hour bike ride costs <dollar />23.</p></li>
+        <li><p>Substitute <m>C=\alert{18.50}</m> into the equation and solve for <m>t</m>.
+        <md><mrow>\alert{18.50}\amp=5+3t</mrow>
+        <mrow>13.50\amp=3t</mrow>
+        <mrow>t\amp=4.5</mrow></md>
+        For <dollar />18.50 Annelise can bicycle for 4½ hours. The point <m>Q</m>  on the graph represents an <dollar />18.50 bike ride.  The value on the <m>t</m>-axis below point <m>Q</m> is 4.5, so <dollar />18.50 will buy a 4.5 hour bike ride.</p></li>
+    </ol>
+    <figure><image source="images/fig1-2.svg" alt="line though points" width="50%" /></figure>
+    
+</solution>
+
+</example>
+
+
+<p>In <xref ref="example-6hrbike" autoname="yes"/>, notice the different algebraic techniques we used in parts (a) and (b).   In part (a), we were given a value of <m>t</m> and we <term>evaluated the expression</term>  <m>5+3t</m> to find <m>C</m>.  In part (b) we were given a value of <m>C</m> and we <term>solved the equation</term> <m>C=5+3t</m> to find <m>t.</m></p> 
+
+<exercise  xml:id="exercise-Frank-plants"> 
+    <statement><p> Frank plants a dozen corn seedlings, each 6 inches tall.  With plenty of water and sunlight they will grow approximately 2 inches per day.  Complete the table of values for the height, <m>h</m>, of the seedlings after <m>t</m> days.</p>
+    <sidebyside >
+        <table xml:id="table-Frank">
+            <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row bottom="minor">
+                    <cell><m>t</m></cell>
+                    <cell>0</cell>
+                    <cell>5</cell>
+                    <cell>10</cell>
+                    <cell>15</cell>
+                    <cell>20</cell>
+                </row>
+                <row> 
+                    <cell><m>h</m></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                </row>
+            </tabular>
+        </table>
+        <figure><image source="images/fig-Example2.svg" alt="grid"  width="80%"  /></figure>
+    </sidebyside>
+    <ol>
+        <li><p>Write an equation for the height of the seedlings in terms of the number of days since they were planted.</p></li>
+        <li><p>Graph the equation.</p></li>
+    </ol>
+    </statement>
+</exercise>
+
+<exercise>
+    <statement>
+        <p> Use your equation from <xref ref="exercise-Frank-plants" autoname="yes"/> to answer the questions.  Illustrate each answer on the graph. </p>
+        <ol>
+            <li><p> How tall is the corn after 3 weeks? </p></li>
+            <li><p> How long will it be before the corn is 6 feet tall? </p></li>
+        </ol>
+    </statement>
+</exercise>
+</subsection>
+
+<subsection>
+<title>Choosing Scales for the Axes</title>
+ <p>To draw a useful graph, we must choose appropriate scales for the axes.  They must extend far enough to show the values of the variables, and the tick marks should be equally spaced.  Usually no more than 10 or 15 tick marks are needed.</p>
+
+ <example xml:id="example-home-price">
+    <p>In 1990, the median home price in the US was <dollar />92,000.  The median price increased by about <dollar />4700 per year over the next decade.
+        <ol>
+            <li><p> Make a table of values showing the median price of a house in 1990, 1994, 1998, and 2000.</p></li>
+            <li><p> Choose suitable scales for the axes and plot the values you found in part (a) on a graph. Use <m>t</m>, the number of years since 1990, on the horizontal axis and the price of the house, <m>P</m>, on the vertical axis.  Draw a curve through the points.</p></li>
+            <li><p> Write an equation that expresses <m>P</m> in terms of <m>t</m>.</p></li>
+            <li><p> How much did the price of the house increase from 1990 to 1996?  Illustrate the increase on your graph.</p></li>
+        </ol>
+    </p>
+    <solution>
+    <ol>
+        <li><p>In 1990 the median price was <dollar />92,000.  Four years later, in 1994, the price had increased by <m>\alert{4}(4700)=18,800</m> dollars, so
+        <me>P=92,000+\alert{4}(4700)=110,800</me>
+        In 1998 the price had increased by <m>\alert{8}(4700)=37,600</m>  dollars, so
+        <me>P=92,000+\alert{8}(4700)-129,600</me>
+        You can verify the price of the house in 2000 by a similar calculation.</p>
+        <table xml:id="table-homeprice">
+            <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row bottom="minor">
+                    <cell><p>Year</p></cell>
+                    <cell><p>Price of House)</p></cell>
+                    <cell><m>(t,P)</m></cell>
+                </row>
+                <row> <cell>1990</cell><cell>92,000</cell><cell><m>(0, 92,000)</m></cell></row>
+                <row> <cell>1994</cell><cell>110,800</cell><cell><m>(4, 110,800)</m></cell></row>
+                <row> <cell>1998</cell><cell>129,600</cell><cell><m>(8, 129,600)</m></cell></row>
+                <row> <cell>2000</cell><cell>139,000</cell><cell><m>(10, 139,000)</m></cell></row>
+            </tabular>
+        </table>
+        </li>
+        <li><p>Let <m>t</m> stand for the number of years since 1990, so that <m>t=0</m> in 1990, <m>t=4</m> in 1994, and so on.  To choose scales for the axes,
+             look at the values in the table.  For this graph we scale the horizontal axis, or <m>t</m>-axis, in 1-year intervals and the vertical axis, or <m>P</m>-axis, for <dollar />90,000 to <dollar />140,000 in intervals of <dollar />5,000. The points in Figure 1. lie on a straight line.</p></li>
+         <li>
+            <p>Look back at the calculations in part (a).  The price of the house started at <dollar />92,000 in 1990 and increased by <m>t \times 4700</m> dollars after <m>t</m> years.  Thus,
+            <me>P=92,000+4700t</me></p>
+        </li>
+        <li>
+            <p>Find the points on the graph corresponding to 1990 and 1996.  These points lie above <m>t=0</m> and <m>t=6</m> on the <m>t</m>-axis.  Now find the values on the <m>P</m>-axis corresponding to the two points.  The values are <m>P=92,000</m> in 1990 and <m>P=120,200</m> in 1996.  The increase in price is the difference of the two <m>P</m>-values.
+            <md>
+                <mrow>\text{increase in price}\amp=120,200-92,000
+                </mrow><mrow>\amp=28,200</mrow></md>  
+            The price of the home increased <dollar />28,200 between 1990 and 1996.  This increase is indicated by the arrows in <xref ref="fig-median-house" autoname="yes"/> [ref].</p>
+            <figure xml:id="fig-median-house"><image source="images/fig1-3.svg" alt="grid"  width="50%"  />
+            <caption></caption></figure>
+        </li>
+    </ol>
+        
+    </solution>
+</example>
+
+
+    <p>The graphs in the preceding examples are <term>increasing graphs</term>.  As we move along the graph from left to right (in the direction of increasing <m>t</m> ), the second coordinate increases as well.  Try Exercise 3, which illustrates a <term>decreasing graph</term>.</p>
+   <exercise xml:id="Silver-Lake">
+    <statement>
+        <p>Silver Lake has been polluted by industrial waste products.  The concentration of toxic chemicals in the water is currently 285 parts per million (ppm).  Local environmental officials would like to reduce the concentration by 15 ppm each year</p>
+        <ol>
+            <li><p>Complete the table of values showing the desired concentration, <m>C,</m><nbsp /> of toxic chemicals <m>t</m> years from now.  For each <m>t</m>-value, calculate the corresponding value for <m>C</m>.  Write your answers as ordered pairs.</p>
+            <table xml:id="table-Silver-Lake">
+            <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row bottom="minor">
+                    <cell><p><m>t</m></p></cell>
+                    <cell><p><m>C</m></p></cell>
+                    <cell></cell>
+                    <cell><m>(t,C)</m></cell>
+                </row>
+                <row> 
+                    <cell>0</cell>
+                    <cell></cell>
+                    <cell><m>C=285-150(\alert{0})</m></cell>
+                    <cell><m>(0, ~~~~ )</m></cell>
+                </row>
+                <row> 
+                    <cell>5</cell>
+                    <cell></cell>
+                    <cell><m>C=285-150(\alert{5})</m></cell>
+                    <cell><m>(5, ~~~~ )</m></cell>
+                </row>
+                <row> 
+                    <cell>10</cell>
+                    <cell></cell>
+                    <cell><m>C=285-150(\alert{10})</m></cell>
+                    <cell><m>(10, ~~~~ )</m></cell>
+                </row>
+                <row> 
+                    <cell>15</cell>
+                    <cell></cell>
+                    <cell><m>C=285-150(\alert{15})</m></cell>
+                    <cell><m>(15, ~~~~ )</m></cell>
+                </row>
+            </tabular>
+            </table>
+            </li>
+            <li><p>To choose scales for the axes, notice that the value of <m>C</m> starts at 285 and decreases from there.  We'll scale the vertical axis up to 300, and use 10 tick marks at intervals of 30.  Graph the ordered pairs on the grid, and connect them with a straight line. Extend the graph until it reaches the horizontal axis, but no farther.  Points with negative <m>C</m>-coordinates have no meaning for the problem.</p></li>
+            <li><p>Write an equation for the concentration, <m>C</m>, of toxic chemicals <m>t</m> years from now.  (Hint:  The concentration is initially 8 ppm, and we subtract 15 ppm for each year that passes, or <m>15 \times t</m>.)</p>
+            <image source="images/fig-Exercise3.svg" alt="Y="  width="50%"  />
+            </li>
+        </ol>
+    </statement>
+</exercise>   
+</subsection>
+
+<remark>
+    <title>Graphing an Equation</title>
+    <p>We can use a graphing calculator to graph an equation. On most calculators, we follow three steps.</p>
+    <p>To Graph an Equation:</p>
+    <ol>
+        <li><p>Press <image source="images/y-equals.svg" alt="Y="  width="6%"  /> and enter the equation you wish to graph.</p></li>
+        <li><p>Press <image source="images/window.svg" alt="Window"  width="12%"  /> and select a suitable graphing window.</p></li>
+        <li><p>Press <image source="images/graph.svg" alt="Graph"  width="12%"  />.</p></li>
+    </ol>
+</remark>
+
+<example xml:id="graphing-calculator">
+    <title>Using a Graphing Calculator</title><line></line>
+    <p>In <xref ref="example-home-price" autoname="yes"/>, we found the equation <m>P = 92,000 + 4700t</m> for the median price of a house <m>t</m> years after 1990. Graph this equation on a calculator.</p>
+    <solution>
+        <p>
+            To begin, we press <image source="images/y-equals.svg" alt="Y="  width="6%"  /> and enter
+        </p>
+        <p text-align="center">
+             <me>Y1 = 92,000 + 4700X</me>
+        </p>
+        <p>For this graph, we’ll use the grid in <xref ref="example-home-price" autoname="yes"/> for our window settings, so we press <image source="images/window.svg" alt="Window"  width="12%"  /> and enter
+        </p>
+        <table>
+            <tabular>
+                <row>
+                    <cell>Xmin<m>=0</m></cell>
+                    <cell></cell>
+                    <cell>Xmax<m>=10</m></cell>
+                </row>
+                <row>
+                    <cell>Ymin<m>=90,000</m></cell>
+                    <cell></cell>
+                    <cell>Ymax<m>=140,000</m></cell>
+                </row>
+            </tabular>
+        </table><p>
+        Finally, we press <image source="images/graph.svg" alt="Graph"  width="12%"  />. The calculator’s graph is shown in <xref ref="fig-GC-house-price" autoname="yes"/>.</p>
+        <figure xml:id="fig-GC-house-price"><image source="images/fig-GC-house-price.svg" alt="grid"  width="50%"  /><caption></caption></figure>
+    </solution>
+</example>
+
+
+
+
+<subsection>
+    <title>Linear Equations</title>
+    <p>All the models in these examples have equations with a similar form:  <me>y=\text{(starting value)}+\text{(rate of change)}\cdot x</me>
+(We'll talk more about rate of change in Section 1.4.)  Their graphs were all portions of straight lines.  For this reason such equations are called <term>linear equations</term>.  The order of the terms in the equation does not matter.  For example, the equation in Example 1, <me>C=5+3t</me> can be written equivalently as <me>-3t+C=5</me> and the equation in Example 3, <me>P=92,000+4700t</me> can be written as <me>-4700+P=92,000</me> 
+This form of a linear equation, <me>Ax+By=C</me> is called the <term>general form</term>.</p>
+
+
+<paragraphs>
+    <title>General Form for a Linear Equation</title>
+    <line></line>
+    <p>The graph of any equation <me>Ax+By=C</me> where <m>A</m> and <m>B</m> are not both equal to zero, is a straight line.</p>
+</paragraphs>
+
+
+<example xml:id="example-advertising"><p>The manager at Albert's Appliances has <dollar />3000 to spend on advertising for the next fiscal quarter.  A 30-second spot on television costs <dollar />150 per broadcast, and a 30-second radio ad costs <dollar />50.</p> 
+    <ol>
+        <li><p>The manager decides to buy <m>x</m> television ads and <m>y</m> radio ads.  Write an equation relating <m>x</m> and <m>y</m>.</p></li>
+        <li><p>Make a table of values showing several choices for <m>x</m> and <m>y</m>.</p></li>
+        <li><p>Plot the points from your table, and graph the equation.</p></li>
+    </ol>
+    <solution>
+     <ol>
+        <li><p>Each television ad costs <dollar />150, so ads will cost <dollar />150.  Similarly, radio ads will cost <dollar />50.  The manager has <dollar />3000 to spend, so the sum of the costs must be <dollar />3000.  Thus, <me>150x+50y=3000</me></p></li>
+        <li><p>Choose some values of <m>x</m>, and solve the equation for the corresponding value of <m>y</m>  For example, if <m>x=\alert{10}</m> then
+               <md><mrow>150(10)+50y\amp=300</mrow>
+                <mrow>1500+50y\amp=3000</mrow>
+                <mrow>50y\amp=1500</mrow>
+                <mrow>y\amp=30</mrow></md>
+                If the manager buys 10 television ads, she can also buy 30 radio ads.  You can verify the other entries in the table.</p>
+                <table xml:id="table-television">
+                        <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                            <row bottom="minor">
+                            <cell><m>x</m></cell><cell>8</cell><cell>10</cell><cell>12</cell><cell>14</cell></row>
+                            <row> <cell><m>y</m></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+                        </tabular>
+                    </table></li>
+        <li><p>Plot the points from the table.  All the solutions lie on a straight line, as shown in <xref ref="fig-example-advertising" autoname="yes"/>
+.
+        <figure xml:id="fig-example-advertising"><image source="images/fig-example-advertising.svg" alt="grid"  width="50%"  /><caption></caption></figure></p></li>
+
+    </ol>
+      
+    </solution>
+</example>
+
+
+
+
+<exercise>
+    <statement>
+        <p>In central Nebraska, each acre of corn requires 25 acre-inches of water per year, and each acre of winter wheat requires 18 acre-inches of water.  
+            (An acre-inch is the amount of water needed to cover one acre of land to a depth of one inch.)  A farmer can count on 9000 acre-inches of water for the coming year.  (Source:  Institute of Agriculture and Natural Resources, University of Nebraska)
+            <ol>
+<li><p>Write an equation relating the number of acres of corn, <m>x</m>, and the number of acres of wheat, <m>y</m>, that the farmer can plant.</p></li>
+<li><p>Complete the table.</p>
+<table xml:id="table-wheat">
+                        <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                            <row bottom="minor">
+                            <cell><m>x</m></cell><cell>50</cell><cell>100</cell><cell>150</cell><cell>200</cell></row>
+                            <row> <cell><m>y</m></cell><cell></cell><cell></cell><cell></cell><cell></cell></row>
+                        </tabular>
+                    </table></li></ol></p></statement></exercise>
+</subsection>
+        
+<subsection>
+    <title>Intercepts</title>
+    <sidebyside>
+        <figure xml:id="fig-intercepts"><image source="images/fig-intercepts.svg" alt="intercepts"  width="90%"  /><caption></caption></figure>
+        <p>Consider the graph of the equation <me>3x-4y=12</me> shown in <xref ref="fig-intercepts" autoname="yes"/>. The points where the graph crosses the axes are called the <term>intercepts</term> of the graph. The coordinates of these points are easy to find.  The <m>y</m>-coordinate of the <m>x</m>-intercept is zero, so we set <m>y=\alert{0}</m> in the equation to get <md><mrow>3(\alert{0})-4x\amp=12</mrow><mrow>x=-3</mrow></md> 
+        </p>
+    </sidebyside>
+    <p>The <m>x</m>-intercept is the point<m>(-3,0)</m>. Also, the <m>x</m>-coordinate of the <m>y</m>-intercept is zero, so we set <m>x=\alert{0}</m> in the equation to get <md><mrow>3y-4(\alert{0})=12</mrow><mrow>y=4</mrow></md>  The <m>y</m>-intercept is <m>(0,4)</m>.</p> 
+
+    <paragraphs>
+        <title>Intercepts of a Graph</title>
+                <line></line>
+                <p>The points where a graph crosses the axes are called the <term>intercepts of the graph</term>.</p>
+                <ol>
+                    <li><p>To find the <m>y</m>-intercept, set <m>x=0</m> and solve for <m>y</m>.</p></li>
+                    <li><p>To find the <m>x</m>-intercept, set <m>y=0</m> and solve for <m>x</m>.</p></li>
+                </ol>
+            </paragraphs>
+            <p>The intercepts of a graph tell us something about the situation it models.</p>
+
+<example>
+    <ol >
+        <li><p>Find the intercepts of the graph in Exercise <xref ref="Silver-Lake" />, about the pollution in Silver Lake.</p></li>
+        <li><p>What do the intercepts tell us about the problem?</p></li>
+    </ol>
+    <solution>
+            <ol ><li><p>An equation for the concentration of toxic chemicals is <me>C=285-15t</me> To find the <m>C</m>-intercept, set <m>t</m> equal to zero. 
+
+            <me>C=285-15(0)=285</me>
+            The <m>C</m>-intercept is the point <m>(0, 285)</m>, or simply 285.  To find the <m>t</m>-intercept, set <m>C</m> equal to zero and solve for <m>t</m>.
+            <p>
+                \begin{align*}
+                \alert{0}<ampersand />=285-15t <ampersand /><ampersand />\text{Add }15t \text{ to both sides.}<backslash /><backslash />
+                15t<ampersand />=285  <ampersand /><ampersand />\text{Divide both sides by 15.}<backslash /><backslash />
+                t<ampersand />=19   <ampersand /><ampersand /> 
+                \end{align*}
+            </p>
+        The <m>t</m>-intercept is the point <m>(19,0)</m>, or simply <m>19</m>.</p></li>
+    
+    <li><p>The <m>C</m>-intercept represents the concentration of toxic chemicals in Silver Lake now:  When  <m>t=0</m>, <m>C=285</m>,  so the concentration is currently <m>285</m> ppm.  The <m>t</m>-intercept represents the number of years it will take for the concentration of toxic chemicals to drop to zero:  When <m>C=0</m>, <m>t=19</m>,  so it will take <m>19</m> years for the pollution to be eliminated entirely.</p>
+    </li></ol>   
+        
+    </solution>
+</example>
+
+
+<exercise>
+    <statement>
+        <ol>
+            <li><p>Find the intercepts of the graph in <xref ref="example-advertising" autoname="yes"/>, about the advertising budget for Albert’s Appliances: <m>150x + 50y = 3000</m>.</p></li>
+            <li><p>What do the intercepts tell us about the problem?</p></li>
+        </ol>
+    </statement>
+</exercise>
+
+ 
+
+
+
+
+
+
+
+</subsection>
+</section>
+</chapter></book></mathbook>
