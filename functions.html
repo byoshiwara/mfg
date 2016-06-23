@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-06-19T20:09:21-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG Functions</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic%7CSource+Code+Pro:400" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\alert}[1]{\mathbf{\color{magenta}{#1}}}
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+
+\newcommand\degree[0]{^{\circ}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading">
+<span class="title">Modeling, Functions, and Graphs</span><span class="subtitle">Algebra for College Students</span>
+</h1>
+<p class="byline">Katherine Yoshiwara</p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="LinMod.html">Previous</a><a class="up-button button toolbar-item" href="chap1.html">Up</a><a class="next-button button toolbar-item" href="graphs-of-functions.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="LinMod.html">Previous</a><a class="up-button button toolbar-item" href="chap1.html">Up</a><a class="next-button button toolbar-item" href="graphs-of-functions.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="biography-1.html">Author Biography</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
+<li><a href="preface-2.html">Contributors to the 5\(^\mathrm{th}\) Edition</a></li>
+</ul>
+<h2 class="link active"><a href="chap1.html"><span class="codenumber">1</span><span class="title">Functions and Their Graphs</span></a></h2>
+<ul>
+<li><a href="LinMod.html">Linear Models</a></li>
+<li><a href="functions.html" class="active">Functions</a></li>
+<li><a href="graphs-of-functions.html">Graphs of Functions</a></li>
+<li><a href="slope-and-rate-of-change.html">Slope and Rate of Change</a></li>
+<li><a href="linear-functions.html">Linear Functions</a></li>
+<li><a href="linear-regression.html">Linear Regression</a></li>
+</ul>
+<h2 class="link"><a href="chap2.html"><span class="codenumber">2</span><span class="title">Modeling with Functions</span></a></h2>
+<ul>
+<li><a href="nonlinear-models.html">Nonlinear Models</a></li>
+<li><a href="basic-functions.html">Some Basic Functions</a></li>
+<li><a href="transformations.html">Transformations of Graphs</a></li>
+<li><a href="MathModels.html">Functions as Mathematical Models</a></li>
+<li><a href="AbsoluteValue.html">The Absolute Value Function</a></li>
+<li><a href="Domain-Range.html">Domain and Range</a></li>
+</ul>
+<h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="colophon-2.html"><span class="title">Colophon</span></a></h2>
+<ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="functions"><header><h1 class="heading hide-type">
+<span class="type">Section</span><span class="codenumber">1.2</span><span class="title">Functions</span><a href="functions.html" class="permalink">¶ permalink</a>
+</h1></header><section class="subsection" id="subsection-6"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.2.1</span><span class="title">Definition of Function</span>
+</h1></header><p id="p-129">
+    We often want to predict values of one variable from the values of a related variable. For example, when a physician prescribes a drug in a certain dosage, she needs to know how long the dose will remain in the bloodstream. A sales manager needs to know how the price of his product will affect its sales. A <em class="terminology">function</em> is a special type of relationship between variables that allows us to make such predictions.</p>
+<p id="p-130">
+    Suppose it costs $800 for flying lessons, plus $30 per hour to rent a plane. If we let \(C\) represent the total cost for t hours of flying lessons, then
+    <div class="displaymath" id="me-18">\begin{equation*}C=800+305t ~~~~ (t\ge 0)\end{equation*}</div>
+    Thus, for example
+</p>
+<figure class="figure-like" id="table-11"><table>
+<tr>
+<td class="r m b0 r0 l0 t0">when</td>
+<td class="l m b0 r0 l0 t0">\(t=\alert{0}\),</td>
+<td class="l m b0 r0 l0 t0">\(C=800+30(\alert{0})=800\)</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0">when</td>
+<td class="l m b0 r0 l0 t0">\(t=\alert{4}\),</td>
+<td class="l m b0 r0 l0 t0">\(C=800+30(\alert{4})=920\)</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0">when</td>
+<td class="l m b0 r0 l0 t0">\(t=\alert{10}\),</td>
+<td class="l m b0 r0 l0 t0">\(C=800+30(\alert{10})=1100\)</td>
+</tr>
+</table></figure><p id="p-131">
+    The variable \(t\) is called the <em class="terminology">input</em> or <em class="terminology">independent</em> variable, and \(C\) is the <em class="terminology">output</em> or <em class="terminology">dependent</em> variable, because its values are determined by the value of \(t\). We can display the relationship between two variables by a table or by ordered pairs. The input variable is the first component of the ordered pair, and the output variable is the second component.
+</p>
+<figure class="figure-like" id="table-12"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(t\)</td>
+<td class="c m b1 r1 l0 t3">\(C\)</td>
+<td class="c m b1 r1 l0 t3">\((t,C)\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(800\)</td>
+<td class="c m b1 r1 l0 t0">\((0, 800)\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(920\)</td>
+<td class="c m b1 r1 l0 t0">\((4, 920)\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(10\)</td>
+<td class="c m b1 r1 l0 t0">\(1100\)</td>
+<td class="c m b1 r1 l0 t0">\((10,1100)\)</td>
+</tr>
+</table></figure><p id="p-132">
+    For this relationship, we can find the value \(C\) of associated with any given value of \(t\). All we have to do is substitute the value of \(t\) into the equation and solve for \(C\). The result has no ambiguity: Only one value for \(C\) corresponds to each value of \(t\). This type of relationship between variables is called a <em class="terminology">function</em>. In general, we make the following definition.
+</p>
+<article class="definition-like" id="definition-function"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">1.2.1</span>
+</h5>
+<p id="p-133">Definition of Function</p>
+<p id="p-134">A <em class="terminology">function</em> is a relationship between two variables for which a unique value of the <em class="terminology">output</em> variable can be determined from a value of the <em class="terminology">input</em> variable.
+    </p></article><p id="p-135">
+    What distinguishes functions from other variable relationships? The definition of a function calls for a <!--Style me with CSS--><em>unique value</em>—that is, <!--Style me with CSS--><em>exactly one value</em> of the output variable corresponding to each value of the input variable. This property makes functions useful in applications because they can often be used to make predictions.
+</p>
+<article class="example-like" id="example-functions"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.2.2</span>
+</h5>
+<p id="p-136">
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-73"><p id="p-137">The distance, \(d\), traveled by a car in 2 hours is a function of its speed, \(r\). If we know the speed of the car, we can determine the distance it travels by the formula \(d = r \cdot 2\).</p></li>
+<li id="li-74"><p id="p-138">The cost of a fill-up with unleaded gasoline is a function of the number of gallons purchased. The gas pump represents the function by displaying the corresponding values of the input variable (number of gallons) and the output variable (cost).</p></li>
+<li id="li-75"><p id="p-139">Score on the Scholastic Aptitude Test (SAT) is not a function of score on an IQ test, because two people with the same score on an IQ test may score differently on the SAT; that is, a person’s score on the SAT is not uniquely determined by his or her score on an IQ test.</p></li>
+</ol>
+
+    </p></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-functions" id="exercise-functions"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.2.3</span>
+</h5></a></div>
+<div id="hk-exercise-functions" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-140">
+    <ol style="list-style-type: lower-alpha;">
+<li id="li-76"><p id="p-141">As part of a project to improve the success rate of freshmen, the counseling department studied the grades earned by a group of students in English and algebra. Do you think that a student’s grade in algebra is a function of his or her grade in English? Explain why or why not.</p></li>
+<li id="li-77"><p id="p-142">Phatburger features a soda bar, where you can serve your own soft drinks in any size. Do you think that the number of calories in a serving of Zap Kola is a function of the number of fluid ounces? Explain why or why not.</p></li>
+</ol></p></article><div class="hidden-knowl-wrapper"></div>
+</div>
+
+A function can be described in several different ways. In the following examples, we consider functions defined by tables, by graphs, and by equations.
+</section><section class="subsection" id="subsection-7"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.2.2</span><span class="title">Functions Defined by Tables</span>
+</h1></header><p id="p-143">When we use a table to describe a function, the first variable in the table (the left column of a vertical table or the top row of a horizontal table) is the input variable, and the second variable is the output. We say that the output variable is a function of the input.</p>
+<article class="example-like" id="example-table-functions"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.2.4</span>
+</h5>
+<ol style="list-style-type: lower-alpha;">
+<li id="li-78">
+<p id="p-144"><a knowl="./knowl/table-auto-sales.html" knowl-id="xref-table-auto-sales" alt="Table 1.2.5 " title="Table 1.2.5 ">Table 1.2.5</a> shows data on sales compiled over several years by the accounting office for Eau Claire Auto Parts, a division of Major Motors. In this example, the year is the input variable, and total sales is the output. We say that total sales, \(S\), is a function of \(t\).</p>
+<figure class="figure-like" id="table-auto-sales"><table>
+<tr>
+<td class="c m b1 r1 l1 t3"><p id="p-145">Year \((t)\)</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-146">Total sales \((S)\)</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">2000</td>
+<td class="c m b1 r1 l0 t0">$612,000</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">2001</td>
+<td class="c m b1 r1 l0 t0">$663,000</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">2002</td>
+<td class="c m b1 r1 l0 t0">$692,000</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">2003</td>
+<td class="c m b1 r1 l0 t0">$749,000</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">2004</td>
+<td class="c m b1 r1 l0 t0">$904,000</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.2.5</span></figcaption></figure>
+</li>
+<li id="li-79">
+<p id="p-147"><a knowl="./knowl/table-postage.html" knowl-id="xref-table-postage" alt="Table 1.2.6 " title="Table 1.2.6 ">Table 1.2.6</a> gives the cost of sending printed material by first-class mail in 2016. </p>
+<figure class="figure-like" id="table-postage"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">Weight in ounces \((w)\)</td>
+<td class="c m b1 r1 l0 t3">Postage \((P)\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0 \lt w \le 1 \)</td>
+<td class="c m b1 r1 l0 t0">$0.47</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1 \lt w \le 2 \)</td>
+<td class="c m b1 r1 l0 t0">$0.68</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(2 \lt w \le 3 \)</td>
+<td class="c m b1 r1 l0 t0">$0.89</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(3 \lt w \le 4 \)</td>
+<td class="c m b1 r1 l0 t0">$1.10</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(4 \lt w \le 5 \)</td>
+<td class="c m b1 r1 l0 t0">$1.31</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(5 \lt w \le 6 \)</td>
+<td class="c m b1 r1 l0 t0">$1.52</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(6 \lt w \le 7 \)</td>
+<td class="c m b1 r1 l0 t0">$1.73</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.2.6</span></figcaption></figure><p id="p-148">If we know the weight of the article being shipped, we can determine the required postage from <a knowl="./knowl/table-postage.html" knowl-id="xref-table-postage" alt="Table 1.2.6 " title="Table 1.2.6 ">Table 1.2.6</a>. For instance, a catalog weighing 4.5 ounces would require $1.31 in postage. In this example, \(w\) is the input variable and \(p\) is the output variable. We say that \(p\) <!--Style me with CSS--><em>is a function of</em> \(w\).</p>
+</li>
+<li id="li-80">
+<p id="p-149"><a knowl="./knowl/table-cholesterol.html" knowl-id="xref-table-cholesterol" alt="Table 1.2.7 " title="Table 1.2.7 ">Table 1.2.7</a> records the age and cholesterol count for 20 patients tested in a hospital survey.</p>
+<figure class="figure-like" id="table-cholesterol"><table>
+<tr>
+<td class="c m b1 r1 l1 t3"><p id="p-150">Age</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-151">Cholesterol count</p></td>
+<td class="c m b1 r1 l0 t3"></td>
+<td class="c m b1 r1 l0 t3"><p id="p-152">Age</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-153">Cholesterol count</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">53</td>
+<td class="c m b1 r1 l0 t0">217</td>
+<td class="c m b1 r1 l0 t0"></td>
+<td class="c m b1 r1 l0 t0">\(\alert{51}\)</td>
+<td class="c m b1 r1 l0 t0">\(\alert{209}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">48</td>
+<td class="c m b1 r1 l0 t0">232</td>
+<td class="c m b1 r1 l0 t0"></td>
+<td class="c m b1 r1 l0 t0">53</td>
+<td class="c m b1 r1 l0 t0">241</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">55</td>
+<td class="c m b1 r1 l0 t0">198</td>
+<td class="c m b1 r1 l0 t0"></td>
+<td class="c m b1 r1 l0 t0">49</td>
+<td class="c m b1 r1 l0 t0">186</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">56</td>
+<td class="c m b1 r1 l0 t0">238</td>
+<td class="c m b1 r1 l0 t0"></td>
+<td class="c m b1 r1 l0 t0">\(\alert{51}\)</td>
+<td class="c m b1 r1 l0 t0">\(\alert{216}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(\alert{51}\)</td>
+<td class="c m b1 r1 l0 t0">\(\alert{227}\)</td>
+<td class="c m b1 r1 l0 t0"></td>
+<td class="c m b1 r1 l0 t0">57</td>
+<td class="c m b1 r1 l0 t0">208</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">52</td>
+<td class="c m b1 r1 l0 t0">264</td>
+<td class="c m b1 r1 l0 t0"></td>
+<td class="c m b1 r1 l0 t0">52</td>
+<td class="c m b1 r1 l0 t0">248</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">53</td>
+<td class="c m b1 r1 l0 t0">195</td>
+<td class="c m b1 r1 l0 t0"></td>
+<td class="c m b1 r1 l0 t0">50</td>
+<td class="c m b1 r1 l0 t0">214</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">47</td>
+<td class="c m b1 r1 l0 t0">203</td>
+<td class="c m b1 r1 l0 t0"></td>
+<td class="c m b1 r1 l0 t0">56</td>
+<td class="c m b1 r1 l0 t0">271</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">48</td>
+<td class="c m b1 r1 l0 t0">212</td>
+<td class="c m b1 r1 l0 t0"></td>
+<td class="c m b1 r1 l0 t0">53</td>
+<td class="c m b1 r1 l0 t0">193</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">50</td>
+<td class="c m b1 r1 l0 t0">234</td>
+<td class="c m b1 r1 l0 t0"></td>
+<td class="c m b1 r1 l0 t0">48</td>
+<td class="c m b1 r1 l0 t0">172</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.2.7</span></figcaption></figure><p id="p-154">According to these data, cholesterol count is <!--Style me with CSS--><em>not</em> a function of age, because several patients who are the same age have different cholesterol levels. For example, three different patients are 51 years old but have cholesterol counts of 227, 209, and 216, respectively. Thus, we cannot determine a <!--Style me with CSS--><em>unique</em> value of the output variable (cholesterol count) from the value of the input variable (age). Other factors besides age must influence a person’s cholesterol count.</p>
+</li>
+</ol></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-9" id="exercise-9"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.2.8</span>
+</h5></a></div>
+<div id="hk-exercise-9" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">Decide whether each table describes \(y\) as a function of \(x\). Explain your choice.
+    <ol style="list-style-type: lower-alpha;">
+<li id="li-81"><figure class="figure-like" id="table-16"><table>
+<tr>
+<td class="c m b1 r1 l1 t3"><p id="p-155">\(x\)</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-156">3.5</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-157">2.0</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-158">2.5</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-159">3.5</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-160">2.5</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-161">4.0</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-162">2.5</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-163">3.0</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0"><p id="p-164">\(y\)</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-165">2.5</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-166">3.0</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-167">2.5</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-168">4.0</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-169">3.5</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-170">4.0</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-171">2.0</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-172">2.5</p></td>
+</tr>
+</table></figure></li>
+<li id="li-82"><figure class="figure-like" id="table-17"><table>
+<tr>
+<td class="c m b1 r1 l1 t3"><p id="p-173">\(x\)</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-174">\(-3\)</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-175">\(-2\)</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-176">\(-1\)</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-177">\(0\)</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-178">\(1\)</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-179">\(2\)</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-180">\(3\)</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0"><p id="p-181">\(y\)</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-182">\(17\)</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-183">\(3\)</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-184">\(0\)</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-185">\(-1\)</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-186">\(0\)</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-187">\(3\)</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-188">\(17\)</p></td>
+</tr>
+</table></figure></li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-8"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.2.3</span><span class="title">Functions Defined by Graphs</span>
+</h1></header><p id="p-189">
+    A graph may also be used to define one variable as a function of another. The input variable is displayed on the horizontal axis, and the output variable on the vertical axis.
+</p>
+<article class="example-like" id="example-sun-hours"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.2.9</span>
+</h5>
+<p id="p-190"><a knowl="./knowl/fig-sun-hours.html" knowl-id="xref-fig-sun-hours" alt="Figure 1.2.10 " title="Figure 1.2.10 ">Figure 1.2.10</a>  shows the number of hours, \(H\), that the sun is above the horizon in Peoria, Illinois, on day \(t\), where January 1 corresponds to \(t = 0\).</p>
+<div class="sidebyside" id="sidebyside-4">
+<article class="paragraphs" id="paragraphs-5" style="width:48%;vertical-align:bottom;text-align:left;"><h5 class="heading"><span class="title"></span></h5>
+<ol style="list-style-type: lower-alpha;">
+<li id="li-83"><p id="p-191">Which variable is the input, and which is the output?</p></li>
+<li id="li-84"><p id="p-192">Approximately how many hours of sunlight are there in Peoria on day 150?</p></li>
+<li id="li-85"><p id="p-193">On which days are there 12 hours of sunlight?</p></li>
+<li id="li-86"><p id="p-194">What are the maximum and minimum values of \(H\), and when do these valuesoccur?</p></li>
+</ol></article><figure class="right" id="fig-sun-hours" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-sun-hours.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.2.10</span></figcaption></figure>
+</div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-8" id="solution-8"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-8" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+<li id="li-87"><p id="p-195">The input variable, \(t\), appears on the horizontal axis. The number of daylight hours, \(H\), is a function of the date. The output variable appears on the vertical axis.</p></li>
+<li id="li-88"><p id="p-196">The point on the curve where \(t = 150\) has \(H \approx 14.1\), so Peoria gets about 14.1 hours of daylight when \(t = 150\), which is at the end of May.</p></li>
+<li id="li-89"><p id="p-197">\(H = 12\) at the two points where \(t \approx 85\) (in late March) and \(t \approx 270\) (late September).</p></li>
+<li id="li-90"><p id="p-198">The maximum value of 14.4 hours occurs on the longest day of the year, when \(t \approx 170\), about three weeks into June. The minimum of 9.6 hours occurs on the shortest day, when \(t \approx 355\), about three weeks into December.</p></li>
+</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-LA-marathon" id="exercise-LA-marathon"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.2.11</span>
+</h5></a></div>
+<div id="hk-exercise-LA-marathon" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><a knowl="./knowl/fig-LA-marathon.html" knowl-id="xref-fig-LA-marathon" alt="Figure 1.2.12 " title="Figure 1.2.12 ">Figure 1.2.12</a>  shows the elevation in feet, \(a\), of the Los Angeles Marathon course at a distance \(d\) miles into the race. (Source: <!--Style me with CSS--><em>Los Angeles Times</em>, March 3, 2005)
+    <figure class="figure-like" id="fig-LA-marathon"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-LA-marathon.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.2.12</span></figcaption></figure><ol style="list-style-type: lower-alpha;">
+<li id="li-91"><p id="p-199">Which variable is the input, and which is the output?</p></li>
+<li id="li-92"><p id="p-200">What is the elevation at mile 20?</p></li>
+<li id="li-93"><p id="p-201">At what distances is the elevation 150 feet?</p></li>
+<li id="li-94"><p id="p-202">What are the maximum and minimum values of \(a\), and when do these values occur?</p></li>
+<li id="li-95"><p id="p-203">The runners pass by the Los Angeles Coliseum at about 4.2 miles into the race. What is the elevation there?</p></li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-9"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.2.4</span><span class="title">Functions Defined by Equations</span>
+</h1></header><p id="p-204"> illustrates a function defined by an equation.</p>
+<article class="example-like" id="example-falling-book"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.2.13</span>
+</h5>
+<p id="p-205">As of 2016,  One World Trade Center in New York City is the nation’s tallest building, at 1776 feet. If an algebra book is dropped from the top of the Sears Tower, its height above the ground after \(t\) seconds is given by the equation <div class="displaymath" id="me-19">\begin{equation*}h = 1776 − 16t^2\end{equation*}</div> Thus, after \(\alert{1}\) second the book’s height is <div class="displaymath" id="me-20">\begin{equation*}h = 1776 − 16(\alert{1})^2 = 1760 \text{ feet}\end{equation*}</div> After \(\alert{2}\) seconds its height is <div class="displaymath" id="me-21">\begin{equation*}h = 1776 − 16(\alert{2})^2 = 1712 \text{ feet}\end{equation*}</div> For this function, \(t\) is the input variable and \(h\) is the output variable. For any value of \(t\), a unique value of \(h\) can be determined from the equation for \(h\). We say that \(h\) <!--Style me with CSS--><em>is a function of</em> \(t\).</p></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-11" id="exercise-11"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.2.14</span>
+</h5></a></div>
+<div id="hk-exercise-11" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">Write an equation that gives the volume, \(V\), of a sphere as a function of its radius, \(r\).
+</article><div class="hidden-knowl-wrapper"></div>
+</div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-remark-3" id="remark-3"><article class="example-like"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.2.15</span><span class="title"><object type="image/svg+xml" style="width:8%; margin:auto; display:block;" data="images/icon-GC.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>Making a Table of Values with a Calculator</span>
+</h5></article></a></div>
+<div id="hk-remark-3" style="display: none;" class="tex2jax_ignore"><article class="example-like"><p id="p-206">We can use a graphing calculator to make a table of values for a function defined by an equation. For the function in <a knowl="./knowl/example-falling-book.html" knowl-id="xref-example-falling-book" alt="Example 1.2.13 " title="Example 1.2.13 ">Example 1.2.13</a>, 
+    <div class="displaymath" id="me-22">\begin{equation*}h = 1776 − 16t^2\end{equation*}</div>
+    we begin by entering the equation: Press the <object type="image/svg+xml" style="width:6%; margin:auto; display:block;" data="images/y-equals.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> key, clear out any other equations, and define \(Y_1 = 1776 − 16X^2.\)</p>
+<p id="p-207">Next, we choose the \(x\)-values for the table. Press <object type="image/svg+xml" style="width:6%; margin:auto; display:block;" data="images/icon-2nd.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> <object type="image/svg+xml" style="width:12%; margin:auto; display:block;" data="images/window.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> to access the TblSet (Table Setup) menu and set it to look like <a knowl="./knowl/fig-TblSetup.html" knowl-id="xref-fig-TblSetup" alt="Figure 1.2.16 " title="Figure 1.2.16 ">Figure 1.2.16</a>. This setting will give us an initial x-value of 0 \((TblStart = 0)\) and an increment of one unit in the x-values, \((\Delta Tbl = 1)\). It also fills in values of both variables automatically. Now press <object type="image/svg+xml" style="width:6%; margin:auto; display:block;" data="images/icon-2nd.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> <object type="image/svg+xml" style="width:12%; margin:auto; display:block;" data="images/graph.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> to see the table of values, as shown in <a knowl="./knowl/fig-GC-table.html" knowl-id="xref-fig-GC-table" alt="Figure 1.2.17 " title="Figure 1.2.17 ">Figure 1.2.17</a>. From this table, we can check the heights we found in <a knowl="./knowl/example-falling-book.html" knowl-id="xref-example-falling-book" alt="Example 1.2.13 " title="Example 1.2.13 ">Example 1.2.13</a>. Now try making a table of values with \(TblStart = 0\) and \(\Delta Tbl = 0.5\). Use the <object type="image/svg+xml" style="width:4%; margin:auto; display:block;" data="images/icon-up.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> and <object type="image/svg+xml" style="width:4%; margin:auto; display:block;" data="images/icon-down.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> keys to scroll up and down the table.
+    </p>
+<div class="sidebyside" id="sidebyside-5">
+<figure class="left" id="fig-TblSetup" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-TblSetup.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.2.16</span></figcaption></figure><figure class="right" id="fig-GC-table" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-GC-table.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.2.17</span></figcaption></figure>
+</div></article></div></section><section class="subsection" id="subsection-10"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.2.5</span><span class="title">Function Notation</span>
+</h1></header><p id="p-208">There is a convenient notation for discussing functions. First, we choose a letter, such as \(f\), \(g\), or \(h\) (or \(F\), \(G\), or \(H\)), to name a particular function. (We can use any letter, but these are
+the most common choices.) For instance, in <a knowl="./knowl/example-falling-book.html" knowl-id="xref-example-falling-book" alt="Example 1.2.13 " title="Example 1.2.13 ">Example 1.2.13</a>, the height, \(h\), of a falling algebra book is a function of the elapsed time, \(t\). We might call this function \(f\). In other words, \(f\) is the name of the relationship between the variables \(h\) and \(t\). We write 
+<div class="displaymath" id="me-23">\begin{equation*}h = f (t)\end{equation*}</div>
+which means "\(h\) is a function of \(t\), and \(f\) is the name of the function."</p>
+<p id="p-209">The new symbol \(f(t)\), read "\(f\) of \(t\)," is another name for the height, \(h\). The parentheses in the symbol \(f(t)\) do not indicate multiplication. (It would not make sense to multiply the name of a function by a variable.) Think of the symbol \(f(t)\) as a single variable that represents
+the output value of the function.</p>
+<p id="p-210">With this new notation we may write
+<div class="displaymath" id="me-24">\begin{equation*}h = f (t) = 1776 − 16t^2\end{equation*}</div>
+or just
+<div class="displaymath" id="me-25">\begin{equation*}f (t) = 1776 − 16t^2\end{equation*}</div>
+instead of
+<div class="displaymath" id="me-26">\begin{equation*}h = 1776 − 16t^2\end{equation*}</div>
+to describe the function.</p>
+<p id="p-211">Perhaps it seems complicated to introduce a new symbol for \(h\), but the notation \(f(t)\) is very useful for showing the correspondence between specific values of the variables \(h\) and \(t\).
+</p>
+<article class="example-like" id="example-falling-book-2"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.2.18</span>
+</h5>
+<p id="p-212">In <a knowl="./knowl/example-falling-book.html" knowl-id="xref-example-falling-book" alt="Example 1.2.13 " title="Example 1.2.13 ">Example 1.2.13</a>, the height of an algebra book dropped from the top of the Sears Tower is given by the equation
+    <div class="displaymath" id="me-27">\begin{equation*}h = 1776 − 16t^2\end{equation*}</div>
+We see that</p>
+<figure class="figure-like" id="table-18"><table>
+<tr>
+<td class="l m b0 r0 l0 t0">when \(t=1\)</td>
+<td class="l m b0 r0 l0 t0"></td>
+<td class="l m b0 r0 l0 t0">\(h=1760\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0">when \(t=2\)</td>
+<td class="l m b0 r0 l0 t0"></td>
+<td class="l m b0 r0 l0 t0">\(h=1712\)</td>
+</tr>
+</table></figure><p id="p-213">Using function notation, these relationships can be expressed more concisely as</p>
+<figure class="figure-like" id="table-19"><table><tr>
+<td class="l m b0 r0 l0 t0">\(f(1)=1760\)</td>
+<td class="l m b0 r0 l0 t0"> and </td>
+<td class="l m b0 r0 l0 t0">\(f(2)=1712\)</td>
+</tr></table></figure><p id="p-214">which we read as "\(f\) of 1 equals 1760" and "\(f\) of 2 equals 1712." The values for the input variable, \(t\), appear <!--Style me with CSS--><em>inside</em> the parentheses, and the values for the output variable, \(h\), appear on the other side of the equation.</p></article><p id="p-215">Remember that when we write \(y = f(x)\), the symbol \(f(x)\) is just another name for the output variable.</p>
+<article class="paragraphs" id="paragraphs-6"><h5 class="heading"><span class="title">Function Notation</span></h5>
+<object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-Function-Notation.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-12" id="exercise-12"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.2.19</span>
+</h5></a></div>
+<div id="hk-exercise-12" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">Let \(F\) be the name of the function defined by the graph in <a knowl="./knowl/example-sun-hours.html" knowl-id="xref-example-sun-hours" alt="Example 1.2.9 " title="Example 1.2.9 ">Example 1.2.9</a>, the number of hours of daylight in Peoria.
+<ol style="list-style-type: lower-alpha;">
+<li id="li-96"><p id="p-216">Use function notation to state that \(H\) is a function of \(t\).</p></li>
+<li id="li-97"><p id="p-217">What does the statement \(F(15) = 9.7\) mean in the context of the problem?</p></li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-11"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.2.6</span><span class="title">Evaluating a Function</span>
+</h1></header><p id="p-218">
+    Finding the value of the output variable that corresponds to a particular value of the input variable is called <em class="terminology">evaluating the function</em>.
+</p>
+<article class="example-like" id="example-postage2"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.2.20</span>
+</h5>
+<p id="p-219">Let \(g\) be the name of the postage function defined by <a knowl="./knowl/table-postage.html" knowl-id="xref-table-postage" alt="Table 1.2.6 " title="Table 1.2.6 ">Table 1.2.6</a>  in <a knowl="./knowl/example-functions.html" knowl-id="xref-example-functions" alt="Example 1.2.2 " title="Example 1.2.2 ">Example 1.2.2</a>. Find \(g(1)\), \(g(3)\), and \(g(6.75\)).</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-9" id="solution-9"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-9" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-220">According to the table,
+    <figure class="figure-like" id="table-20"><table>
+<tr>
+<td class="l m b0 r0 l0 t0">when \(w=1\),</td>
+<td class="l m b0 r0 l0 t0"></td>
+<td class="l m b0 r0 l0 t0">\(p=0.47\)</td>
+<td class="l m b0 r0 l0 t0"> so </td>
+<td class="l m b0 r0 l0 t0">\(g(1)=0.47\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0">when \(w=3\),</td>
+<td class="l m b0 r0 l0 t0"></td>
+<td class="l m b0 r0 l0 t0">\(p=0.89\)</td>
+<td class="l m b0 r0 l0 t0"> so </td>
+<td class="l m b0 r0 l0 t0">\(g(3)=0.89\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0">when \(w=6.75\),</td>
+<td class="l m b0 r0 l0 t0"></td>
+<td class="l m b0 r0 l0 t0">\(p=1.73\)</td>
+<td class="l m b0 r0 l0 t0"> so </td>
+<td class="l m b0 r0 l0 t0">\(g(6.75)=1.73\)</td>
+</tr>
+</table></figure>
+     Thus, a letter weighing 1 ounce costs $0.47 to mail, a letter weighing 3 ounces costs $0.89, and a letter weighing 6.75 ounces costs $1.73.</p></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-heart-rate" id="exercise-heart-rate"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.2.21</span>
+</h5></a></div>
+<div id="hk-exercise-heart-rate" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+    When you exercise, your heart rate should increase until it reaches your target heart rate. The table shows target heart rate, \(r = f(a)\), as a function of age. 
+    <figure class="figure-like" id="table-21"><table>
+<tr>
+<td class="c m b1 r1 l1 t3"><p id="p-221">\(a\)</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-222">20</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-223">25</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-224">30</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-225">35</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-226">40</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-227">45</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-228">50</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-229">55</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-230">60</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-231">65</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-232">70</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0"><p id="p-233">\(r\)</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-234">150</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-235">146</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-236">142</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-237">139</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-238">135</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-239">131</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-240">127</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-241">124</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-242">120</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-243">116</p></td>
+<td class="c m b1 r1 l0 t0"><p id="p-244">112</p></td>
+</tr>
+</table></figure><ol style="list-style-type: lower-alpha;">
+<li id="li-98"><p id="p-245">Find \(f(25)\) and \(f(50)\).</p></li>
+<li id="li-99"><p id="p-246">Find a value of \(a\) for which \(f(a) = 135\).</p></li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<p id="p-247">If a function is described by an equation, we simply substitute the given input value into the equation to find the corresponding output, or function value.</p>
+<article class="example-like" id="example-evaluate-function"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.2.22</span>
+</h5>
+<p id="p-248">The function \(H\) is defined by \(H=f(s) = \frac{\sqrt{s+3}}{s}\). Evaluate the function at the following values.</p>
+<ol style="list-style-type: lower-alpha;">
+<li id="li-100"><p id="p-249">\(s=6\)</p></li>
+<li id="li-101"><p id="p-250">\(s=-1\)</p></li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-10" id="solution-10"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-10" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+<li id="li-102"><p id="p-251">\(f(\alert{6})=\frac{\sqrt{\alert{6}+3}}{\alert{6}}=
+            \frac{\sqrt{9}}{6}=\frac{3}{6}=\frac{1}{2}\). Thus, \(f(6)=\frac{1}{2}\).</p></li>
+<li id="li-103"><p id="p-252">\(f(\alert{-1})=\frac{\sqrt{\alert{-1}+3}}{\alert{-1}}=
+            \frac{\sqrt{2}}{-1}=-\sqrt{2}\). Thus, \(f(-1)=-\sqrt{2}\).</p></li>
+</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-function-notation" id="exercise-function-notation"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.2.23</span>
+</h5></a></div>
+<div id="hk-exercise-function-notation" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+    Complete the table displaying ordered pairs for the function \(f(x) = 5 − x^3\). Evaluate the function to find the corresponding \(f(x)\)-value for each value of \(x\).
+    <figure class="figure-like" id="table-22"><table>
+<tr>
+<td class="c m b1 r1 l1 t3"><p id="p-253">\(x\)</p></td>
+<td class="c m b1 r1 l0 t3"><p id="p-254">\(f(x)\)</p></td>
+<td class="l m b1 r1 l0 t3"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-2\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="l m b1 r1 l0 t0">\(f(\alert{-2})=5-(\alert{-2})^3=~\) </td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="l m b1 r1 l0 t0">\(f(\alert{0})=5-\alert{0}^3=\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="l m b1 r1 l0 t0">\(f(\alert{1})=5-\alert{1}^3=\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(3\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="l m b1 r1 l0 t0">\(f(\alert{3})=5-\alert{3}^3=\)</td>
+</tr>
+</table></figure></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-remark-4" id="remark-4"><article class="example-like"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.2.24</span><span class="title"><object type="image/svg+xml" style="width:8%; margin:auto; display:block;" data="images/icon-GC.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>Evaluating a Function</span>
+</h5></article></a></div>
+<div id="hk-remark-4" style="display: none;" class="tex2jax_ignore"><article class="example-like"><p id="p-255">We can use the table feature on a graphing calculator to evaluate functions. Consider the function of <a knowl="./knowl/exercise-function-notation.html" knowl-id="xref-exercise-function-notation" alt="Exercise 1.2.23 " title="Exercise 1.2.23 ">Exercise 1.2.23</a>, \(f(x) = 5 − x^3\).</p>
+<p id="p-256">Press <object type="image/svg+xml" style="width:6%; margin:auto; display:block;" data="images/y-equals.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>, clear any old functions, and enter
+    <div class="displaymath" id="me-28">\begin{equation*}Y_1 = 5−X \text{^} 3\end{equation*}</div>
+    Then press TblSet (<object type="image/svg+xml" style="width:6%; margin:auto; display:block;" data="images/icon-2nd.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> <object type="image/svg+xml" style="width:13%; margin:auto; display:block;" data="images/window.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>) and choose Ask after Indpnt, as shown in <a knowl="./knowl/fig-TblSetup2.html" knowl-id="xref-fig-TblSetup2" alt="Figure 1.2.25 " title="Figure 1.2.25 ">Figure 1.2.25</a>, and press <object type="image/svg+xml" style="width:11%; margin:auto; display:block;" data="images/icon-enter.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>. This setting allows you to enter any x-values you like. Next, press TABLE (using <object type="image/svg+xml" style="width:6%; margin:auto; display:block;" data="images/icon-2nd.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> <object type="image/svg+xml" style="width:12%; margin:auto; display:block;" data="images/graph.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>). To follow <a knowl="./knowl/exercise-function-notation.html" knowl-id="xref-exercise-function-notation" alt="Exercise 1.2.23 " title="Exercise 1.2.23 ">Exercise 1.2.23</a>, key in <object type="image/svg+xml" style="width:5%; margin:auto; display:block;" data="images/icon-negative.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> 2 <object type="image/svg+xml" style="width:11%; margin:auto; display:block;" data="images/icon-enter.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> for the \(x\)-value, and the calculator will fill in the \(y\)-value. Continue by entering 0, 1, 3, or any other \(x\)-values you choose. One such table is shown in <a knowl="./knowl/fig-GC-table2.html" knowl-id="xref-fig-GC-table2" alt="Figure 1.2.26 " title="Figure 1.2.26 ">Figure 1.2.26</a>. If you would like to evaluate a new function, you do not have to return to the <object type="image/svg+xml" style="width:6%; margin:auto; display:block;" data="images/y-equals.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> screen. Use the <object type="image/svg+xml" style="width:4%; margin:auto; display:block;" data="images/icon-right.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> and <object type="image/svg+xml" style="width:4%; margin:auto; display:block;" data="images/icon-up.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> keys to highlight \(Y_1\) at the top of the second column. The definition of \(Y_1\) will appear at the bottom of the display, as shown in <a knowl="./knowl/fig-GC-table2.html" knowl-id="xref-fig-GC-table2" alt="Figure 1.2.26 " title="Figure 1.2.26 ">Figure 1.2.26</a>. You can key in a new definition here, and the second column will be updated automatically to show the \(y\)-values of the new function.
+    <div class="sidebyside" id="sidebyside-6">
+<figure class="left" id="fig-TblSetup2" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-TblSetup2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.2.25</span></figcaption></figure><figure class="right" id="fig-GC-table2" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-GC-table2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.2.26</span></figcaption></figure>
+</div>
+    </p></article></div>
+<p id="p-257">
+    To simplify the notation, we sometimes use the same letter for the output variable and
+for the name of the function. In the next example, \(C\) is used in this way.
+</p>
+<article class="example-like" id="example-function-notation-abuse"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.2.27</span>
+</h5>
+<p id="p-258">TrailGear decides to market a line of backpacks. The cost, \(C\), of manufacturing backpacks is a function of the number, \(x\), of backpacks produced, given by the equation 
+    <div class="displaymath" id="me-29">\begin{equation*}C(x) = 3000 + 20x\end{equation*}</div>
+    where \(C(x)\) is measured in dollars. Find the cost of producing 500 backpacks.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-11" id="solution-11"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-11" style="display: none;" class="tex2jax_ignore"><span class="solution">To find the value of \(C\) that corresponds to \(x = \alert{500}\), evaluate \(C(500)\).
+    <div class="displaymath" id="me-30">\begin{equation*}C(\alert{500}) = 3000 + 20(\alert{500}) = 13,000\end{equation*}</div>
+    The cost of producing 500 backpacks is $13,000.</span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-sphere-volume" id="exercise-sphere-volume"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.2.28</span>
+</h5></a></div>
+<div id="hk-exercise-sphere-volume" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+        The volume of a sphere of radius \(r\) centimeters is given by
+        <div class="displaymath" id="me-31">\begin{equation*}V = V(r) = \frac{4}{3}\pi r^3\end{equation*}</div>
+        Evaluate \(V(10)\) and explain what it means.
+    </article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-12"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.2.7</span><span class="title">Operations with Function Notation</span>
+</h1></header><p id="p-259">Sometimes we need to evaluate a function at an algebraic expression rather than at a
+specific number.</p>
+<article class="example-like" id="example-backpacks"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.2.29</span>
+</h5>
+<p id="p-260">TrailGear manufactures backpacks at a cost of
+    <div class="displaymath" id="me-32">\begin{equation*}C(x) = 3000 + 20x\end{equation*}</div>
+    for \(x\) backpacks. The company finds that the monthly demand for backpacks increases by 50% during the summer. The backpacks are produced at several small co-ops in different states.</p>
+<ol style="list-style-type: lower-alpha;">
+<li id="li-104">If each co-op usually produces \(b\) backpacks per month, how many should it produce during the summer months?</li>
+<li id="li-105">What costs for producing backpacks should the company expect during the summer?</li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-12" id="solution-12"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-12" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+<li id="li-106">An increase of 50% means an additional 50% of the current production level, \(b\). Therefore, a co-op that produced \(b\) backpacks per month during the winter should increase production to \(b + 0.5b\), or \(1.5b\) backpacks per month in the summer.</li>
+<li id="li-107">The cost of producing \(1.5b\) backpacks will be
+            <div class="displaymath" id="me-33">\begin{equation*}C(\alert{1.5b}) = 3000 + 20(\alert{1.5b}) = 3000 + 30b\end{equation*}</div>
+</li>
+</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-spherical-balloon" id="exercise-spherical-balloon"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.2.30</span>
+</h5></a></div>
+<div id="hk-exercise-spherical-balloon" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+        A spherical balloon has a radius of 10 centimeters.
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-108">If we increase the radius by \(h\) centimeters, what will the new volume be?</li>
+<li id="li-109">If \(h = 2\), how much did the volume increase?</li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<article class="example-like" id="example-evaluate-quadratic"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.2.31</span>
+</h5>
+<p id="p-261">Evaluate the function \(f(x)=4x^2 − x + 5\) for the following expressions.</p>
+<ol style="list-style-type: lower-alpha;">
+<li id="li-110">\(x = 2h\)</li>
+<li id="li-111">\(x = a + 3\)</li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-13" id="solution-13"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-13" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+<li id="li-112">
+<p id="p-262">  </p>\begin{align*}
+                f(\alert{2h}) &amp;= 4(\alert{2h})^2−(\alert{2h}) + 5\\&amp;= 4(4h^2)−2h+5\\&amp;= 16h^2 − 2h + 5\\ 
+                \end{align*}</li>
+<li id="li-113">
+<p id="p-263">  </p>\begin{align*}
+                f(\alert{a+3}) &amp;= 4(\alert{a+3})^2−(\alert{a+3})+5\\&amp;= 4(a^2+6a+9)−a-3+5\\&amp;= 4a^2+24a+36 − a + 2\\&amp;= 4a^2+23a + 38\\ 
+                \end{align*}</li>
+</ol></span></span></article><article class="paragraphs" id="paragraphs-7"><h5 class="heading"><span class="title">CAUTION</span></h5>
+<p id="p-264">In <a knowl="./knowl/example-evaluate-quadratic.html" knowl-id="xref-example-evaluate-quadratic" alt="Example 1.2.31 " title="Example 1.2.31 ">Example 1.2.31</a>, notice that
+<div class="displaymath" id="me-34">\begin{equation*}f(2h) \ne 2 f(h)\end{equation*}</div>
+and
+<div class="displaymath" id="me-35">\begin{equation*}f(a + 3) \ne f(a) + f(3)\end{equation*}</div>
+To compute \(f(a) + f(3)\), we must first compute \(f(a)\) and \(f(3)\), then add them:
+    \begin{align*}
+        f(a)+f(3)&amp;= (4a^2−a+5)+(4\cdot 3^2−3+5) \\
+                &amp;= 4a^2 − a + 43\\ 
+                \end{align*}
+In general, it is not true that \(f(a + b) = f(a) + f(b)\). Remember that the parentheses in the expression \(f(x)\) do not indicate multiplication, so the distributive law does not apply to the expression \(f(a + b)\).</p></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-function-notation2" id="exercise-function-notation2"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.2.32</span>
+</h5></a></div>
+<div id="hk-exercise-function-notation2" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+    Let \(f(x) = x^3 − 1\) and evaluate each expression.
+    <ol style="list-style-type: lower-alpha;">
+<li id="li-114">\(f(2) + f(3)\)</li>
+<li id="li-115">\(f(2 + 3)\)</li>
+<li id="li-116">\(2 f(x) + 3\)</li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-06-22T09:35:29-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG Some Basic Functions</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic%7CSource+Code+Pro:400" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\alert}[1]{\mathbf{\color{magenta}{#1}}}
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+
+\newcommand\degree[0]{^{\circ}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading">
+<span class="title">Test chapter</span><span class="subtitle">test subtitle</span>
+</h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="testchap.html">Previous</a><a class="up-button button toolbar-item" href="testchap.html">Up</a><a class="next-button button toolbar-item" href="Roots-and-Radicals.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="testchap.html">Previous</a><a class="up-button button toolbar-item" href="testchap.html">Up</a><a class="next-button button toolbar-item" href="Roots-and-Radicals.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link active"><a href="testchap.html"><span class="codenumber">1</span><span class="title">Fake chapter</span></a></h2>
+<ul>
+<li><a href="basic-functions.html" class="active">Some Basic Functions</a></li>
+<li><a href="Roots-and-Radicals.html">Roots and Radicals</a></li>
+</ul>
+<h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="colophon-1.html"><span class="title">Colophon</span></a></h2>
+<ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="basic-functions"><header><h1 class="heading hide-type">
+<span class="type">Section</span><span class="codenumber">1.1</span><span class="title">Some Basic Functions</span><a href="basic-functions.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-1">
+    In this section, we study the graphs of some important basic functions. Many functions fall into families or classes of similar functions, and recognizing the appropriate family for a given situation is an important part of modeling.
+</p>
+<p id="p-2">
+    We begin by reviewing the absolute value.
+</p>
+<section class="subsection" id="subsection-1"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.1.1</span><span class="title">Absolute Value</span>
+</h1></header><p id="p-3">
+    The absolute value is used to discuss problems involving distance. For example, consider the number line in <a knowl="./knowl/fig-abs-six.html" knowl-id="xref-fig-abs-six" alt="Figure 1.1.1 " title="Figure 1.1.1 ">Figure 1.1.1</a>. Starting at the origin, we travel in opposite directions to reach the two numbers \(6\) and \(−6\), but the distance we travel in each case is the same.
+</p>
+<figure class="figure-like" id="fig-abs-six"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-abs-six.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.1</span></figcaption></figure><p id="p-4">
+    The distance from a number \(c\) to the origin is called the <em class="terminology">absolute value</em> of \(c\), denoted by \(\abs{c}\). Because distance is never negative, the absolute value of a number is always positive (or zero). Thus, \(\abs{6}= 6\) and \(\abs{−6} = 6\). In general, we define the absolute value of a number \(x\) as follows.
+</p>
+<article class="paragraphs" id="paragraphs-1"><h5 class="heading"><span class="title">Absolute Value</span></h5>
+<p id="p-5">
+   The absolute value of x is defined by
+   <div class="displaymath" id="me-1">\begin{equation*}
+    \abs{x} =
+    \begin{cases}
+    x \amp \text{if } x\ge 0\\
+    -x  \amp \text{if } x\lt 0
+    \end{cases}
+    \end{equation*}</div>
+</p></article><p id="p-6">
+    This definition says that the absolute value of a positive number (or zero) is the same as the number. To find the absolute value of a negative number, we take the opposite of the number, which results in a positive number. For instance,
+    <div class="displaymath" id="me-2">\begin{equation*}\abs{−6} = −(−6) = 6\end{equation*}</div>
+    Absolute value bars act like grouping devices in the order of operations: You should complete any operations that appear inside absolute value bars before you compute the absolute value.
+</p>
+<article class="example-like" id="example-abs"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.1.2</span>
+</h5>
+<p id="p-7">Simplify each expression.</p>
+<ol style="list-style-type: lower-alpha;">
+<li id="li-1">\(\abs{3 − 8}\)</li>
+<li id="li-2">\(\abs{3} − \abs{8}\)</li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+<li id="li-3">Simplify the expression inside the absolute value bars first.
+            <div class="displaymath" id="me-3">\begin{equation*}\abs{3 − 8} = \abs{−5} = 5\end{equation*}</div>
+</li>
+<li id="li-4">Simplify each absolute value; then subtract.
+            <div class="displaymath" id="me-4">\begin{equation*}\abs{3} − \abs{8} = 3 − 8 = −5\end{equation*}</div>
+</li>
+</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-abs" id="exercise-abs"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.1.3</span>
+</h5></a></div>
+<div id="hk-exercise-abs" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+    Simplify each expression.
+    <ol style="list-style-type: lower-alpha;">
+<li id="li-5">\(12 − 3\abs{−6}\)</li>
+<li id="li-6">\(−7 − 3\abs{2 − 9}\)</li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-2"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.1.2</span><span class="title">Examples of Models</span>
+</h1></header><p id="p-8">
+        Many situations can be modeled by a handful of simple functions. The following examples represent applications of eight useful functions.
+    </p>
+<div class="sidebyside" id="sidebyside-1">
+<figure class="left" id="fig-quadratic-model" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-quadratic-model.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.4</span>The contractor for a new hotel is estimating the cost of the marble tile for a circular lobby. The cost is a function of the <!--Style me with CSS--><em>square</em> of the diameter of the lobby.</figcaption></figure><figure class="right" id="fig-cubic-model" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-cubic-model.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.5</span>The number of board-feet that can be cut from a Ponderosa pine is a function of the <!--Style me with CSS--><em>cube</em> of the circumference of the tree at a standard height.</figcaption></figure>
+</div>
+<div class="sidebyside" id="sidebyside-2">
+<figure class="left" id="fig-sqrt-model" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-sqrt-model.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.6</span>The manager of an appliance store must decide how many coffee-makers to order every quarter. The optimal order size is a function of the <!--Style me with CSS--><em>square root</em> of the annual demand for coffeemakers.</figcaption></figure><figure class="right" id="fig-cube-root-model" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-cube-root-model.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.7</span>Investors are deciding whether to support a windmill farm. The wind speed needed to generate a given amount of power is a function of the <!--Style me with CSS--><em>cube root</em> of the power.</figcaption></figure>
+</div>
+<div class="sidebyside" id="sidebyside-3">
+<figure class="left" id="fig-inverse-model" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-inverse-model.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.8</span>The frequency of the note produced by a violin string is a function of the <!--Style me with CSS--><em>reciprocal</em> of the length of the string.</figcaption></figure><figure class="right" id="fig-inverse-square-model" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-inverse-square-model.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.9</span>The loudness, or intensity, of the music at a concert is a function of the <!--Style me with CSS--><em>reciprocal of the square</em> of your distance from the speakers.</figcaption></figure>
+</div>
+<div class="sidebyside" id="sidebyside-4">
+<figure class="left" id="fig-linear-model" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-linear-model.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.10</span>The annual return on an investment is a function of the interest rate.</figcaption></figure><figure class="right" id="fig-abs-model" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-abs-model.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.11</span>You are flying from Los Angeles to New York. Your distance from the Mississippi River is an <!--Style me with CSS--><em>absolute value</em> function of time.</figcaption></figure>
+</div>
+<p id="p-9">
+    We will consider each of these functions and their applications in more detail in later sections. For now, you should become familiar with the properties of each graph and be able to sketch them easily from memory.
+</p>
+<article class="paragraphs" id="paragraphs-2"><h5 class="heading"><span class="title">Investigation: Eight Basic Functions</span></h5>
+<p id="p-10"></p>
+<p id="p-11">Part I Some Powers and Roots</p>
+<ol style="list-style-type: decimal;">
+<li id="li-7">Complete <a knowl="./knowl/table-quadratic-cubic.html" knowl-id="xref-table-quadratic-cubic" alt="Table 1.1.12 " title="Table 1.1.12 ">Table 1.1.12</a>, a table of values for the squaring function, \(f (x) = x^2\), and the cubing function, \(g(x) = x^3\). Then sketch each function on graph paper, using the table values to help you scale the axes.</li>
+<li id="li-8">Verify both graphs with your graphing calculator.</li>
+<li id="li-9">State the intervals on which each graph is increasing.</li>
+<li id="li-10">Write a few sentences comparing the two graphs. The graph of \(y = x^2\) is called a <em class="terminology">parabola</em>, and the graph of \(y = x^3\) is called a <em class="terminology">cubic</em>.</li>
+<li id="li-11">Complete <a knowl="./knowl/table-sqrt.html" knowl-id="xref-table-sqrt" alt="Table 1.1.13 " title="Table 1.1.13 ">Table 1.1.13</a> and <a knowl="./knowl/table-cube-root.html" knowl-id="xref-table-cube-root" alt="Table 1.1.14 " title="Table 1.1.14 ">Table 1.1.14</a> for the square root function, \(f (x) = \sqrt{x}\), and the cube root function, \(g(x) = \sqrt[3]{x} \). (Round your answers to two decimal places.) Then sketch each function on graph paper, using the table values to help you scale the axes.
+
+<div class="sidebyside" id="sidebyside-5">
+<figure class="left" id="table-quadratic-cubic" style="width:32%;vertical-align:bottom;text-align:center;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(f(x)=x^2\)</td>
+<td class="c m b1 r1 l0 t3">\(g(x)=x^3\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-3\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-2\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-1\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(3\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.1.12</span></figcaption></figure><figure class="middle" id="table-sqrt" style="width:32%;vertical-align:bottom;text-align:center;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(f(x)=\sqrt{x}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(3\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(5\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(7\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(9\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.1.13</span></figcaption></figure><figure class="right" id="table-cube-root" style="width:32%;vertical-align:bottom;text-align:center;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(g(x)=\sqrt[3]{x}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-8\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-4\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-1\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(8\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.1.14</span></figcaption></figure>
+</div>
+</li>
+<li id="li-12">Verify both graphs with your graphing calculator.</li>
+<li id="li-13">State the intervals on which each graph is increasing.</li>
+<li id="li-14">Write a few sentences comparing the two graphs.</li>
+</ol>
+<p id="p-12">Part II Asymptotes</p>
+<ol style="list-style-type: decimal;">
+<li id="li-15">Complete <a knowl="./knowl/table-reciprocals.html" knowl-id="xref-table-reciprocals" alt="Table 1.1.15 " title="Table 1.1.15 ">Table 1.1.15</a> for the functions
+        <div class="displaymath" id="me-5">\begin{equation*}f(x)=\frac{1}{x} ~\text{ and } ~ g(x)=\frac{1}{x^2}\end{equation*}</div>
+    What is true about \(f (0)\) and \(g(0)\)?
+
+<figure class="figure-like" id="table-reciprocals"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(f(x)=\frac{1}{x}\)</td>
+<td class="c m b1 r1 l0 t3">\(g(x)=\frac{1}{x^2}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-4\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-3\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-2\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-1\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(3\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.1.15</span></figcaption></figure>
+</li>
+<li id="li-16">
+        Prepare a grid on graph paper, scaling both axes from \(−5\) to \(5\). Plot the points from <a knowl="./knowl/table-reciprocals.html" knowl-id="xref-table-reciprocals" alt="Table 1.1.15 " title="Table 1.1.15 ">Table 1.1.15</a> and connect them with smooth curves.
+    </li>
+<li id="li-17">
+<p id="p-13">As \(x\) increases through larger and larger values, what happens to the values of \(f (x)\)?Extend your graph to reflect your answer. </p>
+<p id="p-14">What happens to \(f (x)\) as \(x\) decreases through larger and larger negative values (that is, for \(x = −5,−6,−7, \ldots \))? Extend your graph for these x-values. </p>
+<p id="p-15">As the values of \(x\) get larger in absolute value, the graph approaches the \(x\)-axis. However, because \(\frac{1}{x}\) never <!--Style me with CSS--><em>equals</em> zero for any \(x\)-value, the graph never actually touches the \(x\)-axis. We say that the \(x\)-axis is a <em class="terminology">horizontal asymptote</em> for the graph.</p>
+</li>
+<li id="li-18">
+        Repeat step (3) for the graph of \(g(x)\).
+    </li>
+<li id="li-19">
+        Next we will examine the graphs of \(f\) and \(g\) near \(x = 0\). Use your calculator to evaluate \(f\) for several \(x\)-values close to zero and record the results in <a knowl="./knowl/table-reciprocals2a.html" knowl-id="xref-table-reciprocals2a" alt="Table 1.1.16 " title="Table 1.1.16 ">Table 1.1.16</a> and <a knowl="./knowl/table-reciprocals2b.html" knowl-id="xref-table-reciprocals2b" alt="Table 1.1.17 " title="Table 1.1.17 ">Table 1.1.17</a>.
+
+    <div class="sidebyside" id="sidebyside-6">
+<figure class="left" id="table-reciprocals2a" style="width:48%;vertical-align:bottom;text-align:center;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(f(x)=\frac{1}{x}\)</td>
+<td class="c m b1 r1 l0 t3">\(g(x)=\frac{1}{x^2}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-2\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-1\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-0.1\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-0.01\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-0.001\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.1.16</span></figcaption></figure><figure class="right" id="table-reciprocals2b" style="width:48%;vertical-align:bottom;text-align:center;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(f(x)=\frac{1}{x}\)</td>
+<td class="c m b1 r1 l0 t3">\(g(x)=\frac{1}{x^2}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0.1\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0.01\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0.001\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.1.17</span></figcaption></figure>
+</div>
+<p id="p-16">What happens to the values of \(f (x)\) as \(x\) approaches zero? Extend your graph of \(f\) to reflect your answer.</p>
+<p id="p-17">As \(x\) approaches zero from the left (through negative values), the function values decrease toward \(-\infty\). As \(x\) approaches zero from the right (through positive values), the function values increase toward \(\infty\). The graph approaches but never touches the vertical line \(x = 0\) (the \(y\)-axis.)We say that the graph of \(f\) has a <em class="terminology">vertical asymptote</em> at \(x = 0\).</p>
+</li>
+<li id="li-20">
+        Repeat step (5) for the graph of \(g(x)\).
+    </li>
+<li id="li-21">
+        The functions \(f (x) = \frac{1}{x}\) and \(g(x) = \frac{1}{x^2}\) are examples of <em class="terminology">rational functions</em>, so called because they are fractions, or ratios. Verify both graphs with your graphing calculator. Use the window
+        \begin{align}
+        \text{Xmin} \amp = −4 \amp\amp \text{Xmax} = 4\\
+        \text{Ymin} \amp = −4 \amp\amp \text{Ymax} = 4
+        \end{align}
+    </li>
+<li id="li-22">
+        State the intervals on which each graph is increasing.
+    </li>
+<li id="li-23">
+        Write a few sentences comparing the two graphs.
+    </li>
+</ol>
+<p id="p-18">Part III Absolute Value</p>
+<ol style="list-style-type: decimal;">
+<li id="li-24">
+        Complete <a knowl="./knowl/table-linear-abs.html" knowl-id="xref-table-linear-abs" alt="Table 1.1.18 " title="Table 1.1.18 ">Table 1.1.18</a> for the two functions \(f (x) = x\) and \(g(x) = \abs{x}\). Then sketch each function on graph paper, using the table values to help you scale the axes.
+            <figure class="figure-like" id="table-linear-abs"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(f(x)=x\)</td>
+<td class="c m b1 r1 l0 t3">\(g(x)=\abs{x}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-4\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-3\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-2\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-1\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(3\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.1.18</span></figcaption></figure>
+</li>
+<li id="li-25">
+        Verify both graphs with your graphing calculator. Your calculator uses the notation \(abs (x)\) instead of \(\abs{x}\) for the absolute value of \(x\). First, position the cursor after \(Y_1 =\) in the graphing window. Now access the absolute value function by pressing <object type="image/svg+xml" style="width:6%; margin:auto; display:block;" data="images/icon-2nd.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>\(0\) for <!--Style me with CSS--><em>CATALOG</em>; then <object type="image/svg+xml" style="width:11%; margin:auto; display:block;" data="images/icon-enter.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> for <!--Style me with CSS--><em>abs(</em>. Don’t forget to press \(X\) if you want to graph \(y = \abs{x}\).
+    </li>
+<li id="li-26">
+        State the intervals on which each graph is increasing.
+    </li>
+<li id="li-27">
+        Write a few sentences comparing the two graphs.
+    </li>
+</ol></article></section><section class="subsection" id="subsection-3"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.1.3</span><span class="title">Graphs of Eight Basic Functions</span>
+</h1></header><p id="p-19">
+        The graphs of the eight basic functions considered in Investigation 4 are shown in <a knowl="./knowl/fig-basic-a-c.html" knowl-id="xref-fig-basic-a-c" alt="Figure 1.1.19 " title="Figure 1.1.19 ">Figure 1.1.19</a>, <a knowl="./knowl/fig-basic-d-f.html" knowl-id="xref-fig-basic-d-f" alt="Figure 1.1.20 " title="Figure 1.1.20 ">Figure 1.1.20</a>, and <a knowl="./knowl/fig-basic-g-h.html" knowl-id="xref-fig-basic-g-h" alt="Figure 1.1.21 " title="Figure 1.1.21 ">Figure 1.1.21</a>. Once you know the shape of each graph, you can sketch an accurate picture by plotting a few guidepoints and drawing the curve through those points. Usually, points (or vertical asymptotes!) at \(x = −1\), \(0\), and \(1\) make good guidepoints.
+    </p>
+<figure class="figure-like" id="fig-basic-a-c"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-basic-a-c.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.19</span></figcaption></figure><figure class="figure-like" id="fig-basic-d-f"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-basic-d-f.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.20</span></figcaption></figure><figure class="figure-like" id="fig-basic-g-h"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-basic-g-h.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.21</span></figcaption></figure></section><section class="subsection" id="subsection-4"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.1.4</span><span class="title">Properties of the Basic Functions</span>
+</h1></header><p id="p-20">
+    In <span>&lt;&lt;Unresolved xref, reference "functions"; check spelling or use "provisional" attribute&gt;&gt;</span>, we saw that for most functions, \(f (a + b)\) is not equal to \(f (a) + f (b)\). We may be able to find some values of \(a\) and \(b\) for which \(f (a + b) = f (a) + f (b)\) is true, but not for all values of \(a\) and \(b\). If there is even one value of \(a\) or \(b\) for which \(f (a + b)\) is not equal to \(f (a) + f (b)\), we cannot claim that \(f (a + b) = f (a) + f (b)\) for that function. For example, for the function \(f (x) = x^2\), if we choose \(a = 3\) and \(b = 4\), then
+    <div class="displaymath" id="md-1">\begin{align*}
+f (3 + 4) \amp = f (7) = 7^2 = 49\\
+\text{but }~ f (3) + f (4) \amp = 3^2 + 4^2 = 9 + 16 = 25
+\end{align*}</div>
+    so we have proved that \(f (a + b) \ne f (a) + f (b)\) for the squaring function. (In fact, we already knew this because \((a + b)^2 \ne a^2 + b^2\) as long as neither \(a\) nor \(b\) is \(0\).)
+</p>
+<p id="p-21">
+    What about multiplication? Which of the basic functions have the property that \(f (ab) = f (a) f (b)\) for all \(a\) and \(b\)? You will consider this question in the homework problems, but in particular you will need to recall the following  roperties of absolute
+value.
+</p>
+<article class="paragraphs" id="paragraphs-3"><h5 class="heading"><span class="title">Properties of Absolute Value</span></h5>
+<p id="p-22">\begin{align}
+\abs{a + b} \le \abs{a} + \abs{b} \amp\amp \text{Triangle inequality}\\
+\abs{a  b} = \abs{a}  \abs{b} \amp\amp \text{Multiplicative property }
+\end{align}</p></article><article class="example-like" id="example-triangle-inequality"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.1.22</span>
+</h5>
+<p id="p-23">
+        Verify the triangle inequality for three cases: \(a\) and \(b\) are both positive, \(a\) and \(b\) are both negative, and \(a\) and \(b\) have opposite signs.
+    </p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><span class="solution">
+    We choose positive values for \(a\) and \(b\), say \(a = 3\) and \(b = 5\). Then 
+    <div class="displaymath" id="me-6">\begin{equation*}\abs{3 + 5} = \abs{8} = 8 ~\text{ and } ~ \abs{3}+\abs{5}= 3 + 5 = 8\end{equation*}</div>
+    so \(\abs{3 + 5} = \abs{3} + \abs{5}\). For the second case, we choose \(a = −3\) and \(b = −5\). Then
+    <div class="displaymath" id="me-7">\begin{equation*}\abs{−3 + (−5)} = \abs{−8} = 8 ~\text{ and } ~ \abs{−3}+\abs{−5} = 3 + 5 = 8\end{equation*}</div>
+    so \(\abs{−3 + (−5)} =\abs{−3}+\abs{−5}\). For the third case, we choose \(a = 3\) and \(b = −5\). Then
+    <div class="displaymath" id="me-8">\begin{equation*}\abs{3 + (−5)}=\abs{−2} = 2  ~\text{ and } ~ \abs{3}+\abs{−5}=3 + 5 = 8\end{equation*}</div>
+    so \(\abs{3 + (−5)} \lt \abs{3}+\abs{−5}\). In each case, \(\abs{a + b}\le\abs{a} +\abs{b}\).
+</span></span></article><p id="p-24">
+    Note that <!--Style me with CSS--><em>verifying</em> a statement for one or two values of the variables does not <!--Style me with CSS--><em>prove</em> the statement is true for <!--Style me with CSS--><em>all</em> values of the variables. However, working with examples can help us understand the meaning and significance of mathematical properties.
+</p>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-abs-multiplicative-property" id="exercise-abs-multiplicative-property"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.1.23</span>
+</h5></a></div>
+<div id="hk-exercise-abs-multiplicative-property" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+    Verify the multiplicative property of absolute value for the three cases in <a knowl="./knowl/example-triangle-inequality.html" knowl-id="xref-example-triangle-inequality" alt="Example 1.1.22 " title="Example 1.1.22 ">Example 1.1.22</a>.
+</article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-5"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.1.5</span><span class="title">Functions Defined Piecewise</span>
+</h1></header><p id="p-25">
+        A function may be defined by different formulas on different portions of the \(x\)-axis. Such a function is said to be defined <em class="terminology">piecewise</em>. To graph a function defined piecewise, we consider each piece of the \(x\)-axis separately.
+    </p>
+<article class="example-like" id="example-piecewise"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.1.24</span>
+</h5>
+<p id="p-26">
+        Graph the function defined by   
+        <div class="displaymath" id="me-9">\begin{equation*}
+            f(x) =
+            \begin{cases}
+            x +1  \amp \text{if } x\le 1\\
+            3  \amp \text{if } x\gt 1
+            \end{cases}
+        \end{equation*}</div>
+    </p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-3" id="solution-3"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-3" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-27">
+        Think of the plane as divided into two regions by the vertical line \(x = 1\), as shown in <a knowl="./knowl/fig-piecewise.html" knowl-id="xref-fig-piecewise" alt="Figure 1.1.25 " title="Figure 1.1.25 ">Figure 1.1.25</a>. In the left-hand region (\(x \le 1\)), we graph the line \(y = x + 1\). (The fastest way to graph the line is to plot its intercepts, \((−1, 0)\) and \((0, 1)\).) 
+    </p>
+<div class="sidebyside" id="sidebyside-7">
+<p id="p-28" class="left" style="width:48%;vertical-align:bottom;text-align:left;">
+        Notice that the value \(x = 1\) is included in the first region, so \(f (1) = 1 + 1 = 2\), and the point \((1, 2)\) is included on the graph. We indicate this with a solid dot at the point \((1, 2)\). In the right-hand region (\(x \gt 1\)), we graph the horizontal line \(y = 3\). The value \(x = 1\) is not included in the second region, so the point \((1, 3)\) is not part of the graph. We indicate this with an open circle at the point \((1, 3)\).
+    </p>
+<figure class="right" id="fig-piecewise" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-piecewise.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.25</span></figcaption></figure>
+</div></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-piecewise" id="exercise-piecewise"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.1.26</span>
+</h5></a></div>
+<div id="hk-exercise-piecewise" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+    Graph the piecewise defined function
+    <div class="displaymath" id="me-10">\begin{equation*}
+        g(x) =\begin{cases}
+        −1 − x \amp \text { if } x \le −1\\
+        x^3 \amp \text{ if } x \gt −1
+        \end{cases}
+    \end{equation*}</div></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<p id="p-29">
+    The absolute value function \(f (x) = \abs{x}\) is an example of a function that is defined piecewise.
+    <div class="displaymath" id="me-11">\begin{equation*}
+        f (x) =\abs{x} =
+        \begin{cases}
+        x \amp \text{if } x\ge 0\\
+        -x  \amp \text{if } x\lt 0
+        \end{cases}
+    \end{equation*}</div>
+    To sketch the absolute value function, we graph the line \(y = x\) in the first quadrant and the line \(y = −x\) in the second quadrant.
+</p>
+<article class="example-like" id="example-piecewise-def"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.1.27</span>
+</h5>
+<ol style="list-style-type: lower-alpha;">
+<li id="li-28">Write a piecewise definition for \(g(x) = \abs{x − 3}\).</li>
+<li id="li-29">Sketch a graph of \(g(x) = \abs{x − 3}\).</li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+<li id="li-30">In the definition for \(\abs{x}\), we replace \(x\) by \(x − 3\) to get
+            <div class="displaymath" id="me-12">\begin{equation*}
+                g(x) =\abs{x-3} =
+                \begin{cases}
+                x-3 \amp \text{if }~ x-3\ge 0\\
+                -x  \amp \text{if }~ -(x-3)\lt 0
+                \end{cases}
+            \end{equation*}</div>
+        We can simplify this expression to
+            <div class="displaymath" id="me-13">\begin{equation*}
+                g(x) =\abs{x-3} =
+                \begin{cases}
+                x-3 \amp \text{if }~ x\ge 3\\
+                -x+3  \amp \text{if }~ x\lt 3
+                \end{cases}
+            \end{equation*}</div>
+</li>
+<li id="li-31">
+            In the first region, \(x \ge 3\), we graph the line \(y = x − 3\). Because \(x = 3\) is included in this region, the endpoint of this portion of the graph, \((3, 0)\), is included, too. In the second region, \(x \lt 3\), we graph the line \(y = −x + 3\). Note that the two pieces of the graph meet at the point \((0, 3)\), as shown in <a knowl="./knowl/fig-piecewise2.html" knowl-id="xref-fig-piecewise2" alt="Figure 1.1.28 " title="Figure 1.1.28 ">Figure 1.1.28</a>.
+            <figure class="figure-like" id="fig-piecewise2"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-piecewise2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.28</span></figcaption></figure>
+</li>
+</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-piecewise2" id="exercise-piecewise2"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.1.29</span>
+</h5></a></div>
+<div id="hk-exercise-piecewise2" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-32">Use your calculator to graph \(g(x) =\abs{x−3}\) and \(h(x) =\abs{x} + \abs{−3}\). Are the graphs the same?</li>
+<li id="li-33">Explain why the functions \(f (x) =\abs{x + k}\) and \(g(x) =\abs{x} + \abs{k}\) are not the same if \(k\ne 0\).
+        </li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-06-20T10:21:21-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG Transformations of Graphs</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic%7CSource+Code+Pro:400" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\alert}[1]{\mathbf{\color{magenta}{#1}}}
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+
+\newcommand\degree[0]{^{\circ}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading">
+<span class="title">Test chapter</span><span class="subtitle">test subtitle</span>
+</h1>
+<p class="byline">Katherine Yoshiwara</p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="basic-functions.html">Previous</a><a class="up-button button toolbar-item" href="chap3.html">Up</a><a class="next-button button toolbar-item" href="MathModels.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="basic-functions.html">Previous</a><a class="up-button button toolbar-item" href="chap3.html">Up</a><a class="next-button button toolbar-item" href="MathModels.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="biography-1.html">Author Biography</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
+<li><a href="preface-2.html">Contributors to the 5\(^\mathrm{th}\) Edition</a></li>
+</ul>
+<h2 class="link active"><a href="chap3.html"><span class="codenumber">1</span><span class="title">Power Functions</span></a></h2>
+<ul>
+<li><a href="nonlinear-models.html">Nonlinear Models</a></li>
+<li><a href="basic-functions.html">Some Basic Functions</a></li>
+<li><a href="transformations.html" class="active">Transformations of Graphs</a></li>
+<li><a href="MathModels.html">Functions as Mathematical Models</a></li>
+<li><a href="AbsoluteValue.html">The Absolute Value Function</a></li>
+<li><a href="Domain-Range.html">Domain and Range</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="transformations"><header><h1 class="heading hide-type">
+<span class="type">Section</span><span class="codenumber">1.3</span><span class="title">Transformations of Graphs</span><a href="transformations.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-98">
+    Models for real situations are often variations of the basic functions introduced in <a href="basic-functions.html" alt="Section 1.2 Some Basic Functions" title="Section 1.2 Some Basic Functions">Section 1.2</a>. In this section, we explore how certain changes in the formula for a function affect its graph. In particular, we will compare the graph of \(y = f (x)\) with the graphs of \(y = f (x) + k\), \(y = f (x + h)\), and \(y = a f (x)\) for different values of the constants \(k\), \(h\), and \(a\). Such variations are called <em class="terminology">transformations</em> of the graph.
+</p>
+<section class="subsection" id="subsection-11"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.3.1</span><span class="title">Vertical Translations</span>
+</h1></header><div class="sidebyside" id="sidebyside-13">
+<figure class="left" id="fig-parabolas" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-parabolas.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.1</span></figcaption></figure><p id="p-99" class="right" style="width:48%;vertical-align:bottom;text-align:left;">
+    <a knowl="./knowl/fig-parabolas.html" knowl-id="xref-fig-parabolas" alt="Figure 1.3.1 " title="Figure 1.3.1 ">Figure 1.3.1</a> shows the graphs of \(f (x) = x^2 + 4\), \(g(x) = x^2 − 4\), and the basic parabola, \(y = x^2\). By comparing tables of values, we can see exactly how the graphs of \(f\) and \(g\) are related to the basic parabola.
+</p>
+</div>
+<figure class="figure-like" id="table-12"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(-2\)</td>
+<td class="c m b1 r1 l0 t3">\(-1\)</td>
+<td class="c m b1 r1 l0 t3">\(0\)</td>
+<td class="c m b1 r1 l0 t3">\(1\)</td>
+<td class="c m b1 r1 l0 t3">\(2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(y=x^2\)</td>
+<td class="c m b1 r1 l0 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(4\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(f(x)=x^2+4\)</td>
+<td class="c m b1 r1 l0 t0">\(8\)</td>
+<td class="c m b1 r1 l0 t0">\(5\)</td>
+<td class="c m b1 r1 l0 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(5\)</td>
+<td class="c m b1 r1 l0 t0">\(8\)</td>
+</tr>
+</table></figure><figure class="figure-like" id="table-13"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(-2\)</td>
+<td class="c m b1 r1 l0 t3">\(-1\)</td>
+<td class="c m b1 r1 l0 t3">\(0\)</td>
+<td class="c m b1 r1 l0 t3">\(1\)</td>
+<td class="c m b1 r1 l0 t3">\(2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(y=x^2\)</td>
+<td class="c m b1 r1 l0 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(4\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(g(x)=x^2-4\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(-3\)</td>
+<td class="c m b1 r1 l0 t0">\(-4\)</td>
+<td class="c m b1 r1 l0 t0">\(-3\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+</tr>
+</table></figure><p id="p-100">
+    Each \(y\)-value in the table for \(f (x)\) is four units greater than the corresponding \(y\)-value for the basic parabola. Consequently, each point on the graph of \(f (x)\) is four units higher than the corresponding point on the basic parabola, as shown by the arrows. Similarly, each point on the graph of \(g(x)\) is four units lower than the corresponding point on the basic parabola.
+</p>
+<p id="p-101">
+    The graphs of \(y = f (x)\) and \(y = g(x)\) are said to be <em class="terminology">translations</em> of the graph of \(y = x^2\). They are shifted to a different location in the plane but retain the same size and shape as the original graph. In general, we have the following principles.
+</p>
+<article class="paragraphs" id="paragraphs-9"><h5 class="heading"><span class="title">Vertical Translations</span></h5>
+<p id="p-102"></p>
+<p id="p-103">
+    Compared with the graph of \(y = f (x)\),
+    <ol style="list-style-type: decimal;">
+<li id="li-70">The graph of \(y=f(x)+k\) (\(k\gt 0\)) is shifted <!--Style me with CSS--><em>upward </em>\(k\) units.</li>
+<li id="li-71">The graph of \(y=f(x)-k\) (\(k\gt 0\)) is shifted <!--Style me with CSS--><em>downward </em>\(k\) units.</li>
+</ol>
+</p></article><article class="example-like" id="example-translations"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.3.2</span>
+</h5>
+<p id="p-104">Graph the following functions.
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-72">\(g(x) = \abs{x} + 3\)</li>
+<li id="li-73">\(h(x) = \frac{1}{x}− 2\)</li>
+</ol>
+    </p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-11" id="solution-11"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-11" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+<li id="li-74">The table shows that the \(y\)-values for \(g(x)\) are each three units greater than the corresponding y-values for the absolute value function. The graph of \(g(x) = \abs{x} + 3\) is a translation of the basic graph of \(y = \abs{x}\), shifted upward three units, as shown in <a knowl="./knowl/fig-translate-abs.html" knowl-id="xref-fig-translate-abs" alt="Figure 1.3.3 " title="Figure 1.3.3 ">Figure 1.3.3</a>.
+        <div class="sidebyside" id="sidebyside-14">
+<figure class="left" id="table-14" style="width:48%;vertical-align:bottom;text-align:center;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(-2\)</td>
+<td class="c m b1 r1 l0 t3">\(-1\)</td>
+<td class="c m b1 r1 l0 t3">\(0\)</td>
+<td class="c m b1 r1 l0 t3">\(1\)</td>
+<td class="c m b1 r1 l0 t3">\(2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(y=\abs{x}\)</td>
+<td class="c m b1 r1 l0 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(g(x)=\abs{x}+3\)</td>
+<td class="c m b1 r1 l0 t0">\(5\)</td>
+<td class="c m b1 r1 l0 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(3\)</td>
+<td class="c m b1 r1 l0 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(5\)</td>
+</tr>
+</table></figure><figure class="right" id="fig-translate-abs" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-translate-abs.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.3</span></figcaption></figure>
+</div>
+</li>
+<li id="li-75">The table shows that the \(y\)-values for \(h(x)\) are each two units smaller than the corresponding \(y\)-values for \(y = \frac{1}{x}\). The graph of \(h(x) = \frac{1}{x} − 2\) is a translation of the basic graph of \(y = \frac{1}{x}\), shifted downward two units, as shown in <a knowl="./knowl/fig-translate-reciprocal.html" knowl-id="xref-fig-translate-reciprocal" alt="Figure 1.3.4 " title="Figure 1.3.4 ">Figure 1.3.4</a>.
+        <div class="sidebyside" id="sidebyside-15">
+<figure class="left" id="table-15" style="width:48%;vertical-align:bottom;text-align:center;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(-2\)</td>
+<td class="c m b1 r1 l0 t3">\(-1\)</td>
+<td class="c m b1 r1 l0 t3">\(\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t3">\(1\)</td>
+<td class="c m b1 r1 l0 t3">\(2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(y=\frac{1}{x}\)</td>
+<td class="c m b1 r1 l0 t0">\(\frac{-1}{2}\)</td>
+<td class="c m b1 r1 l0 t0">\(-1\)</td>
+<td class="c m b1 r1 l0 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(\frac{1}{2}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(h(x)=\frac{1}{x}-2\)</td>
+<td class="c m b1 r1 l0 t0">\(\frac{-5}{2}\)</td>
+<td class="c m b1 r1 l0 t0">\(-3\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(-1\)</td>
+<td class="c m b1 r1 l0 t0">\(\frac{-3}{2}\)</td>
+</tr>
+</table></figure><figure class="right" id="fig-translate-reciprocal" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-translate-reciprocal.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.4</span></figcaption></figure>
+</div>
+</li>
+</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-translate-abs" id="exercise-translate-abs"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.3.5</span>
+</h5></a></div>
+<div id="hk-exercise-translate-abs" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-76">Graph the function \(f (x) = \abs{x} + 1\).</li>
+<li id="li-77">How is the graph of \(f\) different from the graph of \(y = \abs{x}\)?</li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<article class="example-like" id="example-electrical"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.3.6</span>
+</h5>
+<div class="sidebyside" id="sidebyside-16">
+<p id="p-105" class="left" style="width:48%;vertical-align:bottom;text-align:left;">
+        The function \(E = f (h)\) graphed in <a knowl="./knowl/fig-electrical.html" knowl-id="xref-fig-electrical" alt="Figure 1.3.7 " title="Figure 1.3.7 ">Figure 1.3.7</a> gives the amount of electrical power, in megawatts, drawn by a community from its local power plant as a function of time during a 24-hour period in 2002. Sketch a graph of \(y = f (h) + 300\) and interpret its meaning.
+    </p>
+<figure class="right" id="fig-electrical" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-electrical.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.7</span></figcaption></figure>
+</div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-12" id="solution-12"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-12" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-106">
+        The graph of \(y = f (h) + 300\) is a vertical translation of the graph of \(f\), as shown in <a knowl="./knowl/fig-translate-electrical.html" knowl-id="xref-fig-translate-electrical" alt="Figure 1.3.8 " title="Figure 1.3.8 ">Figure 1.3.8</a>.
+    </p>
+<div class="sidebyside" id="sidebyside-17">
+<p id="p-107" class="left" style="width:48%;vertical-align:bottom;text-align:left;">
+        At each hour of the day, or for each value of \(h\), the \(y\)-coordinate is 300 greater than on the graph of \(f\). So at each hour, the community is drawing 300 megawatts more power than in 2002.
+    </p>
+<figure class="right" id="fig-translate-electrical" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-translate-electrical.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.8</span></figcaption></figure>
+</div></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-swamp-cooler" id="exercise-swamp-cooler"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.3.9</span>
+</h5></a></div>
+<div id="hk-exercise-swamp-cooler" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+    An evaporative cooler, or swamp cooler, is an energy-efficient type of air conditioner used in dry climates. A typical swamp cooler can reduce the temperature inside a house by 15 degrees. <a knowl="./knowl/fig-swamp-cooler.html" knowl-id="xref-fig-swamp-cooler" alt="Figure 1.3.10 " title="Figure 1.3.10 ">Figure 1.3.10</a>a shows the graph of \(T = f (t)\), the temperature inside Kate’s house \(t\) hours after she turns on the swamp cooler. Write a formula in terms of \(f\) for the function \(g\) shown in <a knowl="./knowl/fig-swamp-cooler.html" knowl-id="xref-fig-swamp-cooler" alt="Figure 1.3.10 " title="Figure 1.3.10 ">Figure 1.3.10</a>b and give a possible explanation of its meaning.
+    <figure class="figure-like" id="fig-swamp-cooler"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-swamp-cooler.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.10</span></figcaption></figure></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-12"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.3.2</span><span class="title">Horizontal Translations</span>
+</h1></header><figure class="figure-like" id="fig-translate-parabs"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-translate-parabs.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.11</span></figcaption></figure><p id="p-108">
+    Now consider the graphs of \(f (x) = (x + 2)^2\) and \(g(x) = (x − 2)^2\) shown in <a knowl="./knowl/fig-translate-parabs.html" knowl-id="xref-fig-translate-parabs" alt="Figure 1.3.11 " title="Figure 1.3.11 ">Figure 1.3.11</a>. Compared with the graph of the basic function \(y = x^2\), the graph of \(f (x) = (x + 2)^2\) is shifted two units to the <!--Style me with CSS--><em>left</em>, as shown by the arrows. You can see why this happens by studying the function values in the table. Locate a particular \(y\)-value for \(y = x^2\), say, \(y = 1\). You must move two units to the left in the table to find the same \(y\)-value for \(f (x)\), as shown by the arrow. In fact, each \(y\)-value for \(f (x)\) occurs two units to the left when compared to the same \(y\)-value for \(y = x^2\).
+    <figure class="figure-like" id="fig-table-translate-left"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-table-translate-left.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.12</span></figcaption></figure>
+</p>
+<p id="p-109">
+    <figure class="figure-like" id="fig-table-translate-right"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-table-translate-right.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.13</span></figcaption></figure>
+    Similarly, the graph of \(g(x) = (x − 2)^2\) is shifted two units to the <!--Style me with CSS--><em>right</em> compared to the graph of \(y = x^2\). In the table for \(g\), each \(y\)-value for \(g(x)\) occurs two units to the right of the same \(y\)-value for \(y = x^2\). In general, we have the following principle.
+</p>
+<article class="paragraphs" id="paragraphs-10"><h5 class="heading"><span class="title">Horizontal Translations</span></h5>
+<p id="p-110"></p>
+<p id="p-111">
+    Compared with the graph of \(y = f (x)\),
+    <ol style="list-style-type: decimal;">
+<li id="li-78">The graph of \(y = f (x + h)~ ~\) (\(h \gt 0\)) is shifted \(h\) units to the <!--Style me with CSS--><em>left</em>.</li>
+<li id="li-79">The graph of \(y = f (x − h)~ ~\) (\(h \gt 0\)) is shifted \(h\) units to the <!--Style me with CSS--><em>right</em>.</li>
+</ol>
+</p></article><article class="example-like" id="example-horizontal-translations"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.3.14</span>
+</h5>
+<p id="p-112">
+        Graph the following functions.
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-80">\(g(x) =\sqrt{x + 1}\)</li>
+<li id="li-81">\(h(x) = \frac{1}{(x − 3)^2}\)</li>
+</ol>
+    </p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-13" id="solution-13"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-13" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+<li id="li-82">The table shows that each \(y\)-value for \(g(x)\) occurs one unit to the left of the same \(y\)-value for the graph of \(y=\sqrt{x}\). Consequently, each point on the graph of \(y = g(x)\) is shifted one unit to the left of \(y =\sqrt{x}\), as shown in <a knowl="./knowl/fig-shift-sqrt.html" knowl-id="xref-fig-shift-sqrt" alt="Figure 1.3.15 " title="Figure 1.3.15 ">Figure 1.3.15</a>.
+            <figure class="figure-like" id="table-16"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(-1\)</td>
+<td class="c m b1 r1 l0 t3">\(0\)</td>
+<td class="c m b1 r1 l0 t3">\(1\)</td>
+<td class="c m b1 r1 l0 t3">\(2\)</td>
+<td class="c m b1 r1 l0 t3">\(3\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(y=\sqrt{x}\)</td>
+<td class="c m b1 r1 l0 t0"><p id="p-113">undefined</p></td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(1.414\)</td>
+<td class="c m b1 r1 l0 t0">\(1.732\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(y=\sqrt{x+1}\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(1.414\)</td>
+<td class="c m b1 r1 l0 t0">\(1.732\)</td>
+<td class="c m b1 r1 l0 t0">\(2\)</td>
+</tr>
+</table></figure><figure class="figure-like" id="fig-shift-sqrt"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-shift-sqrt.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.15</span></figcaption></figure>
+</li>
+<li id="li-83">The table shows that each \(y\)-value for \(h(x)\) occurs three units to the right of the same y-value for the graph of \(y =\frac{1}{x^2}\). Consequently, each point on the graph of \(y = h(x)\) is shifted three units to the right of \(y =\frac{1}{x^2},\), as shown in <a knowl="./knowl/fig-shift-inv-sq.html" knowl-id="xref-fig-shift-inv-sq" alt="Figure 1.3.16 " title="Figure 1.3.16 ">Figure 1.3.16</a>.
+            <figure class="figure-like" id="table-17"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(-1\)</td>
+<td class="c m b1 r1 l0 t3">\(0\)</td>
+<td class="c m b1 r1 l0 t3">\(1\)</td>
+<td class="c m b1 r1 l0 t3">\(2\)</td>
+<td class="c m b1 r1 l0 t3">\(3\)</td>
+<td class="c m b1 r1 l0 t3">\(4\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(y=\frac{1}{x}\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0"><p id="p-114">undefined</p></td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(\frac{1}{4}\)</td>
+<td class="c m b1 r1 l0 t0">\(\frac{1}{9}\)</td>
+<td class="c m b1 r1 l0 t0">\(\frac{1}{16}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(y=\frac{1}{x(-3)^2}\)</td>
+<td class="c m b1 r1 l0 t0">\(\frac{1}{16}\)</td>
+<td class="c m b1 r1 l0 t0">\(\frac{1}{9}\)</td>
+<td class="c m b1 r1 l0 t0">\(\frac{1}{4}\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0"><p id="p-115">undefined</p></td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+</tr>
+</table></figure><figure class="figure-like" id="fig-shift-inv-sq"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-shift-inv-sq.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.16</span></figcaption></figure>
+</li>
+</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-shift-abs" id="exercise-shift-abs"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.3.17</span>
+</h5></a></div>
+<div id="hk-exercise-shift-abs" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-84">Graph the function \(f (x) = \abs{x + 1}\).</li>
+<li id="li-85">How is the graph of \(f\) different from the graph of \(y = \abs{x}\)?</li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<article class="example-like" id="example-shift-bell-curve"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.3.18</span>
+</h5>
+<div class="sidebyside" id="sidebyside-18">
+<p id="p-116" class="left" style="width:48%;vertical-align:bottom;text-align:left;">The function \(N = f (p)\) graphed in <a knowl="./knowl/fig-shift-bell-curve.html" knowl-id="xref-fig-shift-bell-curve" alt="Figure 1.3.19 " title="Figure 1.3.19 ">Figure 1.3.19</a> gives the number of people who have a given eye pressure level \(p\) from a sample of 100 people with healthy eyes, and the function \(g\) gives the number of people with pressure level \(p\) in a sample of 100 glaucoma patients.</p>
+<figure class="right" id="fig-shift-bell-curve" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-shift-bell-curve.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.19</span></figcaption></figure>
+</div>
+<ol style="list-style-type: lower-alpha;">
+<li id="li-86">Write a formula for \(g\) as a transformation of \(f\).</li>
+<li id="li-87">For what pressure readings could a doctor be fairly certain that a patient has glaucoma?</li>
+</ol>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-14" id="solution-14"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-14" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+<li id="li-88">The graph of \(g\) is translated \(10\) units to the right of \(f\), so \(g(p) = f (p − 10)\).</li>
+<li id="li-89">Pressure readings above \(40\) are a strong indication of glaucoma. Readings between \(10\) and \(40\) cannot conclusively distinguish healthy eyes from those with glaucoma.</li>
+</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-shift-surge-curve" id="exercise-shift-surge-curve"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.3.20</span>
+</h5></a></div>
+<div id="hk-exercise-shift-surge-curve" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+    The function \(C = f (t)\) in <a knowl="./knowl/fig-shift-surge-curve.html" knowl-id="xref-fig-shift-surge-curve" alt="Figure 1.3.21 " title="Figure 1.3.21 ">Figure 1.3.21</a> gives the caffeine level in Delbert's bloodstream at time \(t\) hours after he drinks a cup of coffee, and \(g(t)\) gives the caffeine level in Francine's bloodstream. Write a formula for \(g\) in terms of \(f\), and explain what it tells you about Delbert and Francine.
+    <figure class="figure-like" id="fig-shift-surge-curve"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-shift-surge-curve.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.21</span></figcaption></figure></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<article class="example-like" id="example-translate-cubic"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.3.22</span>
+</h5>
+<p id="p-117">Graph \(f (x) = (x + 4)^3 + 2\).</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-15" id="solution-15"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-15" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-118">
+            We identify the basic graph from the structure of the formula for \(f (x)\). In this case, the basic graph is \(y = x^3\), so we begin by locating a few points on that graph, as shown in <a knowl="./knowl/fig-translate-cubic.html" knowl-id="xref-fig-translate-cubic" alt="Figure 1.3.23 " title="Figure 1.3.23 ">Figure 1.3.23</a>. We will perform the translations separately, following the order of operations. First, we sketch a graph of \(y = (x + 4)^3\) by shifting each point on the basic graph four units to the left. We then move each point up two units to obtain the graph of \(f (x) = (x + 4)^3 + 2\). All three graphs are shown in <a knowl="./knowl/fig-translate-cubic.html" knowl-id="xref-fig-translate-cubic" alt="Figure 1.3.23 " title="Figure 1.3.23 ">Figure 1.3.23</a>.
+        </p>
+<figure class="figure-like" id="fig-translate-cubic"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-translate-cubic.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.23</span></figcaption></figure></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-translate-abs2" id="exercise-translate-abs2"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.3.24</span>
+</h5></a></div>
+<div id="hk-exercise-translate-abs2" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-90">Graph the function \(f (x) = \abs{x − 2} − 1\).</li>
+<li id="li-91">How is the graph of \(f\) different from the graph of \(y=\abs{x}\)?</li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-13"><header><h1 class="heading hide-type">
+<span class="type">Subsection</span><span class="codenumber">1.3.3</span><span class="title">Scale Factors</span>
+</h1></header><p id="p-119">
+    We have seen that <!--Style me with CSS--><em>adding</em> a constant to the expression defining a function results in a translation of its graph. What happens if we <!--Style me with CSS--><em>multiply</em> the expression by a constant? Consider the graphs of the functions
+    <div class="displaymath" id="me-33">\begin{equation*}
+        f(x)= 2x^2 \text{, } ~g(x)= \frac{1}{2}x^2 \text{, and } ~h(x) = −x^2
+    \end{equation*}</div>
+    shown in <a knowl="./knowl/fig-2x-sq.html" knowl-id="xref-fig-2x-sq" alt="Figure 1.3.25 " title="Figure 1.3.25 ">Figure 1.3.25</a>, <a knowl="./knowl/fig-half-x-sq.html" knowl-id="xref-fig-half-x-sq" alt="Figure 1.3.26 " title="Figure 1.3.26 ">Figure 1.3.26</a>, and <a knowl="./knowl/fig-neg-x-sq.html" knowl-id="xref-fig-neg-x-sq" alt="Figure 1.3.27 " title="Figure 1.3.27 ">Figure 1.3.27</a>, and compare each to the graph of \(y = x^2\).
+</p>
+<div class="sidebyside" id="sidebyside-19">
+<figure class="left" id="fig-2x-sq" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-2x-sq.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.25</span></figcaption></figure><figure class="right" id="table-18" style="width:48%;vertical-align:bottom;text-align:center;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(y=x^2\)</td>
+<td class="c m b1 r1 l0 t3">\(f(x)=2x^2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-2\)</td>
+<td class="c m b1 r1 l0 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(8\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-1\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(8\)</td>
+</tr>
+</table></figure>
+</div>
+<p id="p-120">
+    Compared to the graph of \(y = x^2\), the graph of \(f (x) = 2x^2\) is expanded, or stretched, vertically by a factor of \(2\). The \(y\)-coordinate of each point on the graph has been doubled, as you can see in the table of values, so each point on the graph of \(f\) is twice as far from the \(x\)-axis as its counterpart on the basic graph \(y = x^2\).
+</p>
+<div class="sidebyside" id="sidebyside-20">
+<figure class="left" id="fig-half-x-sq" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-half-x-sq.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.26</span></figcaption></figure><figure class="right" id="table-19" style="width:48%;vertical-align:bottom;text-align:center;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(y=x^2\)</td>
+<td class="c m b1 r1 l0 t3">\(g(x)=\frac{1}{2}x^2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-2\)</td>
+<td class="c m b1 r1 l0 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-1\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(\frac{1}{2}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(\frac{1}{2}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(2\)</td>
+</tr>
+</table></figure>
+</div>
+<p id="p-121">
+    The graph of \(g(x) = \frac{1}{2}x^2\) is compressed vertically by a factor of \(\frac{1}{2}\); each point is half as far from the \(x\)-axis as its counterpart on the graph of \(y = x^2\).
+</p>
+<div class="sidebyside" id="sidebyside-21">
+<figure class="left" id="fig-neg-x-sq" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-neg-x-sq.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.27</span></figcaption></figure><figure class="right" id="table-20" style="width:48%;vertical-align:bottom;text-align:center;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(y=x^2\)</td>
+<td class="c m b1 r1 l0 t3">\(h(x)=-x^2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-2\)</td>
+<td class="c m b1 r1 l0 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(-4\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-1\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(-1\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(-1\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(-4\)</td>
+</tr>
+</table></figure>
+</div>
+<p id="p-122">
+    The graph of \(h(x) = −x^2\) is flipped, or reflected, about the \(x\)-axis; the \(y\)-coordinate of each point on the graph of \(y = x^2\) is replaced by its opposite.
+</p>
+<p id="p-123">
+    In general, we have the following principles.
+</p>
+<article class="paragraphs" id="paragraphs-11"><h5 class="heading"><span class="title">Scale Factors and Reflections</span></h5>
+<p id="p-124"></p>
+<p id="p-125">
+    Compared with the graph of \(y = f (x)\), the graph of \(y = a f (x)\), where \(a \ne 0\), is
+    <ol style="list-style-type: decimal;">
+<li id="li-92">stretched vertically by a factor of \(\abs{a}\) if \(\abs{a}\gt 1\),</li>
+<li id="li-93">compressed vertically by a factor of \(\abs{a}\) if \(0\lt\abs{a}\lt 1\), and</li>
+<li id="li-94">reflected about the \(x\)-axis if \(\abs{a}\lt 0\).</li>
+</ol>
+</p></article><article class="example-like" id="example-scale"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.3.28</span>
+</h5>
+<p id="p-126">
+        Graph the following functions.
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-95">\(g(x) = 3\sqrt[3]{x}\)</li>
+<li id="li-96">\(h(x) =\frac{−1}{2}\abs{x}\)</li>
+</ol>
+    </p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-16" id="solution-16"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-16" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+<li id="li-97">The graph of \(g(x) = 3\sqrt[3]{x}\) is a vertical expansion of the basic graph \(y = \sqrt[3]{x}\) by a factor of \(3\), as shown in <a knowl="./knowl/fig-scale-cube-root.html" knowl-id="xref-fig-scale-cube-root" alt="Figure 1.3.29 " title="Figure 1.3.29 ">Figure 1.3.29</a>. Each point on the basic graph has its \(y\)-coordinate tripled.
+            <figure class="figure-like" id="fig-scale-cube-root"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-scale-cube-root.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.29</span></figcaption></figure>
+</li>
+<li id="li-98">
+            The graph of \(h(x) = \frac{−1}{2}\abs{x}\) is a vertical compression of the basic graph \(y = \abs{x}\) by a factor of \(\frac{1}{2}\), combined with a reflection about the \(x\)-axis. You may find it helpful to graph the function in two steps, as shown in <a knowl="./knowl/fig-scale-abs.html" knowl-id="xref-fig-scale-abs" alt="Figure 1.3.30 " title="Figure 1.3.30 ">Figure 1.3.30</a>.
+            <figure class="figure-like" id="fig-scale-abs"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-scale-abs.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.30</span></figcaption></figure>
+</li>
+</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-scale-abs" id="scale-abs"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.3.31</span>
+</h5></a></div>
+<div id="hk-scale-abs" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-99">Graph the function \(f (x) = 2\abs{x}\).</li>
+<li id="li-100">How is the graph of \(f\) different from the graph of \(y =\abs{x}\)?</li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<article class="example-like" id="example-alcohol-level"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.3.32</span>
+</h5>
+<p id="p-127">
+        The function \(A = f (t)\) graphed in <a knowl="./knowl/fig-surge-alcohol.html" knowl-id="xref-fig-surge-alcohol" alt="Figure 1.3.33 " title="Figure 1.3.33 ">Figure 1.3.33</a> gives a person's blood alcohol level \(t\) hours after drinking a martini. Sketch a graph of \(g(t) = 2 f (t)\) and explain what it tells you.
+    </p>
+<figure class="figure-like" id="fig-surge-alcohol"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-surge-alcohol.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.33</span></figcaption></figure><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-17" id="solution-17"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-17" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-128">
+            To sketch a graph of \(g\), we stretch the graph of \(f\) vertically by a factor of \(2\), as shown in <a knowl="./knowl/fig-surge-alcohol2.html" knowl-id="xref-fig-surge-alcohol2" alt="Figure 1.3.34 " title="Figure 1.3.34 ">Figure 1.3.34</a>. At each time \(t\), the person’s blood alcohol level is twice the value given by \(f\). The function \(g\) could represent a person's blood alcohol level \(t\) hours after drinking two martinis.
+        </p>
+<figure class="figure-like" id="fig-surge-alcohol2"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-surge-alcohol2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.34</span></figcaption></figure></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-daylight-hours" id="daylight-hours"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.3.35</span>
+</h5></a></div>
+<div id="hk-daylight-hours" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-129">If the Earth were not tilted on its axis, there would be 12 daylight hours every day all over the planet. But in fact, the length of a day in a particular location depends on the latitude and the time of year. The graph in Figure 2.26 shows \(H = f (t)\), the length of a day in Helsinki, Finland, \(t\) days after January 1, and \(R = g(t)\), the length of a day in Rome. Each is expressed as the number of hours greater or less than 12. Write a formula for \(f\) in terms of \(g\). What does this formula tell you?</p>
+<figure class="figure-like" id="fig-daylight-hours"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-daylight-hours.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.3.36</span></figcaption></figure></article><div class="hidden-knowl-wrapper"></div>
+</div></section></section></div></main>
+</div>
+</body>
+</html>
