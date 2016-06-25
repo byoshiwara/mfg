@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- <mathbook><book> -->
+
+<section xml:id="Joint-Variation"   xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Joint Variation</title>
+
+
+<subsection><title>Functions of Two or More Variables</title>
+<p>
+    So far, we have studied functions that relate values of an output variable to values of a single input variable. But it is not uncommon for an output variable to depend on two or more inputs. Many familiar formulas describe functions of several variables. For example, the perimeter of a rectangle depends on its length and width. The volume of a cylinder depends on its radius and height. The distance you travel depends on your speed and the time you spent traveling. Each of these formulas can be written with function notation.
+    \begin{align*}
+    \amp P = f (l,w) = 2l + 2w \amp\amp \text{Perimeter is a function of length and width.}\\
+    \amp V = f (r, h) = πr 2h \amp\amp \text{Volume is a function of radius and height.}\\
+    \amp d = f (r, t) = rt \amp\amp \text{Distance is a function of rate and time.}
+    \end{align*}
+</p>
+
+<example xml:id="example-rental-car">
+<p>
+    The cost, <m>C</m>, of driving a rental car is given by the function
+    <me>C = f (t, g) = 29.95t + 2.80g</me>
+    where <m>t</m> is the number of days you rent the car and <m>g</m> is the number of gallons of gas you buy.
+</p>
+<ol label="*a*">
+    <li>Evaluate <m>f (3,10)</m> and explain what it means.</li>
+    <li>You have <dollar/>100 to rent a car for <m>2</m> days. How much gas can you buy?</li>
+</ol>
+<solution>
+    <ol label="*a*">
+        <li>We substitute <m>3</m> for <m>t</m> and <m>10</m> for <m>g</m> to find
+        <me>f (3, 10) = 29.95(3) + 2.80(10) = 117.85</me>
+        It will cost <dollar/><m>117.85</m> to rent a car for <m>3</m> days and buy <m>10</m> gallons of gas.</li>
+        <li>We would like to find the value of <m>g</m> when <m>t = 2</m> and <m>C = 100</m>. That is, we want to solve the equation
+        \begin{align*}
+        100 \amp = f (2, g) = 29.95(2) + 2.80g \\
+        100 \amp = 59.90 + 2.80g \\
+        g \amp = 14.32
+        \end{align*}
+        You can buy <m>14.32</m> gallons of gas.
+    </li>
+</ol>
+</solution>
+</example>
+
+<exercise xml:id="exercise-water-stream"><statement>
+<p>
+    The maximum height that the water stream from a fire hose can reach depends on the water pressure and the diameter of the nozzle, and is given by the function
+    <me>H = f (P, n) = 26 + \frac{5}{8}P + 5n</me>
+    where <m>P</m> is the nozzle pressure in psi, and <m>n</m> is measured in <m>18</m>-inch increments over the standard nozzle diameter of <m>\frac{3}{4}</m> inch.
+    <ol label="*a*">
+        <li>Evaluate <m>f (40, 2)</m> and explain what it means.</li>
+        <li>What nozzle pressure is needed to reach a height of <m>91</m> feet with a <m>1\frac{1}{8}</m>-inch nozzle?</li>
+    </ol>
+</p>
+</statement></exercise>
+
+</subsection>
+
+
+
+
+<subsection><title>Tables of Values</title>
+<p>
+    Just as for functions of a single variable, we can use tables to describe functions of two variables, <m>z = f (x, y)</m>. The row and column headings show the values of the two input variables, and the table entries show the values of the output variable.
+</p>
+<example xml:id="example-wind-chill">
+<p>
+    Windchill is a function of two variables, temperature and wind speed, or <m>W = f (s, t)</m>. The table shows the windchill factor for various combinations of temperature and wind speed.
+</p>
+<table>
+    <tabular top="major" halign="center"  right="minor" left="minor" bottom="minor">
+        <!--  -->
+        <row>
+            <cell colspan="9" halign="center">Windchill Factors</cell>
+        </row>
+        <row bottom="medium">
+            <cell></cell>
+            <cell colspan="8" halign="center">Temperature (°F)</cell>
+        </row>
+        <row> 
+            <cell>Wind speed (mph)</cell>
+            <cell><m>35</m></cell>
+            <cell><m>30</m></cell>
+            <cell><m>25</m></cell>
+            <cell><m>20</m></cell>
+            <cell><m>15</m></cell>
+            <cell><m>10</m></cell>
+            <cell><m>5</m></cell>
+            <cell><m>0</m></cell>
+        </row>
+        <row> 
+            <cell><m>5</m></cell>
+            <cell><m>33</m></cell>
+            <cell><m>27</m></cell>
+            <cell><m>21</m></cell>
+            <cell><m>16</m></cell>
+            <cell><m>12</m></cell>
+            <cell><m>7</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>-5</m></cell>
+        </row>
+        <row> 
+            <cell><m>10</m></cell>
+            <cell><m>22</m></cell>
+            <cell><m>16</m></cell>
+            <cell><m>10</m></cell>
+            <cell><m>3</m></cell>
+            <cell><m>-3</m></cell>
+            <cell><m>-9</m></cell>
+            <cell><m>-15</m></cell>
+            <cell><m>-22</m></cell>
+        </row>
+        <row> 
+            <cell><m>15</m></cell>
+            <cell><m>16</m></cell>
+            <cell><m>9</m></cell>
+            <cell><m>2</m></cell>
+            <cell><m>-5</m></cell>
+            <cell><m>-11</m></cell>
+            <cell><m>-18</m></cell>
+            <cell><m>-25</m></cell>
+            <cell><m>-31</m></cell>
+        </row>
+        <row> 
+            <cell><m>20</m></cell>
+            <cell><m>12</m></cell>
+            <cell><m>4</m></cell>
+            <cell><m>-3</m></cell>
+            <cell><m>-10</m></cell>
+            <cell><m>-17</m></cell>
+            <cell><m>-24</m></cell>
+            <cell><m>-31</m></cell>
+            <cell><m>-39</m></cell>
+        </row>
+        <row> 
+            <cell><m>25</m></cell>
+            <cell><m>8</m></cell>
+            <cell><m>1</m></cell>
+            <cell><m>-7</m></cell>
+            <cell><m>-15</m></cell>
+            <cell><m>-22</m></cell>
+            <cell><m>-29</m></cell>
+            <cell><m>-36</m></cell>
+            <cell><m>-44</m></cell>
+        </row>
+    </tabular>
+</table>
+<ol label="*a*">
+    <li>What is the windchill factor when the temperature is <m>15\degree</m>F and the wind is blowing at <m>20</m> mph? Write this fact with function notation.</li>
+    <li>Find a value for <m>t</m> so that <m>f (10, t) =−15</m>. What does this equation tell you about the windchill factor?</li>
+    <li>Solve the equation <m>f (s, 30) = 1</m>. What does this tell you about the windchill factor?</li>
+</ol>
+
+<solution>
+<ol label="*a*">
+    <li>We look in the row for <m>20</m> mph and the column for <m>15\degree</m>. The associated windchill factor is <m>−17</m>, so <m>f (20, 15) = −17</m>.</li>
+    <li>We look in the row for <m>s = 10</m> until we find the windchill factor of <m>W = −15</m>. The column heading for that entry is <m>5</m>, so <m>t = 5</m>. When the wind speed is <m>10</m> mph and the windchill factor is <m>−15</m>, the temperature is <m>5\degree</m>F.</li>
+    <li>In the <m>t = 30\degree</m>F column, we find the windchill factor of <m>1</m> in the <m>25</m>-mph row, so <m>s = 25</m>. The wind speed is <m>25</m> mph when the temperature is <m>30\degree</m>F and the windchill factor is <m>1</m>.</li>
+</ol>
+</solution>
+</example>
+
+<exercise xml:id="exercise-retirement-fund"><statement>
+<p>
+    A retirement plan requires employees to put aside a fixed amount of money each year until retirement. The amount accumulated, <m>A</m>, includes <m>8</m><percent/> annual interest on employee's annual contribution, <m>c</m>. <m>A</m> is a function of <m>c</m> and the number of years, <m>t</m>, that the employee makes contributions, so <m>A = f (c, t)</m>.
+</p>
+<table>
+    <tabular top="major" halign="center"  right="minor" left="minor" bottom="minor">
+        <!--  -->
+        <row>
+            <cell colspan="6" halign="center">Retirement Fund Balance</cell>
+        </row>
+        <row bottom="medium">
+            <cell></cell>
+            <cell colspan="5" halign="center">Number of years of contributions</cell>
+        </row>
+        <row> 
+            <cell>Annual contribution</cell>
+            <cell><m>10</m></cell>
+            <cell><m>20</m></cell>
+            <cell><m>30</m></cell>
+            <cell><m>40</m></cell>
+            <cell><m>50</m></cell>
+        </row>
+        <row> 
+            <cell><m>500</m></cell>
+            <cell><m>7243</m></cell>
+            <cell><m>22,881</m></cell>
+            <cell><m>56,642</m></cell>
+            <cell><m>129,528</m></cell>
+            <cell><m>286,885</m></cell>
+        </row>
+        <row> 
+            <cell><m>1000</m></cell>
+            <cell><m>14,487</m></cell>
+            <cell><m>45,762</m></cell>
+            <cell><m>113,283</m></cell>
+            <cell><m>259,057</m></cell>
+            <cell><m>573,770</m></cell>
+        </row>
+        <row> 
+            <cell><m>1500</m></cell>
+            <cell><m>21,730</m></cell>
+            <cell><m>68,643</m></cell>
+            <cell><m>169,925</m></cell>
+            <cell><m>388,585</m></cell>
+            <cell><m>860,655</m></cell>
+        </row>
+        <row> 
+            <cell><m>2000</m></cell>
+            <cell><m>28,973</m></cell>
+            <cell><m>91,524</m></cell>
+            <cell><m>226,566</m></cell>
+            <cell><m>518,113</m></cell>
+            <cell><m>1,147,540</m></cell>
+        </row>
+        <row> 
+            <cell><m>2500</m></cell>
+            <cell><m>43,460</m></cell>
+            <cell><m>137,286</m></cell>
+            <cell><m>339,850</m></cell>
+            <cell><m>777,170</m></cell>
+            <cell><m>1,721,310</m></cell>
+        </row>
+        <row> 
+            <cell><m>3000</m></cell>
+            <cell><m>50,703</m></cell>
+            <cell><m>160,167</m></cell>
+            <cell><m>396,491</m></cell>
+            <cell><m>906,698</m></cell>
+            <cell><m>2,008,196</m></cell>
+        </row>
+    </tabular>
+</table>
+<ol label="*a*">
+    <li>How much will an employee accumulate if she contributes <dollar/>500 a year for <m>40</m> years? Write your answer with function notation.</li>
+    <li>How much must she contribute each year in order to accumulate <dollar/><m>573,770</m> after <m>50</m> years? Write your answer with function notation.</li>
+    <li>Find a value of <m>t</m> that solves the equation <m>137,286 = f(2500, t)</m>. What does this equation tell you about the retirement fund?</li>
+</ol>
+</statement></exercise>
+
+</subsection>
+
+
+
+
+
+<subsection><title>Joint Variation</title><index>joint variation</index>
+<p>
+    Sometimes we can find patterns relating the entries in a table.
+</p>
+
+<example xml:id="example-load">
+<p>
+    Rectangular beams of a given length can support a load, <m>L</m>, that depends on both the width and the depth of the beam, so that <m>L = f (w, d)</m>. The table shows some of the values.
+</p>
+<table>
+    <tabular top="major" halign="center"  right="minor" left="minor" bottom="minor">
+        <!--  -->
+        <row>
+            <cell colspan="7" halign="center">Maximum Load (kilograms)</cell>
+        </row>
+        <row bottom="medium">
+            <cell></cell>
+            <cell colspan="6" halign="center">Depth (cm)</cell>
+        </row>
+        <row> 
+            <cell>Width (cm)</cell>
+            <cell><m>0</m></cell>
+            <cell><m>1</m></cell>
+            <cell><m>2</m></cell>
+            <cell><m>3</m></cell>
+            <cell><m>4</m></cell>
+            <cell><m>5</m></cell>
+        </row>
+        <row> 
+            <cell><m>0</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>0</m></cell>
+        </row>
+        <row> 
+            <cell><m>1</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>10</m></cell>
+            <cell><m>40</m></cell>
+            <cell><m>90</m></cell>
+            <cell><m>160</m></cell>
+            <cell><m>250</m></cell>
+        </row>
+        <row> 
+            <cell><m>2</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>20</m></cell>
+            <cell><m>80</m></cell>
+            <cell><m>180</m></cell>
+            <cell><m>320</m></cell>
+            <cell><m>500</m></cell>
+        </row>
+        <row> 
+            <cell><m>3</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>30</m></cell>
+            <cell><m>120</m></cell>
+            <cell><m>270</m></cell>
+            <cell><m>480</m></cell>
+            <cell><m>750</m></cell>
+        </row>
+        <row> 
+            <cell><m>4</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>40</m></cell>
+            <cell><m>160</m></cell>
+            <cell><m>360</m></cell>
+            <cell><m>640</m></cell>
+            <cell><m>1000</m></cell>
+        </row>
+        <row> 
+            <cell><m>5</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>50</m></cell>
+            <cell><m>200</m></cell>
+            <cell><m>450</m></cell>
+            <cell><m>800</m></cell>
+            <cell><m>1250</m></cell>
+        </row>
+    </tabular>
+</table>
+<ol label="*a*">
+    <li>Evaluate the function at <m>f (2, 5)</m>. Interpret your answer for the problem situation.</li>
+    <li>Is it true that <m>f (2, 5) = f (5, 2)</m>?</li>
+    <li>Consider the row corresponding to a width of <m>3</m> cm. How does the load depend on the depth?</li>
+</ol>
+<solution>
+<ol label="*a*">
+    <li>In the row for <m>2</m> cm and the column for <m>5</m> cm, we find that <m>f (2, 5) = 500</m>. A beam of width <m>2</m> cm and depth <m>5</m> cm can support a maximum load of <m>500</m> kilograms.</li>
+    <li>In the row for <m>5</m> cm and the column for <m>2</m> cm, we find that <m>f (5, 2) = 200</m>, so <m>f (2, 5) \ne f (5, 2)</m>.</li>
+    <li>Using the row for width <m>3</m> cm, we make a new table showing the relationship between load and depth. The increase in load for each increase of <m>1</m> cm in depth is not a constant, so the graph in <xref ref="fig-load-vs-depth" autoname="yes"/> is not a straight line. The curve does pass through the origin, so perhaps the data describe direct variation with a power of depth. If we try the equation <m>L = kd^2</m> and use the point <m>(1, 30)</m>, we find that <m>30 = k · 1^2</m>, so <m>k = 30</m>. You can check that the equation <m>L = 30d^2</m> does fit the rest of the data points.</li>
+</ol>
+<sidebyside>
+<table valign="top" width="40%"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+        <row bottom="minor">
+            <cell>Depth</cell>
+            <cell>Load</cell>
+        </row>
+        <row>
+            <cell><m>0</m></cell>
+            <cell><m>0</m></cell>
+        </row>
+        <row>
+            <cell><m>1</m></cell>
+            <cell><m>30</m></cell>
+        </row>
+        <row>
+            <cell><m>2</m></cell>
+            <cell><m>120</m></cell>
+        </row>
+        <row>
+            <cell><m>3</m></cell>
+            <cell><m>270</m></cell>
+        </row>
+        <row>
+            <cell><m>4</m></cell>
+            <cell><m>480</m></cell>
+        </row>
+        <row>
+            <cell><m>5</m></cell>
+            <cell><m>750</m></cell>
+        </row>
+    </tabular></table>
+<figure xml:id="fig-load-vs-depth"><image source="images/fig-load-vs-depth" alt="load vs depth for fixed width" width="90%"/><caption></caption></figure>
+</sidebyside>
+</solution>
+</example>
+
+<exercise xml:id="exercise-load"><statement>
+<ol label="*a*">
+    <li>For the table in <xref ref="example-load" autoname="yes"/>, consider the column corresponding to a beam depth of <m>3</m> cm. Graph <m>L</m> as a function of <m>w</m> when the depth is constant at <m>d = 3</m>.</li>
+    <li>Find a formula for <m>L</m> as a function of <m>w</m> for <m>d = 3</m>.</li>
+</ol>
+
+</statement></exercise>
+
+<p>
+    In <xref ref="exercise-load" autoname="yes"/>, you should find that the load varies directly with width when the depth is <m>3</m> centimeters. In fact, the load varies directly with width for any fixed depth. In <xref ref="example-load" autoname="yes"/>, we saw that the load varies with the square of depth when the width is <m>3</m> centimeters, and this relationship also holds for any value of <m>w</m>. Consequently, we can find a constant <m>k</m> such that 
+    <me>\text{load} = k \cdot \text{width} \cdot \text{depth}^2</me>
+    This relationship between variables is an example of <term index="yes">joint variation</term>.
+</p>
+
+
+
+
+</subsection>
+
+
+
+</section> 
+<!-- </book>  </mathbook> -->
