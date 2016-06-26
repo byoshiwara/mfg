@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-06-23T20:04:17-04:00    *-->
+<!--*    on 2016-06-26T15:51:20-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,12 +13,15 @@
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
         equationNumbers: { autoNumber: "none",
                            useLabelIds: true,
                            // JS comment, XML CDATA protect XHTML quality of file
@@ -101,12 +104,15 @@ MathJax.Hub.Config({
 <li><a href="Integer-Exponents.html">Integer Exponents</a></li>
 <li><a href="Roots-and-Radicals.html">Roots and Radicals</a></li>
 <li><a href="Rational-Exponents.html">Rational Exponents</a></li>
+<li><a href="Joint-Variation.html">Joint Variation</a></li>
 </ul>
+<h2 class="link"><a href="chap4.html"><span class="codenumber">4</span><span class="title">Exponential Functions</span></a></h2>
+<ul><li><a href="Exponential-Growth-and-Decay.html">Exponential Growth and Decay</a></li></ul>
 <h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
 <ul></ul>
 <h2 class="link"><a href="colophon-2.html"><span class="title">Colophon</span></a></h2>
 <ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="basic-functions"><header><h1 class="heading hide-type">
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="basic-functions"><header title="Section 2.2 Some Basic Functions"><h1 class="heading hide-type" alt="Section 2.2 Some Basic Functions">
 <span class="type">Section</span><span class="codenumber">2.2</span><span class="title">Some Basic Functions</span><a href="basic-functions.html" class="permalink">¶ permalink</a>
 </h1></header><p id="p-458">
     In this section, we study the graphs of some important basic functions. Many functions fall into families or classes of similar functions, and recognizing the appropriate family for a given situation is an important part of modeling.
@@ -114,7 +120,7 @@ MathJax.Hub.Config({
 <p id="p-459">
     We begin by reviewing the absolute value.
 </p>
-<section class="subsection" id="subsection-37"><header><h1 class="heading hide-type">
+<section class="subsection" id="subsection-37"><header title="Subsection 2.2.1 Absolute Value"><h1 class="heading hide-type" alt="Subsection 2.2.1 Absolute Value">
 <span class="type">Subsection</span><span class="codenumber">2.2.1</span><span class="title">Absolute Value</span>
 </h1></header><p id="p-460">
     The absolute value is used to discuss problems involving distance. For example, consider the number line in <a knowl="./knowl/fig-abs-six.html" knowl-id="xref-fig-abs-six" alt="Figure 2.2.1 " title="Figure 2.2.1 ">Figure 2.2.1</a>. Starting at the origin, we travel in opposite directions to reach the two numbers \(6\) and \(−6\), but the distance we travel in each case is the same.
@@ -125,16 +131,16 @@ MathJax.Hub.Config({
 <article class="paragraphs" id="paragraphs-24"><h5 class="heading"><span class="title">Absolute Value</span></h5>
 <p id="p-462">
    The absolute value of x is defined by
-   <div class="displaymath" id="me-133">\begin{equation*}
+   \begin{equation*}
     \abs{x} =
     \begin{cases}
     x \amp \text{if } x\ge 0\\
     -x  \amp \text{if } x\lt 0
     \end{cases}
-    \end{equation*}</div>
+    \end{equation*}
 </p></article><p id="p-463">
     This definition says that the absolute value of a positive number (or zero) is the same as the number. To find the absolute value of a negative number, we take the opposite of the number, which results in a positive number. For instance,
-    <div class="displaymath" id="me-134">\begin{equation*}\abs{−6} = −(−6) = 6\end{equation*}</div>
+    \begin{equation*}\abs{−6} = −(−6) = 6\end{equation*}
     Absolute value bars act like grouping devices in the order of operations: You should complete any operations that appear inside absolute value bars before you compute the absolute value.
 </p>
 <article class="example-like" id="example-abs"><h5 class="heading">
@@ -144,15 +150,15 @@ MathJax.Hub.Config({
 <ol style="list-style-type: lower-alpha;">
 <li id="li-253">\(\abs{3 − 8}\)</li>
 <li id="li-254">\(\abs{3} − \abs{8}\)</li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-47" id="solution-47"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-47" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-47" id="solution-47"><span class="">Solution</span></a></span><span id="hk-solution-47" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-255">Simplify the expression inside the absolute value bars first.
-            <div class="displaymath" id="me-135">\begin{equation*}\abs{3 − 8} = \abs{−5} = 5\end{equation*}</div>
-</li>
+            \begin{equation*}\abs{3 − 8} = \abs{−5} = 5\end{equation*}</li>
 <li id="li-256">Simplify each absolute value; then subtract.
-            <div class="displaymath" id="me-136">\begin{equation*}\abs{3} − \abs{8} = 3 − 8 = −5\end{equation*}</div>
-</li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-abs" id="exercise-abs"><h5 class="heading">
+            \begin{equation*}\abs{3} − \abs{8} = 3 − 8 = −5\end{equation*}</li>
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-abs" id="exercise-abs"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.2.3</span>
 </h5></a></div>
 <div id="hk-exercise-abs" style="display: none;" class="tex2jax_ignore">
@@ -162,7 +168,7 @@ MathJax.Hub.Config({
 <li id="li-257">\(12 − 3\abs{−6}\)</li>
 <li id="li-258">\(−7 − 3\abs{2 − 9}\)</li>
 </ol></article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-38"><header><h1 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-38"><header title="Subsection 2.2.2 Examples of Models"><h1 class="heading hide-type" alt="Subsection 2.2.2 Examples of Models">
 <span class="type">Subsection</span><span class="codenumber">2.2.2</span><span class="title">Examples of Models</span>
 </h1></header><p id="p-465">
         Many situations can be modeled by a handful of simple functions. The following examples represent applications of eight useful functions.
@@ -339,7 +345,7 @@ MathJax.Hub.Config({
 <p id="p-469">Part II Asymptotes</p>
 <ol style="list-style-type: decimal;">
 <li id="li-267">Complete <a knowl="./knowl/table-reciprocals.html" knowl-id="xref-table-reciprocals" alt="Table 2.2.15 " title="Table 2.2.15 ">Table 2.2.15</a> for the functions
-        <div class="displaymath" id="me-137">\begin{equation*}f(x)=\frac{1}{x} ~\text{ and } ~ g(x)=\frac{1}{x^2}\end{equation*}</div>
+        \begin{equation*}f(x)=\frac{1}{x} ~\text{ and } ~ g(x)=\frac{1}{x^2}\end{equation*}
     What is true about \(f (0)\) and \(g(0)\)?
 
 <figure class="figure-like" id="table-reciprocals"><table>
@@ -584,19 +590,19 @@ MathJax.Hub.Config({
 <li id="li-279">
         Write a few sentences comparing the two graphs.
     </li>
-</ol></article></section><section class="subsection" id="subsection-39"><header><h1 class="heading hide-type">
+</ol></article></section><section class="subsection" id="subsection-39"><header title="Subsection 2.2.3 Graphs of Eight Basic Functions"><h1 class="heading hide-type" alt="Subsection 2.2.3 Graphs of Eight Basic Functions">
 <span class="type">Subsection</span><span class="codenumber">2.2.3</span><span class="title">Graphs of Eight Basic Functions</span>
 </h1></header><p id="p-476">
         The graphs of the eight basic functions considered in Investigation 4 are shown in <a knowl="./knowl/fig-basic-a-c.html" knowl-id="xref-fig-basic-a-c" alt="Figure 2.2.19 " title="Figure 2.2.19 ">Figure 2.2.19</a>, <a knowl="./knowl/fig-basic-d-f.html" knowl-id="xref-fig-basic-d-f" alt="Figure 2.2.20 " title="Figure 2.2.20 ">Figure 2.2.20</a>, and <a knowl="./knowl/fig-basic-g-h.html" knowl-id="xref-fig-basic-g-h" alt="Figure 2.2.21 " title="Figure 2.2.21 ">Figure 2.2.21</a>. Once you know the shape of each graph, you can sketch an accurate picture by plotting a few guidepoints and drawing the curve through those points. Usually, points (or vertical asymptotes!) at \(x = −1\), \(0\), and \(1\) make good guidepoints.
     </p>
-<figure class="figure-like" id="fig-basic-a-c"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-basic-a-c.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.2.19</span></figcaption></figure><figure class="figure-like" id="fig-basic-d-f"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-basic-d-f.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.2.20</span></figcaption></figure><figure class="figure-like" id="fig-basic-g-h"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-basic-g-h.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.2.21</span></figcaption></figure></section><section class="subsection" id="subsection-40"><header><h1 class="heading hide-type">
+<figure class="figure-like" id="fig-basic-a-c"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-basic-a-c.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.2.19</span></figcaption></figure><figure class="figure-like" id="fig-basic-d-f"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-basic-d-f.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.2.20</span></figcaption></figure><figure class="figure-like" id="fig-basic-g-h"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-basic-g-h.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.2.21</span></figcaption></figure></section><section class="subsection" id="subsection-40"><header title="Subsection 2.2.4 Properties of the Basic Functions"><h1 class="heading hide-type" alt="Subsection 2.2.4 Properties of the Basic Functions">
 <span class="type">Subsection</span><span class="codenumber">2.2.4</span><span class="title">Properties of the Basic Functions</span>
 </h1></header><p id="p-477">
     In <a href="functions.html" alt="Section 1.2 Functions" title="Section 1.2 Functions">Section 1.2</a>, we saw that for most functions, \(f (a + b)\) is not equal to \(f (a) + f (b)\). We may be able to find some values of \(a\) and \(b\) for which \(f (a + b) = f (a) + f (b)\) is true, but not for all values of \(a\) and \(b\). If there is even one value of \(a\) or \(b\) for which \(f (a + b)\) is not equal to \(f (a) + f (b)\), we cannot claim that \(f (a + b) = f (a) + f (b)\) for that function. For example, for the function \(f (x) = x^2\), if we choose \(a = 3\) and \(b = 4\), then
-    <div class="displaymath" id="md-9">\begin{align*}
+    \begin{align*}
 f (3 + 4) \amp = f (7) = 7^2 = 49\\
 \text{but }~ f (3) + f (4) \amp = 3^2 + 4^2 = 9 + 16 = 25
-\end{align*}</div>
+\end{align*}
     so we have proved that \(f (a + b) \ne f (a) + f (b)\) for the squaring function. (In fact, we already knew this because \((a + b)^2 \ne a^2 + b^2\) as long as neither \(a\) nor \(b\) is \(0\).)
 </p>
 <p id="p-478">
@@ -612,16 +618,10 @@ value.
 </h5>
 <p id="p-480">
         Verify the triangle inequality for three cases: \(a\) and \(b\) are both positive, \(a\) and \(b\) are both negative, and \(a\) and \(b\) have opposite signs.
-    </p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-48" id="solution-48"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-48" style="display: none;" class="tex2jax_ignore"><span class="solution">
-    We choose positive values for \(a\) and \(b\), say \(a = 3\) and \(b = 5\). Then 
-    <div class="displaymath" id="me-138">\begin{equation*}\abs{3 + 5} = \abs{8} = 8 ~\text{ and } ~ \abs{3}+\abs{5}= 3 + 5 = 8\end{equation*}</div>
-    so \(\abs{3 + 5} = \abs{3} + \abs{5}\). For the second case, we choose \(a = −3\) and \(b = −5\). Then
-    <div class="displaymath" id="me-139">\begin{equation*}\abs{−3 + (−5)} = \abs{−8} = 8 ~\text{ and } ~ \abs{−3}+\abs{−5} = 3 + 5 = 8\end{equation*}</div>
-    so \(\abs{−3 + (−5)} =\abs{−3}+\abs{−5}\). For the third case, we choose \(a = 3\) and \(b = −5\). Then
-    <div class="displaymath" id="me-140">\begin{equation*}\abs{3 + (−5)}=\abs{−2} = 2  ~\text{ and } ~ \abs{3}+\abs{−5}=3 + 5 = 8\end{equation*}</div>
-    so \(\abs{3 + (−5)} \lt \abs{3}+\abs{−5}\). In each case, \(\abs{a + b}\le\abs{a} +\abs{b}\).
-</span></span></article><p id="p-481">
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-48" id="solution-48"><span class="">Solution</span></a></span><span id="hk-solution-48" style="display: none;" class="tex2jax_ignore"><div class="remark-like">\(a\)\(b\)\(a = 3\)\(b = 5\)\begin{equation*}\abs{3 + 5} = \abs{8} = 8 ~\text{ and } ~ \abs{3}+\abs{5}= 3 + 5 = 8\end{equation*}\(\abs{3 + 5} = \abs{3} + \abs{5}\)\(a = −3\)\(b = −5\)\begin{equation*}\abs{−3 + (−5)} = \abs{−8} = 8 ~\text{ and } ~ \abs{−3}+\abs{−5} = 3 + 5 = 8\end{equation*}\(\abs{−3 + (−5)} =\abs{−3}+\abs{−5}\)\(a = 3\)\(b = −5\)\begin{equation*}\abs{3 + (−5)}=\abs{−2} = 2  ~\text{ and } ~ \abs{3}+\abs{−5}=3 + 5 = 8\end{equation*}\(\abs{3 + (−5)} \lt \abs{3}+\abs{−5}\)\(\abs{a + b}\le\abs{a} +\abs{b}\)</div></span>
+</div></div>
+<p id="p-481">
     Note that <!--Style me with CSS--><em>verifying</em> a statement for one or two values of the variables does not <!--Style me with CSS--><em>prove</em> the statement is true for <!--Style me with CSS--><em>all</em> values of the variables. However, working with examples can help us understand the meaning and significance of mathematical properties.
 </p>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-abs-multiplicative-property" id="exercise-abs-multiplicative-property"><h5 class="heading">
@@ -631,7 +631,7 @@ value.
 <article class="exercise-like">
     Verify the multiplicative property of absolute value for the three cases in <a knowl="./knowl/example-triangle-inequality.html" knowl-id="xref-example-triangle-inequality" alt="Example 2.2.22 " title="Example 2.2.22 ">Example 2.2.22</a>.
 </article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-41"><header><h1 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-41"><header title="Subsection 2.2.5 Functions Defined Piecewise"><h1 class="heading hide-type" alt="Subsection 2.2.5 Functions Defined Piecewise">
 <span class="type">Subsection</span><span class="codenumber">2.2.5</span><span class="title">Functions Defined Piecewise</span>
 </h1></header><p id="p-482">
         A function may be defined by different formulas on different portions of the \(x\)-axis. Such a function is said to be defined <em class="terminology">piecewise</em>. To graph a function defined piecewise, we consider each piece of the \(x\)-axis separately.
@@ -641,15 +641,16 @@ value.
 </h5>
 <p id="p-483">
         Graph the function defined by   
-        <div class="displaymath" id="me-141">\begin{equation*}
+        \begin{equation*}
             f(x) =
             \begin{cases}
             x +1  \amp \text{if } x\le 1\\
             3  \amp \text{if } x\gt 1
             \end{cases}
-        \end{equation*}</div>
-    </p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-49" id="solution-49"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-49" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-484">
+        \end{equation*}
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-49" id="solution-49"><span class="">Solution</span></a></span><span id="hk-solution-49" style="display: none;" class="tex2jax_ignore"><div class="remark-like">
+<p id="p-484">
         Think of the plane as divided into two regions by the vertical line \(x = 1\), as shown in <a knowl="./knowl/fig-piecewise.html" knowl-id="xref-fig-piecewise" alt="Figure 2.2.25 " title="Figure 2.2.25 ">Figure 2.2.25</a>. In the left-hand region (\(x \le 1\)), we graph the line \(y = x + 1\). (The fastest way to graph the line is to plot its intercepts, \((−1, 0)\) and \((0, 1)\).) 
     </p>
 <div class="sidebyside" id="sidebyside-42">
@@ -657,28 +658,31 @@ value.
         Notice that the value \(x = 1\) is included in the first region, so \(f (1) = 1 + 1 = 2\), and the point \((1, 2)\) is included on the graph. We indicate this with a solid dot at the point \((1, 2)\). In the right-hand region (\(x \gt 1\)), we graph the horizontal line \(y = 3\). The value \(x = 1\) is not included in the second region, so the point \((1, 3)\) is not part of the graph. We indicate this with an open circle at the point \((1, 3)\).
     </p>
 <figure class="right" id="fig-piecewise" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-piecewise.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.2.25</span></figcaption></figure>
-</div></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-piecewise" id="exercise-piecewise"><h5 class="heading">
+</div>
+</div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-piecewise" id="exercise-piecewise"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.2.26</span>
 </h5></a></div>
 <div id="hk-exercise-piecewise" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like">
     Graph the piecewise defined function
-    <div class="displaymath" id="me-142">\begin{equation*}
+    \begin{equation*}
         g(x) =\begin{cases}
         −1 − x \amp \text { if } x \le −1\\
         x^3 \amp \text{ if } x \gt −1
         \end{cases}
-    \end{equation*}</div></article><div class="hidden-knowl-wrapper"></div>
+    \end{equation*}</article><div class="hidden-knowl-wrapper"></div>
 </div>
 <p id="p-486">
     The absolute value function \(f (x) = \abs{x}\) is an example of a function that is defined piecewise.
-    <div class="displaymath" id="me-143">\begin{equation*}
+    \begin{equation*}
         f (x) =\abs{x} =
         \begin{cases}
         x \amp \text{if } x\ge 0\\
         -x  \amp \text{if } x\lt 0
         \end{cases}
-    \end{equation*}</div>
+    \end{equation*}
     To sketch the absolute value function, we graph the line \(y = x\) in the first quadrant and the line \(y = −x\) in the second quadrant.
 </p>
 <article class="example-like" id="example-piecewise-def"><h5 class="heading">
@@ -687,30 +691,31 @@ value.
 <ol style="list-style-type: lower-alpha;">
 <li id="li-280">Write a piecewise definition for \(g(x) = \abs{x − 3}\).</li>
 <li id="li-281">Sketch a graph of \(g(x) = \abs{x − 3}\).</li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-50" id="solution-50"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-50" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-50" id="solution-50"><span class="">Solution</span></a></span><span id="hk-solution-50" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-282">In the definition for \(\abs{x}\), we replace \(x\) by \(x − 3\) to get
-            <div class="displaymath" id="me-144">\begin{equation*}
+            \begin{equation*}
                 g(x) =\abs{x-3} =
                 \begin{cases}
                 x-3 \amp \text{if }~ x-3\ge 0\\
                 -x  \amp \text{if }~ -(x-3)\lt 0
                 \end{cases}
-            \end{equation*}</div>
+            \end{equation*}
         We can simplify this expression to
-            <div class="displaymath" id="me-145">\begin{equation*}
+            \begin{equation*}
                 g(x) =\abs{x-3} =
                 \begin{cases}
                 x-3 \amp \text{if }~ x\ge 3\\
                 -x+3  \amp \text{if }~ x\lt 3
                 \end{cases}
-            \end{equation*}</div>
-</li>
+            \end{equation*}</li>
 <li id="li-283">
             In the first region, \(x \ge 3\), we graph the line \(y = x − 3\). Because \(x = 3\) is included in this region, the endpoint of this portion of the graph, \((3, 0)\), is included, too. In the second region, \(x \lt 3\), we graph the line \(y = −x + 3\). Note that the two pieces of the graph meet at the point \((0, 3)\), as shown in <a knowl="./knowl/fig-piecewise2.html" knowl-id="xref-fig-piecewise2" alt="Figure 2.2.28 " title="Figure 2.2.28 ">Figure 2.2.28</a>.
             <figure class="figure-like" id="fig-piecewise2"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-piecewise2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.2.28</span></figcaption></figure>
 </li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-piecewise2" id="exercise-piecewise2"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-piecewise2" id="exercise-piecewise2"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.2.29</span>
 </h5></a></div>
 <div id="hk-exercise-piecewise2" style="display: none;" class="tex2jax_ignore">

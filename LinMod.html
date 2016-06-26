@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-06-23T20:04:16-04:00    *-->
+<!--*    on 2016-06-26T15:51:19-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,12 +13,15 @@
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
         equationNumbers: { autoNumber: "none",
                            useLabelIds: true,
                            // JS comment, XML CDATA protect XHTML quality of file
@@ -101,14 +104,17 @@ MathJax.Hub.Config({
 <li><a href="Integer-Exponents.html">Integer Exponents</a></li>
 <li><a href="Roots-and-Radicals.html">Roots and Radicals</a></li>
 <li><a href="Rational-Exponents.html">Rational Exponents</a></li>
+<li><a href="Joint-Variation.html">Joint Variation</a></li>
 </ul>
+<h2 class="link"><a href="chap4.html"><span class="codenumber">4</span><span class="title">Exponential Functions</span></a></h2>
+<ul><li><a href="Exponential-Growth-and-Decay.html">Exponential Growth and Decay</a></li></ul>
 <h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
 <ul></ul>
 <h2 class="link"><a href="colophon-2.html"><span class="title">Colophon</span></a></h2>
 <ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="LinMod"><header><h1 class="heading hide-type">
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="LinMod"><header title="Section 1.1 Linear Models"><h1 class="heading hide-type" alt="Section 1.1 Linear Models">
 <span class="type">Section</span><span class="codenumber">1.1</span><span class="title">Linear Models</span><a href="LinMod.html" class="permalink">¶ permalink</a>
-</h1></header><section class="subsection" id="subsection-1"><header><h1 class="heading hide-type">
+</h1></header><section class="subsection" id="subsection-1"><header title="Subsection 1.1.1 Tables, Graphs and Equations"><h1 class="heading hide-type" alt="Subsection 1.1.1 Tables, Graphs and Equations">
 <span class="type">Subsection</span><span class="codenumber">1.1.1</span><span class="title">Tables, Graphs and Equations</span>
 </h1></header><p id="p-28">The first step in creating a model is to describe relationships between variables.  In Investigation 1 <span>&lt;&lt;investigation-commission&gt;&gt;</span>, we analyzed the relationship between Delbert's sales and his income.  Starting from the verbal description of his income, we represented the relationship by a table of values, a graph, and an algebraic equation.  Each of these mathematical tools is useful in a different way.</p>
 <ol style="list-style-type: decimal;">
@@ -125,14 +131,14 @@ MathJax.Hub.Config({
 <li id="li-13"><p id="p-34">Make a table of values showing the cost, \(C\), of renting a bike for various lengths of time, \(t\).</p></li>
 <li id="li-14"><p id="p-35">Plot the points on a graph.  Draw a curve through the data points</p></li>
 <li id="li-15"><p id="p-36">Write an equation for \(C\) in terms of \(t\).</p></li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="">Solution</span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-16">
 <p id="p-37">To find the cost, multiply the time by $3, and add the result to the $5 insurance fee.  For example, the cost of a 1-hour bike ride is
-                            <div class="displaymath" id="md-1">\begin{align*}
+                            \begin{align*}
 \text{Cost}\amp=(\$5\text{ insurance fee})+(\$3\text{ per hour})\times(\alert{1}\text{ hour})\\
 C\amp=5+3(\alert{1})=8
-\end{align*}</div>
+\end{align*}
                             A 1-hour bike ride costs $8.  Record the results in a table, as shown here:</p>
 <figure class="figure-like" id="table-Annelise"><table>
 <tr>
@@ -166,29 +172,35 @@ C\amp=5+3(\alert{1})=8
 <figure class="figure-like" id="figure-2"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-Annelise-1.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure>
 </li>
 <li id="li-18"><p id="p-41">To find an equation, let \(C\) represent the cost of the rental, and use \(t\) for the number of hours:
-        <div class="displaymath" id="md-2">\begin{align*}
+        \begin{align*}
 \text{Cost}\amp=(\$5\text{ insurance fee})+(\$3\text{ per hour})\times\text{(number of hours)}\\
 C\amp=5+3\cdot t=8
-\end{align*}</div> </p></li>
-</ol></span></span></article><article class="example-like" id="example-6hrbike"><h5 class="heading">
+\end{align*} </p></li>
+</ol></div></span>
+</div></div>
+<article class="example-like" id="example-6hrbike"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">1.1.2</span>
 </h5>
 <p id="p-42">Use the equation \(C=5+3\cdot t\) you found in <a knowl="./knowl/example-Annelise.html" knowl-id="xref-example-Annelise" alt="Example 1.1.1 " title="Example 1.1.1 ">Example 1.1.1</a> to answer the following questions.  Then show how to find the answers by using the graph.</p>
 <ol style="list-style-type: lower-alpha;">
 <li id="li-19"><p id="p-43">How much will it cost Annelise to rent a bicycle for 6 hours?</p></li>
 <li id="li-20"><p id="p-44">How long can Annelise bicycle for $18.50?</p></li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
-<li id="li-21"><p id="p-45">Substitute \(t=\alert{6}\) into the expression for \(C\) to find <div class="displaymath" id="me-1">\begin{equation*}C=5+3(\alert{6})=23\end{equation*}</div>A 6-hour bike ride will cost $23.  The point \(P\) on the graph in the figure represents the cost of a 6-hour bike ride.  The value on the \(C\)-axis at the same height as point \(P\) is 23, so a 6-hour bike ride costs $23.</p></li>
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="">Solution</span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><div class="remark-like">
+<ol style="list-style-type: lower-alpha;">
+<li id="li-21"><p id="p-45">Substitute \(t=\alert{6}\) into the expression for \(C\) to find \begin{equation*}C=5+3(\alert{6})=23\end{equation*}A 6-hour bike ride will cost $23.  The point \(P\) on the graph in the figure represents the cost of a 6-hour bike ride.  The value on the \(C\)-axis at the same height as point \(P\) is 23, so a 6-hour bike ride costs $23.</p></li>
 <li id="li-22"><p id="p-46">Substitute \(C=\alert{18.50}\) into the equation and solve for \(t\).
-        <div class="displaymath" id="md-3">\begin{align*}
+        \begin{align*}
 \alert{18.50}\amp=5+3t\\
 13.50\amp=3t\\
 t\amp=4.5
-\end{align*}</div>
+\end{align*}
         For $18.50 Annelise can bicycle for 4½ hours. The point \(Q\)  on the graph represents an $18.50 bike ride.  The value on the \(t\)-axis below point \(Q\) is 4.5, so $18.50 will buy a 4.5 hour bike ride.</p></li>
 </ol>
-<figure class="figure-like" id="figure-3"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig1-2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></span></span></article><p id="p-47">In <a knowl="./knowl/example-6hrbike.html" knowl-id="xref-example-6hrbike" alt="Example 1.1.2 " title="Example 1.1.2 ">Example 1.1.2</a>, notice the different algebraic techniques we used in parts (a) and (b).   In part (a), we were given a value of \(t\) and we <em class="terminology">evaluated the expression</em>  \(5+3t\) to find \(C\).  In part (b) we were given a value of \(C\) and we <em class="terminology">solved the equation</em> \(C=5+3t\) to find \(t.\)</p>
+<figure class="figure-like" id="figure-3"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig1-2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure>
+</div></span>
+</div></div>
+<p id="p-47">In <a knowl="./knowl/example-6hrbike.html" knowl-id="xref-example-6hrbike" alt="Example 1.1.2 " title="Example 1.1.2 ">Example 1.1.2</a>, notice the different algebraic techniques we used in parts (a) and (b).   In part (a), we were given a value of \(t\) and we <em class="terminology">evaluated the expression</em>  \(5+3t\) to find \(C\).  In part (b) we were given a value of \(C\) and we <em class="terminology">solved the equation</em> \(C=5+3t\) to find \(t.\)</p>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-Frank-plants" id="exercise-Frank-plants"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.1.3</span>
 </h5></a></div>
@@ -228,7 +240,7 @@ t\amp=4.5
 <li id="li-25"><p id="p-52"> How tall is the corn after 3 weeks? </p></li>
 <li id="li-26"><p id="p-53"> How long will it be before the corn is 6 feet tall? </p></li>
 </ol></article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-2"><header><h1 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-2"><header title="Subsection 1.1.2 Choosing Scales for the Axes"><h1 class="heading hide-type" alt="Subsection 1.1.2 Choosing Scales for the Axes">
 <span class="type">Subsection</span><span class="codenumber">1.1.2</span><span class="title">Choosing Scales for the Axes</span>
 </h1></header><p id="p-54">To draw a useful graph, we must choose appropriate scales for the axes.  They must extend far enough to show the values of the variables, and the tick marks should be equally spaced.  Usually no more than 10 or 15 tick marks are needed.</p>
 <article class="example-like" id="example-home-price"><h5 class="heading">
@@ -241,13 +253,13 @@ t\amp=4.5
 <li id="li-29"><p id="p-58"> Write an equation that expresses \(P\) in terms of \(t\).</p></li>
 <li id="li-30"><p id="p-59"> How much did the price of the house increase from 1990 to 1996?  Illustrate the increase on your graph.</p></li>
 </ol>
-    </p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-3" id="solution-3"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-3" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-3" id="solution-3"><span class="">Solution</span></a></span><span id="hk-solution-3" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-31">
 <p id="p-60">In 1990 the median price was $92,000.  Four years later, in 1994, the price had increased by \(\alert{4}(4700)=18,800\) dollars, so
-        <div class="displaymath" id="me-2">\begin{equation*}P=92,000+\alert{4}(4700)=110,800\end{equation*}</div>
+        \begin{equation*}P=92,000+\alert{4}(4700)=110,800\end{equation*}
         In 1998 the price had increased by \(\alert{8}(4700)=37,600\)  dollars, so
-        <div class="displaymath" id="me-3">\begin{equation*}P=92,000+\alert{8}(4700)-129,600\end{equation*}</div>
+        \begin{equation*}P=92,000+\alert{8}(4700)-129,600\end{equation*}
         You can verify the price of the house in 2000 by a similar calculation.</p>
 <figure class="figure-like" id="table-homeprice"><table>
 <tr>
@@ -280,18 +292,20 @@ t\amp=4.5
 <li id="li-32"><p id="p-63">Let \(t\) stand for the number of years since 1990, so that \(t=0\) in 1990, \(t=4\) in 1994, and so on.  To choose scales for the axes,
              look at the values in the table.  For this graph we scale the horizontal axis, or \(t\)-axis, in 1-year intervals and the vertical axis, or \(P\)-axis, for $90,000 to $140,000 in intervals of $5,000. The points in Figure 1. lie on a straight line.</p></li>
 <li id="li-33"><p id="p-64">Look back at the calculations in part (a).  The price of the house started at $92,000 in 1990 and increased by \(t \times 4700\) dollars after \(t\) years.  Thus,
-            <div class="displaymath" id="me-4">\begin{equation*}P=92,000+4700t\end{equation*}</div></p></li>
+            \begin{equation*}P=92,000+4700t\end{equation*}</p></li>
 <li id="li-34">
 <p id="p-65">Find the points on the graph corresponding to 1990 and 1996.  These points lie above \(t=0\) and \(t=6\) on the \(t\)-axis.  Now find the values on the \(P\)-axis corresponding to the two points.  The values are \(P=92,000\) in 1990 and \(P=120,200\) in 1996.  The increase in price is the difference of the two \(P\)-values.
-            <div class="displaymath" id="md-4">\begin{align*}
+            \begin{align*}
 \text{increase in price}\amp=120,200-92,000
                 \\
 \amp=28,200
-\end{align*}</div>  
+\end{align*}  
             The price of the home increased $28,200 between 1990 and 1996.  This increase is indicated by the arrows in <a knowl="./knowl/fig-median-house.html" knowl-id="xref-fig-median-house" alt="Figure 1.1.6 " title="Figure 1.1.6 ">Figure 1.1.6</a> [ref].</p>
 <figure class="figure-like" id="fig-median-house"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig1-3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.6</span></figcaption></figure>
 </li>
-</ol></span></span></article><p id="p-66">The graphs in the preceding examples are <em class="terminology">increasing graphs</em>.  As we move along the graph from left to right (in the direction of increasing \(t\) ), the second coordinate increases as well.  Try Exercise 3, which illustrates a <em class="terminology">decreasing graph</em>.</p>
+</ol></div></span>
+</div></div>
+<p id="p-66">The graphs in the preceding examples are <em class="terminology">increasing graphs</em>.  As we move along the graph from left to right (in the direction of increasing \(t\) ), the second coordinate increases as well.  Try Exercise 3, which illustrates a <em class="terminology">decreasing graph</em>.</p>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-Silver-Lake" id="exercise-Silver-Lake"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.1.7</span>
 </h5></a></div>
@@ -339,10 +353,10 @@ t\amp=4.5
 <object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-Exercise3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>
 </li>
 </ol></article><div class="hidden-knowl-wrapper"></div>
-</div></section><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-remark-1" id="remark-1"><article class="example-like"><h5 class="heading">
+</div></section><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-remark-1" id="remark-1"><article class="remark-like"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.1.8</span><span class="title"><object type="image/svg+xml" style="width:8%; margin:auto; display:block;" data="images/icon-GC.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>Graphing an Equation</span>
 </h5></article></a></div>
-<div id="hk-remark-1" style="display: none;" class="tex2jax_ignore"><article class="example-like"><p id="p-73">We can use a graphing calculator to graph an equation. On most calculators, we follow three steps.</p>
+<div id="hk-remark-1" style="display: none;" class="tex2jax_ignore"><article class="remark-like"><p id="p-73">We can use a graphing calculator to graph an equation. On most calculators, we follow three steps.</p>
 <p id="p-74">To Graph an Equation:</p>
 <ol style="list-style-type: decimal;">
 <li id="li-38"><p id="p-75">Press <object type="image/svg+xml" style="width:6%; margin:auto; display:block;" data="images/y-equals.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> and enter the equation you wish to graph.</p></li>
@@ -352,12 +366,13 @@ t\amp=4.5
 <article class="example-like" id="graphing-calculator"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">1.1.9</span><span class="title"><object type="image/svg+xml" style="width:8%; margin:auto; display:block;" data="images/icon-GC.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>Using a Graphing Calculator</span>
 </h5>
-<p id="p-78">In <a knowl="./knowl/example-home-price.html" knowl-id="xref-example-home-price" alt="Example 1.1.5 " title="Example 1.1.5 ">Example 1.1.5</a>, we found the equation \(P = 92,000 + 4700t\) for the median price of a house \(t\) years after 1990. Graph this equation on a calculator.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-4" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-79">
+<p id="p-78">In <a knowl="./knowl/example-home-price.html" knowl-id="xref-example-home-price" alt="Example 1.1.5 " title="Example 1.1.5 ">Example 1.1.5</a>, we found the equation \(P = 92,000 + 4700t\) for the median price of a house \(t\) years after 1990. Graph this equation on a calculator.</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="">Solution</span></a></span><span id="hk-solution-4" style="display: none;" class="tex2jax_ignore"><div class="remark-like">
+<p id="p-79">
             To begin, we press <object type="image/svg+xml" style="width:6%; margin:auto; display:block;" data="images/y-equals.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> and enter
         </p>
 <p id="p-80">
-             <div class="displaymath" id="me-5">\begin{equation*}Y1 = 92,000 + 4700X\end{equation*}</div>
+             \begin{equation*}Y1 = 92,000 + 4700X\end{equation*}
         </p>
 <p id="p-81">For this graph, we’ll use the grid in <a knowl="./knowl/example-home-price.html" knowl-id="xref-example-home-price" alt="Example 1.1.5 " title="Example 1.1.5 ">Example 1.1.5</a> for our window settings, so we press <object type="image/svg+xml" style="width:12%; margin:auto; display:block;" data="images/window.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> and enter
         </p>
@@ -374,7 +389,10 @@ t\amp=4.5
 </tr>
 </table></figure><p id="p-82">
         Finally, we press <object type="image/svg+xml" style="width:12%; margin:auto; display:block;" data="images/graph.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>. The calculator’s graph is shown in <a knowl="./knowl/fig-GC-house-price.html" knowl-id="xref-fig-GC-house-price" alt="Figure 1.1.10 " title="Figure 1.1.10 ">Figure 1.1.10</a>.</p>
-<figure class="figure-like" id="fig-GC-house-price"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-GC-house-price.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.10</span></figcaption></figure></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-gc" id="exercise-gc"><h5 class="heading">
+<figure class="figure-like" id="fig-GC-house-price"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-GC-house-price.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.10</span></figcaption></figure>
+</div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-gc" id="exercise-gc"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.1.11</span>
 </h5></a></div>
 <div id="hk-exercise-gc" style="display: none;" class="tex2jax_ignore">
@@ -400,13 +418,13 @@ t\amp=4.5
 <li id="li-43"><p id="p-85">Sketch the graph on paper. Use the window settings to choose appropriate scales for the axes.</p></li>
 </ol></article><div class="hidden-knowl-wrapper"></div>
 </div>
-<section class="subsection" id="subsection-3"><header><h1 class="heading hide-type">
+<section class="subsection" id="subsection-3"><header title="Subsection 1.1.3 Linear Equations"><h1 class="heading hide-type" alt="Subsection 1.1.3 Linear Equations">
 <span class="type">Subsection</span><span class="codenumber">1.1.3</span><span class="title">Linear Equations</span>
-</h1></header><p id="p-86">All the models in these examples have equations with a similar form:  <div class="displaymath" id="me-6">\begin{equation*}y=\text{(starting value)}+\text{(rate of change)}\cdot x\end{equation*}</div>
-(We'll talk more about rate of change in Section 1.4.)  Their graphs were all portions of straight lines.  For this reason such equations are called  <em class="terminology">linear equations</em>.  The order of the terms in the equation does not matter.  For example, the equation in Example 1, <div class="displaymath" id="me-7">\begin{equation*}C=5+3t\end{equation*}</div> can be written equivalently as <div class="displaymath" id="me-8">\begin{equation*}-3t+C=5\end{equation*}</div> and the equation in Example 3, <div class="displaymath" id="me-9">\begin{equation*}P=92,000+4700t\end{equation*}</div> can be written as <div class="displaymath" id="me-10">\begin{equation*}-4700+P=92,000\end{equation*}</div> 
-This form of a linear equation, <div class="displaymath" id="me-11">\begin{equation*}Ax+By=C\end{equation*}</div> is called the <em class="terminology">general form</em>.</p>
+</h1></header><p id="p-86">All the models in these examples have equations with a similar form:  \begin{equation*}y=\text{(starting value)}+\text{(rate of change)}\cdot x\end{equation*}
+(We'll talk more about rate of change in Section 1.4.)  Their graphs were all portions of straight lines.  For this reason such equations are called  <em class="terminology">linear equations</em>.  The order of the terms in the equation does not matter.  For example, the equation in Example 1, \begin{equation*}C=5+3t\end{equation*} can be written equivalently as \begin{equation*}-3t+C=5\end{equation*} and the equation in Example 3, \begin{equation*}P=92,000+4700t\end{equation*} can be written as \begin{equation*}-4700+P=92,000\end{equation*} 
+This form of a linear equation, \begin{equation*}Ax+By=C\end{equation*} is called the <em class="terminology">general form</em>.</p>
 <article class="paragraphs" id="paragraphs-2"><h5 class="heading"><span class="title">General Form for a Linear Equation</span></h5>
-<p id="p-87">The graph of any equation <div class="displaymath" id="me-12">\begin{equation*}Ax+By=C\end{equation*}</div> where \(A\) and \(B\) are not both equal to zero, is a straight line.</p></article><article class="example-like" id="example-advertising"><h5 class="heading">
+<p id="p-87">The graph of any equation \begin{equation*}Ax+By=C\end{equation*} where \(A\) and \(B\) are not both equal to zero, is a straight line.</p></article><article class="example-like" id="example-advertising"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">1.1.12</span>
 </h5>
 <p id="p-88">The manager at Albert's Appliances has $3000 to spend on advertising for the next fiscal quarter.  A 30-second spot on television costs $150 per broadcast, and a 30-second radio ad costs $50.</p>
@@ -414,17 +432,17 @@ This form of a linear equation, <div class="displaymath" id="me-11">\begin{equat
 <li id="li-44"><p id="p-89">The manager decides to buy \(x\) television ads and \(y\) radio ads.  Write an equation relating \(x\) and \(y\).</p></li>
 <li id="li-45"><p id="p-90">Make a table of values showing several choices for \(x\) and \(y\).</p></li>
 <li id="li-46"><p id="p-91">Plot the points from your table, and graph the equation.</p></li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-5" id="solution-5"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-5" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
-<li id="li-47"><p id="p-92">Each television ad costs $150, so ads will cost $150.  Similarly, radio ads will cost $50.  The manager has $3000 to spend, so the sum of the costs must be $3000.  Thus, <div class="displaymath" id="me-13">\begin{equation*}150x+50y=3000\end{equation*}</div></p></li>
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-5" id="solution-5"><span class="">Solution</span></a></span><span id="hk-solution-5" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-47"><p id="p-92">Each television ad costs $150, so ads will cost $150.  Similarly, radio ads will cost $50.  The manager has $3000 to spend, so the sum of the costs must be $3000.  Thus, \begin{equation*}150x+50y=3000\end{equation*}</p></li>
 <li id="li-48">
 <p id="p-93">Choose some values of \(x\), and solve the equation for the corresponding value of \(y\)  For example, if \(x=\alert{10}\) then
-               <div class="displaymath" id="md-5">\begin{align*}
+               \begin{align*}
 150(10)+50y\amp=300\\
 1500+50y\amp=3000\\
 50y\amp=1500\\
 y\amp=30
-\end{align*}</div>
+\end{align*}
                 If the manager buys 10 television ads, she can also buy 30 radio ads.  You can verify the other entries in the table.</p>
 <figure class="figure-like" id="table-television"><table>
 <tr>
@@ -446,7 +464,9 @@ y\amp=30
 <li id="li-49"><p id="p-94">Plot the points from the table.  All the solutions lie on a straight line, as shown in <a knowl="./knowl/fig-example-advertising.html" knowl-id="xref-fig-example-advertising" alt="Figure 1.1.13 " title="Figure 1.1.13 ">Figure 1.1.13</a>
 .
         <figure class="figure-like" id="fig-example-advertising"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-example-advertising.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.13</span></figcaption></figure></p></li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-crops" id="exercise-crops"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-crops" id="exercise-crops"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.1.14</span>
 </h5></a></div>
 <div id="hk-exercise-crops" style="display: none;" class="tex2jax_ignore">
@@ -473,19 +493,19 @@ y\amp=30
 </table></figure>
 </li>
 </ol></p></article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-4"><header><h1 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-4"><header title="Subsection 1.1.4 Intercepts"><h1 class="heading hide-type" alt="Subsection 1.1.4 Intercepts">
 <span class="type">Subsection</span><span class="codenumber">1.1.4</span><span class="title">Intercepts</span>
 </h1></header><div class="sidebyside" id="sidebyside-3">
-<figure class="left" id="fig-intercepts" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-intercepts.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.15</span></figcaption></figure><p id="p-98" class="right" style="width:48%;vertical-align:bottom;text-align:left;">Consider the graph of the equation <div class="displaymath" id="me-14">\begin{equation*}3x-4y=12\end{equation*}</div> shown in <a knowl="./knowl/fig-intercepts.html" knowl-id="xref-fig-intercepts" alt="Figure 1.1.15 " title="Figure 1.1.15 ">Figure 1.1.15</a>. The points where the graph crosses the axes are called the <em class="terminology">intercepts</em> of the graph. The coordinates of these points are easy to find.  The \(y\)-coordinate of the \(x\)-intercept is zero, so we set \(y=\alert{0}\) in the equation to get <div class="displaymath" id="md-6">\begin{align*}
+<figure class="left" id="fig-intercepts" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-intercepts.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.15</span></figcaption></figure><p id="p-98" class="right" style="width:48%;vertical-align:bottom;text-align:left;">Consider the graph of the equation \begin{equation*}3x-4y=12\end{equation*} shown in <a knowl="./knowl/fig-intercepts.html" knowl-id="xref-fig-intercepts" alt="Figure 1.1.15 " title="Figure 1.1.15 ">Figure 1.1.15</a>. The points where the graph crosses the axes are called the <em class="terminology">intercepts</em> of the graph. The coordinates of these points are easy to find.  The \(y\)-coordinate of the \(x\)-intercept is zero, so we set \(y=\alert{0}\) in the equation to get \begin{align*}
 3(\alert{0})-4x\amp=12\\
 x=-3
-\end{align*}</div> 
+\end{align*} 
         </p>
 </div>
-<p id="p-99">The \(x\)-intercept is the point\((-3,0)\). Also, the \(x\)-coordinate of the \(y\)-intercept is zero, so we set \(x=\alert{0}\) in the equation to get <div class="displaymath" id="md-7">\begin{gather*}
+<p id="p-99">The \(x\)-intercept is the point\((-3,0)\). Also, the \(x\)-coordinate of the \(y\)-intercept is zero, so we set \(x=\alert{0}\) in the equation to get \begin{gather*}
 3y-4(\alert{0})=12\\
 y=4
-\end{gather*}</div>  The \(y\)-intercept is \((0,4)\).</p>
+\end{gather*}  The \(y\)-intercept is \((0,4)\).</p>
 <article class="paragraphs" id="paragraphs-3"><h5 class="heading"><span class="title">Intercepts of a Graph</span></h5>
 <p id="p-100">The points where a graph crosses the axes are called the <em class="terminology">intercepts of the graph</em>.</p>
 <ol style="list-style-type: decimal;">
@@ -503,11 +523,11 @@ y=4
     </li>
 <li id="li-55">What do the intercepts tell us about the problem?
     </li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-6" id="solution-6"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-6" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
-<li id="li-56"><p id="p-104">An equation for the concentration of toxic chemicals is <div class="displaymath" id="me-15">\begin{equation*}C=285-15t\end{equation*}</div> To find the \(C\)-intercept, set \(t\) equal to zero. 
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-6" id="solution-6"><span class="">Solution</span></a></span><span id="hk-solution-6" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-56"><p id="p-104">An equation for the concentration of toxic chemicals is \begin{equation*}C=285-15t\end{equation*} To find the \(C\)-intercept, set \(t\) equal to zero. 
 
-            <div class="displaymath" id="me-16">\begin{equation*}C=285-15(0)=285\end{equation*}</div>
+            \begin{equation*}C=285-15(0)=285\end{equation*}
             The \(C\)-intercept is the point \((0, 285)\), or simply 285.  To find the \(t\)-intercept, set \(C\) equal to zero and solve for \(t\).
             <p id="p-105">
                 \begin{align*}
@@ -519,7 +539,9 @@ y=4
 
         The \(t\)-intercept is the point \((19,0)\), or simply \(19\).</p></li>
 <li id="li-57"><p id="p-106">The \(C\)-intercept represents the concentration of toxic chemicals in Silver Lake now:  When  \(t=0\), \(C=285\),  so the concentration is currently \(285\) ppm.  The \(t\)-intercept represents the number of years it will take for the concentration of toxic chemicals to drop to zero:  When \(C=0\), \(t=19\),  so it will take \(19\) years for the pollution to be eliminated entirely.</p></li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-6" id="exercise-6"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-6" id="exercise-6"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.1.17</span>
 </h5></a></div>
 <div id="hk-exercise-6" style="display: none;" class="tex2jax_ignore">
@@ -527,7 +549,7 @@ y=4
 <li id="li-58"><p id="p-107">Find the intercepts of the graph in <a knowl="./knowl/example-advertising.html" knowl-id="xref-example-advertising" alt="Example 1.1.12 " title="Example 1.1.12 ">Example 1.1.12</a>, about the advertising budget for Albert’s Appliances: \(150x + 50y = 3000\).</p></li>
 <li id="li-59"><p id="p-108">What do the intercepts tell us about the problem?</p></li>
 </ol></article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-5"><header><h1 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-5"><header title="Subsection 1.1.5 Intercept Method for Graphing Lines"><h1 class="heading hide-type" alt="Subsection 1.1.5 Intercept Method for Graphing Lines">
 <span class="type">Subsection</span><span class="codenumber">1.1.5</span><span class="title">Intercept Method for Graphing Lines</span>
 </h1></header><p id="p-109">Because we really only need two points to graph a linear equation, we might as well find the intercepts first and use them to draw the graph. The values of the intercepts will also help us choose suitable scales for the axes. It is always a good idea to find a third point as a check.
     </p>
@@ -537,8 +559,8 @@ y=4
 <ol style="list-style-type: lower-alpha;">
 <li id="li-60"><p id="p-110">Find the \(x\)- and \(y\)-intercepts of the graph of \(150x − 180y = 9000\).</p></li>
 <li id="li-61"><p id="p-111">Use the intercepts to graph the equation. Find a third point as a check.</p></li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-7" id="solution-7"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-7" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-7" id="solution-7"><span class="">Solution</span></a></span><span id="hk-solution-7" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-62">
 <p id="p-112">To find the \(x\)-intercept, set \(y = \alert{0}\).
             </p>
@@ -560,20 +582,22 @@ y=4
 <p id="p-116">The \(y\)-intercept is the point \((0, −50)\).</p>
 </li>
 <li id="li-63"><p id="p-117">Scale both axes in intervals of 10 and then plot the two intercepts, \((60, 0)\) and \((0, −50)\). Draw the line through them, as shown in <a knowl="./knowl/fig-example-graph-intercepts.html" knowl-id="xref-fig-example-graph-intercepts" alt="Figure 1.1.19 " title="Figure 1.1.19 ">Figure 1.1.19</a>. Now find another point and check that it lies on this line. We choose \(x = \alert{20}\) and solve for \(y\).
-            <div class="displaymath" id="md-8">\begin{gather*}
+            \begin{gather*}
 150(\alert{20}) −180y = 9000\\
 3000 −180y = 9000\\
 −180y = 6000\\
 y =−33.\overline{3}
-\end{gather*}</div>
+\end{gather*}
 
             Plot the point \((20, −33\frac{1}{3})\). Because this point lies on the line, we can be reasonably confident that our graph is correct. 
             <figure class="figure-like" id="fig-example-graph-intercepts"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-example-graph-intercepts.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.1.19</span></figcaption></figure>
             </p></li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-remark-2" id="remark-2"><article class="example-like"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-remark-2" id="remark-2"><article class="remark-like"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.1.20</span><span class="title"><object type="image/svg+xml" style="width:8%; margin:auto; display:block;" data="images/icon-GC.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>Choosing a Graphing Window</span>
 </h5></article></a></div>
-<div id="hk-remark-2" style="display: none;" class="tex2jax_ignore"><article class="example-like"><p id="p-118">Knowing the intercepts can also help us choose a suitable window on a graphing calculator. We would like the window to be large enough to show the intercepts. For the graph in <a knowl="./knowl/fig-example-graph-intercepts.html" knowl-id="xref-fig-example-graph-intercepts" alt="Figure 1.1.19 " title="Figure 1.1.19 ">Figure 1.1.19</a>, we can enter the equation <div class="displaymath" id="me-17">\begin{equation*}Y = (9000 −150X)/ −180\end{equation*}</div>
+<div id="hk-remark-2" style="display: none;" class="tex2jax_ignore"><article class="remark-like"><p id="p-118">Knowing the intercepts can also help us choose a suitable window on a graphing calculator. We would like the window to be large enough to show the intercepts. For the graph in <a knowl="./knowl/fig-example-graph-intercepts.html" knowl-id="xref-fig-example-graph-intercepts" alt="Figure 1.1.19 " title="Figure 1.1.19 ">Figure 1.1.19</a>, we can enter the equation \begin{equation*}Y = (9000 −150X)/ −180\end{equation*}
     in the window
         <figure class="figure-like" id="table-10"><table>
 <tr>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-06-23T20:04:17-04:00    *-->
+<!--*    on 2016-06-26T15:51:20-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,12 +13,15 @@
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
         equationNumbers: { autoNumber: "none",
                            useLabelIds: true,
                            // JS comment, XML CDATA protect XHTML quality of file
@@ -101,17 +104,20 @@ MathJax.Hub.Config({
 <li><a href="Integer-Exponents.html">Integer Exponents</a></li>
 <li><a href="Roots-and-Radicals.html">Roots and Radicals</a></li>
 <li><a href="Rational-Exponents.html">Rational Exponents</a></li>
+<li><a href="Joint-Variation.html">Joint Variation</a></li>
 </ul>
+<h2 class="link"><a href="chap4.html"><span class="codenumber">4</span><span class="title">Exponential Functions</span></a></h2>
+<ul><li><a href="Exponential-Growth-and-Decay.html">Exponential Growth and Decay</a></li></ul>
 <h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
 <ul></ul>
 <h2 class="link"><a href="colophon-2.html"><span class="title">Colophon</span></a></h2>
 <ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="transformations"><header><h1 class="heading hide-type">
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="transformations"><header title="Section 2.3 Transformations of Graphs"><h1 class="heading hide-type" alt="Section 2.3 Transformations of Graphs">
 <span class="type">Section</span><span class="codenumber">2.3</span><span class="title">Transformations of Graphs</span><a href="transformations.html" class="permalink">¶ permalink</a>
 </h1></header><p id="p-487">
     Models for real situations are often variations of the basic functions introduced in <a href="basic-functions.html" alt="Section 2.2 Some Basic Functions" title="Section 2.2 Some Basic Functions">Section 2.2</a>. In this section, we explore how certain changes in the formula for a function affect its graph. In particular, we will compare the graph of \(y = f (x)\) with the graphs of \(y = f (x) + k\), \(y = f (x + h)\), and \(y = a f (x)\) for different values of the constants \(k\), \(h\), and \(a\). Such variations are called <em class="terminology">transformations</em> of the graph.
 </p>
-<section class="subsection" id="subsection-42"><header><h1 class="heading hide-type">
+<section class="subsection" id="subsection-42"><header title="Subsection 2.3.1 Vertical Translations"><h1 class="heading hide-type" alt="Subsection 2.3.1 Vertical Translations">
 <span class="type">Subsection</span><span class="codenumber">2.3.1</span><span class="title">Vertical Translations</span>
 </h1></header><div class="sidebyside" id="sidebyside-43">
 <figure class="left" id="fig-parabolas" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-parabolas.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.1</span></figcaption></figure><p id="p-488" class="right" style="width:48%;vertical-align:bottom;text-align:left;">
@@ -190,8 +196,8 @@ MathJax.Hub.Config({
 <li id="li-288">\(g(x) = \abs{x} + 3\)</li>
 <li id="li-289">\(h(x) = \frac{1}{x}− 2\)</li>
 </ol>
-    </p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-51" id="solution-51"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-51" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-51" id="solution-51"><span class="">Solution</span></a></span><span id="hk-solution-51" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-290">The table shows that the \(y\)-values for \(g(x)\) are each three units greater than the corresponding y-values for the absolute value function. The graph of \(g(x) = \abs{x} + 3\) is a translation of the basic graph of \(y = \abs{x}\), shifted upward three units, as shown in <a knowl="./knowl/fig-translate-abs.html" knowl-id="xref-fig-translate-abs" alt="Figure 2.3.3 " title="Figure 2.3.3 ">Figure 2.3.3</a>.
         <div class="sidebyside" id="sidebyside-44">
 <figure class="left" id="table-46" style="width:48%;vertical-align:bottom;text-align:center;"><table>
@@ -252,7 +258,9 @@ MathJax.Hub.Config({
 </table></figure><figure class="right" id="fig-translate-reciprocal" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-translate-reciprocal.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.4</span></figcaption></figure>
 </div>
 </li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-translate-abs" id="exercise-translate-abs"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-translate-abs" id="exercise-translate-abs"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.3.5</span>
 </h5></a></div>
 <div id="hk-exercise-translate-abs" style="display: none;" class="tex2jax_ignore">
@@ -269,8 +277,9 @@ MathJax.Hub.Config({
         The function \(E = f (h)\) graphed in <a knowl="./knowl/fig-electrical.html" knowl-id="xref-fig-electrical" alt="Figure 2.3.7 " title="Figure 2.3.7 ">Figure 2.3.7</a> gives the amount of electrical power, in megawatts, drawn by a community from its local power plant as a function of time during a 24-hour period in 2002. Sketch a graph of \(y = f (h) + 300\) and interpret its meaning.
     </p>
 <figure class="right" id="fig-electrical" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-electrical.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.7</span></figcaption></figure>
-</div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-52" id="solution-52"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-52" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-495">
+</div></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-52" id="solution-52"><span class="">Solution</span></a></span><span id="hk-solution-52" style="display: none;" class="tex2jax_ignore"><div class="remark-like">
+<p id="p-495">
         The graph of \(y = f (h) + 300\) is a vertical translation of the graph of \(f\), as shown in <a knowl="./knowl/fig-translate-electrical.html" knowl-id="xref-fig-translate-electrical" alt="Figure 2.3.8 " title="Figure 2.3.8 ">Figure 2.3.8</a>.
     </p>
 <div class="sidebyside" id="sidebyside-47">
@@ -278,14 +287,17 @@ MathJax.Hub.Config({
         At each hour of the day, or for each value of \(h\), the \(y\)-coordinate is 300 greater than on the graph of \(f\). So at each hour, the community is drawing 300 megawatts more power than in 2002.
     </p>
 <figure class="right" id="fig-translate-electrical" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-translate-electrical.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.8</span></figcaption></figure>
-</div></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-swamp-cooler" id="exercise-swamp-cooler"><h5 class="heading">
+</div>
+</div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-swamp-cooler" id="exercise-swamp-cooler"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.3.9</span>
 </h5></a></div>
 <div id="hk-exercise-swamp-cooler" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like">
     An evaporative cooler, or swamp cooler, is an energy-efficient type of air conditioner used in dry climates. A typical swamp cooler can reduce the temperature inside a house by 15 degrees. <a knowl="./knowl/fig-swamp-cooler.html" knowl-id="xref-fig-swamp-cooler" alt="Figure 2.3.10 " title="Figure 2.3.10 ">Figure 2.3.10</a>a shows the graph of \(T = f (t)\), the temperature inside Kate’s house \(t\) hours after she turns on the swamp cooler. Write a formula in terms of \(f\) for the function \(g\) shown in <a knowl="./knowl/fig-swamp-cooler.html" knowl-id="xref-fig-swamp-cooler" alt="Figure 2.3.10 " title="Figure 2.3.10 ">Figure 2.3.10</a>b and give a possible explanation of its meaning.
     <figure class="figure-like" id="fig-swamp-cooler"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-swamp-cooler.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.10</span></figcaption></figure></article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-43"><header><h1 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-43"><header title="Subsection 2.3.2 Horizontal Translations"><h1 class="heading hide-type" alt="Subsection 2.3.2 Horizontal Translations">
 <span class="type">Subsection</span><span class="codenumber">2.3.2</span><span class="title">Horizontal Translations</span>
 </h1></header><figure class="figure-like" id="fig-translate-parabs"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-translate-parabs.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.11</span></figcaption></figure><p id="p-497">
     Now consider the graphs of \(f (x) = (x + 2)^2\) and \(g(x) = (x − 2)^2\) shown in <a knowl="./knowl/fig-translate-parabs.html" knowl-id="xref-fig-translate-parabs" alt="Figure 2.3.11 " title="Figure 2.3.11 ">Figure 2.3.11</a>. Compared with the graph of the basic function \(y = x^2\), the graph of \(f (x) = (x + 2)^2\) is shifted two units to the <!--Style me with CSS--><em>left</em>, as shown by the arrows. You can see why this happens by studying the function values in the table. Locate a particular \(y\)-value for \(y = x^2\), say, \(y = 1\). You must move two units to the left in the table to find the same \(y\)-value for \(f (x)\), as shown by the arrow. In fact, each \(y\)-value for \(f (x)\) occurs two units to the left when compared to the same \(y\)-value for \(y = x^2\).
@@ -312,8 +324,8 @@ MathJax.Hub.Config({
 <li id="li-296">\(g(x) =\sqrt{x + 1}\)</li>
 <li id="li-297">\(h(x) = \frac{1}{(x − 3)^2}\)</li>
 </ol>
-    </p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-53" id="solution-53"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-53" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-53" id="solution-53"><span class="">Solution</span></a></span><span id="hk-solution-53" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-298">The table shows that each \(y\)-value for \(g(x)\) occurs one unit to the left of the same \(y\)-value for the graph of \(y=\sqrt{x}\). Consequently, each point on the graph of \(y = g(x)\) is shifted one unit to the left of \(y =\sqrt{x}\), as shown in <a knowl="./knowl/fig-shift-sqrt.html" knowl-id="xref-fig-shift-sqrt" alt="Figure 2.3.15 " title="Figure 2.3.15 ">Figure 2.3.15</a>.
             <figure class="figure-like" id="table-48"><table>
 <tr>
@@ -373,7 +385,9 @@ MathJax.Hub.Config({
 </tr>
 </table></figure><figure class="figure-like" id="fig-shift-inv-sq"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-shift-inv-sq.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.16</span></figcaption></figure>
 </li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-shift-abs" id="exercise-shift-abs"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-shift-abs" id="exercise-shift-abs"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.3.17</span>
 </h5></a></div>
 <div id="hk-exercise-shift-abs" style="display: none;" class="tex2jax_ignore">
@@ -392,11 +406,13 @@ MathJax.Hub.Config({
 <ol style="list-style-type: lower-alpha;">
 <li id="li-302">Write a formula for \(g\) as a transformation of \(f\).</li>
 <li id="li-303">For what pressure readings could a doctor be fairly certain that a patient has glaucoma?</li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-54" id="solution-54"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-54" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-54" id="solution-54"><span class="">Solution</span></a></span><span id="hk-solution-54" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-304">The graph of \(g\) is translated \(10\) units to the right of \(f\), so \(g(p) = f (p − 10)\).</li>
 <li id="li-305">Pressure readings above \(40\) are a strong indication of glaucoma. Readings between \(10\) and \(40\) cannot conclusively distinguish healthy eyes from those with glaucoma.</li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-shift-surge-curve" id="exercise-shift-surge-curve"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-shift-surge-curve" id="exercise-shift-surge-curve"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.3.20</span>
 </h5></a></div>
 <div id="hk-exercise-shift-surge-curve" style="display: none;" class="tex2jax_ignore">
@@ -407,11 +423,15 @@ MathJax.Hub.Config({
 <article class="example-like" id="example-translate-cubic"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">2.3.22</span>
 </h5>
-<p id="p-506">Graph \(f (x) = (x + 4)^3 + 2\).</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-55" id="solution-55"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-55" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-507">
+<p id="p-506">Graph \(f (x) = (x + 4)^3 + 2\).</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-55" id="solution-55"><span class="">Solution</span></a></span><span id="hk-solution-55" style="display: none;" class="tex2jax_ignore"><div class="remark-like">
+<p id="p-507">
             We identify the basic graph from the structure of the formula for \(f (x)\). In this case, the basic graph is \(y = x^3\), so we begin by locating a few points on that graph, as shown in <a knowl="./knowl/fig-translate-cubic.html" knowl-id="xref-fig-translate-cubic" alt="Figure 2.3.23 " title="Figure 2.3.23 ">Figure 2.3.23</a>. We will perform the translations separately, following the order of operations. First, we sketch a graph of \(y = (x + 4)^3\) by shifting each point on the basic graph four units to the left. We then move each point up two units to obtain the graph of \(f (x) = (x + 4)^3 + 2\). All three graphs are shown in <a knowl="./knowl/fig-translate-cubic.html" knowl-id="xref-fig-translate-cubic" alt="Figure 2.3.23 " title="Figure 2.3.23 ">Figure 2.3.23</a>.
         </p>
-<figure class="figure-like" id="fig-translate-cubic"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-translate-cubic.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.23</span></figcaption></figure></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-translate-abs2" id="exercise-translate-abs2"><h5 class="heading">
+<figure class="figure-like" id="fig-translate-cubic"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-translate-cubic.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.23</span></figcaption></figure>
+</div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-translate-abs2" id="exercise-translate-abs2"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.3.24</span>
 </h5></a></div>
 <div id="hk-exercise-translate-abs2" style="display: none;" class="tex2jax_ignore">
@@ -419,13 +439,13 @@ MathJax.Hub.Config({
 <li id="li-306">Graph the function \(f (x) = \abs{x − 2} − 1\).</li>
 <li id="li-307">How is the graph of \(f\) different from the graph of \(y=\abs{x}\)?</li>
 </ol></article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-44"><header><h1 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-44"><header title="Subsection 2.3.3 Scale Factors"><h1 class="heading hide-type" alt="Subsection 2.3.3 Scale Factors">
 <span class="type">Subsection</span><span class="codenumber">2.3.3</span><span class="title">Scale Factors</span>
 </h1></header><p id="p-508">
     We have seen that <!--Style me with CSS--><em>adding</em> a constant to the expression defining a function results in a translation of its graph. What happens if we <!--Style me with CSS--><em>multiply</em> the expression by a constant? Consider the graphs of the functions
-    <div class="displaymath" id="me-146">\begin{equation*}
+    \begin{equation*}
         f(x)= 2x^2 \text{, } ~g(x)= \frac{1}{2}x^2 \text{, and } ~h(x) = −x^2
-    \end{equation*}</div>
+    \end{equation*}
     shown in <a knowl="./knowl/fig-2x-sq.html" knowl-id="xref-fig-2x-sq" alt="Figure 2.3.25 " title="Figure 2.3.25 ">Figure 2.3.25</a>, <a knowl="./knowl/fig-half-x-sq.html" knowl-id="xref-fig-half-x-sq" alt="Figure 2.3.26 " title="Figure 2.3.26 ">Figure 2.3.26</a>, and <a knowl="./knowl/fig-neg-x-sq.html" knowl-id="xref-fig-neg-x-sq" alt="Figure 2.3.27 " title="Figure 2.3.27 ">Figure 2.3.27</a>, and compare each to the graph of \(y = x^2\).
 </p>
 <div class="sidebyside" id="sidebyside-49">
@@ -560,8 +580,8 @@ MathJax.Hub.Config({
 <li id="li-311">\(g(x) = 3\sqrt[3]{x}\)</li>
 <li id="li-312">\(h(x) =\frac{−1}{2}\abs{x}\)</li>
 </ol>
-    </p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-56" id="solution-56"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-56" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-56" id="solution-56"><span class="">Solution</span></a></span><span id="hk-solution-56" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-313">The graph of \(g(x) = 3\sqrt[3]{x}\) is a vertical expansion of the basic graph \(y = \sqrt[3]{x}\) by a factor of \(3\), as shown in <a knowl="./knowl/fig-scale-cube-root.html" knowl-id="xref-fig-scale-cube-root" alt="Figure 2.3.29 " title="Figure 2.3.29 ">Figure 2.3.29</a>. Each point on the basic graph has its \(y\)-coordinate tripled.
             <figure class="figure-like" id="fig-scale-cube-root"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-scale-cube-root.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.29</span></figcaption></figure>
 </li>
@@ -569,7 +589,9 @@ MathJax.Hub.Config({
             The graph of \(h(x) = \frac{−1}{2}\abs{x}\) is a vertical compression of the basic graph \(y = \abs{x}\) by a factor of \(\frac{1}{2}\), combined with a reflection about the \(x\)-axis. You may find it helpful to graph the function in two steps, as shown in <a knowl="./knowl/fig-scale-abs.html" knowl-id="xref-fig-scale-abs" alt="Figure 2.3.30 " title="Figure 2.3.30 ">Figure 2.3.30</a>.
             <figure class="figure-like" id="fig-scale-abs"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-scale-abs.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.30</span></figcaption></figure>
 </li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-scale-abs" id="scale-abs"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-scale-abs" id="scale-abs"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.3.31</span>
 </h5></a></div>
 <div id="hk-scale-abs" style="display: none;" class="tex2jax_ignore">
@@ -584,10 +606,15 @@ MathJax.Hub.Config({
 <p id="p-516">
         The function \(A = f (t)\) graphed in <a knowl="./knowl/fig-surge-alcohol.html" knowl-id="xref-fig-surge-alcohol" alt="Figure 2.3.33 " title="Figure 2.3.33 ">Figure 2.3.33</a> gives a person's blood alcohol level \(t\) hours after drinking a martini. Sketch a graph of \(g(t) = 2 f (t)\) and explain what it tells you.
     </p>
-<figure class="figure-like" id="fig-surge-alcohol"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-surge-alcohol.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.33</span></figcaption></figure><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-57" id="solution-57"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-57" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-517">
+<figure class="figure-like" id="fig-surge-alcohol"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-surge-alcohol.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.33</span></figcaption></figure></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-57" id="solution-57"><span class="">Solution</span></a></span><span id="hk-solution-57" style="display: none;" class="tex2jax_ignore"><div class="remark-like">
+<p id="p-517">
             To sketch a graph of \(g\), we stretch the graph of \(f\) vertically by a factor of \(2\), as shown in <a knowl="./knowl/fig-surge-alcohol2.html" knowl-id="xref-fig-surge-alcohol2" alt="Figure 2.3.34 " title="Figure 2.3.34 ">Figure 2.3.34</a>. At each time \(t\), the person’s blood alcohol level is twice the value given by \(f\). The function \(g\) could represent a person's blood alcohol level \(t\) hours after drinking two martinis.
         </p>
-<figure class="figure-like" id="fig-surge-alcohol2"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-surge-alcohol2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.34</span></figcaption></figure></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-daylight-hours" id="daylight-hours"><h5 class="heading">
+<figure class="figure-like" id="fig-surge-alcohol2"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-surge-alcohol2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.3.34</span></figcaption></figure>
+</div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-daylight-hours" id="daylight-hours"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.3.35</span>
 </h5></a></div>
 <div id="hk-daylight-hours" style="display: none;" class="tex2jax_ignore">

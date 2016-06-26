@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-06-25T11:53:11-04:00    *-->
+<!--*    on 2016-06-26T15:51:21-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,12 +13,15 @@
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
         equationNumbers: { autoNumber: "none",
                            useLabelIds: true,
                            // JS comment, XML CDATA protect XHTML quality of file
@@ -52,7 +55,7 @@ MathJax.Hub.Config({
 <header id="masthead"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading">
-<span class="title">Test chapter</span><span class="subtitle">test subtitle</span>
+<span class="title">Modeling, Functions, and Graphs</span><span class="subtitle">Algebra for College Students</span>
 </h1>
 <p class="byline">Katherine Yoshiwara</p>
 </div>
@@ -77,7 +80,25 @@ MathJax.Hub.Config({
 <li><a href="preface-1.html">Preface</a></li>
 <li><a href="preface-2.html">Contributors to the 5\(^\mathrm{th}\) Edition</a></li>
 </ul>
-<h2 class="link active"><a href="chap3.html"><span class="codenumber">1</span><span class="title">Power Functions</span></a></h2>
+<h2 class="link"><a href="chap1.html"><span class="codenumber">1</span><span class="title">Functions and Their Graphs</span></a></h2>
+<ul>
+<li><a href="LinMod.html">Linear Models</a></li>
+<li><a href="functions.html">Functions</a></li>
+<li><a href="graphs-of-functions.html">Graphs of Functions</a></li>
+<li><a href="slope-and-rate-of-change.html">Slope and Rate of Change</a></li>
+<li><a href="linear-functions.html">Linear Functions</a></li>
+<li><a href="linear-regression.html">Linear Regression</a></li>
+</ul>
+<h2 class="link"><a href="chap2.html"><span class="codenumber">2</span><span class="title">Modeling with Functions</span></a></h2>
+<ul>
+<li><a href="nonlinear-models.html">Nonlinear Models</a></li>
+<li><a href="basic-functions.html">Some Basic Functions</a></li>
+<li><a href="transformations.html">Transformations of Graphs</a></li>
+<li><a href="MathModels.html">Functions as Mathematical Models</a></li>
+<li><a href="AbsoluteValue.html">The Absolute Value Function</a></li>
+<li><a href="Domain-Range.html">Domain and Range</a></li>
+</ul>
+<h2 class="link active"><a href="chap3.html"><span class="codenumber">3</span><span class="title">Power Functions</span></a></h2>
 <ul>
 <li><a href="Variation.html">Variation</a></li>
 <li><a href="Integer-Exponents.html">Integer Exponents</a></li>
@@ -85,18 +106,22 @@ MathJax.Hub.Config({
 <li><a href="Rational-Exponents.html" class="active">Rational Exponents</a></li>
 <li><a href="Joint-Variation.html">Joint Variation</a></li>
 </ul>
+<h2 class="link"><a href="chap4.html"><span class="codenumber">4</span><span class="title">Exponential Functions</span></a></h2>
+<ul><li><a href="Exponential-Growth-and-Decay.html">Exponential Growth and Decay</a></li></ul>
 <h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="colophon-2.html"><span class="title">Colophon</span></a></h2>
 <ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Rational-Exponents"><header><h1 class="heading hide-type">
-<span class="type">Section</span><span class="codenumber">1.4</span><span class="title">Rational Exponents</span><a href="Rational-Exponents.html" class="permalink">¶ permalink</a>
-</h1></header><section class="subsection" id="subsection-20"><header><h1 class="heading hide-type">
-<span class="type">Subsection</span><span class="codenumber">1.4.1</span><span class="title">Powers of the Form \(a^{m/n}\)</span>
-</h1></header><p id="p-143">
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Rational-Exponents"><header title="Section 3.4 Rational Exponents"><h1 class="heading hide-type" alt="Section 3.4 Rational Exponents">
+<span class="type">Section</span><span class="codenumber">3.4</span><span class="title">Rational Exponents</span><a href="Rational-Exponents.html" class="permalink">¶ permalink</a>
+</h1></header><section class="subsection" id="subsection-75"><header title="Subsection 3.4.1 Powers of the Form \(a^{m/n}\)"><h1 class="heading hide-type" alt="Subsection 3.4.1 Powers of the Form \(a^{m/n}\)">
+<span class="type">Subsection</span><span class="codenumber">3.4.1</span><span class="title">Powers of the Form \(a^{m/n}\)</span>
+</h1></header><p id="p-718">
     In the last section, we considered powers of the form \(a^{1/n}\), such as \(x^{1/3}\) and \(x^{−1/4}\), and saw that \(a^{1/n}\) is equivalent to the root \(\sqrt[n]{a}\). What about other fractional exponents? What meaning can we attach to a power of the form \(a^{m /n}\)?
 </p>
-<p id="p-144">
+<p id="p-719">
     Consider the power \(x^{3/2}\). Notice that the exponent \(\frac{3}{2}= 3(\frac{1}{2})\), and thus by the third law of exponents, we can write
-    <div class="displaymath" id="me-71">\begin{equation*}(x^{1/2})3 = x^{(1/2)^3} = x^{3/2}\end{equation*}</div>
+    \begin{equation*}(x^{1/2})3 = x^{(1/2)^3} = x^{3/2}\end{equation*}
     In other words, we can compute \(x^{3/2}\) by first taking the square root of \(x\) and then cubing the result. For example,
     \begin{align*}
         100^{3/2} \amp = (\alert{100^{1/2}})3 \amp\amp \text{Take the square root of 100.}\\
@@ -104,80 +129,79 @@ MathJax.Hub.Config({
     \end{align*}
     We will define fractional powers only when the base is a positive number.
 </p>
-<article class="paragraphs" id="paragraphs-16"><h5 class="heading"><span class="title">Rational Exponents</span></h5>
-<p id="p-145"></p>
-<div class="displaymath" id="me-72">\begin{equation*}
+<article class="paragraphs" id="paragraphs-51"><h5 class="heading"><span class="title">Rational Exponents</span></h5>
+<p id="p-720"></p>\begin{equation*}
     a^{m/n} = (a^{1/n})^m = (a^m)^{1/n}\text{, }a \gt 0\text{, } n \ne 0
-\end{equation*}</div></article><p id="p-146">
+\end{equation*}</article><p id="p-721">
     To compute \(a^{m/n}\), we can compute the \(n\)th root first, or the \(m\)th power, whichever is easier. For example,
-    <div class="displaymath" id="me-73">\begin{equation*}8^{2/3} = \left(8^{1/3}\right)^2 = 2^2 = 4\end{equation*}</div>
+    \begin{equation*}8^{2/3} = \left(8^{1/3}\right)^2 = 2^2 = 4\end{equation*}
     or
-    <div class="displaymath" id="me-74">\begin{equation*}8^{2/3} = \left(8^2\right)^{1/3} = 64^{1/3} = 4\end{equation*}</div>
+    \begin{equation*}8^{2/3} = \left(8^2\right)^{1/3} = 64^{1/3} = 4\end{equation*}
 </p>
 <article class="example-like" id="example-rational-exponent"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">1.4.1</span>
+<span class="type">Example</span><span class="codenumber">3.4.1</span>
 </h5>
 <ol style="list-style-type: lower-alpha;">
-<li id="li-132">\begin{align*}
+<li id="li-521">\begin{align*}
             81^{3/4} \amp = \left(81^{1/4}\right)^3 \\
             \amp = 3^3 = 27
             \end{align*}
         </li>
-<li id="li-133">\begin{align*} 
+<li id="li-522">\begin{align*} 
             −27^{5/3} \amp = −\left(27^{1/3}\right)^5 \\
             \amp = −3^5 = −243
             \end{align*}
         </li>
-<li id="li-134">\begin{align*}
+<li id="li-523">\begin{align*}
             27^{−2/3} \amp = \frac{1}{\left(27^{1/3}\right)^2} \\
             \amp = \frac{1}{3^2}= \frac{1}{9}
             \end{align*}
         </li>
-<li id="li-135">
+<li id="li-524">
             \begin{align*}
             5^{3/2} \amp = \left(5^{1/2}\right)^3 \\
             \amp \approx (2.236)^3 \approx 11.180
             \end{align*}
         </li>
-</ol></article><p id="p-147">
-    You can verify all the calculations in <a knowl="./knowl/example-rational-exponent.html" knowl-id="xref-example-rational-exponent" alt="Example 1.4.1 " title="Example 1.4.1 ">Example 1.4.1</a> on your calculator. For example, to evaluate \(81^{3/4}\), key in
+</ol></article><p id="p-722">
+    You can verify all the calculations in <a knowl="./knowl/example-rational-exponent.html" knowl-id="xref-example-rational-exponent" alt="Example 3.4.1 " title="Example 3.4.1 ">Example 3.4.1</a> on your calculator. For example, to evaluate \(81^{3/4}\), key in
 </p>
-<p id="p-148">
+<p id="p-723">
     81 <tt class="code-inline tex2jax_ignore">^</tt> ( 3 <tt class="code-inline tex2jax_ignore">÷</tt> 4 ) <tt class="code-inline tex2jax_ignore">ENTER</tt>
 </p>
-<p id="p-149">or simply</p>
-<p id="p-150">
+<p id="p-724">or simply</p>
+<p id="p-725">
     81 <tt class="code-inline tex2jax_ignore">^</tt> 0.75 <tt class="code-inline tex2jax_ignore">ENTER</tt>
 </p>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-evaluate-rational-exponent" id="exercise-evaluate-rational-exponent"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">1.4.2</span>
+<span class="type">Exercise</span> <span class="codenumber">3.4.2</span>
 </h5></a></div>
 <div id="hk-exercise-evaluate-rational-exponent" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like">
     Evaluate each power.
     <ol style="list-style-type: lower-alpha;">
-<li id="li-136">\( 32^{−3/5}\)</li>
-<li id="li-137">\( −81^{1.25}\)</li>
+<li id="li-525">\( 32^{−3/5}\)</li>
+<li id="li-526">\( −81^{1.25}\)</li>
 </ol></article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-21"><header><h1 class="heading hide-type">
-<span class="type">Subsection</span><span class="codenumber">1.4.2</span><span class="title">Power Functions</span>
-</h1></header><p id="p-151">
-    The graphs of power functions \(y = x^{m/n}\), where \(m/n\) is positive, are all increasing for \(x\ge 0\). If \(m/n \gt 1\), the graph is concave up. If \(0 \lt m/n \lt 1\), the graph is concave down. Some examples are shown in <a knowl="./knowl/fig-power-functions.html" knowl-id="xref-fig-power-functions" alt="Figure 1.4.3 " title="Figure 1.4.3 ">Figure 1.4.3</a>.
+</div></section><section class="subsection" id="subsection-76"><header title="Subsection 3.4.2 Power Functions"><h1 class="heading hide-type" alt="Subsection 3.4.2 Power Functions">
+<span class="type">Subsection</span><span class="codenumber">3.4.2</span><span class="title">Power Functions</span>
+</h1></header><p id="p-726">
+    The graphs of power functions \(y = x^{m/n}\), where \(m/n\) is positive, are all increasing for \(x\ge 0\). If \(m/n \gt 1\), the graph is concave up. If \(0 \lt m/n \lt 1\), the graph is concave down. Some examples are shown in <a knowl="./knowl/fig-power-functions.html" knowl-id="xref-fig-power-functions" alt="Figure 3.4.3 " title="Figure 3.4.3 ">Figure 3.4.3</a>.
 </p>
-<figure class="figure-like" id="fig-power-functions"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-power-functions.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.3</span></figcaption></figure><p id="p-152">
+<figure class="figure-like" id="fig-power-functions"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-power-functions.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">3.4.3</span></figcaption></figure><p id="p-727">
     Perhaps the single most useful piece of information a scientist can have about an animal is its metabolic rate. The metabolic rate is the amount of energy the animal uses per unit of time for its usual activities, including locomotion, thermoregulation, growth, and reproduction. The basal metabolic rate, or BMR, sometimes called the resting metabolic rate, is the minimum amount of energy the animal can expend in order to survive.
 </p>
 <article class="example-like" id="example-Kleiber-rule"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">1.4.4</span>
+<span class="type">Example</span><span class="codenumber">3.4.4</span>
 </h5>
-<p id="p-153">
+<p id="p-728">
     A revised form of Kleiber's rule states that the basal metabolic rate for many groups of animals is given by 
-    <div class="displaymath" id="me-75">\begin{equation*}B(m) = 70m^{0.75}\end{equation*}</div>
+    \begin{equation*}B(m) = 70m^{0.75}\end{equation*}
     where \(m\) is the mass of the animal in kilograms and the BMR is measured in kilocalories per day.
 </p>
 <ol style="list-style-type: lower-alpha;">
-<li id="li-138">Calculate the BMR for various animals whose masses are given in the table.
-<figure class="figure-like" id="table-17"><table>
+<li id="li-527">Calculate the BMR for various animals whose masses are given in the table.
+<figure class="figure-like" id="table-77"><table>
 <tr>
 <td class="c m b1 r1 l1 t3">Animal</td>
 <td class="c m b1 r1 l0 t3">Bat</td>
@@ -210,14 +234,14 @@ MathJax.Hub.Config({
 </tr>
 </table></figure>
 </li>
-<li id="li-139">Sketch a graph of Kleiber’s rule for \(0 \lt m \le 400\).</li>
-<li id="li-140">Do larger species eat more or less, relative to their body mass, than smaller ones?</li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-14" id="solution-14"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-14" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
-<li id="li-141">Evaluate the function for the values of m given. For example, to calculate the BMR of a bat, we compute
-    <div class="displaymath" id="me-76">\begin{equation*}B(0.1) = 70(0.1)^{0.75} = 12.1\end{equation*}</div>
+<li id="li-528">Sketch a graph of Kleiber’s rule for \(0 \lt m \le 400\).</li>
+<li id="li-529">Do larger species eat more or less, relative to their body mass, than smaller ones?</li>
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-86" id="solution-86"><span class="">Solution</span></a></span><span id="hk-solution-86" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-530">Evaluate the function for the values of m given. For example, to calculate the BMR of a bat, we compute
+    \begin{equation*}B(0.1) = 70(0.1)^{0.75} = 12.1\end{equation*}
     A bat expends, and hence must consume, at least \(12\) kilocalories per day. Evaluate the function to complete the rest of the table.
-    <figure class="figure-like" id="table-18"><table>
+    <figure class="figure-like" id="table-78"><table>
 <tr>
 <td class="c m b1 r1 l1 t3">Animal</td>
 <td class="c m b1 r1 l0 t3">Bat</td>
@@ -250,17 +274,19 @@ MathJax.Hub.Config({
 </tr>
 </table></figure>
 </li>
-<li id="li-142">Plot the data from the table to obtain the graph in Figure 3.14.
-    <figure class="figure-like" id="fig-bat-to-rhino"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-bat-to-rhino.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.5</span></figcaption></figure>
+<li id="li-531">Plot the data from the table to obtain the graph in Figure 3.14.
+    <figure class="figure-like" id="fig-bat-to-rhino"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-bat-to-rhino.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">3.4.5</span></figcaption></figure>
 </li>
-<li id="li-143">If energy consumption were proportional to body weight, the graph would be a straight line. But because the exponent in Kleiber’s rule, \(\frac{3}{4}\) , is less than \(1\), the graph is concave down, or bends downward. Therefore, larger species eat less than smaller ones, relative to their body weight. For example, a moose weighs \(600\) times as much as a squirrel, but its energy requirement is only \(121\) times the squirrel's.</li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-power-function" id="exercise-power-function"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">1.4.6</span>
+<li id="li-532">If energy consumption were proportional to body weight, the graph would be a straight line. But because the exponent in Kleiber’s rule, \(\frac{3}{4}\) , is less than \(1\), the graph is concave down, or bends downward. Therefore, larger species eat less than smaller ones, relative to their body weight. For example, a moose weighs \(600\) times as much as a squirrel, but its energy requirement is only \(121\) times the squirrel's.</li>
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-power-function" id="exercise-power-function"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">3.4.6</span>
 </h5></a></div>
 <div id="hk-exercise-power-function" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><ol style="list-style-type: lower-alpha;">
-<li id="li-144">Complete the table of values for the function \(f (x) = x^{−3/4}\).
-    <figure class="figure-like" id="table-19"><table>
+<li id="li-533">Complete the table of values for the function \(f (x) = x^{−3/4}\).
+    <figure class="figure-like" id="table-79"><table>
 <tr>
 <td class="c m b1 r1 l1 t3">\(x\)</td>
 <td class="c m b1 r1 l0 t3">\(0.1\)</td>
@@ -285,110 +311,111 @@ MathJax.Hub.Config({
 </tr>
 </table></figure>
 </li>
-<li id="li-145">Sketch the graph of the function.</li>
+<li id="li-534">Sketch the graph of the function.</li>
 </ol></article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-22"><header><h1 class="heading hide-type">
-<span class="type">Subsection</span><span class="codenumber">1.4.3</span><span class="title">More about Scaling</span>
-</h1></header><p id="p-154">
-    In <a knowl="./knowl/example-Kleiber-rule.html" knowl-id="xref-example-Kleiber-rule" alt="Example 1.4.4 " title="Example 1.4.4 ">Example 1.4.4</a> we saw that large animals eat less than smaller ones, relative to their body weight. This is because the scaling exponent in Kleiber's rule is less than \(1\). For example, let \(s\) represent the mass of a squirrel. The mass of a moose is then \(600s\), and its metabolic rate is
+</div></section><section class="subsection" id="subsection-77"><header title="Subsection 3.4.3 More about Scaling"><h1 class="heading hide-type" alt="Subsection 3.4.3 More about Scaling">
+<span class="type">Subsection</span><span class="codenumber">3.4.3</span><span class="title">More about Scaling</span>
+</h1></header><p id="p-729">
+    In <a knowl="./knowl/example-Kleiber-rule.html" knowl-id="xref-example-Kleiber-rule" alt="Example 3.4.4 " title="Example 3.4.4 ">Example 3.4.4</a> we saw that large animals eat less than smaller ones, relative to their body weight. This is because the scaling exponent in Kleiber's rule is less than \(1\). For example, let \(s\) represent the mass of a squirrel. The mass of a moose is then \(600s\), and its metabolic rate is
     \begin{align*}
     B(600s) \amp = 70(600s)^{0.75} \\
     \amp = 600^{0.75} \cdot 70s^{0.75} = 121B(s)
     \end{align*}
     or \(121\) times the metabolic rate of the squirrel. Metabolic rate scales as \(k^{0.75}\), compared to the mass of the animal.
 </p>
-<p id="p-155">
+<p id="p-730">
     In a famous experiment in the 1960s, an elephant was given LSD. The dose was determined from a previous experiment in which a \(2.6\)-kg cat was given \(0.26\) gram of LSD. Because the elephant weighed \(2970\) kg, the experimenters used a direct proportion to calculate the dose for the elephant:
-    <div class="displaymath" id="me-77">\begin{equation*}\frac{0.26 \text{ g}}{2.6 \text{ kg}}= \frac{x \text{ g}}{2970 \text{ kg}}\end{equation*}</div>
+    \begin{equation*}\frac{0.26 \text{ g}}{2.6 \text{ kg}}= \frac{x \text{ g}}{2970 \text{ kg}}\end{equation*}
     and arrived at the figure \(297\) g of LSD. Unfortunately, the elephant did not survive the experiment.
 </p>
 <article class="example-like" id="example-Kleiber-elephant-LSD-dose"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">1.4.7</span>
+<span class="type">Example</span><span class="codenumber">3.4.7</span>
 </h5>
-<p id="p-156">
+<p id="p-731">
     Use Kleiber's rule and the dosage for a cat to estimate the corresponding dose for an elephant.
-</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-15" id="solution-15"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-15" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-157">
+</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-87" id="solution-87"><span class="">Solution</span></a></span><span id="hk-solution-87" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-732">
     If the experimenters had taken into account the scaling exponent of \(0.75\) in metabolic rate, they would have used a smaller dose. Because the elephant weighs \(\frac{2970}{2.6}\) , or about \(1142\) times as much as the cat, the dose would be \(1142^{0.75} = 196\) times the dosage for a cat, or about \(51\) grams.
-</p></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-LSD-human-vs-elephant-dose" id="exercise-LSD-human-vs-elephant-dose"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">1.4.8</span>
+</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-LSD-human-vs-elephant-dose" id="exercise-LSD-human-vs-elephant-dose"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">3.4.8</span>
 </h5></a></div>
 <div id="hk-exercise-LSD-human-vs-elephant-dose" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like">
     A human being weighs about \(70\) kg, and \(0.2\) mg of LSD is enough to induce severe psychotic symptoms. Use these data and Kleiber's rule to predict what dosage would produce a similar effect in an elephant.
 </article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-23"><header><h1 class="heading hide-type">
-<span class="type">Subsection</span><span class="codenumber">1.4.4</span><span class="title">Radical Notation</span>
-</h1></header><p id="p-158">
+</div></section><section class="subsection" id="subsection-78"><header title="Subsection 3.4.4 Radical Notation"><h1 class="heading hide-type" alt="Subsection 3.4.4 Radical Notation">
+<span class="type">Subsection</span><span class="codenumber">3.4.4</span><span class="title">Radical Notation</span>
+</h1></header><p id="p-733">
         Because \(a^{1/n} = \sqrt[n]{a}\), we can write any power with a fractional exponent in radical form as follows.
     </p>
-<article class="paragraphs" id="paragraphs-17"><h5 class="heading"><span class="title">Rational Exponents and Radicals</span></h5>
-<div class="displaymath" id="me-78">\begin{equation*}
+<article class="paragraphs" id="paragraphs-52"><h5 class="heading"><span class="title">Rational Exponents and Radicals</span></h5>\begin{equation*}
         a^{m/n} = \sqrt[n]{a^m} =\left( \sqrt[n]{a}\right)^m
-    \end{equation*}</div></article><article class="example-like" id="example-rational-exponent-to-radicals"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">1.4.9</span>
+    \end{equation*}</article><article class="example-like" id="example-rational-exponent-to-radicals"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">3.4.9</span>
 </h5>
 <ol style="list-style-type: lower-alpha;">
-<li id="li-146">\(125^{4/3} = \sqrt[3]{125^4} \text{ or } \left(\sqrt[3]{125}\right)^4\)</li>
-<li id="li-147">\(x^{0.4} = x^{2/5} = \sqrt[5]{x^2}\)</li>
-<li id="li-148">\(6w^{−3/4} = \frac{6}{\sqrt[4]{w^3}}\)</li>
+<li id="li-535">\(125^{4/3} = \sqrt[3]{125^4} \text{ or } \left(\sqrt[3]{125}\right)^4\)</li>
+<li id="li-536">\(x^{0.4} = x^{2/5} = \sqrt[5]{x^2}\)</li>
+<li id="li-537">\(6w^{−3/4} = \frac{6}{\sqrt[4]{w^3}}\)</li>
 </ol></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-rational-exponent-to-radical" id="exercise-rational-exponent-to-radical"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">1.4.10</span>
+<span class="type">Exercise</span> <span class="codenumber">3.4.10</span>
 </h5></a></div>
 <div id="hk-exercise-rational-exponent-to-radical" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like">
 Write each expression in radical notation.
 <ol style="list-style-type: lower-alpha;">
-<li id="li-149">\(5t^{1.25}\)</li>
-<li id="li-150">\( 3m^{−5/3}\)</li>
+<li id="li-538">\(5t^{1.25}\)</li>
+<li id="li-539">\( 3m^{−5/3}\)</li>
 </ol></article><div class="hidden-knowl-wrapper"></div>
 </div>
-<p id="p-159">
+<p id="p-734">
     Usually, we will want to convert from radical notation to fractional exponents, since exponential notation is easier to use.
 </p>
 <article class="example-like" id="example-radical-to-exponential"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">1.4.11</span>
+<span class="type">Example</span><span class="codenumber">3.4.11</span>
 </h5>
 <ol style="list-style-type: lower-alpha;">
-<li id="li-151">\(\sqrt{x^5} = x^{5/2}\)</li>
-<li id="li-152">\( 5 \sqrt[4]{p^3} = 5p^{3/4}\)</li>
-<li id="li-153">\( \frac{3}{\sqrt[5]{t^2}}= 3t^{−2/5}\)</li>
-<li id="li-154">\( \sqrt[3]{2y^2} = \left(2y^2\right)^{1/3} = 2^{1/3} y^{2/3}\)</li>
+<li id="li-540">\(\sqrt{x^5} = x^{5/2}\)</li>
+<li id="li-541">\( 5 \sqrt[4]{p^3} = 5p^{3/4}\)</li>
+<li id="li-542">\( \frac{3}{\sqrt[5]{t^2}}= 3t^{−2/5}\)</li>
+<li id="li-543">\( \sqrt[3]{2y^2} = \left(2y^2\right)^{1/3} = 2^{1/3} y^{2/3}\)</li>
 </ol></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-radical-to-exponential" id="exercise-radical-to-exponential"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">1.4.12</span>
+<span class="type">Exercise</span> <span class="codenumber">3.4.12</span>
 </h5></a></div>
 <div id="hk-exercise-radical-to-exponential" style="display: none;" class="tex2jax_ignore">
-<article class="exercise-like"><p id="p-160">    Convert to exponential notation.</p>
+<article class="exercise-like"><p id="p-735">    Convert to exponential notation.</p>
 <ol style="list-style-type: lower-alpha;">
-<li id="li-155">\(\sqrt[3]{6w^2}\)</li>
-<li id="li-156">\(  \sqrt[4]{\frac{v^3}{s^5}}\)</li>
+<li id="li-544">\(\sqrt[3]{6w^2}\)</li>
+<li id="li-545">\(  \sqrt[4]{\frac{v^3}{s^5}}\)</li>
 </ol></article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-24"><header><h1 class="heading hide-type">
-<span class="type">Subsection</span><span class="codenumber">1.4.5</span><span class="title">Operations with Rational Exponents</span>
-</h1></header><p id="p-161">
-    Powers with rational exponents—positive, negative, or zero—obey the laws of exponents, which we discussed in <a href="Variation.html" alt="Section 1.1 Variation" title="Section 1.1 Variation">Section 1.1</a>. You may want to review those laws before studying the following examples.
+</div></section><section class="subsection" id="subsection-79"><header title="Subsection 3.4.5 Operations with Rational Exponents"><h1 class="heading hide-type" alt="Subsection 3.4.5 Operations with Rational Exponents">
+<span class="type">Subsection</span><span class="codenumber">3.4.5</span><span class="title">Operations with Rational Exponents</span>
+</h1></header><p id="p-736">
+    Powers with rational exponents—positive, negative, or zero—obey the laws of exponents, which we discussed in <a href="Variation.html" alt="Section 3.1 Variation" title="Section 3.1 Variation">Section 3.1</a>. You may want to review those laws before studying the following examples.
 </p>
 <article class="example-like" id="example-operations-with-rational-exponents"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">1.4.13</span>
+<span class="type">Example</span><span class="codenumber">3.4.13</span>
 </h5>
 <ol style="list-style-type: lower-alpha;">
-<li id="li-157">\begin{align*}
+<li id="li-546">\begin{align*}
         \frac{7^{0.75}}{7^{0.5}}\amp= 7^{0.75−0.5} = 7^{0.25}
          \amp\amp \text{Apply the second law of exponents.}
          \end{align*}
     </li>
-<li id="li-158">\begin{align*}
+<li id="li-547">\begin{align*}
         v \cdot v^{−2/3}\amp= v^{1+(−2/3)}
         \amp\amp \text{Apply the first law of exponents.}\\
         \amp  = v^{1/3}
         \end{align*}
     </li>
-<li id="li-159">\begin{align*}
+<li id="li-548">\begin{align*}
         \left(x^8\right)^{0.5}\amp= x^{8(0.5))} = x^4
         \amp\amp \text{Apply the third law of exponents.}
         \end{align*}
     </li>
-<li id="li-160">\begin{align*}
+<li id="li-549">\begin{align*}
         \frac{\left(5^{1/2}y^2\right)^2}{\left(5^{2/3} y\right)^3}  \amp= \frac{5y^4}{5^2 y^3}
         \amp\amp \text{Apply the fourth law of exponents.}\\
         \amp = \frac{y^{4−3}}{5^{2−1}}=\frac{y}{5}
@@ -396,22 +423,22 @@ Write each expression in radical notation.
         \end{align*}
     </li>
 </ol></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-operations-on-rational-exponents" id="exercise-operations-on-rational-exponents"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">1.4.14</span>
+<span class="type">Exercise</span> <span class="codenumber">3.4.14</span>
 </h5></a></div>
 <div id="hk-exercise-operations-on-rational-exponents" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like">
     Simplify by applying the laws of exponents.
     <ol style="list-style-type: lower-alpha;">
-<li id="li-161">\( x^{1/3}\left(x + x^{2/3}\right)\)</li>
-<li id="li-162">\( \frac{n^{9/4}}{4n^{3/4}}\)</li>
+<li id="li-550">\( x^{1/3}\left(x + x^{2/3}\right)\)</li>
+<li id="li-551">\( \frac{n^{9/4}}{4n^{3/4}}\)</li>
 </ol></article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-25"><header><h1 class="heading hide-type">
-<span class="type">Subsection</span><span class="codenumber">1.4.6</span><span class="title">Solving Equations</span>
-</h1></header><p id="p-162">
+</div></section><section class="subsection" id="subsection-80"><header title="Subsection 3.4.6 Solving Equations"><h1 class="heading hide-type" alt="Subsection 3.4.6 Solving Equations">
+<span class="type">Subsection</span><span class="codenumber">3.4.6</span><span class="title">Solving Equations</span>
+</h1></header><p id="p-737">
     According to the third law of exponents, when we raise a power to another power, we multiply the exponents together. In particular, if the two exponents are reciprocals, then their product is \(1\). For example,
-    <div class="displaymath" id="me-79">\begin{equation*}\left(x^{2/3}\right)^{3/2} = x^{(2/3) (3/2)} = x^1 = x\end{equation*}</div>
+    \begin{equation*}\left(x^{2/3}\right)^{3/2} = x^{(2/3) (3/2)} = x^1 = x\end{equation*}
     This observation can help us to solve equations involving fractional exponents. For instance, to solve the equation
-    <div class="displaymath" id="me-80">\begin{equation*}x^{2/3} = 4\end{equation*}</div>
+    \begin{equation*}x^{2/3} = 4\end{equation*}
     we raise both sides of the equation to the reciprocal power, \(3/2\). This gives us
     \begin{align*}
     \left(x^{2/3}\right)^{3/2} \amp = 4^{3/2} \\
@@ -420,10 +447,10 @@ Write each expression in radical notation.
     The solution is \(8\).
 </p>
 <article class="example-like" id="example-equation-with-rational-exponents"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">1.4.15</span>
+<span class="type">Example</span><span class="codenumber">3.4.15</span>
 </h5>
-<p id="p-163">Solve \((2x + 1)^{3/4} = 27\).</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-16" id="solution-16"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-16" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-164">
+<p id="p-738">Solve \((2x + 1)^{3/4} = 27\).</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-88" id="solution-88"><span class="">Solution</span></a></span><span id="hk-solution-88" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-739">
     Raise both sides of the equation to the reciprocal power, \(\frac{4}{3}\).
     \begin{align*}
     \left[(2x + 1)^{3/4}\right]^{4/3} \amp= 27^{4/3} 
@@ -431,28 +458,30 @@ Write each expression in radical notation.
     2x + 1 \amp = 81 \amp\amp \text{Solve as usual.} \\
     x \amp = 40
     \end{align*}
-</p></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-equation-with-rational-exponent" id="exercise-equation-with-rational-exponent"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">1.4.16</span>
+</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-equation-with-rational-exponent" id="exercise-equation-with-rational-exponent"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">3.4.16</span>
 </h5></a></div>
 <div id="hk-exercise-equation-with-rational-exponent" style="display: none;" class="tex2jax_ignore">
-<article class="exercise-like"><p id="p-165">
+<article class="exercise-like"><p id="p-740">
         Solve the equation \(3.2z^{0.6} − 9.7 = 8.7\). Round your answer to two decimal places.
     </p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-2" id="hint-2"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-166">Isolate the power.</p>
-<p id="p-167">Raise both sides to the reciprocal power.</p></span></span></article><div class="hidden-knowl-wrapper"></div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-2" id="hint-2"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-2" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-741">Isolate the power.</p>
+<p id="p-742">Raise both sides to the reciprocal power.</p></span></span></article><div class="hidden-knowl-wrapper"></div>
 </div>
-<article class="paragraphs" id="paragraphs-18"><h5 class="heading"><span class="title">Vampire Bats</span></h5>
-<p id="p-168">
-    Small animals such as bats cannot survive for long without eating. The graph in <a knowl="./knowl/fig-vampire-bats.html" knowl-id="xref-fig-vampire-bats" alt="Figure 1.4.17 " title="Figure 1.4.17 ">Figure 1.4.17</a> shows how the weight, \(W\), of a typical vampire bat decreases over time until its next meal, until the bat reaches the point of starvation. The curve is the graph of the function
-    <div class="displaymath" id="me-81">\begin{equation*}W(h) = 130.25h^{−0.126}\end{equation*}</div>
+<article class="paragraphs" id="paragraphs-53"><h5 class="heading"><span class="title">Vampire Bats</span></h5>
+<p id="p-743">
+    Small animals such as bats cannot survive for long without eating. The graph in <a knowl="./knowl/fig-vampire-bats.html" knowl-id="xref-fig-vampire-bats" alt="Figure 3.4.17 " title="Figure 3.4.17 ">Figure 3.4.17</a> shows how the weight, \(W\), of a typical vampire bat decreases over time until its next meal, until the bat reaches the point of starvation. The curve is the graph of the function
+    \begin{equation*}W(h) = 130.25h^{−0.126}\end{equation*}
     where \(h\) is the number of hours since the bat’s most recent meal. (Source: Wilkinson, 1984)
 </p>
-<figure class="figure-like" id="fig-vampire-bats"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-vampire-bats.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.17</span></figcaption></figure><ol style="list-style-type: decimal;">
-<li id="li-163">Use the graph to estimate answers to the following questions: How long can the bat survive after eating until its next meal? What is the bat’s weight at the point of starvation?</li>
-<li id="li-164">Use the formula for \(W(h)\) to verify your answers.</li>
-<li id="li-165">Write and solve an equation to answer the question: When the bat's weight has dropped to \(90\) grams, how long can it survive before eating again?</li>
-<li id="li-166">Complete the table showing the number of hours since the bat last ate when its weight has dropped to the given values.
-    <figure class="figure-like" id="table-20"><table>
+<figure class="figure-like" id="fig-vampire-bats"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-vampire-bats.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">3.4.17</span></figcaption></figure><ol style="list-style-type: decimal;">
+<li id="li-552">Use the graph to estimate answers to the following questions: How long can the bat survive after eating until its next meal? What is the bat’s weight at the point of starvation?</li>
+<li id="li-553">Use the formula for \(W(h)\) to verify your answers.</li>
+<li id="li-554">Write and solve an equation to answer the question: When the bat's weight has dropped to \(90\) grams, how long can it survive before eating again?</li>
+<li id="li-555">Complete the table showing the number of hours since the bat last ate when its weight has dropped to the given values.
+    <figure class="figure-like" id="table-80"><table>
 <tr>
 <td class="c m b1 r1 l1 t3">Weight (grams)</td>
 <td class="c m b1 r1 l0 t3">\(97.5\)</td>
@@ -476,17 +505,17 @@ Write each expression in radical notation.
 </tr>
 </table></figure>
 </li>
-<li id="li-167">
-        Compute the slope of the line segments from point \(A\) to point \(B\), and from point \(C\) to point \(D\). (See <a knowl="./knowl/fig-vampire-bats2.html" knowl-id="xref-fig-vampire-bats2" alt="Figure 1.4.18 " title="Figure 1.4.18 ">Figure 1.4.18</a>.) Include units in your answers.
-        <figure class="figure-like" id="fig-vampire-bats2"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-vampire-bats2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.18</span></figcaption></figure>
+<li id="li-556">
+        Compute the slope of the line segments from point \(A\) to point \(B\), and from point \(C\) to point \(D\). (See <a knowl="./knowl/fig-vampire-bats2.html" knowl-id="xref-fig-vampire-bats2" alt="Figure 3.4.18 " title="Figure 3.4.18 ">Figure 3.4.18</a>.) Include units in your answers.
+        <figure class="figure-like" id="fig-vampire-bats2"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-vampire-bats2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">3.4.18</span></figcaption></figure>
 </li>
-<li id="li-168">
+<li id="li-557">
         What happens to the slope of the curve as \(h\) increases? What does this tell you about the concavity of the curve?
     </li>
-<li id="li-169">
+<li id="li-558">
         Suppose a bat that weighs \(80\) grams consumes \(5\) grams of blood. How many hours of life does it gain? Suppose a bat that weighs \(97.5\) grams gives up a meal of \(5\) grams of blood. How many hours of life does it forfeit?
     </li>
-<li id="li-170">
+<li id="li-559">
         Vampire bats sometimes donate blood (through regurgitation) to other bats that are close to starvation. Suppose a bat at point \(A\) on the curve donates \(5\) grams of blood to a bat at point \(D\). Explain why this strategy is effective for the survival of the bat community.
     </li>
 </ol></article></section></section></div></main>

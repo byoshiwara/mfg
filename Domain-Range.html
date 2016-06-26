@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-06-23T20:04:17-04:00    *-->
+<!--*    on 2016-06-26T15:51:20-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,12 +13,15 @@
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
         equationNumbers: { autoNumber: "none",
                            useLabelIds: true,
                            // JS comment, XML CDATA protect XHTML quality of file
@@ -101,14 +104,17 @@ MathJax.Hub.Config({
 <li><a href="Integer-Exponents.html">Integer Exponents</a></li>
 <li><a href="Roots-and-Radicals.html">Roots and Radicals</a></li>
 <li><a href="Rational-Exponents.html">Rational Exponents</a></li>
+<li><a href="Joint-Variation.html">Joint Variation</a></li>
 </ul>
+<h2 class="link"><a href="chap4.html"><span class="codenumber">4</span><span class="title">Exponential Functions</span></a></h2>
+<ul><li><a href="Exponential-Growth-and-Decay.html">Exponential Growth and Decay</a></li></ul>
 <h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
 <ul></ul>
 <h2 class="link"><a href="colophon-2.html"><span class="title">Colophon</span></a></h2>
 <ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Domain-Range"><header><h1 class="heading hide-type">
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Domain-Range"><header title="Section 2.6 Domain and Range"><h1 class="heading hide-type" alt="Section 2.6 Domain and Range">
 <span class="type">Section</span><span class="codenumber">2.6</span><span class="title">Domain and Range</span><a href="Domain-Range.html" class="permalink">¶ permalink</a>
-</h1></header><section class="subsection" id="subsection-52"><header><h1 class="heading hide-type">
+</h1></header><section class="subsection" id="subsection-52"><header title="Subsection 2.6.1 Definitions of Domain and Range"><h1 class="heading hide-type" alt="Subsection 2.6.1 Definitions of Domain and Range">
 <span class="type">Subsection</span><span class="codenumber">2.6.1</span><span class="title">Definitions of Domain and Range</span>
 </h1></header><p id="p-564">
     In <a knowl="./knowl/example-graph-square-root.html" knowl-id="xref-example-graph-square-root" alt="Example 1.3.8 " title="Example 1.3.8 ">Example 1.3.8</a> of <a href="graphs-of-functions.html" alt="Section 1.3 Graphs of Functions" title="Section 1.3 Graphs of Functions">Section 1.3</a>, we graphed the function \(f (x) =\sqrt{x + 4}\) and observed that \(f (x)\) is undefined for \(x\)-values less than \(−4\). For this function, we must choose \(x\)-values in the interval \([−4, \infty)\). 
@@ -132,7 +138,7 @@ MathJax.Hub.Config({
 <p id="p-570"></p>
 <p id="p-571">
     A relationship between two variables is a <em class="terminology">function</em> if each element of the domain is paired with exactly one element of the range.
-</p></article></section><section class="subsection" id="subsection-53"><header><h1 class="heading hide-type">
+</p></article></section><section class="subsection" id="subsection-53"><header title="Subsection 2.6.2 Finding Domain and Range from a Graph"><h1 class="heading hide-type" alt="Subsection 2.6.2 Finding Domain and Range from a Graph">
 <span class="type">Subsection</span><span class="codenumber">2.6.2</span><span class="title">Finding Domain and Range from a Graph</span>
 </h1></header><p id="p-572">
     We can identify the domain and range of a function from its graph. The domain is the set of \(x\)-values of all points on the graph, and the range is the set of \(y\)-values.
@@ -150,11 +156,13 @@ MathJax.Hub.Config({
         For the indicated points, show the domain values and their corresponding range values in the form of ordered pairs.
     </li>
 </ol></article><figure class="right" id="fig-domain-and-range-from-graph" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-domain-and-range-from-graph.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.6.3</span></figcaption></figure>
-</div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-68" id="solution-68"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-68" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+</div></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-68" id="solution-68"><span class="">Solution</span></a></span><span id="hk-solution-68" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-377">All the points on the graph have \(v\)-coordinates between \(1\) and \(10\), inclusive, so the domain of the function \(h\) is the interval \([1, 10]\). The \(h(v)\)-coordinates have values between \(−2\) and \(7\), inclusive, so the range of the function is the interval \([−2, 7]\).</li>
 <li id="li-378">Recall that the points on the graph of a function have coordinates \((v, h(v))\). In other words, the coordinates of each point are made up of a domain value and its corresponding range value. Read the coordinates of the indicated points to obtain the ordered pairs \((1, 3)\), \((3,−2)\), \((6, −1)\), \((7, 0)\), and \((10, 7)\).</li>
-</ol></span></span></article><div class="sidebyside" id="sidebyside-57">
+</ol></div></span>
+</div></div>
+<div class="sidebyside" id="sidebyside-57">
 <figure class="left" id="fig-domain-and-range-from-graph2" style="width:48%;vertical-align:top;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-domain-and-range-from-graph2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.6.4</span></figcaption></figure><p id="p-573" class="right" style="width:48%;vertical-align:bottom;text-align:left;">
     <a knowl="./knowl/fig-domain-and-range-from-graph2.html" knowl-id="xref-fig-domain-and-range-from-graph2" alt="Figure 2.6.4 " title="Figure 2.6.4 ">Figure 2.6.4</a> shows the graph of the function \(h\) in <a knowl="./knowl/example-domain-and-range-from-graph.html" knowl-id="xref-example-domain-and-range-from-graph" alt="Example 2.6.2 " title="Example 2.6.2 ">Example 2.6.2</a> with the domain values marked on the horizontal axis and the range values marked on the vertical axis. Imagine a rectangle whose length and width are determined by those segments, as shown in <a knowl="./knowl/fig-domain-and-range-from-graph2.html" knowl-id="xref-fig-domain-and-range-from-graph2" alt="Figure 2.6.4 " title="Figure 2.6.4 ">Figure 2.6.4</a>. All the points \((v, h(v))\) on the graph of the function lie within this rectangle. This rectangle is a convenient window in the plane for viewing the function. Of course, if the domain or range of the function is an infinite interval, we can never include the whole graph within a viewing rectangle and must be satisfied with studying only the important parts of the graph.
 </p>
@@ -178,8 +186,9 @@ MathJax.Hub.Config({
 </h5>
 <p id="p-575">
     Graph the function \(f (x) = x^2 − 6\) on the domain \(0 \le x \le 4\) and give its range.
-</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-69" id="solution-69"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-69" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-576">
+</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-69" id="solution-69"><span class="">Solution</span></a></span><span id="hk-solution-69" style="display: none;" class="tex2jax_ignore"><div class="remark-like">
+<p id="p-576">
     The graph is part of a parabola that opens upward. Obtain several points on the graph by evaluating the function at convenient \(x\)-values in the domain.
 </p>
 <figure class="figure-like" id="table-59"><table>
@@ -224,7 +233,10 @@ MathJax.Hub.Config({
     The range of the function is the set of all \(f (x)\)-values that appear on the graph. We can see in <a knowl="./knowl/fig-parabola-with-finite-domain.html" knowl-id="xref-fig-parabola-with-finite-domain" alt="Figure 2.6.8 " title="Figure 2.6.8 ">Figure 2.6.8</a> that the lowest point on the graph is \((0, −6)\), so the smallest \(f (x)\)-value is \(−6\). The highest point on the graph is \((4, 10)\), so the largest \(f (x)\)-value is \(10\). Thus, the range of the function \(f\) is the interval \([−6, 10]\).
 </p>
 <figure class="right" id="fig-parabola-with-finite-domain" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-parabola-with-finite-domain.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.6.8</span></figcaption></figure>
-</div></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-cubic-on-finite-domain" id="exercise-cubic-on-finite-domain"><h5 class="heading">
+</div>
+</div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-cubic-on-finite-domain" id="exercise-cubic-on-finite-domain"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.6.9</span>
 </h5></a></div>
 <div id="hk-exercise-cubic-on-finite-domain" style="display: none;" class="tex2jax_ignore">
@@ -276,29 +288,31 @@ MathJax.Hub.Config({
 </table></figure>
 </li>
 <li id="li-382">Determine the domain and range of the function.</li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-70" id="solution-70"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-70" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-70" id="solution-70"><span class="">Solution</span></a></span><span id="hk-solution-70" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-383">From the table, we see that articles of any weight up to \(1\) ounce require $0.47 postage. This means that for all \(w\)-values greater than \(0\) but less than or equal to \(1\), the \(p\)-value is \(0.47\). Thus, the graph of \(p = g(w)\) between \(w = 0\) and \(w = 1\) looks like a small piece of the horizontal line \(p = 0.47\). Similarly, for all \(w\)-values greater than \(1\) but less than or equal to \(2\), the \(p\)-value is \(0.68\), so the graph on this interval looks like a small piece of the line \(p = 0.68\). Continue in this way to obtain the graph shown in <a knowl="./knowl/fig-postage-2016.html" knowl-id="xref-fig-postage-2016" alt="Figure 2.6.11 " title="Figure 2.6.11 ">Figure 2.6.11</a>.
     <figure class="figure-like" id="fig-postage-2016"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-postage-2016.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.6.11</span></figcaption></figure>
     The open circles at the left endpoint of each horizontal segment indicate that that point is not included in the graph; the closed circles are points on the graph. For instance, if \(w = 3\), the postage, \(p\), is $0.89, not $1.10. Consequently, the point \((3, 0.89)\) is part of the graph of \(g\), but the point \((3, 1.10)\) is not.
     </li>
 <li id="li-384">Postage rates are given for all weights greater than \(0\) ounces up to and including \(7\) ounces, so the domain of the function is the half-open interval \((0, 7]\). (The domain is an interval because there is a point on the graph for every \(w\)-value from \(0\) to \(7\).) The range of the function is not an interval, however, because the possible values for \(p\) do not include all the real numbers between \(0.3\) and \(1.75\). The range is the set of discrete values \(0.47\), \(0.68\), \(0.89\), \(1.10\), \(1.31\), \(1.52\), and \(1.73\).</li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-piecewise-domain-and-range" id="exercise-piecewise-domain-and-range"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-piecewise-domain-and-range" id="exercise-piecewise-domain-and-range"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.6.12</span>
 </h5></a></div>
 <div id="hk-exercise-piecewise-domain-and-range" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like">
     In <a knowl="./knowl/exercise-water-bill.html" knowl-id="xref-exercise-water-bill" alt="Exercise 2.4.18 " title="Exercise 2.4.18 ">Exercise 2.4.18</a> of <a href="MathModels.html" alt="Section 2.4 Functions as Mathematical Models" title="Section 2.4 Functions as Mathematical Models">Section 2.4</a>, you wrote a formula for residential water bills, \(B(w)\), in Arid, New Mexico:
-    <div class="displaymath" id="me-172">\begin{equation*}
+    \begin{equation*}
     B(w) =
     \begin{cases}
     30 + 2w\text{, } \amp   0 \le w \le 50\\
     50 + 3w\text{, } \amp  w\gt 50
     \end{cases}
-    \end{equation*}</div>
+    \end{equation*}
     If the utilities commission imposes a cap on monthly water consumption at \(120\) HCF, find the domain and range of the function \(B(w)\).
 </article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-54"><header><h1 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-54"><header title="Subsection 2.6.3 Finding the Domain from a Formula"><h1 class="heading hide-type" alt="Subsection 2.6.3 Finding the Domain from a Formula">
 <span class="type">Subsection</span><span class="codenumber">2.6.3</span><span class="title">Finding the Domain from a Formula</span>
 </h1></header><div class="sidebyside" id="sidebyside-59">
 <p id="p-579" class="left" style="width:58%;vertical-align:bottom;text-align:left;">
@@ -309,10 +323,12 @@ MathJax.Hub.Config({
 <article class="example-like" id="example-domain-reciprocal"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">2.6.14</span>
 </h5>
-<p id="p-580">Find the domain of the function \(g(x) = \frac{1}{x−3}\).</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-71" id="solution-71"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-71" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-581">
+<p id="p-580">Find the domain of the function \(g(x) = \frac{1}{x−3}\).</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-71" id="solution-71"><span class="">Solution</span></a></span><span id="hk-solution-71" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-581">
     We must omit any \(x\)-values that do not make sense in the function's formula. Because division by zero is undefined, we cannot allow the denominator of \(\frac{1}{x−3}\) to be zero. Since \(x − 3 = 0\) when \(x = 3\), we exclude \(x = 3\) from the domain of \(g\). Thus, the domain of \(g\) is the set of all real numbers except \(3\).
-</p></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-domain-from-formula" id="exercise-domain-from-formula"><h5 class="heading">
+</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-domain-from-formula" id="exercise-domain-from-formula"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.6.15</span>
 </h5></a></div>
 <div id="hk-exercise-domain-from-formula" style="display: none;" class="tex2jax_ignore">
@@ -335,7 +351,7 @@ MathJax.Hub.Config({
 <p id="p-583">
     The range of the linear function \(f (x) = b + mx\) (if \(m \ne 0\)) is also the set of all real numbers, because the graph continues infinitely at both ends. (See <a knowl="./knowl/fig-two-graphs-of-lines.html" knowl-id="xref-fig-two-graphs-of-lines" alt="Figure 2.6.16 " title="Figure 2.6.16 ">Figure 2.6.16</a>a.) If \(m = 0\), then \(f (x) = b\), and the graph of \(f\) is a horizontal line. In this case, the range consists of a single number, \(b\).
 </p>
-<figure class="figure-like" id="fig-two-graphs-of-lines"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-two-graphs-of-lines.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.6.16</span></figcaption></figure></section><section class="subsection" id="subsection-55"><header><h1 class="heading hide-type">
+<figure class="figure-like" id="fig-two-graphs-of-lines"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-two-graphs-of-lines.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.6.16</span></figcaption></figure></section><section class="subsection" id="subsection-55"><header title="Subsection 2.6.4 Restricting the Domain"><h1 class="heading hide-type" alt="Subsection 2.6.4 Restricting the Domain">
 <span class="type">Subsection</span><span class="codenumber">2.6.4</span><span class="title">Restricting the Domain</span>
 </h1></header><p id="p-584">
     In many applications, we may restrict the domain of a function to suit the situation at hand.
@@ -345,8 +361,9 @@ MathJax.Hub.Config({
 </h5>
 <p id="p-585">
     The function \(h = f (t) = 1454 − 16t^2\) gives the height of an algebra book dropped from the top of the Sears Tower as a function of time. Give a suitable domain for this application, and the corresponding range.
-</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-72" id="solution-72"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-72" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-586">
+</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-72" id="solution-72"><span class="">Solution</span></a></span><span id="hk-solution-72" style="display: none;" class="tex2jax_ignore"><div class="remark-like">
+<p id="p-586">
     You can use the window
         \begin{align}
         \text{Xmin} \amp = −10 \amp\amp \text{Xmax} = 10\\
@@ -357,7 +374,10 @@ MathJax.Hub.Config({
 
     Because \(t\) represents the time in seconds after the book was dropped, only positive \(t\)-values make sense for the problem. The book stops falling when it hits the ground, at \(h = 0\). You can verify that this happens at approximately \(t = 9.5\) seconds. Thus, only \(t\)-values between \(0\) and \(9.5\) are realistic for this application, so we restrict the domain of the function \(f\) to the interval \([0, 9.5]\). During that time period, the height, \(h\), of the book decreases from \(1454\) feet to \(0\) feet. The range of the function on the domain \([0, 9.5]\) is \([0, 1454]\). The graph is shown in <a knowl="./knowl/fig-falling-algebra-book.html" knowl-id="xref-fig-falling-algebra-book" alt="Figure 2.6.19 " title="Figure 2.6.19 ">Figure 2.6.19</a>.
     </p>
-<figure class="figure-like" id="fig-falling-algebra-book"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-falling-algebra-book.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.6.19</span></figcaption></figure></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-boxes" id="exercise-boxes"><h5 class="heading">
+<figure class="figure-like" id="fig-falling-algebra-book"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-falling-algebra-book.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.6.19</span></figcaption></figure>
+</div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-boxes" id="exercise-boxes"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.6.20</span>
 </h5></a></div>
 <div id="hk-exercise-boxes" style="display: none;" class="tex2jax_ignore">

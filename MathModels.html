@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-06-23T20:04:17-04:00    *-->
+<!--*    on 2016-06-26T15:51:20-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,12 +13,15 @@
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
         equationNumbers: { autoNumber: "none",
                            useLabelIds: true,
                            // JS comment, XML CDATA protect XHTML quality of file
@@ -101,14 +104,17 @@ MathJax.Hub.Config({
 <li><a href="Integer-Exponents.html">Integer Exponents</a></li>
 <li><a href="Roots-and-Radicals.html">Roots and Radicals</a></li>
 <li><a href="Rational-Exponents.html">Rational Exponents</a></li>
+<li><a href="Joint-Variation.html">Joint Variation</a></li>
 </ul>
+<h2 class="link"><a href="chap4.html"><span class="codenumber">4</span><span class="title">Exponential Functions</span></a></h2>
+<ul><li><a href="Exponential-Growth-and-Decay.html">Exponential Growth and Decay</a></li></ul>
 <h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
 <ul></ul>
 <h2 class="link"><a href="colophon-2.html"><span class="title">Colophon</span></a></h2>
 <ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="MathModels"><header><h1 class="heading hide-type">
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="MathModels"><header title="Section 2.4 Functions as Mathematical Models"><h1 class="heading hide-type" alt="Section 2.4 Functions as Mathematical Models">
 <span class="type">Section</span><span class="codenumber">2.4</span><span class="title">Functions as Mathematical Models</span><a href="MathModels.html" class="permalink">¶ permalink</a>
-</h1></header><section class="subsection" id="subsection-45"><header><h1 class="heading hide-type">
+</h1></header><section class="subsection" id="subsection-45"><header title="Subsection 2.4.1 The Shape of the Graph"><h1 class="heading hide-type" alt="Subsection 2.4.1 The Shape of the Graph">
 <span class="type">Subsection</span><span class="codenumber">2.4.1</span><span class="title">The Shape of the Graph</span>
 </h1></header><p id="p-519">
     Creating a good model for a situation often begins with deciding what kind of function to use. An appropriate model can depend on very qualitative considerations, such as the general shape of the graph. What sort of function has the right shape to describe the process we want to model? Should it be increasing or decreasing, or some combination of both? Is the slope constant or is it changing? In Examples 1 and 2, we investigate how the shape of a graph illustrates the nature of the process it models.
@@ -123,8 +129,8 @@ MathJax.Hub.Config({
 <li id="li-318">Forrest walks at a constant speed until he reaches the bus stop; then he waits there until the bus arrives.</li>
 <li id="li-319">Forrest walks at a constant speed until he reaches the bus stop, waits there until the bus arrives, and then the bus drives him to school at a constant speed.</li>
 </ol>
-    </p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-58" id="solution-58"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-58" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-58" id="solution-58"><span class="">Solution</span></a></span><span id="hk-solution-58" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-320">The graph is a straight-line segment, as shown in <a knowl="./knowl/fig-home-to-school.html" knowl-id="xref-fig-home-to-school" alt="Figure 2.4.2 " title="Figure 2.4.2 ">Figure 2.4.2</a>a. It begins at the origin because at the instant that Forrest leaves the house, his distance from home is 0. (In other words, when t = 0, y = 0.) The graph is a straight line because Forrest has a constant speed. The slope of the line is equal to Forrest’s walking speed.
             <figure class="figure-like" id="fig-home-to-school"><object type="image/svg+xml" style="width:150%; margin:auto; display:block;" data="images/fig-home-to-school.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.4.2</span></figcaption></figure>
 </li>
@@ -133,7 +139,9 @@ MathJax.Hub.Config({
 <li id="li-322">
                 The graph begins just as the graph in part (b) does. The last section of the graph represents the bus ride. It has a constant slope because the bus is moving at a constant speed. Because the bus (probably) moves faster than Forrest walks, the slope of this segment is greater than the slope for the walking section. The graph is shown in <a knowl="./knowl/fig-home-to-school.html" knowl-id="xref-fig-home-to-school" alt="Figure 2.4.2 " title="Figure 2.4.2 ">Figure 2.4.2</a>c.
             </li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-walk-to-store" id="exercise-walk-to-store"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-walk-to-store" id="exercise-walk-to-store"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.4.3</span>
 </h5></a></div>
 <div id="hk-exercise-walk-to-store" style="display: none;" class="tex2jax_ignore">
@@ -191,10 +199,11 @@ MathJax.Hub.Config({
 </table>
 <figcaption><span class="heading">Table</span><span class="codenumber">2.4.6</span></figcaption></figure>
 </div>
-<figure class="figure-like" id="fig-concavity"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-concavity.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.4.7</span></figcaption></figure><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-59" id="solution-59"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-59" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+<figure class="figure-like" id="fig-concavity"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-concavity.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.4.7</span></figcaption></figure></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-59" id="solution-59"><span class="">Solution</span></a></span><span id="hk-solution-59" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-325">
 <p id="p-523">The number of flu cases is described by <a knowl="./knowl/fig-concavity.html" knowl-id="xref-fig-concavity" alt="Figure 2.4.7 " title="Figure 2.4.7 ">Figure 2.4.7</a>(A) and <a knowl="./knowl/table-flu-cases.html" knowl-id="xref-table-flu-cases" alt="Table 2.4.5 " title="Table 2.4.5 ">Table 2.4.5</a>. The function values in <a knowl="./knowl/table-flu-cases.html" knowl-id="xref-table-flu-cases" alt="Table 2.4.5 " title="Table 2.4.5 ">Table 2.4.5</a> increase at an increasing rate. We can see this by computing the rate of change over successive time intervals. 
-        <div class="displaymath" id="md-10">\begin{gather*}
+        \begin{gather*}
 x = 0 \text{ to } x = 5: \\
 m = \frac{\Delta y}{\Delta x}=\frac{123−70}{5−0} = 10.6\\
 \\
@@ -204,14 +213,14 @@ m = \frac{\Delta y}{\Delta x}=\frac{123−70}{5−0} = 10.6\\
 x = 10 \text{ to } x = 15:\\
 m = \frac{\Delta y}{\Delta x} 
             =\frac{383 − 217}{15 − 10} = 33.2
-\end{gather*}</div>
+\end{gather*}
         The increasing rates can be seen in <a knowl="./knowl/fig-concave-up.html" knowl-id="xref-fig-concave-up" alt="Figure 2.4.8 " title="Figure 2.4.8 ">Figure 2.4.8</a>; the graph bends upward as the slopes increase.
         </p>
 <figure class="figure-like" id="fig-concave-up"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-concave-up.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.4.8</span></figcaption></figure>
 </li>
 <li id="li-326">
             The temperature of the potato is described by <a knowl="./knowl/fig-concavity.html" knowl-id="xref-fig-concavity" alt="Figure 2.4.7 " title="Figure 2.4.7 ">Figure 2.4.7</a>(B) and <a knowl="./knowl/table-oven-temperature.html" knowl-id="xref-table-oven-temperature" alt="Table 2.4.6 " title="Table 2.4.6 ">Table 2.4.6</a>. The function values in table (2) increase, but at a decreasing rate.
-            <div class="displaymath" id="md-11">\begin{gather*}
+            \begin{gather*}
 x = 0\text { to } x = 5:\\
 m =\frac{\Delta y}{\Delta x}=\frac{341−70}{5 − 0}= 54.2\\
 \\
@@ -220,18 +229,20 @@ m =\frac{\Delta y}{\Delta x}=\frac{419 − 341}{10 − 5}= 15.6\\
 \\
 x = 10 \text{ to } x = 15:\\
 m =\frac{\Delta y}{\Delta x}=\frac{441 − 419}{15 − 10}= 4.4
-\end{gather*}</div>
+\end{gather*}
         The decreasing slopes can be seen in <a knowl="./knowl/fig-concave-down.html" knowl-id="xref-fig-concave-down" alt="Figure 2.4.9 " title="Figure 2.4.9 ">Figure 2.4.9</a>. The graph is increasing but bends downward.
         <figure class="figure-like" id="fig-concave-down"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-concave-down.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.4.9</span></figcaption></figure>
 </li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-concavity" id="exercise-concavity"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-concavity" id="exercise-concavity"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.4.10</span>
 </h5></a></div>
 <div id="hk-exercise-concavity" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like">
     Francine bought a cup of cocoa at the cafeteria. The cocoa cooled off rapidly at first, and then gradually approached room temperature. Which graph in <a knowl="./knowl/fig-concavity2.html" knowl-id="xref-fig-concavity2" alt="Figure 2.4.11 " title="Figure 2.4.11 ">Figure 2.4.11</a> more accurately reflects the temperature of the cocoa as a function of time? Explain why. Is the graph you chose concave up or concave down?
     <figure class="figure-like" id="fig-concavity2"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-concavity2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.4.11</span></figcaption></figure></article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-46"><header><h1 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-46"><header title="Subsection 2.4.2 Using the Basic Functions as Models"><h1 class="heading hide-type" alt="Subsection 2.4.2 Using the Basic Functions as Models">
 <span class="type">Subsection</span><span class="codenumber">2.4.2</span><span class="title">Using the Basic Functions as Models</span>
 </h1></header><p id="p-524">
         We have considered some situations that can be modeled by linear functions. In this section, we will look at a few of the other basic functions. Example 3 illustrates an application of the function \(f (x) =\sqrt{x}\).
@@ -268,24 +279,24 @@ m =\frac{\Delta y}{\Delta x}=\frac{441 − 419}{15 − 10}= 4.4
             Find a value of \(k\) so that \(s = k f (T )\) fits the data.</li>
 <li id="li-329">
             On a summer night when the temperature is 20° Celsius, you see a flash of lightning, and \(6\) seconds later you hear the thunderclap. Use your function to estimate your distance from the thunderstorm.</li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-60" id="solution-60"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-60" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-60" id="solution-60"><span class="">Solution</span></a></span><span id="hk-solution-60" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-330">
             The graph of the data is shown in <a knowl="./knowl/fig-speed-sound.html" knowl-id="xref-fig-speed-sound" alt="Figure 2.4.13 " title="Figure 2.4.13 ">Figure 2.4.13</a>. The shape of the graph reminds us of the square root function, \(y = \sqrt{x}\).
             <figure class="figure-like" id="fig-speed-sound"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-speed-sound.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.4.13</span></figcaption></figure>
 </li>
 <li id="li-331">
             We are looking for a value of \(k\) so that the function \(f (T ) = k \sqrt{T}\) fits the data. We substitute one of the data points into the formula and solve for \(k\). If we choose the point \((100, 200.6)\), we obtain 
-            <div class="displaymath" id="me-147">\begin{equation*}200.6 = k \sqrt{100 }\end{equation*}</div>
+            \begin{equation*}200.6 = k \sqrt{100 }\end{equation*}
             and solving for \(k\) yields \(k = 20.06\). We can check that the formula \(s = 20.06 \sqrt{T} \) is a good fit for the rest of the data points as well. Thus, we suggest the function 
-            <div class="displaymath" id="me-148">\begin{equation*}f (T ) = 20.06\sqrt{T}\end{equation*}</div>
+            \begin{equation*}f (T ) = 20.06\sqrt{T}\end{equation*}
             as a model for the speed of sound.
         </li>
 <li id="li-332">
 <p id="p-526">First, use the model to calculate the speed of sound at a temperature of 20° Celsius. The Kelvin temperature is
-            <div class="displaymath" id="me-149">\begin{equation*}T = 20 + 273 = 293\end{equation*}</div>
+            \begin{equation*}T = 20 + 273 = 293\end{equation*}
             so we evaluate \(s = f (T )\) for \(T = 293\).
-            <div class="displaymath" id="me-150">\begin{equation*}f (293) = 20.06\sqrt{293}\approx 343.4\end{equation*}</div>
+            \begin{equation*}f (293) = 20.06\sqrt{293}\approx 343.4\end{equation*}
             Thus, \(s\) is approximately 343.4 meters per second.</p>
 <p id="p-527">
                 The lightning and the thunderclap occur simultaneously, and the speed of light is so fast (about 30,000,000 meters per second) that we see the lightning flash as it occurs. So if the sound of the thunderclap takes \(6\) seconds after the flash to reach us, we can use our calculated speed of sound to find our distance from the storm. 
@@ -296,7 +307,9 @@ m =\frac{\Delta y}{\Delta x}=\frac{441 − 419}{15 − 10}= 4.4
                 The thunderstorm is \(2060\) meters, or about \(1.3\) miles, away.
             </p>
 </li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-UVI" id="exercise-UVI"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-UVI" id="exercise-UVI"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.4.14</span>
 </h5></a></div>
 <div id="hk-exercise-UVI" style="display: none;" class="tex2jax_ignore">
@@ -352,7 +365,7 @@ m =\frac{\Delta y}{\Delta x}=\frac{441 − 419}{15 − 10}= 4.4
 </p>
 <p id="p-534">
     "Some programs . . . automatically fit data to hundreds or thousands of equations and then present you with the equation(s) that fit the data best. Using such a program is appealing because it frees you from the need to choose an equation. The problem is that the program has no understanding of the scientific context of your experiment. The equations that fit the data best are unlikely to correspond to scientifically meaningful models. You will not be able to interpret the best-fit values of the variables, and the results are unlikely to be useful for data analysis."" (Source: <!--Style me with CSS--><em>Fitting Models to Biological Data Using Linear and Nonlinear Regression</em>, Motulsky &amp; Christopoulos, GraphPad Software, 2003)
-</p></section><section class="subsection" id="subsection-47"><header><h1 class="heading hide-type">
+</p></section><section class="subsection" id="subsection-47"><header title="Subsection 2.4.3 Modeling with Piecewise Functions"><h1 class="heading hide-type" alt="Subsection 2.4.3 Modeling with Piecewise Functions">
 <span class="type">Subsection</span><span class="codenumber">2.4.3</span><span class="title">Modeling with Piecewise Functions</span>
 </h1></header><p id="p-535">
     Recall that a piecewise function is defined by different formulas on different portions of the \(x\)-axis.
@@ -408,23 +421,22 @@ m =\frac{\Delta y}{\Delta x}=\frac{441 − 419}{15 − 10}= 4.4
 <li id="li-335">Calculate the tax on incomes of $500, $29,700, and $40,000.</li>
 <li id="li-336">Write a piecewise function for \(T(x)\).</li>
 <li id="li-337">Graph the function \(T(x)\).</li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-61" id="solution-61"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-61" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-61" id="solution-61"><span class="">Solution</span></a></span><span id="hk-solution-61" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-338">
             An income of \(x = \alert{500}\) is in the first tax bracket, so the tax is 
-            <div class="displaymath" id="me-151">\begin{equation*}T(\alert{500}) = 0 + 0.10(\alert{500}) = 50\end{equation*}</div> 
+            \begin{equation*}T(\alert{500}) = 0 + 0.10(\alert{500}) = 50\end{equation*} 
             The income \(x = 29,700\) is just on the upper edge of the second tax bracket. The amount over $7300 is $29,700 − $7300, so 
-            <div class="displaymath" id="me-152">\begin{equation*}T(\alert{29,700}) = 730 + 0.15(\alert{29,700} − 7300) = 4090\end{equation*}</div> 
+            \begin{equation*}T(\alert{29,700}) = 730 + 0.15(\alert{29,700} − 7300) = 4090\end{equation*} 
             The income \(x = 40,000\) is in the third bracket, so the tax is 
-            <div class="displaymath" id="me-153">\begin{equation*}T (\alert{40,000}) = 4090 + 0.25(\alert{40,000} − 29,700) = 6665\end{equation*}</div>
-</li>
+            \begin{equation*}T (\alert{40,000}) = 4090 + 0.25(\alert{40,000} − 29,700) = 6665\end{equation*}</li>
 <li id="li-339">
             The first two columns of the table give the tax brackets, or the \(x\)-intervals on which each piece of the function is defined. In each bracket, the tax \(T(x)\) is given by 
-            <div class="displaymath" id="me-154">\begin{equation*}\text{Base tax} + \text{Rate}\cdot(\text{Amount over bracket base}) \end{equation*}</div>
+            \begin{equation*}\text{Base tax} + \text{Rate}\cdot(\text{Amount over bracket base}) \end{equation*}
             For example, the tax in the second bracket is 
-            <div class="displaymath" id="me-155">\begin{equation*}T (x) = 730 + 0.15(x − 7300)\end{equation*}</div>
+            \begin{equation*}T (x) = 730 + 0.15(x − 7300)\end{equation*}
             Writing the formulas for each of the four tax brackets gives us
-            <div class="displaymath" id="me-156">\begin{equation*}
+            \begin{equation*}
                 T(x) =
                 \begin{cases}
                 0.10x \amp  0 \le x \le 7300\\
@@ -432,13 +444,14 @@ m =\frac{\Delta y}{\Delta x}=\frac{441 − 419}{15 − 10}= 4.4
                 4090 + 0.25(x − 29,700) \amp  29,700\lt x\le 71,950\\
                 14,652.50 + 0.28(x − 71,950)\amp 71,950\lt x\le 150,150\\
                 \end{cases}
-            \end{equation*}</div>
-</li>
+            \end{equation*}</li>
 <li id="li-340">
             The graph of \(T\) is piecewise linear. The first piece starts at the origin and has slope \(0.10\). The second piece is in point-slope form, \(y = y_1 + m(x − x_1)\), so it has slope \(0.15\) and passes through the point \((7300, 730)\). Similarly, the third piece has slope \(0.25\) and passes through \((29,700, 40,490)\), and the fourth piece has slope \(0.28\) and passes through \((71,950, 14,652.5)\). You can check that for this function, all four pieces are connected at their endpoints, as shown in <a knowl="./knowl/fig-income-tax.html" knowl-id="xref-fig-income-tax" alt="Figure 2.4.17 " title="Figure 2.4.17 ">Figure 2.4.17</a>.
             <figure class="figure-like" id="fig-income-tax"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-income-tax.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.4.17</span></figcaption></figure>
 </li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-water-bill" id="exercise-water-bill"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-water-bill" id="exercise-water-bill"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">2.4.18</span>
 </h5></a></div>
 <div id="hk-exercise-water-bill" style="display: none;" class="tex2jax_ignore">

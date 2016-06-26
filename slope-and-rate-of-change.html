@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-06-23T20:04:16-04:00    *-->
+<!--*    on 2016-06-26T15:51:19-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,12 +13,15 @@
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
         equationNumbers: { autoNumber: "none",
                            useLabelIds: true,
                            // JS comment, XML CDATA protect XHTML quality of file
@@ -101,20 +104,23 @@ MathJax.Hub.Config({
 <li><a href="Integer-Exponents.html">Integer Exponents</a></li>
 <li><a href="Roots-and-Radicals.html">Roots and Radicals</a></li>
 <li><a href="Rational-Exponents.html">Rational Exponents</a></li>
+<li><a href="Joint-Variation.html">Joint Variation</a></li>
 </ul>
+<h2 class="link"><a href="chap4.html"><span class="codenumber">4</span><span class="title">Exponential Functions</span></a></h2>
+<ul><li><a href="Exponential-Growth-and-Decay.html">Exponential Growth and Decay</a></li></ul>
 <h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
 <ul></ul>
 <h2 class="link"><a href="colophon-2.html"><span class="title">Colophon</span></a></h2>
 <ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="slope-and-rate-of-change"><header><h1 class="heading hide-type">
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="slope-and-rate-of-change"><header title="Section 1.4 Slope and Rate of Change"><h1 class="heading hide-type" alt="Section 1.4 Slope and Rate of Change">
 <span class="type">Section</span><span class="codenumber">1.4</span><span class="title">Slope and Rate of Change</span><a href="slope-and-rate-of-change.html" class="permalink">¶ permalink</a>
-</h1></header><section class="subsection" id="subsection-17"><header><h1 class="heading hide-type">
+</h1></header><section class="subsection" id="subsection-17"><header title="Subsection 1.4.1 Using Ratios for Comparison"><h1 class="heading hide-type" alt="Subsection 1.4.1 Using Ratios for Comparison">
 <span class="type">Subsection</span><span class="codenumber">1.4.1</span><span class="title">Using Ratios for Comparison</span>
 </h1></header><p id="p-306">Which is more expensive, a 64-ounce bottle of Velvolux dish soap that costs $3.52, or a 60-ounce bottle of Rainfresh dish soap that costs $3.36?</p>
 <p id="p-307">You are probably familiar with the notion of comparison shopping. To decide which dish soap is the better buy, we compute the unit price, or price per ounce, for each bottle. The unit price for Velvolux is
-    <div class="displaymath" id="me-53">\begin{equation*}\frac{352 \text{ cents}}{64 \text{ ounces}}= 5.5 \text{ cents per ounce}\end{equation*}</div>
+    \begin{equation*}\frac{352 \text{ cents}}{64 \text{ ounces}}= 5.5 \text{ cents per ounce}\end{equation*}
 and the unit price for Rainfresh is
-    <div class="displaymath" id="me-54">\begin{equation*}\frac{336 \text{ cents}}{60 \text{ ounces}}= 5.6 \text{ cents per ounce}\end{equation*}</div>
+    \begin{equation*}\frac{336 \text{ cents}}{60 \text{ ounces}}= 5.6 \text{ cents per ounce}\end{equation*}
 </p>
 <p id="p-308">
     The Velvolux costs less per ounce, so it is the better buy. By computing the price of each brand for <!--Style me with CSS--><em>the same amount of soap</em>, it is easy to compare them.</p>
@@ -124,14 +130,10 @@ and the unit price for Rainfresh is
 <article class="example-like" id="example-rate-of-growth"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">1.4.1</span>
 </h5>
-<p id="p-310">Which grow faster, Hybrid A wheat seedlings, which grow 11.2 centimeters in 14 days, or Hybrid B seedlings, which grow 13.5 centimeters in 18 days?</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-22" id="solution-22"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-22" style="display: none;" class="tex2jax_ignore"><span class="solution">
-    We compute the growth rate for each strain of wheat. Growth rate is expressed as a ratio, \(\frac{\text{centimeters}}{\text{days}}\), or centimeters per day. The growth rate for Hybrid A is
-    <div class="displaymath" id="me-55">\begin{equation*}\frac{11.2 \text{ centimeters}}{14 \text{ days}}= 0.8 \text{ centimeters per day}\end{equation*}</div>
-and the growth rate for Hybrid B is
-    <div class="displaymath" id="me-56">\begin{equation*}\frac{13.5 \text{ centimeters}}{18 \text{ days}}= 0.75 \text{ centimeters per day}\end{equation*}</div>
-Because their rate of growth is larger, the Hybrid A seedlings grow faster.
-</span></span></article><p id="p-311">
+<p id="p-310">Which grow faster, Hybrid A wheat seedlings, which grow 11.2 centimeters in 14 days, or Hybrid B seedlings, which grow 13.5 centimeters in 18 days?</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-22" id="solution-22"><span class="">Solution</span></a></span><span id="hk-solution-22" style="display: none;" class="tex2jax_ignore"><div class="remark-like">\(\frac{\text{centimeters}}{\text{days}}\)\begin{equation*}\frac{11.2 \text{ centimeters}}{14 \text{ days}}= 0.8 \text{ centimeters per day}\end{equation*}\begin{equation*}\frac{13.5 \text{ centimeters}}{18 \text{ days}}= 0.75 \text{ centimeters per day}\end{equation*}</div></span>
+</div></div>
+<p id="p-311">
     By computing the growth of each strain of wheat seedling over the same unit of time, a single day, we have a basis for comparison. In this case, the ratio \(\frac{\text{centimeters}}{\text{day}}\) measures the rate of growth of the wheat seedlings.
 </p>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-gas-mileage" id="exercise-gas-mileage"><h5 class="heading">
@@ -144,7 +146,7 @@ Because their rate of growth is larger, the Hybrid A seedlings grow faster.
 </div>
 <p id="p-312">
     In <a knowl="./knowl/exercise-gas-mileage.html" knowl-id="xref-exercise-gas-mileage" alt="Exercise 1.4.2 " title="Exercise 1.4.2 ">Exercise 1.4.2</a>, the ratio \(\frac{\text{miles}}{\text{gallon}}\) measures the rate at which each car uses gasoline. By computing the mileage for each car for the same amount of gas, we have a basis for comparison. We can use this same idea, finding a common basis for comparison, to measure the steepness of an incline.
-</p></section><section class="subsection" id="subsection-18"><header><h1 class="heading hide-type">
+</p></section><section class="subsection" id="subsection-18"><header title="Subsection 1.4.2 Measuring Steepness"><h1 class="heading hide-type" alt="Subsection 1.4.2 Measuring Steepness">
 <span class="type">Subsection</span><span class="codenumber">1.4.2</span><span class="title">Measuring Steepness</span>
 </h1></header><p id="p-313">Imagine you are an ant carrying a heavy burden along one of the two paths shown in <a knowl="./knowl/fig-ant-climb.html" knowl-id="xref-fig-ant-climb" alt="Figure 1.4.3 " title="Figure 1.4.3 ">Figure 1.4.3</a>. Which path is more difficult? Most ants would agree that the steeper path is more difficult. </p>
 <div class="sidebyside" id="sidebyside-10">
@@ -156,33 +158,35 @@ altitude to change in horizontal distance for each path.</p>
 <article class="example-like" id="example-steep-trail"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">1.4.4</span>
 </h5>
-<p id="p-316">Which is steeper, Stony Point trail, which climbs 400 feet over a horizontal distance of 2500 feet, or Lone Pine trail, which climbs 360 feet over a horizontal distance of 1800 feet?</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-23" id="solution-23"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-23" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-317">For each trail, we compute the ratio of vertical gain to horizontal distance. For Stony Point trail, the ratio is
-    <div class="displaymath" id="me-57">\begin{equation*}\frac{400 \text{ feet}}{2500 \text{ feet}}= 0.16 \end{equation*}</div>  
+<p id="p-316">Which is steeper, Stony Point trail, which climbs 400 feet over a horizontal distance of 2500 feet, or Lone Pine trail, which climbs 360 feet over a horizontal distance of 1800 feet?</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-23" id="solution-23"><span class="">Solution</span></a></span><span id="hk-solution-23" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-317">For each trail, we compute the ratio of vertical gain to horizontal distance. For Stony Point trail, the ratio is
+    \begin{equation*}\frac{400 \text{ feet}}{2500 \text{ feet}}= 0.16 \end{equation*}  
     and for Lone Pine trail, the ratio is
-    <div class="displaymath" id="me-58">\begin{equation*}\frac{360 \text{ feet}}{1800 \text{ feet}}= 0.20 \end{equation*}</div> 
-    Lone Pine trail is steeper, because it has a vertical gain of 0.20 foot for every foot traveled horizontally. Or, in more practical units, Lone Pine trail rises 20 feet for every 100 feet of horizontal distance, whereas Stony Point trail rises only 16 feet over a horizontal distance of 100 feet.</p></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-steep-steps" id="exercise-steep-steps"><h5 class="heading">
+    \begin{equation*}\frac{360 \text{ feet}}{1800 \text{ feet}}= 0.20 \end{equation*} 
+    Lone Pine trail is steeper, because it has a vertical gain of 0.20 foot for every foot traveled horizontally. Or, in more practical units, Lone Pine trail rises 20 feet for every 100 feet of horizontal distance, whereas Stony Point trail rises only 16 feet over a horizontal distance of 100 feet.</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-steep-steps" id="exercise-steep-steps"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.4.5</span>
 </h5></a></div>
 <div id="hk-exercise-steep-steps" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like">Which is steeper, a staircase that rises 10 feet over a horizontal distance of 4 feet, or the steps in the football stadium, which rise 20 yards over a horizontal distance of 12 yards?</article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-19"><header><h1 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-19"><header title="Subsection 1.4.3 Definition of Slope"><h1 class="heading hide-type" alt="Subsection 1.4.3 Definition of Slope">
 <span class="type">Subsection</span><span class="codenumber">1.4.3</span><span class="title">Definition of Slope</span>
 </h1></header><p id="p-318">
     To compare the steepness of the two trails in <a knowl="./knowl/example-steep-trail.html" knowl-id="xref-example-steep-trail" alt="Example 1.4.4 " title="Example 1.4.4 ">Example 1.4.4</a>, it is not enough to know which trail has the greater gain in elevation overall. Instead, we compare their elevation gains over the same horizontal distance. Using the same horizontal distance provides a basis for comparison. The two trails are illustrated in <a knowl="./knowl/fig-trail-climb-grid.html" knowl-id="xref-fig-trail-climb-grid" alt="Figure 1.4.6 " title="Figure 1.4.6 ">Figure 1.4.6</a> as lines on a coordinate grid.
 </p>
 <figure class="figure-like" id="fig-trail-climb-grid"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-trail-climb-grid.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.6</span></figcaption></figure><p id="p-319">
     The ratio we computed in <a knowl="./knowl/example-steep-trail.html" knowl-id="xref-example-steep-trail" alt="Example 1.4.4 " title="Example 1.4.4 ">Example 1.4.4</a>,
-    <div class="displaymath" id="me-59">\begin{equation*}\frac{\text{change in elevation}}{\text{change in horizontal position}}\end{equation*}</div>  
+    \begin{equation*}\frac{\text{change in elevation}}{\text{change in horizontal position}}\end{equation*}  
     appears on the graphs in <a knowl="./knowl/fig-trail-climb-grid.html" knowl-id="xref-fig-trail-climb-grid" alt="Figure 1.4.6 " title="Figure 1.4.6 ">Figure 1.4.6</a> as
-    <div class="displaymath" id="me-60">\begin{equation*}\frac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}\end{equation*}</div> 
+    \begin{equation*}\frac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}\end{equation*} 
     For example, as we travel along the line representing Stony Point trail, we move from the point\(0, 0)\) to the point \((2500, 400)\). The \(y\)-coordinate changes by \(400\) and the \(x\)-coordinate changes by \(2500\), giving the ratio \(0.16\) that we found in <a knowl="./knowl/example-steep-trail.html" knowl-id="xref-example-steep-trail" alt="Example 1.4.4 " title="Example 1.4.4 ">Example 1.4.4</a>2. We call this ratio the <em class="terminology">slope</em> of the line.
 </p>
 <article class="definition-like" id="definition-slope"><h5 class="heading">
 <span class="type">Definition</span><span class="codenumber">1.4.7</span>
 </h5>
 <p id="p-320">The <em class="terminology">slope</em> of a line is the ratio
-    <div class="displaymath" id="me-61">\begin{equation*}\frac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}\end{equation*}</div> 
+    \begin{equation*}\frac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}\end{equation*} 
     as we move from one point to another on the line.
     </p></article><article class="example-like" id="example-slope-grid"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">1.4.8</span>
@@ -190,33 +194,34 @@ altitude to change in horizontal distance for each path.</p>
 <p id="p-321">
     Compute the slope of the line that passes through points \(A\) and \(B\) in <a knowl="./knowl/fig-slope-grid.html" knowl-id="xref-fig-slope-grid" alt="Figure 1.4.9 " title="Figure 1.4.9 ">Figure 1.4.9</a>.
 </p>
-<figure class="figure-like" id="fig-slope-grid"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-slope-grid.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.9</span></figcaption></figure><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-24" id="solution-24"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-24" style="display: none;" class="tex2jax_ignore"><span class="solution">
-    As we move along the line from \(A\) to \(B\), the \(y\)-coordinate changes by \(3\) units, and the \(x\)-coordinate changes by \(4\) units. The slope of the line is thus
-    <div class="displaymath" id="me-62">\begin{equation*}\frac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}=\frac{3}{4}\end{equation*}</div></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-slope-grid" id="exercise-slope-grid"><h5 class="heading">
+<figure class="figure-like" id="fig-slope-grid"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-slope-grid.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.9</span></figcaption></figure></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-24" id="solution-24"><span class="">Solution</span></a></span><span id="hk-solution-24" style="display: none;" class="tex2jax_ignore"><div class="remark-like">\(A\)\(B\)\(y\)\(3\)\(x\)\(4\)\begin{equation*}\frac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}=\frac{3}{4}\end{equation*}</div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-slope-grid" id="exercise-slope-grid"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.4.10</span>
 </h5></a></div>
 <div id="hk-exercise-slope-grid" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><div class="sidebyside" id="sidebyside-11">
 <p id="p-322" class="left" style="width:48%;vertical-align:bottom;text-align:left;">Compute the slope of the line through the indicated points in <a knowl="./knowl/fig-slope-grid2.html" knowl-id="xref-fig-slope-grid2" alt="Figure 1.4.11 " title="Figure 1.4.11 ">Figure 1.4.11</a>. On both axes, one square represents one unit. 
-    <div class="displaymath" id="me-63">\begin{equation*}\frac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}=\end{equation*}</div> 
+    \begin{equation*}\frac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}=\end{equation*} 
     </p>
 <figure class="right" id="fig-slope-grid2" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-slope-grid2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.11</span></figcaption></figure>
 </div></article><div class="hidden-knowl-wrapper"></div>
 </div>
 <p id="p-323">
     The slope of a line is a number. It tells us how much the \(y\)-coordinates of points on the line increase when we increase their \(x\)-coordinates by 1 unit. For instance, the slope \(\frac{3}{4}\) in <a knowl="./knowl/example-slope-grid.html" knowl-id="xref-example-slope-grid" alt="Example 1.4.8 " title="Example 1.4.8 ">Example 1.4.8</a> means that the \(y\)-coordinate increases by \(\frac{3}{4}\) unit when the \(x\)-coordinate increases by 1 unit. For increasing graphs, a larger slope indicates a greater increase in altitude, and hence a steeper line.
-</p></section><section class="subsection" id="subsection-20"><header><h1 class="heading hide-type">
+</p></section><section class="subsection" id="subsection-20"><header title="Subsection 1.4.4 Notation for Slope"><h1 class="heading hide-type" alt="Subsection 1.4.4 Notation for Slope">
 <span class="type">Subsection</span><span class="codenumber">1.4.4</span><span class="title">Notation for Slope</span>
 </h1></header><p id="p-324">
     We use a shorthand notation for the ratio that defines slope,
-    <div class="displaymath" id="me-64">\begin{equation*}\frac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}\end{equation*}</div> 
+    \begin{equation*}\frac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}\end{equation*} 
     The symbol \(\Delta\) (the Greek letter delta) is used in mathematics to denote <!--Style me with CSS--><em>change in</em>. In particular, \(\Delta y\) means <!--Style me with CSS--><em>change in \(y\)-coordinate</em>, and \(\Delta x\) means <!--Style me with CSS--><em>change in \(x\)-coordinate</em>. We also use the letter \(m\) to stand for slope. With these symbols, we can write the definition of slope as follows.
 </p>
 <article class="paragraphs" id="paragraphs-11"><h5 class="heading"><span class="title">Notation for Slope</span></h5>
 <div class="sidebyside" id="sidebyside-12">
 <p id="p-325" class="left" style="width:48%;vertical-align:bottom;text-align:left;">
     The <em class="terminology">slope</em> of a line is given by
-    <div class="displaymath" id="me-65">\begin{equation*}\frac{\Delta y}{\Delta x}=\frac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}\text{, }~x\ne 0\end{equation*}</div> 
+    \begin{equation*}\frac{\Delta y}{\Delta x}=\frac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}\text{, }~x\ne 0\end{equation*} 
 </p>
 <figure class="right" id="fig-slope-Delta" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-slope-Delta.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure>
 </div></article><article class="example-like" id="example-Great-Pyramid"><h5 class="heading">
@@ -224,15 +229,17 @@ altitude to change in horizontal distance for each path.</p>
 </h5>
 <p id="p-326">
         The Great Pyramid of Khufu in Egypt was built around 2550 B.C. It is 147 meters tall and has a square base 229 meters on each side. Calculate the slope of the sides of the pyramid, rounded to two decimal places.
-    </p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-25" id="solution-25"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-25" style="display: none;" class="tex2jax_ignore"><span class="solution"><div class="sidebyside" id="sidebyside-13">
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-25" id="solution-25"><span class="">Solution</span></a></span><span id="hk-solution-25" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><div class="sidebyside" id="sidebyside-13">
 <p id="p-327" class="left" style="width:48%;vertical-align:bottom;text-align:left;">
-            From <a knowl="./knowl/fig-Great-Pyramid.html" knowl-id="xref-fig-Great-Pyramid" alt="Figure 1.4.13 " title="Figure 1.4.13 ">Figure 1.4.13</a>, we see that \(\Delta x\) is only half the base of the Great Pyramid, so <div class="displaymath" id="me-66">\begin{equation*}\Delta x = 0.5(229) = 114.5\end{equation*}</div>
+            From <a knowl="./knowl/fig-Great-Pyramid.html" knowl-id="xref-fig-Great-Pyramid" alt="Figure 1.4.13 " title="Figure 1.4.13 ">Figure 1.4.13</a>, we see that \(\Delta x\) is only half the base of the Great Pyramid, so \begin{equation*}\Delta x = 0.5(229) = 114.5\end{equation*}
             and the slope of the side is 
-            <div class="displaymath" id="me-67">\begin{equation*}m=\frac{\Delta y}{\Delta x}= \frac{147}{114.5} = 1.28\end{equation*}</div>
+            \begin{equation*}m=\frac{\Delta y}{\Delta x}= \frac{147}{114.5} = 1.28\end{equation*}
         </p>
 <figure class="right" id="fig-Great-Pyramid" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-Great-Pyramid.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.13</span></figcaption></figure>
-</div></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-Kukulcan-pyramid" id="Kukulcan-pyramid"><h5 class="heading">
+</div></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-Kukulcan-pyramid" id="Kukulcan-pyramid"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.4.14</span>
 </h5></a></div>
 <div id="hk-Kukulcan-pyramid" style="display: none;" class="tex2jax_ignore">
@@ -245,16 +252,16 @@ altitude to change in horizontal distance for each path.</p>
 </div>
 <p id="p-329">
     So far, we have only considered examples in which \(\Delta x\) and \(\Delta y\) are positive numbers, but they can also be negative.
-    <div class="displaymath" id="me-68">\begin{equation*}\Delta x = \begin{cases}
+    \begin{equation*}\Delta x = \begin{cases}
         \text{positive if } x \text{ increases (move to the right)}\\
         \text{negative if } x \text{ decreases (move to the left)}\\
         \end{cases}
-    \end{equation*}</div>
-    <div class="displaymath" id="me-69">\begin{equation*}\Delta y = \begin{cases}
+    \end{equation*}
+    \begin{equation*}\Delta y = \begin{cases}
         \text{positive if } y \text{ increases (move up)}\\
         \text{negative if } y \text{ decreases (move down)}~~~~~~~~~\\
         \end{cases}
-    \end{equation*}</div>
+    \end{equation*}
 </p>
 <article class="example-like" id="example-negative-slope"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">1.4.16</span>
@@ -264,19 +271,17 @@ altitude to change in horizontal distance for each path.</p>
         Compute the slope of the line that passes through the points \(P(−4, 2)\) and \(Q(5, −1)\) shown in <a knowl="./knowl/fig-negative-slope.html" knowl-id="xref-fig-negative-slope" alt="Figure 1.4.17 " title="Figure 1.4.17 ">Figure 1.4.17</a> Illustrate \(\Delta y\) and \(\Delta x\) on the graph.
     </p>
 <figure class="right" id="fig-negative-slope" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-negative-slope.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.17</span></figcaption></figure>
-</div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-26" id="solution-26"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-26" style="display: none;" class="tex2jax_ignore"><span class="solution">
-        As we move from the point \(P(−4, 2)\) to the point \(Q(5, −1)\), we move \(3\) units <!--Style me with CSS--><em>down</em>, so \(\Delta y = −3\). We then move \(9\) units to the right, so \(\Delta x = 9\).
-        Thus, the slope is
-        <div class="displaymath" id="me-70">\begin{equation*}m = \frac{\Delta y}{\Delta x}=\frac{-3}{9}=\frac{-1}{3}\end{equation*}</div>\(\Delta y\) and \(\Delta x\) are labeled on the graph.
-    </span></span></article><div class="sidebyside" id="sidebyside-16">
+</div></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-26" id="solution-26"><span class="">Solution</span></a></span><span id="hk-solution-26" style="display: none;" class="tex2jax_ignore"><div class="remark-like">\(P(−4, 2)\)\(Q(5, −1)\)\(3\)<!--Style me with CSS--><em>down</em>\(\Delta y = −3\)\(9\)\(\Delta x = 9\)\begin{equation*}m = \frac{\Delta y}{\Delta x}=\frac{-3}{9}=\frac{-1}{3}\end{equation*}\(\Delta y\)\(\Delta x\)</div></span>
+</div></div>
+<div class="sidebyside" id="sidebyside-16">
 <p id="p-331" class="left" style="width:48%;vertical-align:bottom;text-align:left;">
     We can move from point to point in either direction to compute the slope. The line graphed in <a knowl="./knowl/example-negative-slope.html" knowl-id="xref-example-negative-slope" alt="Example 1.4.16 " title="Example 1.4.16 ">Example 1.4.16</a> decreases as we move from left to right and hence has a negative slope. The slope is the same if we move from point \(Q\) to point \(P\) instead of from \(P\) to \(Q\). (See <a knowl="./knowl/fig-negative-slope2.html" knowl-id="xref-fig-negative-slope2" alt="Figure 1.4.18 " title="Figure 1.4.18 ">Figure 1.4.18</a>.) In that case, our computation looks like this:
-        <div class="displaymath" id="me-71">\begin{equation*}m = \frac{\Delta y}{\Delta x}=\frac{3}{-9}=\frac{-1}{3}\end{equation*}</div>
+        \begin{equation*}m = \frac{\Delta y}{\Delta x}=\frac{3}{-9}=\frac{-1}{3}\end{equation*}
         \(\Delta y\) and \(\Delta x\) are labeled on the graph.
 </p>
 <figure class="right" id="fig-negative-slope2" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-negative-slope2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.18</span></figcaption></figure>
-</div></section><section class="subsection" id="subsection-21"><header><h1 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-21"><header title="Subsection 1.4.5 Lines Have Constant Slope"><h1 class="heading hide-type" alt="Subsection 1.4.5 Lines Have Constant Slope">
 <span class="type">Subsection</span><span class="codenumber">1.4.5</span><span class="title">Lines Have Constant Slope</span>
 </h1></header><p id="p-332">
     How do we know which two points to choose when we want to compute the slope of a line? It turns out that any two points on the line will do.
@@ -295,21 +300,21 @@ altitude to change in horizontal distance for each path.</p>
     <a knowl="./knowl/exercise-slope-any-points.html" knowl-id="xref-exercise-slope-any-points" alt="Exercise 1.4.19 " title="Exercise 1.4.19 ">Exercise 1.4.19</a> illustrates an important property of lines: They have constant slope. No matter which two points we use to calculate the slope, we will always get the same result. We will see later that lines are the only graphs that have this property. We can think of the slope as a scale factor that tells us how many units \(y\) increases (or decreases) for each unit of increase in \(x\). Compare the lines in <a knowl="./knowl/fig-slope-scale-factor.html" knowl-id="xref-fig-slope-scale-factor" alt="Figure 1.4.20 " title="Figure 1.4.20 ">Figure 1.4.20</a>
     <figure class="figure-like" id="fig-slope-scale-factor"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-slope-scale-factor.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.20</span></figcaption></figure>
     Observe that a line with positive slope increases from left to right, and one with negative slope decreases. What sort of line has slope \(m = 0\)?
-</p></section><section class="subsection" id="subsection-22"><header><h1 class="heading hide-type">
+</p></section><section class="subsection" id="subsection-22"><header title="Subsection 1.4.6 Meaning of Slope"><h1 class="heading hide-type" alt="Subsection 1.4.6 Meaning of Slope">
 <span class="type">Subsection</span><span class="codenumber">1.4.6</span><span class="title">Meaning of Slope</span>
 </h1></header><div class="sidebyside" id="sidebyside-17">
 <p id="p-334" class="left" style="width:48%;vertical-align:bottom;text-align:left;">
     In Example 1 of Section 1.1, we graphed the equation \(C = 5 + 3t\) showing the cost of a bicycle rental in terms of the length of the rental. The graph is reproduced in <a knowl="./knowl/fig-meaning-slope.html" knowl-id="xref-fig-meaning-slope" alt="Figure 1.4.21 " title="Figure 1.4.21 ">Figure 1.4.21</a>. We can choose any two points on the line to compute its slope. Using points P and Q as shown, we find that
-    <div class="displaymath" id="me-72">\begin{equation*}m = \frac{\Delta C}{\Delta t}= \frac{9}{3}=3\end{equation*}</div>
+    \begin{equation*}m = \frac{\Delta C}{\Delta t}= \frac{9}{3}=3\end{equation*}
     The slope of the line is \(3\).
 </p>
 <figure class="right" id="fig-meaning-slope" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-meaning-slope.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.21</span></figcaption></figure>
 </div>
 <p id="p-335">
     What does this value mean for the cost of renting a bicycle? The expression
-    <div class="displaymath" id="me-73">\begin{equation*}\frac{\Delta C}{\Delta t}= \frac{9}{3}\end{equation*}</div>
+    \begin{equation*}\frac{\Delta C}{\Delta t}= \frac{9}{3}\end{equation*}
     stands for
-    <div class="displaymath" id="me-74">\begin{equation*}\frac{\text{change in cost}}{\text{change in time}}= \frac{9 \text{ dollars }}{3 \text{ hours}}\end{equation*}</div>
+    \begin{equation*}\frac{\text{change in cost}}{\text{change in time}}= \frac{9 \text{ dollars }}{3 \text{ hours}}\end{equation*}
 </p>
 <p id="p-336">
     If we increase the length of the rental by 3 hours, the cost of the rental increases by 9 dollars. The slope gives the rate of increase in the rental fee, 3 dollars per hour. In general, we can make the following statement.
@@ -329,18 +334,21 @@ altitude to change in horizontal distance for each path.</p>
 <li id="li-146">What does the slope tell us about the problem?</li>
 </ol>
     </p>
-<figure class="figure-like" id="fig-truck-speed"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-truck-speed.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.23</span></figcaption></figure><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-27" id="solution-27"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-27" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+<figure class="figure-like" id="fig-truck-speed"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-truck-speed.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.23</span></figcaption></figure></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-27" id="solution-27"><span class="">Solution</span></a></span><span id="hk-solution-27" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-147">Choose any two points on the line, say \(G(2, 100)\) and \(H(4, 200)\), in <a knowl="./knowl/fig-truck-speed.html" knowl-id="xref-fig-truck-speed" alt="Figure 1.4.23 " title="Figure 1.4.23 ">Figure 1.4.23</a>. As we move from \(G\) to \(H\), we find
-            <div class="displaymath" id="me-75">\begin{equation*}m = \frac{\Delta D}{\Delta t}=\frac{100}{2}=50\end{equation*}</div>
+            \begin{equation*}m = \frac{\Delta D}{\Delta t}=\frac{100}{2}=50\end{equation*}
             The slope of the line is 50.</li>
 <li id="li-148">The best way to understand the slope is to include units in the calculation. For our example,
-            <div class="displaymath" id="me-76">\begin{equation*}\frac{\Delta D}{\Delta t} \text{ means } \frac{\text{change in distance}}{\text{change in time}}\end{equation*}</div>
+            \begin{equation*}\frac{\Delta D}{\Delta t} \text{ means } \frac{\text{change in distance}}{\text{change in time}}\end{equation*}
             or
-            <div class="displaymath" id="me-77">\begin{equation*}\frac{\Delta D}{\Delta t}
+            \begin{equation*}\frac{\Delta D}{\Delta t}
                 =\frac{100 \text{ miles}}{2\text{ hours}}
-                =50 \text{miles per hour}\end{equation*}</div>
+                =50 \text{miles per hour}\end{equation*}
                 The slope represents the trucker’s average speed or velocity.</li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-example-ski-lift" id="example-ski-lift"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-example-ski-lift" id="example-ski-lift"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.4.24</span>
 </h5></a></div>
 <div id="hk-example-ski-lift" style="display: none;" class="tex2jax_ignore">
@@ -351,7 +359,7 @@ altitude to change in horizontal distance for each path.</p>
 <li id="li-150">What does the slope tell us about the problem?</li>
 </ol>
 <figure class="figure-like" id="fig-ski-lift"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-ski-lift.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.25</span></figcaption></figure></article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-23"><header><h1 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-23"><header title="Subsection 1.4.7 A Formula for Slope"><h1 class="heading hide-type" alt="Subsection 1.4.7 A Formula for Slope">
 <span class="type">Subsection</span><span class="codenumber">1.4.7</span><span class="title">A Formula for Slope</span>
 </h1></header><p id="p-340">
     We have defined the slope of a line to be the ratio \(m = \frac{\Delta y}{\Delta x}\) as we move from one point to another on the line. So far, we have computed \(\Delta y\) and \(\Delta x\) by counting squares on the graph, but this method is not always practical. All we really need are the coordinates of two points on the graph.
@@ -363,16 +371,16 @@ altitude to change in horizontal distance for each path.</p>
 <div class="sidebyside" id="sidebyside-18">
 <figure class="left" id="fig-slope-formula" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-slope-formula.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.26</span></figcaption></figure><p id="p-344" class="right" style="width:48%;vertical-align:bottom;text-align:left;">
         Now consider a specific example. The line through the two points \(P_1 (2, 9)\) and \(P_2 (7,−6)\) is shown in <a knowl="./knowl/fig-slope-formula.html" knowl-id="xref-fig-slope-formula" alt="Figure 1.4.26 " title="Figure 1.4.26 ">Figure 1.4.26</a>. We can find \(\Delta x\) by subtracting the \(x\)-coordinates of the points: 
-        <div class="displaymath" id="me-78">\begin{equation*}\Delta x = 7 − 2 = 5 \end{equation*}</div>
+        \begin{equation*}\Delta x = 7 − 2 = 5 \end{equation*}
         In general, we have 
-        <div class="displaymath" id="me-79">\begin{equation*}\Delta x = x_2 − x_1 \end{equation*}</div>
+        \begin{equation*}\Delta x = x_2 − x_1 \end{equation*}
         and similarly
-        <div class="displaymath" id="me-80">\begin{equation*}\Delta y = y_2 − y_1 \end{equation*}</div>
+        \begin{equation*}\Delta y = y_2 − y_1 \end{equation*}
     </p>
 </div>
 <p id="p-345">
     These formulas work even if some of the coordinates are negative; in our example 
-    <div class="displaymath" id="me-81">\begin{equation*}\Delta y = y_2 − y_1 = −6 − 9 = −15\end{equation*}</div>
+    \begin{equation*}\Delta y = y_2 − y_1 = −6 − 9 = −15\end{equation*}
     By counting squares <!--Style me with CSS--><em>down</em> from \(P_1\) to \(P_2\), we see that \(\Delta y\) is indeed \(−15\). The slope of the line in <a knowl="./knowl/fig-slope-formula.html" knowl-id="xref-fig-slope-formula" alt="Figure 1.4.26 " title="Figure 1.4.26 ">Figure 1.4.26</a> is </p>
 <p id="p-346">\begin{align*}
             m&amp;=\frac{\Delta y}{\Delta x}=\frac{y_2 − y_1}{x_2 − x_1} 
@@ -385,18 +393,16 @@ altitude to change in horizontal distance for each path.</p>
 </p></section><article class="paragraphs" id="paragraphs-13"><h5 class="heading"><span class="title">Two-Point Slope Formula</span></h5>
 <p id="p-348">
         The slope of the line passing through the points \(P_1 (x_1, y_1)\) and \(P_2 (x_2, y_2)\) is given by
-        <div class="displaymath" id="me-82">\begin{equation*}m = \frac{\Delta y}{\Delta x}= \frac{y_2 − y_1}{x_2 − x_1} 
-            \text{, }~x_2 \ne x_1\end{equation*}</div>
+        \begin{equation*}m = \frac{\Delta y}{\Delta x}= \frac{y_2 − y_1}{x_2 − x_1} 
+            \text{, }~x_2 \ne x_1\end{equation*}
     </p></article><article class="example-like" id="example-two-point-slope"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">1.4.27</span>
 </h5>
-<p id="p-349">Compute the slope of the line in <a knowl="./knowl/fig-slope-formula.html" knowl-id="xref-fig-slope-formula" alt="Figure 1.4.26 " title="Figure 1.4.26 ">Figure 1.4.26</a> using the points \(Q_1 (6, −3)\) and \(Q_2 (4, 3)\). </p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-28" id="solution-28"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-28" style="display: none;" class="tex2jax_ignore"><span class="solution">
-        Substitute the coordinates of \(Q_1\) and \(Q_2\) into the slope formula to find
-        <div class="displaymath" id="me-83">\begin{equation*}m = \frac{y_2 − y_1}{x_2 − x_1}= \frac{3 − (−3)}{4 − 6}
-        = \frac{6}{-2}= −3\end{equation*}</div>
-        This value for the slope, \(−3\), is the same value found above.
-    </span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-two-point-slope" id="exercise-two-point-slope"><h5 class="heading">
+<p id="p-349">Compute the slope of the line in <a knowl="./knowl/fig-slope-formula.html" knowl-id="xref-fig-slope-formula" alt="Figure 1.4.26 " title="Figure 1.4.26 ">Figure 1.4.26</a> using the points \(Q_1 (6, −3)\) and \(Q_2 (4, 3)\). </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-28" id="solution-28"><span class="">Solution</span></a></span><span id="hk-solution-28" style="display: none;" class="tex2jax_ignore"><div class="remark-like">\(Q_1\)\(Q_2\)\begin{equation*}m = \frac{y_2 − y_1}{x_2 − x_1}= \frac{3 − (−3)}{4 − 6}
+        = \frac{6}{-2}= −3\end{equation*}\(−3\)</div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-two-point-slope" id="exercise-two-point-slope"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.4.28</span>
 </h5></a></div>
 <div id="hk-exercise-two-point-slope" style="display: none;" class="tex2jax_ignore">
@@ -408,40 +414,37 @@ altitude to change in horizontal distance for each path.</p>
 <p id="p-350">
     It will also be useful to write the slope formula with function notation. Recall that \(f (x)\) is another symbol for \(y\), and, in particular, that \(y_1 = f (x_1)\) and \(y_2 = f (x_2)\). Thus, if \(x_2 \ne x_1\), we have
 </p>
-<article class="paragraphs" id="paragraphs-14"><h5 class="heading"><span class="title">Slope Formula in Function Notation</span></h5>
-<div class="displaymath" id="me-84">\begin{equation*}m = \frac{\Delta y}{\Delta x}
+<article class="paragraphs" id="paragraphs-14"><h5 class="heading"><span class="title">Slope Formula in Function Notation</span></h5>\begin{equation*}m = \frac{\Delta y}{\Delta x}
         = \frac{y_2 − y_1}{x_2 − x_1} 
         = \frac{f(x_2) − f(x_1)}{x_2 − x_1} 
-            \text{, }~x_2 \ne x_1\end{equation*}</div></article><article class="example-like" id="slopes-on-parabola"><h5 class="heading">
+            \text{, }~x_2 \ne x_1\end{equation*}</article><article class="example-like" id="slopes-on-parabola"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">1.4.29</span>
 </h5>
 <div class="sidebyside" id="sidebyside-19">
 <p id="p-351" class="left" style="width:48%;vertical-align:bottom;text-align:left;">
         <a knowl="./knowl/fig-slopes-on-parabola.html" knowl-id="xref-fig-slopes-on-parabola" alt="Figure 1.4.30 " title="Figure 1.4.30 ">Figure 1.4.30</a> shows a graph of 
-        <div class="displaymath" id="me-85">\begin{equation*}f (x) = x_2 − 6x\end{equation*}</div>
+        \begin{equation*}f (x) = x_2 − 6x\end{equation*}
         <ol style="list-style-type: lower-alpha;">
 <li id="li-153">Compute the slope of the line segment joining the points at \(x = 1\) and \(x = 4\).</li>
 <li id="li-154">Compute the slope of the line segment joining the points at \(x = 2\) and \(x = 5\).</li>
 </ol>
     </p>
 <figure class="right" id="fig-slopes-on-parabola" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-slopes-on-parabola.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.4.30</span></figcaption></figure>
-</div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-29" id="solution-29"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-29" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+</div></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-29" id="solution-29"><span class="">Solution</span></a></span><span id="hk-solution-29" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-155">We set \(x_1 = \alert{1}\) and \(x_2 = \alert{4}\) and find the function values at each point. 
-            <div class="displaymath" id="me-86">\begin{equation*}f (x_1) = f (\alert{1}) = \alert{1}^2 − 6(\alert{1}) = −5\end{equation*}</div>
-<div class="displaymath" id="me-87">\begin{equation*}f (x_2) = f (\alert{4}) = \alert{4}^2 − 6(\alert{4}) = −8\end{equation*}</div>
+            \begin{equation*}f (x_1) = f (\alert{1}) = \alert{1}^2 − 6(\alert{1}) = −5\end{equation*}\begin{equation*}f (x_2) = f (\alert{4}) = \alert{4}^2 − 6(\alert{4}) = −8\end{equation*}
             Then
-            <div class="displaymath" id="me-88">\begin{equation*}m = \frac{f (x_2) − f (x_1)}{x_2 − x_1}
-            =\frac{−8 − (−5)}{4 − 1}=\frac{−3}{3}= −1\end{equation*}</div>
-</li>
+            \begin{equation*}m = \frac{f (x_2) − f (x_1)}{x_2 − x_1}
+            =\frac{−8 − (−5)}{4 − 1}=\frac{−3}{3}= −1\end{equation*}</li>
 <li id="li-156">We set \(x_1 = \alert{2}\) and \(x_2 = \alert{5}\) and find the function values at each point. 
-            <div class="displaymath" id="me-89">\begin{equation*}f (x_1) = f (\alert{2}) = \alert{2}^2 − 6(\alert{2}) = −8\end{equation*}</div>
-<div class="displaymath" id="me-90">\begin{equation*}f (x_2) = f (\alert{5}) = \alert{5}^2 − 6(\alert{5}) = −5\end{equation*}</div>
+            \begin{equation*}f (x_1) = f (\alert{2}) = \alert{2}^2 − 6(\alert{2}) = −8\end{equation*}\begin{equation*}f (x_2) = f (\alert{5}) = \alert{5}^2 − 6(\alert{5}) = −5\end{equation*}
             Then
-            <div class="displaymath" id="me-91">\begin{equation*}m = \frac{f (x_2) − f (x_1)}{x_2 − x_1}
-            =\frac{−5 − (−8)}{5 − 2}=\frac{3}{3}= 1\end{equation*}</div>
-</li>
-</ol></span></span></article><p id="p-352">Note that the graph of \(f\) is not a straight line and that the slope is not constant.</p>
+            \begin{equation*}m = \frac{f (x_2) − f (x_1)}{x_2 − x_1}
+            =\frac{−5 − (−8)}{5 − 2}=\frac{3}{3}= 1\end{equation*}</li>
+</ol></div></span>
+</div></div>
+<p id="p-352">Note that the graph of \(f\) is not a straight line and that the slope is not constant.</p>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-slope-of-secant" id="exercise-slope-of-secant"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.4.31</span>
 </h5></a></div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-06-23T20:04:17-04:00    *-->
+<!--*    on 2016-06-26T15:51:19-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,12 +13,15 @@
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
         equationNumbers: { autoNumber: "none",
                            useLabelIds: true,
                            // JS comment, XML CDATA protect XHTML quality of file
@@ -101,17 +104,20 @@ MathJax.Hub.Config({
 <li><a href="Integer-Exponents.html">Integer Exponents</a></li>
 <li><a href="Roots-and-Radicals.html">Roots and Radicals</a></li>
 <li><a href="Rational-Exponents.html">Rational Exponents</a></li>
+<li><a href="Joint-Variation.html">Joint Variation</a></li>
 </ul>
+<h2 class="link"><a href="chap4.html"><span class="codenumber">4</span><span class="title">Exponential Functions</span></a></h2>
+<ul><li><a href="Exponential-Growth-and-Decay.html">Exponential Growth and Decay</a></li></ul>
 <h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
 <ul></ul>
 <h2 class="link"><a href="colophon-2.html"><span class="title">Colophon</span></a></h2>
 <ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="linear-regression"><header><h1 class="heading hide-type">
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="linear-regression"><header title="Section 1.6 Linear Regression"><h1 class="heading hide-type" alt="Section 1.6 Linear Regression">
 <span class="type">Section</span><span class="codenumber">1.6</span><span class="title">Linear Regression</span><a href="linear-regression.html" class="permalink">¶ permalink</a>
 </h1></header><p id="p-382">
     We have spent most of this chapter analyzing models described by graphs or equations. To create a model, however, we often start with a quantity of data. Choosing an appropriate function for a model is a complicated process. In this section, we consider only linear models and explore methods for fitting a linear function to a collection of data points. First, we fit a line through two data points.
 </p>
-<section class="subsection" id="subsection-28"><header><h1 class="heading hide-type">
+<section class="subsection" id="subsection-28"><header title="Subsection 1.6.1 Fitting a Line through Two Points"><h1 class="heading hide-type" alt="Subsection 1.6.1 Fitting a Line through Two Points">
 <span class="type">Subsection</span><span class="codenumber">1.6.1</span><span class="title">Fitting a Line through Two Points</span>
 </h1></header><p id="p-383">
     If we already know that two variables are related by a linear function, we can find a formula from just two data points. For example, variables that increase or decrease at a constant rate can be described by linear functions.
@@ -123,10 +129,10 @@ MathJax.Hub.Config({
 <ol style="list-style-type: lower-alpha;">
 <li id="li-179">Find a formula for wine consumption, \(W\), in millions of cases, as a linear function of time, \(t\), in years since 1990.</li>
 <li id="li-180">State the slope as a rate of change. What does the slope tell us about this problem?</li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-35" id="solution-35"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-35" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-35" id="solution-35"><span class="">Solution</span></a></span><span id="hk-solution-35" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-181">We have two data points of the form \((t, W)\), namely \((3, 188.6)\) and \((13, 258.3)\). We use the point-slope formula to fit a line through these two points. First, we compute the slope.
-        <div class="displaymath" id="me-107">\begin{equation*}\frac{\Delta W}{\Delta t}=\frac {258.3 − 188.6}{13 − 3}= 6.97\end{equation*}</div>
+        \begin{equation*}\frac{\Delta W}{\Delta t}=\frac {258.3 − 188.6}{13 − 3}= 6.97\end{equation*}
         Next, we use the slope m = \(6.97\) and either of the two data points in the point-slope formula.
         \begin{align*}
             W&amp;=W_1 + m(t − t_1)\\
@@ -137,12 +143,14 @@ MathJax.Hub.Config({
         Thus, \(W = f (t) = 167.69 + 6.97t\).
         </li>
 <li id="li-182">The slope gives us the rate of change of the function, and the units of the variables can help us interpret the slope in context.
-        <div class="displaymath" id="me-108">\begin{equation*}\frac{\Delta W}{\Delta t}= 
+        \begin{equation*}\frac{\Delta W}{\Delta t}= 
             \frac{258.3 − 188.6 \text{millions of cases}}{13 − 3\text{ years}}
                 = 6.97 millions of cases /year
-        \end{equation*}</div>
+        \end{equation*}
         Over the 10 years between 1993 and 2003, wine consumption in the United States increased at a rate of 6.97 million cases per year.</li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-burglaries" id="exercise-burglaries"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-burglaries" id="exercise-burglaries"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.6.2</span>
 </h5></a></div>
 <div id="hk-exercise-burglaries" style="display: none;" class="tex2jax_ignore">
@@ -154,7 +162,7 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
 <li id="li-184">State the slope as a rate of change. What does the slope tell us about this problem?.
     </li>
 </ol></article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-29"><header><h1 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-29"><header title="Subsection 1.6.2 Scatterplots"><h1 class="heading hide-type" alt="Subsection 1.6.2 Scatterplots">
 <span class="type">Subsection</span><span class="codenumber">1.6.2</span><span class="title">Scatterplots</span>
 </h1></header><p id="p-385">Empirical data points in a linear relation may not lie exactly on a line. There are many factors that can affect experimental data, including measurement error, the influence of environmental conditions, and the presence of related variable quantities.
     </p>
@@ -187,8 +195,8 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
 <li id="li-186">Draw a line that fits the data.</li>
 <li id="li-187">What does the slope of the line tell us about the data?</li>
 </ol>
-    </p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-36" id="solution-36"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-36" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-36" id="solution-36"><span class="">Solution</span></a></span><span id="hk-solution-36" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-188">No, the data are not strictly linear. If we compute the slopes between successive data points, the values are not constant. We can see from an accurate plot of the data, shown in <a knowl="./knowl/fig-gas-mileage.html" knowl-id="xref-fig-gas-mileage" alt="Figure 1.6.4 " title="Figure 1.6.4 ">Figure 1.6.4</a>, that the points lie close to, but not precisely on, a straight line.
     <div class="sidebyside" id="sidebyside-27">
 <figure class="left" id="fig-gas-mileage" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-gas-mileage.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.6.4</span></figcaption></figure><figure class="right" id="fig-gas-mileage2" style="width:48%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-gas-mileage2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.6.5</span></figcaption></figure>
@@ -196,9 +204,11 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
 </li>
 <li id="li-189">We would like to draw a line that comes as close as possible to all the data points, even though it may not pass precisely through any of them. In particular, we try to adjust the line so that we have the same number of data points above the line and below the line. One possible solution is shown in <a knowl="./knowl/fig-gas-mileage2.html" knowl-id="xref-fig-gas-mileage2" alt="Figure 1.6.5 " title="Figure 1.6.5 ">Figure 1.6.5</a>.</li>
 <li id="li-190">To compute the slope of the line of best fit, we first choose two points on the line. Our line appears to pass through one of the data points,\(8.8, 139.6)\). Look for a second point on the line whose coordinates are easy to read, perhaps \((6.5,100)\). The slope is
-        <div class="displaymath" id="me-109">\begin{equation*}m = \frac{139.6 − 100}{8.8 − 6.5}= 17.2\text{ miles per gallon}\end{equation*}</div>
+        \begin{equation*}m = \frac{139.6 − 100}{8.8 − 6.5}= 17.2\text{ miles per gallon}\end{equation*}
     According to our data, the SUV gets about 17.2 miles to the gallon.</li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-scatterplot" id="exercise-scatterplot"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-scatterplot" id="exercise-scatterplot"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.6.6</span>
 </h5></a></div>
 <div id="hk-exercise-scatterplot" style="display: none;" class="tex2jax_ignore">
@@ -231,7 +241,7 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
     The graph in <a knowl="./knowl/example-gas-mileage.html" knowl-id="xref-example-gas-mileage" alt="Example 1.6.3 " title="Example 1.6.3 ">Example 1.6.3</a> is called a <em class="terminology">scatterplot</em>. The points on a scatterplot may or may not show some sort of pattern. Consider the three plots in <a knowl="./knowl/fig-scatterplots.html" knowl-id="xref-fig-scatterplots" alt="Figure 1.6.7 " title="Figure 1.6.7 ">Figure 1.6.7</a>. In <a knowl="./knowl/fig-scatterplots.html" knowl-id="xref-fig-scatterplots" alt="Figure 1.6.7 " title="Figure 1.6.7 ">Figure 1.6.7</a>a, the data points resemble a cloud of gnats; there is no apparent pattern to their locations. In <a knowl="./knowl/fig-scatterplots.html" knowl-id="xref-fig-scatterplots" alt="Figure 1.6.7 " title="Figure 1.6.7 ">Figure 1.6.7</a>b, the data follow a generally decreasing trend, but certainly do not all lie on the same line. The points in <a knowl="./knowl/fig-scatterplots.html" knowl-id="xref-fig-scatterplots" alt="Figure 1.6.7 " title="Figure 1.6.7 ">Figure 1.6.7</a>c are even more organized; they seem to lie very close to an imaginary line.
 </p>
 <figure class="figure-like" id="fig-scatterplots"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-scatterplots.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.6.7</span></figcaption></figure><p id="p-388">
-    If the data in a scatterplot are roughly linear, we can estimate the location of an imaginary <em class="terminology">line of best</em> fit that passes as close as possible to the data points. We can then use this line to make predictions about the data.</p></section><section class="subsection" id="subsection-30"><header><h1 class="heading hide-type">
+    If the data in a scatterplot are roughly linear, we can estimate the location of an imaginary <em class="terminology">line of best</em> fit that passes as close as possible to the data points. We can then use this line to make predictions about the data.</p></section><section class="subsection" id="subsection-30"><header title="Subsection 1.6.3 Linear Regression"><h1 class="heading hide-type" alt="Subsection 1.6.3 Linear Regression">
 <span class="type">Subsection</span><span class="codenumber">1.6.3</span><span class="title">Linear Regression</span>
 </h1></header><p id="p-389">
         One measure of a person's physical fitness is the <em class="terminology">body mass index</em>, or BMI. Your BMI is the ratio of your weight in kilograms to the square of your height in centimeters. Thus, thinner people have lower BMI scores, and fatter people have higher scores. The Centers for Disease Control considers a BMI between 18.5 and 24.9 to be healthy. The points on the scatterplot in <a knowl="./knowl/fig-BMI.html" knowl-id="xref-fig-BMI" alt="Figure 1.6.8 " title="Figure 1.6.8 ">Figure 1.6.8</a> show the BMI of Miss America from 1918 to 1998. From the data in the scatterplot, can we see a trend in Americans’ ideal of female beauty?
@@ -242,13 +252,15 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
 <ol style="list-style-type: lower-alpha;">
 <li id="li-193">Estimate a line of best fit for the scatterplot in <a knowl="./knowl/fig-BMI.html" knowl-id="xref-fig-BMI" alt="Figure 1.6.8 " title="Figure 1.6.8 ">Figure 1.6.8</a>. (Source: http://www.pbs.org)</li>
 <li id="li-194">Use your line to estimate the BMI of Miss America 1980.</li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-37" id="solution-37"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-37" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-37" id="solution-37"><span class="">Solution</span></a></span><span id="hk-solution-37" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-195">We draw a line that fits the data points as best we can, as shown in <a knowl="./knowl/fig-BMI2.html" knowl-id="xref-fig-BMI2" alt="Figure 1.6.10 " title="Figure 1.6.10 ">Figure 1.6.10</a>. (Note that we have set \(t = 0\) in 1920 on this graph.) We try to end up with roughly equal numbers of data points above and below our line. 
         <figure class="figure-like" id="fig-BMI2"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-BMI2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.6.10</span></figcaption></figure>
 </li>
 <li id="li-196">We see that when \(t = 60\) on this line, the \(y\)-value is approximately 18.3. We therefore estimate that Miss America 1980 had a BMI of 18.3. (Her actual BMI was 17.85.)</li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hominid-brains" id="hominid-brains"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hominid-brains" id="hominid-brains"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.6.11</span>
 </h5></a></div>
 <div id="hk-hominid-brains" style="display: none;" class="tex2jax_ignore">
@@ -267,10 +279,10 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
 <ol style="list-style-type: lower-alpha;">
 <li id="li-199">Find the equation of the regression line in <a knowl="./knowl/example-BMI.html" knowl-id="xref-example-BMI" alt="Example 1.6.9 " title="Example 1.6.9 ">Example 1.6.9</a>, <a knowl="./knowl/fig-BMI.html" knowl-id="xref-fig-BMI" alt="Figure 1.6.8 " title="Figure 1.6.8 ">Figure 1.6.8</a>.</li>
 <li id="li-200">Use the regression equation to predict the BMI of Miss America 1980.</li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-38" id="solution-38"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-38" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-38" id="solution-38"><span class="">Solution</span></a></span><span id="hk-solution-38" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-201">We first calculate the slope by choosing two points on the regression line we drew in <a knowl="./knowl/fig-BMI2.html" knowl-id="xref-fig-BMI2" alt="Figure 1.6.10 " title="Figure 1.6.10 ">Figure 1.6.10</a>. The points we choose are not necessarily any of the original data points; instead they should be points on the regression line itself. The line appears to pass through the points \((17, 20)\) and \((67, 18)\). The slope of the line is then
-        <div class="displaymath" id="me-110">\begin{equation*}m = \frac{18 − 20}{67 − 17}\approx −0.04\end{equation*}</div>
+        \begin{equation*}m = \frac{18 − 20}{67 − 17}\approx −0.04\end{equation*}
         Now we use the point-slope formula to find the equation of the line. (If you need to review the point-slope formula, see <a href="linear-functions.html" alt="Section 1.5 Linear Functions" title="Section 1.5 Linear Functions">Section 1.5</a>.) We substitute \(m = −0.04\) and use either of the two points for \((x_1, y_1)\); we will choose \((17, 20)\). The equation of the regression line is
         \begin{align*}
         y &amp;= y_1 + m(x − x_1)\\
@@ -280,9 +292,11 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
         \end{align*}
         </li>
 <li id="li-202">We will use the regression equation to make our prediction. For Miss America 1980, \(t = 60\) and 
-        <div class="displaymath" id="me-111">\begin{equation*}y = 20.68 − 0.04(60) = 18.28\end{equation*}</div>
+        \begin{equation*}y = 20.68 − 0.04(60) = 18.28\end{equation*}
         This value agrees well with the estimate we made in <a knowl="./knowl/example-BMI.html" knowl-id="xref-example-BMI" alt="Example 1.6.9 " title="Example 1.6.9 ">Example 1.6.9</a>.</li>
-</ol></span></span></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-manatees" id="exercise-manatees"><h5 class="heading">
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-manatees" id="exercise-manatees"><h5 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">1.6.14</span>
 </h5></a></div>
 <div id="hk-exercise-manatees" style="display: none;" class="tex2jax_ignore">
@@ -324,7 +338,7 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
 <li id="li-203">Draw a regression line through the data points shown in <a knowl="./knowl/fig-manatees.html" knowl-id="xref-fig-manatees" alt="Figure 1.6.15 " title="Figure 1.6.15 ">Figure 1.6.15</a>.</li>
 <li id="li-204">Use the regression equation to estimate the number of manatees killed by watercraft in 1998.</li>
 </ol></article><div class="hidden-knowl-wrapper"></div>
-</div></section><section class="subsection" id="subsection-31"><header><h1 class="heading hide-type">
+</div></section><section class="subsection" id="subsection-31"><header title="Subsection 1.6.4 Linear Interpolation and Extrapolation"><h1 class="heading hide-type" alt="Subsection 1.6.4 Linear Interpolation and Extrapolation">
 <span class="type">Subsection</span><span class="codenumber">1.6.4</span><span class="title">Linear Interpolation and Extrapolation</span>
 </h1></header><p id="p-393">
         Using a regression line to estimate values between known data points is called <em class="terminology">interpolation</em>. Making predictions beyond the range of known data is called <em class="terminology">extrapolation</em>.
@@ -335,18 +349,21 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
 <ol style="list-style-type: lower-alpha;">
 <li id="li-205">Use linear interpolation to estimate the BMI of Miss America 1960.</li>
 <li id="li-206">Use linear extrapolation to predict the BMI of Miss America 2001.</li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-39" id="solution-39"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-39" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-39" id="solution-39"><span class="">Solution</span></a></span><span id="hk-solution-39" style="display: none;" class="tex2jax_ignore"><div class="remark-like">
+<ol style="list-style-type: lower-alpha;">
 <li id="li-207">For 1960, we substitute \(t = 40\) into the regression equation we found in <a knowl="./knowl/example-BMI-regression.html" knowl-id="xref-example-BMI-regression" alt="Example 1.6.13 " title="Example 1.6.13 ">Example 1.6.13</a>. 
-        <div class="displaymath" id="me-112">\begin{equation*}y = 20.68 − 0.04(40) = 19.08\end{equation*}</div> 
+        \begin{equation*}y = 20.68 − 0.04(40) = 19.08\end{equation*} 
         We estimate that Miss America 1960 had a BMI of 19.08. (Her BMI was actually 18.79.)</li>
 <li id="li-208">For 2001, we substitute \(t = 81\) into the regression equation. 
-        <div class="displaymath" id="me-113">\begin{equation*}y = 20.68 − 0.04(81) = 17.44\end{equation*}</div>
-</li>
+        \begin{equation*}y = 20.68 − 0.04(81) = 17.44\end{equation*}</li>
 </ol>
-<p id="p-394">Our model predicts that Miss America 2001 had a BMI of 17.44. In fact, her BMI was 20.25. By the late 1990s, public concern over the self-image of young women had led to a reversal of the trend toward ever-thinner role models.</p></span></span></article><p id="p-395">
+<p id="p-394">Our model predicts that Miss America 2001 had a BMI of 17.44. In fact, her BMI was 20.25. By the late 1990s, public concern over the self-image of young women had led to a reversal of the trend toward ever-thinner role models.</p>
+</div></span>
+</div></div>
+<p id="p-395">
     <a knowl="./knowl/example-BMI-extrapolation.html" knowl-id="xref-example-BMI-extrapolation" alt="Example 1.6.16 " title="Example 1.6.16 ">Example 1.6.16</a>b illustrates an important fact about extrapolation: If we try to extrapolate too far, we may get unreasonable results. For example, if we use our model to predict the BMI of Miss America 2520 (when \(t = 600\)), we get 
-    <div class="displaymath" id="me-114">\begin{equation*}y = 20.68 − 0.04(600) =−3.32\end{equation*}</div>
+    \begin{equation*}y = 20.68 − 0.04(600) =−3.32\end{equation*}
     Even if the Miss America pageant is still operating in 600 years, the winner cannot have a negative BMI. Our linear model provides a fair approximation for 1920–1990, but if we try to extrapolate too far beyond the known data, the model may no longer apply.
 </p>
 <p id="p-396">
@@ -374,10 +391,10 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
     Estimating a line of best fit is a subjective process. Rather than base their estimates on such a line, statisticians often use the <em class="terminology">least squares regression line</em>. This regression line minimizes the sum of the squares of all the vertical distances between the data points and the corresponding points on the line (see <a knowl="./knowl/fig-least-squares.html" knowl-id="xref-fig-least-squares" alt="Figure 1.6.19 " title="Figure 1.6.19 ">Figure 1.6.19</a>). Many calculators are programmed to find the least squares regression line, using an algorithm that depends only on the data, not on the appearance of the graph.
 </p>
 </div>
-<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-remark-8" id="remark-8"><article class="example-like"><h5 class="heading">
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-remark-8" id="remark-8"><article class="remark-like"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">1.6.20</span><span class="title"><object type="image/svg+xml" style="width:8%; margin:auto; display:block;" data="images/icon-GC.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>Using a Calculator for Linear Regression</span>
 </h5></article></a></div>
-<div id="hk-remark-8" style="display: none;" class="tex2jax_ignore"><article class="example-like"><figure class="figure-like" id="fig-GC-lists"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-GC-lists.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.6.21</span></figcaption></figure><p id="p-399">
+<div id="hk-remark-8" style="display: none;" class="tex2jax_ignore"><article class="remark-like"><figure class="figure-like" id="fig-GC-lists"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-GC-lists.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.6.21</span></figcaption></figure><p id="p-399">
     You can use a graphing calculator to make a scatterplot, find a regression line, and graph the regression line with the data points. On the TI-83 calculator, we use the statistics mode, which you can access by pressing <object type="image/svg+xml" style="width:10%; margin:auto; display:block;" data="images/icon-stat.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>. You will see a display that looks like <a knowl="./knowl/fig-GC-lists.html" knowl-id="xref-fig-GC-lists" alt="Figure 1.6.21 " title="Figure 1.6.21 ">Figure 1.6.21</a>a. Choose \(1\) to Edit (enter or alter) data. Now follow the instructions in Example 6 for using your calculator’s statistics features.
 </p></article></div>
 <article class="example-like" id="example-GC-regression"><h5 class="heading">
@@ -385,18 +402,19 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
 </h5>
 <ol style="list-style-type: lower-alpha;">
 <li id="li-212">Find the equation of the least squares regression line for the following data:
-            <div class="displaymath" id="me-115">\begin{equation*}(10, 12), (11, 14), (12, 14), (12, 16), (14, 20)\end{equation*}</div>
-</li>
+            \begin{equation*}(10, 12), (11, 14), (12, 14), (12, 16), (14, 20)\end{equation*}</li>
 <li id="li-213">Plot the data points and the least squares regression line on the same axes.</li>
-</ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-40" id="solution-40"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-40" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol style="list-style-type: lower-alpha;">
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-40" id="solution-40"><span class="">Solution</span></a></span><span id="hk-solution-40" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
 <li id="li-214">We must first enter the data. Press <object type="image/svg+xml" style="width:10%; margin:auto; display:block;" data="images/icon-stat.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><object type="image/svg+xml" style="width:11%; margin:auto; display:block;" data="images/icon-enter.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> to select Edit. If there are data in column \(L_1\) or \(L_2\), clear them out: Use the <object type="image/svg+xml" style="width:4%; margin:auto; display:block;" data="images/icon-up.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> key to select \(L_1\), press <object type="image/svg+xml" style="width:11%; margin:auto; display:block;" data="images/icon-clear.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>, then do the same for \(L_2\). Enter the \(x\)-coordinates of the data points in the \(L_1\) column and enter the \(y\)-coordinates in the \(L_2\) column, as shown in <a knowl="./knowl/fig-GC-regression.html" knowl-id="xref-fig-GC-regression" alt="Figure 1.6.23 " title="Figure 1.6.23 ">Figure 1.6.23</a>a.
         <figure class="figure-like" id="fig-GC-regression"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-GC-regression.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.6.23</span></figcaption></figure>
         Now we are ready to find the regression equation for our data. Press <object type="image/svg+xml" style="width:10%; margin:auto; display:block;" data="images/icon-stat.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><object type="image/svg+xml" style="width:4%; margin:auto; display:block;" data="images/icon-right.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> 4 to select linear regression, or LinReg (ax + b), then press <object type="image/svg+xml" style="width:11%; margin:auto; display:block;" data="images/icon-enter.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>. The calculator will display the equation \(y = ax + b\) and the values for \(a\) and \(b\), as shown in <a knowl="./knowl/fig-GC-regression.html" knowl-id="xref-fig-GC-regression" alt="Figure 1.6.23 " title="Figure 1.6.23 ">Figure 1.6.23</a>b. You should find that your regression line is approximately \(y = 1.95x − 7.86\).</li>
 <li id="li-215">First, we first clear out any old definitions in the list. Position the cursor after \(Y_1 =\) and copy in the regression equation as follows: Press <object type="image/svg+xml" style="width:10%; margin:auto; display:block;" data="images/icon-vars.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>5<object type="image/svg+xml" style="width:4%; margin:auto; display:block;" data="images/icon-right.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><object type="image/svg+xml" style="width:4%; margin:auto; display:block;" data="images/icon-right.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><object type="image/svg+xml" style="width:11%; margin:auto; display:block;" data="images/icon-enter.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>. To draw a scatterplot, press <object type="image/svg+xml" style="width:6%; margin:auto; display:block;" data="images/icon-2nd.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><object type="image/svg+xml" style="width:6%; margin:auto; display:block;" data="images/y-equals.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>\(1\) and set the Plot1 menu as shown in <a knowl="./knowl/fig-GC-regression2.html" knowl-id="xref-fig-GC-regression2" alt="Figure 1.6.24 " title="Figure 1.6.24 ">Figure 1.6.24</a>a. Finally, press <object type="image/svg+xml" style="width:12%; margin:auto; display:block;" data="images/icon-zoom.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> 9 to see the scatterplot of the data and the regression line. The graph is shown in <a knowl="./knowl/fig-GC-regression2.html" knowl-id="xref-fig-GC-regression2" alt="Figure 1.6.24 " title="Figure 1.6.24 ">Figure 1.6.24</a>b.
         <figure class="figure-like" id="fig-GC-regression2"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-GC-regression2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.6.24</span></figcaption></figure>
 </li>
-</ol></span></span></article><article class="paragraphs" id="paragraphs-18"><h5 class="heading"><span class="title">CAUTION</span></h5>
+</ol></div></span>
+</div></div>
+<article class="paragraphs" id="paragraphs-18"><h5 class="heading"><span class="title">CAUTION</span></h5>
 <p id="p-400">
         When you are through with the scatterplot, press <object type="image/svg+xml" style="width:6%; margin:auto; display:block;" data="images/y-equals.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><object type="image/svg+xml" style="width:4%; margin:auto; display:block;" data="images/icon-up.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><object type="image/svg+xml" style="width:11%; margin:auto; display:block;" data="images/icon-enter.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> to turn off the Stat Plot. If you neglect to do this, the calculator will continue to show the scatterplot even after
 you ask it to plot a new equation.
