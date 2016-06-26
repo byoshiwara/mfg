@@ -206,8 +206,356 @@
 <p>
     In general, for an initial investment of <m>P</m> dollars at an interest rate <m>r</m> compounded annually, we have the following formula for the amount accumulated after <m>t</m> years.
 </p>
+<paragraphs><title>Compound Interest</title><index>compound interest</index>
+<p>
+    The <term>amount A(t)</term> accumulated (principal plus interest) in an account bearing interest compounded annually is
+    <me>A(t) = P(1 + r)^t</me>
+    where 
+    \begin{align*}
+    \amp P \amp\amp \text{is the principal invested,} \\
+    \amp r \amp\amp \text{is the interest rate,} \\
+    \amp t \amp\amp \text{is the time period, in years.}
+    \end{align*}
+</p>
+</paragraphs>
+
+<p>
+    This function describes exponential growth with an initial value of <m>P</m> and a growth factor of <m>b = 1 + r</m>. The interest rate <m>r</m>, which indicates the <term index="yes">percent increase</term> in the account each year, corresponds to a <term index="yes">growth factor</term> of <m>1 + r</m>. The notion of percent increase is often used to describe the growth factor for quantities that grow exponentially.
+</p>
+
+<example xml:id="example-inflation">
+<p>
+    During a period of rapid inflation, prices rose by <m>12</m><percent/> over <m>6</m> months. At the beginning of the inflationary period, a pound of butter cost <dollar/><m>2</m>.
+    <ol label="*a*">
+        <li>Make a table of values showing the rise in the cost of butter over the next <m>2</m> years.</li>
+        <li>Write a function that gives the price of a pound of butter <m>t</m> years after inflation began.</li>
+        <li>How much did a pound of butter cost after <m>3</m> years? After <m>15</m> months?</li>
+        <li>Graph the function you found in part (b).</li>
+    </ol>
+</p>
+<solution>
+    <ol label="*a*">
+        <li>The percent increase in the price of butter is <m>12</m><percent/> every <m>6</m> months. Therefore, the growth factor for the price of butter is <m>1 + 0.12 = 1.12</m> every half-year. If <m>P(t)</m> represents the price of butter after <m>t</m> years, then <m>P(0) = 2</m>, and every half-year we multiply the price by <m>1.12</m>, as shown in <xref ref="table-inflation" autoname="yes"/>.
+        <table xml:id="table-inflation"><image source="images\fig-table-inflation" alt="table for inflation"/><caption></caption></table>
+        </li>
+        <li>Look closely at the second column of <xref ref="table-inflation" autoname="yes"/>. After <m>t</m> years of inflation, the original price of <dollar/><m>2</m> has been multiplied by <m>2t</m> factors of <m>1.12</m>. Thus,
+        <me>P = 2(1.12)^{2t}</me>
+        </li>
+        <li>To find the price of butter at any time after inflation began, we evaluate the function at the appropriate value of <m>t</m>.
+        \begin{align*}
+        P(\alert{3}) \amp = 2(1.12)^{2(\alert{3})} \\
+        \amp = 2(1.12)^6 \approx 3.95
+        \end{align*}
+        After <m>3</m> years, the price was <dollar/><m>3.95</m>. Fifteen months is <m>1.25</m> years, so we evaluate <m>P(1.25)</m>.
+        \begin{align*}
+        P(\alert{1.25}) \amp = 2(1.12)^{2(\alert{1.25})} \\
+        \amp = 2(1.12)^{2.5} \approx 2.66 
+        \end{align*}
+        After <m>15</m> months, the price of butter was <dollar/><m>2.66</m>.
+        </li>
+        <li>Evaluate the function
+            <me>P(t) = 2(1.12)^{2t}</me>
+            for several values, as shown in <xref ref="table-inflation2" autoname="yes"/>. Plot the points and connect them with a smooth curve to obtain the graph shown in <xref ref="fig-inflation" autoname="yes"/>.
+            <sidebyside>
+            <table valign="center" xml:id="table-inflation2"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row bottom="minor">
+                    <cell><m>t</m></cell>
+                    <cell><m>P(t)</m></cell>
+                </row>
+                <row>
+                    <cell><m>0</m></cell>
+                    <cell><m>2.00</m></cell>
+                </row>
+                <row>
+                    <cell><m>1</m></cell>
+                    <cell><m>2.51</m></cell>
+                </row>
+                <row>
+                    <cell><m>2</m></cell>
+                    <cell><m>3.15</m></cell>
+                </row>
+                <row>
+                    <cell><m>3</m></cell>
+                    <cell><m>3.95</m></cell>
+                </row>
+                <row>
+                    <cell><m>4</m></cell>
+                    <cell><m>4.95</m></cell>
+                </row>
+            </tabular><caption></caption></table>
+            <figure xml:id="fig-inflation"><image source="images/fig-inflation" alt="graph of inflation"/><caption></caption></figure>
+            </sidebyside>
+        </li>
+    </ol>
+</solution>
+</example>
+
+<p>
+    In <xref ref="example-inflation" autoname="yes"/>, we can rewrite the formula for <m>P(t)</m> as follows:
+    \begin{align*}
+    P(t) = 2(1.12)^{2t} \\
+    \amp = 2\left[(1.12)^2\right]^t = 2(1.2544)^t
+    \end{align*}
+    Thus, the annual growth factor for the price of butter is <m>1.2544</m>, and the annual percent growth rate is <m>25.44</m><percent/>.
+</p>
+
+<exercise xml:id="exercise-inflation"><statement>
+    In <m>1998</m>, the average annual cost of attending a public college was <dollar/><m>10,069</m>, and costs were climbing by <m>6</m><percent/> per year.
+    <ol label="*a*">
+        <li>Write a formula for <m>C(t)</m>, the cost of one year of college <m>t</m> years after <m>1998</m>.</li>
+        <li>Complete the table and sketch a graph of <m>C(t)</m>.
+        <table><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+        <row bottom="minor">
+            <cell><m>t</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>5</m></cell>
+            <cell><m>10</m></cell>
+            <cell><m>15</m></cell>
+            <cell><m>20</m></cell>
+            <cell><m>25</m></cell>
+        </row>
+        <row>
+            <cell><m>C(t)</m></cell>
+            <cell><m></m></cell>
+            <cell><m></m></cell>
+            <cell><m></m></cell>
+            <cell><m></m></cell>
+            <cell><m></m></cell>
+            <cell><m></m></cell>
+        </row>
+    </tabular></table>
+
+        </li>
+        <li>If the percent growth rate remained steady, how much did a year of college cost in <m>2005</m>?</li>
+        <li>If the percent growth rate continues to remain steady, how much will a year of college cost in <m>2020</m>?
+        </li>
+    </ol>
+</statement></exercise>
 
 </subsection>
+
+
+
+<subsection><title>Exponential Decay</title>
+<p>
+    In the preceding examples, exponential growth was modeled by increasing functions of the form
+    <me>P(t) = P_0 b^t</me>
+    where <m>b \gt 1</m>. The function <m>P(t) = P_0vb^t</m> is a <em>decreasing</em> function if <m>0 \lt b \lt 1</m>. In this case, we say that the function describes <term>exponential decay</term>, and the constant <m>b</m> is called the <term index="yes">decay factor</term>. In Investigation 8, we consider two examples of exponential decay.
+</p>
+
+
+<Investigation><title>Exponential Decay</title></Investigation>
+<paragraphs><title>Investigation: Exponential Decay</title>
+<ol label="*A*">
+    <li>
+        A small coal-mining town has been losing population since 1940, when 5000 people lived there. At each census thereafter (taken at 10-year intervals), the population declined to approximately 0.90 of its earlier figure.
+        <ol>
+            <li>
+                Fill in the table showing the population <m>P(t)</m> of the town <m>t</m> years after 1940.
+        <table>
+            <tabular halign="center" right="minor" left="minor" bottom="minor">
+                <col top="minor" />
+                <col top="minor" />
+                <col />
+                <col halign="left"/>
+                        
+                <row bottom="minor">
+                    <cell><m>t</m></cell>
+                    <cell><m>P(t)</m></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                </row>
+                <row> 
+                    <cell><m>0</m></cell>
+                    <cell><m>5000</m></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                    <cell top="none" right="none" bottom="none"><m>P(0)=5000</m></cell>
+                </row>
+                <row> 
+                    <cell><m>10</m></cell>
+                    <cell><m></m></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                    <cell top="none" right="none" bottom="none"><m>P(10)=5000\cdot 0.90=</m></cell>
+                </row>
+                <row> 
+                    <cell><m>20</m></cell>
+                    <cell><m></m></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                    <cell top="none" right="none" bottom="none"><m>P(20)=[5000\cdot 0.90]\cdot 0.90=</m></cell>
+                </row>
+                <row> 
+                    <cell><m>30</m></cell>
+                    <cell><m></m></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                    <cell top="none" right="none" bottom="none"><m>P(3)=</m></cell>
+                </row>
+                <row> 
+                    <cell><m>40</m></cell>
+                    <cell><m></m></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                    <cell top="none" right="none" bottom="none"><m>P(4)=</m></cell>
+                </row>
+                <row> 
+                    <cell><m>50</m></cell>
+                    <cell><m></m></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                    <cell top="none" right="none" bottom="none"><m>P(5)=</m></cell>
+                </row>
+            </tabular>
+        </table>
+
+
+            </li>
+            <li>
+                Plot the data points and connect them with a smooth curve.
+                <figure xml:id="fig-grid-for-population-decay"><image source="images/fig-grid-for-population-decay" alt="grid for graph of population decay" width="50%"/></figure>
+            </li>
+            <li>
+                Write a function that gives the population of the town at any time <m>t</m> in years after 1940.
+                <hint>Express the values you calculated in part (1) using powers of <m>0.90</m>. Do you see a connection between the value of <m>t</m> and the exponent on <m>0.90</m>?</hint>
+            </li>
+            <li>
+                Graph your function from part (3) using a calculator. (Use the table to choose an appropriate domain and range.) The graph should resemble your hand-drawn graph from part (2).
+            </li>
+            <li>
+                Evaluate your function to find the population of the town in 1995. What was the population in 2000?
+            </li>
+        </ol>
+
+    </li>
+    <li>
+        A plastic window coating <m>1</m> millimeter thick decreases the light coming through a window by <m>25</m><percent/>. This means that <m>75</m><percent/> of the original amount of light comes through <m>1</m> millimeter of the coating. Each additional millimeter of coating reduces the light by another <m>25</m><percent/>.
+        <ol>
+            <li>
+                Fill in the table showing the percent of the light, <m>P(x)</m>, that shines through <m>x</m> millimeters of the window coating.
+        <table>
+            <tabular halign="center" right="minor" left="minor" bottom="minor">
+                <col top="minor" />
+                <col top="minor" />
+                <col />
+                <col halign="left"/>
+                        
+                <row bottom="minor">
+                    <cell><m>x</m></cell>
+                    <cell><m>P(x)</m></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                </row>
+                <row> 
+                    <cell><m>0</m></cell>
+                    <cell><m>100</m></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                    <cell top="none" right="none" bottom="none"><m>P(0)=100</m></cell>
+                </row>
+                <row> 
+                    <cell><m>1</m></cell>
+                    <cell><m></m></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                    <cell top="none" right="none" bottom="none"><m>P(1)=100\cdot 0.75=</m></cell>
+                </row>
+                <row> 
+                    <cell><m>2</m></cell>
+                    <cell><m></m></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                    <cell top="none" right="none" bottom="none"><m>P(2)=[100\cdot 0.75]\cdot 0.75=</m></cell>
+                </row>
+                <row> 
+                    <cell><m>3</m></cell>
+                    <cell><m></m></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                    <cell top="none" right="none" bottom="none"><m>P(3)=</m></cell>
+                </row>
+                <row> 
+                    <cell><m>4</m></cell>
+                    <cell><m></m></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                    <cell top="none" right="none" bottom="none"><m>P(4)=</m></cell>
+                </row>
+                <row> 
+                    <cell><m>5</m></cell>
+                    <cell><m></m></cell>
+                    <cell top="none" right="none" bottom="none"></cell>
+                    <cell top="none" right="none" bottom="none"><m>P(5)=</m></cell>
+                </row>
+            </tabular>
+        </table>
+
+            </li>
+            <li>
+                Plot the data points and connect them with a smooth curve.
+                <figure xml:id="fig-grid-for-light-decay"><image source="images/fig-grid-for-light-decay" alt="grid for graph of light decay" width="60%"/></figure>
+            </li>
+            <li>
+                Write a function that gives the percent of the light that shines through <m>x</m> millimeters of the coating. 
+                <hint> Express the values you calculated in part (1) using powers of <m>0.75</m>. Do you see a connection between the value of <m>x</m> and the exponent on <m>0.75</m>?</hint>
+            </li>
+            <li>
+                Graph your function from part (3) using a calculator. (Use your table of values to choose an appropriate domain and range.) The graph should resemble your hand-drawn graph from part (2).
+            </li>
+            <li>
+                Evaluate your function to find the percent of the light that comes through <m>6</m> millimeters of plastic coating. What percent comes through <m>12</m> millimeter?
+            </li>
+        </ol>
+
+    </li>
+</ol>
+</paragraphs>
+
+</subsection>
+
+
+
+
+<subsection><title>Decay Factors</title>
+<p>
+    Before <xref ref="example-inflation" autoname="yes"/>, we noted that a percent increase of <m>r</m> (in decimal form) corresponds to a growth factor of <m>b = 1 + r</m>. A percent decrease of <m>r</m> corresponds to a decay factor of <m>b = 1 − r</m>. In Part B of Investigation 8, each millimeter of plastic reduced the amount of light by <m>25</m><percent/>, so <m>r = 0.25</m>, and the decay factor for the function <m>P(x)</m> is
+    \begin{align*}
+    b \amp = 1 − r \\
+    \amp= 1 − 0.25 = 0.75
+    \end{align*}
+</p>
+
+<example xml:id="example-computing-prices">
+<p>
+    David Reed writes in Context magazine: "Computing prices have been falling exponentially—50<percent/> every 18 months—for the past 30 years and will probably stay on that curve for another couple of decades." An accounting firm invests <dollar/>50,000 in new computer equipment.
+    <ol label="*a*">
+        <li>
+            Write a formula for the value of the equipment <m>t</m> years from now.
+        </li>
+        <li>
+            By what percent does the equipment depreciate each year?
+        </li>
+        <li>
+            What will the equipment be worth in <m>5</m> years?
+        </li>
+    </ol>
+</p>
+<solution>
+<ol label="*a*">
+    <li>
+        The initial value of the equipment is <m>V_0 = 50,000</m>. Every <m>18</m> months, the value of the equipment is multiplied by
+        <me>b = 1 − r = 1 − 0.50 = 0.50</me>
+        However, because <m>18</m> months is <m>1.5</m> years, we must divide <m>t</m> by <m>1.5</m> in our formula, giving us
+        <me>V(t) = 50,000(0.50)^{t/1.5}</me>
+    </li>
+    <li>
+        After <m>1</m> year, we have
+        <me>V(1) = 50,000(0.50)^{1/1.5} = 50,000(0.63)</me>
+        The equipment is worth <m>63</m><percent/> of its original value, so it has depreciated by <m>1 − 0.63</m>, or <m>37</m><percent/>.
+    </li>
+    <li>
+        After <m>5</m> years,
+        <me>V(5) = 50,000(0.50)^{5/1.5} = 4960.628</me>
+        To the nearest dollar, the equipment is worth <dollar/>4961.
+    </li>
+</ol>
+</solution>
+</example>
+
+</subsection>
+
+
+
 
 
 </section> 

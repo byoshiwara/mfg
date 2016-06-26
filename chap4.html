@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-06-25T16:43:00-04:00    *-->
+<!--*    on 2016-06-26T14:00:08-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,12 +13,15 @@
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
         equationNumbers: { autoNumber: "none",
                            useLabelIds: true,
                            // JS comment, XML CDATA protect XHTML quality of file
@@ -81,7 +84,7 @@ MathJax.Hub.Config({
 <ul><li><a href="Exponential-Growth-and-Decay.html">Exponential Growth and Decay</a></li></ul>
 <h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
 <ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
-</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="chapter" id="chap4"><header><h1 class="heading" alt="Chapter 1 Exponential Functions" title="Chapter 1 Exponential Functions">
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="chapter" id="chap4"><header title="Chapter 1 Exponential Functions"><h1 class="heading" alt="Chapter 1 Exponential Functions">
 <span class="type">Chapter</span><span class="codenumber">1</span><span class="title">Exponential Functions</span><a href="chap4.html" class="permalink">¶ permalink</a>
 </h1></header><article class="introduction" id="introduction-1"><h5 class="heading"><span></span></h5>
 <p id="p-12"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/computer-chip.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p>
@@ -91,7 +94,7 @@ MathJax.Hub.Config({
 <p id="p-14">
     In 1965, Gordon Moore, the cofounder of Intel, observed that the number of transistors on a computer chip had doubled every year since the integrated circuit was invented. Moore predicted that the pace would slow down a bit, but the number of transistors would continue to double every 2 years. More recently, data density has doubled approximately every 18 months, and this is the current definition of Moore's law. Most experts, including Moore himself, expect Moore's law to hold for at least another two decades.
 </p>
-<article class="paragraphs" id="paragraphs-1"><h5 class="heading"><span class="title">Population Growth</span></h5>
+<article class="paragraphs" id="paragraphs-1"><h5 class="heading"><span class="title">Investigation: Population Growth</span></h5>
 <p id="p-15">
 <ol style="list-style-type: upper-alpha;">
 <li id="li-1">In a laboratory experiment, researchers establish a colony of \(100\) bacteria and monitor its growth. The colony triples in population every day.
@@ -100,7 +103,7 @@ MathJax.Hub.Config({
         <figure class="figure-like" id="table-1"><table>
 <tr>
 <td class="c m b1 r1 l1 t1">\(t\)</td>
-<td class="c m b1 r1 l0 t1">\(P(t))\)</td>
+<td class="c m b1 r1 l0 t1">\(P(t)\)</td>
 <td class="c m b0 r0 l0 t0"></td>
 <td class="l m b0 r0 l0 t0"></td>
 </tr>
@@ -143,7 +146,7 @@ MathJax.Hub.Config({
 </table></figure>
 </li>
 <li id="li-3">Plot the data points from the table and connect them with a smooth curve.
-        <figure class="figure-like" id="fig-grid-for-bacteria-population"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-grid-for-bacteria-population.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure>
+        <figure class="figure-like" id="fig-grid-for-bacteria-population"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-grid-for-bacteria-population.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure>
 </li>
 <li id="li-4">Write a function that gives the population of the colony at any time \(t\), in days.
         <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-1" id="hint-1"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-1" style="display: none;" class="tex2jax_ignore"><span class="solution">Express the values you calculated in part (1) using powers of \(3\). Do you see a connection between the value of \(t\) and the exponent on \(3\)?</span></span>
@@ -158,7 +161,7 @@ MathJax.Hub.Config({
 <figure class="figure-like" id="table-2"><table>
 <tr>
 <td class="c m b1 r1 l1 t1">\(t\)</td>
-<td class="c m b1 r1 l0 t1">\(P(t))\)</td>
+<td class="c m b1 r1 l0 t1">\(P(t)\)</td>
 <td class="c m b0 r0 l0 t0"></td>
 <td class="l m b0 r0 l0 t0"></td>
 </tr>
