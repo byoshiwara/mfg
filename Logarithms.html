@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-06-27T19:42:42-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG Logarithms</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic%7CSource+Code+Pro:400" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\alert}[1]{\mathbf{\color{magenta}{#1}}}
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+
+\newcommand\degree[0]{^{\circ}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading">
+<span class="title">Modeling, Functions, and Graphs</span><span class="subtitle">Algebra for College Students</span>
+</h1>
+<p class="byline">Katherine Yoshiwara</p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="Exponential-Functions.html">Previous</a><a class="up-button button toolbar-item" href="chap4.html">Up</a><a class="next-button button toolbar-item" href="index-part-1.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Exponential-Functions.html">Previous</a><a class="up-button button toolbar-item" href="chap4.html">Up</a><a class="next-button button toolbar-item" href="index-part-1.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="biography-1.html">Author Biography</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
+<li><a href="preface-2.html">Contributors to the 5\(^\mathrm{th}\) Edition</a></li>
+</ul>
+<h2 class="link"><a href="chap1.html"><span class="codenumber">1</span><span class="title">Functions and Their Graphs</span></a></h2>
+<ul>
+<li><a href="LinMod.html">Linear Models</a></li>
+<li><a href="functions.html">Functions</a></li>
+<li><a href="graphs-of-functions.html">Graphs of Functions</a></li>
+<li><a href="slope-and-rate-of-change.html">Slope and Rate of Change</a></li>
+<li><a href="linear-functions.html">Linear Functions</a></li>
+<li><a href="linear-regression.html">Linear Regression</a></li>
+</ul>
+<h2 class="link"><a href="chap2.html"><span class="codenumber">2</span><span class="title">Modeling with Functions</span></a></h2>
+<ul>
+<li><a href="nonlinear-models.html">Nonlinear Models</a></li>
+<li><a href="basic-functions.html">Some Basic Functions</a></li>
+<li><a href="transformations.html">Transformations of Graphs</a></li>
+<li><a href="MathModels.html">Functions as Mathematical Models</a></li>
+<li><a href="AbsoluteValue.html">The Absolute Value Function</a></li>
+<li><a href="Domain-Range.html">Domain and Range</a></li>
+</ul>
+<h2 class="link"><a href="chap3.html"><span class="codenumber">3</span><span class="title">Power Functions</span></a></h2>
+<ul>
+<li><a href="Variation.html">Variation</a></li>
+<li><a href="Integer-Exponents.html">Integer Exponents</a></li>
+<li><a href="Roots-and-Radicals.html">Roots and Radicals</a></li>
+<li><a href="Rational-Exponents.html">Rational Exponents</a></li>
+<li><a href="Joint-Variation.html">Joint Variation</a></li>
+</ul>
+<h2 class="link active"><a href="chap4.html"><span class="codenumber">4</span><span class="title">Exponential Functions</span></a></h2>
+<ul>
+<li><a href="Exponential-Growth-and-Decay.html">Exponential Growth and Decay</a></li>
+<li><a href="Exponential-Functions.html">Exponential Functions</a></li>
+<li><a href="Logarithms.html" class="active">Logarithms</a></li>
+</ul>
+<h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="colophon-2.html"><span class="title">Colophon</span></a></h2>
+<ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Logarithms"><header title="Section 4.3 Logarithms"><h1 class="heading hide-type" alt="Section 4.3 Logarithms">
+<span class="type">Section</span><span class="codenumber">4.3</span><span class="title">Logarithms</span><a href="Logarithms.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-848">
+	In this section, we introduce a new mathematical tool called a <!--Style me with CSS--><em>logarithm</em>, which will help us solve exponential equations.
+</p>
+<p id="p-849">
+	Suppose that a colony of bacteria doubles in size every day. If the colony starts with \(50\) bacteria, how long will it be before there are \(800\) bacteria? We answered questions of this type in <span>&lt;&lt;Unresolved xref, reference "exponential-functions"; check spelling or use "provisional" attribute&gt;&gt;</span> by writing and solving an exponential equation. The function
+	\begin{equation*}P(t) = 50 \cdot 2^t\end{equation*}
+	gives the number of bacteria present on day \(t\), so we must solve the equation
+	\begin{equation*}800 = 50 \cdot 2^t\end{equation*}
+	Dividing both sides by 50 yields
+	\begin{equation*}16 = 2^t\end{equation*}
+	The solution of this equation is the answer to the following question: To what power must we raise \(2\) in order to get \(16\)?
+</p>
+<p id="p-850">
+	The value of \(t\) that solves the equation is called the base \(2\) <em class="terminology">logarithm</em> of \(16\). Since \(2^4 = 16\), the base \(2\) logarithm of \(16\) is \(4\). We write this as
+	\begin{equation*}\log_{2}16 = 4\end{equation*}
+	In other words, we solve an exponential equation by computing a logarithm. You can check that \(t = \alert{4}\)
+	solves the problem stated above:
+	\begin{equation*}P(\alert{4}) = 50 \cdot 2^\alert{4}= 800\end{equation*}
+</p>
+<p id="p-851">
+	Thus, the unknown exponent is called a logarithm. In general, for positive values of \(b\) and \(x\), we make the following definition.
+</p>
+<article class="definition-like" id="definition-10"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">4.3.1</span><span class="title">Logarithm</span>
+</h5>
+	The <em class="terminology">base \(b\) logarithm of \(x\)</em>, written \(\log_{b} x\), is the exponent to which \(b\) must be raised in order to yield \(x\).
+</article><p id="p-852">
+	It will help to keep in mind that a logarithm is just an exponent. Some logarithms, like some square roots, are easy to evaluate, while others require a calculator. We will start with the easy ones.
+</p>
+<article class="example-like" id="example-easy-logarithm"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.3.2</span>
+</h5>
+<p id="p-853">
+	Compute the logarithms.
+	<ol style="list-style-type: lower-alpha;">
+<li id="li-683">\(\log_3 9\)</li>
+<li id="li-684">\(\log_5 125 \)</li>
+<li id="li-685">\(\log_4 \frac{1}{16}\)</li>
+<li id="li-686">\(\log_5 \sqrt{5}\)</li>
+</ol>
+</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-105" id="solution-105"><span class="">Solution</span></a></span><span id="hk-solution-105" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-687">
+		To evaluate \(\log_3 9\), we ask what exponent on base \(3\) will produce \(9\). In symbols, we want to fill in the blank in the equation \(3^{\underline{?}} = 9\). The exponent we need is \(2\), so
+		\begin{equation*}\log_3 9 = 2 \text{ because } 3^2 = 9\end{equation*}
+		We use similar reasoning to compute the other logarithms.
+	</li>
+<li id="li-688">\(\log_5{125} = 3 \text{ because } 5^3 = 125\)</li>
+<li id="li-689">\(\log_4{\frac{1}{16}}= −2 \text{ because } 4^{−2} = \frac{1}{16}\)</li>
+<li id="li-690">\(\log_5{\sqrt{5}} = \frac{1}{2} \text{ because } 5^{1/2} =\sqrt{5}\)</li>
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-easy-logarithms" id="exercise-easy-logarithms"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">4.3.3</span>
+</h5></a></div>
+<div id="hk-exercise-easy-logarithms" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+	Find each logarithm.
+	<ol style="list-style-type: lower-alpha;">
+<li id="li-691">\(\log_{3}{81}\)</li>
+<li id="li-692">\(\log_{10}{\frac{1}{1000}}\)</li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<p id="p-854">
+	From the definition of a logarithm and the examples above, we see that the following two statements are equivalent.
+</p>
+<article class="paragraphs" id="paragraphs-62"><h5 class="heading"><span class="title">Logarithms and Exponents: Conversion Equations</span></h5>
+<p id="p-855">
+	If \(b \gt 0\) and \(x \gt 0\),
+	\begin{equation*}y = \log_b x \text{ if and only if } x = b^y\end{equation*}
+</p></article><p id="p-856">
+	In other words, the logarithm \(y\), is the same as the <!--Style me with CSS--><em>exponent</em> in \(x = b^y\). We see again that <!--Style me with CSS--><em>a logarithm is an exponent</em>; it is the exponent to which \(b\) must be raised to yield \(x\).
+</p>
+<p id="p-857">
+	These equations allow us to convert from logarithmic to exponential form, or vice versa. You should memorize the conversion equations, because we will use them frequently. 
+</p>
+<p id="p-858">
+	As special cases of the equivalence in (1), we can compute the following useful logarithms.
+For any base \(b \gt 0\),
+</p>
+<article class="paragraphs" id="paragraphs-63"><h5 class="heading"><span class="title">Some Useful Logarithms</span></h5>
+<p id="p-859">
+	\begin{align*}
+	\log_b b \amp = 1 \text{ because } b^1 = b \\
+	\log_b 1 \amp = 0  \text{ because } b^0 = 1 \\
+	\log_b{bx} \amp = x \text{ because } b^x = b^x
+	\end{align*}
+</p></article><article class="example-like" id="example-useful-logarithms"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.3.4</span>
+</h5>
+<ol style="list-style-type: lower-alpha;">
+<li id="li-693">\(\log_{2}{2} = 1\)</li>
+<li id="li-694">\(\log_{5}{1} = 0\)</li>
+<li id="li-695">\(\log_{3}{3^4} = 4\)</li>
+</ol></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-useful-logarithms" id="exercise-useful-logarithms"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">4.3.5</span>
+</h5></a></div>
+<div id="hk-exercise-useful-logarithms" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+	Find each logarithm.
+	<ol style="list-style-type: lower-alpha;">
+<li id="li-696">\(\log_{n}{1}\)</li>
+<li id="li-697">\(\log_{n}{n^3}\)</li>
+</ol></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<section class="subsection" id="subsection-96"><header title="Subsection 4.3.1 Using the Conversion Equations"><h1 class="heading hide-type" alt="Subsection 4.3.1 Using the Conversion Equations">
+<span class="type">Subsection</span><span class="codenumber">4.3.1</span><span class="title">Using the Conversion Equations</span>
+</h1></header><p id="p-860">
+	We use logarithms to solve exponential equations, just as we use square roots to solve quadratic equations. Consider the two equations
+	\begin{equation*}x^2 = 25 ~ \text{ and } ~ 2^x = 8\end{equation*}
+	We solve the first equation by taking a square root, and we solve the second equation by computing a logarithm:
+	\begin{equation*}x = \pm\sqrt{25} = \pm 5 ~ \text{ and } ~ x = \log_{2}{8} = 3\end{equation*}
+	The operation of taking a base \(b\) logarithm is the inverse operation for raising the base \(b\) to a power, just as extracting square roots is the inverse of squaring a number.
+</p></section></section></div></main>
+</div>
+</body>
+</html>

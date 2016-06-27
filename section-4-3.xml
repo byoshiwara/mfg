@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- <mathbook><book> -->
+
+<section xml:id="Logarithms"   xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Logarithms</title>
+
+<p>
+	In this section, we introduce a new mathematical tool called a <em>logarithm</em>, which will help us solve exponential equations.
+</p>
+<p>
+	Suppose that a colony of bacteria doubles in size every day. If the colony starts with <m>50</m> bacteria, how long will it be before there are <m>800</m> bacteria? We answered questions of this type in <xref ref="exponential-functions" autoname="yes"/> by writing and solving an exponential equation. The function
+	<me>P(t) = 50 \cdot 2^t</me>
+	gives the number of bacteria present on day <m>t</m>, so we must solve the equation
+	<me>800 = 50 \cdot 2^t</me>
+	Dividing both sides by 50 yields
+	<me>16 = 2^t</me>
+	The solution of this equation is the answer to the following question: To what power must we raise <m>2</m> in order to get <m>16</m>?
+</p>
+<p>
+	The value of <m>t</m> that solves the equation is called the base <m>2</m> <term index="yes">logarithm</term> of <m>16</m>. Since <m>2^4 = 16</m>, the base <m>2</m> logarithm of <m>16</m> is <m>4</m>. We write this as
+	<me>\log_{2}16 = 4</me>
+	In other words, we solve an exponential equation by computing a logarithm. You can check that <m>t = \alert{4}</m>
+	solves the problem stated above:
+	<me>P(\alert{4}) = 50 \cdot 2^\alert{4}= 800</me>
+</p>
+<p>
+	Thus, the unknown exponent is called a logarithm. In general, for positive values of <m>b</m> and <m>x</m>, we make the following definition.
+</p>
+<definition><title>Logarithm</title>
+<statement>
+	The <term index="yes">base <m>b</m> logarithm of <m>x</m></term>, written <m>\log_{b} x</m>, is the exponent to which <m>b</m> must be raised in order to yield <m>x</m>.
+</statement></definition>
+<p>
+	It will help to keep in mind that a logarithm is just an exponent. Some logarithms, like some square roots, are easy to evaluate, while others require a calculator. We will start with the easy ones.
+</p>
+
+<example xml:id="example-easy-logarithm">
+<p>
+	Compute the logarithms.
+	<ol label="*a*">
+		<li><m>\log_3 9</m></li>
+		<li><m>\log_5 125 </m></li>
+		<li><m>\log_4 \frac{1}{16}</m></li>
+		<li><m>\log_5 \sqrt{5}</m></li>
+	</ol>
+</p>
+<solution>
+<ol label="*a*">
+	<li>
+		To evaluate <m>\log_3 9</m>, we ask what exponent on base <m>3</m> will produce <m>9</m>. In symbols, we want to fill in the blank in the equation <m>3^{\underline{?}} = 9</m>. The exponent we need is <m>2</m>, so
+		<me>\log_3 9 = 2 \text{ because } 3^2 = 9</me>
+		We use similar reasoning to compute the other logarithms.
+	</li>
+	<li><m>\log_5{125} = 3 \text{ because } 5^3 = 125</m></li>
+	<li><m>\log_4{\frac{1}{16}}= −2 \text{ because } 4^{−2} = \frac{1}{16}</m></li>
+	<li><m>\log_5{\sqrt{5}} = \frac{1}{2} \text{ because } 5^{1/2} =\sqrt{5}</m></li>
+</ol>
+</solution>
+</example>
+
+<exercise xml:id="exercise-easy-logarithms"><statement>
+	Find each logarithm.
+	<ol label="*a*">
+		<li><m>\log_{3}{81}</m></li>
+		<li><m>\log_{10}{\frac{1}{1000}}</m></li>
+	</ol>
+</statement></exercise>
+
+<p>
+	From the definition of a logarithm and the examples above, we see that the following two statements are equivalent.
+</p>
+
+<paragraphs><title>Logarithms and Exponents: Conversion Equations</title>
+<p>
+	If <m>b \gt 0</m> and <m>x \gt 0</m>,
+	<me>y = \log_b x \text{ if and only if } x = b^y</me>
+</p></paragraphs>
+
+<p>
+	In other words, the logarithm <m>y</m>, is the same as the <em>exponent</em> in <m>x = b^y</m>. We see again that <em>a logarithm is an exponent</em>; it is the exponent to which <m>b</m> must be raised to yield <m>x</m>.
+</p> 
+<p>
+	These equations allow us to convert from logarithmic to exponential form, or vice versa. You should memorize the conversion equations, because we will use them frequently. 
+</p>
+<p>
+	As special cases of the equivalence in (1), we can compute the following useful logarithms.
+For any base <m>b \gt 0</m>,
+</p>
+
+<paragraphs><title>Some Useful Logarithms</title>
+<p>
+	\begin{align*}
+	\log_b b \amp = 1 \text{ because } b^1 = b \\
+	\log_b 1 \amp = 0  \text{ because } b^0 = 1 \\
+	\log_b{bx} \amp = x \text{ because } b^x = b^x
+	\end{align*}
+</p></paragraphs>
+
+<example xml:id="example-useful-logarithms">
+	<ol label="*a*">
+		<li><m>\log_{2}{2} = 1</m></li>
+		<li><m>\log_{5}{1} = 0</m></li>
+		<li><m>\log_{3}{3^4} = 4</m></li>
+	</ol>
+</example>
+
+<exercise xml:id="exercise-useful-logarithms"><statement>
+	Find each logarithm.
+	<ol label="*a*">
+		<li><m>\log_{n}{1}</m></li>
+		<li><m>\log_{n}{n^3}</m></li>
+	</ol>
+</statement></exercise>
+
+<subsection><title>Using the Conversion Equations</title>
+<p>
+	We use logarithms to solve exponential equations, just as we use square roots to solve quadratic equations. Consider the two equations
+	<me>x^2 = 25 ~ \text{ and } ~ 2^x = 8</me>
+	We solve the first equation by taking a square root, and we solve the second equation by computing a logarithm:
+	<me>x = \pm\sqrt{25} = \pm 5 ~ \text{ and } ~ x = \log_{2}{8} = 3</me>
+	The operation of taking a base <m>b</m> logarithm is the inverse operation for raising the base <m>b</m> to a power, just as extracting square roots is the inverse of squaring a number.
+</p>
+
+
+
+
+
+</subsection>
+
+
+</section> 
+<!-- </book>  </mathbook> -->
