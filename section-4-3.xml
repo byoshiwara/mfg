@@ -120,10 +120,157 @@ For any base <m>b \gt 0</m>,
 	<me>x = \pm\sqrt{25} = \pm 5 ~ \text{ and } ~ x = \log_{2}{8} = 3</me>
 	The operation of taking a base <m>b</m> logarithm is the inverse operation for raising the base <m>b</m> to a power, just as extracting square roots is the inverse of squaring a number.
 </p>
+<p>
+	Every exponential equation can be rewritten in logarithmic form by using the conversion equations. Thus,
+	<me>3 = \log_{2}{8} \text{ and } 8 = 2^3</me>
+	are equivalent statements, just as
+	<me>5 = \sqrt{25} \text{ and } 25 = 5^2</me>
+	are equivalent statements. Rewriting an equation in logarithmic form is a basic  strategy for finding its solution.
+</p>
+
+<example xml:id="example-exponential-to-log-form">
+<p>
+	Rewrite each equation in logarithmic form.
+	<ol label="*a*">
+		<li><m>2^{−1} = \frac{1}{2}</m></li>
+		<li><m>a^{1/5} = 2.8</m></li>
+		<li><m>6^{1.5} = T</m></li>
+		<li><m>M^v = 3K</m></li>
+	</ol>
+</p>
+<solution>
+<p>
+	First identify the base <m>b</m>, and then the exponent or logarithm <m>y</m>. Use the conversion equations to rewrite <m>b^y = x</m> in the form <m>\log_{b}{x} = y</m>.
+	<ol label="*a*">
+		<li>The base is <m>2</m> and the exponent is <m>−1</m>. Thus, <m>\log_{2}{\frac{1}{2}}= −1</m>.</li>
+		<li>The base is <m>a</m> and the exponent is <m>\frac{1}{5}</m>. Thus, <m>\log_{a}{2.8} = \frac{1}{5}</m>.</li>
+		<li>The base is <m>6</m> and the exponent is <m>1.5</m>. Thus, <m>\log_{6}{T} = 1.5</m>.</li>
+		<li>The base is <m>M</m> and the exponent is <m>v</m>. Thus, <m>\log_{M}{3K} = v</m>.</li>
+	</ol>
+</p>
+</solution>
+</example>
+
+<exercise xml:id="exercise-exponential-to-log-form"><statement>
+<p>
+	Rewrite each equation in logarithmic form.
+	<ol label="*a*">
+		<li><m>8^{−1/3} = \frac{1}{2}</m></li>
+		<li><m>5^x = 46</m></li>
+	</ol>
+</p>
+</statement></exercise>
+
+</subsection>
 
 
 
+<subsection><title>Approximating Logarithms</title>
+<p>
+	Suppose we would like to solve the equation
+	<me>2^x = 26</me>
+	The solution of this equation is <m>x = \log_{2}{26}</m>, but can we find a decimal approximation for this value? There is no integer power of <m>2</m> that equals <m>26</m>, because
+	\begin{align*}
+	2^4 \amp = 16 \\
+	\text{and } 2^5 \amp = 32
+	\end{align*} 
+	Thus, <m>\log_{2}{26}</m> must be between <m>4</m> and <m>5</m>. We can use trial and error to find the value of <m>\log_{2}{26}</m> to the nearest tenth. Use your calculator to make a table of values for <m>y = 2^x</m>, starting with <m>x = 4</m> and using increments of <m>0.1</m>.
+</p>
 
+
+
+<table xml:id="table-decimal-powers-of-two"><caption></caption>
+    <tabular halign="center" right="minor" left="minor" bottom="minor">
+        <col top="minor" />
+        <col top="minor" />
+        <col />
+        <col top="minor"/>
+        <col top="minor"/>
+                
+        <row bottom="major">
+            <cell><m>x</m></cell>
+            <cell><m>2^x</m></cell>
+            <cell top="none"  bottom="none"></cell>
+            <cell><m>x</m></cell>
+            <cell><m>2^x</m></cell>
+        </row>
+        <row> 
+            <cell><m>4</m></cell>
+            <cell><m>2^4=16</m></cell>
+            <cell top="none"  bottom="none"></cell>
+            <cell><m>4.5</m></cell>
+            <cell><m>2^{4.5}=22.627</m></cell>
+        </row>
+        <row> 
+            <cell><m>4.1</m></cell>
+            <cell><m>2^{4.1}=17.148</m></cell>
+            <cell top="none"  bottom="none"></cell>
+            <cell><m>4.6</m></cell>
+            <cell><m>2^{4.6}=24.251</m></cell>
+        </row>
+        <row> 
+            <cell><m>4.2</m></cell>
+            <cell><m>2^{4.2}=18.379</m></cell>
+            <cell top="none"  bottom="none"></cell>
+            <cell><m>\alert{4.7}</m></cell>
+            <cell><m>2^{\alert{4.7}}=25.992</m></cell>
+        </row>
+        <row> 
+            <cell><m>4.3</m></cell>
+            <cell><m>2^{4.3}=19.698</m></cell>
+            <cell top="none"  bottom="none"></cell>
+            <cell><m>\alert{4.8}</m></cell>
+            <cell><m>2^{\alert{4.8}}=27.858</m></cell>
+        </row>
+        <row> 
+            <cell><m>4.4</m></cell>
+            <cell><m>2^{4.4}=21.112</m></cell>
+            <cell top="none"  bottom="none"></cell>
+            <cell><m>4.9</m></cell>
+            <cell><m>2^{4.9}=29.857</m></cell>
+        </row>
+     </tabular>
+</table>
+<p>
+	From <xref ref="table-decimal-powers-of-two" autoname="yes"/>, we see that <m>26</m> is between <m>24.7</m> and <m>24.8</m>, and is closer to <m>24.7</m>. To the nearest tenth, <m>\log_{2}{26} \approx 4.7</m>.
+</p>
+<p>
+	Trial and error can be a time-consuming process. In Example 4, we illustrate a graphical method for estimating the value of a logarithm.
+</p>
+
+<example xml:id="example-approximate-log">
+<p>
+	Approximate <m>\log_{3}{7}</m> to the nearest hundredth.
+</p>
+<solution>
+<p>
+	If <m>\log_{3}{7}=x</m>, then <m>3^x = 7</m>. We will use the graph of <m>y = 3^x</m> to approximate a solution to <m>3^x = 7</m>. Graph <m>Y_1 =3</m><c>^</c> X and <m>Y_2 = 7</m> in the standard window (<c>ZOOM</c> 6) to obtain the graph shown in <xref ref="fig-GC-approx-log" autoname="yes"/>. Activate the intersect feature to find that the two graphs intersect at the point <m>(1.7712437, 7)</m>. Because this point lies on the graph of <m>y = 3^x</m> , we know that
+	<me>31.7712437 \approx 7\text{, or } \log_{3}{7} \approx 1.7712437</me>
+	To the nearest hundredth, <m>\log_{3}{7} \approx 1.77</m>.
+</p>
+<figure xml:id="fig-GC-approx-log"><image source="images/fig-GC-approx-log" alt="GC intersection of expnential curve and horizontal line" width="60%"/><caption></caption></figure>
+</solution>
+</example>
+<exercise xml:id="exercise-approximate-log"><statement>
+	<ol label="*a*">
+		<li>Rewrite the equation <m>3^x = 90</m> in logarithmic form.</li>
+		<li>Use a graph to approximate the solution to the equation in part (a). Round your answer to three decimal places.</li>
+	</ol>
+</statement></exercise>
+
+</subsection>
+
+
+
+<subsection><title>Base 10 Logarithms</title>
+<p>
+	Some logarithms are used so frequently in applications that their values are programmed into scientific and graphing calculators. These are the base <m>10</m> logarithms, such as 
+	<me>\log_{10}{1000} = 3 ~\text{ and }~ \log_{10}{0.01} = −2</me>
+	Base <m>10</m> logarithms are called <term index="yes">common logarithms</term>, and the subscript <m>10</m> is often omitted, so that <m>\log x</m> is understood to mean <m>\log_{10}{x}</m>.
+</p>
+<p>
+	To evaluate a base <m>10</m> logarithm, we use the <c>LOG</c> key on a calculator. Many logarithms are irrational numbers, and the calculator gives as many digits as its display allows. We can then round off to the desired accuracy.
+</p>
 
 </subsection>
 
