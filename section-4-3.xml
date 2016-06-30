@@ -272,6 +272,191 @@ For any base <m>b \gt 0</m>,
 	To evaluate a base <m>10</m> logarithm, we use the <c>LOG</c> key on a calculator. Many logarithms are irrational numbers, and the calculator gives as many digits as its display allows. We can then round off to the desired accuracy.
 </p>
 
+<example xml:id="example-calculator-log">
+	<p>
+		Approximate the following logarithms to <m>2</m> decimal places.
+		<ol label="*a*">
+			<li><m>\log{6.5}</m></li>
+			<li><m>\log{256}</m></li>
+		</ol>
+	</p>
+<solution>
+	<ol label="*a*">
+		<li>
+			The keying sequence <c>LOG</c> <m>6.5</m> <c>)</c><c>ENTER</c> produces the display
+			<table><tabular>
+				<col halign="left"/><col /><col halign="right"/>
+				<row>
+					<cell><m>\log {(6.5)}</m></cell>
+					<cell><m></m></cell>
+					<cell><m></m></cell>
+				</row>
+				<row>
+					<cell><m></m></cell>
+					<cell><m></m></cell>
+					<cell><m>.812913566</m></cell>
+				</row>
+			</tabular></table>
+		so <m>\log {6.5}\approx 0.81</m>.
+		</li>
+		<li>
+			The keying sequence <c>LOG</c> <m>256</m> <c>)</c> <c>ENTER</c> yields <m>2.408239965</m>, so <m>\log {256} \approx 2.41</m>.
+		</li>
+	</ol>
+</solution>
+</example>
+
+<p>
+	We can check the approximations found in <xref ref="example-calculator-log" autoname="yes"/> with our conversion equations. Remember that a logarithm is an exponent, and in this example the base is <m>10</m>. We find that
+	\begin{align*}
+	\amp\amp 10^{0.81} \amp\approx 6.45654229 \\
+	\text{and} \amp\amp 10^{2.41} \amp\approx 257.0395783
+	\end{align*}
+	so our approximations are reasonable, although you can see that rounding a logarithm to <m>2</m> decimal places does lose some accuracy. For this reason, rounding logarithms to <m>4</m> decimal places is customary.
+</p>
+
+<exercise xml:id="exercise-calculator-log"><statement>
+	<ol label="*a*">
+		<li>Evaluate <m>\log{250}</m>, and round your answer to two decimal places. Check your answer using the conversion equations.</li>
+		<li>Evaluate <m>\log{250}</m>, and round your answer to four decimal places. Check your answer using the conversion equations.</li>
+	</ol>
+</statement></exercise>
+
+</subsection>
+
+
+
+<subsection><title>Solving Exponential Equations</title>
+<p>
+	We can now solve any exponential equation with base <m>10</m>. For instance, to solve the equation
+	<m>16 \cdot 10^t = 360</m>
+	we first divide both sides by <m>16</m> to obtain
+	<me>10^t = 22.5</me>
+	Then we convert the equation to logarithmic form and evaluate:
+	<me>t = \log_{10}{22.5} \approx 1.352182518</me>
+	To <m>4</m> decimal places, the solution is <m>1.3522</m>.
+</p>
+<p>
+	To solve exponential equations involving powers of 10, we can use the following steps.
+</p>
+<paragraphs><title>Steps for Solving Base 10 Exponential Equations</title>
+<ol>
+	<li>Isolate the power on one side of the equation.</li>
+	<li>Rewrite the equation in logarithmic form.</li>
+	<li>Use a calculator, if necessary, to evaluate the logarithm.</li>
+	<li>Solve for the variable.</li>
+</ol>
+</paragraphs>
+
+<example xml:id="example-solve-exponential">
+<p>
+	Solve the equation <m>38 = 95 − 15 \cdot 10^{0.4x}</m>.
+</p>
+<solution>
+<p>
+	First, isolate the power of <m>10</m>: Subtract <m>95</m> from both sides of the equation and divide by <m>−15</m> to obtain
+	\begin{align*}
+	−57 \amp = −15 \cdot 10^{0.4x} \amp\amp \text{Divide by }-15. \\
+	3.8 \amp = 10^{0.4x}
+	\end{align*}
+	Convert the equation to logarithmic form as
+	<me>\log_{10}{3.8} = 0.4x</me>
+	Solving for <m>x</m> yields
+	<me>\frac{\log_{10}{3.8}}{0.4}= x</me>
+	We can evaluate this expression on the calculator by entering
+</p>
+<p>
+	<c>LOG</c> <m>3.8</m> <c>)</c> <c>÷</c> <m>0.4</m> <c>ENTER</c>
+</p>
+<p>
+	which yields <m>1.449458992</m>. Thus, to four decimal places, <m>x \approx 1.4495</m>.
+</p>
+</solution>
+</example>
+
+<warning><title>CAUTION</title><statement>
+<p>
+		Be careful when using a calculator to evaluate expressions involving logs. We can evaluate a single logarithm like <m>\log{3.8}</m> by entering <c>LOG</c> <m>3.8</m><c>ENTER</c> without an ending parenthesis, so that the calculator shows
+		<table><tabular>
+			<col halign="left"/><col /><col halign="right"/>
+			<row>
+				<cell><m>\log {(3.8}</m></cell>
+				<cell><m></m></cell>
+				<cell><m></m></cell>
+			</row>
+			<row>
+				<cell><m></m></cell>
+				<cell><m></m></cell>
+				<cell><m>.5795835966</m></cell>
+			</row>
+		</tabular></table>
+		But if we want to evaluate <m>\frac{\log{3.8}}{0.4}</m>, we must enclose <m>3.8</m> in parentheses, as shown in <xref ref="example-solve-exponential" autoname="yes"/>. If we omit the parenthesis after <m>3.8</m>, the calculator will interpret the expression as <m>\log{\left(\frac{3.8}{0.4}\right)}</m>, which is not the expression we wanted.
+</p>
+</statement>
+</warning>
+
+<exercise xml:id="exercise-solve-exponential"><statement>
+	<p>
+		Solve <m>12 − 30(10^{−0.2x} ) = 11.25</m>.
+	</p>
+</statement></exercise>
+
+</subsection>
+
+
+
+
+<subsection><title>Application to Exponential Models</title>
+<p>
+	We have seen that exponential functions are used to describe some applications of growth and decay, <m>P(t) = P_0b^t</m>. There are two common questions that arise in connection with exponential models:
+	<ol>
+		<li>Given a value of <m>t</m>, what is the corresponding value of <m>P(t)</m>?</li>
+		<li>Given a value of <m>P(t)</m>, what is find the corresponding value of <m>t</m>?</li>
+	</ol>
+	To answer the first question, we evaluate the function <m>P(t)</m> at the appropriate value. To answer the second question, we must solve an exponential equation, and this usually involves logarithms.
+</p>
+
+<example xml:id="example-tractor-depreciates">
+<p>
+	The value of a large tractor originally worth <dollar/><m>30,000</m> depreciates exponentially according to the formula <m>V(t) = 30,000(10)^{−0.04t}</m>, where <m>t</m> is in years. When will the tractor be worth half its original value?
+</p>
+<solution>
+<p>
+	We want to find the value of <m>t</m> for which <m>V(t) = 15,000</m>. That is, we want to solve the equation
+	<me>15,000 = 30,000(10)^{−0.04t}</me>
+	Divide both sides by 30,000 to obtain
+	<me>0.5 = 10^{−0.04t}</me>
+	Convert the equation to logarithmic form as
+	<me>\log_{10}{0.5} = −0.04t</me>
+	and divide by <m>−0.04</m> to obtain
+	<me>\frac{\log_{10}{0.5}}{−0.04} = t </me>
+	To evaluate this expression, key in
+</p>
+<p>
+	<c>LOG</c> <m>0.5</m> <c>)</c> <c>÷</c> <c>(−)</c> <m>0.04</m> <c>ENTER</c>
+</p>
+<p>
+	to find <m>t \approx 7.525749892</m>. The tractor will be worth <dollar/>15,000 in approximately <m>7\frac{1}{2}</m> years.
+</p>
+</solution>
+</example>
+
+<exercise xml:id="exercise-home-computers"><statement>
+<p>
+	The percentage of American homes with computers grew exponentially from 1994 to 1999. For <m>t = 0</m> in 1994, the growth law was <m>P(t) = 25.85(10)^{0.052t}</m>. [Source: Los Angeles Times, August 20, 1999]
+	<ol label="*a*">
+		<li>What percent of American homes had computers in 1994?</li>
+		<li>If the percentage of homes with computers continued to grow at the same rate, when did <m>90</m><percent/> of American homes have a computer?</li>
+		<li>Do you think that the function <m>P(t)</m> will continue to model the percentage of American homes with computers? Why or why not?</li>
+	</ol>
+</p>
+</statement></exercise>
+
+<p>
+	At this stage, it seems we will only be able to solve exponential equations in which the base is <m>10</m>. However, we will see in <xref ref="Properties-of-Logarithms" autoname="yes"/> how the properties of logarithms enable us to solve exponential equations with any base.
+</p>
+
+
 </subsection>
 
 
