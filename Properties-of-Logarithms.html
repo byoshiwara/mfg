@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-06-30T09:15:00-04:00    *-->
+<!--*    on 2016-06-30T20:04:18-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -145,18 +145,324 @@ MathJax.Hub.Config({
 </p></article><p id="p-893">
 	We will consider proofs of the three properties of logarithms in the Homework problems. For now, study the examples below, keeping in mind that a logarithm is an exponent.
 </p>
-<ol style="list-style-type: decimal;"><li id="li-731">
+<ol style="list-style-type: decimal;">
+<li id="li-731">
 		Property (1):
 		\begin{align*}
 		\log_{2}{32} \amp=\log_{2}{(4 \cdot 8)} \amp\amp=\log_2 4 +\log_2 8 \amp \text{ because }2^\alert{5}  \amp= 2^\alert{2} \cdot 2^\alert{3} \\
 		 \alert{5} 		\amp\amp\amp = \alert{2} + \alert{3}		\amp 32 					\amp = 4 \cdot 8
 		\end{align*}
+	</li>
+<li id="li-732">
+		Property (2):
+		\begin{align*}
+		\log_{2}{8} \amp=\log_{2}{\frac{16}{2}} \amp\amp=\log_2{16}-\log_2 2 \amp \text{ because }2^\alert{3}  \amp= \frac{2^\alert{4}}{\cdot 2^\alert{1}} \\
+		 \alert{3} 		\amp\amp\amp = \alert{4} - \alert{1}		\amp 8 					\amp = \frac{16}{2}
+		\end{align*}
+	</li>
+<li id="li-733">
+		Property (3):
+		\begin{align*}
+		\log_{2}{64} \amp=\log_{2}{(4)^3} \amp\amp=3\log_2 4  \amp \text{ because }\left(2^{\alert{2}}\right)^\alert{3}  \amp= 2^\alert{6}  \\
+		 \alert{6} 		\amp\amp\amp = \alert{3}\cdot \alert{2}		\amp (4)^\alert{3} 					\amp = 64
+		\end{align*}
 
-	</li></ol>
-<section class="subsection" id="subsection-101"><header title="Subsection 4.4.1 "><h1 class="heading hide-type" alt="Subsection 4.4.1 ">
-<span class="type">Subsection</span><span class="codenumber">4.4.1</span><span class="title"></span>
+	</li>
+</ol>
+<section class="subsection" id="subsection-101"><header title="Subsection  Using the Properties of Logarithms"><h1 class="heading hide-type" alt="Subsection  Using the Properties of Logarithms">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Using the Properties of Logarithms</span>
 </h1></header><p id="p-894">
-</p></section></section></div></main>
+	Of course, these properties are useful not so much for computing logs but rather for simplifying expressions that contain variables. We will use them to solve exponential equations. But first, we will practice applying the properties. In Example 1, we rewrite one log in terms of simpler logs.
+</p>
+<article class="example-like" id="example-use-log-property"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.4.1</span>
+</h5>
+<p id="p-895">
+	Simplify \(\log_{b}{xy}\).
+</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-111" id="solution-111"><span class="">Solution</span></a></span><span id="hk-solution-111" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-896">
+	First, we write \(\sqrt{xy}\) using a fractional exponent:
+	\begin{equation*}\log_{b}{xy} = \log_{b}{(xy)^{1/2}}\end{equation*}
+	Then we apply Property (3) to rewrite the exponent as a coefficient:
+	\begin{equation*}\log{b}{(xy)^{1/2}} = \frac{1}{2}\log_{b}{(xy)}\end{equation*}
+	Finally, by Property (1) we write the log of a product as a sum of logs:
+	\begin{equation*}\frac{1}{2}(\log_{b}{xy}) = \frac{1}{2}(\log_{b}{x} + \log_{b}{y})\end{equation*}
+	Thus, \(\log_{b}\sqrt{xy} = \frac{1}{2}(\log_{b}{x} + \log_{b}{y})\).
+</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-use-log-property" id="exercise-use-log-property"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">4.4.2</span>
+</h5></a></div>
+<div id="hk-exercise-use-log-property" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-897">
+	Simplify \(\log_{b}{xy^2}\).
+</p></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<article class="remark-like" id="warning-2"><h5 class="heading">
+<span class="type">Caution</span><span class="codenumber">4.4.3</span>
+</h5>
+<p id="p-898">
+	Be careful when using the properties of logarithms! Compare the statements below:
+	<ol style="list-style-type: decimal;">
+<li id="li-734">
+<p id="p-899">\(\log_{b}{(2x)} = \log_{b}{2} + \log_{b}{x}  \text{ by Property 1,}\)</p>
+<p id="p-900">but</p>
+<p id="p-901">\(\log_{b}{(2 + x)} \ne \log_{b}{2} + \log_{b}{x}\)</p>
+<p id="p-902"></p>
+</li>
+<li id="li-735">
+<p id="p-903">\(\log_{b}{\left(\frac{x}{5}\right)}= \log_b x − \log_b 5 \text{ by Property 2,}\)</p>
+<p id="p-904">but</p>
+<p id="p-905">\(\log_{b}{\left(\frac{x}{5}\right)} \ne  \frac{\log_b x}{\log_b 5}\)</p>
+</li>
+</ol>
+</p></article><p id="p-906">
+	We can also use the properties of logarithms to combine sums and differences of logarithms into one logarithm.
+</p>
+<article class="example-like" id="example-rewrite-as-single-log"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.4.4</span>
+</h5>
+<p id="p-907">
+	Express \(3(\log_b x − \log_b y)\) as a single logarithm with a coefficient of \(1\).
+</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-112" id="solution-112"><span class="">Solution</span></a></span><span id="hk-solution-112" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-908">
+	We begin by applying Property (2) to combine the logs.
+	\begin{equation*}3(\log_b x − \log_b y) = 3 \log_{b}\left(\frac{x}{y}\right)\end{equation*}
+	Then, using Property (3), we replace the coefficient \(3\) by an exponent \(3\).
+	\begin{equation*}3 \log_{b}\left(\frac{x}{y}\right)=\log_{b}\left(\frac{x}{y}\right)^3\end{equation*}
+</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-rewrite-as-single-log" id="exercise-rewrite-as-single-log"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">4.4.5</span>
+</h5></a></div>
+<div id="hk-exercise-rewrite-as-single-log" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-909">
+		Express \(2\log_b x + 4\log_{b}{(x + 3)}\) as a single logarithm with a coefficient of \(1\).
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-102"><header title="Subsection  Solving Exponential Equations"><h1 class="heading hide-type" alt="Subsection  Solving Exponential Equations">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Solving Exponential Equations</span>
+</h1></header><p id="p-910">
+	By using Property (3), we can now solve exponential equations in which the base is not \(10\). For example, to solve the equation
+	\begin{equation*}5^x = 7\end{equation*}
+	we could rewrite the equation in logarithmic form to obtain the exact solution
+	\begin{equation*}x = \log_{5}{7}\end{equation*}
+	However, we cannot evaluate \(\log_{5}{7}\); there is no log base \(5\) button on the calculator. If we want a decimal approximation for the solution, we begin by taking the base \(10\) logarithm of both sides, even though the base of the power is not \(10\). This gives us
+	\begin{equation*}\log_{10}{(5^x)} = \log_{10}{7}\end{equation*}
+	Then we use Property (3) to rewrite the left side as
+	\begin{equation*}x \log_{10}{5} = \log_{10}{7}\end{equation*}
+	Note how using Property (3) allows us to solve the equation: The variable, \(x\), is no longer in the exponent, and it is multiplied by a constant, \(\log_{10}{5}\). To finish the solution, we divide both sides by \(\log_{10}{5}\) to get
+	\begin{equation*}x = \frac{\log_{10}{7}}{\log_{10}{5}}\end{equation*}
+	On your calculator, enter the sequence
+</p>
+<p id="p-911">
+	<tt class="code-inline tex2jax_ignore">LOG</tt> \(7\) <tt class="code-inline tex2jax_ignore">)</tt> <tt class="code-inline tex2jax_ignore">÷</tt> <tt class="code-inline tex2jax_ignore">LOG</tt> \(5\) <tt class="code-inline tex2jax_ignore">)</tt> <tt class="code-inline tex2jax_ignore">ENTER</tt>
+</p>
+<p id="p-912">
+	to find that \(x \approx 1.2091\).
+</p>
+<article class="remark-like" id="warning-3"><h5 class="heading">
+<span class="type">Caution</span><span class="codenumber">4.4.6</span>
+</h5>
+<p id="p-913">
+	Do not confuse the expression \(\frac{\log_{10}{7}}{\log_{10}{5}}\) with \(\log_{10}{\left(\frac{7}{5}\right)}\); they are not the same! Property (2) allows us to simplify \(\log{\left(\frac{x}{y}\right)}\), but not \(\frac{\log x}{\log y}\). We cannot rewrite \(\frac{\log_{10}{7}}{\log_{10}{5}}\), so we must evaluate it as \((\log 7)/(\log 5)\). You can check on your calculator that
+	\begin{equation*}\frac{\log_{10}{7}}{\log_{10}{5}}\ne \log_{10}{\left(\frac{7}{5}\right)}= \log_{10}{1.4}\end{equation*}.
+</p></article><article class="example-like" id="example-solve-exp-equation"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.4.7</span>
+</h5>
+<p id="p-914">
+	Solve \(1640 = 80 \cdot 6^{0.03x}\).
+</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-113" id="solution-113"><span class="">Solution</span></a></span><span id="hk-solution-113" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-915">
+	Divide both sides by \(80\) to obtain
+	\begin{equation*}20.5 = 6^{0.03x}\end{equation*}
+	Take the base \(10\) logarithm of both sides of the equation and use Property (3) of logarithms to get
+	\begin{equation*}\log_{10}{20.5} = \log_{10}{6^{0.03x}}= 0.03x \log_{10}{6}\end{equation*}
+	On the right side of the equation, \(x\) is multiplied by two constants, \(0.03\) and \(\log_{10}{6}\). So, to solve for \(x\) we must divide both sides of the equation by \(0.03 \log_{10}{6}\). We use a calculator to evaluate the answer:
+	\begin{equation*}x = \frac{\log_{10}{20.5}}{0.03 \log_{10}{6}}\approx 56.19\end{equation*}
+	(On your calculator, remember to enclose the denominator, \(0.03 \log_{10}{6}\), in parentheses.)
+</p></div></span>
+</div></div>
+<article class="remark-like" id="warning-4"><h5 class="heading">
+<span class="type">Caution</span><span class="codenumber">4.4.8</span>
+</h5>
+<p id="p-916">
+		In <a knowl="./knowl/example-solve-exp-equation.html" knowl-id="xref-example-solve-exp-equation" alt="Example 4.4.7 " title="Example 4.4.7 ">Example 4.4.7</a>, do not try to simplify 
+		\begin{equation*}80 \cdot 6^{0.03x} \rightarrow 480^{0.03x}~~ \text{ Incorrect!}\end{equation*}
+		Remember that the order of operations tells us to compute the power \(6^{0.03x}\) before multiplying by \(80\).
+	</p></article><p id="p-917">
+	We summarize our method for solving exponential equations as follows.
+</p>
+<article class="paragraphs" id="paragraphs-66"><h5 class="heading"><span class="title">Steps for Solving Exponential Equations</span></h5>
+<ol style="list-style-type: decimal;">
+<li id="li-736">Isolate the power on one side of the equation.</li>
+<li id="li-737">Take the log base \(10\) of both sides.</li>
+<li id="li-738">Simplify by applying Log Property (3).</li>
+<li id="li-739">Solve for the variable.</li>
+</ol></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-solve-exp-equation" id="exercise-solve-exp-equation"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">4.4.9</span>
+</h5></a></div>
+<div id="hk-exercise-solve-exp-equation" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-918">
+		Solve \(5(1.2)^{2.5x} = 77\).
+	</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-8" id="hint-8"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-8" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-919">Divide both sides by 5.</p>
+<p id="p-920">Take the log of both sides.</p>
+<p id="p-921">Apply Property (3) to simplify the left side.</p>
+<p id="p-922">Solve for x.</p></span></span></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-103"><header title="Subsection  Applications"><h1 class="heading hide-type" alt="Subsection  Applications">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Applications</span>
+</h1></header><p id="p-923">
+	By using the properties of logarithms, we can now solve equations that arise in exponential growth and decay models, no matter what base the exponential function uses.
+</p>
+<article class="example-like" id="example-population-growth"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.4.10</span>
+</h5>
+<p id="p-924">
+	The population of Silicon City was \(6500\) in \(1990\) and has been tripling every \(12\) years. When will the population reach \(75,000\)?
+</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-114" id="solution-114"><span class="">Solution</span></a></span><span id="hk-solution-114" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-925">
+	The population of Silicon City grows according to the formula
+	\begin{equation*}P(t) = 6500 \cdot 3^{t/12}\end{equation*}
+	where \(t\) is the number of years after \(1990\). We want to find the value of \(t\) for which \(P(t) = 75,000\); that is, we want to solve the equation
+	\begin{align*}
+	6500 \cdot 3^{t/12} \amp = 75,000\amp\amp\text{ Divide both sides by 6500.}\\
+	3^{t/12} \amp = \frac{150}{13} 
+	\end{align*}
+	Take the base \(10\) logarithm of both sides and solve for \(t\).
+	\begin{align*}
+	\log_{10}{(3^{t/12})} \amp = \log_{10}\left(\frac{150}{13}\right)
+	\amp\amp\text{Apply Property (3).}\\
+	\frac{t}{12}\log_{10}{3} \amp= \log_{10}\left(\frac{150}{13}\right)
+	\amp\amp\text{Divide by }\log_{10}{3}\text{; multiply by 12.}\\
+	t \amp = \frac{12 \left(\log_{10}{\frac{150}{13}}\right)}{\log_{10}{3}}\\
+	\amp\approx 26.71
+	\end{align*}
+	The population of Silicon City will reach \(75,000\) about \(27\) years after \(1990\), or in \(2017\).
+</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-traffic-growth" id="exercise-traffic-growth"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">4.4.11</span>
+</h5></a></div>
+<div id="hk-exercise-traffic-growth" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-926">
+	Traffic on U.S. highways is growing by \(2.7\)% per year. (Source: <!--Style me with CSS--><em>Time</em>, Jan. 25, 1999)
+	<ol style="list-style-type: lower-alpha;">
+<li id="li-740">Write a formula for the volume, \(V\), of traffic as a function of time, using \(V_0\) for the current volume.</li>
+<li id="li-741">How long will it take the volume of traffic to double? <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-9" id="hint-9"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-9" style="display: none;" class="tex2jax_ignore"><span class="solution">Find the value of \(t\) that gives \(V = 2V_0\).</span></span>
+</li>
+</ol>
+</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-104"><header title="Subsection  Compound Interest"><h1 class="heading hide-type" alt="Subsection  Compound Interest">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Compound Interest</span>
+</h1></header><p id="p-927">
+	The amount of money in an account that earns interest compounded annually grows exponentially according to the formula
+	\begin{equation*}A(t) = P(1 + r )^t\end{equation*}
+	(See <a href="Exponential-Growth-and-Decay.html" alt="Section 4.1 Exponential Growth and Decay" title="Section 4.1 Exponential Growth and Decay">Section 4.1</a> to review compound interest.) Many accounts compound interest more frequently than once a year. If the interest is compounded \(n\) times per year, then in \(t\) years there will be \(nt\) compounding periods, and in each period the account earns interest at a rate of \(\frac{r}{n}\). The amount accumulated is given by a generalization of our earlier formula.
+</p>
+<article class="paragraphs" id="paragraphs-67"><h5 class="heading"><span class="title">Compound Interest</span></h5>
+<p id="p-928">
+	The amount \(A(t)\) accumulated (principal plus interest) in an account bearing interest compounded \(n\) times annually is
+	\begin{equation*}A(t)=P\left(1+ \frac{r}{n}\right)^{nt}\end{equation*}
+	where  
+	<table>
+<tr>
+<td class="l m b0 r0 l0 t0"></td>
+<td class="l m b0 r0 l0 t0"></td>
+<td class="l m b0 r0 l0 t0">\(P\)</td>
+<td class="l m b0 r0 l0 t0">is the principal invested,</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0"></td>
+<td class="l m b0 r0 l0 t0"></td>
+<td class="l m b0 r0 l0 t0">\(r\)</td>
+<td class="l m b0 r0 l0 t0">is the interest rate,</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0"></td>
+<td class="l m b0 r0 l0 t0"></td>
+<td class="l m b0 r0 l0 t0">\(t\)</td>
+<td class="l m b0 r0 l0 t0">is the time period, in years.</td>
+</tr>
+</table>
+</p></article><article class="example-like" id="example-compound-interest"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.4.12</span>
+</h5>
+<p id="p-929">
+	Rashad deposited $\(1000\) in an account that pays \(4\)% interest. Calculate the amount in his account after \(5\) years if the interest is compounded
+	<ol style="list-style-type: lower-alpha;">
+<li id="li-742">semiannually</li>
+<li id="li-743">quarterly</li>
+<li id="li-744">monthly</li>
+</ol>
+</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-115" id="solution-115"><span class="">Solution</span></a></span><span id="hk-solution-115" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-745">
+<!--Style me with CSS--><em>Semiannually</em> means "twice a year,"" so we use the formula for compound interest with \(P = 1000\), \(r = 0.04\), \(n = 2\), and \(t = 5\).
+			\begin{align*}
+			A(5) \amp = 1000\left(1 + \frac{0.04}{2}\right)^{2(5)} \\
+			\amp = 1000(1.02)^{10} = 1218.99
+			\end{align*}
+			If interest is compounded semiannually, the balance in the account after \(5\) years is $\(1218.99\).
+		</li>
+<li id="li-746">
+<!--Style me with CSS--><em>Quarterly</em> means "4 times a year,"" so we use the formula for compound interest with \(P = 1000\), \(r = 0.04\), \(n = 4\), and \(t = 5\).
+			\begin{align*}
+			A(5) \amp = 1000\left(1 + \frac{0.04}{4}\right)^{4(5)} \\
+			\amp = 1000(1.01)^{20} = 1220.19
+			\end{align*}
+			If interest is compounded quarterly, the balance in the account after \(5\) years is $\(1220.19\).
+		</li>
+<li id="li-747">
+			There are \(12\) months in a year, so we use the formula for compound interest with \(P = 1000\), \(r = 0.04\), \(n = 12\), and \(t = 5\).
+			\begin{align*}
+			A(5) \amp = 1000\left(1 + \frac{0.04}{12}\right)^{12(5)}\\
+			\amp = 1000(1.003)^{60} = 1221.00
+			\end{align*}
+			If interest is compounded monthly, the balance in the account after \(5\) years is $\(1221\).
+		</li>
+</ol></div></span>
+</div></div>
+<p id="p-930">
+	In <a knowl="./knowl/example-compound-interest.html" knowl-id="xref-example-compound-interest" alt="Example 2.1.9 " title="Example 2.1.9 ">Example 2.1.9</a>, you can see that the larger the value of \(n\), the greater the value of \(A\), keeping the other parameters fixed. More frequent compounding periods result in a higher account balance.
+</p>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-compound-interest" id="exercise-compound-interest"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">4.4.13</span>
+</h5></a></div>
+<div id="hk-exercise-compound-interest" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-931">
+	Calculate the amount in Rashad’s account after \(5\) years if the interest is compounded daily. (See <a knowl="./knowl/example-compound-interest.html" knowl-id="xref-example-compound-interest" alt="Example 2.1.9 " title="Example 2.1.9 ">Example 2.1.9</a>. There are \(365\) days in a year.)
+</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-105"><header title="Subsection  Solving Formulas"><h1 class="heading hide-type" alt="Subsection  Solving Formulas">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Solving Formulas</span>
+</h1></header><p id="p-932">
+	The techniques for solving exponential equations can also be used to solve formulas involving exponential expressions for one variable in terms of the others.
+</p>
+<article class="example-like" id="example-exponential-formula"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">4.4.14</span>
+</h5>
+<p id="p-933">
+		Solve \(2C = Cb^{kt}\) for \(t\). (Assume that \(C\) and \(k \ne 0\).)
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-116" id="solution-116"><span class="">Solution</span></a></span><span id="hk-solution-116" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-934">
+		First, we divide both sides by \(C\) to isolate the power.
+		\begin{equation*}b^{kt} = 2\end{equation*}
+		Next, we take the log base \(10\) of both sides.
+		\begin{align*}
+		\log b^{kt} \amp = \log 2 \\
+		kt \log b \amp = \log 2 \amp\amp\text{Apply Log Property (3).}
+		\end{align*}
+		Finally, we divide both sides by \(k \log b\) to solve for \(t\).
+		\begin{equation*}t = \frac{\log 2}{k \log b}\end{equation*}
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-exponential-formula" id="exercise-exponential-formula"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">4.4.15</span>
+</h5></a></div>
+<div id="hk-exercise-exponential-formula" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-935">
+		Solve \(A = P(1 + r )^t\) for \(t\).
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section></section></div></main>
 </div>
 </body>
 </html>
