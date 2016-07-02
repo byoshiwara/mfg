@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-07-01T19:20:28-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG Inverse Functions</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic%7CSource+Code+Pro:400" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\alert}[1]{\mathbf{\color{magenta}{#1}}}
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+
+\newcommand\degree[0]{^{\circ}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading">
+<span class="title">Test chapter</span><span class="subtitle">test subtitle</span>
+</h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="testchap.html">Previous</a><a class="up-button button toolbar-item" href="testchap.html">Up</a><a class="next-button button toolbar-item" href="index-part-1.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="testchap.html">Previous</a><a class="up-button button toolbar-item" href="testchap.html">Up</a><a class="next-button button toolbar-item" href="index-part-1.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link active"><a href="testchap.html"><span class="codenumber">1</span><span class="title">Fake chapter</span></a></h2>
+<ul><li><a href="Inverse-Functions.html" class="active">Inverse Functions</a></li></ul>
+<h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="colophon-1.html"><span class="title">Colophon</span></a></h2>
+<ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Inverse-Functions"><header title="Section 1.1 Inverse Functions"><h1 class="heading hide-type" alt="Section 1.1 Inverse Functions">
+<span class="type">Section</span><span class="codenumber">1.1</span><span class="title">Inverse Functions</span><a href="Inverse-Functions.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-1">
+	When you buy a house, your monthly mortgage payment is a function of the size of the loan. <a knowl="./knowl/table-mortgage.html" knowl-id="xref-table-mortgage" alt="Table 1.1.1 " title="Table 1.1.1 ">Table 1.1.1</a> shows mortgage payments on \(30\)-year loans of various sizes at \(6\)% interest.
+</p>
+<figure class="figure-like" id="table-mortgage"><table>
+<tr>
+<td class="l m b1 r1 l1 t3">Loan amount, \(L\)</td>
+<td class="c m b1 r1 l0 t3">\(150,000\)</td>
+<td class="c m b1 r1 l0 t3">\(175,000\)</td>
+<td class="c m b1 r1 l0 t3">\(200,000\)</td>
+<td class="c m b1 r1 l0 t3">\(225,000\)</td>
+<td class="c m b1 r1 l0 t3">\(250,000\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0">Mortgage payment, \(M\)</td>
+<td class="c m b1 r1 l0 t0">\(899.33\)</td>
+<td class="c m b1 r1 l0 t0">\(1049.21\)</td>
+<td class="c m b1 r1 l0 t0">\(1199.10\)</td>
+<td class="c m b1 r1 l0 t0">\(1348.99\)</td>
+<td class="c m b1 r1 l0 t0">\(1498.88\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.1.1</span></figcaption></figure><p id="p-2">
+	For the function \(M = f (L)\), the input value is the amount of the loan, and the output is the mortgage payment. However, when you are shopping for a house, you may think of the mortgage payment as the input variable: If you can afford a certain monthly mortgage payment, how large a loan can you finance? Now the mortgage payment is the input value, and the loan amount is the output. By interchanging the inputs and outputs, we define a new function, \(L = g(M)\), shown in <a knowl="./knowl/table-mortgage-inv.html" knowl-id="xref-table-mortgage-inv" alt="Table 1.1.2 " title="Table 1.1.2 ">Table 1.1.2</a>.
+</p>
+<figure class="figure-like" id="table-mortgage-inv"><table>
+<tr>
+<td class="l m b1 r1 l1 t3">Mortgage payment, \(M\)</td>
+<td class="c m b1 r1 l0 t3">\(899.33\)</td>
+<td class="c m b1 r1 l0 t3">\(1049.21\)</td>
+<td class="c m b1 r1 l0 t3">\(1199.10\)</td>
+<td class="c m b1 r1 l0 t3">\(1348.99\)</td>
+<td class="c m b1 r1 l0 t3">\(1498.88\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0">Loan amount, \(L\)</td>
+<td class="c m b1 r1 l0 t0">\(150,000\)</td>
+<td class="c m b1 r1 l0 t0">\(175,000\)</td>
+<td class="c m b1 r1 l0 t0">\(200,000\)</td>
+<td class="c m b1 r1 l0 t0">\(225,000\)</td>
+<td class="c m b1 r1 l0 t0">\(250,000\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.1.2</span></figcaption></figure><p id="p-3">
+	This new function gives the same information as the original function, \(f\), but from a different point of view. We call the function \(g\) the <em class="terminology">inverse function</em> for \(f\). The elements of the <!--Style me with CSS--><em>range</em> of \(f\) are used as the input values for \(g\), and the output values of \(g\) are the corresponding domain elements of \(f\). For example, from the tables you can verify that \(f (200,000) = 1199.10\), and \(g(1199.10) = 200,000\). In fact, this property defines the inverse function.
+</p>
+<article class="definition-like" id="definition-1"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">1.1.3</span><span class="title">Inverse Functions</span>
+</h5>
+<p id="p-4"></p>
+<p id="p-5">
+		Suppose \(g\) is the <em class="terminology">inverse function</em> for \(f\). Then
+		\begin{equation*}g(b) = a \text{ if and only if }f(a) = b\end{equation*}
+	</p></article><article class="example-like" id="example-inverse-functions"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.1.4</span>
+</h5>
+<p id="p-6">
+	Suppose \(g\) is the inverse function for \(f\), and we know the following function values for \(f\):
+	\begin{equation*}f (−3) = 5, ~~ f (2) = 1, ~~ f (5) = 0\end{equation*}
+	Find \(g(5)\) and \(g(0)\).
+</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="">Solution</span></a></span><span id="hk-solution-1" style="display: none;" class="tex2jax_ignore"><div class="remark-like">
+<p id="p-7">
+	We know that \(g(5) = −3\) because \(f (−3) = 5\), and \(g(0) = 5\) because \(f (5) = 0\). Tables may be helpful in visualizing the two functions, as shown below.
+</p>
+<div class="sidebyside" id="sidebyside-1">
+<figure class="left" id="table-3" style="width:24%;vertical-align:middle;text-align:center;"><table>
+<tr><td class="c m b1 r1 l1 t3" colspan="2">\(y=f(x)\)</td></tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(x\)</td>
+<td class="c m b1 r1 l0 t0">\(y\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-3\)</td>
+<td class="c m b1 r1 l0 t0">\(5\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(5\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+</tr>
+</table></figure><p id="p-8" class="middle" style="width:48%;vertical-align:middle;text-align:center;">→ Interchange the columns →</p>
+<figure class="right" id="table-4" style="width:24%;vertical-align:middle;text-align:center;"><table>
+<tr><td class="c m b1 r1 l1 t3" colspan="2">\(x=g(y)\)</td></tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(y\)</td>
+<td class="c m b1 r1 l0 t0">\(x\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(5\)</td>
+<td class="c m b1 r1 l0 t0">\(-3\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(5\)</td>
+</tr>
+</table></figure>
+</div>
+<p id="p-9">
+	For the function \(f\), the input variable is \(x\) and the output variable is \(y\). For the inverse function \(g\), the roles of the variables are interchanged: \(y\) is now the input and \(x\) is the output.
+</p>
+</div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-inverse-functions" id="exercise-inverse-functions"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.1.5</span>
+</h5></a></div>
+<div id="hk-exercise-inverse-functions" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-10">
+		Suppose \(g\) is the inverse function for \(f\), and suppose we know the following function values for f :
+		\begin{equation*}f (−1) = 0,~~ f (0) = 1, ~~ f (1) = 2\end{equation*}
+		Find \(g(0)\) and \(g(1)\).
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<section class="subsection" id="subsection-1"><header title="Subsection  Finding a Formula for the Inverse Function"><h1 class="heading hide-type" alt="Subsection  Finding a Formula for the Inverse Function">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Finding a Formula for the Inverse Function</span>
+</h1></header><p id="p-11">
+	If a function is given by a table of values, we can interchange the columns (or rows) of the table to obtain the inverse function. Swapping the columns works because we are really interchanging the input and output variables. If a function is defined by an equation, we can find a formula for its inverse function in the same way: Interchange the roles of the variables in the equation so that the old output variable becomes the new input variable.
+</p>
+<article class="example-like" id="example-inverse-formula"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.1.6</span>
+</h5>
+<ol style="list-style-type: lower-alpha;">
+<li id="li-1">
+			The function \(H = f (t) = 6 + 2t\) gives the height of corn seedlings, in inches, \(t\) days after they are planted. Find a formula for the inverse function and explain its meaning in this context.
+		</li>
+<li id="li-2">
+			Make a table of values for \(f (t)\) and a table for its inverse function.
+		</li>
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="">Solution</span></a></span><span id="hk-solution-2" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-3">
+			Write the equation for \(f\) in the form
+			\begin{equation*}H = 6 + 2t\end{equation*}
+			In this equation, \(t\) is the input and \(H\) is the output. We interchange the roles of the variables by solving for \(t\) to obtain
+			\begin{equation*}t = \frac{H − 6}{2}\end{equation*}
+			In this equation, \(H\) is the input and \(t\) is the output. The formula for the inverse function is \(t=g(H) = \frac{H − 6}{2}\). The function \(g\) gives the number of days it will take the corn seedlings to grow to a height of \(H\) inches.
+		</li>
+<li id="li-4">
+			To make a table for \(f\), we choose values for \(t\) and evaluate \(f (t) = 6 + 2t\) at those \(t\)-values, as shown in <a knowl="./knowl/table-height-vs-time.html" knowl-id="xref-table-height-vs-time" alt="Table 1.1.7 " title="Table 1.1.7 ">Table 1.1.7</a>.
+			<div class="sidebyside" id="sidebyside-2">
+<figure class="left" id="table-height-vs-time" style="width:48%;vertical-align:middle;text-align:center;"><table>
+<tr><td class="c m b1 r1 l1 t3" colspan="2">\(H=f(t)\)</td></tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(t\)</td>
+<td class="c m b1 r1 l0 t0">\(H\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(6\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(8\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(10\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(3\)</td>
+<td class="c m b1 r1 l0 t0">\(12\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.1.7</span></figcaption></figure><figure class="right" id="table-time-vs-height" style="width:48%;vertical-align:middle;text-align:center;"><table>
+<tr><td class="c m b1 r1 l1 t3" colspan="2">\(t=g(H)\)</td></tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(H\)</td>
+<td class="c m b1 r1 l0 t0">\(t\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(6\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(8\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(10\)</td>
+<td class="c m b1 r1 l0 t0">\(2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(12\)</td>
+<td class="c m b1 r1 l0 t0">\(3\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.1.8</span></figcaption></figure>
+</div>
+			To make a table for \(g\), we could choose values for \(H\) and evaluate \(\frac{H−6}{2}\), but because \(g\) is the inverse function for \(f\), we can simply interchange the columns in our table for \(f\), as shown in <a knowl="./knowl/table-time-vs-height.html" knowl-id="xref-table-time-vs-height" alt="Table 1.1.8 " title="Table 1.1.8 ">Table 1.1.8</a>. You can check that the values in the second table do satisfy the formula for the inverse function, \(g(H) = \frac{H−6}{2}\). Note once again that the two tables show the same relationship between \(t\) and \(H\), but the roles of input and output have been interchanged. The function \(f\) tells us the height of the seedlings after \(t\) days, and \(g\) tells us how long it will take the seedlings to grow to height \(H\).
+		</li>
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-inverse-formula" id="exercise-inverse-formula"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1.1.9</span>
+</h5></a></div>
+<div id="hk-exercise-inverse-formula" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-12">
+	Carol can burn \(600\) calories per hour bicycling and \(400\) calories per hour swimming. She would like to lose \(5\) pounds, which is equivalent to \(16,000\) calories.
+	<ol style="list-style-type: lower-alpha;">
+<li id="li-5">
+			Write an equation relating the number of hours of cycling, \(x\), and the number of hours swimming, \(y\), that Carol must spend to lose \(5\) pounds.
+		</li>
+<li id="li-6">
+			Write \(y\) as a function of \(x\), \(y = f (x)\). What does \(f (10)\) tell you?
+		</li>
+<li id="li-7">
+			Find the inverse function, \(x = g(y)\). What does \(g(10)\) tell you?
+		</li>
+</ol>
+</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-2"><header title="Subsection  Inverse Function Notation"><h1 class="heading hide-type" alt="Subsection  Inverse Function Notation">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Inverse Function Notation</span>
+</h1></header><p id="p-13">
+	If the inverse of a function \(f\) is also a function, we often denote the inverse by the symbol \(f^{-1}\), read "\(f\) inverse."" This notation makes it clear that the two functions are related in a special way. For example, the function \(f (t) = 6 + 2t\) in <a knowl="./knowl/example-inverse-formula.html" knowl-id="xref-example-inverse-formula" alt="Example 1.1.6 " title="Example 1.1.6 ">Example 1.1.6</a> has inverse function \(f^{−1}(H) = \frac{H −6}{2}\).
+</p></section></section></div></main>
+</div>
+</body>
+</html>

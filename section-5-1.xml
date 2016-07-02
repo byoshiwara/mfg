@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- <mathbook><book> -->
+
+<section xml:id="Inverse-Functions"   xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Inverse Functions</title>
+
+<p>
+	When you buy a house, your monthly mortgage payment is a function of the size of the loan. <xref ref="table-mortgage" autoname="yes"/> shows mortgage payments on <m>30</m>-year loans of various sizes at <m>6</m><percent/> interest.
+</p>
+<table xml:id="table-mortgage"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor"><col halign="left"/>
+    <row bottom="minor">
+        <cell>Loan amount, <m>L</m></cell>
+        <cell><m>150,000</m></cell>
+        <cell><m>175,000</m></cell>
+        <cell><m>200,000</m></cell>
+        <cell><m>225,000</m></cell>
+        <cell><m>250,000</m></cell>
+    </row>
+    <row>
+        <cell>Mortgage payment, <m>M</m></cell>
+        <cell><m>899.33</m></cell>
+        <cell><m>1049.21</m></cell>
+        <cell><m>1199.10</m></cell>
+        <cell><m>1348.99</m></cell>
+        <cell><m>1498.88</m></cell>
+    </row>
+</tabular><caption></caption></table>
+
+<p>
+	For the function <m>M = f (L)</m>, the input value is the amount of the loan, and the output is the mortgage payment. However, when you are shopping for a house, you may think of the mortgage payment as the input variable: If you can afford a certain monthly mortgage payment, how large a loan can you finance? Now the mortgage payment is the input value, and the loan amount is the output. By interchanging the inputs and outputs, we define a new function, <m>L = g(M)</m>, shown in <xref ref="table-mortgage-inv" autoname="yes"/>.
+</p>
+<table xml:id="table-mortgage-inv"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor"><col halign="left"/>
+    <row>
+        <cell>Mortgage payment, <m>M</m></cell>
+        <cell><m>899.33</m></cell>
+        <cell><m>1049.21</m></cell>
+        <cell><m>1199.10</m></cell>
+        <cell><m>1348.99</m></cell>
+        <cell><m>1498.88</m></cell>
+    </row>
+    <row bottom="minor">
+        <cell>Loan amount, <m>L</m></cell>
+        <cell><m>150,000</m></cell>
+        <cell><m>175,000</m></cell>
+        <cell><m>200,000</m></cell>
+        <cell><m>225,000</m></cell>
+        <cell><m>250,000</m></cell>
+    </row>
+</tabular><caption></caption></table>
+<p>
+	This new function gives the same information as the original function, <m>f</m>, but from a different point of view. We call the function <m>g</m> the <term index="yes">inverse function</term> for <m>f</m>. The elements of the <em>range</em> of <m>f</m> are used as the input values for <m>g</m>, and the output values of <m>g</m> are the corresponding domain elements of <m>f</m>. For example, from the tables you can verify that <m>f (200,000) = 1199.10</m>, and <m>g(1199.10) = 200,000</m>. In fact, this property defines the inverse function.
+</p>
+<definition><title>Inverse Functions</title>
+<statement><p></p>
+	<p>
+		Suppose <m>g</m> is the <term index="yes">inverse function</term> for <m>f</m>. Then
+		<me>g(b) = a \text{ if and only if }f(a) = b</me>
+	</p>
+</statement>
+</definition>
+
+<example xml:id="example-inverse-functions">
+<p>
+	Suppose <m>g</m> is the inverse function for <m>f</m>, and we know the following function values for <m>f</m>:
+	<me>f (−3) = 5, ~~ f (2) = 1, ~~ f (5) = 0</me>
+	Find <m>g(5)</m> and <m>g(0)</m>.
+</p>
+<solution>
+<p>
+	We know that <m>g(5) = −3</m> because <m>f (−3) = 5</m>, and <m>g(0) = 5</m> because <m>f (5) = 0</m>. Tables may be helpful in visualizing the two functions, as shown below.
+</p>
+<sidebyside>
+<table valign="middle" width="25%"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+        <row bottom="minor">
+        	<cell colspan="2" halign="center"><m>y=f(x)</m></cell>
+        </row>
+        <row>
+            <cell><m>x</m></cell>
+            <cell><m>y</m></cell>
+        </row>
+        <row>
+            <cell><m>-3</m></cell>
+            <cell><m>5</m></cell>
+        </row>
+        <row>
+            <cell><m>2</m></cell>
+            <cell><m>1</m></cell>
+        </row>
+        <row>
+            <cell><m>5</m></cell>
+            <cell><m>0</m></cell>
+        </row>
+    </tabular></table>
+    <p halign="center" valign="middle">→ Interchange the columns →</p>
+	<table valign="middle" width="25%"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+        <row bottom="minor">
+        	<cell colspan="2" halign="center"><m>x=g(y)</m></cell>
+        </row>
+        <row>
+            <cell><m>y</m></cell>
+            <cell><m>x</m></cell>
+        </row>
+        <row>
+            <cell><m>5</m></cell>
+            <cell><m>-3</m></cell>
+        </row>
+        <row>
+            <cell><m>1</m></cell>
+            <cell><m>2</m></cell>
+        </row>
+        <row>
+            <cell><m>0</m></cell>
+            <cell><m>5</m></cell>
+        </row>
+    </tabular></table>
+</sidebyside>
+<p>
+	For the function <m>f</m>, the input variable is <m>x</m> and the output variable is <m>y</m>. For the inverse function <m>g</m>, the roles of the variables are interchanged: <m>y</m> is now the input and <m>x</m> is the output.
+</p>
+</solution>
+</example>
+
+<exercise xml:id="exercise-inverse-functions"><statement>
+	<p>
+		Suppose <m>g</m> is the inverse function for <m>f</m>, and suppose we know the following function values for f :
+		<me>f (−1) = 0,~~ f (0) = 1, ~~ f (1) = 2</me>
+		Find <m>g(0)</m> and <m>g(1)</m>.
+	</p>
+</statement></exercise>
+
+
+
+
+<subsection><title>Finding a Formula for the Inverse Function</title>
+<p>
+	If a function is given by a table of values, we can interchange the columns (or rows) of the table to obtain the inverse function. Swapping the columns works because we are really interchanging the input and output variables. If a function is defined by an equation, we can find a formula for its inverse function in the same way: Interchange the roles of the variables in the equation so that the old output variable becomes the new input variable.
+</p>
+<example xml:id="example-inverse-formula">
+	<ol label="*a*">
+		<li>
+			The function <m>H = f (t) = 6 + 2t</m> gives the height of corn seedlings, in inches, <m>t</m> days after they are planted. Find a formula for the inverse function and explain its meaning in this context.
+		</li>
+		<li>
+			Make a table of values for <m>f (t)</m> and a table for its inverse function.
+		</li>
+	</ol>
+<solution>
+	<ol label="*a*">
+		<li>
+			Write the equation for <m>f</m> in the form
+			<me>H = 6 + 2t</me>
+			In this equation, <m>t</m> is the input and <m>H</m> is the output. We interchange the roles of the variables by solving for <m>t</m> to obtain
+			<me>t = \frac{H − 6}{2}</me>
+			In this equation, <m>H</m> is the input and <m>t</m> is the output. The formula for the inverse function is <m>t=g(H) = \frac{H − 6}{2}</m>. The function <m>g</m> gives the number of days it will take the corn seedlings to grow to a height of <m>H</m> inches.
+		</li>
+		<li>
+			To make a table for <m>f</m>, we choose values for <m>t</m> and evaluate <m>f (t) = 6 + 2t</m> at those <m>t</m>-values, as shown in <xref ref="table-height-vs-time" autoname="yes"/>.
+			<sidebyside>
+			<table xml:id="table-height-vs-time" valign="middle" ><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+			        <row bottom="minor">
+			        	<cell colspan="2" halign="center"><m>H=f(t)</m></cell>
+			        </row>
+			        <row>
+			            <cell><m>t</m></cell>
+			            <cell><m>H</m></cell>
+			        </row>
+			        <row>
+			            <cell><m>0</m></cell>
+			            <cell><m>6</m></cell>
+			        </row>
+			        <row>
+			            <cell><m>1</m></cell>
+			            <cell><m>8</m></cell>
+			        </row>
+			        <row>
+			            <cell><m>2</m></cell>
+			            <cell><m>10</m></cell>
+			        </row>
+			        <row>
+			            <cell><m>3</m></cell>
+			            <cell><m>12</m></cell>
+			        </row>
+			    </tabular><caption></caption></table>
+
+				<table xml:id="table-time-vs-height" valign="middle" ><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+			        <row bottom="minor">
+			        	<cell colspan="2" halign="center"><m>t=g(H)</m></cell>
+			        </row>
+			        <row>
+			            <cell><m>H</m></cell>
+			            <cell><m>t</m></cell>
+			        </row>
+			        <row>
+			            <cell><m>6</m></cell>
+			            <cell><m>0</m></cell>
+			        </row>
+			        <row>
+			            <cell><m>8</m></cell>
+			            <cell><m>1</m></cell>
+			        </row>
+			        <row>
+			            <cell><m>10</m></cell>
+			            <cell><m>2</m></cell>
+			        </row>
+			        <row>
+			            <cell><m>12</m></cell>
+			            <cell><m>3</m></cell>
+			        </row>
+			    </tabular><caption></caption></table>
+			</sidebyside>
+			To make a table for <m>g</m>, we could choose values for <m>H</m> and evaluate <m>\frac{H−6}{2}</m>, but because <m>g</m> is the inverse function for <m>f</m>, we can simply interchange the columns in our table for <m>f</m>, as shown in <xref ref="table-time-vs-height" autoname="yes"/>. You can check that the values in the second table do satisfy the formula for the inverse function, <m>g(H) = \frac{H−6}{2}</m>. Note once again that the two tables show the same relationship between <m>t</m> and <m>H</m>, but the roles of input and output have been interchanged. The function <m>f</m> tells us the height of the seedlings after <m>t</m> days, and <m>g</m> tells us how long it will take the seedlings to grow to height <m>H</m>.
+		</li>
+	</ol>
+</solution>
+</example>
+
+<exercise xml:id="exercise-inverse-formula"><statement>
+<p>
+	Carol can burn <m>600</m> calories per hour bicycling and <m>400</m> calories per hour swimming. She would like to lose <m>5</m> pounds, which is equivalent to <m>16,000</m> calories.
+	<ol label="*a*">
+		<li>
+			Write an equation relating the number of hours of cycling, <m>x</m>, and the number of hours swimming, <m>y</m>, that Carol must spend to lose <m>5</m> pounds.
+		</li>
+		<li>
+			Write <m>y</m> as a function of <m>x</m>, <m>y = f (x)</m>. What does <m>f (10)</m> tell you?
+		</li>
+		<li>
+			Find the inverse function, <m>x = g(y)</m>. What does <m>g(10)</m> tell you?
+		</li>
+	</ol>
+</p>
+</statement></exercise>
+
+</subsection>
+
+
+
+
+<subsection><title>Inverse Function Notation</title>
+<p>
+	If the inverse of a function <m>f</m> is also a function, we often denote the inverse by the symbol <m>f^{-1}</m>, read "<m>f</m> inverse."" This notation makes it clear that the two functions are related in a special way. For example, the function <m>f (t) = 6 + 2t</m> in <xref ref="example-inverse-formula" autoname="yes"/> has inverse function <m>f^{−1}(H) = \frac{H −6}{2}</m>.
+</p>
+</subsection>
+
+
+</section> 
+<!-- </book>  </mathbook> -->

@@ -1,164 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- <mathbook><book> -->
-<chapter xml:id="chap4"  xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Exponential Functions</title>
+<chapter xml:id="chap5"  xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Logarithmic Functions</title>
 <introduction>
-<p><image source="images/computer-chip" alt="computer chip, Andre Kudyusov/Getty Images"  width="60%"  /></p>
+<p><image source="images/neurons" alt="neurons, 3D4Medicalcom/Getty Images"  width="60%"  /></p>
 <p>
-    We next consider another important family of functions, called <term>exponential functions</term>. These functions describe growth by a constant factor in equal time periods. Exponential functions model many familiar processes, including the growth of populations, compound interest, and radioactive decay.
+    In <xref ref="chap4" autoname="yes"/>, we used logarithms to solve exponential equations. In this chapter, we consider logarithmic functions as models in their own right. We also study another base for exponential and logarithmic functions, the natural base <m>e</m>, which is the most useful base for many scientific applications.
 </p>
 <p>
-    In 1965, Gordon Moore, the cofounder of Intel, observed that the number of transistors on a computer chip had doubled every year since the integrated circuit was invented. Moore predicted that the pace would slow down a bit, but the number of transistors would continue to double every 2 years. More recently, data density has doubled approximately every 18 months, and this is the current definition of Moore's law. Most experts, including Moore himself, expect Moore's law to hold for at least another two decades.
+    In 1885, the German philosopher Hermann Ebbinghaus conducted one of the first experiments on memory, using himself as a subject. He memorized lists of nonsense syllables and then tested his memory of the syllables at intervals ranging from 20 minutes to 31 days. After one hour, he remembered less than 50<percent/> of the items, but he found that the rate of forgetting leveled off over time. He modeled his data by the function
+    <me>y = \frac{184}{2.88 \log t + 1.84}</me>
 </p>
-<Investigation><title>Population Growth</title></Investigation>
-<paragraphs><title>Investigation: Population Growth</title><p>
-<ol label="*A*">
-    <li>In a laboratory experiment, researchers establish a colony of <m>100</m> bacteria and monitor its growth. The colony triples in population every day.
-    <ol label="*1*">
-        <li>Fill in the table showing the population P(t) of bacteria t days later.
-        <table>
-            <tabular halign="center" right="minor" left="minor" bottom="minor">
-                <col top="minor" />
-                <col top="minor" />
-                <col />
-                <col halign="left"/>
-                        
-                <row bottom="minor">
-                    <cell><m>t</m></cell>
-                    <cell><m>P(t)</m></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                </row>
-                <row> 
-                    <cell><m>0</m></cell>
-                    <cell><m>100</m></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                    <cell top="none" right="none" bottom="none"><m>P(0)=100</m></cell>
-                </row>
-                <row> 
-                    <cell><m>1</m></cell>
-                    <cell><m></m></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                    <cell top="none" right="none" bottom="none"><m>P(1)=100\cdot 3=</m></cell>
-                </row>
-                <row> 
-                    <cell><m>2</m></cell>
-                    <cell><m></m></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                    <cell top="none" right="none" bottom="none"><m>P(2)=[100\cdot 3]\cdot 3=</m></cell>
-                </row>
-                <row> 
-                    <cell><m>3</m></cell>
-                    <cell><m></m></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                    <cell top="none" right="none" bottom="none"><m>P(3)=</m></cell>
-                </row>
-                <row> 
-                    <cell><m>4</m></cell>
-                    <cell><m></m></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                    <cell top="none" right="none" bottom="none"><m>P(4)=</m></cell>
-                </row>
-                <row> 
-                    <cell><m>5</m></cell>
-                    <cell><m></m></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                    <cell top="none" right="none" bottom="none"><m>P(5)=</m></cell>
-                </row>
-            </tabular>
-        </table>
+<sidebyside>
+<table><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+        <row bottom="minor">
+            <cell>Time elapsed</cell>
+            <cell>Percent remembered</cell>
+        </row>
+        <row>
+            <cell><m>20</m> minutes</cell>
+            <cell><m>58.2\%</m></cell>
+        </row>
+        <row>
+            <cell><m>1</m> hour</cell>
+            <cell><m>44.2\%</m></cell>
+        </row>
+        <row>
+            <cell><m>9</m> hours</cell>
+            <cell><m>35.8\%</m></cell>
+        </row>
+        <row>
+            <cell><m>1</m> day</cell>
+            <cell><m>33.7\%</m></cell>
+        </row>
+        <row>
+            <cell><m>2</m> days</cell>
+            <cell><m>27.8\%</m></cell>
+        </row>
+        <row>
+            <cell><m>6</m> days</cell>
+            <cell><m>25.4\%</m></cell>
+        </row>
+        <row>
+            <cell><m>31</m> days</cell>
+            <cell><m>21.1\%</m></cell>
+        </row>
 
-        </li>
-        <li>Plot the data points from the table and connect them with a smooth curve.
-        <figure xml:id="fig-grid-for-bacteria-population"><image source="images/fig-grid-for-bacteria-population" alt="grid for graph of bacteria population" width="50%"/></figure>
+    </tabular></table>
+<figure xml:id="fig-Ebbinghaus"><image source="images/fig-Ebbinghaus" alt="forgettng curve"/></figure>
+</sidebyside>
 
-        </li>
-        <li>Write a function that gives the population of the colony at any time <m>t</m>, in days.
-        <hint>Express the values you calculated in part (1) using powers of <m>3</m>. Do you see a connection between the value of <m>t</m> and the exponent on <m>3</m>?</hint></li>
-        <li>Graph your function from part (3) using a calculator. (Use the table to choose an appropriate domain and range.) The graph should resemble your hand-drawn graph from part (2).</li>
-        <li>Evaluate your function to find the number of bacteria present after <m>8</m> days. How many bacteria are present after <m>36</m> hours?</li>
-    </ol>
-    </li>
-    <li>Under ideal conditions, the number of rabbits in a certain area can double every <m>3</m> months. A rancher estimates that <m>60</m> rabbits live on his land.
-    <ol label="*1*">
-        <li>Fill in the table showing the population <m>P(t)</m> of rabbits <m>t</m> months later.
-<table>
-            <tabular halign="center" right="minor" left="minor" bottom="minor">
-                <col top="minor" />
-                <col top="minor" />
-                <col />
-                <col halign="left"/>
-                        
-                <row bottom="minor">
-                    <cell><m>t</m></cell>
-                    <cell><m>P(t)</m></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                </row>
-                <row> 
-                    <cell><m>0</m></cell>
-                    <cell><m>60</m></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                    <cell top="none" right="none" bottom="none"><m>P(0)=60</m></cell>
-                </row>
-                <row> 
-                    <cell><m>3</m></cell>
-                    <cell><m></m></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                    <cell top="none" right="none" bottom="none"><m>P(3)=60\cdot 2=</m></cell>
-                </row>
-                <row> 
-                    <cell><m>6</m></cell>
-                    <cell><m></m></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                    <cell top="none" right="none" bottom="none"><m>P(6)=[60\cdot 3]\cdot 2=</m></cell>
-                </row>
-                <row> 
-                    <cell><m>9</m></cell>
-                    <cell><m></m></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                    <cell top="none" right="none" bottom="none"><m>P(9)=</m></cell>
-                </row>
-                <row> 
-                    <cell><m>12</m></cell>
-                    <cell><m></m></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                    <cell top="none" right="none" bottom="none"><m>P(12)=</m></cell>
-                </row>
-                <row> 
-                    <cell><m>15</m></cell>
-                    <cell><m></m></cell>
-                    <cell top="none" right="none" bottom="none"></cell>
-                    <cell top="none" right="none" bottom="none"><m>P(15)=</m></cell>
-                </row>
-            </tabular>
-        </table>
-
-        </li>
-        <li>Plot the data points and connect them with a smooth curve.
-        <figure xml:id="fig-grid-for-rabbit-population"><image source="images/fig-grid-for-rabbit-population" alt="grid for graph of rabbit population" width="60%"/></figure>
-
-        </li>
-        <li>Write a function that gives the population of rabbits at any time <m>t</m>, in months.
-        <hint>Express the values you calculated in part (1) using powers of <m>2</m>. Note that the population of rabbits is multiplied by <m>2</m> every <m>3</m> months. If you know the value of <m>t</m>, how do you find the corresponding exponent in <m>P(t)</m>?</hint>
-        </li>
-        <li>Graph your function from part (3) using a calculator. (Use the table to choose an appropriate domain and range.) The graph should resemble your hand-drawn graph from part (2).
-        </li>
-        <li>Evaluate your function to find the number of rabbits present after <m>2</m> years. How many rabbits are present after <m>8</m> months?
-        </li>
-    </ol>
-    </li>
-</ol>
-
-</p></paragraphs>
-
- 
+<p>
+    Ebbinghaus's model uses a logarithmic function. The graph of the data is called the "forgetting curve." Ebbinghaus's work, including his application of the scientific method to his research, provides part of the foundation of modern psychology.
+</p>
 
 
 </introduction>
 
 
-    <xi:include href="./section-4-1.xml" />     <!-- Exponential Growth  -->
+    <xi:include href="./section-5-1.xml" />     <!-- Logarithmic Functions  -->
 
 </chapter> 
 <!-- </book>  </mathbook> -->
