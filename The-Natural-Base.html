@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-07-04T17:01:04-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG The Natural Base</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic%7CSource+Code+Pro:400" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\alert}[1]{\mathbf{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\mathbf{\color{blue}{#1}}}
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+
+\newcommand\degree[0]{^{\circ}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading">
+<span class="title">Modeling, Functions, and Graphs</span><span class="subtitle">Algebra for College Students</span>
+</h1>
+<p class="byline">Katherine Yoshiwara</p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="Logarithmic-Functions.html">Previous</a><a class="up-button button toolbar-item" href="chap5.html">Up</a><a class="next-button button toolbar-item" href="index-part-1.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Logarithmic-Functions.html">Previous</a><a class="up-button button toolbar-item" href="chap5.html">Up</a><a class="next-button button toolbar-item" href="index-part-1.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="biography-1.html">Author Biography</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
+<li><a href="preface-2.html">Contributors to the 5\(^\mathrm{th}\) Edition</a></li>
+</ul>
+<h2 class="link"><a href="chap1.html"><span class="codenumber">1</span><span class="title">Functions and Their Graphs</span></a></h2>
+<ul>
+<li><a href="LinMod.html">Linear Models</a></li>
+<li><a href="functions.html">Functions</a></li>
+<li><a href="graphs-of-functions.html">Graphs of Functions</a></li>
+<li><a href="slope-and-rate-of-change.html">Slope and Rate of Change</a></li>
+<li><a href="linear-functions.html">Linear Functions</a></li>
+<li><a href="linear-regression.html">Linear Regression</a></li>
+</ul>
+<h2 class="link"><a href="chap2.html"><span class="codenumber">2</span><span class="title">Modeling with Functions</span></a></h2>
+<ul>
+<li><a href="nonlinear-models.html">Nonlinear Models</a></li>
+<li><a href="basic-functions.html">Some Basic Functions</a></li>
+<li><a href="transformations.html">Transformations of Graphs</a></li>
+<li><a href="MathModels.html">Functions as Mathematical Models</a></li>
+<li><a href="AbsoluteValue.html">The Absolute Value Function</a></li>
+<li><a href="Domain-Range.html">Domain and Range</a></li>
+</ul>
+<h2 class="link"><a href="chap3.html"><span class="codenumber">3</span><span class="title">Power Functions</span></a></h2>
+<ul>
+<li><a href="Variation.html">Variation</a></li>
+<li><a href="Integer-Exponents.html">Integer Exponents</a></li>
+<li><a href="Roots-and-Radicals.html">Roots and Radicals</a></li>
+<li><a href="Rational-Exponents.html">Rational Exponents</a></li>
+<li><a href="Joint-Variation.html">Joint Variation</a></li>
+</ul>
+<h2 class="link"><a href="chap4.html"><span class="codenumber">4</span><span class="title">Exponential Functions</span></a></h2>
+<ul>
+<li><a href="Exponential-Growth-and-Decay.html">Exponential Growth and Decay</a></li>
+<li><a href="Exponential-Functions.html">Exponential Functions</a></li>
+<li><a href="Logarithms.html">Logarithms</a></li>
+<li><a href="Properties-of-Logarithms.html">Properties of Logarithms</a></li>
+<li><a href="Exponential-Models.html">Exponential Models</a></li>
+</ul>
+<h2 class="link active"><a href="chap5.html"><span class="codenumber">5</span><span class="title">Logarithmic Functions</span></a></h2>
+<ul>
+<li><a href="Inverse-Functions.html">Inverse Functions</a></li>
+<li><a href="Logarithmic-Functions.html">Logarithmic Functions</a></li>
+<li><a href="The-Natural-Base.html" class="active">The Natural Base</a></li>
+</ul>
+<h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="colophon-2.html"><span class="title">Colophon</span></a></h2>
+<ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="The-Natural-Base"><header title="Section 5.3 The Natural Base"><h1 class="heading hide-type" alt="Section 5.3 The Natural Base">
+<span class="type">Section</span><span class="codenumber">5.3</span><span class="title">The Natural Base</span><a href="The-Natural-Base.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-1071">
+	There is another base for logarithms and exponential functions that is often used in applications. This base is an irrational number called \(e\), where
+	\begin{equation*}e \approx 2.71828182845\end{equation*}
+	The number \(e\) is essential for many advanced topics, and it is often called the <em class="terminology">natural base</em>.
+</p>
+<section class="subsection" id="subsection-121"><header title="Subsection  The Natural Exponential Function"><h1 class="heading hide-type" alt="Subsection  The Natural Exponential Function">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">The Natural Exponential Function</span>
+</h1></header><p id="p-1072">
+	The <em class="terminology">natural exponential function</em> is the function \(f(x) = e^x\). Values for \(e^x\) can be obtained with a calculator using the \(\boxed{e^x}\) key ( <tt class="code-inline tex2jax_ignore">2nd</tt> <tt class="code-inline tex2jax_ignore">LN</tt> on most calculators). For example, you can evaluate \(e^1\) by pressing
+</p>
+<p id="p-1073">
+	<tt class="code-inline tex2jax_ignore">2nd</tt> <tt class="code-inline tex2jax_ignore">LN</tt> \(1\)
+</p>
+<p id="p-1074">
+	to confirm the value of \(e\) given above.
+</p>
+<p id="p-1075">
+	Because \(e\) is a number between \(2\) and \(3\), the graph of \(f(x) = e^x\) lies between the graphs of \(y = 2^x\) and \(y = 3^x\). Compare the tables of values (<a knowl="./knowl/table-3-exponentials.html" knowl-id="xref-table-3-exponentials" alt="Table 5.3.1 " title="Table 5.3.1 ">Table 5.3.1</a>) and the graphs of the three functions in <a knowl="./knowl/fig-3-exponentials.html" knowl-id="xref-fig-3-exponentials" alt="Figure 5.3.2 " title="Figure 5.3.2 ">Figure 5.3.2</a>. As with other exponential functions, the domain of the natural exponential function includes all real numbers, and its range is the set of positive numbers.
+</p>
+<div class="sidebyside" id="sidebyside-86">
+<figure class="left" id="table-3-exponentials" style="width:48%;vertical-align:middle;text-align:center;"><table>
+<tr>
+<td class="c m b3 r1 l1 t3">\(x\)</td>
+<td class="c m b3 r1 l0 t3">\(y=2^x\)</td>
+<td class="c m b3 r1 l0 t3">\(y-e^x\)</td>
+<td class="c m b3 r1 l0 t3">\(y=3^x\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-3\)</td>
+<td class="c m b1 r1 l0 t0">\(0.125\)</td>
+<td class="c m b1 r1 l0 t0">\(0.050\)</td>
+<td class="c m b1 r1 l0 t0">\(0.037\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-2\)</td>
+<td class="c m b1 r1 l0 t0">\(0.250\)</td>
+<td class="c m b1 r1 l0 t0">\(0.135\)</td>
+<td class="c m b1 r1 l0 t0">\(0.111\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-1\)</td>
+<td class="c m b1 r1 l0 t0">\(0.500\)</td>
+<td class="c m b1 r1 l0 t0">\(0.368\)</td>
+<td class="c m b1 r1 l0 t0">\(0.333\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(2.718\)</td>
+<td class="c m b1 r1 l0 t0">\(3\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(7.389\)</td>
+<td class="c m b1 r1 l0 t0">\(9\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(3\)</td>
+<td class="c m b1 r1 l0 t0">\(8\)</td>
+<td class="c m b1 r1 l0 t0">\(20.086\)</td>
+<td class="c m b1 r1 l0 t0">\(27\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">5.3.1</span></figcaption></figure><figure class="right" id="fig-3-exponentials" style="width:48%;vertical-align:middle;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-3-exponentials.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.3.2</span></figcaption></figure>
+</div>
+<article class="example-like" id="example-translate-exponential"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">5.3.3</span>
+</h5>
+<p id="p-1076">
+		Graph each function. How does each graph differ from the graph of \(y = e^x\)?
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-860">\(g(x) = e^{x+2}\)</li>
+<li id="li-861">\(h(x) = e^x + 2\)</li>
+</ol>
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-142" id="solution-142"><span class="">Solution</span></a></span><span id="hk-solution-142" style="display: none;" class="tex2jax_ignore"><div class="remark-like">
+<figure class="figure-like" id="fig-translate-exponential"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-translate-exponential.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.3.4</span></figcaption></figure><p id="p-1077"> 
+	If \(f(x) = e^x\), then \(g(x) = f(x + 2)\), so the graph of \(g\) is shifted \(2\) units to the left of \(y = e^x\). Also, \(h(x) = f(x) + 2\), so the graph of \(h\) is shifted \(2\) units up from \(y = e^x\). The graphs are shown in <a knowl="./knowl/fig-translate-exponential.html" knowl-id="xref-fig-translate-exponential" alt="Figure 5.3.4 " title="Figure 5.3.4 ">Figure 5.3.4</a>.
+</p>
+</div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-GC-evaluate-exponential" id="exercise-GC-evaluate-exponential"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">5.3.5</span>
+</h5></a></div>
+<div id="hk-exercise-GC-evaluate-exponential" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1078">
+		Use your calculator to evaluate the following powers.
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-862">\(e^2\)</li>
+<li id="li-863">\(e^{3.5}\)</li>
+<li id="li-864">\(e^{−0.5}\)</li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-122"><header title="Subsection  The Natural Logarithmic Function"><h1 class="heading hide-type" alt="Subsection  The Natural Logarithmic Function">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">The Natural Logarithmic Function</span>
+</h1></header><p id="p-1079">
+	The base \(e\) logarithm of a number \(x\), or \(\log_ e x\), is called the <em class="terminology">natural logarithm</em> of \(x\) and is denoted by \(\ln x\).
+</p>
+<article class="definition-like" id="definition-15"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">5.3.6</span><span class="title">The Natural Logarithm</span>
+</h5>
+<p id="p-1080">
+		The natural logarithm is the logarithm base \(e\).
+		\begin{equation*}\ln x = \log_{e}{x} ~~~~ x\gt 0\end{equation*}
+	</p></article><p id="p-1081">
+	The natural logarithm of \(x\) is the exponent to which \(e\) must be raised to produce \(x\). For example, the natural logarithm of \(10\), or \(\ln 10\), is the solution of the equation
+	\begin{equation*}e^y = 10\end{equation*}
+	You can verify on your calculator that
+	\begin{equation*}e^{\alert{2.3}} ~~ \approx 10 \text{ or } ~~ \ln 10 \approx \alert{2.3}\end{equation*}
+	In general, natural logs obey the same conversion formulas that work for logs to other bases.
+</p>
+<article class="theorem-like" id="theorem-8"><h5 class="heading">
+<span class="type">Key Fact</span><span class="codenumber">5.3.7</span><span class="title">Conversion Formulas for Natural Logs</span>
+</h5>\begin{equation*}
+	y = \ln x ~~\text{ if and only if } ~~ e^y = x
+\end{equation*}</article><p id="p-1082">
+	In particular,
+	\begin{align*}
+	\ln e \amp = 1 \text{ because } e^1 = e \\
+	\ln 1 \amp = 0  \text{ because } e^0 = 1 \\
+	\end{align*}
+</p>
+<p id="p-1083">
+	The conversion formulas tell us that the <em class="terminology">natural log function</em>, \(g(x) = \ln x\), is the inverse function for the natural exponential function, \(f(x) = e^x\).
+</p>
+<article class="example-like" id="example-ln-and-exponential"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">5.3.8</span>
+</h5>
+<ol style="list-style-type: lower-alpha;">
+<li id="li-865">Graph \(f(x) = e^x\) and \(f^{−1}(x) = \ln x\) on the same grid.</li>
+<li id="li-866">Give the domain and range of the natural log function.</li>
+</ol></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-143" id="solution-143"><span class="">Solution</span></a></span><span id="hk-solution-143" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-867">
+			We can make a table of values for \(f^{−1}(x) = \ln x\) by interchanging the columns in <a knowl="./knowl/table-ln.html" knowl-id="xref-table-ln" alt="Table 5.3.9 " title="Table 5.3.9 ">Table 5.3.9</a> for \(f(x) = e^x\). Plotting the points gives us the graph in <a knowl="./knowl/fig-ln-and-exponential.html" knowl-id="xref-fig-ln-and-exponential" alt="Figure 5.3.10 " title="Figure 5.3.10 ">Figure 5.3.10</a>.
+			<div class="sidebyside" id="sidebyside-87">
+<figure class="left" id="table-ln" style="width:38%;vertical-align:middle;text-align:center;"><table>
+<tr>
+<td class="c m b3 r1 l1 t3">\(x\)</td>
+<td class="c m b3 r1 l0 t3">\(y=\ln x\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0.050\)</td>
+<td class="c m b1 r1 l0 t0">\(-3\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0.135\)</td>
+<td class="c m b1 r1 l0 t0">\(-2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0.368\)</td>
+<td class="c m b1 r1 l0 t0">\(-1\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(2.718\)</td>
+<td class="c m b1 r1 l0 t0">\(1\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(7.389\)</td>
+<td class="c m b1 r1 l0 t0">\(2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(20.086\)</td>
+<td class="c m b1 r1 l0 t0">\(3\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">5.3.9</span></figcaption></figure><figure class="right" id="fig-ln-and-exponential" style="width:58%;vertical-align:middle;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-ln-and-exponential.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.3.10</span></figcaption></figure>
+</div>
+</li>
+<li id="li-868">
+			The domain of the natural log function is the same as the range of \(y = e^x\), or all positive numbers. The range of \(y = \ln x\) is the same as the domain of \(y = e^x\), or all real numbers. These results are confirmed by the graph of \(y = \ln x\).
+		</li>
+</ol></div></span>
+</div></div>
+<p id="p-1084">
+	Observe that the natural log of a number greater than \(1\) is positive, while the logs of fractions between \(0\) and \(1\) are negative. In addition, <!--Style me with CSS--><em>the natural logs of negative numbers and zero are undefined</em>.
+</p>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-GC-evaluate-ln" id="exercise-GC-evaluate-ln"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">5.3.11</span>
+</h5></a></div>
+<div id="hk-exercise-GC-evaluate-ln" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1085">
+		Use your calculator to evaluate each logarithms. Round your answers to four decimal places.
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-869">\(\ln 100\)</li>
+<li id="li-870">\(\ln 0.01\)</li>
+<li id="li-871">\(\ln e^3\)</li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-123"><header title="Subsection  Properties of the Natural Logarithm"><h1 class="heading hide-type" alt="Subsection  Properties of the Natural Logarithm">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Properties of the Natural Logarithm</span>
+</h1></header><p id="p-1086">
+	We use natural logarithms in the same way that we use logs to other bases. The properties of logarithms that we studied in <a href="Properties-of-Logarithms.html" alt="Section 4.4 Properties of Logarithms" title="Section 4.4 Properties of Logarithms">Section 4.4</a> also apply to logarithms base \(e\).
+</p>
+<article class="theorem-like" id="theorem-9"><h5 class="heading">
+<span class="type">Key Fact</span><span class="codenumber">5.3.12</span><span class="title">Properties of Natural Logarithms</span>
+</h5>
+<p id="p-1087">
+	If \(x, y \gt 0\), then
+	
+	<ol style="list-style-type: decimal;">
+<li id="li-872">\(\ln{(xy)} = \ln{x} + \ln{y}\)</li>
+<li id="li-873">\(\ln\frac{x}{y} = \ln x − \ln y\)</li>
+<li id="li-874">\(\ln{x^k} = k \ln x \)</li>
+</ol>
+</p></article><p id="p-1088">
+	Because the functions \(y = e^x\) and \(y = \ln x\) are inverse functions, the following properties are also true.
+</p>
+<article class="theorem-like" id="theorem-10"><h5 class="heading">
+<span class="type">Key Fact</span><span class="codenumber">5.3.13</span><span class="title">The Natural log and \(e^x\)</span>
+</h5>
+<p id="p-1089">
+		\begin{equation*}
+			\ln{e^x} = x\text{, for all }x ~~\text{ and }~~e^{\ln x} = x\text{, for }x \gt 0
+		\end{equation*}
+	</p></article><article class="example-like" id="example-simplify-ln-and-exp"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">5.3.14</span>
+</h5>
+<p id="p-1090">
+		Simplify each expression.
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-875">\(\ln e^{0.3x}\)</li>
+<li id="li-876">\(e^{2 \ln(x+3)}\)</li>
+</ol>
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-144" id="solution-144"><span class="">Solution</span></a></span><span id="hk-solution-144" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-877">
+			The natural log is the log base \(e\), and hence the inverse of \(e^x\). Therefore,
+			\begin{equation*}\ln {e^{0.3x}} = 0.3x\end{equation*}</li>
+<li id="li-878">
+			First, simplify the exponent using the third property of logs to get
+			\begin{equation*}2 \ln(x + 3) = \ln(x + 3)^2\end{equation*}
+			Then \(e^{2 \ln(x+3)} = e^{\ln(x+3)^2} = (x + 3)^2\).
+		</li>
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-simplify-ln-and-exp" id="exercise-simplify-ln-and-exp"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">5.3.15</span>
+</h5></a></div>
+<div id="hk-exercise-simplify-ln-and-exp" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1091">Simplify each expression.
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-879">\(e^{(\ln x)/2}\)</li>
+<li id="li-880">\(\ln\left(\frac{1}{e^{4x}}\right)\)</li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-124"><header title="Subsection  Solving Equations"><h1 class="heading hide-type" alt="Subsection  Solving Equations">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Solving Equations</span>
+</h1></header><p id="p-1092">
+	We use the natural logarithm to solve exponential equations with base \(e\). The techniques we've learned for solving other exponential equations also apply to equations with base \(e\).
+</p>
+<article class="example-like" id="example-solve-ln-equation"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">5.3.16</span>
+</h5>
+<p id="p-1093">
+		Solve each equation for \(x\).
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-881">\(e^x = 0.24\)</li>
+<li id="li-882">\(\ln x = 3.5\)</li>
+</ol>
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-145" id="solution-145"><span class="">Solution</span></a></span><span id="hk-solution-145" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-883">
+			Convert the equation to logarithmic form and evaluate using a calculator.
+			\begin{equation*}x = \ln 0.24 \approx −1.427\end{equation*}</li>
+<li id="li-884">
+			Convert the equation to exponential form and evaluate.
+			\begin{equation*}x = e^{3.5} \approx 33.1155\end{equation*}</li>
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-solve-ln-equation" id="exercise-solve-ln-equation"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">5.3.17</span>
+</h5></a></div>
+<div id="hk-exercise-solve-ln-equation" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1094">
+		Solve each equation. Round your answers to four decimal places.
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-885">\(\ln x =−0.2\)</li>
+<li id="li-886">\(e^x = 8\)</li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<p id="p-1095">
+	To solve more complicated exponential equations, we isolate the power on one side of the equation before converting to logarithmic form.
+</p>
+<article class="example-like" id="example-solve-natural-exponential"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">5.3.18</span>
+</h5>
+<p id="p-1096">
+		Solve \(140 = 20 e^{0.4x}\).
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-146" id="solution-146"><span class="">Solution</span></a></span><span id="hk-solution-146" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1097">
+		First, divide each side by \(20\) to obtain
+		\begin{equation*}7 = e^{0.4x}\end{equation*}
+		Then convert the equation to logarithmic form.
+		\begin{align*}
+		0.4x \amp = \ln 7 \amp\amp\text{Divide both sides by 0.4.}\\
+		x \amp= \frac{\ln 7}{0.4}
+		\end{align*}
+		Rounded to four decimal places, \(x \approx 4.8648\).
+	</p></div></span>
+</div></div>
+<p id="p-1098">
+	We can also solve the equation in <a knowl="./knowl/example-solve-natural-exponential.html" knowl-id="xref-example-solve-natural-exponential" alt="Example 5.3.18 " title="Example 5.3.18 ">Example 5.3.18</a>.
+	\begin{equation*}7 = e^{0.4x}\end{equation*}
+	by taking the natural logarithm of both sides. This gives us
+	\begin{align*}
+	\ln 7 \amp = \ln e^{0.4x}\amp\amp\text{Simplify the right side.} \\
+	\ln 7 = 0.4x
+	\end{align*}
+	because \(\ln{e^a} = a\) for any number \(a\). We then proceed with the solution as before.
+</p>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-solve-natural-exponential" id="exercise-solve-natural-exponential"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">5.3.19</span>
+</h5></a></div>
+<div id="hk-exercise-solve-natural-exponential" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1099">
+		Solve \begin{equation*}80 −16e^{−0.2x} = 70.3\end{equation*}
+	</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-11" id="hint-11"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-11" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1100">
+			Subtract \(80\) from both sides and divide by \(−16\).
+		</p>
+<p id="p-1101">
+			Take the natural log of both sides.
+		</p>
+<p id="p-1102">
+			Divide by \(−0.2\).
+		</p></span></span></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<article class="example-like" id="example-solve-logistic"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">5.3.20</span>
+</h5>
+<p id="p-1103">
+		Solve \(P = \frac{a}{1 + be^{−kt}}\) for \(t\).
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-147" id="solution-147"><span class="">Solution</span></a></span><span id="hk-solution-147" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1104">
+		Multiply both sides of the equation by the denominator, \(1 + be^{−kt}\), to get
+		\begin{equation*}P(1 + be^{−kt} ) = a\end{equation*}
+		Then isolate the power, \(e^{−kt}\), as follows:
+		\begin{align*}
+		1 + be^{−kt} \amp = \frac{a}{P}\amp\amp\text{Subtract 1 from both sides.}\\
+		be^{−kt} \amp = \frac{a}{P}− 1 \amp\amp\text{Rewrite the right side. }\\
+		be^{−kt} \amp = \frac{a − P}{P}\amp\amp\text{Divide both sides by }b.\\
+		e^{−kt} \amp= \frac{a − P}{bP}
+		\end{align*}
+		Take the natural logarithm of both sides to get
+		\begin{equation*}\ln {e^{−kt}} = \ln{\frac{a − P}{bP}}\end{equation*}
+		and recall that \(\ln {e^x} = x\) to simplify the left side.
+		\begin{equation*}−kt = \ln{\frac{a − P}{bP}}\end{equation*}
+		Finally, divide both sides by \(−k\) to solve for \(t\).
+		\begin{equation*}t =\frac{−1}{k}\ln{\frac{a-P}{bP}}\end{equation*}
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-solve-exp-decay-for-k" id="exercise-solve-exp-decay-for-k"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">5.3.21</span>
+</h5></a></div>
+<div id="hk-exercise-solve-exp-decay-for-k" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1105">
+		Solve \(N = Ae^{−kt}\) for \(k\).
+	</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-12" id="hint-12"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-12" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1106">Divide both sides by \(A\).</p>
+<p id="p-1107">Take the natural log of both sides.</p>
+<p id="p-1108">Divide both sides by \(−t.\)</p></span></span></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-125"><header title="Subsection  Exponential Growth and Decay"><h1 class="heading hide-type" alt="Subsection  Exponential Growth and Decay">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Exponential Growth and Decay</span>
+</h1></header><p id="p-1109">
+	In <a href="Exponential-Growth-and-Decay.html" alt="Section 4.1 Exponential Growth and Decay" title="Section 4.1 Exponential Growth and Decay">Section 4.1</a>, we considered functions of the form
+	\begin{equation}
+		P(t) = P_0\cdot b^t 
+	\label{eq-exponential-base-b}\tag{5.3.1}\end{equation}
+	which describe exponential growth when \(b \gt 1\) and exponential decay when \(0 \lt b \lt 1\). Exponential growth and decay can also be modeled by functions of the form
+	\begin{equation}
+		P(t) = P_0 \cdot e^{kt}
+	\label{eq-exponential-base-e}\tag{5.3.2}\end{equation}
+	where we have substituted \(e^k\) for the growth factor \(b\) in <a knowl="./knowl/eq-exponential-base-b.html" knowl-id="xref-eq-exponential-base-b" alt="Equation 5.3.1 " title="Equation 5.3.1 ">Equation (5.3.1)</a>, so that 
+	\begin{align*}
+	P(t) \amp = P_0 \cdot b^t\\
+	\amp = P_0 \cdot \left(e^k\right)^t\\
+	\amp  = P_0 \cdot e^{kt}
+	\end{align*}
+	We can find the value of \(k\) by solving the equation \(b = e^k\) for \(k\), to get \(k = \ln b\).
+</p>
+<p id="p-1110">
+	For instance, in <a knowl="./knowl/example-bacteria.html" knowl-id="xref-example-bacteria" alt="Example 4.1.2 " title="Example 4.1.2 ">Example 4.1.2</a> in <a href="Exponential-Growth-and-Decay.html" alt="Section 4.1 Exponential Growth and Decay" title="Section 4.1 Exponential Growth and Decay">Section 4.1</a> we found that a colony of bacteria grew according to the formula
+	\begin{equation*}P(t) = 100 \cdot \alert{3^t}\end{equation*}
+	We can express this function in the form \(P(t) = 100 \cdot \alert{e^{kt}}\) if we set
+	\begin{equation*}3 = e^k ~ \text{ or } ~ k = \ln 3 \approx 1.0986\end{equation*}
+	Thus, the growth law for the colony of bacteria can be written
+	\begin{equation*}P(t) \approx 100 \cdot e^{1.0986t}\end{equation*}
+	By graphing both functions on your calculator, you can verify that \(P(t) = 100 \cdot 3t\) and \(P(t) = 100 \cdot e^{1.0986t}\) are just two ways of writing the same function.
+</p>
+<article class="example-like" id="example-population-growth-e"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">5.3.22</span>
+</h5>
+<p id="p-1111">
+		From 1990 to 2000, the population of Clark County, Nevada, grew by \(6.4\%\) per year.
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-887">
+				What was the growth factor for the population of Clark County from 1990 to 2000? If the population of Clark County was \(768,000\) in 1990, write a formula for the population \(t\) years later.
+			</li>
+<li id="li-888">
+				Write a growth formula for Clark County using base \(e\).
+			</li>
+</ol>
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-148" id="solution-148"><span class="">Solution</span></a></span><span id="hk-solution-148" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-889">
+			The growth factor was \(b = 1 + r = 1.064\). The population \(t\) years later was
+			\begin{equation*}P(t) = 768,000 (1.064)^t\end{equation*}</li>
+<li id="li-890">
+			We use the formula \(P(t) = P_0 \cdot e^{kt}\), where \(e^k = 1.064\). Solving for \(k\), we find
+			\begin{equation*}k = \ln 1.064 = 0.062\end{equation*}
+			so \(P(t) = 768,000 e^{0.062t}\).
+		</li>
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-computers-on-internet" id="exercise-computers-on-internet"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">5.3.23</span>
+</h5></a></div>
+<div id="hk-exercise-computers-on-internet" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1112">
+		From 1994 to 1998, the number of personal computers connected to the Internet grew according to the formula \(N(t) = 2.8e^{0.85t}\), where \(t = 0\) in 1994 and \(N\) is in millions. (Source: Los Angeles Times, September 6, 1999)
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-891">
+				Evaluate \(N(1)\). By what percent did the number of Internet users grow in one year?
+			</li>
+<li id="li-892">
+				Express the growth law in the form \(N(t) = N_0 (1 + r)^t\). 
+				<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-13" id="hint-13"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-13" style="display: none;" class="tex2jax_ignore"><span class="solution">\(e^k = 1 + r\)</span></span>
+</li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<p id="p-1113">
+	If \(k\) is negative, then \(e^k\) is a fraction less than \(1\). For example, if \(k = −2\),
+	\begin{equation*}e^{−2} = \frac{1}{e^2} \approx \frac{1}{7.3891} \approx 0.1353\end{equation*}
+	Thus, for negative values of \(k\), the function \(P(t) = P_0 e^{kt}\) describes exponential decay.
+</p>
+<article class="theorem-like" id="theorem-11"><h5 class="heading">
+<span class="type">Key Fact</span><span class="codenumber">5.3.24</span><span class="title">Exponential Growth and Decay</span>
+</h5>
+<p id="p-1114">
+		The function
+		\begin{equation*}P(t) = P_0 e^{kt}\end{equation*}
+		describes exponential growth if \(k \gt 0\),
+	</p>
+<p id="p-1115">
+		and exponential decay if \(k \lt 0\).
+	</p></article><article class="example-like" id="example-write-decay-with-e"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">5.3.25</span>
+</h5>
+<p id="p-1116">
+		Express the decay law \(N(t) = 60 (0.8)^t\) in the form \(N(t) = N_0 e^{kt}\).
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-149" id="solution-149"><span class="">Solution</span></a></span><span id="hk-solution-149" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1117">
+		For this decay law, \(N_0 = 60\) and \(b = 0.8\). We would like to find a value for \(k\) so that \(e^k = b = 0.8\), that is, we must solve the equation
+		\begin{align*}
+		e^k \amp = 0.8\amp\amp\text{Take natural log of both sides.}\\
+		\ln e^k\amp = \ln 0.8\amp\amp\text{Simplify.}\\
+		k\amp = \ln 0.8 \approx −0.2231
+		\end{align*}
+		Replacing \(b\) with \(e^k\), we find that the decay law is
+		\begin{equation*}N(t) \approx 60e^{−0.2231t}\end{equation*}
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-krypton" id="exercise-krypton"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">5.3.26</span>
+</h5></a></div>
+<div id="hk-exercise-krypton" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1118">
+		A scientist isolates \(25\) grams of krypton-91, which decays according to the formula
+		\(N(t) = 25e^{−0.07t}\), where \(t\) is in seconds.
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-893">
+				Complete the table of values showing the amount of krypton-91 left at \(10\)-second intervals over the first minute.
+				<figure class="figure-like" id="table-122"><table>
+<tr>
+<td class="l m b1 r1 l1 t3">\(t\)</td>
+<td class="c m b1 r1 l0 t3">\(0\)</td>
+<td class="c m b1 r1 l0 t3">\(10\)</td>
+<td class="c m b1 r1 l0 t3">\(20\)</td>
+<td class="c m b1 r1 l0 t3">\(30\)</td>
+<td class="c m b1 r1 l0 t3">\(40\)</td>
+<td class="c m b1 r1 l0 t3">\(50\)</td>
+<td class="c m b1 r1 l0 t3">\(60\)</td>
+</tr>
+<tr>
+<td class="l m b1 r1 l1 t0">\(N(t)\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+<td class="c m b1 r1 l0 t0">\(\)</td>
+</tr>
+</table></figure>
+</li>
+<li id="li-894">
+				Use the table to choose a suitable window and graph the function N(t).
+			</li>
+<li id="li-895">
+				Write and solve an equation to answer the question: How long does it take for 60% of the krypton-91 to decay? 
+				<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-14" id="hint-14"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-14" style="display: none;" class="tex2jax_ignore"><span class="solution">
+					If \(60\%\) of the krypton-91 has decayed, \(40\%\) of the original \(25\) grams remains.
+				</span></span>
+</li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-126"><header title="Subsection  Continuous Compounding"><h1 class="heading hide-type" alt="Subsection  Continuous Compounding">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Continuous Compounding</span>
+</h1></header><p id="p-1119">
+	Some savings institutions offer accounts on which the interest is <em class="terminology">compounded continuously</em>. The amount accumulated in such an account after \(t\) years at interest rate \(r\) is given by the function
+	\begin{equation*}A(t) = Pe^{rt}\end{equation*}
+	where \(P\) is the principal invested.
+</p>
+<article class="example-like" id="example-continuous-compounding"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">5.3.27</span>
+</h5>
+<p id="p-1120">
+		Suppose you invest \(\$500\) in an account that pays \(8\%\) interest compounded continuously. You leave the money in the account without making any additional deposits or withdrawals.
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-896">
+				Write a formula that gives the value of your account \(A(t)\) after \(t\) years.
+			</li>
+<li id="li-897">
+				Make a table of values showing \(A(t)\) for the first \(5\) years.
+			</li>
+<li id="li-898">
+				Graph the function \(A(t)\).
+			</li>
+<li id="li-899">
+				How much will the account be worth after \(10\) years?
+			</li>
+<li id="li-900">
+				How long will it be before the account is worth \(\$1000\)?
+			</li>
+</ol>
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-150" id="solution-150"><span class="">Solution</span></a></span><span id="hk-solution-150" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><ol style="list-style-type: lower-alpha;">
+<li id="li-901">
+			Substitute \(500\) for \(P\), and \(0.08\) for \(r\) to find
+			\begin{equation*}A(t) = 500e^{0.08t}\end{equation*}</li>
+<li id="li-902">
+			Evaluate the formula for \(A(t)\) to obtain a table.
+			<div class="sidebyside" id="sidebyside-88">
+<figure class="left" id="table-123" style="width:29%;vertical-align:middle;text-align:center;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(t\)</td>
+<td class="c m b1 r1 l0 t3">\(A(t)\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(500\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(541.64\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(586.76\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(3\)</td>
+<td class="c m b1 r1 l0 t0">\(635.62\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(688.56\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(5\)</td>
+<td class="c m b1 r1 l0 t0">\(745.91\)</td>
+</tr>
+</table></figure><figure class="right" id="fig-continuous-compound" style="width:67%;vertical-align:middle;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-continuous-compound.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.3.28</span></figcaption></figure>
+</div>
+</li>
+<li id="li-903">
+			The graph of \(A(t)\) is shown in <a knowl="./knowl/fig-continuous-compound.html" knowl-id="xref-fig-continuous-compound" alt="Figure 5.3.28 " title="Figure 5.3.28 ">Figure 5.3.28</a>.
+		</li>
+<li id="li-904">
+			Evaluate \(A(t)\) for \(t = 10\).
+			\begin{align*}
+			A(10) \amp= 500 e^{0.08(10)}\\
+			\amp = 500 e^{0.8}\\
+			\amp \approx 500(2.2255) = 1112.77
+			\end{align*}
+			The account will be worth \(\$1112.77\) after \(10\) years.
+		</li>
+<li id="li-905">
+			Substitute \(1000\) for \(A(t)\) and solve the equation.
+			\begin{align*}
+			1000 \amp= 500 e^{0.08t}\amp\amp\text{Divide both sides by 500.}\\
+			2 \amp = e^{0.08t}\amp\amp\text{Take natural log of both sides.}\\
+			\ln 2 \amp= \ln e^{0.08t} = 0.08t\amp\amp\text{Divide both sides by 0.08.}\\
+			t \amp= \frac{\ln 2}{0.08}\approx 8.6643
+			\end{align*} 
+			The account will be worth \(\$1000\) after approximately \(8.7\) years.
+		</li>
+</ol></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-continuous-compound" id="exercise-continuous-compound"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">5.3.29</span>
+</h5></a></div>
+<div id="hk-exercise-continuous-compound" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1121">
+		Zelda invested \(\$1000\) in an account that pays \(4.5\%\) interest compounded continuously. How long will it be before the account is worth \(\$2000\)?
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section></section></div></main>
+</div>
+</body>
+</html>
