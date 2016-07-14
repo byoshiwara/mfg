@@ -1,18 +1,101 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- <mathbook><book> -->
 
-<section xml:id="Logarithm-Scales"   xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Logarithmic Scales</title>
+<section xml:id="Solving-Quadratic-Equations"   xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Solving Quadratic Equations</title>
 
 <p>
-	Because logarithmic functions grow very slowly, they are useful for modeling phenomena that take on a very wide range of values. For example, biologists study how metabolic functions such as heart rate are related to an animal’s weight, or mass. Table 5.6 shows the mass in kilograms of several mammals.
+	Not every quadratic equation can be solved by factoring or by extraction of roots. For example, the expression <m>x^2 + x − 1</m> cannot be factored, so the equation <m>x^2 + x − 1 = 0</m> cannot be solved by factoring. For other equations, factoring may be difficult. In this section we learn two methods that can be used to solve any quadratic equation.
 </p>
 
 
-<subsection><title>Factors and <m>x</m>-Intercepts</title>
+<subsection><title>Squares of Binomials</title>
 <p>
-	In <xref ref="investigation-height-of-baseball" autoname="yes"/>, perhaps you recognized the graph of the baseball's height as a parabola. In this chapter, we shall see that the graph of any quadratic function is a parabola.
+	In <xref ref="nonlinear-models" autoname="yes"/> we used extraction of roots to solve equations of the form 
+	<me>a( px + q)^2 + r = 0</me>
+	where the left side of the equation includes the square of a binomial, or a <term index="yes">perfect square</term>. We can write any quadratic equation in this form by completing the square.
 </p>
+<p>
+	Consider the following squares of binomials.
+</p>
+
+<table><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+    <row bottom="major">
+        <cell>Square of binomial <m>(x+p)^2</m></cell>
+        <cell><m>p</m></cell>
+        <cell><m>2p</m></cell>
+        <cell><m>p^2</m></cell>
+    </row>
+    <row>
+        <cell>1.  <m>(x+\alert{5})^2=x^2+10x+25</m></cell>
+        <cell><m>\alert{5}</m></cell>
+        <cell><m>2(\alert{5})=10</m></cell>
+        <cell><m>\alert{5}^2=25</m></cell>
+    </row>
+    <row>
+        <cell>2.  <m>(x\alert{{}-{}3})^2=x^2-6x+9</m></cell>
+        <cell><m>\alert{-3}</m></cell>
+        <cell><m>2(\alert{-3})=-6</m></cell>
+        <cell><m>\alert{-3}^2=9</m></cell>
+    </row>
+    <row>
+        <cell>3.  <m>(x\alert{{}-{}12})^2=x^2-24x+144</m></cell>
+        <cell><m>\alert{-12}</m></cell>
+        <cell><m>2(\alert{-12})=-24</m></cell>
+        <cell><m>\alert{-12}^2=144</m></cell>
+    </row>
+</tabular></table>
+
+<p>
+	In each case, the square of the binomial is a quadratic trinomial,
+	<me>(x + p)^2= x^2 + 2px + p^2</me>
+	The coefficient of the linear term, <m>2p</m>, is twice the constant in the binomial, and the constant term of the trinomial, <m>p^2</m>, is its square.
+</p>
+<p>
+	We would like to reverse the process and write a quadratic expression as the square of a binomial. For example, what constant term can we add to
+	<me>x^2 − 16x</me>
+	to produce a perfect square trinomial? Compare the expression to the formula above:
+	<me>
+		\begin{alignedat}{4}
+		x^2 \amp {}+{} \amp 2px \amp {}+{} \amp p^2 \amp {}={} \amp (x + p)^2 \\
+		x^2 \amp {}-{} \amp 16x \amp {}+{} \amp \text{?} \amp {}={} \amp (x + \text{?})^2 \\
+		\end{alignedat}
+	</me>
+	We see that <m>2p = −16</m>, so <m>p = \frac{1}{2}(−16) = −8</m>, and <m>p^2 = (−8)^2 = 64</m>. Substitute these values for <m>p^2</m> and <m>p</m> into the equation to find
+	<me>x^2 − 16x + 64 = (x − 8)^2</me>
+	Notice that in the resulting trinomial, the constant term is equal to <em>the square of one-half the coefficient of</em> <m>x</m>. In other words, we can find the constant term by taking one-half the coefficient of <m>x</m> and then squaring the result. Adding a constant term obtained in this way is called <term index="yes">completing the square</term>.
+</p>
+
+<example>
+	<p>
+		Complete the square by adding an appropriate constant; write the result as the square of a binomial.
+		<ol label="*a*">
+			<li>
+				<m>x^2 − 12x + {}</m><fillin characters="6" />
+			</li>
+			<li>
+				<m>x^2 + 5x + {}</m><fillin characters="6" />
+			</li>
+		</ol>
+	</p>
+<solution>
+	<p><ol label="*a*">
+		<li>
+			One-half of <m>−12</m> is <m>−6</m>, so the constant term is <m>(−6)^2</m>, or <m>36</m>. Add <m>36</m> to obtain
+			<me>x^2 − 12x \alert{{}+{}36}=(x − 6)^2~~~~~~~  \underset{p^2 = (−6)^2 = 36}{\stackrel {p = \frac{1}{2}(−12) = −6}{}}</me>
+			
+		</li>
+		<li>
+			One-half of <m>5</m> is <m>\frac{5}{2}</m>, so the constant term is <m>\left(\frac{5}{2}\right)^2</m>, or <m>\frac{25}{4}</m>. Add <m>\frac{25}{4}</m> to obtain
+			<me>x^2 +5x \alert{{}+{}\frac{25}{4}}=\left(x +\frac{5}{2}\right)^2~~~~~~~  \underset{p^2 = (\frac{5}{2})^2 = \frac{25}{4}}{\stackrel {p = \frac{1}{2}(5) = \frac{5}{2}}{}}</me>
+		</li></ol>
+	</p>
+</solution></example>
+
+<p>
+	You may find it helpful to visualize completing the square geometrically. We can think of the expression <m>x^2 + 2px</m> as the area of a rectangle with dimensions <m>x</m> and <m>x + 2p</m>. For example, the rectangle with length <m>x + 10</m> and width <m>x</m> has area <m>x(x + 10) = x^2 + 10x</m>, as shown in Figure 6.6a. We would like to cut the rectangle into pieces and rearrange them so that we can make a square. In Figure 6.6b, we move half of the x-term so that each side of the square has length x + 5 (note that p = 12 (10) = 5), and in Figure 6.6c we see that the missing corner piece has area p2 = 52 = 25.
+</p>
+
 
 
 
