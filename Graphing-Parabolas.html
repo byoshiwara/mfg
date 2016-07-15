@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-07-15T12:41:17-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG Graphing Parabolas</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic%7CSource+Code+Pro:400" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\alert}[1]{\mathbf{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\mathbf{\color{blue}{#1}}}
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+\newcommand\degree[0]{^{\circ}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading">
+<span class="title">Modeling, Functions, and Graphs</span><span class="subtitle">Algebra for College Students</span>
+</h1>
+<p class="byline">Katherine Yoshiwara</p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="Solving-Quadratic-Equations.html">Previous</a><a class="up-button button toolbar-item" href="chap6.html">Up</a><a class="next-button button toolbar-item" href="index-part-1.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Solving-Quadratic-Equations.html">Previous</a><a class="up-button button toolbar-item" href="chap6.html">Up</a><a class="next-button button toolbar-item" href="index-part-1.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="biography-1.html">Author Biography</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
+<li><a href="preface-2.html">Contributors to the 5\(^\mathrm{th}\) Edition</a></li>
+</ul>
+<h2 class="link"><a href="chap1.html"><span class="codenumber">1</span><span class="title">Functions and Their Graphs</span></a></h2>
+<ul>
+<li><a href="LinMod.html">Linear Models</a></li>
+<li><a href="functions.html">Functions</a></li>
+<li><a href="graphs-of-functions.html">Graphs of Functions</a></li>
+<li><a href="slope-and-rate-of-change.html">Slope and Rate of Change</a></li>
+<li><a href="linear-functions.html">Linear Functions</a></li>
+<li><a href="linear-regression.html">Linear Regression</a></li>
+</ul>
+<h2 class="link"><a href="chap2.html"><span class="codenumber">2</span><span class="title">Modeling with Functions</span></a></h2>
+<ul>
+<li><a href="nonlinear-models.html">Nonlinear Models</a></li>
+<li><a href="basic-functions.html">Some Basic Functions</a></li>
+<li><a href="transformations.html">Transformations of Graphs</a></li>
+<li><a href="MathModels.html">Functions as Mathematical Models</a></li>
+<li><a href="AbsoluteValue.html">The Absolute Value Function</a></li>
+<li><a href="Domain-Range.html">Domain and Range</a></li>
+</ul>
+<h2 class="link"><a href="chap3.html"><span class="codenumber">3</span><span class="title">Power Functions</span></a></h2>
+<ul>
+<li><a href="Variation.html">Variation</a></li>
+<li><a href="Integer-Exponents.html">Integer Exponents</a></li>
+<li><a href="Roots-and-Radicals.html">Roots and Radicals</a></li>
+<li><a href="Rational-Exponents.html">Rational Exponents</a></li>
+<li><a href="Joint-Variation.html">Joint Variation</a></li>
+</ul>
+<h2 class="link"><a href="chap4.html"><span class="codenumber">4</span><span class="title">Exponential Functions</span></a></h2>
+<ul>
+<li><a href="Exponential-Growth-and-Decay.html">Exponential Growth and Decay</a></li>
+<li><a href="Exponential-Functions.html">Exponential Functions</a></li>
+<li><a href="Logarithms.html">Logarithms</a></li>
+<li><a href="Properties-of-Logarithms.html">Properties of Logarithms</a></li>
+<li><a href="Exponential-Models.html">Exponential Models</a></li>
+</ul>
+<h2 class="link"><a href="chap5.html"><span class="codenumber">5</span><span class="title">Logarithmic Functions</span></a></h2>
+<ul>
+<li><a href="Inverse-Functions.html">Inverse Functions</a></li>
+<li><a href="Logarithmic-Functions.html">Logarithmic Functions</a></li>
+<li><a href="The-Natural-Base.html">The Natural Base</a></li>
+<li><a href="Logarithm-Scales.html">Logarithmic Scales</a></li>
+</ul>
+<h2 class="link active"><a href="chap6.html"><span class="codenumber">6</span><span class="title">Quadratic Functions</span></a></h2>
+<ul>
+<li><a href="Factors-and-x-Intercepts.html">Factors and \(x\)-Intercepts</a></li>
+<li><a href="Solving-Quadratic-Equations.html">Solving Quadratic Equations</a></li>
+<li><a href="Graphing-Parabolas.html" class="active">Graphing Parabolas</a></li>
+</ul>
+<h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="colophon-2.html"><span class="title">Colophon</span></a></h2>
+<ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Graphing-Parabolas"><header title="Section 6.3 Graphing Parabolas"><h1 class="heading hide-type" alt="Section 6.3 Graphing Parabolas">
+<span class="type">Section</span><span class="codenumber">6.3</span><span class="title">Graphing Parabolas</span><a href="Graphing-Parabolas.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-1271">
+	The graph of a quadratic function \(f(x) = ax^2 + bx + c\) is called a <em class="terminology">parabola</em>. Some parabolas are shown in <a knowl="./knowl/fig-parabola-diagram.html" knowl-id="xref-fig-parabola-diagram" alt="Figure 6.3.1 " title="Figure 6.3.1 ">Figure 6.3.1</a>.
+	<figure class="figure-like" id="fig-parabola-diagram"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-parabola-diagram.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.3.1</span></figcaption></figure>
+</p>
+<p id="p-1272">
+	All these parabolas share certain features. The graph has either a highest point (if the parabola opens downward, as in <a knowl="./knowl/fig-parabola-diagram.html" knowl-id="xref-fig-parabola-diagram" alt="Figure 6.3.1 " title="Figure 6.3.1 ">Figure 6.3.1</a>a) or a lowest point (if the parabola opens upward, as in <a knowl="./knowl/fig-parabola-diagram.html" knowl-id="xref-fig-parabola-diagram" alt="Figure 6.3.1 " title="Figure 6.3.1 ">Figure 6.3.1</a>b). This high or low point is called the <em class="terminology">vertex</em> of the graph. The parabola is symmetric about a vertical line, called the <em class="terminology">axis of symmetry</em>, that runs through the vertex. The \(y\)-intercept is the point where the parabola intersects the \(y\)-axis. The graph of a quadratic function always has exactly one \(y\)-<em class="terminology">intercept</em>. However, the graph may cross the \(x\)-axis at one point, at two points, or not at all. Points where the parabola intersects the \(x\)-axis are called the \(x\)-<em class="terminology">intercepts</em>. If there are two \(x\)-intercepts, they are equidistant from the axis of symmetry.
+</p>
+<p id="p-1273">
+	The values of the constants \(a\), \(b\), and c determine the location and orientation of the parabola. We will begin by considering each of these constants separately.
+</p>
+<section class="subsection" id="subsection-142"><header title="Subsection  The Graph of \(y = ax^2\)"><h1 class="heading hide-type" alt="Subsection  The Graph of \(y = ax^2\)">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">The Graph of \(y = ax^2\)</span>
+</h1></header><p id="p-1274">
+	In <a href="chap2.html" alt="Chapter 2 Modeling with Functions" title="Chapter 2 Modeling with Functions">Chapter 2</a>, we saw that the graph of \(y = a f(x)\) is a transformation of the graph of \(y = f(x)\). The scale factor, \(a\), stretches  or compresses the graph vertically, and if \(a\) is negative, the graph is reflected about the \(x\)-axis.
+</p>
+<article class="example-like" id="example-193"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.3.2</span>
+</h5>
+<p id="p-1275">
+		Sketch a graph of each quadratic equation by hand.
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1000">\(y = 2x^2\)</li>
+<li id="li-1001">\(y = −\frac{1}{2}x^2\)</li>
+</ol>
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-172" id="solution-172"><span class="">Solution</span></a></span><span id="hk-solution-172" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1276">
+		Both equations are of the form \(y = ax^2\). The graph of \(y = 2x^2\) opens upward because \(a = 2 \gt 0\), and the graph of \(y = −\frac{1}{2}x^2\) opens downward because \(a = −\frac{1}{2}\lt 0\). To make a reasonable sketch by hand, it is enough to plot a few <!--Style me with CSS--><em>guidepoints</em>; the points with \(x\)-coordinates \(1\) and \(−1\) are easy to compute.
+	<div class="sidebyside" id="sidebyside-93">
+<figure class="left" id="fig-parabolas-vertically-scaled" style="width:38%;vertical-align:middle;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-parabolas-vertically-scaled.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.3.3</span></figcaption></figure><figure class="right" id="table-141" style="width:58%;vertical-align:middle;text-align:center;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(y=2x^2\)</td>
+<td class="c m b1 r1 l0 t3">\(y=-\frac{1}{2}x^2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(-1\)</td>
+<td class="c m b1 r1 l0 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(-\frac{1}{2}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+<td class="c m b1 r1 l0 t0">\(0\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(1\)</td>
+<td class="c m b1 r1 l0 t0">\(2\)</td>
+<td class="c m b1 r1 l0 t0">\(-\frac{1}{2}\)</td>
+</tr>
+</table></figure>
+</div>
+    Sketch parabolas through each set of guidepoints, as shown in <a knowl="./knowl/fig-parabolas-vertically-scaled.html" knowl-id="xref-fig-parabolas-vertically-scaled" alt="Figure 6.3.3 " title="Figure 6.3.3 ">Figure 6.3.3</a>.
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-parabolas-vertically-scaled" id="exercise-parabolas-vertically-scaled"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">6.3.4</span>
+</h5></a></div>
+<div id="hk-exercise-parabolas-vertically-scaled" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1277"><div class="sidebyside" id="sidebyside-94">
+<p id="p-1278" class="left" style="width:48%;vertical-align:middle;text-align:left;">
+		Match each parabola in <a knowl="./knowl/fig-parabolas-vertically-scaled2.html" knowl-id="xref-fig-parabolas-vertically-scaled2" alt="Figure 6.3.5 " title="Figure 6.3.5 ">Figure 6.3.5</a> with its equation. The basic parabola is shown in black.</p>
+<figure class="right" id="fig-parabolas-vertically-scaled2" style="width:48%;vertical-align:middle;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-parabolas-vertically-scaled2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.3.5</span></figcaption></figure>
+</div>
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1002">\(y = −\frac{3}{4}x^2\)</li>
+<li id="li-1003">\(y = \frac{1}{4}x^2\)</li>
+<li id="li-1004">\(y = \frac{5}{2}x^2\)</li>
+<li id="li-1005">\(y = −\frac{5}{4}x^2\)</li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-143"><header title="Subsection  The Graph of \(y= x^2 + c\)"><h1 class="heading hide-type" alt="Subsection  The Graph of \(y= x^2 + c\)">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">The Graph of \(y= x^2 + c\)</span>
+</h1></header><p id="p-1279">
+	Next, we consider the effect of the constant term, \(c\), on the graph. Adding a constant \(c\) to the formula for \(y = f (x)\) causes a vertical translation of the graph.
+</p>
+<article class="example-like" id="example-parabolas-vertically-shifted"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.3.6</span>
+</h5>
+<p id="p-1280">
+		Sketch graphs for the following quadratic equations.
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1006">\(y = x^2 − 2\)</li>
+<li id="li-1007">\(y = −x^2 + 4\)</li>
+</ol>
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-173" id="solution-173"><span class="">Solution</span></a></span><span id="hk-solution-173" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1281">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1008">
+				The graph of \(y = x^2 − 2\) is shifted downward by two units, compared to the basic parabola. The vertex is the point \((0, −2)\) and the \(x\)-intercepts are the solutions of the equation
+				\begin{equation*}0 = x^2 − 2\end{equation*}
+				or \(\sqrt{2}\) and \(-\sqrt{2}\). The graph is shown in <a knowl="./knowl/fig-parabolas-vertically-shifted.html" knowl-id="xref-fig-parabolas-vertically-shifted" alt="Figure 6.3.7 " title="Figure 6.3.7 ">Figure 6.3.7</a>.
+		<figure class="figure-like" id="fig-parabolas-vertically-shifted"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-parabolas-vertically-shifted.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.3.7</span></figcaption></figure>
+</li>
+<li id="li-1009">
+				The graph of \(y = −x^2 + 4\) opens downward and is shifted \(4\) units up, compared to the basic parabola. Its vertex is the point \((0, 4)\). Its \(x\)-intercepts are the solutions of the equation 
+				\begin{equation*}0 = −x^2 + 4\end{equation*}
+				or \(2\) and \(−2\). (See <a knowl="./knowl/fig-parabolas-vertically-shifted.html" knowl-id="xref-fig-parabolas-vertically-shifted" alt="Figure 6.3.7 " title="Figure 6.3.7 ">Figure 6.3.7</a>.) You can verify both graphs with your graphing calculator.
+			</li>
+</ol>
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-192" id="exercise-192"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">6.3.8</span>
+</h5></a></div>
+<div id="hk-exercise-192" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1282">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1010">
+				Find the equation of the parabola shown in <a knowl="./knowl/fig-vertically-shifted-parabola.html" knowl-id="xref-fig-vertically-shifted-parabola" alt="Figure 6.3.9 " title="Figure 6.3.9 ">Figure 6.3.9</a>.
+			</li>
+<li id="li-1011">
+				Give the \(x\)- and \(y\)-intercepts of the graph.
+			</li>
+</ol>
+		<figure class="figure-like" id="fig-vertically-shifted-parabola"><object type="image/svg+xml" style="width:45%; margin:auto; display:block;" data="images/fig-vertically-shifted-parabola.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.3.9</span></figcaption></figure>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-144"><header title="Subsection  The Graph of \(y = ax^2 + bx\)"><h1 class="heading hide-type" alt="Subsection  The Graph of \(y = ax^2 + bx\)">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">The Graph of \(y = ax^2 + bx\)</span>
+</h1></header><figure class="figure-like" id="fig-GC-horizontally-shifted-parabola"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-GC-horizontally-shifted-parabola.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.3.10</span></figcaption></figure><p id="p-1283">
+	How does the linear term, \(bx\), affect the graph? Let us begin by considering an example. Graph the equation
+	\begin{equation*}y = 2x^2 + 8x\end{equation*}
+	on your calculator. The graph is shown in <a knowl="./knowl/fig-GC-horizontally-shifted-parabola.html" knowl-id="xref-fig-GC-horizontally-shifted-parabola" alt="Figure 6.3.10 " title="Figure 6.3.10 ">Figure 6.3.10</a>. Note that \(a = 2\) and that \(2 \gt 0\), so the parabola opens upward. We can find the \(x\)-intercepts of the graph by setting \(y\) equal to zero:
+	\begin{align*}
+	0 \amp= 2x^2 + 8x\\
+	\amp= 2x(x + 4)
+	\end{align*}
+	The solutions of this equation are \(0\) and \(−4\), so the \(x\)-intercepts are the points \((0, 0)\) and \((−4, 0)\).
+</p>
+<p id="p-1284">
+	Recall that the parabola is symmetric about a vertical line through its vertex. (We will prove that this is true in the Homework problems.) The two \(x\)-intercepts are equidistant from this line of symmetry, so the \(x\)-coordinate of the vertex lies exactly halfway between the \(x\)-intercepts. We can average their values to find
+	\begin{equation*}x=\frac{1}{2}[0 + (−4)] = −2\end{equation*}
+	To find the \(y\)-coordinate of the vertex, substitute \(x = −2\) into the equation for the parabola:
+	\begin{align*}
+	y \amp= 2(\alert{−2})^2 + 8(\alert{−2})\\
+	\amp= 8 − 16 = −8
+	\end{align*}
+	Thus, the vertex is the point \((−2,−8)\).
+</p>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-quadratic-no-constant" id="exercise-quadratic-no-constant"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">6.3.11</span>
+</h5></a></div>
+<div id="hk-exercise-quadratic-no-constant" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1285">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1012">
+				Find the \(x\)-intercepts and the vertex of the parabola \(y = 6x − x^2\).
+			</li>
+<li id="li-1013">
+				Verify your answers by graphing the equation in the window
+				\begin{align}
+				\text{Xmin} \amp = −9.4 \amp\amp \text{Xmax} = 9.4\\
+				\text{Ymin} \amp = −10 \amp\amp \text{Ymax} = 10
+				\end{align}
+			</li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-145"><header title="Subsection  Finding the Vertex"><h1 class="heading hide-type" alt="Subsection  Finding the Vertex">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Finding the Vertex</span>
+</h1></header><p id="p-1286">
+	We can use the same method to find a formula for the vertex of any parabola of the form
+	\begin{equation*}y = ax^2 + bx\end{equation*}
+	We proceed as we did in the previous example. First, find the \(x\)-intercepts of the graph by setting \(y\) equal to zero and solving for \(x\).
+	\begin{align*}
+	0 \amp= ax^2 + bx\amp\amp\text{Factor.} \\
+	\amp= x(ax + b)
+	\end{align*}
+	Thus,
+	\begin{align*}
+	x \amp=0 \amp\text{or}\amp \amp ax + b \amp= 0\\
+	x \amp=0 \amp\text{or}\amp \amp  x \amp =\frac{−b}{a}
+	\end{align*}
+	The \(x\)-intercepts are the points \((0, 0)\) and \((\frac{−b}{a}, 0)\).
+</p>
+<p id="p-1287">
+	Next, find the \(x\)-coordinate of the vertex by taking the average of the two \(x\)-intercepts found above:
+	\begin{equation*}x=\frac{1}{2}\left[0+\left(\frac{−b}{a}\right)\right]=\frac{−b}{2a}\end{equation*}
+	This gives us a formula for the \(x\)-coordinate of the vertex.
+</p>
+<article class="theorem-like" id="theorem-16"><h5 class="heading">
+<span class="type">Key Idea</span><span class="codenumber">6.3.12</span><span class="title">Vertex of a Parabola</span>
+</h5>
+<p id="p-1288">
+		For the graph of \(y = ax^2 + bx\), the \(x\)-coordinate of the vertex is
+		\begin{equation*}x_v=\frac{-b}{2a}\end{equation*}
+	</p></article><div class="sidebyside" id="sidebyside-95">
+<figure class="left" id="fig-parabola-vertex" style="width:38%;vertical-align:middle;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-parabola-vertex.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.3.13</span></figcaption></figure><p id="p-1289" class="right" style="width:58%;vertical-align:middle;text-align:left;">
+	Also, the axis of symmetry is the vertical line \(x = \frac{−b}{2a}\) (see <a knowl="./knowl/fig-parabola-vertex.html" knowl-id="xref-fig-parabola-vertex" alt="Figure 6.3.13 " title="Figure 6.3.13 ">Figure 6.3.13</a>). Finally, we find the \(y\)-coordinate of the vertex by substituting its \(x\)-coordinate into the equation for the parabola.
+</p>
+</div>
+<article class="example-like" id="example-parabola-vertex"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.3.14</span>
+</h5>
+<p id="p-1290">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1014">
+				Find the vertex of the graph of \(f(x) = −1.8x^2 − 16.2x\).
+			</li>
+<li id="li-1015">
+				Find the \(x\)-intercepts of the graph.
+			</li>
+</ol>
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-174" id="solution-174"><span class="">Solution</span></a></span><span id="hk-solution-174" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1291">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1016">
+				The \(x\)-coordinate of the vertex is
+				\begin{equation*}x_v=\frac{-b}{2a}=\frac{-(-16.2)}{2(-1.8)}=-4.5\end{equation*}
+				To find the \(y\)-coordinate of the vertex, evaluate \(f(x)\) at \(x = \alert{−4.5}\).
+				\begin{equation*}y_v=−1.8(\alert{−4.5})^2 − 16.2(\alert{−4.5}) = 36.45\end{equation*}
+				The vertex is \((−4.5, 36.45)\).
+			</li>
+<li id="li-1017">
+				To find the \(x\)-intercepts of the graph, set \(f(x) = 0\) and solve.
+				\begin{align*}
+				−1.8x2 − 16.2x \amp= 0\amp\amp\text{Factor.}\\
+				−x(1.8x + 16.2) \amp= 0\amp\amp\text{Set each factor equal to zero.}\\
+				−x =0 \hphantom{blank} 1.8x + 16.2 \amp = 0\amp\amp\text{Solve each equation.}\\
+				x = 0 \hphantom{blankblankblan} x  \amp= −9
+				\end{align*}
+				The \(x\)-intercepts of the graph are \((0, 0)\) and \((−9, 0)\). The graph is shown in <a knowl="./knowl/fig-parabola-vertex2.html" knowl-id="xref-fig-parabola-vertex2" alt="Figure 6.3.15 " title="Figure 6.3.15 ">Figure 6.3.15</a>.
+			</li>
+</ol>
+		<figure class="figure-like" id="fig-parabola-vertex2"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-parabola-vertex2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.3.15</span></figcaption></figure>
+	</p></div></span>
+</div></div></section><section class="subsection" id="subsection-146"><header title="Subsection  The Graph of \(y = ax^2 + bx + c\)"><h1 class="heading hide-type" alt="Subsection  The Graph of \(y = ax^2 + bx + c\)">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">The Graph of \(y = ax^2 + bx + c\)</span>
+</h1></header><p id="p-1292">
+	Now we will see that the vertex formula holds for any parabola. Consider the function
+	\begin{equation*}y = 2x^2 + 8x + 6\end{equation*} 
+	Adding \(6\) to \(2x^2 + 8x\) shifts each point on the graph \(6\) units upward, as shown in <a knowl="./knowl/fig-scaled-and-shifted-parabola.html" knowl-id="xref-fig-scaled-and-shifted-parabola" alt="Figure 6.3.16 " title="Figure 6.3.16 ">Figure 6.3.16</a>. The \(x\)-coordinate of the vertex will not be affected by an upward shift. Thus, the formula 
+	\begin{equation*}x_v=\frac{-b}{2a}\end{equation*}
+	for the x-coordinate of the vertex still holds. We have
+	\begin{equation*}x_v=\frac{-8}{2(2)}=-2\end{equation*}
+	We find the \(y\)-coordinate of the vertex by substituting \(x_v = \alert{−2}\) into the equation for the parabola.
+	\begin{align*}
+	y_v \amp= 2(\alert{−2})^2 + 8(\alert{−2}) + 6\\
+	\amp= 8 − 16 + 6 = −2
+	\end{align*}
+	So the vertex is the point \((−2,−2)\). (Notice that this point is shifted \(6\) units upward from the vertex of \(y = 2x^2 + 8x\).)
+</p>
+<p id="p-1293">
+	We find the \(x\)-intercepts of the graph by setting \(y\) equal to zero.
+	\begin{align*}
+	0 \amp= 2x^2 + 8x + 6\amp\amp\text{Factor the right side.}\\
+	\amp= 2(x + 1)(x + 3)\amp\amp\text{Set each factor equal to zero.}\\
+	x + 1 \amp=0 ~~~\text{ or } ~~~x + 3 = 0\\
+	x\amp= −1  \hphantom{blankbl} x = −3
+	\end{align*}
+	The \(x\)-intercepts are the points \((−1, 0)\) and \((−3, 0)\).
+</p>
+<p id="p-1294">
+	The \(y\)-intercept of the graph is found by setting \(x\) equal to zero:
+	\begin{equation*}y = 2(\alert{0})2 + 8(\alert{0}) + 6 = 6\end{equation*}
+	You can see that the \(y\)-intercept, \(6\), is just the constant term of the quadratic equation. The completed graph is shown in <a knowl="./knowl/fig-scaled-and-shifted-parabola.html" knowl-id="xref-fig-scaled-and-shifted-parabola" alt="Figure 6.3.16 " title="Figure 6.3.16 ">Figure 6.3.16</a>.
+</p>
+<figure class="figure-like" id="fig-scaled-and-shifted-parabola"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-scaled-and-shifted-parabola.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.3.16</span></figcaption></figure><article class="example-like" id="example-parabola-vertex2"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.3.17</span>
+</h5>
+<p id="p-1295">
+		Find the vertex of the graph of \(y = −2x^2 + x + 1\).
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-175" id="solution-175"><span class="">Solution</span></a></span><span id="hk-solution-175" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1296">
+		For this equation, \(a = −2\), \(b = 1\), and \(c = 1\). The \(x\)-coordinate of the vertex is given by
+		\begin{equation*}x_v =\frac{−b}{2a}=\frac{-1}{2(-2)}=\frac{1}{4}\end{equation*}
+		To find the \(y\)-coordinate of the vertex, we substitute \(x = \alert{\frac{1}{4}}\) into the equation. We can do this by hand to find
+		\begin{align*}
+		y_v\amp= −2\left(\alert{\frac{1}{4}}\right)^2+ \alert{\frac{1}{4}}+1\\
+		\amp= −2\left(\frac{1}{16}\right)+ \frac{4}{16}+\frac{16}{16}=\frac{18}{16}
+		=\frac{9}{8}
+		\end{align*}
+		So the coordinates of the vertex are \(\left(\frac{1}{4},\frac{9}{8}\right)\). Alternatively, we can use the calculator to evaluate \(−2x^2 + x + 1\) for \(x = 0.25\). The calculator returns the \(y\)-value \(1.125\). Thus, the vertex is the point \((0.25, 1.125)\), which is the decimal equivalent of \(\left(\frac{1}{4},\frac{9}{8}\right)\).
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-parabola-vertex" id="exercise-parabola-vertex"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">6.3.18</span>
+</h5></a></div>
+<div id="hk-exercise-parabola-vertex" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1297">
+		Find the vertex of the graph of \(y = 3x^2 − 6x + 4\). Decide whether the vertex is a maximum point or a minimum point of the graph.
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-147"><header title="Subsection  Number of x-Intercepts"><h1 class="heading hide-type" alt="Subsection  Number of x-Intercepts">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Number of x-Intercepts</span>
+</h1></header><figure class="figure-like" id="fig-parabola-x-intercepts"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-parabola-x-intercepts.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.3.19</span></figcaption></figure><p id="p-1298">
+	The graph of the quadratic function \(y = ax^2 + bx + c\) may have two, one, or no \(x\)-intercepts, according to the number of distinct real-valued solutions of the equation \(ax^2 + bx + c = 0\). Consider the three equations graphed in <a knowl="./knowl/fig-parabola-x-intercepts.html" knowl-id="xref-fig-parabola-x-intercepts" alt="Figure 6.3.19 " title="Figure 6.3.19 ">Figure 6.3.19</a>. The graph of 
+	\begin{equation*}y = x^2 − 4x + 3\end{equation*} 
+	has two \(x\)-intercepts, because the equation
+	\begin{equation*}x^2 − 4x + 3 = 0\end{equation*}
+	has two real-valued solutions, \(x = 1\) and \(x = 3\). The graph of
+	\begin{equation*}y = x^2 − 4x + 4\end{equation*}
+	has only one \(x\)-intercept, because the equation
+	\begin{equation*}x^2 − 4x + 4 = 0\end{equation*}
+	has only one (repeated) real-valued solution, \(x = 2\). The graph of 
+	\begin{equation*}y = x^2 − 4x + 6\end{equation*} 
+	has no \(x\)-intercepts, because the equation 
+	\begin{equation*}x^2 − 4x + 6 = 0\end{equation*} 
+	has no real-valued solutions.
+</p>
+<p id="p-1299">
+	A closer look at the quadratic formula reveals useful information about the solutions of quadratic equations. For the three equations above, we have the following:
+</p>
+<object type="image/svg+xml" style="width:110%; margin:auto; display:block;" data="images/fig-three-cases-x-intercepts.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><p id="p-1300">
+	The expression \(b^2 − 4ac\), which appears under the radical in the quadratic formula, is called the <em class="terminology">discriminant</em>, \(D\), of the equation. The value of the discriminant determines the nature of the solutions of the equation. In particular, if the discriminant is negative, the solutions of the quadratic equation are <em class="terminology">complex numbers</em>. (We will study complex numbers in <span>&lt;&lt;Complex-Numbers&gt;&gt;</span>.)
+</p>
+<article class="theorem-like" id="theorem-17"><h5 class="heading">
+<span class="type">Key Idea</span><span class="codenumber">6.3.20</span><span class="title">The Descriminant</span>
+</h5>
+<p id="p-1301">
+		The <em class="terminology">discriminant</em> of a quadratic equation is \(D = b^2 − 4ac\).
+		<ol style="list-style-type: decimal;">
+<li id="li-1018">
+				If \(D \gt 0\), there are two unequal real solutions.
+			</li>
+<li id="li-1019">
+				If \(D = 0\), there is one real solution of multiplicity two.
+			</li>
+<li id="li-1020">
+				If \(D \lt 0\), there are two complex solutions.
+			</li>
+</ol>
+	</p></article><p id="p-1302">
+	We can also use the discriminant to decide whether a quadratic equation can be solved by factoring. First, clear the equation of fractions. If the discriminant is a perfect square, that is, the square of an integer, the solutions are rational numbers. This in turn means that the equation can be solved by factoring. If the discriminant is not a perfect square, the solutions will be irrational. Irrational solutions always occur in conjugate pairs,
+	\begin{equation*}\frac{-b+\sqrt{b^2-4ac}}{2a} ~~~\text{and}~~~
+		\frac{-b-\sqrt{b^2-4ac}}{2a}\end{equation*}
+	The only difference between the two solutions is the sign between the terms. For example, if we know that one solution of a particular quadratic equation is \(3 +\sqrt{2}\), then the other solution must be \(3 -\sqrt{2}\).
+</p>
+<article class="example-like" id="example-discriminant"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.3.21</span>
+</h5>
+<p id="p-1303">
+		Use the discriminant to determine the nature of the solutions of each equation. Can the equation be solved by factoring?
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1021">\(x^2 − x − 3 = 0\)</li>
+<li id="li-1022">\(2x^2 + x + 1 = 0\)</li>
+<li id="li-1023">\(x^2 − 2x − 3 = 0\)</li>
+</ol>
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-176" id="solution-176"><span class="">Solution</span></a></span><span id="hk-solution-176" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1304">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1024">\(D = b^2 − 4ac = (−1)^2 − 4(1)(−3) = 13 \gt 0\). The equation has two real, unequal solutions. Because \(13\) is not a perfect square, the solutions will be irrational numbers, so the equation cannot be solved by factoring.
+			</li>
+<li id="li-1025">\(D = b^2 − 4ac = 1^2 − 4(2)(1) = −7 \lt 0\).
+				 The equation has two complex solutions, which cannot be found by factoring.
+			</li>
+<li id="li-1026">\(D = b^2 − 4ac = (−2)^2 − 4(1)(−3) = 16 \gt 0\)
+				The equation has two real, unequal solutions. Because \(16 = 4^2\), the solutions are rational numbers and can be found by factoring.
+			</li>
+</ol>
+		(You can verify the conclusions above by solving each equation.)
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-discriminant" id="exercise-discriminant"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">6.3.22</span>
+</h5></a></div>
+<div id="hk-exercise-discriminant" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1305">
+		Use the discriminant to discover how many \(x\)-intercepts the graph of each equation has.
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1027">\(y = x^2 + 5x + 7\)</li>
+<li id="li-1028">\(y = −\frac{1}{2}x^2 + 4x − 8\)</li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<p id="p-1306">
+	In <a knowl="./knowl/exercise-discriminant.html" knowl-id="xref-exercise-discriminant" alt="Exercise 6.3.22 " title="Exercise 6.3.22 ">Exercise 6.3.22</a>, you should check that the single x-intercept is also the vertex of the parabola.
+</p></section><section class="subsection" id="subsection-148"><header title="Subsection  Sketching a Parabola"><h1 class="heading hide-type" alt="Subsection  Sketching a Parabola">
+<span class="type">Subsection</span><span class="codenumber"></span><span class="title">Sketching a Parabola</span>
+</h1></header><p id="p-1307">
+	Once we have located the vertex of the parabola, the \(x\)-intercepts, and the \(y\)-intercept, we can sketch a reasonably accurate graph. Recall that the graph should be symmetric about a vertical line through the vertex. We summarize the procedure as follows.
+</p>
+<article class="theorem-like" id="theorem-18"><h5 class="heading">
+<span class="type">Key Idea</span><span class="codenumber">6.3.23</span><span class="title">To Graph the Quadratic Function \(y = ax^2 + bx + c\):</span>
+</h5>
+<p id="p-1308">
+		<ol style="list-style-type: decimal;">
+<li id="li-1029">
+				Determine whether the parabola opens upward (if \(a \gt 0\)) or downward (if \(a \lt 0\)).
+			</li>
+<li id="li-1030">
+				Locate the vertex of the parabola.
+				<ol style="list-style-type: lower-alpha;">
+<li id="li-1031">
+						The \(x\)-coordinate of the vertex is \(x_v =\frac{−b}{2a}\).
+					</li>
+<li id="li-1032">
+						Find the \(y\)-coordinate of the vertex by substituting \(x_v\) into the equation of the parabola.
+					</li>
+</ol>
+</li>
+<li id="li-1033">
+				Locate the \(x\)-intercepts (if any) by setting \(y = 0\) and solving for \(x\).
+			</li>
+<li id="li-1034">
+				Locate the \(y\)-intercept by evaluating \(y\) for \(x = 0\).
+			</li>
+<li id="li-1035">
+				Locate the point symmetric to the \(y\)-intercept across the axis of symmetry.
+			</li>
+</ol>
+	</p></article><article class="example-like" id="example-198"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.3.24</span>
+</h5>
+<p id="p-1309">
+		Sketch a graph of the equation \(y = x^2 + 3x + 1\), showing the significant points.
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-177" id="solution-177"><span class="">Solution</span></a></span><span id="hk-solution-177" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1310">
+		We follow the steps outlined above.
+		<li id="li-1036">Step 1: <p id="p-1311">Because \(a = 1 \gt 0\), we know that the parabola opens upward.</p>
+</li><li id="li-1037">Step 2: <p id="p-1312">Compute the coordinates of the vertex:
+				\begin{equation*}\begin{aligned}
+					x_v\amp=\frac{-b}{2a}=\frac{-3}{2(1)}= −1.5//
+					y_v\amp= = (−1.5)2 + 3(−1.5) + 1 = −1.25
+					\end{aligned}
+				\end{equation*}
+				The vertex is the point \((−1.5,−1.25)\).</p>
+</li><li id="li-1038">Step 3: <p id="p-1313">Set \(y\) equal to zero to find the \(x\)-intercepts.
+				\begin{equation*}\begin{aligned}
+					0 \amp= x^2 + 3x + 1\amp\amp\text{Use the quadratic formula.}\\
+					x \amp=\frac{-3\pm\sqrt{3^2-4(1)(1)}}{2(1)}\\
+					\amp=\frac{-3\pm\sqrt{5}}{2}
+					\end{aligned}
+				\end{equation*}
+				Rounding to the nearest tenth, we find that the \(x\)-intercepts are approximately \((−2.6, 0)\) and \((−0.4, 0)\).</p>
+</li><li id="li-1039">Step 4: <p id="p-1314">Substitute \(x = 0\) to find the \(y\)-intercept, \((0, 1)\).</p>
+</li><li id="li-1040">Step 5: <p id="p-1315">The axis of symmetry is the vertical line \(x = −1.5\), so the \(y\)-intercept lies \(1.5\) units to the right of the axis of symmetry. There must be another point on the parabola with the same \(y\)-coordinate as the \(y\)-intercept but \(1.5\) units to the left of the axis of symmetry. The coordinates of this point are \((−3, 1)\).
+				</p>
+<p id="p-1316">Finally, plot the \(x\)-intercepts, the vertex, and the \(y\)-intercept and its symmetric point, and draw a parabola through them. The finished graph is shown in <a knowl="./knowl/fig-parabola-with-5-labeled-points.html" knowl-id="xref-fig-parabola-with-5-labeled-points" alt="Figure 6.3.25 " title="Figure 6.3.25 ">Figure 6.3.25</a>.</p>
+<figure class="figure-like" id="fig-parabola-with-5-labeled-points"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-parabola-with-5-labeled-points.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.3.25</span></figcaption></figure>
+</li>
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-196" id="exercise-196"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">6.3.26</span>
+</h5></a></div>
+<div id="hk-exercise-196" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1317">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1041">
+				Find the intercepts and the vertex of the graph of \(y = x^2 − 5x + 4\).
+			</li>
+<li id="li-1042">
+				Sketch the graph by hand.
+			</li>
+<li id="li-1043">
+				Use your calculator to verify your graph.
+			</li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section></section></div></main>
+</div>
+</body>
+</html>
