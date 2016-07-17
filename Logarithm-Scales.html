@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-07-16T18:48:41-04:00    *-->
+<!--*    on 2016-07-17T18:38:23-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -129,6 +129,7 @@ MathJax.Hub.Config({
 <li><a href="Graphing-Parabolas.html">Graphing Parabolas</a></li>
 <li><a href="Problem-Solving.html">Problem Solving</a></li>
 <li><a href="Quadratic-Inequalities.html">Quadratic Inequalities</a></li>
+<li><a href="Curve-Fitting.html">Curve Fitting</a></li>
 </ul>
 <h2 class="link"><a href="index-part-1.html"><span class="title">Index</span></a></h2>
 <ul></ul>
@@ -137,7 +138,7 @@ MathJax.Hub.Config({
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Logarithm-Scales"><header title="Section 5.4 Logarithmic Scales"><h1 class="heading hide-type" alt="Section 5.4 Logarithmic Scales">
 <span class="type">Section</span><span class="codenumber">5.4</span><span class="title">Logarithmic Scales</span><a href="Logarithm-Scales.html" class="permalink">¶ permalink</a>
 </h1></header><p id="p-1121">
-	Because logarithmic functions grow very slowly, they are useful for modeling phenomena that take on a very wide range of values. For example, biologists study how metabolic functions such as heart rate are related to an animal’s weight, or mass. <a knowl="./knowl/table-mammal-mass.html" knowl-id="xref-table-mammal-mass" alt="Table 5.4.1 " title="Table 5.4.1 ">Table 5.4.1</a> shows the mass in kilograms of several mammals.
+	Because logarithmic functions grow very slowly, they are useful for modeling phenomena that take on a very wide range of values. For example, biologists study how metabolic functions such as heart rate are related to an animal’s weight, or mass. <a knowl="./knowl/table-mammal-mass.html" knowl-id="xref-table-mammal-mass" alt="Table 5.96 " title="Table 5.96 ">Table 5.96</a> shows the mass in kilograms of several mammals.
 	<figure class="figure-like" id="table-mammal-mass"><table>
 <tr>
 <td class="l m b1 r1 l1 t3">Animal</td>
@@ -158,16 +159,16 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0">\(70,000\)</td>
 </tr>
 </table>
-<figcaption><span class="heading">Table</span><span class="codenumber">5.4.1</span></figcaption></figure>
+<figcaption><span class="heading">Table</span><span class="codenumber">5.96</span></figcaption></figure>
 </p>
 <p id="p-1122">
-	Imagine trying to scale the \(x\)-axis to show all of these values. If we set tick marks at intervals of \(10,000\) kg, as shown in <a knowl="./knowl/fig-numline-mammal-mass.html" knowl-id="xref-fig-numline-mammal-mass" alt="Figure 5.4.2 " title="Figure 5.4.2 ">Figure 5.4.2</a>, we can plot the mass of the whale, and maybe the elephant, but the dots for the smaller animals will be indistinguishable.
+	Imagine trying to scale the \(x\)-axis to show all of these values. If we set tick marks at intervals of \(10,000\) kg, as shown in <a knowl="./knowl/fig-numline-mammal-mass.html" knowl-id="xref-fig-numline-mammal-mass" alt="Figure 5.97 " title="Figure 5.97 ">Figure 5.97</a>, we can plot the mass of the whale, and maybe the elephant, but the dots for the smaller animals will be indistinguishable.
 </p>
-<figure class="figure-like" id="fig-numline-mammal-mass"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-numline-mammal-mass.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.4.2</span></figcaption></figure><p id="p-1123">
-	On the other hand, we can plot the mass of the cat if we set tick marks at intervals of \(1\) kg, as shown in <a knowl="./knowl/fig-numline-mammal-mass2.html" knowl-id="xref-fig-numline-mammal-mass2" alt="Figure 5.4.3 " title="Figure 5.4.3 ">Figure 5.4.3</a>, but the axis will have to be extremely long to include even the wolf. We cannot show the masses of all these animals on the same scale.
+<figure class="figure-like" id="fig-numline-mammal-mass"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-numline-mammal-mass.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.97</span></figcaption></figure><p id="p-1123">
+	On the other hand, we can plot the mass of the cat if we set tick marks at intervals of \(1\) kg, as shown in <a knowl="./knowl/fig-numline-mammal-mass2.html" knowl-id="xref-fig-numline-mammal-mass2" alt="Figure 5.98 " title="Figure 5.98 ">Figure 5.98</a>, but the axis will have to be extremely long to include even the wolf. We cannot show the masses of all these animals on the same scale.
 </p>
-<figure class="figure-like" id="fig-numline-mammal-mass2"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-numline-mammal-mass2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.4.3</span></figcaption></figure><p id="p-1124">
-	To get around this problem, we can plot the log of the mass, instead of the mass itself. <a knowl="./knowl/table-mammal-log-mass.html" knowl-id="xref-table-mammal-log-mass" alt="Table 5.4.4 " title="Table 5.4.4 ">Table 5.4.4</a> shows the base 10 log of each animal's mass, rounded to \(2\) decimal places.
+<figure class="figure-like" id="fig-numline-mammal-mass2"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-numline-mammal-mass2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.98</span></figcaption></figure><p id="p-1124">
+	To get around this problem, we can plot the log of the mass, instead of the mass itself. <a knowl="./knowl/table-mammal-log-mass.html" knowl-id="xref-table-mammal-log-mass" alt="Table 5.99 " title="Table 5.99 ">Table 5.99</a> shows the base 10 log of each animal's mass, rounded to \(2\) decimal places.
 	<figure class="figure-like" id="table-mammal-log-mass"><table>
 <tr>
 <td class="l m b1 r1 l1 t3">Animal</td>
@@ -197,19 +198,19 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0">\(4.85\)</td>
 </tr>
 </table>
-<figcaption><span class="heading">Table</span><span class="codenumber">5.4.4</span></figcaption></figure>
+<figcaption><span class="heading">Table</span><span class="codenumber">5.99</span></figcaption></figure>
 </p>
 <p id="p-1125">
-	The logs of the masses range from \(−2.40\) to \(4.85\). We can easily plot these values on a single scale, as shown in <a knowl="./knowl/fig-logscale-mammal-mass.html" knowl-id="xref-fig-logscale-mammal-mass" alt="Figure 5.4.5 " title="Figure 5.4.5 ">Figure 5.4.5</a>.
-	<figure class="figure-like" id="fig-logscale-mammal-mass"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-logscale-mammal-mass.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.4.5</span></figcaption></figure>
+	The logs of the masses range from \(−2.40\) to \(4.85\). We can easily plot these values on a single scale, as shown in <a knowl="./knowl/fig-logscale-mammal-mass.html" knowl-id="xref-fig-logscale-mammal-mass" alt="Figure 5.100 " title="Figure 5.100 ">Figure 5.100</a>.
+	<figure class="figure-like" id="fig-logscale-mammal-mass"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-logscale-mammal-mass.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.100</span></figcaption></figure>
 </p>
 <p id="p-1126">
-	The scale in <a knowl="./knowl/fig-logscale-mammal-mass.html" knowl-id="xref-fig-logscale-mammal-mass" alt="Figure 5.4.5 " title="Figure 5.4.5 ">Figure 5.4.5</a> is called a <em class="terminology">logarithmic scale</em>, or log scale. The tick marks are labeled with powers of \(10\), because, as you recall, a logarithm is actually an exponent. For example, the mass of the horse is \(300\) kg, and
+	The scale in <a knowl="./knowl/fig-logscale-mammal-mass.html" knowl-id="xref-fig-logscale-mammal-mass" alt="Figure 5.100 " title="Figure 5.100 ">Figure 5.100</a> is called a <em class="terminology">logarithmic scale</em>, or log scale. The tick marks are labeled with powers of \(10\), because, as you recall, a logarithm is actually an exponent. For example, the mass of the horse is \(300\) kg, and
 	\begin{equation*}\log 300 = 2.48 ~~ \text{ so } ~~ 10^{2.48} = 300\end{equation*}
 	When we plot \(2.48\) for the horse, we are really plotting the power of \(10\) that gives its mass, because \(10^{2.48} = 300\) kg. The exponents on base \(10\) are evenly spaced on a log scale, so we plot \(10^{2.48}\) about halfway between \(10^2\) and \(10^3\).
 </p>
 <article class="example-like" id="example-plot-logscale"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">5.4.6</span>
+<span class="type">Example</span><span class="codenumber">5.101</span>
 </h5>
 <p id="p-1127">
 		Plot the values on a log scale.
@@ -245,16 +246,16 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0">\(8.60\)</td>
 </tr>
 </table></figure>
-	Then we plot each logarithm, estimating its position between integer exponents. For example, we plot the first value, \(−3.15\), closer to \(−3\) than to \(−4\). The finished plot is shown in <a knowl="./knowl/fig-logscale.html" knowl-id="xref-fig-logscale" alt="Figure 5.4.7 " title="Figure 5.4.7 ">Figure 5.4.7</a>.
-	<figure class="figure-like" id="fig-logscale"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-logscale.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.4.7</span></figcaption></figure>
+	Then we plot each logarithm, estimating its position between integer exponents. For example, we plot the first value, \(−3.15\), closer to \(−3\) than to \(−4\). The finished plot is shown in <a knowl="./knowl/fig-logscale.html" knowl-id="xref-fig-logscale" alt="Figure 5.102 " title="Figure 5.102 ">Figure 5.102</a>.
+	<figure class="figure-like" id="fig-logscale"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-logscale.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.102</span></figcaption></figure>
 </p></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-read-logscale" id="exercise-read-logscale"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">5.4.8</span>
+<span class="type">Exercise</span> <span class="codenumber">5.103</span>
 </h5></a></div>
 <div id="hk-exercise-read-logscale" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1129">
-		Complete the table by estimating the logarithm of each point plotted on the log scale in <a knowl="./knowl/fig-read-logscale.html" knowl-id="xref-fig-read-logscale" alt="Figure 5.4.9 " title="Figure 5.4.9 ">Figure 5.4.9</a>. Then give a decimal value for each point.
+		Complete the table by estimating the logarithm of each point plotted on the log scale in <a knowl="./knowl/fig-read-logscale.html" knowl-id="xref-fig-read-logscale" alt="Figure 5.104 " title="Figure 5.104 ">Figure 5.104</a>. Then give a decimal value for each point.
 		<figure class="figure-like" id="table-128"><table>
 <tr>
 <td class="c m b1 r1 l1 t3">\(\log x\)</td>
@@ -271,7 +272,7 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0">\(\)</td>
 </tr>
 </table></figure>
-    <figure class="figure-like" id="fig-read-logscale"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-read-logscale.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.4.9</span></figcaption></figure>
+    <figure class="figure-like" id="fig-read-logscale"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-read-logscale.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.104</span></figcaption></figure>
 	</p></article><div class="hidden-knowl-wrapper"></div>
 </div>
 <section class="subsection" id="subsection-127"><header title="Subsection 5.4.1 Using Log Scales"><h1 class="heading hide-type" alt="Subsection 5.4.1 Using Log Scales">
@@ -280,11 +281,11 @@ MathJax.Hub.Config({
 	By now, you have noticed that the values represented by points on a log scale increase rapidly as we move to the right along the scale. Also notice that \(10^0 = 1\), so the "middle" of a log scale represents \(1\) (not zero, as on a linear scale). Points to the left of \(10^0\) represent fractions between \(0\) and \(1\), because powers of \(10\) with negative exponents are numbers less than \(1\). Their values decrease toward \(0\) as we move to the left, but they never become negative. We cannot plot negative numbers or zero on a log scale, because the log of a negative number or zero is undefined.
 </p>
 <article class="example-like" id="example-log-timeline"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">5.4.10</span>
+<span class="type">Example</span><span class="codenumber">5.105</span>
 </h5>
 <p id="p-1131">
-		<a knowl="./knowl/fig-log-timeline.html" knowl-id="xref-fig-log-timeline" alt="Figure 5.4.11 " title="Figure 5.4.11 ">Figure 5.4.11</a> shows a timeline for life on Earth, in units of Mya (million years ago).
-		<figure class="figure-like" id="fig-log-timeline"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-log-timeline.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.4.11</span></figcaption></figure>
+		<a knowl="./knowl/fig-log-timeline.html" knowl-id="xref-fig-log-timeline" alt="Figure 5.106 " title="Figure 5.106 ">Figure 5.106</a> shows a timeline for life on Earth, in units of Mya (million years ago).
+		<figure class="figure-like" id="fig-log-timeline"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-log-timeline.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.106</span></figcaption></figure>
 		Approximately how long ago did each of the following events occur?
 		<ol style="list-style-type: lower-alpha;">
 <li id="li-906">
@@ -317,7 +318,7 @@ MathJax.Hub.Config({
 </ol></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-log-costs" id="exercise-log-costs"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">5.4.12</span>
+<span class="type">Exercise</span> <span class="codenumber">5.107</span>
 </h5></a></div>
 <div id="hk-exercise-log-costs" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1132">
@@ -361,14 +362,14 @@ MathJax.Hub.Config({
 </div></section><section class="subsection" id="subsection-128"><header title="Subsection 5.4.2 Equal Increments on a Log Scale"><h1 class="heading hide-type" alt="Subsection 5.4.2 Equal Increments on a Log Scale">
 <span class="type">Subsection</span><span class="codenumber">5.4.2</span><span class="title">Equal Increments on a Log Scale</span>
 </h1></header><p id="p-1133">
-	Log scales allow us to plot a wide range of values, but there is a trade-off. Equal increments on a log scale do not correspond to equal differences in value, as they do on a linear scale. You can see why in <a knowl="./knowl/fig-logscale-increments.html" knowl-id="xref-fig-logscale-increments" alt="Figure 5.4.13 " title="Figure 5.4.13 ">Figure 5.4.13</a>: The difference between \(10^1\) and \(10^0\) is \(10 − 1 = 9\), but the difference between \(10^2\) and \(10^1\) is \(100 − 10 = 90\).
-	<figure class="figure-like" id="fig-logscale-increments"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-logscale-increments.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.4.13</span></figcaption></figure>
-	If we include tick marks for intermediate values on the log scale, they look like <a knowl="./knowl/fig-logscale-increments2.html" knowl-id="xref-fig-logscale-increments2" alt="Figure 5.4.14 " title="Figure 5.4.14 ">Figure 5.4.14</a>.
-	<figure class="figure-like" id="fig-logscale-increments2"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-logscale-increments2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.4.14</span></figcaption></figure>
+	Log scales allow us to plot a wide range of values, but there is a trade-off. Equal increments on a log scale do not correspond to equal differences in value, as they do on a linear scale. You can see why in <a knowl="./knowl/fig-logscale-increments.html" knowl-id="xref-fig-logscale-increments" alt="Figure 5.108 " title="Figure 5.108 ">Figure 5.108</a>: The difference between \(10^1\) and \(10^0\) is \(10 − 1 = 9\), but the difference between \(10^2\) and \(10^1\) is \(100 − 10 = 90\).
+	<figure class="figure-like" id="fig-logscale-increments"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-logscale-increments.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.108</span></figcaption></figure>
+	If we include tick marks for intermediate values on the log scale, they look like <a knowl="./knowl/fig-logscale-increments2.html" knowl-id="xref-fig-logscale-increments2" alt="Figure 5.109 " title="Figure 5.109 ">Figure 5.109</a>.
+	<figure class="figure-like" id="fig-logscale-increments2"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-logscale-increments2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.109</span></figcaption></figure>
 </p>
 <p id="p-1134">
-	Once again, the difference between, say, \(10^{0.1}\) and \(10^{0.2}\) is not the same as the difference between \(10^{0.2}\) and \(10^{0.3}\). The decimal values of the powers \(10^{0.1}\) through \(10^{0.9}\), rounded to two places, are shown in <a knowl="./knowl/fig-logscale-increments3.html" knowl-id="xref-fig-logscale-increments3" alt="Figure 5.4.15 " title="Figure 5.4.15 ">Figure 5.4.15</a>.
-	<figure class="figure-like" id="fig-logscale-increments3"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-logscale-increments3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.4.15</span></figcaption></figure>
+	Once again, the difference between, say, \(10^{0.1}\) and \(10^{0.2}\) is not the same as the difference between \(10^{0.2}\) and \(10^{0.3}\). The decimal values of the powers \(10^{0.1}\) through \(10^{0.9}\), rounded to two places, are shown in <a knowl="./knowl/fig-logscale-increments3.html" knowl-id="xref-fig-logscale-increments3" alt="Figure 5.110 " title="Figure 5.110 ">Figure 5.110</a>.
+	<figure class="figure-like" id="fig-logscale-increments3"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-logscale-increments3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.110</span></figcaption></figure>
 </p>
 <p id="p-1135">
 	As we move from left to right on this scale, we <!--Style me with CSS--><em>multiply</em> the value at the previous tick mark by \(10^{0.1}\), or about \(1.258\). For example,
@@ -379,14 +380,14 @@ MathJax.Hub.Config({
 	and so on. Moving up by equal increments on a log scale does not add equal amounts to the values plotted; it \(multiplies\) the values by equal \(factors\).
 </p>
 <article class="example-like" id="example-logscale-half-step"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">5.4.16</span>
+<span class="type">Example</span><span class="codenumber">5.111</span>
 </h5>
 <p id="p-1136">
 		What number is halfway between \(10\) and \(100\) on a log scale?
 	</p></article><div class="posterior"><div>
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-153" id="solution-153"><span class="">Solution</span></a></span><span id="hk-solution-153" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1137">
-		On a log scale, the number \(10^{1.5}\) is halfway between \(10^1\) and \(10^2\), as shown in <a knowl="./knowl/fig-logscale-half-step.html" knowl-id="xref-fig-logscale-half-step" alt="Figure 5.4.17 " title="Figure 5.4.17 ">Figure 5.4.17</a>.
-		<figure class="figure-like" id="fig-logscale-half-step"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-logscale-half-step.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.4.17</span></figcaption></figure>
+		On a log scale, the number \(10^{1.5}\) is halfway between \(10^1\) and \(10^2\), as shown in <a knowl="./knowl/fig-logscale-half-step.html" knowl-id="xref-fig-logscale-half-step" alt="Figure 5.112 " title="Figure 5.112 ">Figure 5.112</a>.
+		<figure class="figure-like" id="fig-logscale-half-step"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-logscale-half-step.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.112</span></figcaption></figure>
 		Now, \(10^{1.5} = 10\sqrt{10}\), or approximately \(31.62\). Note how equal increments of \(0.5\) on the log scale correspond to equal factors of \(10^{0.5}\) in the values plotted:
 		\begin{align*}
 		10 \times 3.162 \amp = 31.62 \text{ and } 31.62 \times 3.162 = 100\\
@@ -395,7 +396,7 @@ MathJax.Hub.Config({
 	</p></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-172" id="exercise-172"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">5.4.18</span>
+<span class="type">Exercise</span> <span class="codenumber">5.113</span>
 </h5></a></div>
 <div id="hk-exercise-172" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1138">
@@ -406,7 +407,7 @@ MathJax.Hub.Config({
 	If we would like to label the log scale with integers, we get a very different-looking scale, one in which the tick marks are not evenly spaced.
 </p>
 <article class="example-like" id="example-logscale-integer-labels"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">5.4.19</span>
+<span class="type">Example</span><span class="codenumber">5.114</span>
 </h5>
 <p id="p-1140">
 		Plot the integer values 2 through 9 and 20 through 90 on a log scale.
@@ -461,24 +462,24 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0">\(1.954\)</td>
 </tr>
 </table></figure>
-	    Plot on a log scale, as shown in <a knowl="./knowl/fig-logscale-integer-labels.html" knowl-id="xref-fig-logscale-integer-labels" alt="Figure 5.4.20 " title="Figure 5.4.20 ">Figure 5.4.20</a>.
-		<figure class="figure-like" id="fig-logscale-integer-labels"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-logscale-integer-labels.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.4.20</span></figcaption></figure>
+	    Plot on a log scale, as shown in <a knowl="./knowl/fig-logscale-integer-labels.html" knowl-id="xref-fig-logscale-integer-labels" alt="Figure 5.115 " title="Figure 5.115 ">Figure 5.115</a>.
+		<figure class="figure-like" id="fig-logscale-integer-labels"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-logscale-integer-labels.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.115</span></figcaption></figure>
 	</p></div></span>
 </div></div>
 <p id="p-1142">
-	On the log scale in <a knowl="./knowl/fig-logscale-integer-labels.html" knowl-id="xref-fig-logscale-integer-labels" alt="Figure 5.4.20 " title="Figure 5.4.20 ">Figure 5.4.20</a>, notice how the integer values are spaced: They get closer together as they approach the next power of \(10\). You will often see log scales labeled not with powers of \(10\), but with integer values, as in <a knowl="./knowl/fig-logscale-integer-labels2.html" knowl-id="xref-fig-logscale-integer-labels2" alt="Figure 5.4.21 " title="Figure 5.4.21 ">Figure 5.4.21</a>.
-	<figure class="figure-like" id="fig-logscale-integer-labels2"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-logscale-integer-labels2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.4.21</span></figcaption></figure>
+	On the log scale in <a knowl="./knowl/fig-logscale-integer-labels.html" knowl-id="xref-fig-logscale-integer-labels" alt="Figure 5.115 " title="Figure 5.115 ">Figure 5.115</a>, notice how the integer values are spaced: They get closer together as they approach the next power of \(10\). You will often see log scales labeled not with powers of \(10\), but with integer values, as in <a knowl="./knowl/fig-logscale-integer-labels2.html" knowl-id="xref-fig-logscale-integer-labels2" alt="Figure 5.116 " title="Figure 5.116 ">Figure 5.116</a>.
+	<figure class="figure-like" id="fig-logscale-integer-labels2"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-logscale-integer-labels2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.116</span></figcaption></figure>
 </p>
 <p id="p-1143">
 	In fact, <em class="terminology">log-log graph paper</em> scales both axes with logarithmic scales.
 </p>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-log-log-graph" id="exercise-log-log-graph"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">5.4.22</span>
+<span class="type">Exercise</span> <span class="codenumber">5.117</span>
 </h5></a></div>
 <div id="hk-exercise-log-log-graph" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1144">
 		The opening page of <a href="chap3.html" alt="Chapter 3 Power Functions" title="Chapter 3 Power Functions">Chapter 3</a> shows the "mouse-to-elephant" curve, a graph of the metabolic rate of mammals as a function of their mass. (The elephant does not appear on that graph, because its mass is too big.) Figure 5.32 shows the same function, graphed on log-log paper.
-		<figure class="figure-like" id="fig-log-log-graph"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-log-log-graph.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.4.23</span></figcaption></figure>
+		<figure class="figure-like" id="fig-log-log-graph"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-log-log-graph.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">5.118</span></figcaption></figure>
 		Use this graph to estimate the mass and metabolic rate for the following animals, labeled on the graph.
 		<figure class="figure-like" id="table-132"><table>
 <tr>
@@ -558,7 +559,7 @@ MathJax.Hub.Config({
 </table></figure>
 </p>
 <article class="example-like" id="example-pH"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">5.4.24</span>
+<span class="type">Example</span><span class="codenumber">5.119</span>
 </h5>
 <p id="p-1146">
 	<ol style="list-style-type: lower-alpha;">
@@ -588,7 +589,7 @@ MathJax.Hub.Config({
 </p></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-174" id="exercise-174"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">5.4.25</span>
+<span class="type">Exercise</span> <span class="codenumber">5.120</span>
 </h5></a></div>
 <div id="hk-exercise-174" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1148">
@@ -648,7 +649,7 @@ MathJax.Hub.Config({
 		Thunder is \(10^9\), or one billion times more intense than a whisper. It would be impossible to show such a wide range of values on a graph and still maintain reasonable precision. When we use a log scale, however, there is a difference of only \(90\) decibels between a whisper and thunder.
 </p>
 <article class="example-like" id="example-decibels"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">5.4.26</span>
+<span class="type">Example</span><span class="codenumber">5.121</span>
 </h5>
 <p id="p-1152">
 	<ol style="list-style-type: lower-alpha;">
@@ -686,7 +687,7 @@ MathJax.Hub.Config({
 </ol></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-decibels" id="exercise-decibels"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">5.4.27</span>
+<span class="type">Exercise</span> <span class="codenumber">5.122</span>
 </h5></a></div>
 <div id="hk-exercise-decibels" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1153">
@@ -702,7 +703,7 @@ MathJax.Hub.Config({
 		</p></article><div class="hidden-knowl-wrapper"></div>
 </div>
 <article class="remark-like" id="warning-8"><h5 class="heading">
-<span class="type">Caution</span><span class="codenumber">5.4.28</span>
+<span class="type">Caution</span><span class="codenumber">5.122</span>
 </h5>
 	Both the decibel model and the Richter scale in the next example use expressions of the form \(\log\left(\frac{a}{b}\right)\). Be careful to follow the order of operations when using these models. We must compute the quotient \(\frac{a}{b}\) before taking a logarithm. In particular, it is <!--Style me with CSS--><em>not</em> true that \(\log\left(\frac{a}{b}\right)\) can be simplified to \(\frac{\log a}{\log b}\).
 </article></section><section class="subsection" id="subsection-131"><header title="Subsection 5.4.5 The Richter Scale"><h1 class="heading hide-type" alt="Subsection 5.4.5 The Richter Scale">
@@ -712,7 +713,7 @@ MathJax.Hub.Config({
 	\begin{equation*}M=\log_{10}\left(\frac{A}{A_0} \right)\end{equation*}
 </p>
 <article class="example-like" id="example-northridge-earthquake"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">5.4.29</span>
+<span class="type">Example</span><span class="codenumber">5.123</span>
 </h5>
 <p id="p-1155">
 	<ol style="list-style-type: lower-alpha;">
@@ -762,7 +763,7 @@ MathJax.Hub.Config({
 </ol></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-Richter" id="exercise-Richter"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">5.4.30</span>
+<span class="type">Exercise</span> <span class="codenumber">5.124</span>
 </h5></a></div>
 <div id="hk-exercise-Richter" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1156">
@@ -773,7 +774,7 @@ MathJax.Hub.Config({
 	An earthquake \(100\), or \(10^2\), times as strong is only two units greater in magnitude on the Richter scale. In general, a difference of \(K\) units on the Richter scale (or any logarithmic scale) corresponds to a factor of \(10^K\) units in the intensity of the quake.
 </p>
 <article class="example-like" id="example-compare-logscale"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">5.4.31</span>
+<span class="type">Example</span><span class="codenumber">5.125</span>
 </h5>
 <p id="p-1158">
 		On a log scale, the weights of two animals differ by \(1.6\) units. What is the ratio of their actual weights?
@@ -783,7 +784,7 @@ MathJax.Hub.Config({
 	</p></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-compare-logscale" id="exercise-compare-logscale"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">5.4.32</span>
+<span class="type">Exercise</span> <span class="codenumber">5.126</span>
 </h5></a></div>
 <div id="hk-exercise-compare-logscale" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like">

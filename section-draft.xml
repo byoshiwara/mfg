@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- <mathbook><book> -->
 
-<section xml:id="Quadratic-Inequalities"   xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Quadratic Inequalities</title>
+<section xml:id="Curve-Fitting"   xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Curve Fitting</title>
 
 <subsection><title>Solving Inequalities Graphically</title>
 <p>
-	In <xref ref="chap1" autoname="yes"/>, we used graphs to solve equations and inequalities. The graphing technique is especially helpful for solving quadratic inequalities.
+	In <xref ref="linear-regression" autoname="yes"/>, we used linear regression to fit a line to a collection of data points. If the data points do not cluster around a line, it does not make sense to describe them by a linear function. Compare the scatterplots in <xref ref="fig-nonlinear-regression" autoname="yes"/>. The points in <xref ref="fig-nonlinear-regression" autoname="yes"/>a are roughly linear in appearance, but the points in <xref ref="fig-nonlinear-regression" autoname="yes"/>b are not. However, we can visualize a parabola that would approximate the data we will. In this section, we will see how to fit a quadratic function to a collection of data points.
+	<figure xml:id="fig-nonlinear-regression"><image source="images/fig-nonlinear-regression" alt="scatterplot that is linear and another that falls on a parabola" width="80%"/><caption></caption> </figure>
+</p>
+<p>
+	We will need to solve a special type of <m>3 \times 3</m> linear system, that is, a linear system of three equations in three variables. We can solve these systems using the <term index="yes">elimination</term> method.
 </p>
 
-<example xml:id="example-fireworks">
+<example xml:id="example-3-by-3">
 	<p>
-		The Chamber of Commerce in River City plans to put on a Fourth of July fireworks display. City regulations require that fireworks at public gatherings explode higher than <m>800</m> feet above the ground. The mayor particularly wants to include the Freedom Starburst model, which is launched from the ground. Its height after t seconds is given by
-		<me>h = 256t − 16t^2</me>
-		When should the Starburst explode in order to satisfy the safety regulation?
+		Use elimination to solve the system of equations.
+		<men>
+		\begin{alignedat}{4}
+		3a \amp {}+{} \amp 2b \amp {}+{} \amp c \amp {}={} \amp -1 \\
+		a \amp {}-{} \amp 2b \amp {}+{} \amp c \amp {}={} \amp -3 \\
+		2a \amp {}+{} \amp 3b \amp {}+{} \amp c \amp {}={} \amp 4 
+		\end{alignedat}
+		</men>
+<men>x=y</men>
 	</p>
 <solution>
 	<p>
-		We can get an approximate answer to this question by looking at the graph of the rocket's height, shown in <xref ref="fig-fireworks" autoname="yes"/>.
-		<figure xml:id="fig-fireworks"><image source="images/fig-fireworks" alt="graph of fireworks height" width="60%"/><caption></caption> </figure>
-		When is the rocket's height greater than 800 feet, or, in mathematical terms, for what values of <m>t</m> is <m>h \gt 800</m>? The answer to this question is the solution of the inequality
-		<me>256t − 16t^2 \gt 800</me>
+		
 	</p>
 </solution>
 </example>
