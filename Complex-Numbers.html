@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-07-21T15:07:16-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG Complex Numbers</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\alert}[1]{\mathbf{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\mathbf{\color{blue}{#1}}}
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+\newcommand\degree[0]{^{\circ}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading">
+<span class="title">Modeling, Functions, and Graphs</span><span class="subtitle">Algebra for College Students</span>
+</h1>
+<p class="byline">Katherine Yoshiwara</p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="Graphing-Polynomial-Functions.html">Previous</a><a class="up-button button toolbar-item" href="chap7.html">Up</a><a class="next-button button toolbar-item" href="backmatter.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Graphing-Polynomial-Functions.html">Previous</a><a class="up-button button toolbar-item" href="chap7.html">Up</a><a class="next-button button toolbar-item" href="backmatter.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="biography-1.html">Author Biography</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
+<li><a href="preface-2.html">Contributors to the 5\(^\mathrm{th}\) Edition</a></li>
+</ul>
+<h2 class="link"><a href="chap1.html"><span class="codenumber">1</span><span class="title">Functions and Their Graphs</span></a></h2>
+<ul>
+<li><a href="LinMod.html">Linear Models</a></li>
+<li><a href="functions.html">Functions</a></li>
+<li><a href="graphs-of-functions.html">Graphs of Functions</a></li>
+<li><a href="slope-and-rate-of-change.html">Slope and Rate of Change</a></li>
+<li><a href="linear-functions.html">Linear Functions</a></li>
+<li><a href="linear-regression.html">Linear Regression</a></li>
+</ul>
+<h2 class="link"><a href="chap2.html"><span class="codenumber">2</span><span class="title">Modeling with Functions</span></a></h2>
+<ul>
+<li><a href="nonlinear-models.html">Nonlinear Models</a></li>
+<li><a href="basic-functions.html">Some Basic Functions</a></li>
+<li><a href="transformations.html">Transformations of Graphs</a></li>
+<li><a href="MathModels.html">Functions as Mathematical Models</a></li>
+<li><a href="AbsoluteValue.html">The Absolute Value Function</a></li>
+<li><a href="Domain-Range.html">Domain and Range</a></li>
+</ul>
+<h2 class="link"><a href="chap3.html"><span class="codenumber">3</span><span class="title">Power Functions</span></a></h2>
+<ul>
+<li><a href="Variation.html">Variation</a></li>
+<li><a href="Integer-Exponents.html">Integer Exponents</a></li>
+<li><a href="Roots-and-Radicals.html">Roots and Radicals</a></li>
+<li><a href="Rational-Exponents.html">Rational Exponents</a></li>
+<li><a href="Joint-Variation.html">Joint Variation</a></li>
+</ul>
+<h2 class="link"><a href="chap4.html"><span class="codenumber">4</span><span class="title">Exponential Functions</span></a></h2>
+<ul>
+<li><a href="Exponential-Growth-and-Decay.html">Exponential Growth and Decay</a></li>
+<li><a href="Exponential-Functions.html">Exponential Functions</a></li>
+<li><a href="Logarithms.html">Logarithms</a></li>
+<li><a href="Properties-of-Logarithms.html">Properties of Logarithms</a></li>
+<li><a href="Exponential-Models.html">Exponential Models</a></li>
+</ul>
+<h2 class="link"><a href="chap5.html"><span class="codenumber">5</span><span class="title">Logarithmic Functions</span></a></h2>
+<ul>
+<li><a href="Inverse-Functions.html">Inverse Functions</a></li>
+<li><a href="Logarithmic-Functions.html">Logarithmic Functions</a></li>
+<li><a href="The-Natural-Base.html">The Natural Base</a></li>
+<li><a href="Logarithm-Scales.html">Logarithmic Scales</a></li>
+</ul>
+<h2 class="link"><a href="chap6.html"><span class="codenumber">6</span><span class="title">Quadratic Functions</span></a></h2>
+<ul>
+<li><a href="Factors-and-x-Intercepts.html">Factors and \(x\)-Intercepts</a></li>
+<li><a href="Solving-Quadratic-Equations.html">Solving Quadratic Equations</a></li>
+<li><a href="Graphing-Parabolas.html">Graphing Parabolas</a></li>
+<li><a href="Problem-Solving.html">Problem Solving</a></li>
+<li><a href="Quadratic-Inequalities.html">Quadratic Inequalities</a></li>
+<li><a href="Curve-Fitting.html">Curve Fitting</a></li>
+</ul>
+<h2 class="link active"><a href="chap7.html"><span class="codenumber">7</span><span class="title">Polynomial and Rational Functions</span></a></h2>
+<ul>
+<li><a href="Polynomial-Functions.html">Polynomial Functions</a></li>
+<li><a href="Graphing-Polynomial-Functions.html">Graphing Polynomial Functions</a></li>
+<li><a href="Complex-Numbers.html" class="active">Complex Numbers</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html">Algebra Skills Refresher</a></li>
+<li><a href="appendix-2.html">Using a Graphing Calculator</a></li>
+<li><a href="appendix-3.html">Glossary</a></li>
+<li><a href="appendix-4.html">Answers to selected exercises</a></li>
+<li><a href="index-part-1.html">Index</a></li>
+<li><a href="colophon-2.html">Colophon</a></li>
+</ul>
+<h2 class="link"><a href="index-part-2.html"><span class="title">Index</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="colophon-3.html"><span class="title">Colophon</span></a></h2>
+<ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Complex-Numbers"><header title="Section 7.3 Complex Numbers"><h1 class="heading hide-type" alt="Section 7.3 Complex Numbers">
+<span class="type">Section</span><span class="codenumber">7.3</span><span class="title">Complex Numbers</span><a href="Complex-Numbers.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-1648">
+	You know that not all quadratic equations have real solutions. For example, the graph of
+	\begin{equation*}
+		f(x) = x^2 − 2x + 2
+	\end{equation*}
+	has no \(x\)-intercepts (as shown in <a knowl="./knowl/fig-parabola-without-x-intercepts.html" knowl-id="xref-fig-parabola-without-x-intercepts" alt="Figure 7.35 " title="Figure 7.35 ">Figure 7.35</a>), and the equation
+	\begin{equation*}
+		x^2 − 2x + 2 = 0
+	\end{equation*}
+	has no real solutions.
+</p>
+<figure class="figure-like" id="fig-parabola-without-x-intercepts"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-parabola-without-x-intercepts.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">7.35</span></figcaption></figure><p id="p-1649">
+	We can still use completing the square or the quadratic formula to solve the equation.
+</p>
+<article class="example-like" id="example-complex-roots"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.36</span>
+</h5>
+<p id="p-1650">
+	Solve the equation \(x^2 − 2x + 2 = 0\) by using the quadratic formula.
+</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-204" id="solution-204"><span class="">Solution</span></a></span><span id="hk-solution-204" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1651">
+		We substitute \(a = 1\), \(b =-2\), and \(c= 2\) into the quadratic formula to get
+		\begin{equation*}
+			x=\frac{-(-2)\pm\sqrt{(-2)^2-4(1)(2)}}{2(1)}=\frac{2\pm\sqrt{-4}}{2}
+		\end{equation*}
+		Because \(\sqrt{-4}\) is not a real number, the equation \(x^2 − 2x + 2 = 0\) has no real solutions.
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-224" id="exercise-224"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">7.37</span>
+</h5></a></div>
+<div id="hk-exercise-224" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like">
+	Solve the equation \(x^2 − 6x + 13 = 0\) by using the quadratic formula.
+</article><div class="hidden-knowl-wrapper"></div>
+</div>
+<section class="subsection" id="subsection-167"><header title="Subsection 7.3.1 Imaginary Numbers"><h1 class="heading hide-type" alt="Subsection 7.3.1 Imaginary Numbers">
+<span class="type">Subsection</span><span class="codenumber">7.3.1</span><span class="title">Imaginary Numbers</span>
+</h1></header><p id="p-1652">
+	Although square roots of negative numbers such as \(\sqrt{-4}\) are not real numbers, they occur often in mathematics and its applications. Mathematicians began working with square roots of negative numbers in the sixteenth century, in their attempts to solve quadratic and cubic equations. René Descartes gave them the name imaginary numbers, which reflected the mistrust with which mathematicians regarded them at the time. Today, however, such numbers are well understood and used routinely by scientists and engineers.
+</p>
+<p id="p-1653">
+	We begin by defining a new number, \(i\), whose square is \(-1\).
+</p>
+<article class="assemblage-like" id="assemblage-101"><h5 class="heading">Imaginary Unit</h5>
+<p id="p-1654">
+	We define the <em class="terminology">imaginary unit</em> \(i\) by
+	\begin{equation*}
+		i^2=-1 ~~~\text{ or }~~~ i=\sqrt{-1}
+	\end{equation*}
+</p></article><p id="p-1655">
+	The letter \(i\) used in this way is not a variable; it is the name of a specific number and hence is a constant. The square root of any negative number can be written as the product of a real number and \(i\). For example,
+	\begin{align*}
+
+			\sqrt{-4}\amp=\sqrt{-1\cdot 4}
+		\\
+
+			\amp= \sqrt{-1}\sqrt{4}=i\cdot2
+		
+\end{align*}
+	or \(\sqrt{-4}=2i\). Any number that is the product of \(i\) and a real number is called an <em class="terminology">imaginary number</em>.
+</p>
+<article class="assemblage-like" id="assemblage-102"><h5 class="heading">Imaginary Numbers</h5>
+<p id="p-1656">
+	For \(a\gt 0\),
+	\begin{equation*}
+		\sqrt{-a}=\sqrt{-1}\cdot\sqrt{a}=i\sqrt{a}
+	\end{equation*}
+</p></article><p id="p-1657">
+	Examples of imaginary numbers are
+	\begin{equation*}3i\text{, }~~~\frac{7}{8}i\text{, } ~~~-38i\text{, }~~~\text{ and }~~~ i\sqrt{5} \end{equation*}
+</p>
+<article class="example-like" id="example-226"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.38</span>
+</h5>
+<p id="p-1658">
+		Write each radical as an imaginary number.
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1203">\(
+				\sqrt{-25}
+			\)</li>
+<li id="li-1204">\(
+				2\sqrt{-3}
+			\)</li>
+</ol>
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-205" id="solution-205"><span class="">Solution</span></a></span><span id="hk-solution-205" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1659">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1205">\begin{align*}
+
+						\sqrt{-25}\amp=\sqrt{-1}\sqrt{25}
+					\\
+
+						\amp=i\sqrt{25}=5i
+					
+\end{align*}</li>
+<li id="li-1206">\begin{align*}
+
+						2\sqrt{-3}\amp=2\sqrt{-1}\sqrt{3}
+					\\
+
+						\amp=2i\sqrt{3}
+					
+\end{align*}</li>
+</ol>
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-225" id="exercise-225"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">7.39</span>
+</h5></a></div>
+<div id="hk-exercise-225" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1660">
+		Write each radical as an imaginary number.
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1207">\(
+				\sqrt{-18}
+			\)</li>
+<li id="li-1208">\(
+				-6\sqrt{-5}
+			\)</li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<p id="p-1661">
+	Every negative real number has two imaginary square roots, \(i\sqrt{a}\)  and \(−i\sqrt{a}\), because
+	\begin{equation*}
+		\left(i\sqrt{a}\right)^2=i^2(\sqrt{a})^2=-a
+	\end{equation*}
+		and
+	\begin{equation*}
+		\left(-i\sqrt{a}\right)^2=(-i)^2(\sqrt{a})^2=-a
+	\end{equation*}
+		For example, the two square roots of \(-9\) are \(3i\) and \(-3i\).
+</p></section><section class="subsection" id="subsection-168"><header title="Subsection 7.3.2 Complex Numbers"><h1 class="heading hide-type" alt="Subsection 7.3.2 Complex Numbers">
+<span class="type">Subsection</span><span class="codenumber">7.3.2</span><span class="title">Complex Numbers</span>
+</h1></header><p id="p-1662">
+	Consider the quadratic equation
+	\begin{equation*}
+		x^2 − 2x + 5 = 0
+	\end{equation*}
+	Using the quadratic formula to solve the equation, we find
+	\begin{equation*}
+		x=\frac{-(-2)\pm\sqrt{(-2)^2-4(1)(5)}}{2}=\frac{2\pm\sqrt{-16}}{2}
+	\end{equation*}
+	If we now replace \(\sqrt{-16}\) with \(4i\), we have
+	\begin{equation*}
+		x=\frac{2\pm4i}{2}=1\pm2i
+	\end{equation*}
+	The two solutions are \(1 + 2i\) and \(1 − 2i\). These numbers are examples of <em class="terminology">complex numbers</em>.
+</p>
+<article class="assemblage-like" id="assemblage-103"><h5 class="heading">Complex Numbers</h5>
+<p id="p-1663">
+	A <em class="terminology">complex number</em> can be written in the form \(a+bi\), where \(a\) and \(b\) are real numbers.
+</p></article><p id="p-1664">Examples of complex numbers are
+	\begin{equation*}
+		3-5i\text{, }~~~2+\sqrt{7}i\text{, }~~~\frac{4-i}{3}\text{, }~~~6i\text{, }~~~\text{ and } -9	
+	\end{equation*}
+	In a complex number \(a+bi\), \(a\) is called the <em class="terminology">real part</em>, and \(b\) is called the <em class="terminology">imaginary part</em>. All real numbers are also complex numbers (with the imaginary part equal to zero). A complex number whose real part equals zero is called a <em class="terminology">pure imaginary</em> number.
+</p>
+<article class="example-like" id="example-227"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.40</span>
+</h5>
+<p id="p-1665">
+		Write the solutions to <a knowl="./knowl/example-complex-roots.html" knowl-id="xref-example-complex-roots" alt="Example 7.36 " title="Example 7.36 ">Example 7.36</a>,
+		\(
+			\frac{2\pm\sqrt{-4}}{2}
+		\), as complex numbers.
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-206" id="solution-206"><span class="">Solution</span></a></span><span id="hk-solution-206" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1666">
+		Because \(\sqrt{-4}=\sqrt{-1}\sqrt{4}=2i\), we have \(\frac{2\pm\sqrt{-4}}{2}=\frac{2\pm2i}{2}\), or \(1\pm i\). The solutions are \(1+i\) and \(1-i\).
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-226" id="exercise-226"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">7.41</span>
+</h5></a></div>
+<div id="hk-exercise-226" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1667">
+		Use extraction of roots to solve \((2x + 1)^2 + 9 = 0\). Write your answers as complex numbers.
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-169"><header title="Subsection 7.3.3 Arithmetic of Complex Numbers"><h1 class="heading hide-type" alt="Subsection 7.3.3 Arithmetic of Complex Numbers">
+<span class="type">Subsection</span><span class="codenumber">7.3.3</span><span class="title">Arithmetic of Complex Numbers</span>
+</h1></header><p id="p-1668">
+	All the properties of real numbers listed in Algebra Skills Refresher A.12 are also true of complex numbers. We can carry out arithmetic operations with complex numbers.
+</p>
+<p id="p-1669">
+	We add and subtract complex numbers by combining their real and imaginary parts separately. For example,
+	\begin{align*}
+
+			(4 + 5i ) + (2 − 3i ) \amp= (4 + 2) + (5 − 3)i
+		\\
+
+			\amp= 6 + 2i
+		
+\end{align*}
+</p>
+<article class="assemblage-like" id="assemblage-104"><h5 class="heading">Sums and Differences of Complex Numbers</h5>
+<p id="p-1670">
+	\begin{equation*}
+		(a + bi) + (c + di) = (a + c) + (b + d)i
+	\end{equation*}
+	\begin{equation*}
+		(a + bi) − (c + di) = (a − c) + (b − d)i
+	\end{equation*}
+</p></article><article class="example-like" id="example-228"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.42</span>
+</h5>
+<p id="p-1671">
+		Subtract: \((8 − 6i ) − (5 + 2i )\).
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-207" id="solution-207"><span class="">Solution</span></a></span><span id="hk-solution-207" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1672">
+		Combine the real and imaginary parts.
+		\begin{align*}
+
+				(8 − 6i ) − (5 + 2i ) \amp= (8 − 5) + (−6 − 2)i
+			\\
+
+				\amp = 3 + (−8)i = 3 − 8i
+			
+\end{align*}
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-227" id="exercise-227"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">7.43</span>
+</h5></a></div>
+<div id="hk-exercise-227" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1673">
+		Subtract: \((−3 + 2i ) − (−3 − 2i )\).
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-170"><header title="Subsection 7.3.4 Products of Complex Numbers"><h1 class="heading hide-type" alt="Subsection 7.3.4 Products of Complex Numbers">
+<span class="type">Subsection</span><span class="codenumber">7.3.4</span><span class="title">Products of Complex Numbers</span>
+</h1></header><p id="p-1674">
+	To find the product of two imaginary numbers, we use the fact that \(i^2=-1\). For example,
+	\begin{align*}
+
+			(3i )\cdot(4i ) \amp= 3\cdot4 i^2
+		\\
+
+			\amp= 12(−1) = −12
+		
+\end{align*}
+	To find the product of two complex numbers, we use the FOIL method, as if the numbers were binomials. For example,
+	\begin{equation*}
+		(2 + 3i )(3 − 5i ) = 6 − 10i + 9i − 15i^2
+	\end{equation*}
+	Because \(i^2=-1\), the last term, \(−15i^2\), can be replaced by \(-15(-1)\), or \(15\), to obtain
+	\begin{equation*}
+		6 − 10i + 9i + 15
+	\end{equation*}
+	Finally, we combine the real parts and imaginary parts to obtain
+	\begin{equation*}
+		(6 + 15) + (−10i + 9i ) = 21 − i
+	\end{equation*}
+</p>
+<article class="example-like" id="example-229"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.44</span>
+</h5>
+<p id="p-1675">
+		Multiply \((7 − 4i )(−2 − i )\).
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-208" id="solution-208"><span class="">Solution</span></a></span><span id="hk-solution-208" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1676">
+		\begin{align*}
+
+				(7 − 4i )(−2 − i ) \amp= −14 − 7i + 8i + 4i^2\amp\amp\text{Replace }i^2 \text{ by }-1.
+			\\
+
+				\amp = −14 − 7i + 8i − 4\amp\amp\text{Combine real parts and imaginary parts.}
+			\\
+
+				\amp= −18 + i
+			
+\end{align*}
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-228" id="exercise-228"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">7.45</span>
+</h5></a></div>
+<div id="hk-exercise-228" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1677">
+		Multiply \((−3 + 2i )(−3 − 2i )\).
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<p id="p-1678">
+	You can verify that in general the following rule holds.
+</p>
+<article class="assemblage-like" id="assemblage-105"><h5 class="heading">Product of Complex Numbers</h5>
+<p id="p-1679">
+	\begin{equation*}
+		(a + bi)(c + di) = (ac − bd) + (ad + bc)i
+	\end{equation*}
+</p></article><article class="remark-like" id="warning-18"><h5 class="heading">
+<span class="type">Caution</span><span class="codenumber">7.45</span>
+</h5>
+<p id="p-1680">
+		One property of real numbers that is not true of complex numbers is \(\sqrt{ab}=\sqrt{a}\cdot\sqrt{b}\).This identity fails when \(a\) and \(b\) are both negative. For example, if \(a = b = −2\), we have
+		\begin{equation*}
+			\sqrt{ab}=\sqrt{(-2)(-2)}=\sqrt{4}=2
+		\end{equation*}
+		but
+		\begin{equation*}
+			\sqrt{a}\cdot\sqrt{b}=\sqrt{-2}\cdot\sqrt{-2}=\sqrt{-1\cdot2}\cdot\sqrt{-1\cdot2} = i\sqrt{2}\cdot i\sqrt{2}=i^2(i\sqrt{2})^2=-2
+		\end{equation*}
+		so
+		\begin{equation*}
+			\sqrt{ab}\ne\sqrt{a}\cdot\sqrt{b}
+		\end{equation*}
+		We can avoid possible errors by writing square roots of negative numbers as imaginary numbers.
+	</p></article></section><section class="subsection" id="subsection-171"><header title="Subsection 7.3.5 Quotients of Complex Numbers"><h1 class="heading hide-type" alt="Subsection 7.3.5 Quotients of Complex Numbers">
+<span class="type">Subsection</span><span class="codenumber">7.3.5</span><span class="title">Quotients of Complex Numbers</span>
+</h1></header><p id="p-1681">
+	To find the quotient of two complex numbers, we use the technique of rationalizing the denominator. (See Algebra Skills Refresher <a href="appendix-1.html#appendix-Working-with-Radicals" alt="Section A.10 Working with Radicals" title="Section A.10 Working with Radicals">Section A.10</a>.) For example, consider the quotient
+	\begin{equation*}
+		\frac{3+4i}{2i}
+	\end{equation*}
+</p>
+<p id="p-1682">
+	Because \(i\) is really a radical (remember that \(i =\sqrt{-1})\), we multiply the numerator and denominator of the quotient by \(\alert{i}\) to obtain
+	\begin{align*}
+
+			\frac{(3+4i)\cdot \alert{i}}{2i\cdot\alert{i}}\amp =\frac{3i+4i^2}{2i^2} \amp\amp\text{Apply the distributive law to the numerator.}
+		\\
+
+			\amp=\frac{3i-4}{-2}\amp\amp\text{Recall that }i^2=-1.
+		
+\end{align*}
+	To write the quotient in the form \(a + bi\), we divide \(-2\) into each term of the numerator to get
+	\begin{equation*}
+		\frac{3i}{-2}-\frac{4}{-2}=\frac{-3}{2}i+2=2+\frac{-3}{2}i
+	\end{equation*}
+</p>
+<article class="example-like" id="example-230"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.46</span>
+</h5>
+<p id="p-1683">
+		Divide \(\displaystyle{\frac{10-15i}{5i}}\).
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-209" id="solution-209"><span class="">Solution</span></a></span><span id="hk-solution-209" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1684">
+		We multiply numerator and denominator by \(\alert{i}\).
+		\begin{align*}
+
+				\frac{10-15i}{5i}\amp=\frac{(10-15i)\cdot \alert{i}}{5i\cdot \alert{i}}\amp\amp
+			\\
+
+				\amp=\frac{10i-15i^2}{5i^2}\amp\amp\text{Replace }i^2 \text{ by } -1.
+			\\
+
+				\amp=\frac{10i+15}{-5}\amp\amp
+			\\
+
+				\amp=\frac{10i}{-5}+\frac{15}{-5}\amp\amp\text{Divide }-5 \text{ into each term of numerator.} 
+			\\
+
+				\amp=-2i-3 
+			
+\end{align*}
+		The quotient is \(−3 − 2i\).
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-229" id="exercise-229"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">7.47</span>
+</h5></a></div>
+<div id="hk-exercise-229" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1685">
+		Divide \(\displaystyle{\frac{8+9i}{3i}}\).
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<p id="p-1686">
+	If \(z = a + bi\)  is any nonzero complex number, then the number \(\overline{z} = a − bi\)  is called the <em class="terminology">complex conjugate</em> of \(z\). The product of a nonzero complex number and its conjugate is always a positive real number.
+	\begin{equation*}
+		z\overline{z} = (a + bi)(a − bi) = a^2 − b^2i^2 = a^2 − b^2(−1) = a^2 + b^2
+	\end{equation*}
+	We use this fact to find the quotient of complex numbers. If the divisor has both a real and an imaginary part,we multiply numerator and denominator by the conjugate of the denominator.
+</p>
+<article class="example-like" id="example-231"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.48</span>
+</h5>
+<p id="p-1687">
+		Divide \(\displaystyle{\frac{2+3i}{4-2i}}\).
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-210" id="solution-210"><span class="">Solution</span></a></span><span id="hk-solution-210" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1688">
+		We multiply numerator and denominator by \(\alert{4 + 2i}\), the conjugate of the denominator.
+		\begin{align*}
+
+				\frac{2+3i}{4-2i}\amp=\frac{(2+3i)(\alert{4 + 2i})}{(4-2i)(\alert{4 + 2i})} \amp\amp\text{Expand numerator and denominator.}
+			\\
+
+				\amp=\frac{8 + 4i + 12i + 6i^2}{16 + 8i − 8i − 4i^2} \amp\amp\text{Replace }i^2\text{ by } -1.
+			\\
+
+				\amp= \frac{8 + 16i − 6}{16 − (−4)} \amp\amp\text{Combine like terms.}
+			\\
+
+				\amp= \frac{2 + 16i}{20} \amp\amp\text{Divide 20 into each term of numerator.}
+			\\
+
+				\amp= \frac{2}{20}+ \frac{16i}{20}
+			\\
+
+				\amp=  \frac{1}{10}+ \frac{4}{5}i
+			
+\end{align*}
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-230" id="exercise-230"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">7.49</span>
+</h5></a></div>
+<div id="hk-exercise-230" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1689">
+		Write the quotient \(\displaystyle{\frac{4 − 2i}{1 + i}}\) in the form \(a + bi\).
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-172"><header title="Subsection 7.3.6 Zeros of Polynomials"><h1 class="heading hide-type" alt="Subsection 7.3.6 Zeros of Polynomials">
+<span class="type">Subsection</span><span class="codenumber">7.3.6</span><span class="title">Zeros of Polynomials</span>
+</h1></header><p id="p-1690">
+	Because we can add, subtract, and multiply any two complex numbers, we can use a complex number as an input for a polynomial function. Thus, we can extend the domain of any polynomial to include all complex numbers.
+</p>
+<article class="example-like" id="example-232"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.50</span>
+</h5>
+<p id="p-1691">
+		Evaluate the polynomial \(f(x) = x^2 − 2x + 2\) for \(x = 1 + i\), then simplify.
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-211" id="solution-211"><span class="">Solution</span></a></span><span id="hk-solution-211" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1692">
+		We substitute \(x = 1 + i\) to find
+		\begin{align*}
+
+				f (1 + i ) \amp = (1 + i )^2 − 2(1 + i ) + 2
+			\\
+
+				\amp = 1^2 + 2i + i^2 − 2 − 2i + 2
+			\\
+
+				\amp = 1 + 2i + (−1) − 2 − 2i + 2
+			\\
+
+				\amp =0
+			
+\end{align*}
+		Thus, \(f(1 + i ) = 0\), so \(1 + i\) is a solution of \(x^2 − 2x + 2 = 0\).
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-231" id="exercise-231"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">7.51</span>
+</h5></a></div>
+<div id="hk-exercise-231" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1693">
+		If \(f(x) = x^2 − 6x + 13\), evaluate \(f(3 + 2i )\).
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<p id="p-1694">
+	In <a href="chap6.html" alt="Chapter 6 Quadratic Functions" title="Chapter 6 Quadratic Functions">Chapter 6</a>, we learned that irrational solutions of quadratic equations occur in conjugate pairs,
+	\begin{equation*}
+		x=\frac{-b}{2a}+\frac{\sqrt{b^2-4ac}}{2a} ~~\text{ and }~~ x=\frac{-b}{2a}-\frac{\sqrt{b^2-4ac}}{2a}
+	\end{equation*}
+	If the discriminant \(D = b^2 − 4ac\) is negative, the two solutions are complex conjugates,
+	\begin{equation*}
+		z=\frac{-b}{2a}+\frac{i\sqrt{\abs{D}}}{2a} ~~\text{ and }~~ \overline{z}=\frac{-b}{2a}-\frac{i\sqrt{\abs{D}}}{2a}
+	\end{equation*}
+	Thus, if we know that \(z\) is a complex solution of a quadratic equation, we know that \(\overline{z}\) is the other solution. The quadratic equation with solutions \(z\) and \(\overline{z}\) is
+	\begin{align*}
+
+			(x − z)(x − \overline{z}) \amp = 0
+		\\
+
+			x^2-(z+ \overline{z}) +z\overline{z}\amp = 0
+		
+\end{align*}
+</p>
+<article class="example-like" id="example-233"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.52</span>
+</h5>
+<p id="p-1695">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1209">
+				Let \(z = 7 − 5i\). Compute \(z\overline{z}\).
+			</li>
+<li id="li-1210">
+				Find a quadratic equation with one solution being \(z = 7 − 5i\).
+			</li>
+</ol>
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-212" id="solution-212"><span class="">Solution</span></a></span><span id="hk-solution-212" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1696">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1211"><p id="p-1697">
+				The conjugate of \(z = 7 − 5i\) is \(\overline{z} = 7 + 5i\), so
+				\begin{align*}
+
+						z\overline{z} \amp= (7 − 5i )(7 + 5i )
+					\\
+
+						\amp= 49 − 25i^2  
+					\\
+
+						\amp= 49 + 25  
+					\\
+
+						\amp=  74 
+					
+\end{align*}
+			</p></li>
+<li id="li-1212"><p id="p-1698">
+				The other solution of the equation is \(\overline{z} = 7 + 5i\), and the equation is \((x-z)(x − \overline{z}) = 0\). We expand the product to find
+				\begin{align*}
+
+						(x − z)(x − z) \amp = x^2 − (z + z)x + z\overline{z}
+					\\
+
+						\amp = x^2 − (7 − 5i + 7 + 5i )x + 74
+					\\
+
+						\amp = x^2 − 14x + 74
+					
+\end{align*}
+				The equation is \(x^2 − 14x + 74 = 0\).
+			</p></li>
+</ol>
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-232" id="exercise-232"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">7.53</span>
+</h5></a></div>
+<div id="hk-exercise-232" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1699">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1213">
+				Let \(z = −3 + 4i\). Compute \(z\overline{z}\).
+			</li>
+<li id="li-1214">
+				Find a quadratic equation with one solution being \(z = −3 + 4i\).
+			</li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<p id="p-1700">	
+	One of the most important results in mathematics is the <em class="terminology">fundamental theorem of algebra</em>, which says that if we allow complex numbers as inputs, then every polynomial \(p(x)\) of degree \(	n\ge 1\) has exactly \(	n\) complex number zeros.
+</p>
+<article class="assemblage-like" id="assemblage-106"><h5 class="heading">Fundamental Theorem of Algebra</h5>
+<p id="p-1701">
+	Let \(p(x)\) be a polynomial of degree \(n\ge 1\). Then \(p(x)\) has exactly \(n\) complex zeros.
+</p></article><div class="sidebyside" id="sidebyside-104">
+<p id="p-1702" class="left" style="width:67%;vertical-align:middle;text-align:left;">
+	As a result, the factor theorem tells that every polynomial of degree \(n\) can be factored as the product of \(n\) linear terms. For example, although the graph of \(y = x^4 + 4\) shown in <a knowl="./knowl/fig-quartic-with-no-real-zeros.html" knowl-id="xref-fig-quartic-with-no-real-zeros" alt="Figure 7.54 " title="Figure 7.54 ">Figure 7.54</a> has no \(x\)-intercepts, the fundamental theorem tells us that there are four complex solutions to \(x^4 + 4 = 0\), and that \(x^4 + 4\) can be factored. 
+</p>
+<figure class="right" id="fig-quartic-with-no-real-zeros" style="width:29%;vertical-align:middle;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-quartic-with-no-real-zeros.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">7.54</span></figcaption></figure>
+</div>
+<p id="p-1703">
+	You can check that the four solutions to \(x^4 + 4 = 0\) are \(1 + i\), \(−1 + i\), \(−1 − i\) , and \(1 − i\). For example, if \(x = 1 + i\), then
+	\begin{equation*}
+		x^2 = (1 + i )^2 = 1 + 2i + i^2 = 2i
+	\end{equation*}
+	and
+	\begin{equation*}
+		x^4 = \left(x^2\right)^2 = (2i )^2 = −4,
+	\end{equation*}
+	so \(x^4+4=(-4)+4=0\).
+</p>
+<p id="p-1704">
+		Because each zero corresponds to a factor of the polynomial, the factored form of \(x^4 + 4\) is
+		\begin{equation*}
+			x^4 + 4 = \left[x − (1 + i )\right]\left[x − (−1 + i )\right]\left[x − (−1 − i )\right]\left[x − (1 − i )\right]
+		\end{equation*}
+</p>
+<p id="p-1705">
+	The four solutions to \(x^4 + 4 = 0\) form two complex conjugate pairs, namely \(1\pm i\) and \(-1\pm i\). In fact, for every polynomial with real coefficients, the nonreal zeros always occur in complex conjugate pairs.
+</p>
+<article class="example-like" id="example-234"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.55</span>
+</h5>
+<p id="p-1706">
+		Find a fourth-degree polynomial with real coefficients, two of whose zeros are \(3i\) and \(2 + i\).
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-213" id="solution-213"><span class="">Solution</span></a></span><span id="hk-solution-213" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1707">
+		The other two zeros are \(-3i\) and \(2 − i\). The factored form of the polynomial is
+		\begin{equation*}
+			(x − 3i )(x + 3i )[x − (2 + i )][x − (2 − i )]
+		\end{equation*}
+		We multiply together the factors to find the polynomial. The product of \((x − 3i )(x + 3i )\) is \(x^2 + 9\), and
+		\begin{align*}
+
+				[x − (2 + i )][x − (2 − i )] \amp = x^2 − (2 + i + 2 − i )x + (2 + i )(2 − i )
+			\\
+
+				\amp = x^2 − 4x + 5
+			
+\end{align*}
+		Finally, we multiply these two partial products to find the polynomial we seek,
+		\begin{equation*}
+			(x^2 + 9)(x^2 − 4x + 5) = x^4 − 4x^3 + 14x^2 − 36x + 45
+		\end{equation*}
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-233" id="exercise-233"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">7.56</span>
+</h5></a></div>
+<div id="hk-exercise-233" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1708">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1215"><p id="p-1709">Find the zeros of the polynomial \(f(x) = x^4 + 15x^2 − 16\).</p></li>
+<li id="li-1216"><p id="p-1710">
+				Write the polynomial in factored form.
+			</p></li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-173"><header title="Subsection 7.3.7 Graphing Complex Numbers"><h1 class="heading hide-type" alt="Subsection 7.3.7 Graphing Complex Numbers">
+<span class="type">Subsection</span><span class="codenumber">7.3.7</span><span class="title">Graphing Complex Numbers</span>
+</h1></header><div class="sidebyside" id="sidebyside-105">
+<figure class="left" id="fig-plotting-conjugates" style="width:24%;vertical-align:middle;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-plotting-conjugates.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">7.57</span></figcaption></figure><p id="p-1711" class="right" style="width:72%;vertical-align:middle;text-align:left;">
+	Real numbers can be plotted on a number line, but to graph a complex number we use a plane, called the complex plane. In the <em class="terminology">complex plane</em>, the real numbers lie on the horizontal or <em class="terminology">real axis</em>, and pure imaginary numbers lie on the vertical or <em class="terminology">imaginary axis</em>. To plot a complex number a + bi, we move a units from the origin in the horizontal direction and  units in the vertical direction. The numbers \(2 + 3i\) and \(2 − 3i\) are plotted in <a knowl="./knowl/fig-plotting-conjugates.html" knowl-id="xref-fig-plotting-conjugates" alt="Figure 7.57 " title="Figure 7.57 ">Figure 7.57</a>.
+</p>
+</div>
+<article class="example-like" id="example-235"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.58</span>
+</h5>
+<p id="p-1712">
+		Plot the numbers \(z\), \(\overline{z}\), \(-z\), and \(−\overline{z}\) as points on the complex plane, for \(z = 2 − 2i\).
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-214" id="solution-214"><span class="">Solution</span></a></span><span id="hk-solution-214" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><div class="sidebyside" id="sidebyside-106">
+<p id="p-1713" class="left" style="width:67%;vertical-align:bottom;text-align:left;">
+		To plot \(z = 2 − 2i\), we move from the origin \(2\) units to the right and \(2\) units down. To plot \(\overline{z} = 2 + 2i\), we move from the origin \(2\)  units to the right and \(2\) units up. To plot \(−z = −2 + 2i\), we move from the origin \(2\) units to the left and \(2\) units up. To plot \(−\overline{z} = −2 − 2i\), we move from the origin \(2\) units to the left and \(2\) units down. All four points are plotted in <a knowl="./knowl/fig-4-complex-numbers-symmetrically-to-axes.html" knowl-id="xref-fig-4-complex-numbers-symmetrically-to-axes" alt="Figure 7.59 " title="Figure 7.59 ">Figure 7.59</a>.
+	</p>
+<figure class="right" id="fig-4-complex-numbers-symmetrically-to-axes" style="width:29%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-4-complex-numbers-symmetrically-to-axes.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">7.59</span></figcaption></figure>
+</div></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-234" id="exercise-234"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">7.60</span>
+</h5></a></div>
+<div id="hk-exercise-234" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-1714">
+		Plot the numbers \(z = 1 + i\), \(i z = i + i^2\), \(i^2z = i^2 + i^3\) and \(i^ 3z = i^3 + i^4\) as points on the complex plane.
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<div class="sidebyside" id="sidebyside-107">
+<p id="p-1715" class="left" style="width:67%;vertical-align:bottom;text-align:left;">
+	If we draw an arrow from the origin to the point \(a + bi\) in the complex plane, we can see that multiplication by \(i\) corresponds to rotating a point around the origin by \(90\degree\) in the counterclockwise direction. For example, <a knowl="./knowl/fig-rotate-complex-vector.html" knowl-id="xref-fig-rotate-complex-vector" alt="Figure 7.61 " title="Figure 7.61 ">Figure 7.61</a> shows the graphs of \(z = 2 + 3i\) and \(i z = 2i − 3\).
+</p>
+<figure class="right" id="fig-rotate-complex-vector" style="width:29%;vertical-align:bottom;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-rotate-complex-vector.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">7.61</span></figcaption></figure>
+</div></section></section></div></main>
+</div>
+</body>
+</html>
