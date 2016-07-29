@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-07-27T11:34:36-04:00    *-->
+<!--*    on 2016-07-29T14:07:28-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -143,6 +143,7 @@ MathJax.Hub.Config({
 <ul>
 <li><a href="Systems-of-Linear-Equations-in-Two-Variables.html">Systems of Linear Equations in Two Variables</a></li>
 <li><a href="Systems-of-Linear-Equations-in-Three-Variables.html">Systems of Linear Equations in Three Variables</a></li>
+<li><a href="Solving-Linear-Systems-Using-Matrices.html">Solving Linear Systems Using Matrices</a></li>
 </ul>
 <h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
 <ul>
@@ -165,7 +166,7 @@ MathJax.Hub.Config({
 	In <a href="chap1.html" alt="Chapter 1 Functions and Their Graphs" title="Chapter 1 Functions and Their Graphs">Chapter 1</a>, we used graphs to solve equations and inequalities. The graphing technique is especially helpful for solving quadratic inequalities.
 </p>
 <article class="example-like" id="example-fireworks"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">6.77</span>
+<span class="type">Example</span><span class="codenumber">6.5.1</span>
 </h5>
 <p id="p-1398">
 		The Chamber of Commerce in River City plans to put on a Fourth of July fireworks display. City regulations require that fireworks at public gatherings explode higher than \(800\) feet above the ground. The mayor particularly wants to include the Freedom Starburst model, which is launched from the ground. Its height after t seconds is given by
@@ -173,33 +174,33 @@ MathJax.Hub.Config({
 		When should the Starburst explode in order to satisfy the safety regulation?
 	</p></article><div class="posterior"><div>
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-183" id="solution-183"><span class="">Solution</span></a></span><span id="hk-solution-183" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1399">
-		We can get an approximate answer to this question by looking at the graph of the rocket's height, shown in <a knowl="./knowl/fig-fireworks.html" knowl-id="xref-fig-fireworks" alt="Figure 6.78 " title="Figure 6.78 ">Figure 6.78</a>.
-		<figure class="figure-like" id="fig-fireworks"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-fireworks.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.78</span></figcaption></figure>
+		We can get an approximate answer to this question by looking at the graph of the rocket's height, shown in <a knowl="./knowl/fig-fireworks.html" knowl-id="xref-fig-fireworks" alt="Figure 6.5.2 " title="Figure 6.5.2 ">Figure 6.5.2</a>.
+		<figure class="figure-like" id="fig-fireworks"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-fireworks.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.5.2</span></figcaption></figure>
 		When is the rocket's height greater than 800 feet, or, in mathematical terms, for what values of \(t\) is \(h \gt 800\)? The answer to this question is the solution of the inequality
 		\begin{equation*}256t − 16t^2 \gt 800\end{equation*}
 		Points on the graph with \(h \gt 800\) are shown in color, and the \(t\)-coordinates of those points are marked on the horizontal axis. If the Freedom Starburst explodes at any of these times, it will satisfy the safety regulation. From the graph, the safe time interval runs from approximately \(4.25\) seconds to \(11.75\) seconds after launch. The solution of the inequality is the set of all \(t\)-values greater than \(4.25\) but less than \(11.75\).
 	</p></div></span>
 </div></div>
 <p id="p-1400">
-	The solution set in <a knowl="./knowl/example-fireworks.html" knowl-id="xref-example-fireworks" alt="Example 6.77 " title="Example 6.77 ">Example 6.77</a> is called a <em class="terminology">compound inequality</em>, because it involves more than one inequality symbol. We write this set as
+	The solution set in <a knowl="./knowl/example-fireworks.html" knowl-id="xref-example-fireworks" alt="Example 6.5.1 " title="Example 6.5.1 ">Example 6.5.1</a> is called a <em class="terminology">compound inequality</em>, because it involves more than one inequality symbol. We write this set as
 	\begin{equation*}4.25 \lt t \lt 11.75\end{equation*}
 	and read "\(t\) greater than \(4.25\) but less than \(11.75\)."
 </p>
 <article class="remark-like" id="remark-13"><h5 class="heading">
-<span class="type">Remark</span><span class="codenumber">6.78</span><span class="title"><img width="8%" src="images/icon-GC.jpg" alt="">Solving an Inequality With a Graphing Calculator</span>
+<span class="type">Remark</span><span class="codenumber">6.5.3</span><span class="title"><img width="8%" src="images/icon-GC.jpg" alt="">Solving an Inequality With a Graphing Calculator</span>
 </h5>
 <p id="p-1401">
-	You can use your graphing calculator to solve the problem in <a knowl="./knowl/example-fireworks.html" knowl-id="xref-example-fireworks" alt="Example 6.77 " title="Example 6.77 ">Example 6.77</a>. Graph the two equations
+	You can use your graphing calculator to solve the problem in <a knowl="./knowl/example-fireworks.html" knowl-id="xref-example-fireworks" alt="Example 6.5.1 " title="Example 6.5.1 ">Example 6.5.1</a>. Graph the two equations
 	
 		\begin{align}
 		Y_1 \amp= 256X − 16X^2\\
 		Y_2 \amp= 800
 		\end{align}
 	
-	on the same screen. Use <tt class="code-inline tex2jax_ignore">WINDOW</tt> settings to match the graph in <a knowl="./knowl/fig-GC-fireworks.html" knowl-id="xref-fig-GC-fireworks" alt="Figure 6.79 " title="Figure 6.79 ">Figure 6.79</a>. Then use the intersect feature to find the \(x\)-coordinates of the points where the two graphs intersect (there are two of them). These points will have \(y\)-coordinates of \(800\). The parabola is above the line, so \(h \gt 800\) when \(t\) is between these two \(x\)-values. To two decimal places, you can see that \(h \gt 800\) when \(4.26 \lt t \lt 11.74\).
-	<figure class="figure-like" id="fig-GC-fireworks"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-GC-fireworks.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.79</span></figcaption></figure>
+	on the same screen. Use <tt class="code-inline tex2jax_ignore">WINDOW</tt> settings to match the graph in <a knowl="./knowl/fig-GC-fireworks.html" knowl-id="xref-fig-GC-fireworks" alt="Figure 6.5.4 " title="Figure 6.5.4 ">Figure 6.5.4</a>. Then use the intersect feature to find the \(x\)-coordinates of the points where the two graphs intersect (there are two of them). These points will have \(y\)-coordinates of \(800\). The parabola is above the line, so \(h \gt 800\) when \(t\) is between these two \(x\)-values. To two decimal places, you can see that \(h \gt 800\) when \(4.26 \lt t \lt 11.74\).
+	<figure class="figure-like" id="fig-GC-fireworks"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-GC-fireworks.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.5.4</span></figcaption></figure>
 </p></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-204" id="exercise-204"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">6.80</span>
+<span class="type">Exercise</span> <span class="codenumber">6.5.5</span>
 </h5></a></div>
 <div id="hk-exercise-204" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1402">
@@ -217,10 +218,10 @@ MathJax.Hub.Config({
 	</p></article><div class="hidden-knowl-wrapper"></div>
 </div>
 <p id="p-1405">
-	<a knowl="./knowl/example-fireworks.html" knowl-id="xref-example-fireworks" alt="Example 6.77 " title="Example 6.77 ">Example 6.77</a>, we solved the inequality \(256t − 16t^2 /gt 800\) by comparing points on the graph of \(h = 256 − 16t^2\) with points on the line \(h = 800\). If one side of an inequality is zero, we can compare points on the graph with the line \(y = 0\), which is the \(x\)-axis.
+	<a knowl="./knowl/example-fireworks.html" knowl-id="xref-example-fireworks" alt="Example 6.5.1 " title="Example 6.5.1 ">Example 6.5.1</a>, we solved the inequality \(256t − 16t^2 /gt 800\) by comparing points on the graph of \(h = 256 − 16t^2\) with points on the line \(h = 800\). If one side of an inequality is zero, we can compare points on the graph with the line \(y = 0\), which is the \(x\)-axis.
 </p>
 <article class="example-like" id="example-2-quadratic-inequalities"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">6.81</span>
+<span class="type">Example</span><span class="codenumber">6.5.6</span>
 </h5>
 <p id="p-1406">
 		Consider the graph of \(y = x^2 − 4\). Find the solutions of the following equations and inequalities.
@@ -232,8 +233,13 @@ MathJax.Hub.Config({
 	</p></article><div class="posterior"><div>
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-184" id="solution-184"><span class="">Solution</span></a></span><span id="hk-solution-184" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1407">
 		Look at the graph of \(y = x^2 − 4\) shown in Figure 6.30. When we substitute a value of \(x\) into the expression \(x^2 − 4\), the result is either positive, negative, or zero. (You can see this more clearly if you compute a few values yourself to complete the table below. Your table should agree with the coordinates of points on the graph.)
-		<div class="sidebyside" id="sidebyside-95">
-<figure class="left" id="table-143" style="width:53%;vertical-align:middle;text-align:center;"><table>
+		<div class="sidebyside" style="" id="sidebyside-95">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<h5 class="sbsheader" style="width:50%;"></h5>
+<h5 class="sbsheader" style="width:50%;"></h5>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
 <tr>
 <td class="c m b1 r1 l3 t3">\(x\)</td>
 <td class="c m b1 r1 l0 t3">\(-3\)</td>
@@ -254,7 +260,12 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0">\(\hphantom{bla}\)</td>
 <td class="c m b1 r1 l0 t0">\(\hphantom{bla}\)</td>
 </tr>
-</table></figure><figure class="right" id="fig-2-quadratic-inequalities" style="width:43%;vertical-align:middle;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-2-quadratic-inequalities.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.82</span></figcaption></figure>
+</table></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img width="100%" src="images/fig-2-quadratic-inequalities"></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="heading">Figure</span><span class="codenumber">6.5.7</span></figcaption>
+</div>
 </div>
 		We will use the graph to solve the given equation and inequalities.
 		<ol style="list-style-type: lower-alpha;">
@@ -271,15 +282,15 @@ MathJax.Hub.Config({
 	</p></div></span>
 </div></div>
 <article class="remark-like" id="warning-16"><h5 class="heading">
-<span class="type">Caution</span><span class="codenumber">6.82</span>
+<span class="type">Caution</span><span class="codenumber">6.5.8</span>
 </h5>
-	In <a knowl="./knowl/example-2-quadratic-inequalities.html" knowl-id="xref-example-2-quadratic-inequalities" alt="Example 6.81 " title="Example 6.81 ">Example 6.81</a>, the solution of the inequality \(x^2 − 4 \gt 0\) is the set
+	In <a knowl="./knowl/example-2-quadratic-inequalities.html" knowl-id="xref-example-2-quadratic-inequalities" alt="Example 6.5.6 " title="Example 6.5.6 ">Example 6.5.6</a>, the solution of the inequality \(x^2 − 4 \gt 0\) is the set
 	\begin{equation*}x \lt −2 ~~~\text{ or }~~~x \gt 2.\end{equation*}
-	This set is another type of compound inequality, and its graph consists of two pieces, as shown in <a knowl="./knowl/fig-numline-infinite-subintervals.html" knowl-id="xref-fig-numline-infinite-subintervals" alt="Figure 6.83 " title="Figure 6.83 ">Figure 6.83</a>.
-	<figure class="figure-like" id="fig-numline-infinite-subintervals"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-numline-infinite-subintervals.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.83</span></figcaption></figure>
+	This set is another type of compound inequality, and its graph consists of two pieces, as shown in <a knowl="./knowl/fig-numline-infinite-subintervals.html" knowl-id="xref-fig-numline-infinite-subintervals" alt="Figure 6.5.9 " title="Figure 6.5.9 ">Figure 6.5.9</a>.
+	<figure class="figure-like" id="fig-numline-infinite-subintervals"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-numline-infinite-subintervals.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.5.9</span></figcaption></figure>
 	The left piece of the set is \(x \lt −2\), and the right piece is \(x \gt 2\). It would be incorrect to describe the solution set as \(−2 \gt x \gt 2\), because this notation implies that \(−2 \gt 2\). We must write the solution as two parts: \(x \lt −2\) or \(x \gt 2\).
 </article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-205" id="exercise-205"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">6.84</span>
+<span class="type">Exercise</span> <span class="codenumber">6.5.10</span>
 </h5></a></div>
 <div id="hk-exercise-205" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1408">
@@ -294,20 +305,29 @@ MathJax.Hub.Config({
 	Because it is relatively easy to decide whether the \(y\)-coordinate of a point on a graph is positive or negative (the point lies above the \(x\)-axis or below the x-axis), we often rewrite a given inequality so that one side is zero.
 </p>
 <article class="example-like" id="example-quadratic-inequality"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">6.85</span>
+<span class="type">Example</span><span class="codenumber">6.5.11</span>
 </h5>
 <p id="p-1410">
 		Use a graph to solve \(x^2 − 2x − 3 \le 12\).
 	</p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-185" id="solution-185"><span class="">Solution</span></a></span><span id="hk-solution-185" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><div class="sidebyside" id="sidebyside-96">
-<p id="p-1411" class="left" style="width:53%;vertical-align:middle;text-align:left;">
-		We first write the inequality with zero on one side: \(x^2 − 2x − 15 \le 0\). We would like to find points on the graph of \(y = x^2 − 2x − 15\) that have \(y\)-coordinates less than or equal to zero. A graph of the equation is shown in <a knowl="./knowl/fig-quadratic-inequality.html" knowl-id="xref-fig-quadratic-inequality" alt="Figure 6.86 " title="Figure 6.86 ">Figure 6.86</a>. You can check that the \(x\)-intercepts of the graph are \(−3\) and \(5\). The points shown in red on the graph lie below the \(x\)-axis and have \(y \le 0\), so the \(x\)-coordinates of these points are the solutions of the inequality. All of these points have \(x\)-coordinates between \(−3\) and \(5\). Thus, the solution is \(−3\le x\le 5\), or in interval notation, \([−3, 5]\).
-	</p>
-<figure class="right" id="fig-quadratic-inequality" style="width:43%;vertical-align:middle;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-quadratic-inequality.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.86</span></figcaption></figure>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-185" id="solution-185"><span class="">Solution</span></a></span><span id="hk-solution-185" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><div class="sidebyside" style="" id="sidebyside-96">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<h5 class="sbsheader" style="width:50%;"></h5>
+<h5 class="sbsheader" style="width:50%;"></h5>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-1411">
+		We first write the inequality with zero on one side: \(x^2 − 2x − 15 \le 0\). We would like to find points on the graph of \(y = x^2 − 2x − 15\) that have \(y\)-coordinates less than or equal to zero. A graph of the equation is shown in <a knowl="./knowl/fig-quadratic-inequality.html" knowl-id="xref-fig-quadratic-inequality" alt="Figure 6.5.12 " title="Figure 6.5.12 ">Figure 6.5.12</a>. You can check that the \(x\)-intercepts of the graph are \(−3\) and \(5\). The points shown in red on the graph lie below the \(x\)-axis and have \(y \le 0\), so the \(x\)-coordinates of these points are the solutions of the inequality. All of these points have \(x\)-coordinates between \(−3\) and \(5\). Thus, the solution is \(−3\le x\le 5\), or in interval notation, \([−3, 5]\).
+	</p></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img width="100%" src="images/fig-quadratic-inequality"></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="heading">Figure</span><span class="codenumber">6.5.12</span></figcaption>
+</div>
 </div></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-206" id="exercise-206"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">6.87</span>
+<span class="type">Exercise</span> <span class="codenumber">6.5.13</span>
 </h5></a></div>
 <div id="hk-exercise-206" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1412">
@@ -333,17 +353,17 @@ MathJax.Hub.Config({
 		\amp\hphantom{blank} ax2 + bx + c \amp\ge 0\\
 		\end{aligned}
 	\end{equation*}
-	All we really need to know is whether the corresponding parabola \(y = ax^2 + bx + c\) opens upward or downward. Consider the parabolas shown in <a knowl="./knowl/fig-two-parabolas.html" knowl-id="xref-fig-two-parabolas" alt="Figure 6.88 " title="Figure 6.88 ">Figure 6.88</a>.
-	<figure class="figure-like" id="fig-two-parabolas"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-two-parabolas.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.88</span></figcaption></figure>
+	All we really need to know is whether the corresponding parabola \(y = ax^2 + bx + c\) opens upward or downward. Consider the parabolas shown in <a knowl="./knowl/fig-two-parabolas.html" knowl-id="xref-fig-two-parabolas" alt="Figure 6.5.14 " title="Figure 6.5.14 ">Figure 6.5.14</a>.
+	<figure class="figure-like" id="fig-two-parabolas"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-two-parabolas.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.5.14</span></figcaption></figure>
 </p>
 <p id="p-1418">
-	The parabola in <a knowl="./knowl/fig-two-parabolas.html" knowl-id="xref-fig-two-parabolas" alt="Figure 6.88 " title="Figure 6.88 ">Figure 6.88</a>a opens upward. It crosses the \(x\)-axis at two points, \(x = r_1\) and \(x = r_2\). At these points, \(y = 0\). The graph lies below the \(x\)-axis between \(r_1\) and \(r_2\), so the solutions to the inequality \(y\lt 0\) lie between \(r_1\) and \(r_2\). The graph lies above the \(x\)-axis for \(x\)-values less than \(r_1\) or greater than \(r_2\), so the solutions to the inequality \(y\gt 0\) are \(x\lt r_1\) or \(x\gt r_2\).
+	The parabola in <a knowl="./knowl/fig-two-parabolas.html" knowl-id="xref-fig-two-parabolas" alt="Figure 6.5.14 " title="Figure 6.5.14 ">Figure 6.5.14</a>a opens upward. It crosses the \(x\)-axis at two points, \(x = r_1\) and \(x = r_2\). At these points, \(y = 0\). The graph lies below the \(x\)-axis between \(r_1\) and \(r_2\), so the solutions to the inequality \(y\lt 0\) lie between \(r_1\) and \(r_2\). The graph lies above the \(x\)-axis for \(x\)-values less than \(r_1\) or greater than \(r_2\), so the solutions to the inequality \(y\gt 0\) are \(x\lt r_1\) or \(x\gt r_2\).
 </p>
 <p id="p-1419">
-	If the parabola opens downward, as in <a knowl="./knowl/fig-two-parabolas.html" knowl-id="xref-fig-two-parabolas" alt="Figure 6.88 " title="Figure 6.88 ">Figure 6.88</a>b, the situation is reversed. The solutions to the inequality \(y\gt 0\) lie between the \(x\)-intercepts, and the solutions to \(y\lt 0\) lie outside the \(x\)-intercepts.
+	If the parabola opens downward, as in <a knowl="./knowl/fig-two-parabolas.html" knowl-id="xref-fig-two-parabolas" alt="Figure 6.5.14 " title="Figure 6.5.14 ">Figure 6.5.14</a>b, the situation is reversed. The solutions to the inequality \(y\gt 0\) lie between the \(x\)-intercepts, and the solutions to \(y\lt 0\) lie outside the \(x\)-intercepts.
 </p>
 <p id="p-1420">
-	From the graphs in <a knowl="./knowl/fig-two-parabolas.html" knowl-id="xref-fig-two-parabolas" alt="Figure 6.88 " title="Figure 6.88 ">Figure 6.88</a>, we see that the \(x\)-intercepts are the boundary points between the portions of the graph with positive \(y\)-coordinates and the portions with negative \(y\)-coordinates. To solve a quadratic inequality, we need only locate the \(x\)-intercepts of the corresponding graph and then decide which intervals of the \(x\)-axis produce the correct sign for \(y\).
+	From the graphs in <a knowl="./knowl/fig-two-parabolas.html" knowl-id="xref-fig-two-parabolas" alt="Figure 6.5.14 " title="Figure 6.5.14 ">Figure 6.5.14</a>, we see that the \(x\)-intercepts are the boundary points between the portions of the graph with positive \(y\)-coordinates and the portions with negative \(y\)-coordinates. To solve a quadratic inequality, we need only locate the \(x\)-intercepts of the corresponding graph and then decide which intervals of the \(x\)-axis produce the correct sign for \(y\).
 </p>
 <article class="assemblage-like" id="assemblage-93"><h5 class="heading">To Solve a Quadratic Inequality Algebraically:</h5>
 <p id="p-1421">
@@ -361,7 +381,7 @@ MathJax.Hub.Config({
 			</p></li>
 </ol>
 	</p></article><article class="example-like" id="example-quadratic-inequality2"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">6.89</span>
+<span class="type">Example</span><span class="codenumber">6.5.15</span>
 </h5>
 <p id="p-1426">
 		Solve the inequality \(36 + 6x − x^2\le 20\) algebraically.
@@ -383,8 +403,8 @@ MathJax.Hub.Config({
 				The \(x\)-intercepts are \(x = −2\) and \(x = 8\).
 				</p>
 </li><li id="li-1096">Step 3<p id="p-1430">
-					Make a rough sketch of the graph of \(y = 16 + 6x − x^2\), as shown in <a knowl="./knowl/fig-quadratic-inequality2.html" knowl-id="xref-fig-quadratic-inequality2" alt="Figure 6.90 " title="Figure 6.90 ">Figure 6.90</a>. Because \(a = −1 \lt 0\), the graph is a parabola that opens downward.
-					<figure class="figure-like" id="fig-quadratic-inequality2"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-quadratic-inequality2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.90</span></figcaption></figure>
+					Make a rough sketch of the graph of \(y = 16 + 6x − x^2\), as shown in <a knowl="./knowl/fig-quadratic-inequality2.html" knowl-id="xref-fig-quadratic-inequality2" alt="Figure 6.5.16 " title="Figure 6.5.16 ">Figure 6.5.16</a>. Because \(a = −1 \lt 0\), the graph is a parabola that opens downward.
+					<figure class="figure-like" id="fig-quadratic-inequality2"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-quadratic-inequality2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.5.16</span></figcaption></figure>
 				</p>
 </li><li id="li-1097">Step 4<p id="p-1431">
 					We are interested in points on the graph for which \(y\le 0\). The points with negative \(y\)-coordinates (that is, points below the \(x\)-axis) lie outside the \(x\)-intercepts of the graph, so the solution of the inequality is \(x\le −2\) or \(x\ge 8\). Or, using interval notation, the solution is \((−\infty,−2] ∪ [8,\infty)\).
@@ -393,12 +413,12 @@ MathJax.Hub.Config({
 	</p></div></span>
 </div></div>
 <article class="remark-like" id="warning-17"><h5 class="heading">
-<span class="type">Caution</span><span class="codenumber">6.90</span>
+<span class="type">Caution</span><span class="codenumber">6.5.17</span>
 </h5>
 <p id="p-1432">
-		Many people think that the inequality signs in the solution should point in the same direction as the sign in the original problem, and hence would incorrectly write the solution to <a knowl="./knowl/example-quadratic-inequality2.html" knowl-id="xref-example-quadratic-inequality2" alt="Example 6.89 " title="Example 6.89 ">Example 6.89</a> as \(x \le −2\) or \(x \le 8\). However, you can see from the graph that this is incorrect. Remember that the graph of a quadratic equation is a parabola, not a straight line!
+		Many people think that the inequality signs in the solution should point in the same direction as the sign in the original problem, and hence would incorrectly write the solution to <a knowl="./knowl/example-quadratic-inequality2.html" knowl-id="xref-example-quadratic-inequality2" alt="Example 6.5.15 " title="Example 6.5.15 ">Example 6.5.15</a> as \(x \le −2\) or \(x \le 8\). However, you can see from the graph that this is incorrect. Remember that the graph of a quadratic equation is a parabola, not a straight line!
 	</p></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-207" id="exercise-207"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">6.91</span>
+<span class="type">Exercise</span> <span class="codenumber">6.5.18</span>
 </h5></a></div>
 <div id="hk-exercise-207" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1433">
@@ -416,7 +436,7 @@ MathJax.Hub.Config({
 	If we cannot find the \(x\)-intercepts of the graph by factoring or extraction of roots, we can use the quadratic formula.
 </p>
 <article class="example-like" id="example-208"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">6.92</span>
+<span class="type">Example</span><span class="codenumber">6.5.19</span>
 </h5>
 <p id="p-1440">
 		TrailGear, Inc. manufactures camping equipment. The company finds that the profit from producing and selling \(x\) alpine parkas per month is given, in dollars, by
@@ -445,15 +465,15 @@ MathJax.Hub.Config({
 					\end{equation*}
 					To two decimal places, the solutions to the equation are \(122.54\) and \(277.46\).
 				</p>
-</li><li id="li-1104">Step 3<p id="p-1444">The graph of the equation is a parabola that opens downward, because the coefficient of \(x^2\) is negative. (See <a knowl="./knowl/fig-quadratic-inequality3.html" knowl-id="xref-fig-quadratic-inequality3" alt="Figure 6.93 " title="Figure 6.93 ">Figure 6.93</a>.)
-				<figure class="figure-like" id="fig-quadratic-inequality3"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-quadratic-inequality3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.93</span></figcaption></figure>
+</li><li id="li-1104">Step 3<p id="p-1444">The graph of the equation is a parabola that opens downward, because the coefficient of \(x^2\) is negative. (See <a knowl="./knowl/fig-quadratic-inequality3.html" knowl-id="xref-fig-quadratic-inequality3" alt="Figure 6.5.20 " title="Figure 6.5.20 ">Figure 6.5.20</a>.)
+				<figure class="figure-like" id="fig-quadratic-inequality3"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-quadratic-inequality3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.5.20</span></figcaption></figure>
 				</p>
 </li><li id="li-1105">Step 4<p id="p-1445">The graph lies above the \(x\)-axis, and hence \(y \gt 0\), for \(x\)-values between the two \(x\)-intercepts, that is, for \(122.54 \lt x \lt 277.46\). Because we cannot produce a fraction of a parka, we restrict the interval to the closest whole number \(x\)-values included, namely \(123\) and \(277\). Thus, TrailGear can produce as few as \(123\) parkas or as many as \(277\) parkas per month to keep its profit above \($2000\).</p>
 </li>
 	</p></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-208" id="exercise-208"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">6.94</span>
+<span class="type">Exercise</span> <span class="codenumber">6.5.21</span>
 </h5></a></div>
 <div id="hk-exercise-208" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1446">

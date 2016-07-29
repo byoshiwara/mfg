@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-07-27T11:34:36-04:00    *-->
+<!--*    on 2016-07-29T14:07:28-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -143,6 +143,7 @@ MathJax.Hub.Config({
 <ul>
 <li><a href="Systems-of-Linear-Equations-in-Two-Variables.html">Systems of Linear Equations in Two Variables</a></li>
 <li><a href="Systems-of-Linear-Equations-in-Three-Variables.html">Systems of Linear Equations in Three Variables</a></li>
+<li><a href="Solving-Linear-Systems-Using-Matrices.html">Solving Linear Systems Using Matrices</a></li>
 </ul>
 <h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
 <ul>
@@ -160,14 +161,14 @@ MathJax.Hub.Config({
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Curve-Fitting"><header title="Section 6.6 Curve Fitting"><h1 class="heading hide-type" alt="Section 6.6 Curve Fitting">
 <span class="type">Section</span><span class="codenumber">6.6</span><span class="title">Curve Fitting</span><a href="Curve-Fitting.html" class="permalink">¶ permalink</a>
 </h1></header><p id="p-1452">
-	In <a href="linear-regression.html" alt="Section 1.6 Linear Regression" title="Section 1.6 Linear Regression">Section 1.6</a>, we used linear regression to fit a line to a collection of data points. If the data points do not cluster around a line, it does not make sense to describe them by a linear function. Compare the scatterplots in <a knowl="./knowl/fig-nonlinear-regression.html" knowl-id="xref-fig-nonlinear-regression" alt="Figure 6.95 " title="Figure 6.95 ">Figure 6.95</a>. The points in <a knowl="./knowl/fig-nonlinear-regression.html" knowl-id="xref-fig-nonlinear-regression" alt="Figure 6.95 " title="Figure 6.95 ">Figure 6.95</a>a are roughly linear in appearance, but the points in <a knowl="./knowl/fig-nonlinear-regression.html" knowl-id="xref-fig-nonlinear-regression" alt="Figure 6.95 " title="Figure 6.95 ">Figure 6.95</a>b are not. However, we can visualize a parabola that would approximate the data we will. In this section, we will see how to fit a quadratic function to a collection of data points.
-	<figure class="figure-like" id="fig-nonlinear-regression"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-nonlinear-regression.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.95</span></figcaption></figure>
+	In <a href="linear-regression.html" alt="Section 1.6 Linear Regression" title="Section 1.6 Linear Regression">Section 1.6</a>, we used linear regression to fit a line to a collection of data points. If the data points do not cluster around a line, it does not make sense to describe them by a linear function. Compare the scatterplots in <a knowl="./knowl/fig-nonlinear-regression.html" knowl-id="xref-fig-nonlinear-regression" alt="Figure 6.6.1 " title="Figure 6.6.1 ">Figure 6.6.1</a>. The points in <a knowl="./knowl/fig-nonlinear-regression.html" knowl-id="xref-fig-nonlinear-regression" alt="Figure 6.6.1 " title="Figure 6.6.1 ">Figure 6.6.1</a>a are roughly linear in appearance, but the points in <a knowl="./knowl/fig-nonlinear-regression.html" knowl-id="xref-fig-nonlinear-regression" alt="Figure 6.6.1 " title="Figure 6.6.1 ">Figure 6.6.1</a>b are not. However, we can visualize a parabola that would approximate the data we will. In this section, we will see how to fit a quadratic function to a collection of data points.
+	<figure class="figure-like" id="fig-nonlinear-regression"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-nonlinear-regression.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.6.1</span></figcaption></figure>
 </p>
 <p id="p-1453">
 	We will need to solve a special type of \(3 \times 3\) linear system, that is, a linear system of three equations in three variables. We can solve these systems using the <em class="terminology">elimination</em> method.
 </p>
 <article class="example-like" id="example-3-by-3"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">6.96</span>
+<span class="type">Example</span><span class="codenumber">6.6.2</span>
 </h5>
 <p id="p-1454">
 		Use elimination to solve the system of equations.
@@ -296,7 +297,7 @@ MathJax.Hub.Config({
 	</p></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-209" id="exercise-209"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">6.97</span>
+<span class="type">Exercise</span> <span class="codenumber">6.6.3</span>
 </h5></a></div>
 <div id="hk-exercise-209" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1456">
@@ -324,7 +325,7 @@ MathJax.Hub.Config({
 	To find these parameters, we need three data points. We then use the method of elimination to solve a system of three linear equations.
 </p>
 <article class="example-like" id="example-210"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">6.98</span>
+<span class="type">Example</span><span class="codenumber">6.6.4</span>
 </h5>
 <p id="p-1462">
 		Find values for \(a\), \(b\), and \(c\) so that the points \((1, 3)\), \((3, 5)\), and \((4, 9)\) lie on the graph of \(y = ax^2 + bx + c\).
@@ -406,12 +407,12 @@ MathJax.Hub.Config({
 	\end{equation*}
 	Thus, the equation of the parabola is
 	\begin{equation*}y = x^2 − 3x + 5\end{equation*}
-	The parabola and the three points are shown in <a knowl="./knowl/fig-parabola-through-3-specified-points.html" knowl-id="xref-fig-parabola-through-3-specified-points" alt="Figure 6.99 " title="Figure 6.99 ">Figure 6.99</a>.
-	<figure class="figure-like" id="fig-parabola-through-3-specified-points"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-parabola-through-3-specified-points.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.99</span></figcaption></figure>
+	The parabola and the three points are shown in <a knowl="./knowl/fig-parabola-through-3-specified-points.html" knowl-id="xref-fig-parabola-through-3-specified-points" alt="Figure 6.6.5 " title="Figure 6.6.5 ">Figure 6.6.5</a>.
+	<figure class="figure-like" id="fig-parabola-through-3-specified-points"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-parabola-through-3-specified-points.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.6.5</span></figcaption></figure>
 </p></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-210" id="exercise-210"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">6.100</span>
+<span class="type">Exercise</span> <span class="codenumber">6.6.6</span>
 </h5></a></div>
 <div id="hk-exercise-210" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1464">
@@ -430,7 +431,7 @@ MathJax.Hub.Config({
 	The simplest way to fit a parabola to a set of data points is to pick three of the points and find the equation of the parabola that passes through those three points.
 </p>
 <article class="example-like" id="example-quadratic-fit"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">6.101</span>
+<span class="type">Example</span><span class="codenumber">6.6.7</span>
 </h5>
 <p id="p-1468">
 		Major Motors Corporation is testing a new car designed for in-town driving. The data below show the cost of driving the car at different speeds. The speeds, \(v\), are given in miles per hour, and the cost, \(C\), includes fuel and maintenance for driving the car \(100\) miles at that speed.
@@ -455,8 +456,8 @@ MathJax.Hub.Config({
 		Find a possible quadratic model for \(C\) as a function of \(v\), \(C = av^2 + bv + c\).
 	</p></article><div class="posterior"><div>
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-190" id="solution-190"><span class="">Solution</span></a></span><span id="hk-solution-190" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1469">
-		<figure class="figure-like" id="fig-nonlinear-scatterplot"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-nonlinear-scatterplot.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.102</span></figcaption></figure>
-		When we plot the data, it is clear that the relationship between \(v\) and \(C\) is not linear, but it may be quadratic (see <a knowl="./knowl/fig-nonlinear-scatterplot.html" knowl-id="xref-fig-nonlinear-scatterplot" alt="Figure 6.102 " title="Figure 6.102 ">Figure 6.102</a>). We will use the last three data points, \((50, 6.20)\), \((60, 7.80)\), and \((70, 10.60)\), to fit a parabola to the data. We would like to find the coefficients \(a\), \(b\), and \(c\) of a parabola \(C = av^2 + bv + c\) that includes the three data points. This gives us a system of equations:
+		<figure class="figure-like" id="fig-nonlinear-scatterplot"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-nonlinear-scatterplot.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.6.8</span></figcaption></figure>
+		When we plot the data, it is clear that the relationship between \(v\) and \(C\) is not linear, but it may be quadratic (see <a knowl="./knowl/fig-nonlinear-scatterplot.html" knowl-id="xref-fig-nonlinear-scatterplot" alt="Figure 6.6.8 " title="Figure 6.6.8 ">Figure 6.6.8</a>). We will use the last three data points, \((50, 6.20)\), \((60, 7.80)\), and \((70, 10.60)\), to fit a parabola to the data. We would like to find the coefficients \(a\), \(b\), and \(c\) of a parabola \(C = av^2 + bv + c\) that includes the three data points. This gives us a system of equations:
 		\begin{equation*}
 		\begin{alignedat}{9}
 		2500a \amp {}+{} \amp 50b \amp {}+{} \amp c \amp {}={} \amp 6.20\amp\hphantom{blankblank} \amp(1)\\
@@ -480,12 +481,12 @@ MathJax.Hub.Config({
 		\end{equation*}
 		Substitute this value into Equation (4) to find \(b = −0.5\), then substitute both values into Equation (1) to find \(c = 16.2\). Thus, our quadratic model is
 		\begin{equation*}C = 0.006v^2 − 0.5v + 16.2\end{equation*}
-		The graph of this function, along with the data points, is shown in <a knowl="./knowl/fig-parabola-fitting-scatterplot.html" knowl-id="xref-fig-parabola-fitting-scatterplot" alt="Figure 6.103 " title="Figure 6.103 ">Figure 6.103</a>.
-		<figure class="figure-like" id="fig-parabola-fitting-scatterplot"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-parabola-fitting-scatterplot.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.103</span></figcaption></figure>
+		The graph of this function, along with the data points, is shown in <a knowl="./knowl/fig-parabola-fitting-scatterplot.html" knowl-id="xref-fig-parabola-fitting-scatterplot" alt="Figure 6.6.9 " title="Figure 6.6.9 ">Figure 6.6.9</a>.
+		<figure class="figure-like" id="fig-parabola-fitting-scatterplot"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-parabola-fitting-scatterplot.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.6.9</span></figcaption></figure>
 	</p></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-211" id="exercise-211"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">6.104</span>
+<span class="type">Exercise</span> <span class="codenumber">6.6.10</span>
 </h5></a></div>
 <div id="hk-exercise-211" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1470">
@@ -517,13 +518,22 @@ MathJax.Hub.Config({
 	It is easier to find a quadratic model if one of the points we know happens to be the vertex of the parabola. In that case, we need only one other point, and we can use the vertex form to find its equation.
 </p>
 <article class="example-like" id="example-212"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">6.105</span>
+<span class="type">Example</span><span class="codenumber">6.6.11</span>
 </h5>
-<div class="sidebyside" id="sidebyside-97">
-<p id="p-1472" class="left" style="width:48%;vertical-align:middle;text-align:left;">
-		When Andre practices free-throws at the park, the ball leaves his hands at a height of \(7\) feet and reaches the vertex of its trajectory \(10\) feet away at a height of \(11\) feet, as shown in <a knowl="./knowl/fig-free-throw.html" knowl-id="xref-fig-free-throw" alt="Figure 6.106 " title="Figure 6.106 ">Figure 6.106</a>.
-	</p>
-<figure class="right" id="fig-free-throw" style="width:48%;vertical-align:middle;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-free-throw.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.106</span></figcaption></figure>
+<div class="sidebyside" style="" id="sidebyside-97">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<h5 class="sbsheader" style="width:50%;"></h5>
+<h5 class="sbsheader" style="width:50%;"></h5>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-1472">
+		When Andre practices free-throws at the park, the ball leaves his hands at a height of \(7\) feet and reaches the vertex of its trajectory \(10\) feet away at a height of \(11\) feet, as shown in <a knowl="./knowl/fig-free-throw.html" knowl-id="xref-fig-free-throw" alt="Figure 6.6.12 " title="Figure 6.6.12 ">Figure 6.6.12</a>.
+	</p></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img width="100%" src="images/fig-free-throw"></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="heading">Figure</span><span class="codenumber">6.6.12</span></figcaption>
+</div>
 </div>
 <ol style="list-style-type: lower-alpha;">
 <li id="li-1116"><p id="p-1473">Find a quadratic equation for the ball's trajectory.</p></li>
@@ -559,15 +569,15 @@ MathJax.Hub.Config({
 </p></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-212" id="exercise-212"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">6.107</span>
+<span class="type">Exercise</span> <span class="codenumber">6.6.13</span>
 </h5></a></div>
 <div id="hk-exercise-212" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1478">
 		Francine is designing a synchronized fountain display for a hotel in Las Vegas. For each fountain, water emerges in a parabolic arc from a nozzle \(3\) feet above the ground. Francine would like the vertex of the arc to be \(8\) feet high and \(2\) feet horizontally from the nozzle.
 		<ol style="list-style-type: decimal;">
 <li id="li-1120">
-<p id="p-1479">Choose a coordinate system for the diagram in <a knowl="./knowl/fig-water-fountain.html" knowl-id="xref-fig-water-fountain" alt="Figure 6.108 " title="Figure 6.108 ">Figure 6.108</a> and write an equation for the path of the water.</p>
-<figure class="figure-like" id="fig-water-fountain"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-water-fountain.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.108</span></figcaption></figure>
+<p id="p-1479">Choose a coordinate system for the diagram in <a knowl="./knowl/fig-water-fountain.html" knowl-id="xref-fig-water-fountain" alt="Figure 6.6.14 " title="Figure 6.6.14 ">Figure 6.6.14</a> and write an equation for the path of the water.</p>
+<figure class="figure-like" id="fig-water-fountain"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-water-fountain.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.6.14</span></figcaption></figure>
 </li>
 <li id="li-1121"><p id="p-1480">
 					How far from the base of the nozzle will the stream of water hit the ground?
@@ -576,17 +586,17 @@ MathJax.Hub.Config({
 	</p></article><div class="hidden-knowl-wrapper"></div>
 </div>
 <article class="remark-like" id="remark-14"><h5 class="heading">
-<span class="type">Remark</span><span class="codenumber">6.108</span><span class="title"><img width="8%" src="images/icon-GC.jpg" alt="">Using a Calculator for Quadratic Regression</span>
+<span class="type">Remark</span><span class="codenumber">6.6.15</span><span class="title"><img width="8%" src="images/icon-GC.jpg" alt="">Using a Calculator for Quadratic Regression</span>
 </h5>
 <p id="p-1481">
 	We can use a graphing calculator to find an approximate quadratic fit for a set of data. The procedure is similar to the steps for linear regression outlined in <a href="functions.html" alt="Section 1.2 Functions" title="Section 1.2 Functions">Section 1.2</a>.
 </p></article><article class="example-like" id="example-GC-quadratic-fit"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">6.109</span>
+<span class="type">Example</span><span class="codenumber">6.6.16</span>
 </h5>
 <p id="p-1482">
 		<ol style="list-style-type: lower-alpha;">
 <li id="li-1122"><p id="p-1483">
-				Use your calculator to find a quadratic fit for the data in <a knowl="./knowl/example-quadratic-fit.html" knowl-id="xref-example-quadratic-fit" alt="Example 6.101 " title="Example 6.101 ">Example 6.101</a>.
+				Use your calculator to find a quadratic fit for the data in <a knowl="./knowl/example-quadratic-fit.html" knowl-id="xref-example-quadratic-fit" alt="Example 6.6.7 " title="Example 6.6.7 ">Example 6.6.7</a>.
 			</p></li>
 <li id="li-1123"><p id="p-1484">
 				How many of the given data points actually lie on the graph of the quadratic approximation?
@@ -596,18 +606,18 @@ MathJax.Hub.Config({
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-192" id="solution-192"><span class="">Solution</span></a></span><span id="hk-solution-192" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1485">
 	<ol style="list-style-type: lower-alpha;">
 <li id="li-1124"><p id="p-1486">
-			We press <tt class="code-inline tex2jax_ignore">STAT</tt> <tt class="code-inline tex2jax_ignore">ENTER</tt> and enter the data under columns \(L_1\) and \(L_2\), as shown in <a knowl="./knowl/fig-GC-quadratic-regression.html" knowl-id="xref-fig-GC-quadratic-regression" alt="Figure 6.110 " title="Figure 6.110 ">Figure 6.110</a>a. Next, we calculate the quadratic regression equation and store it in \(Y_1\) by pressing <tt class="code-inline tex2jax_ignore">STAT</tt> <tt class="code-inline tex2jax_ignore">→</tt> \(5\) <tt class="code-inline tex2jax_ignore">VARS</tt> <tt class="code-inline tex2jax_ignore">→</tt> \(1\) \(1\) <tt class="code-inline tex2jax_ignore">ENTER</tt>. The regression equation has the form \(y = ax^2 + bx + c\), where \(a = 0.0057\), \(b = −0.47\), and \(c = 15.56\). Notice that \(a\), \(b\), and \(c\) are all close to the values we computed in <a knowl="./knowl/example-quadratic-fit.html" knowl-id="xref-example-quadratic-fit" alt="Example 6.101 " title="Example 6.101 ">Example 6.101</a>.
-			<figure class="figure-like" id="fig-GC-quadratic-regression"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-GC-quadratic-regression.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.110</span></figcaption></figure>
+			We press <tt class="code-inline tex2jax_ignore">STAT</tt> <tt class="code-inline tex2jax_ignore">ENTER</tt> and enter the data under columns \(L_1\) and \(L_2\), as shown in <a knowl="./knowl/fig-GC-quadratic-regression.html" knowl-id="xref-fig-GC-quadratic-regression" alt="Figure 6.6.17 " title="Figure 6.6.17 ">Figure 6.6.17</a>a. Next, we calculate the quadratic regression equation and store it in \(Y_1\) by pressing <tt class="code-inline tex2jax_ignore">STAT</tt> <tt class="code-inline tex2jax_ignore">→</tt> \(5\) <tt class="code-inline tex2jax_ignore">VARS</tt> <tt class="code-inline tex2jax_ignore">→</tt> \(1\) \(1\) <tt class="code-inline tex2jax_ignore">ENTER</tt>. The regression equation has the form \(y = ax^2 + bx + c\), where \(a = 0.0057\), \(b = −0.47\), and \(c = 15.56\). Notice that \(a\), \(b\), and \(c\) are all close to the values we computed in <a knowl="./knowl/example-quadratic-fit.html" knowl-id="xref-example-quadratic-fit" alt="Example 6.6.7 " title="Example 6.6.7 ">Example 6.6.7</a>.
+			<figure class="figure-like" id="fig-GC-quadratic-regression"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-GC-quadratic-regression.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.6.17</span></figcaption></figure>
 		</p></li>
 <li id="li-1125"><p id="p-1487">
-			Next, we will graph the data and the regression equation. We press <tt class="code-inline tex2jax_ignore">Y=</tt> and select <!--Style me with CSS--><em>Plot1</em>, then press <tt class="code-inline tex2jax_ignore">ZOOM</tt> \(9\) to see the graph shown in <a knowl="./knowl/fig-GC-quadratic-regression2.html" knowl-id="xref-fig-GC-quadratic-regression2" alt="Figure 6.111 " title="Figure 6.111 ">Figure 6.111</a>a. The parabola seems to pass close to all the data points. However, we can use either the <!--Style me with CSS--><em>value</em> feature or a table to find the \(y\)-coordinates of points on the regression curve. By comparing these \(y\)-coordinates with our original data points, we find that none of the given data points lies precisely on the parabola. (See <a knowl="./knowl/fig-GC-quadratic-regression2.html" knowl-id="xref-fig-GC-quadratic-regression2" alt="Figure 6.111 " title="Figure 6.111 ">Figure 6.111</a>b.)
-			<figure class="figure-like" id="fig-GC-quadratic-regression2"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-GC-quadratic-regression2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.111</span></figcaption></figure>
+			Next, we will graph the data and the regression equation. We press <tt class="code-inline tex2jax_ignore">Y=</tt> and select <!--Style me with CSS--><em>Plot1</em>, then press <tt class="code-inline tex2jax_ignore">ZOOM</tt> \(9\) to see the graph shown in <a knowl="./knowl/fig-GC-quadratic-regression2.html" knowl-id="xref-fig-GC-quadratic-regression2" alt="Figure 6.6.18 " title="Figure 6.6.18 ">Figure 6.6.18</a>a. The parabola seems to pass close to all the data points. However, we can use either the <!--Style me with CSS--><em>value</em> feature or a table to find the \(y\)-coordinates of points on the regression curve. By comparing these \(y\)-coordinates with our original data points, we find that none of the given data points lies precisely on the parabola. (See <a knowl="./knowl/fig-GC-quadratic-regression2.html" knowl-id="xref-fig-GC-quadratic-regression2" alt="Figure 6.6.18 " title="Figure 6.6.18 ">Figure 6.6.18</a>b.)
+			<figure class="figure-like" id="fig-GC-quadratic-regression2"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-GC-quadratic-regression2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.6.18</span></figcaption></figure>
 		</p></li>
 </ol>
 </p></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-213" id="exercise-213"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">6.112</span>
+<span class="type">Exercise</span> <span class="codenumber">6.6.19</span>
 </h5></a></div>
 <div id="hk-exercise-213" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1488">
@@ -644,13 +654,23 @@ MathJax.Hub.Config({
 </ol>
 	</p></article><div class="hidden-knowl-wrapper"></div>
 </div>
-<div class="sidebyside" id="sidebyside-98">
-<figure class="left" id="fig-GC-bad-linear-fit" style="width:38%;vertical-align:middle;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-GC-bad-linear-fit.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.113</span></figcaption></figure><p id="p-1491" class="right" style="width:58%;vertical-align:middle;text-align:left;">
-	We must be careful that our data set gives a complete picture of the situation we want to model. A regression equation may fit a particular collection of data and still be a poor model if the rest of the data diverge from the regression graph. In <a knowl="./knowl/example-quadratic-fit.html" knowl-id="xref-example-quadratic-fit" alt="Example 6.101 " title="Example 6.101 ">Example 6.101</a>, suppose Major Motors had collected only the first three data points and fit a line through them, as shown in <a knowl="./knowl/fig-GC-bad-linear-fit.html" knowl-id="xref-fig-GC-bad-linear-fit" alt="Figure 6.113 " title="Figure 6.113 ">Figure 6.113</a>. This regression line gives poor predictions for the cost of driving at 60 or 70 miles per hour.
-</p>
+<div class="sidebyside" style="" id="sidebyside-98">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<h5 class="sbsheader" style="width:50%;"></h5>
+<h5 class="sbsheader" style="width:50%;"></h5>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img width="100%" src="images/fig-GC-bad-linear-fit"></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-1491">
+	We must be careful that our data set gives a complete picture of the situation we want to model. A regression equation may fit a particular collection of data and still be a poor model if the rest of the data diverge from the regression graph. In <a knowl="./knowl/example-quadratic-fit.html" knowl-id="xref-example-quadratic-fit" alt="Example 6.6.7 " title="Example 6.6.7 ">Example 6.6.7</a>, suppose Major Motors had collected only the first three data points and fit a line through them, as shown in <a knowl="./knowl/fig-GC-bad-linear-fit.html" knowl-id="xref-fig-GC-bad-linear-fit" alt="Figure 6.6.20 " title="Figure 6.6.20 ">Figure 6.6.20</a>. This regression line gives poor predictions for the cost of driving at 60 or 70 miles per hour.
+</p></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"><span class="heading">Figure</span><span class="codenumber">6.6.20</span></figcaption><figcaption class="sbscaption" style="width:50%;"></figcaption>
+</div>
 </div>
 <article class="example-like" id="example-214"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">6.114</span>
+<span class="type">Example</span><span class="codenumber">6.6.21</span>
 </h5>
 <p id="p-1492">
 		Francine records the height of the tip of the minute hand on the classroom’s clock at different times. The data are shown in the table, where time is measured in minutes since noon. (A negative time indicates a number of minutes before noon.) Find a quadratic regression equation for the data and use it to predict the height of the minute hand's tip at \(40\) minutes past noon. Do you believe this prediction is valid?
@@ -688,7 +708,7 @@ MathJax.Hub.Config({
 	</p></article><div class="posterior"><div>
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-193" id="solution-193"><span class="">Solution</span></a></span><span id="hk-solution-193" style="display: none;" class="tex2jax_ignore"><div class="remark-like">
 <p id="p-1493">
-		We enter the time data under \(L_1\) and the height data under \(L_2\). Then we calculate and store the quadratic regression equation in \(Y_1\), as we did in <a knowl="./knowl/example-GC-quadratic-fit.html" knowl-id="xref-example-GC-quadratic-fit" alt="Example 6.109 " title="Example 6.109 ">Example 6.109</a>. The regression equation is
+		We enter the time data under \(L_1\) and the height data under \(L_2\). Then we calculate and store the quadratic regression equation in \(Y_1\), as we did in <a knowl="./knowl/example-GC-quadratic-fit.html" knowl-id="xref-example-GC-quadratic-fit" alt="Example 6.6.16 " title="Example 6.6.16 ">Example 6.6.16</a>. The regression equation is
 		\begin{equation*}y = −0.00297x2 + 0x + 8.834\end{equation*}
 		From either the graph of the regression equation or from the table (see figure below), we can see that the fit is not perfect, although the curve certainly fits the data better than any straight line could.
 	</p>
@@ -697,16 +717,26 @@ MathJax.Hub.Config({
 	</p>
 </div></span>
 </div></div>
-<div class="sidebyside" id="sidebyside-99">
-<figure class="left" id="fig-quadratic-fit-of-periodic" style="width:48%;vertical-align:middle;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-quadratic-fit-of-periodic.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.115</span></figcaption></figure><p id="p-1495" class="right" style="width:48%;vertical-align:middle;text-align:left;">
-	Using the wrong type of equation to fit the data is a common error in making predictions. We know that the minute hand of a clock repeats its position every \(60\) minutes. The graph of the height of its tip oscillates up and down, repeating the same pattern over and over. We cannot describe such a graph using either a linear or a quadratic equation. The graph of the height is shown in <a knowl="./knowl/fig-quadratic-fit-of-periodic.html" knowl-id="xref-fig-quadratic-fit-of-periodic" alt="Figure 6.115 " title="Figure 6.115 ">Figure 6.115</a>, along with the graph of our quadratic regression equation. You can see that the regression equation fits the actual curve only on a small interval.
-</p>
+<div class="sidebyside" style="" id="sidebyside-99">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<h5 class="sbsheader" style="width:50%;"></h5>
+<h5 class="sbsheader" style="width:50%;"></h5>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img width="100%" src="images/fig-quadratic-fit-of-periodic"></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-1495">
+	Using the wrong type of equation to fit the data is a common error in making predictions. We know that the minute hand of a clock repeats its position every \(60\) minutes. The graph of the height of its tip oscillates up and down, repeating the same pattern over and over. We cannot describe such a graph using either a linear or a quadratic equation. The graph of the height is shown in <a knowl="./knowl/fig-quadratic-fit-of-periodic.html" knowl-id="xref-fig-quadratic-fit-of-periodic" alt="Figure 6.6.22 " title="Figure 6.6.22 ">Figure 6.6.22</a>, along with the graph of our quadratic regression equation. You can see that the regression equation fits the actual curve only on a small interval.
+</p></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"><span class="heading">Figure</span><span class="codenumber">6.6.22</span></figcaption><figcaption class="sbscaption" style="width:50%;"></figcaption>
+</div>
 </div>
 <p id="p-1496">
 	Your calculator can always compute a regression equation, but that equation is not necessarily appropriate for your data. Choosing a reasonable type of regression equation for a particular data set requires knowledge of different kinds of models and the physical or natural laws that govern the situation at hand.
 </p>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-214" id="exercise-214"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">6.116</span>
+<span class="type">Exercise</span> <span class="codenumber">6.6.23</span>
 </h5></a></div>
 <div id="hk-exercise-214" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1497">

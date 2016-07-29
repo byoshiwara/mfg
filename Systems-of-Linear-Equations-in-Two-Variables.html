@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-07-27T11:34:39-04:00    *-->
+<!--*    on 2016-07-29T14:07:32-04:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -143,6 +143,7 @@ MathJax.Hub.Config({
 <ul>
 <li><a href="Systems-of-Linear-Equations-in-Two-Variables.html" class="active">Systems of Linear Equations in Two Variables</a></li>
 <li><a href="Systems-of-Linear-Equations-in-Three-Variables.html">Systems of Linear Equations in Three Variables</a></li>
+<li><a href="Solving-Linear-Systems-Using-Matrices.html">Solving Linear Systems Using Matrices</a></li>
 </ul>
 <h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
 <ul>
@@ -189,14 +190,23 @@ MathJax.Hub.Config({
 5t \amp {}+{} \amp 2r  {}\amp={} \amp 32
 \end{alignat*}
 </p>
-<div class="sidebyside" id="sidebyside-110">
-<p id="p-1850" class="left" style="width:58%;vertical-align:middle;text-align:left;">
+<div class="sidebyside" style="" id="sidebyside-110">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<h5 class="sbsheader" style="width:50%;"></h5>
+<h5 class="sbsheader" style="width:50%;"></h5>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-1850">
 	This pair of equations is an example of a <em class="terminology">linear system</em> <em class="terminology">of two equations in two unknowns</em> (or a \(2\times 2\) linear system, for short). A <em class="terminology">solution</em> to the system is an ordered pair of numbers, \((t, r)\), that satisfies both equations in the system.
-</p>
-<figure class="right" id="fig-2x2-linear-system" style="width:38%;vertical-align:middle;text-align:center;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-2x2-linear-system.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.1</span></figcaption></figure>
+</p></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><img width="100%" src="images/fig-2x2-linear-system"></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="heading">Figure</span><span class="codenumber">8.1.1</span></figcaption>
+</div>
 </div>
 <p id="p-1851">
-	Recall that every point on the graph of an equation represents a solution to that equation. A solution to <!--Style me with CSS--><em>both</em> equations corresponds to a point on both graphs. Therefore, a solution to the system is a point where the two graphs intersect. From <a knowl="./knowl/fig-2x2-linear-system.html" knowl-id="xref-fig-2x2-linear-system" alt="Figure 8.1 " title="Figure 8.1 ">Figure 8.1</a>, it appears that the intersection point is \((4, 6)\), so we expect that the values \(t=\alert{4}\) and \(r=\blert{6}\) form the solution to the system. We can check by verifying that these values satisfy <!--Style me with CSS--><em>both</em> equations in the system.
+	Recall that every point on the graph of an equation represents a solution to that equation. A solution to <!--Style me with CSS--><em>both</em> equations corresponds to a point on both graphs. Therefore, a solution to the system is a point where the two graphs intersect. From <a knowl="./knowl/fig-2x2-linear-system.html" knowl-id="xref-fig-2x2-linear-system" alt="Figure 8.1.1 " title="Figure 8.1.1 ">Figure 8.1.1</a>, it appears that the intersection point is \((4, 6)\), so we expect that the values \(t=\alert{4}\) and \(r=\blert{6}\) form the solution to the system. We can check by verifying that these values satisfy <!--Style me with CSS--><em>both</em> equations in the system.
 	\begin{align*}
 
 			3(\alert{4}) + 6(\blert{6})\amp\stackrel{?}{=}48 \amp\amp\text{True}
@@ -211,7 +221,7 @@ MathJax.Hub.Config({
 	We can obtain graphs for the equations in a system quickly and easily using a calculator.
 </p>
 <article class="example-like" id="example-GC-2x2-system"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">8.2</span>
+<span class="type">Example</span><span class="codenumber">8.1.2</span>
 </h5>
 <p id="p-1853">
 		Use your calculator to solve the system by graphing.
@@ -234,12 +244,12 @@ MathJax.Hub.Config({
 				\text{Ymin} \amp = -10 \amp\amp \text{Ymax} = 10
 			
 \end{align*}
-		and enter the two equations We can see in <a knowl="./knowl/fig-GC-2x2-system.html" knowl-id="xref-fig-GC-2x2-system" alt="Figure 8.3 " title="Figure 8.3 ">Figure 8.3</a> that the two lines intersect in the third quadrant. Use the <tt class="code-inline tex2jax_ignore">TRACE</tt> key or the <!--Style me with CSS--><em>intersect</em> feature to find the coordinates of the intersection point. Check that the point \((−2,−3)\) lies on both graphs. The solution to the system is \(x = −2\), \(y=-3\).
-		<figure class="figure-like" id="fig-GC-2x2-system"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-GC-2x2-system.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.3</span></figcaption></figure>
+		and enter the two equations We can see in <a knowl="./knowl/fig-GC-2x2-system.html" knowl-id="xref-fig-GC-2x2-system" alt="Figure 8.1.3 " title="Figure 8.1.3 ">Figure 8.1.3</a> that the two lines intersect in the third quadrant. Use the <tt class="code-inline tex2jax_ignore">TRACE</tt> key or the <!--Style me with CSS--><em>intersect</em> feature to find the coordinates of the intersection point. Check that the point \((−2,−3)\) lies on both graphs. The solution to the system is \(x = −2\), \(y=-3\).
+		<figure class="figure-like" id="fig-GC-2x2-system"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-GC-2x2-system.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.1.3</span></figcaption></figure>
 	</p></div></span>
 </div></div>
 <p id="p-1855">
-	The values we obtain from a calculator may be only approximations, so it is a good idea to check the solution algebraically. In <a knowl="./knowl/example-GC-2x2-system.html" knowl-id="xref-example-GC-2x2-system" alt="Example 8.2 " title="Example 8.2 ">Example 8.2</a>, we find that both equations are true when we substitute \(x = \alert{−2}\) and \(y=\blert{-3}\).
+	The values we obtain from a calculator may be only approximations, so it is a good idea to check the solution algebraically. In <a knowl="./knowl/example-GC-2x2-system.html" knowl-id="xref-example-GC-2x2-system" alt="Example 8.1.2 " title="Example 8.1.2 ">Example 8.1.2</a>, we find that both equations are true when we substitute \(x = \alert{−2}\) and \(y=\blert{-3}\).
 	\begin{align*}
 
 			\blert{-3}\amp = 1.7(\alert{-2})+0.4\amp\amp\text{True}
@@ -250,7 +260,7 @@ MathJax.Hub.Config({
 \end{align*}
 </p>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-246" id="exercise-246"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">8.4</span>
+<span class="type">Exercise</span> <span class="codenumber">8.1.4</span>
 </h5></a></div>
 <div id="hk-exercise-246" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1856">
@@ -277,12 +287,12 @@ MathJax.Hub.Config({
 	</p></article><div class="hidden-knowl-wrapper"></div>
 </div>
 <article class="remark-like" id="remark-15"><h5 class="heading">
-<span class="type">Remark</span><span class="codenumber">8.4</span><span class="title"><img width="8%" src="images/icon-GC.jpg" alt="">Using the Intersect Feature to Solve a System</span>
+<span class="type">Remark</span><span class="codenumber">8.1.5</span><span class="title"><img width="8%" src="images/icon-GC.jpg" alt="">Using the Intersect Feature to Solve a System</span>
 </h5>
 <p id="p-1858">
 	Because the <tt class="code-inline tex2jax_ignore">TRACE</tt> feature does not show every point on a graph, we may not find the exact solution to a system by tracing the graphs.
 </p></article><article class="example-like" id="example-248"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">8.5</span>
+<span class="type">Example</span><span class="codenumber">8.1.6</span>
 </h5>
 <p id="p-1859">
 		Solve the system
@@ -305,8 +315,8 @@ MathJax.Hub.Config({
 				Y_2\amp  = (5.3 − 2X)/1.2
 			
 \end{align*}
-		and then press <tt class="code-inline tex2jax_ignore">ZOOM</tt> \(6\). (Do not forget the parentheses around the numerator of each expression.) Trace along the first line to find the intersection point. It appears to be at \(x=4.468051\), \(y =-2.734195\), as shown in <a knowl="./knowl/fig-GC-2x2-system2.html" knowl-id="xref-fig-GC-2x2-system2" alt="Figure 8.6 " title="Figure 8.6 ">Figure 8.6</a>a. However, if we press the up or down arrow to read the coordinates off the second line, we see that for the same \(x\)-coordinate we obtain a different \(y\)-coordinate, as in <a knowl="./knowl/fig-GC-2x2-system2.html" knowl-id="xref-fig-GC-2x2-system2" alt="Figure 8.6 " title="Figure 8.6 ">Figure 8.6</a>b. The different \(y\)-coordinates indicate that we have not found an intersection point, although we are close. However, the intersect feature can give us a better estimate, \(x = 4.36\), \(y = −2.85\).
-		<figure class="figure-like" id="fig-GC-2x2-system2"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-GC-2x2-system2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.6</span></figcaption></figure>
+		and then press <tt class="code-inline tex2jax_ignore">ZOOM</tt> \(6\). (Do not forget the parentheses around the numerator of each expression.) Trace along the first line to find the intersection point. It appears to be at \(x=4.468051\), \(y =-2.734195\), as shown in <a knowl="./knowl/fig-GC-2x2-system2.html" knowl-id="xref-fig-GC-2x2-system2" alt="Figure 8.1.7 " title="Figure 8.1.7 ">Figure 8.1.7</a>a. However, if we press the up or down arrow to read the coordinates off the second line, we see that for the same \(x\)-coordinate we obtain a different \(y\)-coordinate, as in <a knowl="./knowl/fig-GC-2x2-system2.html" knowl-id="xref-fig-GC-2x2-system2" alt="Figure 8.1.7 " title="Figure 8.1.7 ">Figure 8.1.7</a>b. The different \(y\)-coordinates indicate that we have not found an intersection point, although we are close. However, the intersect feature can give us a better estimate, \(x = 4.36\), \(y = −2.85\).
+		<figure class="figure-like" id="fig-GC-2x2-system2"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-GC-2x2-system2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.1.7</span></figcaption></figure>
 		We can substitute these values into the original system to check that they satisfy both equations.
 		\begin{align*}
 
@@ -319,7 +329,7 @@ MathJax.Hub.Config({
 	</p></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-247" id="exercise-247"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">8.7</span>
+<span class="type">Exercise</span> <span class="codenumber">8.1.8</span>
 </h5></a></div>
 <div id="hk-exercise-247" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1861">
@@ -347,7 +357,7 @@ MathJax.Hub.Config({
 	In previous algebra courses, you learned two algebraic techniques for solving \(2\times 2\) linear systems: <em class="terminology">substitution</em> and <em class="terminology">elimination</em>. See Algebra Skills Refresher <a href="appendix-1.html#appendix-Linear-Systems-in-Two-Variables" alt="Section A.5 Linear Systems in Two Variables" title="Section A.5 Linear Systems in Two Variables">A.5</a> if you would like to review these techniques.
 </p>
 <article class="example-like" id="example-249"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">8.8</span>
+<span class="type">Example</span><span class="codenumber">8.1.9</span>
 </h5>
 <p id="p-1863">
 		Rani kayaks downstream for \(45\) minutes and travels a distance of \(6000\) meters. On the return journey upstream, she covers only \(4800\) meters in \(45\) minutes. How fast is the current in the river, and how fast would Rani kayak in still water? (Give your answers in meters per minute.)
@@ -463,7 +473,7 @@ MathJax.Hub.Config({
 	</p></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-248" id="exercise-248"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">8.9</span>
+<span class="type">Exercise</span> <span class="codenumber">8.1.10</span>
 </h5></a></div>
 <div id="hk-exercise-248" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1877">
@@ -506,22 +516,22 @@ MathJax.Hub.Config({
 </div></section><section class="subsection" id="subsection-183"><header title="Subsection 8.1.2 Inconsistent and Dependent Systems"><h1 class="heading hide-type" alt="Subsection 8.1.2 Inconsistent and Dependent Systems">
 <span class="type">Subsection</span><span class="codenumber">8.1.2</span><span class="title">Inconsistent and Dependent Systems</span>
 </h1></header><p id="p-1887">
-	Because two straight lines do not always intersect at a single point, a \(2\times 2\) system of linear equations does not always have a unique solution. In fact, there are three possibilities, as illustrated in <a knowl="./knowl/fig-3-cases-2x2-systems.html" knowl-id="xref-fig-3-cases-2x2-systems" alt="Figure 8.10 " title="Figure 8.10 ">Figure 8.10</a>.
-	<figure class="figure-like" id="fig-3-cases-2x2-systems"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-3-cases-2x2-systems.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.10</span></figcaption></figure>
+	Because two straight lines do not always intersect at a single point, a \(2\times 2\) system of linear equations does not always have a unique solution. In fact, there are three possibilities, as illustrated in <a knowl="./knowl/fig-3-cases-2x2-systems.html" knowl-id="xref-fig-3-cases-2x2-systems" alt="Figure 8.1.11 " title="Figure 8.1.11 ">Figure 8.1.11</a>.
+	<figure class="figure-like" id="fig-3-cases-2x2-systems"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-3-cases-2x2-systems.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.1.11</span></figcaption></figure>
 	<ol style="list-style-type: decimal;">
 <li id="li-1275"><p id="p-1888">
-			The graphs may be the same line, as shown in <a knowl="./knowl/fig-3-cases-2x2-systems.html" knowl-id="xref-fig-3-cases-2x2-systems" alt="Figure 8.10 " title="Figure 8.10 ">Figure 8.10</a>a.
+			The graphs may be the same line, as shown in <a knowl="./knowl/fig-3-cases-2x2-systems.html" knowl-id="xref-fig-3-cases-2x2-systems" alt="Figure 8.1.11 " title="Figure 8.1.11 ">Figure 8.1.11</a>a.
 		</p></li>
 <li id="li-1276"><p id="p-1889">
-			The graphs may be parallel but distinct lines, as shown in <a knowl="./knowl/fig-3-cases-2x2-systems.html" knowl-id="xref-fig-3-cases-2x2-systems" alt="Figure 8.10 " title="Figure 8.10 ">Figure 8.10</a>b.
+			The graphs may be parallel but distinct lines, as shown in <a knowl="./knowl/fig-3-cases-2x2-systems.html" knowl-id="xref-fig-3-cases-2x2-systems" alt="Figure 8.1.11 " title="Figure 8.1.11 ">Figure 8.1.11</a>b.
 		</p></li>
 <li id="li-1277"><p id="p-1890">
-			The graphs may intersect in one and only one point, as shown in <a knowl="./knowl/fig-3-cases-2x2-systems.html" knowl-id="xref-fig-3-cases-2x2-systems" alt="Figure 8.10 " title="Figure 8.10 ">Figure 8.10</a>c.
+			The graphs may intersect in one and only one point, as shown in <a knowl="./knowl/fig-3-cases-2x2-systems.html" knowl-id="xref-fig-3-cases-2x2-systems" alt="Figure 8.1.11 " title="Figure 8.1.11 ">Figure 8.1.11</a>c.
 		</p></li>
 </ol>
 </p>
 <article class="example-like" id="example-inconsistent-system"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">8.11</span>
+<span class="type">Example</span><span class="codenumber">8.1.12</span>
 </h5>
 <p id="p-1891">
 		Solve the system
@@ -535,7 +545,7 @@ MathJax.Hub.Config({
 \end{gather*}
 	</p></article><div class="posterior"><div>
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-229" id="solution-229"><span class="">Solution</span></a></span><span id="hk-solution-229" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-1892">
-		We use the calculator to graph both equations on the same axes, as shown in <a knowl="./knowl/fig-GC-parallel-lines.html" knowl-id="xref-fig-GC-parallel-lines" alt="Figure 8.12 " title="Figure 8.12 ">Figure 8.12</a>. First, rewrite the second equation in slope-intercept form by solving for \(y\).
+		We use the calculator to graph both equations on the same axes, as shown in <a knowl="./knowl/fig-GC-parallel-lines.html" knowl-id="xref-fig-GC-parallel-lines" alt="Figure 8.1.13 " title="Figure 8.1.13 ">Figure 8.1.13</a>. First, rewrite the second equation in slope-intercept form by solving for \(y\).
 		\begin{align*}
 
 				2x + 2y \amp = 3\amp\amp\text{Substract } 2x \text{ from both sides.}
@@ -556,15 +566,15 @@ MathJax.Hub.Config({
 				Y_2 \amp = −X + 1.5
 			
 \end{align*}
-		<figure class="figure-like" id="fig-GC-parallel-lines"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-GC-parallel-lines.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.12</span></figcaption></figure>
+		<figure class="figure-like" id="fig-GC-parallel-lines"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-GC-parallel-lines.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.1.13</span></figcaption></figure>
 		The lines do not intersect within the viewing window; they appear to be parallel. If we look again at the equations of the lines, we recognize that both have slope \(-1\) but different \(y\)-intercepts, so they are parallel. Since parallel lines never meet, there is no solution to the system.
 	</p></div></span>
 </div></div>
 <p id="p-1893">
-	A system with no solutions, such as the system in <a knowl="./knowl/example-inconsistent-system.html" knowl-id="xref-example-inconsistent-system" alt="Example 8.11 " title="Example 8.11 ">Example 8.11</a>, is called <em class="terminology">inconsistent</em>. A \(2\times 2\) system of linear equations is inconsistent when the two equations correspond to parallel lines. This situation occurs when the lines have the same slope but different \(y\)-intercepts.
+	A system with no solutions, such as the system in <a knowl="./knowl/example-inconsistent-system.html" knowl-id="xref-example-inconsistent-system" alt="Example 8.1.12 " title="Example 8.1.12 ">Example 8.1.12</a>, is called <em class="terminology">inconsistent</em>. A \(2\times 2\) system of linear equations is inconsistent when the two equations correspond to parallel lines. This situation occurs when the lines have the same slope but different \(y\)-intercepts.
 </p>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-249" id="exercise-249"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">8.13</span>
+<span class="type">Exercise</span> <span class="codenumber">8.1.14</span>
 </h5></a></div>
 <div id="hk-exercise-249" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1894">
@@ -583,7 +593,7 @@ MathJax.Hub.Config({
 	A linear system with infinitely many solutions is called <em class="terminology">dependent</em>. A \(2\times 2\) system is dependent when the two equations actually describe the same line. This situation occurs when the two lines have the same slope <!--Style me with CSS--><em>and</em> the same \(y\)-intercept.
 </p>
 <article class="example-like" id="example-251"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">8.14</span>
+<span class="type">Example</span><span class="codenumber">8.1.15</span>
 </h5>
 <p id="p-1896">
 		Solve the system
@@ -621,8 +631,8 @@ MathJax.Hub.Config({
 				y \amp = \frac{3}{2}x − \frac{9}{2}
 			
 \end{align*}
-		The two equations are actually different forms of the same equation. Because they are equivalent, they share the same line as a graph, as shown in <a knowl="./knowl/fig-coincident-lines.html" knowl-id="xref-fig-coincident-lines" alt="Figure 8.15 " title="Figure 8.15 ">Figure 8.15</a>. Every point on the first line is also a point on the second line, so every solution to the first equation is also a solution of the second equation. Thus, the system has infinitely many solutions.
-		<figure class="figure-like" id="fig-coincident-lines"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-coincident-lines.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.15</span></figcaption></figure>
+		The two equations are actually different forms of the same equation. Because they are equivalent, they share the same line as a graph, as shown in <a knowl="./knowl/fig-coincident-lines.html" knowl-id="xref-fig-coincident-lines" alt="Figure 8.1.16 " title="Figure 8.1.16 ">Figure 8.1.16</a>. Every point on the first line is also a point on the second line, so every solution to the first equation is also a solution of the second equation. Thus, the system has infinitely many solutions.
+		<figure class="figure-like" id="fig-coincident-lines"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-coincident-lines.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.1.16</span></figcaption></figure>
 	</p></div></span>
 </div></div>
 <p id="p-1898">
@@ -642,7 +652,7 @@ MathJax.Hub.Config({
 		</p></li>
 </ol>
 </p></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-250" id="exercise-250"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">8.16</span>
+<span class="type">Exercise</span> <span class="codenumber">8.1.17</span>
 </h5></a></div>
 <div id="hk-exercise-250" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1903">
@@ -668,7 +678,7 @@ MathJax.Hub.Config({
 	It is not always easy to tell from the equations themselves whether there is one solution, no solution, or infinitely many solutions. However, the method of elimination will reveal which of the three cases applies.
 </p>
 <article class="example-like" id="example-inconsistent-system2"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">8.17</span>
+<span class="type">Example</span><span class="codenumber">8.1.18</span>
 </h5>
 <p id="p-1907">
 		Solve the system
@@ -719,7 +729,7 @@ MathJax.Hub.Config({
 	</p></div></span>
 </div></div>
 <p id="p-1909">
-	We generalize the results from <a knowl="./knowl/example-inconsistent-system2.html" knowl-id="xref-example-inconsistent-system2" alt="Example 8.17 " title="Example 8.17 ">Example 8.17</a> as follows.
+	We generalize the results from <a knowl="./knowl/example-inconsistent-system2.html" knowl-id="xref-example-inconsistent-system2" alt="Example 8.1.18 " title="Example 8.1.18 ">Example 8.1.18</a> as follows.
 </p>
 <article class="assemblage-like" id="assemblage-111"><h5 class="heading">Inconsistent and Dependent Systems</h5>
 <p id="p-1910">
@@ -740,10 +750,10 @@ MathJax.Hub.Config({
 		</p></li>
 </ol>
 </p></article><p id="p-1913">
-	<a knowl="./knowl/exercise-dependent-system.html" knowl-id="xref-exercise-dependent-system" alt="Exercise 8.18 " title="Exercise 8.18 ">Exercise 8.18</a> illustrates a dependent system.
+	<a knowl="./knowl/exercise-dependent-system.html" knowl-id="xref-exercise-dependent-system" alt="Exercise 8.1.19 " title="Exercise 8.1.19 ">Exercise 8.1.19</a> illustrates a dependent system.
 </p>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-dependent-system" id="exercise-dependent-system"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">8.18</span>
+<span class="type">Exercise</span> <span class="codenumber">8.1.19</span>
 </h5></a></div>
 <div id="hk-exercise-dependent-system" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1914">
@@ -770,7 +780,7 @@ MathJax.Hub.Config({
 	Many practical problems involve two or more unknown quantities.
 </p>
 <article class="example-like" id="example-253"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">8.19</span>
+<span class="type">Example</span><span class="codenumber">8.1.20</span>
 </h5>
 <p id="p-1918">
 		A cup of rolled oats provides 11 grams of protein. A cup of rolled wheat flakes provides 8.5 grams of protein. Francine wants to combine oats and wheat to make a cereal with 10 grams of protein per cup. How much of each grain will she need in one cup of her mixture?
@@ -840,7 +850,7 @@ MathJax.Hub.Config({
 						y \amp = (10 − 11x)/8.5
 					
 \end{align*}
-				Although we could simplify the second equation, the calculator can graph both equations as they are. We know that x and y represent fractions of one cup, so we set the window (as shown in <a knowl="./knowl/fig-GC-2x2-system3.html" knowl-id="xref-fig-GC-2x2-system3" alt="Figure 8.20 " title="Figure 8.20 ">Figure 8.20</a>) with 
+				Although we could simplify the second equation, the calculator can graph both equations as they are. We know that x and y represent fractions of one cup, so we set the window (as shown in <a knowl="./knowl/fig-GC-2x2-system3.html" knowl-id="xref-fig-GC-2x2-system3" alt="Figure 8.1.21 " title="Figure 8.1.21 ">Figure 8.1.21</a>) with 
 				\begin{align*}
 
 						\text{Xmin} \amp = 0 \amp\amp \text{Xmax} = 0.94
@@ -849,7 +859,7 @@ MathJax.Hub.Config({
 						\text{Ymin} \amp = 0 \amp\amp \text{Ymax} = 1
 					
 \end{align*}
-				<figure class="figure-like" id="fig-GC-2x2-system3"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-GC-2x2-system3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.20</span></figcaption></figure>
+				<figure class="figure-like" id="fig-GC-2x2-system3"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-GC-2x2-system3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.1.21</span></figcaption></figure>
 				The lines intersect at \((0.6, 0.4)\), which we can verify by substituting these values into the original two equations of our system.
 			</p>
 </li><li id="li-1290">Step 4:<p id="p-1930">
@@ -859,7 +869,7 @@ MathJax.Hub.Config({
 	</p></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-252" id="exercise-252"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">8.21</span>
+<span class="type">Exercise</span> <span class="codenumber">8.1.22</span>
 </h5></a></div>
 <div id="hk-exercise-252" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1931">
@@ -881,7 +891,7 @@ MathJax.Hub.Config({
 	Being unable to read exact coordinates from a graph is not always a disadvantage. In many situations, fractional values of the unknowns are not acceptable.
 </p>
 <article class="example-like" id="example-254"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">8.22</span>
+<span class="type">Example</span><span class="codenumber">8.1.23</span>
 </h5>
 <p id="p-1936">
 		The mathematics department has \(\$40,000\) to set up a new computer lab. The department will need one printer for every four terminals it purchases. If a printer costs \(\$560\) and a terminal costs \(\$1520\), how many of each should the department buy?
@@ -943,7 +953,7 @@ MathJax.Hub.Config({
 	</p></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-253" id="exercise-253"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">8.23</span>
+<span class="type">Exercise</span> <span class="codenumber">8.1.24</span>
 </h5></a></div>
 <div id="hk-exercise-253" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1944">
@@ -969,7 +979,7 @@ MathJax.Hub.Config({
 	The <em class="terminology">demand function</em> gives the number of units of the product that consumers will buy in terms of the price per unit. The <em class="terminology">supply function</em> gives the number of units that the producer will supply in terms of the price per unit. The price at which the supply and demand are equal is called the <em class="terminology">equilibrium price</em>. This is the price at which the consumer and the producer agree to do business.
 </p>
 <article class="example-like" id="example-255"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">8.24</span>
+<span class="type">Example</span><span class="codenumber">8.1.25</span>
 </h5>
 <p id="p-1950">
 		A woolens mill can produce \(400x\) yards of fine suit fabric if it can charge \(x\) dollars per yard. The mill's clients in the garment industry will buy \(6000 − 100x\) yards of wool fabric at a price of \(x\) dollars per yard. Find the equilibrium price and the amount of fabric that will change hands at that price.
@@ -1014,7 +1024,7 @@ MathJax.Hub.Config({
 	</p></div></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-254" id="exercise-254"><h5 class="heading">
-<span class="type">Exercise</span> <span class="codenumber">8.25</span>
+<span class="type">Exercise</span> <span class="codenumber">8.1.26</span>
 </h5></a></div>
 <div id="hk-exercise-254" style="display: none;" class="tex2jax_ignore">
 <article class="exercise-like"><p id="p-1958">
