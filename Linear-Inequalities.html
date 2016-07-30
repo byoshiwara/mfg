@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-07-30T19:36:07-04:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG Linear Inequalities</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+\newcommand\degree[0]{^{\circ}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading">
+<span class="title">Modeling, Functions, and Graphs</span><span class="subtitle">Algebra for College Students</span>
+</h1>
+<p class="byline">Katherine Yoshiwara</p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="Solving-Linear-Systems-Using-Matrices.html">Previous</a><a class="up-button button toolbar-item" href="chap8.html">Up</a><a class="next-button button toolbar-item" href="Linear-Programming.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Solving-Linear-Systems-Using-Matrices.html">Previous</a><a class="up-button button toolbar-item" href="chap8.html">Up</a><a class="next-button button toolbar-item" href="Linear-Programming.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="biography-1.html">Author Biography</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="preface-1.html">Preface</a></li>
+<li><a href="preface-2.html">Contributors to the 5\(^\mathrm{th}\) Edition</a></li>
+</ul>
+<h2 class="link"><a href="chap1.html"><span class="codenumber">1</span><span class="title">Functions and Their Graphs</span></a></h2>
+<ul>
+<li><a href="LinMod.html">Linear Models</a></li>
+<li><a href="functions.html">Functions</a></li>
+<li><a href="graphs-of-functions.html">Graphs of Functions</a></li>
+<li><a href="slope-and-rate-of-change.html">Slope and Rate of Change</a></li>
+<li><a href="linear-functions.html">Linear Functions</a></li>
+<li><a href="linear-regression.html">Linear Regression</a></li>
+</ul>
+<h2 class="link"><a href="chap2.html"><span class="codenumber">2</span><span class="title">Modeling with Functions</span></a></h2>
+<ul>
+<li><a href="nonlinear-models.html">Nonlinear Models</a></li>
+<li><a href="basic-functions.html">Some Basic Functions</a></li>
+<li><a href="transformations.html">Transformations of Graphs</a></li>
+<li><a href="MathModels.html">Functions as Mathematical Models</a></li>
+<li><a href="AbsoluteValue.html">The Absolute Value Function</a></li>
+<li><a href="Domain-Range.html">Domain and Range</a></li>
+</ul>
+<h2 class="link"><a href="chap3.html"><span class="codenumber">3</span><span class="title">Power Functions</span></a></h2>
+<ul>
+<li><a href="Variation.html">Variation</a></li>
+<li><a href="Integer-Exponents.html">Integer Exponents</a></li>
+<li><a href="Roots-and-Radicals.html">Roots and Radicals</a></li>
+<li><a href="Rational-Exponents.html">Rational Exponents</a></li>
+<li><a href="Joint-Variation.html">Joint Variation</a></li>
+</ul>
+<h2 class="link"><a href="chap4.html"><span class="codenumber">4</span><span class="title">Exponential Functions</span></a></h2>
+<ul>
+<li><a href="Exponential-Growth-and-Decay.html">Exponential Growth and Decay</a></li>
+<li><a href="Exponential-Functions.html">Exponential Functions</a></li>
+<li><a href="Logarithms.html">Logarithms</a></li>
+<li><a href="Properties-of-Logarithms.html">Properties of Logarithms</a></li>
+<li><a href="Exponential-Models.html">Exponential Models</a></li>
+</ul>
+<h2 class="link"><a href="chap5.html"><span class="codenumber">5</span><span class="title">Logarithmic Functions</span></a></h2>
+<ul>
+<li><a href="Inverse-Functions.html">Inverse Functions</a></li>
+<li><a href="Logarithmic-Functions.html">Logarithmic Functions</a></li>
+<li><a href="The-Natural-Base.html">The Natural Base</a></li>
+<li><a href="Logarithm-Scales.html">Logarithmic Scales</a></li>
+</ul>
+<h2 class="link"><a href="chap6.html"><span class="codenumber">6</span><span class="title">Quadratic Functions</span></a></h2>
+<ul>
+<li><a href="Factors-and-x-Intercepts.html">Factors and \(x\)-Intercepts</a></li>
+<li><a href="Solving-Quadratic-Equations.html">Solving Quadratic Equations</a></li>
+<li><a href="Graphing-Parabolas.html">Graphing Parabolas</a></li>
+<li><a href="Problem-Solving.html">Problem Solving</a></li>
+<li><a href="Quadratic-Inequalities.html">Quadratic Inequalities</a></li>
+<li><a href="Curve-Fitting.html">Curve Fitting</a></li>
+</ul>
+<h2 class="link"><a href="chap7.html"><span class="codenumber">7</span><span class="title">Polynomial and Rational Functions</span></a></h2>
+<ul>
+<li><a href="Polynomial-Functions.html">Polynomial Functions</a></li>
+<li><a href="Graphing-Polynomial-Functions.html">Graphing Polynomial Functions</a></li>
+<li><a href="Complex-Numbers.html">Complex Numbers</a></li>
+<li><a href="Graphing-Rational-Functions.html">Graphing Rational Functions</a></li>
+<li><a href="Equations-That-Include-Algebraic-Fractions.html">Equations That Include Algebraic Fractions</a></li>
+</ul>
+<h2 class="link active"><a href="chap8.html"><span class="codenumber">8</span><span class="title">Linear Systems</span></a></h2>
+<ul>
+<li><a href="Systems-of-Linear-Equations-in-Two-Variables.html">Systems of Linear Equations in Two Variables</a></li>
+<li><a href="Systems-of-Linear-Equations-in-Three-Variables.html">Systems of Linear Equations in Three Variables</a></li>
+<li><a href="Solving-Linear-Systems-Using-Matrices.html">Solving Linear Systems Using Matrices</a></li>
+<li><a href="Linear-Inequalities.html" class="active">Linear Inequalities</a></li>
+<li><a href="Linear-Programming.html">Linear Programming</a></li>
+</ul>
+<h2 class="link"><a href="backmatter.html"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="appendix-1.html">Algebra Skills Refresher</a></li>
+<li><a href="appendix-2.html">Using a Graphing Calculator</a></li>
+<li><a href="appendix-3.html">Glossary</a></li>
+<li><a href="appendix-4.html">Answers to selected exercises</a></li>
+<li><a href="index-part-1.html">Index</a></li>
+<li><a href="colophon-2.html">Colophon</a></li>
+</ul>
+<h2 class="link"><a href="index-part-2.html"><span class="title">Index</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="colophon-3.html"><span class="title">Colophon</span></a></h2>
+<ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Linear-Inequalities"><header title="Section 8.4 Linear Inequalities"><h1 class="heading hide-type" alt="Section 8.4 Linear Inequalities">
+<span class="type">Section</span><span class="codenumber">8.4</span><span class="title">Linear Inequalities</span><a href="Linear-Inequalities.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-2133">
+	In this section, we study linear inequalities in two variables and how they arise in applications.
+</p>
+<section class="subsection" id="subsection-196"><header title="Subsection 8.4.1 Graphs of Inequalities in Two Variables"><h1 class="heading hide-type" alt="Subsection 8.4.1 Graphs of Inequalities in Two Variables">
+<span class="type">Subsection</span><span class="codenumber">8.4.1</span><span class="title">Graphs of Inequalities in Two Variables</span>
+</h1></header><p id="p-2134">
+	Ivana is investing in the hotel business. She has bought two hotels, and she will expand her investments when her total profit from the two hotels exceeds \(\$10,000\). If we let \(x\) represent the profit from one hotel and let \(y\) represent the profit from the other, then Ivana will expand her investments when
+	\begin{equation*}
+		x + y \ge 10,000
+	\end{equation*}
+	Notice that the equation \(x + y = 10,000\) is not appropriate to model our situation, since Ivana will be delighted if her profits are not exactly equal to \(\$10,000\) but actually exceed that amount.
+</p>
+<p id="p-2135">
+	A <em class="terminology">solution</em> to an inequality in two variables is an ordered pair of numbers that satisfies the inequality. The graph of the inequality must show all the points whose coordinates are solutions. As an example, let us graph the inequality above, \(x + y \ge 10,000\).
+</p>
+<p id="p-2136">
+	Rewrite the inequality by subtracting \(x\) from both sides to get
+	\begin{equation*}
+		y \ge −x + 10,000
+	\end{equation*}
+	This inequality says that for each \(x\)-value, we must choose points with \(y\)-values greater than or equal to \(−x + 10,000\). For example, when \(x = 2000\), we must choose points with \(y\)-values greater than or equal to \(8000\). Solutions for several choices of \(x\) are shown in <a knowl="./knowl/fig-linear-inequality.html" knowl-id="xref-fig-linear-inequality" alt="Figure 8.4.1 " title="Figure 8.4.1 ">Figure 8.4.1</a>a.
+</p>
+<figure class="figure-like" id="fig-linear-inequality"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-linear-inequality.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.4.1</span></figcaption></figure><p id="p-2137">
+	Amore efficient way to find all the solutions of the inequality is to start with the graph of the corresponding equation
+	\begin{equation*}
+		y = −x + 10,000
+	\end{equation*}
+	The graph is a straight line, as illustrated in <a knowl="./knowl/fig-linear-inequality.html" knowl-id="xref-fig-linear-inequality" alt="Figure 8.4.1 " title="Figure 8.4.1 ">Figure 8.4.1</a>b. Observe that any point above this line has a y-coordinate greater than \(−x + 10,000\) and hence satisfies the inequality. Thus, the graph of the inequality includes all the points on or above the line \(y = −x + 10,000\), as shown by the shaded region in <a knowl="./knowl/fig-linear-inequality.html" knowl-id="xref-fig-linear-inequality" alt="Figure 8.4.1 " title="Figure 8.4.1 ">Figure 8.4.1</a>b.
+</p>
+<p id="p-2138">
+	You can check that the shaded points are also solutions to the original inequality, \(x + y \ge 10,000\). Consider the point \((−1000, 12,000)\), which lies in the shaded region above the line. This pair does satisfy \(x + y \ge 10,000\), because
+	\begin{equation*}
+		−1000 + 12,000 \ge 10,000
+	\end{equation*}
+	(Ivana will expand her investments if her first hotel loses \(\$1000\) and her second has a profit of \(\$12,000\).) On the other hand, the point \((5000, 4000)\) does not lie in the graph of \(x + y \ge 10,000\), because the coordinates do not satisfy the inequality.
+</p></section><section class="subsection" id="subsection-197"><header title="Subsection 8.4.2 Linear Inequalities"><h1 class="heading hide-type" alt="Subsection 8.4.2 Linear Inequalities">
+<span class="type">Subsection</span><span class="codenumber">8.4.2</span><span class="title">Linear Inequalities</span>
+</h1></header><p id="p-2139">
+	A <em class="terminology">linear inequality</em> can be written in the form
+	\begin{equation*}
+		ax + by + c \le 0 ~~~\text{ or }~~~  ax + by + c \ge 0
+	\end{equation*}
+	The solutions consist of the line \(ax + by + c = 0\) and a <em class="terminology">half-plane</em> on one side of that line. We shade the half-plane to show that all its points are included in the solution set. If the inequality is strict, then the graph includes only the half-plane and not the line. In that case, we use a dashed line for the graph of the equation \(ax + by + c = 0\) to show that it is not part of the solution.
+</p>
+<p id="p-2140">
+	To decide which side of the line to shade, we can solve the inequality for \(y\) in terms of \(x\). If we obtain
+	\begin{equation*}
+		y \ge mx + b ~~~(\text{or }~~~y \gt mx + b)
+	\end{equation*}
+	then we shade the half-plane <!--Style me with CSS--><em>above</em> the line. If the inequality is equivalent to
+	\begin{equation*}
+		y \le mx + b ~~~(\text{or }~~~y \lt mx + b)		
+	\end{equation*}
+	then we shade the half-plane <!--Style me with CSS--><em>below</em> the line.
+</p>
+<article class="remark-like" id="warning-19"><h5 class="heading">
+<span class="type">Caution</span><span class="codenumber">8.4.2</span>
+</h5>
+<p id="p-2141">
+		Be careful when isolating \(y\): We must remember to reverse the direction of the inequality whenever we multiply or divide by a negative number. (See Algebra Skills Refresher <a href="appendix-1.html#appendix-Linear-Equations-and-Inequalities" alt="Section A.2 Linear Equations and Inequalities" title="Section A.2 Linear Equations and Inequalities">A.2</a> if you would like to review solving inequalities.)
+	</p></article><article class="example-like" id="example-268"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">8.4.3</span>
+</h5>
+<p id="p-2142">
+		Graph \(4x − 3y \ge 12\).
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-246" id="solution-246"><span class="">Solution</span></a></span><span id="hk-solution-246" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-2143">
+		Solve the inequality for \(y\).
+		\begin{align*}
+
+				4x − 3y \amp\ge 12
+			\\
+
+				−3y\amp\ge −4x + 12
+			\\
+
+				y\amp\le \frac{4}{3}x-4
+			
+\end{align*}
+		Graph the corresponding line
+		\begin{equation*}
+			y = \frac{4}{3}x-4
+		\end{equation*}
+		Note that the \(y\)-intercept is \(-4\) and the slope is \(\frac{4}{3}\). (See <a href="slope-and-rate-of-change.html" alt="Section 1.4 Slope and Rate of Change" title="Section 1.4 Slope and Rate of Change">Section 1.4</a> to review the slope-intercept method of graphing.) Finally, shade the half-plane below the line. The completed graph is shown in <a knowl="./knowl/fig-linear-inequality2.html" knowl-id="xref-fig-linear-inequality2" alt="Figure 8.4.4 " title="Figure 8.4.4 ">Figure 8.4.4</a>.
+<figure class="figure-like" id="fig-linear-inequality2"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-linear-inequality2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.4.4</span></figcaption></figure>
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-267" id="exercise-267"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">8.4.5</span>
+</h5></a></div>
+<div id="hk-exercise-267" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-2144">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-1370"><p id="p-2145">
+				Find one \(y\)-value that satisfies the inequality \(y − 3x \lt 6\) for each of the \(x\)-values in the table.
+				<figure class="figure-like" id="table-182"><table>
+<tr>
+<td class="c m b1 r1 l1 t1">\(x\)</td>
+<td class="c m b1 r1 l0 t1">\(1\)</td>
+<td class="c m b1 r1 l0 t1">\(0\)</td>
+<td class="c m b1 r1 l0 t1">\(-2\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(y\)</td>
+<td class="c m b1 r1 l0 t0">\(\hphantom{blank}\)</td>
+<td class="c m b1 r1 l0 t0">\(\hphantom{blank}\)</td>
+<td class="c m b1 r1 l0 t0">\(\hphantom{blank}\)</td>
+</tr>
+</table></figure>
+			</p></li>
+<li id="li-1371"><p id="p-2146">
+				Graph the line \(y − 3x = 6\). Then plot your solutions from part (a) on the same grid.
+			</p></li>
+<li id="li-1372"><p id="p-2147">
+				Graph the solutions of the inequality \(y − 3x \lt 6\).
+			</p></li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-198"><header title="Subsection 8.4.3 Using a Test Point"><h1 class="heading hide-type" alt="Subsection 8.4.3 Using a Test Point">
+<span class="type">Subsection</span><span class="codenumber">8.4.3</span><span class="title">Using a Test Point</span>
+</h1></header><p id="p-2148">
+	A second method for graphing inequalities does not require us to solve for \(y\). Once we have graphed the boundary line, we can decide which half-plane to shade by using a test point. The test point can be any point that is not on the boundary line itself.
+</p>
+<article class="example-like" id="example-linear-inequality-test-point"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">8.4.6</span>
+</h5>
+<p id="p-2149">
+		Graph the solutions of the inequality \(3x − 2y\lt 6\).
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-247" id="solution-247"><span class="">Solution</span></a></span><span id="hk-solution-247" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-2150">
+		First, graph the line \(3x − 2y = 6\), as shown in Figure 8.19. We will use the intercept method. The intercepts are \((2, 0)\) and \((0, −3)\), so we sketch the boundary line through those points. Next, choose a test point. Since \((0, 0)\) does not lie on the line, we choose it as our test point. Substitute the coordinates of the test point into the inequality to obtain 
+		\begin{equation*}
+			3(\alert{0}) − 2(\alert{0}) \lt 6
+		\end{equation*}
+		Because this is a true statement, \((0, 0)\) is a solution of the inequality. Since all the solutions lie on the same side of the boundary line, we shade the half-plane that contains the test point. In this example, the boundary line is a dashed line because the original inequality was strict.
+<figure class="figure-like" id="fig-linear-inequality3"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-linear-inequality3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.4.7</span></figcaption></figure>
+	</p></div></span>
+</div></div>
+<p id="p-2151">
+	We can choose <!--Style me with CSS--><em>any</em> point for the test point as long as it does not lie on the boundary line. We chose \((0, 0)\) in Example 2 because the coordinates are easy to substitute into the inequality. If the test point <!--Style me with CSS--><em>is</em> a solution to the inequality, then the half-plane including that point should be shaded. If the test point is <!--Style me with CSS--><em>not</em> a solution to the inequality, then the <!--Style me with CSS--><em>other</em> half-plane should be shaded. For example, suppose we had chosen (5, 0) as the test point in <a knowl="./knowl/example-linear-inequality-test-point.html" knowl-id="xref-example-linear-inequality-test-point" alt="Example 8.4.6 " title="Example 8.4.6 ">Example 8.4.6</a>. When we substitute its coordinates into the inequality, we find
+	\begin{equation*}
+		3(\alert{5}) − 2(\blert{0}) \lt 6
+	\end{equation*}
+	which is a <!--Style me with CSS--><em>false</em> statement. This tells us that \((5, 0)\) is not a solution to the inequality, so the solutions must lie on the other side of the boundary line. Using (5, 0) as the test point gives us the same solutions we found in <a knowl="./knowl/example-linear-inequality-test-point.html" knowl-id="xref-example-linear-inequality-test-point" alt="Example 8.4.6 " title="Example 8.4.6 ">Example 8.4.6</a>.
+</p>
+<p id="p-2152">
+	Here is a summary of our test point method for graphing inequalities.
+</p>
+<article class="assemblage-like" id="assemblage-117"><h5 class="heading">To Graph an Inequality Using a Test Point:</h5>
+<p id="p-2153">
+	<ol style="list-style-type: decimal;">
+<li id="li-1373"><p id="p-2154">
+			Graph the corresponding equation to obtain the boundary line.
+		</p></li>
+<li id="li-1374"><p id="p-2155">
+			Choose a test point that does not lie on the boundary line.
+		</p></li>
+<li id="li-1375"><p id="p-2156">
+			Substitute the coordinates of the test point into the inequality.
+			<ol style="list-style-type: lower-alpha;">
+<li id="li-1376"><p id="p-2157">
+					If the resulting statement is true, shade the half-plane that includes the test point.
+				</p></li>
+<li id="li-1377"><p id="p-2158">
+					If the resulting statement is false, shade the half-plane that does not include the test point.
+				</p></li>
+</ol>
+			<li id="li-1378"><p id="p-2159">
+				If the inequality is strict, make the boundary line a dashed line.
+			</p></li>
+		</p></li>
+</ol>
+</p></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-268" id="exercise-268"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">8.4.8</span>
+</h5></a></div>
+<div id="hk-exercise-268" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-2160">
+		Graph the solutions of the inequality \(y \gt \frac{-3}{2}x\).
+		<ol style="list-style-type: decimal;">
+<li id="li-1379"><p id="p-2161">
+				Graph the line \(y = \frac{-3}{2}x\). (Use the slope-intercept method.)
+			</p></li>
+<li id="li-1380"><p id="p-2162">
+				Choose a test point. (Do not choose \((0, 0)\)!)
+			</p></li>
+<li id="li-1381"><p id="p-2163">
+				 Decide which side of the line to shade.
+			</p></li>
+<li id="li-1382"><p id="p-2164">
+				Should the boundary line be dashed or solid?
+			</p></li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<p id="p-2165">
+	Recall that the equation of a vertical line has the form
+	\begin{equation*}x=k\end{equation*}
+	where \(k\) is a constant, and a horizontal line has an equation of the form
+	\begin{equation*}y=k\end{equation*}
+	Similarly, the inequality \(x\ge k\) may represent the inequality in two variables
+	\begin{equation*}x+0y\ge k\end{equation*}
+	Its graph is then a region in the plane.
+</p>
+<article class="example-like" id="example-270"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">8.4.9</span>
+</h5>
+<p id="p-2166">
+		Graph \(x\ge 2\) in the plane.
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-248" id="solution-248"><span class="">Solution</span></a></span><span id="hk-solution-248" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-2167">
+		First, graph the equation \(x = 2\); its graph is a vertical line. Since the origin does not lie on this line, we can use it as a test point. Substitute \(0\) for \(x\) (there is no \(y\)) into the inequality to obtain
+		\begin{equation*}0\ge 2\end{equation*}
+		Since this is a false statement, shade the half-plane that does not contain the origin. We see in <a knowl="./knowl/fig-planar-graph-x-greater-or-equal-2.html" knowl-id="xref-fig-planar-graph-x-greater-or-equal-2" alt="Figure 8.4.10 " title="Figure 8.4.10 ">Figure 8.4.10</a> that the graph of the inequality contains all points whose \(x\)-coordinates are greater than or equal to \(2\).
+<figure class="figure-like" id="fig-planar-graph-x-greater-or-equal-2"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-planar-graph-x-greater-or-equal-2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.4.10</span></figcaption></figure>
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-269" id="exercise-269"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">8.4.11</span>
+</h5></a></div>
+<div id="hk-exercise-269" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-2168">
+		Graph \(−2 \le y \lt 3\) in the plane.
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section><section class="subsection" id="subsection-199"><header title="Subsection 8.4.4 Systems of Inequalities"><h1 class="heading hide-type" alt="Subsection 8.4.4 Systems of Inequalities">
+<span class="type">Subsection</span><span class="codenumber">8.4.4</span><span class="title">Systems of Inequalities</span>
+</h1></header><div class="sidebyside" style="" id="sidebyside-120">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<h5 class="sbsheader" style="width:60%;"></h5>
+<h5 class="sbsheader" style="width:40%;"></h5>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:60%;justify-content:center;"><p id="p-2169">
+	Some applications are best described by a system of two or more inequalities. The solutions to a system of inequalities include all points that are solutions to each inequality in the system. The graph of the system is the intersection of the shaded regions for each inequality in the system. For example, <a knowl="./knowl/fig-system-of-inequalities.html" knowl-id="xref-fig-system-of-inequalities" alt="Figure 8.4.12 " title="Figure 8.4.12 ">Figure 8.4.12</a> shows the solutions of the system
+	\begin{equation*}
+		y \gt x ~~~\text{ and }~~~ y \gt 2
+	\end{equation*}
+</p></div>
+<div class="sbspanel" style="width:40%;justify-content:center;"><img width="100%" src="images/fig-system-of-inequalities"></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:60%;"></figcaption><figcaption class="sbscaption" style="width:40%;"><span class="heading">Figure</span><span class="codenumber">8.4.12</span></figcaption>
+</div>
+</div>
+<article class="example-like" id="example-271"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">8.4.13</span>
+</h5>
+<p id="p-2170">
+		Laura is a finicky eater, and she dislikes most foods that are high in calcium. Her morning cereal satisfies some of her calcium requirements, but she needs an additional 500 milligrams of calcium, which she will get from a combination of broccoli, at 160 milligrams per serving, and zucchini, at 30 milligrams per serving. Draw a graph representing the possible combinations of broccoli and zucchini that fulfill Laura’s calcium requirements.
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-249" id="solution-249"><span class="">Solution</span></a></span><span id="hk-solution-249" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-2171">
+		<li id="li-1383">Step 1:<p id="p-2172">
+				Number of servings of broccoli: \(x\)
+			</p>
+<p id="p-2173">
+				Number of servings of zucchini: \(y\)
+			</p>
+</li><li id="li-1384">Step 2:<p id="p-2174">
+				To consume at least \(500\) milligrams of calcium, Laura must choose \(x\) and \(y\) so that
+				\begin{equation*}
+					160x + 30y \ge 500
+				\end{equation*}
+				It makes no sense to consider negative values of \(x\) or of \(y\), since Laura cannot eat a negative number of servings. Thus, we have two more inequalities to satisfy:
+				\begin{equation*}
+					x \ge 0 ~~~\text{ and }~~~y \ge 0
+				\end{equation*}
+			</p>
+</li><li id="li-1385">Step 3:<p id="p-2175">
+			Graph all three inequalities on the same axes. The inequalities \(x\ge 0\) and \(y \ge 0\) restrict the solutions to lie in the first quadrant. The solutions common to all three inequalities are shown in <a knowl="./knowl/fig-system-of-inequalities2.html" knowl-id="xref-fig-system-of-inequalities2" alt="Figure 8.4.14 " title="Figure 8.4.14 ">Figure 8.4.14</a>.
+<figure class="figure-like" id="fig-system-of-inequalities2"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-system-of-inequalities2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.4.14</span></figcaption></figure>
+		</p>
+</li><li id="li-1386">Step 4:<p id="p-2176">
+			Laura can choose any combination of broccoli and zucchini represented by points in the shaded region. For example, the point \((3, 1)\) is a solution to the system of inequalities, so Laura could choose to eat \(3\) servings of broccoli and \(1\) serving of zucchini.
+		</p>
+</li>
+	</p></div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-270" id="exercise-270"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">8.4.15</span>
+</h5></a></div>
+<div id="hk-exercise-270" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-2177">
+		Use the following steps to graph the solutions of the system
+		\begin{align*}
+
+				x + y \amp\le 12
+			\\
+
+				3x − 4y \amp\le 8
+			
+\end{align*}
+		<ol style="list-style-type: decimal;">
+<li id="li-1387"><p id="p-2178">
+				Graph the boundary line \(x + y = 12\).
+			</p></li>
+<li id="li-1388"><p id="p-2179">
+				Lightly shade the solutions of the inequality \(x + y \le 12\).
+			</p></li>
+<li id="li-1389"><p id="p-2180">
+				Graph the boundary line \(3x − 4y = 8\).
+			</p></li>
+<li id="li-1390"><p id="p-2181">
+				Lightly shade the solutions of \(3x − 4y \le 8\).
+			</p></li>
+<li id="li-1391"><p id="p-2182">
+				Shade the intersection of the two solutions sets.
+			</p></li>
+</ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div>
+<p id="p-2183">
+	To describe the solutions of a system of inequalities, it is useful to locate the <em class="terminology">vertices</em>, or corner points, of the boundary.
+</p>
+<article class="example-like" id="example-272"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">8.4.16</span>
+</h5>
+<p id="p-2184">
+		Graph the solution set of the system below and find the coordinates of its vertices.
+		\begin{align*}
+
+				x − y − 2 \amp\le 0
+			\\
+
+				x + 2y − 6 \amp\le 0
+			\\
+
+				x ≥ 0, ~~~~~y \amp\le 0
+			
+\end{align*}
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-250" id="solution-250"><span class="">Solution</span></a></span><span id="hk-solution-250" style="display: none;" class="tex2jax_ignore"><div class="remark-like">
+<p id="p-2185">
+		The last two inequalities, \(x\ge 0\) and \(y\ge 0\), restrict the solutions to the first quadrant. Graph the line \(x − y − 2 = 0\) and use the test point \((0, 0)\) to shade the half-plane, including the origin. Finally, graph the line \(x − 2y − 6 = 0\) and again use the test point \((0, 0)\) to shade the half-plane below the line. The intersection of the shaded regions is shown in <a knowl="./knowl/fig-system-of-inequalities3.html" knowl-id="xref-fig-system-of-inequalities3" alt="Figure 8.4.17 " title="Figure 8.4.17 ">Figure 8.4.17</a>.
+		<figure class="figure-like" id="fig-system-of-inequalities3"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-system-of-inequalities3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.4.17</span></figcaption></figure>
+	</p>
+<p id="p-2186">
+		To find the coordinates of the vertices \(A\), \(B\), \(C\), and \(D\), solve simultaneously the equations of the two lines that intersect at the vertex. Thus, 
+		<div class="sidebyside" style="" id="sidebyside-121">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<h5 class="sbsheader" style="width:33.3333333333333%;"></h5>
+<h5 class="sbsheader" style="width:33.3333333333333%;"></h5>
+<h5 class="sbsheader" style="width:33.3333333333333%;"></h5>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><p id="p-2187">
+				for \(A\), solve the system 
+			</p></div>
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><p id="p-2188">
+				\begin{align*}
+x \amp= 0\\
+y\amp =0
+\end{align*}
+			</p></div>
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><p id="p-2189">
+				to find \((0, 0)\)
+			</p></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:33.3333333333333%;"></figcaption><figcaption class="sbscaption" style="width:33.3333333333333%;"></figcaption><figcaption class="sbscaption" style="width:33.3333333333333%;"></figcaption>
+</div>
+</div>
+
+		<div class="sidebyside" style="" id="sidebyside-122">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<h5 class="sbsheader" style="width:33.3333333333333%;"></h5>
+<h5 class="sbsheader" style="width:33.3333333333333%;"></h5>
+<h5 class="sbsheader" style="width:33.3333333333333%;"></h5>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><p id="p-2190">
+				for \(B\), solve the system 
+			</p></div>
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><p id="p-2191">
+				\begin{align*}
+x \amp= 0\\
+x + 2y \amp= 6
+\end{align*}
+			</p></div>
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><p id="p-2192">
+				to find \((0, 3)\)
+			</p></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:33.3333333333333%;"></figcaption><figcaption class="sbscaption" style="width:33.3333333333333%;"></figcaption><figcaption class="sbscaption" style="width:33.3333333333333%;"></figcaption>
+</div>
+</div>
+
+		<div class="sidebyside" style="" id="sidebyside-123">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<h5 class="sbsheader" style="width:33.3333333333333%;"></h5>
+<h5 class="sbsheader" style="width:33.3333333333333%;"></h5>
+<h5 class="sbsheader" style="width:33.3333333333333%;"></h5>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><p id="p-2193">
+				for \(C\), solve the system 
+			</p></div>
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><p id="p-2194">
+				\begin{align*}
+x + 2y \amp= 6\\
+x -y \amp= 2
+\end{align*}
+			</p></div>
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><p id="p-2195">
+				to find \(\left(\frac{10}{3},\frac{4}{3} \right)\)
+			</p></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:33.3333333333333%;"></figcaption><figcaption class="sbscaption" style="width:33.3333333333333%;"></figcaption><figcaption class="sbscaption" style="width:33.3333333333333%;"></figcaption>
+</div>
+</div>
+
+		<div class="sidebyside" style="" id="sidebyside-124">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<h5 class="sbsheader" style="width:33.3333333333333%;"></h5>
+<h5 class="sbsheader" style="width:33.3333333333333%;"></h5>
+<h5 class="sbsheader" style="width:33.3333333333333%;"></h5>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><p id="p-2196">
+				for \(D\), solve the system 
+			</p></div>
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><p id="p-2197">
+				\begin{align*}
+y \amp= 0\\
+x -y \amp= 2
+\end{align*}
+			</p></div>
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:center;"><p id="p-2198">
+				to find \(\left(2,0 \right)\)
+			</p></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:33.3333333333333%;"></figcaption><figcaption class="sbscaption" style="width:33.3333333333333%;"></figcaption><figcaption class="sbscaption" style="width:33.3333333333333%;"></figcaption>
+</div>
+</div>
+		The vertices are the points \((0, 0)\), \((0, 3)\), \(\left(\frac{10}{3},\frac{4}{3} \right)\), and \((2, 0)\).
+	</p>
+</div></span>
+</div></div>
+<div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-271" id="exercise-271"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">8.4.18</span>
+</h5></a></div>
+<div id="hk-exercise-271" style="display: none;" class="tex2jax_ignore">
+<article class="exercise-like"><p id="p-2199">
+		<ol style="list-style-type: lower-alpha;"><li id="li-1392"><p id="p-2200">
+				Graph the system of inequalities
+				\begin{align*}
+
+						5x + 4y \amp \lt 40
+					\\
+
+						−3x + 4y \amp \lt 12
+					\\
+
+						x \lt 6, ~~~~y \amp\gt 2
+					
+\end{align*}
+
+
+b. Find the coordinates of the vertices of the solution set.
+			</p></li></ol>
+	</p></article><div class="hidden-knowl-wrapper"></div>
+</div></section></section></div></main>
+</div>
+</body>
+</html>
