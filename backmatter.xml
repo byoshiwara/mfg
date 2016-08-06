@@ -844,25 +844,969 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p></li>
     </dl>
 </p>
-
 </assemblage>
 
+<p>
+    In step 1, begin by writing an English phrase to describe the quantity you are looking for. Be as specific as possible—if you are going to write an equation about this quantity, you must understand its properties! Remember that your variable must represent a numerical quantity. For example, <m>x</m> can represent the <em>speed</em> of a train, but not just “the train.”
+</p>
+<p>
+    Writing an equation is the hardest part of the problem. Note that the quantity mentioned in step 2 will probably <em>not</em> be the same unknown quantity you are looking for, but the algebraic expressions you write <em>will</em> involve your variable. For example, if your variable represents the <em>speed</em> of a train, your equation might be about the <em>distance</em> the train traveled.
+</p>
+
+</subsection>
+
+
+
+<subsection><title>Supply and Demand</title>
+<p>
+    The law of supply and demand is fundamental in economics. If you increase the price of a product, the supply increases because its manufacturers are willing to provide more of the product, but the demand decreases because consumers are not willing to buy as much at a higher price. The price at which the demand for a product equals the supply is called the <term index="yes">equilibrium price</term>.
+</p>
+
+<example>
+    <p>
+        The Coffee Connection finds that when it charges <m>p</m> dollars for a pound of coffee, it can sell <m>800 − 60p</m> pounds per month. On the other hand, at a price of <m>p</m> dollars a pound, International Food and Beverage will supply the Connection with <m>175 + 40p</m> pounds of coffee per month. What price should the Coffee Connection charge for a pound of coffee so that its monthly inventory will sell out?
+    </p>
+<solution>
+    <p>
+        <dl>
+            <li><title>Step 1:</title><p>
+                We are looking for the equilibrium price, <m>p</m>.
+            </p></li>
+            <li><title>Step 2:</title><p>
+                The Coffee Connection would like the demand for its coffee to equal its supply. We equate the expressions for supply and for demand to obtain the equation
+                <me>800 − 60p = 175 + 40p</me>
+            </p></li>
+            <li><title>Step 3:</title><p>
+                Solve the equation. To get all terms containing the variable, <m>p</m>, on one side of the equation, we add <m>60p</m> to both sides and subtract <m>175</m> from both sides to obtain
+                <md>
+                    <mrow>
+                        800 − 60p + \alert{60p − 175} \amp= 175 + 40p + \alert{60p − 175}
+                    </mrow>
+                    <mrow>
+                        625 \amp = 100p \amp\amp\text{Divide both sides by }100.
+                    </mrow>
+                    <mrow>
+                        6.25 \amp = p
+                    </mrow>
+                </md>
+            </p></li>
+            <li><title>Step 4:</title><p>
+                The Coffee Connection should charge <m>\$6.25</m> per pound for its coffee.
+            </p></li>
+        </dl>
+    </p>
+</solution></example>
+</subsection>
+
+<subsection><title>Percent Problems</title>
+<p>
+    Recall the basic formula for computing percents.
+</p>
+
+<assemblage><title>Percent Formula</title>
+<p>
+    <me>P = rW</me>
+    the <term>P</term>art (or percent) = the percentage <term>r</term>ate <m>\times</m> the <term>W</term>hole Amount
+</p></assemblage>
+
+<p>
+    A <term index="yes">percent increase</term> or <term index="yes">percent decrease</term> is calculated as a fraction of the <em>original</em> amount. For example, suppose you make <m>\$16.00</m> an hour now, but next month you are expecting a <m>5\%</m> raise. Your new salary should be
+    <me>
+        \stackrel{\text{Original salary}}{\$16.00} + \stackrel{\text{Increase}}{0.05(\$16.00)} = \stackrel{\text{New Salary}}{\$16.80}
+    </me>
+</p>
+<example xml:id="example-percent-increase">
+    <p>
+        The price of housing in urban areas increased <m>4\%</m> over the past year. If a certain house costs <m>\$100,000</m> today, what was its price last year?
+    </p>
+<solution>
+    <p>
+        <dl>
+            <li><title>Step 1:</title><p>
+                Let <m>c</m> represent the cost of the house last year.
+            </p></li>
+            <li><title>Step 2:</title><p>
+                Express the current price of the house in two different ways. During the past year, the price of the house increased by <m>4\%</m>, or <m>0.04c</m>. Its current price is thus
+                <me>\stackrel{\text{Original cost}}{(1)c} + \stackrel{\text{Price increase}}{0.04c} = c(1 + 0.04) = 1.04c</me>
+                This expression is equal to the value given for current price of the house:
+                <me>1.04c = 100,000</me>
+            </p></li>
+            <li><title>Step 3:</title><p>
+                To solve this equation, we divide both sides by <m>1.04</m> to find
+                <me>c = \frac{100,000}{1.04}= 96,153.846</me>
+            </p></li>
+            <li><title>Step 4:</title><p>
+                To the nearest cent, the cost of the house last year was <m>\$96,153.85</m>.
+            </p></li>
+        </dl>
+    </p>
+</solution></example>
+
+<warning>
+    <p>
+        In <xref ref="example-percent-increase" autoname="yes"/>, it would be incorrect to calculate last year's price by subtracting <m>4\%</m> of <m>\$100,000</m> from <m>\$100,000</m> to get <m>\$96,000</m>. (Do you see why?)
+    </p>
+</warning>
+</subsection>
+
+
+
+<subsection><title>Weighted Averages</title>
+<p>
+    We find the <term index="yes">average</term>, or <term index="yes">mean</term>, of a set of values by adding up the values and dividing the sum by the number of values. Thus, the average, <m>\overline{x}</m>, of the numbers <m>x_1, x_2, \ldots , x_n</m> is given by
+    <me>
+        \overline{x} = \frac{x_1 + x_2 + ·· ·+x_n}{n}
+    </me>
+    In a <term index="yes">weighted average</term>, the numbers being averaged occur with different frequencies or are weighted differently in their contribution to the average value. For instance, suppose a biology class of 12 students takes a 10-point quiz. Of the 12 students, 2 receive 10s, three receive 9s, 5 receive 8s, and 2 receive scores of 6. The average score earned on the quiz is then
+    <me>\overline{x} = \frac{\alert{2}(10) + \alert{3}(9) + \alert{5}(8) + \alert{2}(6)}{12}=8.25</me>
+    The numbers in color are called the weights—in this example they represent the number of times each score was counted. Note that <m>n</m>, the total number of scores, is equal to the sum of the weights:
+    <me>12 = 2 + 3 + 5 + 2</me>
+</p>
+
+<example xml:id="example-weighted-average">
+    <p>
+        Kwan's grade in his accounting class will be computed as follows: Tests count for <m>50\%</m> of the grade, homework counts for <m>20\%</m>, and the final exam counts for <m>30\%</m>. If Kwan has an average of <m>84</m> on tests and <m>92</m> on homework, what score does he need on the final exam to earn a grade of <m>90</m>?
+    </p>
+<solution>
+    <p>
+        <dl>
+            <li><title>Step 1:</title><p>
+                Let <m>x</m> represent the final exam score Kwan needs.
+            </p></li>
+            <li><title>Step 2:</title><p>
+                Kwan's grade is the weighted average of his test, homework, and final exam scores.
+                <me>\frac{\alert{0.50}(84) + \alert{0.20}(92) + \alert{0.30}x}{1.00}=90</me>
+                (The sum of the weights is 1.00, or 100% of Kwan’s grade.) Multiply both sides of the equation by <m>1.00</m> to get
+                <me>0.50(84) + 0.20(92) + 0.30x = 1.00(90)</me>
+            </p></li>
+            <li><title>Step 3:</title><p>
+                Solve the equation. Simplify the left side first.
+                <md>
+                    <mrow>
+                        60.4 + 0.30x \amp = 90\amp\amp\text{Subtract 60.4 from both sides.}
+                    </mrow>
+                    <mrow>
+                        0.30x \amp = 29.6\amp\amp\text{Divide both sides by 0.30.}
+                    </mrow>
+                    <mrow>
+                        x \amp = 98.7
+                    </mrow>
+                </md>
+            </p></li>
+            <li><title>Step 4:</title><p>
+                Kwan needs a score of <m>98.7</m> on the final exam to earn a grade of <m>90</m>.
+            </p></li>
+        </dl>
+    </p>
+</solution></example>
+
+<p>
+    In step 2 of <xref ref="example-weighted-average" autoname="yes"/>, we rewrote the formula for a weighted average in a simpler form.
+</p>
+
+<assemblage><title>Weighted Average</title><index>weighted average</index>
+<p>
+    The sum of the weighted values equals the sum of the weights times the average value. In symbols,
+    <me>w_1x_1 + w_2x_2 + \cdots + w_nx_n = Wx</me>
+    where <m>W</m> is the sum of the weights.
+</p></assemblage>
+
+<p>
+    This form is particularly useful for solving problems involving mixtures.
+</p>
+
+<example>
+    <p>
+        The vet advised Delbert to feed his dog Rollo with kibble that is no more than <m>8\%</m> fat. Rollo likes JuicyBits, which are <m>15\%</m> fat. LeanMeal is more expensive, but it is only <m>5\%</m> fat. How much LeanMeal should Delbert mix with <m>50</m> pounds of JuicyBits to make amixture that is <m>8\%</m> fat?
+    </p>
+<solution>
+    <p>
+        <dl>
+            <li><title>Step 1:</title><p>
+                Let <m>p</m> represent the number of pounds of LeanMeal needed.
+            </p></li>
+            <li><title>Step 2:</title><p>
+                In this problem, we want the weighted average of the fat contents in the two kibbles to be <m>8\%</m>. The weights are the number of pounds of each kibble we use. It is often useful to summarize the given information in a table.
+                <tabular left="minor" right="minor" top="minor" bottom="minor" halign="center">
+                    <col halign="left"/>
+                    <row>
+                        <cell><m></m></cell>
+                        <cell><p><m>\%</m> fat</p></cell>
+                        <cell><p>Total pounds</p></cell>
+                        <cell><p>Pounds of fat</p></cell>
+                    </row>
+                    <row>
+                        <cell><p>Juicy Bits</p></cell>
+                        <cell><p><m>15\%</m></p></cell>
+                        <cell><p><m>50</m></p></cell>
+                        <cell><p>0.15(50)</p></cell>
+                    </row>
+                    <row>
+                        <cell><p>LeanMeal</p></cell>
+                        <cell><p><m>5\%</m></p></cell>
+                        <cell><p><m>p</m></p></cell>
+                        <cell><p>0.05p</p></cell>
+                    </row>
+                    <row>
+                        <cell><p>Mixture</p></cell>
+                        <cell><p><m>8\%</m></p></cell>
+                        <cell><p><m>50+p</m></p></cell>
+                        <cell><p>0.08(50+p)</p></cell>
+                    </row>
+                </tabular>
+                The amount of fat in the mixture must come from adding the amounts of fat in the two ingredients. This gives us an equation,
+                <me>0.15(50) + 0.05p = 0.08(50 + p)</me>
+                This equation is an example of the formula for weighted averages.
+            </p></li>
+            <li><title>Step 3:</title><p>
+                Simplify each side of the equation, then solve.
+                <md>
+                    <mrow>
+                        7.5 + 0.05p \amp = 4 + 0.08p
+                    </mrow>
+                    <mrow>
+                        3.5 \amp = 0.03p
+                    </mrow>
+                    <mrow>
+                        p \amp = 116.\overline{6}
+                    </mrow>
+                </md>
+            </p></li>
+            <li><title>Step 4:</title><p>
+                Delbert should mix <m>116\frac{2}{3}</m> pounds of LeanMeal with <m>50</m> pounds of JuicyBits to make a mixture that is <m>8\%</m> fat.
+            </p></li>
+        </dl>
+    </p>
+</solution></example>
+</subsection>
+
+
+</section>
+<!--
+
+
+    -->
+
+
+<section xml:id="appendix-Graphs-and-Equations"><title>Graphs and Equations</title>
+<p>
+    Graphs are useful tools for studying mathematical relationships. A graph provides an overview of a quantity of data, and it helps us identify trends or unexpected occurrences. Interpreting the graph can help us answer questions about the data.
+</p>
+<p>
+    For example, here are some data showing the atmospheric pressure at different altitudes. Altitude is given in feet, and atmospheric pressure is given in inches of mercury.
+    <table><tabular halign="center" left="minor" right="minor" top="minor" bottom="minor"><col halign="left"/>
+        <row>
+            <cell>Altitude (ft)</cell>
+            <cell><m>0</m></cell>
+            <cell><m>5000</m></cell>
+            <cell><m>10,000</m></cell>
+            <cell><m>20,000</m></cell>
+            <cell><m>30,000</m></cell>
+            <cell><m>40,000</m></cell>
+            <cell><m>50,000</m></cell>
+        </row>
+        <row>
+            <cell>Pressure (in. Hg)</cell>
+            <cell><m>29.7</m></cell>
+            <cell><m>24.8</m></cell>
+            <cell><m>20.5</m></cell>
+            <cell><m>14.6</m></cell>
+            <cell><m>10.6</m></cell>
+            <cell><m>8.5</m></cell>
+            <cell><m>7.3</m></cell>
+        </row>
+    </tabular></table>
+</p>
+<p>
+    We observe a generally decreasing trend in pressure as the altitude increases, but it is difficult to say anything more precise about this relationship. A clearer picture emerges if we plot the data. To do this, we use two perpendicular number lines called axes. We use the horizontal axis for the values of the first variable, altitude, and the vertical axis for the values of the second variable, pressure.
+</p>
+<p>
+    The entries in the table are called <term>ordered pairs</term>, in which the <term>first component</term> is the altitude and the <term>second component</term> is the atmospheric pressure measured at that altitude. For example, the first two entries can be represented by <m>(0, 29.7)</m> and <m>(5000, 24.8)</m>. We plot the points whose <term>coordinates</term> are given by the ordered pairs, as shown in <xref ref="fig-pressure-vs-altitude" autoname="yes"/>a.
+    <figure xml:id="fig-pressure-vs-altitude"><image source="images/fig-pressure-vs-altitude" alt="graphs of pressure vs altitude" /><caption></caption></figure>
+</p>
+<p>
+    We can connect the data points with a smooth curve as shown in <xref ref="fig-pressure-vs-altitude" autoname="yes"/>b. In doing this, we are assuming that one variable changes smoothly with respect to the other, and in fact this is true for many physical situations. Thus, a smooth curve will thus serve as a good model.
+</p>
+
+<subsection><title>Reading a Graph</title>
+<p>
+    Once we have constructed a graph, we can use it to estimate values of the variables between the known data points.
+</p>
+
+<example xml:id="example-pressure-vs-altitude">
+    <p>
+        From the graph in <xref ref="fig-pressure-vs-altitude" autoname="yes"/>b, estimate the following: 
+        <ol label="*a*">
+            <li><p>
+                The atmospheric pressure measured at an altitude of <m>15,000</m> feet 
+            </p></li>
+            <li><p>
+                The altitude at which the pressure is <m>12</m> inches of mercury
+            </p></li>
+        </ol>
+    </p>
+<solution>
+    <p>
+        <ol label="*a*">
+            <li><p>
+                The point with first coordinate <m>15,000</m> on the graph in <xref ref="fig-pressure-vs-altitude2" autoname="yes"/> has second coordinate approximately <m>17.4</m>. We estimate the pressure at <m>15,000</m> feet to be <m>17.4</m> inches of mercury.
+                <figure xml:id="fig-pressure-vs-altitude2"><image source="images/fig-pressure-vs-altitude2" alt="graph of pressure vs altitude with two points highlighted" width="60%"/><caption></caption> </figure>
+         </p></li>
+         <li><p>
+             The point on the graph with second coordinate <m>12</m> has first coordinate approximately <m>25,000</m>, so an atmospheric pressure of <m>12</m> inches of mercury occurs at about <m>25,000</m> feet.
+         </p></li>
+    </ol>
+    </p>
+</solution></example>
+
+<p>
+    We can also use the graph to obtain information about the relationship between altitude and pressure that would be difficult to see from the data alone.
+</p>
+
+<example>
+    <p>
+        <ol label="*a*">
+            <li><p>
+                For what altitudes is the pressure less than <m>18</m> inches of mercury?
+            </p></li>
+            <li><p>
+                How much does the pressure decrease as the altitude increases from <m>15,000</m> feet to <m>25,000</m> feet?
+            </p></li>
+            <li><p>
+                For which <m>10,000</m>-foot increase in altitude does the pressure change most rapidly?
+            </p></li>
+        </ol>
+    </p>
+<solution>
+    <p>
+        <ol label="*a*">
+            <li><p>
+                From the graph in <xref ref="fig-pressure-vs-altitude" autoname="yes"/>b, we see that the pressure has dropped to <m>18</m> inches of mercury at about <m>14,000</m> feet, and that it continues to decrease as the altitude increases. Therefore, the pressure is less than <m>18</m> inches of mercury for altitudes greater than <m>14,000</m> feet.
+            </p></li>
+            <li><p>
+                The pressure at <m>15,000</m> feet is approximately <m>17.4</m> inches of mercury, and at <m>25,000</m> feet it is <m>12</m> inches. This represents a decrease in pressure of <m>17.4 − 12</m>, or <m>5.4</m>, inches of mercury.
+            </p></li>
+            <li><p>
+                By studying the graph we see that the pressure decreases most rapidly at low altitudes, so we conclude that the greatest drop in pressure occurs between <m>0</m> and <m>10,000</m> feet.
+            </p></li>
+        </ol>
+    </p>
+</solution></example>
+
+</subsection>
+
+
+
+<subsection><title>Graphs of Equations</title>
+<p>
+    In <xref ref="example-pressure-vs-altitude" autoname="yes"/>, we used a graph to illustrate data given in a table. Graphs can also help us analyze models given by equations. Let us first review some facts about solutions of equations in two variables.
+</p>
+<p>
+    An equation in two variables, such as y = 2x + 3, is said to be satisfied if the variables are replaced by a pair of numbers that make the statement true. The pair of numbers is called a <term index="yes">solution</term> of the equation and is usually written as an ordered pair <m>(x, y)</m>. (The first number in the pair is the value of <m>x</m> and the second number is the value of <m>y</m>.)
+</p>
+<p>
+    To find a solution of a given equation, we can assign a number to one of the variables and then solve for the second variable.
+</p>
+
+<example>
+    <p>
+        Find solutions to the equation <m>y = 2x + 3</m>.
+    </p>
+<solution>
+    <p>
+        We choose some values for <m>x</m>, say, <m>-2</m>, <m>0</m>, and <m>1</m>. Substitute these <m>x</m>-values into the equation to find a corresponding <m>y</m>-value for each.
+        <md>
+            <mrow>
+                \amp\text{When }x=−2,\amp\amp y = 2(\alert{−2}) + 3 =−1
+            </mrow>
+            <mrow>
+                \amp\text{When }x=0,\amp\amp y = 2(\alert{0}) + 3 =3
+            </mrow>
+            <mrow>
+                \amp\text{When }x=1,\amp\amp y = 2(\alert{1}) + 3 =5
+            </mrow>
+        </md>
+        Thus, the ordered pairs <m>(−2, −1)</m>, <m>(0, 3)</m>, and <m>(1, 5)</m> are three solutions of <m>y = 2x + 3</m>. We can also substitute values for <m>y</m>. For example, if we let <m>y = \alert{10}</m>, we have
+        <me>\alert{10} = 2x + 3</me>
+        Solving this equation for <m>x</m>, we find <m>7 = 2x</m>, or <m>x = 3.5</m>. This means that the ordered pair <m>(3.5, 10)</m> is another solution of the equation <m>y = 2x + 3</m>.
+    </p>
+</solution></example>
+
+<p>
+    An equation in two variables may have infinitely many solutions, so we cannot list them all. However, we can display the solutions on a graph. For this we use a <term index="yes" >Cartesian</term> (or <term index="yes">rectangular</term>) <term index="yes" >coordinate system</term>, as shown in <xref ref="fig-coordinate-plane" autoname="yes"/>.
+</p>
+<sidebyside  widths="45% 45%" margins="auto">
+    <figure xml:id="fig-coordinate-plane"><image source="images/fig-coordinate-plane" alt="coordinate plane" /><caption></caption></figure>
+    <figure xml:id="fig-line"><image source="images/fig-line" alt="line in the coordinate plane" /><caption></caption></figure>
+
+</sidebyside>
+<p>
+    The <term index="yes" >graph of an equation</term> is a picture of its solutions. A point is included in the graph if its coordinates satisfy the equation, and if the coordinates do not satisfy the equation, the point is not part of the graph. A graph of <m>y = 2x + 3</m> is shown in <xref ref="fig-line" autoname="yes"/>.
+</p>
+<p>
+    This graph does not display <em>all</em> the solutions of the equation, but it shows important features such as the intercepts on the <m>x</m>- and <m>y</m>-axes. Because there is a solution corresponding to every real number <m>x</m>, the graph extends infinitely in either direction, as indicated by the arrows.
+</p>
+
+<example>
+    <p>
+        Use the graph of <m>y = 0.5x^2 − 2</m> in <xref ref="fig-parabola0" autoname="yes"/> to decide whether the given ordered pairs are solutions of the equation. Verify your answers algebraically.
+        <ol label="*a*">
+            <li><p><m>(−4, 6)</m></p></li>
+            <li><p><m>(3, 0)</m></p></li>
+        </ol>
+        <figure xml:id="fig-parabola0"><image source="images/fig-parabola0" alt="parabola in the coordinate plane" width="45%" /><caption></caption></figure>
+    </p>
+<solution>
+    <p>
+        <ol label="*a*">
+            <li><p>
+                Because the point <m>(−4, 6)</m> does lie on the graph, the ordered pair <m>x=−4, y = 6</m> is a solution of <m>y = 0.5x^2 − 2</m>. We can verify this by substituting <m>\alert{-4}</m> for <m>x</m> and <m>\blert{6}</m> for <m>y</m>:
+                <md>
+                    <mrow>0.5(\alert{-4})^2 − 2 \amp= 0.5(16) − 2</mrow>
+                    <mrow>= 8 − 2 \amp = \blert{6}</mrow>
+                </md>
+            </p></li>
+            <li><p>
+                Because the point <m>(3, 0)</m> does not lie on the graph, the ordered pair <m>x = 3, y = 0</m> is not a solution of <m>y = 0.5x^2 − 2</m>. We substitute <m>\alert{3}</m> for <m>x</m> and <m>\blert{0}</m> for <m>y</m> to verify this.
+                <md>
+                    <mrow>0.5(\alert{3})^2 − 2 \amp= 0.5(9) − 2</mrow>
+                    <mrow>= 4.5 − 2 \amp = 2.5 \ne \blert{0}</mrow>
+                </md>
+            </p></li>
+        </ol>
+    </p>
+</solution>
+</example>
 
 </subsection>
 
 </section>
 
-        <section xml:id="appendix-Graphs-and-Equations"><title>Graphs and Equations</title>
-        <p>Graphs are useful tools for studying mathematical relationships. A graph provides an overview of a quantity of data, and it helps us identify trends or unexpected occurrences. Interpreting the graph can help us answer questions about the data.</p>
-        </section>
 
-        <section xml:id="appendix-Linear-Systems-in-Two-Variables"><title>Linear Systems in Two Variables</title><index>linear system</index>
-        <p>A <m>2\times 2</m> <term>system</term> of equations is a set of <m>2</m> equations in the same <m>2</m> variables. A <term index="yes">solution</term> of a <m>2\times 2</m> system is an ordered pair that makes each equation in the system true. In this section, we review two algebraic methods for solving <m>2\times 2</m> linear systems: substitution and elimination.</p>
-        </section>
 
-        <section xml:id="appendix-Laws-of-Exponents"><title>Laws of Exponents</title><index>laws of exponents</index>
-        <p>In this section, we review the rules for performing operations on powers.</p>
-        </section>
+<section xml:id="appendix-Linear-Systems-in-Two-Variables"><title>Linear Systems in Two Variables</title><index>linear system</index>
+<p>A <m>2\times 2</m> <term>system</term> of equations is a set of <m>2</m> equations in the same <m>2</m> variables. A <term index="yes">solution</term> of a <m>2\times 2</m> system is an ordered pair that makes each equation in the system true. In this section, we review two algebraic methods for solving <m>2\times 2</m> linear systems: substitution and elimination.</p>
+
+<subsection><title>Solving Systems by Substitution</title>
+<p>
+    The basic strategy for the <term index="yes">substitution</term> method can be described as follows.
+</p>
+
+<assemblage><title>Steps for Solving a <n>2\tines 2</n> System by Substitution</title>
+<p>
+    <ol label="*1*">
+        <li><p>
+            Solve one of the equations for one of the variables in terms of the other.
+        </p></li>
+        <li><p>
+            Substitute this expression into the second equation; doing so yields an equation in one variable.
+        </p></li>
+        <li><p>
+            Solve the new equation.
+        </p></li>
+        <li><p>
+            Use the result of step 1 to find the other variable.
+        </p></li>
+    </ol>
+</p>
+</assemblage>
+
+<example>
+    <p>
+        Staci stocks two kinds of sleeping bags in her sporting goods store, a standard model and a down-filled model for colder temperatures. From past experience, she estimates that she will sell twice as many of the standard variety as of the down filled. She has room to stock 60 sleeping bags at a time. How many of each variety should Staci order?
+    </p>
+<solution>
+    <p>
+        <dl>
+            <li><title>Step 1:</title><p>
+                <md>
+                    <mrow>\amp\text{Number of standard sleeping bags: }~x</mrow>
+                    <mrow>\amp\text{Number of down-filled sleeping bags: }~y</mrow>
+                </md>
+            </p></li>
+            <li><title>Step 2:</title><p>
+                Write two equations about the variables. Staci needs twice as many standard model as down filled, so
+                <md><mrow>x \amp = 2y\amp\amp\hphantom{blankety}(1)</mrow></md>
+                Also, the total number of sleeping bags is 60, so
+                <md><mrow>x+y \amp = 60\amp\amp\hphantom{blank}(2)</mrow></md>
+            </p></li>
+            <li><title>Step 3:</title><p>
+                We will solve this system using substitution. Notice that Equation (1) is already solved for <m>x</m> in terms of <m>y</m>: <m>x = 2y</m>. Substitute <m>\alert{2y}</m> for <m>x</m> in Equation (2) to obtain
+                <md>
+                    <mrow>
+                        \alert{2y} + y \amp = 60
+                    </mrow>
+                    <mrow>3y\amp = 60</mrow>
+                </md>
+                Solving for <m>y</m>, we find <m>y=\alert{20}</m>. Finally, substitute this value into Equation (1) to find
+                <me>x = 2(\alert{20}) = 40</me>
+                The solution to the system is <m>x = 40, y = 20</m>.
+            </p></li>
+            <li><title>Step 4:</title><p>
+                Staci should order <m>40</m> standard sleeping bags and <m>20</m> down-filled bags.
+            </p></li>
+        </dl>
+    </p>
+</solution></example>
+
+</subsection>
+
+
+<subsection><title>Solving Systems by Elimination</title>
+<p>
+    The method of substitution is convenient if one of the variables in the system has a coefficient of <m>1</m> or <m>-1</m>, because it is easy to solve for that variable. If none of the coefficients is <m>1</m> or <m>-1s</m>, then a second method, called <term index="yes">elimination</term>, is usually more efficient.
+</p>
+<p>
+    The method of elimination is based on the following properties of linear equations.
+</p>
+
+<assemblage><title>Properties of Linear Systems</title>
+<p>
+    <ol label="*1*">
+        <li><p>
+            Multiplying a linear equation by a (nonzero) constant does not change its solutions. That is, any solution of the equation
+            <me>ax + by = c</me>
+            is also a solution of the equation
+            <me>kax + kby = kc</me>
+        </p></li>
+        <li><p>
+            Adding (or subtracting) two linear equations does not change their common solutions. That is, any solution of the system
+            <md>
+                <mrow>a_1x + b_1 y \amp = c_1</mrow>
+                <mrow>a_2x + b_2 y \amp = c_2</mrow>
+            </md>
+            is also a solution of the equation
+            <me>(a_1 + a_2) x + (b_1 + b_2) y = c_1 + c_2</me>
+        </p></li>
+    </ol>
+</p>
+</assemblage>
+
+<example xml:id="example-linear-combinations">
+    <p>
+        Solve the system by the method of elimination.
+        <md alignment="alignat">
+            <mrow>2x\amp {}+{}\amp 3y\amp ={}\amp 8 \hphantom{blankblank}\amp(1)</mrow>
+            <mrow>3x\amp {}-{}\amp 4y\amp ={}\amp -5 \hphantom{blankblank}\amp(2)</mrow>
+        </md>
+    </p>
+<solution>
+    <p>
+        We first decide which variable to eliminate, <m>x</m> or <m>y</m>. We can choose whichever looks easiest. In this problem, we choose to eliminate <m>x</m>. We next look for the smallest number that both coefficients, <m>2</m> and <m>3</m>, divide into evenly. This number is <m>6</m>. We want the coefficients of <m>x</m> to become <m>6</m> and <m>-6</m>, so we will multiply Equation (1) by <m>3</m> and Equation (2) by <m>-2</m> to obtain
+        <md alignment="alignat">
+            <mrow>6x\amp {}+{}\amp 9y\amp ={}\amp 24 \hphantom{blankblank}\amp(1\text{a})</mrow>
+            <mrow>-6x\amp {}+{}\amp 8y\amp ={}\amp 10 \hphantom{blankblank}\amp(2\text{a})</mrow>
+        </md>
+        Now add the corresponding terms of (1a) and (2a). The <m>x</m>-terms are eliminated, yielding an equation in one variable.
+        <md alignment="alignat">
+            <mrow>6x\amp {}+{}\amp 9y\amp ={}\amp 24 \hphantom{blankblank}\amp(1\text{a})</mrow>
+            <mrow>-6x\amp {}+{}\amp 8y\amp ={}\amp 10 \hphantom{blankblank}\amp(2\text{a})</mrow>
+            <mrow>{}\amp {}{}\amp 17y\amp ={}\amp 34 \hphantom{blankblank}\amp(3)</mrow>
+        </md>
+        Solve this equation for <m>y</m> to find <m>y=\alert{2}</m>. We can substitute this value of <m>y</m> into any of our equations involving both <m>x</m> and <m>y</m>. If we choose Equation (1), then
+        <me>2x + 3 (\alert{2}) = 8</me>
+        and solving this equation yields <m>x=1</m>. The ordered pair <m>(1, 2)</m> is a solution to the system. You should verify that these values satisfy both original equations.
+    </p>
+</solution></example>
+
+<p>
+    We summarize the strategy for solving a linear system by elimination.
+</p>
+
+<assemblage><title>Steps for Solving a <m>2\times 2</m> Linear System by Elimination</title>
+<p>
+    <ol label="*1*">
+        <li><p>
+            Choose one of the variables to eliminate. Multiply each equation by a suitable factor so that the coefficients of that variable are opposites.
+        </p></li>
+        <li><p>
+            Add the two new equations termwise.
+        </p></li>
+        <li><p>
+            Solve the resulting equation for the remaining variable.
+        </p></li>
+        <li><p>
+            Substitute the value found in step 3 into either of the original equations and solve for the other variable.
+        </p></li>
+    </ol>
+</p>
+</assemblage>
+
+<p>
+    In <xref ref="example-linear-combinations" autoname="yes"/>, we added <m>3</m> times the first equation to <m>-2</m> times the second equation. The result from adding a constant multiple of one equation to a constant multiple of another equation is called a <term index="yes">linear combination</term> of the two equations. The method of elimination is also called the method of linear combinations<index>linear combinations</index>.
+</p>
+<p>
+    If either equation in a system has fractional coefficients, it is helpful to clear the fractions before applying the method of linear combinations.
+</p>
+
+<example>
+    <p>
+        Solve the system by linear combinations.
+        <md alignment="alignat">
+            <mrow>\frac{2}{3}x\amp {}-{}\amp y\amp ={}\amp 2 \hphantom{blankblank}\amp(1)</mrow>
+            <mrow>x\amp {}+{}\amp \frac{1}{2}y\amp ={}\amp 7 \hphantom{blankblank}\amp(2)</mrow>
+        </md>
+    </p>
+<solution>
+    <p>
+        Multiply each side of Equation (1) by <m>3</m> and each side of Equation (2) by <m>2</m> to clear the fractions:
+        <md alignment="alignat">
+            <mrow>2x\amp {}-{}\amp 3y\amp ={}\amp 6 \hphantom{blankblank}\amp(1\text{a})</mrow>
+            <mrow>2x\amp {}+{}\amp y\amp ={}\amp 14 \hphantom{blankblank}\amp(2\text{a})</mrow>
+        </md>
+        To eliminate the variable <m>x</m>, multiply Equation (2a) by <m>-1</m> and add the result to Equation (1a) to get
+        <md>
+            <mrow>−4y \amp = −8 \amp\amp\text{Divide both sides by −4.}</mrow>
+            <mrow>y \amp = 2</mrow>
+        </md>
+        Substitute <m>\alert{2}</m> for <m>y</m> in one of the original equations and solve for <m>x</m>. We use Equation (2).
+        <md>
+            <mrow>x + \frac{1}{2}(\alert{2}) \amp = 7 \amp\amp\text{Subtract 1 from both sides.}</mrow>
+            <mrow>x \amp = 6</mrow>
+        </md>
+        Verify that <m>x=6</m> and <m>y=2</m> satisfy both Equations (1) and (2). The solution to the system is the ordered pair <m>(6, 2)</m>.
+    </p>
+</solution></example>
+
+</subsection>
+</section>
+
+
+<section xml:id="appendix-Laws-of-Exponents"><title>Laws of Exponents</title><index>laws of exponents</index>
+<p>
+    In this section, we review the rules for performing operations on powers.
+</p>
+<subsection><title>Product of Powers</title>
+<p>
+    Consider a product of two powers with the same base.
+    <me>(a^3) (a^2) = a a a \cdot a a = a^5</me>
+    because <m>a</m> occurs as a factor five times. The number of <m>a</m>'s in the product is the <m>sum</m> of the number of  <m>a</m>'s in each factor.
+</p>
+
+<assemblage><title>First Law of Exponents: Product of Powers</title>
+<p>
+    To multiply two powers with the same base, add the exponents and leave the base unchanged.
+    <me>a^m \cdot a^n = a^{m+n}</me>
+</p>
+</assemblage>
+<example xml:id="example-product-of-powers">
+    <p>
+        <image source="images/fig-product-of-powers" alt="figure showing that when powers of the same base are multiplied that base is retained with exponent equal to the sum of the original exponents"/>
+    </p>
+</example>
+
+<p>Here are some mistakes to avoid.</p>
+
+<warning>
+    <p>
+        <ol label="*1*">
+            <li><p>
+                Note that we do not <em>multiply</em> the exponents when simplifying a product. For example,
+                <me>b^4 \cdot b^2 \ne b^8</me>
+                You can check this with your calculator by choosing a value for <m>b</m>, for instance, <m>b = 3</m>:
+                <me>3^4 \cdot 3^2\ne 3^8</me>
+            </p></li>
+            <li><p>
+                In order to apply the first law of exponents, the bases must be the same. For example,
+                <me>2^3 \cdot 3^5 \ne 6^8</me>
+                (Check this on your calculator.)
+            </p></li>
+            <li><p>
+                We do not multiply the bases when simplifying a product. In <xref ref="example-product-of-powers" autoname="yes"/>a, note that
+                <me>5^3 \cdot 5^4\ne 25^7</me>
+            </p></li>
+            <li><p>
+                Although we can simplify the product <m>x^2x^3</m> as <m>x^5</m>, we cannot simplify the sum <m>x^2 + x^3</m>, because <m>x^2</m> and <m>x^3</m> are not like terms.
+            </p></li>
+        </ol>
+    </p>
+</warning>
+
+<example>
+    <p>
+        Multiply <m>(−3x^4z^2) (5x^3 z)</m>.
+    </p>
+<solution>
+    <p>
+        Rearrange the factors to group the numerical coefficients and the powers of each base. Apply the first law of exponents.
+        <md>
+            <mrow>(−3x^4z^2) (5x^3z) \amp = (−3) (5)x^4x^3z^2z</mrow>
+            <mrow>\amp = -15x^7z^3</mrow>
+        </md>
+    </p>
+</solution></example>
+
+</subsection>
+
+
+
+
+<subsection><title>Quotients of Powers</title>
+<p>
+    To reduce a fraction, we divide both numerator and denominator by any common factors.
+    <me>
+        \require{cancel} \require{color} \renewcommand{\CancelColor}{\blue}
+        \frac{x^7}{x^4}=\frac{xxx\cancel{x}\cancel{x}\cancel{x}\cancel{x}}{\cancel{x}\cancel{x}\cancel{x}\cancel{x}}=\frac{x^3}{1}=x^3
+    </me>
+    We can obtain the same result more quickly by <em>subtracting</em> the exponent of the denominator from the exponent of the numerator.
+    <me>\frac{x^7}{x^4}=x^{7-4}=x^3</me>
+</p>
+<p>
+    What if the larger power occurs in the denominator of the fraction?
+    <me>
+        \frac{x^4}{x^7}=\frac{\cancel{x}\cancel{x}\cancel{x}\cancel{x}}{xxx\cancel{x}\cancel{x}\cancel{x}\cancel{x}}=\frac{1}{x^3}
+    </me>
+    In this case, we subtract the exponent of the numerator from the exponent of the denominator.
+    <me>\frac{x^4}{x^7}=\frac{1}{x^{7-4}}=\frac{1}{x^3}</me>
+    These examples suggest the following law.
+</p>
+
+<assemblage><title>Second Law of Exponents: Quotient of Powers</title>
+<p>
+    To divide two powers with the same base, subtract the smaller exponent from the larger one, keeping the same base.
+    <ol labe="*a*">
+        <li><p>
+            If the larger exponent occurs in the numerator, put the power in the numerator.
+            <me>\text{If }m\gt n,~\text{ then }~ \frac{a^m}{a^n}=a^{m-n} \hphantom{blank}(a \ne 0)</me>
+        </p></li>
+        <li><p>
+            If the larger exponent occurs in the denominator, put the power in the denominator.
+            <me>\text{If }m\lt n,~\text{ then }~ \frac{a^m}{a^n}=\frac{1}{a^{n-m}} \hphantom{blank}(a \ne 0)</me>
+        </p></li>
+    </ol>
+</p>
+</assemblage>
+
+<example>
+    <p>
+        <ol>
+            <li><p><m>
+                \dfrac{3^8}{3^2}=3^{8-2}=3^6\hphantom{blankblankbla}\text{Subtract exponents: }~8 \gt 2.
+            </m></p></li>
+            <li><p><m>
+                \displaystyle{\frac{w^3}{w^6}=\frac{1}{w^{6-3}}=\frac{1}{w^3}\hphantom{blankblank}\text{Subtract exponents: }3\lt 6.}
+            </m></p></li>
+        </ol>
+    </p>
+</example>
+<example>
+    <p>
+        Divide
+        <m>\dfrac{3x^2 y^4}{6x^3 y}.</m>
+    </p>
+<solution>
+    <p>
+        Consider the numerical coefficients and the powers of each variable separately. Use the second law of exponents to simplify each quotient of powers.
+        <md>
+            <mrow>
+                \frac{3x^2 y^4}{6x^3 y} \amp = \frac{3}{6}\cdot \frac{x^2}{x^3} \cdot \frac{y^4}{y}\amp\amp\text{Subtract exponents.}
+            </mrow>
+            <mrow>\amp = \frac{1}{2}\cdot \frac{1}{x^{3-2}} \cdot y^{4-1}</mrow>
+            <mrow>\amp = \frac{1}{2}\cdot \frac{1}{x} \cdot y^3=\frac{y^3}{2x}</mrow>
+        </md>
+    </p>
+</solution></example>
+
+</subsection>
+
+
+
+<subsection><title>Power of a Power</title>
+<p>
+    Consider the expression <m>\left(a^4\right)^3</m>, the third power of <m>a^4</m>.
+    <me>\left(a^4\right)^3=\left(a^4\right)\left(a^4\right)\left(a^4\right)
+        =a^{4+4+4}=a^{12} \hphantom{blankblankblank}\text{Add exponents.}</me>
+    We can obtain the same result by multiplying the exponents together.
+    <me>\left(a^4\right)^3=a^{4 \,\cdot\, 3}=a^{12}</me>
+</p>
+
+<assemblage><title>Third Law of Exponents: Power of a Power</title>
+<p>
+    To raise a power to a power, keep the same base and multiply the exponents.
+    <me>\left(a^m\right)^n = a^{mn}</me>
+</p>
+</assemblage>
+
+<example>
+    <p>
+        <image source="images/fig-power-of-power" alt="examples of raising a power to a power by multiplying exponents"/>
+    </p>
+</example>
+
+<warning>
+    <p>
+        Notice the difference between the expressions
+        <me>(x^3) (x^4) = x^{3+4} = x^7</me>
+        and
+        <me>\left(x^3\right)^4 = x^{3\, \cdot \, 4} = x^{12}</me>
+
+The first expression is a product, so we add the exponents. The second expression raises a
+power to a power, so we multiply the exponents.
+    </p>
+</warning>
+
+</subsection>
+
+
+
+<subsection><title>Power of a Product</title>
+<p>
+    To simplify the expression <m>(5a)^3</m>, we use the associative and commutative laws to regroup the factors as follows.
+    <md>
+        <mrow>
+            (5a)^3 \amp = (5a) (5a) (5a)
+        </mrow>
+        <mrow>
+            \amp =  5 \cdot 5 \cdot 5 \cdot a \cdot a \cdot a
+        </mrow>
+        <mrow>
+            \amp = 5^3 a^3
+        </mrow>
+    </md>
+    Thus, to raise a product to a power, we can simply raise each factor to the power.
+</p>
+
+<assemblage><title>Fourth Law of Exponents: Power of a Product</title>
+<p>
+    A power of a product is equal to the product of the powers of each of its factors.
+    <me>(ab)^n = a^n b^n</me>
+</p>
+</assemblage>
+
+<example>
+    <p>
+        <ol label="*a*">
+            <li><p><m>(5a)^3 = 5^3a^3 = 125a^3\hphantom{blank}\text{Cube each factor}</m>.</p></li>
+            <li><p><m>
+                \begin{aligned}
+                \left(−xy^2\right)^4\amp = (−x)^4\left(y^2\right)^4 \amp\amp\text{Raise each factor to the fourth power.}\\
+                \amp =x^4y^8\amp\amp\text{Apply the third law of exponents.}
+                \end{aligned}
+            </m></p></li>
+        </ol>
+    </p>
+</example>
+
+<warning>
+<p><ol label="*1*">
+    <li><p>
+        Compare the two expressions <m>3a^2</m> and <m>(3a)^2</m>; they are not the same. In the expression <m>3a^2</m>, only the factor <m>a</m> is squared. But in <m>(3a)^2</m>, both <m>3</m> and <m>a</m> are squared. Thus,
+        <me>3a^2 ~~\text{  cannot be simplified}</me>
+        but
+        <me>(3a)^2 = 3^2a^2 = 9a^2</me>       
+    </p></li>
+    <li><p>
+        Compare the two expressions <m>(3a)^2</m> and <m>(3 + a)^2</m>. The fourth law of exponents applies to the <em>product</em> <m>3a</m>, but not to the <em>sum</em> <m>3+a</m>. Thus,
+        <me>(3 + a)^2 \ne 3^2 + a^2</me>
+        In order to simplify <m>(3 + a)^2</m>, we must expand the binomial product:
+        <me>(3 + a)^2 = (3 + a) (3 + a) = 9 + 6a + a^2</me>
+    </p></li>
+</ol></p>
+</warning>
+
+</subsection>
+
+
+<subsection><title>Power of a Quotient</title>
+<p>
+    To simplify the expression <m>\displaystyle{\left(\frac{x}{3}\right)^4} </m>, we multiply together <m>4</m> copies of the fraction 
+    <m>\dfrac{x}{3}</m>.
+    <md>
+        <mrow>
+            \left(\frac{x}{3}\right)^4 \amp = \frac{x}{3}\cdot \frac{x}{3}\cdot \frac{x}{3}\cdot \frac{x}{3}
+            = \frac{x\cdot x\cdot x\cdot x}{3\cdot 3\cdot 3\cdot 3}
+        </mrow>
+        <mrow>
+            \amp = \frac{x^4}{3^4}=\frac{x^4}{81}
+        </mrow>
+    </md>
+        In general, we have the following rule.
+</p>
+
+<assemblage><title>Fifth Law of Exponents: Power of a Quotient</title>
+<p>
+    To raise a quotient to a power, raise both the numerator and denominator to the power.
+    <me>\left(\frac{a}{b}\right)^n=\frac{a^n}{b^n}</me>
+</p>
+</assemblage>
+
+
+<p>
+    For reference, we state all of the laws of exponents together. All the laws are valid when a and b are not equal to zero and when the exponents m and n are whole numbers.
+</p>
+<assemblage><title>Laws of Exponents</title><p>
+    <ol label="*I*">
+        <li><p><m>
+            a^m\cdot a^n = a^{m+n}
+        </m></p></li>
+        <li><p>
+            <ol label="*a*">
+                <li><p><m>\dfrac{a^m}{a^n}=a^{m-n} \hphantom{blank}m\gt n</m></p></li>
+                <li><p><m>\displaystyle{\frac{a^m}{a^n}=\frac{1}{a^{n-m}} \hphantom{blank}m\lt n}</m></p></li>
+
+        </ol>
+        </p></li>
+        <li><p><m>
+            \left(a^m\right)^n=a^{m+n}
+        </m></p></li>
+        <li><p><m>
+            (ab)^n=a^n b^n
+        </m></p></li>
+        <li><p><m>
+            \displaystyle{\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n} }
+        </m></p></li>
+    </ol>
+</p></assemblage>
+
+<example>
+    <p>
+        Simplify <m>5x^2 y^3\left(2xy^2\right)^4</m>.
+    </p>
+<solution>
+    <p>
+        According to the order of operations, we should perform any powers before multiplications. Thus, we begin by simplifying <m>(2xy^2)^4</m>. We apply the fourth law.
+        <md>
+            <mrow>
+                5x^2 y^3\left(2xy^2\right)^4 \amp = 5x^2 y^3 · 2^4x^4\left(y^2\right)^4 \amp\amp\text{Apply the fourth law.}
+            </mrow>
+            <mrow>
+                \amp = 5x^2 y^3 · 2^4x^4 y^8
+            </mrow>
+        </md>
+        Finally, multiply powers with the same base. Apply the first law.
+        <me>5x^2 y^3 \cdot 2^4x^4 y^8 = 5 \cdot 2^4 x^2x^4 y^3 y^8 = 80x^6 y^{11}</me>
+    </p>
+</solution></example>
+
+<example>
+    <p>
+        Simplify <m>\displaystyle{\left(\frac{2x}{z^2}\right)^3}</m>.
+    </p>
+<solution>
+    <p>
+        Begin by applying the fifth law.
+        <md>
+            <mrow>
+                \require{\stackengine}
+                \left(\frac{2x}{z^2}\right)^3 \amp = \frac{(2x)^3}{\left(z^2\right)^2}\amp\amp
+                {\text{Apply the fourth law to the numerator }}{\text{and the third law to the denominator.}}
+            </mrow>
+            <mrow>
+                \amp = \frac{2^3x^3}{z^6}=\frac{8x^3}{z^6}
+            </mrow>
+        </md>
+    </p>
+</solution>
+</example>
+
+</subsection>
+
+</section>
+
+
+<!-- **************************
+
+-->
 
         <section xml:id="appendix-Polynomials-and-Factoring"><title>Polynomials and Factoring</title>
         <p>In <xref ref="appendix-Laws-of-Exponents" autoname="yes"/>, we used the first law of exponents to multiply two or more monomials. In this section, we review techniques for multiplying and factoring polynomials of several terms.</p>
