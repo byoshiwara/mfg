@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-09-04T17:26:35-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG Working with Algebraic Fractions</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+\newcommand\degree[0]{^{\circ}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading">
+<span class="title">Test chapter</span><span class="subtitle">test subtitle</span>
+</h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="appendix-Factoring-Quadratic-Trinomials.html">Previous</a><a class="up-button button toolbar-item" href="appendix-a.html">Up</a><a class="next-button button toolbar-item" href="appendix-Working-with-Radicals.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="appendix-Factoring-Quadratic-Trinomials.html">Previous</a><a class="up-button button toolbar-item" href="appendix-a.html">Up</a><a class="next-button button toolbar-item" href="appendix-Working-with-Radicals.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="testchap.html"><span class="codenumber">1</span><span class="title">Fake chapter</span></a></h2>
+<ul></ul>
+<h2 class="link active"><a href="appendix-a.html"><span class="codenumber">A</span><span class="title">Algebra Skills Refresher</span></a></h2>
+<ul>
+<li><a href="section-1.html">Numbers and Operations</a></li>
+<li><a href="appendix-Linear-Equations-and-Inequalities.html">Linear Equations and Inequalities</a></li>
+<li><a href="appendix-Algebraic-Expressions-and-Problem-Solving.html">Algebraic Expressions and Problem Solving</a></li>
+<li><a href="appendix-Graphs-and-Equations.html">Graphs and Equations</a></li>
+<li><a href="appendix-Linear-Systems-in-Two-Variables.html">Linear Systems in Two Variables</a></li>
+<li><a href="appendix-Laws-of-Exponents.html">Laws of Exponents</a></li>
+<li><a href="appendix-Polynomials-and-Factoring.html">Polynomials and Factoring</a></li>
+<li><a href="appendix-Factoring-Quadratic-Trinomials.html">Factoring Quadratic Trinomials</a></li>
+<li><a href="appendix-Working-with-Algebraic-Fractions.html" class="active">Working with Algebraic Fractions</a></li>
+<li><a href="appendix-Working-with-Radicals.html">Working with Radicals</a></li>
+<li><a href="appendix-Facts-from-Geometry.html">Facts from Geometry</a></li>
+<li><a href="appendix-The-Real-Number-System.html">The Real Number System</a></li>
+</ul>
+<h2 class="link"><a href="properties.html"><span class="codenumber">3</span><span class="title">Properties of Numbers</span></a></h2>
+<ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="appendix-Working-with-Algebraic-Fractions"><header title="Section A.9 Working with Algebraic Fractions"><h1 class="heading hide-type" alt="Section A.9 Working with Algebraic Fractions">
+<span class="type">Section</span><span class="codenumber">A.9</span><span class="title">Working with Algebraic Fractions</span><a href="appendix-Working-with-Algebraic-Fractions.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-419">
+    A quotient of two polynomials is called a <em class="terminology">rational expression</em> or an <em class="terminology">algebraic fraction</em>. Operations on algebraic fractions follow the same rules as operations on common fractions.
+</p>
+<section class="subsection" id="subsection-30"><header title="Subsection A.9.1 Reducing Fractions"><h1 class="heading hide-type" alt="Subsection A.9.1 Reducing Fractions">
+<span class="type">Subsection</span><span class="codenumber">A.9.1</span><span class="title">Reducing Fractions</span>
+</h1></header><p id="p-420">
+    When we reduce an ordinary fraction such as \(\frac{24}{36}\), we are using the fundamental principle of fractions.
+</p>
+<article class="assemblage-like" id="assemblage-22"><h5 class="heading">Fundamental Principle of Fractions</h5>
+<p id="p-421">
+    If we multiply or divide the numerator and denominator of a fraction by the same (nonzero) number, the new fraction is equivalent to the old one. In symbols,
+    \begin{equation*}\frac{ac}{bc}=\frac{a}{b}, \hphantom{0000} (b, ~c \ne  0)\end{equation*}
+</p></article><p id="p-422">
+    Thus, for example,
+    \begin{equation*}\frac{24}{36}=\frac{2\cdot 12}{3\cdot 12}=\frac{2}{3}\end{equation*}
+</p>
+<p id="p-423">
+    We use the same procedure to reduce algebraic fractions: We look for common factors in the numerator and denominator and then apply the fundamental principle.
+</p>
+<article class="example-like" id="example-52"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.9.1</span>
+</h5>
+<p id="p-424">
+        Reduce each algebraic fraction.
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-190"><p id="p-425">\(\dfrac{8x^3y}{6x^2y^3}\)</p></li>
+<li id="li-191"><p id="p-426">\(\dfrac{6x-3}{3}\)</p></li>
+</ol>
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-39" id="solution-39"><span class="">Solution</span></a></span><span id="hk-solution-39" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-427">
+        Factor out any common factors from the numerator and denominator. Then divide numerator and denominator by the common factors.
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-192"><p id="p-428">\(
+                \begin{aligned}
+                \frac{8x^3 y}{6x^2 y^3} \amp = \frac{4x \cdot 2x^2 y}{3y^2\cdot 2x^2 y} \\
+                \amp = \frac{4x}{3y^2}
+                \end{aligned}
+            \)</p></li>
+<li id="li-193"><p id="p-429">\(
+                \begin{aligned}
+                \frac{6x-3}{3} \amp = \frac{\cancel{3}(2x+1) }{\cancel{3}} \\
+                \amp = 2x+1
+                \end{aligned}
+            \)</p></li>
+</ol>
+    </p></div></span>
+</div></div>
+<p id="p-430">
+    If the numerator or denominator of the fraction contains more than one term, it is especially important to <!--Style me with CSS--><em>factor</em> before attempting to apply the fundamental principle. We can divide out common <!--Style me with CSS--><em>factors</em> from the numerator and denominator of a fraction, but the fundamental principle does <!--Style me with CSS--><em>not</em> apply to common <!--Style me with CSS--><em>terms</em>.
+</p>
+<article class="remark-like" id="warning-10"><h5 class="heading">
+<span class="type">Caution</span><span class="codenumber">A.9.2</span>
+</h5>
+<p id="p-431">
+        We can reduce
+        \begin{equation*}\frac{2xy}{3y}= \frac{2x}{3} \end{equation*}
+        because \(y\) is a common factor in the numerator and denominator. However,
+        \begin{equation*}\frac{2x+y}{3+y} \ne \frac{2x}{3} \end{equation*}
+        because \(y\) is a common term but is <!--Style me with CSS--><em>not a common factor</em> of the numerator and denominator. Furthermore,
+        \begin{equation*}\frac{5x+3}{5y}\ne \frac{x+3}{y} \end{equation*}
+        because \(5\) is not a factor of the <!--Style me with CSS--><em>entire</em> numerator.
+    </p></article><article class="example-like" id="example-reduce-fraction"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.9.3</span>
+</h5>
+<p id="p-432">
+        Reduce each fraction.
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-194"><p id="p-433">\(
+                \dfrac{4x+2}{4}
+            \)</p></li>
+<li id="li-195"><p id="p-434">\(
+                \dfrac{9x^2+3}{6x+3}
+            \)</p></li>
+</ol>
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-40" id="solution-40"><span class="">Solution</span></a></span><span id="hk-solution-40" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-435">
+        Factor the numerator and denominator. Then divide numerator and denominator by the common factors.
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-196"><p id="p-436">\(
+                \begin{aligned}
+                \frac{4x + 2}{4} \amp = \frac{\cancel{2}(2x + 1)}{\cancel{2} (2)}\\
+                \amp = \frac{2x+1}{2}
+                \end{aligned}
+            \)</p></li>
+<li id="li-197"><p id="p-437">\(
+                \begin{aligned}
+                \frac{9x^2+3}{6x+3} \amp = \frac{\cancel{3}(3x^2 + 1)}{\cancel{3} (2x+1)}\\
+                \amp = \frac{3x^2 + 1}{2x+1}
+                \end{aligned}
+            \)</p></li>
+</ol>
+    </p></div></span>
+</div></div>
+<article class="remark-like" id="warning-11"><h5 class="heading">
+<span class="type">Caution</span><span class="codenumber">A.9.4</span>
+</h5>
+<p id="p-438">
+        Note that in <a knowl="./knowl/example-reduce-fraction.html" knowl-id="xref-example-reduce-fraction" alt="Example A.9.3 " title="Example A.9.3 ">Example A.9.3</a>a above,
+        \begin{equation*}\frac{4x + 2}{4} \ne x+2\end{equation*}
+        and in <a knowl="./knowl/example-reduce-fraction.html" knowl-id="xref-example-reduce-fraction" alt="Example A.9.3 " title="Example A.9.3 ">Example A.9.3</a>b,
+        \begin{equation*}\frac{9x^2+3}{6x+3} \ne \frac{9x^2}{6x}\end{equation*}
+    </p></article><p id="p-439">
+    We summarize the procedure for reducing algebraic fractions as follows.
+</p>
+<article class="assemblage-like" id="assemblage-23"><h5 class="heading">To Reduce an Algebraic Fraction:</h5>
+<p id="p-440">
+    <ol style="list-style-type: decimal;">
+<li id="li-198"><p id="p-441">
+            Factor the numerator and denominator.
+        </p></li>
+<li id="li-199"><p id="p-442">
+            Divide the numerator and denominator by any common factors.
+        </p></li>
+</ol>
+</p></article><article class="example-like" id="example-54"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.9.5</span>
+</h5>
+<p id="p-443">
+        Reduce each fraction.
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-200"><p id="p-444">\(
+                \dfrac{x^2 − 7x + 6}{36 − x^2}
+            \)</p></li>
+<li id="li-201"><p id="p-445">\(
+                \dfrac{27x^3 − 1}{9 x^2-1}
+            \)</p></li>
+</ol>
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-41" id="solution-41"><span class="">Solution</span></a></span><span id="hk-solution-41" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-446">
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-202"><p id="p-447">
+                Factor numerator and denominator to obtain
+                \begin{equation*}\frac{(x − 6) (x − 1)}{(6 − x) (6 + x)} \end{equation*}
+                The factor \(x-6\) in the numerator is the opposite of the factor \(6-x\) in the denominator. That is, \(x − 6 = −1 (6 − x)\). Thus,
+                \begin{equation*}\frac{−1 \cancel{(6 − x )}(x − 1)}{\cancel{(6 − x )}(6 + x)}=\frac{−1 (x − 1)}{6 + x}=\frac{1-x}{6+x} \end{equation*}
+            </p></li>
+<li id="li-203"><p id="p-448">
+                The numerator of the fraction is a difference of two cubes, and the denominator is a difference of two squares. Factor each to obtain
+                \begin{equation*}\frac{\cancel{(3x-1)}(9x^2+3x+1)}{\cancel{(3x-1)}(3x+1)}=\frac{9x^2+3x+1}{3x+1} \end{equation*}
+            </p></li>
+</ol>
+    </p></div></span>
+</div></div></section><section class="subsection" id="subsection-31"><header title="Subsection A.9.2 Products of Fractions"><h1 class="heading hide-type" alt="Subsection A.9.2 Products of Fractions">
+<span class="type">Subsection</span><span class="codenumber">A.9.2</span><span class="title">Products of Fractions</span>
+</h1></header><p id="p-449">
+    To multiply two or more common fractions together, we multiply their numerators together and multiply their denominators together. The same is true for a product of algebraic fractions. For example, xy
+    \begin{align*}
+\frac{6x^2}{y}\cdot\frac{xy}{2}\amp =\frac{6x^2\cdot}{y\cdot 2}=\frac{6x^3y}{2y}\amp\amp\text{Reduce.} \\
+\amp =\frac{3x^3(2y)}{2y}=3x^3 
+\end{align*}
+    We can simplify the process by first factoring each numerator and denominator and dividing out any common factors.
+    \begin{equation*}\frac{6x^2}{y}\cdot\frac{\cancel{2}\cdot 3x^2}{\bcancel{y}}\cdot\frac{x\bcancel{y}}{\cancel{2}}=3x^3 \end{equation*}
+</p>
+<p id="p-450">
+    In general, we have the following procedure for finding the product of algebraic fractions.
+</p>
+<article class="assemblage-like" id="assemblage-24"><h5 class="heading">To Multiply Algebraic Fractions:</h5>
+<p id="p-451">
+    <ol style="list-style-type: decimal;">
+<li id="li-204"><p id="p-452">
+            Factor each numerator and denominator.
+        </p></li>
+<li id="li-205"><p id="p-453">
+            Divide out any factors that appear in both a numerator and a denominator.
+        </p></li>
+<li id="li-206"><p id="p-454">
+            Multiply together the numerators; multiply together the denominators.
+        </p></li>
+</ol>
+</p></article><article class="example-like" id="example-55"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.9.6</span>
+</h5>
+<p id="p-455">
+        Find each product.
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-207"><p id="p-456">\(
+                \dfrac{5}{x^2-1}\cdot\dfrac{x+2}{x}
+            \)</p></li>
+<li id="li-208"><p id="p-457">\(
+                \dfrac{4y^2-1}{4-y^2}\cdot\dfrac{y^2-2y}{4y+2}
+            \)</p></li>
+</ol>
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-42" id="solution-42"><span class="">Solution</span></a></span><span id="hk-solution-42" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-458">
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-209"><p id="p-459">
+                The denominator of the first fraction factors into \((x + 1) (x − 1)\). There are no common factors to divide out, so we multiply the numerators together and multiply the denominators together.
+                \begin{equation*}\frac{5}{x^2-1}\cdot\frac{x+2}{x}=\frac{5(x+2)}{x(x^2-1)}=\frac{5x+10}{x^3-x} \end{equation*}
+            </p></li>
+<li id="li-210"><p id="p-460">
+                Factor each numerator and each denominator. Look for common factors.
+                \begin{align*}
+
+                        \frac{4y^2-1}{4-y^2}\cdot\frac{y^2-2y}{4y+2} \amp = \frac{(2y-1)(\bcancel{2y+1})}{\cancel{(2-y)}(2+y)} \cdot \frac{y\cancelto{\alert{-1}}{(y-2)}}{2(\bcancel{y+1})}\amp\amp\text{Divide out common factors.}
+                    \\
+
+                        \amp =\frac{-y(2y-1)}{y(y+2)} \amp\amp\text{Note: }y-2=-(2-y)
+                    
+\end{align*}
+            </p></li>
+</ol>
+    </p></div></span>
+</div></div></section><section class="subsection" id="subsection-32"><header title="Subsection A.9.3 Quotients of Fractions"><h1 class="heading hide-type" alt="Subsection A.9.3 Quotients of Fractions">
+<span class="type">Subsection</span><span class="codenumber">A.9.3</span><span class="title">Quotients of Fractions</span>
+</h1></header><p id="p-461">
+    To divide two algebraic fractions we multiply the first fraction by the reciprocal of the second fraction. For example,
+    \begin{align*}
+
+            \frac{2x^3}{3y}\div \frac{4x}{5y^2}\amp = \frac{2x^3}{3y}\cdot \frac{5y^2}{4x}
+        \\
+
+            \amp = \frac{\bcancel{2x}\cdot x^2}{3\cancel{y}}\cdot \frac{5y\cdot\cancel{y}}{2\cdot \bcancel{2x}}=\frac{5x^2y}{6}
+        
+\end{align*}
+</p>
+<p id="p-462">
+    If the fractions involve polynomials of more than one term, we may need to factor each numerator and denominator in order to recognize any common factors. This suggests the following procedure for dividing algebraic fractions.
+</p>
+<article class="assemblage-like" id="assemblage-25"><h5 class="heading">To Divide Algebraic Fractions:</h5>
+<p id="p-463">
+    <ol style="list-style-type: decimal;">
+<li id="li-211"><p id="p-464">
+            Multiply the first fraction by the reciprocal of the second fraction.
+        </p></li>
+<li id="li-212"><p id="p-465">
+            Factor each numerator and denominator.
+        </p></li>
+<li id="li-213"><p id="p-466">
+            Divide out any factors that appear in both a numerator and a denominator.
+        </p></li>
+<li id="li-214"><p id="p-467">
+            Multiply together the numerators; multiply together the denominators.
+        </p></li>
+</ol>
+</p></article><article class="example-like" id="example-56"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.9.7</span>
+</h5>
+<p id="p-468">
+        Find each quotient.
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-215"><p id="p-469">\(
+                \dfrac{x^2-1}{x+3}\div\dfrac{x^2-x-2}{x^2+5x+6}
+            \)</p></li>
+<li id="li-216"><p id="p-470">\(
+                \dfrac{6ab}{2a+b}\div(4a^2b)
+            \)</p></li>
+</ol>
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-43" id="solution-43"><span class="">Solution</span></a></span><span id="hk-solution-43" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-471">
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-217"><p id="p-472">
+                Multiply the first fraction by the reciprocal of the second fraction.
+                \begin{align*}
+
+                        \frac{x^2-1}{x+3}\div\frac{x^2-x-2}{x^2+5x+6}
+                        \amp =\frac{x^2-1}{x+3}\cdot\frac{x^2+5x+6}{x^2-x-2} \amp\amp\text{Factor.}
+                    \\
+
+                        \amp = \frac{(x-1)(\cancel{x+1})}{\bcancel{x+3}}\cdot\frac{(\bcancel{x+3})(x+2)}{(\cancel{x+1})(x-2)}
+                    \\
+
+                        \amp = \frac{(x-1)(x+2)}{x-2}
+                    
+\end{align*}
+            </p></li>
+<li id="li-218"><p id="p-473">
+                Multiply the first fraction by the reciprocal of the second fraction.
+                \begin{align*}
+
+                        \frac{6ab}{2a+b}\div(4a^2b) \amp =\frac{\cancelto{\alert{3}}{6}\bcancel{ab}}{2a+b}\cdot\frac{1}{\cancelto{\alert{2}}{4}a\cdot\bcancel{ab}}
+                        \amp\amp\text{Divide out common factors.}
+                    \\
+
+                        \amp = \frac{3}{2a(2a+b)}=\frac{3}{4a^2+2ab}
+                    
+\end{align*}
+            </p></li>
+</ol>
+    </p></div></span>
+</div></div></section><section class="subsection" id="subsection-33"><header title="Subsection A.9.4 Sums and Differences of Like Fractions"><h1 class="heading hide-type" alt="Subsection A.9.4 Sums and Differences of Like Fractions">
+<span class="type">Subsection</span><span class="codenumber">A.9.4</span><span class="title">Sums and Differences of Like Fractions</span>
+</h1></header><p id="p-474">
+    Algebraic fractions with the same denominator are called <em class="terminology">like fractions</em>. To add or subtract like fractions, we combine their numerators and keep the same denominator for the sum or difference. This method is an application of the distributive law.
+</p>
+<article class="example-like" id="example-57"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.9.8</span>
+</h5>
+<p id="p-475">
+        Find each sum or difference.
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-219"><p id="p-476">\(
+                \dfrac{2x}{9z^2}+\dfrac{5x}{9z^2}
+            \)</p></li>
+<li id="li-220"><p id="p-477">\(
+                \dfrac{2x-1}{x+3}-\dfrac{5x-3}{x+3}
+            \)</p></li>
+</ol>
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-44" id="solution-44"><span class="">Solution</span></a></span><span id="hk-solution-44" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-478">
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-221"><p id="p-479">
+                Because these are like fractions, we add their numerators and keep the same denominator.
+                \begin{equation*}
+                    \frac{2x}{9z^2}+\frac{5x}{9z^2}=\frac{2x+5x}{9z^2}=\frac{7x}{9z^2}
+                \end{equation*}
+            </p></li>
+<li id="li-222"><p id="p-480">
+                Be careful to subtract the <!--Style me with CSS--><em>entire</em> numerator of the second fraction: Use parentheses to show that the subtraction applies to both terms of \(5x − 3\).
+                \begin{align*}
+
+                        \frac{2x-1}{x+3}-\frac{5x-3}{x+3}\amp = \frac{2x-1-(5x-3)}{x+3}
+                    \\
+
+                        \amp =\frac{2x-1-5x+3}{x+3}=\frac{-3x+2}{x+3}
+                    
+\end{align*}
+            </p></li>
+</ol>
+    </p></div></span>
+</div></div></section><section class="subsection" id="subsection-34"><header title="Subsection A.9.5 Lowest Common Denominator"><h1 class="heading hide-type" alt="Subsection A.9.5 Lowest Common Denominator">
+<span class="type">Subsection</span><span class="codenumber">A.9.5</span><span class="title">Lowest Common Denominator</span>
+</h1></header><p id="p-481">
+    To add or subtract fractions with different denominators, we must first find a <em class="terminology">common denominator</em>. For arithmetic fractions, we use the smallest natural number that is exactly divisible by each of the given denominators. For example, to add the fractions \(\frac{1}{6}\) and \(\frac{3}{8}\), we use \(24\) as the common denominator because \(24\) is the smallest natural number that both \(6\) and \(8\) divide into evenly.
+</p>
+<p id="p-482">
+    We define the <em class="terminology">lowest common denominator</em> (<em class="terminology">LCD</em>) of two or more algebraic fractions as the polynomial of least degree that is exactly divisible by each of the given denominators.
+</p>
+<article class="example-like" id="example-LCD"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.9.9</span>
+</h5>
+<p id="p-483">
+        Find the LCD for the fractions \(\dfrac{3x}{x+2}\) and \(\dfrac{2x}{x-3}\)
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-45" id="solution-45"><span class="">Solution</span></a></span><span id="hk-solution-45" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-484">
+        The LCD is a polynomial that has as factors both \(x + 2\) and \(x-3\). The simplest such polynomial is \((x + 2) (x − 3)\), or \(x^2 − x - 6\). For our purposes, it will be more convenient to leave the LCD in factored form, so the LCD is \((x + 2) (x − 3)\).
+    </p></div></span>
+</div></div>
+<p id="p-485">
+    The LCD in <a knowl="./knowl/example-LCD.html" knowl-id="xref-example-LCD" alt="Example A.9.9 " title="Example A.9.9 ">Example A.9.9</a> was easy to find because each original denominator consisted of a single factor; that is, neither denominator could be factored. In that case, the LCD is just the product of the original denominators. We can always find a common denominator by multiplying together all the denominators in the given fractions, but this may not give us the <!--Style me with CSS--><em>simplest</em> or <!--Style me with CSS--><em>lowest</em> common denominator. Using anything other than the simplest possible common denominator will complicate our work needlessly.
+</p>
+<p id="p-486">
+    If any of the denominators in the given fractions can be factored, we factor them before looking for the LCD.
+</p>
+<article class="assemblage-like" id="assemblage-26"><h5 class="heading">To Find the LCD of Algebraic Fractions:</h5>
+<p id="p-487">
+    <ol style="list-style-type: decimal;">
+<li id="li-223"><p id="p-488">
+            Factor each denominator completely.
+        </p></li>
+<li id="li-224"><p id="p-489">
+            Include each different factor in the LCD as many times as it occurs in any <!--Style me with CSS--><em>one</em> of the given denominators.
+        </p></li>
+</ol>
+</p></article><article class="example-like" id="example-LCD2"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.9.10</span>
+</h5>
+<p id="p-490">
+         Find the LCD for the fractions \(\dfrac{2x}{x^2-1}\) and \(\dfrac{x+3}{x^2+x}\).
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-46" id="solution-46"><span class="">Solution</span></a></span><span id="hk-solution-46" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-491">
+        Factor the denominators of each of the given fractions.
+        \begin{equation*}x^2 − 1 = (x − 1) (x + 1)~~~\text{ and }~~~x^2 + x = x (x + 1)\end{equation*}
+        The factor \((x − 1)\) occurs once in the first denominator, the factor \(x\) occurs once in the second denominator, and the factor \((x + 1)\) occurs once in each denominator. Therefore, we include in our LCD one copy of each of these factors. The LCD is \(x (x + 1) (x − 1)\).
+    </p></div></span>
+</div></div>
+<article class="remark-like" id="warning-12"><h5 class="heading">
+<span class="type">Caution</span><span class="codenumber">A.9.11</span>
+</h5>
+<p id="p-492">
+        In <a knowl="./knowl/example-LCD2.html" knowl-id="xref-example-LCD2" alt="Example A.9.10 " title="Example A.9.10 ">Example A.9.10</a>, we do not include two factors of \((x + 1)\) in the LCD. We need only one factor of \((x + 1)\) because \((x + 1)\) occurs only once in either denominator. You should check that each original denominator divides evenly into our LCD, \(x (x + 1)(x − 1)\).
+    </p></article></section><section class="subsection" id="subsection-35"><header title="Subsection A.9.6 Building Fractions"><h1 class="heading hide-type" alt="Subsection A.9.6 Building Fractions">
+<span class="type">Subsection</span><span class="codenumber">A.9.6</span><span class="title">Building Fractions</span>
+</h1></header><p id="p-493">
+    After finding the LCD, we <em class="terminology">build</em> each fraction to an equivalent one with the LCD as its denominator. The new fractions will be like fractions, and we can combine them as explained above.
+</p>
+<p id="p-494">
+    Building a fraction is the opposite of reducing a fraction, in the sense that we multiply, rather than divide, the numerator and denominator by an appropriate factor. To find the <em class="terminology">building factor</em>, we compare the factors of the original denominator with those of the desired common denominator.
+</p>
+<article class="example-like" id="example-build-fractions"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.9.12</span>
+</h5>
+<p id="p-495">
+        Build each of the fractions \(\dfrac{3x}{x+2} \) and \(\dfrac{2x}{x-3} \) to equivalent fractions with the LCD \((x + 2)(x − 3)\) as denominator.
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-47" id="solution-47"><span class="">Solution</span></a></span><span id="hk-solution-47" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-496">
+        Compare the denominator of the given fraction to the LCD. We see that the fraction \(\dfrac{3x}{x+2} \) needs a factor of \((x − 3)\) in its denominator, so \((x − 3)\) is the building factor for the first fraction. We multiply the numerator and denominator of the first fraction by \((x − 3)\) to obtain an equivalent fraction:
+        \begin{equation*}\frac{3x}{x+2}=\frac{3x\alert{(x-3)}}{(x+2)\alert{(x-3)}}=\frac{3x^2-9x}{x^2-x-6} \end{equation*}
+        The fraction \(\dfrac{2x}{x-3} \) needs a factor of \((x + 2)\) in the denominator, so we multiply numerator and denominator by \((x + 2)\):
+        \begin{equation*}
+            \frac{2x}{x-3}=\frac{2x\alert{(x+2)}}{(x-3)\alert{(x+2)}}= \frac{2x^2 + 4x}{x^2 − x − 6}
+        \end{equation*}
+    </p></div></span>
+</div></div>
+<p id="p-497">
+    The two new fractions we obtained in <a knowl="./knowl/example-build-fractions.html" knowl-id="xref-example-build-fractions" alt="Example A.9.12 " title="Example A.9.12 ">Example A.9.12</a> are like fractions; they have the same denominator.
+</p></section><section class="subsection" id="subsection-36"><header title="Subsection A.9.7 Sums and Differences of Unlike Fractions"><h1 class="heading hide-type" alt="Subsection A.9.7 Sums and Differences of Unlike Fractions">
+<span class="type">Subsection</span><span class="codenumber">A.9.7</span><span class="title">Sums and Differences of Unlike Fractions</span>
+</h1></header><p id="p-498">
+    We are now ready to add or subtract algebraic fractions with unlike denominators. We will do this in four steps.
+</p>
+<article class="assemblage-like" id="assemblage-27"><h5 class="heading">To Add or Subtract Fractions with Unlike Denominators:</h5>
+<p id="p-499">
+    <ol style="list-style-type: decimal;">
+<li id="li-225"><p id="p-500">
+            Find the LCD for the given fractions.
+        </p></li>
+<li id="li-226"><p id="p-501">
+            Build each fraction to an equivalent fraction with the LCD as its denominator.
+        </p></li>
+<li id="li-227"><p id="p-502">
+            Add or subtract the numerators of the resulting like fractions. Use the LCD as the denominator of the sum or difference.
+        </p></li>
+<li id="li-228"><p id="p-503">
+            Reduce the sum or difference, if possible.
+        </p></li>
+</ol>
+</p></article><article class="example-like" id="example-61"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.9.13</span>
+</h5>
+<p id="p-504">
+        Subtract \(\dfrac{3x}{x+2}-\dfrac{2x}{x-3} \).
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-48" id="solution-48"><span class="">Solution</span></a></span><span id="hk-solution-48" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-505">
+        <dl class="description-list">
+<dt id="li-229">Step 1</dt>
+<dd><p id="p-506">
+                The LCD for these fractions is \((x + 2) (x − 3)\).
+            </p></dd>
+<dt id="li-230">Step 2</dt>
+<dd><p id="p-507">
+                We build each fraction to an equivalent one with the LCD, as we did in <a knowl="./knowl/example-build-fractions.html" knowl-id="xref-example-build-fractions" alt="Example A.9.12 " title="Example A.9.12 ">Example A.9.12</a>.
+                \begin{equation*}
+                    \frac{3x}{x+2}=\frac{3x^2-9x}{x^2-x-6} ~~\text{ and }~~ \frac{2x}{x-3}=\frac{2x^2+4x}{x^2-x-6}
+                \end{equation*}
+            </p></dd>
+<dt id="li-231">Step 3</dt>
+<dd><p id="p-508">
+                Combine the numerators over the same denominator.
+                \begin{align*}
+
+                        \frac{3x}{x+2}-\frac{2x}{x-3}\amp =\frac{3x^2-9x}{x^2-x-6}-\frac{2x^2+4x}{x^2-x-6}
+                        \amp\amp\text{Subtract the numerators.}
+                    \\
+
+                        \amp = \frac{(3x^2-9x)-(2x^2+4x)}{x^2-x-6}
+                    \\
+
+                        \amp = \frac{x^2-13x}{x^2-x-6}
+                    
+\end{align*}
+            </p></dd>
+<dt id="li-232">Step 4</dt>
+<dd><p id="p-509">
+                Reduce the result, if possible. If we factor both numerator and denominator, we find
+                \begin{equation*}\frac{x(x-13)}{(x-3)(x+2)} \end{equation*}
+                The fraction cannot be reduced.
+            </p></dd>
+</dl>
+    </p></div></span>
+</div></div>
+<article class="example-like" id="example-62"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.9.14</span>
+</h5>
+<p id="p-510">
+        Write as a single fraction: \(\displaystyle{1 + \frac{2}{a}−\frac{a^2 + 2}{a^2 + a}}\).
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-49" id="solution-49"><span class="">Solution</span></a></span><span id="hk-solution-49" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-511">
+        <dl class="description-list">
+<dt id="li-233">Step 1</dt>
+<dd><p id="p-512">
+                To find the LCD, factor each denominator:
+                \begin{align*}
+a\amp =a\\
+a^2 + a\amp = a (a + 1)
+\end{align*}
+                The LCD is \(a(a + 1)\).
+            </p></dd>
+<dt id="li-234">Step 2</dt>
+<dd><p id="p-513">
+                Build each term to an equivalent fraction with the LCD as denominator. (The building factors for each fraction are shown in color.) The third fraction already has the LCD for its denominator.
+                \begin{align*}
+
+                        1 = \frac{1 \cdot \alert{a (a + 1)}}{1 \cdot\alert{a (a + 1)}}\amp =\frac{a^2+a} {a (a + 1)}
+                    \\
+
+                        \frac{2}{a}=\frac{2\cdot\alert{(a+1)} }{a\cdot\alert{(a+1)}}\amp =\frac{2a+2}{a(a+1)}
+                    \\
+
+                        \frac{a^2 + 2}{a^2 + a} \amp = \frac{a^2 + 2}{a(a+1)}
+                    
+\end{align*}
+            </p></dd>
+<dt id="li-235">Step 3</dt>
+<dd><p id="p-514">
+                Combine the numerators over the LCD.
+                \begin{align*}
+
+                        1 + \frac{2}{a}−\frac{a^2 + 2}{a^2 + a} \amp = \frac{a^2+a} {a (a + 1)} + \frac{2a+2}{a(a+1)}- \frac{a^2 + 2}{a(a+1)}
+                    \\
+
+                        \amp = \frac{a^2+a +(2a+2)-(a^2+2) } {a (a + 1)}
+                    \\
+
+                        \amp = \frac{3a} {a (a + 1)}
+                    
+\end{align*}
+            </p></dd>
+<dt id="li-236">Step 4</dt>
+<dd><p id="p-515">
+                Reduce the fraction to find
+                \begin{equation*}
+                    \frac{3\cancel{a}}{\cancel{a}(a+1)}=\frac{3}{a+1}
+                \end{equation*}
+            </p></dd>
+</dl>
+    </p></div></span>
+</div></div></section><section class="subsection" id="subsection-37"><header title="Subsection A.9.8 Complex"><h1 class="heading hide-type" alt="Subsection A.9.8 Complex">
+<span class="type">Subsection</span><span class="codenumber">A.9.8</span><span class="title">Complex</span>
+</h1></header><p id="p-516">
+    A fraction that contains one or more fractions in either its numerator or its denominator or both is called a complex fraction. For example,
+    \begin{equation*}
+        \frac{\frac{2}{3}}{\frac{5}{6}} ~~~\text{ and }~~~ \frac{x+\frac{3}{4}}{x-\frac{1}{2}}
+    \end{equation*}
+    are complex fractions. Like simple fractions, complex fractions represent quotients. For the examples above,
+    \begin{equation*}
+        \frac{\frac{2}{3}}{\frac{5}{6}}=\frac{2}{3}\div\frac{5}{6} ~~~\text{ and }~~~ 
+        \frac{x+\frac{3}{4}}{x-\frac{1}{2}} = \left(x+\frac{3}{4}\right)\div\left(x-\frac{1}{2}\right)
+    \end{equation*}
+    We can always simplify a complex fraction into a standard algebraic fraction. If the denominator of the complex fraction is a single term, we can treat the fraction as a division problem and multiply the numerator by the reciprocal of the denominator. Thus,
+    \begin{equation*}
+        \frac{\frac{2}{3}}{\frac{5}{6}}=\frac{2}{3}\div\frac{5}{6} =\frac{2}{3}\cdot\frac{6}{5} = \frac{4}{5}
+    \end{equation*}
+</p>
+<p id="p-517">
+    If the numerator or denominator of the complex fraction contains more than one term, it is easier to use the fundamental principle of fractions to simplify the expression.
+</p>
+<article class="example-like" id="example-63"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.9.15</span>
+</h5>
+<p id="p-518">
+        Simplify \(\displaystyle{\frac{x+\frac{3}{4}}{x-\frac{1}{2}} }\)
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-50" id="solution-50"><span class="">Solution</span></a></span><span id="hk-solution-50" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-519">
+        Consider all of the simple fractions that appear in the complex fraction; in this example \(\frac{1}{2} \) and \(\frac{3}{4} \). The LCD of these fractions is \(4\). If we multiply the numerator and denominator of the complex fraction by \(4\), we will eliminate the fractions within the fraction. Be sure to multiply <!--Style me with CSS--><em>each</em> term of the numerator and <!--Style me with CSS--><em>each</em> term of the denominator by \(4\).
+        \begin{equation*}
+            \frac{\alert{4}\left(x+\frac{3}{4}\right)}{\alert{4}\left(x-\frac{1}{2}\right)}
+            = \frac{\alert{4}(x)+\alert{4}\left(\frac{3}{4}\right)}{\alert{4}(x)-\alert{4}\left(\frac{1}{2}\right)}
+            =\frac{4x+3}{4x-2}
+        \end{equation*}
+        Thus, the original complex fraction is equivalent to the simple fraction \(\displaystyle{\frac{4x+3}{4x-2}} \).
+    </p></div></span>
+</div></div>
+<p id="p-520">
+    We summarize the method for simplifying complex fractions as follows.
+</p>
+<article class="assemblage-like" id="assemblage-28"><h5 class="heading">To Simplify a Complex Fraction:</h5>
+<p id="p-521">
+    <ol style="list-style-type: decimal;">
+<li id="li-237"><p id="p-522">
+            Find the LCD of all the fraction contained in the complex fraction.
+        </p></li>
+<li id="li-238"><p id="p-523">
+            Multiply the numerator and the denominator of the complex fraction by the LCD.
+        </p></li>
+<li id="li-239"><p id="p-524">
+            Reduce the resulting simple fraction, if possible.
+        </p></li>
+</ol>
+</p></article></section><section class="subsection" id="subsection-38"><header title="Subsection A.9.9 Negative Exponents"><h1 class="heading hide-type" alt="Subsection A.9.9 Negative Exponents">
+<span class="type">Subsection</span><span class="codenumber">A.9.9</span><span class="title">Negative Exponents</span>
+</h1></header><p id="p-525">
+    Algebraic fractions are sometimes written using negative exponents. (You can review negative exponents in <span>&lt;&lt;Unresolved xref, reference "Variation"; check spelling or use "provisional" attribute&gt;&gt;</span>.)
+</p>
+<article class="example-like" id="example-negative-exponents-complex-fractions"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.9.16</span>
+</h5>
+<p id="p-526">
+        Write each expression as a single algebraic fraction.
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-240"><p id="p-527">\(
+                x^{-1}-y^{-1}
+            \)</p></li>
+<li id="li-241"><p id="p-528">\(
+                \left(x^{-2}+y^{-2}\right)^{-1}
+            \)</p></li>
+</ol>
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-51" id="solution-51"><span class="">Solution</span></a></span><span id="hk-solution-51" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-529">
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-242"><p id="p-530">\(
+                \displaystyle{x^{-1}-y^{-1}=\frac{1}{x}-\frac{1}{y} ~~~\text{ or } ~~~\frac{y-x}{xy}}
+            \)</p></li>
+<li id="li-243"><p id="p-531">\(
+                \displaystyle{\left(x^{-2}+y^{-2}\right)^{-1}=\left(\frac{1}{x^{2}}+\frac{1}{y^{2}}\right)^{-1}
+                =\left(\frac{y^{2}+x^{2}}{x^2y^2}\right)^{-1}=\frac{x^2y^2}{y^2+x^2}}
+            \)</p></li>
+</ol>
+    </p></div></span>
+</div></div>
+<p id="p-532">
+    When working with fractions and exponents, it is important to avoid some tempting but <!--Style me with CSS--><em>incorrect</em> algebraic operations.
+</p>
+<article class="remark-like" id="warning-13"><h5 class="heading">
+<span class="type">Caution</span><span class="codenumber">A.9.17</span>
+</h5>
+<p id="p-533">
+        <ol style="list-style-type: decimal;">
+<li id="li-244"><p id="p-534">
+                In <a knowl="./knowl/example-negative-exponents-complex-fractions.html" knowl-id="xref-example-negative-exponents-complex-fractions" alt="Example A.9.16 " title="Example A.9.16 ">Example A.9.16</a>a, note that
+                \begin{equation*}\frac{1}{x}-\frac{1}{y}\ne\frac{1}{x-y} \end{equation*}
+                For example, you can check that for \(x=2\) and \(y=3\),
+                \begin{equation*}\frac{1}{2}-\frac{1}{3}\ne\frac{1}{2-3}=-1 \end{equation*}
+            </p></li>
+<li id="li-245"><p id="p-535">
+                 In <a knowl="./knowl/example-negative-exponents-complex-fractions.html" knowl-id="xref-example-negative-exponents-complex-fractions" alt="Example A.9.16 " title="Example A.9.16 ">Example A.9.16</a>b, note that
+                 \begin{equation*}\left(x^{-2}+y^{-2}\right)^{-1}\ne x^2+y^2\end{equation*}
+            </p></li>
+</ol>
+    </p></article><p id="p-536">
+    In general, the fourth law of exponents does <!--Style me with CSS--><em>not</em> apply to sums and differences; that is,
+    \begin{equation*}(a+b)^n\ne a^n + b^n \end{equation*}
+</p></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-09-04T17:26:34-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG Linear Equations and Inequalities</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+\newcommand\degree[0]{^{\circ}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading">
+<span class="title">Test chapter</span><span class="subtitle">test subtitle</span>
+</h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="section-1.html">Previous</a><a class="up-button button toolbar-item" href="appendix-a.html">Up</a><a class="next-button button toolbar-item" href="appendix-Algebraic-Expressions-and-Problem-Solving.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-1.html">Previous</a><a class="up-button button toolbar-item" href="appendix-a.html">Up</a><a class="next-button button toolbar-item" href="appendix-Algebraic-Expressions-and-Problem-Solving.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="testchap.html"><span class="codenumber">1</span><span class="title">Fake chapter</span></a></h2>
+<ul></ul>
+<h2 class="link active"><a href="appendix-a.html"><span class="codenumber">A</span><span class="title">Algebra Skills Refresher</span></a></h2>
+<ul>
+<li><a href="section-1.html">Numbers and Operations</a></li>
+<li><a href="appendix-Linear-Equations-and-Inequalities.html" class="active">Linear Equations and Inequalities</a></li>
+<li><a href="appendix-Algebraic-Expressions-and-Problem-Solving.html">Algebraic Expressions and Problem Solving</a></li>
+<li><a href="appendix-Graphs-and-Equations.html">Graphs and Equations</a></li>
+<li><a href="appendix-Linear-Systems-in-Two-Variables.html">Linear Systems in Two Variables</a></li>
+<li><a href="appendix-Laws-of-Exponents.html">Laws of Exponents</a></li>
+<li><a href="appendix-Polynomials-and-Factoring.html">Polynomials and Factoring</a></li>
+<li><a href="appendix-Factoring-Quadratic-Trinomials.html">Factoring Quadratic Trinomials</a></li>
+<li><a href="appendix-Working-with-Algebraic-Fractions.html">Working with Algebraic Fractions</a></li>
+<li><a href="appendix-Working-with-Radicals.html">Working with Radicals</a></li>
+<li><a href="appendix-Facts-from-Geometry.html">Facts from Geometry</a></li>
+<li><a href="appendix-The-Real-Number-System.html">The Real Number System</a></li>
+</ul>
+<h2 class="link"><a href="properties.html"><span class="codenumber">3</span><span class="title">Properties of Numbers</span></a></h2>
+<ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="appendix-Linear-Equations-and-Inequalities"><header title="Section A.2 Linear Equations and Inequalities"><h1 class="heading hide-type" alt="Section A.2 Linear Equations and Inequalities">
+<span class="type">Section</span><span class="codenumber">A.2</span><span class="title">Linear Equations and Inequalities</span><a href="appendix-Linear-Equations-and-Inequalities.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-41">An <em class="terminology">equation</em> is just a mathematical statement that two expressions are equal. Equations relating two variables are particularly useful. If we know the value of one of the variables, we can find the corresponding value of the other variable by solving the equation.</p>
+<article class="example-like" id="example-6"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.2.1</span>
+</h5>
+<p id="p-42">
+        The equation \(w = 6h\) gives Loren's wages, \(w\), in terms of the number of hours she works, \(h\). How many hours does Loren need to work next week if she wants to earn \(\$225\)?
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-3" id="solution-3"><span class="">Solution</span></a></span><span id="hk-solution-3" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-43">
+        We know that \(w = 225\), and we would like to know the value of \(h\). We substitute the value for \(w\) into our equation and then solve for \(h\).
+        \begin{align*}
+w \amp= 6h\amp\amp \text{Substitute 225 for }w.\\
+\alert{225} \amp= 6h\amp\amp \text{Divide both sides by } 6.\\
+\frac{225}{\alert{6}}\amp = \frac{6h}{\alert{6}}\amp\amp \text{Simplify.}\\
+375.5\amp = h
+\end{align*}
+        Loren must work \(37.5\) hours in order to earn \(\$225\). In reality, Loren will probably have to work for \(38\) hours, because most employers do not pay for portions of an hour's work. Thus, Loren needs to work for \(38\) hours.
+    </p></div></span>
+</div></div>
+<p id="p-44">
+    To solve an equation we can generate simpler equations that have the same solutions. Equations that have identical solutions are called <em class="terminology">equivalent equations</em>. For example,
+    \begin{equation*}3x − 5 = x + 3\end{equation*}
+    and
+    \begin{equation*}2x = 8\end{equation*}
+    are equivalent equations because the solution of each equation is \(4\). Often we can find simpler equivalent equations by undoing in reverse order the operations performed on the variable.
+</p>
+<section class="subsection" id="subsection-5"><header title="Subsection A.2.1 Solving Linear Equations"><h1 class="heading hide-type" alt="Subsection A.2.1 Solving Linear Equations">
+<span class="type">Subsection</span><span class="codenumber">A.2.1</span><span class="title">Solving Linear Equations</span>
+</h1></header><p id="p-45">
+    <em class="terminology">Linear</em>, or first-degree, equations can be written so that every term is either a constant or a constant times the variable. The equations above are examples of linear equations. Recall the following rules for solving linear equations.
+</p>
+<article class="assemblage-like" id="assemblage-4"><h5 class="heading">To Generate Equivalent Equations</h5>
+<p id="p-46">
+    <ol style="list-style-type: decimal;">
+<li id="li-25"><p id="p-47">
+            We can add or subtract the <!--Style me with CSS--><em>same</em> number on <!--Style me with CSS--><em>both</em> sides of an equation.
+        </p></li>
+<li id="li-26"><p id="p-48">
+            We can multiply or divide \(both\) sides of an equation by the \(same\) number (except zero).
+        </p></li>
+</ol>
+</p></article><p id="p-49">
+    Applying either of these rules produces a new equation equivalent to the old one and thus preserves the solution.We use the rules to isolate the variable on one side of the equation.
+</p>
+<article class="example-like" id="example-7"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.2.2</span>
+</h5>
+<p id="p-50">
+    Solve the equation \(3x − 5 = x + 3\).
+</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="">Solution</span></a></span><span id="hk-solution-4" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-51">
+        We first collect all the variable terms on one side of the equation, and the constant terms on the other side.
+        \begin{align*}
+
+                3x − 5 \alert{{}− x} \amp = x + 3 \alert{{}− x}\amp\amp \text{Subtract }x \text{ from both sides.}
+            \\
+
+                2x − 5 \amp = 3\amp\amp \text{Simplify.}
+            \\
+
+                2x − 5 \alert{{}+ 5} \amp = 5 \alert{{}+ 5}\amp\amp \text{Add 5 to both sides.}
+            \\
+
+                2x \amp = 8 \amp\amp\text{Simplify.}
+            \\
+
+                \frac{2x}{\alert{2}}\amp =\frac{8}{\alert{2}}\amp\amp\text{Divide both sides by 2.}
+            \\
+x\amp = 4\amp\amp\text{Simplify.}
+\end{align*}
+        The solution is \(4\). (You can check the solution by substituting \(4\) into the original equation to show that a true statement results.)
+    </p></div></span>
+</div></div>
+<p id="p-52">
+    The following steps should enable you to solve any linear equation. Of course, you may not need all the steps for a particular equation.
+</p>
+<article class="assemblage-like" id="assemblage-5"><h5 class="heading">To Solve a Linear Equation:</h5>
+<p id="p-53">
+    <ol style="list-style-type: decimal;">
+<li id="li-27"><p id="p-54">
+            Simplify each side of the equation separately.
+            <ol style="list-style-type: lower-alpha;">
+<li id="li-28"><p id="p-55">
+                    Apply the distributive law to remove parentheses.
+                </p></li>
+<li id="li-29"><p id="p-56">
+                    Collect like terms.
+                </p></li>
+</ol>
+        </p></li>
+<li id="li-30"><p id="p-57">
+            By adding or subtracting appropriate terms to both sides of the equation, get all the variable terms on one side and all the constant terms on the other.
+        </p></li>
+<li id="li-31"><p id="p-58">
+            Divide both sides of the equation by the coefficient of the variable.
+        </p></li>
+</ol>
+</p></article><article class="example-like" id="example-8"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.2.3</span>
+</h5>
+<p id="p-59">
+        Solve \(3(2x − 5) − 4x = 2x − (6 − 3x)\).
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-5" id="solution-5"><span class="">Solution</span></a></span><span id="hk-solution-5" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-60">
+        We begin by simplifying each side of the equation.
+        \begin{align*}
+
+                3(2x − 5) − 4x \amp = 2x − (6 − 3x) \amp\amp\text{Apply the distributive law.}
+            \\
+
+                6x − 15 − 4x \amp= 2x − 6 + 3x \amp\amp\text{Combine like terms on each side.}
+            \\
+
+                2x − 15 \amp= 5x − 6
+            
+\end{align*}
+        Next, we collect all the variable terms on the left side of the equation, and all the constant terms on the right side.
+        \begin{align*}
+
+                2x − 15 − 5x + 15 \amp= 5x − 6 − 5x + 15 \amp\amp\text{Add }−5x + 15 \text{ to both sides.}
+            \\
+
+                −3x \amp= 9
+            
+\end{align*}
+        Finally, we divide both sides of the equation by the coefficient of the variable.
+        \begin{align*}
+
+                −3x \amp= 9 \amp\amp\text{Divide both sides by }−3.
+            \\
+
+                x \amp =-3
+            
+\end{align*}
+        The solution is \(−3\).
+    </p></div></span>
+</div></div></section><section class="subsection" id="subsection-6"><header title="Subsection A.2.2 Formulas"><h1 class="heading hide-type" alt="Subsection A.2.2 Formulas">
+<span class="type">Subsection</span><span class="codenumber">A.2.2</span><span class="title">Formulas</span>
+</h1></header><p id="p-61">
+    A <em class="terminology">formula</em> is an equation that relates several variables. For example, the equation 
+    \begin{equation*}P = 2l + 2w\end{equation*}
+    gives the perimeter of a rectangle in terms of its length and width.
+</p>
+<p id="p-62">
+    Suppose we have some wire fence to enclose an exercise area for rabbits, and we would like to see what dimensions are possible for different rectangles with that perimeter. In this case, it would be more useful to have a formula for the length of the rectangle in terms of its perimeter and its width. We can find such a formula by solving the perimeter formula for \(l\) in terms of \(P\) and \(w\).
+    \begin{align*}
+2l + 2w \amp= P \amp\amp\text{Subtact }2 w \text{ from both sides.}\\
+2l \amp= P − 2w \amp\amp\text{Divide both sides by 2.}\\
+l \amp= \frac{P − 2w}{2}
+\end{align*}
+        The result is a new formula that gives the length of a rectangle in terms of its perimeter and its width.
+</p>
+<article class="example-like" id="example-9"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.2.4</span>
+</h5>
+<p id="p-63">
+    The formula \(5F = 9C + 160\) relates the temperature in degrees Fahrenheit, \(F\), to the temperature in degrees Celsius, \(C\). Solve the formula for \(C\) in terms of \(F\).
+</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-6" id="solution-6"><span class="">Solution</span></a></span><span id="hk-solution-6" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-64">
+        We begin by isolating the term that contains \(C\).
+        \begin{align*}
+
+                5F \amp= 9C + 160 \amp\amp\text{Subtract 160 from both sides.}
+            \\
+
+                5F − 160 \amp = 9C \amp\amp\text{Divide both sides by 9.}
+            \\
+
+                \frac{5F − 160}{9} \amp =C
+            
+\end{align*}
+        We can also write the formula for \(C\) in terms of \(F\) as \(C = \frac{5}{9}F − \frac{160}{9}\).
+    </p></div></span>
+</div></div>
+<article class="example-like" id="example-10"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.2.5</span>
+</h5>
+<p id="p-65">
+        Solve \(3x − 5y = 40\) for \(y\) in terms of \(x\).
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-7" id="solution-7"><span class="">Solution</span></a></span><span id="hk-solution-7" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-66">
+        We isolate \(y\) on one side of the equation.
+        \begin{align*}
+
+                3x − 5y \amp = 40\amp\amp\text{Subtract }3x \text{ from both sides.}
+            \\
+
+                −5y \amp = 40 − 3x\amp\amp\text{Divide both sides by }-5.
+            \\
+
+                 \frac{−5y}{-5} \amp = \frac{40 − 3x}{-5}\amp\amp\text{Simplify both sides.}               
+            \\
+
+                y \amp = −8 + \frac{3}{5}x
+            
+\end{align*}
+    </p></div></span>
+</div></div></section><section class="subsection" id="subsection-7"><header title="Subsection A.2.3 Linear Inequalities"><h1 class="heading hide-type" alt="Subsection A.2.3 Linear Inequalities">
+<span class="type">Subsection</span><span class="codenumber">A.2.3</span><span class="title">Linear Inequalities</span>
+</h1></header><p id="p-67">
+    The symbol \(\gt\) is called an <em class="terminology">inequality symbol</em>, and the statement \(a\gt b\) is called an <em class="terminology">inequality</em>. There are four inequality symbols:
+    \begin{align*}
+\amp\gt \amp\amp\text{is greater than}\\
+\amp\lt \amp\amp\text{is less than}\\
+\amp\ge \amp\amp\text{is greater than or equal to}\\
+\amp\le \amp\amp\text{is less than or equal to}
+\end{align*}
+</p>
+<p id="p-68">
+    Inequalities that include the symbols \(\gt\) or \(\le\) are called <em class="terminology">strict inequalities</em>; those that include \(\ge\) or \(\le\) are called <em class="terminology">nonstrict</em>.
+</p>
+<p id="p-69">
+    If we multiply or divide both sides of an inequality by a negative number, the direction of the inequality must be reversed. For example, if we multiply both sides of the inequality
+    \begin{equation*}2\lt 5\end{equation*}
+    by \(−3\), we get
+    \begin{align*}
+\alert{−3}(2) \amp\gt \alert{−3}(5)\amp\amp \text{Change inequality symbol from }\lt \text{ to }\gt.\\
+−6 \amp\gt −15.
+\end{align*}
+    Because of this property, the rules for solving linear equations must be revised slightly for solving linear inequalities.
+</p>
+<article class="assemblage-like" id="assemblage-6"><h5 class="heading">To Solve a Linear Inequality:</h5>
+<p id="p-70">
+    <ol style="list-style-type: decimal;">
+<li id="li-32"><p id="p-71">
+            We may add or subtract the same number to both sides of an inequality without changing its solutions.
+        </p></li>
+<li id="li-33"><p id="p-72">
+            We may multiply or divide both sides of an inequality by a <!--Style me with CSS--><em>positive</em> number without changing its solutions.
+        </p></li>
+<li id="li-34"><p id="p-73">
+            If we multiply or divide both sides of an inequality by a <!--Style me with CSS--><em>negative</em> number, we must <!--Style me with CSS--><em>reverse the direction of the inequality symbol</em>.
+        </p></li>
+</ol>
+</p></article><article class="example-like" id="example-11"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.2.6</span>
+</h5>
+<p id="p-74">
+        Solve the inequality \(4 − 3x \ge −17\).
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-8" id="solution-8"><span class="">Solution</span></a></span><span id="hk-solution-8" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-75">
+        Use the rules above to isolate \(x\) on one side of the inequality.
+        \begin{align*}
+
+                4 − 3x \amp\ge −17\amp\amp\text{Subtract 4 from both sides.}
+            \\
+
+                −3x \amp\ge −21\amp\amp\text{Divide both sides by }−3.
+            \\
+x \amp\le 7
+\end{align*}
+        Notice that we reversed the direction of the inequality when we divided by \(-3\). Any number less than or equal to \(7\) is a solution of the inequality.
+    </p></div></span>
+</div></div>
+<p id="p-76">
+    A <em class="terminology">compound inequality</em> involves two inequality symbols.
+</p>
+<article class="example-like" id="example-compound-inequality"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.2.7</span>
+</h5>
+<p id="p-77">
+        Solve \(4 \le 3x + 10 \le 16\).
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-9" id="solution-9"><span class="">Solution</span></a></span><span id="hk-solution-9" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-78">
+        We isolate \(x\) by performing the same operations on all three sides of the inequality.
+        \begin{alignat*}{3}
+
+                4 \amp{}\le{} 3x\amp {}+{}\amp 10 \amp{}\le{} 16\hphantom{blank} \amp\text{Subtract }10.
+            \\
+
+                −6 \amp{}\le{} \amp 3x\amp {}{}\amp {}\le{} 6\hphantom{blank} \amp\text{Divide by }3.
+            \\
+
+                −2 \amp{}\le{} \amp x\amp {}{}\amp{}\le{} 2\hphantom{blank}\amp
+            
+\end{alignat*}
+        The solutions are all numbers between \(-2\) and \(2\), inclusive.
+    </p></div></span>
+</div></div></section><section class="subsection" id="subsection-8"><header title="Subsection A.2.4 Interval Notation"><h1 class="heading hide-type" alt="Subsection A.2.4 Interval Notation">
+<span class="type">Subsection</span><span class="codenumber">A.2.4</span><span class="title">Interval Notation</span>
+</h1></header><p id="p-79">
+    The solutions of the inequality in <a knowl="./knowl/example-compound-inequality.html" knowl-id="xref-example-compound-inequality" alt="Example A.2.7 " title="Example A.2.7 ">Example A.2.7</a> form an interval. An <em class="terminology">interval</em> is a set that consists of all the real numbers between two numbers \(a\) and \(b\).
+</p>
+<p id="p-80">
+    The set \(−2 \le x \le 2\) includes its endpoints \(-2\) and \(2\), so we call it a <em class="terminology">closed interval</em>, and we denote it by \([−2, 2]\) (see <a knowl="./knowl/fig-numline-closed-vs-open.html" knowl-id="xref-fig-numline-closed-vs-open" alt="Figure A.2.8 " title="Figure A.2.8 ">Figure A.2.8</a>a). The square brackets tell us that the endpoints are included in the interval. An interval that does not include its endpoints, such as \(−2 \lt x \lt 2\), is called an <em class="terminology">open interval</em>, and we denote it with round brackets, \((−2, 2)\) (see <a knowl="./knowl/fig-numline-closed-vs-open.html" knowl-id="xref-fig-numline-closed-vs-open" alt="Figure A.2.8 " title="Figure A.2.8 ">Figure A.2.8</a>b).
+    <figure class="figure-like" id="fig-numline-closed-vs-open"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-numline-closed-vs-open.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">A.2.8</span>       
+    </figcaption></figure>
+</p>
+<article class="remark-like" id="warning-2"><h5 class="heading">
+<span class="type">Caution</span><span class="codenumber">A.2.9</span>
+</h5>
+<p id="p-81">
+        Do not confuse the open interval \((−2, 2)\) with the point \((−2, 2)\)! The notation is the same, so you must decide from the context whether an interval or a point is being discussed.
+    </p></article><p id="p-82">
+    We can also discuss <em class="terminology">infinite intervals</em>, such as \(x\lt 3\) and \(x\ge -1\), shown in <a knowl="./knowl/fig-numline-infinite-intervals.html" knowl-id="xref-fig-numline-infinite-intervals" alt="Figure A.2.10 " title="Figure A.2.10 ">Figure A.2.10</a>. We denote the interval \(x\lt 3\) by \((−\infty, 3)\), and the interval \(x\ge -1\) by \([−1, \infty)\). The symbol \(\infty\), for infinity, does not represent a specific real number; it indicates that the interval continues forever along the real line.
+   <figure class="figure-like" id="fig-numline-infinite-intervals"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-numline-infinite-intervals.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">A.2.10</span></figcaption></figure> 
+</p>
+<p id="p-83">
+    Finally, we can combine two or more intervals into a larger set. For example, the set consisting of \(x\lt -1\) or \(x\gt 2\), shown in <a knowl="./knowl/fig-numline-disjoint-infinite-intervals.html" knowl-id="xref-fig-numline-disjoint-infinite-intervals" alt="Figure A.2.11 " title="Figure A.2.11 ">Figure A.2.11</a>, is the <em class="terminology">union</em> of two intervals and is denoted by \((−\infty,−2) \cup (2,\infty)\).
+    <figure class="figure-like" id="fig-numline-disjoint-infinite-intervals"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-numline-disjoint-infinite-intervals.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">A.2.11</span></figcaption></figure>
+</p>
+<p id="p-84">
+    Many solutions of inequalities are intervals or unions of intervals.
+</p>
+<article class="example-like" id="example-13"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.2.12</span>
+</h5>
+<p id="p-85">
+        Write each of the solution sets with interval notation and graph the solution set on a number line.
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-35"><p id="p-86">\(3 \le x \lt 6\)</p></li>
+<li id="li-36"><p id="p-87">\(x \ge −9\)</p></li>
+<li id="li-37"><p id="p-88">\(x\le 1 ~~\text{ or }~~ x\gt 4\)</p></li>
+<li id="li-38"><p id="p-89">\(−8 \lt x \le −5 ~~\text{ or }~~ −1 \le x \lt 3\)</p></li>
+</ol>
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-10" id="solution-10"><span class="">Solution</span></a></span><span id="hk-solution-10" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-90">
+        <ol style="list-style-type: lower-alpha;">
+<li id="li-39"><p id="p-91">
+                \([3, 6)\). This is called a <em class="terminology">half-open</em> or <em class="terminology">half-closed</em> interval. (See <a knowl="./knowl/fig-half-open-interval.html" knowl-id="xref-fig-half-open-interval" alt="Figure A.2.13 " title="Figure A.2.13 ">Figure A.2.13</a>.)
+                <figure class="figure-like" id="fig-half-open-interval"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-half-open-interval.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">A.2.13</span></figcaption></figure>
+            </p></li>
+<li id="li-40"><p id="p-92">
+                \([−9,\infty)\). We always use round brackets next to the symbol \(\infty\) because \(\infty\) is not a specific number and is not included in the set. (See <a knowl="./knowl/fig-half-closed-infinite-interval.html" knowl-id="xref-fig-half-closed-infinite-interval" alt="Figure A.2.14 " title="Figure A.2.14 ">Figure A.2.14</a>.)
+                <figure class="figure-like" id="fig-half-closed-infinite-interval"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-half-closed-infinite-interval.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">A.2.14</span></figcaption></figure>
+            </p></li>
+<li id="li-41"><p id="p-93">
+                \((−\infty, 1] \cup (4, \infty)\). The word <!--Style me with CSS--><em>or</em> describes the union of two sets. (See <a knowl="./knowl/fig-disjoint-infinite-intervals.html" knowl-id="xref-fig-disjoint-infinite-intervals" alt="Figure A.2.15 " title="Figure A.2.15 ">Figure A.2.15</a>.)
+                <figure class="figure-like" id="fig-disjoint-infinite-intervals"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-disjoint-infinite-intervals.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">A.2.15</span></figcaption></figure>
+            </p></li>
+<li id="li-42"><p id="p-94">
+                \((−8,−5] \cup [−1, 3)\). (See <a knowl="./knowl/fig-disjoint-finite-intervals.html" knowl-id="xref-fig-disjoint-finite-intervals" alt="Figure A.2.16 " title="Figure A.2.16 ">Figure A.2.16</a>.)
+                <figure class="figure-like" id="fig-disjoint-finite-intervals"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-disjoint-finite-intervals.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">A.2.16</span></figcaption></figure>
+            </p></li>
+</ol>
+        
+    </p></div></span>
+</div></div></section></section></div></main>
+</div>
+</body>
+</html>

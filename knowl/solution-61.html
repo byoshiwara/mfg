@@ -1,29 +1,40 @@
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-09-04T16:42:15-07:00    *-->
+<!--*    on 2016-09-04T17:47:02-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
 <div class="remark-like">
 <h5 class="heading">
-<span class="type">Solution</span><span class="codenumber">A.4.5.1</span>
+<span class="type">Solution</span><span class="codenumber">2.4.15.1</span>
 </h5>
-<p>
-        We choose some values for \(x\), say, \(-2\), \(0\), and \(1\). Substitute these \(x\)-values into the equation to find a corresponding \(y\)-value for each.
-        \begin{align*}
-
-                \amp\text{When }x=−2,\amp\amp y = 2(\alert{−2}) + 3 =−1
-            \\
-
-                \amp\text{When }x=0,\amp\amp y = 2(\alert{0}) + 3 =3
-            \\
-
-                \amp\text{When }x=1,\amp\amp y = 2(\alert{1}) + 3 =5
-            
-\end{align*}
-        Thus, the ordered pairs \((−2, −1)\), \((0, 3)\), and \((1, 5)\) are three solutions of \(y = 2x + 3\). We can also substitute values for \(y\). For example, if we let \(y = \alert{10}\), we have
-        \begin{equation*}\alert{10} = 2x + 3\end{equation*}
-        Solving this equation for \(x\), we find \(7 = 2x\), or \(x = 3.5\). This means that the ordered pair \((3.5, 10)\) is another solution of the equation \(y = 2x + 3\).
-    </p>
-</div><span class="incontext"><a href="appendix-a.html#solution-61">in-context</a></span>
+<ol style="list-style-type: lower-alpha;">
+<li id="li-342">
+            An income of \(x = \alert{500}\) is in the first tax bracket, so the tax is 
+            \begin{equation*}T(\alert{500}) = 0 + 0.10(\alert{500}) = 50\end{equation*} 
+            The income \(x = 29,700\) is just on the upper edge of the second tax bracket. The amount over $7300 is $29,700 − $7300, so 
+            \begin{equation*}T(\alert{29,700}) = 730 + 0.15(\alert{29,700} − 7300) = 4090\end{equation*} 
+            The income \(x = 40,000\) is in the third bracket, so the tax is 
+            \begin{equation*}T (\alert{40,000}) = 4090 + 0.25(\alert{40,000} − 29,700) = 6665\end{equation*}</li>
+<li id="li-343">
+            The first two columns of the table give the tax brackets, or the \(x\)-intervals on which each piece of the function is defined. In each bracket, the tax \(T(x)\) is given by 
+            \begin{equation*}\text{Base tax} + \text{Rate}\cdot(\text{Amount over bracket base}) \end{equation*}
+            For example, the tax in the second bracket is 
+            \begin{equation*}T (x) = 730 + 0.15(x − 7300)\end{equation*}
+            Writing the formulas for each of the four tax brackets gives us
+            \begin{equation*}
+                T(x) =
+                \begin{cases}
+                0.10x \amp  0 \le x \le 7300\\
+                730 + 0.15(x − 7300)  \amp  7300\lt x\le 29,700\\
+                4090 + 0.25(x − 29,700) \amp  29,700\lt x\le 71,950\\
+                14,652.50 + 0.28(x − 71,950)\amp 71,950\lt x\le 150,150\\
+                \end{cases}
+            \end{equation*}</li>
+<li id="li-344">
+            The graph of \(T\) is piecewise linear. The first piece starts at the origin and has slope \(0.10\). The second piece is in point-slope form, \(y = y_1 + m(x − x_1)\), so it has slope \(0.15\) and passes through the point \((7300, 730)\). Similarly, the third piece has slope \(0.25\) and passes through \((29,700, 40,490)\), and the fourth piece has slope \(0.28\) and passes through \((71,950, 14,652.5)\). You can check that for this function, all four pieces are connected at their endpoints, as shown in <a knowl="./knowl/fig-income-tax.html" knowl-id="xref-fig-income-tax" alt="Figure 2.4.17 " title="Figure 2.4.17 ">Figure 2.4.17</a>.
+            <figure class="figure-like" id="fig-income-tax"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-income-tax.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.4.17</span></figcaption></figure>
+</li>
+</ol>
+</div><span class="incontext"><a href="MathModels.html#solution-61">in-context</a></span>
