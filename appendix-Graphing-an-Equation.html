@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-09-10T10:21:33-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG Graphing an Equation</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+\newcommand\degree[0]{^{\circ}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading">
+<span class="title">Test chapter</span><span class="subtitle">test subtitle</span>
+</h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="appendix-Editing-Expressions.html">Previous</a><a class="up-button button toolbar-item" href="appendix-b.html">Up</a><a class="next-button button toolbar-item" href="appendix-Making-a-Table.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="appendix-Editing-Expressions.html">Previous</a><a class="up-button button toolbar-item" href="appendix-b.html">Up</a><a class="next-button button toolbar-item" href="appendix-Making-a-Table.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="testchap.html"><span class="codenumber">1</span><span class="title">Fake chapter</span></a></h2>
+<ul><li><a href="section-1-1-exercises.html">Homework</a></li></ul>
+<h2 class="link"><a href="appendix-a.html"><span class="codenumber">A</span><span class="title">Algebra Skills Refresher</span></a></h2>
+<ul>
+<li><a href="section-1.html">Numbers and Operations</a></li>
+<li><a href="appendix-Linear-Equations-and-Inequalities.html">Linear Equations and Inequalities</a></li>
+<li><a href="appendix-Algebraic-Expressions-and-Problem-Solving.html">Algebraic Expressions and Problem Solving</a></li>
+<li><a href="appendix-Graphs-and-Equations.html">Graphs and Equations</a></li>
+<li><a href="appendix-Linear-Systems-in-Two-Variables.html">Linear Systems in Two Variables</a></li>
+<li><a href="appendix-Laws-of-Exponents.html">Laws of Exponents</a></li>
+<li><a href="appendix-Polynomials-and-Factoring.html">Polynomials and Factoring</a></li>
+<li><a href="appendix-Factoring-Quadratic-Trinomials.html">Factoring Quadratic Trinomials</a></li>
+<li><a href="appendix-Working-with-Algebraic-Fractions.html">Working with Algebraic Fractions</a></li>
+<li><a href="appendix-Working-with-Radicals.html">Working with Radicals</a></li>
+<li><a href="appendix-Facts-from-Geometry.html">Facts from Geometry</a></li>
+<li><a href="appendix-The-Real-Number-System.html">The Real Number System</a></li>
+</ul>
+<h2 class="link active"><a href="appendix-b.html"><span class="codenumber">B</span><span class="title">Using a Graphing Calculator</span></a></h2>
+<ul>
+<li><a href="appendix-Getting-Started.html">Getting Started</a></li>
+<li><a href="appendix-Entering-Expressions.html">Entering Expressions</a></li>
+<li><a href="appendix-Editing-Expressions.html">Editing Expressions</a></li>
+<li><a href="appendix-Graphing-an-Equation.html" class="active">Graphing an Equation</a></li>
+<li><a href="appendix-Making-a-Table.html">Making a Table</a></li>
+<li><a href="appendix-Regression.html">Regression</a></li>
+<li><a href="appendix-Function-Notation-and-Transformation-of-Graphs.html">Function Notation and Transformation of Graphs</a></li>
+</ul>
+<h2 class="link"><a href="properties.html"><span class="codenumber">4</span><span class="title">Properties of Numbers</span></a></h2>
+<ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="appendix-Graphing-an-Equation"><header title="Section B.4 Graphing an Equation"><h1 class="heading hide-type" alt="Section B.4 Graphing an Equation">
+<span class="type">Section</span><span class="codenumber">B.4</span><span class="title">Graphing an Equation</span><a href="appendix-Graphing-an-Equation.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-1089">
+    We can graph equations written in the form \(y = \) (expression in x). The graphing keys are located on the top row of the keypad. There are two steps to graphing an equation:
+    <ol style="list-style-type: decimal;">
+<li id="li-414"><p id="p-1090">
+            Entering the equation
+        </p></li>
+<li id="li-415"><p id="p-1091">
+            Setting the graphing window
+        </p></li>
+</ol>
+</p>
+<section class="subsection" id="subsection-72"><header title="Subsection B.4.1 Standard Window"><h1 class="heading hide-type" alt="Subsection B.4.1 Standard Window">
+<span class="type">Subsection</span><span class="codenumber">B.4.1</span><span class="title">Standard Window</span>
+</h1></header><p id="p-1092">
+    The standard window displays values from \(−10\) to \(10\) on both axes.
+</p>
+<article class="example-like" id="example-111"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">B.170</span>
+</h5>
+<p id="p-1093">
+        <ol style="list-style-type: decimal;">
+<li id="li-416"><p id="p-1094">
+                Press <tt class="code-inline tex2jax_ignore">Y=</tt> and enter \(2X-5\) after \(Y_1=\) by keying in
+                \begin{align*}
+2~ \boxed{X, T, \theta, n} ~ \boxed{{}-{}} ~ 5 \amp\amp\amp\text{Use the } \boxed{X, T, \theta, n} ~ \text{ to enter }X.
+\end{align*}
+            </p></li>
+<li id="li-417"><p id="p-1095">
+                Press  <tt class="code-inline tex2jax_ignore">ZOOM</tt> \(6\) to set the standard window, and the graph will appear (see <a knowl="./knowl/fig-GC-graphing-windows.html" knowl-id="xref-fig-GC-graphing-windows" alt="Figure B.171 " title="Figure B.171 ">Figure B.171</a>).
+                <figure class="figure-like" id="fig-GC-graphing-windows"><img width="100%" src="images/fig-GC-graphing-windows.jpg" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">B.171</span></figcaption></figure>
+            </p></li>
+</ol>
+        You can press <tt class="code-inline tex2jax_ignore">2nd</tt> <tt class="code-inline tex2jax_ignore">WINDOW</tt> to see the settings for the standard window. \(Xscl = 1\) means that the tick marks on the \(x\)-axis are spaced \(1\) unit apart.
+    </p>
+<p id="p-1096">
+        Press <tt class="code-inline tex2jax_ignore">2nd</tt> <tt class="code-inline tex2jax_ignore">MODE</tt> to Quit the graph and return to the Home screen, where we enter computations. From the Home screen, press <tt class="code-inline tex2jax_ignore">GRAPH</tt> to return to the graph.
+    </p></article></section><section class="subsection" id="subsection-73"><header title="Subsection B.4.2 Tracing"><h1 class="heading hide-type" alt="Subsection B.4.2 Tracing">
+<span class="type">Subsection</span><span class="codenumber">B.4.2</span><span class="title">Tracing</span>
+</h1></header><p id="p-1097">
+    The calculator can display the coordinates of selected points on the graph. Press the <tt class="code-inline tex2jax_ignore">TRACE</tt> key to see a "bug" blinking on the graph. The coordinates of the bug are displayed at the bottom of the screen. Use the left and right arrow keys to move the bug along the graph, as shown in <a knowl="./knowl/fig-GC-tracing.html" knowl-id="xref-fig-GC-tracing" alt="Figure B.172 " title="Figure B.172 ">Figure B.172</a>. Note that the <em class="terminology">Trace</em> feature does not show every point on the graph!
+    <figure class="figure-like" id="fig-GC-tracing"><img width="100%" src="images/fig-GC-tracing.jpg" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">B.172</span></figcaption></figure>
+</p>
+<article class="example-like" id="example-112"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">B.173</span>
+</h5>
+<p id="p-1098">
+        Use the <em class="terminology">Trace</em> to find the point on the graph with \(x=-3\). Press
+        \begin{equation*}\boxed{\text{TRACE}} \, \boxed{(-)} \, 3 \, \boxed{\text{ENTER}} \end{equation*} 
+The bug is off the bottom of the screen, but the coordinates are still shown.
+    </p></article></section><section class="subsection" id="subsection-74"><header title="Subsection B.4.3 Multiple Graphs"><h1 class="heading hide-type" alt="Subsection B.4.3 Multiple Graphs">
+<span class="type">Subsection</span><span class="codenumber">B.4.3</span><span class="title">Multiple Graphs</span>
+</h1></header><p id="p-1099">
+    You can enter more than one graph at a time. Press <tt class="code-inline tex2jax_ignore">↓</tt> to enter a second equation at \(Y_2 =\), at \(Y_3 =\), and so on. When Tracing, press the <tt class="code-inline tex2jax_ignore">↓</tt>  and <tt class="code-inline tex2jax_ignore">↑</tt> keys to move from one graph to another.
+</p>
+<p id="p-1100">
+    To turn off a graph without deleting its equation, press and move the cursor over the \(=\) sign in the equation. Press <tt class="code-inline tex2jax_ignore">ENTER</tt> to deactivate that equation. (When you move the cursor away, the \(=\) sign is no longer highlighted.) To reactivate the equation, move the cursor back over the \(=\) sign and press <tt class="code-inline tex2jax_ignore">ENTER</tt> again.
+</p></section><section class="subsection" id="subsection-75"><header title="Subsection B.4.4 Setting the Window"><h1 class="heading hide-type" alt="Subsection B.4.4 Setting the Window">
+<span class="type">Subsection</span><span class="codenumber">B.4.4</span><span class="title">Setting the Window</span>
+</h1></header><p id="p-1101">
+    Of course, the standard window is not suitable for every graph.
+</p>
+<article class="example-like" id="example-113"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">B.174</span>
+</h5>
+<p id="p-1102">
+        Graph \(y= 0.01x^2- 50\) in the window
+        \begin{align*}
+
+                \text{Xmin} \amp = -100 \amp\amp \text{Xmax} = 100
+            \\
+
+                \text{Ymin} \amp = -60 \amp\amp \text{Ymax} = 50
+            
+\end{align*}
+        <ol style="list-style-type: decimal;">
+<li id="li-418"><p id="p-1103">
+                Press <tt class="code-inline tex2jax_ignore">Y=</tt> and enter \(0.01X^2-50\) by keying in
+                \begin{equation*}0.01 ~ \boxed{X,T,\theta,n}~\boxed{x^2}~\boxed{{}-{}} 50 \hphantom{blank} \text{Use the }  \boxed{X,T,\theta,n}\text{ key to enter} X.\end{equation*}
+            </p></li>
+<li id="li-419"><p id="p-1104">
+                Press <tt class="code-inline tex2jax_ignore">WINDOW</tt> and enter the settings as shown in <a knowl="./knowl/fig-GC-window-settings.html" knowl-id="xref-fig-GC-window-settings" alt="Figure B.175 " title="Figure B.175 ">Figure B.175</a>. Use the up and down arrow keys to move from line to line. Then press <tt class="code-inline tex2jax_ignore">GRAPH</tt>.
+                <figure class="figure-like" id="fig-GC-window-settings"><img width="30%" src="images/fig-GC-window-settings.jpg" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">B.175</span></figcaption></figure>
+            </p></li>
+</ol>
+    </p></article></section><section class="subsection" id="subsection-76"><header title="Subsection B.4.5 Intersect Feature"><h1 class="heading hide-type" alt="Subsection B.4.5 Intersect Feature">
+<span class="type">Subsection</span><span class="codenumber">B.4.5</span><span class="title">Intersect Feature</span>
+</h1></header><p id="p-1105">
+    We can use the calculator to find the intersection point of two graphs:
+    <ol style="list-style-type: decimal;">
+<li id="li-420"><p id="p-1106">
+            Enter the equations for the two graphs in the <tt class="code-inline tex2jax_ignore">Y=</tt> menu.
+        </p></li>
+<li id="li-421"><p id="p-1107">
+            Choose window settings so that the intersection point is visible in the window.
+        </p></li>
+<li id="li-422"><p id="p-1108">
+            Press <tt class="code-inline tex2jax_ignore">2nd</tt> <tt class="code-inline tex2jax_ignore">TRACE</tt> \(5\) to activate the intersect feacture.
+        </p></li>
+<li id="li-423"><p id="p-1109">
+            Use the left and right arrow keys to position the bug near the intersection point.
+        </p></li>
+<li id="li-424"><p id="p-1110">
+            Respond to each of the calculator’s questions, First curve?, Second curve?, and Guess? by pressing <tt class="code-inline tex2jax_ignore">ENTER</tt>. The coordinates of the intersection point are then displayed at the bottom of the screen.
+        </p></li>
+</ol>
+    <a knowl="./knowl/fig-GC-intersect.html" knowl-id="xref-fig-GC-intersect" alt="Figure B.176 " title="Figure B.176 ">Figure B.176</a> shows one of the intersection points of \(y = 0.01x^2 − 50\) and \(y = −0.5x\).
+    <figure class="figure-like" id="fig-GC-intersect"><img width="40%" src="images/fig-GC-intersect.jpg" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">B.176</span></figcaption></figure>
+</p></section><section class="subsection" id="subsection-77"><header title="Subsection B.4.6 Other Windows"><h1 class="heading hide-type" alt="Subsection B.4.6 Other Windows">
+<span class="type">Subsection</span><span class="codenumber">B.4.6</span><span class="title">Other Windows</span>
+</h1></header><p id="p-1111">
+    <ol style="list-style-type: decimal;">
+<li id="li-425"><p id="p-1112">
+            The <em class="terminology">ZDecimal</em> (Zoom Decimal) window, accessed by pressing <tt class="code-inline tex2jax_ignore">ZOOM</tt> \(4\), shows \(x\)-values from \(-4.7\) to \(4.7\) only, but the <em class="terminology">Trace</em> feature shows "nice" \(x\)-values in increments of \(0.1\).
+        </p></li>
+<li id="li-426"><p id="p-1113">
+            The <em class="terminology">ZInteger</em> (Zoom Integer) window shows nice \(x\)-values in increments of \(1\) unit. Access the <em class="terminology">ZInteger</em> window as follows: Press <tt class="code-inline tex2jax_ignore">ZOOM</tt> \(8\), move the bug with the arrow keys to the center of your new window, and press <tt class="code-inline tex2jax_ignore">ENTER</tt>.
+        </p></li>
+<li id="li-427"><p id="p-1114">
+            The <em class="terminology">ZSquare</em> window, accessed by pressing <tt class="code-inline tex2jax_ignore">ZOOM</tt> \(5\), makes the tick marks on both axes have the same size. In this window, squares look like squares, circles look like circles, and all angles appear true.
+        </p></li>
+<li id="li-428"><p id="p-1115">
+            <em class="terminology">"Friendly" Windows</em>: If the difference between Xmin and Xmax is a multiple of \(94\), the <em class="terminology">Trace</em> feature gives nice values for \(x\). A useful example of a friendly window is \(Xmin=-9.4\), \(Xmax= 9.4\).
+        </p></li>
+</ol>
+</p>
+<article class="paragraphs" id="paragraphs-3"><h5 class="heading"><span class="title">Troubleshooting</span></h5>
+<p id="p-1116">
+    <ol style="list-style-type: decimal;">
+<li id="li-429"><p id="p-1117">
+            If the graph is not visible, you may need to adjust your window. Or, the equation may not be activated. Press <tt class="code-inline tex2jax_ignore">Y=</tt> and check to see if the \(=\)sign is highlighted.
+        </p></li>
+<li id="li-430"><p id="p-1118">
+            If you get a range error, ERR: WINDOW RANGE, quit the message and press <tt class="code-inline tex2jax_ignore">WINDOW</tt>. Alter the window settings so that Xmin is smaller than Xmax and so that Ymin is smaller than Ymax.
+        </p></li>
+<li id="li-431"><p id="p-1119">
+            If you press and get an unfamiliar window, or if the axes are not visible in the ZStandard window, you may need to return the <em class="terminology">Mode</em> or <em class="terminology">Format</em> menus to their default settings. See <a href="appendix-Getting-Started.html#troubleshooting" alt="Paragraphs  Troubleshooting" title="Paragraphs  Troubleshooting">Troubleshooting </a> in <a href="appendix-Getting-Started.html" alt="Section B.1 Getting Started" title="Section B.1 Getting Started">Section B.1</a>.
+        </p></li>
+<li id="li-432"><p id="p-1120">
+            If you get a dimension error, <em class="terminology">ERR: INVALID DIM</em>, you may have a StatPlot turned on. Press <tt class="code-inline tex2jax_ignore">2nd</tt> <tt class="code-inline tex2jax_ignore">Y=</tt> \(4\) <tt class="code-inline tex2jax_ignore">ENTER</tt> to turn off the StatPlots.
+        </p></li>
+<li id="li-433"><p id="p-1121">
+            If the bug does not move along the curve, <tt class="code-inline tex2jax_ignore">TRACE</tt> may not be activated. Press <tt class="code-inline tex2jax_ignore">TRACE</tt> and then the left or right arrow key.
+        </p></li>
+<li id="li-434"><p id="p-1122">
+            If you get the error, <em class="terminology">ERR: INVALID</em>, you have probably entered a value of \(x\) that is outside the window. Adjust the window settings accordingly.
+        </p></li>
+<li id="li-435"><p id="p-1123">
+            If the \(x\)-axis or \(y\)-axis is too thick, the tick marks are too close together. Press <tt class="code-inline tex2jax_ignore">WINDOW</tt> and make Xscl or Yscl larger. Set \(Xscl=0\) or \(Yscl =0\) to remove the tick marks.
+        </p></li>
+<li id="li-436"><p id="p-1124">
+            If you get <em class="terminology">ERR: NO SIGN CHNG</em> when using the intersect feature, the calculator did not find any intersection point within the current window. Alter the window settings so that the two curves meet within the window. If the two curves are tangent, the calculator may simply fail to find the point of intersection.
+        </p></li>
+</ol>
+</p></article></section></section></div></main>
+</div>
+</body>
+</html>

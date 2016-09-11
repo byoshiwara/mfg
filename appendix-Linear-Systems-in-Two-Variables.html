@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-09-10T10:21:32-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG Linear Systems in Two Variables</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+\newcommand\degree[0]{^{\circ}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading">
+<span class="title">Test chapter</span><span class="subtitle">test subtitle</span>
+</h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="appendix-Graphs-and-Equations.html">Previous</a><a class="up-button button toolbar-item" href="appendix-a.html">Up</a><a class="next-button button toolbar-item" href="appendix-Laws-of-Exponents.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="appendix-Graphs-and-Equations.html">Previous</a><a class="up-button button toolbar-item" href="appendix-a.html">Up</a><a class="next-button button toolbar-item" href="appendix-Laws-of-Exponents.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="testchap.html"><span class="codenumber">1</span><span class="title">Fake chapter</span></a></h2>
+<ul><li><a href="section-1-1-exercises.html">Homework</a></li></ul>
+<h2 class="link active"><a href="appendix-a.html"><span class="codenumber">A</span><span class="title">Algebra Skills Refresher</span></a></h2>
+<ul>
+<li><a href="section-1.html">Numbers and Operations</a></li>
+<li><a href="appendix-Linear-Equations-and-Inequalities.html">Linear Equations and Inequalities</a></li>
+<li><a href="appendix-Algebraic-Expressions-and-Problem-Solving.html">Algebraic Expressions and Problem Solving</a></li>
+<li><a href="appendix-Graphs-and-Equations.html">Graphs and Equations</a></li>
+<li><a href="appendix-Linear-Systems-in-Two-Variables.html" class="active">Linear Systems in Two Variables</a></li>
+<li><a href="appendix-Laws-of-Exponents.html">Laws of Exponents</a></li>
+<li><a href="appendix-Polynomials-and-Factoring.html">Polynomials and Factoring</a></li>
+<li><a href="appendix-Factoring-Quadratic-Trinomials.html">Factoring Quadratic Trinomials</a></li>
+<li><a href="appendix-Working-with-Algebraic-Fractions.html">Working with Algebraic Fractions</a></li>
+<li><a href="appendix-Working-with-Radicals.html">Working with Radicals</a></li>
+<li><a href="appendix-Facts-from-Geometry.html">Facts from Geometry</a></li>
+<li><a href="appendix-The-Real-Number-System.html">The Real Number System</a></li>
+</ul>
+<h2 class="link"><a href="appendix-b.html"><span class="codenumber">B</span><span class="title">Using a Graphing Calculator</span></a></h2>
+<ul>
+<li><a href="appendix-Getting-Started.html">Getting Started</a></li>
+<li><a href="appendix-Entering-Expressions.html">Entering Expressions</a></li>
+<li><a href="appendix-Editing-Expressions.html">Editing Expressions</a></li>
+<li><a href="appendix-Graphing-an-Equation.html">Graphing an Equation</a></li>
+<li><a href="appendix-Making-a-Table.html">Making a Table</a></li>
+<li><a href="appendix-Regression.html">Regression</a></li>
+<li><a href="appendix-Function-Notation-and-Transformation-of-Graphs.html">Function Notation and Transformation of Graphs</a></li>
+</ul>
+<h2 class="link"><a href="properties.html"><span class="codenumber">4</span><span class="title">Properties of Numbers</span></a></h2>
+<ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="appendix-Linear-Systems-in-Two-Variables"><header title="Section A.5 Linear Systems in Two Variables"><h1 class="heading hide-type" alt="Section A.5 Linear Systems in Two Variables">
+<span class="type">Section</span><span class="codenumber">A.5</span><span class="title">Linear Systems in Two Variables</span><a href="appendix-Linear-Systems-in-Two-Variables.html" class="permalink">¶ permalink</a>
+</h1></header><p id="p-478">A \(2\times 2\) <em class="terminology">system</em> of equations is a set of \(2\) equations in the same \(2\) variables. A <em class="terminology">solution</em> of a \(2\times 2\) system is an ordered pair that makes each equation in the system true. In this section, we review two algebraic methods for solving \(2\times 2\) linear systems: substitution and elimination.</p>
+<section class="subsection" id="subsection-15"><header title="Subsection A.5.1 Solving Systems by Substitution"><h1 class="heading hide-type" alt="Subsection A.5.1 Solving Systems by Substitution">
+<span class="type">Subsection</span><span class="codenumber">A.5.1</span><span class="title">Solving Systems by Substitution</span>
+</h1></header><p id="p-479">
+    The basic strategy for the <em class="terminology">substitution</em> method can be described as follows.
+</p>
+<article class="assemblage-like" id="assemblage-10"><h5 class="heading">Steps for Solving a \(\text{}\) System by Substitution</h5>
+<p id="p-480">
+    <ol style="list-style-type: decimal;">
+<li id="li-176"><p id="p-481">
+            Solve one of the equations for one of the variables in terms of the other.
+        </p></li>
+<li id="li-177"><p id="p-482">
+            Substitute this expression into the second equation; doing so yields an equation in one variable.
+        </p></li>
+<li id="li-178"><p id="p-483">
+            Solve the new equation.
+        </p></li>
+<li id="li-179"><p id="p-484">
+            Use the result of step 1 to find the other variable.
+        </p></li>
+</ol>
+</p></article><article class="example-like" id="example-26"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.44</span>
+</h5>
+<p id="p-485">
+        Staci stocks two kinds of sleeping bags in her sporting goods store, a standard model and a down-filled model for colder temperatures. From past experience, she estimates that she will sell twice as many of the standard variety as of the down filled. She has room to stock 60 sleeping bags at a time. How many of each variety should Staci order?
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-23" id="solution-23"><span class="">Solution</span></a></span><span id="hk-solution-23" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-486">
+        <dl class="description-list">
+<dt id="li-180">Step 1:</dt>
+<dd><p id="p-487">
+                \begin{align*}
+\amp\text{Number of standard sleeping bags: }~x\\
+\amp\text{Number of down-filled sleeping bags: }~y
+\end{align*}
+            </p></dd>
+<dt id="li-181">Step 2:</dt>
+<dd><p id="p-488">
+                Write two equations about the variables. Staci needs twice as many standard model as down filled, so
+                \begin{align*}
+x \amp = 2y\amp\amp\hphantom{blankety}(1)
+\end{align*}
+                Also, the total number of sleeping bags is 60, so
+                \begin{align*}
+x+y \amp = 60\amp\amp\hphantom{blank}(2)
+\end{align*}
+            </p></dd>
+<dt id="li-182">Step 3:</dt>
+<dd><p id="p-489">
+                We will solve this system using substitution. Notice that Equation (1) is already solved for \(x\) in terms of \(y\): \(x = 2y\). Substitute \(\alert{2y}\) for \(x\) in Equation (2) to obtain
+                \begin{align*}
+
+                        \alert{2y} + y \amp = 60
+                    \\
+3y\amp = 60
+\end{align*}
+                Solving for \(y\), we find \(y=\alert{20}\). Finally, substitute this value into Equation (1) to find
+                \begin{equation*}x = 2(\alert{20}) = 40\end{equation*}
+                The solution to the system is \(x = 40, y = 20\).
+            </p></dd>
+<dt id="li-183">Step 4:</dt>
+<dd><p id="p-490">
+                Staci should order \(40\) standard sleeping bags and \(20\) down-filled bags.
+            </p></dd>
+</dl>
+    </p></div></span>
+</div></div></section><section class="subsection" id="subsection-16"><header title="Subsection A.5.2 Solving Systems by Elimination"><h1 class="heading hide-type" alt="Subsection A.5.2 Solving Systems by Elimination">
+<span class="type">Subsection</span><span class="codenumber">A.5.2</span><span class="title">Solving Systems by Elimination</span>
+</h1></header><p id="p-491">
+    The method of substitution is convenient if one of the variables in the system has a coefficient of \(1\) or \(-1\), because it is easy to solve for that variable. If none of the coefficients is \(1\) or \(-1s\), then a second method, called <em class="terminology">elimination</em>, is usually more efficient.
+</p>
+<p id="p-492">
+    The method of elimination is based on the following properties of linear equations.
+</p>
+<article class="assemblage-like" id="assemblage-11"><h5 class="heading">Properties of Linear Systems</h5>
+<p id="p-493">
+    <ol style="list-style-type: decimal;">
+<li id="li-184"><p id="p-494">
+            Multiplying a linear equation by a (nonzero) constant does not change its solutions. That is, any solution of the equation
+            \begin{equation*}ax + by = c\end{equation*}
+            is also a solution of the equation
+            \begin{equation*}kax + kby = kc\end{equation*}
+        </p></li>
+<li id="li-185"><p id="p-495">
+            Adding (or subtracting) two linear equations does not change their common solutions. That is, any solution of the system
+            \begin{align*}
+a_1x + b_1 y \amp = c_1\\
+a_2x + b_2 y \amp = c_2
+\end{align*}
+            is also a solution of the equation
+            \begin{equation*}(a_1 + a_2) x + (b_1 + b_2) y = c_1 + c_2\end{equation*}
+        </p></li>
+</ol>
+</p></article><article class="example-like" id="example-linear-combinations"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.45</span>
+</h5>
+<p id="p-496">
+        Solve the system by the method of elimination.
+        \begin{alignat*}{3}
+2x\amp {}+{}\amp 3y\amp ={}\amp 8 \hphantom{blankblank}\amp(1)\\
+3x\amp {}-{}\amp 4y\amp ={}\amp -5 \hphantom{blankblank}\amp(2)
+\end{alignat*}
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-24" id="solution-24"><span class="">Solution</span></a></span><span id="hk-solution-24" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-497">
+        We first decide which variable to eliminate, \(x\) or \(y\). We can choose whichever looks easiest. In this problem, we choose to eliminate \(x\). We next look for the smallest number that both coefficients, \(2\) and \(3\), divide into evenly. This number is \(6\). We want the coefficients of \(x\) to become \(6\) and \(-6\), so we will multiply Equation (1) by \(3\) and Equation (2) by \(-2\) to obtain
+        \begin{alignat*}{3}
+6x\amp {}+{}\amp 9y\amp ={}\amp 24 \hphantom{blankblank}\amp(1\text{a})\\
+-6x\amp {}+{}\amp 8y\amp ={}\amp 10 \hphantom{blankblank}\amp(2\text{a})
+\end{alignat*}
+        Now add the corresponding terms of (1a) and (2a). The \(x\)-terms are eliminated, yielding an equation in one variable.
+        \begin{alignat*}{3}
+6x\amp {}+{}\amp 9y\amp ={}\amp 24 \hphantom{blankblank}\amp(1\text{a})\\
+-6x\amp {}+{}\amp 8y\amp ={}\amp 10 \hphantom{blankblank}\amp(2\text{a})\\
+{}\amp {}{}\amp 17y\amp ={}\amp 34 \hphantom{blankblank}\amp(3)
+\end{alignat*}
+        Solve this equation for \(y\) to find \(y=\alert{2}\). We can substitute this value of \(y\) into any of our equations involving both \(x\) and \(y\). If we choose Equation (1), then
+        \begin{equation*}2x + 3 (\alert{2}) = 8\end{equation*}
+        and solving this equation yields \(x=1\). The ordered pair \((1, 2)\) is a solution to the system. You should verify that these values satisfy both original equations.
+    </p></div></span>
+</div></div>
+<p id="p-498">
+    We summarize the strategy for solving a linear system by elimination.
+</p>
+<article class="assemblage-like" id="assemblage-12"><h5 class="heading">Steps for Solving a \(2\times 2\) Linear System by Elimination</h5>
+<p id="p-499">
+    <ol style="list-style-type: decimal;">
+<li id="li-186"><p id="p-500">
+            Choose one of the variables to eliminate. Multiply each equation by a suitable factor so that the coefficients of that variable are opposites.
+        </p></li>
+<li id="li-187"><p id="p-501">
+            Add the two new equations termwise.
+        </p></li>
+<li id="li-188"><p id="p-502">
+            Solve the resulting equation for the remaining variable.
+        </p></li>
+<li id="li-189"><p id="p-503">
+            Substitute the value found in step 3 into either of the original equations and solve for the other variable.
+        </p></li>
+</ol>
+</p></article><p id="p-504">
+    In <a knowl="./knowl/example-linear-combinations.html" knowl-id="xref-example-linear-combinations" alt="Example A.45 " title="Example A.45 ">Example A.45</a>, we added \(3\) times the first equation to \(-2\) times the second equation. The result from adding a constant multiple of one equation to a constant multiple of another equation is called a <em class="terminology">linear combination</em> of the two equations. The method of elimination is also called the method of linear combinations.
+</p>
+<p id="p-505">
+    If either equation in a system has fractional coefficients, it is helpful to clear the fractions before applying the method of linear combinations.
+</p>
+<article class="example-like" id="example-28"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.46</span>
+</h5>
+<p id="p-506">
+        Solve the system by linear combinations.
+        \begin{alignat*}{3}
+\frac{2}{3}x\amp {}-{}\amp y\amp ={}\amp 2 \hphantom{blankblank}\amp(1)\\
+x\amp {}+{}\amp \frac{1}{2}y\amp ={}\amp 7 \hphantom{blankblank}\amp(2)
+\end{alignat*}
+    </p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-25" id="solution-25"><span class="">Solution</span></a></span><span id="hk-solution-25" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-507">
+        Multiply each side of Equation (1) by \(3\) and each side of Equation (2) by \(2\) to clear the fractions:
+        \begin{alignat*}{3}
+2x\amp {}-{}\amp 3y\amp ={}\amp 6 \hphantom{blankblank}\amp(1\text{a})\\
+2x\amp {}+{}\amp y\amp ={}\amp 14 \hphantom{blankblank}\amp(2\text{a})
+\end{alignat*}
+        To eliminate the variable \(x\), multiply Equation (2a) by \(-1\) and add the result to Equation (1a) to get
+        \begin{align*}
+−4y \amp = −8 \amp\amp\text{Divide both sides by −4.}\\
+y \amp = 2
+\end{align*}
+        Substitute \(\alert{2}\) for \(y\) in one of the original equations and solve for \(x\). We use Equation (2).
+        \begin{align*}
+x + \frac{1}{2}(\alert{2}) \amp = 7 \amp\amp\text{Subtract 1 from both sides.}\\
+x \amp = 6
+\end{align*}
+        Verify that \(x=6\) and \(y=2\) satisfy both Equations (1) and (2). The solution to the system is the ordered pair \((6, 2)\).
+    </p></div></span>
+</div></div></section></section></div></main>
+</div>
+</body>
+</html>

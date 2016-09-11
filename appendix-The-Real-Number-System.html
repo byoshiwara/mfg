@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2016-09-10T10:21:33-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MFG The Real Number System</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+// contrib directory for accessibility menu, moot after v2.6+?
+MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        // [Contrib]accessibility menu moot after v2.6+?
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           // JS comment, XML CDATA protect XHTML quality of file
+                           // if removed in XSL, use entities
+                           //<![CDATA[
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                           //]]>
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    </script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(\newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+\newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+\delimitershortfall-1sp
+\newcommand\abs[1]{\left|#1\right|}
+\newcommand\degree[0]{^{\circ}}
+\newcommand{\lt}{ &lt; }
+\newcommand{\gt}{ &gt; }
+\newcommand{\amp}{ &amp; }
+\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading">
+<span class="title">Test chapter</span><span class="subtitle">test subtitle</span>
+</h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="appendix-Facts-from-Geometry.html">Previous</a><a class="up-button button toolbar-item" href="appendix-a.html">Up</a><a class="next-button button toolbar-item" href="appendix-b.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="appendix-Facts-from-Geometry.html">Previous</a><a class="up-button button toolbar-item" href="appendix-a.html">Up</a><a class="next-button button toolbar-item" href="appendix-b.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="testchap.html"><span class="codenumber">1</span><span class="title">Fake chapter</span></a></h2>
+<ul><li><a href="section-1-1-exercises.html">Homework</a></li></ul>
+<h2 class="link active"><a href="appendix-a.html"><span class="codenumber">A</span><span class="title">Algebra Skills Refresher</span></a></h2>
+<ul>
+<li><a href="section-1.html">Numbers and Operations</a></li>
+<li><a href="appendix-Linear-Equations-and-Inequalities.html">Linear Equations and Inequalities</a></li>
+<li><a href="appendix-Algebraic-Expressions-and-Problem-Solving.html">Algebraic Expressions and Problem Solving</a></li>
+<li><a href="appendix-Graphs-and-Equations.html">Graphs and Equations</a></li>
+<li><a href="appendix-Linear-Systems-in-Two-Variables.html">Linear Systems in Two Variables</a></li>
+<li><a href="appendix-Laws-of-Exponents.html">Laws of Exponents</a></li>
+<li><a href="appendix-Polynomials-and-Factoring.html">Polynomials and Factoring</a></li>
+<li><a href="appendix-Factoring-Quadratic-Trinomials.html">Factoring Quadratic Trinomials</a></li>
+<li><a href="appendix-Working-with-Algebraic-Fractions.html">Working with Algebraic Fractions</a></li>
+<li><a href="appendix-Working-with-Radicals.html">Working with Radicals</a></li>
+<li><a href="appendix-Facts-from-Geometry.html">Facts from Geometry</a></li>
+<li><a href="appendix-The-Real-Number-System.html" class="active">The Real Number System</a></li>
+</ul>
+<h2 class="link"><a href="appendix-b.html"><span class="codenumber">B</span><span class="title">Using a Graphing Calculator</span></a></h2>
+<ul>
+<li><a href="appendix-Getting-Started.html">Getting Started</a></li>
+<li><a href="appendix-Entering-Expressions.html">Entering Expressions</a></li>
+<li><a href="appendix-Editing-Expressions.html">Editing Expressions</a></li>
+<li><a href="appendix-Graphing-an-Equation.html">Graphing an Equation</a></li>
+<li><a href="appendix-Making-a-Table.html">Making a Table</a></li>
+<li><a href="appendix-Regression.html">Regression</a></li>
+<li><a href="appendix-Function-Notation-and-Transformation-of-Graphs.html">Function Notation and Transformation of Graphs</a></li>
+</ul>
+<h2 class="link"><a href="properties.html"><span class="codenumber">4</span><span class="title">Properties of Numbers</span></a></h2>
+<ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="appendix-The-Real-Number-System"><header title="Section A.12 The Real Number System"><h1 class="heading hide-type" alt="Section A.12 The Real Number System">
+<span class="type">Section</span><span class="codenumber">A.12</span><span class="title">The Real Number System</span><a href="appendix-The-Real-Number-System.html" class="permalink">¶ permalink</a>
+</h1></header><section class="subsection" id="subsection-55"><header title="Subsection A.12.1 Subsets of the Real Numbers"><h1 class="heading hide-type" alt="Subsection A.12.1 Subsets of the Real Numbers">
+<span class="type">Subsection</span><span class="codenumber">A.12.1</span><span class="title">Subsets of the Real Numbers</span>
+</h1></header><p id="p-949">
+    The numbers associated with points on a number line are called the <em class="terminology">real numbers</em>. The set of real numbers is denoted by \(\mathbb{R}\). You are already familiar with several types, or subsets, of real numbers:
+    <ul style="list-style-type: disc;">
+<li id="li-385"><p id="p-950">
+    		The set \(\mathbb{N} \) of <em class="terminology">natural</em>, or <em class="terminology">counting numbers</em>, as its name suggests, consists of the numbers \(1, 2, 3, 4 , \ldots ,\) where "\(\ldots\)" indicates that the list continues without end.
+    	</p></li>
+<li id="li-386"><p id="p-951">
+    		The set \(\mathbb{W} \) of <em class="terminology">whole numbers</em> consists of the natural numbers and zero: \(0, 1, 2, 3 \ldots\).
+    	</p></li>
+<li id="li-387"><p id="p-952">
+    		The set \(\mathbb{Z} \) of <em class="terminology">integers</em> consists of the natural numbers, their negatives, and zero: \(\ldots , −3, −2, −1, 0, 1, 2, 3, \ldots\).
+    	</p></li>
+</ul>
+    All of these numbers are subsets of the rational numbers.
+</p></section><section class="subsection" id="subsection-56"><header title="Subsection A.12.2 Rational Numbers"><h1 class="heading hide-type" alt="Subsection A.12.2 Rational Numbers">
+<span class="type">Subsection</span><span class="codenumber">A.12.2</span><span class="title">Rational Numbers</span>
+</h1></header><p id="p-953">
+	A number that can be expressed as the quotient of two integers \(\frac{a}{b} \) where \(b\ne 0\), is called a <em class="terminology">rational number</em>. The integers are rational numbers, and so are common fractions. Some examples of rational numbers are \(5, −2, 0, \frac{2}{9} , \sqrt{16},\) and \(\frac{-4}{17} \). The set of rational numbers is denoted by \(\mathbb{Q} \).
+</p>
+<p id="p-954">
+	Every rational number has a decimal form that either terminates or repeats a pattern of digits. For example,
+	\begin{equation*}
+		\frac{3}{4}=3\div 4=0.75, ~\text{a }\textbf{terminating decimal}
+	\end{equation*}
+	and
+	\begin{equation*}
+		\frac{2}{37}=9\div 37=0.243243243 \ldots
+	\end{equation*}
+	where the pattern of digits \(243\) is repeated endlessly. We use the <em class="terminology">repeater bar</em> notation to write a repeating decimal fraction:
+	\begin{equation*}
+		\frac{9}{37}= 0.\overline{243}
+	\end{equation*}
+</p></section><section class="subsection" id="subsection-57"><header title="Subsection A.12.3 Irrational Numbers"><h1 class="heading hide-type" alt="Subsection A.12.3 Irrational Numbers">
+<span class="type">Subsection</span><span class="codenumber">A.12.3</span><span class="title">Irrational Numbers</span>
+</h1></header><p id="p-955">
+	Some real numbers <!--Style me with CSS--><em>cannot</em> be written in the form \(\frac{a}{b} \) , where \(a\) and \(b\) are integers. For example, the number \(\sqrt{2} \) is not equal to any common fraction. Such numbers are called <em class="terminology">irrational numbers</em>. Examples of irrational numbers are \(\sqrt{15}, \pi, \) and \(-\sqrt[3]{7} \).
+</p>
+<p id="p-956">
+	The decimal form of an irrational number never terminates, and its digits do not follow a repeating pattern, so it is impossible to write down an exact decimal equivalent for an irrational number. However, we can obtain decimal <!--Style me with CSS--><em>approximations</em> correct to any desired degree of accuracy by rounding off. A graphing calculator gives the decimal representation of \(\pi\) as \(3.141592654\). This is not the <!--Style me with CSS--><em>exact</em> value of \(\pi\), but for most calculations it is quite adequate.
+</p>
+<p id="p-957">
+	Some \(n\)th roots are rational numbers and some are irrational numbers. For example,
+	\begin{equation*}\sqrt{49}. \sqrt[3]{\frac{27}{8}}, \text{ and } 81^{1/4}\end{equation*}
+	are rational numbers because they are equal to \(7, \frac{3}{2},\) and \(3\), respectively. On the other hand,
+	\begin{equation*}\sqrt{5}, \sqrt[3]{54}, \text{ and } 7^{1/5} \end{equation*}
+	are irrational numbers. We can use a calculator to obtain decimal approximations for each of these numbers:
+	\begin{equation*}\sqrt{5}\approx 2.236, ~~~\sqrt[3]{54}\approx 3.826, ~~~\text{ and }~~~ 7^{1/5}\approx 1.476 \end{equation*}
+</p>
+<p id="p-958">
+	The subsets of the real numbers are related as shown in <a knowl="./knowl/fig-real-numbers.html" knowl-id="xref-fig-real-numbers" alt="Figure A.136 " title="Figure A.136 ">Figure A.136</a>. Every natural number is also a whole number, every whole number is an integer, every integer is a rational number, and every rational number is real. Also, every real number is either rational or irrational.
+	<figure class="figure-like" id="fig-real-numbers"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-real-numbers.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">A.136</span></figcaption></figure>
+</p>
+<article class="example-like" id="example-86"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.137</span>
+</h5>
+<p id="p-959">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-388"><p id="p-960">
+				\(2\) is a natural number, a whole number, an integer, a rational number, and a real number.
+			</p></li>
+<li id="li-389"><p id="p-961">
+				\(\sqrt{15}\) is an irrational number and a real number.
+			</p></li>
+<li id="li-390"><p id="p-962">
+				The number \(\pi\), whose decimal representation begins \(3.14159\ldots\) is irrational and real.
+			</p></li>
+<li id="li-391"><p id="p-963">
+				\(3.14159\) is a rational and real number (which is close but not exactly equal to \(\pi\)).
+			</p></li>
+</ol>
+	</p></article></section><section class="subsection" id="subsection-58"><header title="Subsection A.12.4 Properties of the Real Numbers"><h1 class="heading hide-type" alt="Subsection A.12.4 Properties of the Real Numbers">
+<span class="type">Subsection</span><span class="codenumber">A.12.4</span><span class="title">Properties of the Real Numbers</span>
+</h1></header><p id="p-964">
+	The real numbers have several useful properties governing the operations of addition and multiplication. If \(a\), \(b\), and \(c\) represent real numbers, then each of the following equations is true:
+	<ul style="list-style-type: disc;">
+<li id="li-392"><p id="p-965">
+			\(
+				\begin{aligned}
+				\amp a + b = b + a \amp\amp\hphantom{blankblank}\text{Commutative properties}\\
+				\amp ab = ba
+				\end{aligned}
+			\)
+		</p></li>
+<li id="li-393"><p id="p-966">\(
+				\begin{aligned}
+				\amp (a + b)+c = a+(b+c) \amp\amp\text{Associative properties}\\
+				\amp (ab) = a(bc)
+				\end{aligned}
+			\)
+		</p></li>
+<li id="li-394"><p id="p-967">\(
+				\begin{aligned}
+				\amp a(b+c) = ab+ac \amp\amp\hphantom{blank0}\text{Distributive property}
+				\end{aligned}
+			\)
+		</p></li>
+<li id="li-395"><p id="p-968">\(
+				\begin{aligned}
+				\amp a + 0 = a \amp\amp\hphantom{blankblank0000}\text{Identity properties}\\
+				\amp a\cdot 1 = a
+				\end{aligned}
+			\)
+		</p></li>
+</ul>
+</p>
+<p id="p-969">
+	These properties do not mention subtraction or division. But we can define <!--Style me with CSS--><em>subtraction</em> and <!--Style me with CSS--><em>division</em> in terms of addition and multiplication. For example, we can define the difference \(a-b\) as follows:
+	\begin{equation*}
+		a − b = a + (−b)
+	\end{equation*}
+	where \(-b\), the <em class="terminology">additive inverse</em> (or <em class="terminology">opposite</em>) of \(b\), is the number that satisfies
+	\begin{equation*}b + (−b) = 0\end{equation*}
+	Similarly, we can define the quotient \(\frac{a}{b}\):
+	\begin{equation*}\frac{a}{b}=a\left(\frac{1}{b} \right) \hphantom{blank} (b\ne 0) \end{equation*}
+	where \(\frac{1}{b} \), the <em class="terminology">multiplicative inverse</em> (or <em class="terminology">reciprocal</em>) of \(b\), is the number that satisfies
+	\begin{equation*}b\cdot\frac{1}{b}=1 \hphantom{blank} (b\ne 0)\end{equation*}
+</p>
+<p id="p-970">
+	Division by zero is not defined.
+</p>
+<article class="example-like" id="example-87"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.138</span>
+</h5>
+<p id="p-971">
+		Use the commutative and associative laws to simplify the computations.
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-396"><p id="p-972">\(
+				24 + 18 + 6
+			\)</p></li>
+<li id="li-397"><p id="p-973">\(
+				4 \cdot 27\cdot 25
+			\)</p></li>
+</ol>
+	</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-69" id="solution-69"><span class="">Solution</span></a></span><span id="hk-solution-69" style="display: none;" class="tex2jax_ignore"><div class="remark-like"><p id="p-974">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-398"><p id="p-975">
+				Apply the commutative law of addition.
+				\begin{align*}
+
+						24 + 18 + 6 \amp = (24 + 6) + 18
+					\\
+
+						\amp = 30 + 18 = 48
+					
+\end{align*}
+			</p></li>
+<li id="li-399"><p id="p-976">
+				Apply the commutative law of multiplication.
+				\begin{align*}
+
+						4 \cdot 27\cdot 25 \amp = (4\cdot 25)\cdot 27
+					\\
+
+						\amp = 100 \cdot 27 = 2700
+					
+\end{align*}
+			</p></li>
+</ol>
+	</p></div></span>
+</div></div></section><section class="subsection" id="subsection-59"><header title="Subsection A.12.5 Order Properties of the Real Numbers"><h1 class="heading hide-type" alt="Subsection A.12.5 Order Properties of the Real Numbers">
+<span class="type">Subsection</span><span class="codenumber">A.12.5</span><span class="title">Order Properties of the Real Numbers</span>
+</h1></header><p id="p-977">
+	Real numbers obey properties about order, that is, properties about inequalities. The familiar inequality symbols, \(\lt\) and \(\gt\), have the following properties:
+	<ul style="list-style-type: disc;">
+<li id="li-400"><p id="p-978">
+			If \(a\) and \(b\) are any real numbers, then one of three things is true:
+			\begin{equation*}a \lt b, ~~\text{ or }~~ a\gt b, ~~\text{ or }~~  a = b\end{equation*}
+		</p></li>
+<li id="li-401"><p id="p-979">
+			(Transitive property) For real numbers \(a\), \(b\), and \(c\),
+			\begin{equation*}\text{if } a \lt b ~\text{ and }~ b \lt c, ~\text{ then }~ a \lt c\end{equation*}
+		</p></li>
+</ul>
+	We also have three properties that are useful for solving inequalities:
+	<ul style="list-style-type: disc;">
+<li id="li-402"><p id="p-980">
+			If \(a\lt b\), then \(a+c\lt b+c\).
+		</p></li>
+<li id="li-403"><p id="p-981">
+			If \(a\lt b\) and \(c\gt 0\), then \(ac \lt bc\).
+		</p></li>
+<li id="li-404"><p id="p-982">
+			If \(a\lt b\) and \(c\lt 0\), then \(ac\gt bc\).
+		</p></li>
+</ul>
+</p>
+<article class="example-like" id="example-88"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">A.139</span>
+</h5>
+<p id="p-983">
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-405"><p id="p-984">
+				If \(x\lt y\) and \(y\lt -2\), then \(x\lt -2\)
+			</p></li>
+<li id="li-406"><p id="p-985">
+				\(\pi \lt 3.1416\), so \(10\pi\lt 31.416\).
+			</p></li>
+<li id="li-407"><p id="p-986">
+				\(\frac{1}{3}\gt 0.33\), so \(−\frac{1}{3}\lt −0.33.\)
+			</p></li>
+</ol>
+	</p></article></section></section></div></main>
+</div>
+</body>
+</html>

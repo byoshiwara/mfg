@@ -1,34 +1,24 @@
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-09-09T12:40:50-07:00    *-->
+<!--*    on 2016-09-11T14:01:34-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
 <p><h5 class="heading"><span class="type">Paragraph</span></h5>
-	The triangular matrix we obtain by row reduction is an example of <em class="terminology">row echelon form</em>. In a row echelon matrix, (1) the first nonzero entry in any row is farther to the right than the first nonzero entry in the rows above it, (2) the entries directly below the first nonzero entry in any row are all zeros, and (3) any row consisting entirely of zeros is below all rows with any nonzero entry. If we divide each row by its leading nonzero entry, so that the leading entry is \(1\), and if we use row reduction to obtain \(0\)s above the leading \(1\) as well as below it, the resulting matrix is said to be in <em class="terminology">reduced row echelon form</em>. This form is especially convenient because we do not have to use backsubstitution to finish solving the system; we can read off the solutions directly from the matrix. For example, you can check that the matrix
-	\begin{equation*}
-		\left[ \begin{array}{@{}cccc|c@{}}
-			1 \amp 0  \amp 0 \amp 0 \amp -2  \\ 
-			0 \amp 1  \amp 0 \amp 0 \amp 3 \\
-			0 \amp 0  \amp 1 \amp 0 \amp -3  \\ 
-			0 \amp 0  \amp 0 \amp 1 \amp 4 
-		\end{array}\right]		
-	\end{equation*}
-	corresponds to the system
+	A solution to an equation in three variables, such as
+	\begin{equation*}x + 2y − 3z = −4\end{equation*}
+	is an ordered triple of numbers that satisfies the equation. For example, \((0, -2, 0)\) and \((-1, 0, 1)\) are solutions to the equation above, but \((1, 1, 1)\) is not. You can verify this by substituting the coordinates into the equation to see if a true statement results.
 	\begin{alignat*}{5}
 
-			a\amp {}+{} \amp 0b \amp {}+{}\amp 0c\amp {}+{}\amp 0d \amp =\amp -2
+			\amp\text{For }(0,−2, 0):{}\amp 0   {}+{}\amp 2(−2) \amp{}−{}\amp 3(0) \amp = −4{}\amp\hphantom{blank} \text{True}\amp
 		\\
 
-			0a\amp {}+{}\amp b\amp {}+{}\amp 0c\amp {}+{}\amp 0d \amp =\amp 3
+			\amp\text{For }(−1, 0, 1):{}\amp {−}1 {}+{}\amp 2(0)  \amp{}−{}\amp 3(1) \amp = −4{}\amp\hphantom{blank} \text{True}\amp
 		\\
 
-			0a\amp {}+{}\amp 0b\amp {}+{}\amp c\amp {}+{}\amp 0d\amp =\amp -3
-		\\
-
-			0a\amp {}+{}\amp 0b\amp {}+{}\amp 0c\amp {}+{}\amp d\amp =\amp 4
+			\amp\text{For }(1, 1, 1):{}\amp 1   {}+{}\amp 2(1)  \amp{}−{}\amp 3(1) \amp = −4{}\amp\hphantom{blank} \text{Not true}\amp 
 		
 \end{alignat*}
-		From this system, it is easy to read the solutions \(a=-2\), \(b=3\), \(c=-3\), and \(d=4\).
-</p><span class="incontext"><a href="Solving-Linear-Systems-Using-Matrices.html#p-2385">in-context</a></span>
+	As with the two-variable case, a single linear equation in three variables has infinitely many solutions.
+</p><span class="incontext"><a href="Systems-of-Linear-Equations-in-Three-Variables.html#p-2385">in-context</a></span>
