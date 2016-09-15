@@ -1,20 +1,34 @@
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-09-12T18:04:55-07:00    *-->
+<!--*    on 2016-09-15T14:07:18-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
-<p><h5 class="heading"><span class="type">Paragraph</span></h5>Consider the trinomial
-    \begin{equation*}
-        x^2 + 10x + 16
-    \end{equation*}
-    Can we find two binomial factors,
-    \begin{equation*}(x + a)(x + b)\end{equation*}
-    whose product is the given trinomial? The product of the binomials is
-    \begin{equation*}(x + a)(x + b) = x^2 + (a + b)x + ab\end{equation*}
-    Thus, we are looking for two numbers, a and b, that satisfy
-    \begin{equation*}(x + a)(x + b) = x^2 + (a + b)x + ab\end{equation*}
-    \begin{equation*}(x + a)(x + b) = x^2 + (a + b)x + ab= x^2 + 10x + 16\end{equation*}
-    By comparing the coefficients of the terms in the two trinomials, we see that \(a + b = 10\) and \(ab = 16\). That is, the sum of the two numbers is the coefficient of the linear term, \(10\), and their product is the constant term, \(16\).
-</p><span class="incontext"><a href="appendix-a.html#p-3667">in-context</a></span>
+<p><h5 class="heading"><span class="type">Paragraph</span></h5>
+	The triangular matrix we obtain by row reduction is an example of <em class="terminology">row echelon form</em>. In a row echelon matrix, (1) the first nonzero entry in any row is farther to the right than the first nonzero entry in the rows above it, (2) the entries directly below the first nonzero entry in any row are all zeros, and (3) any row consisting entirely of zeros is below all rows with any nonzero entry. If we divide each row by its leading nonzero entry, so that the leading entry is \(1\), and if we use row reduction to obtain \(0\)s above the leading \(1\) as well as below it, the resulting matrix is said to be in <em class="terminology">reduced row echelon form</em>. This form is especially convenient because we do not have to use backsubstitution to finish solving the system; we can read off the solutions directly from the matrix. For example, you can check that the matrix
+	\begin{equation*}
+		\left[ \begin{array}{@{}cccc|c@{}}
+			1 \amp 0  \amp 0 \amp 0 \amp -2  \\ 
+			0 \amp 1  \amp 0 \amp 0 \amp 3 \\
+			0 \amp 0  \amp 1 \amp 0 \amp -3  \\ 
+			0 \amp 0  \amp 0 \amp 1 \amp 4 
+		\end{array}\right]		
+	\end{equation*}
+	corresponds to the system
+	\begin{alignat*}{5}
+
+			a\amp {}+{} \amp 0b \amp {}+{}\amp 0c\amp {}+{}\amp 0d \amp =\amp -2
+		\\
+
+			0a\amp {}+{}\amp b\amp {}+{}\amp 0c\amp {}+{}\amp 0d \amp =\amp 3
+		\\
+
+			0a\amp {}+{}\amp 0b\amp {}+{}\amp c\amp {}+{}\amp 0d\amp =\amp -3
+		\\
+
+			0a\amp {}+{}\amp 0b\amp {}+{}\amp 0c\amp {}+{}\amp d\amp =\amp 4
+		
+\end{alignat*}
+		From this system, it is easy to read the solutions \(a=-2\), \(b=3\), \(c=-3\), and \(d=4\).
+</p><span class="incontext"><a href="Solving-Linear-Systems-Using-Matrices.html#p-3667">in-context</a></span>
