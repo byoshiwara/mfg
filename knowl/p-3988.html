@@ -1,19 +1,67 @@
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-09-20T12:33:27-07:00    *-->
+<!--*    on 2016-09-24T16:30:53-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
 <p><h5 class="heading"><span class="type">Paragraph</span></h5>
-	In this section, we consider a mathematical tool called a <em class="terminology">matrix</em> (plural: matrices) that has wide application in mathematics, business, science, and engineering. A matrix is a rectangular array of numbers or <em class="terminology">entries</em>. These entries are ordinarily displayed in rows and columns, and the entire matrix is enclosed in brackets or parentheses. Thus,
-	\begin{equation*}
-		\begin{bmatrix}1\amp 2\amp 3 \\ 4 \amp5 \amp6 \\ 7 \amp8\amp 9
-		\end{bmatrix},
-		\begin{bmatrix}2\amp −1\amp 3 \\4\amp 0\amp 2
-		\end{bmatrix}, \text{ and }
-		\begin{bmatrix} 4\\5\\6
-		\end{bmatrix}
-	\end{equation*}
-	are matrices. A matrix of <em class="terminology">order</em>, or <em class="terminology">dimension</em>, \(n\times m\) (read "\(n\) by \(m\)") has \(n\) (horizontal) rows and \(m\) (vertical) columns. The matrices above are \(3\times 3\), \(2\times 3\), and \(3\times 1\), respectively. The first matrix—in which the number of rows is equal to the number of columns—is an example of a <em class="terminology">square matrix</em>.
-</p><span class="incontext"><a href="Solving-Linear-Systems-Using-Matrices.html#p-3988">in-context</a></span>
+		<ol style="list-style-type: lower-alpha;">
+<li id="li-2268"><p id="p-3989">
+				If there is a headwind of \(x\) miles per hour, Francine's ground speed will be \(15 − x\) miles per hour. Using the fact that time \(\text{time} = \frac{\text{distance}}{\text{rate}}\), we find that the time needed for the flight will be
+				\begin{equation*}
+					t = f (x) = \frac{60}{15 − x}
+				\end{equation*}
+			</p></li>
+<li id="li-2269"><p id="p-3990">
+				Evaluate the function for several values of \(x\), as shown in the table below.
+				<figure class="figure-like" id="table-177"><table>
+<tr>
+<td class="c m b1 r1 l1 t3">\(x\)</td>
+<td class="c m b1 r1 l0 t3">\(0\)</td>
+<td class="c m b1 r1 l0 t3">\(3\)</td>
+<td class="c m b1 r1 l0 t3">\(5\)</td>
+<td class="c m b1 r1 l0 t3">\(7\)</td>
+<td class="c m b1 r1 l0 t3">\(9\)</td>
+<td class="c m b1 r1 l0 t3">\(10\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0">\(t\)</td>
+<td class="c m b1 r1 l0 t0">\(4\)</td>
+<td class="c m b1 r1 l0 t0">\(5\)</td>
+<td class="c m b1 r1 l0 t0">\(6\)</td>
+<td class="c m b1 r1 l0 t0">\(7.5\)</td>
+<td class="c m b1 r1 l0 t0">\(10\)</td>
+<td class="c m b1 r1 l0 t0">\(12\)</td>
+</tr>
+</table></figure><div class="posterior"></div>
+			    For example, if the headwind is \(\alert{5}\) miles per hour, then
+			    \begin{equation*}
+			    	t=\frac{60}{15-\alert{5}}=\frac{60}{10}=6
+			    \end{equation*}
+			    Francine's effective speed is only \(10\) miles per hour, and it will take her \(6\) hours to fly the \(60\) miles. The table shows that as the speed of the headwind increases, the time required for the flight increases also.
+			</p></li>
+<li id="li-2270">
+<p id="p-3991">
+				The graph of the function is shown in <a knowl="./knowl/fig-graph-time-against-headwind.html" knowl-id="xref-fig-graph-time-against-headwind" alt="Figure 7.64 " title="Figure 7.64 ">Figure 7.64</a>. You can use your calculator with the window
+				\begin{align*}
+
+						\text{Xmin} \amp = −8.5 \amp\amp \text{Xmax} = 15
+					\\
+
+						\text{Ymin} \amp = 0 \amp\amp \text{Ymax} = 30
+					
+\end{align*}
+				to verify the graph. In particular, the point \((0, 4)\) lies on the graph. This point tells us that if there is no wind, Francine can fly \(60\) miles in \(4\) hours, as we calculated earlier.</p>
+<p id="p-3992">
+				<figure class="figure-like" id="fig-graph-time-against-headwind"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-graph-time-against-headwind.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">7.64</span></figcaption></figure><div class="posterior"></div>
+			</p>
+<p id="p-3993">
+				The graph is increasing, as indicated by the table of values. In fact, as the speed of the wind gets close to \(15\) miles per hour, Francine's flying time becomes extremely large. In theory, if the wind speed were exactly \(15\) miles per hour, Francine would never complete her flight. On the graph, the time becomes infinite at \(x = 15\).
+			</p>
+<p id="p-3994">
+				What about negative values for \(x\)? If we interpret a negative headwind as a tailwind, Francine's flying time should decrease for negative \(x\)-values. For example, if \(x = −5\), there is a tailwind of \(5\) miles per hour, so Francine's effective speed is \(20\)  miles per hour, and she can complete the flight in \(3\) hours. As the tailwind gets stronger (that is, as we move farther to the left in the \(x\)-direction), Francine's flying time continues to decrease, and the graph approaches the \(x\)-axis.
+			</p>
+</li>
+</ol>
+	</p><span class="incontext"><a href="Graphing-Rational-Functions.html#p-3988">in-context</a></span>
