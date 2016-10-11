@@ -1,106 +1,419 @@
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-10-07T14:14:00-07:00    *-->
+<!--*    on 2016-10-10T14:46:00-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
 <article class="example-like"><h5 class="heading">
-<span class="type">Investigation</span><span class="codenumber">1.1</span><span class="title">Interpolating Polynomials</span>
+<span class="type">Investigation</span><span class="codenumber">1.1</span><span class="title">Eight Basic Functions</span>
 </h5>
-<p>
-	In <span>&lt;&lt;chap6&gt;&gt;</span>, we learned to fit a quadratic function through three points on its graph. A polynomial whose graph passes through a given set of points is called an <em class="terminology">interpolating polynomial</em>. Because polynomials are easy to evaluate and manipulate, they are often used to approximate more complicated functions and to describe the shapes of curves.
-</p>
-<p>
-	In this Investigation, we find interpolating polynomials of degrees \(1\), \(2\), and \(3\) to approximate the function \(f(x) = \frac{12}{x}\).
-</p>
-<p>
-	<ol style="list-style-type: decimal;">
-<li id="li-1"><ol style="list-style-type: lower-alpha;">
-<li id="li-2"><p id="p-19">
-					Graph the function \(f(x) = \frac{12}{x}\) in the window
-					\begin{align*}
+<p>Part I Some Powers and Roots</p>
+<ol style="list-style-type: decimal;">
+<li id="li-9">Complete <a knowl="./knowl/table-quadratic-cubic.html" knowl-id="xref-table-quadratic-cubic" alt="Table 1.12 " title="Table 1.12 ">Table 1.12</a>, a table of values for the squaring function, \(f (x) = x^2\), and the cubing function, \(g(x) = x^3\). Then sketch each function on graph paper, using the table values to help you scale the axes.</li>
+<li id="li-10">Verify both graphs with your graphing calculator.</li>
+<li id="li-11">State the intervals on which each graph is increasing.</li>
+<li id="li-12">Write a few sentences comparing the two graphs. The graph of \(y = x^2\) is called a <em class="terminology">parabola</em>, and the graph of \(y = x^3\) is called a <em class="terminology">cubic</em>.</li>
+<li id="li-13">Complete <a knowl="./knowl/table-sqrt.html" knowl-id="xref-table-sqrt" alt="Table 1.13 " title="Table 1.13 ">Table 1.13</a> and <a knowl="./knowl/table-cube-root.html" knowl-id="xref-table-cube-root" alt="Table 1.14 " title="Table 1.14 ">Table 1.14</a> for the square root function, \(f (x) = \sqrt{x}\), and the cube root function, \(g(x) = \sqrt[3]{x} \). (Round your answers to two decimal places.) Then sketch each function on graph paper, using the table values to help you scale the axes.
 
-							\text{Xmin} \amp = -2 \amp\amp \text{Xmax} = 7.4
-						\\
-
-							\text{Ymin} \amp = -5 \amp\amp \text{Ymax} = 20
-						
-\end{align*}
-				</p></li>
-<li id="li-3"><p id="p-20">
-					Complete the table of values.
-					<table>
+<div class="sidebyside" style="" id="sidebyside-5">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width" style="width:33.3333333333333%;justify-content:flex-start;"><table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(1\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(2\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(3\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(4\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(5\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(6\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(f(x)=x^2\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(g(x)=x^3\)</td>
 </tr>
 <tr>
-<td class="c m b1 r1 l1 t0 lines">\(f(x)\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l1 t0 lines">\(-3\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(0\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(3\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width" style="width:33.3333333333333%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3 lines">\(x\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(f(x)=\sqrt{x}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(0\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(3\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(4\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(5\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(7\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(9\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width" style="width:33.3333333333333%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3 lines">\(x\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(g(x)=\sqrt[3]{x}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-8\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-4\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(0\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(4\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(8\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+</table></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:33.3333333333333%;"><span class="heading">Table</span><span class="codenumber">1.12</span></figcaption><figcaption class="sbscaption" style="width:33.3333333333333%;"><span class="heading">Table</span><span class="codenumber">1.13</span></figcaption><figcaption class="sbscaption" style="width:33.3333333333333%;"><span class="heading">Table</span><span class="codenumber">1.14</span></figcaption>
+</div>
+</div>
+</li>
+<li id="li-14">Verify both graphs with your graphing calculator.</li>
+<li id="li-15">State the intervals on which each graph is increasing.</li>
+<li id="li-16">Write a few sentences comparing the two graphs.</li>
+</ol>
+<p>Part II Asymptotes</p>
+<ol style="list-style-type: decimal;">
+<li id="li-17">Complete <a knowl="./knowl/table-reciprocals.html" knowl-id="xref-table-reciprocals" alt="Table 1.15 " title="Table 1.15 ">Table 1.15</a> for the functions
+        \begin{equation*}f(x)=\frac{1}{x} ~\text{ and } ~ g(x)=\frac{1}{x^2}\end{equation*}
+    What is true about \(f (0)\) and \(g(0)\)?
+
+<figure class="figure-like" id="table-reciprocals"><table>
+<tr>
+<td class="c m b1 r1 l1 t3 lines">\(x\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(f(x)=\frac{1}{x}\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(g(x)=\frac{1}{x^2}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-4\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-3\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(0\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(3\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(4\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 </table>
-				</p></li>
-</ol></li>
-<li id="li-4">
-			First we will find a linear polynomial \(P_1(x) = ax + b\) that matches \(f(x)\) at \(x = 1\) and \(x=6\). We must find constants \(a\) and \(b\) so that \(P_1(1) = f(1)\) and \(P_1(6) = f(6)\).
-			<ol style="list-style-type: lower-alpha;">
-<li id="li-5"><p id="p-21">
-					The two conditions above translate into equations about \(a\) and \(b\). The constants \(a\) and \(b\) must satisfy the system
-					\begin{align*}
-a \cdot 1 + b \amp = f (1)\\
-a \cdot 6 + b \amp = f (6)
-\end{align*}
-					Solve the system and find the polynomial \(P_1(x)\).
-				</p></li>
-<li id="li-6"><p id="p-22">
-					Graph \(P_1(x)\) in the same window with \(f(x)\).
-				</p></li>
-</ol>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.15</span></figcaption></figure>
 </li>
-<li id="li-7"><p id="p-23">
-			Next, we will find a quadratic polynomial \(P_2(x) = ax^2 + bx + c\) that matches \(f(x)\) at \(x = 1\), \(2.5\), and \(6\).
-			<ol style="list-style-type: lower-alpha;">
-<li id="li-8"><p id="p-24">
-					Write and solve a system of equations for the constants \(a\), \(b\), and \(c\).
-				</p></li>
-<li id="li-9"><p id="p-25">
-					Graph \(P_2(x)\) in the same window with \(f(x)\).
-				</p></li>
+<li id="li-18">
+        Prepare a grid on graph paper, scaling both axes from \(−5\) to \(5\). Plot the points from <a knowl="./knowl/table-reciprocals.html" knowl-id="xref-table-reciprocals" alt="Table 1.15 " title="Table 1.15 ">Table 1.15</a> and connect them with smooth curves.
+    </li>
+<li id="li-19">
+<p id="p-15">As \(x\) increases through larger and larger values, what happens to the values of \(f (x)\)?Extend your graph to reflect your answer. </p>
+<p id="p-16">What happens to \(f (x)\) as \(x\) decreases through larger and larger negative values (that is, for \(x = −5,−6,−7, \ldots \))? Extend your graph for these x-values. </p>
+<p id="p-17">As the values of \(x\) get larger in absolute value, the graph approaches the \(x\)-axis. However, because \(\frac{1}{x}\) never <!--Style me with CSS--><em>equals</em> zero for any \(x\)-value, the graph never actually touches the \(x\)-axis. We say that the \(x\)-axis is a <em class="terminology">horizontal asymptote</em> for the graph.</p>
+</li>
+<li id="li-20">
+        Repeat step (3) for the graph of \(g(x)\).
+    </li>
+<li id="li-21">
+        Next we will examine the graphs of \(f\) and \(g\) near \(x = 0\). Use your calculator to evaluate \(f\) for several \(x\)-values close to zero and record the results in <a knowl="./knowl/table-reciprocals2a.html" knowl-id="xref-table-reciprocals2a" alt="Table 1.16 " title="Table 1.16 ">Table 1.16</a> and <a knowl="./knowl/table-reciprocals2b.html" knowl-id="xref-table-reciprocals2b" alt="Table 1.17 " title="Table 1.17 ">Table 1.17</a>.
+
+    <div class="sidebyside" style="" id="sidebyside-6">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3 lines">\(x\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(f(x)=\frac{1}{x}\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(g(x)=\frac{1}{x^2}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-0.1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-0.01\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-0.001\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3 lines">\(x\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(f(x)=\frac{1}{x}\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(g(x)=\frac{1}{x^2}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(0.1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(0.01\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(0.001\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+</table></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"><span class="heading">Table</span><span class="codenumber">1.16</span></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="heading">Table</span><span class="codenumber">1.17</span></figcaption>
+</div>
+</div>
+<p id="p-18">What happens to the values of \(f (x)\) as \(x\) approaches zero? Extend your graph of \(f\) to reflect your answer.</p>
+<p id="p-19">As \(x\) approaches zero from the left (through negative values), the function values decrease toward \(-\infty\). As \(x\) approaches zero from the right (through positive values), the function values increase toward \(\infty\). The graph approaches but never touches the vertical line \(x = 0\) (the \(y\)-axis.)We say that the graph of \(f\) has a <em class="terminology">vertical asymptote</em> at \(x = 0\).</p>
+</li>
+<li id="li-22">
+        Repeat step (5) for the graph of \(g(x)\).
+    </li>
+<li id="li-23">
+        The functions \(f (x) = \frac{1}{x}\) and \(g(x) = \frac{1}{x^2}\) are examples of <em class="terminology">rational functions</em>, so called because they are fractions, or ratios. Verify both graphs with your graphing calculator. Use the window
+        \begin{align}
+        \text{Xmin} \amp = −4 \amp\amp \text{Xmax} = 4\\
+        \text{Ymin} \amp = −4 \amp\amp \text{Ymax} = 4
+        \end{align}
+    </li>
+<li id="li-24">
+        State the intervals on which each graph is increasing.
+    </li>
+<li id="li-25">
+        Write a few sentences comparing the two graphs.
+    </li>
 </ol>
-		</p></li>
-<li id="li-10"><p id="p-26">
-			We can also find a cubic polynomial \(P_3(x) = ax^3 + bx^2 + cx + d\) that matches \(f(x)\) at \(x = 1\), \(3\), \(4\), and \(6\).
-			<ol style="list-style-type: lower-alpha;">
-<li id="li-11"><p id="p-27">
-					Write a system of equations for \(a\), \(b\), \(c\), and \(d\). We will see how to solve such a system later in this chapter. For now, we will use the calculator's cubic regression feature.
-				</p></li>
-<li id="li-12"><p id="p-28">
-					Enter the coordinates of \(P_3(x)\) evaluated at \(x=1\), \(3\), \(4\), and \(6\) into \(L_1\) and \(L_2\) under the <!--Style me with CSS--><em>STAT EDIT</em> menu. Then, from the <!--Style me with CSS--><em>STAT CALC</em> menu, choose <!--Style me with CSS--><em>6: CubicReg</em> and press <tt class="code-inline tex2jax_ignore">ENTER</tt>.
-				</p></li>
-<li id="li-13"><p id="p-29">
-					Graph \(P_3(x)\) in the same window with \(f(x)\).
-				</p></li>
-</ol>
-		</p></li>
-<li id="li-14"><p id="p-30">
-			How well does each interpolating polynomial approximate the function \(f(x)\)? Graph the "error function," \(E_n(x)\), for each polynomial on the interval \([−2, 7.4]\).
-			\begin{align*}
-E_1(x) \amp = f(x) − P_1(x)\\
-E_2(x) \amp = f(x) − P_2(x)\\
-E_3(x) \amp = f(x) − P_3(x)
-\end{align*}
-			(You will have to choose a suitable \(y\)-window for each error function.) What is the maximum error on the interval \([−2, 7.4]\) for each approximating polynomial?
-		</p></li>
-</ol>
-</p></article><span class="incontext"><a href="chap8.html#investigation-1">in-context</a></span>
+<p>Part III Absolute Value</p>
+<ol style="list-style-type: decimal;">
+<li id="li-26">
+        Complete <a knowl="./knowl/table-linear-abs.html" knowl-id="xref-table-linear-abs" alt="Table 1.18 " title="Table 1.18 ">Table 1.18</a> for the two functions \(f (x) = x\) and \(g(x) = \abs{x}\). Then sketch each function on graph paper, using the table values to help you scale the axes.
+            <figure class="figure-like" id="table-linear-abs"><table>
+<tr>
+<td class="c m b1 r1 l1 t3 lines">\(x\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(f(x)=x\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(g(x)=\abs{x}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-4\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-3\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(-\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(0\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(\frac{1}{2}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(1\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(2\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(3\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(4\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">1.18</span></figcaption></figure>
+</li>
+<li id="li-27">
+        Verify both graphs with your graphing calculator. Your calculator uses the notation \(abs (x)\) instead of \(\abs{x}\) for the absolute value of \(x\). First, position the cursor after \(Y_1 =\) in the graphing window. Now access the absolute value function by pressing <tt class="code-inline tex2jax_ignore">2nd</tt>\(0\) for <!--Style me with CSS--><em>CATALOG</em>; then <tt class="code-inline tex2jax_ignore">ENTER</tt> for <!--Style me with CSS--><em>abs(</em>. Don’t forget to press \(X\) if you want to graph \(y = \abs{x}\).
+    </li>
+<li id="li-28">
+        State the intervals on which each graph is increasing.
+    </li>
+<li id="li-29">
+        Write a few sentences comparing the two graphs.
+    </li>
+</ol></article><span class="incontext"><a href="basic-functions.html#investigation-1">in-context</a></span>

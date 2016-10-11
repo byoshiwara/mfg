@@ -1,8 +1,38 @@
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-10-09T17:33:11-07:00    *-->
+<!--*    on 2016-10-11T09:42:36-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
-<p><h5 class="heading"><span class="type">Paragraph</span></h5>You are familiar with the use of letters, or <em class="terminology">variables</em>, to stand for unknown numbers in equations or formulas. Variables are also used to represent numerical quantities that change over time or in different situations. For example, \(p\) might stand for the atmospheric pressure at different heights above the Earth's surface. Or \(N\) might represent the number of people infected with cholera \(t\) days after the start of an epidemic.</p><span class="incontext"><a href="appendix-a.html#p-5158">in-context</a></span>
+<p><h5 class="heading"><span class="type">Paragraph</span></h5>
+		We perform the transformation in two steps. First, we obtain zeros in the lower two entries of the first column. We get these zeros by adding suitable multiples of the first row to the second and third rows:
+	\begin{equation*}
+		\left[ \begin{array}{@{}ccc|c@{}}
+			1 \amp -3  \amp 1  \amp -4 \\ 
+			3 \amp -1  \amp -1 \amp 8\\ 
+			2 \amp -2  \amp 3  \amp -1\\ 
+		\end{array}\right]				
+		\xrightarrow[−2(\text{row } 1) + \text{row }3]{−3(\text{row } 1) + \text{row }2}
+		\left[ \begin{array}{@{}ccc|c@{}}
+			1 \amp -3  \amp 1  \amp -4 \\ 
+			0 \amp 8   \amp -4 \amp 20 \\ 
+			0 \amp 4   \amp 1  \amp 7 \\ 
+		\end{array}\right]	
+	\end{equation*}
+	Next we obtain a zero as the second entry of the third row by adding a suitable multiple of the second row. For this matrix, we add \(−12(\text{row }2)\) to \(\text{row }3\):
+	\begin{equation*}
+		\left[ \begin{array}{@{}ccc|c@{}}
+			1 \amp -3  \amp 1  \amp -4 \\ 
+			0 \amp 8   \amp -4 \amp 20 \\ 
+			0 \amp 4   \amp 1  \amp 7 \\ 
+		\end{array}\right]				
+		\xrightarrow[\frac{-1}{2}(\text{row } 2) + \text{row }3]{}
+		\left[ \begin{array}{@{}ccc|c@{}}
+			1 \amp -3  \amp 1  \amp -4 \\ 
+			0 \amp 8   \amp -4 \amp 20 \\ 
+			0 \amp 0   \amp 3  \amp -3 \\ 
+		\end{array}\right]	
+	\end{equation*}
+	The last matrix is in upper triangular form.
+	</p><span class="incontext"><a href="Solving-Linear-Systems-Using-Matrices.html#p-5158">in-context</a></span>
