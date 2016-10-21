@@ -1,29 +1,38 @@
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-10-14T14:18:30-07:00    *-->
+<!--*    on 2016-10-21T14:44:46-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
 <p><h5 class="heading"><span class="type">Paragraph</span></h5>
-        We first collect all the variable terms on one side of the equation, and the constant terms on the other side.
-        \begin{align*}
-
-                3x − 5 \alert{{}− x} \amp = x + 3 \alert{{}− x}\amp\amp \text{Subtract }x \text{ from both sides.}
-            \\
-
-                2x − 5 \amp = 3\amp\amp \text{Simplify.}
-            \\
-
-                2x − 5 \alert{{}+ 5} \amp = 5 \alert{{}+ 5}\amp\amp \text{Add 5 to both sides.}
-            \\
-
-                2x \amp = 8 \amp\amp\text{Simplify.}
-            \\
-
-                \frac{2x}{\alert{2}}\amp =\frac{8}{\alert{2}}\amp\amp\text{Divide both sides by 2.}
-            \\
-x\amp = 4\amp\amp\text{Simplify.}
-\end{align*}
-        The solution is \(4\). (You can check the solution by substituting \(4\) into the original equation to show that a true statement results.)
-    </p><span class="incontext"><a href="appendix-a.html#p-5666">in-context</a></span>
+		We perform the transformation in two steps. First, we obtain zeros in the lower two entries of the first column. We get these zeros by adding suitable multiples of the first row to the second and third rows:
+	\begin{equation*}
+		\left[ \begin{array}{@{}ccc|c@{}}
+			1 \amp -3  \amp 1  \amp -4 \\ 
+			3 \amp -1  \amp -1 \amp 8\\ 
+			2 \amp -2  \amp 3  \amp -1\\ 
+		\end{array}\right]				
+		\xrightarrow[−2(\text{row } 1) + \text{row }3]{−3(\text{row } 1) + \text{row }2}
+		\left[ \begin{array}{@{}ccc|c@{}}
+			1 \amp -3  \amp 1  \amp -4 \\ 
+			0 \amp 8   \amp -4 \amp 20 \\ 
+			0 \amp 4   \amp 1  \amp 7 \\ 
+		\end{array}\right]	
+	\end{equation*}
+	Next we obtain a zero as the second entry of the third row by adding a suitable multiple of the second row. For this matrix, we add \(−12(\text{row }2)\) to \(\text{row }3\):
+	\begin{equation*}
+		\left[ \begin{array}{@{}ccc|c@{}}
+			1 \amp -3  \amp 1  \amp -4 \\ 
+			0 \amp 8   \amp -4 \amp 20 \\ 
+			0 \amp 4   \amp 1  \amp 7 \\ 
+		\end{array}\right]				
+		\xrightarrow[\frac{-1}{2}(\text{row } 2) + \text{row }3]{}
+		\left[ \begin{array}{@{}ccc|c@{}}
+			1 \amp -3  \amp 1  \amp -4 \\ 
+			0 \amp 8   \amp -4 \amp 20 \\ 
+			0 \amp 0   \amp 3  \amp -3 \\ 
+		\end{array}\right]	
+	\end{equation*}
+	The last matrix is in upper triangular form.
+	</p><span class="incontext"><a href="Solving-Linear-Systems-Using-Matrices.html#p-5666">in-context</a></span>
