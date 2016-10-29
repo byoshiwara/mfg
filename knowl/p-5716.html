@@ -1,34 +1,32 @@
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-10-21T14:44:49-07:00    *-->
+<!--*    on 2016-10-28T16:56:16-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
 <p><h5 class="heading"><span class="type">Paragraph</span></h5>
-	The triangular matrix we obtain by row reduction is an example of <em class="terminology">row echelon form</em>. In a row echelon matrix, (1) the first nonzero entry in any row is farther to the right than the first nonzero entry in the rows above it, (2) the entries directly below the first nonzero entry in any row are all zeros, and (3) any row consisting entirely of zeros is below all rows with any nonzero entry. If we divide each row by its leading nonzero entry, so that the leading entry is \(1\), and if we use row reduction to obtain \(0\)s above the leading \(1\) as well as below it, the resulting matrix is said to be in <em class="terminology">reduced row echelon form</em>. This form is especially convenient because we do not have to use backsubstitution to finish solving the system; we can read off the solutions directly from the matrix. For example, you can check that the matrix
-	\begin{equation*}
-		\left[ \begin{array}{@{}cccc|c@{}}
-			1 \amp 0  \amp 0 \amp 0 \amp -2  \\ 
-			0 \amp 1  \amp 0 \amp 0 \amp 3 \\
-			0 \amp 0  \amp 1 \amp 0 \amp -3  \\ 
-			0 \amp 0  \amp 0 \amp 1 \amp 4 
-		\end{array}\right]		
-	\end{equation*}
-	corresponds to the system
-	\begin{alignat*}{5}
+		We use the calculator to graph both equations on the same axes, as shown in <a knowl="./knowl/fig-GC-parallel-lines.html" knowl-id="xref-fig-GC-parallel-lines" alt="Figure 8.13 " title="Figure 8.13 ">Figure 8.13</a>. First, rewrite the second equation in slope-intercept form by solving for \(y\).
+		\begin{align*}
 
-			a\amp {}+{} \amp 0b \amp {}+{}\amp 0c\amp {}+{}\amp 0d \amp =\amp -2
-		\\
+				2x + 2y \amp = 3\amp\amp\text{Substract } 2x \text{ from both sides.}
+			\\
 
-			0a\amp {}+{}\amp b\amp {}+{}\amp 0c\amp {}+{}\amp 0d \amp =\amp 3
-		\\
+				2y \amp = −2x + 3\amp\amp\text{Divide both sides by 2.}
+			\\
 
-			0a\amp {}+{}\amp 0b\amp {}+{}\amp c\amp {}+{}\amp 0d\amp =\amp -3
-		\\
+				y \amp = −x + 1.5
+			
+\end{align*}
+		Now enter the equations as
+		\begin{align*}
 
-			0a\amp {}+{}\amp 0b\amp {}+{}\amp 0c\amp {}+{}\amp d\amp =\amp 4
-		
-\end{alignat*}
-		From this system, it is easy to read the solutions \(a=-2\), \(b=3\), \(c=-3\), and \(d=4\).
-</p><span class="incontext"><a href="Solving-Linear-Systems-Using-Matrices.html#p-5716">in-context</a></span>
+				Y_1 \amp= −X + 5
+			\\
+
+				Y_2 \amp = −X + 1.5
+			
+\end{align*}
+		<figure class="figure-like" id="fig-GC-parallel-lines"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-GC-parallel-lines.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.13</span></figcaption></figure>
+		The lines do not intersect within the viewing window; they appear to be parallel. If we look again at the equations of the lines, we recognize that both have slope \(-1\) but different \(y\)-intercepts, so they are parallel. Since parallel lines never meet, there is no solution to the system.
+	</p><span class="incontext"><a href="Systems-of-Linear-Equations-in-Two-Variables.html#p-5716">in-context</a></span>

@@ -1,45 +1,48 @@
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-10-21T14:44:59-07:00    *-->
+<!--*    on 2016-10-28T16:56:20-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
 <article class="list"><h5 class="heading">
-<span class="type">Item</span> <span class="codenumber"></span> <span class="title">Step 1:</span>
-</h5>Step 1:<p id="p-5847">
-				\begin{gather*}
-\text{Number of packages purchased from Company A: } ~x\\
-\text{Number of packages purchased from Company B: } ~y
-\end{gather*}
-				First write the objective function. The store would like to minimize its cost, so
-				\begin{equation*}C = 15x + 25y\end{equation*}
-				Next, write the constraints. These will be a system of inequalities. It may help to organize the information into a table.
-				<figure class="figure-like" id="table-267"><table>
-<tr>
-<td class="c m b1 r1 l1 t1 lines"></td>
-<td class="c m b1 r1 l0 t1 lines">Company A</td>
-<td class="c m b1 r1 l0 t1 lines">Company B</td>
-<td class="c m b1 r1 l0 t1 lines">Required</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">Granola</td>
-<td class="c m b1 r1 l0 t0 lines">\(2x\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(3y\)</td>
-<td class="c m b1 r1 l0 t0 lines">12</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">Muesli</td>
-<td class="c m b1 r1 l0 t0 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(3y\)</td>
-<td class="c m b1 r1 l0 t0 lines">9</td>
-</tr>
-</table></figure>
-				The Healthy Food Store will have \(2x\) kilograms of granola and \(x\) kilograms of muesli from Company A, and \(3y\) kilograms of granola and \(3y\) kilograms of muesli from Company B. The store requires that
-				\begin{align*}
-2x + 3y \amp\ge 12\\
-x + 3y \amp\ge 9
+<span class="type">Item</span> <span class="codenumber"></span> <span class="title">Step 5:</span>
+</h5>Step 5:<p id="p-5791">
+			Now we can start solving for the variables. To keep things organized, we form a triangular system: Choose one of the original equations (in three variables), one of the equations from our \(2\times 2\) system, and our final equation in one variable. We choose Equations (1), (4), and (6).
+		\begin{alignat*}{4}
+ x \amp {}+{} \amp 2y \amp {}-{} \amp 3z \amp {}={} \amp -4\amp\hphantom{blankblank} (1)\\
+\amp \amp−4y \amp+\amp 10z \amp = \amp 22 \amp\hphantom{blankblank} (5)	\\
+\amp \amp     \amp\amp -22z \amp {}={} \amp -66\amp\hphantom{blankblank} (6)	
+\end{alignat*}
+		</p>
+<p id="p-5792">
+			This new system is in triangular form, and it has the same solutions as the original system. We complete the solution by back-substitution. Solve Equation (6) to find \(z=3\). Substituting \(\alert{3}\) for \(z\) in Equation (4), we find
+		\begin{align*}
+
+		 		−5y + 7(\alert{3}) \amp = 11
+		 	\\
+
+		 		−5y + 21 \amp = 11
+		 	\\
+
+		 		−5y \amp = −10
+		 	\\
+
+		 		y \amp = 2
+		 	
+\end{align*}</p>
+<p id="p-5793">
+		Finally, we substitute \(\alert{3}\) for \(z\) and \(\blert{2}\) for \(y\) into Equation (1) to find
+		\begin{align*}
+
+				x + 2(\blert{2}) − 3(\alert{3}) \amp = −4
+			\\
+
+				x + 4 − 9 \amp = −4
+			\\
+
+				x\amp =1
+			
 \end{align*}
-				Because the store cannot purchase negative quantities, we also have
-				\begin{equation*}x \ge 0, ~~~~~y \ge 0\end{equation*}
-			</p></article><span class="incontext"><a href="Linear-Programming.html#li-3619">in-context</a></span>
+		The solution to the system is the ordered triple \((1, 2, 3)\). You can verify that this triple satisfies all three of the original equations.
+		</p></article><span class="incontext"><a href="Systems-of-Linear-Equations-in-Three-Variables.html#li-3619">in-context</a></span>
