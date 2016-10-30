@@ -1,31 +1,112 @@
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2016-10-28T16:56:18-07:00    *-->
+<!--*    on 2016-10-30T16:20:02-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
 <!--**************************************-->
 <article class="list"><h5 class="heading">
-<span class="type">Item</span> <span class="codenumber"></span> <span class="title">Step 3: </span>
-</h5>Step 3: <p id="p-5746">
-				We will solve the system by graphing. First, solve each equation for \(y\) in terms of \(x\) to get
-				\begin{align*}
-
-						y \amp= −x + 1
-					\\
-
-						y \amp = (10 − 11x)/8.5
-					
-\end{align*}
-				Although we could simplify the second equation, the calculator can graph both equations as they are. We know that x and y represent fractions of one cup, so we set the window (as shown in <a knowl="./knowl/fig-GC-2x2-system3.html" knowl-id="xref-fig-GC-2x2-system3" alt="Figure 8.21 " title="Figure 8.21 ">Figure 8.21</a>) with 
-				\begin{align*}
-
-						\text{Xmin} \amp = 0 \amp\amp \text{Xmax} = 0.94
-					\\
-
-						\text{Ymin} \amp = 0 \amp\amp \text{Ymax} = 1
-					
-\end{align*}
-				<figure class="figure-like" id="fig-GC-2x2-system3"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-GC-2x2-system3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">8.21</span></figcaption></figure>
-				The lines intersect at \((0.6, 0.4)\), which we can verify by substituting these values into the original two equations of our system.
-			</p></article><span class="incontext"><a href="Systems-of-Linear-Equations-in-Two-Variables.html#li-3597">in-context</a></span>
+<span class="type">Item</span><span class="codenumber">I.B</span>
+</h5>
+<p id="p-5604">
+            Quadratic Bézier Curves: Drawing a Simple Numeral 7
+        </p>
+<p id="p-5605">
+            The quadratic Bézier curve is defined by two endpoints, \((x_1, y_1)\) and \((x_3, y_3)\), and a control point, \((x_2, y_2)\).
+            \begin{equation*}
+                \begin{aligned}
+                x \amp= f(t)=x_1\cdot(1 − t)^2+2x_2\cdot t (1 − t) + x_3\cdot t^2 \\
+                y \amp = g(t)= y_1\cdot(1 − t)^2 +2y_2\cdot t (1 − t) + y_3 · t^2
+                \end{aligned}
+            \end{equation*}
+            for \(0\le t\le 1\).
+            <ol style="list-style-type: decimal;">
+<li id="bezier-quad-formulas"><p id="p-5606">
+                    Find the functions \(f\) and \(g\) for the quadratic Bézier curve defined by the endpoints \((−4, 7)\) and \((2, 0)\), and the control point \((0, 5)\). Simplify the formulas defining each function.
+                </p></li>
+<li id="li-3599"><p id="p-5607">
+                    Fill in the table of values and plot the curve.
+                    <div class="sidebyside" style="" id="sidebyside-116">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3 lines">\(t\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(0\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(0.25\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(0.5\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(0.75\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(1\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(x\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(y\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+</table></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-8x8-grid.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="heading">Figure</span><span class="codenumber">7.1</span></figcaption>
+</div>
+</div>
+                </p></li>
+<li id="quadratic-bezier"><p id="p-5608">Draw a line segment from \((−4, 7)\) to \((4, 7)\) on the grid in <a knowl="./knowl/fig-8x8-grid.html" knowl-id="xref-fig-8x8-grid" alt="Figure 7.1 " title="Figure 7.1 ">Figure 7.1</a> to complete the numeral 7.
+                </p></li>
+<li id="bezier-quad-formulas2"><p id="p-5609">
+                    We can adjust the curvature of the diagonal stroke of the 7 by moving the control point. Find the functions \(f\) and \(g\) for the quadratic Bézier curve defined by the endpoints \((4, 7)\) and \((0,−7)\), and the control point \((0,−3)\). Simplify the formulas defining each function.
+                </p></li>
+<li id="li-3602"><p id="p-5610">
+                    Fill in the table of values and plot the curve.
+                    <div class="sidebyside" style="" id="sidebyside-117">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l1 t3 lines">\(t\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(0\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(0.25\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(0.5\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(0.75\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(1\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(x\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(y\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\)</td>
+</tr>
+</table></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-8x8-grid.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
+</div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="heading">Figure</span><span class="codenumber">7.2</span></figcaption>
+</div>
+</div>
+                </p></li>
+<li id="quadratic-bezier2"><p id="p-5611">Draw a line segment from \((−4, 7)\) to \((4, 7)\) on the grid in <a knowl="./knowl/fig-8x8-grid2.html" knowl-id="xref-fig-8x8-grid2" alt="Figure 7.2 " title="Figure 7.2 ">Figure 7.2</a> to complete the numeral 7.
+                </p></li>
+<li id="li-3604"><p id="p-5612">
+                    On your graphs in <a knowl="./knowl/quadratic-bezier.html" knowl-id="xref-quadratic-bezier" alt="Item I.B.3 " title="Item I.B.3 ">steps I.B.3</a> and <a knowl="./knowl/quadratic-bezier2.html" knowl-id="xref-quadratic-bezier2" alt="Item I.B.6 " title="Item I.B.6 ">I.B.6</a>, plot the three points that defined the curved section of the numeral 7, then connect them in order with line segments. How does the position of the control point change the curve?
+                </p></li>
+</ol>
+        </p></article><span class="incontext"><a href="chap7.html#li-3597">in-context</a></span>
