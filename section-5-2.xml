@@ -82,7 +82,12 @@
 		<li><m>\log_{w}{w^{x+1}}</m>, for <m>w \gt 0, w\ne 1</m></li>
 	</ol>
 </p>
-</statement></exercise>
+</statement>
+<answer><p><ol label="a" cols="2">
+	<li><p><m>6</m></p></li>
+	<li><p><m>x+1</m></p></li>
+</ol></p></answer>
+</exercise>
 
 <p>
 	We can also apply the two functions in the opposite order. For example,
@@ -123,13 +128,18 @@
 			<li><m>2^{\log_{2}{(x^2+1)}}</m></li>
 		</ol>
 	</p>
-</statement></exercise>
+</statement>
+<answer><p><ol label="a" cols="2">
+	<li><p><m>64</m></p></li>
+	<li><p><m>x^2+1</m></p></li>
+</ol></p></answer>
+</exercise>
 
 <p>
 	We summarize these relationships as follows.
 </p>
 
-<assemblage><title>Exponential and Logarithmic Functions</title>
+<assemblage xml:id="assemblage-exponential-and-log-functions"><title>Exponential and Logarithmic Functions</title>
 	<p>
 		Because <m>f(x) = b^x</m> and <m>g(x) = \log_{b}{x}</m> are inverse functions for <m>b \gt 0, b\ne 1</m>,
 		<me>
@@ -275,7 +285,9 @@
 	<p>
 		Make a table of values and graph the function <m>h(x) = \log_4 x</m>.
 	</p>
-</statement></exercise>
+</statement>
+<answer><p><image source="images/fig-in-ex-ans-5-2-3" alt="log" width="40%"/> </p></answer>
+</exercise>
 
 <p>
 	While an exponential growth function increases very rapidly for positive values, its inverse, the logarithmic function, grows extremely slowly, as you can see in <xref ref="fig-log10-and-exp-on-same-grid" autoname="yes"/>. In addition, the logarithmic function <m>y = \log_b x</m> for any base <m>b \gt 0, b \ne 1</m>, has the following properties.
@@ -348,7 +360,13 @@
 	        \end{align}</li>
 	    <li>State the domain and range of <m>f</m> and <m>f^{−1}</m>.</li>
 	</ol>
-</statement></exercise>
+</statement>
+<answer><p><ol label="a">
+	<li><p><m>f^{−1}(x) = 10^{x/2} − 1 </m></p></li>
+	<li><p><image source="images/fig-in-ex-ans-5-2-4.jpg" alt="log and inverse" width="40%"/> </p></li>
+	<li><p>Domain of <m>f</m>:  <m>(−1,\infty)</m>, Range of <m>f</m>: all real numbers, Domain of <m>f^{−1}</m>: all real numbers, Range of <m>f^{-1}</m>:  <m>(−1, \infty)</m></p></li>
+</ol></p></answer>
+</exercise>
 
 </subsection>
 
@@ -379,9 +397,11 @@
 
 <exercise xml:id="exercise-tumor-doubling-time"><statement>
 <p>
-	The formula <m>T = \frac{\log 2 \cdot t_i}{3 log(D_f /D_0)}</m> is used by X-ray technicians to calculate the doubling time of a malignant tumor. <m>D_0</m> is the diameter of the tumor when first detected, <m>D_f</m> is its diameter at the next reading, and <m>t_i</m> is the time interval between readings, in days. Calculate the doubling time of a tumor if its diameter when first detected was <m>1</m> cm, and <m>1.05</m> cm <m>7</m> days later.
+	The formula <m>T = \dfrac{\log 2 \cdot t_i}{3 log(D_f /D_0)}</m> is used by X-ray technicians to calculate the doubling time of a malignant tumor. <m>D_0</m> is the diameter of the tumor when first detected, <m>D_f</m> is its diameter at the next reading, and <m>t_i</m> is the time interval between readings, in days. Calculate the doubling time of a tumor if its diameter when first detected was <m>1</m> cm, and <m>1.05</m> cm <m>7</m> days later.
 </p>
-</statement></exercise>
+</statement>
+<answer><p><m>33</m> days</p></answer>
+</exercise>
 
 </subsection>
 
@@ -435,7 +455,12 @@
 		</li>
 	</ol>
 </p>
-</statement></exercise>
+</statement>
+<answer><p><ol label="a" cols="2">
+	<li><p><m>b=4</m></p></li>
+	<li><p><m>x=41</m></p></li>
+</ol></p></answer>
+</exercise>
 
 <example xml:id="example-common-log-equation">
 	<p>
@@ -471,7 +496,9 @@
 	<p>
 		Imagine the graph of <m>f(x) = \log_{10}{x}</m>. How far must you travel along the <m>x</m>-axis until the <m>y</m>-coordinate reaches a height of <m>5.25</m>?
 	</p>
-</statement></exercise>
+</statement>
+<answer><p><m>x = 177,827.941</m></p></answer>
+</exercise>
 
 </subsection>
 
@@ -538,10 +565,201 @@
 	<p>Solve for <m>x</m>.</p>
 	<p>Check for extraneous solutions.</p>
 </hint>
+<answer><p><m>x=4</m></p></answer>
 </exercise>
 
 </subsection>
+<xi:include href="./summary-5-2.xml" /> <!-- summary  -->
+<xi:include href="./section-5-2-exercises.xml" /> <!-- exercises  -->
 
-
+<investigation><title>Interest Compounded Continuously</title>
+<statement><p>
+	We learned in <xref ref="Properties-of-Logarithms" autoname="yes"/> that the amount, <m>A</m> (principal plus interest), accumulated in an account with interest compounded <m>n</m> times annually is
+	<me>A=P\left(1+\dfrac{r}{n} \right)^{nt} </me>
+	where <m>P</m> is the principal invested, <m>r</m> is the interest rate, and <m>t</m> is the time period, in years.
+	<ol label="1">
+		<li><p>
+			Suppose you keep <m>\$1000</m> in an account that pays <m>8\%</m> interest. How much is the amount <m>A</m> after <m>1</m> year if the interest is compounded twice a year? Four times a year?
+			<md>
+				<mrow>n = \alert{2}: A = 1000\left(1 + \frac{0.08}{\alert{2}} \right)^{\alert{2}(1)}= </mrow>
+				<mrow>n = \alert{4}: A = 1000\left(1 + \frac{0.08}{\alert{4}} \right)^{\alert{4}(1)}= </mrow>
+			</md>
+		</p></li>
+		<li><p>
+			What happens to <m>A</m> as we increase <m>n</m>, the number of compounding periods per year? Fill in the table showing the amount in the account for different values of <m>n</m>.
+			<sidebyside>
+				<table><tabular left="minor" right="minor" top="minor" bottom="minor" halign="center"><col halign="left"/>
+					<row>
+						<cell halign="center"><m>n</m></cell>
+						<cell><m>A</m></cell>
+					</row>
+					<row>
+						<cell><m>1</m> (annually)</cell>
+						<cell><m>1080</m></cell>
+					</row>
+					<row>
+						<cell><m>2</m> (semiannually)</cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>4</m> (quarterly)</cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>6</m> (bimonthly)</cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>12</m> (monthly)</cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>365</m> (daily)</cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>1000</m></cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>10,000</m></cell>
+						<cell><m></m></cell>
+					</row>
+				</tabular></table>
+				<figure><image source="images/fig-investigation-9" alt="grid" width="95%"/> </figure></sidebyside>
+		</p></li>
+		<li><p>Plot the values in the table from <m>n = 1</m> to <m>n = 12</m>, and connect them with a smooth curve. Describe the curve: What is happening to the value of <m>A</m>?</p></li>
+		<li><p>
+			In part (2), as you increased the value of <m>n</m>, the other parameters in the formula stayed the same. In other words, <m>A</m> is a function of <m>n</m>, given by <m>A = 1000 (1 + \frac{0.08}{n} )^n</m>. Use your calculator to graph A on successively larger domains:
+			<ol label="a">
+				<li><p><m>
+					\text{Xmin} = 0, \text{Xmax} = 12; \text{Ymin} = 1080, \text{Ymax} = 1084
+				</m></p></li>
+				<li><p><m>
+					\text{Xmin} = 0, \text{Xmax} = 50; \text{Ymin} = 1080, \text{Ymax} = 1084
+				</m></p></li>
+				<li><p><m>
+					\text{Xmin} = 0, \text{Xmax} = 365; \text{Ymin} = 1080, \text{Ymax} = 1084
+				</m></p></li>
+			</ol>
+		</p></li>
+		<li><p>Use the <term>Trace</term> feature or the <term>Table</term> feature to evaluate <m>A</m> for very large values of <m>n</m>. Rounded to the nearest penny, what is the largest value of <m>A</m> that you can find?</p></li>
+		<li><p>As <m>n</m> increases, the values of <m>A</m> approach a limiting value. Although <m>A</m> continues to increase, it does so by smaller and smaller increments and will never exceed <m>\$1083.29</m>. When the number of compounding periods increases without bound, we call the limiting result <term index="yes">continuous compounding</term>.</p></li>
+		<li><p>Is there an easier way to compute <m>A</m> under continues compounding? Yes! Compute <m>1000e^{0.08}</m> on your calculator. (Press <c>2nd</c>  <c>LN</c> to enter <m>e^x</m>.) Compare the value to your answer in part (5) for the limiting value. The number <m>e</m> is called the <term index="yes">natural base</term>. We'll compute its value shortly.</p></li>
+		<li><p>
+			Repeat your calculations for two other interest rates, <m>15\%</m> and (an extremely unrealistic) <m>100\%</m>, again for an investment of <m>\$1000</m> for <m>1</m> year. In each case, compare the limiting value of <m>A</m>, and compare to the value of <m>1000e^r</m>.
+			<ol label="a" cols="2"><li><p>
+				<tabular left="minor" right="minor" top="minor" bottom="minor" halign="center"><col halign="right"/>
+					<row>
+						<cell  halign="center" colspan="2"><m>r=0.15</m></cell>
+					</row>
+					<row>
+						<cell halign="center"><m>n</m></cell>
+						<cell><m>A</m></cell>
+					</row>
+					<row>
+						<cell><m>1</m></cell>
+						<cell><m>115</m></cell>
+					</row>
+					<row>
+						<cell><m>2</m></cell>
+						<cell><m>\hphantom{00000}</m></cell>
+					</row>
+					<row>
+						<cell><m>4</m></cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>6</m></cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>12</m></cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>3652</m></cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>1000</m></cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>10,000</m></cell>
+						<cell><m></m></cell>
+					</row>
+					<row left="none">
+						<cell  left="none" halign="left" colspan="2" right="none" bottom="none"><m>~~1000e^{0.15}= </m></cell>
+					</row>
+				</tabular></p></li>
+				<li><p><tabular left="minor" right="minor" top="minor" bottom="minor" halign="center"><col halign="right"/>
+					<row>
+						<cell  halign="center"  colspan="2"><m>r=1</m></cell>
+					</row>
+					<row>
+						<cell halign="center"><m>n</m></cell>
+						<cell><m>A</m></cell>
+					</row>
+					<row>
+						<cell><m>1</m></cell>
+						<cell><m>200</m></cell>
+					</row>
+					<row>
+						<cell><m>2</m></cell>
+						<cell><m>\hphantom{00000}</m></cell>
+					</row>
+					<row>
+						<cell><m>4</m></cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>6</m></cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>12</m></cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>3652</m></cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>1000</m></cell>
+						<cell><m></m></cell>
+					</row>
+					<row>
+						<cell><m>10,000</m></cell>
+						<cell><m></m></cell>
+					</row>
+					<row left="none">
+						<cell  left="none" halign="left" colspan="2" right="none" bottom="none"><m>~~1000e^{1}= </m></cell>
+					</row>
+				</tabular></p></li>
+			</ol>
+		</p></li>
+		<li><p>In part (8b), you have computed an approximation for <m>1000e</m>. What is the value of <m>e</m>, rounded to <m>5</m> decimal places?</p></li>
+		<li><p>
+			Complete the table of values. What does <m>\left(1 + \frac{1}{n} \right)^n</m> appear to approach as <m>n</m> increases?
+			<table><tabular left="minor" right="minor" top="minor" bottom="minor" halign="left">
+				<row>
+					<cell><m>n</m></cell>
+					<cell><m>100</m></cell>
+					<cell><m>1000</m></cell>
+					<cell><m>10,000</m></cell>
+					<cell><m>100,000</m></cell>
+				</row>
+				<row>
+					<cell><m>\left(1+\frac{1}{n} \right)^n </m></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+					<cell></cell>
+				</row>
+			</tabular></table>
+		</p></li>
+	</ol>
+</p></statement></investigation>
 </section> 
 <!-- </book>  </mathbook> -->
