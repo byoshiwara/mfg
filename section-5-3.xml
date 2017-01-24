@@ -81,7 +81,7 @@
 <example xml:id="example-translate-exponential">
 	<p>
 		Graph each function. How does each graph differ from the graph of <m>y = e^x</m>?
-		<ol label="*a*">
+		<ol label="a" cols="2">
 			<li><m>g(x) = e^{x+2}</m></li>
 			<li><m>h(x) = e^x + 2</m></li>
 		</ol>
@@ -96,13 +96,19 @@
 <exercise xml:id="exercise-GC-evaluate-exponential"><statement>
 	<p>
 		Use your calculator to evaluate the following powers.
-		<ol label="*a*">
+		<ol label="a" cols="3">
 			<li><m>e^2</m></li>
 			<li><m>e^{3.5}</m></li>
 			<li><m>e^{−0.5}</m></li>
 		</ol>
 	</p>
-</statement></exercise>
+</statement>
+<answer><p><ol cols="3" label="a">
+	<li><p><m>e^2\approx 7.389</m></p></li>
+	<li><p><m>e^{3.5}\approx 33.115 </m></p></li>
+	<li><p><m>e^{-0.5}\approx 0.6065 </m></p></li>
+</ol></p></answer>
+</exercise>
 
 </subsection>
 
@@ -145,12 +151,12 @@
 </p>
 
 <example xml:id="example-ln-and-exponential">
-	<ol label="*a*">
+	<ol label="a">
 		<li>Graph <m>f(x) = e^x</m> and <m>f^{−1}(x) = \ln x</m> on the same grid.</li>
 		<li>Give the domain and range of the natural log function.</li>
 	</ol>
 <solution>
-	<ol label="*a*">
+	<ol label="a">
 		<li>
 			We can make a table of values for <m>f^{−1}(x) = \ln x</m> by interchanging the columns in <xref ref="table-ln" autoname="yes"/> for <m>f(x) = e^x</m>. Plotting the points gives us the graph in <xref ref="fig-ln-and-exponential" autoname="yes"/>.
 			<sidebyside>
@@ -204,13 +210,19 @@
 <exercise xml:id="exercise-GC-evaluate-ln"><statement>
 	<p>
 		Use your calculator to evaluate each logarithms. Round your answers to four decimal places.
-		<ol label="*a*">
+		<ol label="a" cols="3">
 			<li><m>\ln 100</m></li>
 			<li><m>\ln 0.01</m></li>
 			<li><m>\ln e^3</m></li>
 		</ol>
 	</p>
-</statement></exercise>
+</statement>
+<answer><p><ol label="a" cols="2">
+			<li><m>\ln 100\approx 4.6052</m></li>
+			<li><m>\ln 0.01\approx -4.6052</m></li>
+			<li><m>\ln e^3 =3</m></li>
+</ol></p></answer>
+</exercise>
 
 </subsection>
 
@@ -248,13 +260,13 @@
 <example xml:id="example-simplify-ln-and-exp">
 	<p>
 		Simplify each expression.
-		<ol label="*a*">
+		<ol label="a">
 			<li><m>\ln e^{0.3x}</m></li>
 			<li><m>e^{2 \ln(x+3)}</m></li>
 		</ol>
 	</p>
 <solution>
-	<ol label="*a*">
+	<ol label="a">
 		<li>
 			The natural log is the log base <m>e</m>, and hence the inverse of <m>e^x</m>. Therefore,
 			<me>\ln {e^{0.3x}} = 0.3x</me>
@@ -270,12 +282,17 @@
 
 <exercise xml:id="exercise-simplify-ln-and-exp"><statement>
 	<p>Simplify each expression.
-		<ol label="*a*">
+		<ol label="a" cols="2">
 			<li><m>e^{(\ln x)/2}</m></li>
-			<li><m>\ln\left(\frac{1}{e^{4x}}\right)</m></li>
+			<li><m>\ln\left(\dfrac{1}{e^{4x}}\right)</m></li>
 		</ol>
 	</p>
-</statement></exercise>
+</statement>
+<answer><p><ol label="a" cols="2">
+	<li><p><m>\sqrt{x} </m></p></li>
+	<li><p><m>-4x</m></p></li>
+</ol></p></answer>
+</exercise>
 
 </subsection>
 
@@ -289,13 +306,13 @@
 <example xml:id="example-solve-ln-equation">
 	<p>
 		Solve each equation for <m>x</m>.
-		<ol label="*a*">
+		<ol label="a" cols="2">
 			<li><m>e^x = 0.24</m></li>
 			<li><m>\ln x = 3.5</m></li>
 		</ol>
 	</p>
 <solution>
-	<ol label="*a*">
+	<ol label="a">
 		<li>
 			Convert the equation to logarithmic form and evaluate using a calculator.
 			<me>x = \ln 0.24 \approx −1.427</me>
@@ -310,7 +327,7 @@
 <exercise xml:id="exercise-solve-ln-equation"><statement>
 	<p>
 		Solve each equation. Round your answers to four decimal places.
-		<ol label="*a*">
+		<ol label="a" cols="2">
 			<li>
 				<m>\ln x =−0.2</m>
 			</li>
@@ -319,7 +336,12 @@
 			</li>
 		</ol>
 	</p>
-</statement></exercise>
+</statement>
+<answer><p><ol label="a" cols="2">
+	<li><p><m>0.8187 </m></p></li>
+	<li><p><m>2.0794</m></p></li>
+</ol></p></answer>
+</exercise>
 
 <p>
 	To solve more complicated exponential equations, we isolate the power on one side of the equation before converting to logarithmic form.
@@ -369,6 +391,7 @@
 		Divide by <m>−0.2</m>.
 	</p>
 </hint>
+<answer><p><m>x = −5 \ln \left(\dfrac{9.6}{16} \right)\approx 2.5023</m></p></answer>
 </exercise>
 
 <example xml:id="example-solve-logistic">
@@ -406,6 +429,7 @@
 	<p>Take the natural log of both sides.</p>
 	<p>Divide both sides by <m>−t.</m></p>
 </hint>
+<answer><p><m>k=\dfrac{-\ln(N/A) }{t} </m></p></answer>
 </exercise>
 
 </subsection>
@@ -442,7 +466,7 @@
 <example xml:id="example-population-growth-e">
 	<p>
 		From 1990 to 2000, the population of Clark County, Nevada, grew by <m>6.4\%</m> per year.
-		<ol label="*a*">
+		<ol label="a">
 			<li>
 				What was the growth factor for the population of Clark County from 1990 to 2000? If the population of Clark County was <m>768,000</m> in 1990, write a formula for the population <m>t</m> years later.
 			</li>
@@ -452,7 +476,7 @@
 		</ol>
 	</p>
 <solution>
-	<ol label="*a*">
+	<ol label="a">
 		<li>
 			The growth factor was <m>b = 1 + r = 1.064</m>. The population <m>t</m> years later was
 			<me>P(t) = 768,000 (1.064)^t</me>
@@ -469,7 +493,7 @@
 <exercise xml:id="exercise-computers-on-internet"><statement>
 	<p>
 		From 1994 to 1998, the number of personal computers connected to the Internet grew according to the formula <m>N(t) = 2.8e^{0.85t}</m>, where <m>t = 0</m> in 1994 and <m>N</m> is in millions. (Source: Los Angeles Times, September 6, 1999)
-		<ol label="*a*">
+		<ol label="a">
 			<li>
 				Evaluate <m>N(1)</m>. By what percent did the number of Internet users grow in one year?
 			</li>
@@ -480,6 +504,10 @@
 	</p>
 </statement>
 <hint><p><m>e^k = 1 + r</m></p></hint>
+<answer><p><ol label="a" cols="2">
+	<li><p><m>N(1)\approx 6.55</m>, <m>~134\%</m></p></li>
+	<li><p><m>N(t)\approx 2.8 (1.3396)^t </m></p></li>
+</ol></p></answer>
 </exercise>
 
 <p>
@@ -521,7 +549,7 @@
 	<p>
 		A scientist isolates <m>25</m> grams of krypton-91, which decays according to the formula
 		<m>N(t) = 25e^{−0.07t}</m>, where <m>t</m> is in seconds.
-		<ol label="*a*">
+		<ol label="a">
 			<li>
 				Complete the table of values showing the amount of krypton-91 left at <m>10</m>-second intervals over the first minute.
 				<table><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -559,6 +587,34 @@
 <hint><p>
 	If <m>60\%</m> of the krypton-91 has decayed, <m>40\%</m> of the original <m>25</m> grams remains.
 </p></hint>
+<answer><p><ol label="a">
+	<li><p>
+		<tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+	        <row bottom="minor">
+	            <cell halign="left"><m>t</m></cell>
+	            <cell><m>0</m></cell>
+	            <cell><m>10</m></cell>
+	            <cell><m>20</m></cell>
+	            <cell><m>30</m></cell>
+	            <cell><m>40</m></cell>
+	            <cell><m>50</m></cell>
+	            <cell><m>60</m></cell>
+	        </row>
+	        <row>
+	            <cell halign="left"><m>N(t)</m></cell>
+	            <cell><m>25</m></cell>
+	            <cell><m>12.41</m></cell>
+	            <cell><m>6.16</m></cell>
+	            <cell><m>3.06</m></cell>
+	            <cell><m>1.52</m></cell>
+	            <cell><m>0.75</m></cell>
+	            <cell><m>0.37</m></cell>
+	        </row>
+	    </tabular>
+	</p></li>
+	<li><p><image source="images/fig-in-ex-ans-5-3-8.jpg" alt="decay" width="40%"/> </p></li>
+	<li><p><m>25 e^{−0.07t} = 0.40(25)</m>; <m>~~t=\dfrac{\ln(0.4)}{-0.07}\approx 13.09 </m> seconds</p></li>
+</ol></p></answer>
 </exercise>
 
 </subsection>
@@ -575,7 +631,7 @@
 <example xml:id="example-continuous-compounding">
 	<p>
 		Suppose you invest <m>\$500</m> in an account that pays <m>8\%</m> interest compounded continuously. You leave the money in the account without making any additional deposits or withdrawals.
-		<ol label="*a*">
+		<ol label="a">
 			<li>
 				Write a formula that gives the value of your account <m>A(t)</m> after <m>t</m> years.
 			</li>
@@ -594,7 +650,7 @@
 		</ol>
 	</p>
 <solution>
-	<ol label="*a*">
+	<ol label="a">
 		<li>
 			Substitute <m>500</m> for <m>P</m>, and <m>0.08</m> for <m>r</m> to find
 			<me>A(t) = 500e^{0.08t}</me>
@@ -663,11 +719,13 @@
 	<p>
 		Zelda invested <m>\$1000</m> in an account that pays <m>4.5\%</m> interest compounded continuously. How long will it be before the account is worth <m>\$2000</m>?
 	</p>
-</statement></exercise>
+</statement>
+<answer><p>About <m>15.4</m> years</p></answer>
+</exercise>
 
 
 </subsection>
-
-
+<xi:include href="./summary-5-3.xml" /> <!-- summary  -->
+<xi:include href="./section-5-3-exercises.xml" /> <!-- exercises  -->
 </section> 
 <!-- </book>  </mathbook> -->
