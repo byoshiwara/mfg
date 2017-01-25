@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-23T17:31:05-08:00    *-->
+<!--*    on 2017-01-25T13:42:08-08:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,18 +13,43 @@
 </head>
 <body>
 <span class="solution"><h5 class="heading">
-<span class="type">Solution</span><span class="codenumber">1.18.1</span>
+<span class="type">Solution</span><span class="codenumber">1.31.1</span>
 </h5>
-<ol id="ol-18" style="list-style-type: lower-alpha;">
-<li id="li-40">
-			The growth factor was \(b = 1 + r = 1.064\). The population \(t\) years later was
-			\begin{equation*}P(t) = 768,000 (1.064)^t\end{equation*}
+<ol id="ol-10" style="list-style-type: lower-alpha;">
+<li id="li-23">
+			Let \(A_N\) represent the amplitude of the Northridge quake and let \(A_H\) represent the amplitude of a quake \(100\) times more powerful. From the Richter model, we have
+			\begin{equation*}6.9 = \log_{10}\left(\frac{A_N}{A_0}\right)\end{equation*}
+			or, rewriting in exponential form,
+			\begin{equation*}\frac{A_N}{A_0}= 10^{6.9}\end{equation*}
+			Now, \(A_H = 100A_N\) , so
+			\begin{align*}
+				\frac{A_H}{A_0}\amp= \frac{100A_N}{A_0}\\
+				\amp = 100\left(\frac{A_N}{A_0}\right)
+				= 10^2(10^{6.9})\\
+				\amp = 10^{8.9}
+			\end{align*}
+			Thus, the magnitude of the more powerful quake is
+			\begin{align*}
+				\log_{10}\left(\frac{A_H}{A_0}\right)
+				\amp = \log_{10} 10^{8.9}\\
+				\amp = 8.9
+			\end{align*}
 		</li>
-<li id="li-41">
-			We use the formula \(P(t) = P_0 \cdot e^{kt}\), where \(e^k = 1.064\). Solving for \(k\), we find
-			\begin{equation*}k = \ln 1.064 = 0.062\end{equation*}
-			so \(P(t) = 768,000 e^{0.062t}\).
+<li id="li-24">
+			Let \(A_S\) stand for the amplitude of the San Francisco earthquake. We are looking for the ratio \(A_S/A_N\). First, we will use the Richter formula to compute values for \(A_S\) and \(A_N\).
+			\begin{equation*}6.9 = \log_{10}\left(\frac{A_N}{A_0}\right)
+				~~\text{ and }~~ 7.1 = \log_{10}\left(\frac{A_s}{A_0}\right)
+			\end{equation*}
+			Rewriting each equation in exponential form, we have
+			\begin{equation*}\frac{A_N}{A_0}= 10^{6.9}
+				~~\text{ and }~~ \frac{A_S}{A_0}= 10^{7.1}
+			\end{equation*}
+			or
+			\begin{equation*}A_N = 10^{6.9}A_0 ~~\text{ and }~~A_S = 10^{7.1}A_0\end{equation*}
+			Now we can compute the ratio we want:
+			\begin{equation*}\frac{A_S}{A_N}= \frac{10^{7.1}A_0}{10^{6.9}A_0}= 10^{0.2}\end{equation*}
+			The San Francisco earthquake was \(10^{0.2}\), or approximately \(1.58\) times as powerful as the Northridge quake.
 		</li>
-</ol></span><span class="incontext"><a href="The-Natural-Base.html#solution-7">in-context</a></span>
+</ol></span><span class="incontext"><a href="Logarithm-Scales.html#solution-7">in-context</a></span>
 </body>
 </html>

@@ -141,7 +141,26 @@
     </tabular></table>
     <figure xml:id="fig-read-logscale"><image source="images/fig-read-logscale" alt="points on logscale"/><caption></caption></figure>
 	</p>
-</statement></exercise>
+</statement>
+<answer><p>
+		<tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+        <row>
+            <cell><m>\log x</m></cell>
+            <cell><m>-4</m></cell>
+            <cell><m>-2.5</m></cell>
+            <cell><m>1.5</m></cell>
+            <cell><m>4.25</m></cell>
+        </row>      
+        <row>
+            <cell><m>x</m></cell>
+            <cell><m>0.0001</m></cell>
+            <cell><m>0.0032</m></cell>
+            <cell><m>31.6</m></cell>
+            <cell><m>17,782.8</m></cell>
+        </row>
+    </tabular>
+</p></answer>
+</exercise>
 
 <subsection><title>Using Log Scales</title>
 <p>
@@ -153,7 +172,7 @@
 		<xref ref="fig-log-timeline" autoname="yes"/> shows a timeline for life on Earth, in units of Mya (million years ago).
 		<figure xml:id="fig-log-timeline"><image source="images/fig-log-timeline" alt="timeline of events on a logscale"/><caption></caption></figure>
 		Approximately how long ago did each of the following events occur?
-		<ol label="*a*">
+		<ol label="a">
 			<li>
 				Formation of Earth
 			</li>
@@ -169,7 +188,7 @@
 		</ol>
 	</p>
 <solution>
-	<ol label="*a*">
+	<ol label="a">
 		<li>
 			Reading from the timeline, the Earth was formed between <m>10^3</m> and <m>10^4</m>, or between <m>1000</m> and <m>10,000</m> million years ago. We estimate that Earth formed <m>5000</m> million years ago.
 		</li>
@@ -224,6 +243,7 @@
     </tabular></table>
 
 	</p></statement>
+<answer><p><image source="images/fig-in-ex-ans-5-4-2" alt="logscale" width="100%"/> </p></answer>
 </exercise>
 
 </subsection>
@@ -267,7 +287,9 @@
 
 <exercise><statement><p>
 	What number is halfway between <m>10^{1.5}</m> and <m>10^2</m> on a log scale?
-</p></statement></exercise>
+</p></statement>
+<answer><p><m>56.23</m></p></answer>
+</exercise>
 
 <p>
 	If we would like to label the log scale with integers, we get a very different-looking scale, one in which the tick marks are not evenly spaced.
@@ -372,9 +394,37 @@
             <cell></cell>
         </row>
     </tabular></table>
-
 	</p>
-</statement></exercise>
+</statement>
+<answer><p>
+		<tabular top="major" halign="center" right="minor" left="minor" bottom="minor"><col halign="left"/>
+        <row bottom="minor">
+            <cell>Animal</cell>
+            <cell>Mouse</cell>
+            <cell>Dog</cell>
+            <cell>Sheep</cell>
+            <cell>Cow</cell>
+            <cell>Elephant</cell>
+        </row>
+        <row>
+            <cell>Mass (kg)</cell>
+            <cell><m>0.02</m></cell>
+            <cell><m>15</m></cell>
+            <cell><m>50</m></cell>
+            <cell><m>500</m></cell>
+            <cell><m>4000</m></cell>
+        </row>
+        <row>
+            <cell>Metabolic rate (kcal/day)</cell>
+            <cell><m>3.5</m></cell>
+            <cell><m>500</m></cell>
+            <cell><m>1500</m></cell>
+            <cell><m>6000</m></cell>
+            <cell><m>50,000</m></cell>
+        </row>
+    </tabular>
+</p></answer>
+</exercise>
 
 </subsection>
 
@@ -384,8 +434,8 @@
 <p>
 	You may have already encountered log scales in some everyday applications. A simple example is the <term index = "yes">pH scale</term>, used by chemists to measure the acidity of a substance or chemical compound. This scale is based on the concentration of hydrogen ions in the substance, denoted by <m>[H^+]</m>. The pH value is defined by the formula 
 	<me>\text{pH}=−\log_{10}[H^+]</me> 
-	Values for pH fall between <m>0</m> and <m>14</m>, with <m>7</m> indicating a neutral solution. The lower the pH value, the more acidic the substance. Some common substances and their pH values are shown in Table 5.8.
-	<table><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+	Values for pH fall between <m>0</m> and <m>14</m>, with <m>7</m> indicating a neutral solution. The lower the pH value, the more acidic the substance. Some common substances and their pH values are shown in <xref ref="table-pH" autoname="yes"/>.
+	<table xml:id="table-pH"><caption></caption><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
 		<col halign="left"/>
         <row bottom="major">
             <cell>Substance</cell>
@@ -432,7 +482,7 @@
 
 <example xml:id="example-pH">
 <p>
-	<ol label="*a*">
+	<ol label="a">
 		<li>
 			Calculate the pH of a solution with a hydrogen ion concentration of <m>3.98 \times 10^{−5}</m>.
 		</li>
@@ -442,7 +492,7 @@
 	</ol>
 </p>
 <solution><p>
-	<ol label="*a*">
+	<ol label="a">
 		<li>
 			Use a calculator to evaluate the pH formula with <m>[H^+] = 3.98\times10^{−5}</m>.
 			<me>\text{pH} = −\log_{10}{(3.98 × 10^{−5})} \approx 4.4</me>
@@ -464,7 +514,9 @@
 	<p>
 		The pH of the water in a tide pool is <m>8.3</m>. What is the hydrogen ion concentration of the water?
 	</p>
-</statement></exercise>
+</statement>
+<answer><p><m>5.01\times 10^{−9}</m></p></answer>
+</exercise>
 
 <p>
 	A decrease of <m>1</m> on the pH scale corresponds to an increase in acidity by a factor of <m>10</m>. Thus, lemon juice is <m>10</m> times more acidic than vinegar, and battery acid is <m>100</m> times more acidic than vinegar.
@@ -479,7 +531,7 @@
 	The <term index="yes">decibel scale</term>, used to measure the loudness or intensity of a sound, is another example of a logarithmic scale. The loudness of a sound is measured in decibels, D, by
 	<me>D=10 \log_{10}\left(\frac{I}{10^{-12}}\right)</me>
 	where <m>I</m> is the intensity of its sound waves (in watts per square meter). Table 5.9 shows the intensity of some common sounds, measured in watts per square meter.
-	<table><tabular top="major" halign="center" right="minor" left="minor" bottom="minor"><col halign="left"/>
+	<table xml:id="table-dB"><caption></caption><tabular top="major" halign="center" right="minor" left="minor" bottom="minor"><col halign="left"/>
         <row bottom="major">
             <cell>Sound</cell>
             <cell>Intensity (watts/m<m>^2</m>)</cell>
@@ -527,7 +579,7 @@
 
 <example xml:id="example-decibels">
 <p>
-	<ol label="*a*">
+	<ol label="a">
 		<li>
 			Normal breathing generates about <m>10^{−11}</m> watts per square meter at a distance of <m>3</m> feet. Find the number of decibels for a breath <m>3</m> feet away.
 		</li>
@@ -537,7 +589,7 @@
 	</ol>
 </p>
 <solution>
-	<ol label="*a*">
+	<ol label="a">
 		<li>
 			Evaluate the decibel formula with <m>I = \alert{10^{−11}}</m> to find
 			\begin{align*}
@@ -566,7 +618,7 @@
 <exercise xml:id="exercise-decibels"><statement>
 	<p>
 		The noise of city traffic registers at about <m>70</m> decibels.
-		<ol label="*a*">
+		<ol label="a">
 			<li>
 				What is the intensity of traffic noise, in watts per square meter?
 			</li>
@@ -575,7 +627,12 @@
 			</li>
 		</ol>
 		</p>
-</statement></exercise>
+</statement>
+<answer><p><ol label="a" cols="2">
+	<li><p><m>I = 10^{−5} \text{watts}/m^2</m></p></li>
+	<li><p><m>1000</m></p></li>
+</ol></p></answer>
+</exercise>
 
 <warning><statement>
 	Both the decibel model and the Richter scale in the next example use expressions of the form <m>\log\left(\frac{a}{b}\right)</m>. Be careful to follow the order of operations when using these models. We must compute the quotient <m>\frac{a}{b}</m> before taking a logarithm. In particular, it is <em>not</em> true that <m>\log\left(\frac{a}{b}\right)</m> can be simplified to <m>\frac{\log a}{\log b}</m>.
@@ -593,7 +650,7 @@
 
 <example xml:id="example-northridge-earthquake">
 <p>
-	<ol label="*a*">
+	<ol label="a">
 		<li>
 			The Northridge earthquake of January 1994 registered 6.9 on the Richter scale. What would be the magnitude of an earthquake 100 times as powerful as the Northridge quake?
 		</li>
@@ -603,7 +660,7 @@
 	</ol>
 </p>
 <solution>
-	<ol label="*a*">
+	<ol label="a">
 		<li>
 			Let <m>A_N</m> represent the amplitude of the Northridge quake and let <m>A_H</m> represent the amplitude of a quake <m>100</m> times more powerful. From the Richter model, we have
 			<me>6.9 = \log_{10}\left(\frac{A_N}{A_0}\right)</me>
@@ -645,7 +702,9 @@
 	<p>
 		In October 2005, a magnitude 7.6 earthquake struck Pakistan. How much more powerful was this earthquake than the 1989 San Francisco earthquake of magnitude 7.1?
 	</p>
-</statement></exercise>
+</statement>
+<answer><p><m>3.16</m></p></answer>
+</exercise>
 
 <p>
 	An earthquake <m>100</m>, or <m>10^2</m>, times as strong is only two units greater in magnitude on the Richter scale. In general, a difference of <m>K</m> units on the Richter scale (or any logarithmic scale) corresponds to a factor of <m>10^K</m> units in the intensity of the quake.
@@ -662,12 +721,14 @@
 </solution></example>
 
 <exercise xml:id="exercise-compare-logscale"><statement>
-	Two points, labeled <m>A</m> and <m>B</m>, differ by <m>2.5</m> units on a log scale. What is the ratio of their decimal values?
-</statement></exercise>
+	<p>Two points, labeled <m>A</m> and <m>B</m>, differ by <m>2.5</m> units on a log scale. What is the ratio of their decimal values?</p>
+</statement>
+<answer><p><m>316.2</m></p></answer>
+</exercise>
 
 
 </subsection>
-
-
+<xi:include href="./summary-5-4.xml" /> <!-- summary  -->
+<xi:include href="./section-5-4-exercises.xml" /> <!-- exercises  -->
 </section> 
 <!-- </book>  </mathbook> -->

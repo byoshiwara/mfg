@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-01-23T17:31:05-08:00    *-->
+<!--*    on 2017-01-25T13:42:08-08:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,24 +13,31 @@
 </head>
 <body>
 <span class="solution"><h5 class="heading">
-<span class="type">Solution</span><span class="codenumber">1.16.1</span>
+<span class="type">Solution</span><span class="codenumber">1.28.1</span>
 </h5>
-<p id="p-47">
-		Multiply both sides of the equation by the denominator, \(1 + be^{−kt}\), to get
-		\begin{equation*}P(1 + be^{−kt} ) = a\end{equation*}
-		Then isolate the power, \(e^{−kt}\), as follows:
-		\begin{align*}
-		1 + be^{−kt} \amp = \frac{a}{P}\amp\amp\text{Subtract 1 from both sides.}\\
-		be^{−kt} \amp = \frac{a}{P}− 1 \amp\amp\text{Rewrite the right side. }\\
-		be^{−kt} \amp = \frac{a − P}{P}\amp\amp\text{Divide both sides by }b.\\
-		e^{−kt} \amp= \frac{a − P}{bP}
-		\end{align*}
-		Take the natural logarithm of both sides to get
-		\begin{equation*}\ln {e^{−kt}} = \ln{\frac{a − P}{bP}}\end{equation*}
-		and recall that \(\ln {e^x} = x\) to simplify the left side.
-		\begin{equation*}−kt = \ln{\frac{a − P}{bP}}\end{equation*}
-		Finally, divide both sides by \(−k\) to solve for \(t\).
-		\begin{equation*}t =\frac{−1}{k}\ln{\frac{a-P}{bP}}\end{equation*}
-	</p></span><span class="incontext"><a href="The-Natural-Base.html#solution-6">in-context</a></span>
+<ol id="ol-6" style="list-style-type: lower-alpha;">
+<li id="li-15">
+			Evaluate the decibel formula with \(I = \alert{10^{−11}}\) to find
+			\begin{align*}
+			D \amp = 10 \log_{10}\left(\frac{\alert{10^{−11}}} {10^{−12}}\right)
+			 = 10 \log_{10} {10^1}\\ 
+			\amp = 10(1) = 10 \text{ decibels}
+			\end{align*}
+		</li>
+<li id="li-16">
+			Let \(I_b\) stand for the sound intensity of breathing, and let \(I_c\) stand for the intensity of normal conversation. We are looking for the ratio \(I_c/I_b\). From part (a), we know that
+			\begin{equation*}I_w = 10^{−11}\end{equation*}
+			and from the formula for decibels, we have
+			\begin{equation*}40 = 10 \log_{10}\left(\frac{I_c}{10^{−12}}\right)\end{equation*}
+			which we can solve for \(I_c\). Dividing both members of the equation by \(10\) and rewriting in exponential form, we have
+			\begin{align*}
+			\frac{I_c}{10^{−12}} \amp = 10^4\amp\amp\text{Multiply both sides by }10^{−12}.\\
+			I_c \amp = 10^4(10^{−12}) = 10^{−8}
+			\end{align*}
+			Finally, compute the ratio \(\frac{I_c}{I_b}\):
+			\begin{equation*}\frac{I_c}{I_b}= \frac{10^{−8}}{10^{−11}}= 10^3\end{equation*}
+			Normal conversation is \(1000\) times more intense than breathing.
+		</li>
+</ol></span><span class="incontext"><a href="Logarithm-Scales.html#solution-6">in-context</a></span>
 </body>
 </html>
