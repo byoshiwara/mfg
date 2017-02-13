@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-02T15:52:02-08:00    *-->
+<!--*    on 2017-02-13T14:37:52-08:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,284 +13,30 @@
 </head>
 <body>
 <article class="example-like"><h5 class="heading">
-<span class="type">Project</span><span class="codenumber">1.5</span><span class="title">Part II</span>
+<span class="type">Project</span><span class="codenumber">1.3</span><span class="title">Solving cubics: Part II</span>
 </h5>
-<p id="p-1990">
-    Many periodic functions have a characteristic wave shape like the graph shown in <a knowl="./knowl/fig-chap2-proj-part2.html" knowl-id="xref-fig-chap2-proj-part2" alt="Figure 1.148 " title="Figure 1.148 ">Figure 1.148</a>. These graphs are called <em class="terminology">sinusoidal</em>, after the trigonometric functions sine and cosine. They are often described by three parameters: the <em class="terminology">period</em>, <em class="terminology">midline</em>, and <em class="terminology">amplitude</em>.</p>
-<p id="p-1991">
-    The period of the graph is the smallest interval of input values on which the graph repeats. The midline is the horizontal line at the average of the maximum and minimum values of the output variable. The amplitude is the vertical distance between the maximum output value and the midline.
-    <figure class="figure-like" id="fig-chap2-proj-part2"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-chap2-proj-part2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.148</span></figcaption></figure>
-</p>
-<article class="example-like" id="example-34"><h5 class="heading">
-<span class="type">Example</span><span class="codenumber">1.149</span>
-</h5>
-<p id="p-1992">
-    The table shows the number of hours of daylight in Glasgow, Scotland, on the first of each month.
-    <figure class="figure-like" id="table-58"><table>
-<tr>
-<td class="l m b1 r1 l1 t1 lines">Month</td>
-<td class="c m b1 r1 l0 t1 lines">Jan</td>
-<td class="c m b1 r1 l0 t1 lines">Feb</td>
-<td class="c m b1 r1 l0 t1 lines">Mar</td>
-<td class="c m b1 r1 l0 t1 lines">Apr</td>
-<td class="c m b1 r1 l0 t1 lines">May</td>
-<td class="c m b1 r1 l0 t1 lines">Jun</td>
-<td class="c m b1 r1 l0 t1 lines">Jul</td>
-<td class="c m b1 r1 l0 t1 lines">Aug</td>
-<td class="c m b1 r1 l0 t1 lines">Sep</td>
-<td class="c m b1 r1 l0 t1 lines">Oct</td>
-<td class="c m b1 r1 l0 t1 lines">Nov</td>
-<td class="c m b1 r1 l0 t1 lines">Dec</td>
-</tr>
-<tr>
-<td class="l m b1 r1 l1 t0 lines">Daylight<br>hours</td>
-<td class="c m b1 r1 l0 t0 lines">\(7.1\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(8.7\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(10.7\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(13.1\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(15.3\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(17.2\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(17.5\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(16.7\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(13.8\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(11.5\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(9.2\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(7.5\)</td>
-</tr>
-</table></figure>
+<p id="p-605">
+    Tartaglia's method always works to solve the special cubic equation, even when \(u\) and \(v\) are not convenient values. We will show why in this project.
     </p>
-<ol id="ol-364" style="list-style-type: lower-alpha;">
-<li id="li-1105"><p id="p-1993">Sketch a sinusoidal graph of daylight hours as a function of time, with \(t = 1\) in January.</p></li>
-<li id="li-1106"><p id="p-1994">Estimate the period, amplitude, and midline of the graph.</p></li>
+<ol id="ol-90" style="list-style-type: lower-alpha;">
+<li id="li-249"><p id="p-606">Expand the expression \((a − b)^3 + 3ab(a − b)\) and complete the identity.
+        \begin{equation*}(a−b)^3+3ab(a−b)=\underline{\hspace{6.818181818181818em}}\end{equation*}
+    </p></li>
+<li id="li-250"><p id="p-607">Your answer to part (a) is actually Tartaglia's special cubic in disguise. Substitute \(x = a − b\), \(m = 3ab\), and \(n = a^3 − b^3\) to see this. Therefore, if we can find numbers \(a\) and \(b\) that satisfy
+    \begin{align*}
+3ab \amp = m\\
+a^3 − b^3 \amp = n
+\end{align*}
+    then the solution to Tartaglia's cubic is \(x = a − b\).</p></li>
+<li id="li-251"><p id="p-608">Compare the system in part (b) to the system from <a knowl="./knowl/project-reduced-cubic-1.html" knowl-id="xref-project-reduced-cubic-1" alt="Project 1.2 Solving cubics: Part I" title="Project 1.2 Solving cubics: Part I">Project 1.2</a>,
+    \begin{gather*}
+u − v = n\\
+uv=\left(\frac{m}{3}\right)^3 
+\end{gather*}
+    to show that \(u = a^3\) and \(v = b^3\).</p></li>
+<li id="li-252"><p id="p-609">Use your answer to part (c) to show that Tartaglia's value, \(x=\sqrt[3]{u}- \sqrt[3]{v}  \), is a solution of \(x^3 + mx = n\).</p></li>
 </ol>
 <p>
-</p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-34" id="solution-34"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-34" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-1995">
-    </p>
-<ol id="ol-365" style="list-style-type: lower-alpha;">
-<li id="li-1107"><p id="p-1996">
-            Plot the data points and fit a sinusoidal curve by eye, as shown in <a knowl="./knowl/fig-chap2-proj-example2.html" knowl-id="xref-fig-chap2-proj-example2" alt="Figure 1.150 " title="Figure 1.150 ">Figure 1.150</a>.
-            <figure class="figure-like" id="fig-chap2-proj-example2"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-chap2-proj-example2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.150</span></figcaption></figure>
-        </p></li>
-<li id="li-1108"><p id="p-1997">The period of the graph is \(12\) months. The midline is approximately \(y = 12.25\), and the amplitude is approximately \(5.25\).</p></li>
-</ol>
-<p>
-</p></span></span>
-</div></div>
-<section class="exercises" id="exercises-9"><header title="Exercises 1.8.1 Exercise Set 2"><h1 class="heading hide-type" alt="Exercises 1.8.1 Exercise Set 2">
-<span class="type">Subsubsection</span><span class="codenumber">1.8.1</span><span class="title">Exercise Set 2</span>
-</h1></header><article class="exercise-like" id="exercise-515"><h5 class="heading"><span class="codenumber">1</span></h5>
-<p id="p-1998">
-    The graph shows the number of daylight hours in Jacksonville, in Anchorage, at the Arctic Circle, and at the Equator.
-    <object type="image/svg+xml" style="width:85%; margin:auto; display:block;" data="images/fig-chap2-proj-ex-2-1.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>
-    </p>
-<ol id="ol-366" style="list-style-type: lower-alpha;">
-<li id="li-1109"><p id="p-1999">Which graph corresponds to each location?</p></li>
-<li id="li-1110"><p id="p-2000">What are the maximum and minimum number of daylight hours in Jacksonville?</p></li>
-<li id="li-1111"><p id="p-2001">For how long are there \(24\) hours of daylight per day at the Arctic Circle?</p></li>
-</ol>
-<p>
-</p></article><article class="exercise-like" id="exercise-516"><h5 class="heading"><span class="codenumber">2</span></h5>
-<p id="p-2002">
-    Match each of the following situations with the appropriate graph.
-    <object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-chap2-proj-ex-2-2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>
-    </p>
-<ol id="ol-367" style="list-style-type: lower-alpha;">
-<li id="li-1112"><p id="p-2003">The number of hours of daylight in Salt Lake City varies from a minimum of \(9.6\) hours on the winter solstice to a maximum of \(14.4\) hours on the summer solstice.</p></li>
-<li id="li-1113"><p id="p-2004">A weight is \(6.5\) feet above the floor, suspended from the ceiling by a spring. The weight is pulled down to \(5\) feet above the floor and released, rising past \(6.5\) feet in \(0.5\) second before attaining its maximum height of \(8\) feet. Neglecting the effects of friction, the height of the weight will continue to oscillate between its minimum and maximum height.</p></li>
-<li id="li-1114"><p id="p-2005">The voltage used in U.S. electrical current changes from \(155\) V to \(-155\) V and back \(60\) times each second.</p></li>
-<li id="li-1115"><p id="p-2006">Although the moon is spherical, what we can see from Earth looks like a (sometimes only partly visible) disk. The percentage of the moon's disk that is visible varies between \(0\) (at new moon) to \(100\) (at full moon).</p></li>
-</ol>
-<p>
-</p></article><article class="exercise-like" id="exercise-517"><h5 class="heading"><span class="codenumber">3</span></h5>
-<p id="p-2007">
-    As the moon revolves around the Earth, the percent of the disk that we see varies sinusoidally with a period of approximately 30 days. There are eight phases, starting with the new moon, when the moon's disk is dark, followed by waxing crescent, first quarter, waxing gibbous, full moon (when the disk is \(100\%\) visible), waning gibbous, last quarter, and waning crescent. Which graph best represents the phases of the moon?
-    <object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-chap2-proj-ex-2-3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>
-</p></article><article class="exercise-like" id="exercise-518"><h5 class="heading"><span class="codenumber">4</span></h5>
-<p id="p-2008">
-    The table shows sunrise and sunset times in Los Angeles on the fifteenth of each month.
-    <figure class="figure-like" id="table-59"><table>
-<tr>
-<td class="l m b1 r1 l1 t1 lines">Month</td>
-<td class="c m b1 r1 l0 t1 lines">Oct</td>
-<td class="c m b1 r1 l0 t1 lines">Nov</td>
-<td class="c m b1 r1 l0 t1 lines">Dec</td>
-<td class="c m b1 r1 l0 t1 lines">Jan</td>
-<td class="c m b1 r1 l0 t1 lines">Feb</td>
-<td class="c m b1 r1 l0 t1 lines">Mar</td>
-</tr>
-<tr>
-<td class="l m b1 r1 l1 t0 lines">Sunrise</td>
-<td class="c m b1 r1 l0 t0 lines">\(5:58\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(6:26\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(6:51\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(6:59\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(6:39\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(6:04\)</td>
-</tr>
-<tr>
-<td class="l m b1 r1 l1 t0 lines">Sunset</td>
-<td class="c m b1 r1 l0 t0 lines">\(17:20\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(16:50\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(16:45\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(17:07\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(17:37\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(18:01\)</td>
-</tr>
-</table></figure>
-    <figure class="figure-like" id="table-60"><table>
-<tr>
-<td class="l m b1 r1 l1 t1 lines">Month</td>
-<td class="c m b1 r1 l0 t1 lines">Apr</td>
-<td class="c m b1 r1 l0 t1 lines">May</td>
-<td class="c m b1 r1 l0 t1 lines">Jun</td>
-<td class="c m b1 r1 l0 t1 lines">Jul</td>
-<td class="c m b1 r1 l0 t1 lines">Aug</td>
-<td class="c m b1 r1 l0 t1 lines">Sep</td>
-</tr>
-<tr>
-<td class="l m b1 r1 l1 t0 lines">Sunrise</td>
-<td class="c m b1 r1 l0 t0 lines">\(5:22\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(4:52\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(4:42\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(4:43\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(5:15\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(5:37\)</td>
-</tr>
-<tr>
-<td class="l m b1 r1 l1 t0 lines">Sunset</td>
-<td class="c m b1 r1 l0 t0 lines">\(18:25\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(18:48\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(19:07\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(19:05\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(18:40\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(18:00\)</td>
-</tr>
-</table></figure>
-    </p>
-<ol id="ol-368" style="list-style-type: lower-alpha;">
-<li id="li-1116"><p id="p-2009">Use the grid (a) to plot the sunrise times and sketch a sinusoidal graph through the points</p></li>
-<li id="li-1117"><p id="p-2010">Use the grid (b) to plot the sunset times and sketch a sinusoidal graph through the points.</p></li>
-</ol>
-<p>
-    <figure class="figure-like" id="figure-128"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-chap2-proj-ex-2-4.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure>
-</p></article><article class="exercise-like" id="exercise-519"><h5 class="heading"><span class="codenumber">5</span></h5>
-<p id="p-2011">
-    </p>
-<ol id="ol-369" style="list-style-type: lower-alpha;">
-<li id="li-1118"><p id="p-2012">Use the data from Problem 4 to complete the table with the hours of sunlight in Los Angeles on the fifteenth of each month
-    <figure class="figure-like" id="table-61"><table>
-<tr>
-<td class="l m b1 r1 l1 t1 lines">Month</td>
-<td class="c m b1 r1 l0 t1 lines">Oct</td>
-<td class="c m b1 r1 l0 t1 lines">Nov</td>
-<td class="c m b1 r1 l0 t1 lines">Dec</td>
-<td class="c m b1 r1 l0 t1 lines">Jan</td>
-<td class="c m b1 r1 l0 t1 lines">Feb</td>
-<td class="c m b1 r1 l0 t1 lines">Mar</td>
-</tr>
-<tr>
-<td class="l m b1 r1 l1 t0 lines">Hours of<br>daylight</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{00000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{00000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{00000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{00000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{00000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{00000}\)</td>
-</tr>
-</table></figure>
-    <figure class="figure-like" id="table-62"><table>
-<tr>
-<td class="l m b1 r1 l1 t1 lines">Month</td>
-<td class="c m b1 r1 l0 t1 lines">Apr</td>
-<td class="c m b1 r1 l0 t1 lines">May</td>
-<td class="c m b1 r1 l0 t1 lines">Jun</td>
-<td class="c m b1 r1 l0 t1 lines">Jul</td>
-<td class="c m b1 r1 l0 t1 lines">Aug</td>
-<td class="c m b1 r1 l0 t1 lines">Sep</td>
-</tr>
-<tr>
-<td class="l m b1 r1 l1 t0 lines">Hours of<br>daylight</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{00000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{00000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{00000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{00000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{00000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000000}\)</td>
-</tr>
-</table></figure></p></li>
-<li id="li-1119"><p id="p-2013">Plot the daylight hours and sketch a sinusoidal graph through the points.</p></li>
-</ol>
-<p>
-</p></article><article class="exercise-like" id="exercise-520"><h5 class="heading"><span class="codenumber">6</span></h5>
-<p id="p-2014">
-    Many people who believe in astrology also believe in biorhythms. The graph shows an individual's three biorhythms—physical, emotional, and intellectual—for \(36\) days, from \(t = 0\) on September 30 to November 5.
-    <object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-chap2-proj-ex-2-6.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>
-    </p>
-<ol id="ol-370" style="list-style-type: lower-alpha;">
-<li id="li-1120"><p id="p-2015">Find the dates of highest and lowest activity for each biorhythm during the month of October.</p></li>
-<li id="li-1121"><p id="p-2016">Find the period of each biorhythm in days</p></li>
-<li id="li-1122"><p id="p-2017">On the day of your birth, all three biorhythms are at their maximum. How old will you be before all three are again at the maximum level?</p></li>
-</ol>
-<p>
-</p></article><article class="exercise-like" id="exercise-521"><h5 class="heading"><span class="codenumber">7</span></h5>
-<p id="p-2018">
-    </p>
-<ol id="ol-371" style="list-style-type: lower-alpha;">
-<li id="li-1123"><p id="p-2019">Is the function shown periodic? If so, what is its period? If not, explain why not.
-            <object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-chap2-proj-ex-2-7.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>
-        </p></li>
-<li id="li-1124"><p id="p-2020">Compute the difference between the maximum and minimum function values. Sketch in the midline of the graph.</p></li>
-<li id="li-1125"><p id="p-2021">Find the smallest positive value of \(k\) for which \(f (x) = f (x + k)\) for all \(x\).</p></li>
-<li id="li-1126"><p id="p-2022">Find the smallest positive values of \(a\) and \(b\) for which \(f (b) − f (a)\) is a maximum.</p></li>
-</ol>
-<p>
-</p></article><article class="exercise-like" id="exercise-522"><h5 class="heading"><span class="codenumber">8</span></h5>
-<p id="p-2023">
-    </p>
-<ol id="ol-372" style="list-style-type: lower-alpha;">
-<li id="li-1127"><p id="p-2024">
-            Find the period, the maximum and minimum values, and the midline of the graph of \(y = f (x)\).
-            <object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-chap2-proj-ex-2-8.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>
-        </p></li>
-<li id="li-1128"><p id="p-2025">Sketch a graph of \(y = 2 f (x)\).</p></li>
-<li id="li-1129"><p id="p-2026">Sketch a graph of \(y = 2 + f (x)\).</p></li>
-<li id="li-1130"><p id="p-2027">Modify the graph of \(f (x)\) so that the period is twice its current value.</p></li>
-</ol>
-<p>
-</p></article><article class="exercise-like" id="exercise-523"><h5 class="heading"><span class="codenumber">9</span></h5>
-<p id="p-2028">
-    The apparent magnitude of a star is a measure of its brightness as seen from Earth. Smaller values for the apparent magnitude correspond to brighter stars. The graph below, called a light curve, shows the apparent magnitude of the star Algol as a function of time. Algol is an eclipsing binary star, which means that it is actually a system of two stars, a bright principal star and its dimmer companion, in orbit around each other. As each star passes in front of the other, it eclipses some of the light that reaches Earth from the system. (Source: Gamow, 1965, Brandt &amp; Maran, 1972)
-    <object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-chap2-proj-ex-2-9.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>
-    </p>
-<ol id="ol-373" style="list-style-type: lower-alpha;">
-<li id="li-1131"><p id="p-2029">The light curve is periodic. What is its period?</p></li>
-<li id="li-1132"><p id="p-2030">What is the range of apparent magnitudes of the Algol system?</p></li>
-<li id="li-1133"><p id="p-2031">Explain the large and small dips in the light curve. What is happening to cause the dips?</p></li>
-</ol>
-<p>
-</p></article><article class="exercise-like" id="exercise-524"><h5 class="heading"><span class="codenumber">10</span></h5>
-<p id="p-2032">
-    Some stars, called Cepheid variable stars, appear to pulse, getting brighter and dimmer periodically. The graph shows the light curve for the star Delta Cephei. (Source: Ingham, 1997)
-    </p>
-<ol id="ol-374" style="list-style-type: lower-alpha;">
-<li id="li-1134"><p id="p-2033">What is the period of the graph?</p></li>
-<li id="li-1135"><p id="p-2034">What is the range of apparent magnitudes for Delta Cephei?</p></li>
-</ol>
-<p>
-</p></article><article class="exercise-like" id="exercise-525"><h5 class="heading"><span class="codenumber">11</span></h5>
-<p id="p-2035">
-    The figure is a tide chart for Los Angeles for the week of December 17–23, 2000. The horizontal axis shows time in hours, with \(t = 12\) corresponding to noon on December 17. The vertical axis shows the height of the tide in feet above mean sea level.
-    <object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-chap2-proj-ex-2-11.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object>
-    </p>
-<ol id="ol-375" style="list-style-type: lower-alpha;">
-<li id="li-1136"><p id="p-2036">High tides occurred at 3:07 a.m. and 2:08 p.m. on December 17, and low tides at 8:41 a.m. and 9:02 p.m. Estimate the heights of the high and low tides on that day.</p></li>
-<li id="li-1137"><p id="p-2037">Is tide height a periodic function of time? Use the information from part (a) to justify your answer.</p></li>
-<li id="li-1138"><p id="p-2038">Make a table showing approximate times and heights for the high tides throughout the week. Make a similar table for the low tides</p></li>
-<li id="li-1139"><p id="p-2039">Describe the trend in the heights of the high tides over the week. Describe the trend in the heights of the low tides.</p></li>
-<li id="li-1140"><p id="p-2040">What is the largest height difference between consecutive high and low tides during the week shown? When does it occur?</p></li>
-</ol>
-<p>
-</p></article></section></article><span class="incontext"><a href="chap2-rev-projects.html#project-2">in-context</a></span>
+</p></article><span class="incontext"><a href="chap7-rev-projects.html#project-2">in-context</a></span>
 </body>
 </html>
