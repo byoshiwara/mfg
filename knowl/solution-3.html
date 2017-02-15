@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-13T14:37:40-08:00    *-->
+<!--*    on 2017-02-15T12:55:20-08:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,21 +13,36 @@
 </head>
 <body>
 <span class="solution"><h5 class="heading">
-<span class="type">Solution</span><span class="codenumber">1.10.1</span>
+<span class="type">Solution</span><span class="codenumber">1.7.1</span>
 </h5>
-<p id="p-75">
-		Use <a knowl="./knowl/cube-of-x-minus-y.html" knowl-id="xref-cube-of-x-minus-y" alt="Item 2 " title="Item 2 ">product 2</a> above, with \(x\) replaced by \(\alert{2w}\) and \(y\) replaced by \(\blert{3}\).
-		\begin{align*}
-
-				(x − y)^3 \amp= x^3 − 3 x^2 y + 3 x y^2 − y^3
-			\\
-
-				(\alert{2w} − \blert{3})^3 \amp= (\alert{2w})^3 − 3(\alert{2w})^2(\blert{3}) + 3(\alert{2w})(\blert{3})^2 − \blert{3}^3 \amp\amp\text{Simplify.}
-			\\
-
-				\amp= 8w^3 − 36w^2 + 54w − 27
-			
-\end{align*}
-	</p></span><span class="incontext"><a href="Polynomial-Functions.html#solution-3">in-context</a></span>
+<p id="p-22">
+		<figure class="figure-like" id="fig-nonlinear-scatterplot"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-nonlinear-scatterplot.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.8</span></figcaption></figure>
+		When we plot the data, it is clear that the relationship between \(v\) and \(C\) is not linear, but it may be quadratic (see <a knowl="./knowl/fig-nonlinear-scatterplot.html" knowl-id="xref-fig-nonlinear-scatterplot" alt="Figure 1.8 " title="Figure 1.8 ">Figure 1.8</a>). We will use the last three data points, \((50, 6.20)\), \((60, 7.80)\), and \((70, 10.60)\), to fit a parabola to the data. We would like to find the coefficients \(a\), \(b\), and \(c\) of a parabola \(C = av^2 + bv + c\) that includes the three data points. This gives us a system of equations:
+		\begin{equation*}
+		\begin{alignedat}{9}
+		2500a \amp {}+{} \amp 50b \amp {}+{} \amp c \amp {}={} \amp 6.20\amp\hphantom{blankblank} \amp(1)\\
+		3600a \amp {}+{} \amp 60b \amp {}+{} \amp c \amp {}={} \amp 7.8\amp\amp(2) \\
+		4900a \amp {}+{} \amp 70b \amp {}+{} \amp c \amp {}={} \amp 10.6\amp\amp(3) 
+		\end{alignedat}
+		\end{equation*}
+		Eliminating \(c\) from Equations (1) and (2) yields Equation (4), and eliminating \(c\) from Equations (2) and (3) yields Equation (5).
+		\begin{equation*}
+		\begin{alignedat}{9}
+		1100a \amp {}+{} \amp 10b  \amp {}={} \amp 1.60\amp\hphantom{blankblank}\amp(4) \\
+		1300a \amp {}+{} \amp 10b  \amp {}={} \amp 2.8\amp\amp(5) 
+		\end{alignedat}
+		\end{equation*}
+		Eliminating \(b\) from Equations (4) and (5) gives us
+		\begin{equation*}
+			\begin{aligned}
+			200a \amp= 1.20\\
+			a \amp= 0.006
+			\end{aligned}
+		\end{equation*}
+		Substitute this value into Equation (4) to find \(b = −0.5\), then substitute both values into Equation (1) to find \(c = 16.2\). Thus, our quadratic model is
+		\begin{equation*}C = 0.006v^2 − 0.5v + 16.2\end{equation*}
+		The graph of this function, along with the data points, is shown in <a knowl="./knowl/fig-parabola-fitting-scatterplot.html" knowl-id="xref-fig-parabola-fitting-scatterplot" alt="Figure 1.9 " title="Figure 1.9 ">Figure 1.9</a>.
+		<figure class="figure-like" id="fig-parabola-fitting-scatterplot"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-parabola-fitting-scatterplot.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">1.9</span></figcaption></figure>
+	</p></span><span class="incontext"><a href="Curve-Fitting.html#solution-3">in-context</a></span>
 </body>
 </html>
