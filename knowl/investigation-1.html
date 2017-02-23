@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-02-13T14:37:39-08:00    *-->
+<!--*    on 2017-02-23T15:34:14-08:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,291 +13,123 @@
 </head>
 <body>
 <article class="example-like"><h5 class="heading">
-<span class="type">Investigation</span><span class="codenumber">1.1</span><span class="title">Bézier Curves</span>
+<span class="type">Investigation</span><span class="codenumber">1.1</span><span class="title">Interpolating Polynomials</span>
 </h5>
-<p id="p-17">
-    A Bézier curve is actually a sequence of short curves pieced together. Each piece has two endpoints and (for nonlinear curves) at least one control point. The control points do not lie on the curve itself, but they determine its shape. Two polynomials define the curve, one for the \(x\)-coordinate and one for the \(y\)-coordinate.
+<p id="p-16">
+	In <span>&lt;&lt;chap6&gt;&gt;</span>, we learned to fit a quadratic function through three points on its graph. A polynomial whose graph passes through a given set of points is called an <em class="terminology">interpolating polynomial</em>. Because polynomials are easy to evaluate and manipulate, they are often used to approximate more complicated functions and to describe the shapes of curves.
 </p>
-<ol id="ol-1" style="list-style-type: upper-roman;">
+<p id="p-17">
+	In this Investigation, we find interpolating polynomials of degrees \(1\text{,}\) \(2\text{,}\) and \(3\) to approximate the function \(f(x) = \frac{12}{x}\text{.}\)
+</p>
+<p id="p-18">
+	</p>
+<ol id="ol-1" style="list-style-type: decimal;">
 <li id="li-1">
-<p id="p-18">Sketching by Hand</p>
-<ol id="ol-2" style="list-style-type: upper-alpha;">
-<li id="li-2">
-<p id="p-19">Linear Bézier Curves</p>
-<p id="p-20">
-            The linear Bézier curve for two endpoints, \((x_1, y_1)\) and \((x_2, y_2)\), is the straight line segment joining those two points. The curve is defined by the two functions
-            \begin{equation*}
-                \begin{aligned}
-                x \amp= f(t) = x_1\cdot (1 − t) + x_2\cdot t \\
-                y \amp = g(t) = y_1 \cdot (1 − t) + y_2 \cdot t
-                \end{aligned}
-            \end{equation*}
-            for \(0\le t\le 1\).
-            </p>
-<ol id="ol-3" style="list-style-type: decimal;">
-<li id="bezier-linear-formulas"><p id="p-21">
-                    Find the functions \(f\) and \(g\) defining the linear Bézier curve joining the two points \((−4, 7)\) and \((2, 0)\). Simplify the formulas defining each function.
-                </p></li>
-<li id="y-stroke"><p id="p-22">
-                    Fill in the table of values and plot the curve.
-                    <div class="sidebyside" style="" id="sidebyside-1"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
-<tr>
-<td class="c m b1 r1 l1 t3 lines">\(t\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0.25\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0.5\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0.75\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(1\)</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">\(y\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-</tr>
-</table></div>
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-8x8-grid.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
-</div></div>
-                </p></li>
-</ol>
-<p>
-        </p>
-</li>
-<li id="li-5">
-<p id="p-23">
-            Quadratic Bézier Curves: Drawing a Simple Numeral 7
-        </p>
-<p id="p-24">
-            The quadratic Bézier curve is defined by two endpoints, \((x_1, y_1)\) and \((x_3, y_3)\), and a control point, \((x_2, y_2)\).
-            \begin{equation*}
-                \begin{aligned}
-                x \amp= f(t)=x_1\cdot(1 − t)^2+2x_2\cdot t (1 − t) + x_3\cdot t^2 \\
-                y \amp = g(t)= y_1\cdot(1 − t)^2 +2y_2\cdot t (1 − t) + y_3 · t^2
-                \end{aligned}
-            \end{equation*}
-            for \(0\le t\le 1\).
-            </p>
-<ol id="ol-4" style="list-style-type: decimal;">
-<li id="bezier-quad-formulas"><p id="p-25">
-                    Find the functions \(f\) and \(g\) for the quadratic Bézier curve defined by the endpoints \((−4, 7)\) and \((2, 0)\), and the control point \((0, 5)\). Simplify the formulas defining each function.
-                </p></li>
-<li id="li-7"><p id="p-26">
-                    Fill in the table of values and plot the curve.
-                    <div class="sidebyside" style="" id="sidebyside-2">
-<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
-<tr>
-<td class="c m b1 r1 l1 t3 lines">\(t\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0.25\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0.5\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0.75\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(1\)</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">\(y\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-</tr>
-</table></div>
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-8x8-grid.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
-</div>
-<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="heading">Figure</span><span class="codenumber">1.1</span></figcaption>
-</div>
-</div>
-                </p></li>
-<li id="quadratic-bezier"><p id="p-27">Draw a line segment from \((−4, 7)\) to \((4, 7)\) on the grid in <a knowl="./knowl/fig-8x8-grid.html" knowl-id="xref-fig-8x8-grid" alt="Figure 1.1 " title="Figure 1.1 ">Figure 1.1</a> to complete the numeral 7.
-                </p></li>
-<li id="bezier-quad-formulas2"><p id="p-28">
-                    We can adjust the curvature of the diagonal stroke of the 7 by moving the control point. Find the functions \(f\) and \(g\) for the quadratic Bézier curve defined by the endpoints \((4, 7)\) and \((0,−7)\), and the control point \((0,−3)\). Simplify the formulas defining each function.
-                </p></li>
-<li id="li-10"><p id="p-29">
-                    Fill in the table of values and plot the curve.
-                    <div class="sidebyside" style="" id="sidebyside-3">
-<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
-<tr>
-<td class="c m b1 r1 l1 t3 lines">\(t\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0.25\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0.5\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0.75\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(1\)</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">\(y\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-</tr>
-</table></div>
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-8x8-grid.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
-</div>
-<div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="heading">Figure</span><span class="codenumber">1.2</span></figcaption>
-</div>
-</div>
-                </p></li>
-<li id="quadratic-bezier2"><p id="p-30">Draw a line segment from \((−4, 7)\) to \((4, 7)\) on the grid in <a knowl="./knowl/fig-8x8-grid2.html" knowl-id="xref-fig-8x8-grid2" alt="Figure 1.2 " title="Figure 1.2 ">Figure 1.2</a> to complete the numeral 7.
-                </p></li>
-<li id="li-12"><p id="p-31">
-                    On your graphs in <a knowl="./knowl/quadratic-bezier.html" knowl-id="xref-quadratic-bezier" alt="Item I.B.3 " title="Item I.B.3 ">steps I.B.3</a> and <a knowl="./knowl/quadratic-bezier2.html" knowl-id="xref-quadratic-bezier2" alt="Item I.B.6 " title="Item I.B.6 ">I.B.6</a>, plot the three points that defined the curved section of the numeral 7, then connect them in order with line segments. How does the position of the control point change the curve?
-                </p></li>
-</ol>
-<p>
-        </p>
-</li>
-<li id="li-13">
-<p id="p-32">Cubic Bézier Curves: Drawing a Letter y</p>
-<p id="p-33">
-            A cubic Bézier curve is defined by two endpoints, \((x_1, y_1)\) and \((x_4, y_4)\), and two control points, \((x_2, y_2)\) and \((x_3, y_3)\).
-            \begin{equation*}
-                \begin{aligned}
-                x \amp= f(t) = x_1\cdot (1 − t)^2 +3x_2\cdot t(1 − t)^2 +3x_3\cdot t^2(1 − t) + x_4\cdot t^3\\
-                y \amp = g(t) = y_1\cdot (1 − t)^2 +3y_2\cdot t(1 − t)^2 +3y_3\cdot t^2(1 − t) + y_4 \cdot t^3
-                \end{aligned}
-            \end{equation*}
-            for \(0\le t \le 1\).
-            </p>
-<ol id="ol-5" style="list-style-type: decimal;">
-<li id="bezier-cubic-formulas"><p id="p-34">
-                    Find the functions \(f\) and \(g\) for the cubic Bézier curve defined by the endpoints \((4, 7)\) and \((−4,−5)\), and the control points \((3, 3)\) and \((0,−8)\). Simplify the formulas defining each function.
-                </p></li>
-<li id="li-15"><p id="p-35">
-                    Fill in the table of values and plot the curve.
-                    <div class="sidebyside" style="" id="sidebyside-4"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
-<tr>
-<td class="c m b1 r1 l1 t3 lines">\(t\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0.25\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0.5\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(0.75\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(1\)</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">\(x\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">\(y\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(\)</td>
-</tr>
-</table></div>
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-8x8-grid.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
-</div></div>
-                </p></li>
-<li id="li-16"><p id="p-36">
-                    Connect the four given points in order using three line segments. How does the position of the control points affect the curve? Finish the letter y by including the linear Bézier curve you drew for <a knowl="./knowl/y-stroke.html" knowl-id="xref-y-stroke" alt="Item I.A.2 " title="Item I.A.2 ">step I.A.2</a> in Part 1.
-                </p></li>
-</ol>
-<p>
-        </p>
-</li>
-</ol>
-</li>
-<li id="li-17">
-<p id="p-37">Using a Graphing Calculator</p>
-<ol id="ol-6" style="list-style-type: upper-alpha;">
-<li id="li-18">
-<p id="p-38">Bézier Curves on the Graphing Calculator</p>
-<p id="p-39">
-                We can draw Bézier curves on the graphing calculator using the parametric mode. First, press the <tt class="code-inline tex2jax_ignore">MODE</tt> key and highlight <!--Style me with CSS--><em>PAR</em>, as shown in <a knowl="./knowl/fig-GC-bezier.html" knowl-id="xref-fig-GC-bezier" alt="Figure 1.3 " title="Figure 1.3 ">Figure 1.3</a>a. To remove the \(x\)- and \(y\)-axes from the display, press <tt class="code-inline tex2jax_ignore">2nd</tt> <tt class="code-inline tex2jax_ignore">ZOOM</tt> to get the \(Format\) menu, then choose \(AxesOff\) as shown in Figure <a knowl="./knowl/fig-GC-bezier.html" knowl-id="xref-fig-GC-bezier" alt="Figure 1.3 " title="Figure 1.3 ">Figure 1.3</a>b. Finally, we set the viewing window: Press <tt class="code-inline tex2jax_ignore">WINDOW</tt> and set
-                \begin{align}
-                \text{Tmin} \amp = 0 \amp \text{Tmax} \amp= 1\amp\text{TStep} \amp= 0.05\\
-                \text{Xmin} \amp = −10 \amp \text{Xmax} \amp= 10 \amp
-                \text{Ymin} \amp = −10 \amp \text{Ymax} \amp= 10
-                \end{align}
-                as shown in <a knowl="./knowl/fig-GC-bezier.html" knowl-id="xref-fig-GC-bezier" alt="Figure 1.3 " title="Figure 1.3 ">Figure 1.3</a>c.
-                <figure class="figure-like" id="fig-GC-bezier"><img width="100%" src="images/fig-GC-bezier.jpg" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">1.3</span></figcaption></figure>
-            </p>
-<p id="p-40">
-                As an example, we will graph the linear curve from part (A). Press <tt class="code-inline tex2jax_ignore">Y=</tt> and enter the definitions for \(x(t)\) and \(y(t)\), as shown in <a knowl="./knowl/fig-GC-bezier2.html" knowl-id="xref-fig-GC-bezier2" alt="Figure 1.4 " title="Figure 1.4 ">Figure 1.4</a>a. Press <tt class="code-inline tex2jax_ignore">GRAPH</tt> and the calculator displays the line segment joining \((−4, 7)\) and \((2, 0)\), as shown in <a knowl="./knowl/fig-GC-bezier2.html" knowl-id="xref-fig-GC-bezier2" alt="Figure 1.4 " title="Figure 1.4 ">Figure 1.4</a>b. Experiment by modifying the endpoints to see how the graph changes.
-                <figure class="figure-like" id="fig-GC-bezier2"><img width="100%" src="images/fig-GC-bezier2.jpg" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">1.4</span></figcaption></figure>
+<p id="p-19">
+			</p>
+<ol id="ol-2" style="list-style-type: lower-alpha;">
+<li id="li-2"><p id="p-20">
+					Graph the function \(f(x) = \frac{12}{x}\) in the window
+					\begin{align*}
 
-            </p>
-</li>
-<li id="li-19">
-<p id="p-41">Designing a Numeral 7</p>
-<ol id="ol-7" style="list-style-type: decimal;">
-<li id="bezier-quad-formulas-GC"><p id="p-42">
-                    Press <tt class="code-inline tex2jax_ignore">2nd</tt> <tt class="code-inline tex2jax_ignore">Y=</tt> and enter the formulas for the quadratic Bézier curve defined by the endpoints \((4, 7)\) and \((0,−7)\), and the control point \((0, 5)\) under \(X_{1T}\) and \(Y_{1T}\). (These are the same formulas you found in <a knowl="./knowl/bezier-quad-formulas.html" knowl-id="xref-bezier-quad-formulas" alt="Item I.B.1 " title="Item I.B.1 ">step I.B.1</a>.)
-                </p></li>
-<li id="li-21"><p id="p-43">
-                    Find the functions \(f\) and \(g\) for the linear Bézier curve joining the points \((−4, 7)\) and \((4, 7)\). Simplify the formulas for those functions and enter them into your calculator under \(X_{2T}\) and \(Y_{2T}\). Press <tt class="code-inline tex2jax_ignore">GRAPH</tt> to see the graph.
-                </p></li>
-<li id="li-22"><p id="p-44">
-                    Now we will alter the image slightly: Go back to \(X_{1T}\) and \(Y_{1T}\) and change the control point to \((0,−3)\). (These are the formulas you found in <a knowl="./knowl/bezier-quad-formulas2.html" knowl-id="xref-bezier-quad-formulas2" alt="Item I.B.4 " title="Item I.B.4 ">step I.B.4</a>.) How does the graph change?
-                </p></li>
-<li id="li-23"><p id="p-45">
-                    We can see exactly how the control point affects the graph by connecting the three data points with line segments. Press <tt class="code-inline tex2jax_ignore">STAT</tt> <tt class="code-inline tex2jax_ignore">ENTER</tt> and enter the coordinates of \((4, 7)\), \((0,−3)\), and \((0,−7)\) in \(L_1\) and \(L_2\), as shown in <a knowl="./knowl/fig-GC-bezier3.html" knowl-id="xref-fig-GC-bezier3" alt="Figure 1.5 " title="Figure 1.5 ">Figure 1.5</a>a. Press <tt class="code-inline tex2jax_ignore">2nd</tt> <tt class="code-inline tex2jax_ignore">Y=</tt> <tt class="code-inline tex2jax_ignore">ENTER</tt>, turn on <!--Style me with CSS--><em>Plot1</em>, and select the second plot type, as shown in <a knowl="./knowl/fig-GC-bezier3.html" knowl-id="xref-fig-GC-bezier3" alt="Figure 1.5 " title="Figure 1.5 ">Figure 1.5</a>b. You should see the line segments superimposed on your numeral 7. How are those segments related to the curve?
-                    <figure class="figure-like" id="fig-GC-bezier3"><img width="100%" src="images/fig-GC-bezier3.jpg" alt=""><figcaption><span class="heading">Figure</span><span class="codenumber">1.5</span></figcaption></figure>
-                </p></li>
-<li id="li-24"><p id="p-46">
-                    Now edit \(L_2\) so that the control point is \((0, 5)\), and again define \(X_{1T}\) and \(Y_{1T}\) as in <a knowl="./knowl/bezier-quad-formulas-GC.html" knowl-id="xref-bezier-quad-formulas-GC" alt="Item II.B.1 " title="Item II.B.1 ">step II.B.1</a> to see how the graph is altered. Experiment by using different coordinates for the control point and entering the appropriate new equations in \(X_{1T}\) and \(Y_{1T}\). Describe how the point \((x_2, y_2)\) affects the direction of the quadratic Bézier curve. (Hint: Consider the direction of the curve starting off from either endpoint.)
-                </p></li>
+							\text{Xmin} \amp = -2 \amp\amp \text{Xmax} = 7.4
+						\\
+
+							\text{Ymin} \amp = -5 \amp\amp \text{Ymax} = 20
+						
+\end{align*}
+				</p></li>
+<li id="li-3"><p id="p-21">
+					Complete the table of values.
+					<table>
+<tr>
+<td class="c m b1 r1 l1 t3 lines">\(x\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(1\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(2\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(3\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(4\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(5\)</td>
+<td class="c m b1 r1 l0 t3 lines">\(6\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">\(f(x)\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
+<td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
+</tr>
+</table>
+				</p></li>
 </ol>
+<p>
+		</p>
 </li>
-<li id="li-25">
-<p id="p-47">Designing a Letter y with Cubic Bézier Curves</p>
-<ol id="ol-8" style="list-style-type: decimal;">
-<li id="li-26"><p id="p-48">
-                    First, turn off Plot1 by pressing <tt class="code-inline tex2jax_ignore">Y=</tt> <tt class="code-inline tex2jax_ignore">↑</tt> <tt class="code-inline tex2jax_ignore">ENTER</tt>.
-                </p></li>
-<li id="li-27"><p id="p-49">
-                    Enter the formulas for the cubic Bézier curve from <a knowl="./knowl/bezier-cubic-formulas.html" knowl-id="xref-bezier-cubic-formulas" alt="Item I.C.1 " title="Item I.C.1 ">part I.C.1</a> under \(X_{1T}\) and \(Y_{1T}\). Modify the expressions in \(X_{2T}\) and \(Y_{2T}\) to the linear Bézier curve joining the points \((−4, 7)\) and \((2, 0)\) from <a knowl="./knowl/bezier-linear-formulas.html" knowl-id="xref-bezier-linear-formulas" alt="Item I.A.1 " title="Item I.A.1 ">step I.A.1</a>.
-                </p></li>
-<li id="li-28"><p id="p-50">
-                    How do the control points affect the direction of the Bézier curve? (Suggestion: Enter the coordinates of the four points under \(L_1\) and \(L_2\) and turn <!--Style me with CSS--><em>Plot1</em> back on.)
-                </p></li>
+<li id="li-4">
+<p id="p-22">
+			First we will find a linear polynomial \(P_1(x) = ax + b\) that matches \(f(x)\) at \(x = 1\) and \(x=6\text{.}\) We must find constants \(a\) and \(b\) so that \(P_1(1) = f(1)\) and \(P_1(6) = f(6)\text{.}\)
+			</p>
+<ol id="ol-3" style="list-style-type: lower-alpha;">
+<li id="li-5"><p id="p-23">
+					The two conditions above translate into equations about \(a\) and \(b\text{.}\) The constants \(a\) and \(b\) must satisfy the system
+					\begin{align*}
+a \cdot 1 + b \amp = f (1)\\
+a \cdot 6 + b \amp = f (6)
+\end{align*}
+					Solve the system and find the polynomial \(P_1(x)\text{.}\)
+				</p></li>
+<li id="li-6"><p id="p-24">
+					Graph \(P_1(x)\) in the same window with \(f(x)\text{.}\)
+				</p></li>
 </ol>
+<p>
+		</p>
 </li>
+<li id="li-7">
+<p id="p-25">
+			Next, we will find a quadratic polynomial \(P_2(x) = ax^2 + bx + c\) that matches \(f(x)\) at \(x = 1\text{,}\) \(2.5\text{,}\) and \(6\text{.}\)
+			</p>
+<ol id="ol-4" style="list-style-type: lower-alpha;">
+<li id="li-8"><p id="p-26">
+					Write and solve a system of equations for the constants \(a\text{,}\) \(b\text{,}\) and \(c\text{.}\)
+				</p></li>
+<li id="li-9"><p id="p-27">
+					Graph \(P_2(x)\) in the same window with \(f(x)\text{.}\)
+				</p></li>
 </ol>
+<p>
+		</p>
 </li>
+<li id="li-10">
+<p id="p-28">
+			We can also find a cubic polynomial \(P_3(x) = ax^3 + bx^2 + cx + d\) that matches \(f(x)\) at \(x = 1\text{,}\) \(3\text{,}\) \(4\text{,}\) and \(6\text{.}\)
+			</p>
+<ol id="ol-5" style="list-style-type: lower-alpha;">
+<li id="li-11"><p id="p-29">
+					Write a system of equations for \(a\text{,}\) \(b\text{,}\) \(c\text{,}\) and \(d\text{.}\) We will see how to solve such a system later in this chapter. For now, we will use the calculator's cubic regression feature.
+				</p></li>
+<li id="li-12"><p id="p-30">
+					Enter the coordinates of \(P_3(x)\) evaluated at \(x=1\text{,}\) \(3\text{,}\) \(4\text{,}\) and \(6\) into \(L_1\) and \(L_2\) under the <!--Style me with CSS--><em>STAT EDIT</em> menu. Then, from the <!--Style me with CSS--><em>STAT CALC</em> menu, choose <!--Style me with CSS--><em>6: CubicReg</em> and press <tt class="code-inline tex2jax_ignore">ENTER</tt>.
+				</p></li>
+<li id="li-13"><p id="p-31">
+					Graph \(P_3(x)\) in the same window with \(f(x)\text{.}\)
+				</p></li>
 </ol>
-<p id="p-51">
-    When you finish experimenting with Bézier curves, set the calculator <tt class="code-inline tex2jax_ignore">MODE</tt> (<tt class="code-inline tex2jax_ignore">2nd</tt> <tt class="code-inline tex2jax_ignore">QUIT</tt>) back to <tt class="code-inline tex2jax_ignore">FUNC</tt>, and reset the <tt class="code-inline tex2jax_ignore">FORMAT</tt>(<tt class="code-inline tex2jax_ignore">2nd</tt> <tt class="code-inline tex2jax_ignore">ZOOM</tt>)to <!--Style me with CSS--><em>AxesOn</em>.
-</p></article><span class="incontext"><a href="chap7.html#investigation-1">in-context</a></span>
+<p>
+		</p>
+</li>
+<li id="li-14"><p id="p-32">
+			How well does each interpolating polynomial approximate the function \(f(x)\text{?}\) Graph the "error function," \(E_n(x)\text{,}\) for each polynomial on the interval \([−2, 7.4]\text{.}\)
+			\begin{align*}
+E_1(x) \amp = f(x) − P_1(x)\\
+E_2(x) \amp = f(x) − P_2(x)\\
+E_3(x) \amp = f(x) − P_3(x)
+\end{align*}
+			(You will have to choose a suitable \(y\)-window for each error function.) What is the maximum error on the interval \([−2, 7.4]\) for each approximating polynomial?
+		</p></li>
+</ol>
+<p>
+</p></article><span class="incontext"><a href="chap8.html#investigation-1">in-context</a></span>
 </body>
 </html>
