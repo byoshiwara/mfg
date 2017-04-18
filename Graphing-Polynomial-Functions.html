@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-04-07T10:54:52-07:00    *-->
+<!--*    on 2017-04-17T18:46:00-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,15 +13,14 @@
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
-// contrib directory for accessibility menu, moot after v2.6+?
-MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        // [Contrib]accessibility menu moot after v2.6+?
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
         equationNumbers: { autoNumber: "none",
                            useLabelIds: true,
                            // JS comment, XML CDATA protect XHTML quality of file
@@ -33,11 +32,17 @@ MathJax.Hub.Config({
         TagSide: "right",
         TagIndent: ".8em",
     },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
     "HTML-CSS": {
         scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script>(function() {
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
   var cx = '006592449927388994635:w0x-ox5bpme';
   var gcse = document.createElement('script');
   gcse.type = 'text/javascript';
@@ -75,7 +80,7 @@ MathJax.Hub.Config({
 <nav id="primary-navbar" class="navbar" style=""><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="Polynomial-Functions.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chap7.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="Complex-Numbers.html" title="Next" alt="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Polynomial-Functions.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap7.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Complex-Numbers.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
@@ -187,21 +192,21 @@ MathJax.Hub.Config({
 <li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
 </ul>
 <h2 class="link"><a href="index-part-2.html" data-scroll="index-part-2"><span class="title">Index</span></a></h2>
-<h2 class="link"><a href="colophon-3.html" data-scroll="colophon-3"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+<h2 class="link"><a href="colophon-3.html" data-scroll="colophon-3"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Graphing-Polynomial-Functions"><header title="Section 7.2 Graphing Polynomial Functions"><h1 class="heading hide-type" alt="Section 7.2 Graphing Polynomial Functions">
 <span class="type">Section</span><span class="codenumber">7.2</span><span class="title">Graphing Polynomial Functions</span><a href="Graphing-Polynomial-Functions.html" class="permalink">¶ permalink</a>
-</h1></header><p id="p-12763">In <a href="Polynomial-Functions.html" alt="Section 7.1 Polynomial Functions" title="Section 7.1 Polynomial Functions">Section 7.1</a>, we considered applications of polynomial functions. Although most applications use only a portion of the graph of a particular polynomial, we can learn a lot about these functions by taking a more global view of their behavior.</p>
+</h1></header><p id="p-12765">In <a href="Polynomial-Functions.html" alt="Section 7.1 Polynomial Functions" title="Section 7.1 Polynomial Functions">Section 7.1</a>, we considered applications of polynomial functions. Although most applications use only a portion of the graph of a particular polynomial, we can learn a lot about these functions by taking a more global view of their behavior.</p>
 <section class="subsection" id="subsection-201"><header title="Subsection 7.2.1 Classifying Polynomials by Degree"><h1 class="heading hide-type" alt="Subsection 7.2.1 Classifying Polynomials by Degree">
 <span class="type">Subsection</span><span class="codenumber">7.2.1</span><span class="title">Classifying Polynomials by Degree</span>
-</h1></header><p id="p-12764">The graph of a polynomial function depends first of all on its degree. We have already studied the graphs of polynomials of degrees \(0\text{,}\) \(1\text{,}\) and \(2\text{.}\) A polynomial of degree \(0\) is a constant, and its graph is a horizontal line. An example of such a polynomial function is \(f(x) = 3\) (see <a knowl="./knowl/fig-deg-0-and-1-polynomials.html" knowl-id="xref-fig-deg-0-and-1-polynomials" alt="Figure 7.21 " title="Figure 7.21 ">Figure 7.21</a>a). A polynomial of degree \(1\) is a linear function, and its graph is a straight line. The function \(f(x) = 2x − 3\) is an example of a polynomial of degree \(1\text{.}\) (See <a knowl="./knowl/fig-deg-0-and-1-polynomials.html" knowl-id="xref-fig-deg-0-and-1-polynomials" alt="Figure 7.21 " title="Figure 7.21 ">Figure 7.21</a>b.) <figure class="figure-like" id="fig-deg-0-and-1-polynomials"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-deg-0-and-1-polynomials.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">7.21</span></figcaption></figure></p>
-<p id="p-12765">Quadratic functions, such as \(f(x) = −2x^2 + 6x + 8\text{,}\) are polynomials of degree \(2\text{.}\) The graph of every quadratic function is a parabola, with the same basic shape as the standard parabola, \(y = x^2\text{.}\) (See <a knowl="./knowl/fig-two-parabolas2.html" knowl-id="xref-fig-two-parabolas2" alt="Figure 7.22 " title="Figure 7.22 ">Figure 7.22</a>.) It has one turning point, where the graph changes from increasing to decreasing or vice versa. The turning point of a parabola is the same as its vertex. <figure class="figure-like" id="fig-two-parabolas2"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-two-parabolas2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">7.22</span></figcaption></figure></p></section><section class="subsection" id="subsection-202"><header title="Subsection 7.2.2 Cubic Polynomials"><h1 class="heading hide-type" alt="Subsection 7.2.2 Cubic Polynomials">
+</h1></header><p id="p-12766">The graph of a polynomial function depends first of all on its degree. We have already studied the graphs of polynomials of degrees \(0\text{,}\) \(1\text{,}\) and \(2\text{.}\) A polynomial of degree \(0\) is a constant, and its graph is a horizontal line. An example of such a polynomial function is \(f(x) = 3\) (see <a knowl="./knowl/fig-deg-0-and-1-polynomials.html" knowl-id="xref-fig-deg-0-and-1-polynomials" alt="Figure 7.21 " title="Figure 7.21 ">Figure 7.21</a>a). A polynomial of degree \(1\) is a linear function, and its graph is a straight line. The function \(f(x) = 2x − 3\) is an example of a polynomial of degree \(1\text{.}\) (See <a knowl="./knowl/fig-deg-0-and-1-polynomials.html" knowl-id="xref-fig-deg-0-and-1-polynomials" alt="Figure 7.21 " title="Figure 7.21 ">Figure 7.21</a>b.) <figure class="figure-like" id="fig-deg-0-and-1-polynomials"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-deg-0-and-1-polynomials.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">7.21</span></figcaption></figure></p>
+<p id="p-12767">Quadratic functions, such as \(f(x) = −2x^2 + 6x + 8\text{,}\) are polynomials of degree \(2\text{.}\) The graph of every quadratic function is a parabola, with the same basic shape as the standard parabola, \(y = x^2\text{.}\) (See <a knowl="./knowl/fig-two-parabolas2.html" knowl-id="xref-fig-two-parabolas2" alt="Figure 7.22 " title="Figure 7.22 ">Figure 7.22</a>.) It has one turning point, where the graph changes from increasing to decreasing or vice versa. The turning point of a parabola is the same as its vertex. <figure class="figure-like" id="fig-two-parabolas2"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-two-parabolas2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">7.22</span></figcaption></figure></p></section><section class="subsection" id="subsection-202"><header title="Subsection 7.2.2 Cubic Polynomials"><h1 class="heading hide-type" alt="Subsection 7.2.2 Cubic Polynomials">
 <span class="type">Subsection</span><span class="codenumber">7.2.2</span><span class="title">Cubic Polynomials</span>
-</h1></header><p id="p-12766">Do the graphs of all <em class="terminology">cubic</em>, or third-degree, polynomials have a basic shape in common? We can graph a few examples and find out. Unlike the basic parabola, the graph of \(y = x^3\) is always increasing. At the origin, however, it changes from concave down to concave up. A point where the graph changes concavity is called an <em class="terminology">inflection point</em>.</p>
+</h1></header><p id="p-12768">Do the graphs of all <em class="terminology">cubic</em>, or third-degree, polynomials have a basic shape in common? We can graph a few examples and find out. Unlike the basic parabola, the graph of \(y = x^3\) is always increasing. At the origin, however, it changes from concave down to concave up. A point where the graph changes concavity is called an <em class="terminology">inflection point</em>.</p>
 <article class="example-like" id="example-two-cubics"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">7.23</span>
 </h5>
-<p id="p-12767">Graph the cubic polynomial \(P(x) = x^3 − 4x\) and compare its graph with that of the basic cubic, \(y = x^3\text{.}\)</p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-202" id="solution-202"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-202" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12768">The graph of the basic cubic is shown in <a knowl="./knowl/fig-two-cubics.html" knowl-id="xref-fig-two-cubics" alt="Figure 7.24 " title="Figure 7.24 ">Figure 7.24</a>a. To help us understand the graph of the polynomial \(P(x) = x^3 − 4x\text{,}\) we will evaluate the function to make a table of values. We can do this by hand or use the Table feature on the graphing calculator. <figure class="figure-like" id="fig-two-cubics"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-two-cubics.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">7.24</span></figcaption></figure> <figure class="figure-like" id="table-409"><table>
+<p id="p-12769">Graph the cubic polynomial \(P(x) = x^3 − 4x\) and compare its graph with that of the basic cubic, \(y = x^3\text{.}\)</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-202" id="solution-202"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-202" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12770">The graph of the basic cubic is shown in <a knowl="./knowl/fig-two-cubics.html" knowl-id="xref-fig-two-cubics" alt="Figure 7.24 " title="Figure 7.24 ">Figure 7.24</a>a. To help us understand the graph of the polynomial \(P(x) = x^3 − 4x\text{,}\) we will evaluate the function to make a table of values. We can do this by hand or use the Table feature on the graphing calculator. <figure class="figure-like" id="fig-two-cubics"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-two-cubics.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">7.24</span></figcaption></figure> <figure class="figure-like" id="table-409"><table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(-3\)</td>
@@ -224,14 +229,14 @@ MathJax.Hub.Config({
 </tr>
 </table></figure> The graph of \(P(x) = x^3 − 4x\) is shown in <a knowl="./knowl/fig-two-cubics.html" knowl-id="xref-fig-two-cubics" alt="Figure 7.24 " title="Figure 7.24 ">Figure 7.24</a>b. It is not exactly the same shape as the basic cubic—it has two turning points—but it is similar, especially at the edges of the graphs.</p></span></span>
 </div></div>
-<p id="p-12769">Despite the differences in the central portions of the two graphs, they exhibit similar <!--Style me with CSS--><em>long-term</em> behavior. For very large and very small values of \(x\text{,}\) both graphs look like the power function \(y = x^3\text{.}\) The \(y\)-values increase from \(-\infty\) toward zero in the third quadrant, and they increase from zero toward \(+\infty\) in the first quadrant. Or we might say that the graphs start at the lower left and extend to the upper right. All cubic polynomials display this behavior when their lead coefficients (the coefficient of the \(x^3\) term) are positive.</p>
-<p id="p-12770">Both of the graphs in <a knowl="./knowl/example-two-cubics.html" knowl-id="xref-example-two-cubics" alt="Example 7.23 " title="Example 7.23 ">7.23</a> are smooth curves without any breaks or holes. This smoothness is a feature of the graphs of all polynomial functions. The domain of any polynomial function is the entire set of real numbers.</p>
+<p id="p-12771">Despite the differences in the central portions of the two graphs, they exhibit similar <!--Style me with CSS--><em>long-term</em> behavior. For very large and very small values of \(x\text{,}\) both graphs look like the power function \(y = x^3\text{.}\) The \(y\)-values increase from \(-\infty\) toward zero in the third quadrant, and they increase from zero toward \(+\infty\) in the first quadrant. Or we might say that the graphs start at the lower left and extend to the upper right. All cubic polynomials display this behavior when their lead coefficients (the coefficient of the \(x^3\) term) are positive.</p>
+<p id="p-12772">Both of the graphs in <a knowl="./knowl/example-two-cubics.html" knowl-id="xref-example-two-cubics" alt="Example 7.23 " title="Example 7.23 ">7.23</a> are smooth curves without any breaks or holes. This smoothness is a feature of the graphs of all polynomial functions. The domain of any polynomial function is the entire set of real numbers.</p>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-2672" id="exercise-2672"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">7.25</span>
 </h5></article></a></div>
-<div id="hk-exercise-2672" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-12771"></p>
+<div id="hk-exercise-2672" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-12773"></p>
 <ol id="ol-2374" style="list-style-type: lower-alpha;">
-<li id="li-7627"><p id="p-12772">Complete the table of values below for \(C(x) = −x^3 − 2x^2 + 4x + 4\text{.}\) <figure class="figure-like" id="table-410"><table>
+<li id="li-7627"><p id="p-12774">Complete the table of values below for \(C(x) = −x^3 − 2x^2 + 4x + 4\text{.}\) <figure class="figure-like" id="table-410"><table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(-4\)</td>
@@ -257,12 +262,12 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-7628"><p id="p-12773">Graph \(y = C(x)\) in the standard window. Compare the graph to the graphs in <a knowl="./knowl/example-two-cubics.html" knowl-id="xref-example-two-cubics" alt="Example 7.23 " title="Example 7.23 ">Example 7.23</a>: What similarities do you notice? What differences?</p></li>
+<li id="li-7628"><p id="p-12775">Graph \(y = C(x)\) in the standard window. Compare the graph to the graphs in <a knowl="./knowl/example-two-cubics.html" knowl-id="xref-example-two-cubics" alt="Example 7.23 " title="Example 7.23 ">Example 7.23</a>: What similarities do you notice? What differences?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1427" id="answer-1427"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1427" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12774"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1427" id="answer-1427"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1427" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12776"></p>
 <ol id="ol-2375" style="list-style-type: decimal;">
-<li id="li-7629"><p id="p-12775"><table>
+<li id="li-7629"><p id="p-12777"><table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(-4\)</td>
@@ -288,15 +293,15 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">\(-76\)</td>
 </tr>
 </table></p></li>
-<li id="li-7630"><p id="p-12776"><img width="35%" src="images/fig-in-ex-ans-7-2-1.jpg" alt=""> Both graphs have three \(x\)-intercepts, but the function in  <a knowl="./knowl/example-two-cubics.html" knowl-id="xref-example-two-cubics" alt="Example 7.23 " title="Example 7.23 ">Example 7.23</a> has long-term behavior like \(y = x^3\text{,}\) and this function has long-term behavior like \(y = −x^3\text{.}\)</p></li>
+<li id="li-7630"><p id="p-12778"><img width="35%" src="images/fig-in-ex-ans-7-2-1.jpg" alt=""> Both graphs have three \(x\)-intercepts, but the function in  <a knowl="./knowl/example-two-cubics.html" knowl-id="xref-example-two-cubics" alt="Example 7.23 " title="Example 7.23 ">Example 7.23</a> has long-term behavior like \(y = x^3\text{,}\) and this function has long-term behavior like \(y = −x^3\text{.}\)</p></li>
 </ol></span></span> </article></div></section><section class="subsection" id="subsection-203"><header title="Subsection 7.2.3 Quartic Polynomials"><h1 class="heading hide-type" alt="Subsection 7.2.3 Quartic Polynomials">
 <span class="type">Subsection</span><span class="codenumber">7.2.3</span><span class="title">Quartic Polynomials</span>
-</h1></header><p id="p-12777">Now let’s compare the long-term behavior of two <em class="terminology">quartic</em>, or fourth-degree, polynomials.</p>
+</h1></header><p id="p-12779">Now let’s compare the long-term behavior of two <em class="terminology">quartic</em>, or fourth-degree, polynomials.</p>
 <article class="example-like" id="example-two-quartics"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">7.26</span>
 </h5>
-<p id="p-12778">Graph the polynomials \(f(x) = x^4 − 10x^2 + 9\) and \(g(x) = x^4 + 2x^3\text{,}\) and compare.</p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-203" id="solution-203"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-203" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12779">For each function we make a table of values. <figure class="figure-like" id="table-411"><table>
+<p id="p-12780">Graph the polynomials \(f(x) = x^4 − 10x^2 + 9\) and \(g(x) = x^4 + 2x^3\text{,}\) and compare.</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-203" id="solution-203"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-203" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12781">For each function we make a table of values. <figure class="figure-like" id="table-411"><table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(-4\)</td>
@@ -329,14 +334,14 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">\(384\)</td>
 </tr>
 </table></figure> The graphs are shown in <a knowl="./knowl/fig-two-quartics.html" knowl-id="xref-fig-two-quartics" alt="Figure 7.27 " title="Figure 7.27 ">Figure 7.27</a>. All the essential features of the graphs are shown in these viewing windows. The graphs continue forever in the directions indicated, without any additional twists or turns. You can see that the graph of f has three turning points, and the graph of g has one turning point. <figure class="figure-like" id="fig-two-quartics"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-two-quartics.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">7.27</span></figcaption></figure></p>
-<p id="p-12780">As in <a knowl="./knowl/example-two-cubics.html" knowl-id="xref-example-two-cubics" alt="Example 7.23 " title="Example 7.23 ">Example 7.23</a>, both graphs have similar long-term behavior. The \(y\)-values decrease from \(-\infty\) toward zero as \(x\) increases from \(-\infty\text{,}\) and the \(y\)-values increase toward \(+\infty\) as \(x\) increases to \(+\infty\text{.}\) This long-term behavior is similar to that of the power function \(y = x^4\text{.}\) Its graph also starts at the upper left and extends to the upper right.</p></span></span>
+<p id="p-12782">As in <a knowl="./knowl/example-two-cubics.html" knowl-id="xref-example-two-cubics" alt="Example 7.23 " title="Example 7.23 ">Example 7.23</a>, both graphs have similar long-term behavior. The \(y\)-values decrease from \(-\infty\) toward zero as \(x\) increases from \(-\infty\text{,}\) and the \(y\)-values increase toward \(+\infty\) as \(x\) increases to \(+\infty\text{.}\) This long-term behavior is similar to that of the power function \(y = x^4\text{.}\) Its graph also starts at the upper left and extends to the upper right.</p></span></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-2673" id="exercise-2673"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">7.28</span>
 </h5></article></a></div>
-<div id="hk-exercise-2673" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-12781"></p>
+<div id="hk-exercise-2673" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-12783"></p>
 <ol id="ol-2376" style="list-style-type: lower-alpha;">
-<li id="li-7631"><p id="p-12782">Complete the following table of values for \(Q(x) = −x^4 − x^3 − 6x^2 + 2\text{.}\) <figure class="figure-like" id="table-412"><table>
+<li id="li-7631"><p id="p-12784">Complete the following table of values for \(Q(x) = −x^4 − x^3 − 6x^2 + 2\text{.}\) <figure class="figure-like" id="table-412"><table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(-4\)</td>
@@ -362,12 +367,12 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{000}\)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-7632"><p id="p-12783">Graph \(y = Q(x)\) in the window \begin{align} \text{Xmin} \amp = −5 \amp\amp \text{Xmax} = 5\\ \text{Ymin} \amp = −15 \amp\amp \text{Ymax} = 10 \end{align} Compare the graph to the graphs in <a knowl="./knowl/example-two-quartics.html" knowl-id="xref-example-two-quartics" alt="Example 7.26 " title="Example 7.26 ">Example 7.26</a>: What similarities do you notice? What differences?</p></li>
+<li id="li-7632"><p id="p-12785">Graph \(y = Q(x)\) in the window \begin{align} \text{Xmin} \amp = −5 \amp\amp \text{Xmax} = 5\\ \text{Ymin} \amp = −15 \amp\amp \text{Ymax} = 10 \end{align} Compare the graph to the graphs in <a knowl="./knowl/example-two-quartics.html" knowl-id="xref-example-two-quartics" alt="Example 7.26 " title="Example 7.26 ">Example 7.26</a>: What similarities do you notice? What differences?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1428" id="answer-1428"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1428" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12784"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1428" id="answer-1428"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1428" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12786"></p>
 <ol id="ol-2377" style="list-style-type: decimal;">
-<li id="li-7633"><p id="p-12785"><table>
+<li id="li-7633"><p id="p-12787"><table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(-4\)</td>
@@ -393,47 +398,47 @@ MathJax.Hub.Config({
 <td class="c m b1 r1 l0 t0 lines">\(-414\)</td>
 </tr>
 </table></p></li>
-<li id="li-7634"><p id="p-12786"><img width="35%" src="images/fig-in-ex-ans-7-2-2.jpg" alt=""> The graphs all have long-term behavior like a fourth degree power function, \(y = ax^4\text{.}\) The long-term behavior of the graphs in <a knowl="./knowl/example-two-quartics.html" knowl-id="xref-example-two-quartics" alt="Example 7.26 " title="Example 7.26 ">Example 7.26</a> is the same as that of \(y = x^4\text{,}\) but the graph here has long-term behavior like \(y = −x^4\text{.}\)</p></li>
+<li id="li-7634"><p id="p-12788"><img width="35%" src="images/fig-in-ex-ans-7-2-2.jpg" alt=""> The graphs all have long-term behavior like a fourth degree power function, \(y = ax^4\text{.}\) The long-term behavior of the graphs in <a knowl="./knowl/example-two-quartics.html" knowl-id="xref-example-two-quartics" alt="Example 7.26 " title="Example 7.26 ">Example 7.26</a> is the same as that of \(y = x^4\text{,}\) but the graph here has long-term behavior like \(y = −x^4\text{.}\)</p></li>
 </ol></span></span> </article></div>
-<p id="p-12787">In <a knowl="./knowl/example-two-cubics.html" knowl-id="xref-example-two-cubics" alt="Example 7.23 " title="Example 7.23 ">Examples 7.23</a> and <a knowl="./knowl/example-two-quartics.html" knowl-id="xref-example-two-quartics" alt="Example 7.26 " title="Example 7.26 ">7.26</a>, we have seen polynomials of degree 3, whose graphs have a characteristic shape, illustrated in <a knowl="./knowl/fig-cubic-and-quartic.html" knowl-id="xref-fig-cubic-and-quartic" alt="Figure  " title="Figure  ">Figure </a>a, and polynomials of degree 4, whose graphs are illustrated by <a knowl="./knowl/fig-cubic-and-quartic.html" knowl-id="xref-fig-cubic-and-quartic" alt="Figure  " title="Figure  ">Figure </a>b. In the exercises, you will consider more graphs to help you verify the following observations.</p>
+<p id="p-12789">In <a knowl="./knowl/example-two-cubics.html" knowl-id="xref-example-two-cubics" alt="Example 7.23 " title="Example 7.23 ">Examples 7.23</a> and <a knowl="./knowl/example-two-quartics.html" knowl-id="xref-example-two-quartics" alt="Example 7.26 " title="Example 7.26 ">7.26</a>, we have seen polynomials of degree 3, whose graphs have a characteristic shape, illustrated in <a knowl="./knowl/fig-cubic-and-quartic.html" knowl-id="xref-fig-cubic-and-quartic" alt="Figure  " title="Figure  ">Figure </a>a, and polynomials of degree 4, whose graphs are illustrated by <a knowl="./knowl/fig-cubic-and-quartic.html" knowl-id="xref-fig-cubic-and-quartic" alt="Figure  " title="Figure  ">Figure </a>b. In the exercises, you will consider more graphs to help you verify the following observations.</p>
 <article class="assemblage-like" id="assemblage-140"><h5 class="heading">Long-Term Behavior of Polynomial Functions</h5>
-<p id="p-12788"></p>
+<p id="p-12790"></p>
 <ol id="ol-2378" style="list-style-type: decimal;">
-<li id="li-7635"><p id="p-12789">A polynomial of odd degree (with positive lead coefficient) has negative \(y\)-values for large negative \(x\) and positive \(y\)-values for large positive \(x\text{.}\)</p></li>
-<li id="li-7636"><p id="p-12790">A polynomial of even degree (with positive lead coefficient) has positive \(y\)-values for both large positive and large negative \(x\text{.}\)</p></li>
+<li id="li-7635"><p id="p-12791">A polynomial of odd degree (with positive lead coefficient) has negative \(y\)-values for large negative \(x\) and positive \(y\)-values for large positive \(x\text{.}\)</p></li>
+<li id="li-7636"><p id="p-12792">A polynomial of even degree (with positive lead coefficient) has positive \(y\)-values for both large positive and large negative \(x\text{.}\)</p></li>
 </ol>
-<p> <figure class="figure-like" id="fig-cubic-and-quartic"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-cubic-and-quartic.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></article><p id="p-12791">Another way to describe the long-term behavior of a polynomial graph is to note that for large values of \(\abs{x}\text{,}\) the shape is similar to a power function of the same degree. It is the presence of the lower-degree terms in the polynomial that are responsible for any extra wiggles or turning points in the graph.</p></section><section class="subsection" id="subsection-204"><header title="Subsection 7.2.4 \(x\)-Intercepts and the Factor Theorem"><h1 class="heading hide-type" alt="Subsection 7.2.4 \(x\)-Intercepts and the Factor Theorem">
+<p> <figure class="figure-like" id="fig-cubic-and-quartic"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-cubic-and-quartic.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></article><p id="p-12793">Another way to describe the long-term behavior of a polynomial graph is to note that for large values of \(\abs{x}\text{,}\) the shape is similar to a power function of the same degree. It is the presence of the lower-degree terms in the polynomial that are responsible for any extra wiggles or turning points in the graph.</p></section><section class="subsection" id="subsection-204"><header title="Subsection 7.2.4 \(x\)-Intercepts and the Factor Theorem"><h1 class="heading hide-type" alt="Subsection 7.2.4 \(x\)-Intercepts and the Factor Theorem">
 <span class="type">Subsection</span><span class="codenumber">7.2.4</span><span class="title">\(x\)-Intercepts and the Factor Theorem</span>
-</h1></header><p id="p-12792">In <a href="chap6.html" alt="Chapter 6 Quadratic Functions" title="Chapter 6 Quadratic Functions">Chapter 6</a>, we saw that the x-intercepts of a quadratic polynomial, \(f(x) = ax^2 + bx + c\text{,}\) occur at values of \(x\) for which \(f(x) = 0\text{,}\) that is, at the real-valued solutions of the equation \(ax^2 + bx + c = 0\text{.}\) The same holds true for polynomials of higher degree.</p>
-<p id="p-12793">Solutions of the equation \(P(x) = 0\) are called <em class="terminology">zeros</em> of the polynomial \(P\text{.}\) In <a knowl="./knowl/example-two-cubics.html" knowl-id="xref-example-two-cubics" alt="Example 7.23 " title="Example 7.23 ">Example 7.23</a>, we graphed the cubic polynomial \(P(x) = x^3 − 4x\text{.}\) Its \(x\)-intercepts are the solutions of the equation \(x^3 − 4x = 0\text{,}\) which we can solve by factoring the polynomial \(P(x)\text{.}\)
+</h1></header><p id="p-12794">In <a href="chap6.html" alt="Chapter 6 Quadratic Functions" title="Chapter 6 Quadratic Functions">Chapter 6</a>, we saw that the x-intercepts of a quadratic polynomial, \(f(x) = ax^2 + bx + c\text{,}\) occur at values of \(x\) for which \(f(x) = 0\text{,}\) that is, at the real-valued solutions of the equation \(ax^2 + bx + c = 0\text{.}\) The same holds true for polynomials of higher degree.</p>
+<p id="p-12795">Solutions of the equation \(P(x) = 0\) are called <em class="terminology">zeros</em> of the polynomial \(P\text{.}\) In <a knowl="./knowl/example-two-cubics.html" knowl-id="xref-example-two-cubics" alt="Example 7.23 " title="Example 7.23 ">Example 7.23</a>, we graphed the cubic polynomial \(P(x) = x^3 − 4x\text{.}\) Its \(x\)-intercepts are the solutions of the equation \(x^3 − 4x = 0\text{,}\) which we can solve by factoring the polynomial \(P(x)\text{.}\)
 \begin{align*}
 x^3 − 4x \amp= 0\\
 x(x − 2)(x + 2) \amp= 0
 \end{align*}
 The zeros of \(P\) are \(0\text{,}\) \(2\text{,}\) and \(−2\text{.}\) Each zero of \(P\) corresponds to a factor of \(P(x)\text{.}\) This result suggests the following theorem, which holds for any polynomial \(P\text{.}\)</p>
 <article class="assemblage-like" id="assemblage-factor-theorem"><h5 class="heading">Factor Theorem</h5>
-<p id="p-12794">Let \(P(x)\) be a polynomial with real number coefficients. Then \((x − a)\) is a factor of \(P(x)\) if and only if \(P(a) = 0\text{.}\)</p></article><p id="p-12795">The factor theorem follows from the division algorithm for polynomials. We will consider both of these results in more detail in the Homework problems.</p>
-<p id="p-12796">Because a polynomial function of degree \(n\) can have at most \(n\) linear factors of the form \((x − a)\text{,}\) it follows that \(P\) can have at most \(n\) distinct zeros. Another way of saying this is that if \(P(x)\) is a polynomial of \(n\)th degree, the equation \(P(x) = 0\) can have at most \(n\) distinct solutions, some of which may be complex numbers. (We consider complex numbers in <a href="Complex-Numbers.html" alt="Section 7.3 Complex Numbers" title="Section 7.3 Complex Numbers">Section 7.3</a>.) Because only real-valued solutions appear on the graph as \(x\)-intercepts, we have the following corollary to the factor theorem.</p>
+<p id="p-12796">Let \(P(x)\) be a polynomial with real number coefficients. Then \((x − a)\) is a factor of \(P(x)\) if and only if \(P(a) = 0\text{.}\)</p></article><p id="p-12797">The factor theorem follows from the division algorithm for polynomials. We will consider both of these results in more detail in the Homework problems.</p>
+<p id="p-12798">Because a polynomial function of degree \(n\) can have at most \(n\) linear factors of the form \((x − a)\text{,}\) it follows that \(P\) can have at most \(n\) distinct zeros. Another way of saying this is that if \(P(x)\) is a polynomial of \(n\)th degree, the equation \(P(x) = 0\) can have at most \(n\) distinct solutions, some of which may be complex numbers. (We consider complex numbers in <a href="Complex-Numbers.html" alt="Section 7.3 Complex Numbers" title="Section 7.3 Complex Numbers">Section 7.3</a>.) Because only real-valued solutions appear on the graph as \(x\)-intercepts, we have the following corollary to the factor theorem.</p>
 <article class="assemblage-like" id="assemblage-142"><h5 class="heading">\(x\)-Intercepts of Polynomials</h5>
-<p id="p-12797">A polynomial of degree \(n\) can have at most \(n\) \(x\)-intercepts.</p></article><p id="p-12798">If some of the zeros of \(P\) are complex numbers, they will not appear on the graph, so a polynomial of degree \(n\) <!--Style me with CSS--><em>may have fewer</em> than \(n\) \(x\)-intercepts.</p>
+<p id="p-12799">A polynomial of degree \(n\) can have at most \(n\) \(x\)-intercepts.</p></article><p id="p-12800">If some of the zeros of \(P\) are complex numbers, they will not appear on the graph, so a polynomial of degree \(n\) <!--Style me with CSS--><em>may have fewer</em> than \(n\) \(x\)-intercepts.</p>
 <article class="example-like" id="example-cubic-and-quartic"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">7.29</span>
 </h5>
-<p id="p-12799">Find the real-valued zeros of each of the following polynomials, and list the \(x\)-intercepts of its graph. </p>
+<p id="p-12801">Find the real-valued zeros of each of the following polynomials, and list the \(x\)-intercepts of its graph. </p>
 <ol id="ol-2379" style="list-style-type: lower-alpha;">
 <li id="li-7637">\(f(x) = x^3 + 6x^2 + 9x\)</li>
 <li id="li-7638">\(g(x) = x^4 − 3x^2 − 4\)</li>
 </ol>
 <p></p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-204" id="solution-204"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-204" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12800"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-204" id="solution-204"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-204" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12802"></p>
 <ol id="ol-2380" style="list-style-type: lower-alpha;">
-<li id="li-7639"><p id="p-12801">Factor the polynomial to obtain
+<li id="li-7639"><p id="p-12803">Factor the polynomial to obtain
 \begin{align*}
 f(x) \amp= x(x^2 + 6x + 9)\\
 \amp= x(x + 3)(x + 3)
 \end{align*}
 By the factor theorem, the zeros of \(f\) are \(0\text{,}\) \(−3\text{,}\) and \(−3\text{.}\) (We say that \(f\) has a zero <!--Style me with CSS--><em>of multiplicity two</em> at \(−3\text{.}\)) Because all of these are real numbers, all will appear as \(x\)-intercepts on the graph. Thus, the \(x\)-intercepts occur at \((0, 0)\) and at \((−3, 0)\text{.}\)</p></li>
-<li id="li-7640"><p id="p-12802">Factor the polynomial to obtain
+<li id="li-7640"><p id="p-12804">Factor the polynomial to obtain
 \begin{align*}
 g(x) \amp= (x^2 − 4)(x^2 + 1)\\
 \amp= (x − 2)(x + 2)(x^2 + 1)
@@ -446,33 +451,33 @@ Because \(x^2 + 1\) cannot be factored in real numbers, the graph has only two \
 <span class="type">Exercise</span><span class="codenumber">7.31</span>
 </h5></article></a></div>
 <div id="hk-exercise-2674" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><ol id="ol-2381" style="list-style-type: lower-alpha;">
-<li id="li-7641"><p id="p-12803">Find the real-valued zeros of \(P(x) = −x^4 + x^3 + 2x^2\) by factoring.</p></li>
-<li id="li-7642"><p id="p-12804">Sketch a rough graph of \(y = P(x)\) by hand.</p></li>
+<li id="li-7641"><p id="p-12805">Find the real-valued zeros of \(P(x) = −x^4 + x^3 + 2x^2\) by factoring.</p></li>
+<li id="li-7642"><p id="p-12806">Sketch a rough graph of \(y = P(x)\) by hand.</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1429" id="answer-1429"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1429" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12805"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1429" id="answer-1429"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1429" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12807"></p>
 <ol id="ol-2382" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-7643" style="width:49%; float:left;"><p id="p-12806">\(−1, 0, 2\)</p></li>
-<li id="li-7644" style="width:49%; float:left;"><p id="p-12807"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-in-ex-ans-7-2-3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-7643" style="width:49%; float:left;"><p id="p-12808">\(−1, 0, 2\)</p></li>
+<li id="li-7644" style="width:49%; float:left;"><p id="p-12809"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-in-ex-ans-7-2-3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></span></span> </article></div></section><section class="subsection" id="subsection-205"><header title="Subsection 7.2.5 Zeros of Multiplicity Two or Three"><h1 class="heading hide-type" alt="Subsection 7.2.5 Zeros of Multiplicity Two or Three">
 <span class="type">Subsection</span><span class="codenumber">7.2.5</span><span class="title">Zeros of Multiplicity Two or Three</span>
-</h1></header><p id="p-12808">The appearance of the graph near an \(x\)-intercept is determined by the multiplicity of the zero there. For example, both real zeros of the polynomial \(g(x) = x^4 − 3x^2 − 4\) in <a knowl="./knowl/example-cubic-and-quartic.html" knowl-id="xref-example-cubic-and-quartic" alt="Example 7.29 " title="Example 7.29 ">Example 7.29</a>b are of multiplicity one, and the graph crosses the \(x\)-axis at each intercept. However, the polynomial \(f(x) = x^3 + 6x^2 + 9x\) in <a knowl="./knowl/example-cubic-and-quartic.html" knowl-id="xref-example-cubic-and-quartic" alt="Example 7.29 " title="Example 7.29 ">Example 7.29</a>a has a zero of multiplicity two at \(x = −3\text{.}\) The graph of \(f\) just touches the \(x\)-axis and then reverses direction without crossing the axis.</p>
-<p id="p-12809">To understand what happens in general, compare the graphs of the three polynomials in <a knowl="./knowl/fig-linear-quadratic-and-cubic-with-1-zero.html" knowl-id="xref-fig-linear-quadratic-and-cubic-with-1-zero" alt="Figure 7.32 " title="Figure 7.32 ">Figure 7.32</a>. <figure class="figure-like" id="fig-linear-quadratic-and-cubic-with-1-zero"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-linear-quadratic-and-cubic-with-1-zero.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">7.32</span></figcaption></figure> </p>
+</h1></header><p id="p-12810">The appearance of the graph near an \(x\)-intercept is determined by the multiplicity of the zero there. For example, both real zeros of the polynomial \(g(x) = x^4 − 3x^2 − 4\) in <a knowl="./knowl/example-cubic-and-quartic.html" knowl-id="xref-example-cubic-and-quartic" alt="Example 7.29 " title="Example 7.29 ">Example 7.29</a>b are of multiplicity one, and the graph crosses the \(x\)-axis at each intercept. However, the polynomial \(f(x) = x^3 + 6x^2 + 9x\) in <a knowl="./knowl/example-cubic-and-quartic.html" knowl-id="xref-example-cubic-and-quartic" alt="Example 7.29 " title="Example 7.29 ">Example 7.29</a>a has a zero of multiplicity two at \(x = −3\text{.}\) The graph of \(f\) just touches the \(x\)-axis and then reverses direction without crossing the axis.</p>
+<p id="p-12811">To understand what happens in general, compare the graphs of the three polynomials in <a knowl="./knowl/fig-linear-quadratic-and-cubic-with-1-zero.html" knowl-id="xref-fig-linear-quadratic-and-cubic-with-1-zero" alt="Figure 7.32 " title="Figure 7.32 ">Figure 7.32</a>. <figure class="figure-like" id="fig-linear-quadratic-and-cubic-with-1-zero"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-linear-quadratic-and-cubic-with-1-zero.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">7.32</span></figcaption></figure> </p>
 <ol id="ol-2383" style="list-style-type: decimal;">
-<li id="li-7645"><p id="p-12810">In <a knowl="./knowl/fig-linear-quadratic-and-cubic-with-1-zero.html" knowl-id="xref-fig-linear-quadratic-and-cubic-with-1-zero" alt="Figure 7.32 " title="Figure 7.32 ">Figure 7.32</a>a, \(L(x) = x − 2\) has a zero <!--Style me with CSS--><em>of multiplicity one</em> at \(x = 2\text{,}\) and its graph crosses the \(x\)-axis there.</p></li>
-<li id="li-7646"><p id="p-12811">In <a knowl="./knowl/fig-linear-quadratic-and-cubic-with-1-zero.html" knowl-id="xref-fig-linear-quadratic-and-cubic-with-1-zero" alt="Figure 7.32 " title="Figure 7.32 ">Figure 7.32</a>b, \(Q(x) = (x − 2)^2\) has a zero <!--Style me with CSS--><em>of multiplicity two</em> at \(x = 2\text{,}\) and its graph touches the \(x\)-axis there but changes direction without crossing.</p></li>
-<li id="li-7647"><p id="p-12812">In <a knowl="./knowl/fig-linear-quadratic-and-cubic-with-1-zero.html" knowl-id="xref-fig-linear-quadratic-and-cubic-with-1-zero" alt="Figure 7.32 " title="Figure 7.32 ">Figure 7.32</a>c, \(C(x) = (x − 2)^3\) has a zero <!--Style me with CSS--><em>of multiplicity three</em> at \(x = 2\text{.}\) In this case, the graph makes an S-shaped curve at the intercept, like the graph of \(y = x^3\text{.}\)</p></li>
+<li id="li-7645"><p id="p-12812">In <a knowl="./knowl/fig-linear-quadratic-and-cubic-with-1-zero.html" knowl-id="xref-fig-linear-quadratic-and-cubic-with-1-zero" alt="Figure 7.32 " title="Figure 7.32 ">Figure 7.32</a>a, \(L(x) = x − 2\) has a zero <!--Style me with CSS--><em>of multiplicity one</em> at \(x = 2\text{,}\) and its graph crosses the \(x\)-axis there.</p></li>
+<li id="li-7646"><p id="p-12813">In <a knowl="./knowl/fig-linear-quadratic-and-cubic-with-1-zero.html" knowl-id="xref-fig-linear-quadratic-and-cubic-with-1-zero" alt="Figure 7.32 " title="Figure 7.32 ">Figure 7.32</a>b, \(Q(x) = (x − 2)^2\) has a zero <!--Style me with CSS--><em>of multiplicity two</em> at \(x = 2\text{,}\) and its graph touches the \(x\)-axis there but changes direction without crossing.</p></li>
+<li id="li-7647"><p id="p-12814">In <a knowl="./knowl/fig-linear-quadratic-and-cubic-with-1-zero.html" knowl-id="xref-fig-linear-quadratic-and-cubic-with-1-zero" alt="Figure 7.32 " title="Figure 7.32 ">Figure 7.32</a>c, \(C(x) = (x − 2)^3\) has a zero <!--Style me with CSS--><em>of multiplicity three</em> at \(x = 2\text{.}\) In this case, the graph makes an S-shaped curve at the intercept, like the graph of \(y = x^3\text{.}\)</p></li>
 </ol>
 <p></p>
-<p id="p-12813">Near its \(x\)-intercepts, the graph of a polynomial takes one of the characteristic shapes illustrated in <a knowl="./knowl/fig-linear-quadratic-and-cubic-with-1-zero.html" knowl-id="xref-fig-linear-quadratic-and-cubic-with-1-zero" alt="Figure 7.32 " title="Figure 7.32 ">Figure 7.32</a>. (Although we will not consider zeros of multiplicity greater than three, they correspond to similar behavior in the graph: At a zero of odd multiplicity, the graph has an inflection point at the intercept; its graph makes an S-shaped curve. At a zero of even multiplicity, the graph has a turning point; it changes direction without crossing the \(x\)-axis.)</p>
+<p id="p-12815">Near its \(x\)-intercepts, the graph of a polynomial takes one of the characteristic shapes illustrated in <a knowl="./knowl/fig-linear-quadratic-and-cubic-with-1-zero.html" knowl-id="xref-fig-linear-quadratic-and-cubic-with-1-zero" alt="Figure 7.32 " title="Figure 7.32 ">Figure 7.32</a>. (Although we will not consider zeros of multiplicity greater than three, they correspond to similar behavior in the graph: At a zero of odd multiplicity, the graph has an inflection point at the intercept; its graph makes an S-shaped curve. At a zero of even multiplicity, the graph has a turning point; it changes direction without crossing the \(x\)-axis.)</p>
 <article class="example-like" id="example-226"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">7.33</span>
 </h5>
-<p id="p-12814">Graph the polynomial
+<p id="p-12816">Graph the polynomial
 \begin{equation*}
 f(x) = (x + 2)^3(x − 1)(x − 3)^2
 \end{equation*}
 </p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-205" id="solution-205"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-205" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12815">The polynomial has degree six, an even number, so its graph starts at the upper left and extends to the upper right. Its \(y\)-intercept is
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-205" id="solution-205"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-205" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12817">The polynomial has degree six, an even number, so its graph starts at the upper left and extends to the upper right. Its \(y\)-intercept is
 \begin{equation*}
 f(0) = (2)^3(−1)(−3)^2 = −72
 \end{equation*}
@@ -481,417 +486,417 @@ f(0) = (2)^3(−1)(−3)^2 = −72
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-2675" id="exercise-2675"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">7.35</span>
 </h5></article></a></div>
-<div id="hk-exercise-2675" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-12816">Sketch a rough graph of \(f(x) = (x + 3)(x − 1)^2\) by hand. Label the \(x\)- and \(y\)-intercepts.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1430" id="answer-1430"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1430" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12817"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-in-ex-ans-7-2-4.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></span></span> </article></div></section><section class="subsection" id="summary-7-2"><header title="Subsection 7.2.6 Section Summary"><h1 class="heading hide-type" alt="Subsection 7.2.6 Section Summary">
+<div id="hk-exercise-2675" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-12818">Sketch a rough graph of \(f(x) = (x + 3)(x − 1)^2\) by hand. Label the \(x\)- and \(y\)-intercepts.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1430" id="answer-1430"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1430" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12819"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-in-ex-ans-7-2-4.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></span></span> </article></div></section><section class="subsection" id="summary-7-2"><header title="Subsection 7.2.6 Section Summary"><h1 class="heading hide-type" alt="Subsection 7.2.6 Section Summary">
 <span class="type">Subsection</span><span class="codenumber">7.2.6</span><span class="title">Section Summary</span><a href="Graphing-Polynomial-Functions.html#summary-7-2" class="permalink">¶ permalink</a>
 </h1></header><section class="subsubsection" id="subsubsection-133"><header title="Subsubsection 7.2.6.1 Vocabulary"><h1 class="heading hide-type" alt="Subsubsection 7.2.6.1 Vocabulary">
 <span class="type">Subsubsection</span><span class="codenumber">7.2.6.1</span><span class="title">Vocabulary</span>
-</h1></header><p id="p-12818">Look up the definitions of new terms in the Glossary. </p>
+</h1></header><p id="p-12820">Look up the definitions of new terms in the Glossary. </p>
 <ul id="ul-42" class="cols3" style="list-style-type: disc;">
-<li id="li-7648" style="width:32.6666666666667%; float:left;"><p id="p-12819">Degree</p></li>
-<li id="li-7649" style="width:32.6666666666667%; float:left;"><p id="p-12820">Multiplicity</p></li>
-<li id="li-7650" style="width:32.6666666666667%; float:left;"><p id="p-12821">Inflection point</p></li>
-<li id="li-7651" style="width:32.6666666666667%; float:left;"><p id="p-12822">Quartic</p></li>
-<li id="li-7652" style="width:32.6666666666667%; float:left;"><p id="p-12823">Turning point</p></li>
-<li id="li-7653" style="width:32.6666666666667%; float:left;"><p id="p-12824">Cubic</p></li>
-<li id="li-7654" style="width:32.6666666666667%; float:left;"><p id="p-12825">Corollary</p></li>
-<li id="li-7655" style="width:32.6666666666667%; float:left;"><p id="p-12826">Zero</p></li>
+<li id="li-7648" style="width:32.6666666666667%; float:left;"><p id="p-12821">Degree</p></li>
+<li id="li-7649" style="width:32.6666666666667%; float:left;"><p id="p-12822">Multiplicity</p></li>
+<li id="li-7650" style="width:32.6666666666667%; float:left;"><p id="p-12823">Inflection point</p></li>
+<li id="li-7651" style="width:32.6666666666667%; float:left;"><p id="p-12824">Quartic</p></li>
+<li id="li-7652" style="width:32.6666666666667%; float:left;"><p id="p-12825">Turning point</p></li>
+<li id="li-7653" style="width:32.6666666666667%; float:left;"><p id="p-12826">Cubic</p></li>
+<li id="li-7654" style="width:32.6666666666667%; float:left;"><p id="p-12827">Corollary</p></li>
+<li id="li-7655" style="width:32.6666666666667%; float:left;"><p id="p-12828">Zero</p></li>
 </ul>
 <p></p></section><section class="subsubsection" id="subsubsection-134"><header title="Subsubsection 7.2.6.2 CONCEPTS"><h1 class="heading hide-type" alt="Subsubsection 7.2.6.2 CONCEPTS">
 <span class="type">Subsubsection</span><span class="codenumber">7.2.6.2</span><span class="title">CONCEPTS</span>
-</h1></header><p id="p-12827"></p>
+</h1></header><p id="p-12829"></p>
 <ol id="ol-2384" style="list-style-type: decimal;">
-<li id="li-7656"><p id="p-12828">The graphs of all polynomials are smooth curves without breaks or holes.</p></li>
-<li id="li-7657"><p id="p-12829">The graph of a polynomial of degree \(n\) (with positive leading coefficient) has the same long-term behavior as the power function of the same degree.</p></li>
-<li id="li-7658"><p id="p-12830"><a knowl="./knowl/assemblage-factor-theorem.html" knowl-id="xref-assemblage-factor-theorem" alt="Assemblage  Factor Theorem" title="Assemblage  Factor Theorem">Factor theorem </a></p></li>
-<li id="li-7659"><p id="p-12831">A polynomial of degree \(n\) can have at most \(n\) \(x\)-intercepts.</p></li>
-<li id="li-7660"><p id="p-12832">At a zero of multiplicity two, the graph of a polynomial has a turning point. At a zero of multiplicity three, the graph of a polynomial has an inflection point.</p></li>
+<li id="li-7656"><p id="p-12830">The graphs of all polynomials are smooth curves without breaks or holes.</p></li>
+<li id="li-7657"><p id="p-12831">The graph of a polynomial of degree \(n\) (with positive leading coefficient) has the same long-term behavior as the power function of the same degree.</p></li>
+<li id="li-7658"><p id="p-12832"><a knowl="./knowl/assemblage-factor-theorem.html" knowl-id="xref-assemblage-factor-theorem" alt="Assemblage  Factor Theorem" title="Assemblage  Factor Theorem">Factor theorem </a></p></li>
+<li id="li-7659"><p id="p-12833">A polynomial of degree \(n\) can have at most \(n\) \(x\)-intercepts.</p></li>
+<li id="li-7660"><p id="p-12834">At a zero of multiplicity two, the graph of a polynomial has a turning point. At a zero of multiplicity three, the graph of a polynomial has an inflection point.</p></li>
 </ol>
 <p></p></section><section class="subsubsection" id="subsubsection-135"><header title="Subsubsection 7.2.6.3 STUDY QUESTIONS"><h1 class="heading hide-type" alt="Subsubsection 7.2.6.3 STUDY QUESTIONS">
 <span class="type">Subsubsection</span><span class="codenumber">7.2.6.3</span><span class="title">STUDY QUESTIONS</span>
-</h1></header><p id="p-12833"></p>
+</h1></header><p id="p-12835"></p>
 <ol id="ol-2385" style="list-style-type: decimal;">
-<li id="li-7661"><p id="p-12834">Describe the graphs of polynomials of degrees \(0\text{,}\) \(1\text{,}\) and \(2\text{.}\)</p></li>
-<li id="li-7662"><p id="p-12835">What does the degree of a polynomial tell you about its long-term behavior?</p></li>
-<li id="li-7663"><p id="p-12836">What is a zero of a polynomial?</p></li>
-<li id="li-7664"><p id="p-12837">How are zeros related to the factors of a polynomial?</p></li>
-<li id="li-7665"><p id="p-12838">What do the zeros tell you about the graph of a polynomial?</p></li>
-<li id="li-7666"><p id="p-12839">Explain the difference between a turning point and an inflection point.</p></li>
+<li id="li-7661"><p id="p-12836">Describe the graphs of polynomials of degrees \(0\text{,}\) \(1\text{,}\) and \(2\text{.}\)</p></li>
+<li id="li-7662"><p id="p-12837">What does the degree of a polynomial tell you about its long-term behavior?</p></li>
+<li id="li-7663"><p id="p-12838">What is a zero of a polynomial?</p></li>
+<li id="li-7664"><p id="p-12839">How are zeros related to the factors of a polynomial?</p></li>
+<li id="li-7665"><p id="p-12840">What do the zeros tell you about the graph of a polynomial?</p></li>
+<li id="li-7666"><p id="p-12841">Explain the difference between a turning point and an inflection point.</p></li>
 </ol>
 <p></p></section><section class="subsubsection" id="subsubsection-136"><header title="Subsubsection 7.2.6.4 SKILLS"><h1 class="heading hide-type" alt="Subsubsection 7.2.6.4 SKILLS">
 <span class="type">Subsubsection</span><span class="codenumber">7.2.6.4</span><span class="title">SKILLS</span>
-</h1></header><p id="p-12840">Practice each skill in the <a href="Graphing-Polynomial-Functions.html#section-7-2-exercises" alt="Exercises 7.2.7 Homework" title="Exercises 7.2.7 Homework">Homework 7.2.7</a> problems listed. </p>
+</h1></header><p id="p-12842">Practice each skill in the <a href="Graphing-Polynomial-Functions.html#section-7-2-exercises" alt="Exercises 7.2.7 Homework" title="Exercises 7.2.7 Homework">Homework 7.2.7</a> problems listed. </p>
 <ol id="ol-2386" style="list-style-type: decimal;">
-<li id="li-7667"><p id="p-12841">Identify \(x\)-intercepts, turning points, and inflection points: #1–8, 11–18</p></li>
-<li id="li-7668"><p id="p-12842">Use a graph to factor a polynomial: #21–28</p></li>
-<li id="li-7669"><p id="p-12843">Sketch the graph of a polynomial: #29–46</p></li>
-<li id="li-7670"><p id="p-12844">Find a possible formula for a polynomial whose graph is shown: #47–52</p></li>
-<li id="li-7671"><p id="p-12845">Graph translations of polynomials: #53–56</p></li>
+<li id="li-7667"><p id="p-12843">Identify \(x\)-intercepts, turning points, and inflection points: #1–8, 11–18</p></li>
+<li id="li-7668"><p id="p-12844">Use a graph to factor a polynomial: #21–28</p></li>
+<li id="li-7669"><p id="p-12845">Sketch the graph of a polynomial: #29–46</p></li>
+<li id="li-7670"><p id="p-12846">Find a possible formula for a polynomial whose graph is shown: #47–52</p></li>
+<li id="li-7671"><p id="p-12847">Graph translations of polynomials: #53–56</p></li>
 </ol>
 <p></p></section></section><section class="exercises" id="section-7-2-exercises"><header title="Exercises 7.2.7 Homework"><h1 class="heading hide-type" alt="Exercises 7.2.7 Homework">
 <span class="type">Subsection</span><span class="codenumber">7.2.7</span><span class="title">Homework</span><a href="Graphing-Polynomial-Functions.html#section-7-2-exercises" class="permalink">¶ permalink</a>
 </h1></header><div class="exercisegroup" id="exercisegroup-359">
-<article class="introduction" id="introduction-365"><p id="p-12846">In Problems 1–8, use your calculator to graph each cubic polynomial. </p>
+<article class="introduction" id="introduction-365"><p id="p-12848">In Problems 1–8, use your calculator to graph each cubic polynomial. </p>
 <ol id="ol-2387" style="list-style-type: lower-alpha;">
-<li id="li-7672"><p id="p-12847">Describe the long-term behavior of each graph. How does this behavior compare to that of the basic cubic? How does the sign of the lead coefficient affect the graph?</p></li>
-<li id="li-7673"><p id="p-12848">How many \(x\)-intercepts does each graph have? How many turning points? How many inflection points?</p></li>
+<li id="li-7672"><p id="p-12849">Describe the long-term behavior of each graph. How does this behavior compare to that of the basic cubic? How does the sign of the lead coefficient affect the graph?</p></li>
+<li id="li-7673"><p id="p-12850">How many \(x\)-intercepts does each graph have? How many turning points? How many inflection points?</p></li>
 </ol></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-2676"><h5 class="heading"><span class="codenumber">1</span></h5>
-<p id="p-12849">\(y = x^3 + 4\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1431" id="answer-1431"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1431" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12850"><img width="40%" src="images/fig-ans-7-2-1.jpg" alt=""></p>
+<p id="p-12851">\(y = x^3 + 4\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1431" id="answer-1431"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1431" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12852"><img width="40%" src="images/fig-ans-7-2-1.jpg" alt=""></p>
 <ol id="ol-2388" style="list-style-type: lower-alpha;">
-<li id="li-7674"><p id="p-12851">The end behavior is the same as for the basic cubic because the lead coefficient is positive.</p></li>
-<li id="li-7675"><p id="p-12852">There is one \(x\)-intercept, no turning points, one inflection point.</p></li>
+<li id="li-7674"><p id="p-12853">The end behavior is the same as for the basic cubic because the lead coefficient is positive.</p></li>
+<li id="li-7675"><p id="p-12854">There is one \(x\)-intercept, no turning points, one inflection point.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2677"><h5 class="heading"><span class="codenumber">2</span></h5>
-<p id="p-12853">\(y = x^3 − 8\)</p></article><article class="exercise-like" id="exercise-2678"><h5 class="heading"><span class="codenumber">3</span></h5>
-<p id="p-12854">\(y = −2 − 0.05x^3\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1432" id="answer-1432"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1432" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12855"><img width="40%" src="images/fig-ans-7-2-3.jpg" alt=""></p>
+<p id="p-12855">\(y = x^3 − 8\)</p></article><article class="exercise-like" id="exercise-2678"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p id="p-12856">\(y = −2 − 0.05x^3\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1432" id="answer-1432"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1432" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12857"><img width="40%" src="images/fig-ans-7-2-3.jpg" alt=""></p>
 <ol id="ol-2389" style="list-style-type: lower-alpha;">
-<li id="li-7676"><p id="p-12856">The end behavior is opposite to the basic cubic (the graph starts in the upper left and extends to the lower right) because the lead coefficient is negative.</p></li>
-<li id="li-7677"><p id="p-12857">There is one \(x\)-intercept, no turning points, one inflection point.</p></li>
+<li id="li-7676"><p id="p-12858">The end behavior is opposite to the basic cubic (the graph starts in the upper left and extends to the lower right) because the lead coefficient is negative.</p></li>
+<li id="li-7677"><p id="p-12859">There is one \(x\)-intercept, no turning points, one inflection point.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2679"><h5 class="heading"><span class="codenumber">4</span></h5>
-<p id="p-12858">\(y = 5 − 0.02x^3\)</p></article><article class="exercise-like" id="exercise-2680"><h5 class="heading"><span class="codenumber">5</span></h5>
-<p id="p-12859">\(y = x^3 − 3x\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1433" id="answer-1433"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1433" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12860"><img width="30%" src="images/fig-ans-7-2-5.png" alt=""></p>
+<p id="p-12860">\(y = 5 − 0.02x^3\)</p></article><article class="exercise-like" id="exercise-2680"><h5 class="heading"><span class="codenumber">5</span></h5>
+<p id="p-12861">\(y = x^3 − 3x\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1433" id="answer-1433"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1433" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12862"><img width="30%" src="images/fig-ans-7-2-5.png" alt=""></p>
 <ol id="ol-2390" style="list-style-type: lower-alpha;">
-<li id="li-7678"><p id="p-12861">The end behavior is the same as for the basic cubic because the lead coefficient is positive.</p></li>
-<li id="li-7679"><p id="p-12862">There are three \(x\)-intercepts, two turning points, one inflection point.</p></li>
+<li id="li-7678"><p id="p-12863">The end behavior is the same as for the basic cubic because the lead coefficient is positive.</p></li>
+<li id="li-7679"><p id="p-12864">There are three \(x\)-intercepts, two turning points, one inflection point.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2681"><h5 class="heading"><span class="codenumber">6</span></h5>
-<p id="p-12863">\(y = 9x − x^3\)</p></article><article class="exercise-like" id="exercise-2682"><h5 class="heading"><span class="codenumber">7</span></h5>
-<p id="p-12864">\(y = x^3 + 5x^2 − 4x − 20\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1434" id="answer-1434"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1434" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12865"><img width="40%" src="images/fig-ans-7-2-7.jpg" alt=""> </p>
+<p id="p-12865">\(y = 9x − x^3\)</p></article><article class="exercise-like" id="exercise-2682"><h5 class="heading"><span class="codenumber">7</span></h5>
+<p id="p-12866">\(y = x^3 + 5x^2 − 4x − 20\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1434" id="answer-1434"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1434" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12867"><img width="40%" src="images/fig-ans-7-2-7.jpg" alt=""> </p>
 <ol id="ol-2391" style="list-style-type: lower-alpha;">
-<li id="li-7680"><p id="p-12866">The end behavior is the same as for the basic cubic because the lead coefficient is positive.</p></li>
-<li id="li-7681"><p id="p-12867">There are three \(x\)-intercepts, two turning points, one inflection point.</p></li>
+<li id="li-7680"><p id="p-12868">The end behavior is the same as for the basic cubic because the lead coefficient is positive.</p></li>
+<li id="li-7681"><p id="p-12869">There are three \(x\)-intercepts, two turning points, one inflection point.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2683"><h5 class="heading"><span class="codenumber">8</span></h5>
-<p id="p-12868">\(y = −x^3 − 2x^2 + 5x + 6\)</p></article>
+<p id="p-12870">\(y = −x^3 − 2x^2 + 5x + 6\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-360">
-<article class="introduction" id="introduction-366"><p id="p-12869">Use a calculator to graph each cubic polynomial.Which graphs are the same?</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-366"><p id="p-12871">Use a calculator to graph each cubic polynomial.Which graphs are the same?</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-2684"><h5 class="heading"><span class="codenumber">9</span></h5>
-<p id="p-12870"></p>
+<p id="p-12872"></p>
 <ol id="ol-2392" style="list-style-type: lower-alpha;">
-<li id="li-7682"><p id="p-12871">\(y=x^3-2 \)</p></li>
-<li id="li-7683"><p id="p-12872">\(y=(x-2)^3 \)</p></li>
-<li id="li-7684"><p id="p-12873">\(y= x^3-6x^2+12x-8 \)</p></li>
+<li id="li-7682"><p id="p-12873">\(y=x^3-2 \)</p></li>
+<li id="li-7683"><p id="p-12874">\(y=(x-2)^3 \)</p></li>
+<li id="li-7684"><p id="p-12875">\(y= x^3-6x^2+12x-8 \)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1435" id="answer-1435"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1435" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12874"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1435" id="answer-1435"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1435" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12876"></p>
 <ol id="ol-2393" style="list-style-type: lower-alpha;">
-<li id="li-7685"><p id="p-12875"><img width="35%" src="images/fig-ans-7-2-9.jpg" alt=""></p></li>
-<li id="li-7686"><p id="p-12876"><img width="35%" src="images/fig-ans-7-2-9b.jpg" alt=""></p></li>
-<li id="li-7687"><p id="p-12877"><img width="35%" src="images/fig-ans-7-2-9c.jpg" alt=""></p></li>
+<li id="li-7685"><p id="p-12877"><img width="35%" src="images/fig-ans-7-2-9.jpg" alt=""></p></li>
+<li id="li-7686"><p id="p-12878"><img width="35%" src="images/fig-ans-7-2-9b.jpg" alt=""></p></li>
+<li id="li-7687"><p id="p-12879"><img width="35%" src="images/fig-ans-7-2-9c.jpg" alt=""></p></li>
 </ol>
 <p>(b) and (c) are the same.</p></span></span> </article><article class="exercise-like" id="exercise-2685"><h5 class="heading"><span class="codenumber">10</span></h5>
-<p id="p-12878"></p>
+<p id="p-12880"></p>
 <ol id="ol-2394" style="list-style-type: lower-alpha;">
-<li id="li-7688"><p id="p-12879">\(y = x^3 + 3\)</p></li>
-<li id="li-7689"><p id="p-12880">\(y = (x + 3)^3\)</p></li>
-<li id="li-7690"><p id="p-12881">\(y = x^3 + 9x^2+27x+27\)</p></li>
+<li id="li-7688"><p id="p-12881">\(y = x^3 + 3\)</p></li>
+<li id="li-7689"><p id="p-12882">\(y = (x + 3)^3\)</p></li>
+<li id="li-7690"><p id="p-12883">\(y = x^3 + 9x^2+27x+27\)</p></li>
 </ol></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-361">
-<article class="introduction" id="introduction-367"><p id="p-12882">In Problems 11–18, use your calculator to graph each quartic polynomial. </p>
+<article class="introduction" id="introduction-367"><p id="p-12884">In Problems 11–18, use your calculator to graph each quartic polynomial. </p>
 <ol id="ol-2395" style="list-style-type: lower-alpha;">
-<li id="li-7691"><p id="p-12883">Describe the long-term behavior of each graph. How does this behavior compare to that of the basic quartic? How does the sign of the lead coefficient affect the graph?</p></li>
-<li id="li-7692"><p id="p-12884">How many \(x\)-intercepts does each graph have? How many turning points? How many inflection points?</p></li>
+<li id="li-7691"><p id="p-12885">Describe the long-term behavior of each graph. How does this behavior compare to that of the basic quartic? How does the sign of the lead coefficient affect the graph?</p></li>
+<li id="li-7692"><p id="p-12886">How many \(x\)-intercepts does each graph have? How many turning points? How many inflection points?</p></li>
 </ol></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-2686"><h5 class="heading"><span class="codenumber">11</span></h5>
-<p id="p-12885">\(y = 0.5x^4 − 4\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1436" id="answer-1436"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1436" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12886"><img width="35%" src="images/fig-ans-7-2-11.jpg" alt=""> </p>
+<p id="p-12887">\(y = 0.5x^4 − 4\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1436" id="answer-1436"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1436" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12888"><img width="35%" src="images/fig-ans-7-2-11.jpg" alt=""> </p>
 <ol id="ol-2396" style="list-style-type: lower-alpha;">
-<li id="li-7693"><p id="p-12887">The end behavior is the same as for the basic quartic because the lead coefficient is positive.</p></li>
-<li id="li-7694"><p id="p-12888">There are two \(x\)-intercepts, one turning point, no inflection point.</p></li>
+<li id="li-7693"><p id="p-12889">The end behavior is the same as for the basic quartic because the lead coefficient is positive.</p></li>
+<li id="li-7694"><p id="p-12890">There are two \(x\)-intercepts, one turning point, no inflection point.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2687"><h5 class="heading"><span class="codenumber">12</span></h5>
-<p id="p-12889">\(y = 0.3x^4 + 1\)</p></article><article class="exercise-like" id="exercise-2688"><h5 class="heading"><span class="codenumber">13</span></h5>
-<p id="p-12890">\(y = −x^4 + 6x^2 − 10\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1437" id="answer-1437"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1437" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12891"><img width="35%" src="images/fig-ans-7-2-13.jpg" alt=""> </p>
+<p id="p-12891">\(y = 0.3x^4 + 1\)</p></article><article class="exercise-like" id="exercise-2688"><h5 class="heading"><span class="codenumber">13</span></h5>
+<p id="p-12892">\(y = −x^4 + 6x^2 − 10\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1437" id="answer-1437"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1437" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12893"><img width="35%" src="images/fig-ans-7-2-13.jpg" alt=""> </p>
 <ol id="ol-2397" style="list-style-type: lower-alpha;">
-<li id="li-7695"><p id="p-12892">The end behavior is opposite to the basic quartic (the graph starts in the lower left and ends in the lower right) because the lead coefficient is negative.</p></li>
-<li id="li-7696"><p id="p-12893">There are no \(x\)-intercepts, three turning points, two inflection points.</p></li>
+<li id="li-7695"><p id="p-12894">The end behavior is opposite to the basic quartic (the graph starts in the lower left and ends in the lower right) because the lead coefficient is negative.</p></li>
+<li id="li-7696"><p id="p-12895">There are no \(x\)-intercepts, three turning points, two inflection points.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2689"><h5 class="heading"><span class="codenumber">14</span></h5>
-<p id="p-12894">\(y = x^4 − 8x^2 − 8\)</p></article><article class="exercise-like" id="exercise-2690"><h5 class="heading"><span class="codenumber">15</span></h5>
-<p id="p-12895">\(y = x^4 − 3x^3\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1438" id="answer-1438"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1438" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12896"><img width="35%" src="images/fig-ans-7-2-15.jpg" alt=""> </p>
+<p id="p-12896">\(y = x^4 − 8x^2 − 8\)</p></article><article class="exercise-like" id="exercise-2690"><h5 class="heading"><span class="codenumber">15</span></h5>
+<p id="p-12897">\(y = x^4 − 3x^3\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1438" id="answer-1438"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1438" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12898"><img width="35%" src="images/fig-ans-7-2-15.jpg" alt=""> </p>
 <ol id="ol-2398" style="list-style-type: lower-alpha;">
-<li id="li-7697"><p id="p-12897">The end behavior is the same as for the basic quartic because the lead coefficient is positive.</p></li>
-<li id="li-7698"><p id="p-12898">There are two \(x\)-intercepts, one turning point, two inflection points.</p></li>
+<li id="li-7697"><p id="p-12899">The end behavior is the same as for the basic quartic because the lead coefficient is positive.</p></li>
+<li id="li-7698"><p id="p-12900">There are two \(x\)-intercepts, one turning point, two inflection points.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2691"><h5 class="heading"><span class="codenumber">16</span></h5>
-<p id="p-12899">\(y = −x^4 − 4x^3\)</p></article><article class="exercise-like" id="exercise-2692"><h5 class="heading"><span class="codenumber">17</span></h5>
-<p id="p-12900">\(y = −x^4 − x^3 − 2\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1439" id="answer-1439"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1439" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12901"><img width="35%" src="images/fig-ans-7-2-17.jpg" alt=""> </p>
+<p id="p-12901">\(y = −x^4 − 4x^3\)</p></article><article class="exercise-like" id="exercise-2692"><h5 class="heading"><span class="codenumber">17</span></h5>
+<p id="p-12902">\(y = −x^4 − x^3 − 2\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1439" id="answer-1439"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1439" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12903"><img width="35%" src="images/fig-ans-7-2-17.jpg" alt=""> </p>
 <ol id="ol-2399" style="list-style-type: lower-alpha;">
-<li id="li-7699"><p id="p-12902">The end behavior is opposite to the basic quartic (the graph starts in the lower left and ends in the lower right) because the lead coefficient is negative.</p></li>
-<li id="li-7700"><p id="p-12903">There are no \(x\)-intercepts, one turning point, two inflection points.</p></li>
+<li id="li-7699"><p id="p-12904">The end behavior is opposite to the basic quartic (the graph starts in the lower left and ends in the lower right) because the lead coefficient is negative.</p></li>
+<li id="li-7700"><p id="p-12905">There are no \(x\)-intercepts, one turning point, two inflection points.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2693"><h5 class="heading"><span class="codenumber">18</span></h5>
-<p id="p-12904">\(y = x^4 + 2x^3 + 4x^2 + 10\)</p></article>
+<p id="p-12906">\(y = x^4 + 2x^3 + 4x^2 + 10\)</p></article>
 </div>
 </div>
 <article class="exercise-like" id="exercise-2694"><h5 class="heading"><span class="codenumber">19</span></h5>
-<p id="p-12905">From your answers to Problems 1–8, what you can conclude about the graphs of cubic polynomials? Consider the long-term behavior, \(x\)-intercepts, turning points, and inflection points.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1440" id="answer-1440"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1440" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12906">The graph of a cubic polynomial with a positive lead coefficient will have the same end behavior as the basic cubic, and a cubic with a negative lead coefficient will have the opposite end behavior. Each graph of a cubic polynomial has one, two, or three \(x\)-intercepts, it has two, one or no turning point, and it has exactly one inflection point.</p></span></span> </article><article class="exercise-like" id="exercise-2695"><h5 class="heading"><span class="codenumber">20</span></h5>
-<p id="p-12907">From your answers to Problems 11–18, what you can conclude about the graphs of quartic polynomials? Consider the long-term behavior, \(x\)-intercepts, turning points, and inflection points.</p></article><div class="exercisegroup" id="exercisegroup-362">
-<article class="introduction" id="introduction-368"><p id="p-12908">For Problems 21–26, </p>
+<p id="p-12907">From your answers to Problems 1–8, what you can conclude about the graphs of cubic polynomials? Consider the long-term behavior, \(x\)-intercepts, turning points, and inflection points.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1440" id="answer-1440"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1440" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12908">The graph of a cubic polynomial with a positive lead coefficient will have the same end behavior as the basic cubic, and a cubic with a negative lead coefficient will have the opposite end behavior. Each graph of a cubic polynomial has one, two, or three \(x\)-intercepts, it has two, one or no turning point, and it has exactly one inflection point.</p></span></span> </article><article class="exercise-like" id="exercise-2695"><h5 class="heading"><span class="codenumber">20</span></h5>
+<p id="p-12909">From your answers to Problems 11–18, what you can conclude about the graphs of quartic polynomials? Consider the long-term behavior, \(x\)-intercepts, turning points, and inflection points.</p></article><div class="exercisegroup" id="exercisegroup-362">
+<article class="introduction" id="introduction-368"><p id="p-12910">For Problems 21–26, </p>
 <ol id="ol-2400" style="list-style-type: lower-alpha;">
-<li id="li-7701"><p id="p-12909">Use your calculator to graph each polynomial and locate the \(x\)-intercepts. Set \(\text{Xmin} =−4.7\text{,}\) \(\text{Xmax} = 4.7\text{,}\) and adjust <em class="terminology">Ymin</em> and <em class="terminology">Ymax</em> to get a good graph.</p></li>
-<li id="li-7702"><p id="p-12910">Write the polynomial in factored form.</p></li>
-<li id="li-7703"><p id="p-12911">Expand the factored form of the polynomial (that is, multiply the factors together). Do you get the original polynomial?</p></li>
+<li id="li-7701"><p id="p-12911">Use your calculator to graph each polynomial and locate the \(x\)-intercepts. Set \(\text{Xmin} =−4.7\text{,}\) \(\text{Xmax} = 4.7\text{,}\) and adjust <em class="terminology">Ymin</em> and <em class="terminology">Ymax</em> to get a good graph.</p></li>
+<li id="li-7702"><p id="p-12912">Write the polynomial in factored form.</p></li>
+<li id="li-7703"><p id="p-12913">Expand the factored form of the polynomial (that is, multiply the factors together). Do you get the original polynomial?</p></li>
 </ol></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-2696"><h5 class="heading"><span class="codenumber">21</span></h5>
-<p id="p-12912">\(P(x) = x^3 − 7x − 6\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1441" id="answer-1441"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1441" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12913"></p>
+<p id="p-12914">\(P(x) = x^3 − 7x − 6\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1441" id="answer-1441"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1441" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12915"></p>
 <ol id="ol-2401" style="list-style-type: lower-alpha;">
-<li id="li-7704"><p id="p-12914"><img width="49%" src="images/fig-ans-7-2-21.jpg" alt=""> \((−2, 0), (−1, 0), (3, 0)\)</p></li>
-<li id="li-7705"><p id="p-12915">\(P(x) = (x + 2)(x + 1)(x − 3)\)</p></li>
-<li id="li-7706"><p id="p-12916">Yes</p></li>
+<li id="li-7704"><p id="p-12916"><img width="49%" src="images/fig-ans-7-2-21.jpg" alt=""> \((−2, 0), (−1, 0), (3, 0)\)</p></li>
+<li id="li-7705"><p id="p-12917">\(P(x) = (x + 2)(x + 1)(x − 3)\)</p></li>
+<li id="li-7706"><p id="p-12918">Yes</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2697"><h5 class="heading"><span class="codenumber">22</span></h5>
-<p id="p-12917">\(Q(x) = x^3 + 3x^2 − x − 3\)</p></article><article class="exercise-like" id="exercise-2698"><h5 class="heading"><span class="codenumber">23</span></h5>
-<p id="p-12918">\(R(x) = x^4 − x^3 − 4x^2 + 4x\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1442" id="answer-1442"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1442" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12919"></p>
+<p id="p-12919">\(Q(x) = x^3 + 3x^2 − x − 3\)</p></article><article class="exercise-like" id="exercise-2698"><h5 class="heading"><span class="codenumber">23</span></h5>
+<p id="p-12920">\(R(x) = x^4 − x^3 − 4x^2 + 4x\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1442" id="answer-1442"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1442" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12921"></p>
 <ol id="ol-2402" style="list-style-type: lower-alpha;">
-<li id="li-7707"><p id="p-12920"><img width="49%" src="images/fig-ans-7-2-23.jpg" alt=""> \((−2, 0), (0, 0), (1, 0), (2, 0)\)</p></li>
-<li id="li-7708"><p id="p-12921">\(R(x) = (x + 2)(x)(x − 1)(x − 2)\)</p></li>
-<li id="li-7709"><p id="p-12922">Yes</p></li>
+<li id="li-7707"><p id="p-12922"><img width="49%" src="images/fig-ans-7-2-23.jpg" alt=""> \((−2, 0), (0, 0), (1, 0), (2, 0)\)</p></li>
+<li id="li-7708"><p id="p-12923">\(R(x) = (x + 2)(x)(x − 1)(x − 2)\)</p></li>
+<li id="li-7709"><p id="p-12924">Yes</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2699"><h5 class="heading"><span class="codenumber">24</span></h5>
-<p id="p-12923">\(S(x) = x^4 + 3x^3 − x^2 − 3x\)</p></article><article class="exercise-like" id="exercise-2700"><h5 class="heading"><span class="codenumber">25</span></h5>
-<p id="p-12924">\(p(x) = x^3 − 3x^2 − 6x + 8\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1443" id="answer-1443"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1443" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12925"></p>
+<p id="p-12925">\(S(x) = x^4 + 3x^3 − x^2 − 3x\)</p></article><article class="exercise-like" id="exercise-2700"><h5 class="heading"><span class="codenumber">25</span></h5>
+<p id="p-12926">\(p(x) = x^3 − 3x^2 − 6x + 8\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1443" id="answer-1443"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1443" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12927"></p>
 <ol id="ol-2403" style="list-style-type: lower-alpha;">
-<li id="li-7710"><p id="p-12926"><img width="49%" src="images/fig-ans-7-2-25.jpg" alt=""> \((−2, 0), (1, 0), (4, 0)\)</p></li>
-<li id="li-7711"><p id="p-12927">\(p(x) = (x + 2)(x − 1)(x − 4)\)</p></li>
-<li id="li-7712"><p id="p-12928">Yes</p></li>
+<li id="li-7710"><p id="p-12928"><img width="49%" src="images/fig-ans-7-2-25.jpg" alt=""> \((−2, 0), (1, 0), (4, 0)\)</p></li>
+<li id="li-7711"><p id="p-12929">\(p(x) = (x + 2)(x − 1)(x − 4)\)</p></li>
+<li id="li-7712"><p id="p-12930">Yes</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2701"><h5 class="heading"><span class="codenumber">26</span></h5>
-<p id="p-12929">\(q(x) = x^3 + 6x^2 − x − 30\)</p></article><article class="exercise-like" id="exercise-2702"><h5 class="heading"><span class="codenumber">27</span></h5>
-<p id="p-12930">\(r (x) = x^4 − x^3 − 10x^2 + 4x + 24\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1444" id="answer-1444"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1444" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12931"></p>
+<p id="p-12931">\(q(x) = x^3 + 6x^2 − x − 30\)</p></article><article class="exercise-like" id="exercise-2702"><h5 class="heading"><span class="codenumber">27</span></h5>
+<p id="p-12932">\(r (x) = x^4 − x^3 − 10x^2 + 4x + 24\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1444" id="answer-1444"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1444" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12933"></p>
 <ol id="ol-2404" style="list-style-type: lower-alpha;">
-<li id="li-7713"><p id="p-12932"><img width="49%" src="images/fig-ans-7-2-25.jpg" alt=""> \((−2, 0), (2, 0), (3, 0)\)</p></li>
-<li id="li-7714"><p id="p-12933">\(r(x) = (x + 2)^2(x − 2)(x − 3)\)</p></li>
-<li id="li-7715"><p id="p-12934">Yes</p></li>
+<li id="li-7713"><p id="p-12934"><img width="49%" src="images/fig-ans-7-2-25.jpg" alt=""> \((−2, 0), (2, 0), (3, 0)\)</p></li>
+<li id="li-7714"><p id="p-12935">\(r(x) = (x + 2)^2(x − 2)(x − 3)\)</p></li>
+<li id="li-7715"><p id="p-12936">Yes</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2703"><h5 class="heading"><span class="codenumber">28</span></h5>
-<p id="p-12935">\(s(x) = x^4 − x^3 − 12x^2 − 4x + 16\)</p></article>
+<p id="p-12937">\(s(x) = x^4 − x^3 − 12x^2 − 4x + 16\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-363">
-<article class="introduction" id="introduction-369"><p id="p-12936">Sketch a rough graph of each polynomial function by hand, paying attention to the shape of the graph near each \(x\)-intercept. Check by graphing with a calculator.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-369"><p id="p-12938">Sketch a rough graph of each polynomial function by hand, paying attention to the shape of the graph near each \(x\)-intercept. Check by graphing with a calculator.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-2704"><h5 class="heading"><span class="codenumber">29</span></h5>
-<p id="p-12937">\(q(x) = (x + 4)(x + 1)(x − 1)\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1445" id="answer-1445"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1445" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12938"><object type="image/svg+xml" style="width:30%; margin:auto; display:block;" data="images/fig-ans-7-2-29.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></span></span> </article><article class="exercise-like" id="exercise-2705"><h5 class="heading"><span class="codenumber">30</span></h5>
-<p id="p-12939">\(p(x) = x(x + 2)(x + 4)\)</p></article><article class="exercise-like" id="exercise-2706"><h5 class="heading"><span class="codenumber">31</span></h5>
-<p id="p-12940">\(G(x) = (x − 2)^2(x + 2)^2\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1446" id="answer-1446"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1446" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12941"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-ans-7-2-31.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></span></span> </article><article class="exercise-like" id="exercise-2707"><h5 class="heading"><span class="codenumber">32</span></h5>
-<p id="p-12942">\(F(x) = (x − 1)^2 (x − 3)^2\)</p></article><article class="exercise-like" id="exercise-2708"><h5 class="heading"><span class="codenumber">33</span></h5>
-<p id="p-12943">\(h(x) = x^3(x + 2)(x − 2)\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1447" id="answer-1447"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1447" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12944"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-ans-7-2-33.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></span></span> </article><article class="exercise-like" id="exercise-2709"><h5 class="heading"><span class="codenumber">34</span></h5>
-<p id="p-12945">\(H(x) = (x + 1)^3(x − 2)^2\)</p></article><article class="exercise-like" id="exercise-2710"><h5 class="heading"><span class="codenumber">35</span></h5>
-<p id="p-12946">\(P(x) = (x + 4)^2(x + 1)^2(x − 1)^2\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1448" id="answer-1448"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1448" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12947"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-ans-7-2-35.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></span></span> </article><article class="exercise-like" id="exercise-2711"><h5 class="heading"><span class="codenumber">36</span></h5>
-<p id="p-12948">\(Q(x) = x^2(x − 5)(x − 1)^2(x + 2)\)</p></article>
+<p id="p-12939">\(q(x) = (x + 4)(x + 1)(x − 1)\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1445" id="answer-1445"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1445" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12940"><object type="image/svg+xml" style="width:30%; margin:auto; display:block;" data="images/fig-ans-7-2-29.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></span></span> </article><article class="exercise-like" id="exercise-2705"><h5 class="heading"><span class="codenumber">30</span></h5>
+<p id="p-12941">\(p(x) = x(x + 2)(x + 4)\)</p></article><article class="exercise-like" id="exercise-2706"><h5 class="heading"><span class="codenumber">31</span></h5>
+<p id="p-12942">\(G(x) = (x − 2)^2(x + 2)^2\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1446" id="answer-1446"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1446" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12943"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-ans-7-2-31.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></span></span> </article><article class="exercise-like" id="exercise-2707"><h5 class="heading"><span class="codenumber">32</span></h5>
+<p id="p-12944">\(F(x) = (x − 1)^2 (x − 3)^2\)</p></article><article class="exercise-like" id="exercise-2708"><h5 class="heading"><span class="codenumber">33</span></h5>
+<p id="p-12945">\(h(x) = x^3(x + 2)(x − 2)\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1447" id="answer-1447"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1447" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12946"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-ans-7-2-33.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></span></span> </article><article class="exercise-like" id="exercise-2709"><h5 class="heading"><span class="codenumber">34</span></h5>
+<p id="p-12947">\(H(x) = (x + 1)^3(x − 2)^2\)</p></article><article class="exercise-like" id="exercise-2710"><h5 class="heading"><span class="codenumber">35</span></h5>
+<p id="p-12948">\(P(x) = (x + 4)^2(x + 1)^2(x − 1)^2\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1448" id="answer-1448"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1448" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12949"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-ans-7-2-35.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></span></span> </article><article class="exercise-like" id="exercise-2711"><h5 class="heading"><span class="codenumber">36</span></h5>
+<p id="p-12950">\(Q(x) = x^2(x − 5)(x − 1)^2(x + 2)\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-364">
-<article class="introduction" id="introduction-370"><p id="p-12949">For Problems 37–46, </p>
+<article class="introduction" id="introduction-370"><p id="p-12951">For Problems 37–46, </p>
 <ol id="ol-2405" style="list-style-type: lower-alpha;">
-<li id="li-7716"><p id="p-12950">Find the zeros of each polynomial by factoring.</p></li>
-<li id="li-7717"><p id="p-12951">Sketch a rough graph by hand.</p></li>
+<li id="li-7716"><p id="p-12952">Find the zeros of each polynomial by factoring.</p></li>
+<li id="li-7717"><p id="p-12953">Sketch a rough graph by hand.</p></li>
 </ol></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-2712"><h5 class="heading"><span class="codenumber">37</span></h5>
-<p id="p-12952">\(P(x) = x^4 + 4x^2\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1449" id="answer-1449"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1449" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12953"></p>
+<p id="p-12954">\(P(x) = x^4 + 4x^2\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1449" id="answer-1449"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1449" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12955"></p>
 <ol id="ol-2406" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-7718" style="width:49%; float:left;"><p id="p-12954">\(0\) (multiplicity 2)</p></li>
-<li id="li-7719" style="width:49%; float:left;"><p id="p-12955"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-ans-7-2-37.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-7718" style="width:49%; float:left;"><p id="p-12956">\(0\) (multiplicity 2)</p></li>
+<li id="li-7719" style="width:49%; float:left;"><p id="p-12957"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-ans-7-2-37.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2713"><h5 class="heading"><span class="codenumber">38</span></h5>
-<p id="p-12956">\(P(x) = x^3 + 3x\)</p></article><article class="exercise-like" id="exercise-2714"><h5 class="heading"><span class="codenumber">39</span></h5>
-<p id="p-12957">\(f (x) = x^4 + 4x^3 + 4x^2\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1450" id="answer-1450"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1450" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12958"></p>
+<p id="p-12958">\(P(x) = x^3 + 3x\)</p></article><article class="exercise-like" id="exercise-2714"><h5 class="heading"><span class="codenumber">39</span></h5>
+<p id="p-12959">\(f (x) = x^4 + 4x^3 + 4x^2\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1450" id="answer-1450"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1450" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12960"></p>
 <ol id="ol-2407" style="list-style-type: lower-alpha;">
-<li id="li-7720"><p id="p-12959">\(0\) (multiplicity 2), \(2\) (multiplicity 2)</p></li>
-<li id="li-7721"><p id="p-12960"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-ans-7-2-39.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-7720"><p id="p-12961">\(0\) (multiplicity 2), \(2\) (multiplicity 2)</p></li>
+<li id="li-7721"><p id="p-12962"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-ans-7-2-39.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2715"><h5 class="heading"><span class="codenumber">40</span></h5>
-<p id="p-12961">\(g(x) = x^4 + 4x^3 + 3x^2\)</p></article><article class="exercise-like" id="exercise-2716"><h5 class="heading"><span class="codenumber">41</span></h5>
-<p id="p-12962">\(g(x) = 4x − x^3\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1451" id="answer-1451"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1451" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12963"></p>
+<p id="p-12963">\(g(x) = x^4 + 4x^3 + 3x^2\)</p></article><article class="exercise-like" id="exercise-2716"><h5 class="heading"><span class="codenumber">41</span></h5>
+<p id="p-12964">\(g(x) = 4x − x^3\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1451" id="answer-1451"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1451" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12965"></p>
 <ol id="ol-2408" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-7722" style="width:49%; float:left;"><p id="p-12964">\(0, \pm 2\)</p></li>
-<li id="li-7723" style="width:49%; float:left;"><p id="p-12965"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-ans-7-2-41.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-7722" style="width:49%; float:left;"><p id="p-12966">\(0, \pm 2\)</p></li>
+<li id="li-7723" style="width:49%; float:left;"><p id="p-12967"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-ans-7-2-41.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2717"><h5 class="heading"><span class="codenumber">42</span></h5>
-<p id="p-12966">\(g(x) = x^4 + 4x^3 + 3x^2\)</p></article><article class="exercise-like" id="exercise-2718"><h5 class="heading"><span class="codenumber">43</span></h5>
-<p id="p-12967">\(K(x) = x^4 − 10x^2 + 16\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1452" id="answer-1452"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1452" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12968"></p>
+<p id="p-12968">\(g(x) = x^4 + 4x^3 + 3x^2\)</p></article><article class="exercise-like" id="exercise-2718"><h5 class="heading"><span class="codenumber">43</span></h5>
+<p id="p-12969">\(K(x) = x^4 − 10x^2 + 16\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1452" id="answer-1452"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1452" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12970"></p>
 <ol id="ol-2409" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-7724" style="width:49%; float:left;"><p id="p-12969">\(\pm\sqrt{2}, \pm\sqrt{8}\)</p></li>
-<li id="li-7725" style="width:49%; float:left;"><p id="p-12970"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-ans-7-2-43.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-7724" style="width:49%; float:left;"><p id="p-12971">\(\pm\sqrt{2}, \pm\sqrt{8}\)</p></li>
+<li id="li-7725" style="width:49%; float:left;"><p id="p-12972"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-ans-7-2-43.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2719"><h5 class="heading"><span class="codenumber">44</span></h5>
-<p id="p-12971">\(m(x) = x^4 − 15x^2 + 36\)</p></article><article class="exercise-like" id="exercise-2720"><h5 class="heading"><span class="codenumber">45</span></h5>
-<p id="p-12972">\(r (x) = (x^2 − 1)(x + 3)^2\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1453" id="answer-1453"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1453" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12973"></p>
+<p id="p-12973">\(m(x) = x^4 − 15x^2 + 36\)</p></article><article class="exercise-like" id="exercise-2720"><h5 class="heading"><span class="codenumber">45</span></h5>
+<p id="p-12974">\(r (x) = (x^2 − 1)(x + 3)^2\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1453" id="answer-1453"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1453" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12975"></p>
 <ol id="ol-2410" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-7726" style="width:49%; float:left;"><p id="p-12974">\(\pm 1, -3\) (multiplicity 2)</p></li>
-<li id="li-7727" style="width:49%; float:left;"><p id="p-12975"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-ans-7-2-45.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-7726" style="width:49%; float:left;"><p id="p-12976">\(\pm 1, -3\) (multiplicity 2)</p></li>
+<li id="li-7727" style="width:49%; float:left;"><p id="p-12977"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-ans-7-2-45.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2721"><h5 class="heading"><span class="codenumber">46</span></h5>
-<p id="p-12976">\(s(x) = (x^2 − 9)(x − 1)^2\)</p></article>
+<p id="p-12978">\(s(x) = (x^2 − 9)(x − 1)^2\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-365">
-<article class="introduction" id="introduction-371"><p id="p-12977">Find a possible equation for the polynomial whose graph is shown.</p></article><div class="exercisegroup-exercises cols3">
+<article class="introduction" id="introduction-371"><p id="p-12979">Find a possible equation for the polynomial whose graph is shown.</p></article><div class="exercisegroup-exercises cols3">
 <article class="exercise-like" id="exercise-2722"><h5 class="heading"><span class="codenumber">47</span></h5>
-<p id="p-12978"><img width="100%" src="images/fig-7-2-47.jpg" alt=""></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1454" id="answer-1454"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1454" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12979">\(P(x) = (x + 2)(x − 1)(x − 4)\)</p></span></span> </article><article class="exercise-like" id="exercise-2723"><h5 class="heading"><span class="codenumber">48</span></h5>
-<p id="p-12980"><img width="100%" src="images/fig-7-2-48.jpg" alt=""></p></article><article class="exercise-like" id="exercise-2724"><h5 class="heading"><span class="codenumber">49</span></h5>
-<p id="p-12981"><img width="100%" src="images/fig-7-2-49.jpg" alt=""></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1455" id="answer-1455"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1455" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12982">\(P(x) = (x + 3)^2(x − 2)\)</p></span></span> </article><article class="exercise-like" id="exercise-2725"><h5 class="heading"><span class="codenumber">50</span></h5>
-<p id="p-12983"><img width="100%" src="images/fig-7-2-50.jpg" alt=""></p></article><article class="exercise-like" id="exercise-2726"><h5 class="heading"><span class="codenumber">51</span></h5>
-<p id="p-12984"><img width="100%" src="images/fig-7-2-51.jpg" alt=""></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1456" id="answer-1456"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1456" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12985">\(P(x) = (x - 2)^3(x + 2)\)</p></span></span> </article><article class="exercise-like" id="exercise-2727"><h5 class="heading"><span class="codenumber">52</span></h5>
-<p id="p-12986"><img width="100%" src="images/fig-7-2-52.jpg" alt=""></p></article>
+<p id="p-12980"><img width="100%" src="images/fig-7-2-47.jpg" alt=""></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1454" id="answer-1454"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1454" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12981">\(P(x) = (x + 2)(x − 1)(x − 4)\)</p></span></span> </article><article class="exercise-like" id="exercise-2723"><h5 class="heading"><span class="codenumber">48</span></h5>
+<p id="p-12982"><img width="100%" src="images/fig-7-2-48.jpg" alt=""></p></article><article class="exercise-like" id="exercise-2724"><h5 class="heading"><span class="codenumber">49</span></h5>
+<p id="p-12983"><img width="100%" src="images/fig-7-2-49.jpg" alt=""></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1455" id="answer-1455"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1455" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12984">\(P(x) = (x + 3)^2(x − 2)\)</p></span></span> </article><article class="exercise-like" id="exercise-2725"><h5 class="heading"><span class="codenumber">50</span></h5>
+<p id="p-12985"><img width="100%" src="images/fig-7-2-50.jpg" alt=""></p></article><article class="exercise-like" id="exercise-2726"><h5 class="heading"><span class="codenumber">51</span></h5>
+<p id="p-12986"><img width="100%" src="images/fig-7-2-51.jpg" alt=""></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1456" id="answer-1456"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1456" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12987">\(P(x) = (x - 2)^3(x + 2)\)</p></span></span> </article><article class="exercise-like" id="exercise-2727"><h5 class="heading"><span class="codenumber">52</span></h5>
+<p id="p-12988"><img width="100%" src="images/fig-7-2-52.jpg" alt=""></p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-366">
-<article class="introduction" id="introduction-372"><p id="p-12987">For Problems 53–56, write the formula for each function in parts (a) through (d) and graph with a calculator. Describe how the graph differs from the graph of \(y = f(x)\text{.}\)</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-372"><p id="p-12989">For Problems 53–56, write the formula for each function in parts (a) through (d) and graph with a calculator. Describe how the graph differs from the graph of \(y = f(x)\text{.}\)</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-2728"><h5 class="heading"><span class="codenumber">53</span></h5>
-<p id="p-12988">\(f (x) = x^3 − 4x\) </p>
+<p id="p-12990">\(f (x) = x^3 − 4x\) </p>
 <ol id="ol-2411" style="list-style-type: lower-alpha;">
-<li id="li-7728"><p id="p-12989">\(y=f(x)+3 \)</p></li>
-<li id="li-7729"><p id="p-12990">\(y=f(x)-5 \)</p></li>
-<li id="li-7730"><p id="p-12991">\(y=f(x-2) \)</p></li>
-<li id="li-7731"><p id="p-12992">\(y=f(x+3) \)</p></li>
+<li id="li-7728"><p id="p-12991">\(y=f(x)+3 \)</p></li>
+<li id="li-7729"><p id="p-12992">\(y=f(x)-5 \)</p></li>
+<li id="li-7730"><p id="p-12993">\(y=f(x-2) \)</p></li>
+<li id="li-7731"><p id="p-12994">\(y=f(x+3) \)</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1457" id="answer-1457"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1457" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12993"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1457" id="answer-1457"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1457" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12995"></p>
 <ol id="ol-2412" style="list-style-type: lower-alpha;">
-<li id="li-7732"><p id="p-12994">\(y = x^3 − 4x + 3\text{;}\) The graph of \(y = f (x)\) shifted \(3\) units up. <figure class="figure-like" id="figure-429"><img width="35%" src="images/fig-ans-7-2-53.jpg" alt=""></figure></p></li>
-<li id="li-7733"><p id="p-12995">\(y = x^3 − 4x -5\text{;}\) The graph of \(y = f (x)\) shifted \(5\) units down. <figure class="figure-like" id="figure-430"><img width="35%" src="images/fig-ans-7-2-53b.jpg" alt=""></figure></p></li>
-<li id="li-7734"><p id="p-12996">\(y = (x − 2)^3 − 4(x − 2)\text{;}\) The graph of \(y = f (x)\) shifted \(2\) units right. <figure class="figure-like" id="figure-431"><img width="35%" src="images/fig-ans-7-2-53c.jpg" alt=""></figure></p></li>
-<li id="li-7735"><p id="p-12997">\(y = (x +3)^3 − 4(x +3)\text{;}\) The graph of \(y = f (x)\) shifted \(3\) units left. <figure class="figure-like" id="figure-432"><img width="35%" src="images/fig-ans-7-2-53d.jpg" alt=""></figure></p></li>
+<li id="li-7732"><p id="p-12996">\(y = x^3 − 4x + 3\text{;}\) The graph of \(y = f (x)\) shifted \(3\) units up. <figure class="figure-like" id="figure-429"><img width="35%" src="images/fig-ans-7-2-53.jpg" alt=""></figure></p></li>
+<li id="li-7733"><p id="p-12997">\(y = x^3 − 4x -5\text{;}\) The graph of \(y = f (x)\) shifted \(5\) units down. <figure class="figure-like" id="figure-430"><img width="35%" src="images/fig-ans-7-2-53b.jpg" alt=""></figure></p></li>
+<li id="li-7734"><p id="p-12998">\(y = (x − 2)^3 − 4(x − 2)\text{;}\) The graph of \(y = f (x)\) shifted \(2\) units right. <figure class="figure-like" id="figure-431"><img width="35%" src="images/fig-ans-7-2-53c.jpg" alt=""></figure></p></li>
+<li id="li-7735"><p id="p-12999">\(y = (x +3)^3 − 4(x +3)\text{;}\) The graph of \(y = f (x)\) shifted \(3\) units left. <figure class="figure-like" id="figure-432"><img width="35%" src="images/fig-ans-7-2-53d.jpg" alt=""></figure></p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2729"><h5 class="heading"><span class="codenumber">54</span></h5>
-<p id="p-12998">\(f (x) = x^3 −x^2 +x −1\) </p>
+<p id="p-13000">\(f (x) = x^3 −x^2 +x −1\) </p>
 <ol id="ol-2413" style="list-style-type: lower-alpha;">
-<li id="li-7736"><p id="p-12999">\(y=f(x)+4 \)</p></li>
-<li id="li-7737"><p id="p-13000">\(y=f(x)-4 \)</p></li>
-<li id="li-7738"><p id="p-13001">\(y=f(x-3) \)</p></li>
-<li id="li-7739"><p id="p-13002">\(y=f(x+5) \)</p></li>
+<li id="li-7736"><p id="p-13001">\(y=f(x)+4 \)</p></li>
+<li id="li-7737"><p id="p-13002">\(y=f(x)-4 \)</p></li>
+<li id="li-7738"><p id="p-13003">\(y=f(x-3) \)</p></li>
+<li id="li-7739"><p id="p-13004">\(y=f(x+5) \)</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-2730"><h5 class="heading"><span class="codenumber">55</span></h5>
-<p id="p-13003">\(f (x) = x^4 − 4x^2\) </p>
+<p id="p-13005">\(f (x) = x^4 − 4x^2\) </p>
 <ol id="ol-2414" style="list-style-type: lower-alpha;">
-<li id="li-7740"><p id="p-13004">\(y=f(x)+6 \)</p></li>
-<li id="li-7741"><p id="p-13005">\(y=f(x)-2 \)</p></li>
-<li id="li-7742"><p id="p-13006">\(y=f(x-1) \)</p></li>
-<li id="li-7743"><p id="p-13007">\(y=f(x+2) \)</p></li>
+<li id="li-7740"><p id="p-13006">\(y=f(x)+6 \)</p></li>
+<li id="li-7741"><p id="p-13007">\(y=f(x)-2 \)</p></li>
+<li id="li-7742"><p id="p-13008">\(y=f(x-1) \)</p></li>
+<li id="li-7743"><p id="p-13009">\(y=f(x+2) \)</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1458" id="answer-1458"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1458" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-13008"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1458" id="answer-1458"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1458" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-13010"></p>
 <ol id="ol-2415" style="list-style-type: lower-alpha;">
-<li id="li-7744"><p id="p-13009">\(y = x^4 − 4x^2 + 6\text{;}\) The graph of \(y = f (x)\) shifted \(6\) units up. <figure class="figure-like" id="figure-433"><img width="35%" src="images/fig-ans-7-2-55.jpg" alt=""></figure></p></li>
-<li id="li-7745"><p id="p-13010">\(y = x^4 − 4x^2 − 2\text{;}\) The graph of \(y = f (x)\) shifted \(2\) units down. <figure class="figure-like" id="figure-434"><img width="35%" src="images/fig-ans-7-2-55b.jpg" alt=""></figure></p></li>
-<li id="li-7746"><p id="p-13011">\(y = (x − 1)^4 − 4(x − 1)^2\text{;}\) The graph of \(y = f (x)\) shifted \(1\) unit right. <figure class="figure-like" id="figure-435"><img width="35%" src="images/fig-ans-7-2-55c.jpg" alt=""></figure></p></li>
-<li id="li-7747"><p id="p-13012">\(y = (x +2)^4 − 4(x +2)^2\text{;}\) The graph of \(y = f (x)\) shifted \(2\) units left. <figure class="figure-like" id="figure-436"><img width="35%" src="images/fig-ans-7-2-55d.jpg" alt=""></figure></p></li>
+<li id="li-7744"><p id="p-13011">\(y = x^4 − 4x^2 + 6\text{;}\) The graph of \(y = f (x)\) shifted \(6\) units up. <figure class="figure-like" id="figure-433"><img width="35%" src="images/fig-ans-7-2-55.jpg" alt=""></figure></p></li>
+<li id="li-7745"><p id="p-13012">\(y = x^4 − 4x^2 − 2\text{;}\) The graph of \(y = f (x)\) shifted \(2\) units down. <figure class="figure-like" id="figure-434"><img width="35%" src="images/fig-ans-7-2-55b.jpg" alt=""></figure></p></li>
+<li id="li-7746"><p id="p-13013">\(y = (x − 1)^4 − 4(x − 1)^2\text{;}\) The graph of \(y = f (x)\) shifted \(1\) unit right. <figure class="figure-like" id="figure-435"><img width="35%" src="images/fig-ans-7-2-55c.jpg" alt=""></figure></p></li>
+<li id="li-7747"><p id="p-13014">\(y = (x +2)^4 − 4(x +2)^2\text{;}\) The graph of \(y = f (x)\) shifted \(2\) units left. <figure class="figure-like" id="figure-436"><img width="35%" src="images/fig-ans-7-2-55d.jpg" alt=""></figure></p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2731"><h5 class="heading"><span class="codenumber">56</span></h5>
-<p id="p-13013">\(f (x) = x^4 + 3x^3\) </p>
+<p id="p-13015">\(f (x) = x^4 + 3x^3\) </p>
 <ol id="ol-2416" style="list-style-type: lower-alpha;">
-<li id="li-7748"><p id="p-13014">\(y=f(x)+5 \)</p></li>
-<li id="li-7749"><p id="p-13015">\(y=f(x)-3 \)</p></li>
-<li id="li-7750"><p id="p-13016">\(y=f(x-2) \)</p></li>
-<li id="li-7751"><p id="p-13017">\(y=f(x+1) \)</p></li>
+<li id="li-7748"><p id="p-13016">\(y=f(x)+5 \)</p></li>
+<li id="li-7749"><p id="p-13017">\(y=f(x)-3 \)</p></li>
+<li id="li-7750"><p id="p-13018">\(y=f(x-2) \)</p></li>
+<li id="li-7751"><p id="p-13019">\(y=f(x+1) \)</p></li>
 </ol>
 <p></p></article>
 </div>
 </div>
 <article class="assemblage-like" id="assemblage-143"><h5 class="heading">Division Algorithm for Polynomials</h5>
-<p id="p-13018">If \(f(x) \) and \(g(x)\) are nonconstant polynomials with real coefficients, then there exist unique polynomials \(q(x)\) and \(r (x)\) such that
+<p id="p-13020">If \(f(x) \) and \(g(x)\) are nonconstant polynomials with real coefficients, then there exist unique polynomials \(q(x)\) and \(r (x)\) such that
 \begin{equation*}
 f (x) = g(x)q(x) + r(x),
 \end{equation*}
 where \(\text{deg } r(x) \lt \text{deg }g(x)\text{.}\)</p></article><div class="exercisegroup" id="exercisegroup-367">
-<article class="introduction" id="introduction-373"><p id="p-13019">In Problems 57–60, use polynomial division to divide \(f(x) \) by \(g(x) \text{,}\) and hence find the quotient, \(q(x) \text{,}\) and remainder, \(r(x) \text{.}\) (See Algebra Skills Refresher <a href="appendix-a.html#appendix-Polynomials-and-Factoring" alt="Section A.7 Polynomials and Factoring" title="Section A.7 Polynomials and Factoring">Section A.7</a> to review polynomial division.)</p></article><div class="exercisegroup-exercises">
+<article class="introduction" id="introduction-373"><p id="p-13021">In Problems 57–60, use polynomial division to divide \(f(x) \) by \(g(x) \text{,}\) and hence find the quotient, \(q(x) \text{,}\) and remainder, \(r(x) \text{.}\) (See Algebra Skills Refresher <a href="appendix-a.html#appendix-Polynomials-and-Factoring" alt="Section A.7 Polynomials and Factoring" title="Section A.7 Polynomials and Factoring">Section A.7</a> to review polynomial division.)</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-2732"><h5 class="heading"><span class="codenumber">57</span></h5>
-<p id="p-13020">\(f (x) = 2x^3 − 2x^2 − 19x − 11, ~g(x) = x − 3\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1459" id="answer-1459"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1459" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-13021">\(q(x) = 2x^2 + 4x − 7\text{;}\) \(r (x) = −32\)</p></span></span> </article><article class="exercise-like" id="exercise-2733"><h5 class="heading"><span class="codenumber">58</span></h5>
-<p id="p-13022">\(f (x) = 3x^3 + 12x^2 − 13x − 32, ~g(x) = x + 4\)</p></article><article class="exercise-like" id="exercise-2734"><h5 class="heading"><span class="codenumber">59</span></h5>
-<p id="p-13023">\(f (x) = x^5 + 2x^4 − 7x^3 − 12x^2 + 5, ~g(x) = x^2 + 2x − 1\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1460" id="answer-1460"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1460" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-13024">\(q(x) = x^3 − 6x\text{;}\) \(r (x) =−6x + 5\)</p></span></span> </article><article class="exercise-like" id="exercise-2735"><h5 class="heading"><span class="codenumber">60</span></h5>
-<p id="p-13025">\(f (x) = x^5 − 4x^4 + 11x^3 − 12x^2 + 5x + 2, ~g(x) = x^2 − x + 3\)</p></article>
+<p id="p-13022">\(f (x) = 2x^3 − 2x^2 − 19x − 11, ~g(x) = x − 3\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1459" id="answer-1459"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1459" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-13023">\(q(x) = 2x^2 + 4x − 7\text{;}\) \(r (x) = −32\)</p></span></span> </article><article class="exercise-like" id="exercise-2733"><h5 class="heading"><span class="codenumber">58</span></h5>
+<p id="p-13024">\(f (x) = 3x^3 + 12x^2 − 13x − 32, ~g(x) = x + 4\)</p></article><article class="exercise-like" id="exercise-2734"><h5 class="heading"><span class="codenumber">59</span></h5>
+<p id="p-13025">\(f (x) = x^5 + 2x^4 − 7x^3 − 12x^2 + 5, ~g(x) = x^2 + 2x − 1\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1460" id="answer-1460"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1460" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-13026">\(q(x) = x^3 − 6x\text{;}\) \(r (x) =−6x + 5\)</p></span></span> </article><article class="exercise-like" id="exercise-2735"><h5 class="heading"><span class="codenumber">60</span></h5>
+<p id="p-13027">\(f (x) = x^5 − 4x^4 + 11x^3 − 12x^2 + 5x + 2, ~g(x) = x^2 − x + 3\)</p></article>
 </div>
 </div>
 <article class="exercise-like" id="exercise-2736"><h5 class="heading"><span class="codenumber">61</span></h5>
-<p id="p-13026">The remainder theorem states, If \(P(x)\) is a polynomial and \(a\) is any real number, there is a unique polynomial \(Q(x)\) such that
+<p id="p-13028">The remainder theorem states, If \(P(x)\) is a polynomial and \(a\) is any real number, there is a unique polynomial \(Q(x)\) such that
 \begin{equation*}
 P(x) = (x − a)Q(x) + P(a)
 \end{equation*}
 Follow the steps below to prove the remainder theorem. </p>
 <ol id="ol-2417" style="list-style-type: lower-alpha;">
-<li id="li-7752"><p id="p-13027">State the division algorithm applied to the polynomials \(P(x)\) and \(x-a\text{.}\)</p></li>
-<li id="li-7753"><p id="p-13028">What must be the degree of \(r(x) \) in this case?</p></li>
-<li id="li-7754"><p id="p-13029">Evaluate your expression from part (a) at \(x = a\text{.}\) What does this tell you about the remainder, \(r (x)\text{?}\)</p></li>
+<li id="li-7752"><p id="p-13029">State the division algorithm applied to the polynomials \(P(x)\) and \(x-a\text{.}\)</p></li>
+<li id="li-7753"><p id="p-13030">What must be the degree of \(r(x) \) in this case?</p></li>
+<li id="li-7754"><p id="p-13031">Evaluate your expression from part (a) at \(x = a\text{.}\) What does this tell you about the remainder, \(r (x)\text{?}\)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1461" id="answer-1461"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1461" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-13030"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1461" id="answer-1461"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1461" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-13032"></p>
 <ol id="ol-2418" style="list-style-type: lower-alpha;">
-<li id="li-7755"><p id="p-13031">If \(P(x)\) is a nonconstant polynomial with real coefficients and \(a\) is any real number, then there exist unique polynomials \(q(x)\) and \(r (x)\) such that
+<li id="li-7755"><p id="p-13033">If \(P(x)\) is a nonconstant polynomial with real coefficients and \(a\) is any real number, then there exist unique polynomials \(q(x)\) and \(r (x)\) such that
 \begin{equation*}
 P(x) = (x − a)q(x) + r (x)
 \end{equation*}
 where \(\text{deg }r (x)\lt \text{deg }(x − a)\text{.}\)</p></li>
-<li id="li-7756"><p id="p-13032">Zero</p></li>
-<li id="li-7757"><p id="p-13033">\(P(a) = (a − a)q(a) + r (a) = r (a)\text{.}\) Because \(\text{deg }r(x) = 0 \text{,}\) \(r(x) \) is a constant. That constant value is \(P(a) \text{,}\) so \(P(x) = (x − a)q(x) + P(a)\text{.}\)</p></li>
+<li id="li-7756"><p id="p-13034">Zero</p></li>
+<li id="li-7757"><p id="p-13035">\(P(a) = (a − a)q(a) + r (a) = r (a)\text{.}\) Because \(\text{deg }r(x) = 0 \text{,}\) \(r(x) \) is a constant. That constant value is \(P(a) \text{,}\) so \(P(x) = (x − a)q(x) + P(a)\text{.}\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2737"><h5 class="heading"><span class="codenumber">62</span></h5>
-<p id="p-13034">Verify the remainder theorem for the following: </p>
+<p id="p-13036">Verify the remainder theorem for the following: </p>
 <ol id="ol-2419" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-7758" style="width:49%; float:left;"><p id="p-13035">\(P(x) = x^3 − 4x^2 + 2x − 1, `a = 2\)</p></li>
-<li id="li-7759" style="width:49%; float:left;"><p id="p-13036">\(P(x) = 3x^2 + x − 5, ~a = −3\)</p></li>
+<li id="li-7758" style="width:49%; float:left;"><p id="p-13037">\(P(x) = x^3 − 4x^2 + 2x − 1, `a = 2\)</p></li>
+<li id="li-7759" style="width:49%; float:left;"><p id="p-13038">\(P(x) = 3x^2 + x − 5, ~a = −3\)</p></li>
 </ol></article><article class="exercise-like" id="exercise-2738"><h5 class="heading"><span class="codenumber">63</span></h5>
-<p id="p-13037">Use the remainder theorem to prove the factor theorem, stated earlier in this section. You will need to justify two statements: </p>
+<p id="p-13039">Use the remainder theorem to prove the factor theorem, stated earlier in this section. You will need to justify two statements: </p>
 <ol id="ol-2420" style="list-style-type: lower-alpha;">
-<li id="li-7760"><p id="p-13038">If \(P(a) = 0\text{,}\) show that \(x − a\) is a factor of \(P(x) \text{.}\)</p></li>
-<li id="li-7761"><p id="p-13039">If \(x-a\) is a factor of \(P(x)\text{,}\) show that \(P(a)=0 \text{.}\)</p></li>
+<li id="li-7760"><p id="p-13040">If \(P(a) = 0\text{,}\) show that \(x − a\) is a factor of \(P(x) \text{.}\)</p></li>
+<li id="li-7761"><p id="p-13041">If \(x-a\) is a factor of \(P(x)\text{,}\) show that \(P(a)=0 \text{.}\)</p></li>
 </ol>
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1462" id="answer-1462"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1462" style="display: none;" class="tex2jax_ignore"><span class="solution"><ol id="ol-2421" style="list-style-type: lower-alpha;">
-<li id="li-7762"><p id="p-13040">From the remainder theorem, \(\begin{aligned}
+<li id="li-7762"><p id="p-13042">From the remainder theorem, \(\begin{aligned}
 P(x) \amp = (x − a)Q(x) + P(a)\\
 \amp = (x − a)Q(x) + 0\\
 \amp =(x − a)Q(x)
 \end{aligned}\)</p></li>
-<li id="li-7763"><p id="p-13041">By definition of a factor, if \(x-a\) is a factor of \(P(x) \text{,}\) then \(P(x) = (x − a)q(x)\text{,}\) so \(P(x) =(x − a)q(x) + 0\text{.}\) The uniqueness guaranteed in the remainder theorem tells us that \(P(a) = 0\text{.}\)</p></li>
+<li id="li-7763"><p id="p-13043">By definition of a factor, if \(x-a\) is a factor of \(P(x) \text{,}\) then \(P(x) = (x − a)q(x)\text{,}\) so \(P(x) =(x − a)q(x) + 0\text{.}\) The uniqueness guaranteed in the remainder theorem tells us that \(P(a) = 0\text{.}\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2739"><h5 class="heading"><span class="codenumber">64</span></h5>
-<p id="p-13042">Verify the factor theorem for the following: </p>
+<p id="p-13044">Verify the factor theorem for the following: </p>
 <ol id="ol-2422" style="list-style-type: lower-alpha;">
-<li id="li-7764"><p id="p-13043">\(P(x) = x^4 − 4x^3 − 11x^2 + 3x + 2, ~a = −2\)</p></li>
-<li id="li-7765"><p id="p-13044">\(P(x) = x^3 + 2x^2 − 31x − 20, ~a = 5\)</p></li>
+<li id="li-7764"><p id="p-13045">\(P(x) = x^4 − 4x^3 − 11x^2 + 3x + 2, ~a = −2\)</p></li>
+<li id="li-7765"><p id="p-13046">\(P(x) = x^3 + 2x^2 − 31x − 20, ~a = 5\)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-368">
-<article class="introduction" id="introduction-374"><p id="p-13045">For Problems 65–68, </p>
+<article class="introduction" id="introduction-374"><p id="p-13047">For Problems 65–68, </p>
 <ol id="ol-2423" style="list-style-type: lower-alpha;">
-<li id="li-7766"><p id="p-13046">Verify that the given value is a zero of the polynomial.</p></li>
-<li id="li-7767"><p id="p-13047">Find the other zeros. (<!--Style me with CSS--><em>Hint</em>: Use polynomial division to write P(x) = (x − a)Q(x), then factor Q(x).)</p></li>
+<li id="li-7766"><p id="p-13048">Verify that the given value is a zero of the polynomial.</p></li>
+<li id="li-7767"><p id="p-13049">Find the other zeros. (<!--Style me with CSS--><em>Hint</em>: Use polynomial division to write P(x) = (x − a)Q(x), then factor Q(x).)</p></li>
 </ol></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-2740"><h5 class="heading"><span class="codenumber">65</span></h5>
-<p id="p-13048">\(P(x) = x^3 − 2x^2 + 1\text{;}\) \(a = 1\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1463" id="answer-1463"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1463" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-13049"></p>
+<p id="p-13050">\(P(x) = x^3 − 2x^2 + 1\text{;}\) \(a = 1\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1463" id="answer-1463"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1463" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-13051"></p>
 <ol id="ol-2424" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-7768" style="width:49%; float:left;"><p id="p-13050">\(P(1)=0 \)</p></li>
-<li id="li-7769" style="width:49%; float:left;"><p id="p-13051">\(\dfrac{1\pm\sqrt{5}}{2} \)</p></li>
+<li id="li-7768" style="width:49%; float:left;"><p id="p-13052">\(P(1)=0 \)</p></li>
+<li id="li-7769" style="width:49%; float:left;"><p id="p-13053">\(\dfrac{1\pm\sqrt{5}}{2} \)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2741"><h5 class="heading"><span class="codenumber">66</span></h5>
-<p id="p-13052">\(P(x) = x^3 + 2x^2 - 1\text{;}\) \(a = -1\)</p></article><article class="exercise-like" id="exercise-2742"><h5 class="heading"><span class="codenumber">67</span></h5>
-<p id="p-13053">\(P(x) = x^4 − 3x^3 − 10x^2 + 24x\text{;}\) \(a = -3\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1464" id="answer-1464"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1464" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-13054"></p>
+<p id="p-13054">\(P(x) = x^3 + 2x^2 - 1\text{;}\) \(a = -1\)</p></article><article class="exercise-like" id="exercise-2742"><h5 class="heading"><span class="codenumber">67</span></h5>
+<p id="p-13055">\(P(x) = x^4 − 3x^3 − 10x^2 + 24x\text{;}\) \(a = -3\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1464" id="answer-1464"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1464" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-13056"></p>
 <ol id="ol-2425" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-7770" style="width:49%; float:left;"><p id="p-13055">\(P(-3)=0 \)</p></li>
-<li id="li-7771" style="width:49%; float:left;"><p id="p-13056">\(0, 2, 4 \)</p></li>
+<li id="li-7770" style="width:49%; float:left;"><p id="p-13057">\(P(-3)=0 \)</p></li>
+<li id="li-7771" style="width:49%; float:left;"><p id="p-13058">\(0, 2, 4 \)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2743"><h5 class="heading"><span class="codenumber">68</span></h5>
-<p id="p-13057">\(P(x) = x^4 + 5x^3 − x^2 − 5x\text{;}\) \(a = -5\)</p></article>
+<p id="p-13059">\(P(x) = x^4 + 5x^3 − x^2 − 5x\text{;}\) \(a = -5\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-369">
-<article class="introduction" id="introduction-375"><p id="p-13058">In Problems 69–70, we use polynomials to approximate other functions.</p></article><div class="exercisegroup-exercises">
+<article class="introduction" id="introduction-375"><p id="p-13060">In Problems 69–70, we use polynomials to approximate other functions.</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-2744"><h5 class="heading"><span class="codenumber">69</span></h5>
-<p id="p-13059"></p>
+<p id="p-13061"></p>
 <ol id="ol-2426" style="list-style-type: lower-alpha;">
-<li id="li-7772"><p id="p-13060">Graph the functions \(f (x) = e^x\) and
+<li id="li-7772"><p id="p-13062">Graph the functions \(f (x) = e^x\) and
 \begin{equation*}
 p(x) = 1 + x + \frac{1}{2}x^2+\frac{1}{6}x^3 
 \end{equation*}
 in the standard window. For what values of \(x\) does it appear that \(p(x)\) would be a good approximation for \(f (x)\text{?}\)</p></li>
-<li id="li-7773"><p id="p-13061">Change the window settings to
+<li id="li-7773"><p id="p-13063">Change the window settings to
 \begin{align*}
 \small{\text{Xmin}} \amp = −4.7 \amp\amp \small{\text{Xmax}} = 4.7\\
 \small{\text{Ymin}} \amp = 0 \amp\amp \small{\text{Ymax}} = 20
@@ -928,17 +933,17 @@ and fill in the table of values below. (You can use the <em class="terminology">
 <td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-7774"><p id="p-13062">The <em class="terminology">error</em> in the approximation is the difference \(f (x) − p(x)\text{.}\) We can reduce the error by using a polynomial of higher degree. The \(n\)th degree polynomial for approximating \(e^x\) is
+<li id="li-7774"><p id="p-13064">The <em class="terminology">error</em> in the approximation is the difference \(f (x) − p(x)\text{.}\) We can reduce the error by using a polynomial of higher degree. The \(n\)th degree polynomial for approximating \(e^x\) is
 \begin{equation*}
 P_n(x) = 1 + x + \frac{1}{2!}x^2+\frac{1}{3!}x^3+ \cdots +\frac{1}{n!}x^n 
 \end{equation*}
 where \(n! = n(n − 1)(n − 2) \cdots 3 \cdot 2 \cdot 1\text{.}\) Graph \(f(x) \) and \(P_5(x)\) in the same window as in part (b). What is the error in approximating \(f (2)\) by \(P_5(2)\text{?}\)</p></li>
-<li id="li-7775"><p id="p-13063">Graph \(f (x) − P_5(x)\) in the same window as in part (b). What does the graph tell you about the error in approximating \(f (x)\) by \(P_5(x)\text{?}\)</p></li>
+<li id="li-7775"><p id="p-13065">Graph \(f (x) − P_5(x)\) in the same window as in part (b). What does the graph tell you about the error in approximating \(f (x)\) by \(P_5(x)\text{?}\)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1465" id="answer-1465"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1465" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-13064"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1465" id="answer-1465"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1465" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-13066"></p>
 <ol id="ol-2427" style="list-style-type: lower-alpha;">
-<li id="li-7776"><p id="p-13065">About \(-1\lt x \lt 2\) <img width="45%" src="images/fig-ans-7-2-69.jpg" alt=""></p></li>
-<li id="li-7777"><p id="p-13066"><table>
+<li id="li-7776"><p id="p-13067">About \(-1\lt x \lt 2\) <img width="45%" src="images/fig-ans-7-2-69.jpg" alt=""></p></li>
+<li id="li-7777"><p id="p-13068"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(-1\)</td>
@@ -970,17 +975,17 @@ where \(n! = n(n − 1)(n − 2) \cdots 3 \cdot 2 \cdot 1\text{.}\) Graph \(f(x)
 <td class="c m b1 r1 l0 t0 lines">\(6.333\)</td>
 </tr>
 </table></p></li>
-<li id="li-7778"><p id="p-13067">\(0.122\)</p></li>
-<li id="li-7779"><p id="p-13068"><img width="45%" src="images/fig-ans-7-2-69d.jpg" alt=""> The error is relatively small for values of \(x\) between \(-3\) and \(2.5\text{.}\)</p></li>
+<li id="li-7778"><p id="p-13069">\(0.122\)</p></li>
+<li id="li-7779"><p id="p-13070"><img width="45%" src="images/fig-ans-7-2-69d.jpg" alt=""> The error is relatively small for values of \(x\) between \(-3\) and \(2.5\text{.}\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2745"><h5 class="heading"><span class="codenumber">70</span></h5>
-<p id="p-13069">In the Projects for Chapter 2, we investigated periodic functions. The <em class="terminology">sine function</em>, \(f (x) = \sin(x)\text{,}\) is a useful periodic function.</p>
+<p id="p-13071">In the Projects for Chapter 2, we investigated periodic functions. The <em class="terminology">sine function</em>, \(f (x) = \sin(x)\text{,}\) is a useful periodic function.</p>
 <ol id="ol-2428" style="list-style-type: lower-alpha;">
-<li id="li-7780"><p id="p-13070">Graph the functions \(f (x) =\sin(x) \) and
+<li id="li-7780"><p id="p-13072">Graph the functions \(f (x) =\sin(x) \) and
 \begin{equation*}
 p(x) = x - \frac{1}{6}x^3 
 \end{equation*}
 in the standard window. (Check that your calculator is set in <em class="terminology">Radian</em> mode.) For what values of \(x\) does it appear that \(p(x)\) would be a good approximation for \(f (x)\text{?}\)</p></li>
-<li id="li-7781"><p id="p-13071">Change the window settings to
+<li id="li-7781"><p id="p-13073">Change the window settings to
 \begin{align*}
 \small{\text{Xmin}} \amp = −4.7 \amp\amp \small{\text{Xmax}} = 4.7\\
 \small{\text{Ymin}} \amp = -2 \amp\amp \small{\text{Ymax}} = 2
@@ -1017,13 +1022,13 @@ and fill in the table of values below. (You can use the <em class="terminology">
 <td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-7782"><p id="p-13072">Two more polynomials for approximating \(f (x) = \sin(x)\) are
+<li id="li-7782"><p id="p-13074">Two more polynomials for approximating \(f (x) = \sin(x)\) are
 \begin{align*}
 P_5(x) \amp = 1 -\frac{1}{3!}x^3+\frac{1}{5!}x^5\\
 P_7(x) \amp = 1 -\frac{1}{3!}x^3+\frac{1}{5!}x^5 - +\frac{1}{7!}x^7 
 \end{align*}
 (See Problem 69 for the definition of \(n!\text{.}\)) Graph \(f(x) \) and \(P_5(x)\) in the same window as in part (b). What is the error in approximating \(f (2)\) by \(P_5(2)\text{?}\)</p></li>
-<li id="li-7783"><p id="p-13073">Graph \(f (x) − P_5(x)\) in the same window as in part (b). What does the graph tell you about the error in approximating \(f (x)\) by \(P_5(x)\text{?}\)</p></li>
+<li id="li-7783"><p id="p-13075">Graph \(f (x) − P_5(x)\) in the same window as in part (b). What does the graph tell you about the error in approximating \(f (x)\) by \(P_5(x)\text{?}\)</p></li>
 </ol></article>
 </div>
 </div></section></section></div></main>

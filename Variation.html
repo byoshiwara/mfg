@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-04-07T10:53:02-07:00    *-->
+<!--*    on 2017-04-17T18:44:05-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,15 +13,14 @@
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
-// contrib directory for accessibility menu, moot after v2.6+?
-MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        // [Contrib]accessibility menu moot after v2.6+?
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
         equationNumbers: { autoNumber: "none",
                            useLabelIds: true,
                            // JS comment, XML CDATA protect XHTML quality of file
@@ -33,11 +32,17 @@ MathJax.Hub.Config({
         TagSide: "right",
         TagIndent: ".8em",
     },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
     "HTML-CSS": {
         scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script>(function() {
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
   var cx = '006592449927388994635:w0x-ox5bpme';
   var gcse = document.createElement('script');
   gcse.type = 'text/javascript';
@@ -75,7 +80,7 @@ MathJax.Hub.Config({
 <nav id="primary-navbar" class="navbar" style=""><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="chap3.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chap3.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="Integer-Exponents.html" title="Next" alt="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chap3.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap3.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Integer-Exponents.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
@@ -187,13 +192,13 @@ MathJax.Hub.Config({
 <li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
 </ul>
 <h2 class="link"><a href="index-part-2.html" data-scroll="index-part-2"><span class="title">Index</span></a></h2>
-<h2 class="link"><a href="colophon-3.html" data-scroll="colophon-3"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+<h2 class="link"><a href="colophon-3.html" data-scroll="colophon-3"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Variation"><header title="Section 3.1 Variation"><h1 class="heading hide-type" alt="Section 3.1 Variation">
 <span class="type">Section</span><span class="codenumber">3.1</span><span class="title">Variation</span><a href="Variation.html" class="permalink">¶ permalink</a>
-</h1></header><p id="p-4746">Two types of functions are widely used in modeling and are known by special names: <em class="terminology">direct variation</em> and <em class="terminology">inverse variation</em>.</p>
+</h1></header><p id="p-4748">Two types of functions are widely used in modeling and are known by special names: <em class="terminology">direct variation</em> and <em class="terminology">inverse variation</em>.</p>
 <section class="subsection" id="subsection-70"><header title="Subsection 3.1.1 Direct Variation"><h1 class="heading hide-type" alt="Subsection 3.1.1 Direct Variation">
 <span class="type">Subsection</span><span class="codenumber">3.1.1</span><span class="title">Direct Variation</span>
-</h1></header><p id="p-4747">Two variables are <em class="terminology">directly proportional</em> (or just <em class="terminology">proportional</em> if the ratios of their corresponding values are always equal. Consider the functions described in Tables 3.1 and 3.2. The first table shows the price of gasoline as a function of the number of gallons purchased.</p>
+</h1></header><p id="p-4749">Two variables are <em class="terminology">directly proportional</em> (or just <em class="terminology">proportional</em> if the ratios of their corresponding values are always equal. Consider the functions described in Tables 3.1 and 3.2. The first table shows the price of gasoline as a function of the number of gallons purchased.</p>
 <div class="sidebyside" style="" id="sidebyside-75">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
@@ -270,9 +275,9 @@ MathJax.Hub.Config({
 <figcaption class="sbscaption" style="width:50%;"><span class="heading">Table</span><span class="codenumber">3.1</span></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="heading">Table</span><span class="codenumber">3.2</span></figcaption>
 </div>
 </div>
-<p id="p-4748">The ratio \(\frac{\text{total price}}{\text{number of gallons}}\text{,}\) or price per gallon, is the same for each pair of values in <a knowl="./knowl/table-gasoline.html" knowl-id="xref-table-gasoline" alt="Table 3.1 " title="Table 3.1 ">Table 3.1</a>. This agrees with everyday experience: The price per gallon of gasoline is the same no matter how many gallons you buy. Thus, the total price of a gasoline purchase is directly proportional to the number of gallons purchased.</p>
-<p id="p-4749">The second table, <a knowl="./knowl/table-population.html" knowl-id="xref-table-population" alt="Table 3.2 " title="Table 3.2 ">Table 3.2</a>, shows the population of a small town as a function of the town’s age. The ratio number of people number of years gives the average rate of growth of the population in people per year. You can see that this ratio is not constant; in fact, it increases as time goes on. Thus, the population of the town is not proportional to its age.</p>
-<figure class="figure-like" id="fig-gasoline-and-population-graphs"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-gasoline-and-population-graphs.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">3.3</span></figcaption></figure><p id="p-4750">The graphs of these two functions are shown in <a knowl="./knowl/fig-gasoline-and-population-graphs.html" knowl-id="xref-fig-gasoline-and-population-graphs" alt="Figure 3.3 " title="Figure 3.3 ">Figure 3.3</a>. We see that the price, \(P\text{,}\) of a fill-up is a linear function of the number of gallons, \(g\text{,}\) purchased. This should not be surprising if we write an equation relating the variables \(g\) and \(P\text{.}\) Because the ratio of their values is constant, we can write
+<p id="p-4750">The ratio \(\frac{\text{total price}}{\text{number of gallons}}\text{,}\) or price per gallon, is the same for each pair of values in <a knowl="./knowl/table-gasoline.html" knowl-id="xref-table-gasoline" alt="Table 3.1 " title="Table 3.1 ">Table 3.1</a>. This agrees with everyday experience: The price per gallon of gasoline is the same no matter how many gallons you buy. Thus, the total price of a gasoline purchase is directly proportional to the number of gallons purchased.</p>
+<p id="p-4751">The second table, <a knowl="./knowl/table-population.html" knowl-id="xref-table-population" alt="Table 3.2 " title="Table 3.2 ">Table 3.2</a>, shows the population of a small town as a function of the town’s age. The ratio number of people number of years gives the average rate of growth of the population in people per year. You can see that this ratio is not constant; in fact, it increases as time goes on. Thus, the population of the town is not proportional to its age.</p>
+<figure class="figure-like" id="fig-gasoline-and-population-graphs"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-gasoline-and-population-graphs.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">3.3</span></figcaption></figure><p id="p-4752">The graphs of these two functions are shown in <a knowl="./knowl/fig-gasoline-and-population-graphs.html" knowl-id="xref-fig-gasoline-and-population-graphs" alt="Figure 3.3 " title="Figure 3.3 ">Figure 3.3</a>. We see that the price, \(P\text{,}\) of a fill-up is a linear function of the number of gallons, \(g\text{,}\) purchased. This should not be surprising if we write an equation relating the variables \(g\) and \(P\text{.}\) Because the ratio of their values is constant, we can write
 \begin{equation*}
 \frac{P}{g}= k
 \end{equation*}
@@ -281,13 +286,13 @@ where \(k\) is a constant. In this example, the constant \(k\) is \(2.40\text{,}
 P = kg = 2.40g
 \end{equation*}
 which we recognize as the equation of a line through the origin.</p>
-<p id="p-4751">In general, we make the following definition.</p>
+<p id="p-4753">In general, we make the following definition.</p>
 <article class="assemblage-like" id="assemblage-46"><h5 class="heading">Direct Variation</h5>
-<p id="p-4752">\(y\) varies directly with \(x\) if
+<p id="p-4754">\(y\) varies directly with \(x\) if
 \begin{equation*}
 y = kx
 \end{equation*}
-where \(k\) is a positive constant called the <em class="terminology">constant of variation</em>.</p></article><p id="p-4753">From the preceding discussion, we see that <!--Style me with CSS--><em>vary directly</em> means exactly the same thing as are <!--Style me with CSS--><em>directly proportional</em>. The two phrases are interchangeable.</p>
+where \(k\) is a positive constant called the <em class="terminology">constant of variation</em>.</p></article><p id="p-4755">From the preceding discussion, we see that <!--Style me with CSS--><em>vary directly</em> means exactly the same thing as are <!--Style me with CSS--><em>directly proportional</em>. The two phrases are interchangeable.</p>
 <article class="example-like" id="example-circumference-and-simple-interest"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">3.4</span>
 </h5>
@@ -302,7 +307,7 @@ The constant of variation is \(2\pi\text{,}\) or about 6.28.</li>
 I = 0.07P
 \end{equation*}
 </li>
-</ol></article><p id="p-4754">Direct variation defines a linear function of the form
+</ol></article><p id="p-4756">Direct variation defines a linear function of the form
 \begin{equation*}
 y = f (x) = kx
 \end{equation*}
@@ -310,9 +315,9 @@ The positive constant \(k\) in the equation \(y = kx\) is just the slope of the 
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-three-lines" id="exercise-three-lines"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">3.5</span>
 </h5></article></a></div>
-<div id="hk-exercise-three-lines" style="display: none;" class="tex2jax_ignore"><article class="exercise-like">Which of the graphs in <a knowl="./knowl/fig-three-lines.html" knowl-id="xref-fig-three-lines" alt="Figure 3.6 " title="Figure 3.6 ">Figure 3.6</a> could represent direct variation? Explain why. <figure class="figure-like" id="fig-three-lines"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-three-lines.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">3.6</span></figcaption></figure><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-527" id="answer-527"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-527" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4755">(b): The graph is a straight line through the origin.</p></span></span> </article></div></section><section class="subsection" id="subsection-71"><header title="Subsection 3.1.2 The Scaling Property of Direct Variation"><h1 class="heading hide-type" alt="Subsection 3.1.2 The Scaling Property of Direct Variation">
+<div id="hk-exercise-three-lines" style="display: none;" class="tex2jax_ignore"><article class="exercise-like">Which of the graphs in <a knowl="./knowl/fig-three-lines.html" knowl-id="xref-fig-three-lines" alt="Figure 3.6 " title="Figure 3.6 ">Figure 3.6</a> could represent direct variation? Explain why. <figure class="figure-like" id="fig-three-lines"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-three-lines.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">3.6</span></figcaption></figure><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-527" id="answer-527"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-527" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4757">(b): The graph is a straight line through the origin.</p></span></span> </article></div></section><section class="subsection" id="subsection-71"><header title="Subsection 3.1.2 The Scaling Property of Direct Variation"><h1 class="heading hide-type" alt="Subsection 3.1.2 The Scaling Property of Direct Variation">
 <span class="type">Subsection</span><span class="codenumber">3.1.2</span><span class="title">The Scaling Property of Direct Variation</span>
-</h1></header><p id="p-4756">The fact that the constant term is zero in a direct variation is significant: If we double the value of \(x\text{,}\) then the value of \(y\) will double also. In fact, increasing \(x\) by any factor causes \(y\) to increase by the same factor. For example, in <a knowl="./knowl/table-gasoline.html" knowl-id="xref-table-gasoline" alt="Table 3.1 " title="Table 3.1 ">Table 3.1</a> doubling the number of gallons of gas purchased, say, from \(4\) gallons to \(8\) gallons or from \(6\) gallons to \(12\) gallons, causes the total price to double also. Or, consider investing \(\$800\) for one year at \(7\)% simple interest, as in <a knowl="./knowl/example-circumference-and-simple-interest.html" knowl-id="xref-example-circumference-and-simple-interest" alt="Example 3.4 " title="Example 3.4 ">Example 3.4</a>b. The interest earned is
+</h1></header><p id="p-4758">The fact that the constant term is zero in a direct variation is significant: If we double the value of \(x\text{,}\) then the value of \(y\) will double also. In fact, increasing \(x\) by any factor causes \(y\) to increase by the same factor. For example, in <a knowl="./knowl/table-gasoline.html" knowl-id="xref-table-gasoline" alt="Table 3.1 " title="Table 3.1 ">Table 3.1</a> doubling the number of gallons of gas purchased, say, from \(4\) gallons to \(8\) gallons or from \(6\) gallons to \(12\) gallons, causes the total price to double also. Or, consider investing \(\$800\) for one year at \(7\)% simple interest, as in <a knowl="./knowl/example-circumference-and-simple-interest.html" knowl-id="xref-example-circumference-and-simple-interest" alt="Example 3.4 " title="Example 3.4 ">Example 3.4</a>b. The interest earned is
 \begin{equation*}
 I = 0.07(800) = \$56
 \end{equation*}
@@ -395,13 +400,13 @@ Thus, \(C(S)\) is a linear function of \(S\) with a \(C\)-intercept of zero, so 
 </tr>
 </table></figure></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-528" id="answer-528"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-528" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4757">(a): If we multiply \(x\) by \(c\text{,}\) \(y\) is also multiplied by \(c\text{.}\)</p></span></span> </article></div></section><section class="subsection" id="subsection-72"><header title="Subsection 3.1.3 Finding a Formula for Direct Variation"><h1 class="heading hide-type" alt="Subsection 3.1.3 Finding a Formula for Direct Variation">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-528" id="answer-528"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-528" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4759">(a): If we multiply \(x\) by \(c\text{,}\) \(y\) is also multiplied by \(c\text{.}\)</p></span></span> </article></div></section><section class="subsection" id="subsection-72"><header title="Subsection 3.1.3 Finding a Formula for Direct Variation"><h1 class="heading hide-type" alt="Subsection 3.1.3 Finding a Formula for Direct Variation">
 <span class="type">Subsection</span><span class="codenumber">3.1.3</span><span class="title">Finding a Formula for Direct Variation</span>
-</h1></header><p id="p-4758">If we know any one pair of values for the variables in a direct variation, we can find the constant of variation. We can then use the constant to write a formula for one of the variables as a function of the other.</p>
+</h1></header><p id="p-4760">If we know any one pair of values for the variables in a direct variation, we can find the constant of variation. We can then use the constant to write a formula for one of the variables as a function of the other.</p>
 <article class="example-like" id="example-falling-into-grand-canyon"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">3.10</span>
 </h5>
-<p id="p-4759">If an object is dropped from a great height, say, off the rim of the Grand Canyon, its speed, \(v\text{,}\) varies directly with the time, \(t\text{,}\) the object has been falling. A rock dropped off the edge of the Canyon is falling at a speed of \(39.2\) meters per second when it passes a lizard on a ledge \(4\) seconds later.</p>
+<p id="p-4761">If an object is dropped from a great height, say, off the rim of the Grand Canyon, its speed, \(v\text{,}\) varies directly with the time, \(t\text{,}\) the object has been falling. A rock dropped off the edge of the Canyon is falling at a speed of \(39.2\) meters per second when it passes a lizard on a ledge \(4\) seconds later.</p>
 <ol id="ol-907" style="list-style-type: lower-alpha;">
 <li id="li-2874">Express \(v\) as a function of \(t\text{.}\)</li>
 <li id="li-2875">What is the speed of the rock after it has fallen for 6 seconds?</li>
@@ -429,23 +434,23 @@ At \(t = 6\) seconds, the rock is falling at a speed of \(58.8\) meters per seco
 <li id="li-2880">Express the volume, \(V\text{,}\) of a bag of rice as a function of its weight, \(w\text{.}\)</li>
 <li id="li-2881">How many cups of rice are in a \(15\)-pound bag?</li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-529" id="answer-529"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-529" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4760"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-529" id="answer-529"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-529" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4762"></p>
 <ol id="ol-910" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-2882" style="width:49%; float:left;"><p id="p-4761">\(V = 1.75w\)</p></li>
-<li id="li-2883" style="width:49%; float:left;"><p id="p-4762">\(26.25\)</p></li>
+<li id="li-2882" style="width:49%; float:left;"><p id="p-4763">\(V = 1.75w\)</p></li>
+<li id="li-2883" style="width:49%; float:left;"><p id="p-4764">\(26.25\)</p></li>
 </ol></span></span> </article></div></section><section class="subsection" id="subsection-73"><header title="Subsection 3.1.4 Direct Variation with a Power of \(x\)"><h1 class="heading hide-type" alt="Subsection 3.1.4 Direct Variation with a Power of \(x\)">
 <span class="type">Subsection</span><span class="codenumber">3.1.4</span><span class="title">Direct Variation with a Power of \(x\)</span>
-</h1></header><p id="p-4763">We can generalize the notion of direct variation to include situations in which \(y\) is proportional to a power of \(x\text{,}\) instead of \(x\) itself.</p>
+</h1></header><p id="p-4765">We can generalize the notion of direct variation to include situations in which \(y\) is proportional to a power of \(x\text{,}\) instead of \(x\) itself.</p>
 <article class="assemblage-like" id="assemblage-47"><h5 class="heading">Direct Variation with a Power</h5>
-<p id="p-4764"></p>
-<p id="p-4765">\(y\) <em class="terminology">varies directly</em> with a power of \(x\) if
+<p id="p-4766"></p>
+<p id="p-4767">\(y\) <em class="terminology">varies directly</em> with a power of \(x\) if
 \begin{equation*}
 y = kx^n
 \end{equation*}
 where \(k\) and \(n\) are positive constants.</p></article><article class="example-like" id="example-sphere-surface-area"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">3.13</span>
 </h5>
-<p id="p-4766">The surface area of a sphere varies directly with the <!--Style me with CSS--><em>square</em> of its radius. A balloon of radius \(5\) centimeters has surface area \(100\pi\) square centimeters, or about \(314\) square centimeters. Find a formula for the surface area of a sphere as a function of its radius.</p></article><div class="posterior"><div>
+<p id="p-4768">The surface area of a sphere varies directly with the <!--Style me with CSS--><em>square</em> of its radius. A balloon of radius \(5\) centimeters has surface area \(100\pi\) square centimeters, or about \(314\) square centimeters. Find a formula for the surface area of a sphere as a function of its radius.</p></article><div class="posterior"><div>
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-77" id="solution-77"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-77" style="display: none;" class="tex2jax_ignore"><span class="solution">\(S\)\(r\text{,}\)
 \begin{equation*}
 S = f (r ) = kr^2
@@ -455,18 +460,18 @@ S = f (r ) = kr^2
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-sphere-volume" id="exercise-sphere-volume"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">3.14</span>
 </h5></article></a></div>
-<div id="hk-exercise-sphere-volume" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-4767">The volume of a sphere varies directly with the <!--Style me with CSS--><em>cube</em> of its radius. A balloon of radius \(5\) centimeters has volume \(\frac{500\pi}{3}\) cubic centimeters, or about \(524\) cubic centimeters. Find a formula for the volume of a sphere as a function of its radius.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-530" id="answer-530"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-530" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4768">\(V=\dfrac{4}{3}\pi r^3\)</p></span></span> </article></div>
-<p id="p-4769">In any example of direct variation, as the input variable increases through positive values, the output variable increases also. Thus, a direct variation is an increasing function, as we can see when we consider the graphs of some typical direct variations in <a knowl="./knowl/fig-vary-with-power.html" knowl-id="xref-fig-vary-with-power" alt="Figure 3.15 " title="Figure 3.15 ">Figure 3.15</a></p>
+<div id="hk-exercise-sphere-volume" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-4769">The volume of a sphere varies directly with the <!--Style me with CSS--><em>cube</em> of its radius. A balloon of radius \(5\) centimeters has volume \(\frac{500\pi}{3}\) cubic centimeters, or about \(524\) cubic centimeters. Find a formula for the volume of a sphere as a function of its radius.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-530" id="answer-530"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-530" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4770">\(V=\dfrac{4}{3}\pi r^3\)</p></span></span> </article></div>
+<p id="p-4771">In any example of direct variation, as the input variable increases through positive values, the output variable increases also. Thus, a direct variation is an increasing function, as we can see when we consider the graphs of some typical direct variations in <a knowl="./knowl/fig-vary-with-power.html" knowl-id="xref-fig-vary-with-power" alt="Figure 3.15 " title="Figure 3.15 ">Figure 3.15</a></p>
 <figure class="figure-like" id="fig-vary-with-power"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-vary-with-power.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">3.15</span></figcaption></figure><article class="remark-like" id="warning-1"><h5 class="heading">
 <span class="type">Caution</span><span class="codenumber">3.16</span>
 </h5>
-<p id="p-4770">The graph of a direct variation always passes through the origin, so when the input is zero, the output is also zero. Thus, the functions \(y = 3x + 2\) and \(y = 0.4x^2 − 2.3\text{,}\) for example, are not direct variation, even though they are increasing functions for positive \(x\text{.}\)</p></article><p id="p-4771">Even without an equation, we can check whether a table of data describes direct variation or merely an increasing function. If \(y\) varies directly with \(x^n\) , then \(y = kx^n\) , or, equivalently, \(\frac{y}{x^n} = k\text{.}\)</p>
+<p id="p-4772">The graph of a direct variation always passes through the origin, so when the input is zero, the output is also zero. Thus, the functions \(y = 3x + 2\) and \(y = 0.4x^2 − 2.3\text{,}\) for example, are not direct variation, even though they are increasing functions for positive \(x\text{.}\)</p></article><p id="p-4773">Even without an equation, we can check whether a table of data describes direct variation or merely an increasing function. If \(y\) varies directly with \(x^n\) , then \(y = kx^n\) , or, equivalently, \(\frac{y}{x^n} = k\text{.}\)</p>
 <article class="assemblage-like" id="assemblage-48"><h5 class="heading">Test for Direct Variation</h5>
-<p id="p-4772">If the ratio \(\frac{y}{x^n}\) is constant, then \(y\) varies directly with \(x^n\text{.}\)</p></article><article class="example-like" id="example-test-variation-with-square"><h5 class="heading">
+<p id="p-4774">If the ratio \(\frac{y}{x^n}\) is constant, then \(y\) varies directly with \(x^n\text{.}\)</p></article><article class="example-like" id="example-test-variation-with-square"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">3.17</span>
 </h5>
-<p id="p-4773">Delbert collects the following data and would like to know if \(y\) varies directly with the square of \(x\text{.}\) What should he calculate?</p>
+<p id="p-4775">Delbert collects the following data and would like to know if \(y\) varies directly with the square of \(x\text{.}\) What should he calculate?</p>
 <figure class="figure-like" id="table-152"><table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
@@ -485,7 +490,7 @@ S = f (r ) = kr^2
 <td class="c m b1 r1 l0 t0 lines">\(76\)</td>
 </tr>
 </table></figure></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-78" id="solution-78"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-78" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4774">If \(y\) varies directly with \(x^2\text{,}\) then \(y = kx^2\text{,}\) or \(\frac{y}{x^2}= k\text{.}\) Delbert should calculate the ratio \(\frac{y}{x^2}\) for each data point.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-78" id="solution-78"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-78" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4776">If \(y\) varies directly with \(x^2\text{,}\) then \(y = kx^2\text{,}\) or \(\frac{y}{x^2}= k\text{.}\) Delbert should calculate the ratio \(\frac{y}{x^2}\) for each data point.</p>
 <figure class="figure-like" id="table-153"><table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
@@ -516,7 +521,7 @@ S = f (r ) = kr^2
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-vary-with-cube" id="exercise-vary-with-cube"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">3.18</span>
 </h5></article></a></div>
-<div id="hk-exercise-vary-with-cube" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-4775">Does \(B\) vary directly with the cube of \(r\text{?}\) Explain your decision. <figure class="figure-like" id="table-154"><table>
+<div id="hk-exercise-vary-with-cube" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-4777">Does \(B\) vary directly with the cube of \(r\text{?}\) Explain your decision. <figure class="figure-like" id="table-154"><table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(r\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0.1\)</td>
@@ -534,13 +539,13 @@ S = f (r ) = kr^2
 <td class="c m b1 r1 l0 t0 lines">\(124.416\)</td>
 </tr>
 </table></figure></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-531" id="answer-531"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-531" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4776">Yes, \(\dfrac{B}{r^3}\) is constant.</p></span></span> </article></div></section><section class="subsection" id="subsection-74"><header title="Subsection 3.1.5 Scaling"><h1 class="heading hide-type" alt="Subsection 3.1.5 Scaling">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-531" id="answer-531"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-531" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4778">Yes, \(\dfrac{B}{r^3}\) is constant.</p></span></span> </article></div></section><section class="subsection" id="subsection-74"><header title="Subsection 3.1.5 Scaling"><h1 class="heading hide-type" alt="Subsection 3.1.5 Scaling">
 <span class="type">Subsection</span><span class="codenumber">3.1.5</span><span class="title">Scaling</span>
-</h1></header><p id="p-4777">Recall that if \(y\) varies directly with \(x\text{,}\) then doubling \(x\) causes \(y\) to double also. But is the area of a \(16\)-inch circular pizza double the area of an \(8\)-inch pizza? If you double the dimensions of a model of a skyscraper, will its weight double also? You probably know that the answer to both of these questions is <!--Style me with CSS--><em>No</em>. The area of a circle is proportional to the <!--Style me with CSS--><em>square</em> of its radius, and the volume (and hence the weight) of an object is proportional to the <!--Style me with CSS--><em>cube</em> of its linear dimension. Variation with a power of \(x\) produces a different scaling effect.</p>
+</h1></header><p id="p-4779">Recall that if \(y\) varies directly with \(x\text{,}\) then doubling \(x\) causes \(y\) to double also. But is the area of a \(16\)-inch circular pizza double the area of an \(8\)-inch pizza? If you double the dimensions of a model of a skyscraper, will its weight double also? You probably know that the answer to both of these questions is <!--Style me with CSS--><em>No</em>. The area of a circle is proportional to the <!--Style me with CSS--><em>square</em> of its radius, and the volume (and hence the weight) of an object is proportional to the <!--Style me with CSS--><em>cube</em> of its linear dimension. Variation with a power of \(x\) produces a different scaling effect.</p>
 <article class="example-like" id="example-scaling-weight"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">3.19</span>
 </h5>
-<p id="p-4778">The Taipei 101 building is 1671 feet tall, and in 2006 it was the tallest skyscraper in the world. Show that doubling the dimensions of a model of the Taipei 101 building produces a model that weighs \(8\) times as much.</p></article><div class="posterior"><div>
+<p id="p-4780">The Taipei 101 building is 1671 feet tall, and in 2006 it was the tallest skyscraper in the world. Show that doubling the dimensions of a model of the Taipei 101 building produces a model that weighs \(8\) times as much.</p></article><div class="posterior"><div>
 <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-79" id="solution-79"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-79" style="display: none;" class="tex2jax_ignore"><span class="solution">\(V = lwh\text{.}\)\(W\text{,}\)
 \begin{equation*}
 W = klwh
@@ -557,9 +562,9 @@ W_\text{new} \amp = k(2l)(2w)(2h)\\
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-double-pizza-diameter" id="exercise-double-pizza-diameter"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">3.20</span>
 </h5></article></a></div>
-<div id="hk-exercise-double-pizza-diameter" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-4779">Use the formula for the area of a circle to show that doubling the diameter of a pizza quadruples its area.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-532" id="answer-532"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-532" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4780">\(A =\pi r^2\text{,}\) so \(A_\text{new} = \pi(2r )^2 = 4\pi r^2 = 4A_\text{old}\)</p></span></span> </article></div>
-<p id="p-4781">In general, if \(y\) varies directly with a power of \(x\text{,}\) that is, if \(y = kx^n\text{,}\) then doubling the value of \(x\) causes \(y\) to increase by a factor of \(2^n\text{.}\) In fact, if we multiply \(x\) by any positive number \(c\text{,}\) then
+<div id="hk-exercise-double-pizza-diameter" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-4781">Use the formula for the area of a circle to show that doubling the diameter of a pizza quadruples its area.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-532" id="answer-532"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-532" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4782">\(A =\pi r^2\text{,}\) so \(A_\text{new} = \pi(2r )^2 = 4\pi r^2 = 4A_\text{old}\)</p></span></span> </article></div>
+<p id="p-4783">In general, if \(y\) varies directly with a power of \(x\text{,}\) that is, if \(y = kx^n\text{,}\) then doubling the value of \(x\) causes \(y\) to increase by a factor of \(2^n\text{.}\) In fact, if we multiply \(x\) by any positive number \(c\text{,}\) then
 \begin{equation*}
 \begin{aligned}
 y_\text{new} \amp =k(cx)^n
@@ -568,27 +573,27 @@ y_\text{new} \amp =k(cx)^n
 \end{equation*}
 so the value of \(y\) is multiplied by \(c^n\text{.}\) We will call \(n\) the <em class="terminology">scaling exponent</em>, and you will often see variation described in terms of scaling. For example, we might say that "the area of a circle scales as the square of its radius."" (In many applications, the power \(n\) is called the <!--Style me with CSS--><em>scale factor</em>, even though it is not a factor but an exponent.)</p></section><section class="subsection" id="subsection-75"><header title="Subsection 3.1.6 Inverse Variation"><h1 class="heading hide-type" alt="Subsection 3.1.6 Inverse Variation">
 <span class="type">Subsection</span><span class="codenumber">3.1.6</span><span class="title">Inverse Variation</span>
-</h1></header><p id="p-4782">How long does it take to travel a distance of \(600\) miles? The answer depends on your average speed. If you are on a bicycle trip, your average speed might be \(15\) miles per hour. In that case, your traveling time will be
+</h1></header><p id="p-4784">How long does it take to travel a distance of \(600\) miles? The answer depends on your average speed. If you are on a bicycle trip, your average speed might be \(15\) miles per hour. In that case, your traveling time will be
 \begin{equation*}
 T = \frac{D}{R}= \frac{600}{15}= 40 \text{ hours}
 \end{equation*}
 (Of course, you will have to add time for rest stops; the \(40\) hours are just your travel time.)</p>
-<p id="p-4783">If you are driving your car, you might average \(50\) miles per hour. Your travel time is then
+<p id="p-4785">If you are driving your car, you might average \(50\) miles per hour. Your travel time is then
 \begin{equation*}
 T = \frac{D}{R}= \frac{600}{50}= 12 \text{ hours}
 \end{equation*}
 </p>
-<p id="p-4784">If you take a commercial air flight, the plane’s speed might be \(400\) miles per hour, and the flight time would be
+<p id="p-4786">If you take a commercial air flight, the plane’s speed might be \(400\) miles per hour, and the flight time would be
 \begin{equation*}
 T = \frac{D}{R}= \frac{600}{400}= 1.5 \text{ hours}
 \end{equation*}
 </p>
-<p id="p-4785">You can see that for higher average speeds, the travel time is shorter. In other words, the time needed for a \(600\)-mile journey is a decreasing function of average speed. In fact, a formula for the function is
+<p id="p-4787">You can see that for higher average speeds, the travel time is shorter. In other words, the time needed for a \(600\)-mile journey is a decreasing function of average speed. In fact, a formula for the function is
 \begin{equation*}
 T = f (R) = \frac{600}{R}
 \end{equation*}
 </p>
-<p id="p-4786">This function is an example of <em class="terminology">inverse variation</em>.A table of values and a graph of the function are shown in <a knowl="./knowl/fig-inverse-variation.html" knowl-id="xref-fig-inverse-variation" alt="Figure 3.21 " title="Figure 3.21 ">Figure 3.21</a>.</p>
+<p id="p-4788">This function is an example of <em class="terminology">inverse variation</em>.A table of values and a graph of the function are shown in <a knowl="./knowl/fig-inverse-variation.html" knowl-id="xref-fig-inverse-variation" alt="Figure 3.21 " title="Figure 3.21 ">Figure 3.21</a>.</p>
 <div class="sidebyside" style="" id="sidebyside-76">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
@@ -628,11 +633,11 @@ T = f (R) = \frac{600}{R}
 </div>
 </div>
 <article class="assemblage-like" id="assemblage-49"><h5 class="heading">Inverse Variation</h5>
-<p id="p-4787">\(y\) <em class="terminology">varies inversely</em> with \(x\) if
+<p id="p-4789">\(y\) <em class="terminology">varies inversely</em> with \(x\) if
 \begin{equation*}
 y = \frac{k}{x}\text{, }x \ne 0
 \end{equation*}
-where \(k\) is a positive constant.</p></article><p id="p-4788">Inverse variation describes a decreasing function, but not every decreasing function represents inverse variation. People sometimes mistakenly use the phrase <!--Style me with CSS--><em>varies inversely</em> to describe any decreasing function, but if \(y\) varies inversely with \(x\text{,}\) the variables must satisfy an equation of the form \(y = \frac{k}{x}\text{,}\) or \(xy = k\text{.}\) To decide whether two variables truly vary inversely, we can check whether their product is constant. For instance, in the preceding travel-time example, we see from the table that \(RT = 600\text{.}\)</p>
+where \(k\) is a positive constant.</p></article><p id="p-4790">Inverse variation describes a decreasing function, but not every decreasing function represents inverse variation. People sometimes mistakenly use the phrase <!--Style me with CSS--><em>varies inversely</em> to describe any decreasing function, but if \(y\) varies inversely with \(x\text{,}\) the variables must satisfy an equation of the form \(y = \frac{k}{x}\text{,}\) or \(xy = k\text{.}\) To decide whether two variables truly vary inversely, we can check whether their product is constant. For instance, in the preceding travel-time example, we see from the table that \(RT = 600\text{.}\)</p>
 <figure class="figure-like" id="table-156"><table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(R\)</td>
@@ -661,22 +666,22 @@ where \(k\) is a positive constant.</p></article><p id="p-4788">Inverse variatio
 <td class="c m b1 r1 l0 t0 lines">\(600\)</td>
 <td class="c m b1 r1 l0 t0 lines">\(600\)</td>
 </tr>
-</table></figure><p id="p-4789">We can also define inverse variation with a power of the variable.</p>
+</table></figure><p id="p-4791">We can also define inverse variation with a power of the variable.</p>
 <article class="assemblage-like" id="assemblage-50"><h5 class="heading">Inverse Variation with a power</h5>
-<p id="p-4790">\(y\) <em class="terminology">varies inversely</em> with \(x^n\) if
+<p id="p-4792">\(y\) <em class="terminology">varies inversely</em> with \(x^n\) if
 \begin{equation*}
 y = \frac{k}{x^n}\text{, }x \ne 0
 \end{equation*}
-where \(k\) and \(n\) are positive constants.</p></article><p id="p-4791">We may also say that \(y\) is <em class="terminology">inversely proportional</em> to \(x^n\text{.}\)</p>
+where \(k\) and \(n\) are positive constants.</p></article><p id="p-4793">We may also say that \(y\) is <em class="terminology">inversely proportional</em> to \(x^n\text{.}\)</p>
 <article class="example-like" id="example-weight-vs-distance-from-earth"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">3.22</span>
 </h5>
-<p id="p-4792">The weight, \(w\text{,}\) of an object varies inversely with the square of its distance, \(d\text{,}\) from the center of the Earth. Thus,
+<p id="p-4794">The weight, \(w\text{,}\) of an object varies inversely with the square of its distance, \(d\text{,}\) from the center of the Earth. Thus,
 \begin{equation*}
 w = \frac{k}{d^2}
 \end{equation*}
 If you double your distance from the center of the Earth, what happens to your weight? What if you triple the distance?</p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-80" id="solution-80"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-80" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4793">Suppose you weigh \(W\) pounds at distance \(D\) from the center of the Earth. Then 	\(W = \frac{k}{D^2}\text{.}\) At distance \(2D\text{,}\) your weight will be
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-80" id="solution-80"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-80" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4795">Suppose you weigh \(W\) pounds at distance \(D\) from the center of the Earth. Then 	\(W = \frac{k}{D^2}\text{.}\) At distance \(2D\text{,}\) your weight will be
 \begin{equation*}
 w = \frac{k}{(2D)^2}= \frac{k}{4D^2}= \frac{1}{4}\cdot\frac{k}{D^2}
 = \frac{1}{4}W
@@ -690,15 +695,15 @@ Your new weight will be \(\frac{1}{4}\) of your old weight. By a similar calcula
 \begin{equation*}
 F = \frac{k}{l}
 \end{equation*}
-If you increase the length of the wrench by 50% so that the new length is \(1.5l\text{,}\) what happens to the amount of force required to loosen the bolt?<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-533" id="answer-533"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-533" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4794">\(F_\text{new}=\dfrac{2}{3}F_\text{old} \)</p></span></span> </article></div>
-<p id="p-4795">In <a knowl="./knowl/example-weight-vs-distance-from-earth.html" knowl-id="xref-example-weight-vs-distance-from-earth" alt="Example 3.22 " title="Example 3.22 ">Example 3.22</a> and  as the independent variable increases through positive values, the dependent variable decreases. An inverse variation is an example of a decreasing function. The graphs of some typical inverse variations are shown in <a knowl="./knowl/fig-inverse-variation-with-power.html" knowl-id="xref-fig-inverse-variation-with-power" alt="Figure 3.24 " title="Figure 3.24 ">Figure 3.24</a>.</p>
+If you increase the length of the wrench by 50% so that the new length is \(1.5l\text{,}\) what happens to the amount of force required to loosen the bolt?<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-533" id="answer-533"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-533" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4796">\(F_\text{new}=\dfrac{2}{3}F_\text{old} \)</p></span></span> </article></div>
+<p id="p-4797">In <a knowl="./knowl/example-weight-vs-distance-from-earth.html" knowl-id="xref-example-weight-vs-distance-from-earth" alt="Example 3.22 " title="Example 3.22 ">Example 3.22</a> and  as the independent variable increases through positive values, the dependent variable decreases. An inverse variation is an example of a decreasing function. The graphs of some typical inverse variations are shown in <a knowl="./knowl/fig-inverse-variation-with-power.html" knowl-id="xref-fig-inverse-variation-with-power" alt="Figure 3.24 " title="Figure 3.24 ">Figure 3.24</a>.</p>
 <figure class="figure-like" id="fig-inverse-variation-with-power"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-inverse-variation-with-power.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">3.24</span></figcaption></figure></section><section class="subsection" id="subsection-76"><header title="Subsection 3.1.7 Finding a Formula for Inverse Variation"><h1 class="heading hide-type" alt="Subsection 3.1.7 Finding a Formula for Inverse Variation">
 <span class="type">Subsection</span><span class="codenumber">3.1.7</span><span class="title">Finding a Formula for Inverse Variation</span>
-</h1></header><p id="p-4796">If we know that two variables vary inversely and we can find one pair of corresponding values for the variables, we can determine \(k\text{,}\) the constant of variation.</p>
+</h1></header><p id="p-4798">If we know that two variables vary inversely and we can find one pair of corresponding values for the variables, we can determine \(k\text{,}\) the constant of variation.</p>
 <article class="example-like" id="example-EMR-vs-distance"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">3.25</span>
 </h5>
-<p id="p-4797">The intensity of electromagnetic radiation, such as light or radio waves, varies inversely with the square of the distance from its source. Radio station KPCC broadcasts a signal that is measured at \(0.016\) watt per square meter by a receiver \(1\) kilometer away. </p>
+<p id="p-4799">The intensity of electromagnetic radiation, such as light or radio waves, varies inversely with the square of the distance from its source. Radio station KPCC broadcasts a signal that is measured at \(0.016\) watt per square meter by a receiver \(1\) kilometer away. </p>
 <ol id="ol-911" style="list-style-type: lower-alpha;">
 <li id="li-2884">Write a formula that gives signal strength as a function of distance.</li>
 <li id="li-2885">If you live \(5\) kilometers from the station, what is the strength of the signal you will receive?</li>
@@ -716,71 +721,71 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-share-gift" id="exercise-share-gift"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">3.26</span>
 </h5></article></a></div>
-<div id="hk-exercise-share-gift" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-4798">Delbert’s officemates want to buy a $120 gold watch for a colleague who is retiring. The cost per person is inversely proportional to the number of people who contribute. </p>
+<div id="hk-exercise-share-gift" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-4800">Delbert’s officemates want to buy a $120 gold watch for a colleague who is retiring. The cost per person is inversely proportional to the number of people who contribute. </p>
 <ol id="ol-913" style="list-style-type: lower-alpha;">
 <li id="li-2888">Express the cost per person, \(C\text{,}\) as a function of the number of people, \(p\text{,}\) who contribute.</li>
 <li id="li-2889">Sketch the function on the domain \(0 \le p \le 20\text{.}\)</li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-534" id="answer-534"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-534" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4799"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-534" id="answer-534"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-534" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4801"></p>
 <ol id="ol-914" style="list-style-type: lower-alpha;">
-<li id="li-2890"><p id="p-4800">\(C=\dfrac{120}{p} \)</p></li>
-<li id="li-2891"><p id="p-4801"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-in-ex-ans-3-1-8.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-2890"><p id="p-4802">\(C=\dfrac{120}{p} \)</p></li>
+<li id="li-2891"><p id="p-4803"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-in-ex-ans-3-1-8.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></span></span> </article></div></section><section class="subsection" id="summary-3-1"><header title="Subsection 3.1.8 Section Summary"><h1 class="heading hide-type" alt="Subsection 3.1.8 Section Summary">
 <span class="type">Subsection</span><span class="codenumber">3.1.8</span><span class="title">Section Summary</span><a href="Variation.html#summary-3-1" class="permalink">¶ permalink</a>
 </h1></header><section class="subsubsection" id="subsubsection-49"><header title="Subsubsection 3.1.8.1 Vocabulary"><h1 class="heading hide-type" alt="Subsubsection 3.1.8.1 Vocabulary">
 <span class="type">Subsubsection</span><span class="codenumber">3.1.8.1</span><span class="title">Vocabulary</span>
-</h1></header><p id="p-4802">Look up the definitions of new terms in the Glossary. </p>
+</h1></header><p id="p-4804">Look up the definitions of new terms in the Glossary. </p>
 <ul id="ul-15" class="cols3" style="list-style-type: disc;">
-<li id="li-2892" style="width:32.6666666666667%; float:left;"><p id="p-4803">Direct variation</p></li>
-<li id="li-2893" style="width:32.6666666666667%; float:left;"><p id="p-4804">Directly proportional</p></li>
-<li id="li-2894" style="width:32.6666666666667%; float:left;"><p id="p-4805">Constant of variation</p></li>
-<li id="li-2895" style="width:32.6666666666667%; float:left;"><p id="p-4806">Scaling exponent</p></li>
-<li id="li-2896" style="width:32.6666666666667%; float:left;"><p id="p-4807">Inverse variation</p></li>
-<li id="li-2897" style="width:32.6666666666667%; float:left;"><p id="p-4808">Inversely proportional</p></li>
+<li id="li-2892" style="width:32.6666666666667%; float:left;"><p id="p-4805">Direct variation</p></li>
+<li id="li-2893" style="width:32.6666666666667%; float:left;"><p id="p-4806">Directly proportional</p></li>
+<li id="li-2894" style="width:32.6666666666667%; float:left;"><p id="p-4807">Constant of variation</p></li>
+<li id="li-2895" style="width:32.6666666666667%; float:left;"><p id="p-4808">Scaling exponent</p></li>
+<li id="li-2896" style="width:32.6666666666667%; float:left;"><p id="p-4809">Inverse variation</p></li>
+<li id="li-2897" style="width:32.6666666666667%; float:left;"><p id="p-4810">Inversely proportional</p></li>
 </ul>
 <p></p></section><section class="subsubsection" id="subsubsection-50"><header title="Subsubsection 3.1.8.2 CONCEPTS"><h1 class="heading hide-type" alt="Subsubsection 3.1.8.2 CONCEPTS">
 <span class="type">Subsubsection</span><span class="codenumber">3.1.8.2</span><span class="title">CONCEPTS</span>
-</h1></header><p id="p-4809"></p>
+</h1></header><p id="p-4811"></p>
 <ol id="ol-915" style="list-style-type: decimal;">
-<li id="li-2898"><p id="p-4810"><article class="assemblage-like" id="assemblage-51"><h5 class="heading">Direct and Inverse Variation</h5>
-<p id="p-4811"></p>
+<li id="li-2898"><p id="p-4812"><article class="assemblage-like" id="assemblage-51"><h5 class="heading">Direct and Inverse Variation</h5>
+<p id="p-4813"></p>
 <ul id="ul-16" style="list-style-type: disc;">
-<li id="li-2899"><p id="p-4812"><em class="terminology">\(y\) varies directly with \(x\)</em> if the ratio \(\frac{y}{x} \) is constant, that is, if \(y = kx\) .</p></li>
-<li id="li-2900"><p id="p-4813"><em class="terminology">\(y\) varies directly with a power of \(x\)</em> if the ratio \(\frac{y}{x^n} \) is constant, that is, if \(y = kx^n\) .</p></li>
-<li id="li-2901"><p id="p-4814"><em class="terminology">\(y\) varies inversely with \(x\)</em> if the product \(xy \) is constant, that is, if \(y =\frac{k}{x}\) .</p></li>
-<li id="li-2902"><p id="p-4815"><em class="terminology">\(y\) varies inversely with a power of \(x\)</em> if the product \(x^ny \) is constant, that is, if \(y =\frac{k}{x^n}\) .</p></li>
+<li id="li-2899"><p id="p-4814"><em class="terminology">\(y\) varies directly with \(x\)</em> if the ratio \(\frac{y}{x} \) is constant, that is, if \(y = kx\) .</p></li>
+<li id="li-2900"><p id="p-4815"><em class="terminology">\(y\) varies directly with a power of \(x\)</em> if the ratio \(\frac{y}{x^n} \) is constant, that is, if \(y = kx^n\) .</p></li>
+<li id="li-2901"><p id="p-4816"><em class="terminology">\(y\) varies inversely with \(x\)</em> if the product \(xy \) is constant, that is, if \(y =\frac{k}{x}\) .</p></li>
+<li id="li-2902"><p id="p-4817"><em class="terminology">\(y\) varies inversely with a power of \(x\)</em> if the product \(x^ny \) is constant, that is, if \(y =\frac{k}{x^n}\) .</p></li>
 </ul></article></p></li>
-<li id="li-2903"><p id="p-4816">The graph of a direct variation passes through the origin. The graph of an inverse variation has a vertical asymptote at the origin.</p></li>
-<li id="li-2904"><p id="p-4817">If \(y = kx^n\) , we say that \(y\) <em class="terminology">scales</em> as \(x^n\text{.}\)</p></li>
+<li id="li-2903"><p id="p-4818">The graph of a direct variation passes through the origin. The graph of an inverse variation has a vertical asymptote at the origin.</p></li>
+<li id="li-2904"><p id="p-4819">If \(y = kx^n\) , we say that \(y\) <em class="terminology">scales</em> as \(x^n\text{.}\)</p></li>
 </ol>
 <p></p></section><section class="subsubsection" id="subsubsection-51"><header title="Subsubsection 3.1.8.3 STUDY QUESTIONS"><h1 class="heading hide-type" alt="Subsubsection 3.1.8.3 STUDY QUESTIONS">
 <span class="type">Subsubsection</span><span class="codenumber">3.1.8.3</span><span class="title">STUDY QUESTIONS</span>
-</h1></header><p id="p-4818"></p>
+</h1></header><p id="p-4820"></p>
 <ol id="ol-916" style="list-style-type: decimal;">
-<li id="li-2905"><p id="p-4819">Describe the graph of \(y = f (x)\) if \(y\) varies directly with \(x\text{.}\)</p></li>
-<li id="li-2906"><p id="p-4820">What is true about the ratio of two variables if they are directly proportional?</p></li>
-<li id="li-2907"><p id="p-4821">If \(y\) is inversely proportional to \(x\text{,}\) then the graph of \(y\) versus \(x\) is a transformation of which basic graph?</p></li>
-<li id="li-2908"><p id="p-4822">If \(y\) varies directly with a power of \(x\text{,}\) write a formula for \(y\) as a function of \(x\text{.}\)</p></li>
-<li id="li-2909"><p id="p-4823">If \(y\) varies inversely with a power of \(x\text{,}\) write a formula for \(y\) as a function of \(x\text{.}\)</p></li>
-<li id="li-2910"><p id="p-4824">If \(y = kx^4\text{,}\) what happens to \(y\) if you double \(x\text{?}\)</p></li>
-<li id="li-2911"><p id="p-4825">State a test to determine whether \(y\) varies inversely with \(x^n\text{.}\)</p></li>
-<li id="li-2912"><p id="p-4826">If \(y = \frac{k}{x^2}\text{,}\) and we double the value of \(x\text{,}\) what happens to the value of \(y\text{?}\)</p></li>
+<li id="li-2905"><p id="p-4821">Describe the graph of \(y = f (x)\) if \(y\) varies directly with \(x\text{.}\)</p></li>
+<li id="li-2906"><p id="p-4822">What is true about the ratio of two variables if they are directly proportional?</p></li>
+<li id="li-2907"><p id="p-4823">If \(y\) is inversely proportional to \(x\text{,}\) then the graph of \(y\) versus \(x\) is a transformation of which basic graph?</p></li>
+<li id="li-2908"><p id="p-4824">If \(y\) varies directly with a power of \(x\text{,}\) write a formula for \(y\) as a function of \(x\text{.}\)</p></li>
+<li id="li-2909"><p id="p-4825">If \(y\) varies inversely with a power of \(x\text{,}\) write a formula for \(y\) as a function of \(x\text{.}\)</p></li>
+<li id="li-2910"><p id="p-4826">If \(y = kx^4\text{,}\) what happens to \(y\) if you double \(x\text{?}\)</p></li>
+<li id="li-2911"><p id="p-4827">State a test to determine whether \(y\) varies inversely with \(x^n\text{.}\)</p></li>
+<li id="li-2912"><p id="p-4828">If \(y = \frac{k}{x^2}\text{,}\) and we double the value of \(x\text{,}\) what happens to the value of \(y\text{?}\)</p></li>
 </ol>
 <p></p></section><section class="subsubsection" id="subsubsection-52"><header title="Subsubsection 3.1.8.4 SKILLS"><h1 class="heading hide-type" alt="Subsubsection 3.1.8.4 SKILLS">
 <span class="type">Subsubsection</span><span class="codenumber">3.1.8.4</span><span class="title">SKILLS</span>
-</h1></header><p id="p-4827">Practice each skill in the <a href="Variation.html#section-3-1-exercises" alt="Exercises 3.1.9 Homework" title="Exercises 3.1.9 Homework">Homework 3.1.9</a> problems listed. </p>
+</h1></header><p id="p-4829">Practice each skill in the <a href="Variation.html#section-3-1-exercises" alt="Exercises 3.1.9 Homework" title="Exercises 3.1.9 Homework">Homework 3.1.9</a> problems listed. </p>
 <ol id="ol-917" style="list-style-type: decimal;">
-<li id="li-2913"><p id="p-4828">Find the constant of variation: #1–4, 13–26</p></li>
-<li id="li-2914"><p id="p-4829">Write a formula for direct or inverse variation: #1–4, 13–26, 35–46</p></li>
-<li id="li-2915"><p id="p-4830">Recognize direct and inverse variation from a table of values: #27–34, 39–42</p></li>
-<li id="li-2916"><p id="p-4831">Recognize direct or inverse variation from a graph: #9–12, 35–38</p></li>
-<li id="li-2917"><p id="p-4832">Use scaling in direct and inverse variation: #13–20, 43–46</p></li>
+<li id="li-2913"><p id="p-4830">Find the constant of variation: #1–4, 13–26</p></li>
+<li id="li-2914"><p id="p-4831">Write a formula for direct or inverse variation: #1–4, 13–26, 35–46</p></li>
+<li id="li-2915"><p id="p-4832">Recognize direct and inverse variation from a table of values: #27–34, 39–42</p></li>
+<li id="li-2916"><p id="p-4833">Recognize direct or inverse variation from a graph: #9–12, 35–38</p></li>
+<li id="li-2917"><p id="p-4834">Use scaling in direct and inverse variation: #13–20, 43–46</p></li>
 </ol>
 <p></p></section></section><section class="exercises" id="section-3-1-exercises"><header title="Exercises 3.1.9 Homework"><h1 class="heading hide-type" alt="Exercises 3.1.9 Homework">
 <span class="type">Subsection</span><span class="codenumber">3.1.9</span><span class="title">Homework</span><a href="Variation.html#section-3-1-exercises" class="permalink">¶ permalink</a>
 </h1></header><article class="exercise-like" id="exercise-1014"><h5 class="heading"><span class="codenumber">1</span></h5>
-<p id="p-4833">Delbert's credit card statement lists three purchases he made while on a business trip in the Midwest. His company's accountant would like to know the sales tax rate on the purchases. <figure class="figure-like" id="table-157"><table>
+<p id="p-4835">Delbert's credit card statement lists three purchases he made while on a business trip in the Midwest. His company's accountant would like to know the sales tax rate on the purchases. <figure class="figure-like" id="table-157"><table>
 <tr>
 <td class="l m b1 r3 l1 t1 lines">\(\text{Price of item} \)</td>
 <td class="c m b1 r1 l0 t1 lines">\(18\)</td>
@@ -801,14 +806,14 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 </tr>
 </table></figure> </p>
 <ol id="ol-918" style="list-style-type: lower-alpha;">
-<li id="li-2918"><p id="p-4834">Compute the ratio of the tax to the price of each item. Is the tax proportional to the price? What is the tax rate?</p></li>
-<li id="li-2919"><p id="p-4835">Express the tax, \(T\text{,}\) as a function of the price, \(p\text{,}\) of the item.</p></li>
-<li id="li-2920"><p id="p-4836">Sketch a graph of the function by hand, and label the scales on the axes.</p></li>
+<li id="li-2918"><p id="p-4836">Compute the ratio of the tax to the price of each item. Is the tax proportional to the price? What is the tax rate?</p></li>
+<li id="li-2919"><p id="p-4837">Express the tax, \(T\text{,}\) as a function of the price, \(p\text{,}\) of the item.</p></li>
+<li id="li-2920"><p id="p-4838">Sketch a graph of the function by hand, and label the scales on the axes.</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-535" id="answer-535"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-535" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4837"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-535" id="answer-535"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-535" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4839"></p>
 <ol id="ol-919" style="list-style-type: lower-alpha;">
-<li id="li-2921"><p id="p-4838"><table>
+<li id="li-2921"><p id="p-4840"><table>
 <tr>
 <td class="l m b1 r3 l1 t1 lines">\(\text{Price of item} \)</td>
 <td class="c m b1 r1 l0 t1 lines">\(18\)</td>
@@ -828,10 +833,10 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\alert{0.065}\)</td>
 </tr>
 </table> Yes; \(6.5\%\)</p></li>
-<li id="li-2922"><p id="p-4839">\(T = 0.065p\)</p></li>
-<li id="li-2923"><p id="p-4840"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-ans-3-1-1.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-2922"><p id="p-4841">\(T = 0.065p\)</p></li>
+<li id="li-2923"><p id="p-4842"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-ans-3-1-1.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1015"><h5 class="heading"><span class="codenumber">2</span></h5>
-<p id="p-4841">At constant acceleration from rest, the distance traveled by a race car is proportional to the square of the time elapsed. The highest recorded road-tested acceleration is \(0\) to \(60\) miles per hour in \(3.07\) seconds, which produces the following data. <figure class="figure-like" id="table-158"><table>
+<p id="p-4843">At constant acceleration from rest, the distance traveled by a race car is proportional to the square of the time elapsed. The highest recorded road-tested acceleration is \(0\) to \(60\) miles per hour in \(3.07\) seconds, which produces the following data. <figure class="figure-like" id="table-158"><table>
 <tr>
 <td class="l m b1 r3 l1 t1 lines">\(\text{Time (seconds)} \)</td>
 <td class="c m b1 r1 l0 t1 lines">\(2\)</td>
@@ -852,12 +857,12 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 </tr>
 </table></figure> </p>
 <ol id="ol-920" style="list-style-type: lower-alpha;">
-<li id="li-2924"><p id="p-4842">Compute the ratios of the distance traveled to the square of the time elapsed. What was the acceleration, in feet per second squared?</p></li>
-<li id="li-2925"><p id="p-4843">Express the distance traveled, \(d\text{,}\) as a function of time in seconds, \(t\text{.}\)</p></li>
-<li id="li-2926"><p id="p-4844">Sketch a graph of the function by hand, and label the scales on the axes.</p></li>
+<li id="li-2924"><p id="p-4844">Compute the ratios of the distance traveled to the square of the time elapsed. What was the acceleration, in feet per second squared?</p></li>
+<li id="li-2925"><p id="p-4845">Express the distance traveled, \(d\text{,}\) as a function of time in seconds, \(t\text{.}\)</p></li>
+<li id="li-2926"><p id="p-4846">Sketch a graph of the function by hand, and label the scales on the axes.</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-1016"><h5 class="heading"><span class="codenumber">3</span></h5>
-<p id="p-4845">The marketing department for a paper company is testing wrapping paper rolls in various dimensions to see which shape consumers prefer. All the rolls contain the same amount of wrapping paper. <figure class="figure-like" id="table-159"><table>
+<p id="p-4847">The marketing department for a paper company is testing wrapping paper rolls in various dimensions to see which shape consumers prefer. All the rolls contain the same amount of wrapping paper. <figure class="figure-like" id="table-159"><table>
 <tr>
 <td class="l m b1 r3 l1 t1 lines">\(\text{Width (feet)} \)</td>
 <td class="c m b1 r1 l0 t1 lines">\(2\)</td>
@@ -878,14 +883,14 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 </tr>
 </table></figure> </p>
 <ol id="ol-921" style="list-style-type: lower-alpha;">
-<li id="li-2927"><p id="p-4846">Compute the product of the length and width for each roll of wrapping paper. What is the constant of inverse proportionality?</p></li>
-<li id="li-2928"><p id="p-4847">Express the length, \(L\text{,}\) of the paper as a function of the width, \(w\text{,}\) of the roll.</p></li>
-<li id="li-2929"><p id="p-4848">Sketch a graph of the function by hand, and label the scales on the axes.</p></li>
+<li id="li-2927"><p id="p-4848">Compute the product of the length and width for each roll of wrapping paper. What is the constant of inverse proportionality?</p></li>
+<li id="li-2928"><p id="p-4849">Express the length, \(L\text{,}\) of the paper as a function of the width, \(w\text{,}\) of the roll.</p></li>
+<li id="li-2929"><p id="p-4850">Sketch a graph of the function by hand, and label the scales on the axes.</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-536" id="answer-536"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-536" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4849"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-536" id="answer-536"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-536" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4851"></p>
 <ol id="ol-922" style="list-style-type: lower-alpha;">
-<li id="li-2930"><p id="p-4850"><table>
+<li id="li-2930"><p id="p-4852"><table>
 <tr>
 <td class="l m b1 r3 l1 t1 lines">\(\text{Width (feet)} \)</td>
 <td class="c m b1 r1 l0 t1 lines">\(2\)</td>
@@ -905,10 +910,10 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\alert{24}\)</td>
 </tr>
 </table> \(24\) square feet</p></li>
-<li id="li-2931"><p id="p-4851">\(L = \dfrac{24}{w} \)</p></li>
-<li id="li-2932"><p id="p-4852"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-ans-3-1-3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-2931"><p id="p-4853">\(L = \dfrac{24}{w} \)</p></li>
+<li id="li-2932"><p id="p-4854"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-ans-3-1-3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1017"><h5 class="heading"><span class="codenumber">4</span></h5>
-<p id="p-4853">The force of gravity on a \(1\)-kilogram mass is inversely proportional to the square of the object's distance from the center of the Earth. The table shows the force on the object, in newtons, at distances that are multiples of the Earth's radius. <figure class="figure-like" id="table-160"><table>
+<p id="p-4855">The force of gravity on a \(1\)-kilogram mass is inversely proportional to the square of the object's distance from the center of the Earth. The table shows the force on the object, in newtons, at distances that are multiples of the Earth's radius. <figure class="figure-like" id="table-160"><table>
 <tr>
 <td class="l m b1 r3 l1 t1 lines">\(\text{Distance (Earth radii)} \)</td>
 <td class="c m b1 r1 l0 t1 lines">\(1\)</td>
@@ -929,29 +934,29 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 </tr>
 </table></figure> </p>
 <ol id="ol-923" style="list-style-type: lower-alpha;">
-<li id="li-2933"><p id="p-4854">Compute the products of the force and the square of the distance. What is the constant of inverse proportionality</p></li>
-<li id="li-2934"><p id="p-4855">Express the gravitational force, \(F\text{,}\) on a \(1\)-kilogram mass as a function of its distance, \(r\text{,}\) from the Earth's center, measured in Earth radii</p></li>
-<li id="li-2935"><p id="p-4856">Sketch a graph of the function by hand, and label the scales on the axes.</p></li>
+<li id="li-2933"><p id="p-4856">Compute the products of the force and the square of the distance. What is the constant of inverse proportionality</p></li>
+<li id="li-2934"><p id="p-4857">Express the gravitational force, \(F\text{,}\) on a \(1\)-kilogram mass as a function of its distance, \(r\text{,}\) from the Earth's center, measured in Earth radii</p></li>
+<li id="li-2935"><p id="p-4858">Sketch a graph of the function by hand, and label the scales on the axes.</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-1018"><h5 class="heading"><span class="codenumber">5</span></h5>
-<p id="p-4857"></p>
+<p id="p-4859"></p>
 <ol id="ol-924" style="list-style-type: lower-alpha;">
-<li id="li-2936"><p id="p-4858">How can you tell from a table of values whether \(y\) varies directly with \(x\text{?}\)</p></li>
-<li id="li-2937"><p id="p-4859">How can you tell from a table of values whether \(y\) varies inversely with \(x\text{?}\)</p></li>
+<li id="li-2936"><p id="p-4860">How can you tell from a table of values whether \(y\) varies directly with \(x\text{?}\)</p></li>
+<li id="li-2937"><p id="p-4861">How can you tell from a table of values whether \(y\) varies inversely with \(x\text{?}\)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-537" id="answer-537"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-537" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4860"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-537" id="answer-537"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-537" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4862"></p>
 <ol id="ol-925" style="list-style-type: lower-alpha;">
-<li id="li-2938"><p id="p-4861">The ratio \(\frac{y}{x} \) is a constant.</p></li>
-<li id="li-2939"><p id="p-4862">The product \(xy\) is a constant.</p></li>
+<li id="li-2938"><p id="p-4863">The ratio \(\frac{y}{x} \) is a constant.</p></li>
+<li id="li-2939"><p id="p-4864">The product \(xy\) is a constant.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1019"><h5 class="heading"><span class="codenumber">6</span></h5>
-<p id="p-4863"></p>
+<p id="p-4865"></p>
 <ol id="ol-926" style="list-style-type: lower-alpha;">
-<li id="li-2940"><p id="p-4864">How can you tell from a table of values whether \(y\) varies directly with a power of \(x\text{?}\)</p></li>
-<li id="li-2941"><p id="p-4865">How can you tell from a table of values whether \(y\) varies inversely with a power of \(x\text{?}\)</p></li>
+<li id="li-2940"><p id="p-4866">How can you tell from a table of values whether \(y\) varies directly with a power of \(x\text{?}\)</p></li>
+<li id="li-2941"><p id="p-4867">How can you tell from a table of values whether \(y\) varies inversely with a power of \(x\text{?}\)</p></li>
 </ol></article><article class="exercise-like" id="exercise-1020"><h5 class="heading"><span class="codenumber">7</span></h5>
-<p id="p-4866">The length of a rectangle is \(10\) inches, and its width is \(8\) inches. Suppose we increase the length of the rectangle while holding the width constant. </p>
+<p id="p-4868">The length of a rectangle is \(10\) inches, and its width is \(8\) inches. Suppose we increase the length of the rectangle while holding the width constant. </p>
 <ol id="ol-927" style="list-style-type: lower-alpha;">
-<li id="li-2942"><p id="p-4867">Fill in the table. <figure class="figure-like" id="table-161"><table>
+<li id="li-2942"><p id="p-4869">Fill in the table. <figure class="figure-like" id="table-161"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">Length</td>
 <td class="c m b1 r1 l0 t1 lines">Width</td>
@@ -983,15 +988,15 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 </table></figure></p></li>
-<li id="li-2943"><p id="p-4868">Does the perimeter vary directly with the length?</p></li>
-<li id="li-2944"><p id="p-4869">Write a formula for the perimeter of the rectangle in terms of its length.</p></li>
-<li id="li-2945"><p id="p-4870">Does the area vary directly with the length?</p></li>
-<li id="li-2946"><p id="p-4871">Write a formula for the area of the rectangle in terms of its length.</p></li>
+<li id="li-2943"><p id="p-4870">Does the perimeter vary directly with the length?</p></li>
+<li id="li-2944"><p id="p-4871">Write a formula for the perimeter of the rectangle in terms of its length.</p></li>
+<li id="li-2945"><p id="p-4872">Does the area vary directly with the length?</p></li>
+<li id="li-2946"><p id="p-4873">Write a formula for the area of the rectangle in terms of its length.</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-538" id="answer-538"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-538" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4872"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-538" id="answer-538"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-538" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4874"></p>
 <ol id="ol-928" style="list-style-type: lower-alpha;">
-<li id="li-2947"><p id="p-4873"><figure class="figure-like" id="table-162"><table>
+<li id="li-2947"><p id="p-4875"><figure class="figure-like" id="table-162"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">Length</td>
 <td class="c m b1 r1 l0 t1 lines">Width</td>
@@ -1023,14 +1028,14 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\alert{160} \)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-2948"><p id="p-4874">No</p></li>
-<li id="li-2949"><p id="p-4875">\(P=16+2l\)</p></li>
-<li id="li-2950"><p id="p-4876">Yes</p></li>
-<li id="li-2951"><p id="p-4877">\(A=8l\)</p></li>
+<li id="li-2948"><p id="p-4876">No</p></li>
+<li id="li-2949"><p id="p-4877">\(P=16+2l\)</p></li>
+<li id="li-2950"><p id="p-4878">Yes</p></li>
+<li id="li-2951"><p id="p-4879">\(A=8l\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1021"><h5 class="heading"><span class="codenumber">8</span></h5>
-<p id="p-4878">The base of an isosceles triangle is \(12\) centimeters, and the equal sides have length \(15\) centimeters. Suppose we increase the base of the triangle while holding the sides constant. </p>
+<p id="p-4880">The base of an isosceles triangle is \(12\) centimeters, and the equal sides have length \(15\) centimeters. Suppose we increase the base of the triangle while holding the sides constant. </p>
 <ol id="ol-929" style="list-style-type: lower-alpha;">
-<li id="li-2952"><p id="p-4879">Fill in the table. <figure class="figure-like" id="table-163"><table>
+<li id="li-2952"><p id="p-4881">Fill in the table. <figure class="figure-like" id="table-163"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">Base</td>
 <td class="c m b1 r1 l0 t1 lines">Sides</td>
@@ -1067,21 +1072,21 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines"></td>
 </tr>
 </table></figure></p></li>
-<li id="li-2953"><p id="p-4880">Does the perimeter vary directly with the base?</p></li>
-<li id="li-2954"><p id="p-4881">Write a formula for the perimeter of the triangle in terms of its base.</p></li>
-<li id="li-2955"><p id="p-4882">Write a formula for the area of the triangle in terms of its base.</p></li>
-<li id="li-2956"><p id="p-4883">Does the area vary directly with the base?</p></li>
+<li id="li-2953"><p id="p-4882">Does the perimeter vary directly with the base?</p></li>
+<li id="li-2954"><p id="p-4883">Write a formula for the perimeter of the triangle in terms of its base.</p></li>
+<li id="li-2955"><p id="p-4884">Write a formula for the area of the triangle in terms of its base.</p></li>
+<li id="li-2956"><p id="p-4885">Does the area vary directly with the base?</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-1022"><h5 class="heading"><span class="codenumber">9</span></h5>
-<p id="p-4884">Which of the graphs could describe direct variation? Explain your answer. <img width="100%" src="images/fig-3-1-9.jpg" alt=""></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-539" id="answer-539"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-539" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4885">(b)</p></span></span> </article><article class="exercise-like" id="exercise-1023"><h5 class="heading"><span class="codenumber">10</span></h5>
-<p id="p-4886">Which of the graphs could describe direct variation? Explain your answer. <img width="100%" src="images/fig-3-1-10.jpg" alt=""></p></article><article class="exercise-like" id="exercise-1024"><h5 class="heading"><span class="codenumber">11</span></h5>
-<p id="p-4887">Which of the graphs could describe inverse variation? Explain your answer. <img width="100%" src="images/fig-3-1-11.jpg" alt=""></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-540" id="answer-540"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-540" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4888">(c)</p></span></span> </article><article class="exercise-like" id="exercise-1025"><h5 class="heading"><span class="codenumber">12</span></h5>
-<p id="p-4889">Which of the graphs could describe inverse variation? Explain your answer. <img width="100%" src="images/fig-3-1-12.jpg" alt=""></p></article><article class="exercise-like" id="exercise-1026"><h5 class="heading"><span class="codenumber">13</span></h5>
-<p id="p-4890">The weight of an object on the Moon varies directly with its weight on Earth. A person who weighs \(150\) pounds on Earth would weigh only \(24.75\) pounds on the Moon. </p>
+<p id="p-4886">Which of the graphs could describe direct variation? Explain your answer. <img width="100%" src="images/fig-3-1-9.jpg" alt=""></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-539" id="answer-539"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-539" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4887">(b)</p></span></span> </article><article class="exercise-like" id="exercise-1023"><h5 class="heading"><span class="codenumber">10</span></h5>
+<p id="p-4888">Which of the graphs could describe direct variation? Explain your answer. <img width="100%" src="images/fig-3-1-10.jpg" alt=""></p></article><article class="exercise-like" id="exercise-1024"><h5 class="heading"><span class="codenumber">11</span></h5>
+<p id="p-4889">Which of the graphs could describe inverse variation? Explain your answer. <img width="100%" src="images/fig-3-1-11.jpg" alt=""></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-540" id="answer-540"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-540" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4890">(c)</p></span></span> </article><article class="exercise-like" id="exercise-1025"><h5 class="heading"><span class="codenumber">12</span></h5>
+<p id="p-4891">Which of the graphs could describe inverse variation? Explain your answer. <img width="100%" src="images/fig-3-1-12.jpg" alt=""></p></article><article class="exercise-like" id="exercise-1026"><h5 class="heading"><span class="codenumber">13</span></h5>
+<p id="p-4892">The weight of an object on the Moon varies directly with its weight on Earth. A person who weighs \(150\) pounds on Earth would weigh only \(24.75\) pounds on the Moon. </p>
 <ol id="ol-930" style="list-style-type: lower-alpha;">
-<li id="li-2957"><p id="p-4891">Find a function that gives the weight \(m\) of an object on the Moon in terms of its weight \(w\) on Earth. Complete the table and graph your function in a suitable window. <figure class="figure-like" id="table-164"><table>
+<li id="li-2957"><p id="p-4893">Find a function that gives the weight \(m\) of an object on the Moon in terms of its weight \(w\) on Earth. Complete the table and graph your function in a suitable window. <figure class="figure-like" id="table-164"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(w\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(50\)</td>
@@ -1097,14 +1102,14 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-2958"><p id="p-4892">How much would a person weigh on the Moon if she weighs \(120\) pounds on Earth?</p></li>
-<li id="li-2959"><p id="p-4893">A piece of rock weighs \(50\) pounds on the Moon. How much will it weigh back on Earth?</p></li>
-<li id="li-2960"><p id="p-4894">If you double the weight of an object on Earth, what will happen to its weight on the Moon?</p></li>
+<li id="li-2958"><p id="p-4894">How much would a person weigh on the Moon if she weighs \(120\) pounds on Earth?</p></li>
+<li id="li-2959"><p id="p-4895">A piece of rock weighs \(50\) pounds on the Moon. How much will it weigh back on Earth?</p></li>
+<li id="li-2960"><p id="p-4896">If you double the weight of an object on Earth, what will happen to its weight on the Moon?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-541" id="answer-541"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-541" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4895"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-541" id="answer-541"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-541" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4897"></p>
 <ol id="ol-931" style="list-style-type: lower-alpha;">
-<li id="li-2961"><p id="p-4896">\(m = 0.165w\) <figure class="figure-like" id="table-165"><table>
+<li id="li-2961"><p id="p-4898">\(m = 0.165w\) <figure class="figure-like" id="table-165"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(w\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(50\)</td>
@@ -1120,13 +1125,13 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\alert{66}\)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-2962"><p id="p-4897">\(19.8\) lb</p></li>
-<li id="li-2963"><p id="p-4898">\(303.03\) lb</p></li>
-<li id="li-2964"><p id="p-4899">It will double.</p></li>
+<li id="li-2962"><p id="p-4899">\(19.8\) lb</p></li>
+<li id="li-2963"><p id="p-4900">\(303.03\) lb</p></li>
+<li id="li-2964"><p id="p-4901">It will double.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1027"><h5 class="heading"><span class="codenumber">14</span></h5>
-<p id="p-4900">Hubble's law says that distant galaxies are receding from us at a rate that varies directly with their distance. (The speeds of the galaxies are measured using a phenomenon called redshifting.) A galaxy in the constellation Ursa Major is \(980\) million light-years away and is receding at a speed of \(15,000\) kilometers per second. </p>
+<p id="p-4902">Hubble's law says that distant galaxies are receding from us at a rate that varies directly with their distance. (The speeds of the galaxies are measured using a phenomenon called redshifting.) A galaxy in the constellation Ursa Major is \(980\) million light-years away and is receding at a speed of \(15,000\) kilometers per second. </p>
 <ol id="ol-932" style="list-style-type: lower-alpha;">
-<li id="li-2965"><p id="p-4901">Find a function that gives the speed, \(v\text{,}\) of a galaxy in terms of its distance, \(d\text{,}\) from Earth. Complete the table and graph your function in a suitable window. (Distances are given in millions of light-years.) <figure class="figure-like" id="table-166"><table>
+<li id="li-2965"><p id="p-4903">Find a function that gives the speed, \(v\text{,}\) of a galaxy in terms of its distance, \(d\text{,}\) from Earth. Complete the table and graph your function in a suitable window. (Distances are given in millions of light-years.) <figure class="figure-like" id="table-166"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(d\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(500\)</td>
@@ -1142,14 +1147,14 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000}\)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-2966"><p id="p-4902">How far away is a galaxy in the constellation Hydra that is receding at \(61,000\) kilometers per second?</p></li>
-<li id="li-2967"><p id="p-4903">A galaxy in Leo is \(1240\) million light-years away. How fast is it receding from us?</p></li>
-<li id="li-2968"><p id="p-4904">If one constellation is twice as distant as another, how do their speeds compare?</p></li>
+<li id="li-2966"><p id="p-4904">How far away is a galaxy in the constellation Hydra that is receding at \(61,000\) kilometers per second?</p></li>
+<li id="li-2967"><p id="p-4905">A galaxy in Leo is \(1240\) million light-years away. How fast is it receding from us?</p></li>
+<li id="li-2968"><p id="p-4906">If one constellation is twice as distant as another, how do their speeds compare?</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-1028"><h5 class="heading"><span class="codenumber">15</span></h5>
-<p id="p-4905">The length, \(L\text{,}\) of a pendulum varies directly with the square of its period, \(T\text{,}\) the time required for the pendulum to make one complete swing back and forth. The pendulum on a grandfather clock is \(3.25\) feet long and has a period of \(2\) seconds. </p>
+<p id="p-4907">The length, \(L\text{,}\) of a pendulum varies directly with the square of its period, \(T\text{,}\) the time required for the pendulum to make one complete swing back and forth. The pendulum on a grandfather clock is \(3.25\) feet long and has a period of \(2\) seconds. </p>
 <ol id="ol-933" style="list-style-type: lower-alpha;">
-<li id="li-2969"><p id="p-4906">Express \(L\) as a function of \(T\text{.}\) Complete the table and graph your function in a suitable window. <figure class="figure-like" id="table-167"><table>
+<li id="li-2969"><p id="p-4908">Express \(L\) as a function of \(T\text{.}\) Complete the table and graph your function in a suitable window. <figure class="figure-like" id="table-167"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(T\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(1\)</td>
@@ -1165,14 +1170,14 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000} \)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-2970"><p id="p-4907">How long is the Foucault pendulum in the Pantheon in Paris, which has a period of \(17\) seconds?</p></li>
-<li id="li-2971"><p id="p-4908">A hypnotist uses a gold pendant as a pendulum to mesmerize his clients. If the chain on the pendant is \(9\) inches long, what is the period of its swing?</p></li>
-<li id="li-2972"><p id="p-4909">In order to double the period of a pendulum, how must you vary its length?</p></li>
+<li id="li-2970"><p id="p-4909">How long is the Foucault pendulum in the Pantheon in Paris, which has a period of \(17\) seconds?</p></li>
+<li id="li-2971"><p id="p-4910">A hypnotist uses a gold pendant as a pendulum to mesmerize his clients. If the chain on the pendant is \(9\) inches long, what is the period of its swing?</p></li>
+<li id="li-2972"><p id="p-4911">In order to double the period of a pendulum, how must you vary its length?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-542" id="answer-542"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-542" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4910"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-542" id="answer-542"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-542" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4912"></p>
 <ol id="ol-934" style="list-style-type: lower-alpha;">
-<li id="li-2973"><p id="p-4911">\(L = 0.8125T^2\) <table>
+<li id="li-2973"><p id="p-4913">\(L = 0.8125T^2\) <table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(T\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(1\)</td>
@@ -1188,13 +1193,13 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\alert{325} \)</td>
 </tr>
 </table></p></li>
-<li id="li-2974"><p id="p-4912">\(234.8125\) ft</p></li>
-<li id="li-2975"><p id="p-4913">\(0.96\) sec</p></li>
-<li id="li-2976"><p id="p-4914">It must be four times as long.</p></li>
+<li id="li-2974"><p id="p-4914">\(234.8125\) ft</p></li>
+<li id="li-2975"><p id="p-4915">\(0.96\) sec</p></li>
+<li id="li-2976"><p id="p-4916">It must be four times as long.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1029"><h5 class="heading"><span class="codenumber">16</span></h5>
-<p id="p-4915">The load, \(L\text{,}\) that a beam can support varies directly with the square of its vertical thickness, \(h\text{.}\) A beam that is \(4\) inches thick can support a load of \(2000\) pounds. </p>
+<p id="p-4917">The load, \(L\text{,}\) that a beam can support varies directly with the square of its vertical thickness, \(h\text{.}\) A beam that is \(4\) inches thick can support a load of \(2000\) pounds. </p>
 <ol id="ol-935" style="list-style-type: lower-alpha;">
-<li id="li-2977"><p id="p-4916">Express \(L\) as a function of \(h\text{.}\) Complete the table and graph your function in a suitable window. <figure class="figure-like" id="table-168"><table>
+<li id="li-2977"><p id="p-4918">Express \(L\) as a function of \(h\text{.}\) Complete the table and graph your function in a suitable window. <figure class="figure-like" id="table-168"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(h\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(1\)</td>
@@ -1210,14 +1215,14 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000} \)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-2978"><p id="p-4917">What size load can be supported by a beam that is \(6\) inches thick?</p></li>
-<li id="li-2979"><p id="p-4918">How thick a beam is needed to support a load of \(100\) pounds?</p></li>
-<li id="li-2980"><p id="p-4919">If you double the thickness of a beam, how will the load it can support change?</p></li>
+<li id="li-2978"><p id="p-4919">What size load can be supported by a beam that is \(6\) inches thick?</p></li>
+<li id="li-2979"><p id="p-4920">How thick a beam is needed to support a load of \(100\) pounds?</p></li>
+<li id="li-2980"><p id="p-4921">If you double the thickness of a beam, how will the load it can support change?</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-1030"><h5 class="heading"><span class="codenumber">17</span></h5>
-<p id="p-4920">Computer monitors produce a magnetic field. The effect of the field, \(B\text{,}\) on the user varies inversely with his or her distance, \(d\text{,}\) from the screen. The field from a certain color monitor was measured at \(22\) milligauss \(4\) inches from the screen. </p>
+<p id="p-4922">Computer monitors produce a magnetic field. The effect of the field, \(B\text{,}\) on the user varies inversely with his or her distance, \(d\text{,}\) from the screen. The field from a certain color monitor was measured at \(22\) milligauss \(4\) inches from the screen. </p>
 <ol id="ol-936" style="list-style-type: lower-alpha;">
-<li id="li-2981"><p id="p-4921">Express the field strength as a function of distance from the screen. Complete the table and graph your function in a suitable window. <figure class="figure-like" id="table-169"><table>
+<li id="li-2981"><p id="p-4923">Express the field strength as a function of distance from the screen. Complete the table and graph your function in a suitable window. <figure class="figure-like" id="table-169"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(d\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(1\)</td>
@@ -1233,14 +1238,14 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000} \)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-2982"><p id="p-4922">What is the field strength \(10\) inches from the screen?</p></li>
-<li id="li-2983"><p id="p-4923">An elevated risk of cancer can result from exposure to field strengths of \(4.3\) milligauss. How far from the screen should the computer user sit to keep the field level below \(4.3\) milligauss?</p></li>
-<li id="li-2984"><p id="p-4924">If you double your distance from the screen, how does the field strength change?</p></li>
+<li id="li-2982"><p id="p-4924">What is the field strength \(10\) inches from the screen?</p></li>
+<li id="li-2983"><p id="p-4925">An elevated risk of cancer can result from exposure to field strengths of \(4.3\) milligauss. How far from the screen should the computer user sit to keep the field level below \(4.3\) milligauss?</p></li>
+<li id="li-2984"><p id="p-4926">If you double your distance from the screen, how does the field strength change?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-543" id="answer-543"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-543" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4925"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-543" id="answer-543"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-543" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4927"></p>
 <ol id="ol-937" style="list-style-type: lower-alpha;">
-<li id="li-2985"><p id="p-4926">\(B = \dfrac{88}{d}\) <table>
+<li id="li-2985"><p id="p-4928">\(B = \dfrac{88}{d}\) <table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(d\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(1\)</td>
@@ -1256,13 +1261,13 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\alert{3.7} \)</td>
 </tr>
 </table></p></li>
-<li id="li-2986"><p id="p-4927">\(8.8\) milligauss</p></li>
-<li id="li-2987"><p id="p-4928">More than \(20.47\) in</p></li>
-<li id="li-2988"><p id="p-4929">It is one half as strong.</p></li>
+<li id="li-2986"><p id="p-4929">\(8.8\) milligauss</p></li>
+<li id="li-2987"><p id="p-4930">More than \(20.47\) in</p></li>
+<li id="li-2988"><p id="p-4931">It is one half as strong.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1031"><h5 class="heading"><span class="codenumber">18</span></h5>
-<p id="p-4930">The amount of current, \(I\text{,}\) that flows through a circuit varies inversely with the resistance, \(R\text{,}\) on the circuit. An iron with a resistance of \(12\) ohms draws \(10\) amps of current. </p>
+<p id="p-4932">The amount of current, \(I\text{,}\) that flows through a circuit varies inversely with the resistance, \(R\text{,}\) on the circuit. An iron with a resistance of \(12\) ohms draws \(10\) amps of current. </p>
 <ol id="ol-938" style="list-style-type: lower-alpha;">
-<li id="li-2989"><p id="p-4931">Express the current as a function of the resistance. Complete the table and graph your function in a suitable window. <figure class="figure-like" id="table-170"><table>
+<li id="li-2989"><p id="p-4933">Express the current as a function of the resistance. Complete the table and graph your function in a suitable window. <figure class="figure-like" id="table-170"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(R\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(1\)</td>
@@ -1278,14 +1283,14 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000} \)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-2990"><p id="p-4932">How much current is drawn by a light bulb with a resistance of \(533.3\) ohms?</p></li>
-<li id="li-2991"><p id="p-4933">What is the resistance of a toaster that draws \(12.5\) amps of current?</p></li>
-<li id="li-2992"><p id="p-4934">If the resistance of one appliance is double the resistance of a second appliance, how does the current they draw compare?</p></li>
+<li id="li-2990"><p id="p-4934">How much current is drawn by a light bulb with a resistance of \(533.3\) ohms?</p></li>
+<li id="li-2991"><p id="p-4935">What is the resistance of a toaster that draws \(12.5\) amps of current?</p></li>
+<li id="li-2992"><p id="p-4936">If the resistance of one appliance is double the resistance of a second appliance, how does the current they draw compare?</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-1032"><h5 class="heading"><span class="codenumber">19</span></h5>
-<p id="p-4935">The amount of power, \(P\text{,}\) generated by a windmill varies directly with the cube of the wind speed, \(w\text{.}\) A windmill on Oahu, Hawaii, produces \(7300\) kilowatts of power when the wind speed is \(32\) miles per hour. </p>
+<p id="p-4937">The amount of power, \(P\text{,}\) generated by a windmill varies directly with the cube of the wind speed, \(w\text{.}\) A windmill on Oahu, Hawaii, produces \(7300\) kilowatts of power when the wind speed is \(32\) miles per hour. </p>
 <ol id="ol-939" style="list-style-type: lower-alpha;">
-<li id="li-2993"><p id="p-4936">Express the power as a function of wind speed. Complete the table and graph your function in a suitable window. <figure class="figure-like" id="table-171"><table>
+<li id="li-2993"><p id="p-4938">Express the power as a function of wind speed. Complete the table and graph your function in a suitable window. <figure class="figure-like" id="table-171"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(w\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(10\)</td>
@@ -1301,14 +1306,14 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000} \)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-2994"><p id="p-4937">How much power would the windmill produce in a light breeze of \(15\) miles per hour?</p></li>
-<li id="li-2995"><p id="p-4938">What wind speed is needed to produce \(10,000\) kilowatts of power?</p></li>
-<li id="li-2996"><p id="p-4939">If the wind speed doubles, what  happens to the amount of power generated?</p></li>
+<li id="li-2994"><p id="p-4939">How much power would the windmill produce in a light breeze of \(15\) miles per hour?</p></li>
+<li id="li-2995"><p id="p-4940">What wind speed is needed to produce \(10,000\) kilowatts of power?</p></li>
+<li id="li-2996"><p id="p-4941">If the wind speed doubles, what  happens to the amount of power generated?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-544" id="answer-544"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-544" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4940"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-544" id="answer-544"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-544" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4942"></p>
 <ol id="ol-940" style="list-style-type: lower-alpha;">
-<li id="li-2997"><p id="p-4941">\(P = \dfrac{1825}{8192}w^3\approx0.2228w^3\) <table>
+<li id="li-2997"><p id="p-4943">\(P = \dfrac{1825}{8192}w^3\approx0.2228w^3\) <table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(w\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(10\)</td>
@@ -1324,13 +1329,13 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\alert{114,074} \)</td>
 </tr>
 </table></p></li>
-<li id="li-2998"><p id="p-4942">\(752\) kilowatts</p></li>
-<li id="li-2999"><p id="p-4943">\(33.54\) mph</p></li>
-<li id="li-3000"><p id="p-4944">It is multiplied by \(8\text{.}\)</p></li>
+<li id="li-2998"><p id="p-4944">\(752\) kilowatts</p></li>
+<li id="li-2999"><p id="p-4945">\(33.54\) mph</p></li>
+<li id="li-3000"><p id="p-4946">It is multiplied by \(8\text{.}\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1033"><h5 class="heading"><span class="codenumber">20</span></h5>
-<p id="p-4945">A crystal form of pyrite (a compound of iron and sulfur) has the shape of a regular solid with \(12\) faces. Each face is a regular pentagon. This compound is called pyritohedron, and its mass, \(M\text{,}\) varies directly with the cube of the length, \(L\text{,}\) of one edge. If each edge is \(1.1\) centimeters, then the mass is \(51\) grams. </p>
+<p id="p-4947">A crystal form of pyrite (a compound of iron and sulfur) has the shape of a regular solid with \(12\) faces. Each face is a regular pentagon. This compound is called pyritohedron, and its mass, \(M\text{,}\) varies directly with the cube of the length, \(L\text{,}\) of one edge. If each edge is \(1.1\) centimeters, then the mass is \(51\) grams. </p>
 <ol id="ol-941" style="list-style-type: lower-alpha;">
-<li id="li-3001"><p id="p-4946">Express the mass of pyritohedron as a function of the length of one edge. Complete the table and graph your function in a suitable window. <figure class="figure-like" id="table-172"><table>
+<li id="li-3001"><p id="p-4948">Express the mass of pyritohedron as a function of the length of one edge. Complete the table and graph your function in a suitable window. <figure class="figure-like" id="table-172"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(L\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(0.5\)</td>
@@ -1346,20 +1351,20 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{0000} \)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-3002"><p id="p-4947">What is the weight of a chunk of pyritohedron if each edge is \(2.2\) centimeters?</p></li>
-<li id="li-3003"><p id="p-4948">How long would each edge be for a \(1643\)-gram piece of pyritohedron?</p></li>
-<li id="li-3004"><p id="p-4949">If one chunk has double the length of a second chunk, how do their weights compare?</p></li>
+<li id="li-3002"><p id="p-4949">What is the weight of a chunk of pyritohedron if each edge is \(2.2\) centimeters?</p></li>
+<li id="li-3003"><p id="p-4950">How long would each edge be for a \(1643\)-gram piece of pyritohedron?</p></li>
+<li id="li-3004"><p id="p-4951">If one chunk has double the length of a second chunk, how do their weights compare?</p></li>
 </ol>
 <p></p></article><div class="exercisegroup" id="exercisegroup-143">
-<article class="introduction" id="introduction-145"><p id="p-4950">For Problems 21–26, </p>
+<article class="introduction" id="introduction-145"><p id="p-4952">For Problems 21–26, </p>
 <ol id="ol-942" style="list-style-type: lower-alpha;">
-<li id="li-3005"><p id="p-4951">Use the values in the table to find the constant of variation, \(k\text{,}\) and write \(y\) as a function of \(x\text{.}\)</p></li>
-<li id="li-3006"><p id="p-4952">Fill in the rest of the table with the correct values.</p></li>
-<li id="li-3007"><p id="p-4953">What happens to \(y\) when you double the value of \(x\text{?}\)</p></li>
+<li id="li-3005"><p id="p-4953">Use the values in the table to find the constant of variation, \(k\text{,}\) and write \(y\) as a function of \(x\text{.}\)</p></li>
+<li id="li-3006"><p id="p-4954">Fill in the rest of the table with the correct values.</p></li>
+<li id="li-3007"><p id="p-4955">What happens to \(y\) when you double the value of \(x\text{?}\)</p></li>
 </ol>
 <p></p></article><div class="exercisegroup-exercises cols3">
 <article class="exercise-like" id="exercise-1034"><h5 class="heading"><span class="codenumber">21</span></h5>
-<p id="p-4954">\(y\) varies directly with \(x\text{.}\) <table>
+<p id="p-4956">\(y\) varies directly with \(x\text{.}\) <table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1385,10 +1390,10 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(4.5\)</td>
 </tr>
 </table></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-545" id="answer-545"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-545" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4955"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-545" id="answer-545"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-545" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4957"></p>
 <ol id="ol-943" style="list-style-type: lower-alpha;">
-<li id="li-3008"><p id="p-4956">\(y= 0.3x\)</p></li>
-<li id="li-3009"><p id="p-4957"><table>
+<li id="li-3008"><p id="p-4958">\(y= 0.3x\)</p></li>
+<li id="li-3009"><p id="p-4959"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1414,9 +1419,9 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(4.5\)</td>
 </tr>
 </table></p></li>
-<li id="li-3010"><p id="p-4958">\(y\) doubles.</p></li>
+<li id="li-3010"><p id="p-4960">\(y\) doubles.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1035"><h5 class="heading"><span class="codenumber">22</span></h5>
-<p id="p-4959">\(y\) varies directly with \(x\text{.}\) <table>
+<p id="p-4961">\(y\) varies directly with \(x\text{.}\) <table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1442,7 +1447,7 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{000} \)</td>
 </tr>
 </table></p></article><article class="exercise-like" id="exercise-1036"><h5 class="heading"><span class="codenumber">23</span></h5>
-<p id="p-4960">\(y\) varies directly with the square of \(x\text{.}\) <table>
+<p id="p-4962">\(y\) varies directly with the square of \(x\text{.}\) <table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1468,10 +1473,10 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(150\)</td>
 </tr>
 </table></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-546" id="answer-546"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-546" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4961"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-546" id="answer-546"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-546" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4963"></p>
 <ol id="ol-944" style="list-style-type: lower-alpha;">
-<li id="li-3011"><p id="p-4962">\(y= \dfrac{2}{3} x^2\)</p></li>
-<li id="li-3012"><p id="p-4963"><table>
+<li id="li-3011"><p id="p-4964">\(y= \dfrac{2}{3} x^2\)</p></li>
+<li id="li-3012"><p id="p-4965"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1497,9 +1502,9 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(150\)</td>
 </tr>
 </table></p></li>
-<li id="li-3013"><p id="p-4964">\(y\) is quadrupled.</p></li>
+<li id="li-3013"><p id="p-4966">\(y\) is quadrupled.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1037"><h5 class="heading"><span class="codenumber">24</span></h5>
-<p id="p-4965">\(y\) varies directly with the cube of \(x\text{.}\) <table>
+<p id="p-4967">\(y\) varies directly with the cube of \(x\text{.}\) <table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1525,7 +1530,7 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(15,000 \)</td>
 </tr>
 </table></p></article><article class="exercise-like" id="exercise-1038"><h5 class="heading"><span class="codenumber">25</span></h5>
-<p id="p-4966">\(y\) varies inversely with \(x\text{.}\) <table>
+<p id="p-4968">\(y\) varies inversely with \(x\text{.}\) <table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1551,10 +1556,10 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(3\)</td>
 </tr>
 </table></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-547" id="answer-547"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-547" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4967"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-547" id="answer-547"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-547" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4969"></p>
 <ol id="ol-945" style="list-style-type: lower-alpha;">
-<li id="li-3014"><p id="p-4968">\(y= \dfrac{120}{x} \)</p></li>
-<li id="li-3015"><p id="p-4969"><table>
+<li id="li-3014"><p id="p-4970">\(y= \dfrac{120}{x} \)</p></li>
+<li id="li-3015"><p id="p-4971"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(4\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(\alert{30}\)</td>
@@ -1576,9 +1581,9 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(3\)</td>
 </tr>
 </table></p></li>
-<li id="li-3016"><p id="p-4970">\(y\) is halved.</p></li>
+<li id="li-3016"><p id="p-4972">\(y\) is halved.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1039"><h5 class="heading"><span class="codenumber">26</span></h5>
-<p id="p-4971">\(y\) varies inversely with the square of \(x\text{.}\) <table>
+<p id="p-4973">\(y\) varies inversely with the square of \(x\text{.}\) <table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1607,9 +1612,9 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-144">
-<article class="introduction" id="introduction-146"><p id="p-4972">For each table, decide whether (a) \(y\) varies directly with \(x\text{,}\) (b) \(y\) varies directly with \(x^2\text{,}\) or (c) \(y\) does not vary directly with a power of \(x\text{.}\) Explain why your choice is correct. If your choice is (a) or (b), find the constant of variation.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-146"><p id="p-4974">For each table, decide whether (a) \(y\) varies directly with \(x\text{,}\) (b) \(y\) varies directly with \(x^2\text{,}\) or (c) \(y\) does not vary directly with a power of \(x\text{.}\) Explain why your choice is correct. If your choice is (a) or (b), find the constant of variation.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1040"><h5 class="heading"><span class="codenumber">27</span></h5>
-<p id="p-4973"><table>
+<p id="p-4975"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1631,8 +1636,8 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(32.0\)</td>
 </tr>
 </table></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-548" id="answer-548"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-548" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4974">(b) \(y = 0.5x^2\)</p></span></span> </article><article class="exercise-like" id="exercise-1041"><h5 class="heading"><span class="codenumber">28</span></h5>
-<p id="p-4975"><table>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-548" id="answer-548"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-548" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4976">(b) \(y = 0.5x^2\)</p></span></span> </article><article class="exercise-like" id="exercise-1041"><h5 class="heading"><span class="codenumber">28</span></h5>
+<p id="p-4977"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1654,7 +1659,7 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(68\)</td>
 </tr>
 </table></p></article><article class="exercise-like" id="exercise-1042"><h5 class="heading"><span class="codenumber">29</span></h5>
-<p id="p-4976"><table>
+<p id="p-4978"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1676,8 +1681,8 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(73.8\)</td>
 </tr>
 </table></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-549" id="answer-549"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-549" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4977">(c) \(\dfrac{y}{x^p}\) is not constant for any exponent \(p\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-1043"><h5 class="heading"><span class="codenumber">30</span></h5>
-<p id="p-4978"><table>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-549" id="answer-549"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-549" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4979">(c) \(\dfrac{y}{x^p}\) is not constant for any exponent \(p\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-1043"><h5 class="heading"><span class="codenumber">30</span></h5>
+<p id="p-4980"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1702,9 +1707,9 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-145">
-<article class="introduction" id="introduction-147"><p id="p-4979">For each table, decide whether (a) \(y\) varies inversely with \(x\text{,}\) (b) \(y\) varies inversely with \(x^2\text{,}\) or (c) \(y\) does not vary inversely with a power of \(x\text{.}\) Explain why your choice is correct. If your choice is (a) or (b), find the constant of variation.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-147"><p id="p-4981">For each table, decide whether (a) \(y\) varies inversely with \(x\text{,}\) (b) \(y\) varies inversely with \(x^2\text{,}\) or (c) \(y\) does not vary inversely with a power of \(x\text{.}\) Explain why your choice is correct. If your choice is (a) or (b), find the constant of variation.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1044"><h5 class="heading"><span class="codenumber">31</span></h5>
-<p id="p-4980"><table>
+<p id="p-4982"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1726,8 +1731,8 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(2\)</td>
 </tr>
 </table></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-550" id="answer-550"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-550" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4981">(b) \(y =\dfrac{72}{x^2}\)</p></span></span> </article><article class="exercise-like" id="exercise-1045"><h5 class="heading"><span class="codenumber">32</span></h5>
-<p id="p-4982"><table>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-550" id="answer-550"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-550" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4983">(b) \(y =\dfrac{72}{x^2}\)</p></span></span> </article><article class="exercise-like" id="exercise-1045"><h5 class="heading"><span class="codenumber">32</span></h5>
+<p id="p-4984"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1749,7 +1754,7 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(10.0\)</td>
 </tr>
 </table></p></article><article class="exercise-like" id="exercise-1046"><h5 class="heading"><span class="codenumber">33</span></h5>
-<p id="p-4983"><table>
+<p id="p-4985"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1771,8 +1776,8 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(1.0\)</td>
 </tr>
 </table></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-551" id="answer-551"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-551" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4984">(c) \(x^p y\) is not constant for any exponent \(p\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-1047"><h5 class="heading"><span class="codenumber">34</span></h5>
-<p id="p-4985"><table>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-551" id="answer-551"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-551" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4986">(c) \(x^p y\) is not constant for any exponent \(p\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-1047"><h5 class="heading"><span class="codenumber">34</span></h5>
+<p id="p-4987"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y\)</td>
@@ -1797,28 +1802,28 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-146">
-<article class="introduction" id="introduction-148"><p id="p-4986">The functions described by a table of data or by a graph in Problems 35–42 are examples of direct or inverse variation. </p>
+<article class="introduction" id="introduction-148"><p id="p-4988">The functions described by a table of data or by a graph in Problems 35–42 are examples of direct or inverse variation. </p>
 <ol id="ol-946" style="list-style-type: lower-alpha;">
-<li id="li-3017"><p id="p-4987">Find an algebraic formula for the function, including the constant of variation, \(k\text{.}\)</p></li>
-<li id="li-3018"><p id="p-4988">Answer the question in the problem.</p></li>
+<li id="li-3017"><p id="p-4989">Find an algebraic formula for the function, including the constant of variation, \(k\text{.}\)</p></li>
+<li id="li-3018"><p id="p-4990">Answer the question in the problem.</p></li>
 </ol>
 <p></p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-1048"><h5 class="heading"><span class="codenumber">35</span></h5>
-<p id="p-4989">The faster a car moves, the more difficult it is to stop. The graph shows the distance, \(d\text{,}\) required to stop a car as a function of its velocity, \(v\text{,}\) before the brakes were applied. What distance is needed to stop a car moving at \(100\) kilometers per hour? <object type="image/svg+xml" style="width:30%; margin:auto; display:block;" data="images/fig-3-1-35.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-552" id="answer-552"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-552" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4990"></p>
+<p id="p-4991">The faster a car moves, the more difficult it is to stop. The graph shows the distance, \(d\text{,}\) required to stop a car as a function of its velocity, \(v\text{,}\) before the brakes were applied. What distance is needed to stop a car moving at \(100\) kilometers per hour? <object type="image/svg+xml" style="width:30%; margin:auto; display:block;" data="images/fig-3-1-35.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-552" id="answer-552"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-552" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4992"></p>
 <ol id="ol-947" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-3019" style="width:49%; float:left;"><p id="p-4991">\(d = 0.005v^2\)</p></li>
-<li id="li-3020" style="width:49%; float:left;"><p id="p-4992">\(50\) m</p></li>
+<li id="li-3019" style="width:49%; float:left;"><p id="p-4993">\(d = 0.005v^2\)</p></li>
+<li id="li-3020" style="width:49%; float:left;"><p id="p-4994">\(50\) m</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1049"><h5 class="heading"><span class="codenumber">36</span></h5>
-<p id="p-4993">A wide pipe can handle a greater water flow than a narrow pipe. The graph shows the water flow through a pipe, \(w\text{,}\) as a function of its radius, \(r\text{.}\) How great is the water flow through a pipe of radius of \(10\) inches? <object type="image/svg+xml" style="width:30%; margin:auto; display:block;" data="images/fig-3-1-36.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></article><article class="exercise-like" id="exercise-1050"><h5 class="heading"><span class="codenumber">37</span></h5>
-<p id="p-4994">If the price of mushrooms goes up, the amount consumers are willing to buy goes down. The graph shows the number of tons of shiitake mushrooms, \(m\text{,}\) sold in California each week as a function of their price, \(p\text{.}\) If the price of shiitake mushrooms rises to \(\$10\) per pound, how many tons will be sold? <object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-3-1-37.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-553" id="answer-553"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-553" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4995"></p>
+<p id="p-4995">A wide pipe can handle a greater water flow than a narrow pipe. The graph shows the water flow through a pipe, \(w\text{,}\) as a function of its radius, \(r\text{.}\) How great is the water flow through a pipe of radius of \(10\) inches? <object type="image/svg+xml" style="width:30%; margin:auto; display:block;" data="images/fig-3-1-36.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></article><article class="exercise-like" id="exercise-1050"><h5 class="heading"><span class="codenumber">37</span></h5>
+<p id="p-4996">If the price of mushrooms goes up, the amount consumers are willing to buy goes down. The graph shows the number of tons of shiitake mushrooms, \(m\text{,}\) sold in California each week as a function of their price, \(p\text{.}\) If the price of shiitake mushrooms rises to \(\$10\) per pound, how many tons will be sold? <object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-3-1-37.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-553" id="answer-553"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-553" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-4997"></p>
 <ol id="ol-948" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-3021" style="width:49%; float:left;"><p id="p-4996">\(m =\dfrac{8}{p} \)</p></li>
-<li id="li-3022" style="width:49%; float:left;"><p id="p-4997">\(0.8\) ton</p></li>
+<li id="li-3021" style="width:49%; float:left;"><p id="p-4998">\(m =\dfrac{8}{p} \)</p></li>
+<li id="li-3022" style="width:49%; float:left;"><p id="p-4999">\(0.8\) ton</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1051"><h5 class="heading"><span class="codenumber">38</span></h5>
-<p id="p-4998">When an adult plays with a small child on a seesaw, the adult must sit closer to the pivot point to balance the seesaw. The graph shows this distance, \(d\text{,}\) as a function of the adult's weight, \(w\text{.}\) How far from the pivot must Kareem sit if he weighs \(280\) pounds? <object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-3-1-38.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></article><article class="exercise-like" id="exercise-1052"><h5 class="heading"><span class="codenumber">39</span></h5>
-<p id="p-4999">Ocean temperatures are generally colder at the greater depths. The table shows the temperature of the water as a function of depth. What is the ocean temperature at a depth of \(6\) kilometers? <figure class="figure-like" id="table-173"><table>
+<p id="p-5000">When an adult plays with a small child on a seesaw, the adult must sit closer to the pivot point to balance the seesaw. The graph shows this distance, \(d\text{,}\) as a function of the adult's weight, \(w\text{.}\) How far from the pivot must Kareem sit if he weighs \(280\) pounds? <object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-3-1-38.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></article><article class="exercise-like" id="exercise-1052"><h5 class="heading"><span class="codenumber">39</span></h5>
+<p id="p-5001">Ocean temperatures are generally colder at the greater depths. The table shows the temperature of the water as a function of depth. What is the ocean temperature at a depth of \(6\) kilometers? <figure class="figure-like" id="table-173"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">Depth (km)</td>
 <td class="c m b1 r1 l0 t1 lines">Temperature (\(\degree\)C)</td>
@@ -1840,12 +1845,12 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(2\)</td>
 </tr>
 </table></figure></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-554" id="answer-554"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-554" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5000"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-554" id="answer-554"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-554" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5002"></p>
 <ol id="ol-949" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-3023" style="width:49%; float:left;"><p id="p-5001">\(T=\dfrac{6}{d} \)</p></li>
-<li id="li-3024" style="width:49%; float:left;"><p id="p-5002">\(1\degree\)C</p></li>
+<li id="li-3023" style="width:49%; float:left;"><p id="p-5003">\(T=\dfrac{6}{d} \)</p></li>
+<li id="li-3024" style="width:49%; float:left;"><p id="p-5004">\(1\degree\)C</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1053"><h5 class="heading"><span class="codenumber">40</span></h5>
-<p id="p-5003">The shorter the length of a vibrating guitar string, the higher the frequency of the vibrations. The fifth string is \(65\) centimeters long and is tuned to A (with a frequency of \(220\) vibrations per second). The placement of the fret relative to the bridge changes the effective length of the guitar string. The table shows frequency as a function of effective length. How far from the bridge should the fret be placed for the note C (\(256\) vibrations per second)? <figure class="figure-like" id="table-174"><table>
+<p id="p-5005">The shorter the length of a vibrating guitar string, the higher the frequency of the vibrations. The fifth string is \(65\) centimeters long and is tuned to A (with a frequency of \(220\) vibrations per second). The placement of the fret relative to the bridge changes the effective length of the guitar string. The table shows frequency as a function of effective length. How far from the bridge should the fret be placed for the note C (\(256\) vibrations per second)? <figure class="figure-like" id="table-174"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">Length (cm)</td>
 <td class="c m b1 r1 l0 t1 lines">Frequency</td>
@@ -1867,7 +1872,7 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(200\)</td>
 </tr>
 </table></figure></p></article><article class="exercise-like" id="exercise-1054"><h5 class="heading"><span class="codenumber">41</span></h5>
-<p id="p-5004">The strength of a cylindrical rod depends on its diameter. The greater the diameter of the rod, the more weight it can support before collapsing. The table shows the maximum weight supported by a rod as a function of its diameter. How much weight can a \(1.2\)-centimeter rod support before collapsing? <figure class="figure-like" id="table-175"><table>
+<p id="p-5006">The strength of a cylindrical rod depends on its diameter. The greater the diameter of the rod, the more weight it can support before collapsing. The table shows the maximum weight supported by a rod as a function of its diameter. How much weight can a \(1.2\)-centimeter rod support before collapsing? <figure class="figure-like" id="table-175"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">Diameter (cm)</td>
 <td class="c m b1 r1 l0 t1 lines">Weight (newtons)</td>
@@ -1889,12 +1894,12 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 <td class="c m b1 r1 l0 t0 lines">\(2400\)</td>
 </tr>
 </table></figure></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-555" id="answer-555"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-555" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5005"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-555" id="answer-555"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-555" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5007"></p>
 <ol id="ol-950" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-3025" style="width:49%; float:left;"><p id="p-5006">\(W = 600d^2 \)</p></li>
-<li id="li-3026" style="width:49%; float:left;"><p id="p-5007">\(864\) newtons</p></li>
+<li id="li-3025" style="width:49%; float:left;"><p id="p-5008">\(W = 600d^2 \)</p></li>
+<li id="li-3026" style="width:49%; float:left;"><p id="p-5009">\(864\) newtons</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1055"><h5 class="heading"><span class="codenumber">42</span></h5>
-<p id="p-5008">The maximum height attained by a cannonball depends on the speed at which it was shot. The table shows maximum height as a function of initial speed. What height is attained by a cannonball whose initial upward speed was \(100\) feet per second? <figure class="figure-like" id="table-176"><table>
+<p id="p-5010">The maximum height attained by a cannonball depends on the speed at which it was shot. The table shows maximum height as a function of initial speed. What height is attained by a cannonball whose initial upward speed was \(100\) feet per second? <figure class="figure-like" id="table-176"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">Speed (ft/sec)</td>
 <td class="c m b1 r1 l0 t1 lines">Height (ft)</td>
@@ -1919,92 +1924,92 @@ At a distance of \(5\) kilometers from the station, the signal strength is \(0.0
 </div>
 </div>
 <article class="exercise-like" id="exercise-1056"><h5 class="heading"><span class="codenumber">43</span></h5>
-<p id="p-5009">The wind resistance, \(W\text{,}\) experienced by a vehicle on the freeway varies directly with the square of its speed, \(v\text{.}\) </p>
+<p id="p-5011">The wind resistance, \(W\text{,}\) experienced by a vehicle on the freeway varies directly with the square of its speed, \(v\text{.}\) </p>
 <ol id="ol-951" style="list-style-type: lower-alpha;">
-<li id="li-3027"><p id="p-5010">If you double your speed, what happens to the wind resistance?</p></li>
-<li id="li-3028"><p id="p-5011">If you drive one-third as fast, what happens to the wind resistance?</p></li>
-<li id="li-3029"><p id="p-5012">If you decrease your speed by \(10\%\text{,}\) what happens to the wind resistance?</p></li>
+<li id="li-3027"><p id="p-5012">If you double your speed, what happens to the wind resistance?</p></li>
+<li id="li-3028"><p id="p-5013">If you drive one-third as fast, what happens to the wind resistance?</p></li>
+<li id="li-3029"><p id="p-5014">If you decrease your speed by \(10\%\text{,}\) what happens to the wind resistance?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-556" id="answer-556"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-556" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5013"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-556" id="answer-556"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-556" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5015"></p>
 <ol id="ol-952" style="list-style-type: lower-alpha;">
-<li id="li-3030"><p id="p-5014">Wind resistance quadruples.</p></li>
-<li id="li-3031"><p id="p-5015">It is one-ninth as great.</p></li>
-<li id="li-3032"><p id="p-5016">It is decreased by \(19\%\) because it is \(81\%\) of the original.</p></li>
+<li id="li-3030"><p id="p-5016">Wind resistance quadruples.</p></li>
+<li id="li-3031"><p id="p-5017">It is one-ninth as great.</p></li>
+<li id="li-3032"><p id="p-5018">It is decreased by \(19\%\) because it is \(81\%\) of the original.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1057"><h5 class="heading"><span class="codenumber">44</span></h5>
-<p id="p-5017">The weight, \(w\text{,}\) of a bronze statue varies directly with the cube of its height, \(h\text{.}\) </p>
+<p id="p-5019">The weight, \(w\text{,}\) of a bronze statue varies directly with the cube of its height, \(h\text{.}\) </p>
 <ol id="ol-953" style="list-style-type: lower-alpha;">
-<li id="li-3033"><p id="p-5018">If you double the height of the statue, what happens to its weight?</p></li>
-<li id="li-3034"><p id="p-5019">If you make the statue one-fourth as tall, what happens to its weight?</p></li>
-<li id="li-3035"><p id="p-5020">If you increase the height of the statue by \(50\%\text{,}\) what happens to its weight?</p></li>
+<li id="li-3033"><p id="p-5020">If you double the height of the statue, what happens to its weight?</p></li>
+<li id="li-3034"><p id="p-5021">If you make the statue one-fourth as tall, what happens to its weight?</p></li>
+<li id="li-3035"><p id="p-5022">If you increase the height of the statue by \(50\%\text{,}\) what happens to its weight?</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-1058"><h5 class="heading"><span class="codenumber">45</span></h5>
-<p id="p-5021">The intensity of illumination, \(I\text{,}\) from a lamp varies inversely with the square of your distance, \(d\text{,}\) from the lamp. </p>
+<p id="p-5023">The intensity of illumination, \(I\text{,}\) from a lamp varies inversely with the square of your distance, \(d\text{,}\) from the lamp. </p>
 <ol id="ol-954" style="list-style-type: lower-alpha;">
-<li id="li-3036"><p id="p-5022">If you double your distance from a reading lamp, what happens to the illumination?</p></li>
-<li id="li-3037"><p id="p-5023">If you triple the distance, what happens to the illumination?</p></li>
-<li id="li-3038"><p id="p-5024">If you increase the distance by \(25\%\text{,}\) what happens to the illumination?</p></li>
+<li id="li-3036"><p id="p-5024">If you double your distance from a reading lamp, what happens to the illumination?</p></li>
+<li id="li-3037"><p id="p-5025">If you triple the distance, what happens to the illumination?</p></li>
+<li id="li-3038"><p id="p-5026">If you increase the distance by \(25\%\text{,}\) what happens to the illumination?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-557" id="answer-557"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-557" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5025"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-557" id="answer-557"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-557" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5027"></p>
 <ol id="ol-955" style="list-style-type: lower-alpha;">
-<li id="li-3039"><p id="p-5026">It is one-fourth the original illumination.</p></li>
-<li id="li-3040"><p id="p-5027">It is one-ninth the illumination.</p></li>
-<li id="li-3041"><p id="p-5028">It is \(64\%\) of the illumination.</p></li>
+<li id="li-3039"><p id="p-5028">It is one-fourth the original illumination.</p></li>
+<li id="li-3040"><p id="p-5029">It is one-ninth the illumination.</p></li>
+<li id="li-3041"><p id="p-5030">It is \(64\%\) of the illumination.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1059"><h5 class="heading"><span class="codenumber">46</span></h5>
-<p id="p-5029">The resistance, \(R\text{,}\) of an electrical wire varies inversely with the square of its diameter, \(d\text{.}\) </p>
+<p id="p-5031">The resistance, \(R\text{,}\) of an electrical wire varies inversely with the square of its diameter, \(d\text{.}\) </p>
 <ol id="ol-956" style="list-style-type: lower-alpha;">
-<li id="li-3042"><p id="p-5030">If you replace an old wire with a new one whose diameter is half that of the old one, what happens to the resistance?</p></li>
-<li id="li-3043"><p id="p-5031">If you replace an old wire with a new one whose diameter is two-thirds of the old one, what happens to the resistance?</p></li>
-<li id="li-3044"><p id="p-5032">If you decrease the diameter of the wire by \(30\%\text{,}\) what happens to the resistance?</p></li>
+<li id="li-3042"><p id="p-5032">If you replace an old wire with a new one whose diameter is half that of the old one, what happens to the resistance?</p></li>
+<li id="li-3043"><p id="p-5033">If you replace an old wire with a new one whose diameter is two-thirds of the old one, what happens to the resistance?</p></li>
+<li id="li-3044"><p id="p-5034">If you decrease the diameter of the wire by \(30\%\text{,}\) what happens to the resistance?</p></li>
 </ol>
 <p></p></article><div class="exercisegroup" id="exercisegroup-147">
-<article class="introduction" id="introduction-149"><p id="p-5033">The quoted material in Problems 47–50  is taken from the article "Quantum Black Holes," by Bernard J. Carr and Steven B. Giddings, in the May 2005 issue of <span class="booktitle">Scientific American</span>. (See Algebra Skills Refresher <a href="appendix-a.html#Scientific-Notation" alt="Subsection A.1.4 Scientific Notation" title="Subsection A.1.4 Scientific Notation">A.1.4</a> to review scientific notation.)</p></article><div class="exercisegroup-exercises">
+<article class="introduction" id="introduction-149"><p id="p-5035">The quoted material in Problems 47–50  is taken from the article "Quantum Black Holes," by Bernard J. Carr and Steven B. Giddings, in the May 2005 issue of <span class="booktitle">Scientific American</span>. (See Algebra Skills Refresher <a href="appendix-a.html#Scientific-Notation" alt="Subsection A.1.4 Scientific Notation" title="Subsection A.1.4 Scientific Notation">A.1.4</a> to review scientific notation.)</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-1060"><h5 class="heading"><span class="codenumber">47</span></h5>
-<p id="p-5034">“The density to which matter must be squeezed [to create a black hole] scales as the inverse square of the mass. For a hole with the mass of the Sun, the density is about \(10^9\) kilograms per cubic meter, higher than that of an atomic nucleus.” </p>
+<p id="p-5036">“The density to which matter must be squeezed [to create a black hole] scales as the inverse square of the mass. For a hole with the mass of the Sun, the density is about \(10^9\) kilograms per cubic meter, higher than that of an atomic nucleus.” </p>
 <ol id="ol-957" style="list-style-type: lower-alpha;">
-<li id="li-3045"><p id="p-5035">Recall that the density of an object is its mass per unit volume. Given that the mass of the sun is about \(2\times 10^{30}\) kilograms, write a formula for the density, \(D\text{,}\) of a black hole as a function of its mass, \(m\text{.}\)</p></li>
-<li id="li-3046"><p id="p-5036">“The known laws of physics allow for a matter density up to the so-called Planck value of \(10^{97}\) kilograms per cubic meter.” If a black hole with this density could be created, it would be the smallest possible black hole. What would its mass be?</p></li>
-<li id="li-3047"><p id="p-5037">Assuming that a black hole is spherical, what would be the radius of the smallest possible black hole?</p></li>
+<li id="li-3045"><p id="p-5037">Recall that the density of an object is its mass per unit volume. Given that the mass of the sun is about \(2\times 10^{30}\) kilograms, write a formula for the density, \(D\text{,}\) of a black hole as a function of its mass, \(m\text{.}\)</p></li>
+<li id="li-3046"><p id="p-5038">“The known laws of physics allow for a matter density up to the so-called Planck value of \(10^{97}\) kilograms per cubic meter.” If a black hole with this density could be created, it would be the smallest possible black hole. What would its mass be?</p></li>
+<li id="li-3047"><p id="p-5039">Assuming that a black hole is spherical, what would be the radius of the smallest possible black hole?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-558" id="answer-558"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-558" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5038"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-558" id="answer-558"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-558" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5040"></p>
 <ol id="ol-958" style="list-style-type: lower-alpha;">
-<li id="li-3048"><p id="p-5039">\(D = (2.5\times 10^{−52})m^2\)</p></li>
-<li id="li-3049"><p id="p-5040">\(2\times 10^{74}\) kg</p></li>
-<li id="li-3050"><p id="p-5041">\(1.7\times 10^{−8} ~m\)</p></li>
+<li id="li-3048"><p id="p-5041">\(D = (2.5\times 10^{−52})m^2\)</p></li>
+<li id="li-3049"><p id="p-5042">\(2\times 10^{74}\) kg</p></li>
+<li id="li-3050"><p id="p-5043">\(1.7\times 10^{−8} ~m\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1061"><h5 class="heading"><span class="codenumber">48</span></h5>
-<p id="p-5042">“A black hole radiates thermally, like a hot coal, with a temperature inversely proportional to its mass. For a solar-mass black hole, the temperature is around a millionth of a kelvin.” </p>
+<p id="p-5044">“A black hole radiates thermally, like a hot coal, with a temperature inversely proportional to its mass. For a solar-mass black hole, the temperature is around a millionth of a kelvin.” </p>
 <ol id="ol-959" style="list-style-type: lower-alpha;">
-<li id="li-3051"><p id="p-5043">The solar mass is given in Problem 47. Write a formula for the temperature, \(T\text{,}\) of a black hole as a function of its mass, \(m\text{.}\)</p></li>
-<li id="li-3052"><p id="p-5044">What is the temperature of a black hole of mass \(10^{12}\) kilograms, about the mass of a mountain?</p></li>
+<li id="li-3051"><p id="p-5045">The solar mass is given in Problem 47. Write a formula for the temperature, \(T\text{,}\) of a black hole as a function of its mass, \(m\text{.}\)</p></li>
+<li id="li-3052"><p id="p-5046">What is the temperature of a black hole of mass \(10^{12}\) kilograms, about the mass of a mountain?</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-1062"><h5 class="heading"><span class="codenumber">49</span></h5>
-<p id="p-5045">“The total time for a black hole to evaporate away is proportional to the cube of its initial mass. For a solar-mass hole, the lifetime is an unobservably long \(10^{64}\) years.” </p>
+<p id="p-5047">“The total time for a black hole to evaporate away is proportional to the cube of its initial mass. For a solar-mass hole, the lifetime is an unobservably long \(10^{64}\) years.” </p>
 <ol id="ol-960" style="list-style-type: lower-alpha;">
-<li id="li-3053"><p id="p-5046">The solar mass is given in Problem 47. Write a formula for the lifetime, \(L\text{,}\) of a black hole as a function of its mass, \(m\text{.}\)</p></li>
-<li id="li-3054"><p id="p-5047">The present age of the universe is about \(10^{10}\) years. What would be the mass of a black hole as old as the universe?</p></li>
+<li id="li-3053"><p id="p-5048">The solar mass is given in Problem 47. Write a formula for the lifetime, \(L\text{,}\) of a black hole as a function of its mass, \(m\text{.}\)</p></li>
+<li id="li-3054"><p id="p-5049">The present age of the universe is about \(10^{10}\) years. What would be the mass of a black hole as old as the universe?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-559" id="answer-559"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-559" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5048"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-559" id="answer-559"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-559" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5050"></p>
 <ol id="ol-961" style="list-style-type: lower-alpha;">
-<li id="li-3055"><p id="p-5049">\(L = (1.25\times 10{−27})m^3\)</p></li>
-<li id="li-3056"><p id="p-5050">\(2\times 10^{12}\) kg</p></li>
+<li id="li-3055"><p id="p-5051">\(L = (1.25\times 10{−27})m^3\)</p></li>
+<li id="li-3056"><p id="p-5052">\(2\times 10^{12}\) kg</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1063"><h5 class="heading"><span class="codenumber">50</span></h5>
-<p id="p-5051">“String theory \(\ldots\) predicts that space has dimensions beyond the usual three. In three dimensions, the force of  as strong.” In three dimensions, the forcgravity quadruples as you halve the distance between two objects. But in nine dimensions, gravity would get \(256\) timese of gravity varies inversely with the square of distance. Write a formula for the force of gravity in nine dimensions.</p></article>
+<p id="p-5053">“String theory \(\ldots\) predicts that space has dimensions beyond the usual three. In three dimensions, the force of  as strong.” In three dimensions, the forcgravity quadruples as you halve the distance between two objects. But in nine dimensions, gravity would get \(256\) timese of gravity varies inversely with the square of distance. Write a formula for the force of gravity in nine dimensions.</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-148">
-<article class="introduction" id="introduction-150"><p id="p-5052">Use algebra to support your answers to Problems 51–56. Begin with a formula for direct or inverse variation.</p></article><div class="exercisegroup-exercises">
+<article class="introduction" id="introduction-150"><p id="p-5054">Use algebra to support your answers to Problems 51–56. Begin with a formula for direct or inverse variation.</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-1064"><h5 class="heading"><span class="codenumber">51</span></h5>
-<p id="p-5053">Suppose \(y\) varies directly with \(x\text{.}\) Show that if you multiply \(x\) by any constant \(c\text{,}\) then \(y\) will be multiplied by the same constant.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-560" id="answer-560"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-560" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5054">\(y = kx\) implies that \(k(cx)=c(kx)=cy\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-1065"><h5 class="heading"><span class="codenumber">52</span></h5>
-<p id="p-5055">Suppose \(y\) varies inversely with \(x\text{.}\) Show that if you multiply \(x\) by any constant \(c\text{,}\) then \(y\) will be divided by the same constant.</p></article><article class="exercise-like" id="exercise-1066"><h5 class="heading"><span class="codenumber">53</span></h5>
-<p id="p-5056">Explain why the ratio \(\frac{y}{x^2}\) is a constant when \(y\) varies directly with \(x^2\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-561" id="answer-561"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-561" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5057">If \(y = kx^2\text{,}\) then dividing both sides of the equation by \(x^2\) gives \(\frac{y}{x^2} = k\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-1067"><h5 class="heading"><span class="codenumber">55</span></h5>
-<p id="p-5058">If \(x\) varies directly with \(y\) and \(y\) varies directly with \(z\text{,}\) does \(x\) vary directly with \(z\text{?}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-562" id="answer-562"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-562" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5059">Yes</p></span></span> </article><article class="exercise-like" id="exercise-1068"><h5 class="heading"><span class="codenumber">56</span></h5>
-<p id="p-5060">If \(x\) varies inversely with \(y\) and \(y\) varies inversely with \(z\text{,}\) does \(x\) vary invesely with \(z\text{?}\)</p></article>
+<p id="p-5055">Suppose \(y\) varies directly with \(x\text{.}\) Show that if you multiply \(x\) by any constant \(c\text{,}\) then \(y\) will be multiplied by the same constant.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-560" id="answer-560"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-560" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5056">\(y = kx\) implies that \(k(cx)=c(kx)=cy\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-1065"><h5 class="heading"><span class="codenumber">52</span></h5>
+<p id="p-5057">Suppose \(y\) varies inversely with \(x\text{.}\) Show that if you multiply \(x\) by any constant \(c\text{,}\) then \(y\) will be divided by the same constant.</p></article><article class="exercise-like" id="exercise-1066"><h5 class="heading"><span class="codenumber">53</span></h5>
+<p id="p-5058">Explain why the ratio \(\frac{y}{x^2}\) is a constant when \(y\) varies directly with \(x^2\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-561" id="answer-561"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-561" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5059">If \(y = kx^2\text{,}\) then dividing both sides of the equation by \(x^2\) gives \(\frac{y}{x^2} = k\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-1067"><h5 class="heading"><span class="codenumber">55</span></h5>
+<p id="p-5060">If \(x\) varies directly with \(y\) and \(y\) varies directly with \(z\text{,}\) does \(x\) vary directly with \(z\text{?}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-562" id="answer-562"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-562" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-5061">Yes</p></span></span> </article><article class="exercise-like" id="exercise-1068"><h5 class="heading"><span class="codenumber">56</span></h5>
+<p id="p-5062">If \(x\) varies inversely with \(y\) and \(y\) varies inversely with \(z\text{,}\) does \(x\) vary invesely with \(z\text{?}\)</p></article>
 </div>
 </div></section></section></div></main>
 </div>

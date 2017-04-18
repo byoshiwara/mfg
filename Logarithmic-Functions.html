@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-04-07T10:53:55-07:00    *-->
+<!--*    on 2017-04-17T18:45:01-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,15 +13,14 @@
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
-// contrib directory for accessibility menu, moot after v2.6+?
-MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        // [Contrib]accessibility menu moot after v2.6+?
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
         equationNumbers: { autoNumber: "none",
                            useLabelIds: true,
                            // JS comment, XML CDATA protect XHTML quality of file
@@ -33,11 +32,17 @@ MathJax.Hub.Config({
         TagSide: "right",
         TagIndent: ".8em",
     },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
     "HTML-CSS": {
         scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script>(function() {
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
   var cx = '006592449927388994635:w0x-ox5bpme';
   var gcse = document.createElement('script');
   gcse.type = 'text/javascript';
@@ -75,7 +80,7 @@ MathJax.Hub.Config({
 <nav id="primary-navbar" class="navbar" style=""><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="Inverse-Functions.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chap5.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="The-Natural-Base.html" title="Next" alt="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Inverse-Functions.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap5.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="The-Natural-Base.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
@@ -187,12 +192,12 @@ MathJax.Hub.Config({
 <li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
 </ul>
 <h2 class="link"><a href="index-part-2.html" data-scroll="index-part-2"><span class="title">Index</span></a></h2>
-<h2 class="link"><a href="colophon-3.html" data-scroll="colophon-3"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+<h2 class="link"><a href="colophon-3.html" data-scroll="colophon-3"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Logarithmic-Functions"><header title="Section 5.2 Logarithmic Functions"><h1 class="heading hide-type" alt="Section 5.2 Logarithmic Functions">
 <span class="type">Section</span><span class="codenumber">5.2</span><span class="title">Logarithmic Functions</span><a href="Logarithmic-Functions.html" class="permalink">¶ permalink</a>
 </h1></header><section class="subsection" id="subsection-144"><header title="Subsection 5.2.1 Inverse of the Exponential Function"><h1 class="heading hide-type" alt="Subsection 5.2.1 Inverse of the Exponential Function">
 <span class="type">Subsection</span><span class="codenumber">5.2.1</span><span class="title">Inverse of the Exponential Function</span>
-</h1></header><p id="p-9298">Inverse functions are really a generalization of inverse operations. For example, raising to the \(n\)th power and taking \(n\)th roots are inverse operations. In fact, we use the following rule to define cube roots:
+</h1></header><p id="p-9300">Inverse functions are really a generalization of inverse operations. For example, raising to the \(n\)th power and taking \(n\)th roots are inverse operations. In fact, we use the following rule to define cube roots:
 \begin{equation*}
 b = \sqrt[3]{a} ~\text{ if and only if }~ a = b^3
 \end{equation*}
@@ -201,15 +206,15 @@ Compare this rule to the definition of inverse functions from <a href="Inverse-F
 b = g(a) ~\text{ if and only if }~ a = f (b)
 \end{equation*}
 We have shown that the two functions \(f(x) = x^3\) and \(g(x) = \sqrt[3]{x}\) are inverse functions.</p>
-<p id="p-9299">In <a href="chap4.html" alt="Chapter 4 Exponential Functions" title="Chapter 4 Exponential Functions">Chapter 4</a>, we saw that a similar rule relates the operations of raising a base \(b\) to a power and taking a base \(b\) logarithm, because they are inverse operations.</p>
+<p id="p-9301">In <a href="chap4.html" alt="Chapter 4 Exponential Functions" title="Chapter 4 Exponential Functions">Chapter 4</a>, we saw that a similar rule relates the operations of raising a base \(b\) to a power and taking a base \(b\) logarithm, because they are inverse operations.</p>
 <article class="assemblage-like" id="assemblage-112"><h5 class="heading">Conversion Formulas for Logarithms</h5>
-<p id="p-9300">For any base \(b \gt 0, b\ne 1\text{,}\)
+<p id="p-9302">For any base \(b \gt 0, b\ne 1\text{,}\)
 \begin{equation*}
 y = \log_{b}{x} ~\text{ if and only if }~ x = b^y
 \end{equation*}
-</p></article><p id="p-9301">We can now define the <em class="terminology">logarithmic function</em>, \(g(x) = \log_{b}{x}\text{,}\) that takes the log base \(b\) of its input values. The conversion formulas tell us that the log function, \(g(x) = \log_{b}{x}\text{,}\) is the inverse of the exponential function, \(f(x) = b^x\text{.}\)</p>
+</p></article><p id="p-9303">We can now define the <em class="terminology">logarithmic function</em>, \(g(x) = \log_{b}{x}\text{,}\) that takes the log base \(b\) of its input values. The conversion formulas tell us that the log function, \(g(x) = \log_{b}{x}\text{,}\) is the inverse of the exponential function, \(f(x) = b^x\text{.}\)</p>
 <article class="assemblage-like" id="assemblage-113"><h5 class="heading">Logarithmic Function</h5>
-<p id="p-9302">The <em class="terminology">logarithmic function</em> base \(b\text{,}\) \(g(x) = \log_b x\text{,}\) is the inverse of the exponential function of the same base, \(f(x) = b^x\text{.}\)</p></article><p id="p-9303">For example, the function \(g(x) = \log_2 x\) is the inverse of \(f(x) = 2^x\text{.}\) Each function undoes the effect of the other. So, if we start with \(x = 3\text{,}\) apply \(f\text{,}\) and then apply \(g\) to the result, we return to the original number, 3.
+<p id="p-9304">The <em class="terminology">logarithmic function</em> base \(b\text{,}\) \(g(x) = \log_b x\text{,}\) is the inverse of the exponential function of the same base, \(f(x) = b^x\text{.}\)</p></article><p id="p-9305">For example, the function \(g(x) = \log_2 x\) is the inverse of \(f(x) = 2^x\text{.}\) Each function undoes the effect of the other. So, if we start with \(x = 3\text{,}\) apply \(f\text{,}\) and then apply \(g\) to the result, we return to the original number, 3.
 \begin{equation*}
 x=\alert{3}\mathrel{\mathop{\rightarrow}^{\text{Apply the}}_{\text{exponential function}}}
 f(\alert{3})=2^\alert{3}=8		
@@ -229,7 +234,7 @@ A similar equation holds for any value of \(x\) and for any base \(b \gt 0\text{
 <article class="example-like" id="example-log-of-exp"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">5.38</span>
 </h5>
-<p id="p-9304">Simplify each expression. </p>
+<p id="p-9306">Simplify each expression. </p>
 <ol id="ol-1807" style="list-style-type: lower-alpha;">
 <li id="li-5693">\(\log_{4}{4^6}\)</li>
 <li id="li-5694">\(\log_{8}{8^{2a+3}}\)</li>
@@ -251,18 +256,18 @@ x=6\mathrel{\mathop{\rightarrow}^{\text{Apply the}}_{\text{exponential function}
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-log-of-exponential" id="exercise-log-of-exponential"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">5.39</span>
 </h5></article></a></div>
-<div id="hk-exercise-log-of-exponential" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-9305">Simplify each expression. </p>
+<div id="hk-exercise-log-of-exponential" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-9307">Simplify each expression. </p>
 <ol id="ol-1809" style="list-style-type: lower-alpha;">
 <li id="li-5697">\(\log_{10}{10^6}\)</li>
 <li id="li-5698">\(\log_{w}{w^{x+1}}\text{,}\) for \(w \gt 0, w\ne 1\)</li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-997" id="answer-997"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-997" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9306"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-997" id="answer-997"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-997" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9308"></p>
 <ol id="ol-1810" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5699" style="width:49%; float:left;"><p id="p-9307">\(6\)</p></li>
-<li id="li-5700" style="width:49%; float:left;"><p id="p-9308">\(x+1\)</p></li>
+<li id="li-5699" style="width:49%; float:left;"><p id="p-9309">\(6\)</p></li>
+<li id="li-5700" style="width:49%; float:left;"><p id="p-9310">\(x+1\)</p></li>
 </ol></span></span> </article></div>
-<p id="p-9309">We can also apply the two functions in the opposite order. For example,
+<p id="p-9311">We can also apply the two functions in the opposite order. For example,
 \begin{equation*}
 2^{\log_2 \alert{8} }= \alert{8}
 \end{equation*}
@@ -282,7 +287,7 @@ b^{\log_b x} = x
 <article class="example-like" id="example-exp-of-log"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">5.40</span>
 </h5>
-<p id="p-9310">Simplify each expression. </p>
+<p id="p-9312">Simplify each expression. </p>
 <ol id="ol-1811" style="list-style-type: lower-alpha;">
 <li id="li-5701">\(10^{\log_{10}{1000}}\)</li>
 <li id="li-5702">\(Q^{\log_{Q}{25}}\text{, for } Q \gt 0, Q\ne 1\)</li>
@@ -296,26 +301,26 @@ b^{\log_b x} = x
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-exp-of-log" id="exercise-exp-of-log"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">5.41</span>
 </h5></article></a></div>
-<div id="hk-exercise-exp-of-log" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-9311">Simplify each expression. </p>
+<div id="hk-exercise-exp-of-log" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-9313">Simplify each expression. </p>
 <ol id="ol-1813" style="list-style-type: lower-alpha;">
 <li id="li-5705">\(4^{\log_4 {64}}\)</li>
 <li id="li-5706">\(2^{\log_{2}{(x^2+1)}}\)</li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-998" id="answer-998"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-998" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9312"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-998" id="answer-998"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-998" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9314"></p>
 <ol id="ol-1814" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5707" style="width:49%; float:left;"><p id="p-9313">\(64\)</p></li>
-<li id="li-5708" style="width:49%; float:left;"><p id="p-9314">\(x^2+1\)</p></li>
+<li id="li-5707" style="width:49%; float:left;"><p id="p-9315">\(64\)</p></li>
+<li id="li-5708" style="width:49%; float:left;"><p id="p-9316">\(x^2+1\)</p></li>
 </ol></span></span> </article></div>
-<p id="p-9315">We summarize these relationships as follows.</p>
+<p id="p-9317">We summarize these relationships as follows.</p>
 <article class="assemblage-like" id="assemblage-exponential-and-log-functions"><h5 class="heading">Exponential and Logarithmic Functions</h5>
-<p id="p-9316">Because \(f(x) = b^x\) and \(g(x) = \log_{b}{x}\) are inverse functions for \(b \gt 0, b\ne 1\text{,}\)
+<p id="p-9318">Because \(f(x) = b^x\) and \(g(x) = \log_{b}{x}\) are inverse functions for \(b \gt 0, b\ne 1\text{,}\)
 \begin{equation*}
 \log_{b}{b^x} = x\text{, for all }x ~~\text{ and }~~b^{\log_b x} = x\text{, for }x \gt 0
 \end{equation*}
 </p></article></section><section class="subsection" id="subsection-145"><header title="Subsection 5.2.2 Graphs of Logarithmic Functions"><h1 class="heading hide-type" alt="Subsection 5.2.2 Graphs of Logarithmic Functions">
 <span class="type">Subsection</span><span class="codenumber">5.2.2</span><span class="title">Graphs of Logarithmic Functions</span>
-</h1></header><p id="p-9317">We can obtain a table of values for \(g(x) = \log_2 x\) by making a table for \(f(x) = 2^x\) and then interchanging the columns, as shown in <a knowl="./knowl/table-base-2-exp.html" knowl-id="xref-table-base-2-exp" alt="Table 5.42 " title="Table 5.42 ">Tables 5.42</a> and <a knowl="./knowl/table-base-2-log.html" knowl-id="xref-table-base-2-log" alt="Table 5.43 " title="Table 5.43 ">5.43</a>. You can see that the graphs of \(f(x) = 2^x\) and \(g(x) = \log_2 x\text{,}\) shown in <a knowl="./knowl/fig-log-and-exp-on-same-grid.html" knowl-id="xref-fig-log-and-exp-on-same-grid" alt="Figure 5.44 " title="Figure 5.44 ">Figure 5.44</a>, are symmetric about the line \(y = x\text{.}\) <div class="sidebyside" style="" id="sidebyside-107">
+</h1></header><p id="p-9319">We can obtain a table of values for \(g(x) = \log_2 x\) by making a table for \(f(x) = 2^x\) and then interchanging the columns, as shown in <a knowl="./knowl/table-base-2-exp.html" knowl-id="xref-table-base-2-exp" alt="Table 5.42 " title="Table 5.42 ">Tables 5.42</a> and <a knowl="./knowl/table-base-2-log.html" knowl-id="xref-table-base-2-log" alt="Table 5.43 " title="Table 5.43 ">5.43</a>. You can see that the graphs of \(f(x) = 2^x\) and \(g(x) = \log_2 x\text{,}\) shown in <a knowl="./knowl/fig-log-and-exp-on-same-grid.html" knowl-id="xref-fig-log-and-exp-on-same-grid" alt="Figure 5.44 " title="Figure 5.44 ">Figure 5.44</a>, are symmetric about the line \(y = x\text{.}\) <div class="sidebyside" style="" id="sidebyside-107">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel fixed-width" style="width:33.3333333333333%;justify-content:flex-start;"><table>
 <tr>
@@ -378,8 +383,8 @@ b^{\log_b x} = x
 <article class="example-like" id="example-log10-and-exp"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">5.45</span>
 </h5>
-<p id="p-9318">Graph the function \(f(x)=10^x\) and its inverse \(g(x)=\log_{10}{x}\) on the same axes.</p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-138" id="solution-138"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-138" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9319">Make a table of values for the function \(f(x)=10^x\text{.}\) A table of values for the inverse function, \(g(x) = \log_{10}{x}\text{,}\) can be obtained by interchanging the components of each ordered pairs in the table for \(f\text{.}\) <div class="sidebyside" style="" id="sidebyside-108">
+<p id="p-9320">Graph the function \(f(x)=10^x\) and its inverse \(g(x)=\log_{10}{x}\) on the same axes.</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-138" id="solution-138"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-138" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9321">Make a table of values for the function \(f(x)=10^x\text{.}\) A table of values for the inverse function, \(g(x) = \log_{10}{x}\text{,}\) can be obtained by interchanging the components of each ordered pairs in the table for \(f\text{.}\) <div class="sidebyside" style="" id="sidebyside-108">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel fixed-width" style="width:33.3333333333333%;justify-content:flex-start;"><table>
 <tr>
@@ -443,11 +448,11 @@ b^{\log_b x} = x
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-log-base-4" id="exercise-log-base-4"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">5.47</span>
 </h5></article></a></div>
-<div id="hk-exercise-log-base-4" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-9320">Make a table of values and graph the function \(h(x) = \log_4 x\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-999" id="answer-999"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-999" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9321"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-in-ex-ans-5-2-3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></span></span> </article></div>
-<p id="p-9322">While an exponential growth function increases very rapidly for positive values, its inverse, the logarithmic function, grows extremely slowly, as you can see in <a knowl="./knowl/fig-log10-and-exp-on-same-grid.html" knowl-id="xref-fig-log10-and-exp-on-same-grid" alt="Figure 5.46 " title="Figure 5.46 ">Figure 5.46</a>. In addition, the logarithmic function \(y = \log_b x\) for any base \(b \gt 0, b \ne 1\text{,}\) has the following properties.</p>
+<div id="hk-exercise-log-base-4" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-9322">Make a table of values and graph the function \(h(x) = \log_4 x\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-999" id="answer-999"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-999" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9323"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-in-ex-ans-5-2-3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></span></span> </article></div>
+<p id="p-9324">While an exponential growth function increases very rapidly for positive values, its inverse, the logarithmic function, grows extremely slowly, as you can see in <a knowl="./knowl/fig-log10-and-exp-on-same-grid.html" knowl-id="xref-fig-log10-and-exp-on-same-grid" alt="Figure 5.46 " title="Figure 5.46 ">Figure 5.46</a>. In addition, the logarithmic function \(y = \log_b x\) for any base \(b \gt 0, b \ne 1\text{,}\) has the following properties.</p>
 <article class="assemblage-like" id="assemblage-log-functions"><h5 class="heading">Logarithmic Functions \(y = \log_b x\)</h5>
-<p id="p-9323"></p>
+<p id="p-9325"></p>
 <ol id="ol-1815" style="list-style-type: decimal;">
 <li id="li-5709">Domain: all positive real numbers</li>
 <li id="li-5710">Range: all real numbers</li>
@@ -479,18 +484,18 @@ b^{\log_b x} = x
 <li id="li-5722">Graph \(f\) and \(f^{−1}\) in the window \begin{align} \text{Xmin} \amp = −6 \amp\amp \text{Xmax} = 6\\ \text{Ymin} \amp = −4 \amp\amp \text{Ymax} = 4 \end{align}</li>
 <li id="li-5723">State the domain and range of \(f\) and \(f^{−1}\text{.}\)</li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1000" id="answer-1000"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1000" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9324"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1000" id="answer-1000"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1000" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9326"></p>
 <ol id="ol-1819" style="list-style-type: lower-alpha;">
-<li id="li-5724"><p id="p-9325">\(f^{−1}(x) = 10^{x/2} − 1 \)</p></li>
-<li id="li-5725"><p id="p-9326"><img width="40%" src="images/fig-in-ex-ans-5-2-4.jpg" alt=""></p></li>
-<li id="li-5726"><p id="p-9327">Domain of \(f\text{:}\)  \((−1,\infty)\text{,}\) Range of \(f\text{:}\) all real numbers, Domain of \(f^{−1}\text{:}\) all real numbers, Range of \(f^{-1}\text{:}\)  \((−1, \infty)\)</p></li>
+<li id="li-5724"><p id="p-9327">\(f^{−1}(x) = 10^{x/2} − 1 \)</p></li>
+<li id="li-5725"><p id="p-9328"><img width="40%" src="images/fig-in-ex-ans-5-2-4.jpg" alt=""></p></li>
+<li id="li-5726"><p id="p-9329">Domain of \(f\text{:}\)  \((−1,\infty)\text{,}\) Range of \(f\text{:}\) all real numbers, Domain of \(f^{−1}\text{:}\) all real numbers, Range of \(f^{-1}\text{:}\)  \((−1, \infty)\)</p></li>
 </ol></span></span> </article></div></section><section class="subsection" id="subsection-146"><header title="Subsection 5.2.3 Evaluating Logarithmic Functions"><h1 class="heading hide-type" alt="Subsection 5.2.3 Evaluating Logarithmic Functions">
 <span class="type">Subsection</span><span class="codenumber">5.2.3</span><span class="title">Evaluating Logarithmic Functions</span>
-</h1></header><p id="p-9328">We can use the <tt class="code-inline tex2jax_ignore">LOG</tt> key on a calculator to evaluate the function \(f(x) = \log_{10}{x}\text{.}\)</p>
+</h1></header><p id="p-9330">We can use the <tt class="code-inline tex2jax_ignore">LOG</tt> key on a calculator to evaluate the function \(f(x) = \log_{10}{x}\text{.}\)</p>
 <article class="example-like" id="example-GC-evaluate-logs"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">5.51</span>
 </h5>
-<p id="p-9329">Let \(f(x) = \log_{10}{x}\text{.}\) Evaluate the following expressions. </p>
+<p id="p-9331">Let \(f(x) = \log_{10}{x}\text{.}\) Evaluate the following expressions. </p>
 <ol id="ol-1820" style="list-style-type: lower-alpha;">
 <li id="li-5727">\(f(35)\)</li>
 <li id="li-5728">\(f(−8)\)</li>
@@ -506,10 +511,10 @@ b^{\log_b x} = x
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-tumor-doubling-time" id="exercise-tumor-doubling-time"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">5.52</span>
 </h5></article></a></div>
-<div id="hk-exercise-tumor-doubling-time" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-9330">The formula \(T = \dfrac{\log 2 \cdot t_i}{3 log(D_f /D_0)}\) is used by X-ray technicians to calculate the doubling time of a malignant tumor. \(D_0\) is the diameter of the tumor when first detected, \(D_f\) is its diameter at the next reading, and \(t_i\) is the time interval between readings, in days. Calculate the doubling time of a tumor if its diameter when first detected was \(1\) cm, and \(1.05\) cm \(7\) days later.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1001" id="answer-1001"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1001" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9331">\(33\) days</p></span></span> </article></div></section><section class="subsection" id="subsection-147"><header title="Subsection 5.2.4 Logarithmic Equations"><h1 class="heading hide-type" alt="Subsection 5.2.4 Logarithmic Equations">
+<div id="hk-exercise-tumor-doubling-time" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-9332">The formula \(T = \dfrac{\log 2 \cdot t_i}{3 log(D_f /D_0)}\) is used by X-ray technicians to calculate the doubling time of a malignant tumor. \(D_0\) is the diameter of the tumor when first detected, \(D_f\) is its diameter at the next reading, and \(t_i\) is the time interval between readings, in days. Calculate the doubling time of a tumor if its diameter when first detected was \(1\) cm, and \(1.05\) cm \(7\) days later.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1001" id="answer-1001"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1001" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9333">\(33\) days</p></span></span> </article></div></section><section class="subsection" id="subsection-147"><header title="Subsection 5.2.4 Logarithmic Equations"><h1 class="heading hide-type" alt="Subsection 5.2.4 Logarithmic Equations">
 <span class="type">Subsection</span><span class="codenumber">5.2.4</span><span class="title">Logarithmic Equations</span>
-</h1></header><p id="p-9332">A <em class="terminology">logarithmic equation</em> is one in which the variable appears inside of a logarithm. For example,
+</h1></header><p id="p-9334">A <em class="terminology">logarithmic equation</em> is one in which the variable appears inside of a logarithm. For example,
 \begin{equation*}
 \log_4 x = 3
 \end{equation*}
@@ -521,7 +526,7 @@ Thus, we can rewrite a logarithmic equation in exponential form.</p>
 <article class="example-like" id="example-log-equations"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">5.53</span>
 </h5>
-<p id="p-9333">Solve for \(x\text{.}\) </p>
+<p id="p-9335">Solve for \(x\text{.}\) </p>
 <ol id="ol-1822" style="list-style-type: lower-alpha;">
 <li id="li-5733">\(2(\log_3 x) − 1 = 4\)</li>
 <li id="li-5734">\(\log_{10}{(2x + 100)} = 3\)</li>
@@ -539,22 +544,22 @@ Solve for \(x\) to find \(2x = 900\text{,}\) or \(x = 450\text{.}\)</li>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-log-equation" id="exercise-log-equation"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">5.54</span>
 </h5></article></a></div>
-<div id="hk-exercise-log-equation" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-9334">Solve for the unknown value in each equation. </p>
+<div id="hk-exercise-log-equation" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-9336">Solve for the unknown value in each equation. </p>
 <ol id="ol-1824" style="list-style-type: lower-alpha;">
 <li id="li-5737">\(\log_b 2 = \frac{1}{2}\)</li>
 <li id="li-5738">\(\log_{3}{(2x − 1)} = 4\)</li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1002" id="answer-1002"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1002" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9335"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1002" id="answer-1002"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1002" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9337"></p>
 <ol id="ol-1825" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5739" style="width:49%; float:left;"><p id="p-9336">\(b=4\)</p></li>
-<li id="li-5740" style="width:49%; float:left;"><p id="p-9337">\(x=41\)</p></li>
+<li id="li-5739" style="width:49%; float:left;"><p id="p-9338">\(b=4\)</p></li>
+<li id="li-5740" style="width:49%; float:left;"><p id="p-9339">\(x=41\)</p></li>
 </ol></span></span> </article></div>
 <article class="example-like" id="example-common-log-equation"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">5.55</span>
 </h5>
-<p id="p-9338">If \(f(x) = \log_{10}{x}\text{,}\) find \(x\) so that \(f(x)=−3.2\text{.}\)</p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-142" id="solution-142"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-142" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9339">We must solve the equation \(\log_{10}{x} = −3.2\text{.}\) Rewriting the equation in exponential form yields
+<p id="p-9340">If \(f(x) = \log_{10}{x}\text{,}\) find \(x\) so that \(f(x)=−3.2\text{.}\)</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-142" id="solution-142"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-142" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9341">We must solve the equation \(\log_{10}{x} = −3.2\text{.}\) Rewriting the equation in exponential form yields
 \begin{equation*}
 x = 10^{−3.2}\approx 0.00063
 \end{equation*}
@@ -563,22 +568,22 @@ x = 10^{−3.2}\approx 0.00063
 <article class="remark-like" id="remark-11"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">5.56</span><span class="title"><img width="8%" src="images/icon-GC.jpg" alt="">Evaluating \(10^x\)</span>
 </h5>
-<p id="p-9340">In <a knowl="./knowl/example-common-log-equation.html" knowl-id="xref-example-common-log-equation" alt="Example 5.55 " title="Example 5.55 ">Example 5.55</a>, the expression \(10^{−3.2}\) can be evaluated in two different ways with a calculator. We can use the <tt class="code-inline tex2jax_ignore">^</tt> key and press</p>
-<p id="p-9341">\(10\) <tt class="code-inline tex2jax_ignore">^</tt> <tt class="code-inline tex2jax_ignore">(−)</tt> \(3.2\) <tt class="code-inline tex2jax_ignore">ENTER</tt></p>
-<p id="p-9342">which gives <tt class="code-inline tex2jax_ignore">6.30957344 E −4</tt>, or approximately \(0.00063\text{.}\) Alternatively, because \(10^x\) is the inverse function for \(\log x\text{,}\) we can press</p>
-<p id="p-9343"><tt class="code-inline tex2jax_ignore">2nd</tt> <tt class="code-inline tex2jax_ignore">LOG</tt> <tt class="code-inline tex2jax_ignore">(−)</tt> \(3.2\) <tt class="code-inline tex2jax_ignore">ENTER</tt></p>
-<p id="p-9344">which gives the same answer as before.</p></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-common-log-equation" id="exercise-common-log-equation"><article class="exercise-like"><h5 class="heading">
+<p id="p-9342">In <a knowl="./knowl/example-common-log-equation.html" knowl-id="xref-example-common-log-equation" alt="Example 5.55 " title="Example 5.55 ">Example 5.55</a>, the expression \(10^{−3.2}\) can be evaluated in two different ways with a calculator. We can use the <tt class="code-inline tex2jax_ignore">^</tt> key and press</p>
+<p id="p-9343">\(10\) <tt class="code-inline tex2jax_ignore">^</tt> <tt class="code-inline tex2jax_ignore">(−)</tt> \(3.2\) <tt class="code-inline tex2jax_ignore">ENTER</tt></p>
+<p id="p-9344">which gives <tt class="code-inline tex2jax_ignore">6.30957344 E −4</tt>, or approximately \(0.00063\text{.}\) Alternatively, because \(10^x\) is the inverse function for \(\log x\text{,}\) we can press</p>
+<p id="p-9345"><tt class="code-inline tex2jax_ignore">2nd</tt> <tt class="code-inline tex2jax_ignore">LOG</tt> <tt class="code-inline tex2jax_ignore">(−)</tt> \(3.2\) <tt class="code-inline tex2jax_ignore">ENTER</tt></p>
+<p id="p-9346">which gives the same answer as before.</p></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-common-log-equation" id="exercise-common-log-equation"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">5.57</span>
 </h5></article></a></div>
-<div id="hk-exercise-common-log-equation" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-9345">Imagine the graph of \(f(x) = \log_{10}{x}\text{.}\) How far must you travel along the \(x\)-axis until the \(y\)-coordinate reaches a height of \(5.25\text{?}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1003" id="answer-1003"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1003" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9346">\(x = 177,827.941\)</p></span></span> </article></div></section><section class="subsection" id="subsection-148"><header title="Subsection 5.2.5 Using the Properties of Logarithms"><h1 class="heading hide-type" alt="Subsection 5.2.5 Using the Properties of Logarithms">
+<div id="hk-exercise-common-log-equation" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-9347">Imagine the graph of \(f(x) = \log_{10}{x}\text{.}\) How far must you travel along the \(x\)-axis until the \(y\)-coordinate reaches a height of \(5.25\text{?}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1003" id="answer-1003"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1003" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9348">\(x = 177,827.941\)</p></span></span> </article></div></section><section class="subsection" id="subsection-148"><header title="Subsection 5.2.5 Using the Properties of Logarithms"><h1 class="heading hide-type" alt="Subsection 5.2.5 Using the Properties of Logarithms">
 <span class="type">Subsection</span><span class="codenumber">5.2.5</span><span class="title">Using the Properties of Logarithms</span>
-</h1></header><p id="p-9347">The properties of logarithms are useful in solving both exponential and logarithmic equations. To solve logarithmic equations, we first combine any expressions involving logs into a single logarithm.</p>
+</h1></header><p id="p-9349">The properties of logarithms are useful in solving both exponential and logarithmic equations. To solve logarithmic equations, we first combine any expressions involving logs into a single logarithm.</p>
 <article class="example-like" id="example-solve-log-equation"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">5.58</span>
 </h5>
-<p id="p-9348">Solve \(\log_{10}{(x + 1)} + \log_{10}{(x − 2)} = 1\text{.}\)</p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-143" id="solution-143"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-143" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9349">Use Property (1) of logarithms to rewrite the left-hand side as a single logarithm:
+<p id="p-9350">Solve \(\log_{10}{(x + 1)} + \log_{10}{(x − 2)} = 1\text{.}\)</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-143" id="solution-143"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-143" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9351">Use Property (1) of logarithms to rewrite the left-hand side as a single logarithm:
 \begin{equation*}
 \log_{10}{(x + 1)(x − 2)} = 1
 \end{equation*}
@@ -588,9 +593,9 @@ Once the left-hand side is expressed as a single logarithm, we can rewrite the e
 \end{equation*}
 from which \begin{align*} x^2 − x − 2 \amp = 10\amp\amp\text{Subtract 10 from both sides.}\\ x^2 − x − 12 \amp = 0\amp\amp\text{Factor the left side.}\\ (x − 4)(x + 3) \amp= 0\amp\amp\text{Apply the zero-factor principle.} \end{align*} Thus, \(x = 4\) or \(x = −3\text{.}\) The number \(−3\) is not a solution of the original equation, because neither \(\log_{10}{(x + 1)}\) nor \(\log_{10}{(x − 2)}\) is defined for \(x = −3\text{.}\) The solution of the original equation is \(4\text{.}\)</p></span></span>
 </div></div>
-<p id="p-9350">In <a knowl="./knowl/example-solve-log-equation.html" knowl-id="xref-example-solve-log-equation" alt="Example 5.58 " title="Example 5.58 ">Example 5.58</a>, the apparent solution \(x = −3\) is called <em class="terminology">extraneous</em> because it does not solve the original equation. We should always check for extraneous solutions when solving log equations. The following steps give a rough outline for solving log equations.</p>
+<p id="p-9352">In <a knowl="./knowl/example-solve-log-equation.html" knowl-id="xref-example-solve-log-equation" alt="Example 5.58 " title="Example 5.58 ">Example 5.58</a>, the apparent solution \(x = −3\) is called <em class="terminology">extraneous</em> because it does not solve the original equation. We should always check for extraneous solutions when solving log equations. The following steps give a rough outline for solving log equations.</p>
 <article class="assemblage-like" id="assemblage-solving-log-equations"><h5 class="heading">Steps for Solving Logarithmic Equations</h5>
-<p id="p-9351"></p>
+<p id="p-9353"></p>
 <ol id="ol-1826" style="list-style-type: decimal;">
 <li id="li-5741">Use the properties of logarithms to combine all logs into one log.</li>
 <li id="li-5742">Isolate the log on one side of the equation.</li>
@@ -601,46 +606,46 @@ from which \begin{align*} x^2 − x − 2 \amp = 10\amp\amp\text{Subtract 10 fro
 <p></p></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-solve-log-equation" id="exercise-solve-log-equation"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">5.59</span>
 </h5></article></a></div>
-<div id="hk-exercise-solve-log-equation" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-9352">Solve \(\log_2 x + \log_{2}{(x − 2)} = 3\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-27" id="hint-27"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-27" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9353">Rewrite the left side as a single logarithm.</p>
-<p id="p-9354">Rewrite the equation in exponential form.</p>
-<p id="p-9355">Solve for \(x\text{.}\)</p>
-<p id="p-9356">Check for extraneous solutions.</p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1004" id="answer-1004"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1004" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9357">\(x=4\)</p></span></span> </article></div></section><section class="subsection" id="summary-5-2"><header title="Subsection 5.2.6 Section Summary"><h1 class="heading hide-type" alt="Subsection 5.2.6 Section Summary">
+<div id="hk-exercise-solve-log-equation" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-9354">Solve \(\log_2 x + \log_{2}{(x − 2)} = 3\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-27" id="hint-27"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-27" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9355">Rewrite the left side as a single logarithm.</p>
+<p id="p-9356">Rewrite the equation in exponential form.</p>
+<p id="p-9357">Solve for \(x\text{.}\)</p>
+<p id="p-9358">Check for extraneous solutions.</p></span></span> <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1004" id="answer-1004"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1004" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9359">\(x=4\)</p></span></span> </article></div></section><section class="subsection" id="summary-5-2"><header title="Subsection 5.2.6 Section Summary"><h1 class="heading hide-type" alt="Subsection 5.2.6 Section Summary">
 <span class="type">Subsection</span><span class="codenumber">5.2.6</span><span class="title">Section Summary</span><a href="Logarithmic-Functions.html#summary-5-2" class="permalink">¶ permalink</a>
 </h1></header><section class="subsubsection" id="subsubsection-93"><header title="Subsubsection 5.2.6.1 Vocabulary"><h1 class="heading hide-type" alt="Subsubsection 5.2.6.1 Vocabulary">
 <span class="type">Subsubsection</span><span class="codenumber">5.2.6.1</span><span class="title">Vocabulary</span>
-</h1></header><p id="p-9358">Look up the definitions of new terms in the Glossary. </p>
+</h1></header><p id="p-9360">Look up the definitions of new terms in the Glossary. </p>
 <ul id="ul-32" class="cols3" style="list-style-type: disc;">
-<li id="li-5746" style="width:32.6666666666667%; float:left;"><p id="p-9359">Logarithmic function</p></li>
-<li id="li-5747" style="width:32.6666666666667%; float:left;"><p id="p-9360">Logarithmic equation</p></li>
-<li id="li-5748" style="width:32.6666666666667%; float:left;"><p id="p-9361">Extraneous solution</p></li>
+<li id="li-5746" style="width:32.6666666666667%; float:left;"><p id="p-9361">Logarithmic function</p></li>
+<li id="li-5747" style="width:32.6666666666667%; float:left;"><p id="p-9362">Logarithmic equation</p></li>
+<li id="li-5748" style="width:32.6666666666667%; float:left;"><p id="p-9363">Extraneous solution</p></li>
 </ul>
 <p></p></section><section class="subsubsection" id="subsubsection-94"><header title="Subsubsection 5.2.6.2 CONCEPTS"><h1 class="heading hide-type" alt="Subsubsection 5.2.6.2 CONCEPTS">
 <span class="type">Subsubsection</span><span class="codenumber">5.2.6.2</span><span class="title">CONCEPTS</span>
-</h1></header><p id="p-9362"></p>
+</h1></header><p id="p-9364"></p>
 <ol id="ol-1827" style="list-style-type: decimal;">
-<li id="li-5749"><p id="p-9363">We define the <em class="terminology">logarithmic function</em>, \(g(x) = \log_b x\text{,}\) which takes the log base \(b\) of its input values. The log function \(g(x) = \log_b x\) is the inverse of the exponential function \(f (x) = b^x\text{.}\)</p></li>
-<li id="li-5750"><p id="p-9364"><a knowl="./knowl/assemblage-exponential-and-log-functions.html" knowl-id="xref-assemblage-exponential-and-log-functions" alt="Assemblage  Exponential and Logarithmic Functions" title="Assemblage  Exponential and Logarithmic Functions">Exponential and Logarithmic Functions </a></p></li>
-<li id="li-5751"><p id="p-9365"><a knowl="./knowl/assemblage-log-functions.html" knowl-id="xref-assemblage-log-functions" alt="Assemblage  Logarithmic Functions \(y = \log_b x\)" title="Assemblage  Logarithmic Functions \(y = \log_b x\)">Logarithmic Functions \(y=\log_b x\) </a></p></li>
-<li id="li-5752"><p id="p-9366">A <em class="terminology">logarithmic equation</em> is one in which the variable appears inside of a logarithm. We can solve logarithmic equations by converting to exponential form.</p></li>
-<li id="li-5753"><p id="p-9367"><a knowl="./knowl/assemblage-solving-log-equations.html" knowl-id="xref-assemblage-solving-log-equations" alt="Assemblage  Steps for Solving Logarithmic Equations" title="Assemblage  Steps for Solving Logarithmic Equations">Steps for solving logarithmic equations </a></p></li>
+<li id="li-5749"><p id="p-9365">We define the <em class="terminology">logarithmic function</em>, \(g(x) = \log_b x\text{,}\) which takes the log base \(b\) of its input values. The log function \(g(x) = \log_b x\) is the inverse of the exponential function \(f (x) = b^x\text{.}\)</p></li>
+<li id="li-5750"><p id="p-9366"><a knowl="./knowl/assemblage-exponential-and-log-functions.html" knowl-id="xref-assemblage-exponential-and-log-functions" alt="Assemblage  Exponential and Logarithmic Functions" title="Assemblage  Exponential and Logarithmic Functions">Exponential and Logarithmic Functions </a></p></li>
+<li id="li-5751"><p id="p-9367"><a knowl="./knowl/assemblage-log-functions.html" knowl-id="xref-assemblage-log-functions" alt="Assemblage  Logarithmic Functions \(y = \log_b x\)" title="Assemblage  Logarithmic Functions \(y = \log_b x\)">Logarithmic Functions \(y=\log_b x\) </a></p></li>
+<li id="li-5752"><p id="p-9368">A <em class="terminology">logarithmic equation</em> is one in which the variable appears inside of a logarithm. We can solve logarithmic equations by converting to exponential form.</p></li>
+<li id="li-5753"><p id="p-9369"><a knowl="./knowl/assemblage-solving-log-equations.html" knowl-id="xref-assemblage-solving-log-equations" alt="Assemblage  Steps for Solving Logarithmic Equations" title="Assemblage  Steps for Solving Logarithmic Equations">Steps for solving logarithmic equations </a></p></li>
 </ol>
 <p></p></section><section class="subsubsection" id="subsubsection-95"><header title="Subsubsection 5.2.6.3 STUDY QUESTIONS"><h1 class="heading hide-type" alt="Subsubsection 5.2.6.3 STUDY QUESTIONS">
 <span class="type">Subsubsection</span><span class="codenumber">5.2.6.3</span><span class="title">STUDY QUESTIONS</span>
-</h1></header><p id="p-9368"></p>
+</h1></header><p id="p-9370"></p>
 <ol id="ol-1828" style="list-style-type: decimal;">
-<li id="li-5754"><p id="p-9369">Can the output of the function \(y = \log_b x\) be negative?</p></li>
-<li id="li-5755"><p id="p-9370">Francine says that \(\log_2 \frac{1}{x}= −\log_2 x\text{.}\) Is she correct? Why or why not?</p></li>
-<li id="li-5756"><p id="p-9371">Sketch a typical logarithmic function.</p></li>
+<li id="li-5754"><p id="p-9371">Can the output of the function \(y = \log_b x\) be negative?</p></li>
+<li id="li-5755"><p id="p-9372">Francine says that \(\log_2 \frac{1}{x}= −\log_2 x\text{.}\) Is she correct? Why or why not?</p></li>
+<li id="li-5756"><p id="p-9373">Sketch a typical logarithmic function.</p></li>
 <li id="li-5757">
-<p id="p-9372">Simplify: </p>
+<p id="p-9374">Simplify: </p>
 <ol id="ol-1829" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5758" style="width:49%; float:left;"><p id="p-9373">\(10^{\log 13} \)</p></li>
-<li id="li-5759" style="width:49%; float:left;"><p id="p-9374">\(7^{\log_7 13} \)</p></li>
+<li id="li-5758" style="width:49%; float:left;"><p id="p-9375">\(10^{\log 13} \)</p></li>
+<li id="li-5759" style="width:49%; float:left;"><p id="p-9376">\(7^{\log_7 13} \)</p></li>
 </ol>
 <p></p>
 </li>
-<li id="li-5760"><p id="p-9375">Why is the following attempt to solve the equation incorrect?
+<li id="li-5760"><p id="p-9377">Why is the following attempt to solve the equation incorrect?
 \begin{align*}
 \bluetext{Solve:}\hphantom{blank}\log x + \log(x + 1) \amp= 2\\
 x + x + 1 \amp= 10^2
@@ -649,29 +654,29 @@ x + x + 1 \amp= 10^2
 </ol>
 <p></p></section><section class="subsubsection" id="subsubsection-96"><header title="Subsubsection 5.2.6.4 SKILLS"><h1 class="heading hide-type" alt="Subsubsection 5.2.6.4 SKILLS">
 <span class="type">Subsubsection</span><span class="codenumber">5.2.6.4</span><span class="title">SKILLS</span>
-</h1></header><p id="p-9376">Practice each skill in the <a href="Logarithmic-Functions.html#section-5-2-exercises" alt="Exercises 5.2.7 Homework" title="Exercises 5.2.7 Homework">Homework 5.2.7</a> problems listed. </p>
+</h1></header><p id="p-9378">Practice each skill in the <a href="Logarithmic-Functions.html#section-5-2-exercises" alt="Exercises 5.2.7 Homework" title="Exercises 5.2.7 Homework">Homework 5.2.7</a> problems listed. </p>
 <ol id="ol-1830" style="list-style-type: decimal;">
-<li id="li-5761"><p id="p-9377">Evaluate log functions: #1–16, 27 and 28</p></li>
-<li id="li-5762"><p id="p-9378">Simplify expressions involving logs: #15 and 16, 19, and 20</p></li>
-<li id="li-5763"><p id="p-9379">Graph logarithmic functions and transformations of log functions: #1–4, 25–28</p></li>
-<li id="li-5764"><p id="p-9380">Find formulas for inverse functions: #17–24</p></li>
-<li id="li-5765"><p id="p-9381">Solve logarithmic equations: #29–54</p></li>
-<li id="li-5766"><p id="p-9382">Solve formulas involving logs: #55–60</p></li>
+<li id="li-5761"><p id="p-9379">Evaluate log functions: #1–16, 27 and 28</p></li>
+<li id="li-5762"><p id="p-9380">Simplify expressions involving logs: #15 and 16, 19, and 20</p></li>
+<li id="li-5763"><p id="p-9381">Graph logarithmic functions and transformations of log functions: #1–4, 25–28</p></li>
+<li id="li-5764"><p id="p-9382">Find formulas for inverse functions: #17–24</p></li>
+<li id="li-5765"><p id="p-9383">Solve logarithmic equations: #29–54</p></li>
+<li id="li-5766"><p id="p-9384">Solve formulas involving logs: #55–60</p></li>
 </ol>
 <p></p></section></section><section class="exercises" id="section-5-2-exercises"><header title="Exercises 5.2.7 Homework"><h1 class="heading hide-type" alt="Exercises 5.2.7 Homework">
 <span class="type">Subsection</span><span class="codenumber">5.2.7</span><span class="title">Homework</span><a href="Logarithmic-Functions.html#section-5-2-exercises" class="permalink">¶ permalink</a>
 </h1></header><div class="exercisegroup" id="exercisegroup-258">
-<article class="introduction" id="introduction-262"><p id="p-9383">In Problems 1–4, </p>
+<article class="introduction" id="introduction-262"><p id="p-9385">In Problems 1–4, </p>
 <ol id="ol-1831" style="list-style-type: lower-alpha;">
-<li id="li-5767"><p id="p-9384">Make tables of values for each exponential function and its inverse logarithmic function.</p></li>
-<li id="li-5768"><p id="p-9385">Graph both functions on the same set of axes.</p></li>
+<li id="li-5767"><p id="p-9386">Make tables of values for each exponential function and its inverse logarithmic function.</p></li>
+<li id="li-5768"><p id="p-9387">Graph both functions on the same set of axes.</p></li>
 </ol>
 <p></p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1886"><h5 class="heading"><span class="codenumber">1</span></h5>
-<p id="p-9386">\(f(x)=2^x \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1005" id="answer-1005"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1005" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9387"></p>
+<p id="p-9388">\(f(x)=2^x \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1005" id="answer-1005"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1005" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9389"></p>
 <ol id="ol-1832" style="list-style-type: lower-alpha;">
-<li id="li-5769"><p id="p-9388"><figure class="figure-like" id="table-313"><table>
+<li id="li-5769"><p id="p-9390"><figure class="figure-like" id="table-313"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(-1\)</td>
@@ -702,13 +707,13 @@ x + x + 1 \amp= 10^2
 <td class="c m b1 r1 l0 t0 lines">\(2\)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-5770"><p id="p-9389"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-ans-5-2-1.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-5770"><p id="p-9391"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-ans-5-2-1.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1887"><h5 class="heading"><span class="codenumber">2</span></h5>
-<p id="p-9390">\(f(x)=3^x \)</p></article><article class="exercise-like" id="exercise-1888"><h5 class="heading"><span class="codenumber">3</span></h5>
-<p id="p-9391">\(f(x)=\left(\dfrac{1}{3} \right)^x \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1006" id="answer-1006"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1006" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9392"></p>
+<p id="p-9392">\(f(x)=3^x \)</p></article><article class="exercise-like" id="exercise-1888"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p id="p-9393">\(f(x)=\left(\dfrac{1}{3} \right)^x \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1006" id="answer-1006"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1006" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9394"></p>
 <ol id="ol-1833" style="list-style-type: lower-alpha;">
-<li id="li-5771"><p id="p-9393"><figure class="figure-like" id="table-315"><table>
+<li id="li-5771"><p id="p-9395"><figure class="figure-like" id="table-315"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(-2\)</td>
@@ -739,219 +744,219 @@ x + x + 1 \amp= 10^2
 <td class="c m b1 r1 l0 t0 lines">\(1\)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-5772"><p id="p-9394"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-ans-5-2-3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-5772"><p id="p-9396"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-ans-5-2-3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1889"><h5 class="heading"><span class="codenumber">4</span></h5>
-<p id="p-9395">\(f(x)=\left(\dfrac{1}{2} \right)^x \)</p></article>
+<p id="p-9397">\(f(x)=\left(\dfrac{1}{2} \right)^x \)</p></article>
 </div>
 </div>
 <article class="exercise-like" id="exercise-1890"><h5 class="heading"><span class="codenumber">5</span></h5>
-<p id="p-9396"></p>
+<p id="p-9398"></p>
 <ol id="ol-1834" style="list-style-type: lower-alpha;">
-<li id="li-5773"><p id="p-9397">How large must \(x\) be before the graph of \(y = \log_{10} x\) reaches a height of \(4\text{?}\)</p></li>
-<li id="li-5774"><p id="p-9398">How large must \(x\) be before the graph of \(y = \log_{10} x\) reaches a height of \(8\text{?}\)</p></li>
+<li id="li-5773"><p id="p-9399">How large must \(x\) be before the graph of \(y = \log_{10} x\) reaches a height of \(4\text{?}\)</p></li>
+<li id="li-5774"><p id="p-9400">How large must \(x\) be before the graph of \(y = \log_{10} x\) reaches a height of \(8\text{?}\)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1007" id="answer-1007"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1007" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9399"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1007" id="answer-1007"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1007" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9401"></p>
 <ol id="ol-1835" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5775" style="width:49%; float:left;"><p id="p-9400">\(x=10,000\)</p></li>
-<li id="li-5776" style="width:49%; float:left;"><p id="p-9401">\(x=10^{8} \)</p></li>
+<li id="li-5775" style="width:49%; float:left;"><p id="p-9402">\(x=10,000\)</p></li>
+<li id="li-5776" style="width:49%; float:left;"><p id="p-9403">\(x=10^{8} \)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1891"><h5 class="heading"><span class="codenumber">6</span></h5>
-<p id="p-9402"></p>
+<p id="p-9404"></p>
 <ol id="ol-1836" style="list-style-type: lower-alpha;">
-<li id="li-5777"><p id="p-9403">How large must \(x\) be before the graph of \(y = \log_{2} x\) reaches a height of \(5\text{?}\)</p></li>
-<li id="li-5778"><p id="p-9404">How large must \(x\) be before the graph of \(y = \log_{10} x\) reaches a height of \(10\text{?}\)</p></li>
+<li id="li-5777"><p id="p-9405">How large must \(x\) be before the graph of \(y = \log_{2} x\) reaches a height of \(5\text{?}\)</p></li>
+<li id="li-5778"><p id="p-9406">How large must \(x\) be before the graph of \(y = \log_{10} x\) reaches a height of \(10\text{?}\)</p></li>
 </ol></article><article class="exercise-like" id="exercise-1892"><h5 class="heading"><span class="codenumber">7</span></h5>
-<p id="p-9405">For what values of \(x\) is \(y = \log_{10} x \lt −2\text{?}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1008" id="answer-1008"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1008" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9406">\(0\lt x \lt 0.01\)</p></span></span> </article><article class="exercise-like" id="exercise-1893"><h5 class="heading"><span class="codenumber">8</span></h5>
-<p id="p-9407">For what values of \(x\) is \(y = \log_{2} x \lt −3\text{?}\)</p></article><div class="exercisegroup" id="exercisegroup-259">
-<article class="introduction" id="introduction-263"><p id="p-9408">In Problems 9–14, \(f(x) = \log_{10} x\text{.}\) Evaluate.</p></article><div class="exercisegroup-exercises">
+<p id="p-9407">For what values of \(x\) is \(y = \log_{10} x \lt −2\text{?}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1008" id="answer-1008"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1008" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9408">\(0\lt x \lt 0.01\)</p></span></span> </article><article class="exercise-like" id="exercise-1893"><h5 class="heading"><span class="codenumber">8</span></h5>
+<p id="p-9409">For what values of \(x\) is \(y = \log_{2} x \lt −3\text{?}\)</p></article><div class="exercisegroup" id="exercisegroup-259">
+<article class="introduction" id="introduction-263"><p id="p-9410">In Problems 9–14, \(f(x) = \log_{10} x\text{.}\) Evaluate.</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-1894"><h5 class="heading"><span class="codenumber">9</span></h5>
-<p id="p-9409"></p>
+<p id="p-9411"></p>
 <ol id="ol-1837" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5779" style="width:49%; float:left;"><p id="p-9410">\(f(487)+f(206) \)</p></li>
-<li id="li-5780" style="width:49%; float:left;"><p id="p-9411">\(f(487+206) \)</p></li>
+<li id="li-5779" style="width:49%; float:left;"><p id="p-9412">\(f(487)+f(206) \)</p></li>
+<li id="li-5780" style="width:49%; float:left;"><p id="p-9413">\(f(487+206) \)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1009" id="answer-1009"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1009" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9412"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1009" id="answer-1009"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1009" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9414"></p>
 <ol id="ol-1838" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5781" style="width:49%; float:left;"><p id="p-9413">\(\log 100,322\approx 5.001\)</p></li>
-<li id="li-5782" style="width:49%; float:left;"><p id="p-9414">\(\log 693\approx 2.841\)</p></li>
+<li id="li-5781" style="width:49%; float:left;"><p id="p-9415">\(\log 100,322\approx 5.001\)</p></li>
+<li id="li-5782" style="width:49%; float:left;"><p id="p-9416">\(\log 693\approx 2.841\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1895"><h5 class="heading"><span class="codenumber">10</span></h5>
-<p id="p-9415"></p>
+<p id="p-9417"></p>
 <ol id="ol-1839" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5783" style="width:49%; float:left;"><p id="p-9416">\(f(93)+f(1500) \)</p></li>
-<li id="li-5784" style="width:49%; float:left;"><p id="p-9417">\(f(93+1500) \)</p></li>
+<li id="li-5783" style="width:49%; float:left;"><p id="p-9418">\(f(93)+f(1500) \)</p></li>
+<li id="li-5784" style="width:49%; float:left;"><p id="p-9419">\(f(93+1500) \)</p></li>
 </ol></article><article class="exercise-like" id="exercise-1896"><h5 class="heading"><span class="codenumber">11</span></h5>
-<p id="p-9418"></p>
+<p id="p-9420"></p>
 <ol id="ol-1840" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5785" style="width:49%; float:left;"><p id="p-9419">\(f(-7) \)</p></li>
-<li id="li-5786" style="width:49%; float:left;"><p id="p-9420">\(6f(28) \)</p></li>
+<li id="li-5785" style="width:49%; float:left;"><p id="p-9421">\(f(-7) \)</p></li>
+<li id="li-5786" style="width:49%; float:left;"><p id="p-9422">\(6f(28) \)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1010" id="answer-1010"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1010" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9421"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1010" id="answer-1010"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1010" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9423"></p>
 <ol id="ol-1841" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5787" style="width:49%; float:left;"><p id="p-9422">\(\log (−7)\) is undefined.</p></li>
-<li id="li-5788" style="width:49%; float:left;"><p id="p-9423">\(6 \log 28\approx 8.683\)</p></li>
+<li id="li-5787" style="width:49%; float:left;"><p id="p-9424">\(\log (−7)\) is undefined.</p></li>
+<li id="li-5788" style="width:49%; float:left;"><p id="p-9425">\(6 \log 28\approx 8.683\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1897"><h5 class="heading"><span class="codenumber">12</span></h5>
-<p id="p-9424"></p>
+<p id="p-9426"></p>
 <ol id="ol-1842" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5789" style="width:49%; float:left;"><p id="p-9425">\(f(0) \)</p></li>
-<li id="li-5790" style="width:49%; float:left;"><p id="p-9426">\(3f(41 ) \)</p></li>
+<li id="li-5789" style="width:49%; float:left;"><p id="p-9427">\(f(0) \)</p></li>
+<li id="li-5790" style="width:49%; float:left;"><p id="p-9428">\(3f(41 ) \)</p></li>
 </ol></article><article class="exercise-like" id="exercise-1898"><h5 class="heading"><span class="codenumber">13</span></h5>
-<p id="p-9427"></p>
+<p id="p-9429"></p>
 <ol id="ol-1843" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5791" style="width:49%; float:left;"><p id="p-9428">\(18-5f(3) \)</p></li>
-<li id="li-5792" style="width:49%; float:left;"><p id="p-9429">\(\dfrac{2}{5+f(0.6)} \)</p></li>
+<li id="li-5791" style="width:49%; float:left;"><p id="p-9430">\(18-5f(3) \)</p></li>
+<li id="li-5792" style="width:49%; float:left;"><p id="p-9431">\(\dfrac{2}{5+f(0.6)} \)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1011" id="answer-1011"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1011" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9430"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1011" id="answer-1011"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1011" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9432"></p>
 <ol id="ol-1844" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5793" style="width:49%; float:left;"><p id="p-9431">\(15.614\)</p></li>
-<li id="li-5794" style="width:49%; float:left;"><p id="p-9432">\(0.419\)</p></li>
+<li id="li-5793" style="width:49%; float:left;"><p id="p-9433">\(15.614\)</p></li>
+<li id="li-5794" style="width:49%; float:left;"><p id="p-9434">\(0.419\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1899"><h5 class="heading"><span class="codenumber">14</span></h5>
-<p id="p-9433"></p>
+<p id="p-9435"></p>
 <ol id="ol-1845" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5795" style="width:49%; float:left;"><p id="p-9434">\(15-4f(7) \)</p></li>
-<li id="li-5796" style="width:49%; float:left;"><p id="p-9435">\(\dfrac{3}{2+f(0.2)} \)</p></li>
+<li id="li-5795" style="width:49%; float:left;"><p id="p-9436">\(15-4f(7) \)</p></li>
+<li id="li-5796" style="width:49%; float:left;"><p id="p-9437">\(\dfrac{3}{2+f(0.2)} \)</p></li>
 </ol></article>
 </div>
 </div>
 <article class="exercise-like" id="exercise-1900"><h5 class="heading"><span class="codenumber">15</span></h5>
-<p id="p-9436">Let \(f(x) = 3^x\) and \(g(x) = \log_3 x\text{.}\) </p>
+<p id="p-9438">Let \(f(x) = 3^x\) and \(g(x) = \log_3 x\text{.}\) </p>
 <ol id="ol-1846" style="list-style-type: lower-alpha;">
-<li id="li-5797"><p id="p-9437">Compute \(f (4)\text{.}\)</p></li>
-<li id="li-5798"><p id="p-9438">Compute \(g[ f (4)]\text{.}\)</p></li>
-<li id="li-5799"><p id="p-9439">Explain why \(\log_3 3^x = x\) for any \(x\text{.}\)</p></li>
-<li id="li-5800"><p id="p-9440">Compute \(\log_3 3^{1.8}\text{.}\)</p></li>
-<li id="li-5801"><p id="p-9441">Simplify \(\log_3 3^a\text{.}\)</p></li>
+<li id="li-5797"><p id="p-9439">Compute \(f (4)\text{.}\)</p></li>
+<li id="li-5798"><p id="p-9440">Compute \(g[ f (4)]\text{.}\)</p></li>
+<li id="li-5799"><p id="p-9441">Explain why \(\log_3 3^x = x\) for any \(x\text{.}\)</p></li>
+<li id="li-5800"><p id="p-9442">Compute \(\log_3 3^{1.8}\text{.}\)</p></li>
+<li id="li-5801"><p id="p-9443">Simplify \(\log_3 3^a\text{.}\)</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1012" id="answer-1012"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1012" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9442"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1012" id="answer-1012"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1012" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9444"></p>
 <ol id="ol-1847" class="cols3" style="list-style-type: lower-alpha;">
-<li id="li-5802" style="width:32.6666666666667%; float:left;"><p id="p-9443">\(81\)</p></li>
-<li id="li-5803" style="width:32.6666666666667%; float:left;"><p id="p-9444">\(4\)</p></li>
-<li id="li-5804" style="width:32.6666666666667%; float:left;"><p id="p-9445">Definition of logarithm base \(3\)</p></li>
-<li id="li-5805" style="width:32.6666666666667%; float:left;"><p id="p-9446">\(1.8\)</p></li>
-<li id="li-5806" style="width:32.6666666666667%; float:left;"><p id="p-9447">\(a\)</p></li>
+<li id="li-5802" style="width:32.6666666666667%; float:left;"><p id="p-9445">\(81\)</p></li>
+<li id="li-5803" style="width:32.6666666666667%; float:left;"><p id="p-9446">\(4\)</p></li>
+<li id="li-5804" style="width:32.6666666666667%; float:left;"><p id="p-9447">Definition of logarithm base \(3\)</p></li>
+<li id="li-5805" style="width:32.6666666666667%; float:left;"><p id="p-9448">\(1.8\)</p></li>
+<li id="li-5806" style="width:32.6666666666667%; float:left;"><p id="p-9449">\(a\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1901"><h5 class="heading"><span class="codenumber">16</span></h5>
-<p id="p-9448">Let \(f(x) = 2^x\) and \(g(x) = \log_2 x\text{.}\) </p>
+<p id="p-9450">Let \(f(x) = 2^x\) and \(g(x) = \log_2 x\text{.}\) </p>
 <ol id="ol-1848" style="list-style-type: lower-alpha;">
-<li id="li-5807"><p id="p-9449">Compute \(f (32)\text{.}\)</p></li>
-<li id="li-5808"><p id="p-9450">Compute \(g[ f (32)]\text{.}\)</p></li>
-<li id="li-5809"><p id="p-9451">Explain why \(2^{\log_2 x} = x\) for any \(x\gt 0\text{.}\)</p></li>
-<li id="li-5810"><p id="p-9452">Compute \(2^{\log_2 6} \text{.}\)</p></li>
-<li id="li-5811"><p id="p-9453">Simplify \(2^{\log_2 Q}\text{.}\)</p></li>
+<li id="li-5807"><p id="p-9451">Compute \(f (32)\text{.}\)</p></li>
+<li id="li-5808"><p id="p-9452">Compute \(g[ f (32)]\text{.}\)</p></li>
+<li id="li-5809"><p id="p-9453">Explain why \(2^{\log_2 x} = x\) for any \(x\gt 0\text{.}\)</p></li>
+<li id="li-5810"><p id="p-9454">Compute \(2^{\log_2 6} \text{.}\)</p></li>
+<li id="li-5811"><p id="p-9455">Simplify \(2^{\log_2 Q}\text{.}\)</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-1902"><h5 class="heading"><span class="codenumber">17</span></h5>
-<p id="p-9454"></p>
+<p id="p-9456"></p>
 <ol id="ol-1849" style="list-style-type: lower-alpha;">
-<li id="li-5812"><p id="p-9455">If \(h(r ) = \log_2 r\text{,}\) find \(h^{−1}(8)\text{.}\)</p></li>
-<li id="li-5813"><p id="p-9456">If \(H(w) = 3^w\text{,}\) find \(H^{−1}\left(\dfrac{1}{9} \right) \text{.}\)</p></li>
+<li id="li-5812"><p id="p-9457">If \(h(r ) = \log_2 r\text{,}\) find \(h^{−1}(8)\text{.}\)</p></li>
+<li id="li-5813"><p id="p-9458">If \(H(w) = 3^w\text{,}\) find \(H^{−1}\left(\dfrac{1}{9} \right) \text{.}\)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1013" id="answer-1013"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1013" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9457"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1013" id="answer-1013"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1013" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9459"></p>
 <ol id="ol-1850" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5814" style="width:49%; float:left;"><p id="p-9458">\(2^8\)</p></li>
-<li id="li-5815" style="width:49%; float:left;"><p id="p-9459">\(-2\)</p></li>
+<li id="li-5814" style="width:49%; float:left;"><p id="p-9460">\(2^8\)</p></li>
+<li id="li-5815" style="width:49%; float:left;"><p id="p-9461">\(-2\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1903"><h5 class="heading"><span class="codenumber">18</span></h5>
-<p id="p-9460"></p>
+<p id="p-9462"></p>
 <ol id="ol-1851" style="list-style-type: lower-alpha;">
-<li id="li-5816"><p id="p-9461">If \(g(z ) = \log_3 z\text{,}\) find \(g^{−1}(-3)\text{.}\)</p></li>
-<li id="li-5817"><p id="p-9462">If \(G(q) = 2^q\text{,}\) find \(G^{−1}(1) \text{.}\)</p></li>
+<li id="li-5816"><p id="p-9463">If \(g(z ) = \log_3 z\text{,}\) find \(g^{−1}(-3)\text{.}\)</p></li>
+<li id="li-5817"><p id="p-9464">If \(G(q) = 2^q\text{,}\) find \(G^{−1}(1) \text{.}\)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-260">
-<article class="introduction" id="introduction-264"><p id="p-9463">Simplify.</p></article><div class="exercisegroup-exercises">
+<article class="introduction" id="introduction-264"><p id="p-9465">Simplify.</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-1904"><h5 class="heading"><span class="codenumber">19</span></h5>
-<p id="p-9464"></p>
+<p id="p-9466"></p>
 <ol id="ol-1852" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5818" style="width:49%; float:left;"><p id="p-9465">\(10^{\log 2k} \)</p></li>
-<li id="li-5819" style="width:49%; float:left;"><p id="p-9466">\(10^{3\log x} \)</p></li>
-<li id="li-5820" style="width:49%; float:left;"><p id="p-9467">\((\sqrt{10})^{\log x} \)</p></li>
-<li id="li-5821" style="width:49%; float:left;"><p id="p-9468">\(\log 100^m \)</p></li>
+<li id="li-5818" style="width:49%; float:left;"><p id="p-9467">\(10^{\log 2k} \)</p></li>
+<li id="li-5819" style="width:49%; float:left;"><p id="p-9468">\(10^{3\log x} \)</p></li>
+<li id="li-5820" style="width:49%; float:left;"><p id="p-9469">\((\sqrt{10})^{\log x} \)</p></li>
+<li id="li-5821" style="width:49%; float:left;"><p id="p-9470">\(\log 100^m \)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1014" id="answer-1014"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1014" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9469"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1014" id="answer-1014"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1014" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9471"></p>
 <ol id="ol-1853" class="cols4" style="list-style-type: lower-alpha;">
-<li id="li-5822" style="width:24.5%; float:left;"><p id="p-9470">\(2k\)</p></li>
-<li id="li-5823" style="width:24.5%; float:left;"><p id="p-9471">\(x^3\)</p></li>
-<li id="li-5824" style="width:24.5%; float:left;"><p id="p-9472">\(\sqrt{x} \)</p></li>
-<li id="li-5825" style="width:24.5%; float:left;"><p id="p-9473">\(2m\)</p></li>
+<li id="li-5822" style="width:24.5%; float:left;"><p id="p-9472">\(2k\)</p></li>
+<li id="li-5823" style="width:24.5%; float:left;"><p id="p-9473">\(x^3\)</p></li>
+<li id="li-5824" style="width:24.5%; float:left;"><p id="p-9474">\(\sqrt{x} \)</p></li>
+<li id="li-5825" style="width:24.5%; float:left;"><p id="p-9475">\(2m\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1905"><h5 class="heading"><span class="codenumber">20</span></h5>
-<p id="p-9474"></p>
+<p id="p-9476"></p>
 <ol id="ol-1854" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5826" style="width:49%; float:left;"><p id="p-9475">\(\log 10^{(1-x)} \)</p></li>
-<li id="li-5827" style="width:49%; float:left;"><p id="p-9476">\(100^{\log 2x} \)</p></li>
-<li id="li-5828" style="width:49%; float:left;"><p id="p-9477">\((0.1)^{\log (x-1)} \)</p></li>
-<li id="li-5829" style="width:49%; float:left;"><p id="p-9478">\(\log 10^{\log 10} \)</p></li>
+<li id="li-5826" style="width:49%; float:left;"><p id="p-9477">\(\log 10^{(1-x)} \)</p></li>
+<li id="li-5827" style="width:49%; float:left;"><p id="p-9478">\(100^{\log 2x} \)</p></li>
+<li id="li-5828" style="width:49%; float:left;"><p id="p-9479">\((0.1)^{\log (x-1)} \)</p></li>
+<li id="li-5829" style="width:49%; float:left;"><p id="p-9480">\(\log 10^{\log 10} \)</p></li>
 </ol></article>
 </div>
 </div>
 <article class="exercise-like" id="exercise-1906"><h5 class="heading"><span class="codenumber">21</span></h5>
-<p id="p-9479"></p>
+<p id="p-9481"></p>
 <ol id="ol-1855" style="list-style-type: lower-alpha;">
-<li id="li-5830"><p id="p-9480">What is the domain of the function \(f(x) = 4 + \log_3(x − 9)\text{?}\)</p></li>
-<li id="li-5831"><p id="p-9481">Find a formula for \(f^{−1}(x)\text{.}\)</p></li>
+<li id="li-5830"><p id="p-9482">What is the domain of the function \(f(x) = 4 + \log_3(x − 9)\text{?}\)</p></li>
+<li id="li-5831"><p id="p-9483">Find a formula for \(f^{−1}(x)\text{.}\)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1015" id="answer-1015"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1015" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9482"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1015" id="answer-1015"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1015" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9484"></p>
 <ol id="ol-1856" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5832" style="width:49%; float:left;"><p id="p-9483">\((9,\infty) \)</p></li>
-<li id="li-5833" style="width:49%; float:left;"><p id="p-9484">\(f^{−1} (x) = 3^{x−4} + 9 \)</p></li>
+<li id="li-5832" style="width:49%; float:left;"><p id="p-9485">\((9,\infty) \)</p></li>
+<li id="li-5833" style="width:49%; float:left;"><p id="p-9486">\(f^{−1} (x) = 3^{x−4} + 9 \)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1907"><h5 class="heading"><span class="codenumber">22</span></h5>
-<p id="p-9485"></p>
+<p id="p-9487"></p>
 <ol id="ol-1857" style="list-style-type: lower-alpha;">
-<li id="li-5834"><p id="p-9486">What is the domain of the function \(f(x) = 1- \log_2(16-4x)\text{?}\)</p></li>
-<li id="li-5835"><p id="p-9487">Find a formula for \(f^{−1}(x)\text{.}\)</p></li>
+<li id="li-5834"><p id="p-9488">What is the domain of the function \(f(x) = 1- \log_2(16-4x)\text{?}\)</p></li>
+<li id="li-5835"><p id="p-9489">Find a formula for \(f^{−1}(x)\text{.}\)</p></li>
 </ol></article><article class="exercise-like" id="exercise-1908"><h5 class="heading"><span class="codenumber">23</span></h5>
-<p id="p-9488"></p>
+<p id="p-9490"></p>
 <ol id="ol-1858" style="list-style-type: lower-alpha;">
-<li id="li-5836"><p id="p-9489">Find the inverse of the function \(f (x) = 100 − 4^{x+2}\text{.}\)</p></li>
-<li id="li-5837"><p id="p-9490">Show that \(f^{−1}\) undoes the effect of \(f\) on \(x = 1\text{.}\)</p></li>
-<li id="li-5838"><p id="p-9491">Show that \(f\) undoes the effect of \(f^{−1}\) on \(x = 84\text{.}\)</p></li>
+<li id="li-5836"><p id="p-9491">Find the inverse of the function \(f (x) = 100 − 4^{x+2}\text{.}\)</p></li>
+<li id="li-5837"><p id="p-9492">Show that \(f^{−1}\) undoes the effect of \(f\) on \(x = 1\text{.}\)</p></li>
+<li id="li-5838"><p id="p-9493">Show that \(f\) undoes the effect of \(f^{−1}\) on \(x = 84\text{.}\)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1016" id="answer-1016"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1016" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9492"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1016" id="answer-1016"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1016" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9494"></p>
 <ol id="ol-1859" style="list-style-type: lower-alpha;">
-<li id="li-5839"><p id="p-9493">\(f^{-1}(x)= \log_4 (100 − x) − 2 \)</p></li>
-<li id="li-5840"><p id="p-9494">\(f^{−1} (f(1)) = f^{−1}(36)=\log_4(64)-2=1 \)</p></li>
-<li id="li-5841"><p id="p-9495">\(f\left(f^{−1} (84)\right)= f (0) = 100 − 4^2 = 84\)</p></li>
+<li id="li-5839"><p id="p-9495">\(f^{-1}(x)= \log_4 (100 − x) − 2 \)</p></li>
+<li id="li-5840"><p id="p-9496">\(f^{−1} (f(1)) = f^{−1}(36)=\log_4(64)-2=1 \)</p></li>
+<li id="li-5841"><p id="p-9497">\(f\left(f^{−1} (84)\right)= f (0) = 100 − 4^2 = 84\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1909"><h5 class="heading"><span class="codenumber">24</span></h5>
-<p id="p-9496"></p>
+<p id="p-9498"></p>
 <ol id="ol-1860" style="list-style-type: lower-alpha;">
-<li id="li-5842"><p id="p-9497">Find the inverse of the function \(f (x) = 5 + 2^{−x}\text{.}\)</p></li>
-<li id="li-5843"><p id="p-9498">Show that \(f^{−1}\) undoes the effect of \(f\) on \(x = -2\text{.}\)</p></li>
-<li id="li-5844"><p id="p-9499">Show that \(f\) undoes the effect of \(f^{−1}\) on \(x = 6\text{.}\)</p></li>
+<li id="li-5842"><p id="p-9499">Find the inverse of the function \(f (x) = 5 + 2^{−x}\text{.}\)</p></li>
+<li id="li-5843"><p id="p-9500">Show that \(f^{−1}\) undoes the effect of \(f\) on \(x = -2\text{.}\)</p></li>
+<li id="li-5844"><p id="p-9501">Show that \(f\) undoes the effect of \(f^{−1}\) on \(x = 6\text{.}\)</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-261">
-<article class="introduction" id="introduction-265"><p id="p-9500">Match each graph to its equation.</p></article><div class="exercisegroup-exercises">
+<article class="introduction" id="introduction-265"><p id="p-9502">Match each graph to its equation.</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-1910"><h5 class="heading"><span class="codenumber">25</span></h5>
-<p id="p-9501"></p>
+<p id="p-9503"></p>
 <ol id="ol-1861" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5845" style="width:49%; float:left;"><p id="p-9502">\(y = \log_2(x − 3) \)</p></li>
-<li id="li-5846" style="width:49%; float:left;"><p id="p-9503">\(y = 3 + \log_2 x \)</p></li>
-<li id="li-5847" style="width:49%; float:left;"><p id="p-9504">\(y=2 − \log_2 x \)</p></li>
-<li id="li-5848" style="width:49%; float:left;"><p id="p-9505">\(y = \log_2(x + 4) − 1 \)</p></li>
+<li id="li-5845" style="width:49%; float:left;"><p id="p-9504">\(y = \log_2(x − 3) \)</p></li>
+<li id="li-5846" style="width:49%; float:left;"><p id="p-9505">\(y = 3 + \log_2 x \)</p></li>
+<li id="li-5847" style="width:49%; float:left;"><p id="p-9506">\(y=2 − \log_2 x \)</p></li>
+<li id="li-5848" style="width:49%; float:left;"><p id="p-9507">\(y = \log_2(x + 4) − 1 \)</p></li>
 </ol>
 <ol id="ol-1862" class="cols2" style="list-style-type: upper-roman;">
-<li id="li-5849" style="width:49%; float:left;"><p id="p-9506"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-5-2-25-I.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
-<li id="li-5850" style="width:49%; float:left;"><p id="p-9507"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-5-2-25-II.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
-<li id="li-5851" style="width:49%; float:left;"><p id="p-9508"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-5-2-25-III.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
-<li id="li-5852" style="width:49%; float:left;"><p id="p-9509"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-5-2-25-IV.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-5849" style="width:49%; float:left;"><p id="p-9508"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-5-2-25-I.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-5850" style="width:49%; float:left;"><p id="p-9509"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-5-2-25-II.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-5851" style="width:49%; float:left;"><p id="p-9510"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-5-2-25-III.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-5852" style="width:49%; float:left;"><p id="p-9511"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-5-2-25-IV.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1017" id="answer-1017"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1017" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9510"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1017" id="answer-1017"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1017" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9512"></p>
 <ol id="ol-1863" class="cols4" style="list-style-type: lower-alpha;">
-<li id="li-5853" style="width:24.5%; float:left;"><p id="p-9511">IV</p></li>
-<li id="li-5854" style="width:24.5%; float:left;"><p id="p-9512">I</p></li>
-<li id="li-5855" style="width:24.5%; float:left;"><p id="p-9513">II</p></li>
-<li id="li-5856" style="width:24.5%; float:left;"><p id="p-9514">III</p></li>
+<li id="li-5853" style="width:24.5%; float:left;"><p id="p-9513">IV</p></li>
+<li id="li-5854" style="width:24.5%; float:left;"><p id="p-9514">I</p></li>
+<li id="li-5855" style="width:24.5%; float:left;"><p id="p-9515">II</p></li>
+<li id="li-5856" style="width:24.5%; float:left;"><p id="p-9516">III</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1911"><h5 class="heading"><span class="codenumber">26</span></h5>
-<p id="p-9515"></p>
+<p id="p-9517"></p>
 <ol id="ol-1864" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5857" style="width:49%; float:left;"><p id="p-9516">\(y = 5\log x \)</p></li>
-<li id="li-5858" style="width:49%; float:left;"><p id="p-9517">\(y = \log \dfrac{x}{2} \)</p></li>
-<li id="li-5859" style="width:49%; float:left;"><p id="p-9518">\(y= \log \dfrac{1}{x} \)</p></li>
-<li id="li-5860" style="width:49%; float:left;"><p id="p-9519">\(y = \log(-x) \)</p></li>
+<li id="li-5857" style="width:49%; float:left;"><p id="p-9518">\(y = 5\log x \)</p></li>
+<li id="li-5858" style="width:49%; float:left;"><p id="p-9519">\(y = \log \dfrac{x}{2} \)</p></li>
+<li id="li-5859" style="width:49%; float:left;"><p id="p-9520">\(y= \log \dfrac{1}{x} \)</p></li>
+<li id="li-5860" style="width:49%; float:left;"><p id="p-9521">\(y = \log(-x) \)</p></li>
 </ol>
 <ol id="ol-1865" class="cols2" style="list-style-type: upper-roman;">
-<li id="li-5861" style="width:49%; float:left;"><p id="p-9520"><object type="image/svg+xml" style="width:75%; margin:auto; display:block;" data="images/fig-5-2-26-I.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
-<li id="li-5862" style="width:49%; float:left;"><p id="p-9521"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-5-2-26-II.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
-<li id="li-5863" style="width:49%; float:left;"><p id="p-9522"><object type="image/svg+xml" style="width:75%; margin:auto; display:block;" data="images/fig-5-2-26-III.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
-<li id="li-5864" style="width:49%; float:left;"><p id="p-9523"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-5-2-26-IV.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-5861" style="width:49%; float:left;"><p id="p-9522"><object type="image/svg+xml" style="width:75%; margin:auto; display:block;" data="images/fig-5-2-26-I.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-5862" style="width:49%; float:left;"><p id="p-9523"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-5-2-26-II.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-5863" style="width:49%; float:left;"><p id="p-9524"><object type="image/svg+xml" style="width:75%; margin:auto; display:block;" data="images/fig-5-2-26-III.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-5864" style="width:49%; float:left;"><p id="p-9525"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-5-2-26-IV.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></article>
 </div>
 </div>
 <article class="exercise-like" id="exercise-1912"><h5 class="heading"><span class="codenumber">27</span></h5>
-<p id="p-9524">In a psychology experiment, volunteers were asked to memorize a list of nonsense words, then 24 hours later were tested to see how many of the words they recalled. On average, the subjects had forgotten \(20\%\) of the words. The researchers found that the more lists their volunteers memorized, the larger the fraction of words they were unable to recall. (Source: Underwood, <span class="booktitle">Scientific American</span>, vol. 210, no. 3) <figure class="figure-like" id="table-317"><table>
+<p id="p-9526">In a psychology experiment, volunteers were asked to memorize a list of nonsense words, then 24 hours later were tested to see how many of the words they recalled. On average, the subjects had forgotten \(20\%\) of the words. The researchers found that the more lists their volunteers memorized, the larger the fraction of words they were unable to recall. (Source: Underwood, <span class="booktitle">Scientific American</span>, vol. 210, no. 3) <figure class="figure-like" id="table-317"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Number of lists, \(n\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(1\)</td>
@@ -972,22 +977,22 @@ x + x + 1 \amp= 10^2
 </tr>
 </table></figure> </p>
 <ol id="ol-1866" style="list-style-type: lower-alpha;">
-<li id="li-5865"><p id="p-9525">Plot the data. What sort of function seems to fit the data points?</p></li>
-<li id="li-5866"><p id="p-9526">Psychologists often describe rates of forgetting by logarithmic functions. Graph the function
+<li id="li-5865"><p id="p-9527">Plot the data. What sort of function seems to fit the data points?</p></li>
+<li id="li-5866"><p id="p-9528">Psychologists often describe rates of forgetting by logarithmic functions. Graph the function
 \begin{equation*}
 f (n) = 16.6 + 46.3 \log n
 \end{equation*}
 on the same graph with your data. Comment on the fit.</p></li>
-<li id="li-5867"><p id="p-9527">What happens to the function \(f (n)\) as \(n\) grows increasingly large? Does this behavior accurately reflect the situation being modeled?</p></li>
+<li id="li-5867"><p id="p-9529">What happens to the function \(f (n)\) as \(n\) grows increasingly large? Does this behavior accurately reflect the situation being modeled?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1018" id="answer-1018"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1018" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9528"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1018" id="answer-1018"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1018" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9530"></p>
 <ol id="ol-1867" style="list-style-type: lower-alpha;">
-<li id="li-5868"><p id="p-9529"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-ans-5-2-27.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
-<li id="li-5869"><p id="p-9530">The graph resembles a logarithmic function. The (translated) log function is close to the points but appears too steep at first and not steep enough after \(n = 15\text{.}\) Overall, it is a good fit.</p></li>
-<li id="li-5870"><p id="p-9531">\(f\) grows (more and more slowly) without bound. \(f\) will eventually exceed \(100\) per cent, but no one can forget more than \(100\%\) of what is learned.</p></li>
+<li id="li-5868"><p id="p-9531"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-ans-5-2-27.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-5869"><p id="p-9532">The graph resembles a logarithmic function. The (translated) log function is close to the points but appears too steep at first and not steep enough after \(n = 15\text{.}\) Overall, it is a good fit.</p></li>
+<li id="li-5870"><p id="p-9533">\(f\) grows (more and more slowly) without bound. \(f\) will eventually exceed \(100\) per cent, but no one can forget more than \(100\%\) of what is learned.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1913"><h5 class="heading"><span class="codenumber">28</span></h5>
-<p id="p-9532">The water velocity at any point in a stream or river is related to the logarithm of the depth at that point. For the Hoback River near Bondurant, Wyoming,
+<p id="p-9534">The water velocity at any point in a stream or river is related to the logarithm of the depth at that point. For the Hoback River near Bondurant, Wyoming,
 \begin{equation*}
 v = 2.63 + 1.03 \log d
 \end{equation*}
@@ -997,7 +1002,7 @@ v = 1.96 + 0.65 \log d
 \end{equation*}
 Both streams are \(1.2\) feet deep at the locations mentioned. (Source: Leopold, Luna, Wolman, and Gordon, 1992) </p>
 <ol id="ol-1868" style="list-style-type: lower-alpha;">
-<li id="li-5871"><p id="p-9533">Complete the table of values for each stream. <figure class="figure-like" id="table-318"><table>
+<li id="li-5871"><p id="p-9535">Complete the table of values for each stream. <figure class="figure-like" id="table-318"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Distance from bed (feet)</td>
 <td class="l m b1 r1 l0 t1 lines">\(0.2\)</td>
@@ -1026,167 +1031,167 @@ Both streams are \(1.2\) feet deep at the locations mentioned. (Source: Leopold,
 <td class="l m b1 r1 l0 t0 lines"></td>
 </tr>
 </table></figure></p></li>
-<li id="li-5872"><p id="p-9534">If you double the distance from the bed, by how much does the velocity increase in each stream?</p></li>
-<li id="li-5873"><p id="p-9535">Plot both functions on the same graph.</p></li>
-<li id="li-5874"><p id="p-9536">The average velocity of the entire stream can be closely approximated as follows: Measure the velocity at \(20\%\) of the total depth of the stream from the surface and at \(80\%\) of the total depth, then average these two values. Find the average velocity for the Hoback River and for Pole Creek.</p></li>
+<li id="li-5872"><p id="p-9536">If you double the distance from the bed, by how much does the velocity increase in each stream?</p></li>
+<li id="li-5873"><p id="p-9537">Plot both functions on the same graph.</p></li>
+<li id="li-5874"><p id="p-9538">The average velocity of the entire stream can be closely approximated as follows: Measure the velocity at \(20\%\) of the total depth of the stream from the surface and at \(80\%\) of the total depth, then average these two values. Find the average velocity for the Hoback River and for Pole Creek.</p></li>
 </ol>
 <p></p></article><div class="exercisegroup" id="exercisegroup-262">
-<article class="introduction" id="introduction-266"><p id="p-9537">n Problems 29–30, \(f (x) = \log_{10} x\text{.}\) Solve for \(x\text{.}\)</p></article><div class="exercisegroup-exercises">
+<article class="introduction" id="introduction-266"><p id="p-9539">n Problems 29–30, \(f (x) = \log_{10} x\text{.}\) Solve for \(x\text{.}\)</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-1914"><h5 class="heading"><span class="codenumber">29</span></h5>
-<p id="p-9538"></p>
+<p id="p-9540"></p>
 <ol id="ol-1869" class="cols3" style="list-style-type: lower-alpha;">
-<li id="li-5875" style="width:32.6666666666667%; float:left;"><p id="p-9539">\(f (x) = 1.41\)</p></li>
-<li id="li-5876" style="width:32.6666666666667%; float:left;"><p id="p-9540">\(f (x) = -1.69\)</p></li>
-<li id="li-5877" style="width:32.6666666666667%; float:left;"><p id="p-9541">\(f (x) = 0.52\)</p></li>
+<li id="li-5875" style="width:32.6666666666667%; float:left;"><p id="p-9541">\(f (x) = 1.41\)</p></li>
+<li id="li-5876" style="width:32.6666666666667%; float:left;"><p id="p-9542">\(f (x) = -1.69\)</p></li>
+<li id="li-5877" style="width:32.6666666666667%; float:left;"><p id="p-9543">\(f (x) = 0.52\)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1019" id="answer-1019"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1019" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9542"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1019" id="answer-1019"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1019" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9544"></p>
 <ol id="ol-1870" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5878" style="width:49%; float:left;"><p id="p-9543">\(10^{1.41}\approx 25.704 \)</p></li>
-<li id="li-5879" style="width:49%; float:left;"><p id="p-9544">\(10^{-1.69}\approx 0.020417 \)</p></li>
-<li id="li-5880" style="width:49%; float:left;"><p id="p-9545">\(10^{0.52}\approx 3.3113 \)</p></li>
+<li id="li-5878" style="width:49%; float:left;"><p id="p-9545">\(10^{1.41}\approx 25.704 \)</p></li>
+<li id="li-5879" style="width:49%; float:left;"><p id="p-9546">\(10^{-1.69}\approx 0.020417 \)</p></li>
+<li id="li-5880" style="width:49%; float:left;"><p id="p-9547">\(10^{0.52}\approx 3.3113 \)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1915"><h5 class="heading"><span class="codenumber">30</span></h5>
-<p id="p-9546"></p>
+<p id="p-9548"></p>
 <ol id="ol-1871" class="cols3" style="list-style-type: lower-alpha;">
-<li id="li-5881" style="width:32.6666666666667%; float:left;"><p id="p-9547">\(f (x) = 2.3\)</p></li>
-<li id="li-5882" style="width:32.6666666666667%; float:left;"><p id="p-9548">\(f (x) = -1.3\)</p></li>
-<li id="li-5883" style="width:32.6666666666667%; float:left;"><p id="p-9549">\(f (x) = 0.8\)</p></li>
+<li id="li-5881" style="width:32.6666666666667%; float:left;"><p id="p-9549">\(f (x) = 2.3\)</p></li>
+<li id="li-5882" style="width:32.6666666666667%; float:left;"><p id="p-9550">\(f (x) = -1.3\)</p></li>
+<li id="li-5883" style="width:32.6666666666667%; float:left;"><p id="p-9551">\(f (x) = 0.8\)</p></li>
 </ol></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-263">
-<article class="introduction" id="introduction-267"><p id="p-9550">Convert each logarithmic equation to exponential form.</p></article><div class="exercisegroup-exercises cols3">
+<article class="introduction" id="introduction-267"><p id="p-9552">Convert each logarithmic equation to exponential form.</p></article><div class="exercisegroup-exercises cols3">
 <article class="exercise-like" id="exercise-1916"><h5 class="heading"><span class="codenumber">31</span></h5>
-<p id="p-9551">\(\log_{16}256 = w\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1020" id="answer-1020"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1020" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9552">\(16^w = 256\)</p></span></span> </article><article class="exercise-like" id="exercise-1917"><h5 class="heading"><span class="codenumber">32</span></h5>
-<p id="p-9553">\(\log_{9}729 = y\)</p></article><article class="exercise-like" id="exercise-1918"><h5 class="heading"><span class="codenumber">33</span></h5>
-<p id="p-9554">\(\log_{b}9 = -2\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1021" id="answer-1021"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1021" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9555">\(b^{-2} = 9\)</p></span></span> </article><article class="exercise-like" id="exercise-1919"><h5 class="heading"><span class="codenumber">34</span></h5>
-<p id="p-9556">\(\log_{b}8 = -3\)</p></article><article class="exercise-like" id="exercise-1920"><h5 class="heading"><span class="codenumber">35</span></h5>
-<p id="p-9557">\(\log_{10}A = -2.3\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1022" id="answer-1022"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1022" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9558">\(10^{-2.3} = A\)</p></span></span> </article><article class="exercise-like" id="exercise-1921"><h5 class="heading"><span class="codenumber">36</span></h5>
-<p id="p-9559">\(\log_{10}C = -4.5\)</p></article><article class="exercise-like" id="exercise-1922"><h5 class="heading"><span class="codenumber">37</span></h5>
-<p id="p-9560">\(\log_{u}v = w\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1023" id="answer-1023"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1023" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9561">\(u^{w} = v\)</p></span></span> </article><article class="exercise-like" id="exercise-1923"><h5 class="heading"><span class="codenumber">38</span></h5>
-<p id="p-9562">\(\log_{m}n = p\)</p></article>
+<p id="p-9553">\(\log_{16}256 = w\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1020" id="answer-1020"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1020" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9554">\(16^w = 256\)</p></span></span> </article><article class="exercise-like" id="exercise-1917"><h5 class="heading"><span class="codenumber">32</span></h5>
+<p id="p-9555">\(\log_{9}729 = y\)</p></article><article class="exercise-like" id="exercise-1918"><h5 class="heading"><span class="codenumber">33</span></h5>
+<p id="p-9556">\(\log_{b}9 = -2\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1021" id="answer-1021"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1021" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9557">\(b^{-2} = 9\)</p></span></span> </article><article class="exercise-like" id="exercise-1919"><h5 class="heading"><span class="codenumber">34</span></h5>
+<p id="p-9558">\(\log_{b}8 = -3\)</p></article><article class="exercise-like" id="exercise-1920"><h5 class="heading"><span class="codenumber">35</span></h5>
+<p id="p-9559">\(\log_{10}A = -2.3\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1022" id="answer-1022"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1022" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9560">\(10^{-2.3} = A\)</p></span></span> </article><article class="exercise-like" id="exercise-1921"><h5 class="heading"><span class="codenumber">36</span></h5>
+<p id="p-9561">\(\log_{10}C = -4.5\)</p></article><article class="exercise-like" id="exercise-1922"><h5 class="heading"><span class="codenumber">37</span></h5>
+<p id="p-9562">\(\log_{u}v = w\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1023" id="answer-1023"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1023" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9563">\(u^{w} = v\)</p></span></span> </article><article class="exercise-like" id="exercise-1923"><h5 class="heading"><span class="codenumber">38</span></h5>
+<p id="p-9564">\(\log_{m}n = p\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-264">
-<article class="introduction" id="introduction-268"><p id="p-9563">Solve for the unknown value.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-268"><p id="p-9565">Solve for the unknown value.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1924"><h5 class="heading"><span class="codenumber">39</span></h5>
-<p id="p-9564">\(\log_{b} 8 = 3\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1024" id="answer-1024"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1024" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9565">\(b=2\)</p></span></span> </article><article class="exercise-like" id="exercise-1925"><h5 class="heading"><span class="codenumber">40</span></h5>
-<p id="p-9566">\(\log_{b} 625 = 4\)</p></article><article class="exercise-like" id="exercise-1926"><h5 class="heading"><span class="codenumber">41</span></h5>
-<p id="p-9567">\(\log_{b} 10 = \dfrac{1}{2} \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1025" id="answer-1025"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1025" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9568">\(b=100\)</p></span></span> </article><article class="exercise-like" id="exercise-1927"><h5 class="heading"><span class="codenumber">42</span></h5>
-<p id="p-9569">\(\log_{b} 0.1 = -1\)</p></article><article class="exercise-like" id="exercise-1928"><h5 class="heading"><span class="codenumber">43</span></h5>
-<p id="p-9570">\(\log_{2} (3x-1) = 5 \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1026" id="answer-1026"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1026" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9571">\(x=11\)</p></span></span> </article><article class="exercise-like" id="exercise-1929"><h5 class="heading"><span class="codenumber">44</span></h5>
-<p id="p-9572">\(\log_{5} (9-4x) = 3\)</p></article><article class="exercise-like" id="exercise-1930"><h5 class="heading"><span class="codenumber">45</span></h5>
-<p id="p-9573">\(3(\log_{7} x) + 5=7 \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1027" id="answer-1027"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1027" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9574">\(x=7^{2/3} \)</p></span></span> </article><article class="exercise-like" id="exercise-1931"><h5 class="heading"><span class="codenumber">46</span></h5>
-<p id="p-9575">\(5(\log_{2} x)+6 = -14\)</p></article>
+<p id="p-9566">\(\log_{b} 8 = 3\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1024" id="answer-1024"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1024" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9567">\(b=2\)</p></span></span> </article><article class="exercise-like" id="exercise-1925"><h5 class="heading"><span class="codenumber">40</span></h5>
+<p id="p-9568">\(\log_{b} 625 = 4\)</p></article><article class="exercise-like" id="exercise-1926"><h5 class="heading"><span class="codenumber">41</span></h5>
+<p id="p-9569">\(\log_{b} 10 = \dfrac{1}{2} \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1025" id="answer-1025"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1025" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9570">\(b=100\)</p></span></span> </article><article class="exercise-like" id="exercise-1927"><h5 class="heading"><span class="codenumber">42</span></h5>
+<p id="p-9571">\(\log_{b} 0.1 = -1\)</p></article><article class="exercise-like" id="exercise-1928"><h5 class="heading"><span class="codenumber">43</span></h5>
+<p id="p-9572">\(\log_{2} (3x-1) = 5 \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1026" id="answer-1026"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1026" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9573">\(x=11\)</p></span></span> </article><article class="exercise-like" id="exercise-1929"><h5 class="heading"><span class="codenumber">44</span></h5>
+<p id="p-9574">\(\log_{5} (9-4x) = 3\)</p></article><article class="exercise-like" id="exercise-1930"><h5 class="heading"><span class="codenumber">45</span></h5>
+<p id="p-9575">\(3(\log_{7} x) + 5=7 \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1027" id="answer-1027"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1027" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9576">\(x=7^{2/3} \)</p></span></span> </article><article class="exercise-like" id="exercise-1931"><h5 class="heading"><span class="codenumber">46</span></h5>
+<p id="p-9577">\(5(\log_{2} x)+6 = -14\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-265">
-<article class="introduction" id="introduction-269"><p id="p-9576">Solve each logarithmic equation.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-269"><p id="p-9578">Solve each logarithmic equation.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1932"><h5 class="heading"><span class="codenumber">47</span></h5>
-<p id="p-9577">\(\log_{10} x + \log_{10}(x + 21) = 2\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1028" id="answer-1028"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1028" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9578">\(x=4\)</p></span></span> </article><article class="exercise-like" id="exercise-1933"><h5 class="heading"><span class="codenumber">48</span></h5>
-<p id="p-9579">\(\log_{10} (x+3) + \log_{10}x = 1\)</p></article><article class="exercise-like" id="exercise-1934"><h5 class="heading"><span class="codenumber">49</span></h5>
-<p id="p-9580">\(\log_{8} (x+5) - \log_{8}2 = 1\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1029" id="answer-1029"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1029" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9581">\(x=11\)</p></span></span> </article><article class="exercise-like" id="exercise-1935"><h5 class="heading"><span class="codenumber">50</span></h5>
-<p id="p-9582">\(\log_{10} (x-1) - \log_{10}4 = 2\)</p></article><article class="exercise-like" id="exercise-1936"><h5 class="heading"><span class="codenumber">51</span></h5>
-<p id="p-9583">\(\log_{10} (x+2) + \log_{10}(x-1) = 1\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1030" id="answer-1030"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1030" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9584">\(x=3\)</p></span></span> </article><article class="exercise-like" id="exercise-1937"><h5 class="heading"><span class="codenumber">52</span></h5>
-<p id="p-9585">\(\log_{4} (x+8) - \log_{4}(x+2) = 2\)</p></article><article class="exercise-like" id="exercise-1938"><h5 class="heading"><span class="codenumber">53</span></h5>
-<p id="p-9586">\(\log_{3} (x-2) - \log_{3}(x+1) = 3\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1031" id="answer-1031"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1031" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9587">No solution</p></span></span> </article><article class="exercise-like" id="exercise-1939"><h5 class="heading"><span class="codenumber">54</span></h5>
-<p id="p-9588">\(\log_{10} (x+3) - \log_{10}(x-1) = 1\)</p></article>
+<p id="p-9579">\(\log_{10} x + \log_{10}(x + 21) = 2\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1028" id="answer-1028"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1028" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9580">\(x=4\)</p></span></span> </article><article class="exercise-like" id="exercise-1933"><h5 class="heading"><span class="codenumber">48</span></h5>
+<p id="p-9581">\(\log_{10} (x+3) + \log_{10}x = 1\)</p></article><article class="exercise-like" id="exercise-1934"><h5 class="heading"><span class="codenumber">49</span></h5>
+<p id="p-9582">\(\log_{8} (x+5) - \log_{8}2 = 1\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1029" id="answer-1029"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1029" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9583">\(x=11\)</p></span></span> </article><article class="exercise-like" id="exercise-1935"><h5 class="heading"><span class="codenumber">50</span></h5>
+<p id="p-9584">\(\log_{10} (x-1) - \log_{10}4 = 2\)</p></article><article class="exercise-like" id="exercise-1936"><h5 class="heading"><span class="codenumber">51</span></h5>
+<p id="p-9585">\(\log_{10} (x+2) + \log_{10}(x-1) = 1\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1030" id="answer-1030"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1030" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9586">\(x=3\)</p></span></span> </article><article class="exercise-like" id="exercise-1937"><h5 class="heading"><span class="codenumber">52</span></h5>
+<p id="p-9587">\(\log_{4} (x+8) - \log_{4}(x+2) = 2\)</p></article><article class="exercise-like" id="exercise-1938"><h5 class="heading"><span class="codenumber">53</span></h5>
+<p id="p-9588">\(\log_{3} (x-2) - \log_{3}(x+1) = 3\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1031" id="answer-1031"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1031" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9589">No solution</p></span></span> </article><article class="exercise-like" id="exercise-1939"><h5 class="heading"><span class="codenumber">54</span></h5>
+<p id="p-9590">\(\log_{10} (x+3) - \log_{10}(x-1) = 1\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-266">
-<article class="introduction" id="introduction-270"><p id="p-9589">Solve for the indicated variable.</p></article><div class="exercisegroup-exercises">
+<article class="introduction" id="introduction-270"><p id="p-9591">Solve for the indicated variable.</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-1940"><h5 class="heading"><span class="codenumber">55</span></h5>
-<p id="p-9590">\(t = T \log_{10}\left(1+\dfrac{A}{k} \right)\text{,}\) for \(A\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1032" id="answer-1032"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1032" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9591">\(A=k(10^{t/T}-1) \)</p></span></span> </article><article class="exercise-like" id="exercise-1941"><h5 class="heading"><span class="codenumber">56</span></h5>
-<p id="p-9592">\(\log_{10} R= \log_{10} R_0 +kt \text{,}\) for \(R\)</p></article><article class="exercise-like" id="exercise-1942"><h5 class="heading"><span class="codenumber">57</span></h5>
-<p id="p-9593">\(N=N_0 \log_b (ks) \text{,}\) for \(s\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1033" id="answer-1033"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1033" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9594">\(s=\dfrac{b^{N/N_0}}{k} \)</p></span></span> </article><article class="exercise-like" id="exercise-1943"><h5 class="heading"><span class="codenumber">58</span></h5>
-<p id="p-9595">\(T=\dfrac{H\log_{10}\dfrac{N}{N _0} }{\log_{10} \dfrac{1}{2}} \text{,}\) for \(N\)</p></article><article class="exercise-like" id="exercise-1944"><h5 class="heading"><span class="codenumber">59</span></h5>
-<p id="p-9596">\(M=\sqrt{\dfrac{\log_{10}H}{k\log_{10} H_0}} \text{,}\) for \(H\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1034" id="answer-1034"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1034" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9597">\(H=(H_0)^{kM^2} \)</p></span></span> </article><article class="exercise-like" id="exercise-1945"><h5 class="heading"><span class="codenumber">60</span></h5>
-<p id="p-9598">\(h=a-\sqrt{\dfrac{\log_{10}B}{t}} \text{,}\) for \(B\)</p></article>
+<p id="p-9592">\(t = T \log_{10}\left(1+\dfrac{A}{k} \right)\text{,}\) for \(A\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1032" id="answer-1032"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1032" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9593">\(A=k(10^{t/T}-1) \)</p></span></span> </article><article class="exercise-like" id="exercise-1941"><h5 class="heading"><span class="codenumber">56</span></h5>
+<p id="p-9594">\(\log_{10} R= \log_{10} R_0 +kt \text{,}\) for \(R\)</p></article><article class="exercise-like" id="exercise-1942"><h5 class="heading"><span class="codenumber">57</span></h5>
+<p id="p-9595">\(N=N_0 \log_b (ks) \text{,}\) for \(s\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1033" id="answer-1033"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1033" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9596">\(s=\dfrac{b^{N/N_0}}{k} \)</p></span></span> </article><article class="exercise-like" id="exercise-1943"><h5 class="heading"><span class="codenumber">58</span></h5>
+<p id="p-9597">\(T=\dfrac{H\log_{10}\dfrac{N}{N _0} }{\log_{10} \dfrac{1}{2}} \text{,}\) for \(N\)</p></article><article class="exercise-like" id="exercise-1944"><h5 class="heading"><span class="codenumber">59</span></h5>
+<p id="p-9598">\(M=\sqrt{\dfrac{\log_{10}H}{k\log_{10} H_0}} \text{,}\) for \(H\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1034" id="answer-1034"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1034" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9599">\(H=(H_0)^{kM^2} \)</p></span></span> </article><article class="exercise-like" id="exercise-1945"><h5 class="heading"><span class="codenumber">60</span></h5>
+<p id="p-9600">\(h=a-\sqrt{\dfrac{\log_{10}B}{t}} \text{,}\) for \(B\)</p></article>
 </div>
 </div>
 <article class="exercise-like" id="exercise-1946"><h5 class="heading"><span class="codenumber">61</span></h5>
-<p id="p-9599">Choose the graph for each function described below. <div class="sidebyside" style="" id="sidebyside-109"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<p id="p-9601">Choose the graph for each function described below. <div class="sidebyside" style="" id="sidebyside-109"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel" style="width:55%;justify-content:flex-start;">
-<p id="p-9600"></p>
+<p id="p-9602"></p>
 <ol id="ol-1872" style="list-style-type: lower-alpha;">
-<li id="li-5884"><p id="p-9601">The area, \(A\text{,}\) of a pentagon is a quadratic function of the length, \(l\text{,}\) of its side.</p></li>
-<li id="li-5885"><p id="p-9602">The strength, \(F\text{,}\) of a hurricane varies inversely with its speed, \(s\text{.}\)</p></li>
-<li id="li-5886"><p id="p-9603">The price of food has increased by \(3\%\) every year for a decade.</p></li>
-<li id="li-5887"><p id="p-9604">The magnitude, \(M\text{,}\) of a star is a logarithmic function of its brightness, \(I\text{.}\)</p></li>
-<li id="li-5888"><p id="p-9605">The speed of the train increased at a constant rate.</p></li>
-<li id="li-5889"><p id="p-9606">If you do not practice a foreign language, you lose \(\frac{1}{8} \) of the words in your working vocabulary, \(V\text{,}\) each year.</p></li>
+<li id="li-5884"><p id="p-9603">The area, \(A\text{,}\) of a pentagon is a quadratic function of the length, \(l\text{,}\) of its side.</p></li>
+<li id="li-5885"><p id="p-9604">The strength, \(F\text{,}\) of a hurricane varies inversely with its speed, \(s\text{.}\)</p></li>
+<li id="li-5886"><p id="p-9605">The price of food has increased by \(3\%\) every year for a decade.</p></li>
+<li id="li-5887"><p id="p-9606">The magnitude, \(M\text{,}\) of a star is a logarithmic function of its brightness, \(I\text{.}\)</p></li>
+<li id="li-5888"><p id="p-9607">The speed of the train increased at a constant rate.</p></li>
+<li id="li-5889"><p id="p-9608">If you do not practice a foreign language, you lose \(\frac{1}{8} \) of the words in your working vocabulary, \(V\text{,}\) each year.</p></li>
 </ol>
 <p></p>
 </div>
 <div class="sbspanel" style="width:43%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-5-2-61.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
 </div></div></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1035" id="answer-1035"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1035" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9607"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1035" id="answer-1035"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1035" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9609"></p>
 <ol id="ol-1873" class="cols3" style="list-style-type: lower-alpha;">
-<li id="li-5890" style="width:32.6666666666667%; float:left;"><p id="p-9608">II</p></li>
-<li id="li-5891" style="width:32.6666666666667%; float:left;"><p id="p-9609">VI</p></li>
-<li id="li-5892" style="width:32.6666666666667%; float:left;"><p id="p-9610">III</p></li>
-<li id="li-5893" style="width:32.6666666666667%; float:left;"><p id="p-9611">V</p></li>
-<li id="li-5894" style="width:32.6666666666667%; float:left;"><p id="p-9612">I</p></li>
-<li id="li-5895" style="width:32.6666666666667%; float:left;"><p id="p-9613">IV</p></li>
+<li id="li-5890" style="width:32.6666666666667%; float:left;"><p id="p-9610">II</p></li>
+<li id="li-5891" style="width:32.6666666666667%; float:left;"><p id="p-9611">VI</p></li>
+<li id="li-5892" style="width:32.6666666666667%; float:left;"><p id="p-9612">III</p></li>
+<li id="li-5893" style="width:32.6666666666667%; float:left;"><p id="p-9613">V</p></li>
+<li id="li-5894" style="width:32.6666666666667%; float:left;"><p id="p-9614">I</p></li>
+<li id="li-5895" style="width:32.6666666666667%; float:left;"><p id="p-9615">IV</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1947"><h5 class="heading"><span class="codenumber">62</span></h5>
-<p id="p-9614">For each of the functions listed below, select the graph of its inverse function, if possible, from the figures labeled I–VI. (The inverse of one of the functions is not shown.) </p>
+<p id="p-9616">For each of the functions listed below, select the graph of its inverse function, if possible, from the figures labeled I–VI. (The inverse of one of the functions is not shown.) </p>
 <ol id="ol-1874" class="cols3" style="list-style-type: lower-alpha;">
-<li id="li-5896" style="width:32.6666666666667%; float:left;"><p id="p-9615">\(f (x) = 2^x\)</p></li>
-<li id="li-5897" style="width:32.6666666666667%; float:left;"><p id="p-9616">\(f (x) = x^2, ~~x \ge 0\)</p></li>
-<li id="li-5898" style="width:32.6666666666667%; float:left;"><p id="p-9617">\(f (x) = \dfrac{2}{x} \)</p></li>
-<li id="li-5899" style="width:32.6666666666667%; float:left;"><p id="p-9618">\(f(x)=\sqrt{x} \)</p></li>
-<li id="li-5900" style="width:32.6666666666667%; float:left;"><p id="p-9619">\(f (x) = \log_2 x\)</p></li>
-<li id="li-5901" style="width:32.6666666666667%; float:left;"><p id="p-9620">\(f(x)=\left(\dfrac{1}{2} \right)^x \)</p></li>
+<li id="li-5896" style="width:32.6666666666667%; float:left;"><p id="p-9617">\(f (x) = 2^x\)</p></li>
+<li id="li-5897" style="width:32.6666666666667%; float:left;"><p id="p-9618">\(f (x) = x^2, ~~x \ge 0\)</p></li>
+<li id="li-5898" style="width:32.6666666666667%; float:left;"><p id="p-9619">\(f (x) = \dfrac{2}{x} \)</p></li>
+<li id="li-5899" style="width:32.6666666666667%; float:left;"><p id="p-9620">\(f(x)=\sqrt{x} \)</p></li>
+<li id="li-5900" style="width:32.6666666666667%; float:left;"><p id="p-9621">\(f (x) = \log_2 x\)</p></li>
+<li id="li-5901" style="width:32.6666666666667%; float:left;"><p id="p-9622">\(f(x)=\left(\dfrac{1}{2} \right)^x \)</p></li>
 </ol>
 <p> <figure class="figure-like" id="figure-289"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-5-2-62-I-II.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure> <figure class="figure-like" id="figure-290"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-5-2-62-III-IV.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure> <figure class="figure-like" id="figure-291"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-5-2-62-V-VI.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></article><div class="exercisegroup" id="exercisegroup-267">
-<article class="introduction" id="introduction-271"><p id="p-9621">Graph each function on the domain [−4, 4] and a suitable range. Which have inverses that are also functions?</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-271"><p id="p-9623">Graph each function on the domain [−4, 4] and a suitable range. Which have inverses that are also functions?</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1948"><h5 class="heading"><span class="codenumber">63</span></h5>
-<p id="p-9622"></p>
+<p id="p-9624"></p>
 <ol id="ol-1875" style="list-style-type: lower-alpha;">
-<li id="li-5902"><p id="p-9623">\(f (x) = 5(2^{−x^2})\)</p></li>
-<li id="li-5903"><p id="p-9624">\(f (x) = 2^x + 2^{−x}\)</p></li>
+<li id="li-5902"><p id="p-9625">\(f (x) = 5(2^{−x^2})\)</p></li>
+<li id="li-5903"><p id="p-9626">\(f (x) = 2^x + 2^{−x}\)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1036" id="answer-1036"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1036" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9625"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1036" id="answer-1036"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1036" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9627"></p>
 <ol id="ol-1876" style="list-style-type: lower-alpha;">
-<li id="li-5904"><p id="p-9626"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-ans-5-2-63.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> No inverse function</p></li>
-<li id="li-5905"><p id="p-9627"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-ans-5-2-63b.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> No inverse function</p></li>
+<li id="li-5904"><p id="p-9628"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-ans-5-2-63.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> No inverse function</p></li>
+<li id="li-5905"><p id="p-9629"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-ans-5-2-63b.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> No inverse function</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1949"><h5 class="heading"><span class="codenumber">64</span></h5>
-<p id="p-9628"></p>
+<p id="p-9630"></p>
 <ol id="ol-1877" style="list-style-type: lower-alpha;">
-<li id="li-5906"><p id="p-9629">\(f(x)=5(\log(x))^2+1 \)</p></li>
-<li id="li-5907"><p id="p-9630">\(f(x)=5\log(x^2+1) \)</p></li>
+<li id="li-5906"><p id="p-9631">\(f(x)=5(\log(x))^2+1 \)</p></li>
+<li id="li-5907"><p id="p-9632">\(f(x)=5\log(x^2+1) \)</p></li>
 </ol></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-268">
-<article class="introduction" id="introduction-272"><p id="p-9631">Graph each pair of functions on your calculator. Explain the result.</p></article><div class="exercisegroup-exercises">
+<article class="introduction" id="introduction-272"><p id="p-9633">Graph each pair of functions on your calculator. Explain the result.</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-1950"><h5 class="heading"><span class="codenumber">65</span></h5>
-<p id="p-9632">\(f (x) = \log(2x), ~~~g(x) = \log 2 + \log x\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1037" id="answer-1037"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1037" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9633"><img width="40%" src="images/fig-ans-5-2-65.jpg" alt=""> The functions are equal.</p></span></span> </article><article class="exercise-like" id="exercise-1951"><h5 class="heading"><span class="codenumber">66</span></h5>
-<p id="p-9634">\(f (x) = \log\left(\dfrac{x}{3}\right), ~~~g(x) = \log x - \log 3\)</p></article><article class="exercise-like" id="exercise-1952"><h5 class="heading"><span class="codenumber">67</span></h5>
-<p id="p-9635">\(f (x) =\log\left(\dfrac{1}{x}\right), ~~~g(x) = -\log x\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1038" id="answer-1038"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1038" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9636"><img width="40%" src="images/fig-ans-5-2-67.jpg" alt=""> The functions are equal.</p></span></span> </article><article class="exercise-like" id="exercise-1953"><h5 class="heading"><span class="codenumber">68</span></h5>
-<p id="p-9637">\(f (x) = \log(x^3), ~~~g(x) = 3 \log x\)</p></article>
+<p id="p-9634">\(f (x) = \log(2x), ~~~g(x) = \log 2 + \log x\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1037" id="answer-1037"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1037" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9635"><img width="40%" src="images/fig-ans-5-2-65.jpg" alt=""> The functions are equal.</p></span></span> </article><article class="exercise-like" id="exercise-1951"><h5 class="heading"><span class="codenumber">66</span></h5>
+<p id="p-9636">\(f (x) = \log\left(\dfrac{x}{3}\right), ~~~g(x) = \log x - \log 3\)</p></article><article class="exercise-like" id="exercise-1952"><h5 class="heading"><span class="codenumber">67</span></h5>
+<p id="p-9637">\(f (x) =\log\left(\dfrac{1}{x}\right), ~~~g(x) = -\log x\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1038" id="answer-1038"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1038" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9638"><img width="40%" src="images/fig-ans-5-2-67.jpg" alt=""> The functions are equal.</p></span></span> </article><article class="exercise-like" id="exercise-1953"><h5 class="heading"><span class="codenumber">68</span></h5>
+<p id="p-9639">\(f (x) = \log(x^3), ~~~g(x) = 3 \log x\)</p></article>
 </div>
 </div>
 <article class="exercise-like" id="exercise-1954"><h5 class="heading"><span class="codenumber">69</span></h5>
-<p id="p-9638"></p>
+<p id="p-9640"></p>
 <ol id="ol-1878" style="list-style-type: lower-alpha;">
-<li id="li-5908"><p id="p-9639">Complete the following table. <figure class="figure-like" id="table-319"><table>
+<li id="li-5908"><p id="p-9641">Complete the following table. <figure class="figure-like" id="table-319"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(x^2\)</td>
@@ -1230,11 +1235,11 @@ Both streams are \(1.2\) feet deep at the locations mentioned. (Source: Leopold,
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{00000}\)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-5909"><p id="p-9640">Do you notice a relationship between \(\log_{10} x\) and \(\log_{10} x^2\text{?}\) State the relationship as an equation.</p></li>
+<li id="li-5909"><p id="p-9642">Do you notice a relationship between \(\log_{10} x\) and \(\log_{10} x^2\text{?}\) State the relationship as an equation.</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1039" id="answer-1039"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1039" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9641"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1039" id="answer-1039"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1039" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9643"></p>
 <ol id="ol-1879" style="list-style-type: lower-alpha;">
-<li id="li-5910"><p id="p-9642"><table>
+<li id="li-5910"><p id="p-9644"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(x^2\)</td>
@@ -1278,11 +1283,11 @@ Both streams are \(1.2\) feet deep at the locations mentioned. (Source: Leopold,
 <td class="c m b1 r1 l0 t0 lines">\(1.556\)</td>
 </tr>
 </table></p></li>
-<li id="li-5911"><p id="p-9643">\(\log_{10}x^2=2\log_{10}x \)</p></li>
+<li id="li-5911"><p id="p-9645">\(\log_{10}x^2=2\log_{10}x \)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1955"><h5 class="heading"><span class="codenumber">70</span></h5>
-<p id="p-9644"></p>
+<p id="p-9646"></p>
 <ol id="ol-1880" style="list-style-type: lower-alpha;">
-<li id="li-5912"><p id="p-9645">Complete the following table. <figure class="figure-like" id="table-320"><table>
+<li id="li-5912"><p id="p-9647">Complete the following table. <figure class="figure-like" id="table-320"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(\dfrac{1}{x} \)</td>
@@ -1326,11 +1331,11 @@ Both streams are \(1.2\) feet deep at the locations mentioned. (Source: Leopold,
 <td class="c m b1 r1 l0 t0 lines">\(\hphantom{00000}\)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-5913"><p id="p-9646">Do you notice a relationship between \(\log_{10} x\) and \(\log_{10} \frac{1}{x} \text{?}\) State the relationship as an equation.</p></li>
+<li id="li-5913"><p id="p-9648">Do you notice a relationship between \(\log_{10} x\) and \(\log_{10} \frac{1}{x} \text{?}\) State the relationship as an equation.</p></li>
 </ol></article><div class="exercisegroup" id="exercisegroup-269">
-<article class="introduction" id="introduction-273"><p id="p-9647">In Problems 69 and 70, you found relationships between \(\log_{10} x\) and \(\log_{10} x^2\text{,}\) and between \(\log_{10} x\) and \(\log_{10} 1⁄x\text{.}\) Assuming that those relationships hold for any base, complete the following tables and use them to graph the given functions.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-273"><p id="p-9649">In Problems 69 and 70, you found relationships between \(\log_{10} x\) and \(\log_{10} x^2\text{,}\) and between \(\log_{10} x\) and \(\log_{10} 1⁄x\text{.}\) Assuming that those relationships hold for any base, complete the following tables and use them to graph the given functions.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1956"><h5 class="heading"><span class="codenumber">71</span></h5>
-<p id="p-9648"><figure class="figure-like" id="table-321"><table>
+<p id="p-9650"><figure class="figure-like" id="table-321"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y=\log_e x \)</td>
@@ -1364,7 +1369,7 @@ Both streams are \(1.2\) feet deep at the locations mentioned. (Source: Leopold,
 <td class="c m b1 r1 l0 t0 lines">\(\)</td>
 </tr>
 </table></figure></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1040" id="answer-1040"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1040" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9649"><div class="sidebyside" style="" id="sidebyside-110"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1040" id="answer-1040"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1040" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-9651"><div class="sidebyside" style="" id="sidebyside-110"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
@@ -1401,7 +1406,7 @@ Both streams are \(1.2\) feet deep at the locations mentioned. (Source: Leopold,
 </table></div>
 <div class="sbspanel" style="width:50%;justify-content:flex-start;"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-ans-5-2-71.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
 </div></div></p></span></span> </article><article class="exercise-like" id="exercise-1957"><h5 class="heading"><span class="codenumber">72</span></h5>
-<p id="p-9650"><figure class="figure-like" id="table-322"><table>
+<p id="p-9652"><figure class="figure-like" id="table-322"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(y=\log_f x \)</td>
@@ -1439,19 +1444,19 @@ Both streams are \(1.2\) feet deep at the locations mentioned. (Source: Leopold,
 </div></section><article class="example-like" id="investigation-9"><h5 class="heading">
 <span class="type">Investigation</span><span class="codenumber">5.1</span><span class="title">Interest Compounded Continuously</span>
 </h5>
-<p id="p-9651">We learned in <a href="Properties-of-Logarithms.html" alt="Section 4.4 Properties of Logarithms" title="Section 4.4 Properties of Logarithms">Section 4.4</a> that the amount, \(A\) (principal plus interest), accumulated in an account with interest compounded \(n\) times annually is
+<p id="p-9653">We learned in <a href="Properties-of-Logarithms.html" alt="Section 4.4 Properties of Logarithms" title="Section 4.4 Properties of Logarithms">Section 4.4</a> that the amount, \(A\) (principal plus interest), accumulated in an account with interest compounded \(n\) times annually is
 \begin{equation*}
 A=P\left(1+\dfrac{r}{n} \right)^{nt} 
 \end{equation*}
 where \(P\) is the principal invested, \(r\) is the interest rate, and \(t\) is the time period, in years. </p>
 <ol id="ol-1881" style="list-style-type: decimal;">
-<li id="li-5914"><p id="p-9652">Suppose you keep \(\$1000\) in an account that pays \(8\%\) interest. How much is the amount \(A\) after \(1\) year if the interest is compounded twice a year? Four times a year?
+<li id="li-5914"><p id="p-9654">Suppose you keep \(\$1000\) in an account that pays \(8\%\) interest. How much is the amount \(A\) after \(1\) year if the interest is compounded twice a year? Four times a year?
 \begin{gather*}
 n = \alert{2}: A = 1000\left(1 + \frac{0.08}{\alert{2}} \right)^{\alert{2}(1)}= \\
 n = \alert{4}: A = 1000\left(1 + \frac{0.08}{\alert{4}} \right)^{\alert{4}(1)}= 
 \end{gather*}
 </p></li>
-<li id="li-5915"><p id="p-9653">What happens to \(A\) as we increase \(n\text{,}\) the number of compounding periods per year? Fill in the table showing the amount in the account for different values of \(n\text{.}\) <div class="sidebyside" style="" id="sidebyside-111"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<li id="li-5915"><p id="p-9655">What happens to \(A\) as we increase \(n\text{,}\) the number of compounding periods per year? Fill in the table showing the amount in the account for different values of \(n\text{.}\) <div class="sidebyside" style="" id="sidebyside-111"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel fixed-width" style="width:50%;justify-content:flex-start;"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(n\)</td>
@@ -1492,23 +1497,23 @@ n = \alert{4}: A = 1000\left(1 + \frac{0.08}{\alert{4}} \right)^{\alert{4}(1)}=
 </table></div>
 <div class="sbspanel" style="width:50%;justify-content:flex-start;"><object type="image/svg+xml" style="width:95%; margin:auto; display:block;" data="images/fig-investigation-9.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
 </div></div></p></li>
-<li id="li-5916"><p id="p-9654">Plot the values in the table from \(n = 1\) to \(n = 12\text{,}\) and connect them with a smooth curve. Describe the curve: What is happening to the value of \(A\text{?}\)</p></li>
+<li id="li-5916"><p id="p-9656">Plot the values in the table from \(n = 1\) to \(n = 12\text{,}\) and connect them with a smooth curve. Describe the curve: What is happening to the value of \(A\text{?}\)</p></li>
 <li id="li-5917">
-<p id="p-9655">In part (2), as you increased the value of \(n\text{,}\) the other parameters in the formula stayed the same. In other words, \(A\) is a function of \(n\text{,}\) given by \(A = 1000 (1 + \frac{0.08}{n} )^n\text{.}\) Use your calculator to graph A on successively larger domains: </p>
+<p id="p-9657">In part (2), as you increased the value of \(n\text{,}\) the other parameters in the formula stayed the same. In other words, \(A\) is a function of \(n\text{,}\) given by \(A = 1000 (1 + \frac{0.08}{n} )^n\text{.}\) Use your calculator to graph A on successively larger domains: </p>
 <ol id="ol-1882" style="list-style-type: lower-alpha;">
-<li id="li-5918"><p id="p-9656">\(\text{Xmin} = 0, \text{Xmax} = 12; \text{Ymin} = 1080, \text{Ymax} = 1084\)</p></li>
-<li id="li-5919"><p id="p-9657">\(\text{Xmin} = 0, \text{Xmax} = 50; \text{Ymin} = 1080, \text{Ymax} = 1084\)</p></li>
-<li id="li-5920"><p id="p-9658">\(\text{Xmin} = 0, \text{Xmax} = 365; \text{Ymin} = 1080, \text{Ymax} = 1084\)</p></li>
+<li id="li-5918"><p id="p-9658">\(\text{Xmin} = 0, \text{Xmax} = 12; \text{Ymin} = 1080, \text{Ymax} = 1084\)</p></li>
+<li id="li-5919"><p id="p-9659">\(\text{Xmin} = 0, \text{Xmax} = 50; \text{Ymin} = 1080, \text{Ymax} = 1084\)</p></li>
+<li id="li-5920"><p id="p-9660">\(\text{Xmin} = 0, \text{Xmax} = 365; \text{Ymin} = 1080, \text{Ymax} = 1084\)</p></li>
 </ol>
 <p></p>
 </li>
-<li id="li-5921"><p id="p-9659">Use the <em class="terminology">Trace</em> feature or the <em class="terminology">Table</em> feature to evaluate \(A\) for very large values of \(n\text{.}\) Rounded to the nearest penny, what is the largest value of \(A\) that you can find?</p></li>
-<li id="li-5922"><p id="p-9660">As \(n\) increases, the values of \(A\) approach a limiting value. Although \(A\) continues to increase, it does so by smaller and smaller increments and will never exceed \(\$1083.29\text{.}\) When the number of compounding periods increases without bound, we call the limiting result <em class="terminology">continuous compounding</em>.</p></li>
-<li id="li-5923"><p id="p-9661">Is there an easier way to compute \(A\) under continues compounding? Yes! Compute \(1000e^{0.08}\) on your calculator. (Press <tt class="code-inline tex2jax_ignore">2nd</tt>  <tt class="code-inline tex2jax_ignore">LN</tt> to enter \(e^x\text{.}\)) Compare the value to your answer in part (5) for the limiting value. The number \(e\) is called the <em class="terminology">natural base</em>. We'll compute its value shortly.</p></li>
+<li id="li-5921"><p id="p-9661">Use the <em class="terminology">Trace</em> feature or the <em class="terminology">Table</em> feature to evaluate \(A\) for very large values of \(n\text{.}\) Rounded to the nearest penny, what is the largest value of \(A\) that you can find?</p></li>
+<li id="li-5922"><p id="p-9662">As \(n\) increases, the values of \(A\) approach a limiting value. Although \(A\) continues to increase, it does so by smaller and smaller increments and will never exceed \(\$1083.29\text{.}\) When the number of compounding periods increases without bound, we call the limiting result <em class="terminology">continuous compounding</em>.</p></li>
+<li id="li-5923"><p id="p-9663">Is there an easier way to compute \(A\) under continues compounding? Yes! Compute \(1000e^{0.08}\) on your calculator. (Press <tt class="code-inline tex2jax_ignore">2nd</tt>  <tt class="code-inline tex2jax_ignore">LN</tt> to enter \(e^x\text{.}\)) Compare the value to your answer in part (5) for the limiting value. The number \(e\) is called the <em class="terminology">natural base</em>. We'll compute its value shortly.</p></li>
 <li id="li-5924">
-<p id="p-9662">Repeat your calculations for two other interest rates, \(15\%\) and (an extremely unrealistic) \(100\%\text{,}\) again for an investment of \(\$1000\) for \(1\) year. In each case, compare the limiting value of \(A\text{,}\) and compare to the value of \(1000e^r\text{.}\) </p>
+<p id="p-9664">Repeat your calculations for two other interest rates, \(15\%\) and (an extremely unrealistic) \(100\%\text{,}\) again for an investment of \(\$1000\) for \(1\) year. In each case, compare the limiting value of \(A\text{,}\) and compare to the value of \(1000e^r\text{.}\) </p>
 <ol id="ol-1883" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5925" style="width:49%; float:left;"><p id="p-9663"><table>
+<li id="li-5925" style="width:49%; float:left;"><p id="p-9665"><table>
 <tr><td class="c m b1 r1 l1 t1 lines" colspan="2">\(r=0.15\)</td></tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(n\)</td>
@@ -1548,7 +1553,7 @@ n = \alert{4}: A = 1000\left(1 + \frac{0.08}{\alert{4}} \right)^{\alert{4}(1)}=
 </tr>
 <tr><td class="l m b0 r0 l0 t0 lines" colspan="2">\(~~1000e^{0.15}= \)</td></tr>
 </table></p></li>
-<li id="li-5926" style="width:49%; float:left;"><p id="p-9664"><table>
+<li id="li-5926" style="width:49%; float:left;"><p id="p-9666"><table>
 <tr><td class="c m b1 r1 l1 t1 lines" colspan="2">\(r=1\)</td></tr>
 <tr>
 <td class="c m b1 r1 l1 t0 lines">\(n\)</td>
@@ -1591,8 +1596,8 @@ n = \alert{4}: A = 1000\left(1 + \frac{0.08}{\alert{4}} \right)^{\alert{4}(1)}=
 </ol>
 <p></p>
 </li>
-<li id="li-5927"><p id="p-9665">In part (8b), you have computed an approximation for \(1000e\text{.}\) What is the value of \(e\text{,}\) rounded to \(5\) decimal places?</p></li>
-<li id="li-5928"><p id="p-9666">Complete the table of values. What does \(\left(1 + \frac{1}{n} \right)^n\) appear to approach as \(n\) increases? <figure class="figure-like" id="table-324"><table>
+<li id="li-5927"><p id="p-9667">In part (8b), you have computed an approximation for \(1000e\text{.}\) What is the value of \(e\text{,}\) rounded to \(5\) decimal places?</p></li>
+<li id="li-5928"><p id="p-9668">Complete the table of values. What does \(\left(1 + \frac{1}{n} \right)^n\) appear to approach as \(n\) increases? <figure class="figure-like" id="table-324"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">\(n\)</td>
 <td class="l m b1 r1 l0 t1 lines">\(100\)</td>

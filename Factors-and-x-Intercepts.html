@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-04-07T10:54:14-07:00    *-->
+<!--*    on 2017-04-17T18:45:21-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,15 +13,14 @@
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
-// contrib directory for accessibility menu, moot after v2.6+?
-MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        // [Contrib]accessibility menu moot after v2.6+?
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
         equationNumbers: { autoNumber: "none",
                            useLabelIds: true,
                            // JS comment, XML CDATA protect XHTML quality of file
@@ -33,11 +32,17 @@ MathJax.Hub.Config({
         TagSide: "right",
         TagIndent: ".8em",
     },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
     "HTML-CSS": {
         scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script>(function() {
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
   var cx = '006592449927388994635:w0x-ox5bpme';
   var gcse = document.createElement('script');
   gcse.type = 'text/javascript';
@@ -75,7 +80,7 @@ MathJax.Hub.Config({
 <nav id="primary-navbar" class="navbar" style=""><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="chap6.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chap6.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="Solving-Quadratic-Equations.html" title="Next" alt="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chap6.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap6.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Solving-Quadratic-Equations.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
@@ -187,35 +192,35 @@ MathJax.Hub.Config({
 <li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
 </ul>
 <h2 class="link"><a href="index-part-2.html" data-scroll="index-part-2"><span class="title">Index</span></a></h2>
-<h2 class="link"><a href="colophon-3.html" data-scroll="colophon-3"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+<h2 class="link"><a href="colophon-3.html" data-scroll="colophon-3"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Factors-and-x-Intercepts"><header title="Section 6.1 Factors and \(x\)-Intercepts"><h1 class="heading hide-type" alt="Section 6.1 Factors and \(x\)-Intercepts">
 <span class="type">Section</span><span class="codenumber">6.1</span><span class="title">Factors and \(x\)-Intercepts</span><a href="Factors-and-x-Intercepts.html" class="permalink">¶ permalink</a>
-</h1></header><p id="p-10392">In <a knowl="./knowl/investigation-height-of-baseball.html" knowl-id="xref-investigation-height-of-baseball" alt="Investigation 6.1 Height of a Baseball" title="Investigation 6.1 Height of a Baseball">Investigation 6.1</a>, perhaps you recognized the graph of the baseball's height as a parabola. In this chapter, we shall see that the graph of any quadratic function is a parabola.s</p>
+</h1></header><p id="p-10394">In <a knowl="./knowl/investigation-height-of-baseball.html" knowl-id="xref-investigation-height-of-baseball" alt="Investigation 6.1 Height of a Baseball" title="Investigation 6.1 Height of a Baseball">Investigation 6.1</a>, perhaps you recognized the graph of the baseball's height as a parabola. In this chapter, we shall see that the graph of any quadratic function is a parabola.s</p>
 <article class="assemblage-like" id="assemblage-quadratic-function"><h5 class="heading">Quadratic Function</h5>
-<p id="p-10393">A <em class="terminology">quadratic function</em>s is one that can be written in the form
+<p id="p-10395">A <em class="terminology">quadratic function</em>s is one that can be written in the form
 \begin{equation*}
 f(x) = ax^2 + bx + c
 \end{equation*}
-where \(a\text{,}\) \(b\text{,}\) and \(c\) are constants, and \(a\) is not equal to zero.</p></article><p id="p-10394">In the definition above, notice that if a is zero, there is no x-squared term, so the function is not quadratic.</p>
-<p id="p-10395">In <a knowl="./knowl/investigation-height-of-baseball.html" knowl-id="xref-investigation-height-of-baseball" alt="Investigation 6.1 Height of a Baseball" title="Investigation 6.1 Height of a Baseball">Investigation 6.1</a>, the height of a baseball \(t\) seconds after being hit was given by
+where \(a\text{,}\) \(b\text{,}\) and \(c\) are constants, and \(a\) is not equal to zero.</p></article><p id="p-10396">In the definition above, notice that if a is zero, there is no x-squared term, so the function is not quadratic.</p>
+<p id="p-10397">In <a knowl="./knowl/investigation-height-of-baseball.html" knowl-id="xref-investigation-height-of-baseball" alt="Investigation 6.1 Height of a Baseball" title="Investigation 6.1 Height of a Baseball">Investigation 6.1</a>, the height of a baseball \(t\) seconds after being hit was given by
 \begin{equation*}
 h = −16t^2 + 64t + 4
 \end{equation*}
 We used a graph to find two times when the baseball was \(64\) feet high. Can we solve the same problem algebraically?</p>
-<p id="p-10396">We are looking for values of \(t\) that produce \(h = 64\) in the height equation. So, if we substitute \(h = 64\) into the height equation, we would like to solve the <em class="terminology">quadratic equation</em>s
+<p id="p-10398">We are looking for values of \(t\) that produce \(h = 64\) in the height equation. So, if we substitute \(h = 64\) into the height equation, we would like to solve the <em class="terminology">quadratic equation</em>s
 \begin{equation*}
 64 = −16t^2 + 64t + 4
 \end{equation*}
 This equation cannot be solved by extraction of roots, because there are two terms containing the variable \(t\text{,}\) and they cannot be combined. To solve this equation, we will appeal to a property of our number system, called the <em class="terminology">zero-factor principle</em>.</p>
 <section class="subsection" id="subsection-164"><header title="Subsection 6.1.1 Zero-Factor Principle"><h1 class="heading hide-type" alt="Subsection 6.1.1 Zero-Factor Principle">
 <span class="type">Subsection</span><span class="codenumber">6.1.1</span><span class="title">Zero-Factor Principle</span>
-</h1></header><p id="p-10397">Can you multiply two numbers together and obtain a product of zero? Only if one of the two numbers happens to be zero. This property of numbers is called the <em class="terminology">zero-factor principle</em>.</p>
+</h1></header><p id="p-10399">Can you multiply two numbers together and obtain a product of zero? Only if one of the two numbers happens to be zero. This property of numbers is called the <em class="terminology">zero-factor principle</em>.</p>
 <article class="assemblage-like" id="assemblage-zero-factor-principle"><h5 class="heading">Zero-Factor Principle</h5>
-<p id="p-10398">The product of two factors equals zero if and only if one or both of the factors equals zero. In symbols,
+<p id="p-10400">The product of two factors equals zero if and only if one or both of the factors equals zero. In symbols,
 \begin{equation*}
 ab=0  ~~\text{ if and only if }~~ a=0 ~~\text{ or }~~ b=0
 \end{equation*}
-</p></article><p id="p-10399">The principle is true even if the numbers \(a\) and \(b\) are represented by algebraic expressions, such as \(x − 5\) or \(2x + 1\text{.}\) For example, if
+</p></article><p id="p-10401">The principle is true even if the numbers \(a\) and \(b\) are represented by algebraic expressions, such as \(x − 5\) or \(2x + 1\text{.}\) For example, if
 \begin{equation*}
 (x − 5)(2x + 1) = 0
 \end{equation*}
@@ -223,7 +228,7 @@ then it must be true that either \(x − 5 = 0\) or \(2x + 1 = 0\text{.}\) Thus,
 <article class="example-like" id="example-ZFP"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.2</span>
 </h5>
-<p id="p-10400"></p>
+<p id="p-10402"></p>
 <ol id="ol-2006" style="list-style-type: lower-alpha;">
 <li id="li-6332">Solve the equation \((x − 6)(x + 2) = 0\text{.}\)</li>
 <li id="li-6333">Find the \(x\)-intercepts of the graph of \(f(x) = x^2 − 4x − 12\text{.}\)</li>
@@ -256,21 +261,21 @@ But this is the equation we solved in part (a), because \((x − 6)(x + 2) = x^2
 </li>
 </ol></span></span>
 </div></div>
-<p id="p-10401"><a knowl="./knowl/example-ZFP.html" knowl-id="xref-example-ZFP" alt="Example 6.2 " title="Example 6.2 ">Example 6.2</a> illustrates an important fact about the \(x\)-intercepts of a graph.</p>
+<p id="p-10403"><a knowl="./knowl/example-ZFP.html" knowl-id="xref-example-ZFP" alt="Example 6.2 " title="Example 6.2 ">Example 6.2</a> illustrates an important fact about the \(x\)-intercepts of a graph.</p>
 <article class="assemblage-like" id="assemblage-x-intercepts-of-graph"><h5 class="heading">\(x\)-Intercepts of a Graph</h5>
-<p id="p-10402">The \(x\)-intercepts of the graph of \(y = f(x)\) are the solutions of the equation \(f(x) = 0\text{.}\)</p></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-ZFP" id="exercise-ZFP"><article class="exercise-like"><h5 class="heading">
+<p id="p-10404">The \(x\)-intercepts of the graph of \(y = f(x)\) are the solutions of the equation \(f(x) = 0\text{.}\)</p></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-ZFP" id="exercise-ZFP"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">6.4</span>
 </h5></article></a></div>
-<div id="hk-exercise-ZFP" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-10403">Graph the function
+<div id="hk-exercise-ZFP" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-10405">Graph the function
 \begin{equation*}
 f(x) = (x − 3)(2x + 3)
 \end{equation*}
 on a calculator, and use your graph to solve the equation \(f(x) = 0\text{.}\) (Use \(\text{Xmin} = −9.4\text{,}\) \(\text{Xmax} = 9.4\text{.}\)) Check your answer with the zero-factor principle.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1142" id="answer-1142"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1142" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10404">\(x=-\frac{3}{2} \text{,}\) \(~x=3\)</p></span></span> </article></div></section><section class="subsection" id="subsection-165"><header title="Subsection 6.1.2 Solving Quadratic Equations by Factoring"><h1 class="heading hide-type" alt="Subsection 6.1.2 Solving Quadratic Equations by Factoring">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1142" id="answer-1142"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1142" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10406">\(x=-\frac{3}{2} \text{,}\) \(~x=3\)</p></span></span> </article></div></section><section class="subsection" id="subsection-165"><header title="Subsection 6.1.2 Solving Quadratic Equations by Factoring"><h1 class="heading hide-type" alt="Subsection 6.1.2 Solving Quadratic Equations by Factoring">
 <span class="type">Subsection</span><span class="codenumber">6.1.2</span><span class="title">Solving Quadratic Equations by Factoring</span>
-</h1></header><p id="p-10405">Before we apply the zero-factor principle to solve a quadratic equation, we must first write the equation so that one side of the equation is zero. Let us introduce some terminology.</p>
+</h1></header><p id="p-10407">Before we apply the zero-factor principle to solve a quadratic equation, we must first write the equation so that one side of the equation is zero. Let us introduce some terminology.</p>
 <article class="assemblage-like" id="assemblage-126"><h5 class="heading">Forms for Quadratic Equations</h5>
-<p id="p-10406"></p>
+<p id="p-10408"></p>
 <ol id="ol-2008" style="list-style-type: decimal;">
 <li id="li-6336">A quadratic equation written
 \begin{equation*}
@@ -283,12 +288,12 @@ a(x − r_1)(x − r_2) = 0
 \end{equation*}
 is in <em class="terminology">factored form</em>.</li>
 </ol>
-<p></p></article><p id="p-10407">Once we have written the equation in standard form, we factor the left side and set each variable factor equal to zero separately.</p>
+<p></p></article><p id="p-10409">Once we have written the equation in standard form, we factor the left side and set each variable factor equal to zero separately.</p>
 <article class="example-like" id="example-quadratic-via-factoring"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.5</span>
 </h5>
-<p id="p-10408">Solve \(3x(x + 1) = 2x + 2\text{.}\)</p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-162" id="solution-162"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-162" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10409">First, we write the equation in standard form. \begin{align*} 3x(x + 1) \amp = 2x + 2\amp\amp\text{Apply the distributive law to the left side.}\\ 3x^2 + 3x \amp = 2x + 2\amp\amp\text{Subtract }2x + 2 \text{ from both sides.}\\ 3x^2 + x − 2 \amp = 0 \end{align*} Next, we factor the left side to obtain
+<p id="p-10410">Solve \(3x(x + 1) = 2x + 2\text{.}\)</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-162" id="solution-162"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-162" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10411">First, we write the equation in standard form. \begin{align*} 3x(x + 1) \amp = 2x + 2\amp\amp\text{Apply the distributive law to the left side.}\\ 3x^2 + 3x \amp = 2x + 2\amp\amp\text{Subtract }2x + 2 \text{ from both sides.}\\ 3x^2 + x − 2 \amp = 0 \end{align*} Next, we factor the left side to obtain
 \begin{equation*}
 (3x − 2)(x + 1) = 0
 \end{equation*}
@@ -308,9 +313,9 @@ The solutions are \(\frac{2}{3}\) and \(−1\text{.}\)</p></span></span>
 \begin{equation*}
 (x − 2)(x − 4) = 15
 \end{equation*}
-it is incorrect to set each factor equal to \(15\text{!}\) (There are many ways that the product of two numbers can equal \(15\text{;}\) it is not necessary that one of the numbers be \(15\text{.}\)) We must first simplify the left side and write the equation in standard form. (The correct solutions are \(7\) and \(−1\)s; make sure you can find these solutions.)</article><p id="p-10410">We summarize the factoring method for solving quadratic equations as follows.</p>
+it is incorrect to set each factor equal to \(15\text{!}\) (There are many ways that the product of two numbers can equal \(15\text{;}\) it is not necessary that one of the numbers be \(15\text{.}\)) We must first simplify the left side and write the equation in standard form. (The correct solutions are \(7\) and \(−1\)s; make sure you can find these solutions.)</article><p id="p-10412">We summarize the factoring method for solving quadratic equations as follows.</p>
 <article class="assemblage-like" id="assemblage-solve-quadratic-by-factoring"><h5 class="heading">To Solve a Quadratic Equation by Factoring</h5>
-<p id="p-10411"></p>
+<p id="p-10413"></p>
 <ol id="ol-2009" style="list-style-type: decimal;">
 <li id="li-6338">Write the equation in standard form.</li>
 <li id="li-6339">Factor the left side of the equation.</li>
@@ -320,20 +325,20 @@ it is incorrect to set each factor equal to \(15\text{!}\) (There are many ways 
 <p></p></article><div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-quadratic-via-factoring" id="exercise-quadratic-via-factoring"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">6.7</span>
 </h5></article></a></div>
-<div id="hk-exercise-quadratic-via-factoring" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-10412">Solve by factoring: \((t − 3)^2 = 3(9 − t)\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1143" id="answer-1143"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1143" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10413">\(x=-3\text{,}\) \(~x=6\)</p></span></span> </article></div>
-<p id="p-10414">We can use factoring to solve the equation from <a knowl="./knowl/investigation-height-of-baseball.html" knowl-id="xref-investigation-height-of-baseball" alt="Investigation 6.1 Height of a Baseball" title="Investigation 6.1 Height of a Baseball">Investigation 6.1</a>.</p>
+<div id="hk-exercise-quadratic-via-factoring" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-10414">Solve by factoring: \((t − 3)^2 = 3(9 − t)\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1143" id="answer-1143"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1143" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10415">\(x=-3\text{,}\) \(~x=6\)</p></span></span> </article></div>
+<p id="p-10416">We can use factoring to solve the equation from <a knowl="./knowl/investigation-height-of-baseball.html" knowl-id="xref-investigation-height-of-baseball" alt="Investigation 6.1 Height of a Baseball" title="Investigation 6.1 Height of a Baseball">Investigation 6.1</a>.</p>
 <article class="example-like" id="example-height-of-baseball"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.8</span>
 </h5>
-<p id="p-10415">The height, \(h\text{,}\) of a baseball \(t\) seconds after being hit is given by
+<p id="p-10417">The height, \(h\text{,}\) of a baseball \(t\) seconds after being hit is given by
 \begin{equation*}
 h = −16t^2 + 64t + 4
 \end{equation*}
 When will the baseball reach a height of \(64\) feet?</p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-163" id="solution-163"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-163" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10416">Substitute \(64\) for \(h\) in the formula, and solve for \(t\text{.}\) \begin{align*} 64 \amp = −16t^2 + 64t + 4\amp\amp\text{Write the equation in standard form.}\\ 16t^2 − 64t + 60 \amp= 0\amp\amp\text{Factor 4 from the left side.}\\ 4(4t^2 − 16t + 15) \amp= 0\amp\amp\text{Factor the quadratic expression.}\\ 4(2t − 3)(2t − 5) \amp= 0\amp\amp\text{Set each variable factor equal to zero.}\\ 2t − 3 =0 ~~\text{ or }~~ 2t − 5 \amp= 0\amp\amp\text{Solve each equation.}\\ t = \frac{3}{2}  ~~\text{ or }~~  t \amp = \frac{5}{2} \end{align*} There are two solutions to the quadratic equation. At \(t = \frac{3}{2}\) seconds, the ball reaches a height of \(64\) feet on the way up, and at \(t = \frac{5}{2}\) seconds, the ball is \(64\) feet high on its way down. (See <a knowl="./knowl/fig-height-of-baseball.html" knowl-id="xref-fig-height-of-baseball" alt="Figure 6.9 " title="Figure 6.9 ">Figure 6.9</a>.) <figure class="figure-like" id="fig-height-of-baseball"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-height-of-baseball.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.9</span></figcaption></figure></p></span></span>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-163" id="solution-163"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-163" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10418">Substitute \(64\) for \(h\) in the formula, and solve for \(t\text{.}\) \begin{align*} 64 \amp = −16t^2 + 64t + 4\amp\amp\text{Write the equation in standard form.}\\ 16t^2 − 64t + 60 \amp= 0\amp\amp\text{Factor 4 from the left side.}\\ 4(4t^2 − 16t + 15) \amp= 0\amp\amp\text{Factor the quadratic expression.}\\ 4(2t − 3)(2t − 5) \amp= 0\amp\amp\text{Set each variable factor equal to zero.}\\ 2t − 3 =0 ~~\text{ or }~~ 2t − 5 \amp= 0\amp\amp\text{Solve each equation.}\\ t = \frac{3}{2}  ~~\text{ or }~~  t \amp = \frac{5}{2} \end{align*} There are two solutions to the quadratic equation. At \(t = \frac{3}{2}\) seconds, the ball reaches a height of \(64\) feet on the way up, and at \(t = \frac{5}{2}\) seconds, the ball is \(64\) feet high on its way down. (See <a knowl="./knowl/fig-height-of-baseball.html" knowl-id="xref-fig-height-of-baseball" alt="Figure 6.9 " title="Figure 6.9 ">Figure 6.9</a>.) <figure class="figure-like" id="fig-height-of-baseball"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-height-of-baseball.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.9</span></figcaption></figure></p></span></span>
 </div></div>
-<p id="p-10417">In the solution to <a knowl="./knowl/example-height-of-baseball.html" knowl-id="xref-example-height-of-baseball" alt="Example 6.8 " title="Example 6.8 ">Example 6.8</a>, the factor \(4\) does not affect the solutions of the equation at all. You can understand why this is true by looking at some graphs. First, check that the two equations
+<p id="p-10419">In the solution to <a knowl="./knowl/example-height-of-baseball.html" knowl-id="xref-example-height-of-baseball" alt="Example 6.8 " title="Example 6.8 ">Example 6.8</a>, the factor \(4\) does not affect the solutions of the equation at all. You can understand why this is true by looking at some graphs. First, check that the two equations
 \begin{equation*}
 x^2 − 4x + 3 = 0 ~~\text{ and }~~ 4(x^2 − 4x + 3) = 0
 \end{equation*}
@@ -354,27 +359,27 @@ Y_2 = 4(X^2 − 4X + 3)
 <li id="li-6343">Solve \(g(t) = 20t − 5t^2 = 0\) by factoring.</li>
 <li id="li-6344">Graph \(y = f(t)\) and \(y = g(t)\) together in the window \begin{align} \text{Xmin} \amp = −2 \amp\amp \text{Xmax} = 6\\ \text{Ymin} \amp = −20 \amp\amp \text{Ymax} = 25 \end{align} and locate the horizontal intercepts of each graph.</li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1144" id="answer-1144"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1144" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10418"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1144" id="answer-1144"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1144" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10420"></p>
 <ol id="ol-2011" class="cols3" style="list-style-type: lower-alpha;">
-<li id="li-6345" style="width:32.6666666666667%; float:left;"><p id="p-10419">\(t=0\text{,}\) \(~t=4\)</p></li>
-<li id="li-6346" style="width:32.6666666666667%; float:left;"><p id="p-10420">\(t=0\text{,}\)	\(~t=4\)</p></li>
-<li id="li-6347" style="width:32.6666666666667%; float:left;"><p id="p-10421">\((0,0) \text{,}\) \(~(4,0) \)</p></li>
+<li id="li-6345" style="width:32.6666666666667%; float:left;"><p id="p-10421">\(t=0\text{,}\) \(~t=4\)</p></li>
+<li id="li-6346" style="width:32.6666666666667%; float:left;"><p id="p-10422">\(t=0\text{,}\)	\(~t=4\)</p></li>
+<li id="li-6347" style="width:32.6666666666667%; float:left;"><p id="p-10423">\((0,0) \text{,}\) \(~(4,0) \)</p></li>
 </ol></span></span> </article></div></section><section class="subsection" id="subsection-166"><header title="Subsection 6.1.3 Applications"><h1 class="heading hide-type" alt="Subsection 6.1.3 Applications">
 <span class="type">Subsection</span><span class="codenumber">6.1.3</span><span class="title">Applications</span>
-</h1></header><p id="p-10422">Here is another example of how quadratic equations arise in applications.</p>
+</h1></header><p id="p-10424">Here is another example of how quadratic equations arise in applications.</p>
 <article class="example-like" id="example-computer-screen"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.12</span>
 </h5>
 <div class="sidebyside" style="" id="sidebyside-119">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel" style="width:50%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-computer-screen.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-10423">The size of a rectangular computer monitor screen is given by the length of its diagonal. (See <a knowl="./knowl/fig-computer-screen.html" knowl-id="xref-fig-computer-screen" alt="Figure 6.13 " title="Figure 6.13 ">Figure 6.13</a>.) If the length of the screen should be \(3\) inches greater than its width, what are the dimensions of a \(15\)-inch monitor?</p></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-10425">The size of a rectangular computer monitor screen is given by the length of its diagonal. (See <a knowl="./knowl/fig-computer-screen.html" knowl-id="xref-fig-computer-screen" alt="Figure 6.13 " title="Figure 6.13 ">Figure 6.13</a>.) If the length of the screen should be \(3\) inches greater than its width, what are the dimensions of a \(15\)-inch monitor?</p></div>
 </div>
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <figcaption class="sbscaption" style="width:50%;"><span class="heading">Figure</span><span class="codenumber">6.13</span></figcaption><figcaption class="sbscaption" style="width:50%;"></figcaption>
 </div>
 </div></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-164" id="solution-164"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-164" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10424">We express the two dimensions of the screen in terms of a single variable: <figure class="figure-like" id="table-360"><table>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-164" id="solution-164"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-164" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10426">We express the two dimensions of the screen in terms of a single variable: <figure class="figure-like" id="table-360"><table>
 <tr><td class="l m b0 r0 l0 t0 lines">Width of screen: \(~~ w\)</td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines">Length of screen: \(~~ w + 3\)</td></tr>
 </table></figure> We can use the Pythagorean theorem to write an equation.
@@ -388,16 +393,16 @@ Solve the equation. Begin by simplifying the left side. \begin{align*} w^2 + w^2
 </h5></article></a></div>
 <div id="hk-exercise-garden" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><div class="sidebyside" style="" id="sidebyside-120">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-10425">Francine is designing the layout for a botanical garden. The plan includes a square herb garden, with a path \(5\) feet wide through the center of the garden, as shown in <a knowl="./knowl/fig-garden.html" knowl-id="xref-fig-garden" alt="Figure 6.15 " title="Figure 6.15 ">Figure 6.15</a>. To include all the species of herbs, the planted area must be \(300\) square feet. Find the dimensions of the herb garden.</p></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><p id="p-10427">Francine is designing the layout for a botanical garden. The plan includes a square herb garden, with a path \(5\) feet wide through the center of the garden, as shown in <a knowl="./knowl/fig-garden.html" knowl-id="xref-fig-garden" alt="Figure 6.15 " title="Figure 6.15 ">Figure 6.15</a>. To include all the species of herbs, the planted area must be \(300\) square feet. Find the dimensions of the herb garden.</p></div>
 <div class="sbspanel" style="width:50%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-garden.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
 </div>
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <figcaption class="sbscaption" style="width:50%;"></figcaption><figcaption class="sbscaption" style="width:50%;"><span class="heading">Figure</span><span class="codenumber">6.15</span></figcaption>
 </div>
 </div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1145" id="answer-1145"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1145" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10426">\(20\) feet by \(20\) feet</p></span></span> </article></div></section><section class="subsection" id="subsection-167"><header title="Subsection 6.1.4 Solutions of Quadratic Equations"><h1 class="heading hide-type" alt="Subsection 6.1.4 Solutions of Quadratic Equations">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1145" id="answer-1145"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1145" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10428">\(20\) feet by \(20\) feet</p></span></span> </article></div></section><section class="subsection" id="subsection-167"><header title="Subsection 6.1.4 Solutions of Quadratic Equations"><h1 class="heading hide-type" alt="Subsection 6.1.4 Solutions of Quadratic Equations">
 <span class="type">Subsection</span><span class="codenumber">6.1.4</span><span class="title">Solutions of Quadratic Equations</span>
-</h1></header><p id="p-10427">We have seen that the solutions of the quadratic equation
+</h1></header><p id="p-10429">We have seen that the solutions of the quadratic equation
 \begin{equation*}
 a(x − r_1)(x − r_2) = 0
 \end{equation*}
@@ -405,8 +410,8 @@ are \(r_1\) and \(r_2\text{.}\) Thus, if we know the two solutions of a quadrati
 <article class="example-like" id="example-quadratic-equation-from-solutions"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.16</span>
 </h5>
-<p id="p-10428">Find a quadratic equation whose solutions are \(\frac{1}{2}\) and \(−3\text{.}\)</p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-165" id="solution-165"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-165" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10429">The quadratic equation is \begin{align*} \left(x-\frac{1}{2}\right)\left[x-(-3)\right] \amp= 0\\ \left(x-\frac{1}{2}\right)(x + 3) \amp = 0 \end{align*} To write the equation in standard form, multiply the factors together.
+<p id="p-10430">Find a quadratic equation whose solutions are \(\frac{1}{2}\) and \(−3\text{.}\)</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-165" id="solution-165"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-165" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10431">The quadratic equation is \begin{align*} \left(x-\frac{1}{2}\right)\left[x-(-3)\right] \amp= 0\\ \left(x-\frac{1}{2}\right)(x + 3) \amp = 0 \end{align*} To write the equation in standard form, multiply the factors together.
 \begin{equation*}
 x^2 + \frac{5}{2}x − \frac{3}{2}= 0
 \end{equation*}
@@ -415,119 +420,119 @@ We can also find an equation with integer coefficients if we clear the equation 
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-quadratic-equation-from-solutions" id="exercise-quadratic-equation-from-solutions"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">6.17</span>
 </h5></article></a></div>
-<div id="hk-exercise-quadratic-equation-from-solutions" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-10430">Find a quadratic equation with integer coefficients whose solutions are \(\frac{2}{3}\) and \(−5\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1146" id="answer-1146"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1146" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10431">\(3x^2 + 13x − 10 = 0\)</p></span></span> </article></div>
-<p id="p-10432">A quadratic equation in one variable always has two solutions. However, in some cases, the solutions may be equal. For example, the equation \(x^2 − 2x + 1 = 0\) can be solved by factoring as follows: \begin{align*} (x − 1)(x − 1) \amp = 0\amp\amp\text{Apply the zero-factor principle.}\\ x − 1 =0 ~~\text{ or } ~~ x − 1 \amp= 0 \end{align*} Both of these equations have solution \(1\text{.}\) We say that \(1\) is a solution of <em class="terminology">multiplicity</em> two, meaning that it occurs twice as a solution of the quadratic equation.</p></section><section class="subsection" id="subsection-168"><header title="Subsection 6.1.5 Equations Quadratic in Form"><h1 class="heading hide-type" alt="Subsection 6.1.5 Equations Quadratic in Form">
+<div id="hk-exercise-quadratic-equation-from-solutions" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-10432">Find a quadratic equation with integer coefficients whose solutions are \(\frac{2}{3}\) and \(−5\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1146" id="answer-1146"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1146" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10433">\(3x^2 + 13x − 10 = 0\)</p></span></span> </article></div>
+<p id="p-10434">A quadratic equation in one variable always has two solutions. However, in some cases, the solutions may be equal. For example, the equation \(x^2 − 2x + 1 = 0\) can be solved by factoring as follows: \begin{align*} (x − 1)(x − 1) \amp = 0\amp\amp\text{Apply the zero-factor principle.}\\ x − 1 =0 ~~\text{ or } ~~ x − 1 \amp= 0 \end{align*} Both of these equations have solution \(1\text{.}\) We say that \(1\) is a solution of <em class="terminology">multiplicity</em> two, meaning that it occurs twice as a solution of the quadratic equation.</p></section><section class="subsection" id="subsection-168"><header title="Subsection 6.1.5 Equations Quadratic in Form"><h1 class="heading hide-type" alt="Subsection 6.1.5 Equations Quadratic in Form">
 <span class="type">Subsection</span><span class="codenumber">6.1.5</span><span class="title">Equations Quadratic in Form</span>
-</h1></header><p id="p-10433">The equation \(x^6 − 4x^3 − 5 = 0\) is not quadratic, but if we make the substitution \(u = x^3\text{,}\) the equation becomes \(u^2 − 4u − 5 = 0\text{.}\) An equation is called <em class="terminology">quadratic in form</em> if we can use a substitution to write it as \(au^2 + bu + c = 0\text{,}\) where \(u\) stands for an algebraic expression. Such equations can be solved by the same techniques we use to solve quadratic equations.</p>
+</h1></header><p id="p-10435">The equation \(x^6 − 4x^3 − 5 = 0\) is not quadratic, but if we make the substitution \(u = x^3\text{,}\) the equation becomes \(u^2 − 4u − 5 = 0\text{.}\) An equation is called <em class="terminology">quadratic in form</em> if we can use a substitution to write it as \(au^2 + bu + c = 0\text{,}\) where \(u\) stands for an algebraic expression. Such equations can be solved by the same techniques we use to solve quadratic equations.</p>
 <article class="example-like" id="example-quadratic-in-form"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.18</span>
 </h5>
-<p id="p-10434">Use the substitution \(u = x^3\) to solve the equation \(x^6 − 4x^3 − 5 = 0\text{.}\)</p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-166" id="solution-166"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-166" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10435">We set \(u = x^3\text{,}\) so that \(u^2 = \left(x^3\right)^2 = x^6\text{.}\) The original equation then becomes a quadratic equation in the variable \(u\text{,}\) which we can solve by factoring. \begin{align*} u^2 − 4u − 5 \amp= 0\amp\amp\text{Factor the left side.}\\ (u + 1)(u − 5) \amp= 0\amp\amp\text{Apply the zero-factor principle.}\\ u + 1 \amp =0 \text{  or }u − 5 = 0\amp\amp\text{Solve each equation for }u.\\ u \amp = −1  \text{  or } u = 5 \end{align*} Finally, we replace \(u\) by \(x^3\) and solve for \(x\text{.}\) \begin{align*} x^3 \amp = −1 ~~~~~~~\text{ or } \amp x^3 \amp= 5\amp\amp\text{Take cube roots.}\\ x\amp= \sqrt[3]{−1} = −1 ~~~\text{ or } \amp x \amp = \sqrt[3]{5} \end{align*} You can verify that the solutions of the original equation are \(−1\) and \(\sqrt[3]{5}\text{.}\)</p></span></span>
+<p id="p-10436">Use the substitution \(u = x^3\) to solve the equation \(x^6 − 4x^3 − 5 = 0\text{.}\)</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-166" id="solution-166"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-166" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10437">We set \(u = x^3\text{,}\) so that \(u^2 = \left(x^3\right)^2 = x^6\text{.}\) The original equation then becomes a quadratic equation in the variable \(u\text{,}\) which we can solve by factoring. \begin{align*} u^2 − 4u − 5 \amp= 0\amp\amp\text{Factor the left side.}\\ (u + 1)(u − 5) \amp= 0\amp\amp\text{Apply the zero-factor principle.}\\ u + 1 \amp =0 \text{  or }u − 5 = 0\amp\amp\text{Solve each equation for }u.\\ u \amp = −1  \text{  or } u = 5 \end{align*} Finally, we replace \(u\) by \(x^3\) and solve for \(x\text{.}\) \begin{align*} x^3 \amp = −1 ~~~~~~~\text{ or } \amp x^3 \amp= 5\amp\amp\text{Take cube roots.}\\ x\amp= \sqrt[3]{−1} = −1 ~~~\text{ or } \amp x \amp = \sqrt[3]{5} \end{align*} You can verify that the solutions of the original equation are \(−1\) and \(\sqrt[3]{5}\text{.}\)</p></span></span>
 </div></div>
-<p id="p-10436">We say that the equation in <a knowl="./knowl/example-quadratic-in-form.html" knowl-id="xref-example-quadratic-in-form" alt="Example 6.18 " title="Example 6.18 ">Example 6.18</a>, \(x^6 − 4x^3 − 5 = 0\text{,}\) is <em class="terminology">quadratic in</em> \(x^3\text{.}\) We chose the substitution \(u = x^3\) because \(x^6 = u^2\text{.}\)</p>
+<p id="p-10438">We say that the equation in <a knowl="./knowl/example-quadratic-in-form.html" knowl-id="xref-example-quadratic-in-form" alt="Example 6.18 " title="Example 6.18 ">Example 6.18</a>, \(x^6 − 4x^3 − 5 = 0\text{,}\) is <em class="terminology">quadratic in</em> \(x^3\text{.}\) We chose the substitution \(u = x^3\) because \(x^6 = u^2\text{.}\)</p>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-quadratic-in-form" id="exercise-quadratic-in-form"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">6.19</span>
 </h5></article></a></div>
-<div id="hk-exercise-quadratic-in-form" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-10437">Use the substitution \(u = x^2\) to solve the equation \(x^4 − 5x^2 + 6 = 0\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1147" id="answer-1147"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1147" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10438">\(x=\pm\sqrt{2} \text{,}\) \(~x=\pm\sqrt{3} \)</p></span></span> </article></div>
-<p id="p-10439">Usually, you can choose the simpler variable term in the equation for the \(u\)-substitution. For example, in <a knowl="./knowl/exercise-quadratic-in-form.html" knowl-id="xref-exercise-quadratic-in-form" alt="Exercise 6.19 " title="Exercise 6.19 ">Exercise 6.19</a> we chose \(u = x^2\) because \(u^2 = \left(x^2\right)^2 = x^4\text{,}\) which is the first term of the equation. Once you have chosen the \(u\)-substitution, you should check that the other variable term is then a multiple of \(u^2\text{;}\) otherwise, the equation is not quadratic in form.</p>
+<div id="hk-exercise-quadratic-in-form" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-10439">Use the substitution \(u = x^2\) to solve the equation \(x^4 − 5x^2 + 6 = 0\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1147" id="answer-1147"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1147" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10440">\(x=\pm\sqrt{2} \text{,}\) \(~x=\pm\sqrt{3} \)</p></span></span> </article></div>
+<p id="p-10441">Usually, you can choose the simpler variable term in the equation for the \(u\)-substitution. For example, in <a knowl="./knowl/exercise-quadratic-in-form.html" knowl-id="xref-exercise-quadratic-in-form" alt="Exercise 6.19 " title="Exercise 6.19 ">Exercise 6.19</a> we chose \(u = x^2\) because \(u^2 = \left(x^2\right)^2 = x^4\text{,}\) which is the first term of the equation. Once you have chosen the \(u\)-substitution, you should check that the other variable term is then a multiple of \(u^2\text{;}\) otherwise, the equation is not quadratic in form.</p>
 <article class="example-like" id="example-quadratic-in-form2"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.20</span>
 </h5>
-<p id="p-10440">Solve the equation \(e^{2x} − 7e^x + 12 = 0\text{.}\)</p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-167" id="solution-167"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-167" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10441">We use the substitution \(u = e^x\text{,}\) because \(u^2 = \left(e^x\right)^2 = e^{2x}\text{.}\) The original equation then becomes \begin{align*} u^2 − 7u + 12 \amp= 0\amp\amp\text{Factor the left side.}\\ (u − 3)(u − 4) \amp = 0\amp\amp\text{Apply the zero-factor principle.}\\ u − 3 \amp =0 ~~\text{ or } ~~  u − 4 = 0\amp\amp\text{Solve each equation for u.}\\ u \amp =3 ~~\text{ or } ~~ u = 4 \end{align*} Finally, we replace \(u\) by \(e^x\) and solve for \(x\text{.}\) \begin{align*} e^x \amp =3  ~~~~~\text{ or }\amp  e^x \amp= 4\\ x \amp = \ln 3  ~~~\text{ or }\amp x \amp= \ln 4 \end{align*} You should verify that the solutions of the original equation are \(\ln 3\) and \(\ln 4\text{.}\)</p></span></span>
+<p id="p-10442">Solve the equation \(e^{2x} − 7e^x + 12 = 0\text{.}\)</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-167" id="solution-167"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-167" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10443">We use the substitution \(u = e^x\text{,}\) because \(u^2 = \left(e^x\right)^2 = e^{2x}\text{.}\) The original equation then becomes \begin{align*} u^2 − 7u + 12 \amp= 0\amp\amp\text{Factor the left side.}\\ (u − 3)(u − 4) \amp = 0\amp\amp\text{Apply the zero-factor principle.}\\ u − 3 \amp =0 ~~\text{ or } ~~  u − 4 = 0\amp\amp\text{Solve each equation for u.}\\ u \amp =3 ~~\text{ or } ~~ u = 4 \end{align*} Finally, we replace \(u\) by \(e^x\) and solve for \(x\text{.}\) \begin{align*} e^x \amp =3  ~~~~~\text{ or }\amp  e^x \amp= 4\\ x \amp = \ln 3  ~~~\text{ or }\amp x \amp= \ln 4 \end{align*} You should verify that the solutions of the original equation are \(\ln 3\) and \(\ln 4\text{.}\)</p></span></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-2149" id="exercise-2149"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">6.21</span>
 </h5></article></a></div>
-<div id="hk-exercise-2149" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-10442">Solve the equation \(10^{2x} − 3 \cdot 10^x + 2 = 0\text{,}\) and check the solutions.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1148" id="answer-1148"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1148" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10443">\(x=0\text{,}\) \(~x=\log 2\)</p></span></span> </article></div></section><section class="subsection" id="summary-6-1"><header title="Subsection 6.1.6 Section Summary"><h1 class="heading hide-type" alt="Subsection 6.1.6 Section Summary">
+<div id="hk-exercise-2149" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-10444">Solve the equation \(10^{2x} − 3 \cdot 10^x + 2 = 0\text{,}\) and check the solutions.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1148" id="answer-1148"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1148" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10445">\(x=0\text{,}\) \(~x=\log 2\)</p></span></span> </article></div></section><section class="subsection" id="summary-6-1"><header title="Subsection 6.1.6 Section Summary"><h1 class="heading hide-type" alt="Subsection 6.1.6 Section Summary">
 <span class="type">Subsection</span><span class="codenumber">6.1.6</span><span class="title">Section Summary</span><a href="Factors-and-x-Intercepts.html#summary-6-1" class="permalink">¶ permalink</a>
 </h1></header><section class="subsubsection" id="subsubsection-105"><header title="Subsubsection 6.1.6.1 Vocabulary"><h1 class="heading hide-type" alt="Subsubsection 6.1.6.1 Vocabulary">
 <span class="type">Subsubsection</span><span class="codenumber">6.1.6.1</span><span class="title">Vocabulary</span>
-</h1></header><p id="p-10444">Look up the definitions of new terms in the Glossary. </p>
+</h1></header><p id="p-10446">Look up the definitions of new terms in the Glossary. </p>
 <ul id="ul-35" class="cols3" style="list-style-type: disc;">
-<li id="li-6348" style="width:32.6666666666667%; float:left;"><p id="p-10445">Quadratic function</p></li>
-<li id="li-6349" style="width:32.6666666666667%; float:left;"><p id="p-10446">Zero-factor principle</p></li>
-<li id="li-6350" style="width:32.6666666666667%; float:left;"><p id="p-10447">Standard form</p></li>
-<li id="li-6351" style="width:32.6666666666667%; float:left;"><p id="p-10448">Factored form</p></li>
-<li id="li-6352" style="width:32.6666666666667%; float:left;"><p id="p-10449">Multiplicity</p></li>
-<li id="li-6353" style="width:32.6666666666667%; float:left;"><p id="p-10450">Monotonic</p></li>
+<li id="li-6348" style="width:32.6666666666667%; float:left;"><p id="p-10447">Quadratic function</p></li>
+<li id="li-6349" style="width:32.6666666666667%; float:left;"><p id="p-10448">Zero-factor principle</p></li>
+<li id="li-6350" style="width:32.6666666666667%; float:left;"><p id="p-10449">Standard form</p></li>
+<li id="li-6351" style="width:32.6666666666667%; float:left;"><p id="p-10450">Factored form</p></li>
+<li id="li-6352" style="width:32.6666666666667%; float:left;"><p id="p-10451">Multiplicity</p></li>
+<li id="li-6353" style="width:32.6666666666667%; float:left;"><p id="p-10452">Monotonic</p></li>
 </ul>
 <p></p></section><section class="subsubsection" id="subsubsection-106"><header title="Subsubsection 6.1.6.2 CONCEPTS"><h1 class="heading hide-type" alt="Subsubsection 6.1.6.2 CONCEPTS">
 <span class="type">Subsubsection</span><span class="codenumber">6.1.6.2</span><span class="title">CONCEPTS</span>
-</h1></header><p id="p-10451"></p>
+</h1></header><p id="p-10453"></p>
 <ol id="ol-2012" style="list-style-type: decimal;">
-<li id="li-6354"><p id="p-10452"><a knowl="./knowl/assemblage-quadratic-function.html" knowl-id="xref-assemblage-quadratic-function" alt="Assemblage  Quadratic Function" title="Assemblage  Quadratic Function">Quadratic Function </a></p></li>
-<li id="li-6355"><p id="p-10453"><a knowl="./knowl/assemblage-zero-factor-principle.html" knowl-id="xref-assemblage-zero-factor-principle" alt="Assemblage  Zero-Factor Principle" title="Assemblage  Zero-Factor Principle">Zero-Factor Principle </a></p></li>
-<li id="li-6356"><p id="p-10454"><a knowl="./knowl/assemblage-x-intercepts-of-graph.html" knowl-id="xref-assemblage-x-intercepts-of-graph" alt="Assemblage  \(x\)-Intercepts of a Graph" title="Assemblage  \(x\)-Intercepts of a Graph">\(x\)-Intercepts of a Graph </a></p></li>
+<li id="li-6354"><p id="p-10454"><a knowl="./knowl/assemblage-quadratic-function.html" knowl-id="xref-assemblage-quadratic-function" alt="Assemblage  Quadratic Function" title="Assemblage  Quadratic Function">Quadratic Function </a></p></li>
+<li id="li-6355"><p id="p-10455"><a knowl="./knowl/assemblage-zero-factor-principle.html" knowl-id="xref-assemblage-zero-factor-principle" alt="Assemblage  Zero-Factor Principle" title="Assemblage  Zero-Factor Principle">Zero-Factor Principle </a></p></li>
+<li id="li-6356"><p id="p-10456"><a knowl="./knowl/assemblage-x-intercepts-of-graph.html" knowl-id="xref-assemblage-x-intercepts-of-graph" alt="Assemblage  \(x\)-Intercepts of a Graph" title="Assemblage  \(x\)-Intercepts of a Graph">\(x\)-Intercepts of a Graph </a></p></li>
 <li id="li-6357">
-<p id="p-10455">A quadratic equation written as \(ax^2 + bx + c = 0\) is in <em class="terminology">standard form</em>.</p>
-<p id="p-10456">A quadratic equation written as \(a (x − r_1) (x − r_2) = 0\) is in <em class="terminology">factored form</em>.</p>
+<p id="p-10457">A quadratic equation written as \(ax^2 + bx + c = 0\) is in <em class="terminology">standard form</em>.</p>
+<p id="p-10458">A quadratic equation written as \(a (x − r_1) (x − r_2) = 0\) is in <em class="terminology">factored form</em>.</p>
 </li>
-<li id="li-6358"><p id="p-10457"><a knowl="./knowl/assemblage-solve-quadratic-by-factoring.html" knowl-id="xref-assemblage-solve-quadratic-by-factoring" alt="Assemblage  To Solve a Quadratic Equation by Factoring" title="Assemblage  To Solve a Quadratic Equation by Factoring">To Solve a Quadratic Equation by Factoring </a></p></li>
-<li id="li-6359"><p id="p-10458">Every quadratic equation has two solutions, which may be the same.</p></li>
-<li id="li-6360"><p id="p-10459">The value of the constant \(a\) in the factored form of a quadratic equation does not affect the solutions.</p></li>
-<li id="li-6361"><p id="p-10460">Each solution of a quadratic equation corresponds to a factor in the factored form.</p></li>
-<li id="li-6362"><p id="p-10461">An equation is called <em class="terminology">quadratic in form</em> if we can use a substitution to write it as \(au^2 + bu + c = 0\text{,}\) where \(u\) stands for an algebraic expression.</p></li>
+<li id="li-6358"><p id="p-10459"><a knowl="./knowl/assemblage-solve-quadratic-by-factoring.html" knowl-id="xref-assemblage-solve-quadratic-by-factoring" alt="Assemblage  To Solve a Quadratic Equation by Factoring" title="Assemblage  To Solve a Quadratic Equation by Factoring">To Solve a Quadratic Equation by Factoring </a></p></li>
+<li id="li-6359"><p id="p-10460">Every quadratic equation has two solutions, which may be the same.</p></li>
+<li id="li-6360"><p id="p-10461">The value of the constant \(a\) in the factored form of a quadratic equation does not affect the solutions.</p></li>
+<li id="li-6361"><p id="p-10462">Each solution of a quadratic equation corresponds to a factor in the factored form.</p></li>
+<li id="li-6362"><p id="p-10463">An equation is called <em class="terminology">quadratic in form</em> if we can use a substitution to write it as \(au^2 + bu + c = 0\text{,}\) where \(u\) stands for an algebraic expression.</p></li>
 </ol>
 <p></p></section><section class="subsubsection" id="subsubsection-107"><header title="Subsubsection 6.1.6.3 STUDY QUESTIONS"><h1 class="heading hide-type" alt="Subsubsection 6.1.6.3 STUDY QUESTIONS">
 <span class="type">Subsubsection</span><span class="codenumber">6.1.6.3</span><span class="title">STUDY QUESTIONS</span>
-</h1></header><p id="p-10462"></p>
+</h1></header><p id="p-10464"></p>
 <ol id="ol-2013" style="list-style-type: decimal;">
 <li id="li-6363">
-<p id="p-10463"></p>
+<p id="p-10465"></p>
 <ol id="ol-2014" style="list-style-type: lower-alpha;">
-<li id="li-6364"><p id="p-10464">Find a pair of numbers whose product is \(6\text{.}\) Now find a different pair of numbers whose product is \(6\text{.}\) Can you find more such pairs?</p></li>
-<li id="li-6365"><p id="p-10465">Find a pair of numbers whose product is \(0\text{.}\) What is true about any such pair?</p></li>
+<li id="li-6364"><p id="p-10466">Find a pair of numbers whose product is \(6\text{.}\) Now find a different pair of numbers whose product is \(6\text{.}\) Can you find more such pairs?</p></li>
+<li id="li-6365"><p id="p-10467">Find a pair of numbers whose product is \(0\text{.}\) What is true about any such pair?</p></li>
 </ol>
 </li>
-<li id="li-6366"><p id="p-10466">Before you begin factoring to solve a quadratic equation, what should you do?</p></li>
-<li id="li-6367"><p id="p-10467">How can you find the \(x\)-intercepts of the graph of \(y = f (x)\) without looking at the graph?</p></li>
-<li id="li-6368"><p id="p-10468">How many solutions does a quadratic equation have?</p></li>
+<li id="li-6366"><p id="p-10468">Before you begin factoring to solve a quadratic equation, what should you do?</p></li>
+<li id="li-6367"><p id="p-10469">How can you find the \(x\)-intercepts of the graph of \(y = f (x)\) without looking at the graph?</p></li>
+<li id="li-6368"><p id="p-10470">How many solutions does a quadratic equation have?</p></li>
 <li id="li-6369">
-<p id="p-10469"></p>
+<p id="p-10471"></p>
 <ol id="ol-2015" style="list-style-type: lower-alpha;">
-<li id="li-6370"><p id="p-10470">Write a linear equation whose only solution is \(x = 3\text{.}\)</p></li>
-<li id="li-6371"><p id="p-10471">Write a quadratic equation whose only solution is \(x = 3\text{.}\)</p></li>
+<li id="li-6370"><p id="p-10472">Write a linear equation whose only solution is \(x = 3\text{.}\)</p></li>
+<li id="li-6371"><p id="p-10473">Write a quadratic equation whose only solution is \(x = 3\text{.}\)</p></li>
 </ol>
 </li>
-<li id="li-6372"><p id="p-10472">If you know the solutions of \(ax^2 + bx + c = 0\text{,}\) how can you find the solutions of \(5(ax^2 + bx + c) = 0\text{?}\)</p></li>
-<li id="li-6373"><p id="p-10473">Is the equation \(x^9 − 6x^3 + 8 = 0\) quadratic in form? Why or why not?</p></li>
-<li id="li-6374"><p id="p-10474">Delbert says that he can solve the equation \(x(x + 5) = 2(x + 5)\) by canceling the factor \((x + 5)\) to get \(x = 2\text{.}\) Comment on his method</p></li>
+<li id="li-6372"><p id="p-10474">If you know the solutions of \(ax^2 + bx + c = 0\text{,}\) how can you find the solutions of \(5(ax^2 + bx + c) = 0\text{?}\)</p></li>
+<li id="li-6373"><p id="p-10475">Is the equation \(x^9 − 6x^3 + 8 = 0\) quadratic in form? Why or why not?</p></li>
+<li id="li-6374"><p id="p-10476">Delbert says that he can solve the equation \(x(x + 5) = 2(x + 5)\) by canceling the factor \((x + 5)\) to get \(x = 2\text{.}\) Comment on his method</p></li>
 </ol>
 <p></p></section><section class="subsubsection" id="subsubsection-108"><header title="Subsubsection 6.1.6.4 SKILLS"><h1 class="heading hide-type" alt="Subsubsection 6.1.6.4 SKILLS">
 <span class="type">Subsubsection</span><span class="codenumber">6.1.6.4</span><span class="title">SKILLS</span>
-</h1></header><p id="p-10475">Practice each skill in the <a href="Factors-and-x-Intercepts.html#section-6-1-exercises" alt="Exercises 6.1.7 Homework" title="Exercises 6.1.7 Homework">Homework 6.1.7</a> problems listed. </p>
+</h1></header><p id="p-10477">Practice each skill in the <a href="Factors-and-x-Intercepts.html#section-6-1-exercises" alt="Exercises 6.1.7 Homework" title="Exercises 6.1.7 Homework">Homework 6.1.7</a> problems listed. </p>
 <ol id="ol-2016" style="list-style-type: decimal;">
-<li id="li-6375"><p id="p-10476">Use the zero-factor principle and find x-intercepts: #3–10</p></li>
-<li id="li-6376"><p id="p-10477">Solve quadratic equations by factoring: #11–24</p></li>
-<li id="li-6377"><p id="p-10478">Use the \(x\)-intercepts of the graph to factor a quadratic equation: #25–28, 37–40</p></li>
-<li id="li-6378"><p id="p-10479">Write a quadratic equation with given solutions: #29–36</p></li>
-<li id="li-6379"><p id="p-10480">Solve applied problems involving quadratic equations: #41–50</p></li>
-<li id="li-6380"><p id="p-10481">Solve equations that are quadratic in form: #51–62</p></li>
+<li id="li-6375"><p id="p-10478">Use the zero-factor principle and find x-intercepts: #3–10</p></li>
+<li id="li-6376"><p id="p-10479">Solve quadratic equations by factoring: #11–24</p></li>
+<li id="li-6377"><p id="p-10480">Use the \(x\)-intercepts of the graph to factor a quadratic equation: #25–28, 37–40</p></li>
+<li id="li-6378"><p id="p-10481">Write a quadratic equation with given solutions: #29–36</p></li>
+<li id="li-6379"><p id="p-10482">Solve applied problems involving quadratic equations: #41–50</p></li>
+<li id="li-6380"><p id="p-10483">Solve equations that are quadratic in form: #51–62</p></li>
 </ol>
 <p></p></section></section><section class="exercises" id="section-6-1-exercises"><header title="Exercises 6.1.7 Homework"><h1 class="heading hide-type" alt="Exercises 6.1.7 Homework">
 <span class="type">Subsection</span><span class="codenumber">6.1.7</span><span class="title">Homework</span><a href="Factors-and-x-Intercepts.html#section-6-1-exercises" class="permalink">¶ permalink</a>
 </h1></header><article class="exercise-like" id="exercise-2150"><h5 class="heading"><span class="codenumber">1</span></h5>
-<p id="p-10482">Delbert stands at the top of a \(300\)-foot cliff and throws his algebra book directly upward with a velocity of \(20\) feet per second. The height of his book above the ground \(t\) seconds later is given by the equation
+<p id="p-10484">Delbert stands at the top of a \(300\)-foot cliff and throws his algebra book directly upward with a velocity of \(20\) feet per second. The height of his book above the ground \(t\) seconds later is given by the equation
 \begin{equation*}
 h = −16t^2 + 20t + 300
 \end{equation*}
 where \(h\) is in feet. </p>
 <ol id="ol-2017" style="list-style-type: lower-alpha;">
-<li id="li-6381"><p id="p-10483">Use your calculator to make a table of values for the height equation, with increments of \(0.5\) second.</p></li>
-<li id="li-6382"><p id="p-10484">Graph the height equation on your calculator. Use your table of values to help you choose appropriate window settings.</p></li>
-<li id="li-6383"><p id="p-10485">What is the highest altitude Delbert’s book reaches? When does it reach that height? Use the <tt class="code-inline tex2jax_ignore">TRACE</tt> feature to find approximate answers first. Then use the <em class="terminology">Table</em> feature to improve your estimate.</p></li>
-<li id="li-6384"><p id="p-10486">When does Delbert's book pass him on its way down? (Delbert is standing at a height of \(300\) feet.) Use the <em class="terminology">intersect</em> command.</p></li>
-<li id="li-6385"><p id="p-10487">How long will it take Delbert's book to hit the ground at the bottom of the cliff?</p></li>
+<li id="li-6381"><p id="p-10485">Use your calculator to make a table of values for the height equation, with increments of \(0.5\) second.</p></li>
+<li id="li-6382"><p id="p-10486">Graph the height equation on your calculator. Use your table of values to help you choose appropriate window settings.</p></li>
+<li id="li-6383"><p id="p-10487">What is the highest altitude Delbert’s book reaches? When does it reach that height? Use the <tt class="code-inline tex2jax_ignore">TRACE</tt> feature to find approximate answers first. Then use the <em class="terminology">Table</em> feature to improve your estimate.</p></li>
+<li id="li-6384"><p id="p-10488">When does Delbert's book pass him on its way down? (Delbert is standing at a height of \(300\) feet.) Use the <em class="terminology">intersect</em> command.</p></li>
+<li id="li-6385"><p id="p-10489">How long will it take Delbert's book to hit the ground at the bottom of the cliff?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1149" id="answer-1149"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1149" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10488"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1149" id="answer-1149"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1149" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10490"></p>
 <ol id="ol-2018" style="list-style-type: lower-alpha;">
-<li id="li-6386"><p id="p-10489"><figure class="figure-like" id="table-361"><table>
+<li id="li-6386"><p id="p-10491"><figure class="figure-like" id="table-361"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(t\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(0\)</td>
@@ -557,196 +562,196 @@ where \(h\) is in feet. </p>
 <td class="c m b1 r1 l0 t0 lines">\(0\)</td>
 </tr>
 </table></figure></p></li>
-<li id="li-6387"><p id="p-10490"><img width="50%" src="images/fig-ans-6-1-1.jpg" alt=""></p></li>
-<li id="li-6388"><p id="p-10491">\(306.25\) ft at \(0.625\) sec</p></li>
-<li id="li-6389"><p id="p-10492">\(1.25\) sec</p></li>
-<li id="li-6390"><p id="p-10493">\(5\) sec</p></li>
+<li id="li-6387"><p id="p-10492"><img width="50%" src="images/fig-ans-6-1-1.jpg" alt=""></p></li>
+<li id="li-6388"><p id="p-10493">\(306.25\) ft at \(0.625\) sec</p></li>
+<li id="li-6389"><p id="p-10494">\(1.25\) sec</p></li>
+<li id="li-6390"><p id="p-10495">\(5\) sec</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2151"><h5 class="heading"><span class="codenumber">2</span></h5>
-<p id="p-10494">James Bond stands on top of a \(240\)-foot building and throws a film canister upward to a fellow agent in a helicopter \(16\) feet above the building. The height of the film above the ground \(t\) seconds later is given by the formula
+<p id="p-10496">James Bond stands on top of a \(240\)-foot building and throws a film canister upward to a fellow agent in a helicopter \(16\) feet above the building. The height of the film above the ground \(t\) seconds later is given by the formula
 \begin{equation*}
 h = −16t^2 + 32t + 240
 \end{equation*}
 where \(h\) is in feet. </p>
 <ol id="ol-2019" style="list-style-type: lower-alpha;">
-<li id="li-6391"><p id="p-10495">Use your calculator to make a table of values for the height formula, with increments of \(0.5\) second.</p></li>
-<li id="li-6392"><p id="p-10496">Graph the height formula on your calculator. Use your table of values to help you choose appropriate window settings.</p></li>
-<li id="li-6393"><p id="p-10497">How long will it take the film canister to reach the agent in the helicopter? (What is the agent's altitude?) Use the <tt class="code-inline tex2jax_ignore">TRACE</tt> feature to find approximate answers first. Then use the <em class="terminology">Table</em> feature to improve your estimate.</p></li>
-<li id="li-6394"><p id="p-10498">If the agent misses the canister, when will it pass James Bond on the way down? Use the intersect command.</p></li>
-<li id="li-6395"><p id="p-10499">How long will it take it to hit the ground?</p></li>
+<li id="li-6391"><p id="p-10497">Use your calculator to make a table of values for the height formula, with increments of \(0.5\) second.</p></li>
+<li id="li-6392"><p id="p-10498">Graph the height formula on your calculator. Use your table of values to help you choose appropriate window settings.</p></li>
+<li id="li-6393"><p id="p-10499">How long will it take the film canister to reach the agent in the helicopter? (What is the agent's altitude?) Use the <tt class="code-inline tex2jax_ignore">TRACE</tt> feature to find approximate answers first. Then use the <em class="terminology">Table</em> feature to improve your estimate.</p></li>
+<li id="li-6394"><p id="p-10500">If the agent misses the canister, when will it pass James Bond on the way down? Use the intersect command.</p></li>
+<li id="li-6395"><p id="p-10501">How long will it take it to hit the ground?</p></li>
 </ol>
 <p></p></article><div class="exercisegroup" id="exercisegroup-288">
-<article class="introduction" id="introduction-293"><p id="p-10500">In Problems 3–10, use a graph to solve the equation y = 0. (Use \(\text{Xmin} =−9.4\text{,}\) \(\text{Xmax} = 9.4\text{.}\)) Check your answers with the zero-factor principle.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-293"><p id="p-10502">In Problems 3–10, use a graph to solve the equation y = 0. (Use \(\text{Xmin} =−9.4\text{,}\) \(\text{Xmax} = 9.4\text{.}\)) Check your answers with the zero-factor principle.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-2152"><h5 class="heading"><span class="codenumber">3</span></h5>
-<p id="p-10501">\(y = (2x + 5)(x − 2)\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1150" id="answer-1150"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1150" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10502">\(\dfrac{-5}{2} \text{,}\) \(~2\)</p></span></span> </article><article class="exercise-like" id="exercise-2153"><h5 class="heading"><span class="codenumber">4</span></h5>
-<p id="p-10503">\(y = (x + 1)(4x − 1)\)</p></article><article class="exercise-like" id="exercise-2154"><h5 class="heading"><span class="codenumber">5</span></h5>
-<p id="p-10504">\(y =x(3x + 10)\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1151" id="answer-1151"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1151" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10505">\(0 \text{,}\) \(~\dfrac{-10}{3} \)</p></span></span> </article><article class="exercise-like" id="exercise-2155"><h5 class="heading"><span class="codenumber">6</span></h5>
-<p id="p-10506">\(y =x(3x − 7)\)</p></article><article class="exercise-like" id="exercise-2156"><h5 class="heading"><span class="codenumber">7</span></h5>
-<p id="p-10507">\(y =(4x + 3)(x + 8)\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1152" id="answer-1152"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1152" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10508">\(\dfrac{-3}{4} \text{,}\) \(~-8 \)</p></span></span> </article><article class="exercise-like" id="exercise-2157"><h5 class="heading"><span class="codenumber">8</span></h5>
-<p id="p-10509">\(y =(x − 2)(x − 9)\)</p></article><article class="exercise-like" id="exercise-2158"><h5 class="heading"><span class="codenumber">9</span></h5>
-<p id="p-10510">\(y =(x − 4)^2\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1153" id="answer-1153"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1153" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10511">\(4 \)</p></span></span> </article><article class="exercise-like" id="exercise-2159"><h5 class="heading"><span class="codenumber">10</span></h5>
-<p id="p-10512">\(y =(x + 6)^2\)</p></article>
+<p id="p-10503">\(y = (2x + 5)(x − 2)\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1150" id="answer-1150"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1150" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10504">\(\dfrac{-5}{2} \text{,}\) \(~2\)</p></span></span> </article><article class="exercise-like" id="exercise-2153"><h5 class="heading"><span class="codenumber">4</span></h5>
+<p id="p-10505">\(y = (x + 1)(4x − 1)\)</p></article><article class="exercise-like" id="exercise-2154"><h5 class="heading"><span class="codenumber">5</span></h5>
+<p id="p-10506">\(y =x(3x + 10)\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1151" id="answer-1151"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1151" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10507">\(0 \text{,}\) \(~\dfrac{-10}{3} \)</p></span></span> </article><article class="exercise-like" id="exercise-2155"><h5 class="heading"><span class="codenumber">6</span></h5>
+<p id="p-10508">\(y =x(3x − 7)\)</p></article><article class="exercise-like" id="exercise-2156"><h5 class="heading"><span class="codenumber">7</span></h5>
+<p id="p-10509">\(y =(4x + 3)(x + 8)\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1152" id="answer-1152"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1152" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10510">\(\dfrac{-3}{4} \text{,}\) \(~-8 \)</p></span></span> </article><article class="exercise-like" id="exercise-2157"><h5 class="heading"><span class="codenumber">8</span></h5>
+<p id="p-10511">\(y =(x − 2)(x − 9)\)</p></article><article class="exercise-like" id="exercise-2158"><h5 class="heading"><span class="codenumber">9</span></h5>
+<p id="p-10512">\(y =(x − 4)^2\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1153" id="answer-1153"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1153" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10513">\(4 \)</p></span></span> </article><article class="exercise-like" id="exercise-2159"><h5 class="heading"><span class="codenumber">10</span></h5>
+<p id="p-10514">\(y =(x + 6)^2\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-289">
-<article class="introduction" id="introduction-294"><p id="p-10513">Solve by factoring. (See Algebra Skills Refresher <a href="appendix-a.html#appendix-Factoring-Quadratic-Trinomials" alt="Section A.8 Factoring Quadratic Trinomials" title="Section A.8 Factoring Quadratic Trinomials">Appendix A.8</a> to review factoring.)</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-294"><p id="p-10515">Solve by factoring. (See Algebra Skills Refresher <a href="appendix-a.html#appendix-Factoring-Quadratic-Trinomials" alt="Section A.8 Factoring Quadratic Trinomials" title="Section A.8 Factoring Quadratic Trinomials">Appendix A.8</a> to review factoring.)</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-2160"><h5 class="heading"><span class="codenumber">11</span></h5>
-<p id="p-10514">\(2a^2 + 5a − 3 = 0\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1154" id="answer-1154"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1154" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10515">\(\dfrac{1}{2} \text{,}\) \(~-3\)</p></span></span> </article><article class="exercise-like" id="exercise-2161"><h5 class="heading"><span class="codenumber">12</span></h5>
-<p id="p-10516">\(3b^2 − 4b − 4 = 0 \)</p></article><article class="exercise-like" id="exercise-2162"><h5 class="heading"><span class="codenumber">13</span></h5>
-<p id="p-10517">\(2x^2 = 6x \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1155" id="answer-1155"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1155" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10518">\(0 \text{,}\) \(~3\)</p></span></span> </article><article class="exercise-like" id="exercise-2163"><h5 class="heading"><span class="codenumber">14</span></h5>
-<p id="p-10519">\(5z^2 = 5z \)</p></article><article class="exercise-like" id="exercise-2164"><h5 class="heading"><span class="codenumber">15</span></h5>
-<p id="p-10520">\(3y^2 − 6y = −3 \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1156" id="answer-1156"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1156" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10521">\(1\)</p></span></span> </article><article class="exercise-like" id="exercise-2165"><h5 class="heading"><span class="codenumber">16</span></h5>
-<p id="p-10522">\(4y^2 + 4y = 8 \)</p></article><article class="exercise-like" id="exercise-2166"><h5 class="heading"><span class="codenumber">17</span></h5>
-<p id="p-10523">\(x(2x − 3) = −1 \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1157" id="answer-1157"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1157" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10524">\(\dfrac{1}{2} \text{,}\) \(~1 \)</p></span></span> </article><article class="exercise-like" id="exercise-2167"><h5 class="heading"><span class="codenumber">18</span></h5>
-<p id="p-10525">\(2x(x − 2) = x + 3 \)</p></article><article class="exercise-like" id="exercise-2168"><h5 class="heading"><span class="codenumber">19</span></h5>
-<p id="p-10526">\(t (t − 3) = 2(t − 3) \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1158" id="answer-1158"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1158" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10527">\(2 \text{,}\) \(~3 \)</p></span></span> </article><article class="exercise-like" id="exercise-2169"><h5 class="heading"><span class="codenumber">20</span></h5>
-<p id="p-10528">\(5(t + 2) = t (t + 2)\)</p></article><article class="exercise-like" id="exercise-2170"><h5 class="heading"><span class="codenumber">21</span></h5>
-<p id="p-10529">\(z(3z + 2) = (z + 2)^2 \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1159" id="answer-1159"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1159" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10530">\(-1 \text{,}\) \(~2 \)</p></span></span> </article><article class="exercise-like" id="exercise-2171"><h5 class="heading"><span class="codenumber">22</span></h5>
-<p id="p-10531">\((z − 1)^2 = 2z^2 + 3z − 5 \)</p></article><article class="exercise-like" id="exercise-2172"><h5 class="heading"><span class="codenumber">23</span></h5>
-<p id="p-10532">\((v + 2)(v − 5) = 8 \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1160" id="answer-1160"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1160" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10533">\(-3 \text{,}\) \(~6 \)</p></span></span> </article><article class="exercise-like" id="exercise-2173"><h5 class="heading"><span class="codenumber">24</span></h5>
-<p id="p-10534">\((w + 1)(2w − 3) = 3 \)</p></article>
+<p id="p-10516">\(2a^2 + 5a − 3 = 0\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1154" id="answer-1154"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1154" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10517">\(\dfrac{1}{2} \text{,}\) \(~-3\)</p></span></span> </article><article class="exercise-like" id="exercise-2161"><h5 class="heading"><span class="codenumber">12</span></h5>
+<p id="p-10518">\(3b^2 − 4b − 4 = 0 \)</p></article><article class="exercise-like" id="exercise-2162"><h5 class="heading"><span class="codenumber">13</span></h5>
+<p id="p-10519">\(2x^2 = 6x \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1155" id="answer-1155"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1155" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10520">\(0 \text{,}\) \(~3\)</p></span></span> </article><article class="exercise-like" id="exercise-2163"><h5 class="heading"><span class="codenumber">14</span></h5>
+<p id="p-10521">\(5z^2 = 5z \)</p></article><article class="exercise-like" id="exercise-2164"><h5 class="heading"><span class="codenumber">15</span></h5>
+<p id="p-10522">\(3y^2 − 6y = −3 \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1156" id="answer-1156"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1156" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10523">\(1\)</p></span></span> </article><article class="exercise-like" id="exercise-2165"><h5 class="heading"><span class="codenumber">16</span></h5>
+<p id="p-10524">\(4y^2 + 4y = 8 \)</p></article><article class="exercise-like" id="exercise-2166"><h5 class="heading"><span class="codenumber">17</span></h5>
+<p id="p-10525">\(x(2x − 3) = −1 \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1157" id="answer-1157"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1157" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10526">\(\dfrac{1}{2} \text{,}\) \(~1 \)</p></span></span> </article><article class="exercise-like" id="exercise-2167"><h5 class="heading"><span class="codenumber">18</span></h5>
+<p id="p-10527">\(2x(x − 2) = x + 3 \)</p></article><article class="exercise-like" id="exercise-2168"><h5 class="heading"><span class="codenumber">19</span></h5>
+<p id="p-10528">\(t (t − 3) = 2(t − 3) \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1158" id="answer-1158"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1158" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10529">\(2 \text{,}\) \(~3 \)</p></span></span> </article><article class="exercise-like" id="exercise-2169"><h5 class="heading"><span class="codenumber">20</span></h5>
+<p id="p-10530">\(5(t + 2) = t (t + 2)\)</p></article><article class="exercise-like" id="exercise-2170"><h5 class="heading"><span class="codenumber">21</span></h5>
+<p id="p-10531">\(z(3z + 2) = (z + 2)^2 \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1159" id="answer-1159"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1159" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10532">\(-1 \text{,}\) \(~2 \)</p></span></span> </article><article class="exercise-like" id="exercise-2171"><h5 class="heading"><span class="codenumber">22</span></h5>
+<p id="p-10533">\((z − 1)^2 = 2z^2 + 3z − 5 \)</p></article><article class="exercise-like" id="exercise-2172"><h5 class="heading"><span class="codenumber">23</span></h5>
+<p id="p-10534">\((v + 2)(v − 5) = 8 \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1160" id="answer-1160"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1160" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10535">\(-3 \text{,}\) \(~6 \)</p></span></span> </article><article class="exercise-like" id="exercise-2173"><h5 class="heading"><span class="codenumber">24</span></h5>
+<p id="p-10536">\((w + 1)(2w − 3) = 3 \)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-290">
-<article class="introduction" id="introduction-295"><p id="p-10535">In Problems 25–28, graph each set of functions in the standard window.What do you notice about the \(x\)-intercepts? Generalize your observation, and test your idea with examples.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-295"><p id="p-10537">In Problems 25–28, graph each set of functions in the standard window.What do you notice about the \(x\)-intercepts? Generalize your observation, and test your idea with examples.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-2174"><h5 class="heading"><span class="codenumber">25</span></h5>
-<p id="p-10536"></p>
+<p id="p-10538"></p>
 <ol id="ol-2020" style="list-style-type: lower-alpha;">
-<li id="li-6396"><p id="p-10537">\(y = x^2 − x − 20\)</p></li>
-<li id="li-6397"><p id="p-10538">\(y = 2(x^2 − x − 20)\)</p></li>
-<li id="li-6398"><p id="p-10539">\(y = 0.5(x^2 − x − 20)\)</p></li>
+<li id="li-6396"><p id="p-10539">\(y = x^2 − x − 20\)</p></li>
+<li id="li-6397"><p id="p-10540">\(y = 2(x^2 − x − 20)\)</p></li>
+<li id="li-6398"><p id="p-10541">\(y = 0.5(x^2 − x − 20)\)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1161" id="answer-1161"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1161" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10540">The 3 graphs have the same \(x\)-intercepts. In general, the graph of \(y = ax^2 + bx + c\) has the same \(x\)-intercepts as the graph of \(y = k(ax^2 + bx + c)\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-2175"><h5 class="heading"><span class="codenumber">26</span></h5>
-<p id="p-10541"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1161" id="answer-1161"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1161" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10542">The 3 graphs have the same \(x\)-intercepts. In general, the graph of \(y = ax^2 + bx + c\) has the same \(x\)-intercepts as the graph of \(y = k(ax^2 + bx + c)\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-2175"><h5 class="heading"><span class="codenumber">26</span></h5>
+<p id="p-10543"></p>
 <ol id="ol-2021" style="list-style-type: lower-alpha;">
-<li id="li-6399"><p id="p-10542">\(y = x^2 + 2x − 15 \)</p></li>
-<li id="li-6400"><p id="p-10543">\(y = 3(x^2 + 2x − 15)\)</p></li>
-<li id="li-6401"><p id="p-10544">\(y = 0.2(x^2 + 2x − 15)\)</p></li>
+<li id="li-6399"><p id="p-10544">\(y = x^2 + 2x − 15 \)</p></li>
+<li id="li-6400"><p id="p-10545">\(y = 3(x^2 + 2x − 15)\)</p></li>
+<li id="li-6401"><p id="p-10546">\(y = 0.2(x^2 + 2x − 15)\)</p></li>
 </ol></article><article class="exercise-like" id="exercise-2176"><h5 class="heading"><span class="codenumber">27</span></h5>
-<p id="p-10545"></p>
+<p id="p-10547"></p>
 <ol id="ol-2022" style="list-style-type: lower-alpha;">
-<li id="li-6402"><p id="p-10546">\(y = x^2 + 6x − 16 \)</p></li>
-<li id="li-6403"><p id="p-10547">\(y = -2(x^2 + 6x − 16)\)</p></li>
-<li id="li-6404"><p id="p-10548">\(y = -0.1(x^2 + 6x − 16)\)</p></li>
+<li id="li-6402"><p id="p-10548">\(y = x^2 + 6x − 16 \)</p></li>
+<li id="li-6403"><p id="p-10549">\(y = -2(x^2 + 6x − 16)\)</p></li>
+<li id="li-6404"><p id="p-10550">\(y = -0.1(x^2 + 6x − 16)\)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1162" id="answer-1162"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1162" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10549">The 3 graphs have the same \(x\)-intercepts. In general, the graph of \(y = ax^2 + bx + c\) has the same \(x\)-intercepts as the graph of \(y = k(ax^2 + bx + c)\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-2177"><h5 class="heading"><span class="codenumber">28</span></h5>
-<p id="p-10550"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1162" id="answer-1162"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1162" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10551">The 3 graphs have the same \(x\)-intercepts. In general, the graph of \(y = ax^2 + bx + c\) has the same \(x\)-intercepts as the graph of \(y = k(ax^2 + bx + c)\text{.}\)</p></span></span> </article><article class="exercise-like" id="exercise-2177"><h5 class="heading"><span class="codenumber">28</span></h5>
+<p id="p-10552"></p>
 <ol id="ol-2023" style="list-style-type: lower-alpha;">
-<li id="li-6405"><p id="p-10551">\(y = x^2 − 16 \)</p></li>
-<li id="li-6406"><p id="p-10552">\(y = -1.5(x^2 − 16)\)</p></li>
-<li id="li-6407"><p id="p-10553">\(y = -0.4(x^2 − 16)\)</p></li>
+<li id="li-6405"><p id="p-10553">\(y = x^2 − 16 \)</p></li>
+<li id="li-6406"><p id="p-10554">\(y = -1.5(x^2 − 16)\)</p></li>
+<li id="li-6407"><p id="p-10555">\(y = -0.4(x^2 − 16)\)</p></li>
 </ol></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-291">
-<article class="introduction" id="introduction-296"><p id="p-10554">In Problems 29–36, write a quadratic equation whose solutions are given. The equation should be in standard form with integer coefficients.</p></article><div class="exercisegroup-exercises cols4">
+<article class="introduction" id="introduction-296"><p id="p-10556">In Problems 29–36, write a quadratic equation whose solutions are given. The equation should be in standard form with integer coefficients.</p></article><div class="exercisegroup-exercises cols4">
 <article class="exercise-like" id="exercise-2178"><h5 class="heading"><span class="codenumber">29</span></h5>
-<p id="p-10555">\(-2\) and \(1\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1163" id="answer-1163"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1163" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10556">\(x^2 + x − 2 = 0\)</p></span></span> </article><article class="exercise-like" id="exercise-2179"><h5 class="heading"><span class="codenumber">30</span></h5>
-<p id="p-10557">\(-4\) and \(3\)</p></article><article class="exercise-like" id="exercise-2180"><h5 class="heading"><span class="codenumber">31</span></h5>
-<p id="p-10558">\(0\) and \(-5\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1164" id="answer-1164"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1164" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10559">\(x^2 + 5x  = 0\)</p></span></span> </article><article class="exercise-like" id="exercise-2181"><h5 class="heading"><span class="codenumber">32</span></h5>
-<p id="p-10560">\(0\) and \(5\)</p></article><article class="exercise-like" id="exercise-2182"><h5 class="heading"><span class="codenumber">33</span></h5>
-<p id="p-10561">\(-3\) and \(\frac{1}{2} \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1165" id="answer-1165"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1165" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10562">\(2x^2 + 5x − 3 = 0\)</p></span></span> </article><article class="exercise-like" id="exercise-2183"><h5 class="heading"><span class="codenumber">34</span></h5>
-<p id="p-10563">\(\frac{-2}{3} \) and \(4\)</p></article><article class="exercise-like" id="exercise-2184"><h5 class="heading"><span class="codenumber">35</span></h5>
-<p id="p-10564">\(\frac{-1}{4} \) and \(\frac{3}{2} \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1166" id="answer-1166"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1166" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10565">\(8x^2 -10x -3 = 0\)</p></span></span> </article><article class="exercise-like" id="exercise-2185"><h5 class="heading"><span class="codenumber">36</span></h5>
-<p id="p-10566">\(\frac{-1}{3} \) and \(\frac{-1}{2} \)</p></article>
+<p id="p-10557">\(-2\) and \(1\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1163" id="answer-1163"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1163" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10558">\(x^2 + x − 2 = 0\)</p></span></span> </article><article class="exercise-like" id="exercise-2179"><h5 class="heading"><span class="codenumber">30</span></h5>
+<p id="p-10559">\(-4\) and \(3\)</p></article><article class="exercise-like" id="exercise-2180"><h5 class="heading"><span class="codenumber">31</span></h5>
+<p id="p-10560">\(0\) and \(-5\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1164" id="answer-1164"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1164" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10561">\(x^2 + 5x  = 0\)</p></span></span> </article><article class="exercise-like" id="exercise-2181"><h5 class="heading"><span class="codenumber">32</span></h5>
+<p id="p-10562">\(0\) and \(5\)</p></article><article class="exercise-like" id="exercise-2182"><h5 class="heading"><span class="codenumber">33</span></h5>
+<p id="p-10563">\(-3\) and \(\frac{1}{2} \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1165" id="answer-1165"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1165" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10564">\(2x^2 + 5x − 3 = 0\)</p></span></span> </article><article class="exercise-like" id="exercise-2183"><h5 class="heading"><span class="codenumber">34</span></h5>
+<p id="p-10565">\(\frac{-2}{3} \) and \(4\)</p></article><article class="exercise-like" id="exercise-2184"><h5 class="heading"><span class="codenumber">35</span></h5>
+<p id="p-10566">\(\frac{-1}{4} \) and \(\frac{3}{2} \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1166" id="answer-1166"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1166" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10567">\(8x^2 -10x -3 = 0\)</p></span></span> </article><article class="exercise-like" id="exercise-2185"><h5 class="heading"><span class="codenumber">36</span></h5>
+<p id="p-10568">\(\frac{-1}{3} \) and \(\frac{-1}{2} \)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-292">
-<article class="introduction" id="introduction-297"><p id="p-10567">Graph the function in the <em class="terminology">ZInteger</em> window, and locate the \(x\)-intercepts of the graph. Use the \(x\)-intercepts to write the quadratic expression in factored form.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-297"><p id="p-10569">Graph the function in the <em class="terminology">ZInteger</em> window, and locate the \(x\)-intercepts of the graph. Use the \(x\)-intercepts to write the quadratic expression in factored form.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-2186"><h5 class="heading"><span class="codenumber">37</span></h5>
-<p id="p-10568">\(y = 0.1(x^2 − 3x − 270)\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1167" id="answer-1167"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1167" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10569">\(y = 0.1(x − 18)(x + 15)\)</p></span></span> </article><article class="exercise-like" id="exercise-2187"><h5 class="heading"><span class="codenumber">38</span></h5>
-<p id="p-10570">\(y = 0.1(x^2 + 9x − 360)\)</p></article><article class="exercise-like" id="exercise-2188"><h5 class="heading"><span class="codenumber">39</span></h5>
-<p id="p-10571">\(y = −0.08(x^2 + 14x − 576)\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1168" id="answer-1168"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1168" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10572">\(y = -0.087(x − 18)(x + 32)\)</p></span></span> </article><article class="exercise-like" id="exercise-2189"><h5 class="heading"><span class="codenumber">40</span></h5>
-<p id="p-10573">\(y = −0.06(x^2 − 22x − 504)\)</p></article>
+<p id="p-10570">\(y = 0.1(x^2 − 3x − 270)\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1167" id="answer-1167"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1167" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10571">\(y = 0.1(x − 18)(x + 15)\)</p></span></span> </article><article class="exercise-like" id="exercise-2187"><h5 class="heading"><span class="codenumber">38</span></h5>
+<p id="p-10572">\(y = 0.1(x^2 + 9x − 360)\)</p></article><article class="exercise-like" id="exercise-2188"><h5 class="heading"><span class="codenumber">39</span></h5>
+<p id="p-10573">\(y = −0.08(x^2 + 14x − 576)\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1168" id="answer-1168"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1168" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10574">\(y = -0.087(x − 18)(x + 32)\)</p></span></span> </article><article class="exercise-like" id="exercise-2189"><h5 class="heading"><span class="codenumber">40</span></h5>
+<p id="p-10575">\(y = −0.06(x^2 − 22x − 504)\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-293">
-<article class="introduction" id="introduction-298"><p id="p-10574">Use the Pythagorean theorem to solve Problems 41 and 42. (See Algebra Skills Refresher <a href="appendix-a.html#appendix-Facts-from-Geometry" alt="Section A.11 Facts from Geometry" title="Section A.11 Facts from Geometry">Appendix A.11</a> to review the Pythagorean theorem.)</p></article><div class="exercisegroup-exercises">
+<article class="introduction" id="introduction-298"><p id="p-10576">Use the Pythagorean theorem to solve Problems 41 and 42. (See Algebra Skills Refresher <a href="appendix-a.html#appendix-Facts-from-Geometry" alt="Section A.11 Facts from Geometry" title="Section A.11 Facts from Geometry">Appendix A.11</a> to review the Pythagorean theorem.)</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-2190"><h5 class="heading"><span class="codenumber">41</span></h5>
-<p id="p-10575"><div class="sidebyside" style="" id="sidebyside-121"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<p id="p-10577"><div class="sidebyside" style="" id="sidebyside-121"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel" style="width:65%;justify-content:flex-start;">
-<p id="p-10576">One end of a ladder is \(10\) feet from the base of a wall, and the other end reaches a window in the wall. The ladder is \(2\) feet longer than the height of the window. </p>
+<p id="p-10578">One end of a ladder is \(10\) feet from the base of a wall, and the other end reaches a window in the wall. The ladder is \(2\) feet longer than the height of the window. </p>
 <ol id="ol-2024" style="list-style-type: lower-alpha;">
-<li id="li-6408"><p id="p-10577">Write a quadratic equation about the height of the window.</p></li>
-<li id="li-6409"><p id="p-10578">Solve your equation to find the height of the window.</p></li>
+<li id="li-6408"><p id="p-10579">Write a quadratic equation about the height of the window.</p></li>
+<li id="li-6409"><p id="p-10580">Solve your equation to find the height of the window.</p></li>
 </ol>
 <p></p>
 </div>
 <div class="sbspanel" style="width:30%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-6-1-41.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
 </div></div></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1169" id="answer-1169"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1169" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10579"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1169" id="answer-1169"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1169" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10581"></p>
 <ol id="ol-2025" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-6410" style="width:49%; float:left;"><p id="p-10580">\(10^2 + h^2 = (h + 2)^2\)</p></li>
-<li id="li-6411" style="width:49%; float:left;"><p id="p-10581">\(24\) ft</p></li>
+<li id="li-6410" style="width:49%; float:left;"><p id="p-10582">\(10^2 + h^2 = (h + 2)^2\)</p></li>
+<li id="li-6411" style="width:49%; float:left;"><p id="p-10583">\(24\) ft</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2191"><h5 class="heading"><span class="codenumber">42</span></h5>
-<p id="p-10582">The diagonal of a rectangle is \(20\) inches. One side of the rectangle is \(4\) inches shorter than the other side. </p>
+<p id="p-10584">The diagonal of a rectangle is \(20\) inches. One side of the rectangle is \(4\) inches shorter than the other side. </p>
 <ol id="ol-2026" style="list-style-type: lower-alpha;">
-<li id="li-6412"><p id="p-10583">Write a quadratic equation about the length of the rectangle.</p></li>
-<li id="li-6413"><p id="p-10584">Solve your equation to find the dimensions of the rectangle.</p></li>
+<li id="li-6412"><p id="p-10585">Write a quadratic equation about the length of the rectangle.</p></li>
+<li id="li-6413"><p id="p-10586">Solve your equation to find the dimensions of the rectangle.</p></li>
 </ol>
 <p></p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-294">
-<article class="introduction" id="introduction-299"><p id="p-10585">Use the following formula to answer Problems 43 and 44. If an object is thrown into the air from a height \(s_0\) above the ground with an initial velocity \(v_0\text{,}\) its height \(t\) seconds later is given by the formula
+<article class="introduction" id="introduction-299"><p id="p-10587">Use the following formula to answer Problems 43 and 44. If an object is thrown into the air from a height \(s_0\) above the ground with an initial velocity \(v_0\text{,}\) its height \(t\) seconds later is given by the formula
 \begin{equation*}
 h=-\frac{1}{2}gt^2+v_0 t + s_0 
 \end{equation*}
 where \(g\) is a constant that measures the force of gravity.</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-2192"><h5 class="heading"><span class="codenumber">43</span></h5>
-<p id="p-10586">A tennis ball is thrown into the air with an initial velocity of \(16\) feet per second from a height of \(8\) feet. The value of \(g\) is \(32\text{.}\) </p>
+<p id="p-10588">A tennis ball is thrown into the air with an initial velocity of \(16\) feet per second from a height of \(8\) feet. The value of \(g\) is \(32\text{.}\) </p>
 <ol id="ol-2027" style="list-style-type: lower-alpha;">
-<li id="li-6414"><p id="p-10587">Write a quadratic equation that gives the height of the tennis ball at time \(t\text{.}\)</p></li>
-<li id="li-6415"><p id="p-10588">Find the height of the tennis ball at \(t = \frac{1}{2}\) second and at \(t = 1\) second.</p></li>
-<li id="li-6416"><p id="p-10589">Write and solve an equation to answer the question: At what time is the tennis ball \(11\) feet high?</p></li>
-<li id="li-6417"><p id="p-10590">Use the <em class="terminology">Table</em> feature on your calculator to verify your answers to parts (b) and (c). (What value of \(\Delta \text{Tbl}\) is useful for this problem?)</p></li>
-<li id="li-6418"><p id="p-10591">Graph your equation from part (a) on your calculator. Use your table to help you choose an appropriate window.</p></li>
-<li id="li-6419"><p id="p-10592">If nobody hits the tennis ball, approximately how long will it be in the air?</p></li>
+<li id="li-6414"><p id="p-10589">Write a quadratic equation that gives the height of the tennis ball at time \(t\text{.}\)</p></li>
+<li id="li-6415"><p id="p-10590">Find the height of the tennis ball at \(t = \frac{1}{2}\) second and at \(t = 1\) second.</p></li>
+<li id="li-6416"><p id="p-10591">Write and solve an equation to answer the question: At what time is the tennis ball \(11\) feet high?</p></li>
+<li id="li-6417"><p id="p-10592">Use the <em class="terminology">Table</em> feature on your calculator to verify your answers to parts (b) and (c). (What value of \(\Delta \text{Tbl}\) is useful for this problem?)</p></li>
+<li id="li-6418"><p id="p-10593">Graph your equation from part (a) on your calculator. Use your table to help you choose an appropriate window.</p></li>
+<li id="li-6419"><p id="p-10594">If nobody hits the tennis ball, approximately how long will it be in the air?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1170" id="answer-1170"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1170" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10593"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1170" id="answer-1170"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1170" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10595"></p>
 <ol id="ol-2028" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-6420" style="width:49%; float:left;"><p id="p-10594">\(h=−16t^2 + 16t + 8\)</p></li>
-<li id="li-6421" style="width:49%; float:left;"><p id="p-10595">\(12\) ft; \(8\) ft</p></li>
-<li id="li-6422" style="width:49%; float:left;"><p id="p-10596">\(11=-16t^2+16t+8\text{;}\) at \(\dfrac{1}{4} \) sec and \(\dfrac{3}{4} \) sec</p></li>
-<li id="li-6423" style="width:49%; float:left;"><p id="p-10597">\(\Delta \text{Tbl}=0.25\)</p></li>
-<li id="li-6424" style="width:49%; float:left;"><p id="p-10598"><img width="60%" src="images/fig-ans-6-1-43.jpg" alt=""></p></li>
-<li id="li-6425" style="width:49%; float:left;"><p id="p-10599">\(1.37\) sec</p></li>
+<li id="li-6420" style="width:49%; float:left;"><p id="p-10596">\(h=−16t^2 + 16t + 8\)</p></li>
+<li id="li-6421" style="width:49%; float:left;"><p id="p-10597">\(12\) ft; \(8\) ft</p></li>
+<li id="li-6422" style="width:49%; float:left;"><p id="p-10598">\(11=-16t^2+16t+8\text{;}\) at \(\dfrac{1}{4} \) sec and \(\dfrac{3}{4} \) sec</p></li>
+<li id="li-6423" style="width:49%; float:left;"><p id="p-10599">\(\Delta \text{Tbl}=0.25\)</p></li>
+<li id="li-6424" style="width:49%; float:left;"><p id="p-10600"><img width="60%" src="images/fig-ans-6-1-43.jpg" alt=""></p></li>
+<li id="li-6425" style="width:49%; float:left;"><p id="p-10601">\(1.37\) sec</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2193"><h5 class="heading"><span class="codenumber">44</span></h5>
-<p id="p-10600">A mountain climber stands on a ledge \(80\) feet above the ground and tosses a rope down to a companion clinging to the rock face below the ledge. The initial velocity of the rope is \(-8\) feet per second, and the value of \(g\) is \(32\text{.}\) </p>
+<p id="p-10602">A mountain climber stands on a ledge \(80\) feet above the ground and tosses a rope down to a companion clinging to the rock face below the ledge. The initial velocity of the rope is \(-8\) feet per second, and the value of \(g\) is \(32\text{.}\) </p>
 <ol id="ol-2029" style="list-style-type: lower-alpha;">
-<li id="li-6426"><p id="p-10601">Write a quadratic equation that gives the height of the rope at time \(t\text{.}\)</p></li>
-<li id="li-6427"><p id="p-10602">What is the height of the rope after \(\frac{1}{2} \) second? After \(1\) second?</p></li>
-<li id="li-6428"><p id="p-10603">Write and solve an equation to answer the question: How long does it take the rope to reach the second climber, who is \(17\) feet above the ground?</p></li>
-<li id="li-6429"><p id="p-10604">Use the Table feature on your calculator to verify your answers to parts (b) and (c). (What value of \(\Delta \text{Tbl}\) is useful for this problem?)</p></li>
-<li id="li-6430"><p id="p-10605">Graph your equation from part (a) on your calculator. Use your table to help you choose an appropriate window.</p></li>
-<li id="li-6431"><p id="p-10606">If the second climber misses the rope, approximately how long will the rope take to reach the ground?</p></li>
+<li id="li-6426"><p id="p-10603">Write a quadratic equation that gives the height of the rope at time \(t\text{.}\)</p></li>
+<li id="li-6427"><p id="p-10604">What is the height of the rope after \(\frac{1}{2} \) second? After \(1\) second?</p></li>
+<li id="li-6428"><p id="p-10605">Write and solve an equation to answer the question: How long does it take the rope to reach the second climber, who is \(17\) feet above the ground?</p></li>
+<li id="li-6429"><p id="p-10606">Use the Table feature on your calculator to verify your answers to parts (b) and (c). (What value of \(\Delta \text{Tbl}\) is useful for this problem?)</p></li>
+<li id="li-6430"><p id="p-10607">Graph your equation from part (a) on your calculator. Use your table to help you choose an appropriate window.</p></li>
+<li id="li-6431"><p id="p-10608">If the second climber misses the rope, approximately how long will the rope take to reach the ground?</p></li>
 </ol>
 <p></p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-295">
-<article class="introduction" id="introduction-300"><p id="p-10607">For Problems 45 and 46, you may want to review <a knowl="./knowl/investigation-Perimeter-and-Area.html" knowl-id="xref-investigation-Perimeter-and-Area" alt="Investigation 2.2 Investigation: Perimeter and Area" title="Investigation 2.2 Investigation: Perimeter and Area">Investigation 2.2</a>, Perimeter and Area, in <a href="chap2.html" alt="Chapter 2 Modeling with Functions" title="Chapter 2 Modeling with Functions">Chapter 2</a>.</p></article><div class="exercisegroup-exercises">
+<article class="introduction" id="introduction-300"><p id="p-10609">For Problems 45 and 46, you may want to review <a knowl="./knowl/investigation-Perimeter-and-Area.html" knowl-id="xref-investigation-Perimeter-and-Area" alt="Investigation 2.2 Investigation: Perimeter and Area" title="Investigation 2.2 Investigation: Perimeter and Area">Investigation 2.2</a>, Perimeter and Area, in <a href="chap2.html" alt="Chapter 2 Modeling with Functions" title="Chapter 2 Modeling with Functions">Chapter 2</a>.</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-2194"><h5 class="heading"><span class="codenumber">45</span></h5>
-<p id="p-10608">A rancher has \(360\) yards of fence to enclose a rectangular pasture. If the pasture should be \(8000\) square yards in area, what should its dimensions be? We will use 3 methods to solve this problem: a table of values, a graph, and an algebraic equation. </p>
+<p id="p-10610">A rancher has \(360\) yards of fence to enclose a rectangular pasture. If the pasture should be \(8000\) square yards in area, what should its dimensions be? We will use 3 methods to solve this problem: a table of values, a graph, and an algebraic equation. </p>
 <ol id="ol-2030" style="list-style-type: lower-alpha;">
-<li id="li-6432"><p id="p-10609">Make a table by hand that shows the areas of pastures of various widths, as shown here. <figure class="figure-like" id="table-362"><table>
+<li id="li-6432"><p id="p-10611">Make a table by hand that shows the areas of pastures of various widths, as shown here. <figure class="figure-like" id="table-362"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">Width</td>
 <td class="c m b1 r1 l0 t1 lines">Length</td>
@@ -763,13 +768,13 @@ where \(g\) is a constant that measures the force of gravity.</p></article><div 
 <td class="c m b1 r1 l0 t0 lines">\(\vdots\)</td>
 </tr>
 </table></figure> (To find the length of each pasture, ask yourself, What is the sum of the length plus the width if there are \(360\) yards of fence?) Continue the table until you find the pasture whose area is \(8000\) square yards.</p></li>
-<li id="li-6433"><p id="p-10610">Write an expression for the length of the pasture if its width is \(x\text{.}\) Next, write an expression for the area, \(A\text{,}\) of the pasture if its width is \(x\text{.}\) Graph the equation for \(A\) on your calculator, and use the graph to find the pasture of area \(8000\) square yards.</p></li>
-<li id="li-6434"><p id="p-10611">Write an equation for the area, \(A\text{,}\) of the pasture in terms of its width \(x\text{.}\) Solve your equation algebraically for \(A = 8000\text{.}\) Explain why there are two solutions.</p></li>
+<li id="li-6433"><p id="p-10612">Write an expression for the length of the pasture if its width is \(x\text{.}\) Next, write an expression for the area, \(A\text{,}\) of the pasture if its width is \(x\text{.}\) Graph the equation for \(A\) on your calculator, and use the graph to find the pasture of area \(8000\) square yards.</p></li>
+<li id="li-6434"><p id="p-10613">Write an equation for the area, \(A\text{,}\) of the pasture in terms of its width \(x\text{.}\) Solve your equation algebraically for \(A = 8000\text{.}\) Explain why there are two solutions.</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1171" id="answer-1171"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1171" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10612"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1171" id="answer-1171"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1171" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10614"></p>
 <ol id="ol-2031" style="list-style-type: lower-alpha;">
-<li id="li-6435"><p id="p-10613"><table>
+<li id="li-6435"><p id="p-10615"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">Width</td>
 <td class="c m b1 r1 l0 t1 lines">Length</td>
@@ -816,12 +821,12 @@ where \(g\) is a constant that measures the force of gravity.</p></article><div 
 <td class="c m b1 r1 l0 t0 lines">\(8000\)</td>
 </tr>
 </table></p></li>
-<li id="li-6436"><p id="p-10614">\(l= 180 − x\text{,}\) \(A = 180x − x^2\text{;}\) \(80\) yd by \(100\) yd</p></li>
-<li id="li-6437"><p id="p-10615">\(180x-x^2=8000\text{,}\) \(80\) yd by \(100\) yd, or \(100\) yd by \(80\) yd. There are two solutions to the equation, but they give the same dimensions of the rectangle.</p></li>
+<li id="li-6436"><p id="p-10616">\(l= 180 − x\text{,}\) \(A = 180x − x^2\text{;}\) \(80\) yd by \(100\) yd</p></li>
+<li id="li-6437"><p id="p-10617">\(180x-x^2=8000\text{,}\) \(80\) yd by \(100\) yd, or \(100\) yd by \(80\) yd. There are two solutions to the equation, but they give the same dimensions of the rectangle.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2195"><h5 class="heading"><span class="codenumber">46</span></h5>
-<p id="p-10616">If the rancher in Problem 45 uses a riverbank to border one side of the pasture as shown in the figure, he can enclose \(16,000\) square yards with \(360\) yards of fence. What will the dimensions of the pasture be then? We will use three methods to solve this problem: a table of values, a graph, and an algebraic equation. <figure class="figure-like" id="figure-332"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-6-1-46.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure> </p>
+<p id="p-10618">If the rancher in Problem 45 uses a riverbank to border one side of the pasture as shown in the figure, he can enclose \(16,000\) square yards with \(360\) yards of fence. What will the dimensions of the pasture be then? We will use three methods to solve this problem: a table of values, a graph, and an algebraic equation. <figure class="figure-like" id="figure-332"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-6-1-46.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure> </p>
 <ol id="ol-2032" style="list-style-type: lower-alpha;">
-<li id="li-6438"><p id="p-10617">Make a table by hand that shows the areas of pastures of various widths, as shown here. <figure class="figure-like" id="table-363"><table>
+<li id="li-6438"><p id="p-10619">Make a table by hand that shows the areas of pastures of various widths, as shown here. <figure class="figure-like" id="table-363"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">Width</td>
 <td class="c m b1 r1 l0 t1 lines">Length</td>
@@ -843,28 +848,28 @@ where \(g\) is a constant that measures the force of gravity.</p></article><div 
 <td class="c m b1 r1 l0 t0 lines">\(\vdots\)</td>
 </tr>
 </table></figure> (Be careful computing the length of the pasture: Remember that one side of the pasture does not need any fence!) Continue the table until you find the pasture whose area is \(16,000\) square yards.</p></li>
-<li id="li-6439"><p id="p-10618">Write an expression for the length of the pasture if its width is \(x\text{.}\) Next, write an expression for the area, \(A\text{,}\) of the pasture if its width is \(x\text{.}\) Graph the equation for \(A\text{,}\) and use the graph to find the pasture of area \(16,000\) square yards.</p></li>
-<li id="li-6440"><p id="p-10619">Write an equation for the area, \(A\text{,}\) of the pasture in terms of its width \(x\text{.}\) Solve your equation algebraically for \(A = 16,000\text{.}\)</p></li>
+<li id="li-6439"><p id="p-10620">Write an expression for the length of the pasture if its width is \(x\text{.}\) Next, write an expression for the area, \(A\text{,}\) of the pasture if its width is \(x\text{.}\) Graph the equation for \(A\text{,}\) and use the graph to find the pasture of area \(16,000\) square yards.</p></li>
+<li id="li-6440"><p id="p-10621">Write an equation for the area, \(A\text{,}\) of the pasture in terms of its width \(x\text{.}\) Solve your equation algebraically for \(A = 16,000\text{.}\)</p></li>
 </ol>
 <p></p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-296">
-<article class="introduction" id="introduction-301"><p id="p-10620">For Problems 47 and 48, you will need the formula for the volume of a box.</p></article><div class="exercisegroup-exercises">
+<article class="introduction" id="introduction-301"><p id="p-10622">For Problems 47 and 48, you will need the formula for the volume of a box.</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-2196"><h5 class="heading"><span class="codenumber">47</span></h5>
-<p id="p-10621">A box is made from a square piece of cardboard by cutting \(2\)-inch squares from each corner and turning up the edges. <figure class="figure-like" id="figure-333"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-6-1-47.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure> </p>
+<p id="p-10623">A box is made from a square piece of cardboard by cutting \(2\)-inch squares from each corner and turning up the edges. <figure class="figure-like" id="figure-333"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-6-1-47.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure> </p>
 <ol id="ol-2033" style="list-style-type: lower-alpha;">
-<li id="li-6441"><p id="p-10622">If the piece of cardboard is \(x\) inches square, write expressions for the length, width, and height of the box. Then write an expression for the volume, \(V\text{,}\) of the box in terms of \(x\text{.}\)</p></li>
-<li id="li-6442"><p id="p-10623">Use your calculator to make a table of values showing the volumes of boxes made from cardboard squares of side \(4\) inches, \(5\) inches, and so on.</p></li>
-<li id="li-6443"><p id="p-10624">Graph your expression for the volume on your calculator. What happens to \(V\) as \(x\) increases?</p></li>
-<li id="li-6444"><p id="p-10625">Use your table or your graph to find what size cardboard you need to make a box with volume \(50\) cubic inches.</p></li>
-<li id="li-6445"><p id="p-10626">Write and solve a quadratic equation to answer part (d).</p></li>
+<li id="li-6441"><p id="p-10624">If the piece of cardboard is \(x\) inches square, write expressions for the length, width, and height of the box. Then write an expression for the volume, \(V\text{,}\) of the box in terms of \(x\text{.}\)</p></li>
+<li id="li-6442"><p id="p-10625">Use your calculator to make a table of values showing the volumes of boxes made from cardboard squares of side \(4\) inches, \(5\) inches, and so on.</p></li>
+<li id="li-6443"><p id="p-10626">Graph your expression for the volume on your calculator. What happens to \(V\) as \(x\) increases?</p></li>
+<li id="li-6444"><p id="p-10627">Use your table or your graph to find what size cardboard you need to make a box with volume \(50\) cubic inches.</p></li>
+<li id="li-6445"><p id="p-10628">Write and solve a quadratic equation to answer part (d).</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1172" id="answer-1172"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1172" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10627"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1172" id="answer-1172"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1172" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10629"></p>
 <ol id="ol-2034" style="list-style-type: lower-alpha;">
-<li id="li-6446"><p id="p-10628">\(l = x − 4\text{,}\) \(~w = x − 4\text{,}\) \(~h = 2\text{,}\) \(~V = 2(x − 4)^2\)</p></li>
-<li id="li-6447"><p id="p-10629"><table>
+<li id="li-6446"><p id="p-10630">\(l = x − 4\text{,}\) \(~w = x − 4\text{,}\) \(~h = 2\text{,}\) \(~V = 2(x − 4)^2\)</p></li>
+<li id="li-6447"><p id="p-10631"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(4\)</td>
@@ -886,44 +891,44 @@ where \(g\) is a constant that measures the force of gravity.</p></article><div 
 <td class="c m b1 r1 l0 t0 lines">\(72\)</td>
 </tr>
 </table></p></li>
-<li id="li-6448"><p id="p-10630">As \(x\) increases, \(V\) increases.</p></li>
-<li id="li-6449"><p id="p-10631">\(9\) inches by \(9\) inches.</p></li>
-<li id="li-6450"><p id="p-10632">\(2(x − 4)^2 = 50\text{,}\) \(~x = 9\)</p></li>
+<li id="li-6448"><p id="p-10632">As \(x\) increases, \(V\) increases.</p></li>
+<li id="li-6449"><p id="p-10633">\(9\) inches by \(9\) inches.</p></li>
+<li id="li-6450"><p id="p-10634">\(2(x − 4)^2 = 50\text{,}\) \(~x = 9\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2197"><h5 class="heading"><span class="codenumber">48</span></h5>
-<p id="p-10633">A length of rain gutter is made from a piece of aluminum \(6\) feet long and \(1\) foot wide. </p>
+<p id="p-10635">A length of rain gutter is made from a piece of aluminum \(6\) feet long and \(1\) foot wide. </p>
 <ol id="ol-2035" style="list-style-type: lower-alpha;">
-<li id="li-6451"><p id="p-10634">If a strip of width \(x\) is turned up along each long edge, write expressions for the length, width, and height of the gutter. Then write an expression for the volume, \(V\text{,}\) of the gutter in terms of \(x\text{.}\) <object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-6-1-48.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
-<li id="li-6452"><p id="p-10635">Use your calculator to make a table of values showing the volumes of various rain gutters formed by turning up edges of \(0.1\) foot, \(0.2\) foot, and so on.</p></li>
-<li id="li-6453"><p id="p-10636">Graph your expression for the volume. What happens to \(V\) as \(x\) increases?</p></li>
-<li id="li-6454"><p id="p-10637">Use your table or your graph to discover how much metal should be turned up along each long edge so that the gutter has a capacity of \(\frac{3}{4} \) cubic foot of rainwater.</p></li>
-<li id="li-6455"><p id="p-10638">Write and solve a quadratic equation to answer part (d).</p></li>
+<li id="li-6451"><p id="p-10636">If a strip of width \(x\) is turned up along each long edge, write expressions for the length, width, and height of the gutter. Then write an expression for the volume, \(V\text{,}\) of the gutter in terms of \(x\text{.}\) <object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-6-1-48.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-6452"><p id="p-10637">Use your calculator to make a table of values showing the volumes of various rain gutters formed by turning up edges of \(0.1\) foot, \(0.2\) foot, and so on.</p></li>
+<li id="li-6453"><p id="p-10638">Graph your expression for the volume. What happens to \(V\) as \(x\) increases?</p></li>
+<li id="li-6454"><p id="p-10639">Use your table or your graph to discover how much metal should be turned up along each long edge so that the gutter has a capacity of \(\frac{3}{4} \) cubic foot of rainwater.</p></li>
+<li id="li-6455"><p id="p-10640">Write and solve a quadratic equation to answer part (d).</p></li>
 </ol>
 <p></p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-297">
-<article class="introduction" id="introduction-302"><p id="p-10639">Problems 49 and 50 deal with wildlife management. The annual increase, \(I\text{,}\) in a population often depends on the size \(x\) of the population, according to the formula
+<article class="introduction" id="introduction-302"><p id="p-10641">Problems 49 and 50 deal with wildlife management. The annual increase, \(I\text{,}\) in a population often depends on the size \(x\) of the population, according to the formula
 \begin{equation*}
 I = kCx − kx^2
 \end{equation*}
 where \(k\) and \(C\) are constants related to the fertility of the population and the availability of food.</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-2198"><h5 class="heading"><span class="codenumber">49</span></h5>
-<p id="p-10640">The annual increase, \(f (x)\text{,}\) in the deer population in a national park is given by
+<p id="p-10642">The annual increase, \(f (x)\text{,}\) in the deer population in a national park is given by
 \begin{equation*}
 f (x) = 1.2x − 0.0002x^2
 \end{equation*}
 where \(x\) is the size of the population that year. </p>
 <ol id="ol-2036" style="list-style-type: lower-alpha;">
-<li id="li-6456"><p id="p-10641">Make a table of values for \(f (x)\) for \(0 \le x \le 7000\text{.}\) Use increments of \(500\) in \(x\text{.}\)</p></li>
-<li id="li-6457"><p id="p-10642">How much will a population of \(2000\) deer increase? A population of \(5000\) deer? A population of \(7000\) deer?</p></li>
-<li id="li-6458"><p id="p-10643">Use your calculator to graph the annual increase, \(f (x)\text{,}\) versus the size of the population, \(x\text{,}\) for \(0 \le x \le 7000\text{.}\)</p></li>
-<li id="li-6459"><p id="p-10644">What do the \(x\)-intercepts tell us about the deer population?</p></li>
-<li id="li-6460"><p id="p-10645">Estimate the population size that results in the largest annual increase. What is that increase?</p></li>
+<li id="li-6456"><p id="p-10643">Make a table of values for \(f (x)\) for \(0 \le x \le 7000\text{.}\) Use increments of \(500\) in \(x\text{.}\)</p></li>
+<li id="li-6457"><p id="p-10644">How much will a population of \(2000\) deer increase? A population of \(5000\) deer? A population of \(7000\) deer?</p></li>
+<li id="li-6458"><p id="p-10645">Use your calculator to graph the annual increase, \(f (x)\text{,}\) versus the size of the population, \(x\text{,}\) for \(0 \le x \le 7000\text{.}\)</p></li>
+<li id="li-6459"><p id="p-10646">What do the \(x\)-intercepts tell us about the deer population?</p></li>
+<li id="li-6460"><p id="p-10647">Estimate the population size that results in the largest annual increase. What is that increase?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1173" id="answer-1173"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1173" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10646"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1173" id="answer-1173"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1173" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10648"></p>
 <ol id="ol-2037" style="list-style-type: lower-alpha;">
-<li id="li-6461"><p id="p-10647"><table>
+<li id="li-6461"><p id="p-10649"><table>
 <tr>
 <td class="r m b1 r1 l1 t1 lines">\(x\)</td>
 <td class="r m b1 r1 l0 t1 lines">\(500\)</td>
@@ -966,68 +971,68 @@ where \(x\) is the size of the population that year. </p>
 <td class="r m b1 r1 l0 t0 lines">\(-1400\)</td>
 </tr>
 </table></p></li>
-<li id="li-6462"><p id="p-10648">\(1600\text{,}\) \(1000\text{,}\) \(-1400\)</p></li>
-<li id="li-6463"><p id="p-10649"><img width="45%" src="images/fig-ans-6-1-49.jpg" alt=""></p></li>
-<li id="li-6464"><p id="p-10650">No increase</p></li>
-<li id="li-6465"><p id="p-10651">\(3000\text{;}\) \(1800\)</p></li>
+<li id="li-6462"><p id="p-10650">\(1600\text{,}\) \(1000\text{,}\) \(-1400\)</p></li>
+<li id="li-6463"><p id="p-10651"><img width="45%" src="images/fig-ans-6-1-49.jpg" alt=""></p></li>
+<li id="li-6464"><p id="p-10652">No increase</p></li>
+<li id="li-6465"><p id="p-10653">\(3000\text{;}\) \(1800\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2199"><h5 class="heading"><span class="codenumber">50</span></h5>
-<p id="p-10652">Commercial fishermen rely on a steady supply of fish in their area. To avoid overfishing, they adjust their harvest to the size of the population. The function
+<p id="p-10654">Commercial fishermen rely on a steady supply of fish in their area. To avoid overfishing, they adjust their harvest to the size of the population. The function
 \begin{equation*}
 g(x) = 0.4x − 0.0001x^2
 \end{equation*}
 gives the annual rate of growth, in tons per year, of a fish population of biomass \(x\) tons.</p>
 <ol id="ol-2038" style="list-style-type: lower-alpha;">
-<li id="li-6466"><p id="p-10653">Make a table of values for \(g(x)\) for \(0 \le x\le 5000\text{.}\) Use increments of \(500\) in \(x\text{.}\)</p></li>
-<li id="li-6467"><p id="p-10654">How much will a population of \(1000\) tons increase? A population of \(3000\) tons? A population of \(5000\) tons?</p></li>
-<li id="li-6468"><p id="p-10655">Use your calculator to graph the annual increase, \(g(x)\text{,}\) versus the size of the population, \(x\text{,}\) for \(0\le x\le 5000\text{.}\)</p></li>
-<li id="li-6469"><p id="p-10656">What do the \(x\)-intercepts tell us about the fish population?</p></li>
-<li id="li-6470"><p id="p-10657">Estimate the population size that results in the largest annual increase. What is that increase?</p></li>
+<li id="li-6466"><p id="p-10655">Make a table of values for \(g(x)\) for \(0 \le x\le 5000\text{.}\) Use increments of \(500\) in \(x\text{.}\)</p></li>
+<li id="li-6467"><p id="p-10656">How much will a population of \(1000\) tons increase? A population of \(3000\) tons? A population of \(5000\) tons?</p></li>
+<li id="li-6468"><p id="p-10657">Use your calculator to graph the annual increase, \(g(x)\text{,}\) versus the size of the population, \(x\text{,}\) for \(0\le x\le 5000\text{.}\)</p></li>
+<li id="li-6469"><p id="p-10658">What do the \(x\)-intercepts tell us about the fish population?</p></li>
+<li id="li-6470"><p id="p-10659">Estimate the population size that results in the largest annual increase. What is that increase?</p></li>
 </ol>
 <p></p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-298">
-<article class="introduction" id="introduction-303"><p id="p-10658">Use a substitution to solve the equation.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-303"><p id="p-10660">Use a substitution to solve the equation.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-2200"><h5 class="heading"><span class="codenumber">51</span></h5>
-<p id="p-10659">\(a^4 + a^2 − 2 = 0\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1174" id="answer-1174"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1174" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10660">\(\pm 1\)</p></span></span> </article><article class="exercise-like" id="exercise-2201"><h5 class="heading"><span class="codenumber">52</span></h5>
-<p id="p-10661">\(t^6 − t^3 − 6 = 0\)</p></article><article class="exercise-like" id="exercise-2202"><h5 class="heading"><span class="codenumber">53</span></h5>
-<p id="p-10662">\(4b^6 − 3 = b^3\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1175" id="answer-1175"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1175" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10663">\(\sqrt[3]{-3/4} \text{,}\) \(1\)</p></span></span> </article><article class="exercise-like" id="exercise-2203"><h5 class="heading"><span class="codenumber">54</span></h5>
-<p id="p-10664">\(3x^4 + 1 = 4x^2\)</p></article><article class="exercise-like" id="exercise-2204"><h5 class="heading"><span class="codenumber">55</span></h5>
-<p id="p-10665">\(c^{2/3} + 2c^{1/3} − 3 = 0\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1176" id="answer-1176"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1176" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10666">\(-27 \text{,}\) \(1\)</p></span></span> </article><article class="exercise-like" id="exercise-2205"><h5 class="heading"><span class="codenumber">56</span></h5>
-<p id="p-10667">\(y^{1/2} − 5y^{1/4} + 4 = 0\)</p></article><article class="exercise-like" id="exercise-2206"><h5 class="heading"><span class="codenumber">57</span></h5>
-<p id="p-10668">\(10^{2w}-5\cdot 10^w + 6 = 0\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1177" id="answer-1177"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1177" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10669">\(\log 2 \text{,}\) \(\log 3\)</p></span></span> </article><article class="exercise-like" id="exercise-2207"><h5 class="heading"><span class="codenumber">58</span></h5>
-<p id="p-10670">\(e^{2x} − 5e^x + 4 = 0\)</p></article><article class="exercise-like" id="exercise-2208"><h5 class="heading"><span class="codenumber">59</span></h5>
-<p id="p-10671">\(5^{2t} − 30\cdot 5^t + 125 = 0\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1178" id="answer-1178"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1178" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10672">\(1 \text{,}\) \(2 \)</p></span></span> </article><article class="exercise-like" id="exercise-2209"><h5 class="heading"><span class="codenumber">60</span></h5>
-<p id="p-10673">\(e^{4r} − 3e^{2r} + 2 = 0\)</p></article><article class="exercise-like" id="exercise-2210"><h5 class="heading"><span class="codenumber">61</span></h5>
-<p id="p-10674">\(\dfrac{1}{m^2}+ \dfrac{5}{m} − 6 = 0\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1179" id="answer-1179"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1179" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10675">\(\dfrac{-1}{6} \text{,}\) \(1 \)</p></span></span> </article><article class="exercise-like" id="exercise-2211"><h5 class="heading"><span class="codenumber">62</span></h5>
-<p id="p-10676">\(\dfrac{1}{s^2}+ \dfrac{4}{s} − 5 = 0\)</p></article>
+<p id="p-10661">\(a^4 + a^2 − 2 = 0\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1174" id="answer-1174"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1174" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10662">\(\pm 1\)</p></span></span> </article><article class="exercise-like" id="exercise-2201"><h5 class="heading"><span class="codenumber">52</span></h5>
+<p id="p-10663">\(t^6 − t^3 − 6 = 0\)</p></article><article class="exercise-like" id="exercise-2202"><h5 class="heading"><span class="codenumber">53</span></h5>
+<p id="p-10664">\(4b^6 − 3 = b^3\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1175" id="answer-1175"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1175" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10665">\(\sqrt[3]{-3/4} \text{,}\) \(1\)</p></span></span> </article><article class="exercise-like" id="exercise-2203"><h5 class="heading"><span class="codenumber">54</span></h5>
+<p id="p-10666">\(3x^4 + 1 = 4x^2\)</p></article><article class="exercise-like" id="exercise-2204"><h5 class="heading"><span class="codenumber">55</span></h5>
+<p id="p-10667">\(c^{2/3} + 2c^{1/3} − 3 = 0\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1176" id="answer-1176"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1176" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10668">\(-27 \text{,}\) \(1\)</p></span></span> </article><article class="exercise-like" id="exercise-2205"><h5 class="heading"><span class="codenumber">56</span></h5>
+<p id="p-10669">\(y^{1/2} − 5y^{1/4} + 4 = 0\)</p></article><article class="exercise-like" id="exercise-2206"><h5 class="heading"><span class="codenumber">57</span></h5>
+<p id="p-10670">\(10^{2w}-5\cdot 10^w + 6 = 0\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1177" id="answer-1177"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1177" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10671">\(\log 2 \text{,}\) \(\log 3\)</p></span></span> </article><article class="exercise-like" id="exercise-2207"><h5 class="heading"><span class="codenumber">58</span></h5>
+<p id="p-10672">\(e^{2x} − 5e^x + 4 = 0\)</p></article><article class="exercise-like" id="exercise-2208"><h5 class="heading"><span class="codenumber">59</span></h5>
+<p id="p-10673">\(5^{2t} − 30\cdot 5^t + 125 = 0\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1178" id="answer-1178"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1178" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10674">\(1 \text{,}\) \(2 \)</p></span></span> </article><article class="exercise-like" id="exercise-2209"><h5 class="heading"><span class="codenumber">60</span></h5>
+<p id="p-10675">\(e^{4r} − 3e^{2r} + 2 = 0\)</p></article><article class="exercise-like" id="exercise-2210"><h5 class="heading"><span class="codenumber">61</span></h5>
+<p id="p-10676">\(\dfrac{1}{m^2}+ \dfrac{5}{m} − 6 = 0\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1179" id="answer-1179"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1179" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10677">\(\dfrac{-1}{6} \text{,}\) \(1 \)</p></span></span> </article><article class="exercise-like" id="exercise-2211"><h5 class="heading"><span class="codenumber">62</span></h5>
+<p id="p-10678">\(\dfrac{1}{s^2}+ \dfrac{4}{s} − 5 = 0\)</p></article>
 </div>
 </div>
 <article class="exercise-like" id="exercise-2212"><h5 class="heading"><span class="codenumber">63</span></h5>
-<p id="p-10677">The sail in the figure is a right triangle of base and height \(x\text{.}\) It has a colored stripe along the hypotenuse and a white triangle of base and height \(y\) in the lower corner. <object type="image/svg+xml" style="width:25%; margin:auto; display:block;" data="images/fig-6-1-63.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> </p>
+<p id="p-10679">The sail in the figure is a right triangle of base and height \(x\text{.}\) It has a colored stripe along the hypotenuse and a white triangle of base and height \(y\) in the lower corner. <object type="image/svg+xml" style="width:25%; margin:auto; display:block;" data="images/fig-6-1-63.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> </p>
 <ol id="ol-2039" style="list-style-type: lower-alpha;">
-<li id="li-6471"><p id="p-10678">Write an expression for the area of the colored stripe.</p></li>
-<li id="li-6472"><p id="p-10679">Express the area of the stripe in factored form.</p></li>
-<li id="li-6473"><p id="p-10680">If the sail is \(7\frac{1}{2} \) feet high and the white strip is \(4\frac{1}{2} \) feet high, use your answer to (b) to calculate mentally the area of the stripe.</p></li>
+<li id="li-6471"><p id="p-10680">Write an expression for the area of the colored stripe.</p></li>
+<li id="li-6472"><p id="p-10681">Express the area of the stripe in factored form.</p></li>
+<li id="li-6473"><p id="p-10682">If the sail is \(7\frac{1}{2} \) feet high and the white strip is \(4\frac{1}{2} \) feet high, use your answer to (b) to calculate mentally the area of the stripe.</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1180" id="answer-1180"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1180" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10681"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1180" id="answer-1180"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1180" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-10683"></p>
 <ol id="ol-2040" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-6474" style="width:49%; float:left;"><p id="p-10682">\(A=\dfrac{1}{2}(x^2-y^2) \)</p></li>
-<li id="li-6475" style="width:49%; float:left;"><p id="p-10683">\(A=\dfrac{1}{2}(x-y)(x+y)\)</p></li>
-<li id="li-6476" style="width:49%; float:left;"><p id="p-10684">\(18\) sq ft</p></li>
+<li id="li-6474" style="width:49%; float:left;"><p id="p-10684">\(A=\dfrac{1}{2}(x^2-y^2) \)</p></li>
+<li id="li-6475" style="width:49%; float:left;"><p id="p-10685">\(A=\dfrac{1}{2}(x-y)(x+y)\)</p></li>
+<li id="li-6476" style="width:49%; float:left;"><p id="p-10686">\(18\) sq ft</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2213"><h5 class="heading"><span class="codenumber">64</span></h5>
-<p id="p-10685">An hors d'oeuvres tray has radius \(x\text{,}\) and the dip container has radius \(y\text{,}\) as shown in the figure. <object type="image/svg+xml" style="width:25%; margin:auto; display:block;" data="images/fig-6-1-64.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> </p>
+<p id="p-10687">An hors d'oeuvres tray has radius \(x\text{,}\) and the dip container has radius \(y\text{,}\) as shown in the figure. <object type="image/svg+xml" style="width:25%; margin:auto; display:block;" data="images/fig-6-1-64.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> </p>
 <ol id="ol-2041" style="list-style-type: lower-alpha;">
-<li id="li-6477"><p id="p-10686">Write an expression for the area for the chips (shaded region).</p></li>
-<li id="li-6478"><p id="p-10687">Express the area in factored form.</p></li>
-<li id="li-6479"><p id="p-10688">If the tray has radius \(8\frac{1}{2} \) inches and the space for the dip has radius \(2\frac{1}{2} \) inches, use your answer to part (b) to calculate mentally the area for chips. (Express your answer as a multiple of \(\pi\text{.}\))</p></li>
+<li id="li-6477"><p id="p-10688">Write an expression for the area for the chips (shaded region).</p></li>
+<li id="li-6478"><p id="p-10689">Express the area in factored form.</p></li>
+<li id="li-6479"><p id="p-10690">If the tray has radius \(8\frac{1}{2} \) inches and the space for the dip has radius \(2\frac{1}{2} \) inches, use your answer to part (b) to calculate mentally the area for chips. (Express your answer as a multiple of \(\pi\text{.}\))</p></li>
 </ol>
 <p></p></article></section></section></div></main>
 </div>

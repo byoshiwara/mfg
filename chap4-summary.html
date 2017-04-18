@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-04-07T10:53:43-07:00    *-->
+<!--*    on 2017-04-17T18:44:48-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,15 +13,14 @@
 <meta name="Keywords" content="Authored in MathBook XML">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
-// contrib directory for accessibility menu, moot after v2.6+?
-MathJax.Ajax.config.path["Contrib"] = "https://cdn.mathjax.org/mathjax/contrib";
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [['\\(','\\)']],
     },
     TeX: {
-        // [Contrib]accessibility menu moot after v2.6+?
-        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", "[Contrib]/a11y/accessibility-menu.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
         equationNumbers: { autoNumber: "none",
                            useLabelIds: true,
                            // JS comment, XML CDATA protect XHTML quality of file
@@ -33,11 +32,17 @@ MathJax.Hub.Config({
         TagSide: "right",
         TagIndent: ".8em",
     },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
     "HTML-CSS": {
         scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
     },
 });
-</script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script>(function() {
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>(function() {
   var cx = '006592449927388994635:w0x-ox5bpme';
   var gcse = document.createElement('script');
   gcse.type = 'text/javascript';
@@ -75,7 +80,7 @@ MathJax.Hub.Config({
 <nav id="primary-navbar" class="navbar" style=""><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a class="previous-button toolbar-item button" href="Exponential-Models.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="chap4.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="chap4-rev-projects.html" title="Next" alt="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Exponential-Models.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chap4.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="chap4-rev-projects.html" title="Next" alt="Next">Next</a></span>
 </div>
 <button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
@@ -187,30 +192,30 @@ MathJax.Hub.Config({
 <li><a href="colophon-2.html" data-scroll="colophon-2">Colophon</a></li>
 </ul>
 <h2 class="link"><a href="index-part-2.html" data-scroll="index-part-2"><span class="title">Index</span></a></h2>
-<h2 class="link"><a href="colophon-3.html" data-scroll="colophon-3"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://cdn.mathjax.org/mathjax/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+<h2 class="link"><a href="colophon-3.html" data-scroll="colophon-3"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="chap4-summary"><header title="Section 4.6 Chapter Summary and Review"><h1 class="heading hide-type" alt="Section 4.6 Chapter Summary and Review">
 <span class="type">Section</span><span class="codenumber">4.6</span><span class="title">Chapter Summary and Review</span><a href="chap4-summary.html" class="permalink">¶ permalink</a>
 </h1></header><section class="subsection" id="subsection-135"><header title="Subsection 4.6.1 Key Concepts"><h1 class="heading hide-type" alt="Subsection 4.6.1 Key Concepts">
 <span class="type">Subsection</span><span class="codenumber">4.6.1</span><span class="title">Key Concepts</span>
-</h1></header><p id="p-8672"></p>
+</h1></header><p id="p-8674"></p>
 <ol id="ol-1696" style="list-style-type: decimal;">
-<li id="li-5334"><p id="p-8673">If a quantity is multiplied by a constant factor, \(b\text{,}\) in each time period, we say that it undergoes <em class="terminology">exponential growth</em> or <em class="terminology">decay</em> . The constant \(b\) is called the <em class="terminology">growth factor</em> if \(b\gt 1\) and the <em class="terminology">decay factor</em> if \(0 \lt b \lt 1\text{.}\)</p></li>
-<li id="li-5335"><p id="p-8674">Quantities that increase or decrease by a constant percent in each time period grow or decay exponentially.</p></li>
-<li id="li-5336"><p id="p-8675"><article class="assemblage-like" id="assemblage-95"><h5 class="heading">Exponential Growth and Decay</h5>
-<p id="p-8676">The function
+<li id="li-5334"><p id="p-8675">If a quantity is multiplied by a constant factor, \(b\text{,}\) in each time period, we say that it undergoes <em class="terminology">exponential growth</em> or <em class="terminology">decay</em> . The constant \(b\) is called the <em class="terminology">growth factor</em> if \(b\gt 1\) and the <em class="terminology">decay factor</em> if \(0 \lt b \lt 1\text{.}\)</p></li>
+<li id="li-5335"><p id="p-8676">Quantities that increase or decrease by a constant percent in each time period grow or decay exponentially.</p></li>
+<li id="li-5336"><p id="p-8677"><article class="assemblage-like" id="assemblage-95"><h5 class="heading">Exponential Growth and Decay</h5>
+<p id="p-8678">The function
 \begin{equation*}
 P(t)=P_0 b^t
 \end{equation*}
 models exponential growth and decay.</p>
-<p id="p-8677">\(P_0 = P(0)\) is the initial value of \(P\text{;}\)</p>
-<p id="p-8678">\(b\) is the growth or decay factor.</p>
-<p id="p-8679"></p>
+<p id="p-8679">\(P_0 = P(0)\) is the initial value of \(P\text{;}\)</p>
+<p id="p-8680">\(b\) is the growth or decay factor.</p>
+<p id="p-8681"></p>
 <ol id="ol-1697" style="list-style-type: decimal;">
-<li id="li-5337"><p id="p-8680">If \(b\gt 1\text{,}\) then \(P(t)\) is increasing, and \(b = 1 + r\text{,}\) where \(r\) represents percent increase.</p></li>
-<li id="li-5338"><p id="p-8681">If \(0\lt b \lt 1\text{,}\) then \(P(t)\) is decreasing, and \(b= 1 − r\text{,}\) where \(r\) represents percent decrease.</p></li>
+<li id="li-5337"><p id="p-8682">If \(b\gt 1\text{,}\) then \(P(t)\) is increasing, and \(b = 1 + r\text{,}\) where \(r\) represents percent increase.</p></li>
+<li id="li-5338"><p id="p-8683">If \(0\lt b \lt 1\text{,}\) then \(P(t)\) is decreasing, and \(b= 1 − r\text{,}\) where \(r\) represents percent decrease.</p></li>
 </ol></article></p></li>
-<li id="li-5339"><p id="p-8682"><article class="assemblage-like" id="assemblage-96"><h5 class="heading">Interest Compounded Annually</h5>
-<p id="p-8683">The amount \(A(t)\) accumulated (principal plus interest) in an account bearing interest compounded annually is
+<li id="li-5339"><p id="p-8684"><article class="assemblage-like" id="assemblage-96"><h5 class="heading">Interest Compounded Annually</h5>
+<p id="p-8685">The amount \(A(t)\) accumulated (principal plus interest) in an account bearing interest compounded annually is
 \begin{equation*}
 A(t)=(1 + r)^t
 \end{equation*}
@@ -234,61 +239,61 @@ where <table>
 <td class="l m b0 r0 l0 t0 lines">is the time period, in years.</td>
 </tr>
 </table></p></article></p></li>
-<li id="li-5340"><p id="p-8684">In linear growth, a constant amount is <!--Style me with CSS--><em>added</em> to the output for each unit increase in the input. In exponential growth, the output is <!--Style me with CSS--><em>multiplied</em> by a constant factor for each unit increase in the input.</p></li>
-<li id="li-5341"><p id="p-8685">An <em class="terminology">exponential function</em> has the form
+<li id="li-5340"><p id="p-8686">In linear growth, a constant amount is <!--Style me with CSS--><em>added</em> to the output for each unit increase in the input. In exponential growth, the output is <!--Style me with CSS--><em>multiplied</em> by a constant factor for each unit increase in the input.</p></li>
+<li id="li-5341"><p id="p-8687">An <em class="terminology">exponential function</em> has the form
 \begin{equation*}
 f (x) = ab^x,~~ \text{ where }~~ b\gt 0 ~~\text{ and } b \ne 1, ~~~a\ne 0
 \end{equation*}
 </p></li>
-<li id="li-5342"><p id="p-8686"><article class="assemblage-like" id="assemblage-97"><h5 class="heading">Properties of Exponential Functions, \(f(x)=ab^x, ~~a\gt 0 \)</h5>
-<p id="p-8687"></p>
+<li id="li-5342"><p id="p-8688"><article class="assemblage-like" id="assemblage-97"><h5 class="heading">Properties of Exponential Functions, \(f(x)=ab^x, ~~a\gt 0 \)</h5>
+<p id="p-8689"></p>
 <ol id="ol-1698" style="list-style-type: decimal;">
-<li id="li-5343"><p id="p-8688">Domain: all real numbers</p></li>
-<li id="li-5344"><p id="p-8689">Range: all positive numbers</p></li>
-<li id="li-5345"><p id="p-8690">If \(b\gt 1\text{,}\) the function is increasing and concave up; if \(0\lt b \lt 1\text{,}\) the function is decreasing and concave up.</p></li>
-<li id="li-5346"><p id="p-8691">The \(y\)-intercept is \((a, 0)\text{.}\) There is no \(x\)-intercept</p></li>
+<li id="li-5343"><p id="p-8690">Domain: all real numbers</p></li>
+<li id="li-5344"><p id="p-8691">Range: all positive numbers</p></li>
+<li id="li-5345"><p id="p-8692">If \(b\gt 1\text{,}\) the function is increasing and concave up; if \(0\lt b \lt 1\text{,}\) the function is decreasing and concave up.</p></li>
+<li id="li-5346"><p id="p-8693">The \(y\)-intercept is \((a, 0)\text{.}\) There is no \(x\)-intercept</p></li>
 </ol>
 <p></p></article></p></li>
-<li id="li-5347"><p id="p-8692">The graphs of exponential functions can be transformed by shifts, stretches, and reflections.</p></li>
-<li id="li-5348"><p id="p-8693"><article class="assemblage-like" id="assemblage-98"><h5 class="heading">Reflections of Graphs</h5>
-<p id="p-8694"></p>
+<li id="li-5347"><p id="p-8694">The graphs of exponential functions can be transformed by shifts, stretches, and reflections.</p></li>
+<li id="li-5348"><p id="p-8695"><article class="assemblage-like" id="assemblage-98"><h5 class="heading">Reflections of Graphs</h5>
+<p id="p-8696"></p>
 <ol id="ol-1699" style="list-style-type: decimal;">
-<li id="li-5349"><p id="p-8695">The graph of \(y = −f (x)\) is the reflection of the graph of \(y = f (x)\) about the \(x\)-axis.</p></li>
-<li id="li-5350"><p id="p-8696">The graph of \(y = f (−x)\) is the reflection of the graph of \(y = f (x)\) about the \(y\)-axis.</p></li>
+<li id="li-5349"><p id="p-8697">The graph of \(y = −f (x)\) is the reflection of the graph of \(y = f (x)\) about the \(x\)-axis.</p></li>
+<li id="li-5350"><p id="p-8698">The graph of \(y = f (−x)\) is the reflection of the graph of \(y = f (x)\) about the \(y\)-axis.</p></li>
 </ol>
 <p></p></article></p></li>
-<li id="li-5351"><p id="p-8697">Exponential functions \(f (x) = ab^x\) have different properties than power functions \(f (x) = kx^p\text{.}\)</p></li>
-<li id="li-5352"><p id="p-8698">We can solve <em class="terminology">exponential equations</em> by writing both sides with the same base and equating the exponents.</p></li>
-<li id="li-5353"><p id="p-8699">We can use graphs to find approximate solutions to exponential equations</p></li>
-<li id="li-5354"><p id="p-8700">We use logrithms to help us solve exponential equations.</p></li>
-<li id="li-5355"><p id="p-8701">The <em class="terminology">base \(b\) logarithm of \(x\)</em>, written \(\log_b x\text{,}\) is the exponent to which \(b\) must be raised in order to yield \(x\text{.}\)</p></li>
-<li id="li-5356"><p id="p-8702">If \(b \gt 0\text{,}\) \(b \ne 1\text{,}\) and \(x\gt 0\text{,}\)
+<li id="li-5351"><p id="p-8699">Exponential functions \(f (x) = ab^x\) have different properties than power functions \(f (x) = kx^p\text{.}\)</p></li>
+<li id="li-5352"><p id="p-8700">We can solve <em class="terminology">exponential equations</em> by writing both sides with the same base and equating the exponents.</p></li>
+<li id="li-5353"><p id="p-8701">We can use graphs to find approximate solutions to exponential equations</p></li>
+<li id="li-5354"><p id="p-8702">We use logrithms to help us solve exponential equations.</p></li>
+<li id="li-5355"><p id="p-8703">The <em class="terminology">base \(b\) logarithm of \(x\)</em>, written \(\log_b x\text{,}\) is the exponent to which \(b\) must be raised in order to yield \(x\text{.}\)</p></li>
+<li id="li-5356"><p id="p-8704">If \(b \gt 0\text{,}\) \(b \ne 1\text{,}\) and \(x\gt 0\text{,}\)
 \begin{equation*}
 y = \log_b x~~~ \text{ if and only if }~~~x = b^y
 \end{equation*}
 </p></li>
-<li id="li-5357"><p id="p-8703">The operation of taking a base \(b\) logarithm is the inverse operation for raising the base \(b\) to a power.</p></li>
-<li id="li-5358"><p id="p-8704">Base 10 logarithms are called <em class="terminology">common logarithms</em>, and \(\log x\) means \(\log_{10} x\text{.}\)</p></li>
-<li id="li-5359"><p id="p-8705"><article class="assemblage-like" id="assemblage-99"><h5 class="heading">Steps for Solving Base 10 Exponential Equations</h5>
-<p id="p-8706"></p>
+<li id="li-5357"><p id="p-8705">The operation of taking a base \(b\) logarithm is the inverse operation for raising the base \(b\) to a power.</p></li>
+<li id="li-5358"><p id="p-8706">Base 10 logarithms are called <em class="terminology">common logarithms</em>, and \(\log x\) means \(\log_{10} x\text{.}\)</p></li>
+<li id="li-5359"><p id="p-8707"><article class="assemblage-like" id="assemblage-99"><h5 class="heading">Steps for Solving Base 10 Exponential Equations</h5>
+<p id="p-8708"></p>
 <ol id="ol-1700" style="list-style-type: decimal;">
-<li id="li-5360"><p id="p-8707">Isolate the power on one side of the equation.</p></li>
-<li id="li-5361"><p id="p-8708">Rewrite the equation in logarithmic form.</p></li>
-<li id="li-5362"><p id="p-8709">Use a calculator, if necessary, to evaluate the logarithm.</p></li>
-<li id="li-5363"><p id="p-8710">Solve for the variable.</p></li>
+<li id="li-5360"><p id="p-8709">Isolate the power on one side of the equation.</p></li>
+<li id="li-5361"><p id="p-8710">Rewrite the equation in logarithmic form.</p></li>
+<li id="li-5362"><p id="p-8711">Use a calculator, if necessary, to evaluate the logarithm.</p></li>
+<li id="li-5363"><p id="p-8712">Solve for the variable.</p></li>
 </ol>
 <p></p></article></p></li>
-<li id="li-5364"><p id="p-8711"><article class="assemblage-like" id="assemblage-100"><h5 class="heading">Properties of Logarithms</h5>
-<p id="p-8712">If \(x\text{,}\) \(y\text{,}\) \(b\gt 0\text{,}\) and \(b\ne 1\text{,}\) then </p>
+<li id="li-5364"><p id="p-8713"><article class="assemblage-like" id="assemblage-100"><h5 class="heading">Properties of Logarithms</h5>
+<p id="p-8714">If \(x\text{,}\) \(y\text{,}\) \(b\gt 0\text{,}\) and \(b\ne 1\text{,}\) then </p>
 <ol id="ol-1701" style="list-style-type: decimal;">
-<li id="li-5365"><p id="p-8713">\(\log_b(xy)=\log_b x + \log_b y \)</p></li>
-<li id="li-5366"><p id="p-8714">\(\log_b\dfrac{x}{y}=\log_b x - \log_b y \)</p></li>
-<li id="li-5367"><p id="p-8715">\(\log_b x^k= k\log_b x \)</p></li>
+<li id="li-5365"><p id="p-8715">\(\log_b(xy)=\log_b x + \log_b y \)</p></li>
+<li id="li-5366"><p id="p-8716">\(\log_b\dfrac{x}{y}=\log_b x - \log_b y \)</p></li>
+<li id="li-5367"><p id="p-8717">\(\log_b x^k= k\log_b x \)</p></li>
 </ol>
 <p></p></article></p></li>
-<li id="li-5368"><p id="p-8716">We can use the properties of logarithms to solve exponential equations with any base.</p></li>
-<li id="li-5369"><p id="p-8717"><article class="assemblage-like" id="assemblage-101"><h5 class="heading">Compounded Interest</h5>
-<p id="p-8718">The amount \(A(t)\) accumulated (principal plus interest) in an account bearing interest compounded \(n\) times annually is
+<li id="li-5368"><p id="p-8718">We can use the properties of logarithms to solve exponential equations with any base.</p></li>
+<li id="li-5369"><p id="p-8719"><article class="assemblage-like" id="assemblage-101"><h5 class="heading">Compounded Interest</h5>
+<p id="p-8720">The amount \(A(t)\) accumulated (principal plus interest) in an account bearing interest compounded \(n\) times annually is
 \begin{equation*}
 A(t)=\left(1 + \dfrac{r}{n} \right)^{nt}
 \end{equation*}
@@ -312,26 +317,26 @@ where <table>
 <td class="l m b0 r0 l0 t0 lines">is the time period, in years.</td>
 </tr>
 </table></p></article></p></li>
-<li id="li-5370"><p id="p-8719">We can use the ratio method to fit an exponential function through two points. <article class="assemblage-like" id="assemblage-102"><h5 class="heading">To find an exponential function \(f (x) = ab^x\) through two points:</h5>
-<p id="p-8720"></p>
+<li id="li-5370"><p id="p-8721">We can use the ratio method to fit an exponential function through two points. <article class="assemblage-like" id="assemblage-102"><h5 class="heading">To find an exponential function \(f (x) = ab^x\) through two points:</h5>
+<p id="p-8722"></p>
 <ol id="ol-1702" style="list-style-type: decimal;">
-<li id="li-5371"><p id="p-8721">Use the coordinates of the points to write two equations in \(a\) and \(b\text{.}\)</p></li>
-<li id="li-5372"><p id="p-8722">Divide one equation by the other to eliminate \(a\text{.}\)</p></li>
-<li id="li-5373"><p id="p-8723">Solve for \(b\text{.}\)</p></li>
-<li id="li-5374"><p id="p-8724">Substitute \(b\) into either equation and solve for \(a\text{.}\)</p></li>
+<li id="li-5371"><p id="p-8723">Use the coordinates of the points to write two equations in \(a\) and \(b\text{.}\)</p></li>
+<li id="li-5372"><p id="p-8724">Divide one equation by the other to eliminate \(a\text{.}\)</p></li>
+<li id="li-5373"><p id="p-8725">Solve for \(b\text{.}\)</p></li>
+<li id="li-5374"><p id="p-8726">Substitute \(b\) into either equation and solve for \(a\text{.}\)</p></li>
 </ol>
 <p></p></article></p></li>
-<li id="li-5375"><p id="p-8725">Every increasing exponential has a fixed <em class="terminology">doubling time</em>. Every decreasing exponential function has a fixed <em class="terminology">half-life</em>.</p></li>
-<li id="li-5376"><p id="p-8726">If \(D\) is the doubling time for a population, its growth law can be written as \(P(t) = P_0 2^{t/D}\text{.}\)</p></li>
-<li id="li-5377"><p id="p-8727">If \(H\) is the half-life for a quantity, its decay law can be written as \(Q(t) = Q_0 (0.5)^{t/H}\text{.}\)</p></li>
-<li id="li-5378"><p id="p-8728"><article class="assemblage-like" id="assemblage-103"><h5 class="heading">Future Value of an Annuity</h5>
-<p id="p-8729">If you make \(n\) payments per year for \(t\) years into an annuity that pays interest rate \(r\) compounded \(n\) times per year, the future value, \(FV\text{,}\) of the annuity is
+<li id="li-5375"><p id="p-8727">Every increasing exponential has a fixed <em class="terminology">doubling time</em>. Every decreasing exponential function has a fixed <em class="terminology">half-life</em>.</p></li>
+<li id="li-5376"><p id="p-8728">If \(D\) is the doubling time for a population, its growth law can be written as \(P(t) = P_0 2^{t/D}\text{.}\)</p></li>
+<li id="li-5377"><p id="p-8729">If \(H\) is the half-life for a quantity, its decay law can be written as \(Q(t) = Q_0 (0.5)^{t/H}\text{.}\)</p></li>
+<li id="li-5378"><p id="p-8730"><article class="assemblage-like" id="assemblage-103"><h5 class="heading">Future Value of an Annuity</h5>
+<p id="p-8731">If you make \(n\) payments per year for \(t\) years into an annuity that pays interest rate \(r\) compounded \(n\) times per year, the future value, \(FV\text{,}\) of the annuity is
 \begin{equation*}
 FV=\frac{P\left[\left(1+\frac{r}{n} \right)^{nt}-1 \right]}{\frac{r}{n}} 
 \end{equation*}
 where each payment is \(P\) dollars.</p></article></p></li>
-<li id="li-5379"><p id="p-8730"><article class="assemblage-like" id="assemblage-104"><h5 class="heading">Present Value of an Annuity</h5>
-<p id="p-8731">If you wish to receive \(n\) payments per year for \(t\) years from a fund that earns interest rate \(r\) compounded \(n\) times per year, the present value, \(PV\text{,}\) of the annuity must be
+<li id="li-5379"><p id="p-8732"><article class="assemblage-like" id="assemblage-104"><h5 class="heading">Present Value of an Annuity</h5>
+<p id="p-8733">If you wish to receive \(n\) payments per year for \(t\) years from a fund that earns interest rate \(r\) compounded \(n\) times per year, the present value, \(PV\text{,}\) of the annuity must be
 \begin{equation*}
 PV=\frac{P\left[1- \left(1+\frac{r}{n} \right)^{-nt} \right]}{\frac{r}{n}} 
 \end{equation*}
@@ -340,44 +345,44 @@ where each payment is \(P\) dollars.</p></article></p></li>
 <p>.</p></section><section class="exercises" id="chap4-rev-problems"><header title="Exercises 4.6.2 Review Problems"><h1 class="heading hide-type" alt="Exercises 4.6.2 Review Problems">
 <span class="type">Subsection</span><span class="codenumber">4.6.2</span><span class="title">Review Problems</span><a href="chap4-summary.html#chap4-rev-problems" class="permalink">¶ permalink</a>
 </h1></header><div class="exercisegroup" id="exercisegroup-238">
-<article class="introduction" id="introduction-241"><p id="p-8732">For Problems 1–4, </p>
+<article class="introduction" id="introduction-241"><p id="p-8734">For Problems 1–4, </p>
 <ol id="ol-1703" style="list-style-type: lower-alpha;">
-<li id="li-5380"><p id="p-8733">Write a function that describes exponential growth or decay.</p></li>
-<li id="li-5381"><p id="p-8734">Evaluate the function at the given values.</p></li>
+<li id="li-5380"><p id="p-8735">Write a function that describes exponential growth or decay.</p></li>
+<li id="li-5381"><p id="p-8736">Evaluate the function at the given values.</p></li>
 </ol>
 <p></p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-1741"><h5 class="heading"><span class="codenumber">1</span></h5>
-<p id="p-8735">The number of computer science degrees awarded by Monroe College has increased by a factor of \(1.5\) every \(5\) years since 1984. If the college granted \(8\) degrees in 1984, how many did it award in 1994? In 2005?</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-924" id="answer-924"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-924" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8736"></p>
+<p id="p-8737">The number of computer science degrees awarded by Monroe College has increased by a factor of \(1.5\) every \(5\) years since 1984. If the college granted \(8\) degrees in 1984, how many did it award in 1994? In 2005?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-924" id="answer-924"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-924" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8738"></p>
 <ol id="ol-1704" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5382" style="width:49%; float:left;"><p id="p-8737">\(D = 8(1.5)^{t/5}\)</p></li>
-<li id="li-5383" style="width:49%; float:left;"><p id="p-8738">\(18\text{;}\) \(44\)</p></li>
+<li id="li-5382" style="width:49%; float:left;"><p id="p-8739">\(D = 8(1.5)^{t/5}\)</p></li>
+<li id="li-5383" style="width:49%; float:left;"><p id="p-8740">\(18\text{;}\) \(44\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1742"><h5 class="heading"><span class="codenumber">2</span></h5>
-<p id="p-8739">The price of public transportation has been rising by \(10\%\) per year since \(1975\text{.}\) If it cost \(\$0.25\) to ride the bus in \(1975\text{,}\) how much did it cost in \(1985\text{?}\) How much will it cost in the year \(210\) if the current trend continues?</p></article><article class="exercise-like" id="exercise-1743"><h5 class="heading"><span class="codenumber">3</span></h5>
-<p id="p-8740">A certain medication is eliminated from the body at a rate of \(15\%\) per hour. If an initial dose of \(100\) milligrams is taken at \(8\) a.m., how much is left at \(12\) noon? At \(6\) p.m.?</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-925" id="answer-925"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-925" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8741"></p>
+<p id="p-8741">The price of public transportation has been rising by \(10\%\) per year since \(1975\text{.}\) If it cost \(\$0.25\) to ride the bus in \(1975\text{,}\) how much did it cost in \(1985\text{?}\) How much will it cost in the year \(210\) if the current trend continues?</p></article><article class="exercise-like" id="exercise-1743"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p id="p-8742">A certain medication is eliminated from the body at a rate of \(15\%\) per hour. If an initial dose of \(100\) milligrams is taken at \(8\) a.m., how much is left at \(12\) noon? At \(6\) p.m.?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-925" id="answer-925"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-925" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8743"></p>
 <ol id="ol-1705" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5384" style="width:49%; float:left;"><p id="p-8742">\(M = 100(0.85)^t\)</p></li>
-<li id="li-5385" style="width:49%; float:left;"><p id="p-8743">\(52.2\) mg; \(19.7\) mg</p></li>
+<li id="li-5384" style="width:49%; float:left;"><p id="p-8744">\(M = 100(0.85)^t\)</p></li>
+<li id="li-5385" style="width:49%; float:left;"><p id="p-8745">\(52.2\) mg; \(19.7\) mg</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1744"><h5 class="heading"><span class="codenumber">4</span></h5>
-<p id="p-8744">After the World Series, sales of T-shirts and other baseball memorabilia decline \(30\%\) per week. If \(\$200,000\) worth of souvenirs were sold during the Series, how much will be sold \(4\) weeks later? After \(6\) weeks?</p></article>
+<p id="p-8746">After the World Series, sales of T-shirts and other baseball memorabilia decline \(30\%\) per week. If \(\$200,000\) worth of souvenirs were sold during the Series, how much will be sold \(4\) weeks later? After \(6\) weeks?</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-239">
-<article class="introduction" id="introduction-242"><p id="p-8745">Use the laws of exponents to simplify.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-242"><p id="p-8747">Use the laws of exponents to simplify.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1745"><h5 class="heading"><span class="codenumber">5</span></h5>
-<p id="p-8746">\((4n^{x+5})^2\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-926" id="answer-926"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-926" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8747">\(16n^{2x+10}\)</p></span></span> </article><article class="exercise-like" id="exercise-1746"><h5 class="heading"><span class="codenumber">6</span></h5>
-<p id="p-8748">\(9^x\cdot 3^{x-3}\)</p></article><article class="exercise-like" id="exercise-1747"><h5 class="heading"><span class="codenumber">7</span></h5>
-<p id="p-8749">\(\dfrac{m^{x+2}}{m^{2x+4}} \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-927" id="answer-927"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-927" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8750">\(\dfrac{1}{m^{x+2}} \)</p></span></span> </article><article class="exercise-like" id="exercise-1748"><h5 class="heading"><span class="codenumber">8</span></h5>
-<p id="p-8751">\(\sqrt[3]{8^{2x+1}\cdot 8^{x-2}} \)</p></article>
+<p id="p-8748">\((4n^{x+5})^2\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-926" id="answer-926"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-926" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8749">\(16n^{2x+10}\)</p></span></span> </article><article class="exercise-like" id="exercise-1746"><h5 class="heading"><span class="codenumber">6</span></h5>
+<p id="p-8750">\(9^x\cdot 3^{x-3}\)</p></article><article class="exercise-like" id="exercise-1747"><h5 class="heading"><span class="codenumber">7</span></h5>
+<p id="p-8751">\(\dfrac{m^{x+2}}{m^{2x+4}} \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-927" id="answer-927"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-927" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8752">\(\dfrac{1}{m^{x+2}} \)</p></span></span> </article><article class="exercise-like" id="exercise-1748"><h5 class="heading"><span class="codenumber">8</span></h5>
+<p id="p-8753">\(\sqrt[3]{8^{2x+1}\cdot 8^{x-2}} \)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-240">
-<article class="introduction" id="introduction-243"><p id="p-8752">Find a growth or decay law for the function.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-243"><p id="p-8754">Find a growth or decay law for the function.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1749"><h5 class="heading"><span class="codenumber">9</span></h5>
-<p id="p-8753"><table>
+<p id="p-8755"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(t\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(0\)</td>
@@ -393,8 +398,8 @@ where each payment is \(P\) dollars.</p></article></p></li>
 <td class="c m b1 r1 l0 t0 lines">\(9.83\)</td>
 </tr>
 </table></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-928" id="answer-928"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-928" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8754">\(g(t)=16(0.85)^t \)</p></span></span> </article><article class="exercise-like" id="exercise-1750"><h5 class="heading"><span class="codenumber">10</span></h5>
-<p id="p-8755"><table>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-928" id="answer-928"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-928" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8756">\(g(t)=16(0.85)^t \)</p></span></span> </article><article class="exercise-like" id="exercise-1750"><h5 class="heading"><span class="codenumber">10</span></h5>
+<p id="p-8757"><table>
 <tr>
 <td class="c m b1 r1 l1 t1 lines">\(t\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(0\)</td>
@@ -410,301 +415,301 @@ where each payment is \(P\) dollars.</p></article></p></li>
 <td class="c m b1 r1 l0 t0 lines">\(49.15\)</td>
 </tr>
 </table></p></article><article class="exercise-like" id="exercise-1751"><h5 class="heading"><span class="codenumber">11</span></h5>
-<p id="p-8756"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-chap4-rev-11.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-929" id="answer-929"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-929" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8757">\(f (x) = 500\left(\dfrac{1}{5}\right)^x\)</p></span></span> </article><article class="exercise-like" id="exercise-1752"><h5 class="heading"><span class="codenumber">12</span></h5>
-<p id="p-8758"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-chap4-rev-12.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></article>
+<p id="p-8758"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-chap4-rev-11.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-929" id="answer-929"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-929" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8759">\(f (x) = 500\left(\dfrac{1}{5}\right)^x\)</p></span></span> </article><article class="exercise-like" id="exercise-1752"><h5 class="heading"><span class="codenumber">12</span></h5>
+<p id="p-8760"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-chap4-rev-12.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></article>
 </div>
 </div>
 <article class="exercise-like" id="exercise-1753"><h5 class="heading"><span class="codenumber">13</span></h5>
-<p id="p-8759">The president's approval rating increased by \(12\%\) and then decreased by \(15\%\text{.}\) What was the net change in his approval rating?</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-930" id="answer-930"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-930" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8760">\(4.8\%\) loss</p></span></span> </article><article class="exercise-like" id="exercise-1754"><h5 class="heading"><span class="codenumber">14</span></h5>
-<p id="p-8761">The number of students at Salt Creek Elementary School fell by \(18\%\) last year but increased by \(26\%\) this year. What was the net change in the number of students?</p></article><article class="exercise-like" id="exercise-1755"><h5 class="heading"><span class="codenumber">15</span></h5>
-<p id="p-8762">Enviroco's stock is growing exponentially in value and increased by \(33.8\%\) over the past \(5\) years. What was its annual rate of increase?</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-931" id="answer-931"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-931" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8763">\(6\%\) loss</p></span></span> </article><article class="exercise-like" id="exercise-1756"><h5 class="heading"><span class="codenumber">16</span></h5>
-<p id="p-8764">Sales of the software package Home Accountant 3.0 fell exponentially when the new version came out, decreasing by \(60\%\) over the past 3 months. What was the monthly rate of decrease?</p></article><div class="exercisegroup" id="exercisegroup-241">
-<article class="introduction" id="introduction-244"><p id="p-8765">For Problems 17–20, </p>
+<p id="p-8761">The president's approval rating increased by \(12\%\) and then decreased by \(15\%\text{.}\) What was the net change in his approval rating?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-930" id="answer-930"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-930" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8762">\(4.8\%\) loss</p></span></span> </article><article class="exercise-like" id="exercise-1754"><h5 class="heading"><span class="codenumber">14</span></h5>
+<p id="p-8763">The number of students at Salt Creek Elementary School fell by \(18\%\) last year but increased by \(26\%\) this year. What was the net change in the number of students?</p></article><article class="exercise-like" id="exercise-1755"><h5 class="heading"><span class="codenumber">15</span></h5>
+<p id="p-8764">Enviroco's stock is growing exponentially in value and increased by \(33.8\%\) over the past \(5\) years. What was its annual rate of increase?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-931" id="answer-931"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-931" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8765">\(6\%\) loss</p></span></span> </article><article class="exercise-like" id="exercise-1756"><h5 class="heading"><span class="codenumber">16</span></h5>
+<p id="p-8766">Sales of the software package Home Accountant 3.0 fell exponentially when the new version came out, decreasing by \(60\%\) over the past 3 months. What was the monthly rate of decrease?</p></article><div class="exercisegroup" id="exercisegroup-241">
+<article class="introduction" id="introduction-244"><p id="p-8767">For Problems 17–20, </p>
 <ol id="ol-1706" style="list-style-type: lower-alpha;">
-<li id="li-5386"><p id="p-8766">Graph the function.</p></li>
-<li id="li-5387"><p id="p-8767">List all intercepts and asymptotes.</p></li>
-<li id="li-5388"><p id="p-8768">Give the range of the function on the domain \([−3, 3]\text{.}\)</p></li>
+<li id="li-5386"><p id="p-8768">Graph the function.</p></li>
+<li id="li-5387"><p id="p-8769">List all intercepts and asymptotes.</p></li>
+<li id="li-5388"><p id="p-8770">Give the range of the function on the domain \([−3, 3]\text{.}\)</p></li>
 </ol>
 <p></p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1757"><h5 class="heading"><span class="codenumber">17</span></h5>
-<p id="p-8769">\(f (t) = 6(1.2)^t\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-932" id="answer-932"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-932" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8770"></p>
+<p id="p-8771">\(f (t) = 6(1.2)^t\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-932" id="answer-932"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-932" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8772"></p>
 <ol id="ol-1707" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5389" style="width:49%; float:left;"><p id="p-8771"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-ans-chap4-rev-17.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
-<li id="li-5390" style="width:49%; float:left;"><p id="p-8772">\(y\)-intercept \((0, 6)\text{;}\) asymptote: \(y = 0\)</p></li>
-<li id="li-5391" style="width:49%; float:left;"><p id="p-8773">\([3.472, 10.368]\)</p></li>
+<li id="li-5389" style="width:49%; float:left;"><p id="p-8773"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-ans-chap4-rev-17.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-5390" style="width:49%; float:left;"><p id="p-8774">\(y\)-intercept \((0, 6)\text{;}\) asymptote: \(y = 0\)</p></li>
+<li id="li-5391" style="width:49%; float:left;"><p id="p-8775">\([3.472, 10.368]\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1758"><h5 class="heading"><span class="codenumber">18</span></h5>
-<p id="p-8774">\(g(t) = 35(0.6)^{−t}\)</p></article><article class="exercise-like" id="exercise-1759"><h5 class="heading"><span class="codenumber">19</span></h5>
-<p id="p-8775">\(P(x) = 2^x − 3\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-933" id="answer-933"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-933" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8776"></p>
+<p id="p-8776">\(g(t) = 35(0.6)^{−t}\)</p></article><article class="exercise-like" id="exercise-1759"><h5 class="heading"><span class="codenumber">19</span></h5>
+<p id="p-8777">\(P(x) = 2^x − 3\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-933" id="answer-933"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-933" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8778"></p>
 <ol id="ol-1708" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5392" style="width:49%; float:left;"><p id="p-8777"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-ans-chap4-rev-19.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
-<li id="li-5393" style="width:49%; float:left;"><p id="p-8778">\(x\)-intercept \(\left(\frac{\log 3}{\log 2} \right) \text{;}\) \(y\)-intercept \((0, -2)\text{;}\) asymptote: \(y = -3\)</p></li>
-<li id="li-5394" style="width:49%; float:left;"><p id="p-8779">\([−2.875,5]\)</p></li>
+<li id="li-5392" style="width:49%; float:left;"><p id="p-8779"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-ans-chap4-rev-19.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-5393" style="width:49%; float:left;"><p id="p-8780">\(x\)-intercept \(\left(\frac{\log 3}{\log 2} \right) \text{;}\) \(y\)-intercept \((0, -2)\text{;}\) asymptote: \(y = -3\)</p></li>
+<li id="li-5394" style="width:49%; float:left;"><p id="p-8781">\([−2.875,5]\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1760"><h5 class="heading"><span class="codenumber">20</span></h5>
-<p id="p-8780">\(R(x) = 2^{x+3}\)</p></article>
+<p id="p-8782">\(R(x) = 2^{x+3}\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-242">
-<article class="introduction" id="introduction-245"><p id="p-8781">Solve each equation.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-245"><p id="p-8783">Solve each equation.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1761"><h5 class="heading"><span class="codenumber">21</span></h5>
-<p id="p-8782">\(3^{x+2} = 9^{1/3}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-934" id="answer-934"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-934" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8783">\(\dfrac{-4}{3}\)</p></span></span></article><article class="exercise-like" id="exercise-1762"><h5 class="heading"><span class="codenumber">22</span></h5>
-<p id="p-8784">\(2^{x−1} = 8^{−2x}\)</p></article><article class="exercise-like" id="exercise-1763"><h5 class="heading"><span class="codenumber">23</span></h5>
-<p id="p-8785">\(4^{2x+1} = 8^{x-3}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-935" id="answer-935"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-935" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8786">\(-11\)</p></span></span></article><article class="exercise-like" id="exercise-1764"><h5 class="heading"><span class="codenumber">24</span></h5>
-<p id="p-8787">\(3^{x^2−4} = 27\)</p></article>
+<p id="p-8784">\(3^{x+2} = 9^{1/3}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-934" id="answer-934"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-934" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8785">\(\dfrac{-4}{3}\)</p></span></span></article><article class="exercise-like" id="exercise-1762"><h5 class="heading"><span class="codenumber">22</span></h5>
+<p id="p-8786">\(2^{x−1} = 8^{−2x}\)</p></article><article class="exercise-like" id="exercise-1763"><h5 class="heading"><span class="codenumber">23</span></h5>
+<p id="p-8787">\(4^{2x+1} = 8^{x-3}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-935" id="answer-935"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-935" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8788">\(-11\)</p></span></span></article><article class="exercise-like" id="exercise-1764"><h5 class="heading"><span class="codenumber">24</span></h5>
+<p id="p-8789">\(3^{x^2−4} = 27\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-243">
-<article class="introduction" id="introduction-246"><p id="p-8788">For Problems 25–28, </p>
+<article class="introduction" id="introduction-246"><p id="p-8790">For Problems 25–28, </p>
 <ol id="ol-1709" style="list-style-type: lower-alpha;">
-<li id="li-5395"><p id="p-8789">Graph both functions in the same window. Are they equivalent?</p></li>
-<li id="li-5396"><p id="p-8790">Justify your answer to part (a) algebraically.</p></li>
+<li id="li-5395"><p id="p-8791">Graph both functions in the same window. Are they equivalent?</p></li>
+<li id="li-5396"><p id="p-8792">Justify your answer to part (a) algebraically.</p></li>
 </ol>
 <p></p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-1765"><h5 class="heading"><span class="codenumber">25</span></h5>
-<p id="p-8791">\(P(t) = 5(2^{t/8}), ~~~Q(t) = 5(1.0905)^t\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-936" id="answer-936"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-936" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8792"></p>
+<p id="p-8793">\(P(t) = 5(2^{t/8}), ~~~Q(t) = 5(1.0905)^t\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-936" id="answer-936"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-936" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8794"></p>
 <ol id="ol-1710" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5397" style="width:49%; float:left;"><p id="p-8793"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-ans-chap4-rev-25.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> Not (quite) equivalent</p></li>
-<li id="li-5398" style="width:49%; float:left;"><p id="p-8794">\(2^{1/8}\approx 1.090507733\gt 1.0905 \)</p></li>
+<li id="li-5397" style="width:49%; float:left;"><p id="p-8795"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-ans-chap4-rev-25.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> Not (quite) equivalent</p></li>
+<li id="li-5398" style="width:49%; float:left;"><p id="p-8796">\(2^{1/8}\approx 1.090507733\gt 1.0905 \)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1766"><h5 class="heading"><span class="codenumber">26</span></h5>
-<p id="p-8795">\(M(x) = 4(3^{x/5}), ~~~N(x) = 4(1.2457)^x\)</p></article><article class="exercise-like" id="exercise-1767"><h5 class="heading"><span class="codenumber">27</span></h5>
-<p id="p-8796">\(H(x) =\left(\dfrac{1}{3}  \right)^{x−2}, ~~~G(x) = 9\left(\dfrac{1}{3} \right)^x\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-937" id="answer-937"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-937" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8797"></p>
+<p id="p-8797">\(M(x) = 4(3^{x/5}), ~~~N(x) = 4(1.2457)^x\)</p></article><article class="exercise-like" id="exercise-1767"><h5 class="heading"><span class="codenumber">27</span></h5>
+<p id="p-8798">\(H(x) =\left(\dfrac{1}{3}  \right)^{x−2}, ~~~G(x) = 9\left(\dfrac{1}{3} \right)^x\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-937" id="answer-937"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-937" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8799"></p>
 <ol id="ol-1711" style="list-style-type: lower-alpha;">
-<li id="li-5399"><p id="p-8798"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-ans-chap4-rev-27.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> Equivalent</p></li>
-<li id="li-5400"><p id="p-8799">\(\left(\dfrac{1}{3} \right)^{x-2} =\left(\dfrac{1}{3} \right)^{x}\cdot \left(\dfrac{1}{3} \right)^{-2} =\left(\dfrac{1}{3} \right)^{x}\cdot 9 \)</p></li>
+<li id="li-5399"><p id="p-8800"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-ans-chap4-rev-27.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> Equivalent</p></li>
+<li id="li-5400"><p id="p-8801">\(\left(\dfrac{1}{3} \right)^{x-2} =\left(\dfrac{1}{3} \right)^{x}\cdot \left(\dfrac{1}{3} \right)^{-2} =\left(\dfrac{1}{3} \right)^{x}\cdot 9 \)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1768"><h5 class="heading"><span class="codenumber">28</span></h5>
-<p id="p-8800">\(F(x) = =\left(\dfrac{1}{2} \right)^{2x-3}, ~~~L(x) = 8\left(\dfrac{1}{2} \right)^{x}\)</p></article>
+<p id="p-8802">\(F(x) = =\left(\dfrac{1}{2} \right)^{2x-3}, ~~~L(x) = 8\left(\dfrac{1}{2} \right)^{x}\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-244">
-<article class="introduction" id="introduction-247"><p id="p-8801">For Problems 29–32, \(f (x) = 2^x\text{.}\) </p>
+<article class="introduction" id="introduction-247"><p id="p-8803">For Problems 29–32, \(f (x) = 2^x\text{.}\) </p>
 <ol id="ol-1712" style="list-style-type: lower-alpha;">
-<li id="li-5401"><p id="p-8802">Write a formula for the function.</p></li>
-<li id="li-5402"><p id="p-8803">Use transformations to sketch the graph, indicating any intercepts and asymptotes.</p></li>
+<li id="li-5401"><p id="p-8804">Write a formula for the function.</p></li>
+<li id="li-5402"><p id="p-8805">Use transformations to sketch the graph, indicating any intercepts and asymptotes.</p></li>
 </ol>
 <p></p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1769"><h5 class="heading"><span class="codenumber">29</span></h5>
-<p id="p-8804">\(y = 4 + f (x + 1)\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-938" id="answer-938"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-938" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8805"></p>
+<p id="p-8806">\(y = 4 + f (x + 1)\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-938" id="answer-938"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-938" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8807"></p>
 <ol id="ol-1713" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5403" style="width:49%; float:left;"><p id="p-8806">\(y = 4 + 2^{x+1}\)</p></li>
-<li id="li-5404" style="width:49%; float:left;"><p id="p-8807">Shift the graph of \(f~~1\)  unit left, \(4\) units up. <object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-ans-chap4-rev-29.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-5403" style="width:49%; float:left;"><p id="p-8808">\(y = 4 + 2^{x+1}\)</p></li>
+<li id="li-5404" style="width:49%; float:left;"><p id="p-8809">Shift the graph of \(f~~1\)  unit left, \(4\) units up. <object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-ans-chap4-rev-29.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1770"><h5 class="heading"><span class="codenumber">30</span></h5>
-<p id="p-8808">\(y = 6 − 3 f (x)\)</p></article><article class="exercise-like" id="exercise-1771"><h5 class="heading"><span class="codenumber">31</span></h5>
-<p id="p-8809">\(y = 4 + f (x + 1)\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-939" id="answer-939"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-939" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8810"></p>
+<p id="p-8810">\(y = 6 − 3 f (x)\)</p></article><article class="exercise-like" id="exercise-1771"><h5 class="heading"><span class="codenumber">31</span></h5>
+<p id="p-8811">\(y = 4 + f (x + 1)\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-939" id="answer-939"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-939" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8812"></p>
 <ol id="ol-1714" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5405" style="width:49%; float:left;"><p id="p-8811">\(y = 4 + 2^{x+1}\)</p></li>
-<li id="li-5406" style="width:49%; float:left;"><p id="p-8812">Expand vertically by \(3\text{,}\) reflect about \(x\)-axis, shift \(6\) units up. <img width="60%" src="images/fig-ans-chap4-rev-31.jpg" alt=""></p></li>
+<li id="li-5405" style="width:49%; float:left;"><p id="p-8813">\(y = 4 + 2^{x+1}\)</p></li>
+<li id="li-5406" style="width:49%; float:left;"><p id="p-8814">Expand vertically by \(3\text{,}\) reflect about \(x\)-axis, shift \(6\) units up. <img width="60%" src="images/fig-ans-chap4-rev-31.jpg" alt=""></p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1772"><h5 class="heading"><span class="codenumber">32</span></h5>
-<p id="p-8813">\(y = 10 − 4 f (x)\)</p></article>
+<p id="p-8815">\(y = 10 − 4 f (x)\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-245">
-<article class="introduction" id="introduction-248"><p id="p-8814">In Problems 33–36, we compare power and exponential functions. Let
+<article class="introduction" id="introduction-248"><p id="p-8816">In Problems 33–36, we compare power and exponential functions. Let
 \begin{equation*}
 f (x) = 4x^{1.5}, ~~~g(x) = 4(1.5)^x
 \end{equation*}
 </p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-1773"><h5 class="heading"><span class="codenumber">33</span></h5>
-<p id="p-8815">Graph both functions in the window \(\text{Xmin} = 0\text{,}\) \(\text{Xmax} = 10\text{,}\) \(\text{Ymin} = 0\text{,}\) \(\text{Ymax} = 120\text{.}\) Which function grows more rapidly for large values of \(x\text{?}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-940" id="answer-940"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-940" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8816"><img width="40%" src="images/fig-ans-chap4-rev-33.jpg" alt=""> \(g\) eventually grows faster.</p></span></span> </article><article class="exercise-like" id="exercise-1774"><h5 class="heading"><span class="codenumber">34</span></h5>
-<p id="p-8817">Estimate the solutions of \(f (x) = g(x)\text{.}\) For what values of \(x\) is \(f (x) \gt g(x)\text{?}\)</p></article><article class="exercise-like" id="exercise-1775"><h5 class="heading"><span class="codenumber">35</span></h5>
-<p id="p-8818">When \(x\) doubles from \(2\) to \(4\text{,}\) \(f (x)\) grows by a factor of <span class="fillin" style="width: 1.818181818181818em;"></span>, and \(g(x)\) grows by a factor of <span class="fillin" style="width: 1.818181818181818em;"></span>.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-941" id="answer-941"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-941" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8819">\(2^{1.5}\approx 2.83\text{;}\) \(2.25\)</p></span></span> </article><article class="exercise-like" id="exercise-1776"><h5 class="heading"><span class="codenumber">36</span></h5>
-<p id="p-8820">What is the range of \(f (x)\) on the domain \([0, 100]\text{?}\) What is the range of \(g(x)\) on the same domain?</p></article>
+<p id="p-8817">Graph both functions in the window \(\text{Xmin} = 0\text{,}\) \(\text{Xmax} = 10\text{,}\) \(\text{Ymin} = 0\text{,}\) \(\text{Ymax} = 120\text{.}\) Which function grows more rapidly for large values of \(x\text{?}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-940" id="answer-940"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-940" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8818"><img width="40%" src="images/fig-ans-chap4-rev-33.jpg" alt=""> \(g\) eventually grows faster.</p></span></span> </article><article class="exercise-like" id="exercise-1774"><h5 class="heading"><span class="codenumber">34</span></h5>
+<p id="p-8819">Estimate the solutions of \(f (x) = g(x)\text{.}\) For what values of \(x\) is \(f (x) \gt g(x)\text{?}\)</p></article><article class="exercise-like" id="exercise-1775"><h5 class="heading"><span class="codenumber">35</span></h5>
+<p id="p-8820">When \(x\) doubles from \(2\) to \(4\text{,}\) \(f (x)\) grows by a factor of <span class="fillin" style="width: 1.818181818181818em;"></span>, and \(g(x)\) grows by a factor of <span class="fillin" style="width: 1.818181818181818em;"></span>.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-941" id="answer-941"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-941" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8821">\(2^{1.5}\approx 2.83\text{;}\) \(2.25\)</p></span></span> </article><article class="exercise-like" id="exercise-1776"><h5 class="heading"><span class="codenumber">36</span></h5>
+<p id="p-8822">What is the range of \(f (x)\) on the domain \([0, 100]\text{?}\) What is the range of \(g(x)\) on the same domain?</p></article>
 </div>
 </div>
 <article class="exercise-like" id="exercise-1777"><h5 class="heading"><span class="codenumber">37</span></h5>
-<p id="p-8821">"Within belts of uniform moisture conditions and comparable vegetation, the organic matter content of soil decreases exponentially with increasing temperature." Data indicate that the organic content doubles with each \(10\degree\)C decrease in temperature. Write a formula for this function, stating clearly what each variable represents. (Source: Leopold, Wolman, Gordon, and Miller, 1992)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-942" id="answer-942"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-942" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8822">\(M = M_0(2)^{t/10}\text{,}\) where \(M\) is the organic content, \(M_0\) is the organic content at \(0\degree\)C, and \(t\) is the temperature in \(\degree\) Celsius.</p></span></span> </article><article class="exercise-like" id="exercise-1778"><h5 class="heading"><span class="codenumber">38</span></h5>
-<p id="p-8823">In 1951, a study of barley yields under diverse soil conditions led to the formula
+<p id="p-8823">"Within belts of uniform moisture conditions and comparable vegetation, the organic matter content of soil decreases exponentially with increasing temperature." Data indicate that the organic content doubles with each \(10\degree\)C decrease in temperature. Write a formula for this function, stating clearly what each variable represents. (Source: Leopold, Wolman, Gordon, and Miller, 1992)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-942" id="answer-942"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-942" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8824">\(M = M_0(2)^{t/10}\text{,}\) where \(M\) is the organic content, \(M_0\) is the organic content at \(0\degree\)C, and \(t\) is the temperature in \(\degree\) Celsius.</p></span></span> </article><article class="exercise-like" id="exercise-1778"><h5 class="heading"><span class="codenumber">38</span></h5>
+<p id="p-8825">In 1951, a study of barley yields under diverse soil conditions led to the formula
 \begin{equation*}
 Y = cV^aG^b
 \end{equation*}
 where \(V\) is a soil texture rating, \(G\) is a drainage rating, and \(a\text{,}\) \(b\text{,}\) and \(c\) are constants. In fields with similar drainage systems, the formula gives barley yields, \(Y\text{,}\) as a function of \(V\text{,}\) the soil texture. What type of function is it? If it is an increasing function, what can you say about \(a\text{?}\) (Source: Briggs and Courtney, 1985)</p></article><div class="exercisegroup" id="exercisegroup-246">
-<article class="introduction" id="introduction-249"><p id="p-8824">Find each logarithm.</p></article><div class="exercisegroup-exercises cols3">
+<article class="introduction" id="introduction-249"><p id="p-8826">Find each logarithm.</p></article><div class="exercisegroup-exercises cols3">
 <article class="exercise-like" id="exercise-1779"><h5 class="heading"><span class="codenumber">39</span></h5>
-<p id="p-8825">\(\log_2 16 \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-943" id="answer-943"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-943" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8826">\(4\)</p></span></span> </article><article class="exercise-like" id="exercise-1780"><h5 class="heading"><span class="codenumber">40</span></h5>
-<p id="p-8827">\(\log_4 2 \)</p></article><article class="exercise-like" id="exercise-1781"><h5 class="heading"><span class="codenumber">41</span></h5>
-<p id="p-8828">\(\log_3 \frac{1}{3} \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-944" id="answer-944"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-944" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8829">\(-1\)</p></span></span> </article><article class="exercise-like" id="exercise-1782"><h5 class="heading"><span class="codenumber">42</span></h5>
-<p id="p-8830">\(\log_7 7 \)</p></article><article class="exercise-like" id="exercise-1783"><h5 class="heading"><span class="codenumber">43</span></h5>
-<p id="p-8831">\(\log_{10} 10^{-3} \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-945" id="answer-945"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-945" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8832">\(-3\)</p></span></span> </article><article class="exercise-like" id="exercise-1784"><h5 class="heading"><span class="codenumber">44</span></h5>
-<p id="p-8833">\(\log_{10} 0.0001 \)</p></article>
+<p id="p-8827">\(\log_2 16 \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-943" id="answer-943"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-943" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8828">\(4\)</p></span></span> </article><article class="exercise-like" id="exercise-1780"><h5 class="heading"><span class="codenumber">40</span></h5>
+<p id="p-8829">\(\log_4 2 \)</p></article><article class="exercise-like" id="exercise-1781"><h5 class="heading"><span class="codenumber">41</span></h5>
+<p id="p-8830">\(\log_3 \frac{1}{3} \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-944" id="answer-944"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-944" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8831">\(-1\)</p></span></span> </article><article class="exercise-like" id="exercise-1782"><h5 class="heading"><span class="codenumber">42</span></h5>
+<p id="p-8832">\(\log_7 7 \)</p></article><article class="exercise-like" id="exercise-1783"><h5 class="heading"><span class="codenumber">43</span></h5>
+<p id="p-8833">\(\log_{10} 10^{-3} \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-945" id="answer-945"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-945" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8834">\(-3\)</p></span></span> </article><article class="exercise-like" id="exercise-1784"><h5 class="heading"><span class="codenumber">44</span></h5>
+<p id="p-8835">\(\log_{10} 0.0001 \)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-247">
-<article class="introduction" id="introduction-250"><p id="p-8834">Write each equation in logarithmic form.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-250"><p id="p-8836">Write each equation in logarithmic form.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1785"><h5 class="heading"><span class="codenumber">45</span></h5>
-<p id="p-8835">\(0.3^{−2} = x + 1\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-946" id="answer-946"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-946" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8836">\(\log_{0.3}(x + 1) = −2\)</p></span></span> </article><article class="exercise-like" id="exercise-1786"><h5 class="heading"><span class="codenumber">46</span></h5>
-<p id="p-8837">\(4^{0.3 t} = 3N_0\)</p></article>
+<p id="p-8837">\(0.3^{−2} = x + 1\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-946" id="answer-946"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-946" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8838">\(\log_{0.3}(x + 1) = −2\)</p></span></span> </article><article class="exercise-like" id="exercise-1786"><h5 class="heading"><span class="codenumber">46</span></h5>
+<p id="p-8839">\(4^{0.3 t} = 3N_0\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-248">
-<article class="introduction" id="introduction-251"><p id="p-8838">Solve</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-251"><p id="p-8840">Solve</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1787"><h5 class="heading"><span class="codenumber">47</span></h5>
-<p id="p-8839">\(4\cdot 10^{1.3x} = 20.4\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-947" id="answer-947"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-947" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8840">\(\dfrac{\log 5.1}{1.3}\approx 0.5433 \)</p></span></span> </article><article class="exercise-like" id="exercise-1788"><h5 class="heading"><span class="codenumber">48</span></h5>
-<p id="p-8841">\(127= 2(10^{0.5x} )-17.3\)</p></article><article class="exercise-like" id="exercise-1789"><h5 class="heading"><span class="codenumber">49</span></h5>
-<p id="p-8842">\(3 (10^{-0.7x})+6.1 = 9\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-948" id="answer-948"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-948" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8843">\(\dfrac{\log (2.9/3)}{-0.7}\approx 0.21 \)</p></span></span> </article><article class="exercise-like" id="exercise-1790"><h5 class="heading"><span class="codenumber">50</span></h5>
-<p id="p-8844">\(40(1-10^{-1.2x} )=30\)</p></article>
+<p id="p-8841">\(4\cdot 10^{1.3x} = 20.4\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-947" id="answer-947"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-947" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8842">\(\dfrac{\log 5.1}{1.3}\approx 0.5433 \)</p></span></span> </article><article class="exercise-like" id="exercise-1788"><h5 class="heading"><span class="codenumber">48</span></h5>
+<p id="p-8843">\(127= 2(10^{0.5x} )-17.3\)</p></article><article class="exercise-like" id="exercise-1789"><h5 class="heading"><span class="codenumber">49</span></h5>
+<p id="p-8844">\(3 (10^{-0.7x})+6.1 = 9\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-948" id="answer-948"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-948" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8845">\(\dfrac{\log (2.9/3)}{-0.7}\approx 0.21 \)</p></span></span> </article><article class="exercise-like" id="exercise-1790"><h5 class="heading"><span class="codenumber">50</span></h5>
+<p id="p-8846">\(40(1-10^{-1.2x} )=30\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-249">
-<article class="introduction" id="introduction-252"><p id="p-8845">Write each expression in terms of simpler logarithms. (Assume that all variables and variable expressions denote positive real numbers.)</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-252"><p id="p-8847">Write each expression in terms of simpler logarithms. (Assume that all variables and variable expressions denote positive real numbers.)</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1791"><h5 class="heading"><span class="codenumber">51</span></h5>
-<p id="p-8846">\(\log_b \left(\dfrac{xy^{1/3}}{z^2} \right) \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-949" id="answer-949"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-949" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8847">\(\log_b x + \dfrac{1}{3} \log_b y − 2 \log_b z\)</p></span></span> </article><article class="exercise-like" id="exercise-1792"><h5 class="heading"><span class="codenumber">52</span></h5>
-<p id="p-8848">\(\log_b \sqrt{\dfrac{L^2}{2R} } \)</p></article><article class="exercise-like" id="exercise-1793"><h5 class="heading"><span class="codenumber">53</span></h5>
-<p id="p-8849">\(\log_{10} \left(x\sqrt[3]{\dfrac{x}{y} } \right) \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-950" id="answer-950"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-950" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8850">\(\dfrac{4}{3} \log x -\dfrac{1}{3} \log y\)</p></span></span> </article><article class="exercise-like" id="exercise-1794"><h5 class="heading"><span class="codenumber">54</span></h5>
-<p id="p-8851">\(\log_{10} \sqrt{(s-a)(s-g)^2 } \)</p></article>
+<p id="p-8848">\(\log_b \left(\dfrac{xy^{1/3}}{z^2} \right) \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-949" id="answer-949"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-949" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8849">\(\log_b x + \dfrac{1}{3} \log_b y − 2 \log_b z\)</p></span></span> </article><article class="exercise-like" id="exercise-1792"><h5 class="heading"><span class="codenumber">52</span></h5>
+<p id="p-8850">\(\log_b \sqrt{\dfrac{L^2}{2R} } \)</p></article><article class="exercise-like" id="exercise-1793"><h5 class="heading"><span class="codenumber">53</span></h5>
+<p id="p-8851">\(\log_{10} \left(x\sqrt[3]{\dfrac{x}{y} } \right) \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-950" id="answer-950"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-950" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8852">\(\dfrac{4}{3} \log x -\dfrac{1}{3} \log y\)</p></span></span> </article><article class="exercise-like" id="exercise-1794"><h5 class="heading"><span class="codenumber">54</span></h5>
+<p id="p-8853">\(\log_{10} \sqrt{(s-a)(s-g)^2 } \)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-250">
-<article class="introduction" id="introduction-253"><p id="p-8852">Write each expression as a single logarithm with coefficient \(1\text{.}\)</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-253"><p id="p-8854">Write each expression as a single logarithm with coefficient \(1\text{.}\)</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1795"><h5 class="heading"><span class="codenumber">55</span></h5>
-<p id="p-8853">\(\dfrac{1}{3}\left(\log_{10} x-2\log_{10}y \right) \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-951" id="answer-951"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-951" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8854">\(\log\sqrt[3] {\dfrac{x}{y^{2}}} \)</p></span></span> </article><article class="exercise-like" id="exercise-1796"><h5 class="heading"><span class="codenumber">56</span></h5>
-<p id="p-8855">\(\dfrac{1}{2}\log_{10}( 3x)-\dfrac{2}{3}\log_{10}y  \)</p></article><article class="exercise-like" id="exercise-1797"><h5 class="heading"><span class="codenumber">57</span></h5>
-<p id="p-8856">\(\dfrac{1}{3} \log_{10} 8 -2\left(\log_{10}8-\log_{10} 2 \right) \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-952" id="answer-952"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-952" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8857">\(\log {\dfrac{1}{8}} \)</p></span></span> </article><article class="exercise-like" id="exercise-1798"><h5 class="heading"><span class="codenumber">58</span></h5>
-<p id="p-8858">\(\dfrac{1}{2}(\log_{10}9+2\log_{10}4)+2\log_{10}5\)</p></article>
+<p id="p-8855">\(\dfrac{1}{3}\left(\log_{10} x-2\log_{10}y \right) \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-951" id="answer-951"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-951" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8856">\(\log\sqrt[3] {\dfrac{x}{y^{2}}} \)</p></span></span> </article><article class="exercise-like" id="exercise-1796"><h5 class="heading"><span class="codenumber">56</span></h5>
+<p id="p-8857">\(\dfrac{1}{2}\log_{10}( 3x)-\dfrac{2}{3}\log_{10}y  \)</p></article><article class="exercise-like" id="exercise-1797"><h5 class="heading"><span class="codenumber">57</span></h5>
+<p id="p-8858">\(\dfrac{1}{3} \log_{10} 8 -2\left(\log_{10}8-\log_{10} 2 \right) \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-952" id="answer-952"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-952" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8859">\(\log {\dfrac{1}{8}} \)</p></span></span> </article><article class="exercise-like" id="exercise-1798"><h5 class="heading"><span class="codenumber">58</span></h5>
+<p id="p-8860">\(\dfrac{1}{2}(\log_{10}9+2\log_{10}4)+2\log_{10}5\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-251">
-<article class="introduction" id="introduction-254"><p id="p-8859">Solve each equation by using base 10 logarithms.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-254"><p id="p-8861">Solve each equation by using base 10 logarithms.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1799"><h5 class="heading"><span class="codenumber">59</span></h5>
-<p id="p-8860">\(3^{x-2}=7 \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-953" id="answer-953"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-953" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8861">\(\dfrac{\log 63}{\log 3}\approx 3.77 \)</p></span></span> </article><article class="exercise-like" id="exercise-1800"><h5 class="heading"><span class="codenumber">60</span></h5>
-<p id="p-8862">\(4\cdot 2^{1.2x}=64 \)</p></article><article class="exercise-like" id="exercise-1801"><h5 class="heading"><span class="codenumber">61</span></h5>
-<p id="p-8863">\(1200=24\cdot 6^{-0.3x} \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-954" id="answer-954"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-954" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8864">\(\dfrac{\log 50}{-0.3\log 6}\approx -7.278 \)</p></span></span> </article><article class="exercise-like" id="exercise-1802"><h5 class="heading"><span class="codenumber">62</span></h5>
-<p id="p-8865">\(0.08=12\cdot 3^{-1.5x} \)</p></article>
+<p id="p-8862">\(3^{x-2}=7 \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-953" id="answer-953"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-953" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8863">\(\dfrac{\log 63}{\log 3}\approx 3.77 \)</p></span></span> </article><article class="exercise-like" id="exercise-1800"><h5 class="heading"><span class="codenumber">60</span></h5>
+<p id="p-8864">\(4\cdot 2^{1.2x}=64 \)</p></article><article class="exercise-like" id="exercise-1801"><h5 class="heading"><span class="codenumber">61</span></h5>
+<p id="p-8865">\(1200=24\cdot 6^{-0.3x} \)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-954" id="answer-954"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-954" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8866">\(\dfrac{\log 50}{-0.3\log 6}\approx -7.278 \)</p></span></span> </article><article class="exercise-like" id="exercise-1802"><h5 class="heading"><span class="codenumber">62</span></h5>
+<p id="p-8867">\(0.08=12\cdot 3^{-1.5x} \)</p></article>
 </div>
 </div>
 <article class="exercise-like" id="exercise-1803"><h5 class="heading"><span class="codenumber">63</span></h5>
-<p id="p-8866">Solve \(N = N_0(10^{kt} )\) for \(t\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-955" id="answer-955"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-955" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8867">\(\dfrac{\log(N/N_0)}{k}\)</p></span></span> </article><article class="exercise-like" id="exercise-1804"><h5 class="heading"><span class="codenumber">64</span></h5>
-<p id="p-8868">Solve \(Q = R_0+R \log_{10} kt\) for \(t\text{.}\)</p></article><article class="exercise-like" id="exercise-1805"><h5 class="heading"><span class="codenumber">65</span></h5>
-<p id="p-8869">The population of Dry Gulch has been declining according to the function
+<p id="p-8868">Solve \(N = N_0(10^{kt} )\) for \(t\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-955" id="answer-955"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-955" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8869">\(\dfrac{\log(N/N_0)}{k}\)</p></span></span> </article><article class="exercise-like" id="exercise-1804"><h5 class="heading"><span class="codenumber">64</span></h5>
+<p id="p-8870">Solve \(Q = R_0+R \log_{10} kt\) for \(t\text{.}\)</p></article><article class="exercise-like" id="exercise-1805"><h5 class="heading"><span class="codenumber">65</span></h5>
+<p id="p-8871">The population of Dry Gulch has been declining according to the function
 \begin{equation*}
 P(t) = 3800 · 2^{−t/20}
 \end{equation*}
 where \(t\) is the number of years since the town's heyday in \(1910\text{.}\) </p>
 <ol id="ol-1715" style="list-style-type: lower-alpha;">
-<li id="li-5407"><p id="p-8870">What was the population of Dry Gulch in 1990?</p></li>
-<li id="li-5408"><p id="p-8871">In what year did the population dip below \(120\) people?</p></li>
+<li id="li-5407"><p id="p-8872">What was the population of Dry Gulch in 1990?</p></li>
+<li id="li-5408"><p id="p-8873">In what year did the population dip below \(120\) people?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-956" id="answer-956"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-956" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8872"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-956" id="answer-956"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-956" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8874"></p>
 <ol id="ol-1716" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5409" style="width:49%; float:left;"><p id="p-8873">\(238\)</p></li>
-<li id="li-5410" style="width:49%; float:left;"><p id="p-8874">\(2010\)</p></li>
+<li id="li-5409" style="width:49%; float:left;"><p id="p-8875">\(238\)</p></li>
+<li id="li-5410" style="width:49%; float:left;"><p id="p-8876">\(2010\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1806"><h5 class="heading"><span class="codenumber">66</span></h5>
-<p id="p-8875">The number of compact discs produced each year by Delta Discs is given by the function
+<p id="p-8877">The number of compact discs produced each year by Delta Discs is given by the function
 \begin{equation*}
 N(t)=8000\cdot 3^{t/4}
 \end{equation*}
 where \(t\) is the number of years since discs were introduced in \(1980\text{.}\) </p>
 <ol id="ol-1717" style="list-style-type: lower-alpha;">
-<li id="li-5411"><p id="p-8876">How many discs did Delta produce in \(1989\text{?}\)</p></li>
-<li id="li-5412"><p id="p-8877">In what year did Delta first produce over 2 million discs?</p></li>
+<li id="li-5411"><p id="p-8878">How many discs did Delta produce in \(1989\text{?}\)</p></li>
+<li id="li-5412"><p id="p-8879">In what year did Delta first produce over 2 million discs?</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-1807"><h5 class="heading"><span class="codenumber">67</span></h5>
-<p id="p-8878"></p>
+<p id="p-8880"></p>
 <ol id="ol-1718" style="list-style-type: lower-alpha;">
-<li id="li-5413"><p id="p-8879">Write a formula for the cost of a camera \(t\) years from now if it costs \(\$90\) now and the inflation rate is \(6\%\) annually.</p></li>
-<li id="li-5414"><p id="p-8880">How much will the camera cost \(10\) months from now?</p></li>
-<li id="li-5415"><p id="p-8881">How long will it be before the camera costs $120?</p></li>
+<li id="li-5413"><p id="p-8881">Write a formula for the cost of a camera \(t\) years from now if it costs \(\$90\) now and the inflation rate is \(6\%\) annually.</p></li>
+<li id="li-5414"><p id="p-8882">How much will the camera cost \(10\) months from now?</p></li>
+<li id="li-5415"><p id="p-8883">How long will it be before the camera costs $120?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-957" id="answer-957"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-957" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8882"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-957" id="answer-957"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-957" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8884"></p>
 <ol id="ol-1719" class="cols3" style="list-style-type: lower-alpha;">
-<li id="li-5416" style="width:32.6666666666667%; float:left;"><p id="p-8883">\(C = 90(1.06)^t\)</p></li>
-<li id="li-5417" style="width:32.6666666666667%; float:left;"><p id="p-8884">\(\$94.48\)</p></li>
-<li id="li-5418" style="width:32.6666666666667%; float:left;"><p id="p-8885">\(5\) years</p></li>
+<li id="li-5416" style="width:32.6666666666667%; float:left;"><p id="p-8885">\(C = 90(1.06)^t\)</p></li>
+<li id="li-5417" style="width:32.6666666666667%; float:left;"><p id="p-8886">\(\$94.48\)</p></li>
+<li id="li-5418" style="width:32.6666666666667%; float:left;"><p id="p-8887">\(5\) years</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1808"><h5 class="heading"><span class="codenumber">68</span></h5>
-<p id="p-8886"></p>
+<p id="p-8888"></p>
 <ol id="ol-1720" style="list-style-type: lower-alpha;">
-<li id="li-5419"><p id="p-8887">Write a formula for the cost of a sofa \(t\) years from now if it costs \(\$1200\) now and the inflation rate is \(8\%\) annually.</p></li>
-<li id="li-5420"><p id="p-8888">How much will the sofa cost \(20\) months from now?</p></li>
-<li id="li-5421"><p id="p-8889">How long will it be before the sofa costs \(\$1500\text{?}\)</p></li>
+<li id="li-5419"><p id="p-8889">Write a formula for the cost of a sofa \(t\) years from now if it costs \(\$1200\) now and the inflation rate is \(8\%\) annually.</p></li>
+<li id="li-5420"><p id="p-8890">How much will the sofa cost \(20\) months from now?</p></li>
+<li id="li-5421"><p id="p-8891">How long will it be before the sofa costs \(\$1500\text{?}\)</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-1809"><h5 class="heading"><span class="codenumber">69</span></h5>
-<p id="p-8890">Francine inherited \(\$5000\) and plans to deposit the money in an account that compounds interest monthly. </p>
+<p id="p-8892">Francine inherited \(\$5000\) and plans to deposit the money in an account that compounds interest monthly. </p>
 <ol id="ol-1721" style="list-style-type: lower-alpha;">
-<li id="li-5422"><p id="p-8891">If she can get \(5.5\%\) interest, how long will it take for the money to grow to \(\$7500\text{?}\)</p></li>
-<li id="li-5423"><p id="p-8892">What interest rate will she need if she would like the money to grow to \(\$6000\) in \(3\) years?</p></li>
+<li id="li-5422"><p id="p-8893">If she can get \(5.5\%\) interest, how long will it take for the money to grow to \(\$7500\text{?}\)</p></li>
+<li id="li-5423"><p id="p-8894">What interest rate will she need if she would like the money to grow to \(\$6000\) in \(3\) years?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-958" id="answer-958"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-958" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8893"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-958" id="answer-958"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-958" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8895"></p>
 <ol id="ol-1722" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5424" style="width:49%; float:left;"><p id="p-8894">\(7.4\) years</p></li>
-<li id="li-5425" style="width:49%; float:left;"><p id="p-8895">\(6.1%\)</p></li>
+<li id="li-5424" style="width:49%; float:left;"><p id="p-8896">\(7.4\) years</p></li>
+<li id="li-5425" style="width:49%; float:left;"><p id="p-8897">\(6.1%\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1810"><h5 class="heading"><span class="codenumber">70</span></h5>
-<p id="p-8896">Delbert received a signing bonus of \(\$2500\) and wants to invest the money in a certificate of deposit (CD) that compounds interest quarterly. </p>
+<p id="p-8898">Delbert received a signing bonus of \(\$2500\) and wants to invest the money in a certificate of deposit (CD) that compounds interest quarterly. </p>
 <ol id="ol-1723" style="list-style-type: lower-alpha;">
-<li id="li-5426"><p id="p-8897">If the CD pays \(4.8\%\) interest, how long will it take his money to grow to \(\$3000\text{?}\)</p></li>
-<li id="li-5427"><p id="p-8898">What interest rate will he need if he would like the money to grow to \(\$3000\) in \(1\) year?</p></li>
+<li id="li-5426"><p id="p-8899">If the CD pays \(4.8\%\) interest, how long will it take his money to grow to \(\$3000\text{?}\)</p></li>
+<li id="li-5427"><p id="p-8900">What interest rate will he need if he would like the money to grow to \(\$3000\) in \(1\) year?</p></li>
 </ol>
 <p></p></article><div class="exercisegroup" id="exercisegroup-252">
-<article class="introduction" id="introduction-255"><p id="p-8899">Find an exponential growth or decay function that fits the data.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-255"><p id="p-8901">Find an exponential growth or decay function that fits the data.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-1811"><h5 class="heading"><span class="codenumber">71</span></h5>
-<p id="p-8900">\(f(2) = 1714, ~~~f (4) = 1836\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-959" id="answer-959"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-959" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8901">\(f(x)\approx 1600(1.035)^x \)</p></span></span> </article><article class="exercise-like" id="exercise-1812"><h5 class="heading"><span class="codenumber">72</span></h5>
-<p id="p-8902">\(g(1) = 10,665, ~~~ g(6) = 24,920\)</p></article><article class="exercise-like" id="exercise-1813"><h5 class="heading"><span class="codenumber">73</span></h5>
-<p id="p-8903">\(g(1) = 45, ~~~ g(5) = 0.00142\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-960" id="answer-960"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-960" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8904">\(g(x)\approx 600(0.075)^x \)</p></span></span> </article><article class="exercise-like" id="exercise-1814"><h5 class="heading"><span class="codenumber">74</span></h5>
-<p id="p-8905">\(f(2) = 17,464, ~~~f (5) = 16.690\)</p></article>
+<p id="p-8902">\(f(2) = 1714, ~~~f (4) = 1836\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-959" id="answer-959"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-959" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8903">\(f(x)\approx 1600(1.035)^x \)</p></span></span> </article><article class="exercise-like" id="exercise-1812"><h5 class="heading"><span class="codenumber">72</span></h5>
+<p id="p-8904">\(g(1) = 10,665, ~~~ g(6) = 24,920\)</p></article><article class="exercise-like" id="exercise-1813"><h5 class="heading"><span class="codenumber">73</span></h5>
+<p id="p-8905">\(g(1) = 45, ~~~ g(5) = 0.00142\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-960" id="answer-960"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-960" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8906">\(g(x)\approx 600(0.075)^x \)</p></span></span> </article><article class="exercise-like" id="exercise-1814"><h5 class="heading"><span class="codenumber">74</span></h5>
+<p id="p-8907">\(f(2) = 17,464, ~~~f (5) = 16.690\)</p></article>
 </div>
 </div>
 <article class="exercise-like" id="exercise-1815"><h5 class="heading"><span class="codenumber">75</span></h5>
-<p id="p-8906">The population of Sweden is growing at \(0.1\%\) annually. </p>
+<p id="p-8908">The population of Sweden is growing at \(0.1\%\) annually. </p>
 <ol id="ol-1724" style="list-style-type: lower-alpha;">
-<li id="li-5428"><p id="p-8907">What is the doubling time for Sweden's population?</p></li>
-<li id="li-5429"><p id="p-8908">In \(2005\text{,}\) the population of Sweden was \(9\) million. At the current rate of growth, how long will it take the population to reach \(10\) million?</p></li>
+<li id="li-5428"><p id="p-8909">What is the doubling time for Sweden's population?</p></li>
+<li id="li-5429"><p id="p-8910">In \(2005\text{,}\) the population of Sweden was \(9\) million. At the current rate of growth, how long will it take the population to reach \(10\) million?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-961" id="answer-961"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-961" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8909"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-961" id="answer-961"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-961" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8911"></p>
 <ol id="ol-1725" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-5430" style="width:49%; float:left;"><p id="p-8910">\(\dfrac{\log 2}{\log 1.001}\approx 693 \) years</p></li>
-<li id="li-5431" style="width:49%; float:left;"><p id="p-8911">\(105\) years</p></li>
+<li id="li-5430" style="width:49%; float:left;"><p id="p-8912">\(\dfrac{\log 2}{\log 1.001}\approx 693 \) years</p></li>
+<li id="li-5431" style="width:49%; float:left;"><p id="p-8913">\(105\) years</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1816"><h5 class="heading"><span class="codenumber">76</span></h5>
-<p id="p-8912">The bacteria <em class="terminology">E. sakazakii</em> is found in powdered infant formula and can has a doubling time of \(4.98\) hours even if kept chilled to \(50\degree\)F. </p>
+<p id="p-8914">The bacteria <em class="terminology">E. sakazakii</em> is found in powdered infant formula and can has a doubling time of \(4.98\) hours even if kept chilled to \(50\degree\)F. </p>
 <ol id="ol-1726" style="list-style-type: lower-alpha;">
-<li id="li-5432"><p id="p-8913">What is the hourly growth rate for E. sakazakii?</p></li>
-<li id="li-5433"><p id="p-8914">How long would it take a colony of E. sakazakii to increase by \(50\%\text{?}\)</p></li>
+<li id="li-5432"><p id="p-8915">What is the hourly growth rate for E. sakazakii?</p></li>
+<li id="li-5433"><p id="p-8916">How long would it take a colony of E. sakazakii to increase by \(50\%\text{?}\)</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-1817"><h5 class="heading"><span class="codenumber">77</span></h5>
-<p id="p-8915">Manganese-53 decays to chromium-53 with a half-life of \(3.7\) million years and is used to estimate the age of meteorites. What is the decay rate of manganese-53, with time expressed in millions of years?</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-962" id="answer-962"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-962" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8916">\(17\%\)</p></span></span> </article><article class="exercise-like" id="exercise-1818"><h5 class="heading"><span class="codenumber">78</span></h5>
-<p id="p-8917">The cold medication pseudoephedrine decays at a rate of \(5.95\%\) per hour in the body. What is the half-life of pseudoephedrine?</p></article><article class="exercise-like" id="exercise-1819"><h5 class="heading"><span class="codenumber">79</span></h5>
-<p id="p-8918">You would like to buy a house with a \(20\)-year mortgage for \(\$300,000\text{,}\) at an interest rate of \(6.25\%\text{,}\) compounded monthly. Use the formula for the present value of an annuity to calculate your monthly payment.</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-963" id="answer-963"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-963" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8919">\(\$2192.78\)</p></span></span> </article><article class="exercise-like" id="exercise-1820"><h5 class="heading"><span class="codenumber">80</span></h5>
-<p id="p-8920">Rosalie's retirement fund pays \(7\%\) interest compounded monthly. Use the formula for the future value of an annuity to calculate how much should she contribute monthly in order to have \(\$500,000\) in \(25\) years.</p></article><article class="exercise-like" id="exercise-1821"><h5 class="heading"><span class="codenumber">81</span></h5>
-<p id="p-8921">An eccentric millionaire offers you a summer job for the month of June. She will pay you \(2\) cents for your first day of work and will double your wages every day thereafter. (Assume that you work every day, including weekends.) </p>
+<p id="p-8917">Manganese-53 decays to chromium-53 with a half-life of \(3.7\) million years and is used to estimate the age of meteorites. What is the decay rate of manganese-53, with time expressed in millions of years?</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-962" id="answer-962"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-962" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8918">\(17\%\)</p></span></span> </article><article class="exercise-like" id="exercise-1818"><h5 class="heading"><span class="codenumber">78</span></h5>
+<p id="p-8919">The cold medication pseudoephedrine decays at a rate of \(5.95\%\) per hour in the body. What is the half-life of pseudoephedrine?</p></article><article class="exercise-like" id="exercise-1819"><h5 class="heading"><span class="codenumber">79</span></h5>
+<p id="p-8920">You would like to buy a house with a \(20\)-year mortgage for \(\$300,000\text{,}\) at an interest rate of \(6.25\%\text{,}\) compounded monthly. Use the formula for the present value of an annuity to calculate your monthly payment.</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-963" id="answer-963"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-963" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8921">\(\$2192.78\)</p></span></span> </article><article class="exercise-like" id="exercise-1820"><h5 class="heading"><span class="codenumber">80</span></h5>
+<p id="p-8922">Rosalie's retirement fund pays \(7\%\) interest compounded monthly. Use the formula for the future value of an annuity to calculate how much should she contribute monthly in order to have \(\$500,000\) in \(25\) years.</p></article><article class="exercise-like" id="exercise-1821"><h5 class="heading"><span class="codenumber">81</span></h5>
+<p id="p-8923">An eccentric millionaire offers you a summer job for the month of June. She will pay you \(2\) cents for your first day of work and will double your wages every day thereafter. (Assume that you work every day, including weekends.) </p>
 <ol id="ol-1727" style="list-style-type: lower-alpha;">
-<li id="li-5434"><p id="p-8922">Make a table showing your wages on each day. Do you see a pattern?</p></li>
-<li id="li-5435"><p id="p-8923">Write a function that gives your wages in terms of the number of days you have worked.</p></li>
-<li id="li-5436"><p id="p-8924">How much will you make on June 15? On June 30?</p></li>
+<li id="li-5434"><p id="p-8924">Make a table showing your wages on each day. Do you see a pattern?</p></li>
+<li id="li-5435"><p id="p-8925">Write a function that gives your wages in terms of the number of days you have worked.</p></li>
+<li id="li-5436"><p id="p-8926">How much will you make on June 15? On June 30?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-964" id="answer-964"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-964" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8925"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-964" id="answer-964"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-964" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-8927"></p>
 <ol id="ol-1728" style="list-style-type: lower-alpha;">
-<li id="li-5437"><p id="p-8926"><table>
+<li id="li-5437"><p id="p-8928"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Day</td>
 <td class="l m b1 r1 l0 t1 lines">\(1\)</td>
@@ -726,14 +731,14 @@ where \(t\) is the number of years since discs were introduced in \(1980\text{.}
 <td class="l m b1 r1 l0 t0 lines">\(2^{30}\)</td>
 </tr>
 </table></p></li>
-<li id="li-5438"><p id="p-8927">\(W(t)=2^5\) cents</p></li>
-<li id="li-5439"><p id="p-8928">\(\$327.68\text{;}\) \(\$10,737,418.24\)</p></li>
+<li id="li-5438"><p id="p-8929">\(W(t)=2^5\) cents</p></li>
+<li id="li-5439"><p id="p-8930">\(\$327.68\text{;}\) \(\$10,737,418.24\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-1822"><h5 class="heading"><span class="codenumber">82</span></h5>
-<p id="p-8929">The king of Persia offered one of his subjects anything he desired in return for services rendered. The subject requested that the king give him an amount of grain calculated as follows: Place one grain of wheat on the first square of a chessboard, two grains on the second square, four grains on the third square, and so on, until the entire chessboard is covered. </p>
+<p id="p-8931">The king of Persia offered one of his subjects anything he desired in return for services rendered. The subject requested that the king give him an amount of grain calculated as follows: Place one grain of wheat on the first square of a chessboard, two grains on the second square, four grains on the third square, and so on, until the entire chessboard is covered. </p>
 <ol id="ol-1729" style="list-style-type: lower-alpha;">
-<li id="li-5440"><p id="p-8930">Make a table showing the number of grains of wheat on each square of the chessboard</p></li>
-<li id="li-5441"><p id="p-8931">Write a function for the amount of wheat on each square.</p></li>
-<li id="li-5442"><p id="p-8932">How many grains of wheat should be placed on the last (64th) square?</p></li>
+<li id="li-5440"><p id="p-8932">Make a table showing the number of grains of wheat on each square of the chessboard</p></li>
+<li id="li-5441"><p id="p-8933">Write a function for the amount of wheat on each square.</p></li>
+<li id="li-5442"><p id="p-8934">How many grains of wheat should be placed on the last (64th) square?</p></li>
 </ol>
 <p></p></article></section></section></div></main>
 </div>
