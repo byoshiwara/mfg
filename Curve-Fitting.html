@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-04-19T12:47:59-07:00    *-->
+<!--*    on 2017-05-10T16:37:01-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -195,12 +195,12 @@ MathJax.Hub.Config({
 <h2 class="link"><a href="colophon-3.html" data-scroll="colophon-3"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="Curve-Fitting"><header title="Section 6.6 Curve Fitting"><h1 class="heading hide-type" alt="Section 6.6 Curve Fitting">
 <span class="type">Section</span><span class="codenumber">6.6</span><span class="title">Curve Fitting</span><a href="Curve-Fitting.html" class="permalink">¶ permalink</a>
-</h1></header><p id="p-11879">In <a href="linear-regression.html" alt="Section 1.6 Linear Regression" title="Section 1.6 Linear Regression">Section 1.6</a>, we used linear regression to fit a line to a collection of data points. If the data points do not cluster around a line, it does not make sense to describe them by a linear function. Compare the scatterplots in <a knowl="./knowl/fig-nonlinear-regression.html" knowl-id="xref-fig-nonlinear-regression" alt="Figure 6.101 " title="Figure 6.101 ">Figure 6.101</a>. The points in <a knowl="./knowl/fig-nonlinear-regression.html" knowl-id="xref-fig-nonlinear-regression" alt="Figure 6.101 " title="Figure 6.101 ">Figure 6.101</a>a are roughly linear in appearance, but the points in <a knowl="./knowl/fig-nonlinear-regression.html" knowl-id="xref-fig-nonlinear-regression" alt="Figure 6.101 " title="Figure 6.101 ">Figure 6.101</a>b are not. However, we can visualize a parabola that would approximate the data we will. In this section, we will see how to fit a quadratic function to a collection of data points. <figure class="figure-like" id="fig-nonlinear-regression"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-nonlinear-regression.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.101</span></figcaption></figure></p>
-<p id="p-11880">We will need to solve a special type of \(3 \times 3\) linear system, that is, a linear system of three equations in three variables. We can solve these systems using the <em class="terminology">elimination</em> method.</p>
+</h1></header><p id="p-11882">In <a href="linear-regression.html" alt="Section 1.6 Linear Regression" title="Section 1.6 Linear Regression">Section 1.6</a>, we used linear regression to fit a line to a collection of data points. If the data points do not cluster around a line, it does not make sense to describe them by a linear function. Compare the scatterplots in <a knowl="./knowl/fig-nonlinear-regression.html" knowl-id="xref-fig-nonlinear-regression" alt="Figure 6.101 " title="Figure 6.101 ">Figure 6.101</a>. The points in <a knowl="./knowl/fig-nonlinear-regression.html" knowl-id="xref-fig-nonlinear-regression" alt="Figure 6.101 " title="Figure 6.101 ">Figure 6.101</a>a are roughly linear in appearance, but the points in <a knowl="./knowl/fig-nonlinear-regression.html" knowl-id="xref-fig-nonlinear-regression" alt="Figure 6.101 " title="Figure 6.101 ">Figure 6.101</a>b are not. However, we can visualize a parabola that would approximate the data we will. In this section, we will see how to fit a quadratic function to a collection of data points. <figure class="figure-like" id="fig-nonlinear-regression"><object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/fig-nonlinear-regression.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.101</span></figcaption></figure></p>
+<p id="p-11883">We will need to solve a special type of \(3 \times 3\) linear system, that is, a linear system of three equations in three variables. We can solve these systems using the <em class="terminology">elimination</em> method.</p>
 <article class="example-like" id="example-3-by-3"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.102</span>
 </h5>
-<p id="p-11881">Use elimination to solve the system of equations.
+<p id="p-11884">Use elimination to solve the system of equations.
 \begin{equation*}
 \begin{alignedat}{9}
 3a \amp {}+{} \amp 2b \amp {}+{} \amp c \amp {}={} \amp -1\amp\hphantom{blankblank} \amp(1)\\
@@ -209,7 +209,7 @@ a \amp {}-{} \amp 2b \amp {}+{} \amp c \amp {}={} \amp -3\amp\amp(2) \\
 \end{alignedat}
 \end{equation*}
 </p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-190" id="solution-190"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-190" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11882">We first eliminate \(c\) from the system by combining the equations in pairs. We can add \(−1\) times Equation (2) to Equation (1) to get a new equation in two variables: <figure class="figure-like" id="table-373"><table>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-190" id="solution-190"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-190" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11885">We first eliminate \(c\) from the system by combining the equations in pairs. We can add \(−1\) times Equation (2) to Equation (1) to get a new equation in two variables: <figure class="figure-like" id="table-373"><table>
 <tr>
 <td class="r m b0 r0 l0 t0 lines">\(3a\)</td>
 <td class="r m b0 r0 l0 t0 lines">\(+\)</td>
@@ -317,7 +317,7 @@ To eliminate \(a\text{,}\) we add \(−2\) times Equation (5) to Equation (4):  
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-2470" id="exercise-2470"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">6.103</span>
 </h5></article></a></div>
-<div id="hk-exercise-2470" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-11883">Follow the steps to solve the system
+<div id="hk-exercise-2470" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-11886">Follow the steps to solve the system
 \begin{equation*}
 \begin{alignedat}{9}
 a \amp {}+{} \amp b \amp {}+{} \amp c \amp {}={} \amp 3\amp\hphantom{blankblank} \amp(1)\\
@@ -328,19 +328,19 @@ a \amp {}+{} \amp b \amp {}+{} \amp c \amp {}={} \amp 3\amp\hphantom{blankblank}
 </p>
 <dl id="dl-16" class="description-list">
 <dt id="li-7161">Step 1:</dt>
-<dd><p id="p-11884">Eliminate \(c\) from Equations (1) and (2) to obtain a new Equation (4).</p></dd>
+<dd><p id="p-11887">Eliminate \(c\) from Equations (1) and (2) to obtain a new Equation (4).</p></dd>
 <dt id="li-7162">Step 2:</dt>
-<dd><p id="p-11885">Eliminate \(c\) from Equations (2) and (3) to obtain a new Equation (5).</p></dd>
+<dd><p id="p-11888">Eliminate \(c\) from Equations (2) and (3) to obtain a new Equation (5).</p></dd>
 <dt id="li-7163"></dt>
-<dd><p id="p-11886">Solve the system of Equations (4) and (5).</p></dd>
+<dd><p id="p-11889">Solve the system of Equations (4) and (5).</p></dd>
 <dt id="li-7164">Step 4:</dt>
-<dd><p id="p-11887">Substitute the values of \(a\) and \(b\) into one of the original equations to find \(c\text{.}\)</p></dd>
+<dd><p id="p-11890">Substitute the values of \(a\) and \(b\) into one of the original equations to find \(c\text{.}\)</p></dd>
 </dl>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1320" id="answer-1320"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1320" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11888">\(a = 1, b = 5, c = −3\)</p></span></span> </article></div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1320" id="answer-1320"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1320" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11891">\(a = 1, b = 5, c = −3\)</p></span></span> </article></div>
 <section class="subsection" id="subsection-192"><header title="Subsection 6.6.1 Finding a Quadratic Function through Three Points"><h1 class="heading hide-type" alt="Subsection 6.6.1 Finding a Quadratic Function through Three Points">
 <span class="type">Subsection</span><span class="codenumber">6.6.1</span><span class="title">Finding a Quadratic Function through Three Points</span>
-</h1></header><p id="p-11889">Every linear function can be written in the form
+</h1></header><p id="p-11892">Every linear function can be written in the form
 \begin{equation*}
 y = mx + b
 \end{equation*}
@@ -352,8 +352,8 @@ To find these parameters, we need three data points. We then use the method of e
 <article class="example-like" id="example-212"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.104</span>
 </h5>
-<p id="p-11890">Find values for \(a\text{,}\) \(b\text{,}\) and \(c\) so that the points \((1, 3)\text{,}\) \((3, 5)\text{,}\) and \((4, 9)\) lie on the graph of \(y = ax^2 + bx + c\text{.}\)</p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-191" id="solution-191"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-191" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11891">Substitute the coordinates of each of the three points into the equation of the parabola to obtain three equations:
+<p id="p-11893">Find values for \(a\text{,}\) \(b\text{,}\) and \(c\) so that the points \((1, 3)\text{,}\) \((3, 5)\text{,}\) and \((4, 9)\) lie on the graph of \(y = ax^2 + bx + c\text{.}\)</p></article><div class="posterior"><div>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-191" id="solution-191"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-191" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11894">Substitute the coordinates of each of the three points into the equation of the parabola to obtain three equations:
 \begin{equation*}
 \begin{alignedat}{9}
 \alert{3} =\amp a(\alert{1})^2{}+{} \amp b(\alert{1}) \amp {}+{} \amp c \amp \\
@@ -435,26 +435,26 @@ The parabola and the three points are shown in <a knowl="./knowl/fig-parabola-th
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-2471" id="exercise-2471"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">6.106</span>
 </h5></article></a></div>
-<div id="hk-exercise-2471" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-11892"></p>
+<div id="hk-exercise-2471" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-11895"></p>
 <ol id="ol-2236" style="list-style-type: lower-alpha;">
-<li id="li-7165"><p id="p-11893">Find the equation of a parabola
+<li id="li-7165"><p id="p-11896">Find the equation of a parabola
 \begin{equation*}
 y = ax^2 + bx + c
 \end{equation*}
 that passes through the points \((0, 80)\text{,}\) \((15, 95)\text{,}\) and \((25, 55)\text{.}\)</p></li>
-<li id="li-7166"><p id="p-11894">Plot the data points and sketch the parabola.</p></li>
+<li id="li-7166"><p id="p-11897">Plot the data points and sketch the parabola.</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1321" id="answer-1321"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1321" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11895"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1321" id="answer-1321"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1321" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11898"></p>
 <ol id="ol-2237" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-7167" style="width:49%; float:left;"><p id="p-11896">\(y = \frac{−1}{5} x^2 + 4x + 80\)</p></li>
-<li id="li-7168" style="width:49%; float:left;"><p id="p-11897"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-in-ex-ans-6-6-2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-7167" style="width:49%; float:left;"><p id="p-11899">\(y = \frac{−1}{5} x^2 + 4x + 80\)</p></li>
+<li id="li-7168" style="width:49%; float:left;"><p id="p-11900"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-in-ex-ans-6-6-2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></span></span> </article></div>
-<p id="p-11898">The simplest way to fit a parabola to a set of data points is to pick three of the points and find the equation of the parabola that passes through those three points.</p>
+<p id="p-11901">The simplest way to fit a parabola to a set of data points is to pick three of the points and find the equation of the parabola that passes through those three points.</p>
 <article class="example-like" id="example-quadratic-fit"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.107</span>
 </h5>
-<p id="p-11899">Major Motors Corporation is testing a new car designed for in-town driving. The data below show the cost of driving the car at different speeds. The speeds, \(v\text{,}\) are given in miles per hour, and the cost, \(C\text{,}\) includes fuel and maintenance for driving the car \(100\) miles at that speed. <figure class="figure-like" id="table-377"><table>
+<p id="p-11902">Major Motors Corporation is testing a new car designed for in-town driving. The data below show the cost of driving the car at different speeds. The speeds, \(v\text{,}\) are given in miles per hour, and the cost, \(C\text{,}\) includes fuel and maintenance for driving the car \(100\) miles at that speed. <figure class="figure-like" id="table-377"><table>
 <tr>
 <td class="c m b1 r3 l1 t1 lines">\(v\)</td>
 <td class="c m b1 r1 l0 t1 lines">\(30\)</td>
@@ -472,7 +472,7 @@ that passes through the points \((0, 80)\text{,}\) \((15, 95)\text{,}\) and \((2
 <td class="c m b1 r1 l0 t0 lines">\(10.60\)</td>
 </tr>
 </table></figure> Find a possible quadratic model for \(C\) as a function of \(v\text{,}\) \(C = av^2 + bv + c\text{.}\)</p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-192" id="solution-192"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-192" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11900"><figure class="figure-like" id="fig-nonlinear-scatterplot"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-nonlinear-scatterplot.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.108</span></figcaption></figure> When we plot the data, it is clear that the relationship between \(v\) and \(C\) is not linear, but it may be quadratic (see <a knowl="./knowl/fig-nonlinear-scatterplot.html" knowl-id="xref-fig-nonlinear-scatterplot" alt="Figure 6.108 " title="Figure 6.108 ">Figure 6.108</a>). We will use the last three data points, \((50, 6.20)\text{,}\) \((60, 7.80)\text{,}\) and \((70, 10.60)\text{,}\) to fit a parabola to the data. We would like to find the coefficients \(a\text{,}\) \(b\text{,}\) and \(c\) of a parabola \(C = av^2 + bv + c\) that includes the three data points. This gives us a system of equations:
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-192" id="solution-192"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-192" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11903"><figure class="figure-like" id="fig-nonlinear-scatterplot"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-nonlinear-scatterplot.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.108</span></figcaption></figure> When we plot the data, it is clear that the relationship between \(v\) and \(C\) is not linear, but it may be quadratic (see <a knowl="./knowl/fig-nonlinear-scatterplot.html" knowl-id="xref-fig-nonlinear-scatterplot" alt="Figure 6.108 " title="Figure 6.108 ">Figure 6.108</a>). We will use the last three data points, \((50, 6.20)\text{,}\) \((60, 7.80)\text{,}\) and \((70, 10.60)\text{,}\) to fit a parabola to the data. We would like to find the coefficients \(a\text{,}\) \(b\text{,}\) and \(c\) of a parabola \(C = av^2 + bv + c\) that includes the three data points. This gives us a system of equations:
 \begin{equation*}
 \begin{alignedat}{9}
 2500a \amp {}+{} \amp 50b \amp {}+{} \amp c \amp {}={} \amp 6.20\amp\hphantom{blankblank} \amp(1)\\
@@ -503,7 +503,7 @@ The graph of this function, along with the data points, is shown in <a knowl="./
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-2472" id="exercise-2472"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">6.110</span>
 </h5></article></a></div>
-<div id="hk-exercise-2472" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-11901">Sara plans to start a side business selling eggs. She finds that the total number of eggs produced each day depends on the number of hens confined in the henhouse, as shown in the table. Use the first three data points to find a quadratic model \(E = an^2 + bn + c\text{.}\) Plot the data and sketch the curve on the same axes. <figure class="figure-like" id="table-378"><table>
+<div id="hk-exercise-2472" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-11904">Sara plans to start a side business selling eggs. She finds that the total number of eggs produced each day depends on the number of hens confined in the henhouse, as shown in the table. Use the first three data points to find a quadratic model \(E = an^2 + bn + c\text{.}\) Plot the data and sketch the curve on the same axes. <figure class="figure-like" id="table-378"><table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Number of hens, \(n\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(15\)</td>
@@ -523,15 +523,15 @@ The graph of this function, along with the data points, is shown in <a knowl="./
 <td class="c m b1 r1 l0 t0 lines">\(20\)</td>
 </tr>
 </table></figure></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1322" id="answer-1322"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1322" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11902">\(E = −0.02n^2 + 1.3n\) <figure class="figure-like" id="figure-378"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-in-ex-ans-6-6-3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></span></span> </article></div></section><section class="subsection" id="subsection-193"><header title="Subsection 6.6.2 Finding an Equation in Vertex Form"><h1 class="heading hide-type" alt="Subsection 6.6.2 Finding an Equation in Vertex Form">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1322" id="answer-1322"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1322" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11905">\(E = −0.02n^2 + 1.3n\) <figure class="figure-like" id="figure-378"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-in-ex-ans-6-6-3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></span></span> </article></div></section><section class="subsection" id="subsection-193"><header title="Subsection 6.6.2 Finding an Equation in Vertex Form"><h1 class="heading hide-type" alt="Subsection 6.6.2 Finding an Equation in Vertex Form">
 <span class="type">Subsection</span><span class="codenumber">6.6.2</span><span class="title">Finding an Equation in Vertex Form</span>
-</h1></header><p id="p-11903">It is easier to find a quadratic model if one of the points we know happens to be the vertex of the parabola. In that case, we need only one other point, and we can use the vertex form to find its equation.</p>
+</h1></header><p id="p-11906">It is easier to find a quadratic model if one of the points we know happens to be the vertex of the parabola. In that case, we need only one other point, and we can use the vertex form to find its equation.</p>
 <article class="example-like" id="example-214"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.111</span>
 </h5>
 <div class="sidebyside" style="" id="sidebyside-132">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:45%;justify-content:flex-start;"><p id="p-11904">When Andre practices free-throws at the park, the ball leaves his hands at a height of \(7\) feet and reaches the vertex of its trajectory \(10\) feet away at a height of \(11\) feet, as shown in <a knowl="./knowl/fig-free-throw.html" knowl-id="xref-fig-free-throw" alt="Figure 6.112 " title="Figure 6.112 ">Figure 6.112</a>.</p></div>
+<div class="sbspanel" style="width:45%;justify-content:flex-start;"><p id="p-11907">When Andre practices free-throws at the park, the ball leaves his hands at a height of \(7\) feet and reaches the vertex of its trajectory \(10\) feet away at a height of \(11\) feet, as shown in <a knowl="./knowl/fig-free-throw.html" knowl-id="xref-fig-free-throw" alt="Figure 6.112 " title="Figure 6.112 ">Figure 6.112</a>.</p></div>
 <div class="sbspanel" style="width:50%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-free-throw.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
 </div>
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
@@ -539,12 +539,12 @@ The graph of this function, along with the data points, is shown in <a knowl="./
 </div>
 </div>
 <ol id="ol-2238" style="list-style-type: lower-alpha;">
-<li id="li-7169"><p id="p-11905">Find a quadratic equation for the ball's trajectory.</p></li>
-<li id="li-7170"><p id="p-11906">Do you think Andre's free-throw will score on a basketball court where the hoop is \(15\) feet from the shooter and \(10\) feet high?</p></li>
+<li id="li-7169"><p id="p-11908">Find a quadratic equation for the ball's trajectory.</p></li>
+<li id="li-7170"><p id="p-11909">Do you think Andre's free-throw will score on a basketball court where the hoop is \(15\) feet from the shooter and \(10\) feet high?</p></li>
 </ol></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-193" id="solution-193"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-193" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11907"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-193" id="solution-193"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-193" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11910"></p>
 <ol id="ol-2239" style="list-style-type: lower-alpha;">
-<li id="li-7171"><p id="p-11908">If Andre's feet are at the origin, then the vertex of the ball's trajectory is the point \((10, 11)\text{,}\) and its \(y\)-intercept is \((0, 7)\text{.}\) Start with the vertex form for a parabola:
+<li id="li-7171"><p id="p-11911">If Andre's feet are at the origin, then the vertex of the ball's trajectory is the point \((10, 11)\text{,}\) and its \(y\)-intercept is \((0, 7)\text{.}\) Start with the vertex form for a parabola:
 \begin{equation*}
 \begin{aligned}
 y \amp = a(x - x_v)^2 + y_v\\
@@ -560,7 +560,7 @@ a \amp= −0.04
 \end{aligned}
 \end{equation*}
 The equation of the trajectory is \(y = −0.04(x − 10)^2 + 11\text{.}\)</p></li>
-<li id="li-7172"><p id="p-11909">We would like to know if the point \((15, 10)\) is on the trajectory of Andre's free-throw. Substitute \(x = 15\) into the equation:
+<li id="li-7172"><p id="p-11912">We would like to know if the point \((15, 10)\) is on the trajectory of Andre's free-throw. Substitute \(x = 15\) into the equation:
 \begin{equation*}
 \begin{aligned}
 y \amp= −0.04(15 − 10)^2 + 11\\
@@ -574,43 +574,43 @@ Andre's shot will score.</p></li>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-2473" id="exercise-2473"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">6.113</span>
 </h5></article></a></div>
-<div id="hk-exercise-2473" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-11910">Francine is designing a synchronized fountain display for a hotel in Las Vegas. For each fountain, water emerges in a parabolic arc from a nozzle \(3\) feet above the ground. Francine would like the vertex of the arc to be \(8\) feet high and \(2\) feet horizontally from the nozzle. </p>
+<div id="hk-exercise-2473" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-11913">Francine is designing a synchronized fountain display for a hotel in Las Vegas. For each fountain, water emerges in a parabolic arc from a nozzle \(3\) feet above the ground. Francine would like the vertex of the arc to be \(8\) feet high and \(2\) feet horizontally from the nozzle. </p>
 <ol id="ol-2240" style="list-style-type: lower-alpha;">
 <li id="li-7173">
-<p id="p-11911">Choose a coordinate system for the diagram in <a knowl="./knowl/fig-water-fountain.html" knowl-id="xref-fig-water-fountain" alt="Figure 6.114 " title="Figure 6.114 ">Figure 6.114</a> and write an equation for the path of the water.</p>
+<p id="p-11914">Choose a coordinate system for the diagram in <a knowl="./knowl/fig-water-fountain.html" knowl-id="xref-fig-water-fountain" alt="Figure 6.114 " title="Figure 6.114 ">Figure 6.114</a> and write an equation for the path of the water.</p>
 <figure class="figure-like" id="fig-water-fountain"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-water-fountain.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.114</span></figcaption></figure>
 </li>
-<li id="li-7174"><p id="p-11912">How far from the base of the nozzle will the stream of water hit the ground?</p></li>
+<li id="li-7174"><p id="p-11915">How far from the base of the nozzle will the stream of water hit the ground?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1323" id="answer-1323"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1323" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11913"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1323" id="answer-1323"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1323" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11916"></p>
 <ol id="ol-2241" style="list-style-type: lower-alpha;">
-<li id="li-7175"><p id="p-11914">With the origin on the ground directly below the nozzle, \(y = \frac{−5}{4} x^2 + 5x + 3\text{.}\)</p></li>
-<li id="li-7176"><p id="p-11915">Approximately \(4.53\) feet</p></li>
+<li id="li-7175"><p id="p-11917">With the origin on the ground directly below the nozzle, \(y = \frac{−5}{4} x^2 + 5x + 3\text{.}\)</p></li>
+<li id="li-7176"><p id="p-11918">Approximately \(4.53\) feet</p></li>
 </ol></span></span> </article></div>
 <article class="remark-like" id="remark-14"><h5 class="heading">
 <span class="type">Remark</span><span class="codenumber">6.115</span><span class="title"><img width="8%" src="images/icon-GC.jpg" alt="">Using a Calculator for Quadratic Regression</span>
 </h5>
-<p id="p-11916">We can use a graphing calculator to find an approximate quadratic fit for a set of data. The procedure is similar to the steps for linear regression outlined in <a href="functions.html" alt="Section 1.2 Functions" title="Section 1.2 Functions">Section 1.2</a>.</p></article><article class="example-like" id="example-GC-quadratic-fit"><h5 class="heading">
+<p id="p-11919">We can use a graphing calculator to find an approximate quadratic fit for a set of data. The procedure is similar to the steps for linear regression outlined in <a href="functions.html" alt="Section 1.2 Functions" title="Section 1.2 Functions">Section 1.2</a>.</p></article><article class="example-like" id="example-GC-quadratic-fit"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.116</span>
 </h5>
-<p id="p-11917"></p>
+<p id="p-11920"></p>
 <ol id="ol-2242" style="list-style-type: lower-alpha;">
-<li id="li-7177"><p id="p-11918">Use your calculator to find a quadratic fit for the data in <a knowl="./knowl/example-quadratic-fit.html" knowl-id="xref-example-quadratic-fit" alt="Example 6.107 " title="Example 6.107 ">Example 6.107</a>.</p></li>
-<li id="li-7178"><p id="p-11919">How many of the given data points actually lie on the graph of the quadratic approximation?</p></li>
+<li id="li-7177"><p id="p-11921">Use your calculator to find a quadratic fit for the data in <a knowl="./knowl/example-quadratic-fit.html" knowl-id="xref-example-quadratic-fit" alt="Example 6.107 " title="Example 6.107 ">Example 6.107</a>.</p></li>
+<li id="li-7178"><p id="p-11922">How many of the given data points actually lie on the graph of the quadratic approximation?</p></li>
 </ol>
 <p></p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-194" id="solution-194"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-194" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11920"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-194" id="solution-194"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-194" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11923"></p>
 <ol id="ol-2243" style="list-style-type: lower-alpha;">
-<li id="li-7179"><p id="p-11921">We press <tt class="code-inline tex2jax_ignore">STAT</tt> <tt class="code-inline tex2jax_ignore">ENTER</tt> and enter the data under columns \(L_1\) and \(L_2\text{,}\) as shown in <a knowl="./knowl/fig-GC-quadratic-regression.html" knowl-id="xref-fig-GC-quadratic-regression" alt="Figure 6.117 " title="Figure 6.117 ">Figure 6.117</a>a. Next, we calculate the quadratic regression equation and store it in \(Y_1\) by pressing <tt class="code-inline tex2jax_ignore">STAT</tt> <tt class="code-inline tex2jax_ignore">→</tt> \(5\) <tt class="code-inline tex2jax_ignore">VARS</tt> <tt class="code-inline tex2jax_ignore">→</tt> \(1\) \(1\) <tt class="code-inline tex2jax_ignore">ENTER</tt>. The regression equation has the form \(y = ax^2 + bx + c\text{,}\) where \(a = 0.0057\text{,}\) \(b = −0.47\text{,}\) and \(c = 15.56\text{.}\) Notice that \(a\text{,}\) \(b\text{,}\) and \(c\) are all close to the values we computed in <a knowl="./knowl/example-quadratic-fit.html" knowl-id="xref-example-quadratic-fit" alt="Example 6.107 " title="Example 6.107 ">Example 6.107</a>. <figure class="figure-like" id="fig-GC-quadratic-regression"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-GC-quadratic-regression.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.117</span></figcaption></figure></p></li>
-<li id="li-7180"><p id="p-11922">Next, we will graph the data and the regression equation. We press <tt class="code-inline tex2jax_ignore">Y=</tt> and select <!--Style me with CSS--><em>Plot1</em>, then press <tt class="code-inline tex2jax_ignore">ZOOM</tt> \(9\) to see the graph shown in <a knowl="./knowl/fig-GC-quadratic-regression2.html" knowl-id="xref-fig-GC-quadratic-regression2" alt="Figure 6.118 " title="Figure 6.118 ">Figure 6.118</a>a. The parabola seems to pass close to all the data points. However, we can use either the <!--Style me with CSS--><em>value</em> feature or a table to find the \(y\)-coordinates of points on the regression curve. By comparing these \(y\)-coordinates with our original data points, we find that none of the given data points lies precisely on the parabola. (See <a knowl="./knowl/fig-GC-quadratic-regression2.html" knowl-id="xref-fig-GC-quadratic-regression2" alt="Figure 6.118 " title="Figure 6.118 ">Figure 6.118</a>b.) <figure class="figure-like" id="fig-GC-quadratic-regression2"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-GC-quadratic-regression2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.118</span></figcaption></figure></p></li>
+<li id="li-7179"><p id="p-11924">We press <tt class="code-inline tex2jax_ignore">STAT</tt> <tt class="code-inline tex2jax_ignore">ENTER</tt> and enter the data under columns \(L_1\) and \(L_2\text{,}\) as shown in <a knowl="./knowl/fig-GC-quadratic-regression.html" knowl-id="xref-fig-GC-quadratic-regression" alt="Figure 6.117 " title="Figure 6.117 ">Figure 6.117</a>a. Next, we calculate the quadratic regression equation and store it in \(Y_1\) by pressing <tt class="code-inline tex2jax_ignore">STAT</tt> <tt class="code-inline tex2jax_ignore">→</tt> \(5\) <tt class="code-inline tex2jax_ignore">VARS</tt> <tt class="code-inline tex2jax_ignore">→</tt> \(1\) \(1\) <tt class="code-inline tex2jax_ignore">ENTER</tt>. The regression equation has the form \(y = ax^2 + bx + c\text{,}\) where \(a = 0.0057\text{,}\) \(b = −0.47\text{,}\) and \(c = 15.56\text{.}\) Notice that \(a\text{,}\) \(b\text{,}\) and \(c\) are all close to the values we computed in <a knowl="./knowl/example-quadratic-fit.html" knowl-id="xref-example-quadratic-fit" alt="Example 6.107 " title="Example 6.107 ">Example 6.107</a>. <figure class="figure-like" id="fig-GC-quadratic-regression"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-GC-quadratic-regression.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.117</span></figcaption></figure></p></li>
+<li id="li-7180"><p id="p-11925">Next, we will graph the data and the regression equation. We press <tt class="code-inline tex2jax_ignore">Y=</tt> and select <!--Style me with CSS--><em>Plot1</em>, then press <tt class="code-inline tex2jax_ignore">ZOOM</tt> \(9\) to see the graph shown in <a knowl="./knowl/fig-GC-quadratic-regression2.html" knowl-id="xref-fig-GC-quadratic-regression2" alt="Figure 6.118 " title="Figure 6.118 ">Figure 6.118</a>a. The parabola seems to pass close to all the data points. However, we can use either the <!--Style me with CSS--><em>value</em> feature or a table to find the \(y\)-coordinates of points on the regression curve. By comparing these \(y\)-coordinates with our original data points, we find that none of the given data points lies precisely on the parabola. (See <a knowl="./knowl/fig-GC-quadratic-regression2.html" knowl-id="xref-fig-GC-quadratic-regression2" alt="Figure 6.118 " title="Figure 6.118 ">Figure 6.118</a>b.) <figure class="figure-like" id="fig-GC-quadratic-regression2"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-GC-quadratic-regression2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">6.118</span></figcaption></figure></p></li>
 </ol>
 <p></p></span></span>
 </div></div>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-2474" id="exercise-2474"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">6.119</span>
 </h5></article></a></div>
-<div id="hk-exercise-2474" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-11923">To test the effects of radiation, a researcher irradiated male mice with various dosages and bred them with unexposed female mice. The table below shows the fraction of fertilized eggs that survived, as a function of the radiation dosage. (Source: Strickberger, Monroe W., 1976) <figure class="figure-like" id="table-379"><table>
+<div id="hk-exercise-2474" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-11926">To test the effects of radiation, a researcher irradiated male mice with various dosages and bred them with unexposed female mice. The table below shows the fraction of fertilized eggs that survived, as a function of the radiation dosage. (Source: Strickberger, Monroe W., 1976) <figure class="figure-like" id="table-379"><table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Radiation (rems)</td>
 <td class="c m b1 r1 l0 t3 lines">\(100\)</td>
@@ -633,19 +633,19 @@ Andre's shot will score.</p></li>
 </tr>
 </table></figure> </p>
 <ol id="ol-2244" style="list-style-type: lower-alpha;">
-<li id="li-7181"><p id="p-11924">Enter the data into your calculator and create a scatterplot. Does the graph appear to be linear? Does it appear to be quadratic?</p></li>
-<li id="li-7182"><p id="p-11925">Fit a quadratic regression equation to the data and graph the equation on the scatterplot.</p></li>
+<li id="li-7181"><p id="p-11927">Enter the data into your calculator and create a scatterplot. Does the graph appear to be linear? Does it appear to be quadratic?</p></li>
+<li id="li-7182"><p id="p-11928">Fit a quadratic regression equation to the data and graph the equation on the scatterplot.</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1324" id="answer-1324"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1324" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11926"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1324" id="answer-1324"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1324" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11929"></p>
 <ol id="ol-2245" style="list-style-type: lower-alpha;">
-<li id="li-7183"><p id="p-11927">The graph appears to be quadratic.</p></li>
-<li id="li-7184"><p id="p-11928">\(y = 3.65x^2 − 0.001x + 1.02\) <figure class="figure-like" id="figure-383"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-in-ex-ans-6-6-5.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></li>
+<li id="li-7183"><p id="p-11930">The graph appears to be quadratic.</p></li>
+<li id="li-7184"><p id="p-11931">\(y = 3.65x^2 − 0.001x + 1.02\) <figure class="figure-like" id="figure-383"><object type="image/svg+xml" style="width:40%; margin:auto; display:block;" data="images/fig-in-ex-ans-6-6-5.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></li>
 </ol></span></span> </article></div>
 <div class="sidebyside" style="" id="sidebyside-133">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel" style="width:39%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-GC-bad-linear-fit.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
-<div class="sbspanel" style="width:59%;justify-content:flex-start;"><p id="p-11929">We must be careful that our data set gives a complete picture of the situation we want to model. A regression equation may fit a particular collection of data and still be a poor model if the rest of the data diverge from the regression graph. In <a knowl="./knowl/example-quadratic-fit.html" knowl-id="xref-example-quadratic-fit" alt="Example 6.107 " title="Example 6.107 ">Example 6.107</a>, suppose Major Motors had collected only the first three data points and fit a line through them, as shown in <a knowl="./knowl/fig-GC-bad-linear-fit.html" knowl-id="xref-fig-GC-bad-linear-fit" alt="Figure 6.120 " title="Figure 6.120 ">Figure 6.120</a>. This regression line gives poor predictions for the cost of driving at 60 or 70 miles per hour.</p></div>
+<div class="sbspanel" style="width:59%;justify-content:flex-start;"><p id="p-11932">We must be careful that our data set gives a complete picture of the situation we want to model. A regression equation may fit a particular collection of data and still be a poor model if the rest of the data diverge from the regression graph. In <a knowl="./knowl/example-quadratic-fit.html" knowl-id="xref-example-quadratic-fit" alt="Example 6.107 " title="Example 6.107 ">Example 6.107</a>, suppose Major Motors had collected only the first three data points and fit a line through them, as shown in <a knowl="./knowl/fig-GC-bad-linear-fit.html" knowl-id="xref-fig-GC-bad-linear-fit" alt="Figure 6.120 " title="Figure 6.120 ">Figure 6.120</a>. This regression line gives poor predictions for the cost of driving at 60 or 70 miles per hour.</p></div>
 </div>
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <figcaption class="sbscaption" style="width:39%;"><span class="heading">Figure</span><span class="codenumber">6.120</span></figcaption><figcaption class="sbscaption" style="width:59%;"></figcaption>
@@ -654,7 +654,7 @@ Andre's shot will score.</p></li>
 <article class="example-like" id="example-216"><h5 class="heading">
 <span class="type">Example</span><span class="codenumber">6.121</span>
 </h5>
-<p id="p-11930">Francine records the height of the tip of the minute hand on the classroom’s clock at different times. The data are shown in the table, where time is measured in minutes since noon. (A negative time indicates a number of minutes before noon.) Find a quadratic regression equation for the data and use it to predict the height of the minute hand's tip at \(40\) minutes past noon. Do you believe this prediction is valid? <figure class="figure-like" id="table-380"><table>
+<p id="p-11933">Francine records the height of the tip of the minute hand on the classroom’s clock at different times. The data are shown in the table, where time is measured in minutes since noon. (A negative time indicates a number of minutes before noon.) Find a quadratic regression equation for the data and use it to predict the height of the minute hand's tip at \(40\) minutes past noon. Do you believe this prediction is valid? <figure class="figure-like" id="table-380"><table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Time<br>(minutes)</td>
 <td class="c m b1 r1 l0 t3 lines">\(-25\)</td>
@@ -684,27 +684,27 @@ Andre's shot will score.</p></li>
 <td class="c m b1 r1 l0 t0 lines">\(7.13\)</td>
 </tr>
 </table></figure></p></article><div class="posterior"><div>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-195" id="solution-195"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-195" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11931">We enter the time data under \(L_1\) and the height data under \(L_2\text{.}\) Then we calculate and store the quadratic regression equation in \(Y_1\text{,}\) as we did in <a knowl="./knowl/example-GC-quadratic-fit.html" knowl-id="xref-example-GC-quadratic-fit" alt="Example 6.116 " title="Example 6.116 ">Example 6.116</a>. The regression equation is
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-195" id="solution-195"><span class="heading"><span class="type">Solution</span></span></a></span><span id="hk-solution-195" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11934">We enter the time data under \(L_1\) and the height data under \(L_2\text{.}\) Then we calculate and store the quadratic regression equation in \(Y_1\text{,}\) as we did in <a knowl="./knowl/example-GC-quadratic-fit.html" knowl-id="xref-example-GC-quadratic-fit" alt="Example 6.116 " title="Example 6.116 ">Example 6.116</a>. The regression equation is
 \begin{equation*}
 y = −0.00297x2 + 0x + 8.834
 \end{equation*}
 From either the graph of the regression equation or from the table (see figure below), we can see that the fit is not perfect, although the curve certainly fits the data better than any straight line could.</p>
-<object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-GC-bad-quadratic-fit.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><p id="p-11932">If we scroll down the table, we find that this equation predicts a height of approximately \(4.08\) feet at time \(40\) minutes. (See figure c.) This is a preposterous estimate! The position of the minute hand at \(40\) minutes after noon should be the same as it was exactly one hour earlier (at 20 minutes before noon), when it was \(7.50\) feet.</p></span></span>
+<object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-GC-bad-quadratic-fit.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><p id="p-11935">If we scroll down the table, we find that this equation predicts a height of approximately \(4.08\) feet at time \(40\) minutes. (See figure c.) This is a preposterous estimate! The position of the minute hand at \(40\) minutes after noon should be the same as it was exactly one hour earlier (at 20 minutes before noon), when it was \(7.50\) feet.</p></span></span>
 </div></div>
 <div class="sidebyside" style="" id="sidebyside-134">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel" style="width:50%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-quadratic-fit-of-periodic.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
-<div class="sbspanel" style="width:48%;justify-content:flex-start;"><p id="p-11933">Using the wrong type of equation to fit the data is a common error in making predictions. We know that the minute hand of a clock repeats its position every \(60\) minutes. The graph of the height of its tip oscillates up and down, repeating the same pattern over and over. We cannot describe such a graph using either a linear or a quadratic equation. The graph of the height is shown in <a knowl="./knowl/fig-quadratic-fit-of-periodic.html" knowl-id="xref-fig-quadratic-fit-of-periodic" alt="Figure 6.122 " title="Figure 6.122 ">Figure 6.122</a>, along with the graph of our quadratic regression equation. You can see that the regression equation fits the actual curve only on a small interval.</p></div>
+<div class="sbspanel" style="width:48%;justify-content:flex-start;"><p id="p-11936">Using the wrong type of equation to fit the data is a common error in making predictions. We know that the minute hand of a clock repeats its position every \(60\) minutes. The graph of the height of its tip oscillates up and down, repeating the same pattern over and over. We cannot describe such a graph using either a linear or a quadratic equation. The graph of the height is shown in <a knowl="./knowl/fig-quadratic-fit-of-periodic.html" knowl-id="xref-fig-quadratic-fit-of-periodic" alt="Figure 6.122 " title="Figure 6.122 ">Figure 6.122</a>, along with the graph of our quadratic regression equation. You can see that the regression equation fits the actual curve only on a small interval.</p></div>
 </div>
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <figcaption class="sbscaption" style="width:50%;"><span class="heading">Figure</span><span class="codenumber">6.122</span></figcaption><figcaption class="sbscaption" style="width:48%;"></figcaption>
 </div>
 </div>
-<p id="p-11934">Your calculator can always compute a regression equation, but that equation is not necessarily appropriate for your data. Choosing a reasonable type of regression equation for a particular data set requires knowledge of different kinds of models and the physical or natural laws that govern the situation at hand.</p>
+<p id="p-11937">Your calculator can always compute a regression equation, but that equation is not necessarily appropriate for your data. Choosing a reasonable type of regression equation for a particular data set requires knowledge of different kinds of models and the physical or natural laws that govern the situation at hand.</p>
 <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-exercise-2475" id="exercise-2475"><article class="exercise-like"><h5 class="heading">
 <span class="type">Exercise</span><span class="codenumber">6.123</span>
 </h5></article></a></div>
-<div id="hk-exercise-2475" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-11935">A speeding motorist slams on the brakes when she sees an accident directly ahead of her. The distance she has traveled \(t\) seconds after braking is shown in the table. <figure class="figure-like" id="table-381"><table>
+<div id="hk-exercise-2475" style="display: none;" class="tex2jax_ignore"><article class="exercise-like"><p id="p-11938">A speeding motorist slams on the brakes when she sees an accident directly ahead of her. The distance she has traveled \(t\) seconds after braking is shown in the table. <figure class="figure-like" id="table-381"><table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">Time (seconds)</td>
 <td class="c m b1 r1 l0 t3 lines">\(0\)</td>
@@ -725,71 +725,71 @@ From either the graph of the regression equation or from the table (see figure b
 </tr>
 </table></figure> </p>
 <ol id="ol-2246" style="list-style-type: lower-alpha;">
-<li id="li-7185"><p id="p-11936">Enter the data into your calculator and create a scatterplot. Fit a quadratic regression equation to the data and graph the equation on the scatterplot.</p></li>
-<li id="li-7186"><p id="p-11937">Use your regression equation to find the vertex of the parabola. What do the coordinates represent in terms of the problem?</p></li>
+<li id="li-7185"><p id="p-11939">Enter the data into your calculator and create a scatterplot. Fit a quadratic regression equation to the data and graph the equation on the scatterplot.</p></li>
+<li id="li-7186"><p id="p-11940">Use your regression equation to find the vertex of the parabola. What do the coordinates represent in terms of the problem?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1325" id="answer-1325"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1325" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11938"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1325" id="answer-1325"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1325" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11941"></p>
 <ol id="ol-2247" style="list-style-type: lower-alpha;">
-<li id="li-7187"><p id="p-11939">\(y = −15x^2 + 110x − 0.07\) <figure class="figure-like" id="figure-386"><img width="40%" src="images/fig-in-ex-ans-6-6-6.jpg" alt=""></figure></p></li>
-<li id="li-7188"><p id="p-11940">\((3.67, 201)\text{:}\) The car came to a stop in \(3.67\) seconds, after sliding \(201\) feet.</p></li>
+<li id="li-7187"><p id="p-11942">\(y = −15x^2 + 110x − 0.07\) <figure class="figure-like" id="figure-386"><img width="40%" src="images/fig-in-ex-ans-6-6-6.jpg" alt=""></figure></p></li>
+<li id="li-7188"><p id="p-11943">\((3.67, 201)\text{:}\) The car came to a stop in \(3.67\) seconds, after sliding \(201\) feet.</p></li>
 </ol></span></span> </article></div></section><section class="subsection" id="summary-6-6"><header title="Subsection 6.6.3 Section Summary"><h1 class="heading hide-type" alt="Subsection 6.6.3 Section Summary">
 <span class="type">Subsection</span><span class="codenumber">6.6.3</span><span class="title">Section Summary</span><a href="Curve-Fitting.html#summary-6-6" class="permalink">¶ permalink</a>
 </h1></header><section class="subsubsection" id="subsubsection-125"><header title="Subsubsection 6.6.3.1 Vocabulary"><h1 class="heading hide-type" alt="Subsubsection 6.6.3.1 Vocabulary">
 <span class="type">Subsubsection</span><span class="codenumber">6.6.3.1</span><span class="title">Vocabulary</span>
-</h1></header><p id="p-11941">Look up the definitions of new terms in the Glossary. </p>
+</h1></header><p id="p-11944">Look up the definitions of new terms in the Glossary. </p>
 <ul id="ul-40" class="cols3" style="list-style-type: disc;">
-<li id="li-7189" style="width:32.6666666666667%; float:left;"><p id="p-11942">Elimination method</p></li>
-<li id="li-7190" style="width:32.6666666666667%; float:left;"><p id="p-11943">Quadratic regression</p></li>
+<li id="li-7189" style="width:32.6666666666667%; float:left;"><p id="p-11945">Elimination method</p></li>
+<li id="li-7190" style="width:32.6666666666667%; float:left;"><p id="p-11946">Quadratic regression</p></li>
 </ul>
 <p></p></section><section class="subsubsection" id="subsubsection-126"><header title="Subsubsection 6.6.3.2 CONCEPTS"><h1 class="heading hide-type" alt="Subsubsection 6.6.3.2 CONCEPTS">
 <span class="type">Subsubsection</span><span class="codenumber">6.6.3.2</span><span class="title">CONCEPTS</span>
-</h1></header><p id="p-11944"></p>
+</h1></header><p id="p-11947"></p>
 <ol id="ol-2248" style="list-style-type: decimal;">
-<li id="li-7191"><p id="p-11945">We need three points to determine a parabola.</p></li>
-<li id="li-7192"><p id="p-11946">We can use the method of elimination to find the equation of a parabola through three points.</p></li>
-<li id="li-7193"><p id="p-11947">If we know the vertex of a parabola, we need only one other point to find its equation.</p></li>
-<li id="li-7194"><p id="p-11948">We can use quadratic regression to fit a parabola to a collection of data points.</p></li>
+<li id="li-7191"><p id="p-11948">We need three points to determine a parabola.</p></li>
+<li id="li-7192"><p id="p-11949">We can use the method of elimination to find the equation of a parabola through three points.</p></li>
+<li id="li-7193"><p id="p-11950">If we know the vertex of a parabola, we need only one other point to find its equation.</p></li>
+<li id="li-7194"><p id="p-11951">We can use quadratic regression to fit a parabola to a collection of data points.</p></li>
 </ol>
 <p></p></section><section class="subsubsection" id="subsubsection-127"><header title="Subsubsection 6.6.3.3 STUDY QUESTIONS"><h1 class="heading hide-type" alt="Subsubsection 6.6.3.3 STUDY QUESTIONS">
 <span class="type">Subsubsection</span><span class="codenumber">6.6.3.3</span><span class="title">STUDY QUESTIONS</span>
-</h1></header><p id="p-11949"></p>
+</h1></header><p id="p-11952"></p>
 <ol id="ol-2249" style="list-style-type: decimal;">
-<li id="li-7195"><p id="p-11950">How many points are necessary to determine a parabola?</p></li>
-<li id="li-7196"><p id="p-11951">Why do we need a second point to find the equation of a parabola if we know its vertex?</p></li>
-<li id="li-7197"><p id="p-11952">How can you decide whether linear regression, quadratic regression, or neither one is appropriate for a collection of data?</p></li>
+<li id="li-7195"><p id="p-11953">How many points are necessary to determine a parabola?</p></li>
+<li id="li-7196"><p id="p-11954">Why do we need a second point to find the equation of a parabola if we know its vertex?</p></li>
+<li id="li-7197"><p id="p-11955">How can you decide whether linear regression, quadratic regression, or neither one is appropriate for a collection of data?</p></li>
 </ol>
 <p></p></section><section class="subsubsection" id="subsubsection-128"><header title="Subsubsection 6.6.3.4 SKILLS"><h1 class="heading hide-type" alt="Subsubsection 6.6.3.4 SKILLS">
 <span class="type">Subsubsection</span><span class="codenumber">6.6.3.4</span><span class="title">SKILLS</span>
-</h1></header><p id="p-11953">Practice each skill in the <a href="Curve-Fitting.html#section-6-6-exercises" alt="Exercises 6.6.4 Homework" title="Exercises 6.6.4 Homework">Homework 6.6.4</a> problems listed. </p>
+</h1></header><p id="p-11956">Practice each skill in the <a href="Curve-Fitting.html#section-6-6-exercises" alt="Exercises 6.6.4 Homework" title="Exercises 6.6.4 Homework">Homework 6.6.4</a> problems listed. </p>
 <ol id="ol-2250" style="list-style-type: decimal;">
-<li id="li-7198"><p id="p-11954">Fit a quadratic equation through three points: #5–12</p></li>
-<li id="li-7199"><p id="p-11955">Find a quadratic model in vertex form: #13–30</p></li>
-<li id="li-7200"><p id="p-11956">Use quadratic regression to fit a parabola to data: #31–34</p></li>
+<li id="li-7198"><p id="p-11957">Fit a quadratic equation through three points: #5–12</p></li>
+<li id="li-7199"><p id="p-11958">Find a quadratic model in vertex form: #13–30</p></li>
+<li id="li-7200"><p id="p-11959">Use quadratic regression to fit a parabola to data: #31–34</p></li>
 </ol>
 <p></p></section></section><section class="exercises" id="section-6-6-exercises"><header title="Exercises 6.6.4 Homework"><h1 class="heading hide-type" alt="Exercises 6.6.4 Homework">
 <span class="type">Subsection</span><span class="codenumber">6.6.4</span><span class="title">Homework</span><a href="Curve-Fitting.html#section-6-6-exercises" class="permalink">¶ permalink</a>
 </h1></header><div class="exercisegroup" id="exercisegroup-330">
-<article class="introduction" id="introduction-335"><p id="p-11957">Solve the system by elimination. Begin by eliminating \(c\text{.}\)</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-335"><p id="p-11960">Solve the system by elimination. Begin by eliminating \(c\text{.}\)</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-2476"><h5 class="heading"><span class="codenumber">1</span></h5>
-<p id="p-11958">\(\begin{alignedat}{5}
+<p id="p-11961">\(\begin{alignedat}{5}
 a \amp {}+{} \amp b \amp {}+{} \amp c\amp {}={} \amp -3 \\
 a \amp {}-{} \amp  b \amp {}+{} \amp  c \amp {}={} \amp  -9 \\
 4a \amp {}+{} \amp 2b \amp {}+{} \amp  c \amp {}={} \amp -6
 \end{alignedat} \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1326" id="answer-1326"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1326" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11959">\(a = −2, b = 3, c = −4\)</p></span></span> </article><article class="exercise-like" id="exercise-2477"><h5 class="heading"><span class="codenumber">2</span></h5>
-<p id="p-11960">\(\begin{alignedat}{5}
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1326" id="answer-1326"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1326" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11962">\(a = −2, b = 3, c = −4\)</p></span></span> </article><article class="exercise-like" id="exercise-2477"><h5 class="heading"><span class="codenumber">2</span></h5>
+<p id="p-11963">\(\begin{alignedat}{5}
 a \amp {}+{} \amp b \amp {}+{} \amp c\amp {}={} \amp 10 \\
 4a \amp {}-{} \amp 2b \amp {}+{} \amp c \amp {}={} \amp 19 \\
 9a \amp {}+{} \amp 3b \amp {}+{} \amp c \amp {}={} \amp 38
 \end{alignedat} \)</p></article><article class="exercise-like" id="exercise-2478"><h5 class="heading"><span class="codenumber">3</span></h5>
-<p id="p-11961">\(\begin{alignedat}{5}
+<p id="p-11964">\(\begin{alignedat}{5}
 a \amp {}-{} \amp b \amp {}+{} \amp c\amp {}={} \amp 12\\
 4a \amp {}-{} \amp 2b \amp {}+{} \amp  c \amp {}={} \amp  19 \\
 9a \amp {}+{} \amp 3b \amp {}+{} \amp  c \amp {}={} \amp 4
 \end{alignedat} \)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1327" id="answer-1327"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1327" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11962">\(a = 1, b = −4, c = 7\)</p></span></span> </article><article class="exercise-like" id="exercise-2479"><h5 class="heading"><span class="codenumber">4</span></h5>
-<p id="p-11963">\(\begin{alignedat}{5}
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1327" id="answer-1327"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1327" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11965">\(a = 1, b = −4, c = 7\)</p></span></span> </article><article class="exercise-like" id="exercise-2479"><h5 class="heading"><span class="codenumber">4</span></h5>
+<p id="p-11966">\(\begin{alignedat}{5}
 4a \amp {}+{} \amp 2b \amp {}+{} \amp c\amp {}={} \amp 14 \\
 9a \amp {}-{} \amp 3b \amp {}+{} \amp c \amp {}={} \amp -41 \\
 16a \amp {}-{} \amp 4b \amp {}+{} \amp c \amp {}={} \amp -70
@@ -797,12 +797,12 @@ a \amp {}-{} \amp b \amp {}+{} \amp c\amp {}={} \amp 12\\
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-331">
-<article class="introduction" id="introduction-336"><p id="p-11964">Find a quadratic equation that fits the data points.</p></article><div class="exercisegroup-exercises">
+<article class="introduction" id="introduction-336"><p id="p-11967">Find a quadratic equation that fits the data points.</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-2480"><h5 class="heading"><span class="codenumber">5</span></h5>
-<p id="p-11965">Find values for \(a\text{,}\) \(b\text{,}\) and \(c\) so that the graph of the parabola \(y = ax^2 + bx + c\) includes the points \((−1, 0)\text{,}\) \((2, 12)\text{,}\) and \((−2, 8)\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1328" id="answer-1328"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1328" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11966">\(a = 3, b = 1, c = −2\text{.}\) The equation for the parabola is \(y = 3x^2 + x − 2\)</p></span></span> </article><article class="exercise-like" id="exercise-2481"><h5 class="heading"><span class="codenumber">6</span></h5>
-<p id="p-11967">Find values for \(a\text{,}\) \(b\text{,}\) and \(c\) so that the graph of the parabola \(y = ax^2 + bx + c\) includes the points \((−1, 2)\text{,}\) \((1, 6)\text{,}\) and \((2, 11)\text{.}\)</p></article><article class="exercise-like" id="exercise-2482"><h5 class="heading"><span class="codenumber">7</span></h5>
-<p id="p-11968">A survey to determine what percent of different age groups regularly use marijuana collected the following data. <figure class="figure-like" id="table-382"><table>
+<p id="p-11968">Find values for \(a\text{,}\) \(b\text{,}\) and \(c\) so that the graph of the parabola \(y = ax^2 + bx + c\) includes the points \((−1, 0)\text{,}\) \((2, 12)\text{,}\) and \((−2, 8)\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1328" id="answer-1328"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1328" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11969">\(a = 3, b = 1, c = −2\text{.}\) The equation for the parabola is \(y = 3x^2 + x − 2\)</p></span></span> </article><article class="exercise-like" id="exercise-2481"><h5 class="heading"><span class="codenumber">6</span></h5>
+<p id="p-11970">Find values for \(a\text{,}\) \(b\text{,}\) and \(c\) so that the graph of the parabola \(y = ax^2 + bx + c\) includes the points \((−1, 2)\text{,}\) \((1, 6)\text{,}\) and \((2, 11)\text{.}\)</p></article><article class="exercise-like" id="exercise-2482"><h5 class="heading"><span class="codenumber">7</span></h5>
+<p id="p-11971">A survey to determine what percent of different age groups regularly use marijuana collected the following data. <figure class="figure-like" id="table-382"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Age</td>
 <td class="c m b1 r1 l0 t1 lines">\(16\)</td>
@@ -819,18 +819,18 @@ a \amp {}-{} \amp b \amp {}+{} \amp c\amp {}={} \amp 12\\
 </tr>
 </table></figure> </p>
 <ol id="ol-2251" style="list-style-type: lower-alpha;">
-<li id="li-7201"><p id="p-11969">Use the percentages for ages \(15\text{,}\) \(20\text{,}\) and \(30\) to fit a quadratic equation to the data, \(P = ax^2 + bx + c\text{,}\) where \(x\) represents age.</p></li>
-<li id="li-7202"><p id="p-11970">What does your equation predict for the percentage of \(25\)-year-olds who use marijuana?</p></li>
-<li id="li-7203"><p id="p-11971">Sketch the graph of your quadratic equation and the given data on the same axes.</p></li>
+<li id="li-7201"><p id="p-11972">Use the percentages for ages \(15\text{,}\) \(20\text{,}\) and \(30\) to fit a quadratic equation to the data, \(P = ax^2 + bx + c\text{,}\) where \(x\) represents age.</p></li>
+<li id="li-7202"><p id="p-11973">What does your equation predict for the percentage of \(25\)-year-olds who use marijuana?</p></li>
+<li id="li-7203"><p id="p-11974">Sketch the graph of your quadratic equation and the given data on the same axes.</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1329" id="answer-1329"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1329" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11972"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1329" id="answer-1329"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1329" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11975"></p>
 <ol id="ol-2252" style="list-style-type: lower-alpha;">
-<li id="li-7204"><p id="p-11973">\(P = −0.16x^2 + 7.4x − 71\)</p></li>
-<li id="li-7205"><p id="p-11974">\(14\%\text{.}\) It predicts that \(14\%\) of the \(25\)-year old population use marijuana on a regular basis.</p></li>
-<li id="li-7206"><p id="p-11975"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-ans-6-6-7.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-7204"><p id="p-11976">\(P = −0.16x^2 + 7.4x − 71\)</p></li>
+<li id="li-7205"><p id="p-11977">\(14\%\text{.}\) It predicts that \(14\%\) of the \(25\)-year old population use marijuana on a regular basis.</p></li>
+<li id="li-7206"><p id="p-11978"><object type="image/svg+xml" style="width:35%; margin:auto; display:block;" data="images/fig-ans-6-6-7.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2483"><h5 class="heading"><span class="codenumber">8</span></h5>
-<p id="p-11976">The following data show the number of people of certain ages who were the victims of homicide in a large city last year. <figure class="figure-like" id="table-383"><table>
+<p id="p-11979">The following data show the number of people of certain ages who were the victims of homicide in a large city last year. <figure class="figure-like" id="table-383"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Age</td>
 <td class="c m b1 r1 l0 t1 lines">\(10\)</td>
@@ -847,12 +847,12 @@ a \amp {}-{} \amp b \amp {}+{} \amp c\amp {}={} \amp 12\\
 </tr>
 </table></figure> </p>
 <ol id="ol-2253" style="list-style-type: lower-alpha;">
-<li id="li-7207"><p id="p-11977">Use the first three data points to fit a quadratic equation to the data, \(N = ax^2 + bx + c\text{,}\) where \(x\) represents age.</p></li>
-<li id="li-7208"><p id="p-11978">What does your equation predict for the number of \(40\)-year-olds who were the victims of homicide?</p></li>
-<li id="li-7209"><p id="p-11979">Sketch the graph of your quadratic equation and the given data on the same axes.</p></li>
+<li id="li-7207"><p id="p-11980">Use the first three data points to fit a quadratic equation to the data, \(N = ax^2 + bx + c\text{,}\) where \(x\) represents age.</p></li>
+<li id="li-7208"><p id="p-11981">What does your equation predict for the number of \(40\)-year-olds who were the victims of homicide?</p></li>
+<li id="li-7209"><p id="p-11982">Sketch the graph of your quadratic equation and the given data on the same axes.</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-2484"><h5 class="heading"><span class="codenumber">9</span></h5>
-<p id="p-11980">The data below show Americans' annual per capita consumption of chicken for several years since \(1985\text{.}\) <figure class="figure-like" id="table-384"><table>
+<p id="p-11983">The data below show Americans' annual per capita consumption of chicken for several years since \(1985\text{.}\) <figure class="figure-like" id="table-384"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Year</td>
 <td class="c m b1 r1 l0 t1 lines">\(1986\)</td>
@@ -871,18 +871,18 @@ a \amp {}-{} \amp b \amp {}+{} \amp c\amp {}={} \amp 12\\
 </tr>
 </table></figure> </p>
 <ol id="ol-2254" style="list-style-type: lower-alpha;">
-<li id="li-7210"><p id="p-11981">Use the values for \(1987\) through \(1989\) to fit a quadratic equation to the data, \(C = at^2 + bt + c\text{,}\) where \(t\) is measured in years since \(1985\text{.}\)</p></li>
-<li id="li-7211"><p id="p-11982">What does your equation predict for per capita chicken consumption in \(1990\text{?}\)</p></li>
-<li id="li-7212"><p id="p-11983">Sketch the graph of your equation and the given data.</p></li>
+<li id="li-7210"><p id="p-11984">Use the values for \(1987\) through \(1989\) to fit a quadratic equation to the data, \(C = at^2 + bt + c\text{,}\) where \(t\) is measured in years since \(1985\text{.}\)</p></li>
+<li id="li-7211"><p id="p-11985">What does your equation predict for per capita chicken consumption in \(1990\text{?}\)</p></li>
+<li id="li-7212"><p id="p-11986">Sketch the graph of your equation and the given data.</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1330" id="answer-1330"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1330" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11984"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1330" id="answer-1330"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1330" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11987"></p>
 <ol id="ol-2255" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-7213" style="width:49%; float:left;"><p id="p-11985">\(C = 0.75t^2 −1.85t + 56.2\)</p></li>
-<li id="li-7214" style="width:49%; float:left;"><p id="p-11986">\(65.7\) lb</p></li>
-<li id="li-7215" style="width:49%; float:left;"><p id="p-11987"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-ans-6-6-9.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-7213" style="width:49%; float:left;"><p id="p-11988">\(C = 0.75t^2 −1.85t + 56.2\)</p></li>
+<li id="li-7214" style="width:49%; float:left;"><p id="p-11989">\(65.7\) lb</p></li>
+<li id="li-7215" style="width:49%; float:left;"><p id="p-11990"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-ans-6-6-9.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2485"><h5 class="heading"><span class="codenumber">10</span></h5>
-<p id="p-11988">The data show sales of in-line skates at a sporting goods store at the beach. <figure class="figure-like" id="table-385"><table>
+<p id="p-11991">The data show sales of in-line skates at a sporting goods store at the beach. <figure class="figure-like" id="table-385"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Year</td>
 <td class="c m b1 r1 l0 t1 lines">\(1990\)</td>
@@ -901,12 +901,12 @@ a \amp {}-{} \amp b \amp {}+{} \amp c\amp {}={} \amp 12\\
 </tr>
 </table></figure> </p>
 <ol id="ol-2256" style="list-style-type: lower-alpha;">
-<li id="li-7216"><p id="p-11989">Use the values for \(1991\) through \(1993\) to fit a quadratic equation to the data, \(S = at^2 + bt + c\text{,}\) where \(t\) is measured in years since \(1990\text{.}\)</p></li>
-<li id="li-7217"><p id="p-11990">What does your equation predict for the number of pairs of skates sold in \(1994\text{?}\)</p></li>
-<li id="li-7218"><p id="p-11991">Sketch the graph of your equation and the given data.</p></li>
+<li id="li-7216"><p id="p-11992">Use the values for \(1991\) through \(1993\) to fit a quadratic equation to the data, \(S = at^2 + bt + c\text{,}\) where \(t\) is measured in years since \(1990\text{.}\)</p></li>
+<li id="li-7217"><p id="p-11993">What does your equation predict for the number of pairs of skates sold in \(1994\text{?}\)</p></li>
+<li id="li-7218"><p id="p-11994">Sketch the graph of your equation and the given data.</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-2486"><h5 class="heading"><span class="codenumber">11</span></h5>
-<p id="p-11992">Find a quadratic formula for the number of diagonals that can be drawn in a polygon of n sides. Some data are provided. <figure class="figure-like" id="table-386"><table>
+<p id="p-11995">Find a quadratic formula for the number of diagonals that can be drawn in a polygon of n sides. Some data are provided. <figure class="figure-like" id="table-386"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Sides</td>
 <td class="c m b1 r1 l0 t1 lines">\(4\)</td>
@@ -922,8 +922,8 @@ a \amp {}-{} \amp b \amp {}+{} \amp c\amp {}={} \amp 12\\
 <td class="c m b1 r1 l0 t0 lines">\(14\)</td>
 </tr>
 </table></figure></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1331" id="answer-1331"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1331" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11993">\(D=\dfrac{1}{2}n^2-\dfrac{3}{2}n \)</p></span></span> </article><article class="exercise-like" id="exercise-2487"><h5 class="heading"><span class="codenumber">12</span></h5>
-<p id="p-11994">Your are driving at \(60\) miles per hour when you step on the brakes. Find a quadratic formula for the distance in feet that your car travels in \(t\) seconds after braking. Some data are provided. <figure class="figure-like" id="table-387"><table>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1331" id="answer-1331"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1331" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11996">\(D=\dfrac{1}{2}n^2-\dfrac{3}{2}n \)</p></span></span> </article><article class="exercise-like" id="exercise-2487"><h5 class="heading"><span class="codenumber">12</span></h5>
+<p id="p-11997">Your are driving at \(60\) miles per hour when you step on the brakes. Find a quadratic formula for the distance in feet that your car travels in \(t\) seconds after braking. Some data are provided. <figure class="figure-like" id="table-387"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Seconds</td>
 <td class="c m b1 r1 l0 t1 lines">\(1\)</td>
@@ -939,119 +939,119 @@ a \amp {}-{} \amp b \amp {}+{} \amp c\amp {}={} \amp 12\\
 <td class="c m b1 r1 l0 t0 lines">\(267\)</td>
 </tr>
 </table></figure></p></article><article class="exercise-like" id="exercise-2488"><h5 class="heading"><span class="codenumber">13</span></h5>
-<p id="p-11995"></p>
+<p id="p-11998"></p>
 <ol id="ol-2257" style="list-style-type: lower-alpha;">
-<li id="li-7219"><p id="p-11996">Write an equation for a parabola whose vertex is the point \((−2, 6)\text{.}\) (Many answers are possible.)</p></li>
-<li id="li-7220"><p id="p-11997">Find the value of \(a\) if the \(y\)-intercept of the parabola in part (a) is \(18\text{.}\)</p></li>
+<li id="li-7219"><p id="p-11999">Write an equation for a parabola whose vertex is the point \((−2, 6)\text{.}\) (Many answers are possible.)</p></li>
+<li id="li-7220"><p id="p-12000">Find the value of \(a\) if the \(y\)-intercept of the parabola in part (a) is \(18\text{.}\)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1332" id="answer-1332"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1332" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-11998"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1332" id="answer-1332"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1332" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12001"></p>
 <ol id="ol-2258" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-7221" style="width:49%; float:left;"><p id="p-11999">\(y= a(x + 2)^2 + 6\)</p></li>
-<li id="li-7222" style="width:49%; float:left;"><p id="p-12000">\(3\)</p></li>
+<li id="li-7221" style="width:49%; float:left;"><p id="p-12002">\(y= a(x + 2)^2 + 6\)</p></li>
+<li id="li-7222" style="width:49%; float:left;"><p id="p-12003">\(3\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2489"><h5 class="heading"><span class="codenumber">14</span></h5>
-<p id="p-12001"></p>
-<ol id="ol-2259" style="list-style-type: lower-alpha;">
-<li id="li-7223"><p id="p-12002">Write an equation for a parabola whose vertex is the point \((5,-10)\text{.}\) (Many answers are possible.)</p></li>
-<li id="li-7224"><p id="p-12003">Find the value of \(a\) if the \(y\)-intercept of the parabola in part (a) is \(-5\text{.}\)</p></li>
-</ol></article><article class="exercise-like" id="exercise-2490"><h5 class="heading"><span class="codenumber">15</span></h5>
 <p id="p-12004"></p>
+<ol id="ol-2259" style="list-style-type: lower-alpha;">
+<li id="li-7223"><p id="p-12005">Write an equation for a parabola whose vertex is the point \((5,-10)\text{.}\) (Many answers are possible.)</p></li>
+<li id="li-7224"><p id="p-12006">Find the value of \(a\) if the \(y\)-intercept of the parabola in part (a) is \(-5\text{.}\)</p></li>
+</ol></article><article class="exercise-like" id="exercise-2490"><h5 class="heading"><span class="codenumber">15</span></h5>
+<p id="p-12007"></p>
 <ol id="ol-2260" style="list-style-type: lower-alpha;">
-<li id="li-7225"><p id="p-12005">Write an equation for a parabola with vertex at \((0,-3)\) and one of its \(x\)-intercepts at \((2,0) \text{.}\)</p></li>
-<li id="li-7226"><p id="p-12006">Write an equation for a parabola with vertex at \((0,-3)\) and no \(x\)-intercepts at \((2,0) \text{.}\)</p></li>
+<li id="li-7225"><p id="p-12008">Write an equation for a parabola with vertex at \((0,-3)\) and one of its \(x\)-intercepts at \((2,0) \text{.}\)</p></li>
+<li id="li-7226"><p id="p-12009">Write an equation for a parabola with vertex at \((0,-3)\) and no \(x\)-intercepts at \((2,0) \text{.}\)</p></li>
 </ol>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1333" id="answer-1333"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1333" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12007"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1333" id="answer-1333"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1333" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12010"></p>
 <ol id="ol-2261" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-7227" style="width:49%; float:left;"><p id="p-12008">\(y= \dfrac{3}{4}x^2-3 \)</p></li>
-<li id="li-7228" style="width:49%; float:left;"><p id="p-12009">\(y=ax^2-3 \) for any \(a\lt 0\)</p></li>
+<li id="li-7227" style="width:49%; float:left;"><p id="p-12011">\(y= \dfrac{3}{4}x^2-3 \)</p></li>
+<li id="li-7228" style="width:49%; float:left;"><p id="p-12012">\(y=ax^2-3 \) for any \(a\lt 0\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2491"><h5 class="heading"><span class="codenumber">16</span></h5>
-<p id="p-12010">Write an equation for a parabola with vertex at \((4, 0)\) and \(y\)-intercept at \((0, 4)\text{.}\) How many \(x\)-intercepts does the parabola have?</p></article><article class="exercise-like" id="exercise-2492"><h5 class="heading"><span class="codenumber">17</span></h5>
-<p id="p-12011">Find the equation for a parabola that has a vertex of \((30, 280)\) and passes through the point \((20, 80)\text{.}\)</p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1334" id="answer-1334"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1334" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12012">\(y = −2(x − 30)^2 + 280 \)</p></span></span> </article><article class="exercise-like" id="exercise-2493"><h5 class="heading"><span class="codenumber">18</span></h5>
-<p id="p-12013">Find the equation for a parabola that has a vertex of \((−12,−40)\) and passes through the point \((6, 68)\text{.}\)</p></article>
+<p id="p-12013">Write an equation for a parabola with vertex at \((4, 0)\) and \(y\)-intercept at \((0, 4)\text{.}\) How many \(x\)-intercepts does the parabola have?</p></article><article class="exercise-like" id="exercise-2492"><h5 class="heading"><span class="codenumber">17</span></h5>
+<p id="p-12014">Find the equation for a parabola that has a vertex of \((30, 280)\) and passes through the point \((20, 80)\text{.}\)</p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1334" id="answer-1334"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1334" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12015">\(y = −2(x − 30)^2 + 280 \)</p></span></span> </article><article class="exercise-like" id="exercise-2493"><h5 class="heading"><span class="codenumber">18</span></h5>
+<p id="p-12016">Find the equation for a parabola that has a vertex of \((−12,−40)\) and passes through the point \((6, 68)\text{.}\)</p></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-332">
-<article class="introduction" id="introduction-337"><p id="p-12014">Find an equation for each parabola. Use the vertex form or the factored form of the equation, whichever is more appropriate.</p></article><div class="exercisegroup-exercises cols2">
+<article class="introduction" id="introduction-337"><p id="p-12017">Find an equation for each parabola. Use the vertex form or the factored form of the equation, whichever is more appropriate.</p></article><div class="exercisegroup-exercises cols2">
 <article class="exercise-like" id="exercise-2494"><h5 class="heading"><span class="codenumber">19</span></h5>
-<p id="p-12015"><figure class="figure-like" id="figure-387"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-19.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1335" id="answer-1335"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1335" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12016">\(y=x^2 − 9\)</p></span></span> </article><article class="exercise-like" id="exercise-2495"><h5 class="heading"><span class="codenumber">20</span></h5>
-<p id="p-12017"><figure class="figure-like" id="figure-388"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-20.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></article><article class="exercise-like" id="exercise-2496"><h5 class="heading"><span class="codenumber">21</span></h5>
-<p id="p-12018"><figure class="figure-like" id="figure-389"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-21.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1336" id="answer-1336"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1336" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12019">\(y=-2x^2 \)</p></span></span> </article><article class="exercise-like" id="exercise-2497"><h5 class="heading"><span class="codenumber">22</span></h5>
-<p id="p-12020"><figure class="figure-like" id="figure-390"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-22.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></article><article class="exercise-like" id="exercise-2498"><h5 class="heading"><span class="codenumber">23</span></h5>
-<p id="p-12021"><figure class="figure-like" id="figure-391"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-23.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1337" id="answer-1337"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1337" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12022">\(y = x^2 − 2x − 15 \)</p></span></span> </article><article class="exercise-like" id="exercise-2499"><h5 class="heading"><span class="codenumber">24</span></h5>
-<p id="p-12023"><figure class="figure-like" id="figure-392"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-24.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></article><article class="exercise-like" id="exercise-2500"><h5 class="heading"><span class="codenumber">25</span></h5>
-<p id="p-12024"><figure class="figure-like" id="figure-393"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-25.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1338" id="answer-1338"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1338" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12025">\(y = x^2 − 4x +5 \)</p></span></span> </article><article class="exercise-like" id="exercise-2501"><h5 class="heading"><span class="codenumber">26</span></h5>
-<p id="p-12026"><figure class="figure-like" id="figure-394"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-26.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></article>
+<p id="p-12018"><figure class="figure-like" id="figure-387"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-19.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1335" id="answer-1335"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1335" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12019">\(y=x^2 − 9\)</p></span></span> </article><article class="exercise-like" id="exercise-2495"><h5 class="heading"><span class="codenumber">20</span></h5>
+<p id="p-12020"><figure class="figure-like" id="figure-388"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-20.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></article><article class="exercise-like" id="exercise-2496"><h5 class="heading"><span class="codenumber">21</span></h5>
+<p id="p-12021"><figure class="figure-like" id="figure-389"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-21.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1336" id="answer-1336"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1336" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12022">\(y=-2x^2 \)</p></span></span> </article><article class="exercise-like" id="exercise-2497"><h5 class="heading"><span class="codenumber">22</span></h5>
+<p id="p-12023"><figure class="figure-like" id="figure-390"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-22.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></article><article class="exercise-like" id="exercise-2498"><h5 class="heading"><span class="codenumber">23</span></h5>
+<p id="p-12024"><figure class="figure-like" id="figure-391"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-23.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1337" id="answer-1337"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1337" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12025">\(y = x^2 − 2x − 15 \)</p></span></span> </article><article class="exercise-like" id="exercise-2499"><h5 class="heading"><span class="codenumber">24</span></h5>
+<p id="p-12026"><figure class="figure-like" id="figure-392"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-24.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></article><article class="exercise-like" id="exercise-2500"><h5 class="heading"><span class="codenumber">25</span></h5>
+<p id="p-12027"><figure class="figure-like" id="figure-393"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-25.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1338" id="answer-1338"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1338" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12028">\(y = x^2 − 4x +5 \)</p></span></span> </article><article class="exercise-like" id="exercise-2501"><h5 class="heading"><span class="codenumber">26</span></h5>
+<p id="p-12029"><figure class="figure-like" id="figure-394"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/fig-6-6-26.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></article>
 </div>
 </div>
 <article class="exercise-like" id="exercise-2502"><h5 class="heading"><span class="codenumber">27</span></h5>
-<p id="p-12027">In skeet shooting, the clay pigeon is launched from a height of \(4\) feet and reaches a maximum height of \(164\) feet at a distance of \(80\) feet from the launch site.</p>
+<p id="p-12030">In skeet shooting, the clay pigeon is launched from a height of \(4\) feet and reaches a maximum height of \(164\) feet at a distance of \(80\) feet from the launch site.</p>
 <ol id="ol-2262" style="list-style-type: lower-alpha;">
-<li id="li-7229"><p id="p-12028">Write an equation for the height of the clay pigeon in terms of the horizontal distance it has traveled.</p></li>
-<li id="li-7230"><p id="p-12029">If the shooter misses the clay pigeon, how far from the launch site will it hit the ground?</p></li>
+<li id="li-7229"><p id="p-12031">Write an equation for the height of the clay pigeon in terms of the horizontal distance it has traveled.</p></li>
+<li id="li-7230"><p id="p-12032">If the shooter misses the clay pigeon, how far from the launch site will it hit the ground?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1339" id="answer-1339"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1339" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12030"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1339" id="answer-1339"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1339" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12033"></p>
 <ol id="ol-2263" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-7231" style="width:49%; float:left;"><p id="p-12031">\(y=\dfrac{-1}{40}(x-80)^2+164 \)</p></li>
-<li id="li-7232" style="width:49%; float:left;"><p id="p-12032">\(160.99\) ft</p></li>
+<li id="li-7231" style="width:49%; float:left;"><p id="p-12034">\(y=\dfrac{-1}{40}(x-80)^2+164 \)</p></li>
+<li id="li-7232" style="width:49%; float:left;"><p id="p-12035">\(160.99\) ft</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2503"><h5 class="heading"><span class="codenumber">28</span></h5>
-<p id="p-12033">The batter in a softball game hits the ball when it is \(4\) feet above the ground. The ball reaches the greatest height on its trajectory, \(35\) feet, directly above the head of the left-fielder, who is \(200\) feet from home plate. </p>
+<p id="p-12036">The batter in a softball game hits the ball when it is \(4\) feet above the ground. The ball reaches the greatest height on its trajectory, \(35\) feet, directly above the head of the left-fielder, who is \(200\) feet from home plate. </p>
 <ol id="ol-2264" style="list-style-type: lower-alpha;">
-<li id="li-7233"><p id="p-12034">Write an equation for the height of the softball in terms of its horizontal distance from home plate.</p></li>
-<li id="li-7234"><p id="p-12035">Will the ball clear the left field wall, which is \(10\) feet tall and \(375\) feet from home plate?</p></li>
+<li id="li-7233"><p id="p-12037">Write an equation for the height of the softball in terms of its horizontal distance from home plate.</p></li>
+<li id="li-7234"><p id="p-12038">Will the ball clear the left field wall, which is \(10\) feet tall and \(375\) feet from home plate?</p></li>
 </ol>
 <p></p></article><div class="exercisegroup" id="exercisegroup-333">
-<article class="introduction" id="introduction-338"><p id="p-12036">The cables on a suspension bridge hang in the shape of parabolas. For Problems 29 and 30, imagine a coordinate system superimposed on a diagram of the bridge, as shown in the figure. <figure class="figure-like" id="figure-395"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-6-6-29.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></article><div class="exercisegroup-exercises">
+<article class="introduction" id="introduction-338"><p id="p-12039">The cables on a suspension bridge hang in the shape of parabolas. For Problems 29 and 30, imagine a coordinate system superimposed on a diagram of the bridge, as shown in the figure. <figure class="figure-like" id="figure-395"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-6-6-29.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure></p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-2504"><h5 class="heading"><span class="codenumber">29</span></h5>
-<p id="p-12037">The Akashi Kaikyo bridge in Japan is the longest suspension bridge in the world, with a main span of \(1991\) meters. Its main towers are \(297\) meters tall. The roadbed of the bridge is \(14\) meters thick and clears the water below by \(65\) meters. </p>
+<p id="p-12040">The Akashi Kaikyo bridge in Japan is the longest suspension bridge in the world, with a main span of \(1991\) meters. Its main towers are \(297\) meters tall. The roadbed of the bridge is \(14\) meters thick and clears the water below by \(65\) meters. </p>
 <ol id="ol-2265" style="list-style-type: lower-alpha;">
-<li id="li-7235"><p id="p-12038">Find the coordinates of the vertex and one other point on the cable.</p></li>
-<li id="li-7236"><p id="p-12039">Use the points from part (a) to find an equation for the shape of the cable in vertex form.</p></li>
+<li id="li-7235"><p id="p-12041">Find the coordinates of the vertex and one other point on the cable.</p></li>
+<li id="li-7236"><p id="p-12042">Use the points from part (a) to find an equation for the shape of the cable in vertex form.</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1340" id="answer-1340"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1340" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12040"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1340" id="answer-1340"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1340" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12043"></p>
 <ol id="ol-2266" style="list-style-type: lower-alpha;">
-<li id="li-7237"><p id="p-12041">Vertex: \(\left( \frac{1991}{2} , 79\right)\text{;}\) \(y\)-intercept: \((0, 297)\)</p></li>
-<li id="li-7238"><p id="p-12042">\(y = 0.00022(x − 995.5)^2 + 79\)</p></li>
+<li id="li-7237"><p id="p-12044">Vertex: \(\left( \frac{1991}{2} , 79\right)\text{;}\) \(y\)-intercept: \((0, 297)\)</p></li>
+<li id="li-7238"><p id="p-12045">\(y = 0.00022(x − 995.5)^2 + 79\)</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2505"><h5 class="heading"><span class="codenumber">30</span></h5>
-<p id="p-12043">A suspension bridge joining Sicily to the tip of Italy over the Straits of Messina has been planned planned and canceled multiple times. The main span of the bridge should be \(3300\) meters, and its main towers \(375\) meters tall. The roadbed should be \(3\) meters thick, clearing the water below by \(65\) meters. </p>
+<p id="p-12046">A suspension bridge joining Sicily to the tip of Italy over the Straits of Messina has been planned planned and canceled multiple times. The main span of the bridge should be \(3300\) meters, and its main towers \(375\) meters tall. The roadbed should be \(3\) meters thick, clearing the water below by \(65\) meters. </p>
 <ol id="ol-2267" style="list-style-type: lower-alpha;">
-<li id="li-7239"><p id="p-12044">Find the coordinates of the vertex and one other point on the cable.</p></li>
-<li id="li-7240"><p id="p-12045">Use the points from part (a) to find an equation for the shape of the cable in vertex form.</p></li>
+<li id="li-7239"><p id="p-12047">Find the coordinates of the vertex and one other point on the cable.</p></li>
+<li id="li-7240"><p id="p-12048">Use the points from part (a) to find an equation for the shape of the cable in vertex form.</p></li>
 </ol>
 <p></p></article>
 </div>
 </div>
 <article class="exercise-like" id="exercise-2506"><h5 class="heading"><span class="codenumber">31</span></h5>
-<p id="p-12046">The Square Kilometre Array (SKA) is an international radio telescope project. Project members plan to build a telescope 30 times larger than the largest one currently available. The Australia Telescope National Facility held a workshop in 2005 to design an appropriate antenna. The antenna should be a parabolic dish with diameter from \(12\) to \(20\) meters, and the ratio of the focal length to the diameter should be \(0.4\text{.}\) The figure shows a cross section of the dish. (Source: www.atnf.csiro.au/projects/ska/) <figure class="figure-like" id="figure-396"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-6-6-31.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure> </p>
+<p id="p-12049">The Square Kilometre Array (SKA) is an international radio telescope project. Project members plan to build a telescope 30 times larger than the largest one currently available. The Australia Telescope National Facility held a workshop in 2005 to design an appropriate antenna. The antenna should be a parabolic dish with diameter from \(12\) to \(20\) meters, and the ratio of the focal length to the diameter should be \(0.4\text{.}\) The figure shows a cross section of the dish. (Source: www.atnf.csiro.au/projects/ska/) <figure class="figure-like" id="figure-396"><object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/fig-6-6-31.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></figure> </p>
 <ol id="ol-2268" style="list-style-type: lower-alpha;">
-<li id="li-7241"><p id="p-12047">You want to design a \(20\)-meter-diameter parabolic antenna for the project. What will the focal length of your antenna be?</p></li>
-<li id="li-7242"><p id="p-12048">The equation of the dish has the form \(y = \frac{x^2}{4F}\text{,}\) where \(F\) is the focal length. What is the equation of the parabola for your antenna?</p></li>
-<li id="li-7243"><p id="p-12049">What is the depth of your parabolic antenna?</p></li>
+<li id="li-7241"><p id="p-12050">You want to design a \(20\)-meter-diameter parabolic antenna for the project. What will the focal length of your antenna be?</p></li>
+<li id="li-7242"><p id="p-12051">The equation of the dish has the form \(y = \frac{x^2}{4F}\text{,}\) where \(F\) is the focal length. What is the equation of the parabola for your antenna?</p></li>
+<li id="li-7243"><p id="p-12052">What is the depth of your parabolic antenna?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1341" id="answer-1341"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1341" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12050"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1341" id="answer-1341"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1341" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12053"></p>
 <ol id="ol-2269" class="cols3" style="list-style-type: lower-alpha;">
-<li id="li-7244" style="width:32.6666666666667%; float:left;"><p id="p-12051">\(8\) m</p></li>
-<li id="li-7245" style="width:32.6666666666667%; float:left;"><p id="p-12052">\(y=\dfrac{x^2}{32} \)</p></li>
-<li id="li-7246" style="width:32.6666666666667%; float:left;"><p id="p-12053">\(3.125\) m</p></li>
+<li id="li-7244" style="width:32.6666666666667%; float:left;"><p id="p-12054">\(8\) m</p></li>
+<li id="li-7245" style="width:32.6666666666667%; float:left;"><p id="p-12055">\(y=\dfrac{x^2}{32} \)</p></li>
+<li id="li-7246" style="width:32.6666666666667%; float:left;"><p id="p-12056">\(3.125\) m</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2507"><h5 class="heading"><span class="codenumber">32</span></h5>
-<p id="p-12054"><div class="sidebyside" style="" id="sidebyside-135"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:60%;justify-content:flex-start;"><p id="p-12055">Some comets move about the sun in parabolic orbits. In 1973, the comet Kohoutek passed within 0.14 AU (astronomical units), or 21 million kilometers, of the Sun. Imagine a coordinate system superimposed on a diagram of the comet’s orbit, with the Sun at the origin, as shown in the figure. The units on each axis are measured in AU.</p></div>
+<p id="p-12057"><div class="sidebyside" style="" id="sidebyside-135"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:60%;justify-content:flex-start;"><p id="p-12058">Some comets move about the sun in parabolic orbits. In 1973, the comet Kohoutek passed within 0.14 AU (astronomical units), or 21 million kilometers, of the Sun. Imagine a coordinate system superimposed on a diagram of the comet’s orbit, with the Sun at the origin, as shown in the figure. The units on each axis are measured in AU.</p></div>
 <div class="sbspanel" style="width:25%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-6-6-32.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
 </div></div> </p>
 <ol id="ol-2270" style="list-style-type: lower-alpha;">
-<li id="li-7247"><p id="p-12056">The comet's closest approach to the Sun (called <em class="terminology">perihelion</em>) occurred at the vertex of the parabola. What were the comet’s coordinates at perihelion?</p></li>
-<li id="li-7248"><p id="p-12057">When the comet was first discovered, its coordinates were \((1.68, −4.9)\text{.}\) Find an equation for comet Kohoutek's orbit in vertex form.</p></li>
+<li id="li-7247"><p id="p-12059">The comet's closest approach to the Sun (called <em class="terminology">perihelion</em>) occurred at the vertex of the parabola. What were the comet’s coordinates at perihelion?</p></li>
+<li id="li-7248"><p id="p-12060">When the comet was first discovered, its coordinates were \((1.68, −4.9)\text{.}\) Find an equation for comet Kohoutek's orbit in vertex form.</p></li>
 </ol>
 <p></p></article><div class="exercisegroup" id="exercisegroup-334">
-<article class="introduction" id="introduction-339"><p id="p-12058">Use your calculator's statistics features for Problems 33–38.</p></article><div class="exercisegroup-exercises">
+<article class="introduction" id="introduction-339"><p id="p-12061">Use your calculator's statistics features for Problems 33–38.</p></article><div class="exercisegroup-exercises">
 <article class="exercise-like" id="exercise-2508"><h5 class="heading"><span class="codenumber">33</span></h5>
-<p id="p-12059">The table shows the height of a projectile at different times after it was fired. <figure class="figure-like" id="table-388"><table>
+<p id="p-12062">The table shows the height of a projectile at different times after it was fired. <figure class="figure-like" id="table-388"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Time<br>(seconds)</td>
 <td class="c m b1 r1 l0 t1 lines">\(2\)</td>
@@ -1074,26 +1074,26 @@ a \amp {}-{} \amp b \amp {}+{} \amp c\amp {}={} \amp 12\\
 </tr>
 </table></figure> </p>
 <ol id="ol-2271" style="list-style-type: lower-alpha;">
-<li id="li-7249"><p id="p-12060">Find the equation of the least-squares regression line for height in terms of time.</p></li>
-<li id="li-7250"><p id="p-12061">Use the linear regression equation to predict the height of the projectile \(15\) seconds after it was fired.</p></li>
-<li id="li-7251"><p id="p-12062">Make a scatterplot of the data and draw the regression line on the same axes.</p></li>
-<li id="li-7252"><p id="p-12063">Find the quadratic regression equation for height in terms of time.</p></li>
-<li id="li-7253"><p id="p-12064">Use the quadratic regression equation to predict the height of the projectile \(15\) seconds after it was fired.</p></li>
-<li id="li-7254"><p id="p-12065">Draw the quadratic regression curve on the graph from part (c).</p></li>
-<li id="li-7255"><p id="p-12066">Which model is more appropriate for the height of the projectile, linear or quadratic? Why?</p></li>
+<li id="li-7249"><p id="p-12063">Find the equation of the least-squares regression line for height in terms of time.</p></li>
+<li id="li-7250"><p id="p-12064">Use the linear regression equation to predict the height of the projectile \(15\) seconds after it was fired.</p></li>
+<li id="li-7251"><p id="p-12065">Make a scatterplot of the data and draw the regression line on the same axes.</p></li>
+<li id="li-7252"><p id="p-12066">Find the quadratic regression equation for height in terms of time.</p></li>
+<li id="li-7253"><p id="p-12067">Use the quadratic regression equation to predict the height of the projectile \(15\) seconds after it was fired.</p></li>
+<li id="li-7254"><p id="p-12068">Draw the quadratic regression curve on the graph from part (c).</p></li>
+<li id="li-7255"><p id="p-12069">Which model is more appropriate for the height of the projectile, linear or quadratic? Why?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1342" id="answer-1342"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1342" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12067"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1342" id="answer-1342"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1342" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12070"></p>
 <ol id="ol-2272" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-7256" style="width:49%; float:left;"><p id="p-12068">\(h = 8.24t + 38.89\)</p></li>
-<li id="li-7257" style="width:49%; float:left;"><p id="p-12069">\(162.5\) m</p></li>
-<li id="li-7258" style="width:49%; float:left;"><p id="p-12070"><img width="90%" src="images/fig-ans-6-6-33.jpg" alt=""></p></li>
-<li id="li-7259" style="width:49%; float:left;"><p id="p-12071">\(h=−0.81t^2 + 21.2t\)</p></li>
-<li id="li-7260" style="width:49%; float:left;"><p id="p-12072">\(135.7\) m</p></li>
-<li id="li-7261" style="width:49%; float:left;"><p id="p-12073"><img width="90%" src="images/fig-ans-6-6-33f.jpg" alt=""></p></li>
-<li id="li-7262" style="width:49%; float:left;"><p id="p-12074">Quadratic: Gravity will slow the projectile, giving the graph a concave down shape.</p></li>
+<li id="li-7256" style="width:49%; float:left;"><p id="p-12071">\(h = 8.24t + 38.89\)</p></li>
+<li id="li-7257" style="width:49%; float:left;"><p id="p-12072">\(162.5\) m</p></li>
+<li id="li-7258" style="width:49%; float:left;"><p id="p-12073"><img width="90%" src="images/fig-ans-6-6-33.jpg" alt=""></p></li>
+<li id="li-7259" style="width:49%; float:left;"><p id="p-12074">\(h=−0.81t^2 + 21.2t\)</p></li>
+<li id="li-7260" style="width:49%; float:left;"><p id="p-12075">\(135.7\) m</p></li>
+<li id="li-7261" style="width:49%; float:left;"><p id="p-12076"><img width="90%" src="images/fig-ans-6-6-33f.jpg" alt=""></p></li>
+<li id="li-7262" style="width:49%; float:left;"><p id="p-12077">Quadratic: Gravity will slow the projectile, giving the graph a concave down shape.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2509"><h5 class="heading"><span class="codenumber">34</span></h5>
-<p id="p-12075">The table shows the height of a star-flare at different times after it exploded from the surface of a star. <figure class="figure-like" id="table-389"><table>
+<p id="p-12078">The table shows the height of a star-flare at different times after it exploded from the surface of a star. <figure class="figure-like" id="table-389"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Time<br>(seconds)</td>
 <td class="c m b1 r1 l0 t1 lines">\(0.2\)</td>
@@ -1114,16 +1114,16 @@ a \amp {}-{} \amp b \amp {}+{} \amp c\amp {}={} \amp 12\\
 </tr>
 </table></figure> </p>
 <ol id="ol-2273" style="list-style-type: lower-alpha;">
-<li id="li-7263"><p id="p-12076">Find the equation of the least-squares regression line for height of the flare in terms of time.</p></li>
-<li id="li-7264"><p id="p-12077">Use the linear regression equation to predict the height of the flare \(1.4\) seconds after it exploded.</p></li>
-<li id="li-7265"><p id="p-12078">Make a scatterplot of the data and draw the regression line on the same axes.</p></li>
-<li id="li-7266"><p id="p-12079">Find the quadratic regression equation for height in terms of time.</p></li>
-<li id="li-7267"><p id="p-12080">Use the quadratic regression equation to predict the height of the flare \(1.4\) seconds after it exploded.</p></li>
-<li id="li-7268"><p id="p-12081">Draw the quadratic regression curve on the graph from part (c).</p></li>
-<li id="li-7269"><p id="p-12082">Which model is more appropriate for the height of the star-flare, linear or quadratic? Why?</p></li>
+<li id="li-7263"><p id="p-12079">Find the equation of the least-squares regression line for height of the flare in terms of time.</p></li>
+<li id="li-7264"><p id="p-12080">Use the linear regression equation to predict the height of the flare \(1.4\) seconds after it exploded.</p></li>
+<li id="li-7265"><p id="p-12081">Make a scatterplot of the data and draw the regression line on the same axes.</p></li>
+<li id="li-7266"><p id="p-12082">Find the quadratic regression equation for height in terms of time.</p></li>
+<li id="li-7267"><p id="p-12083">Use the quadratic regression equation to predict the height of the flare \(1.4\) seconds after it exploded.</p></li>
+<li id="li-7268"><p id="p-12084">Draw the quadratic regression curve on the graph from part (c).</p></li>
+<li id="li-7269"><p id="p-12085">Which model is more appropriate for the height of the star-flare, linear or quadratic? Why?</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-2510"><h5 class="heading"><span class="codenumber">35</span></h5>
-<p id="p-12083">In the 1990s, an outbreak of mad cow disease (Creutzfeldt-Jakob disease) alarmed health officials in England. The table shows the number of deaths each year from the disease. <figure class="figure-like" id="table-390"><table>
+<p id="p-12086">In the 1990s, an outbreak of mad cow disease (Creutzfeldt-Jakob disease) alarmed health officials in England. The table shows the number of deaths each year from the disease. <figure class="figure-like" id="table-390"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Year</td>
 <td class="c m b1 r1 l0 t1 lines">'94</td>
@@ -1154,16 +1154,16 @@ a \amp {}-{} \amp b \amp {}+{} \amp c\amp {}={} \amp 12\\
 </tr>
 </table></figure>(Source: www.cjd.ed.ac.uk/vcjdqsep05) </p>
 <ol id="ol-2274" style="list-style-type: lower-alpha;">
-<li id="li-7270"><p id="p-12084">The Health Protection Agency determined that a quadratic model was the best-fitting model for the data. Find a quadratic regression equation for the data.</p></li>
-<li id="li-7271"><p id="p-12085">Use your model to estimate when the peak of the epidemic occurred and how many deaths from mad cow disease were expected in 2005.</p></li>
+<li id="li-7270"><p id="p-12087">The Health Protection Agency determined that a quadratic model was the best-fitting model for the data. Find a quadratic regression equation for the data.</p></li>
+<li id="li-7271"><p id="p-12088">Use your model to estimate when the peak of the epidemic occurred and how many deaths from mad cow disease were expected in 2005.</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1343" id="answer-1343"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1343" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12086"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1343" id="answer-1343"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1343" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12089"></p>
 <ol id="ol-2275" style="list-style-type: lower-alpha;">
-<li id="li-7272"><p id="p-12087">\(y=−0.587t^2 + 7.329t − 2.538\)</p></li>
-<li id="li-7273"><p id="p-12088">The predicted peak was in 2000, near the end of March. The model predicts \(7\) deaths for 2005.</p></li>
+<li id="li-7272"><p id="p-12090">\(y=−0.587t^2 + 7.329t − 2.538\)</p></li>
+<li id="li-7273"><p id="p-12091">The predicted peak was in 2000, near the end of March. The model predicts \(7\) deaths for 2005.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-quadratic-nitrogen-fertilizer"><h5 class="heading"><span class="codenumber">36</span></h5>
-<p id="p-12089">The table shows the amount of nitrogen fertilizer applied to a crop of soybeans per hectare of land in a trial in Thailand and the resulting yield. <figure class="figure-like" id="table-391"><table>
+<p id="p-12092">The table shows the amount of nitrogen fertilizer applied to a crop of soybeans per hectare of land in a trial in Thailand and the resulting yield. <figure class="figure-like" id="table-391"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Nitrogen (kg)</td>
 <td class="c m b1 r1 l0 t1 lines">\(0\)</td>
@@ -1182,11 +1182,11 @@ a \amp {}-{} \amp b \amp {}+{} \amp c\amp {}={} \amp 12\\
 </tr>
 </table></figure>(Source: www.arc-avrdc.org) </p>
 <ol id="ol-2276" style="list-style-type: lower-alpha;">
-<li id="li-7274"><p id="p-12090">Fit a quadratic regression equation to the data.</p></li>
-<li id="li-7275"><p id="p-12091">Use your model to predict the maximum yield and the amount of nitrogen needed.</p></li>
+<li id="li-7274"><p id="p-12093">Fit a quadratic regression equation to the data.</p></li>
+<li id="li-7275"><p id="p-12094">Use your model to predict the maximum yield and the amount of nitrogen needed.</p></li>
 </ol>
 <p></p></article><article class="exercise-like" id="exercise-2512"><h5 class="heading"><span class="codenumber">37</span></h5>
-<p id="p-12092">The number of daylight hours increases each day from the beginning of winter until the beginning of summer, and then begins to decrease. The table below gives the number of daylight hours in Delbert's hometown last year in terms of the number of days since January 1. <figure class="figure-like" id="table-392"><table>
+<p id="p-12095">The number of daylight hours increases each day from the beginning of winter until the beginning of summer, and then begins to decrease. The table below gives the number of daylight hours in Delbert's hometown last year in terms of the number of days since January 1. <figure class="figure-like" id="table-392"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Days since<br>January 1</td>
 <td class="c m b1 r1 l0 t1 lines">\(0\)</td>
@@ -1209,26 +1209,26 @@ a \amp {}-{} \amp b \amp {}+{} \amp c\amp {}={} \amp 12\\
 </tr>
 </table></figure> </p>
 <ol id="ol-2277" style="list-style-type: lower-alpha;">
-<li id="li-7276"><p id="p-12093">Find the equation of the least-squares regression line for the number of daylight hours in terms of the number of days since January 1.</p></li>
-<li id="li-7277"><p id="p-12094">Use the linear regression equation to predict the number of daylight hours \(365\) days after January 1.</p></li>
-<li id="li-7278"><p id="p-12095">Make a scatterplot of the data and draw the regression line on the same axes.</p></li>
-<li id="li-7279"><p id="p-12096">Find the quadratic regression equation for the number of daylight hours in terms of the number of days since January 1.</p></li>
-<li id="li-7280"><p id="p-12097">Use the quadratic regression equation to predict the number of daylight hours \(365\) days after January 1.</p></li>
-<li id="li-7281"><p id="p-12098">Draw the quadratic regression curve on the graph from part (c).</p></li>
-<li id="li-7282"><p id="p-12099">Predict the number of daylight hours \(365\) days since January 1 without using any regression equation. What does this tell you about the linear and quadratic models you found?</p></li>
+<li id="li-7276"><p id="p-12096">Find the equation of the least-squares regression line for the number of daylight hours in terms of the number of days since January 1.</p></li>
+<li id="li-7277"><p id="p-12097">Use the linear regression equation to predict the number of daylight hours \(365\) days after January 1.</p></li>
+<li id="li-7278"><p id="p-12098">Make a scatterplot of the data and draw the regression line on the same axes.</p></li>
+<li id="li-7279"><p id="p-12099">Find the quadratic regression equation for the number of daylight hours in terms of the number of days since January 1.</p></li>
+<li id="li-7280"><p id="p-12100">Use the quadratic regression equation to predict the number of daylight hours \(365\) days after January 1.</p></li>
+<li id="li-7281"><p id="p-12101">Draw the quadratic regression curve on the graph from part (c).</p></li>
+<li id="li-7282"><p id="p-12102">Predict the number of daylight hours \(365\) days since January 1 without using any regression equation. What does this tell you about the linear and quadratic models you found?</p></li>
 </ol>
 <p></p>
-<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1344" id="answer-1344"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1344" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12100"></p>
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-answer-1344" id="answer-1344"><span class="heading"><span class="type">Answer</span></span></a></span><span id="hk-answer-1344" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-12103"></p>
 <ol id="ol-2278" class="cols2" style="list-style-type: lower-alpha;">
-<li id="li-7283" style="width:49%; float:left;"><p id="p-12101">\(y = 0.0051t + 11.325\)</p></li>
-<li id="li-7284" style="width:49%; float:left;"><p id="p-12102">\(13.2\) hr</p></li>
-<li id="li-7285" style="width:49%; float:left;"><p id="p-12103"><img width="90%" src="images/fig-ans-6-6-37.jpg" alt=""></p></li>
-<li id="li-7286" style="width:49%; float:left;"><p id="p-12104">\(y=−0.00016t^2 + 0.053t + 9.319\)</p></li>
-<li id="li-7287" style="width:49%; float:left;"><p id="p-12105">\(7.4\) hr</p></li>
-<li id="li-7288" style="width:49%; float:left;"><p id="p-12106"><img width="90%" src="images/fig-ans-6-6-37f.jpg" alt=""></p></li>
-<li id="li-7289" style="width:49%; float:left;"><p id="p-12107">\(9.8\) hr (the same as the previous year); Neither model is appropriate. The quadratic model estimate is too low, and the linear model is too high.</p></li>
+<li id="li-7283" style="width:49%; float:left;"><p id="p-12104">\(y = 0.0051t + 11.325\)</p></li>
+<li id="li-7284" style="width:49%; float:left;"><p id="p-12105">\(13.2\) hr</p></li>
+<li id="li-7285" style="width:49%; float:left;"><p id="p-12106"><img width="90%" src="images/fig-ans-6-6-37.jpg" alt=""></p></li>
+<li id="li-7286" style="width:49%; float:left;"><p id="p-12107">\(y=−0.00016t^2 + 0.053t + 9.319\)</p></li>
+<li id="li-7287" style="width:49%; float:left;"><p id="p-12108">\(7.4\) hr</p></li>
+<li id="li-7288" style="width:49%; float:left;"><p id="p-12109"><img width="90%" src="images/fig-ans-6-6-37f.jpg" alt=""></p></li>
+<li id="li-7289" style="width:49%; float:left;"><p id="p-12110">\(9.8\) hr (the same as the previous year); Neither model is appropriate. The quadratic model estimate is too low, and the linear model is too high.</p></li>
 </ol></span></span> </article><article class="exercise-like" id="exercise-2513"><h5 class="heading"><span class="codenumber">38</span></h5>
-<p id="p-12108">To observers on Earth, the Moon looks like a disk that is completely illuminated at full moon and completely dark at new moon. The table below shows what fraction of the Moon is illuminated at \(5\)-day interval after the last full moon. <figure class="figure-like" id="table-393"><table>
+<p id="p-12111">To observers on Earth, the Moon looks like a disk that is completely illuminated at full moon and completely dark at new moon. The table below shows what fraction of the Moon is illuminated at \(5\)-day interval after the last full moon. <figure class="figure-like" id="table-393"><table>
 <tr>
 <td class="l m b1 r1 l1 t1 lines">Days since<br>full moon</td>
 <td class="c m b1 r1 l0 t1 lines">\(0\)</td>
@@ -1249,13 +1249,13 @@ a \amp {}-{} \amp b \amp {}+{} \amp c\amp {}={} \amp 12\\
 </tr>
 </table></figure>(Source: www.arc-avrdc.org) </p>
 <ol id="ol-2279" style="list-style-type: lower-alpha;">
-<li id="li-7290"><p id="p-12109">Find the equation of the least-squares regression line for the fraction illuminated in terms of days.</p></li>
-<li id="li-7291"><p id="p-12110">Use the linear regression equation to predict the fraction illuminated \(30\) days after the full moon.</p></li>
-<li id="li-7292"><p id="p-12111">Make a scatterplot of the data and draw the regression line on the same axes.</p></li>
-<li id="li-7293"><p id="p-12112">Find the quadratic regression equation for the fraction illuminated in terms of days.</p></li>
-<li id="li-7294"><p id="p-12113">Use the quadratic regression equation to predict the fraction illuminated \(30\) days after the full moon.</p></li>
-<li id="li-7295"><p id="p-12114">Draw the quadratic regression curve on the graph from part (c).</p></li>
-<li id="li-7296"><p id="p-12115">Predict the fraction of the disk that is illuminated \(30\) days after the full moon without using any regression equation. What does this tell you about the linear and quadratic models you found?</p></li>
+<li id="li-7290"><p id="p-12112">Find the equation of the least-squares regression line for the fraction illuminated in terms of days.</p></li>
+<li id="li-7291"><p id="p-12113">Use the linear regression equation to predict the fraction illuminated \(30\) days after the full moon.</p></li>
+<li id="li-7292"><p id="p-12114">Make a scatterplot of the data and draw the regression line on the same axes.</p></li>
+<li id="li-7293"><p id="p-12115">Find the quadratic regression equation for the fraction illuminated in terms of days.</p></li>
+<li id="li-7294"><p id="p-12116">Use the quadratic regression equation to predict the fraction illuminated \(30\) days after the full moon.</p></li>
+<li id="li-7295"><p id="p-12117">Draw the quadratic regression curve on the graph from part (c).</p></li>
+<li id="li-7296"><p id="p-12118">Predict the fraction of the disk that is illuminated \(30\) days after the full moon without using any regression equation. What does this tell you about the linear and quadratic models you found?</p></li>
 </ol>
 <p></p></article>
 </div>
