@@ -1,6 +1,6 @@
 %**************************************%
 %* Generated from MathBook XML source *%
-%*    on 2017-04-05T17:23:50-07:00    *%
+%*    on 2017-05-23T15:38:09-07:00    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
@@ -278,7 +278,7 @@ roundcorner=2ex, backgroundcolor=blue!5,linecolor=blue!75!black,}%
 %% Add  debug=true  option to see boxes around contents
 \usepackage{tasks}
 \NewTasks[label-format=\bfseries,item-indent=3.3em,label-offset=0.4em,label-width=1.7em,label-align=right,after-item-skip=\smallskipamount,after-skip=\smallskipamount]{exercisegroup}[\exercise]
-%% hyperref driver does not need to be specified
+%% hyperref driver does not need to be specified, it will be detected
 \usepackage{hyperref}
 %% Hyperlinking active in PDFs, all links solid and blue
 \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue}
@@ -351,7 +351,6 @@ The first step in creating a model is to describe relationships between variable
 \item\hypertarget{li-2}{}A \terminology{graph} is a visual display of the data.  It is easier to spot trends and describe the overall behavior of the variables from a graph.%
 \item\hypertarget{li-3}{}An \terminology{algebraic equation} is a compact summary of the model.  It can be used to analyze the model and to make predictions%
 \end{enumerate}
-\par
 We begin our study of modeling with some examples of \terminology{linear models}.  In the examples that follow, observe the interplay among the three modeling tools, and how each contributes to the model.%
 \begin{example}[]\label{example-Annelise}
 Annelise is on vacation at a seaside resort.  She can rent a bicycle from her hotel for \textdollar{}3 an hour, plus a \textdollar{}5 insurance fee.  (A fraction of an hour is charged as the same fraction of \textdollar{}3.)%
@@ -364,13 +363,12 @@ Annelise is on vacation at a seaside resort.  She can rent a bicycle from her ho
 \par\medskip\noindent%
 \textbf{Solution.}\quad \leavevmode%
 \begin{enumerate}[label=\alph*]
-\item\hypertarget{li-7}{}To find the cost, multiply the time by \textdollar{}3, and add the result to the \textdollar{}5 insurance fee.  For example, the cost of a 1-hour bike ride is%
+\item\hypertarget{li-7}{}To find the cost, we multiply the time by \textdollar{}3, and add the result to the \textdollar{}5 insurance fee.  For example, the cost of a 1-hour bike ride is%
 \begin{align*}
 \text{Cost}\amp=(\$5\text{ insurance fee})+(\$3\text{ per hour})\times(\alert{1}\text{ hour})\\
 C\amp=5+3(\alert{1})=8
 \end{align*}
 A 1-hour bike ride costs \textdollar{}8.  Record the results in a table, as shown here:%
-\leavevmode%
 \begin{table}
 \centering
 \begin{tabular}{AcAcAcAcA}\hrulethick
@@ -381,12 +379,13 @@ Length of rental (hours)&Cost of rental (dollars)&&\((t,C)\)\tabularnewline\hrul
 \end{tabular}
 \end{table}
 \item\hypertarget{li-8}{}Each pair of values represents a point on the graph.  The first value gives the horizontal coordinate of the point, and the second value gives the vertical coordinate.  The points lie on a straight line, as shown in the figure.  The line extends infinitely in only one direction, because negative values of \(t\) do not make sense here.%
-\leavevmode%
 \begin{figure}
 \centering
-\includegraphics[width=0.5\linewidth]{images/fig-Annelise-1}
+\includegraphics[width=0.4\linewidth]{images/fig-Annelise-1}
 \end{figure}
-\item\hypertarget{li-9}{}To find an equation, let \(C\) represent the cost of the rental, and use \(t\) for the number of hours:%
+\item\hypertarget{li-9}{}To write an equation, let \(C\) represent the cost of the rental, and use \(t\) for the number of hours:%
+\par
+%
 \begin{align*}
 \text{Cost}\amp=(\$5\text{ insurance fee})+(\$3\text{ per hour})\times\text{(number of hours)}\\
 C\amp=5+3\cdot t=8
@@ -418,14 +417,12 @@ t\amp=4.5
 \end{align*}
 For \textdollar{}18.50 Annelise can bicycle for 4½ hours. The point \(Q\)  on the graph represents an \textdollar{}18.50 bike ride.  The value on the \(t\)-axis below point \(Q\) is 4.5, so \textdollar{}18.50 will buy a 4.5 hour bike ride.%
 \end{enumerate}
- \leavevmode%
-\begin{figure}
+ \begin{figure}
 \centering
-\includegraphics[width=0.5\linewidth]{images/fig1-2}
+\includegraphics[width=0.4\linewidth]{images/fig1-2}
 \end{figure}
 %
 \end{example}
-\par
 In \hyperref[example-6hrbike]{Example~\ref{example-6hrbike}}, notice the different algebraic techniques we used in parts (a) and (b).   In part (a), we were given a value of \(t\) and we \terminology{evaluated the expression}  \(5+3t\) to find \(C\).  In part (b) we were given a value of \(C\) and we \terminology{solved the equation} \(C=5+3t\) to find \(t\).%
 \begin{exercise}\label{exercise-Frank-plants}
 Frank plants a dozen corn seedlings, each 6 inches tall.  With plenty of water and sunlight they will grow approximately 2 inches per day.  Complete the table of values for the height, \(h\), of the seedlings after \(t\) days.%
@@ -481,9 +478,9 @@ For part (b), convert feet to inches.%
 \typeout{Subsection 1.1.2 Choosing Scales for the Axes}
 \typeout{************************************************}
 \subsection[{Choosing Scales for the Axes}]{Choosing Scales for the Axes}\label{subsection-2}
-To draw a useful graph, we must choose appropriate scales for the axes.  They must extend far enough to show the values of the variables, and the tick marks should be equally spaced.  Usually no more than 10 or 15 tick marks are needed.%
+To create a useful graph, we must choose appropriate scales for the axes.  The axes must extend far enough to show the values of the variables, and the tick marks should be equally spaced.  Usually we should use no more than 10 or 15 tick marks.%
 \begin{example}[]\label{example-home-price}
-In 1990, the median home price in the US was \textdollar{}92,000.  The median price increased by about \textdollar{}4700 per year over the next decade. \leavevmode%
+In 1990, the median price of a home in the US was \textdollar{}92,000.  The median price increased by about \textdollar{}4700 per year over the next decade. \leavevmode%
 \begin{enumerate}[label=\alph*]
 \item\hypertarget{li-22}{}Make a table of values showing the median price of a house in 1990, 1994, 1998, and 2000.%
 \item\hypertarget{li-23}{}Choose suitable scales for the axes and plot the values you found in part (a) on a graph. Use \(t\), the number of years since 1990, on the horizontal axis and the price of the house, \(P\), on the vertical axis.  Draw a curve through the points.%
@@ -500,49 +497,46 @@ P=92,000+\alert{4}(4700)=110,800
 \end{equation*}
 In 1998 the price had increased by \(\alert{8}(4700)=37,600\)  dollars, so%
 \begin{equation*}
-P=92,000+\alert{8}(4700)-129,600
+P=92,000+\alert{8}(4700)=129,600
 \end{equation*}
 You can verify the price of the house in 2000 by a similar calculation.%
-\leavevmode%
 \begin{table}
 \centering
 \begin{tabular}{AcAcAcA}\hrulethick
 Year&Price of House)&\((t,P)\)\tabularnewline\hrulethin
-\(1990\)&\(92,000\)&\((0, 92,000)\)\tabularnewline\hrulethin
-\(1994\)&\(110,800\)&\((4, 110,800)\)\tabularnewline\hrulethin
-\(1998\)&\(129,600\)&\((8, 129,600)\)\tabularnewline\hrulethin
-\(2000\)&\(139,000\)&\((10, 139,000)\)\tabularnewline\hrulethin
+\(1990\)&\(92,000\)&\((0,\, 92,000)\)\tabularnewline\hrulethin
+\(1994\)&\(110,800\)&\((4,\, 110,800)\)\tabularnewline\hrulethin
+\(1998\)&\(129,600\)&\((8,\, 129,600)\)\tabularnewline\hrulethin
+\(2000\)&\(139,000\)&\((10,\, 139,000)\)\tabularnewline\hrulethin
 \end{tabular}
 \end{table}
-\item\hypertarget{li-27}{}Let \(t\) stand for the number of years since 1990, so that \(t=0\) in 1990, \(t=4\) in 1994, and so on.  To choose scales for the axes, look at the values in the table.  For this graph we scale the horizontal axis, or \(t\)-axis, in 1-year intervals and the vertical axis, or \(P\)-axis, for \textdollar{}90,000 to \textdollar{}140,000 in intervals of \textdollar{}5,000. The points in Figure 1. lie on a straight line.%
+\item\hypertarget{li-27}{}Let \(t\) stand for the number of years since 1990, so that \(t=0\) in 1990, \(t=4\) in 1994, and so on.  To choose scales for the axes, look at the values in the table.  For this graph we scale the horizontal axis, or \(t\)-axis, in 1-year intervals and the vertical axis, or \(P\)-axis, for \textdollar{}90,000 to \textdollar{}140,000 in intervals of \textdollar{}5,000. The points in \hyperref[fig-median-house]{Figure~\ref{fig-median-house}}. lie on a straight line.%
 \item\hypertarget{li-28}{}Look back at the calculations in part (a).  The price of the house started at \textdollar{}92,000 in 1990 and increased by \(t \times 4700\) dollars after \(t\) years.  Thus,%
 \begin{equation*}
 P=92,000+4700t
 \end{equation*}
 %
-\item\hypertarget{li-29}{}Find the points on the graph corresponding to 1990 and 1996.  These points lie above \(t=0\) and \(t=6\) on the \(t\)-axis.  Now find the values on the \(P\)-axis corresponding to the two points.  The values are \(P=92,000\) in 1990 and \(P=120,200\) in 1996.  The increase in price is the difference of the two \(P\)-values.%
-\begin{align*}
-\text{increase in price}\amp=120,200-92,000
-\\
-\amp=28,200
-\end{align*}
-The price of the home increased \textdollar{}28,200 between 1990 and 1996.  This increase is indicated by the arrows in \hyperref[fig-median-house]{Figure~\ref{fig-median-house}} [ref].%
-\leavevmode%
+\item\hypertarget{li-29}{}Find the points on the graph corresponding to 1990 and 1996.%
 \begin{figure}
 \centering
 \includegraphics[width=0.5\linewidth]{images/fig1-3}
 \caption{\label{fig-median-house}}
 \end{figure}
+These points lie above \(t=0\) and \(t=6\) on the \(t\)-axis.  Now find the values on the \(P\)-axis corresponding to the two points.  The values are \(P=92,000\) in 1990 and \(P=120,200\) in 1996.  The increase in price is the difference of the two \(P\)-values.%
+\begin{align*}
+\text{increase in price}\amp=120,200-92,000
+\\
+\amp=28,200
+\end{align*}
+The price of the home increased \textdollar{}28,200 between 1990 and 1996.  This increase is indicated by the arrows in \hyperref[fig-median-house]{Figure~\ref{fig-median-house}}.%
 \end{enumerate}
 \end{example}
-\par
 The graphs in the preceding examples are \terminology{increasing graphs}.  As we move along the graph from left to right (in the direction of increasing \(t\) ), the second coordinate increases as well.  Try \hyperref[exercise-Silver-Lake]{Exercise~\ref{exercise-Silver-Lake}}, which illustrates a \terminology{decreasing graph}.%
 \begin{exercise}\label{exercise-Silver-Lake}
 Silver Lake has been polluted by industrial waste products.  The concentration of toxic chemicals in the water is currently 285 parts per million (ppm).  Local environmental officials would like to reduce the concentration by 15 ppm each year%
 \leavevmode%
 \begin{enumerate}[label=\alph*]
 \item\hypertarget{li-30}{}Complete the table of values showing the desired concentration, \(C,\)~ of toxic chemicals \(t\) years from now.  For each \(t\)-value, calculate the corresponding value for \(C\).  Write your answers as ordered pairs.%
-\leavevmode%
 \begin{table}
 \centering
 \begin{tabular}{AcAcAcAcA}\hrulethick
@@ -561,8 +555,7 @@ Silver Lake has been polluted by industrial waste products.  The concentration o
 \noindent\textbf{Hint.}\hypertarget{hint-2}{}\quad
 For part (c): The concentration is initially 8 ppm, and we subtract 15 ppm for each year that passes, or \(15 \times t\).%
 \end{exercise}
-\begin{remark}[\includegraphics[width=0.08\linewidth]{images/icon-GC.jpg}
-Graphing an Equation]\label{remark-1}
+\begin{remark}[Graphing an Equation]\label{remark-1}
 We can use a graphing calculator to graph an equation. On most calculators, we follow three steps.%
 \par
 To Graph an Equation:%
@@ -573,8 +566,7 @@ To Graph an Equation:%
 \item\hypertarget{li-38}{}Press \lstinline?GRAPH?%
 \end{enumerate}
 \end{remark}
-\begin{example}[\includegraphics[width=0.08\linewidth]{images/icon-GC.jpg}
-Using a Graphing Calculator]\label{graphing-calculator}
+\begin{example}[Using a Graphing Calculator]\label{graphing-calculator}
 In \hyperref[example-home-price]{Example~\ref{example-home-price}}, we found the equation \(P = 92,000 + 4700t\) for the median price of a house \(t\) years after 1990. Graph this equation on a calculator.%
 \par\medskip\noindent%
 \textbf{Solution.}\quad To begin, we press \lstinline?Y=? and enter%
@@ -584,7 +576,6 @@ Y1 = 92,000 + 4700X
 %
 \par
 For this graph, we’ll use the grid in \hyperref[example-home-price]{Example~\ref{example-home-price}} for our window settings, so we press \lstinline?WINDOW? and enter%
-\leavevmode%
 \begin{table}
 \centering
 \begin{tabular}{lll}
@@ -592,9 +583,7 @@ Xmin\(=0\)&&Xmax\(=10\)\tabularnewline[0pt]
 Ymin\(=90,000\)&&Ymax\(=140,000\)
 \end{tabular}
 \end{table}
-\par
-Finally, we press \lstinline?GRAPH?. The calculator's graph is shown in \hyperref[fig-GC-house-price]{Figure~\ref{fig-GC-house-price}}. \leavevmode%
-\begin{figure}
+Finally, we press \lstinline?GRAPH?. The calculator's graph is shown in \hyperref[fig-GC-house-price]{Figure~\ref{fig-GC-house-price}}. \begin{figure}
 \centering
 \includegraphics[width=0.5\linewidth]{images/fig-GC-house-price}
 \caption{\label{fig-GC-house-price}}
@@ -604,7 +593,7 @@ Finally, we press \lstinline?GRAPH?. The calculator's graph is shown in \hyperre
 \begin{exercise}\label{exercise-gc}
 \leavevmode%
 \begin{enumerate}[label=\alph*]
-\item\hypertarget{li-39}{}Solve the equation \(2y − 1575 = 45x\) for \(y\) in terms of \(x\).%
+\item\hypertarget{li-39}{}Solve the equation \(2y - 1575 = 45x\) for \(y\) in terms of \(x\).%
 \item\hypertarget{li-40}{}Graph the equation on a graphing calculator. Use the window \leavevmode%
 \begin{table}
 \centering
@@ -621,11 +610,11 @@ Ymin\(=-500\)&&Ymax\(=1000\)&&Yscl\(=100\)
 \typeout{Subsection 1.1.3 Linear Equations}
 \typeout{************************************************}
 \subsection[{Linear Equations}]{Linear Equations}\label{subsection-3}
-All the models in these examples have equations with a similar form:%
+All the models in the preceding examples have equations with a similar form:%
 \begin{equation*}
 y=\text{(starting value)}+\text{(rate of change)}\cdot x
 \end{equation*}
-(We'll talk more about rate of change in {$\langle\langle$Unresolved xref, reference "slope-and-rate-of-change"; check spelling or use "provisional" attribute$\rangle\rangle$}.)  Their graphs were all portions of straight lines.  For this reason such equations are called  \terminology{linear equations}.  The order of the terms in the equation does not matter.  For example, the equation in Example 1,%
+(We'll talk more about rate of change in {$\langle\langle$Unresolved xref, reference "slope-and-rate-of-change"; check spelling or use "provisional" attribute$\rangle\rangle$}.)  Their graphs were all portions of straight lines.  For this reason such equations are called  \terminology{linear equations}.  The order of the terms in the equation does not matter.  For example, the equation in \hyperref[example-Annelise]{Example~\ref{example-Annelise}},%
 \begin{equation*}
 C=5+3t
 \end{equation*}
@@ -633,13 +622,13 @@ can be written equivalently as%
 \begin{equation*}
 -3t+C=5
 \end{equation*}
-and the equation in Example 3,%
+and the equation in \hyperref[example-home-price]{Example~\ref{example-home-price}},%
 \begin{equation*}
 P=92,000+4700t
 \end{equation*}
 can be written as%
 \begin{equation*}
--4700+P=92,000
+-4700t +P=92,000
 \end{equation*}
 This form of a linear equation,%
 \begin{equation*}
@@ -664,31 +653,29 @@ The manager at Albert's Appliances has \textdollar{}3000 to spend on advertising
 \par\medskip\noindent%
 \textbf{Solution.}\quad \leavevmode%
 \begin{enumerate}[label=\alph*]
-\item\hypertarget{li-48}{}Each television ad costs \textdollar{}150, so ads will cost \textdollar{}150.  Similarly, radio ads will cost \textdollar{}50.  The manager has \textdollar{}3000 to spend, so the sum of the costs must be \textdollar{}3000.  Thus,%
+\item\hypertarget{li-48}{}Each television ad costs \textdollar{}150, so \(x\) ads will cost \(\$150x\).  Similarly, \(y\) radio ads will cost \(\$50y\).  The manager has \textdollar{}3000 to spend, so the sum of the costs must be \textdollar{}3000.  Thus,%
 \begin{equation*}
 150x+50y=3000
 \end{equation*}
 %
-\item\hypertarget{li-49}{}Choose some values of \(x\), and solve the equation for the corresponding value of \(y\)  For example, if \(x=\alert{10}\) then%
+\item\hypertarget{li-49}{}Choose some values of \(x\), and solve the equation for the corresponding value of \(y\).  For example, if \(x=\alert{10}\) then%
 \begin{align*}
-150(10)+50y\amp=300\\
+150(\alert{10})+50y\amp=300\\
 1500+50y\amp=3000\\
 50y\amp=1500\\
 y\amp=30
 \end{align*}
 If the manager buys 10 television ads, she can also buy 30 radio ads.  You can verify the other entries in the table.%
-\leavevmode%
 \begin{table}
 \centering
 \begin{tabular}{AcAcAcAcAcA}\hrulethick
 \(x\)&\(8\)&\(10\)&\(12\)&\(14\)\tabularnewline\hrulethin
-\(y\)&&&&\tabularnewline\hrulethin
+\(y\)&\(36\)&\(30\)&\(24\)&\(18\)\tabularnewline\hrulethin
 \end{tabular}
 \end{table}
-\item\hypertarget{li-50}{}Plot the points from the table.  All the solutions lie on a straight line, as shown in \hyperref[fig-example-advertising]{Figure~\ref{fig-example-advertising}} . \leavevmode%
-\begin{figure}
+\item\hypertarget{li-50}{}Plot the points from the table.  All the solutions lie on a straight line, as shown in \hyperref[fig-example-advertising]{Figure~\ref{fig-example-advertising}} . \begin{figure}
 \centering
-\includegraphics[width=0.5\linewidth]{images/fig-example-advertising}
+\includegraphics[width=0.4\linewidth]{images/fig-example-advertising}
 \caption{\label{fig-example-advertising}}
 \end{figure}
 %
@@ -700,7 +687,6 @@ In central Nebraska, each acre of corn requires 25 acre-inches of water per year
 \begin{enumerate}[label=\alph*]
 \item\hypertarget{li-51}{}Write an equation relating the number of acres of corn, \(x\), and the number of acres of wheat, \(y\), that the farmer can plant.%
 \item\hypertarget{li-52}{}Complete the table.%
-\leavevmode%
 \begin{table}
 \centering
 \begin{tabular}{AcAcAcAcAcA}\hrulethick
@@ -719,16 +705,16 @@ In central Nebraska, each acre of corn requires 25 acre-inches of water per year
 {% begin: group for a single side-by-side
 % set panel max height to practical minimum, created in preamble
 \setlength{\panelmax}{0pt}
-\newsavebox{\panelboxNimage}
-\savebox{\panelboxNimage}{%
-\includegraphics[width=0.5\linewidth]{images/fig-intercepts}
+\newsavebox{\panelboxLimage}
+\savebox{\panelboxLimage}{%
+\includegraphics[width=0.35\linewidth]{images/fig-intercepts}
 }
-\newlength{\phNimage}\setlength{\phNimage}{\ht\panelboxNimage+\dp\panelboxNimage}
-\settototalheight{\phNimage}{\usebox{\panelboxNimage}}
-\setlength{\panelmax}{\maxof{\panelmax}{\phNimage}}
-\newsavebox{\panelboxCHp}
-\savebox{\panelboxCHp}{%
-\raisebox{\depth}{\parbox{0.5\textwidth}{Consider the graph of the equation%
+\newlength{\phLimage}\setlength{\phLimage}{\ht\panelboxLimage+\dp\panelboxLimage}
+\settototalheight{\phLimage}{\usebox{\panelboxLimage}}
+\setlength{\panelmax}{\maxof{\panelmax}{\phLimage}}
+\newsavebox{\panelboxCJp}
+\savebox{\panelboxCJp}{%
+\raisebox{\depth}{\parbox{0.6\textwidth}{Consider the graph of the equation%
 \begin{equation*}
 3x-4y=12
 \end{equation*}
@@ -738,25 +724,25 @@ shown in \hyperref[fig-intercepts]{Figure~\ref{fig-intercepts}}. The points wher
 x=-3
 \end{align*}
 }}}
-\newlength{\phCHp}\setlength{\phCHp}{\ht\panelboxCHp+\dp\panelboxCHp}
-\settototalheight{\phCHp}{\usebox{\panelboxCHp}}
-\setlength{\panelmax}{\maxof{\panelmax}{\phCHp}}
+\newlength{\phCJp}\setlength{\phCJp}{\ht\panelboxCJp+\dp\panelboxCJp}
+\settototalheight{\phCJp}{\usebox{\panelboxCJp}}
+\setlength{\panelmax}{\maxof{\panelmax}{\phCJp}}
 \leavevmode%
 % begin: side-by-side as figure/tabular
 % \tabcolsep change local to group
-\setlength{\tabcolsep}{0\textwidth}
+\setlength{\tabcolsep}{0.025\textwidth}
 % @{} suppress \tabcolsep at extremes, so margins behave as intended
 \begin{figure}
 \begin{tabular}{@{}*{2}{c}@{}}
-\begin{minipage}[c][\panelmax][t]{0.5\textwidth}\usebox{\panelboxNimage}\end{minipage}&
-\begin{minipage}[c][\panelmax][t]{0.5\textwidth}\usebox{\panelboxCHp}\end{minipage}\tabularnewline
-\parbox[t]{0.5\textwidth}{\captionof{figure}{\label{fig-intercepts}}
+\begin{minipage}[c][\panelmax][t]{0.35\textwidth}\usebox{\panelboxLimage}\end{minipage}&
+\begin{minipage}[c][\panelmax][t]{0.6\textwidth}\usebox{\panelboxCJp}\end{minipage}\tabularnewline
+\parbox[t]{0.35\textwidth}{\captionof{figure}{\label{fig-intercepts}}
 }&
 \end{tabular}
 \end{figure}
 % end: side-by-side as tabular/figure
 }% end: group for a single side-by-side
-The \(x\)-intercept is the point\((-3,0)\). Also, the \(x\)-coordinate of the \(y\)-intercept is zero, so we set \(x=\alert{0}\) in the equation to get%
+The \(x\)-intercept is the point \((-3,0)\). Also, the \(x\)-coordinate of the \(y\)-intercept is zero, so we set \(x=\alert{0}\) in the equation to get%
 \begin{gather*}
 3y-4(\alert{0})=12\\
 y=4
@@ -770,7 +756,6 @@ The points where a graph crosses the axes are called the \terminology{intercepts
 \end{enumerate}
 %
 \end{assemblage}
-\par
 The intercepts of a graph tell us something about the situation it models.%
 \begin{example}[]\label{example-intercepts}
 \leavevmode%
@@ -790,7 +775,9 @@ To find the \(C\)-intercept, set \(t\) equal to zero.%
 C=285-15(0)=285
 \end{equation*}
 The \(C\)-intercept is the point \((0, 285)\), or simply 285.  To find the \(t\)-intercept, set \(C\) equal to zero and solve for \(t\). \begin{align*} \alert{0}\&=285-15t \&\&\text{Add }15t \text{ to both sides.}\textbackslash{}\textbackslash{} 15t\&=285  \&\&\text{Divide both sides by 15.}\textbackslash{}\textbackslash{} t\&=19   \&\& \end{align*}%
- The \(t\)-intercept is the point \((19,0)\), or simply \(19\).%
+ \par
+The \(t\)-intercept is the point \((19,0)\), or simply \(19\).%
+%
 \item\hypertarget{li-60}{}The \(C\)-intercept represents the concentration of toxic chemicals in Silver Lake now:  When  \(t=0\), \(C=285\),  so the concentration is currently \(285\) ppm.  The \(t\)-intercept represents the number of years it will take for the concentration of toxic chemicals to drop to zero:  When \(C=0\), \(t=19\),  so it will take \(19\) years for the pollution to be eliminated entirely.%
 \end{enumerate}
 \end{example}
@@ -809,7 +796,7 @@ Because we really only need two points to graph a linear equation, we might as w
 \begin{example}[]\label{intercepts}
 \leavevmode%
 \begin{enumerate}[label=\alph*]
-\item\hypertarget{li-63}{}Find the \(x\)- and \(y\)-intercepts of the graph of \(150x − 180y = 9000\).%
+\item\hypertarget{li-63}{}Find the \(x\)- and \(y\)-intercepts of the graph of \(150x - 180y = 9000\).%
 \item\hypertarget{li-64}{}Use the intercepts to graph the equation. Find a third point as a check.%
 \end{enumerate}
 \par\medskip\noindent%
@@ -823,16 +810,15 @@ The \(x\)-intercept is the point \((60, 0)\). To find the \(y\)-intercept, set \
 \par
 \begin{align*} 150(\alert{0})-18y\&=9000 \&\&\text{Simpify.}\textbackslash{}\textbackslash{} -180y\&=9000  \&\&\text{Divide both sides by } -180\text{.}\textbackslash{}\textbackslash{} y\&=-50   \&\& \end{align*}%
 \par
-The \(y\)-intercept is the point \((0, −50)\).%
-\item\hypertarget{li-66}{}Scale both axes in intervals of 10 and then plot the two intercepts, \((60, 0)\) and \((0, −50)\). Draw the line through them, as shown in \hyperref[fig-example-graph-intercepts]{Figure~\ref{fig-example-graph-intercepts}}. Now find another point and check that it lies on this line. We choose \(x = \alert{20}\) and solve for \(y\).%
-\begin{gather*}
-150(\alert{20}) −180y = 9000\\
-3000 −180y = 9000\\
-−180y = 6000\\
-y =−33.\overline{3}
-\end{gather*}
-Plot the point \((20, −33\frac{1}{3})\). Because this point lies on the line, we can be reasonably confident that our graph is correct. \leavevmode%
-\begin{figure}
+The \(y\)-intercept is the point \((0, -50)\).%
+\item\hypertarget{li-66}{}Scale both axes in intervals of 10 and then plot the two intercepts, \((60, 0)\) and \((0, -50)\). Draw the line through them, as shown in \hyperref[fig-example-graph-intercepts]{Figure~\ref{fig-example-graph-intercepts}}. Now find another point and check that it lies on this line. We choose \(x = \alert{20}\) and solve for \(y\).%
+\begin{align*}
+150(\alert{20}) -180y \amp = 9000\\
+3000 -180y \amp = 9000\\
+-180y \amp = 6000\\
+y \amp =-33.\overline{3}
+\end{align*}
+Plot the point \((20, -33\frac{1}{3})\). Because this point lies on the line, we can be reasonably confident that our graph is correct. \begin{figure}
 \centering
 \includegraphics[width=0.5\linewidth]{images/fig-example-graph-intercepts}
 \caption{\label{fig-example-graph-intercepts}}
@@ -840,14 +826,12 @@ Plot the point \((20, −33\frac{1}{3})\). Because this point lies on the line, 
 %
 \end{enumerate}
 \end{example}
-\begin{remark}[\includegraphics[width=0.08\linewidth]{images/icon-GC.jpg}
-Choosing a Graphing Window]\label{remark-2}
+\begin{remark}[Choosing a Graphing Window]\label{remark-2}
 Knowing the intercepts can also help us choose a suitable window on a graphing calculator. We would like the window to be large enough to show the intercepts. For the graph in \hyperref[fig-example-graph-intercepts]{Figure~\ref{fig-example-graph-intercepts}}, we can enter the equation%
 \begin{equation*}
-Y = (9000 −150X)/ −180
+Y = (9000 -150X)/ -180
 \end{equation*}
-in the window \leavevmode%
-\begin{table}
+in the window \begin{table}
 \centering
 \begin{tabular}{lll}
 Xmin\(=-20\)&&Xmax\(=70\)\tabularnewline[0pt]
@@ -879,7 +863,6 @@ Ymin\(=-70\)&&Ymax\(=30\)
 \item\hypertarget{li-75}{}What do the intercepts tell us about the problem?%
 \end{enumerate}
 \end{exercise}
-\par
 The examples in this section model simple linear relationships between two variables. Such relationships, in which the value of one variable is determined by the value of the other, are called \terminology{functions}. We will study various kinds of functions throughout the course.%
 \typeout{************************************************}
 \typeout{Subsection 1.1.6 Section Summary}
@@ -964,18 +947,18 @@ where \(A\) and \(B\) are not both equal to zero, is a straight line.%
 \subsubsection[{SKILLS}]{SKILLS}\label{subsubsection-4}
 Practice each skill in the \hyperref[section-1-1-exercises]{Homework~\ref{section-1-1-exercises}} problems listed. \leavevmode%
 \begin{enumerate}[label=\arabic*]
-\item\hypertarget{li-103}{}Make a table of values: #1–4, 7 and 8%
-\item\hypertarget{li-104}{}Plot points and draw a graph: #1– 4, 7 and 8%
-\item\hypertarget{li-105}{}Choose appropriate scales for the axes: #5–12%
-\item\hypertarget{li-106}{}Write a linear model of the form \(y = (\text{starting value}) + (\text{rate of change})\cdot x\): #1–8%
-\item\hypertarget{li-107}{}Write a linear model in general form: #25–28, 33–36%
-\item\hypertarget{li-108}{}Evaluate a linear expression, algebraically and graphically: #1–4%
-\item\hypertarget{li-109}{}Solve a linear equation, algebraically and graphically: #1–4%
-\item\hypertarget{li-110}{}Find the intercepts of a graph: #5 and 6, 13–24, 45–52%
-\item\hypertarget{li-111}{}Graph a line by the intercept method: #5 and 6, 13–24%
-\item\hypertarget{li-112}{}Interpret the meaning of the intercepts: #5 and 6, 25–28%
-\item\hypertarget{li-113}{}Use a graphing calculator to graph a line: #37–52%
-\item\hypertarget{li-114}{}Sketch on paper a graph obtained on a calculator: #37–44%
+\item\hypertarget{li-103}{}Make a table of values: \#1\textendash{}4, 7 and 8%
+\item\hypertarget{li-104}{}Plot points and draw a graph: \#1– 4, 7 and 8%
+\item\hypertarget{li-105}{}Choose appropriate scales for the axes: \#5\textendash{}12%
+\item\hypertarget{li-106}{}Write a linear model of the form \(y = (\text{starting value}) + (\text{rate of change})\cdot x\): \#1\textendash{}8%
+\item\hypertarget{li-107}{}Write a linear model in general form: \#25\textendash{}28, 33\textendash{}36%
+\item\hypertarget{li-108}{}Evaluate a linear expression, algebraically and graphically: \#1\textendash{}4%
+\item\hypertarget{li-109}{}Solve a linear equation, algebraically and graphically: \#1\textendash{}4%
+\item\hypertarget{li-110}{}Find the intercepts of a graph: \#5 and 6, 13–24, 45–52%
+\item\hypertarget{li-111}{}Graph a line by the intercept method: \#5 and 6, 13–24%
+\item\hypertarget{li-112}{}Interpret the meaning of the intercepts: \#5 and 6, 25–28%
+\item\hypertarget{li-113}{}Use a graphing calculator to graph a line: \#37\textendash{}52%
+\item\hypertarget{li-114}{}Sketch on paper a graph obtained on a calculator: \#37\textendash{}44%
 \end{enumerate}
 %
 \typeout{************************************************}
@@ -983,8 +966,7 @@ Practice each skill in the \hyperref[section-1-1-exercises]{Homework~\ref{sectio
 \typeout{************************************************}
 \subsection[{Homework}]{Homework}\label{section-1-1-exercises}
 \begin{exerciselist}
-\item[1.]\hypertarget{exercise-8}{}The temperature in the desert at 6 a.m., just before sunrise, was \(65\degree\)F. The temperature rose \(5\) degrees every hour until it reached its maximum value at about 5 p.m. Complete the table of values for the temperature, \(T\), at \(h\) hours after 6 a.m. \leavevmode%
-\begin{table}
+\item[1.]\hypertarget{exercise-8}{}The temperature in the desert at 6 a.m., just before sunrise, was \(65\degree\)F. The temperature rose \(5\) degrees every hour until it reached its maximum value at about 5 p.m. Complete the table of values for the temperature, \(T\), at \(h\) hours after 6 a.m. \begin{table}
 \centering
 \begin{tabular}{AcAcAcAcAcAcA}\hrulethick
 \(h\)&\(0\)&\(3\)&\(6\)&\(9\)&\(10\)\tabularnewline\hrulethin
@@ -992,7 +974,7 @@ Practice each skill in the \hyperref[section-1-1-exercises]{Homework~\ref{sectio
 \end{tabular}
 \end{table}
  \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-115}{}Write an equation for the temperature, \(T\), in terms of \(h\).%
 \item\hypertarget{li-116}{}Graph the equation. \includegraphics[width=0.5\linewidth]{images/fig-ex-1-1-1}
 %
@@ -1008,7 +990,7 @@ Practice each skill in the \hyperref[section-1-1-exercises]{Homework~\ref{sectio
 \(T\)&\(65\)&\(80\)&\(95\)&\(110\)&\(115\)\tabularnewline\hrulethin
 \end{tabular}
  \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-119}{}\(T=65+5h\)%
 \item\hypertarget{li-120}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-1}
 %
@@ -1016,8 +998,7 @@ Practice each skill in the \hyperref[section-1-1-exercises]{Homework~\ref{sectio
 \item\hypertarget{li-122}{}3 p.m.%
 \end{enumerate}
 %
-\item[2.]\hypertarget{exercise-9}{}The taxi out of Dulles Airport charges a traveler with one suitcase an initial fee of \(\$2.00\), plus \(\$1.50\) for each mile traveled. Complete the table of values showing the charge, \(C\), for a trip of \(n\) miles. \leavevmode%
-\begin{table}
+\item[2.]\hypertarget{exercise-9}{}The taxi out of Dulles Airport charges a traveler with one suitcase an initial fee of \(\$2.00\), plus \(\$1.50\) for each mile traveled. Complete the table of values showing the charge, \(C\), for a trip of \(n\) miles. \begin{table}
 \centering
 \begin{tabular}{AcAcAcAcAcAcAcA}\hrulethick
 \(n\)&\(0\)&\(5\)&\(10\)&\(15\)&\(20\)&\(25\)\tabularnewline\hrulethin
@@ -1034,8 +1015,7 @@ Practice each skill in the \hyperref[section-1-1-exercises]{Homework~\ref{sectio
 \end{enumerate}
 %
 \par\smallskip
-\item[3.]\hypertarget{exercise-10}{}On October 31, Betty and Paul fill their \(250\)-gallon oil tank for their heater. Beginning in November, they use an average of \(15\) gallons of oil per week. Complete the table of values for the amount of oil, \(A\), left in the tank after \(w\) weeks. \leavevmode%
-\begin{table}
+\item[3.]\hypertarget{exercise-10}{}On October 31, Betty and Paul fill their \(250\)-gallon oil tank for their heater. Beginning in November, they use an average of \(15\) gallons of oil per week. Complete the table of values for the amount of oil, \(A\), left in the tank after \(w\) weeks. \begin{table}
 \centering
 \begin{tabular}{AcAcAcAcAcAcA}\hrulethick
 \(w\)&\(0\)&\(4\)&\(8\)&\(12\)&\(16\)\tabularnewline\hrulethin
@@ -1067,8 +1047,7 @@ Practice each skill in the \hyperref[section-1-1-exercises]{Homework~\ref{sectio
 \item\hypertarget{li-134}{}Until the fifth week%
 \end{enumerate}
 %
-\item[4.]\hypertarget{exercise-11}{}Leon's camper has a \(20\)-gallon gas tank, and he gets \(12\) miles to the gallon. (That is, he uses \(1⁄12\) gallon per mile.) Complete the table of values for the amount of gas, \(g\), left in Leon's tank after driving \(m\) miles. \leavevmode%
-\begin{table}
+\item[4.]\hypertarget{exercise-11}{}Leon's camper has a \(20\)-gallon gas tank, and he gets \(12\) miles to the gallon. (That is, he uses \(1⁄12\) gallon per mile.) Complete the table of values for the amount of gas, \(g\), left in Leon's tank after driving \(m\) miles. \begin{table}
 \centering
 \begin{tabular}{AcAcAcAcAcAcA}\hrulethick
 \(m\)&\(0\)&\(48\)&\(96\)&\(144\)&\(192\)\tabularnewline\hrulethin
@@ -1088,7 +1067,7 @@ Practice each skill in the \hyperref[section-1-1-exercises]{Homework~\ref{sectio
 \item[5.]\hypertarget{exercise-12}{}Phil and Ernie buy a used photocopier for \(\$800\) and set up a copy service on their campus. For each hour that the copier runs, Phil and Ernie make \(\$40\). \leavevmode%
 \begin{enumerate}[label=(\alph*)]
 \item\hypertarget{li-139}{}Write an equation that expresses Phil and Ernie's profit (or loss), \(P\), in terms of the number of hours, \(t\), they run the copier.%
-\item\hypertarget{li-140}{}Find the intercepts and sketch the graph. (Suggestion: Scale the horizontal axis from \(0\) to \(40\) in increments of \(5\), and scale the vertical axis from \(−1000\) to \(400\) in increments of \(100\).)%
+\item\hypertarget{li-140}{}Find the intercepts and sketch the graph. (Suggestion: Scale the horizontal axis from \(0\) to \(40\) in increments of \(5\), and scale the vertical axis from \(-1000\) to \(400\) in increments of \(100\).)%
 \item\hypertarget{li-141}{}What do the intercepts tell us about the profit?%
 \end{enumerate}
 %
@@ -1105,19 +1084,19 @@ Practice each skill in the \hyperref[section-1-1-exercises]{Homework~\ref{sectio
 %
 \item[6.]\hypertarget{exercise-13}{}A deep-sea diver is taking some readings at a depth of \(400\) feet. He begins rising at \(20\) feet per minute. \leavevmode%
 \begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-145}{}Write an equation that expresses the diver’s altitude, \(h\), in terms of the number of minutes, \(m\), elapsed. (Consider a depth of \(400\) feet as an altitude of \(−400\) feet.)%
-\item\hypertarget{li-146}{}Find the intercepts and sketch the graph. (Suggestion: Scale the horizontal axis from \(0\) to \(24\) in increments of \(2\), and scale the vertical axis from \(−500\) to \(100\) in increments of \(50\).)%
+\item\hypertarget{li-145}{}Write an equation that expresses the diver’s altitude, \(h\), in terms of the number of minutes, \(m\), elapsed. (Consider a depth of \(400\) feet as an altitude of \(-400\) feet.)%
+\item\hypertarget{li-146}{}Find the intercepts and sketch the graph. (Suggestion: Scale the horizontal axis from \(0\) to \(24\) in increments of \(2\), and scale the vertical axis from \(-500\) to \(100\) in increments of \(50\).)%
 \item\hypertarget{li-147}{}What do the intercepts tell us about the diver's depth?%
 \end{enumerate}
 %
 \par\smallskip
-\item[7.]\hypertarget{exercise-14}{}There are many formulas for estimating the annual cost of driving. The Automobile Club estimates that fixed costs for a small car—including insurance, registration, depreciation, and financing—total about \(\$5000\) per year. The operating costs for gasoline, oil, maintenance, tires, and so forth are about \(12.5}\) cents per mile. (Source: Automobile Association of America) \leavevmode%
+\item[7.]\hypertarget{exercise-14}{}There are many formulas for estimating the annual cost of driving. The Automobile Club estimates that fixed costs for a small car—including insurance, registration, depreciation, and financing—total about \(\$5000\) per year. The operating costs for gasoline, oil, maintenance, tires, and so forth are about \(12.5\) cents per mile. (Source: Automobile Association of America) \leavevmode%
 \begin{enumerate}[label=(\alph*)]
 \item\hypertarget{li-148}{}Write an equation for the annual driving cost, \(C\), in terms of \(d\), the number of miles driven.%
 \item\hypertarget{li-149}{}Complete the table of values. \leavevmode%
 \begin{table}
 \centering
-\begin{tabular}{AlA}\hrulethick
+\begin{tabular}{AlAcAcAcAcAcA}\hrulethick
 Miles Driven&\(4000\)&\(8000\)&\(12,000\)&\(16,000\)&\(20,000\)\tabularnewline\hrulethin
 Cost (\textdollar{})&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)\tabularnewline\hrulethin
 \end{tabular}
@@ -1137,7 +1116,7 @@ Cost (\textdollar{})&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)
 \item\hypertarget{li-154}{}Complete the table of values. \leavevmode%
 \begin{table}
 \centering
-\begin{tabular}{AlA}\hrulethick
+\begin{tabular}{AlAcAcAcAcAcA}\hrulethick
 Miles Driven&\(4000\)&\(8000\)&\(12,000\)&\(16,000\)&\(20,000\)\tabularnewline\hrulethin
 Cost (\textdollar{})&\(5500\)&\(6000\)&\(6500\)&\(7000\)&\(7500\)\tabularnewline\hrulethin
 \end{tabular}
@@ -1155,7 +1134,7 @@ Cost (\textdollar{})&\(5500\)&\(6000\)&\(6500\)&\(7000\)&\(7500\)\tabularnewline
 \item\hypertarget{li-159}{}Complete the table of values. \leavevmode%
 \begin{table}
 \centering
-\begin{tabular}{AlA}\hrulethick
+\begin{tabular}{AlAcAcAcAcAcAcAcA}\hrulethick
 Altitude (ft)&\(-500\)&\(0\)&\(1000\)&\(2000\)&\(3000\)&\(4000\)&\(5000\)\tabularnewline\hrulethin
 Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)\tabularnewline\hrulethin
 \end{tabular}
@@ -1169,7 +1148,7 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \par\smallskip
 \hypertarget{exercisegroup-1}{}\par\noindent For each table, choose appropriate scales for the axes and plot the given points.%
 \begin{exercisegroup}(2)
-\exercise[9.]\hypertarget{exercise-16}{}\begin{tabular}{AlA}\hrulethick
+\exercise[9.]\hypertarget{exercise-16}{}\begin{tabular}{AlAcAcAcAcA}\hrulethick
 \(x\)&\(0\)&\(80\)&\(90\)&\(120\)\tabularnewline\hrulethin
 \(y\)&\(6\)&\(2\)&\(1.5\)&\(1\)\tabularnewline\hrulethin
 \end{tabular}
@@ -1178,12 +1157,12 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \noindent\textbf{Answer.}\hypertarget{answer-12}{}\quad
 \includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-9}
 %
-\exercise[10.]\hypertarget{exercise-17}{}\begin{tabular}{AlA}\hrulethick
+\exercise[10.]\hypertarget{exercise-17}{}\begin{tabular}{AlAcAcAcAcA}\hrulethick
 \(x\)&\(300\)&\(500\)&\(800\)&\(1100\)\tabularnewline\hrulethin
 \(y\)&\(1.2\)&\(1.3\)&\(1.5\)&\(1.9\)\tabularnewline\hrulethin
 \end{tabular}
 %
-\exercise[11.]\hypertarget{exercise-18}{}\begin{tabular}{AlA}\hrulethick
+\exercise[11.]\hypertarget{exercise-18}{}\begin{tabular}{AlAcAcAcAcA}\hrulethick
 \(x\)&\(0.01\)&\(0.03\)&\(0.06\)&\(0.07\)\tabularnewline\hrulethin
 \(y\)&\(-0.2\)&\(-1\)&\(-1.1\)&\(-2\)\tabularnewline\hrulethin
 \end{tabular}
@@ -1192,7 +1171,7 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \noindent\textbf{Answer.}\hypertarget{answer-13}{}\quad
 \includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-11}
 %
-\exercise[12.]\hypertarget{exercise-19}{}\begin{tabular}{AlA}\hrulethick
+\exercise[12.]\hypertarget{exercise-19}{}\begin{tabular}{AlAcAcAcAcA}\hrulethick
 \(x\)&\(0.003\)&\(0.005\)&\(0.008\)&\(0.011\)\tabularnewline\hrulethin
 \(y\)&\(6\)&\(2\)&\(1.5\)&\(1\)\tabularnewline\hrulethin
 \end{tabular}
@@ -1210,29 +1189,29 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-14}{}\quad
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-165}{}\((8, 0), (0, 4)\)%
 \item\hypertarget{li-166}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-13}
 %
 \end{enumerate}
 %
-\exercise[14.]\hypertarget{exercise-21}{}\(2x − y = 6\)%
-\exercise[15.]\hypertarget{exercise-22}{}\(3x − 4y =12\)%
+\exercise[14.]\hypertarget{exercise-21}{}\(2x - y = 6\)%
+\exercise[15.]\hypertarget{exercise-22}{}\(3x - 4y =12\)%
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-15}{}\quad
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-167}{}\((4, 0), (0, -3)\)%
 \item\hypertarget{li-168}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-15}
 %
 \end{enumerate}
 %
 \exercise[16.]\hypertarget{exercise-23}{}\(2x + 6y = 6\)%
-\exercise[17.]\hypertarget{exercise-24}{}\(\displaystyle{\frac{x}{9}− \frac{y}{4}= 1}\)%
+\exercise[17.]\hypertarget{exercise-24}{}\(\displaystyle{\frac{x}{9}- \frac{y}{4}= 1}\)%
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-16}{}\quad
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-169}{}\((9, 0), (0, -4)\)%
 \item\hypertarget{li-170}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-17}
 %
@@ -1248,12 +1227,12 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \end{enumerate}
 %
 \begin{exercisegroup}(2)
-\exercise[19.]\hypertarget{exercise-26}{}\(20x = 30y − 45,000\)%
+\exercise[19.]\hypertarget{exercise-26}{}\(20x = 30y - 45,000\)%
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-17}{}\quad
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
-\item\hypertarget{li-173}{}\((−2250, 0), (0, 1500)\)%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-173}{}\((-2250, 0), (0, 1500)\)%
 \item\hypertarget{li-174}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-19}
 %
 \end{enumerate}
@@ -1263,18 +1242,18 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-18}{}\quad
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-175}{}\((12, 0), (0, 4)\)%
 \item\hypertarget{li-176}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-21}
 %
 \end{enumerate}
 %
-\exercise[22.]\hypertarget{exercise-29}{}\(3.2x − 0.8y = 12.8\)%
+\exercise[22.]\hypertarget{exercise-29}{}\(3.2x - 0.8y = 12.8\)%
 \exercise[23.]\hypertarget{exercise-30}{}\(\displaystyle{\frac{2x}{3}+ \frac{3y}{11}= 1}\)%
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-19}{}\quad
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-177}{}\(\left(\dfrac{3}{2} , 0\right), \left(0, \dfrac{11}{3} \right)\)%
 \item\hypertarget{li-178}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-23}
 %
@@ -1285,7 +1264,7 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \par\smallskip\noindent
 \item[25.]\hypertarget{exercise-32}{}The owner of a gas station has \(\$19,200\) to spend on unleaded gas this month. Regular unleaded costs him \(\$2.40\) per gallon, and premium unleaded costs \(\$3.20\) per gallon.%
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-179}{}How much do \(x\) gallons of regular cost? How much do \(y\) gallons of premium cost?%
 \item\hypertarget{li-180}{}Write an equation in general form that relates the amount of regular unleaded gasoline, \(\), the owner can buy and the amount of premium unleaded, \(y\).%
 \item\hypertarget{li-181}{}Find the intercepts and sketch the graph.%
@@ -1295,7 +1274,7 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-20}{}\quad
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-183}{}\(\$2.40x, \$3.20y\)%
 \item\hypertarget{li-184}{}\(2.40x + 3.20y = 19,200\)%
 \item\hypertarget{li-185}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-25}
@@ -1305,7 +1284,7 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 %
 \item[26.]\hypertarget{exercise-33}{}Five pounds of body fat is equivalent to \(16,000\) calories. Carol can burn \(600\) calories per hour bicycling and \(400\) calories per hour swimming.%
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-187}{}How many calories will Carol burn in \(\) hours of cycling? How many calories will she burn in \(y\) hours of swimming?%
 \item\hypertarget{li-188}{}Write an equation in general form that relates the number of hours, \(x\), of cycling and the number of hours, \(y\), of swimming Carol needs to perform in order to lose \(5\) pounds.%
 \item\hypertarget{li-189}{}Find the intercepts and sketch the graph.%
@@ -1314,7 +1293,7 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \par\smallskip
 \item[27.]\hypertarget{exercise-34}{}Delbert must increase his daily potassium intake by \(1800\) mg. He decides to eat a combination of figs and bananas, which are both low in sodium. There are \(9\) mg potassium per gram of fig, and \(4\) mg potassium per gram of banana.%
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-191}{}How much potassium is in \(x\) grams of fig? How much potassium is in \(y\) grams of banana?%
 \item\hypertarget{li-192}{}Write an equation in general form that relates the number of grams, \(x\), of fig and the number of grams, \(y\), of banana Delbert needs to get \(1800\) mg of potassium.%
 \item\hypertarget{li-193}{}Find the intercepts and sketch the graph.%
@@ -1324,7 +1303,7 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-21}{}\quad
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-195}{}\(9x\) mg, \(4y\) mg%
 \item\hypertarget{li-196}{}\(9x + 4y = 1800\)%
 \item\hypertarget{li-197}{}\includegraphics[width=0.35\linewidth]{images/fig-ans-1-1-27}
@@ -1334,7 +1313,7 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 %
 \item[28.]\hypertarget{exercise-35}{}Leslie plans to invest some money in two CD accounts. The first account pays \(3.6\%\) interest per year, and the second account pays \(2.8\%\) interest per year. Leslie would like to earn \(\$500\) per year on her investment.%
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-199}{}If Leslie invests \(x\) dollars in the first account, how much interest will she earn? How much interest will she earn if she invests \(y\) dollars in the second account?%
 \item\hypertarget{li-200}{}Write an equation in general form that relates \(x\) and \(y\) if Leslie earns \(\$500\) interest.%
 \item\hypertarget{li-201}{}Find the intercepts and sketch the graph.%
@@ -1344,9 +1323,9 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \item[29.]\hypertarget{exercise-36}{}Find the intercepts of the graph for each equation.%
 \leavevmode%
 \begin{multicols}{2}
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-203}{}\(\displaystyle{\frac{x}{3}+\frac{y}{5}=1} \)%
-\item\hypertarget{li-204}{}\(\displaystyle{2x − 4y = 1} \)%
+\item\hypertarget{li-204}{}\(\displaystyle{2x - 4y = 1} \)%
 \item\hypertarget{li-205}{}\(\displaystyle{\frac{2x}{5}-\frac{2y}{3}=1} \)%
 \item\hypertarget{li-206}{}\(\displaystyle{\frac{x}{p}+\frac{y}{q}=1} \)%
 \item\hypertarget{li-207}{}Why is the equation \(\displaystyle{\frac{x}{a}+\frac{y}{b}=1} \) called the \terminology{intercept form} for a line?%
@@ -1357,7 +1336,7 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \noindent\textbf{Answer.}\hypertarget{answer-22}{}\quad
 \leavevmode%
 \begin{multicols}{2}
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-208}{}\((3,0), (0,5) \)%
 \item\hypertarget{li-209}{}\(\left(\dfrac{1}{2},0\right), \left(0,\dfrac{-1}{4}\right) \)%
 \item\hypertarget{li-210}{}\(\left(\dfrac{5}{2},0\right), \left(0,\dfrac{-3}{2}\right) \)%
@@ -1369,17 +1348,17 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \item[30.]\hypertarget{exercise-37}{}Write an equation in intercept form (see Problem 29) for the line with the given intercepts. Then write the equation in general form.%
 \leavevmode%
 \begin{multicols}{2}
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-213}{}\((6, 0), (0, 2) \)%
-\item\hypertarget{li-214}{}\((−3, 0), (0, 8) \)%
+\item\hypertarget{li-214}{}\((-3, 0), (0, 8) \)%
 \item\hypertarget{li-215}{}\(\left(\dfrac{3}{4}, 0\right), \left(0, \dfrac{-1}{4}\right) \)%
-\item\hypertarget{li-216}{}\((v, 0), (0, −w) \)%
+\item\hypertarget{li-216}{}\((v, 0), (0, -w) \)%
 \item\hypertarget{li-217}{}\(\left(\dfrac{1}{H}, 0\right), \left(0, \dfrac{1}{T}\right) \)%
 \end{enumerate}
 \end{multicols}
 \par\smallskip
 \item[31.]\hypertarget{exercise-38}{}\leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-218}{}Find the \(y\)-intercept of the line \(y = mx + b\).%
 \item\hypertarget{li-219}{}Find the \(x\)-intercept of the line \(y = mx + b\).%
 \end{enumerate}
@@ -1388,13 +1367,13 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-23}{}\quad
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-220}{}\((0, b)\)%
 \item\hypertarget{li-221}{}\(\left(\dfrac{-b}{m},0\right)\), if \(m\ne 0\)%
 \end{enumerate}
 %
 \item[32.]\hypertarget{exercise-39}{}\leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-222}{}Find the \(y\)-intercept of the line \(Ax + By = C\).%
 \item\hypertarget{li-223}{}Find the \(x\)-intercept of the line \(Ax + By = C\).%
 \end{enumerate}
@@ -1407,7 +1386,7 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 %
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-24}{}\quad
-\(−2x + 3y = 2400\)%
+\(-2x + 3y = 2400\)%
 \exercise[34.]\hypertarget{exercise-41}{}\includegraphics[width=0.8\linewidth]{images/fig-ex-1-1-34}
 %
 \exercise[35.]\hypertarget{exercise-42}{}\includegraphics[width=0.8\linewidth]{images/fig-ex-1-1-35}
@@ -1420,7 +1399,7 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \end{exercisegroup}
 \par\smallskip\noindent
 \hypertarget{exercisegroup-5}{}\par\noindent For Problems 37–44, \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-224}{}Solve each equation for \(y\) in terms of \(x\). (See the Algebra Skills Refresher {$\langle\langle$Unresolved xref, reference "appendix-Linear-Equations-and-Inequalities"; check spelling or use "provisional" attribute$\rangle\rangle$} to review this skill.)%
 \item\hypertarget{li-225}{}Graph the equation on your calculator in the specified window. (See {$\langle\langle$Unresolved xref, reference "appendix-b"; check spelling or use "provisional" attribute$\rangle\rangle$} for help with the graphing calculator.)%
 \item\hypertarget{li-226}{}Make a pencil and paper sketch of the graph. Label the scales on your axes, and the coordinates of the intercepts.%
@@ -1440,12 +1419,12 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \noindent\textbf{Answer.}\hypertarget{answer-26}{}\quad
 \leavevmode%
 \begin{description}
-\item[{a.}]\hypertarget{li-227}{}\(y = 6 − 2x\)%
+\item[{a.}]\hypertarget{li-227}{}\(y = 6 - 2x\)%
 \item[{c.}]\hypertarget{li-228}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-37}
 %
 \end{description}
 %
-\exercise[38.]\hypertarget{exercise-45}{}\(8 − y + 3x = 0\)%
+\exercise[38.]\hypertarget{exercise-45}{}\(8 - y + 3x = 0\)%
 \begin{align*}
 \small{\text{Xmin}} \amp = -10 \amp\amp \small{\text{Ymin}} = -10
 \\
@@ -1454,7 +1433,7 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \small{\text{Xscl}} \amp = 1 \amp\amp \small{\text{Yscl}} = 1
 \end{align*}
 %
-\exercise[39.]\hypertarget{exercise-46}{}\(3x − 4y = 1200\)%
+\exercise[39.]\hypertarget{exercise-46}{}\(3x - 4y = 1200\)%
 \begin{align*}
 \small{\text{Xmin}} \amp = -1000 \amp\amp \small{\text{Ymin}} = -1000
 \\
@@ -1494,12 +1473,12 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \noindent\textbf{Answer.}\hypertarget{answer-28}{}\quad
 \leavevmode%
 \begin{description}
-\item[{a.}]\hypertarget{li-231}{}\(y = 0.02 − 0.04x\)%
+\item[{a.}]\hypertarget{li-231}{}\(y = 0.02 - 0.04x\)%
 \item[{c.}]\hypertarget{li-232}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-41}
 %
 \end{description}
 %
-\exercise[42.]\hypertarget{exercise-49}{}\(1.2x − 4.2y = 3.6\)%
+\exercise[42.]\hypertarget{exercise-49}{}\(1.2x - 4.2y = 3.6\)%
 \begin{align*}
 \small{\text{Xmin}} \amp = -1 \amp\amp \small{\text{Ymin}} = -1
 \\
@@ -1521,12 +1500,12 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \noindent\textbf{Answer.}\hypertarget{answer-29}{}\quad
 \leavevmode%
 \begin{description}
-\item[{a.}]\hypertarget{li-233}{}\(y = 210 − 35x\)%
+\item[{a.}]\hypertarget{li-233}{}\(y = 210 - 35x\)%
 \item[{c.}]\hypertarget{li-234}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-43}
 %
 \end{description}
 %
-\exercise[44.]\hypertarget{exercise-51}{}\(40y − 5x = 780 − 20y\)%
+\exercise[44.]\hypertarget{exercise-51}{}\(40y - 5x = 780 - 20y\)%
 \begin{align*}
 \small{\text{Xmin}} \amp = -200 \amp\amp \small{\text{Ymin}} = 0
 \\
@@ -1538,7 +1517,7 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \end{exercisegroup}
 \par\smallskip\noindent
 \hypertarget{exercisegroup-6}{}\par\noindent For Problems 45–52, \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-235}{}Find the \(\text{}\)- and \(y\)-intercepts.%
 \item\hypertarget{li-236}{}Solve the equation for \(y\).%
 \item\hypertarget{li-237}{}Choose a graphing window in which both intercepts are visible, and graph the equation on your calculator.%
@@ -1549,50 +1528,50 @@ Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-30}{}\quad
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
+\begin{enumerate}[label=\alph*]
 \item\hypertarget{li-238}{}\((100, 0), (0, 25)\)%
-\item\hypertarget{li-239}{}\(y = 25 − \dfrac{1}{4}x\)%
+\item\hypertarget{li-239}{}\(y = 25 - \dfrac{1}{4}x\)%
 \item\hypertarget{li-240}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-45.jpg}
 %
 \end{enumerate}
 %
-\exercise[46.]\hypertarget{exercise-53}{}\(2x − 3y = −72\)%
-\exercise[47.]\hypertarget{exercise-54}{}\(25x − 20y = 1\)%
+\exercise[46.]\hypertarget{exercise-53}{}\(2x - 3y = -72\)%
+\exercise[47.]\hypertarget{exercise-54}{}\(25x - 20y = 1\)%
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-31}{}\quad
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
-\item\hypertarget{li-241}{}\((0.04, 0), (0, −0.05)\)%
-\item\hypertarget{li-242}{}\(y = 1.25x − 0.05\)%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-241}{}\((0.04, 0), (0, -0.05)\)%
+\item\hypertarget{li-242}{}\(y = 1.25x - 0.05\)%
 \item\hypertarget{li-243}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-47.jpg}
 %
 \end{enumerate}
 %
 \exercise[48.]\hypertarget{exercise-55}{}\(4x + 75y = 60,000\)%
-\exercise[49.]\hypertarget{exercise-56}{}\(\dfrac{y}{12} − \dfrac{x}{60}= 1\)%
+\exercise[49.]\hypertarget{exercise-56}{}\(\dfrac{y}{12} - \dfrac{x}{60}= 1\)%
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-32}{}\quad
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
-\item\hypertarget{li-244}{}\((−60, 0), (0, 12)\)%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-244}{}\((-60, 0), (0, 12)\)%
 \item\hypertarget{li-245}{}\(y = 12 + \dfrac{1}{5}x\)%
 \item\hypertarget{li-246}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-49.jpg}
 %
 \end{enumerate}
 %
 \exercise[50.]\hypertarget{exercise-57}{}\(\dfrac{x}{80} + \dfrac{y}{400}= 1\)%
-\exercise[51.]\hypertarget{exercise-58}{}\(−2x = 3y + 84\)%
+\exercise[51.]\hypertarget{exercise-58}{}\(-2x = 3y + 84\)%
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-33}{}\quad
 \leavevmode%
-\begin{enumerate}[label=*\alph**]
-\item\hypertarget{li-247}{}\((−42, 0), (0, −28)\)%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-247}{}\((-42, 0), (0, -28)\)%
 \item\hypertarget{li-248}{}\(y = \dfrac{-2}{3}x-28\)%
 \item\hypertarget{li-249}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-51.jpg}
 %
 \end{enumerate}
 %
-\exercise[52.]\hypertarget{exercise-59}{}\(7x = 91 − 13y\)%
+\exercise[52.]\hypertarget{exercise-59}{}\(7x = 91 - 13y\)%
 \end{exercisegroup}
 \par\smallskip\noindent
 \end{document}
