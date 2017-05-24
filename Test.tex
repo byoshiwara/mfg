@@ -1,6 +1,6 @@
 %**************************************%
 %* Generated from MathBook XML source *%
-%*    on 2017-05-23T15:38:09-07:00    *%
+%*    on 2017-05-23T16:41:20-07:00    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
@@ -149,9 +149,6 @@ roundcorner=2ex, backgroundcolor=blue!5,linecolor=blue!75!black,}%
 \newtheorem{exercise}[theorem]{Exercise}
 %% Localize LaTeX supplied names (possibly none)
 \renewcommand*{\chaptername}{Chapter}
-%% Equation Numbering
-%% Controlled by  numbering.equations.level  processing parameter
-\numberwithin{equation}{part}
 %% For improved tables
 \usepackage{array}
 %% Some extra height on each row is desirable, especially with horizontal rules
@@ -184,6 +181,8 @@ roundcorner=2ex, backgroundcolor=blue!5,linecolor=blue!75!black,}%
 \newcolumntype{B}{!{\vrule width 0.07em}}
 \newcolumntype{C}{!{\vrule width 0.11em}}
 \makeatother
+\newcommand{\tablecelllines}[3]%
+{\begin{tabular}[#2]{@{}#1@{}}#3\end{tabular}}
 %% Figures, Tables, Listings, Floats
 %% The [H]ere option of the float package fixes floats in-place,
 %% in deference to web usage, where floats are totally irrelevant
@@ -212,31 +211,6 @@ roundcorner=2ex, backgroundcolor=blue!5,linecolor=blue!75!black,}%
 \makeatletter
 \let\c@table\c@theorem
 \makeatother
-%% Musical Symbol Support
-\ifthenelse{\boolean{xetex}}{
-%% begin: xelatex-specific configuration
-\usepackage{lilyglyphs}
-\lilyGlobalOptions{scale=0.8}
-\newcommand*{\doubleflat}{\flatflat}
-%% end: xelatex-specific configuration
-}{
-%% begin: pdflatex-specific configuration
-\DeclareFontFamily{U}{musix}{}%
-\DeclareFontShape{U}{musix}{m}{n}{%
-<-12>   musix11
-<12-15> musix13
-<15-18> musix16
-<18-23> musix20
-<23->   musix29
-}{}%
-%% We grab all five accidentals from the musix font so they are usable in both math and text mode
-\renewcommand*\flat{\raisebox{0.5ex}{\usefont{U}{musix}{m}{n}\selectfont{2}}}
-\newcommand*\doubleflat{\raisebox{0.5ex}{\usefont{U}{musix}{m}{n}\selectfont{3}}}
-\renewcommand*\sharp{\raisebox{0.5ex}{\usefont{U}{musix}{m}{n}\selectfont{4}}}
-\newcommand*\doublesharp{\raisebox{0.5ex}{\usefont{U}{musix}{m}{n}\selectfont{5}}}
-\renewcommand*\natural{\raisebox{0.5ex}{\usefont{U}{musix}{m}{n}\selectfont{6}}}
-%% end: pdflatex-specific configuration
-}
 %% Raster graphics inclusion, wrapped figures in paragraphs
 %% \resizebox sometimes used for images in side-by-side layout
 \usepackage{graphicx}
@@ -289,7 +263,11 @@ roundcorner=2ex, backgroundcolor=blue!5,linecolor=blue!75!black,}%
 \usepackage{stackengine}
 \usepackage{cancel}
 \usepackage{xcolor}
-\renewcommand{\CancelColor}{blue}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shadows}
 %% If tikz has been loaded, replace ampersand with \amp macro
 %% NB: calc redefines \setlength
 \usepackage{calc}
@@ -319,6 +297,7 @@ roundcorner=2ex, backgroundcolor=blue!5,linecolor=blue!75!black,}%
 \delimitershortfall-1sp
 \newcommand\abs[1]{\left|#1\right|}
 \newcommand\degree[0]{^{\circ}}
+\renewcommand{\CancelColor}{blue}
 \newcommand{\lt}{<}
 \newcommand{\gt}{>}
 \newcommand{\amp}{&}
@@ -337,116 +316,165 @@ roundcorner=2ex, backgroundcolor=blue!5,linecolor=blue!75!black,}%
 \typeout{Introduction  }
 \typeout{************************************************}
 \typeout{************************************************}
-\typeout{Section 1.1 Linear Models}
+\typeout{Section 1.1 Functions}
 \typeout{************************************************}
-\section[{Linear Models}]{Linear Models}\label{LinMod}
+\section[{Functions}]{Functions}\label{functions}
 \typeout{************************************************}
-\typeout{Subsection 1.1.1 Tables, Graphs and Equations}
+\typeout{Subsection 1.1.1 Definition of Function}
 \typeout{************************************************}
-\subsection[{Tables, Graphs and Equations}]{Tables, Graphs and Equations}\label{subsection-1}
-The first step in creating a model is to describe relationships between variables.  In {$\langle\langle$Unresolved xref, reference "investigation-commission"; check spelling or use "provisional" attribute$\rangle\rangle$}, we analyzed the relationship between Delbert's sales and his income.  Starting from the verbal description of his income, we represented the relationship by a table of values, a graph, and an algebraic equation.  Each of these mathematical tools is useful in a different way.%
-\leavevmode%
-\begin{enumerate}
-\item\hypertarget{li-1}{}A \terminology{table of values} displays specific data points with precise numerical values.%
-\item\hypertarget{li-2}{}A \terminology{graph} is a visual display of the data.  It is easier to spot trends and describe the overall behavior of the variables from a graph.%
-\item\hypertarget{li-3}{}An \terminology{algebraic equation} is a compact summary of the model.  It can be used to analyze the model and to make predictions%
-\end{enumerate}
-We begin our study of modeling with some examples of \terminology{linear models}.  In the examples that follow, observe the interplay among the three modeling tools, and how each contributes to the model.%
-\begin{example}[]\label{example-Annelise}
-Annelise is on vacation at a seaside resort.  She can rent a bicycle from her hotel for \textdollar{}3 an hour, plus a \textdollar{}5 insurance fee.  (A fraction of an hour is charged as the same fraction of \textdollar{}3.)%
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-4}{}Make a table of values showing the cost, \(C\), of renting a bike for various lengths of time, \(t\).%
-\item\hypertarget{li-5}{}Plot the points on a graph.  Draw a curve through the data points%
-. \item\hypertarget{li-6}{}Write an equation for \(C\) in terms of \(t\).%
-\end{enumerate}
-\par\medskip\noindent%
-\textbf{Solution.}\quad \leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-7}{}To find the cost, we multiply the time by \textdollar{}3, and add the result to the \textdollar{}5 insurance fee.  For example, the cost of a 1-hour bike ride is%
-\begin{align*}
-\text{Cost}\amp=(\$5\text{ insurance fee})+(\$3\text{ per hour})\times(\alert{1}\text{ hour})\\
-C\amp=5+3(\alert{1})=8
-\end{align*}
-A 1-hour bike ride costs \textdollar{}8.  Record the results in a table, as shown here:%
+\subsection[{Definition of Function}]{Definition of Function}\label{subsection-1}
+We often want to predict values of one variable from the values of a related variable. For example, when a physician prescribes a drug in a certain dosage, she needs to know how long the dose will remain in the bloodstream. A sales manager needs to know how the price of his product will affect its sales. A \terminology{function} is a special type of relationship between variables that allows us to make such predictions.%
+\par
+Suppose it costs \textdollar{}800 for flying lessons, plus \textdollar{}30 per hour to rent a plane. If we let \(C\) represent the total cost for \(t\) hours of flying lessons, then%
+\begin{equation*}
+C=800+305t ~~~~ (t\ge 0)
+\end{equation*}
+Thus, for example%
 \begin{table}
 \centering
-\begin{tabular}{AcAcAcAcA}\hrulethick
-Length of rental (hours)&Cost of rental (dollars)&&\((t,C)\)\tabularnewline\hrulethin
-\(1\)&\(8\)&\(C=5+3(\alert{1})\)&\((1,8)\)\tabularnewline\hrulethin
-\(2\)&\(11\)&\(C=5+3(\alert{2})\)&\((2,11)\)\tabularnewline\hrulethin
-\(3\)&\(14\)&\(C=5+3(\alert{3})\)&\((3,14)\)\tabularnewline\hrulethin
+\begin{tabular}{rll}
+when&\(t=\alert{0}\),&\(C=800+30(\alert{0})=800\)\tabularnewline[0pt]
+when&\(t=\alert{4}\),&\(C=800+30(\alert{4})=920\)\tabularnewline[0pt]
+when&\(t=\alert{10}\),&\(C=800+30(\alert{10})=1100\)
 \end{tabular}
 \end{table}
-\item\hypertarget{li-8}{}Each pair of values represents a point on the graph.  The first value gives the horizontal coordinate of the point, and the second value gives the vertical coordinate.  The points lie on a straight line, as shown in the figure.  The line extends infinitely in only one direction, because negative values of \(t\) do not make sense here.%
-\begin{figure}
+The variable \(t\) is called the \terminology{input} or \terminology{independent} variable, and \(C\) is the \terminology{output} or \terminology{dependent} variable, because its values are determined by the value of \(t\). We can display the relationship between two variables by a table or by ordered pairs. The input variable is the first component of the ordered pair, and the output variable is the second component.%
+\begin{table}
 \centering
-\includegraphics[width=0.4\linewidth]{images/fig-Annelise-1}
-\end{figure}
-\item\hypertarget{li-9}{}To write an equation, let \(C\) represent the cost of the rental, and use \(t\) for the number of hours:%
-\par
-%
-\begin{align*}
-\text{Cost}\amp=(\$5\text{ insurance fee})+(\$3\text{ per hour})\times\text{(number of hours)}\\
-C\amp=5+3\cdot t=8
-\end{align*}
-%
-\end{enumerate}
-%
-\end{example}
-\begin{example}[]\label{example-6hrbike}
-Use the equation \(C=5+3\cdot t\) you found in \hyperref[example-Annelise]{Example~\ref{example-Annelise}} to answer the following questions.  Then show how to find the answers by using the graph.%
+\begin{tabular}{AcAcAcA}\hrulethick
+\(t\)&\(C\)&\((t,C)\)\tabularnewline\hrulethin
+\(0\)&\(800\)&\((0, 800)\)\tabularnewline\hrulethin
+\(4\)&\(920\)&\((4, 920)\)\tabularnewline\hrulethin
+\(10\)&\(1100\)&\((10,1100)\)\tabularnewline\hrulethin
+\end{tabular}
+\end{table}
+For this relationship, we can find the value \(C\) of associated with any given value of \(t\). All we have to do is substitute the value of \(t\) into the equation and solve for \(C\). The result has no ambiguity: Only one value for \(C\) corresponds to each value of \(t\). This type of relationship between variables is called a \terminology{function}. In general, we make the following definition.%
+\begin{assemblage}{Definition of Function}\label{assemblage-1}
+A \terminology{function} is a relationship between two variables for which a unique value of the \terminology{output} variable can be determined from a value of the \terminology{input} variable.%
+\end{assemblage}
+What distinguishes functions from other variable relationships? The definition of a function calls for a \emph{unique value}—that is, \emph{exactly one value} of the output variable corresponding to each value of the input variable. This property makes functions useful in applications because they can often be used to make predictions.%
+\begin{example}[]\label{example-functions}
 \leavevmode%
 \begin{enumerate}[label=\alph*]
-\item\hypertarget{li-10}{}How much will it cost Annelise to rent a bicycle for 6 hours?%
-\item\hypertarget{li-11}{}How long can Annelise bicycle for \textdollar{}18.50?%
+\item\hypertarget{li-1}{}The distance, \(d\), traveled by a car in 2 hours is a function of its speed, \(r\). If we know the speed of the car, we can determine the distance it travels by the formula \(d = r \cdot 2\).%
+\item\hypertarget{li-2}{}The cost of a fill-up with unleaded gasoline is a function of the number of gallons purchased. The gas pump represents the function by displaying the corresponding values of the input variable (number of gallons) and the output variable (cost).%
+\item\hypertarget{li-3}{}Score on the Scholastic Aptitude Test (SAT) is not a function of score on an IQ test, because two people with the same score on an IQ test may score differently on the SAT; that is, a person’s score on the SAT is not uniquely determined by his or her score on an IQ test.%
 \end{enumerate}
-\par\medskip\noindent%
-\textbf{Solution.}\quad \leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-12}{}Substitute \(t=\alert{6}\) into the expression for \(C\) to find%
-\begin{equation*}
-C=5+3(\alert{6})=23
-\end{equation*}
-A 6-hour bike ride will cost \textdollar{}23.  The point \(P\) on the graph in the figure represents the cost of a 6-hour bike ride.  The value on the \(C\)-axis at the same height as point \(P\) is 23, so a 6-hour bike ride costs \textdollar{}23.%
-\item\hypertarget{li-13}{}Substitute \(C=\alert{18.50}\) into the equation and solve for \(t\).%
-\begin{align*}
-\alert{18.50}\amp=5+3t\\
-13.50\amp=3t\\
-t\amp=4.5
-\end{align*}
-For \textdollar{}18.50 Annelise can bicycle for 4½ hours. The point \(Q\)  on the graph represents an \textdollar{}18.50 bike ride.  The value on the \(t\)-axis below point \(Q\) is 4.5, so \textdollar{}18.50 will buy a 4.5 hour bike ride.%
-\end{enumerate}
- \begin{figure}
-\centering
-\includegraphics[width=0.4\linewidth]{images/fig1-2}
-\end{figure}
 %
 \end{example}
-In \hyperref[example-6hrbike]{Example~\ref{example-6hrbike}}, notice the different algebraic techniques we used in parts (a) and (b).   In part (a), we were given a value of \(t\) and we \terminology{evaluated the expression}  \(5+3t\) to find \(C\).  In part (b) we were given a value of \(C\) and we \terminology{solved the equation} \(C=5+3t\) to find \(t\).%
-\begin{exercise}\label{exercise-Frank-plants}
-Frank plants a dozen corn seedlings, each 6 inches tall.  With plenty of water and sunlight they will grow approximately 2 inches per day.  Complete the table of values for the height, \(h\), of the seedlings after \(t\) days.%
+\begin{exercise}\label{exercise-functions}
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-4}{}As part of a project to improve the success rate of freshmen, the counseling department studied the grades earned by a group of students in English and algebra. Do you think that a student’s grade in algebra is a function of his or her grade in English? Explain why or why not.%
+\item\hypertarget{li-5}{}Phatburger features a soda bar, where you can serve your own soft drinks in any size. Do you think that the number of calories in a serving of Zap Kola is a function of the number of fluid ounces? Explain why or why not.%
+\end{enumerate}
+%
+\end{exercise}
+\typeout{************************************************}
+\typeout{Subsection 1.1.2 Functions Defined by Tables}
+\typeout{************************************************}
+\subsection[{Functions Defined by Tables}]{Functions Defined by Tables}\label{subsection-2}
+When we use a table to describe a function, the first variable in the table (the left column of a vertical table or the top row of a horizontal table) is the input variable, and the second variable is the output. We say that the output variable is a function of the input.%
+\begin{example}[]\label{example-table-functions}
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-8}{}\hyperref[table-auto-sales]{Table~\ref{table-auto-sales}} shows data on sales compiled over several years by the accounting office for Eau Claire Auto Parts, a division of Major Motors. In this example, the year is the input variable, and total sales is the output. We say that total sales, \(S\), is a function of \(t\).%
+\begin{table}
+\centering
+\begin{tabular}{AcAcA}\hrulethick
+Year \((t)\)&Total sales \((S)\)\tabularnewline\hrulethin
+2000&\textdollar{}612,000\tabularnewline\hrulethin
+2001&\textdollar{}663,000\tabularnewline\hrulethin
+2002&\textdollar{}692,000\tabularnewline\hrulethin
+2003&\textdollar{}749,000\tabularnewline\hrulethin
+2004&\textdollar{}904,000\tabularnewline\hrulethin
+\end{tabular}
+\caption{\label{table-auto-sales}}
+\end{table}
+\item\hypertarget{li-9}{}\hyperref[table-postage]{Table~\ref{table-postage}} gives the cost of sending printed material by first-class mail in 2016.%
+\begin{table}
+\centering
+\begin{tabular}{AcAcA}\hrulethick
+Weight in ounces \((w)\)&Postage \((P)\)\tabularnewline\hrulethin
+\(0 \lt w \le 1 \)&\textdollar{}0.47\tabularnewline\hrulethin
+\(1 \lt w \le 2 \)&\textdollar{}0.68\tabularnewline\hrulethin
+\(2 \lt w \le 3 \)&\textdollar{}0.89\tabularnewline\hrulethin
+\(3 \lt w \le 4 \)&\textdollar{}1.10\tabularnewline\hrulethin
+\(4 \lt w \le 5 \)&\textdollar{}1.31\tabularnewline\hrulethin
+\(5 \lt w \le 6 \)&\textdollar{}1.52\tabularnewline\hrulethin
+\(6 \lt w \le 7 \)&\textdollar{}1.73\tabularnewline\hrulethin
+\end{tabular}
+\caption{\label{table-postage}}
+\end{table}
+If we know the weight of the article being shipped, we can determine the required postage from \hyperref[table-postage]{Table~\ref{table-postage}}. For instance, a catalog weighing 4.5 ounces would require \textdollar{}1.31 in postage. In this example, \(w\) is the input variable and \(p\) is the output variable. We say that \(p\) \emph{is a function of} \(w\).%
+\item\hypertarget{li-10}{}\hyperref[table-cholesterol]{Table~\ref{table-cholesterol}} records the age and cholesterol count for 20 patients tested in a hospital survey.%
+\begin{table}
+\centering
+\begin{tabular}{AcAcAcAcAcA}\hrulethick
+Age&Cholesterol count&&Age&Cholesterol count\tabularnewline\hrulethin
+53&217&&\(\alert{51}\)&\(\alert{209}\)\tabularnewline\hrulethin
+48&232&&53&241\tabularnewline\hrulethin
+55&198&&49&186\tabularnewline\hrulethin
+56&238&&\(\alert{51}\)&\(\alert{216}\)\tabularnewline\hrulethin
+\(\alert{51}\)&\(\alert{227}\)&&57&208\tabularnewline\hrulethin
+52&264&&52&248\tabularnewline\hrulethin
+53&195&&50&214\tabularnewline\hrulethin
+47&203&&56&271\tabularnewline\hrulethin
+48&212&&53&193\tabularnewline\hrulethin
+50&234&&48&172\tabularnewline\hrulethin
+\end{tabular}
+\caption{\label{table-cholesterol}}
+\end{table}
+According to these data, cholesterol count is \emph{not} a function of age, because several patients who are the same age have different cholesterol levels. For example, three different patients are 51 years old but have cholesterol counts of 227, 209, and 216, respectively. Thus, we cannot determine a \emph{unique} value of the output variable (cholesterol count) from the value of the input variable (age). Other factors besides age must influence a person’s cholesterol count.%
+\end{enumerate}
+\end{example}
+\begin{exercise}\label{exercise-2}
+Decide whether each table describes \(y\) as a function of \(x\). Explain your choice. \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-11}{}\begin{tabular}{AcAcAcAcAcAcAcAcAcA}\hrulethick
+\(x\)&\(3.5\)&\(2.0\)&\(2.5\)&\(3.5\)&\(2.5\)&\(4.0\)&\(2.5\)&\(3.0\)\tabularnewline\hrulethin
+\(y\)&\(2.5\)&\(3.0\)&\(2.5\)&\(4.0\)&\(3.5\)&\(4.0\)&\(2.0\)&\(2.5\)\tabularnewline\hrulethin
+\end{tabular}
+%
+\item\hypertarget{li-12}{}\begin{tabular}{AcAcAcAcAcAcAcAcA}\hrulethick
+\(x\)&\(-3\)&\(-2\)&\(-1\)&\(0\)&\(1\)&\(2\)&\(3\)\tabularnewline\hrulethin
+\(y\)&\(17\)&\(3\)&\(0\)&\(-1\)&\(0\)&\(3\)&\(17\)\tabularnewline\hrulethin
+\end{tabular}
+%
+\end{enumerate}
+\end{exercise}
+\typeout{************************************************}
+\typeout{Subsection 1.1.3 Functions Defined by Graphs}
+\typeout{************************************************}
+\subsection[{Functions Defined by Graphs}]{Functions Defined by Graphs}\label{subsection-3}
+A graph may also be used to define one variable as a function of another. The input variable is displayed on the horizontal axis, and the output variable on the vertical axis.%
+\begin{example}[]\label{example-sun-hours}
+\hyperref[fig-sun-hours]{Figure~\ref{fig-sun-hours}}  shows the number of hours, \(H\), that the sun is above the horizon in Peoria, Illinois, on day \(t\), where January 1 corresponds to \(t = 0\).%
 % group protects changes to lengths, releases boxes (?)
 {% begin: group for a single side-by-side
 % set panel max height to practical minimum, created in preamble
 \setlength{\panelmax}{0pt}
-\newsavebox{\panelboxBtabular}
-\savebox{\panelboxBtabular}{%
-\raisebox{\depth}{\parbox{0.5\textwidth}{\centering\begin{tabular}{AcAcAcAcAcAcA}\hrulethick
-\(t\)&\(0\)&\(5\)&\(10\)&\(15\)&\(20\)\tabularnewline\hrulethin
-\(h\)&&&&&\tabularnewline\hrulethin
-\end{tabular}
+\newsavebox{\panelboxAparagraphs}
+\savebox{\panelboxAparagraphs}{%
+\raisebox{\depth}{\parbox{0.5\textwidth}{\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-15}{}Which variable is the input, and which is the output?%
+\item\hypertarget{li-16}{}Approximately how many hours of sunlight are there in Peoria on day 150?%
+\item\hypertarget{li-17}{}On which days are there 12 hours of sunlight?%
+\item\hypertarget{li-18}{}What are the maximum and minimum values of \(H\), and when do these valuesoccur?%
+\end{enumerate}
+%
 }}}
-\newlength{\phBtabular}\setlength{\phBtabular}{\ht\panelboxBtabular+\dp\panelboxBtabular}
-\settototalheight{\phBtabular}{\usebox{\panelboxBtabular}}
-\setlength{\panelmax}{\maxof{\panelmax}{\phBtabular}}
-\newsavebox{\panelboxCimage}
-\savebox{\panelboxCimage}{%
-\includegraphics[width=0.5\linewidth]{images/fig-Example2}
+\newlength{\phAparagraphs}\setlength{\phAparagraphs}{\ht\panelboxAparagraphs+\dp\panelboxAparagraphs}
+\settototalheight{\phAparagraphs}{\usebox{\panelboxAparagraphs}}
+\setlength{\panelmax}{\maxof{\panelmax}{\phAparagraphs}}
+\newsavebox{\panelboxAimage}
+\savebox{\panelboxAimage}{%
+\includegraphics[width=0.5\linewidth]{images/fig-sun-hours}
 }
-\newlength{\phCimage}\setlength{\phCimage}{\ht\panelboxCimage+\dp\panelboxCimage}
-\settototalheight{\phCimage}{\usebox{\panelboxCimage}}
-\setlength{\panelmax}{\maxof{\panelmax}{\phCimage}}
+\newlength{\phAimage}\setlength{\phAimage}{\ht\panelboxAimage+\dp\panelboxAimage}
+\settototalheight{\phAimage}{\usebox{\panelboxAimage}}
+\setlength{\panelmax}{\maxof{\panelmax}{\phAimage}}
 \leavevmode%
 % begin: side-by-side as figure/tabular
 % \tabcolsep change local to group
@@ -454,1124 +482,1431 @@ Frank plants a dozen corn seedlings, each 6 inches tall.  With plenty of water a
 % @{} suppress \tabcolsep at extremes, so margins behave as intended
 \begin{figure}
 \begin{tabular}{@{}*{2}{c}@{}}
-\begin{minipage}[c][\panelmax][t]{0.5\textwidth}\usebox{\panelboxBtabular}\end{minipage}&
-\begin{minipage}[c][\panelmax][t]{0.5\textwidth}\usebox{\panelboxCimage}\end{minipage}\end{tabular}
+\begin{minipage}[c][\panelmax][t]{0.5\textwidth}\usebox{\panelboxAparagraphs}\end{minipage}&
+\begin{minipage}[c][\panelmax][t]{0.5\textwidth}\usebox{\panelboxAimage}\end{minipage}\tabularnewline
+&
+\parbox[t]{0.5\textwidth}{\captionof{figure}{\label{fig-sun-hours}}
+}\end{tabular}
 \end{figure}
 % end: side-by-side as tabular/figure
 }% end: group for a single side-by-side
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-14}{}Write an equation for the height of the seedlings in terms of the number of days since they were planted.%
-\item\hypertarget{li-15}{}Graph the equation.%
-\end{enumerate}
-\end{exercise}
-\begin{exercise}\label{exercise-2}
-Use your equation from \hyperref[exercise-Frank-plants]{Exercise~\ref{exercise-Frank-plants}} to answer the questions.  Illustrate each answer on the graph.%
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-18}{}How tall is the corn after 3 weeks?%
-\item\hypertarget{li-19}{}How long will it be before the corn is 6 feet tall?%
-\end{enumerate}
-For part (b), convert feet to inches.%
-\end{exercise}
-\typeout{************************************************}
-\typeout{Subsection 1.1.2 Choosing Scales for the Axes}
-\typeout{************************************************}
-\subsection[{Choosing Scales for the Axes}]{Choosing Scales for the Axes}\label{subsection-2}
-To create a useful graph, we must choose appropriate scales for the axes.  The axes must extend far enough to show the values of the variables, and the tick marks should be equally spaced.  Usually we should use no more than 10 or 15 tick marks.%
-\begin{example}[]\label{example-home-price}
-In 1990, the median price of a home in the US was \textdollar{}92,000.  The median price increased by about \textdollar{}4700 per year over the next decade. \leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-22}{}Make a table of values showing the median price of a house in 1990, 1994, 1998, and 2000.%
-\item\hypertarget{li-23}{}Choose suitable scales for the axes and plot the values you found in part (a) on a graph. Use \(t\), the number of years since 1990, on the horizontal axis and the price of the house, \(P\), on the vertical axis.  Draw a curve through the points.%
-\item\hypertarget{li-24}{}Write an equation that expresses \(P\) in terms of \(t\).%
-\item\hypertarget{li-25}{}How much did the price of the house increase from 1990 to 1996?  Illustrate the increase on your graph.%
-\end{enumerate}
-%
 \par\medskip\noindent%
 \textbf{Solution.}\quad \leavevmode%
 \begin{enumerate}[label=\alph*]
-\item\hypertarget{li-26}{}In 1990 the median price was \textdollar{}92,000.  Four years later, in 1994, the price had increased by \(\alert{4}(4700)=18,800\) dollars, so%
-\begin{equation*}
-P=92,000+\alert{4}(4700)=110,800
-\end{equation*}
-In 1998 the price had increased by \(\alert{8}(4700)=37,600\)  dollars, so%
-\begin{equation*}
-P=92,000+\alert{8}(4700)=129,600
-\end{equation*}
-You can verify the price of the house in 2000 by a similar calculation.%
-\begin{table}
-\centering
-\begin{tabular}{AcAcAcA}\hrulethick
-Year&Price of House)&\((t,P)\)\tabularnewline\hrulethin
-\(1990\)&\(92,000\)&\((0,\, 92,000)\)\tabularnewline\hrulethin
-\(1994\)&\(110,800\)&\((4,\, 110,800)\)\tabularnewline\hrulethin
-\(1998\)&\(129,600\)&\((8,\, 129,600)\)\tabularnewline\hrulethin
-\(2000\)&\(139,000\)&\((10,\, 139,000)\)\tabularnewline\hrulethin
-\end{tabular}
-\end{table}
-\item\hypertarget{li-27}{}Let \(t\) stand for the number of years since 1990, so that \(t=0\) in 1990, \(t=4\) in 1994, and so on.  To choose scales for the axes, look at the values in the table.  For this graph we scale the horizontal axis, or \(t\)-axis, in 1-year intervals and the vertical axis, or \(P\)-axis, for \textdollar{}90,000 to \textdollar{}140,000 in intervals of \textdollar{}5,000. The points in \hyperref[fig-median-house]{Figure~\ref{fig-median-house}}. lie on a straight line.%
-\item\hypertarget{li-28}{}Look back at the calculations in part (a).  The price of the house started at \textdollar{}92,000 in 1990 and increased by \(t \times 4700\) dollars after \(t\) years.  Thus,%
-\begin{equation*}
-P=92,000+4700t
-\end{equation*}
-%
-\item\hypertarget{li-29}{}Find the points on the graph corresponding to 1990 and 1996.%
-\begin{figure}
-\centering
-\includegraphics[width=0.5\linewidth]{images/fig1-3}
-\caption{\label{fig-median-house}}
-\end{figure}
-These points lie above \(t=0\) and \(t=6\) on the \(t\)-axis.  Now find the values on the \(P\)-axis corresponding to the two points.  The values are \(P=92,000\) in 1990 and \(P=120,200\) in 1996.  The increase in price is the difference of the two \(P\)-values.%
-\begin{align*}
-\text{increase in price}\amp=120,200-92,000
-\\
-\amp=28,200
-\end{align*}
-The price of the home increased \textdollar{}28,200 between 1990 and 1996.  This increase is indicated by the arrows in \hyperref[fig-median-house]{Figure~\ref{fig-median-house}}.%
+\item\hypertarget{li-19}{}The input variable, \(t\), appears on the horizontal axis. The number of daylight hours, \(H\), is a function of the date. The output variable appears on the vertical axis.%
+\item\hypertarget{li-20}{}The point on the curve where \(t = 150\) has \(H \approx 14.1\), so Peoria gets about 14.1 hours of daylight when \(t = 150\), which is at the end of May.%
+\item\hypertarget{li-21}{}\(H = 12\) at the two points where \(t \approx 85\) (in late March) and \(t \approx 270\) (late September).%
+\item\hypertarget{li-22}{}The maximum value of 14.4 hours occurs on the longest day of the year, when \(t \approx 170\), about three weeks into June. The minimum of 9.6 hours occurs on the shortest day, when \(t \approx 355\), about three weeks into December.%
 \end{enumerate}
 \end{example}
-The graphs in the preceding examples are \terminology{increasing graphs}.  As we move along the graph from left to right (in the direction of increasing \(t\) ), the second coordinate increases as well.  Try \hyperref[exercise-Silver-Lake]{Exercise~\ref{exercise-Silver-Lake}}, which illustrates a \terminology{decreasing graph}.%
-\begin{exercise}\label{exercise-Silver-Lake}
-Silver Lake has been polluted by industrial waste products.  The concentration of toxic chemicals in the water is currently 285 parts per million (ppm).  Local environmental officials would like to reduce the concentration by 15 ppm each year%
+\begin{exercise}\label{exercise-LA-marathon}
+\hyperref[fig-LA-marathon]{Figure~\ref{fig-LA-marathon}}  shows the elevation in feet, \(a\), of the Los Angeles Marathon course at a distance \(d\) miles into the race. (Source: \emph{Los Angeles Times}, March 3, 2005) \begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{images/fig-LA-marathon}
+\caption{\label{fig-LA-marathon}}
+\end{figure}
 \leavevmode%
 \begin{enumerate}[label=\alph*]
-\item\hypertarget{li-30}{}Complete the table of values showing the desired concentration, \(C,\)~ of toxic chemicals \(t\) years from now.  For each \(t\)-value, calculate the corresponding value for \(C\).  Write your answers as ordered pairs.%
-\begin{table}
-\centering
-\begin{tabular}{AcAcAcAcA}\hrulethick
-\(t\)&\(C\)&&\((t,C)\)\tabularnewline\hrulethin
-\(0\)&&\(C=285-150(\alert{0})\)&\((0, ~~~~ )\)\tabularnewline\hrulethin
-\(5\)&&\(C=285-150(\alert{5})\)&\((5, ~~~~ )\)\tabularnewline\hrulethin
-\(10\)&&\(C=285-150(\alert{10})\)&\((10, ~~~~ )\)\tabularnewline\hrulethin
-\(15\)&&\(C=285-150(\alert{15})\)&\((15, ~~~~ )\)\tabularnewline\hrulethin
-\end{tabular}
-\end{table}
-\item\hypertarget{li-31}{}To choose scales for the axes, notice that the value of \(C\) starts at 285 and decreases from there.  We'll scale the vertical axis up to 300, and use 10 tick marks at intervals of 30.  Graph the ordered pairs on the grid, and connect them with a straight line. Extend the graph until it reaches the horizontal axis, but no farther.  Points with negative \(C\)-coordinates have no meaning for the problem.%
-\item\hypertarget{li-32}{}Write an equation for the concentration, \(C\), of toxic chemicals \(t\) years from now.%
-\includegraphics[width=0.5\linewidth]{images/fig-Exercise3}
+\item\hypertarget{li-23}{}Which variable is the input, and which is the output?%
+\item\hypertarget{li-24}{}What is the elevation at mile 20?%
+\item\hypertarget{li-25}{}At what distances is the elevation 150 feet?%
+\item\hypertarget{li-26}{}What are the maximum and minimum values of \(a\), and when do these values occur?%
+\item\hypertarget{li-27}{}The runners pass by the Los Angeles Coliseum at about 4.2 miles into the race. What is the elevation there?%
 \end{enumerate}
-\par\smallskip
-\noindent\textbf{Hint.}\hypertarget{hint-2}{}\quad
-For part (c): The concentration is initially 8 ppm, and we subtract 15 ppm for each year that passes, or \(15 \times t\).%
 \end{exercise}
-\begin{remark}[Graphing an Equation]\label{remark-1}
-We can use a graphing calculator to graph an equation. On most calculators, we follow three steps.%
+\typeout{************************************************}
+\typeout{Subsection 1.1.4 Functions Defined by Equations}
+\typeout{************************************************}
+\subsection[{Functions Defined by Equations}]{Functions Defined by Equations}\label{subsection-4}
+\hyperref[example-falling-book]{Example~\ref{example-falling-book}} illustrates a function defined by an equation.%
+\begin{example}[]\label{example-falling-book}
+As of 2016,  One World Trade Center in New York City is the nation’s tallest building, at 1776 feet. If an algebra book is dropped from the top of the Sears Tower, its height above the ground after \(t\) seconds is given by the equation%
+\begin{equation*}
+h = 1776 - 16t^2
+\end{equation*}
+Thus, after \(\alert{1}\) second the book’s height is%
+\begin{equation*}
+h = 1776 - 16(\alert{1})^2 = 1760 \text{ feet}
+\end{equation*}
+After \(\alert{2}\) seconds its height is%
+\begin{equation*}
+h = 1776 - 16(\alert{2})^2 = 1712 \text{ feet}
+\end{equation*}
+For this function, \(t\) is the input variable and \(h\) is the output variable. For any value of \(t\), a unique value of \(h\) can be determined from the equation for \(h\). We say that \(h\) \emph{is a function of} \(t\).%
+\end{example}
+\begin{exercise}\label{exercise-4}
+Write an equation that gives the volume, \(V\), of a sphere as a function of its radius, \(r\).\end{exercise}
+\begin{remark}[Making a Table of Values with a Calculator]\label{remark-1}
+We can use a graphing calculator to make a table of values for a function defined by an equation. For the function in \hyperref[example-falling-book]{Example~\ref{example-falling-book}},%
+\begin{equation*}
+h = 1776 - 16t^2
+\end{equation*}
+we begin by entering the equation: Press the \lstinline?Y=? key, clear out any other equations, and define \(Y_1 = 1776 - 16X^2.\)%
 \par
-To Graph an Equation:%
-\leavevmode%
-\begin{enumerate}
-\item\hypertarget{li-36}{}Press \lstinline?Y=? and enter the equation you wish to graph.%
-\item\hypertarget{li-37}{}Press \lstinline?WINDOW? and select a suitable graphing window.%
-\item\hypertarget{li-38}{}Press \lstinline?GRAPH?%
-\end{enumerate}
-\end{remark}
-\begin{example}[Using a Graphing Calculator]\label{graphing-calculator}
-In \hyperref[example-home-price]{Example~\ref{example-home-price}}, we found the equation \(P = 92,000 + 4700t\) for the median price of a house \(t\) years after 1990. Graph this equation on a calculator.%
-\par\medskip\noindent%
-\textbf{Solution.}\quad To begin, we press \lstinline?Y=? and enter%
-\begin{equation*}
-Y1 = 92,000 + 4700X
-\end{equation*}
-%
+Next, we choose the \(x\)-values for the table. Press \lstinline?2nd?\lstinline?WINDOW? to access the TblSet (Table Setup) menu and set it to look like \hyperref[fig-TblSetup]{Figure~\ref{fig-TblSetup}}. This setting will give us an initial x-value of 0 \((TblStart = 0)\) and an increment of one unit in the x-values, \((\Delta Tbl = 1)\). It also fills in values of both variables automatically. Now press \lstinline?2nd? \lstinline?GRAPH? to see the table of values, as shown in \hyperref[fig-GC-table]{Figure~\ref{fig-GC-table}}. From this table, we can check the heights we found in \hyperref[example-falling-book]{Example~\ref{example-falling-book}}.%
 \par
-For this graph, we’ll use the grid in \hyperref[example-home-price]{Example~\ref{example-home-price}} for our window settings, so we press \lstinline?WINDOW? and enter%
-\begin{table}
-\centering
-\begin{tabular}{lll}
-Xmin\(=0\)&&Xmax\(=10\)\tabularnewline[0pt]
-Ymin\(=90,000\)&&Ymax\(=140,000\)
-\end{tabular}
-\end{table}
-Finally, we press \lstinline?GRAPH?. The calculator's graph is shown in \hyperref[fig-GC-house-price]{Figure~\ref{fig-GC-house-price}}. \begin{figure}
-\centering
-\includegraphics[width=0.5\linewidth]{images/fig-GC-house-price}
-\caption{\label{fig-GC-house-price}}
-\end{figure}
-%
-\end{example}
-\begin{exercise}\label{exercise-gc}
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-39}{}Solve the equation \(2y - 1575 = 45x\) for \(y\) in terms of \(x\).%
-\item\hypertarget{li-40}{}Graph the equation on a graphing calculator. Use the window \leavevmode%
-\begin{table}
-\centering
-\begin{tabular}{lllll}
-Xmin\(=-50\)&&Xmax\(=50\)&&Xscl\(=5\)\tabularnewline[0pt]
-Ymin\(=-500\)&&Ymax\(=1000\)&&Yscl\(=100\)
-\end{tabular}
-\end{table}
-%
-\item\hypertarget{li-41}{}Sketch the graph on paper. Use the window settings to choose appropriate scales for the axes.%
-\end{enumerate}
-\end{exercise}
-\typeout{************************************************}
-\typeout{Subsection 1.1.3 Linear Equations}
-\typeout{************************************************}
-\subsection[{Linear Equations}]{Linear Equations}\label{subsection-3}
-All the models in the preceding examples have equations with a similar form:%
-\begin{equation*}
-y=\text{(starting value)}+\text{(rate of change)}\cdot x
-\end{equation*}
-(We'll talk more about rate of change in {$\langle\langle$Unresolved xref, reference "slope-and-rate-of-change"; check spelling or use "provisional" attribute$\rangle\rangle$}.)  Their graphs were all portions of straight lines.  For this reason such equations are called  \terminology{linear equations}.  The order of the terms in the equation does not matter.  For example, the equation in \hyperref[example-Annelise]{Example~\ref{example-Annelise}},%
-\begin{equation*}
-C=5+3t
-\end{equation*}
-can be written equivalently as%
-\begin{equation*}
--3t+C=5
-\end{equation*}
-and the equation in \hyperref[example-home-price]{Example~\ref{example-home-price}},%
-\begin{equation*}
-P=92,000+4700t
-\end{equation*}
-can be written as%
-\begin{equation*}
--4700t +P=92,000
-\end{equation*}
-This form of a linear equation,%
-\begin{equation*}
-Ax+By=C
-\end{equation*}
-is called the \terminology{general form}.%
-\begin{assemblage}{General Form for a Linear Equation}\label{assemblage-1}
-The graph of any equation%
-\begin{equation*}
-Ax+By=C
-\end{equation*}
-where \(A\) and \(B\) are not both equal to zero, is a straight line.%
-\end{assemblage}
-\begin{example}[]\label{example-advertising}
-The manager at Albert's Appliances has \textdollar{}3000 to spend on advertising for the next fiscal quarter.  A 30-second spot on television costs \textdollar{}150 per broadcast, and a 30-second radio ad costs \textdollar{}50.%
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-45}{}The manager decides to buy \(x\) television ads and \(y\) radio ads.  Write an equation relating \(x\) and \(y\).%
-\item\hypertarget{li-46}{}Make a table of values showing several choices for \(x\) and \(y\).%
-\item\hypertarget{li-47}{}Plot the points from your table, and graph the equation.%
-\end{enumerate}
-\par\medskip\noindent%
-\textbf{Solution.}\quad \leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-48}{}Each television ad costs \textdollar{}150, so \(x\) ads will cost \(\$150x\).  Similarly, \(y\) radio ads will cost \(\$50y\).  The manager has \textdollar{}3000 to spend, so the sum of the costs must be \textdollar{}3000.  Thus,%
-\begin{equation*}
-150x+50y=3000
-\end{equation*}
-%
-\item\hypertarget{li-49}{}Choose some values of \(x\), and solve the equation for the corresponding value of \(y\).  For example, if \(x=\alert{10}\) then%
-\begin{align*}
-150(\alert{10})+50y\amp=300\\
-1500+50y\amp=3000\\
-50y\amp=1500\\
-y\amp=30
-\end{align*}
-If the manager buys 10 television ads, she can also buy 30 radio ads.  You can verify the other entries in the table.%
-\begin{table}
-\centering
-\begin{tabular}{AcAcAcAcAcA}\hrulethick
-\(x\)&\(8\)&\(10\)&\(12\)&\(14\)\tabularnewline\hrulethin
-\(y\)&\(36\)&\(30\)&\(24\)&\(18\)\tabularnewline\hrulethin
-\end{tabular}
-\end{table}
-\item\hypertarget{li-50}{}Plot the points from the table.  All the solutions lie on a straight line, as shown in \hyperref[fig-example-advertising]{Figure~\ref{fig-example-advertising}} . \begin{figure}
-\centering
-\includegraphics[width=0.4\linewidth]{images/fig-example-advertising}
-\caption{\label{fig-example-advertising}}
-\end{figure}
-%
-\end{enumerate}
-%
-\end{example}
-\begin{exercise}\label{exercise-crops}
-In central Nebraska, each acre of corn requires 25 acre-inches of water per year, and each acre of winter wheat requires 18 acre-inches of water.             (An acre-inch is the amount of water needed to cover one acre of land to a depth of one inch.)  A farmer can count on 9000 acre-inches of water for the coming year.  (Source:  Institute of Agriculture and Natural Resources, University of Nebraska) \leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-51}{}Write an equation relating the number of acres of corn, \(x\), and the number of acres of wheat, \(y\), that the farmer can plant.%
-\item\hypertarget{li-52}{}Complete the table.%
-\begin{table}
-\centering
-\begin{tabular}{AcAcAcAcAcA}\hrulethick
-\(x\)&\(50\)&\(100\)&\(150\)&\(200\)\tabularnewline\hrulethin
-\(y\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)\tabularnewline\hrulethin
-\end{tabular}
-\end{table}
-\end{enumerate}
-%
-\end{exercise}
-\typeout{************************************************}
-\typeout{Subsection 1.1.4 Intercepts}
-\typeout{************************************************}
-\subsection[{Intercepts}]{Intercepts}\label{subsection-4}
+Now try making a table of values with \(TblStart = 0\) and \(\Delta Tbl = 0.5\). Use the  \(\keystroke{ $\uparrow$}\) and \lstinline?↓? arrow keys to scroll up and down the table.%
 % group protects changes to lengths, releases boxes (?)
 {% begin: group for a single side-by-side
 % set panel max height to practical minimum, created in preamble
 \setlength{\panelmax}{0pt}
-\newsavebox{\panelboxLimage}
-\savebox{\panelboxLimage}{%
-\includegraphics[width=0.35\linewidth]{images/fig-intercepts}
+\newsavebox{\panelboxCimage}
+\savebox{\panelboxCimage}{%
+\includegraphics[width=0.5\linewidth]{images/fig-TblSetup}
 }
-\newlength{\phLimage}\setlength{\phLimage}{\ht\panelboxLimage+\dp\panelboxLimage}
-\settototalheight{\phLimage}{\usebox{\panelboxLimage}}
-\setlength{\panelmax}{\maxof{\panelmax}{\phLimage}}
-\newsavebox{\panelboxCJp}
-\savebox{\panelboxCJp}{%
-\raisebox{\depth}{\parbox{0.6\textwidth}{Consider the graph of the equation%
-\begin{equation*}
-3x-4y=12
-\end{equation*}
-shown in \hyperref[fig-intercepts]{Figure~\ref{fig-intercepts}}. The points where the graph crosses the axes are called the \terminology{intercepts} of the graph. The coordinates of these points are easy to find.  The \(y\)-coordinate of the \(x\)-intercept is zero, so we set \(y=\alert{0}\) in the equation to get%
-\begin{align*}
-3(\alert{0})-4x\amp=12\\
-x=-3
-\end{align*}
-}}}
-\newlength{\phCJp}\setlength{\phCJp}{\ht\panelboxCJp+\dp\panelboxCJp}
-\settototalheight{\phCJp}{\usebox{\panelboxCJp}}
-\setlength{\panelmax}{\maxof{\panelmax}{\phCJp}}
+\newlength{\phCimage}\setlength{\phCimage}{\ht\panelboxCimage+\dp\panelboxCimage}
+\settototalheight{\phCimage}{\usebox{\panelboxCimage}}
+\setlength{\panelmax}{\maxof{\panelmax}{\phCimage}}
+\newsavebox{\panelboxDimage}
+\savebox{\panelboxDimage}{%
+\includegraphics[width=0.5\linewidth]{images/fig-GC-table}
+}
+\newlength{\phDimage}\setlength{\phDimage}{\ht\panelboxDimage+\dp\panelboxDimage}
+\settototalheight{\phDimage}{\usebox{\panelboxDimage}}
+\setlength{\panelmax}{\maxof{\panelmax}{\phDimage}}
 \leavevmode%
 % begin: side-by-side as figure/tabular
 % \tabcolsep change local to group
-\setlength{\tabcolsep}{0.025\textwidth}
+\setlength{\tabcolsep}{0\textwidth}
 % @{} suppress \tabcolsep at extremes, so margins behave as intended
 \begin{figure}
 \begin{tabular}{@{}*{2}{c}@{}}
-\begin{minipage}[c][\panelmax][t]{0.35\textwidth}\usebox{\panelboxLimage}\end{minipage}&
-\begin{minipage}[c][\panelmax][t]{0.6\textwidth}\usebox{\panelboxCJp}\end{minipage}\tabularnewline
-\parbox[t]{0.35\textwidth}{\captionof{figure}{\label{fig-intercepts}}
+\begin{minipage}[c][\panelmax][t]{0.5\textwidth}\usebox{\panelboxCimage}\end{minipage}&
+\begin{minipage}[c][\panelmax][t]{0.5\textwidth}\usebox{\panelboxDimage}\end{minipage}\tabularnewline
+\parbox[t]{0.5\textwidth}{\captionof{figure}{\label{fig-TblSetup}}
 }&
-\end{tabular}
+\parbox[t]{0.5\textwidth}{\captionof{figure}{\label{fig-GC-table}}
+}\end{tabular}
 \end{figure}
 % end: side-by-side as tabular/figure
 }% end: group for a single side-by-side
-The \(x\)-intercept is the point \((-3,0)\). Also, the \(x\)-coordinate of the \(y\)-intercept is zero, so we set \(x=\alert{0}\) in the equation to get%
-\begin{gather*}
-3y-4(\alert{0})=12\\
-y=4
-\end{gather*}
-The \(y\)-intercept is \((0,4)\).%
-\begin{assemblage}{Intercepts of a Graph}\label{assemblage-2}
-The points where a graph crosses the axes are called the \terminology{intercepts of the graph}. \leavevmode%
-\begin{enumerate}
-\item\hypertarget{li-55}{}To find the \(y\)-intercept, set \(x=0\) and solve for \(y\).%
-\item\hypertarget{li-56}{}To find the \(x\)-intercept, set \(y=0\) and solve for \(x\)%
-\end{enumerate}
-%
-\end{assemblage}
-The intercepts of a graph tell us something about the situation it models.%
-\begin{example}[]\label{example-intercepts}
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-57}{}Find the intercepts of the graph in \hyperref[exercise-Silver-Lake]{Exercise~\ref{exercise-Silver-Lake}}, about the pollution in Silver Lake.%
-\item\hypertarget{li-58}{}What do the intercepts tell us about the problem?%
-\end{enumerate}
-\par\medskip\noindent%
-\textbf{Solution.}\quad \leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-59}{}An equation for the concentration of toxic chemicals is%
-\begin{equation*}
-C=285-15t
-\end{equation*}
-To find the \(C\)-intercept, set \(t\) equal to zero.%
-\begin{equation*}
-C=285-15(0)=285
-\end{equation*}
-The \(C\)-intercept is the point \((0, 285)\), or simply 285.  To find the \(t\)-intercept, set \(C\) equal to zero and solve for \(t\). \begin{align*} \alert{0}\&=285-15t \&\&\text{Add }15t \text{ to both sides.}\textbackslash{}\textbackslash{} 15t\&=285  \&\&\text{Divide both sides by 15.}\textbackslash{}\textbackslash{} t\&=19   \&\& \end{align*}%
- \par
-The \(t\)-intercept is the point \((19,0)\), or simply \(19\).%
-%
-\item\hypertarget{li-60}{}The \(C\)-intercept represents the concentration of toxic chemicals in Silver Lake now:  When  \(t=0\), \(C=285\),  so the concentration is currently \(285\) ppm.  The \(t\)-intercept represents the number of years it will take for the concentration of toxic chemicals to drop to zero:  When \(C=0\), \(t=19\),  so it will take \(19\) years for the pollution to be eliminated entirely.%
-\end{enumerate}
-\end{example}
-\begin{exercise}\label{exercise-6}
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-61}{}Find the intercepts of the graph in \hyperref[example-advertising]{Example~\ref{example-advertising}}, about the advertising budget for Albert's Appliances: \(150x + 50y = 3000\).%
-\item\hypertarget{li-62}{}What do the intercepts tell us about the problem?%
-\end{enumerate}
-\end{exercise}
+\end{remark}
 \typeout{************************************************}
-\typeout{Subsection 1.1.5 Intercept Method for Graphing Lines}
+\typeout{Subsection 1.1.5 Function Notation}
 \typeout{************************************************}
-\subsection[{Intercept Method for Graphing Lines}]{Intercept Method for Graphing Lines}\label{subsection-5}
-Because we really only need two points to graph a linear equation, we might as well find the intercepts first and use them to draw the graph. The values of the intercepts will also help us choose suitable scales for the axes. It is always a good idea to find a third point as a check.%
-\begin{example}[]\label{intercepts}
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-63}{}Find the \(x\)- and \(y\)-intercepts of the graph of \(150x - 180y = 9000\).%
-\item\hypertarget{li-64}{}Use the intercepts to graph the equation. Find a third point as a check.%
-\end{enumerate}
-\par\medskip\noindent%
-\textbf{Solution.}\quad \leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-65}{}To find the \(x\)-intercept, set \(y = \alert{0}\).%
-\par
-\begin{align*} 150x-18(\alert{0})\&=9000 \&\&\text{Simpify.}\textbackslash{}\textbackslash{} 150x\&=9000  \&\&\text{Divide both sides by 150.}\textbackslash{}\textbackslash{} x\&=60   \&\& \end{align*}%
-\par
-The \(x\)-intercept is the point \((60, 0)\). To find the \(y\)-intercept, set \(x = \alert{0}\).%
-\par
-\begin{align*} 150(\alert{0})-18y\&=9000 \&\&\text{Simpify.}\textbackslash{}\textbackslash{} -180y\&=9000  \&\&\text{Divide both sides by } -180\text{.}\textbackslash{}\textbackslash{} y\&=-50   \&\& \end{align*}%
-\par
-The \(y\)-intercept is the point \((0, -50)\).%
-\item\hypertarget{li-66}{}Scale both axes in intervals of 10 and then plot the two intercepts, \((60, 0)\) and \((0, -50)\). Draw the line through them, as shown in \hyperref[fig-example-graph-intercepts]{Figure~\ref{fig-example-graph-intercepts}}. Now find another point and check that it lies on this line. We choose \(x = \alert{20}\) and solve for \(y\).%
-\begin{align*}
-150(\alert{20}) -180y \amp = 9000\\
-3000 -180y \amp = 9000\\
--180y \amp = 6000\\
-y \amp =-33.\overline{3}
-\end{align*}
-Plot the point \((20, -33\frac{1}{3})\). Because this point lies on the line, we can be reasonably confident that our graph is correct. \begin{figure}
-\centering
-\includegraphics[width=0.5\linewidth]{images/fig-example-graph-intercepts}
-\caption{\label{fig-example-graph-intercepts}}
-\end{figure}
-%
-\end{enumerate}
-\end{example}
-\begin{remark}[Choosing a Graphing Window]\label{remark-2}
-Knowing the intercepts can also help us choose a suitable window on a graphing calculator. We would like the window to be large enough to show the intercepts. For the graph in \hyperref[fig-example-graph-intercepts]{Figure~\ref{fig-example-graph-intercepts}}, we can enter the equation%
+\subsection[{Function Notation}]{Function Notation}\label{subsection-5}
+There is a convenient notation for discussing functions. First, we choose a letter, such as \(f\), \(g\), or \(h\) (or \(F\), \(G\), or \(H\)), to name a particular function. (We can use any letter, but these are the most common choices.) For instance, in \hyperref[example-falling-book]{Example~\ref{example-falling-book}}, the height, \(h\), of a falling algebra book is a function of the elapsed time, \(t\). We might call this function \(f\). In other words, \(f\) is the name of the relationship between the variables \(h\) and \(t\). We write%
 \begin{equation*}
-Y = (9000 -150X)/ -180
+h = f (t)
 \end{equation*}
-in the window \begin{table}
+which means "\(h\) is a function of \(t\), and \(f\) is the name of the function."%
+\par
+The new symbol \(f(t)\), read "\(f\) of \(t\)," is another name for the height, \(h\). The parentheses in the symbol \(f(t)\) do not indicate multiplication. (It would not make sense to multiply the name of a function by a variable.) Think of the symbol \(f(t)\) as a single variable that represents the output value of the function.%
+\par
+With this new notation we may write%
+\begin{equation*}
+h = f (t) = 1776 - 16t^2
+\end{equation*}
+or just%
+\begin{equation*}
+f (t) = 1776 - 16t^2
+\end{equation*}
+instead of%
+\begin{equation*}
+h = 1776 - 16t^2
+\end{equation*}
+to describe the function.%
+\par
+Perhaps it seems complicated to introduce a new symbol for \(h\), but the notation \(f(t)\) is very useful for showing the correspondence between specific values of the variables \(h\) and \(t\).%
+\begin{example}[]\label{example-falling-book-2}
+In \hyperref[example-falling-book]{Example~\ref{example-falling-book}}, the height of an algebra book dropped from the top of the Sears Tower is given by the equation%
+\begin{equation*}
+h = 1776 - 16t^2
+\end{equation*}
+We see that%
+\begin{table}
 \centering
 \begin{tabular}{lll}
-Xmin\(=-20\)&&Xmax\(=70\)\tabularnewline[0pt]
-Ymin\(=-70\)&&Ymax\(=30\)
+when \(t=1\)&&\(h=1760\)\tabularnewline[0pt]
+when \(t=2\)&&\(h=1712\)
 \end{tabular}
 \end{table}
-%
-\end{remark}
-\begin{assemblage}{To Graph a Line Using the Intercept Method:}\label{assemblage-3}
-\leavevmode%
-\begin{enumerate}[label=*\arabic**]
-\item\hypertarget{li-67}{}Find the intercepts of the line.%
-%
-\begin{enumerate}[label=++\alph*]
-\item\hypertarget{li-68}{}To find the \(x\)-intercept, set \(y=0\) and solve for \(x\).%
-\item\hypertarget{li-69}{}To find the \(y\)-intercept, set \(x = 0\) and solve for \(y\).%
-\end{enumerate}
-\item\hypertarget{li-70}{}Plot the intercepts.%
-\item\hypertarget{li-71}{}Choose a value for \(x\) and find a third point on the line.%
-\item\hypertarget{li-72}{}Draw a line through the points.%
-\end{enumerate}
+Using function notation, these relationships can be expressed more concisely as%
+\begin{table}
+\centering
+\begin{tabular}{lll}
+\(f(1)=1760\)&and&\(f(2)=1712\)
+\end{tabular}
+\end{table}
+which we read as "\(f\) of 1 equals 1760" and "\(f\) of 2 equals 1712." The values for the input variable, \(t\), appear \emph{inside} the parentheses, and the values for the output variable, \(h\), appear on the other side of the equation.%
+\end{example}
+Remember that when we write \(y = f(x)\), the symbol \(f(x)\) is just another name for the output variable.%
+\begin{assemblage}{Function Notation}\label{assemblage-2}
+\includegraphics[width=0.7\linewidth]{images/fig-Function-Notation}
 %
 \end{assemblage}
-\begin{exercise}\label{exercise-intercepts}
-\leavevmode%
+\begin{exercise}\label{exercise-5}
+Let \(F\) be the name of the function defined by the graph in \hyperref[example-sun-hours]{Example~\ref{example-sun-hours}}, the number of hours of daylight in Peoria. \leavevmode%
 \begin{enumerate}[label=\alph*]
-\item\hypertarget{li-73}{}In \hyperref[exercise-crops]{Exercise~\ref{exercise-crops}}, you wrote an equation about crops in Nebraska. Find the intercepts of the graph.%
-\item\hypertarget{li-74}{}Use the intercepts to help you choose appropriate scales for the axes, and then graph the equation.%
-\item\hypertarget{li-75}{}What do the intercepts tell us about the problem?%
+\item\hypertarget{li-33}{}Use function notation to state that \(H\) is a function of \(t\).%
+\item\hypertarget{li-34}{}What does the statement \(F(15) = 9.7\) mean in the context of the problem?%
 \end{enumerate}
 \end{exercise}
-The examples in this section model simple linear relationships between two variables. Such relationships, in which the value of one variable is determined by the value of the other, are called \terminology{functions}. We will study various kinds of functions throughout the course.%
 \typeout{************************************************}
-\typeout{Subsection 1.1.6 Section Summary}
+\typeout{Subsection 1.1.6 Evaluating a Function}
 \typeout{************************************************}
-\subsection[{Section Summary}]{Section Summary}\label{summary-1-1}
+\subsection[{Evaluating a Function}]{Evaluating a Function}\label{subsection-6}
+Finding the value of the output variable that corresponds to a particular value of the input variable is called \terminology{evaluating the function}.%
+\begin{example}[]\label{example-postage2}
+Let \(g\) be the name of the postage function defined by \hyperref[table-postage]{Table~\ref{table-postage}}  in \hyperref[example-functions]{Example~\ref{example-functions}}. Find \(g(1)\), \(g(3)\), and \(g(6.75\)).%
+\par\medskip\noindent%
+\textbf{Solution.}\quad According to the table, \leavevmode%
+\begin{table}
+\centering
+\begin{tabular}{lllll}
+when \(w=1\),&&\(p=0.47\)&so&\(g(1)=0.47\)\tabularnewline[0pt]
+when \(w=3\),&&\(p=0.89\)&so&\(g(3)=0.89\)\tabularnewline[0pt]
+when \(w=6.75\),&&\(p=1.73\)&so&\(g(6.75)=1.73\)
+\end{tabular}
+\end{table}
+ Thus, a letter weighing 1 ounce costs \textdollar{}0.47 to mail, a letter weighing 3 ounces costs \textdollar{}0.89, and a letter weighing 6.75 ounces costs \textdollar{}1.73.%
+\end{example}
+\begin{exercise}\label{exercise-heart-rate}
+When you exercise, your heart rate should increase until it reaches your target heart rate. The table shows target heart rate, \(r = f(a)\), as a function of age. \begin{table}
+\centering
+\begin{tabular}{AcAcAcAcAcAcAcAcAcAcAcAcA}\hrulethick
+\(a\)&\(20\)&\(25\)&\(30\)&\(35\)&\(40\)&\(45\)&\(50\)&\(55\)&\(60\)&\(65\)&\(70\)\tabularnewline\hrulethin
+\(r\)&\(150\)&\(146\)&\(142\)&\(139\)&\(135\)&\(131\)&\(127\)&\(124\)&\(120\)&\(116\)&\(112\)\tabularnewline\hrulethin
+\end{tabular}
+\end{table}
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-37}{}Find \(f(25)\) and \(f(50)\).%
+\item\hypertarget{li-38}{}Find a value of \(a\) for which \(f(a) = 135\).%
+\end{enumerate}
+\end{exercise}
+If a function is described by an equation, we simply substitute the given input value into the equation to find the corresponding output, or function value.%
+\begin{example}[]\label{example-evaluate-function}
+The function \(H\) is defined by \(H=f(s) = \dfrac{\sqrt{s+3}}{s}\). Evaluate the function at the following values.%
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-41}{}\(s=6\)%
+\item\hypertarget{li-42}{}\(s=-1\)%
+\end{enumerate}
+\par\medskip\noindent%
+\textbf{Solution.}\quad \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-43}{}\(f(\alert{6})=\frac{\sqrt{\alert{6}+3}}{\alert{6}}=
+\frac{\sqrt{9}}{6}=\frac{3}{6}=\frac{1}{2}\). Thus, \(f(6)=\frac{1}{2}\).%
+\item\hypertarget{li-44}{}\(f(\alert{-1})=\frac{\sqrt{\alert{-1}+3}}{\alert{-1}}=
+\frac{\sqrt{2}}{-1}=-\sqrt{2}\). Thus, \(f(-1)=-\sqrt{2}\).%
+\end{enumerate}
+\end{example}
+\begin{exercise}\label{exercise-function-notation}
+Complete the table displaying ordered pairs for the function \(f(x) = 5 - x^3\). Evaluate the function to find the corresponding \(f(x)\)-value for each value of \(x\). \begin{table}
+\centering
+\begin{tabular}{AcAcAl}\crulethick{1-2}
+\(x\)&\(f(x)\)&\tabularnewline\crulethin{1-2}
+\(-2\)&\(\)&\(f(\alert{-2})=5-(\alert{-2})^3=~\)\tabularnewline\crulethin{1-2}
+\(0\)&\(\)&\(f(\alert{0})=5-\alert{0}^3=\)\tabularnewline\crulethin{1-2}
+\(1\)&\(\)&\(f(\alert{1})=5-\alert{1}^3=\)\tabularnewline\crulethin{1-2}
+\(3\)&\(\)&\(f(\alert{3})=5-\alert{3}^3=\)\tabularnewline\crulethin{1-2}
+\end{tabular}
+\end{table}
+\end{exercise}
+\begin{remark}[Evaluating a Function]\label{remark-2}
+We can use the table feature on a graphing calculator to evaluate functions. Consider the function of \hyperref[exercise-function-notation]{Exercise~\ref{exercise-function-notation}}, \(f(x) = 5 - x^3\).%
+\par
+Press \lstinline?Y=?, clear any old functions, and enter%
+\begin{equation*}
+Y_1 = 5-X \text{^} 3
+\end{equation*}
+Then press TblSet (\lstinline?2nd? \lstinline?WINDOW?) and choose Ask after Indpnt, as shown in \hyperref[fig-TblSetup2]{Figure~\ref{fig-TblSetup2}}, and press \lstinline?ENTER?. This setting allows you to enter any \(x\)-values you like. Next, press TABLE (using \lstinline?2nd? \lstinline?GRAPH?).%
+\par
+To follow \hyperref[exercise-function-notation]{Exercise~\ref{exercise-function-notation}}, key in \lstinline?(-)? 2 \lstinline?ENTER? for the \(x\)-value, and the calculator will fill in the \(y\)-value. Continue by entering 0, 1, 3, or any other \(x\)-values you choose. One such table is shown in \hyperref[fig-GC-table2]{Figure~\ref{fig-GC-table2}}.%
+\par
+If you would like to evaluate a new function, you do not have to return to the \lstinline?Y=? screen. Use the \lstinline?→? and \lstinline?↑? arrow keys to highlight \(Y_1\) at the top of the second column. The definition of \(Y_1\) will appear at the bottom of the display, as shown in \hyperref[fig-GC-table2]{Figure~\ref{fig-GC-table2}}. You can key in a new definition here, and the second column will be updated automatically to show the \(y\)-values of the new function. % group protects changes to lengths, releases boxes (?)
+{% begin: group for a single side-by-side
+% set panel max height to practical minimum, created in preamble
+\setlength{\panelmax}{0pt}
+\newsavebox{\panelboxFimage}
+\savebox{\panelboxFimage}{%
+\includegraphics[width=0.5\linewidth]{images/fig-TblSetup2}
+}
+\newlength{\phFimage}\setlength{\phFimage}{\ht\panelboxFimage+\dp\panelboxFimage}
+\settototalheight{\phFimage}{\usebox{\panelboxFimage}}
+\setlength{\panelmax}{\maxof{\panelmax}{\phFimage}}
+\newsavebox{\panelboxGimage}
+\savebox{\panelboxGimage}{%
+\includegraphics[width=0.5\linewidth]{images/fig-GC-table2}
+}
+\newlength{\phGimage}\setlength{\phGimage}{\ht\panelboxGimage+\dp\panelboxGimage}
+\settototalheight{\phGimage}{\usebox{\panelboxGimage}}
+\setlength{\panelmax}{\maxof{\panelmax}{\phGimage}}
+\leavevmode%
+% begin: side-by-side as figure/tabular
+% \tabcolsep change local to group
+\setlength{\tabcolsep}{0\textwidth}
+% @{} suppress \tabcolsep at extremes, so margins behave as intended
+\begin{figure}
+\begin{tabular}{@{}*{2}{c}@{}}
+\begin{minipage}[c][\panelmax][t]{0.5\textwidth}\usebox{\panelboxFimage}\end{minipage}&
+\begin{minipage}[c][\panelmax][t]{0.5\textwidth}\usebox{\panelboxGimage}\end{minipage}\tabularnewline
+\parbox[t]{0.5\textwidth}{\captionof{figure}{\label{fig-TblSetup2}}
+}&
+\parbox[t]{0.5\textwidth}{\captionof{figure}{\label{fig-GC-table2}}
+}\end{tabular}
+\end{figure}
+% end: side-by-side as tabular/figure
+}% end: group for a single side-by-side
+%
+\end{remark}
+To simplify the notation, we sometimes use the same letter for the output variable and for the name of the function. In the next example, \(C\) is used in this way.%
+\begin{example}[]\label{example-function-notation-abuse}
+TrailGear decides to market a line of backpacks. The cost, \(C\), of manufacturing backpacks is a function of the number, \(x\), of backpacks produced, given by the equation%
+\begin{equation*}
+C(x) = 3000 + 20x
+\end{equation*}
+where \(C(x)\) is measured in dollars. Find the cost of producing 500 backpacks.%
+\par\medskip\noindent%
+\textbf{Solution.}\quad To find the value of \(C\) that corresponds to \(x = \alert{500}\), evaluate \(C(500)\).%
+\begin{equation*}
+C(\alert{500}) = 3000 + 20(\alert{500}) = 13,000
+\end{equation*}
+The cost of producing 500 backpacks is \textdollar{}13,000.%
+\end{example}
+\begin{exercise}\label{exercise-sphere-volume}
+The volume of a sphere of radius \(r\) centimeters is given by%
+\begin{equation*}
+V = V(r) = \frac{4}{3}\pi r^3
+\end{equation*}
+Evaluate \(V(10)\) and explain what it means.%
+\end{exercise}
 \typeout{************************************************}
-\typeout{Subsubsection 1.1.6.1 Vocabulary}
+\typeout{Subsection 1.1.7 Operations with Function Notation}
+\typeout{************************************************}
+\subsection[{Operations with Function Notation}]{Operations with Function Notation}\label{subsection-7}
+Sometimes we need to evaluate a function at an algebraic expression rather than at a specific number.%
+\begin{example}[]\label{example-backpacks}
+TrailGear manufactures backpacks at a cost of%
+\begin{equation*}
+C(x) = 3000 + 20x
+\end{equation*}
+for \(x\) backpacks. The company finds that the monthly demand for backpacks increases by 50% during the summer. The backpacks are produced at several small co-ops in different states.%
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-45}{}If each co-op usually produces \(b\) backpacks per month, how many should it produce during the summer months?%
+\item\hypertarget{li-46}{}What costs for producing backpacks should the company expect during the summer?%
+\end{enumerate}
+\par\medskip\noindent%
+\textbf{Solution.}\quad \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-47}{}An increase of 50% means an additional 50% of the current production level, \(b\). Therefore, a co-op that produced \(b\) backpacks per month during the winter should increase production to \(b + 0.5b\), or \(1.5b\) backpacks per month in the summer.%
+\item\hypertarget{li-48}{}The cost of producing \(1.5b\) backpacks will be%
+\begin{equation*}
+C(\alert{1.5b}) = 3000 + 20(\alert{1.5b}) = 3000 + 30b
+\end{equation*}
+%
+\end{enumerate}
+\end{example}
+\begin{exercise}\label{exercise-spherical-balloon}
+A spherical balloon has a radius of 10 centimeters. \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-49}{}If we increase the radius by \(h\) centimeters, what will the new volume be?%
+\item\hypertarget{li-50}{}If \(h = 2\), how much did the volume increase?%
+\end{enumerate}
+\end{exercise}
+\begin{example}[]\label{example-evaluate-quadratic}
+Evaluate the function \(f(x)=4x^2 - x + 5\) for the following expressions.%
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-53}{}\(x = 2h\)%
+\item\hypertarget{li-54}{}\(x = a + 3\)%
+\end{enumerate}
+\par\medskip\noindent%
+\textbf{Solution.}\quad \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-55}{}~%
+\par
+\(\begin{aligned}
+f(\alert{2h}) \amp= 4(\alert{2h})^2-(\alert{2h}) + 5\\
+\amp= 4(4h^2)-2h+5\\
+\amp= 16h^2 - 2h + 5\\ 
+\end{aligned}\)%
+\item\hypertarget{li-56}{}~%
+\par
+\(\begin{aligned}
+f(\alert{a+3}) \amp= 4(\alert{a+3})^2-(\alert{a+3})+5\\
+\amp= 4(a^2+6a+9)-a-3+5\\
+\amp= 4a^2+24a+36 - a + 2\\
+\amp= 4a^2+23a + 38\\
+\end{aligned}\)%
+\end{enumerate}
+\end{example}
+\typeout{************************************************}
+\typeout{Paragraphs  CAUTION}
+\typeout{************************************************}
+\paragraph[{CAUTION}]{CAUTION}\hypertarget{paragraphs-2}{}
+In \hyperref[example-evaluate-quadratic]{Example~\ref{example-evaluate-quadratic}}, notice that%
+\begin{equation*}
+f(2h) \ne 2 f(h)
+\end{equation*}
+and%
+\begin{equation*}
+f(a + 3) \ne f(a) + f(3)
+\end{equation*}
+To compute \(f(a) + f(3)\), we must first compute \(f(a)\) and \(f(3)\), then add them: \begin{align*} f(a)+f(3)\&= (4a^2-a+5)+(4\cdot 3^2-3+5) \textbackslash{}\textbackslash{} \&= 4a^2 - a + 43\textbackslash{}\textbackslash{} \end{align*} In general, it is not true that \(f(a + b) = f(a) + f(b)\). Remember that the parentheses in the expression \(f(x)\) do not indicate multiplication, so the distributive law does not apply to the expression \(f(a + b)\).%
+\begin{exercise}\label{exercise-function-notation2}
+Let \(f(x) = x^3 - 1\) and evaluate each expression. \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-57}{}\(f(2) + f(3)\)%
+\item\hypertarget{li-58}{}\(f(2 + 3)\)%
+\item\hypertarget{li-59}{}\(2 f(x) + 3\)%
+\end{enumerate}
+\end{exercise}
+\typeout{************************************************}
+\typeout{Subsection 1.1.8 Section Summary}
+\typeout{************************************************}
+\subsection[{Section Summary}]{Section Summary}\label{summary-1-2}
+\typeout{************************************************}
+\typeout{Subsubsection 1.1.8.1 Vocabulary}
 \typeout{************************************************}
 \subsubsection[{Vocabulary}]{Vocabulary}\label{subsubsection-1}
 Look up the definitions of new terms in the Glossary. \leavevmode%
 \begin{multicols}{3}
 \begin{itemize}[label=\textbullet]
-\item{}Variable%
-\item{}Mathematical model%
-\item{}Increasing graph%
-\item{}Linear equation%
-\item{}Solve an equation%
-\item{}Evaluate an expression%
-\item{}Intercept%
-\item{}Decreasing graph%
+\item{}Function%
+\item{}Input variable%
+\item{}Independent variable%
+\item{}Dependent variable%
+\item{}Function value%
+\item{}Output variable%
 \end{itemize}
 \end{multicols}
 %
 \typeout{************************************************}
-\typeout{Subsubsection 1.1.6.2 CONCEPTS}
+\typeout{Subsubsection 1.1.8.2 CONCEPTS}
 \typeout{************************************************}
 \subsubsection[{CONCEPTS}]{CONCEPTS}\label{subsubsection-2}
 \leavevmode%
 \begin{enumerate}[label=\arabic*]
-\item\hypertarget{li-84}{}We can describe a relationship between variables with a table of values, a graph, or an equation.%
-\item\hypertarget{li-85}{}Linear models have equations of the following form:%
-\begin{equation*}
-y = (\text{starting value}) + (\text{rate of change})\cdot x
-\end{equation*}
-%
-\item\hypertarget{li-86}{}To make a useful graph, we must choose appropriate scales for the axes.%
-\item\hypertarget{li-87}{}\begin{assemblage}{General Form for a Linear Equation}\label{assemblage-4}
-The graph of any equation%
-\begin{equation*}
-Ax+By=C
-\end{equation*}
-where \(A\) and \(B\) are not both equal to zero, is a straight line.%
-\end{assemblage}
-%
-\item\hypertarget{li-88}{}The intercepts of a graph are the points where the graph crosses the axes.%
-\item\hypertarget{li-89}{}We can use the intercepts to graph a line.%
-\begin{assemblage}{To Graph a Line Using the Intercept Method:}\label{assemblage-5}
-%
-\begin{enumerate}[label=\arabic*]
-\item\hypertarget{li-90}{}Find the intercepts of the line.%
-%
-\begin{enumerate}[label=++\alph*]
-\item\hypertarget{li-91}{}To find the \(x\)-intercept, set \(y=0\) and solve for \(x\).%
-\item\hypertarget{li-92}{}To find the \(y\)-intercept, set \(x = 0\) and solve for \(y\).%
-\end{enumerate}
-\item\hypertarget{li-93}{}Plot the intercepts.%
-\item\hypertarget{li-94}{}Choose a value for \(x\) and find a third point on the line.%
-\item\hypertarget{li-95}{}Draw a line through the points.%
-\end{enumerate}
-%
-\end{assemblage}
-\item\hypertarget{li-96}{}The intercepts are also useful for interpreting a model.%
+\item\hypertarget{li-69}{}A function is a rule that assigns to each value of the input variable a unique value of the output variable.%
+\item\hypertarget{li-70}{}Functions may be defined by words, tables, graphs, or equations.%
+\item\hypertarget{li-71}{}Function notation: \(y = f (x)\), where \(x\) is the input and \(y\) is the output.%
 \end{enumerate}
 %
 \typeout{************************************************}
-\typeout{Subsubsection 1.1.6.3 STUDY QUESTIONS}
+\typeout{Subsubsection 1.1.8.3 STUDY QUESTIONS}
 \typeout{************************************************}
 \subsubsection[{STUDY QUESTIONS}]{STUDY QUESTIONS}\label{subsubsection-3}
 \leavevmode%
 \begin{enumerate}[label=\arabic*]
-\item\hypertarget{li-97}{}Name three ways to represent a relationship between two variables.%
-\item\hypertarget{li-98}{}If \(C\) is expressed in terms of \(H\), which variable goes on the horizontal axis?%
-\item\hypertarget{li-99}{}Explain the difference between evaluating an expression and solving an equation.%
-\item\hypertarget{li-100}{}How many points do you need to graph a linear equation?%
-\item\hypertarget{li-101}{}Explain how the words \terminology{intercept} and \terminology{intersect} are related; explain how they are different.%
-\item\hypertarget{li-102}{}Delbert says that the intercepts of the line \(3x + 5y = 30\) are \((10, 6)\). What is wrong with his answer?%
+\item\hypertarget{li-72}{}What property makes a relation between two variables a function?%
+\item\hypertarget{li-73}{}Name three ways to define a function.%
+\item\hypertarget{li-74}{}Give an example of a function in which two distinct values of the input variable correspond to the same value of the output variable.%
+\item\hypertarget{li-75}{}Use function notation to write the statement "\(G\) defines \(w\) as a function of \(p\)."%
+\item\hypertarget{li-76}{}Give an example of a function for which \(f (2 + 3)\ne f (2) + f (3)\).%
 \end{enumerate}
 %
 \typeout{************************************************}
-\typeout{Subsubsection 1.1.6.4 SKILLS}
+\typeout{Subsubsection 1.1.8.4 SKILLS}
 \typeout{************************************************}
 \subsubsection[{SKILLS}]{SKILLS}\label{subsubsection-4}
-Practice each skill in the \hyperref[section-1-1-exercises]{Homework~\ref{section-1-1-exercises}} problems listed. \leavevmode%
+Practice each skill in the \hyperref[section-1-2-exercises]{Homework~\ref{section-1-2-exercises}} problems listed. \leavevmode%
 \begin{enumerate}[label=\arabic*]
-\item\hypertarget{li-103}{}Make a table of values: \#1\textendash{}4, 7 and 8%
-\item\hypertarget{li-104}{}Plot points and draw a graph: \#1– 4, 7 and 8%
-\item\hypertarget{li-105}{}Choose appropriate scales for the axes: \#5\textendash{}12%
-\item\hypertarget{li-106}{}Write a linear model of the form \(y = (\text{starting value}) + (\text{rate of change})\cdot x\): \#1\textendash{}8%
-\item\hypertarget{li-107}{}Write a linear model in general form: \#25\textendash{}28, 33\textendash{}36%
-\item\hypertarget{li-108}{}Evaluate a linear expression, algebraically and graphically: \#1\textendash{}4%
-\item\hypertarget{li-109}{}Solve a linear equation, algebraically and graphically: \#1\textendash{}4%
-\item\hypertarget{li-110}{}Find the intercepts of a graph: \#5 and 6, 13–24, 45–52%
-\item\hypertarget{li-111}{}Graph a line by the intercept method: \#5 and 6, 13–24%
-\item\hypertarget{li-112}{}Interpret the meaning of the intercepts: \#5 and 6, 25–28%
-\item\hypertarget{li-113}{}Use a graphing calculator to graph a line: \#37\textendash{}52%
-\item\hypertarget{li-114}{}Sketch on paper a graph obtained on a calculator: \#37\textendash{}44%
+\item\hypertarget{li-77}{}Decide whether a relationship between two variables is a function: \#1\textendash{}26%
+\item\hypertarget{li-78}{}Evaluate a function defined by a table, a graph, or an equation: \#27\textendash{}54%
+\item\hypertarget{li-79}{}Choose appropriate scales for the axes: \#5\textendash{}12%
+\item\hypertarget{li-80}{}Interpret function notation: \#31\textendash{}34, 49\textendash{}54%
+\item\hypertarget{li-81}{}Simplify expressions involving function notation: \#59\textendash{}76%
 \end{enumerate}
 %
 \typeout{************************************************}
-\typeout{Exercises 1.1.7 Homework}
+\typeout{Exercises 1.1.9 Homework}
 \typeout{************************************************}
-\subsection[{Homework}]{Homework}\label{section-1-1-exercises}
-\begin{exerciselist}
-\item[1.]\hypertarget{exercise-8}{}The temperature in the desert at 6 a.m., just before sunrise, was \(65\degree\)F. The temperature rose \(5\) degrees every hour until it reached its maximum value at about 5 p.m. Complete the table of values for the temperature, \(T\), at \(h\) hours after 6 a.m. \begin{table}
-\centering
-\begin{tabular}{AcAcAcAcAcAcA}\hrulethick
-\(h\)&\(0\)&\(3\)&\(6\)&\(9\)&\(10\)\tabularnewline\hrulethin
-\(T\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)\tabularnewline\hrulethin
-\end{tabular}
-\end{table}
- \leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-115}{}Write an equation for the temperature, \(T\), in terms of \(h\).%
-\item\hypertarget{li-116}{}Graph the equation. \includegraphics[width=0.5\linewidth]{images/fig-ex-1-1-1}
-%
-\item\hypertarget{li-117}{}How hot is it at noon? Illustrate the answer on your graph.%
-\item\hypertarget{li-118}{}When will the temperature be \(110\degree\)F? Illustrate the answer on your graph.%
-\end{enumerate}
-%
-\par\smallskip
-\par\smallskip
-\noindent\textbf{Answer.}\hypertarget{answer-8}{}\quad
-\begin{tabular}{AcAcAcAcAcAcA}\hrulethick
-\(h\)&\(0\)&\(3\)&\(6\)&\(9\)&\(10\)\tabularnewline\hrulethin
-\(T\)&\(65\)&\(80\)&\(95\)&\(110\)&\(115\)\tabularnewline\hrulethin
-\end{tabular}
- \leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-119}{}\(T=65+5h\)%
-\item\hypertarget{li-120}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-1}
-%
-\item\hypertarget{li-121}{}\(95\degree\)%
-\item\hypertarget{li-122}{}3 p.m.%
-\end{enumerate}
-%
-\item[2.]\hypertarget{exercise-9}{}The taxi out of Dulles Airport charges a traveler with one suitcase an initial fee of \(\$2.00\), plus \(\$1.50\) for each mile traveled. Complete the table of values showing the charge, \(C\), for a trip of \(n\) miles. \begin{table}
-\centering
-\begin{tabular}{AcAcAcAcAcAcAcA}\hrulethick
-\(n\)&\(0\)&\(5\)&\(10\)&\(15\)&\(20\)&\(25\)\tabularnewline\hrulethin
-\(C\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)\tabularnewline\hrulethin
-\end{tabular}
-\end{table}
- \leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-123}{}Write an equation for the charge, \(C\), in terms of the number of miles traveled, \(n\).%
-\item\hypertarget{li-124}{}Graph the equation. \includegraphics[width=0.5\linewidth]{images/fig-ex-1-1-2}
-%
-\item\hypertarget{li-125}{}What is the charge for a trip to Mount Vernon,  \(40\) miles from the airport? Illustrate the answer on your graph.%
-\item\hypertarget{li-126}{}If a ride to the National Institutes of Health (NIH) costs \(\$39.50\), how far is it from the airport to the NIH? Illustrate the answer on your graph.%
-\end{enumerate}
-%
-\par\smallskip
-\item[3.]\hypertarget{exercise-10}{}On October 31, Betty and Paul fill their \(250\)-gallon oil tank for their heater. Beginning in November, they use an average of \(15\) gallons of oil per week. Complete the table of values for the amount of oil, \(A\), left in the tank after \(w\) weeks. \begin{table}
-\centering
-\begin{tabular}{AcAcAcAcAcAcA}\hrulethick
-\(w\)&\(0\)&\(4\)&\(8\)&\(12\)&\(16\)\tabularnewline\hrulethin
-\(A\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)\tabularnewline\hrulethin
-\end{tabular}
-\end{table}
- \leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-127}{}Write an equation that expresses the amount of oil, \(A\), in the tank in terms of the number of weeks, \(w\), since October 31.%
-\item\hypertarget{li-128}{}Graph the equation. \includegraphics[width=0.5\linewidth]{images/fig-ex-1-1-3}
-%
-\item\hypertarget{li-129}{}How much did the amount of fuel oil in the tank decrease between the third week and the eighth week? Illustrate this amount on the graph.%
-\item\hypertarget{li-130}{}When will the tank contain more than \(175\) gallons of fuel oil? Illustrate on the graph.%
-\end{enumerate}
-%
-\par\smallskip
-\par\smallskip
-\noindent\textbf{Answer.}\hypertarget{answer-9}{}\quad
-\begin{tabular}{AcAcAcAcAcAcA}\hrulethick
-\(w\)&\(0\)&\(4\)&\(8\)&\(12\)&\(16\)\tabularnewline\hrulethin
-\(A\)&\(250\)&\(190\)&\(130\)&\(70\)&\(10\)\tabularnewline\hrulethin
-\end{tabular}
- \leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-131}{}\(A=250-15w\)%
-\item\hypertarget{li-132}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-3}
-%
-\item\hypertarget{li-133}{}75 gallons%
-\item\hypertarget{li-134}{}Until the fifth week%
-\end{enumerate}
-%
-\item[4.]\hypertarget{exercise-11}{}Leon's camper has a \(20\)-gallon gas tank, and he gets \(12\) miles to the gallon. (That is, he uses \(1⁄12\) gallon per mile.) Complete the table of values for the amount of gas, \(g\), left in Leon's tank after driving \(m\) miles. \begin{table}
-\centering
-\begin{tabular}{AcAcAcAcAcAcA}\hrulethick
-\(m\)&\(0\)&\(48\)&\(96\)&\(144\)&\(192\)\tabularnewline\hrulethin
-\(g\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)\tabularnewline\hrulethin
-\end{tabular}
-\end{table}
- \leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-135}{}Write an equation that expresses the amount of gas, \(g\), in Leon's fuel tank in terms of the number of miles, \(m\), he has driven.%
-\item\hypertarget{li-136}{}Graph the equation. \includegraphics[width=0.5\linewidth]{images/fig-ex-1-1-4}
-%
-\item\hypertarget{li-137}{}How much gas will Leon use between 8 a.m., when his odometer reads \(96\) miles, and 9 a.m., when the odometer reads \(144\) miles? Illustrate on the graph.%
-\item\hypertarget{li-138}{}If Leon has less than \(5\) gallons of gas left, how many miles has he driven? Illustrate on the graph.%
-\end{enumerate}
-%
-\par\smallskip
-\item[5.]\hypertarget{exercise-12}{}Phil and Ernie buy a used photocopier for \(\$800\) and set up a copy service on their campus. For each hour that the copier runs, Phil and Ernie make \(\$40\). \leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-139}{}Write an equation that expresses Phil and Ernie's profit (or loss), \(P\), in terms of the number of hours, \(t\), they run the copier.%
-\item\hypertarget{li-140}{}Find the intercepts and sketch the graph. (Suggestion: Scale the horizontal axis from \(0\) to \(40\) in increments of \(5\), and scale the vertical axis from \(-1000\) to \(400\) in increments of \(100\).)%
-\item\hypertarget{li-141}{}What do the intercepts tell us about the profit?%
-\end{enumerate}
-%
-\par\smallskip
-\par\smallskip
-\noindent\textbf{Answer.}\hypertarget{answer-10}{}\quad
-\leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-142}{}\(P=-800+40t\)%
-\item\hypertarget{li-143}{}\((0,-800)\), \((20,0)\) \includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-5}
-%
-\item\hypertarget{li-144}{}The \(P\)-intercept, \(800\), is the initial \((t = 0)\) value of the profit. Phil and Ernie start out \(\$800\) in debt. The \(t\)-intercept, \(20\), is the number of hours required for Phil and Ernie to break even.%
-\end{enumerate}
-%
-\item[6.]\hypertarget{exercise-13}{}A deep-sea diver is taking some readings at a depth of \(400\) feet. He begins rising at \(20\) feet per minute. \leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-145}{}Write an equation that expresses the diver’s altitude, \(h\), in terms of the number of minutes, \(m\), elapsed. (Consider a depth of \(400\) feet as an altitude of \(-400\) feet.)%
-\item\hypertarget{li-146}{}Find the intercepts and sketch the graph. (Suggestion: Scale the horizontal axis from \(0\) to \(24\) in increments of \(2\), and scale the vertical axis from \(-500\) to \(100\) in increments of \(50\).)%
-\item\hypertarget{li-147}{}What do the intercepts tell us about the diver's depth?%
-\end{enumerate}
-%
-\par\smallskip
-\item[7.]\hypertarget{exercise-14}{}There are many formulas for estimating the annual cost of driving. The Automobile Club estimates that fixed costs for a small car—including insurance, registration, depreciation, and financing—total about \(\$5000\) per year. The operating costs for gasoline, oil, maintenance, tires, and so forth are about \(12.5\) cents per mile. (Source: Automobile Association of America) \leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-148}{}Write an equation for the annual driving cost, \(C\), in terms of \(d\), the number of miles driven.%
-\item\hypertarget{li-149}{}Complete the table of values. \leavevmode%
-\begin{table}
-\centering
-\begin{tabular}{AlAcAcAcAcAcA}\hrulethick
-Miles Driven&\(4000\)&\(8000\)&\(12,000\)&\(16,000\)&\(20,000\)\tabularnewline\hrulethin
-Cost (\textdollar{})&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)\tabularnewline\hrulethin
-\end{tabular}
-\end{table}
-%
-\item\hypertarget{li-150}{}Choose scales for the axes and graph the equation.%
-\item\hypertarget{li-151}{}How much does the annual cost of driving increase when the mileage increases from \(8000\) to \(12,000\) miles? Illustrate this amount on the graph.%
-\item\hypertarget{li-152}{}How much mileage will cause the annual cost to exceed \(\$7000\)? Illustrate on the graph.%
-\end{enumerate}
-%
-\par\smallskip
+\subsection[{Homework}]{Homework}\label{section-1-2-exercises}
+\hypertarget{exercisegroup-1}{}\par\noindent For which of the following pairs is the second quantity a function of the first? Explain your answers.%
+\begin{exercisegroup}(1)
+\exercise[1.]\hypertarget{exercise-11}{}Price of an item; sales tax on the item at 4\%%
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-11}{}\quad
-\leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-153}{}\(C=5000+0.125d\)%
-\item\hypertarget{li-154}{}Complete the table of values. \leavevmode%
-\begin{table}
-\centering
-\begin{tabular}{AlAcAcAcAcAcA}\hrulethick
-Miles Driven&\(4000\)&\(8000\)&\(12,000\)&\(16,000\)&\(20,000\)\tabularnewline\hrulethin
-Cost (\textdollar{})&\(5500\)&\(6000\)&\(6500\)&\(7000\)&\(7500\)\tabularnewline\hrulethin
-\end{tabular}
-\end{table}
-%
-\item\hypertarget{li-155}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-7}
-%
-\item\hypertarget{li-156}{}\(\$500\)%
-\item\hypertarget{li-157}{}More than 16,000 miles%
-\end{enumerate}
-%
-\item[8.]\hypertarget{exercise-15}{}The boiling point of water changes with altitude. At sea level, water boils at \(212\degree\)F, and the boiling point diminishes by approximately \(0.002\degree\)F for each \(1\)-foot increase in altitude. \leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-158}{}Write an equation for the boiling point, \(B\), in terms of \(a\), the altitude in feet.%
-\item\hypertarget{li-159}{}Complete the table of values. \leavevmode%
-\begin{table}
-\centering
-\begin{tabular}{AlAcAcAcAcAcAcAcA}\hrulethick
-Altitude (ft)&\(-500\)&\(0\)&\(1000\)&\(2000\)&\(3000\)&\(4000\)&\(5000\)\tabularnewline\hrulethin
-Boiling point (\(\degree\)F)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)&\(\hphantom{0000}\)\tabularnewline\hrulethin
-\end{tabular}
-\end{table}
-%
-\item\hypertarget{li-160}{}Choose scales for the axes and graph the equation.%
-\item\hypertarget{li-161}{}How much does the boiling point decrease when the altitude increases from \(1000\) to \(3000\) feet? Illustrate this amount on the graph.%
-\item\hypertarget{li-162}{}At what altitudes is the boiling point less than \(204\degree\)F? Illustrate on the graph.%
-\end{enumerate}
-%
-\par\smallskip
-\hypertarget{exercisegroup-1}{}\par\noindent For each table, choose appropriate scales for the axes and plot the given points.%
-\begin{exercisegroup}(2)
-\exercise[9.]\hypertarget{exercise-16}{}\begin{tabular}{AlAcAcAcAcA}\hrulethick
-\(x\)&\(0\)&\(80\)&\(90\)&\(120\)\tabularnewline\hrulethin
-\(y\)&\(6\)&\(2\)&\(1.5\)&\(1\)\tabularnewline\hrulethin
-\end{tabular}
-%
+Function; the tax is determined by the price of the item.%
+\exercise[2.]\hypertarget{exercise-12}{}Time traveled at constant speed; distance traveled%
+\exercise[3.]\hypertarget{exercise-13}{}Number of years of education; annual income%
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-12}{}\quad
-\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-9}
-%
-\exercise[10.]\hypertarget{exercise-17}{}\begin{tabular}{AlAcAcAcAcA}\hrulethick
-\(x\)&\(300\)&\(500\)&\(800\)&\(1100\)\tabularnewline\hrulethin
-\(y\)&\(1.2\)&\(1.3\)&\(1.5\)&\(1.9\)\tabularnewline\hrulethin
-\end{tabular}
-%
-\exercise[11.]\hypertarget{exercise-18}{}\begin{tabular}{AlAcAcAcAcA}\hrulethick
-\(x\)&\(0.01\)&\(0.03\)&\(0.06\)&\(0.07\)\tabularnewline\hrulethin
-\(y\)&\(-0.2\)&\(-1\)&\(-1.1\)&\(-2\)\tabularnewline\hrulethin
-\end{tabular}
-%
+Not a function; incomes may differ for same number of years of education.%
+\exercise[4.]\hypertarget{exercise-14}{}Distance flown in an airplane; price of the ticket%
+\exercise[5.]\hypertarget{exercise-15}{}Volume of a container of water; the weight of the water%
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-13}{}\quad
-\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-11}
+Function; weight is determined by volume.%
+\exercise[6.]\hypertarget{exercise-16}{}Amount of a paycheck; amount of Social Security tax withheld%
+\end{exercisegroup}
+\par\smallskip\noindent
+\hypertarget{exercisegroup-2}{}\par\noindent Each of the following objects establishes a correspondence between two variables. Suggest appropriate input and output variables and decide whether the relationship is a function.%
+\begin{exercisegroup}(2)
+\exercise[7.]\hypertarget{exercise-17}{}An itemized grocery receipt%
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-14}{}\quad
+Input: items purchased; output: price of item. Yes, a function because each item has only one price.%
+\exercise[8.]\hypertarget{exercise-18}{}An inventory list%
+\exercise[9.]\hypertarget{exercise-19}{}An index%
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-15}{}\quad
+Input: topics; output: page or pages on which topic occurs. No, not a function because the same topic may appear in more than one page.%
+\exercise[10.]\hypertarget{exercise-20}{}A will%
+\exercise[11.]\hypertarget{exercise-21}{}An instructor's grade book%
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-16}{}\quad
+Input: students’ names; output: students’ scores on quizzes, tests, etc. No, not a function because the same student can have different grades on different tests.%
+\exercise[12.]\hypertarget{exercise-22}{}An address book%
+\exercise[13.]\hypertarget{exercise-23}{}A bathroom scale%
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-17}{}\quad
+Input: person stepping on scales; output: person's weight. Yes, a function because a person cannot have two different weights at the same time.%
+\exercise[14.]\hypertarget{exercise-24}{}A radio dial%
+\end{exercisegroup}
+\par\smallskip\noindent
+\hypertarget{exercisegroup-3}{}\par\noindent Which of the following tables define the second variable as a function of the first variable? Explain why or why not.%
+\begin{exercisegroup}(4)
+\exercise[15.]\hypertarget{exercise-25}{}\begin{tabular}{AcAcA}\hrulethick
+\(x\)&\(t\)\tabularnewline\hrulethin
+\(-1\)&\(2\)\tabularnewline\hrulethin
+\(0\)&\(9\)\tabularnewline\hrulethin
+\(1\)&\(-2\)\tabularnewline\hrulethin
+\(0\)&\(-3\)\tabularnewline\hrulethin
+\(-1\)&\(5\)\tabularnewline\hrulethin
+\end{tabular}
 %
-\exercise[12.]\hypertarget{exercise-19}{}\begin{tabular}{AlAcAcAcAcA}\hrulethick
-\(x\)&\(0.003\)&\(0.005\)&\(0.008\)&\(0.011\)\tabularnewline\hrulethin
-\(y\)&\(6\)&\(2\)&\(1.5\)&\(1\)\tabularnewline\hrulethin
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-18}{}\quad
+No%
+\exercise[16.]\hypertarget{exercise-26}{}\begin{tabular}{AcAcA}\hrulethick
+\(y\)&\(w\)\tabularnewline\hrulethin
+\(0\)&\(8\)\tabularnewline\hrulethin
+\(1\)&\(12\)\tabularnewline\hrulethin
+\(3\)&\(7\)\tabularnewline\hrulethin
+\(5\)&\(-3\)\tabularnewline\hrulethin
+\(7\)&\(4\)\tabularnewline\hrulethin
+\end{tabular}
+%
+\exercise[17.]\hypertarget{exercise-27}{}\begin{tabular}{AcAcA}\hrulethick
+\(x\)&\(y\)\tabularnewline\hrulethin
+\(-3\)&\(8\)\tabularnewline\hrulethin
+\(-2\)&\(3\)\tabularnewline\hrulethin
+\(-1\)&\(0\)\tabularnewline\hrulethin
+\(0\)&\(-1\)\tabularnewline\hrulethin
+\(1\)&\(0\)\tabularnewline\hrulethin
+\(2\)&\(3\)\tabularnewline\hrulethin
+\(3\)&\(8\)\tabularnewline\hrulethin
+\end{tabular}
+%
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-19}{}\quad
+Yes%
+\exercise[18.]\hypertarget{exercise-28}{}\begin{tabular}{AcAcA}\hrulethick
+\(s\)&\(t\)\tabularnewline\hrulethin
+\(2\)&\(5\)\tabularnewline\hrulethin
+\(4\)&\(10\)\tabularnewline\hrulethin
+\(6\)&\(15\)\tabularnewline\hrulethin
+\(8\)&\(20\)\tabularnewline\hrulethin
+\(6\)&\(25\)\tabularnewline\hrulethin
+\(4\)&\(30\)\tabularnewline\hrulethin
+\(2\)&\(35\)\tabularnewline\hrulethin
 \end{tabular}
 %
 \end{exercisegroup}
 \par\smallskip\noindent
-\hypertarget{exercisegroup-2}{}\par\noindent For Problems 13-18, \leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-163}{}Find the intercepts of the graph.%
-\item\hypertarget{li-164}{}Graph the equation by the intercept method.%
-\end{enumerate}
+\hypertarget{exercisegroup-4}{}\begin{exercisegroup}(2)
+\exercise[19.]\hypertarget{exercise-29}{}\begin{tabular}{AcAcAcAcAcAcA}\hrulethick
+\(r\)&\(-4\)&\(-2\)&\(0\)&\(2\)&\(4\)\tabularnewline\hrulethin
+\(v\)&\(6\)&\(6\)&\(3\)&\(6\)&\(8\)\tabularnewline\hrulethin
+\end{tabular}
 %
-\begin{exercisegroup}(3)
-\exercise[13.]\hypertarget{exercise-20}{}\(x + 2y = 8\)%
-\par\smallskip
-\noindent\textbf{Answer.}\hypertarget{answer-14}{}\quad
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-165}{}\((8, 0), (0, 4)\)%
-\item\hypertarget{li-166}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-13}
-%
-\end{enumerate}
-%
-\exercise[14.]\hypertarget{exercise-21}{}\(2x - y = 6\)%
-\exercise[15.]\hypertarget{exercise-22}{}\(3x - 4y =12\)%
-\par\smallskip
-\noindent\textbf{Answer.}\hypertarget{answer-15}{}\quad
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-167}{}\((4, 0), (0, -3)\)%
-\item\hypertarget{li-168}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-15}
-%
-\end{enumerate}
-%
-\exercise[16.]\hypertarget{exercise-23}{}\(2x + 6y = 6\)%
-\exercise[17.]\hypertarget{exercise-24}{}\(\displaystyle{\frac{x}{9}- \frac{y}{4}= 1}\)%
-\par\smallskip
-\noindent\textbf{Answer.}\hypertarget{answer-16}{}\quad
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-169}{}\((9, 0), (0, -4)\)%
-\item\hypertarget{li-170}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-17}
-%
-\end{enumerate}
-%
-\exercise[18.]\hypertarget{exercise-25}{}\(\displaystyle{\frac{x}{5}+ \frac{y}{8}= 1}\)%
-\end{exercisegroup}
-\par\smallskip\noindent
-\hypertarget{exercisegroup-3}{}\par\noindent For Problems 19-24, \leavevmode%
-\begin{enumerate}[label=(\alph*)]
-\item\hypertarget{li-171}{}Find the intercepts of the graph.%
-\item\hypertarget{li-172}{}Use the intercepts to choose scales for the axes, and then graph the equation by the intercept method.%
-\end{enumerate}
-%
-\begin{exercisegroup}(2)
-\exercise[19.]\hypertarget{exercise-26}{}\(20x = 30y - 45,000\)%
-\par\smallskip
-\noindent\textbf{Answer.}\hypertarget{answer-17}{}\quad
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-173}{}\((-2250, 0), (0, 1500)\)%
-\item\hypertarget{li-174}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-19}
-%
-\end{enumerate}
-%
-\exercise[20.]\hypertarget{exercise-27}{}\(30x = 45y + 60,000\)%
-\exercise[21.]\hypertarget{exercise-28}{}\(0.4x + 1.2y = 4.8\)%
-\par\smallskip
-\noindent\textbf{Answer.}\hypertarget{answer-18}{}\quad
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-175}{}\((12, 0), (0, 4)\)%
-\item\hypertarget{li-176}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-21}
-%
-\end{enumerate}
-%
-\exercise[22.]\hypertarget{exercise-29}{}\(3.2x - 0.8y = 12.8\)%
-\exercise[23.]\hypertarget{exercise-30}{}\(\displaystyle{\frac{2x}{3}+ \frac{3y}{11}= 1}\)%
-\par\smallskip
-\noindent\textbf{Answer.}\hypertarget{answer-19}{}\quad
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-177}{}\(\left(\dfrac{3}{2} , 0\right), \left(0, \dfrac{11}{3} \right)\)%
-\item\hypertarget{li-178}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-23}
-%
-\end{enumerate}
-%
-\exercise[24.]\hypertarget{exercise-31}{}\(\displaystyle{\frac{8x}{7}- \frac{2y}{7}= 1}\)%
-\end{exercisegroup}
-\par\smallskip\noindent
-\item[25.]\hypertarget{exercise-32}{}The owner of a gas station has \(\$19,200\) to spend on unleaded gas this month. Regular unleaded costs him \(\$2.40\) per gallon, and premium unleaded costs \(\$3.20\) per gallon.%
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-179}{}How much do \(x\) gallons of regular cost? How much do \(y\) gallons of premium cost?%
-\item\hypertarget{li-180}{}Write an equation in general form that relates the amount of regular unleaded gasoline, \(\), the owner can buy and the amount of premium unleaded, \(y\).%
-\item\hypertarget{li-181}{}Find the intercepts and sketch the graph.%
-\item\hypertarget{li-182}{}What do the intercepts tell us about the amount of gasoline the owner can purchase?%
-\end{enumerate}
-\par\smallskip
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-20}{}\quad
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-183}{}\(\$2.40x, \$3.20y\)%
-\item\hypertarget{li-184}{}\(2.40x + 3.20y = 19,200\)%
-\item\hypertarget{li-185}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-25}
+Yes%
+\exercise[20.]\hypertarget{exercise-30}{}\begin{tabular}{AcAcAcAcAcAcA}\hrulethick
+\(p\)&\(-5\)&\(-4\)&\(-3\)&\(-2\)&\(-1\)\tabularnewline\hrulethin
+\(d\)&\(-5\)&\(-4\)&\(-3\)&\(-2\)&\(-1\)\tabularnewline\hrulethin
+\end{tabular}
 %
-\item\hypertarget{li-186}{}The \(y\)-intercept, \(6000\) gallons, is the amount of premium that the gas station owner can buy if he buys no regular. The \(x\)-intercept, \(8000\) gallons, is the amount of regular he can buy if he buys no premium.%
-\end{enumerate}
+\exercise[21.]\hypertarget{exercise-31}{}\begin{tabular}{AcAcA}\hrulethick
+Pressure (\(p\))&Volume (\(v\))\tabularnewline\hrulethin
+\(15\)&\(100.0\)\tabularnewline\hrulethin
+\(20\)&\(75.0\)\tabularnewline\hrulethin
+\(25\)&\(60.0\)\tabularnewline\hrulethin
+\(30\)&\(50.0\)\tabularnewline\hrulethin
+\(35\)&\(42.8\)\tabularnewline\hrulethin
+\(40\)&\(37.5\)\tabularnewline\hrulethin
+\(45\)&\(33.3\)\tabularnewline\hrulethin
+\(50\)&\(30.0\)\tabularnewline\hrulethin
+\end{tabular}
 %
-\item[26.]\hypertarget{exercise-33}{}Five pounds of body fat is equivalent to \(16,000\) calories. Carol can burn \(600\) calories per hour bicycling and \(400\) calories per hour swimming.%
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-187}{}How many calories will Carol burn in \(\) hours of cycling? How many calories will she burn in \(y\) hours of swimming?%
-\item\hypertarget{li-188}{}Write an equation in general form that relates the number of hours, \(x\), of cycling and the number of hours, \(y\), of swimming Carol needs to perform in order to lose \(5\) pounds.%
-\item\hypertarget{li-189}{}Find the intercepts and sketch the graph.%
-\item\hypertarget{li-190}{}What do the intercepts tell us about Carol's exercise program?%
-\end{enumerate}
-\par\smallskip
-\item[27.]\hypertarget{exercise-34}{}Delbert must increase his daily potassium intake by \(1800\) mg. He decides to eat a combination of figs and bananas, which are both low in sodium. There are \(9\) mg potassium per gram of fig, and \(4\) mg potassium per gram of banana.%
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-191}{}How much potassium is in \(x\) grams of fig? How much potassium is in \(y\) grams of banana?%
-\item\hypertarget{li-192}{}Write an equation in general form that relates the number of grams, \(x\), of fig and the number of grams, \(y\), of banana Delbert needs to get \(1800\) mg of potassium.%
-\item\hypertarget{li-193}{}Find the intercepts and sketch the graph.%
-\item\hypertarget{li-194}{}What do the intercepts tell us about Delbert's diet?%
-\end{enumerate}
-\par\smallskip
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-21}{}\quad
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-195}{}\(9x\) mg, \(4y\) mg%
-\item\hypertarget{li-196}{}\(9x + 4y = 1800\)%
-\item\hypertarget{li-197}{}\includegraphics[width=0.35\linewidth]{images/fig-ans-1-1-27}
+Yes%
+\exercise[22.]\hypertarget{exercise-32}{}\begin{tabular}{AcAcA}\hrulethick
+Frequency (\(f\))&Wavelength (\(w\))\tabularnewline\hrulethin
+\(5\)&\(60.0\)\tabularnewline\hrulethin
+\(10\)&\(30.0\)\tabularnewline\hrulethin
+\(20\)&\(15.0\)\tabularnewline\hrulethin
+\(30\)&\(10.0\)\tabularnewline\hrulethin
+\(40\)&\(7.5\)\tabularnewline\hrulethin
+\(50\)&\(6.0\)\tabularnewline\hrulethin
+\(60\)&\(5.0\)\tabularnewline\hrulethin
+\(70\)&\(4.3\)\tabularnewline\hrulethin
+\end{tabular}
 %
-\item\hypertarget{li-198}{}The \(x\)-intercept, \(200\) grams, tells how much fig Delbert should eat if he has no bananas, and the \(y\)-intercept, \(450\) grams, tells how much banana he should eat if he has no figs.%
-\end{enumerate}
+\exercise[23.]\hypertarget{exercise-33}{}\begin{tabular}{AcAcA}\hrulethick
+Temperature (\(T\))&Humidity (\(h\))\tabularnewline\hrulethin
+Jan. 1 \(34\degree\)F&\(42\%\)\tabularnewline\hrulethin
+Jan. 2 \(36\degree\)F&\(44\%\)\tabularnewline\hrulethin
+Jan. 3 \(35\degree\)F&\(47\%\)\tabularnewline\hrulethin
+Jan. 4 \(29\degree\)F&\(50\%\)\tabularnewline\hrulethin
+Jan. 5 \(31\degree\)F&\(52\%\)\tabularnewline\hrulethin
+Jan. 6\(35\degree\)F&\(51%\)\tabularnewline\hrulethin
+Jan. 7 \(34\degree\)F&\(49\%\)\tabularnewline\hrulethin
+\end{tabular}
 %
-\item[28.]\hypertarget{exercise-35}{}Leslie plans to invest some money in two CD accounts. The first account pays \(3.6\%\) interest per year, and the second account pays \(2.8\%\) interest per year. Leslie would like to earn \(\$500\) per year on her investment.%
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-199}{}If Leslie invests \(x\) dollars in the first account, how much interest will she earn? How much interest will she earn if she invests \(y\) dollars in the second account?%
-\item\hypertarget{li-200}{}Write an equation in general form that relates \(x\) and \(y\) if Leslie earns \(\$500\) interest.%
-\item\hypertarget{li-201}{}Find the intercepts and sketch the graph.%
-\item\hypertarget{li-202}{}What do the intercepts tell us about Leslie's investments?%
-\end{enumerate}
-\par\smallskip
-\item[29.]\hypertarget{exercise-36}{}Find the intercepts of the graph for each equation.%
-\leavevmode%
-\begin{multicols}{2}
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-203}{}\(\displaystyle{\frac{x}{3}+\frac{y}{5}=1} \)%
-\item\hypertarget{li-204}{}\(\displaystyle{2x - 4y = 1} \)%
-\item\hypertarget{li-205}{}\(\displaystyle{\frac{2x}{5}-\frac{2y}{3}=1} \)%
-\item\hypertarget{li-206}{}\(\displaystyle{\frac{x}{p}+\frac{y}{q}=1} \)%
-\item\hypertarget{li-207}{}Why is the equation \(\displaystyle{\frac{x}{a}+\frac{y}{b}=1} \) called the \terminology{intercept form} for a line?%
-\end{enumerate}
-\end{multicols}
-\par\smallskip
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-22}{}\quad
-\leavevmode%
-\begin{multicols}{2}
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-208}{}\((3,0), (0,5) \)%
-\item\hypertarget{li-209}{}\(\left(\dfrac{1}{2},0\right), \left(0,\dfrac{-1}{4}\right) \)%
-\item\hypertarget{li-210}{}\(\left(\dfrac{5}{2},0\right), \left(0,\dfrac{-3}{2}\right) \)%
-\item\hypertarget{li-211}{}\((p,0), (0,q) \)%
-\item\hypertarget{li-212}{}The value of \(a\) is the \(x\)-intercept, and the value of \(b\) is the \(y\)-intercept.%
-\end{enumerate}
-\end{multicols}
+No%
+\exercise[24.]\hypertarget{exercise-34}{}\begin{tabular}{AcAcA}\hrulethick
+\tablecelllines{c}{m}
+{Inflation\\
+rate (\(I\))}
+&\tablecelllines{c}{m}
+{Unemployment\\
+rate (\(U\))}
+\tabularnewline\hrulethin
+1972 \(\hphantom{000}5.6\%\)&\(5.1\%\)\tabularnewline\hrulethin
+1973 \(\hphantom{000}6.2\%\)&\(4.5\%\)\tabularnewline\hrulethin
+1974 \(\hphantom{000}10.1\%\)&\(4.9\%\)\tabularnewline\hrulethin
+1975 \(\hphantom{000}9.2\%\)&\(7.4\%\)\tabularnewline\hrulethin
+1976 \(\hphantom{000}5.8\%\)&\(6.7\%\)\tabularnewline\hrulethin
+1977 \(\hphantom{000}5.6\%\)&\(6.8\%\)\tabularnewline\hrulethin
+1978 \(\hphantom{000}6.7\%\)&\(7.4\%\)\tabularnewline\hrulethin
+\end{tabular}
 %
-\item[30.]\hypertarget{exercise-37}{}Write an equation in intercept form (see Problem 29) for the line with the given intercepts. Then write the equation in general form.%
-\leavevmode%
-\begin{multicols}{2}
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-213}{}\((6, 0), (0, 2) \)%
-\item\hypertarget{li-214}{}\((-3, 0), (0, 8) \)%
-\item\hypertarget{li-215}{}\(\left(\dfrac{3}{4}, 0\right), \left(0, \dfrac{-1}{4}\right) \)%
-\item\hypertarget{li-216}{}\((v, 0), (0, -w) \)%
-\item\hypertarget{li-217}{}\(\left(\dfrac{1}{H}, 0\right), \left(0, \dfrac{1}{T}\right) \)%
-\end{enumerate}
-\end{multicols}
-\par\smallskip
-\item[31.]\hypertarget{exercise-38}{}\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-218}{}Find the \(y\)-intercept of the line \(y = mx + b\).%
-\item\hypertarget{li-219}{}Find the \(x\)-intercept of the line \(y = mx + b\).%
-\end{enumerate}
+\exercise[25.]\hypertarget{exercise-35}{}\begin{tabular}{AcAcA}\hrulethick
+\tablecelllines{c}{m}
+{Adjusted gross\\
+income (\(I\))}
+&Tax bracket (\(T\))\tabularnewline\hrulethin
+\(\$0-2479\)&\(0\%\)\tabularnewline\hrulethin
+\(\$2480-3669\)&\(4.5\%\)\tabularnewline\hrulethin
+\(\$3670-4749\)&\(12\%\)\tabularnewline\hrulethin
+\(\$4750-7009\)&\(14\%\)\tabularnewline\hrulethin
+\(\$7010-9169\)&\(15\%\)\tabularnewline\hrulethin
+\($9170-11,649\)&\(16\%\)\tabularnewline\hrulethin
+\($11,650-13,919\)&\(18\%\)\tabularnewline\hrulethin
+\end{tabular}
 %
-\par\smallskip
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-23}{}\quad
-\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-220}{}\((0, b)\)%
-\item\hypertarget{li-221}{}\(\left(\dfrac{-b}{m},0\right)\), if \(m\ne 0\)%
-\end{enumerate}
-%
-\item[32.]\hypertarget{exercise-39}{}\leavevmode%
-\begin{enumerate}[label=\alph*]
-\item\hypertarget{li-222}{}Find the \(y\)-intercept of the line \(Ax + By = C\).%
-\item\hypertarget{li-223}{}Find the \(x\)-intercept of the line \(Ax + By = C\).%
-\end{enumerate}
-%
-\par\smallskip
-\end{exerciselist}
-\hypertarget{exercisegroup-4}{}\par\noindent Write an equation in general form for each line.%
-\begin{exercisegroup}(2)
-\exercise[33.]\hypertarget{exercise-40}{}\includegraphics[width=0.8\linewidth]{images/fig-ex-1-1-33}
-%
-\par\smallskip
-\noindent\textbf{Answer.}\hypertarget{answer-24}{}\quad
-\(-2x + 3y = 2400\)%
-\exercise[34.]\hypertarget{exercise-41}{}\includegraphics[width=0.8\linewidth]{images/fig-ex-1-1-34}
-%
-\exercise[35.]\hypertarget{exercise-42}{}\includegraphics[width=0.8\linewidth]{images/fig-ex-1-1-35}
-%
-\par\smallskip
-\noindent\textbf{Answer.}\hypertarget{answer-25}{}\quad
-\(3x + 400y = 240\)%
-\exercise[36.]\hypertarget{exercise-43}{}\includegraphics[width=0.8\linewidth]{images/fig-ex-1-1-36}
+Yes%
+\exercise[26.]\hypertarget{exercise-36}{}\begin{tabular}{AcAcA}\hrulethick
+\tablecelllines{c}{m}
+{Cost of\\
+merchandise (\(M\))}
+&\tablecelllines{c}{m}
+{Shipping\\
+charge  (\(C\))}
+\tabularnewline\hrulethin
+\(\$0.01-10.00\)&\(\$2.50\)\tabularnewline\hrulethin
+\(10.01-20.00\)&\(3.75\)\tabularnewline\hrulethin
+\(20.01-35.00\)&\(4.85\)\tabularnewline\hrulethin
+\(30.01-50.00\)&\(5.95\)\tabularnewline\hrulethin
+\(50.01-75.00\)&\(6.95\)\tabularnewline\hrulethin
+\(75.01-100.00\)&\(7.95\)\tabularnewline\hrulethin
+Over \(100.00\)&\(8.95\)\tabularnewline\hrulethin
+\end{tabular}
 %
 \end{exercisegroup}
 \par\smallskip\noindent
-\hypertarget{exercisegroup-5}{}\par\noindent For Problems 37–44, \leavevmode%
+\begin{exerciselist}
+\item[27.]\hypertarget{exercise-37}{}The function described in Problem 21 is called \(g\), so that \(v = g( p)\). Find the following: \leavevmode%
 \begin{enumerate}[label=\alph*]
-\item\hypertarget{li-224}{}Solve each equation for \(y\) in terms of \(x\). (See the Algebra Skills Refresher {$\langle\langle$Unresolved xref, reference "appendix-Linear-Equations-and-Inequalities"; check spelling or use "provisional" attribute$\rangle\rangle$} to review this skill.)%
-\item\hypertarget{li-225}{}Graph the equation on your calculator in the specified window. (See {$\langle\langle$Unresolved xref, reference "appendix-b"; check spelling or use "provisional" attribute$\rangle\rangle$} for help with the graphing calculator.)%
-\item\hypertarget{li-226}{}Make a pencil and paper sketch of the graph. Label the scales on your axes, and the coordinates of the intercepts.%
+\item\hypertarget{li-82}{}\(g(25)\)%
+\item\hypertarget{li-83}{}\(g(40)\)%
+\item\hypertarget{li-84}{}\(x\) so that \(g(x) = 50\)%
 \end{enumerate}
 %
-\begin{exercisegroup}(2)
-\exercise[37.]\hypertarget{exercise-44}{}\(2+y=6\)%
-\begin{align*}
-\small{\text{Xmin}} \amp = -10 \amp\amp \small{\text{Ymin}} = -10
-\\
-\small{\text{Xmax}} \amp = 10 \amp\amp \small{\text{Ymax}} = 10
-\\
-\small{\text{Xscl}} \amp = 1 \amp\amp \small{\text{Yscl}} = 1
-\end{align*}
+\par\smallskip
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-24}{}\quad
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-85}{}\(60\)%
+\item\hypertarget{li-86}{}\(37.5\)%
+\item\hypertarget{li-87}{}\(30\)%
+\end{enumerate}
 %
+\item[28.]\hypertarget{exercise-38}{}The function described in Problem 22 is called \(h\), so that \(w = h( f)\). Find the following: \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-88}{}\(h(20)\)%
+\item\hypertarget{li-89}{}\(h(60)\)%
+\item\hypertarget{li-90}{}\(x\) so that \(h(x) = 10\)%
+\end{enumerate}
+%
+\par\smallskip
+\item[29.]\hypertarget{exercise-39}{}The function described in Problem 25 is called \(T\), so that \(T = T( I)\). Find the following: \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-91}{}\(T(8750)\)%
+\item\hypertarget{li-92}{}\(T(6249)\)%
+\item\hypertarget{li-93}{}\(x\) so that \(T(x) = 15\%\)%
+\end{enumerate}
+%
+\par\smallskip
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-25}{}\quad
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-94}{}\(15\%\)%
+\item\hypertarget{li-95}{}\(14\%\)%
+\item\hypertarget{li-96}{}\(\$7010–\$9169\)%
+\end{enumerate}
+%
+\item[30.]\hypertarget{exercise-40}{}The function described in Problem 26 is called \(C\), so that \(C = C( M)\). Find the following: \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-97}{}\(C(11.50)\)%
+\item\hypertarget{li-98}{}\(C(47.24)\)%
+\item\hypertarget{li-99}{}\(x\) so that \(C(x) = 7.95\)%
+\end{enumerate}
+%
+\par\smallskip
+\item[31.]\hypertarget{exercise-41}{}Data indicate that U.S. women are delaying having children longer than their counterparts 50 years ago. The table shows \(f(t)\) the percent of 20–24-year-old women in year \(t\) who had not yet had children. (Source: U.S. Dept of Health and Human Services) \begin{tabular}{AcAcAcAcAcAcAcAcAcAcA}\hrulethick
+Year (\(t\))&\(1960\)&\(1965\)&\(1970\)&\(1975\)&\(1980\)&\(1985\)&\(1990\)&\(1995\)&\(2000\)\tabularnewline\hrulethin
+\tablecelllines{c}{m}
+{Percent of\\
+women}
+&\(47.5\)&\(51.4\)&\(47.0\)&\(62.5\)&\(66.2\)&\(67.7\)&\(68.3\)&\(65.5\)&\(66.0\)\tabularnewline\hrulethin
+\end{tabular}
+ \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-100}{}Evaluate \(f (1985)\) and explain what it means.%
+\item\hypertarget{li-101}{}Estimate a solution to the equation \(f (t) = 68\) and explain what it means.%
+\item\hypertarget{li-102}{}In 1997, \(64.9\%\) of 20–24-year-old women had not yet had children. Write an equation with function notation that states this fact.%
+\end{enumerate}
+%
+\par\smallskip
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-26}{}\quad
 \leavevmode%
-\begin{description}
-\item[{a.}]\hypertarget{li-227}{}\(y = 6 - 2x\)%
-\item[{c.}]\hypertarget{li-228}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-37}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-103}{}\(67.7\): In 1985, \(67.7\%\) of 20–24 year old women had not yet had children.%
+\item\hypertarget{li-104}{}1987: 1987 is approximately when \(68\%\) of 20–24 year old women had not yet had children.%
+\item\hypertarget{li-105}{}\(f (1997) = 64.9\)%
+\end{enumerate}
 %
-\end{description}
+\item[32.]\hypertarget{exercise-42}{}The table shows \(f (t)\), the death rate (per 100,000 people) from HIV among 15–24-year-olds, and \(g(t)\), the death rate from HIV among 25–34-year-olds, for selected years from 1997 to 2002. (Source: U.S. Dept of Health and Human Services) \begin{tabular}{AcAcAcAcAcAcAcAcAcAcAcA}\hrulethick
+Year&\(1987\)&\(1988\)&\(1989\)&\(1990\)&\(1992\)&\(1994\)&\(1996\)&\(1998\)&\(2000\)&\(2002\)\tabularnewline\hrulethin
+15–24-year-olds&\(1.3\)&\(1.4\)&\(1.6\)&\(1.5\)&\(1.6\)&\(1.8\)&\(1.1\)&\(0.6\)&\(0.5\)&\(0.4\)\tabularnewline\hrulethin
+25–34-year-olds&\(11.7\)&\(14.0\)&\(17.9\)&\(19.7\)&\(24.2\)&\(28.6\)&\(19.2\)&\(8.1\)&\(6.1\)&\(4.6\)\tabularnewline\hrulethin
+\end{tabular}
+ \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-106}{}Evaluate \(f (1995)\) and explain what it means.%
+\item\hypertarget{li-107}{}Find a solution to the equation \(g (t) = 28.6\) and explain what it means.%
+\item\hypertarget{li-108}{}In 1988, the death rate from HIV for 25–34-year-olds was \(10\) times the corresponding rate for 15–24-year-olds. Write an equation with function notation that states this fact.%
+\end{enumerate}
 %
-\exercise[38.]\hypertarget{exercise-45}{}\(8 - y + 3x = 0\)%
-\begin{align*}
-\small{\text{Xmin}} \amp = -10 \amp\amp \small{\text{Ymin}} = -10
-\\
-\small{\text{Xmax}} \amp = 10 \amp\amp \small{\text{Ymax}} = 10
-\\
-\small{\text{Xscl}} \amp = 1 \amp\amp \small{\text{Yscl}} = 1
-\end{align*}
+\par\smallskip
+\item[33.]\hypertarget{exercise-43}{}When you exercise, your heart rate should increase until it reaches your target heart rate. The table shows target heart rate, \(r = f (a)\), as a function of age. \begin{tabular}{AcAcAcAcAcAcAcAcAcAcAcA}\hrulethick
+\(a\)&\(20\)&\(25\)&\(30\)&\(35\)&\(40\)&\(50\)&\(55\)&\(60\)&\(65\)&\(70\)\tabularnewline\hrulethin
+\(r\)&\(150\)&\(146\)&\(142\)&\(139\)&\(131\)&\(127\)&\(124\)&\(120\)&\(116\)&\(112\)\tabularnewline\hrulethin
+\end{tabular}
+ \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-109}{}Does \(f (50) = 2 f (25)\)?%
+\item\hypertarget{li-110}{}Find a value of a for which \(f (a) = 2a\). Is \(f (a) = 2a\) for all values of \(a\)?%
+\item\hypertarget{li-111}{}Is \(r = f (a)\) an increasing function or a decreasing function?%
+\end{enumerate}
 %
-\exercise[39.]\hypertarget{exercise-46}{}\(3x - 4y = 1200\)%
-\begin{align*}
-\small{\text{Xmin}} \amp = -1000 \amp\amp \small{\text{Ymin}} = -1000
-\\
-\small{\text{Xmax}} \amp = 1000 \amp\amp \small{\text{Ymax}} = 1000
-\\
-\small{\text{Xscl}} \amp = 100 \amp\amp \small{\text{Yscl}} = 100
-\end{align*}
-%
+\par\smallskip
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-27}{}\quad
 \leavevmode%
-\begin{description}
-\item[{a.}]\hypertarget{li-229}{}\(y = \dfrac{3}{4}x-300\)%
-\item[{c.}]\hypertarget{li-230}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-39}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-112}{}No%
+\item\hypertarget{li-113}{}60; no%
+\item\hypertarget{li-114}{}Decreasing%
+\end{enumerate}
 %
-\end{description}
+\item[34.]\hypertarget{exercise-44}{}The table shows \(M = f (d)\), the men's Olympic record time, and \(W = g(d)\), the women's Olympic record time, as a function of the length, \(d\), of the race. For example, the women’s record in the 100 meters is 10.62 seconds, and the men’s record in the 800 meters is 1 minute, 42.58 seconds. (Source: www.hickoksports.com) \begin{tabular}{AcAcAcAcAcAcAcAcA}\hrulethick
+\tablecelllines{c}{m}
+{Distance\\
+(meters)}
+&\(100\)&\(200\)&\(400\)&\(800\)&\(1500\)&\(5000\)&\(10,000\)\tabularnewline\hrulethin
+Men&\(9.63\)&\(19.30\)&\(43.03\)&\(1:40.91\)&\(3:32.07\)&\(12:57.82\)&\(27:01.17\)\tabularnewline\hrulethin
+Women&\(10.62\)&\(21.34\)&\(48.25\)&\(1:53.43\)&\(3:53.96\)&\(14:26.17\)&\(29:17.45\)\tabularnewline\hrulethin
+\end{tabular}
+ \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-115}{}Does \(f (800) = 2 f (400)\)? Does \(g(400) = 2g(200)\)?%
+\item\hypertarget{li-116}{}Find a value of \(d\) for which \(f (2d)\lt 2f (d)\). Is there a value of \(d\) for which \(g(2d)\lt 2g(d)\)?%
+\end{enumerate}
 %
-\exercise[40.]\hypertarget{exercise-47}{}\(x + 2y = 500\)%
-\begin{align*}
-\small{\text{Xmin}} \amp = -1000 \amp\amp \small{\text{Ymin}} = -1000
-\\
-\small{\text{Xmax}} \amp = 1000 \amp\amp \small{\text{Ymax}} = 1000
-\\
-\small{\text{Xscl}} \amp = 100 \amp\amp \small{\text{Yscl}} = 100
-\end{align*}
-%
-\exercise[41.]\hypertarget{exercise-48}{}\(0.2x + 5y = 0.1\)%
-\begin{align*}
-\small{\text{Xmin}} \amp = -1 \amp\amp \small{\text{Ymin}} = -0.1
-\\
-\small{\text{Xmax}} \amp = 1 \amp\amp \small{\text{Ymax}} = 0.1
-\\
-\small{\text{Xscl}} \amp = 0.1 \amp\amp \small{\text{Yscl}} = 0.01
-\end{align*}
-%
+\par\smallskip
+\hypertarget{exercisegroup-5}{}\par\noindent In Problems 35\textemdash{}40, use the graph of the function to answer the questions.%
+\begin{exercisegroup}(1)
+\exercise[35.]\hypertarget{exercise-45}{}The graph shows \(C\) as a function of \(t\). \(C\) stands for the number of students (in thousands) at State University who consider themselves computer literate, and \(t\) represents time, measured in years since 1990.%
+\includegraphics[width=0.4\linewidth]{images/fig-ex-1-2-35}
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-117}{}When did \(2000\) students consider themselves computer literate?%
+\item\hypertarget{li-118}{}How long did it take that number to double?%
+\item\hypertarget{li-119}{}How long did it take for the number to double again?%
+\item\hypertarget{li-120}{}How many students became computer literate between January 1992 and June 1993?%
+\end{enumerate}
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-28}{}\quad
 \leavevmode%
-\begin{description}
-\item[{a.}]\hypertarget{li-231}{}\(y = 0.02 - 0.04x\)%
-\item[{c.}]\hypertarget{li-232}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-41}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-121}{}1991%
+\item\hypertarget{li-122}{}1 yr%
+\item\hypertarget{li-123}{}1 yr%
+\item\hypertarget{li-124}{}About 7300%
+\end{enumerate}
 %
-\end{description}
-%
-\exercise[42.]\hypertarget{exercise-49}{}\(1.2x - 4.2y = 3.6\)%
-\begin{align*}
-\small{\text{Xmin}} \amp = -1 \amp\amp \small{\text{Ymin}} = -1
-\\
-\small{\text{Xmax}} \amp = 4 \amp\amp \small{\text{Ymax}} = 1
-\\
-\small{\text{Xscl}} \amp = 0.2 \amp\amp \small{\text{Yscl}} = 0.1
-\end{align*}
-%
-\exercise[43.]\hypertarget{exercise-50}{}\(70x + 3y = y + 420\)%
-\begin{align*}
-\small{\text{Xmin}} \amp = 0 \amp\amp \small{\text{Ymin}} = 0
-\\
-\small{\text{Xmax}} \amp = 10 \amp\amp \small{\text{Ymax}} = 250
-\\
-\small{\text{Xscl}} \amp = 1 \amp\amp \small{\text{Yscl}} = 25
-\end{align*}
-%
+\exercise[36.]\hypertarget{exercise-46}{}The graph shows \(P\) as a function of \(t\). \(P\) is the number of people in Cedar Grove who owned a portable DVD player \(t\) years after 2000.%
+\includegraphics[width=0.4\linewidth]{images/fig-ex-1-2-36}
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-125}{}When did 3500 people own portable DVD players?%
+\item\hypertarget{li-126}{}How many people owned portable DVD players in 2005?%
+\item\hypertarget{li-127}{}The number of owners of portable DVD players in Cedar Grove seems to be leveling off at what number?%
+\item\hypertarget{li-128}{}How many people acquired portable DVD players between 2001 and 2004?%
+\end{enumerate}
+\exercise[37.]\hypertarget{exercise-47}{}The graph shows the revenue, \(R\), a movie theater collects as a function of the price, \(d\), it charges for a ticket.%
+\includegraphics[width=0.5\linewidth]{images/fig-ex-1-2-37}
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-129}{}What is the revenue if the theater charges \(\$12.00\) for a ticket?%
+\item\hypertarget{li-130}{}What should the theater charge for a ticket in order to collect \(\$1500\) in revenue?%
+\item\hypertarget{li-131}{}For what values of \(d\) is \(R\gt 1875\)?%
+\end{enumerate}
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-29}{}\quad
 \leavevmode%
-\begin{description}
-\item[{a.}]\hypertarget{li-233}{}\(y = 210 - 35x\)%
-\item[{c.}]\hypertarget{li-234}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-43}
-%
-\end{description}
-%
-\exercise[44.]\hypertarget{exercise-51}{}\(40y - 5x = 780 - 20y\)%
-\begin{align*}
-\small{\text{Xmin}} \amp = -200 \amp\amp \small{\text{Ymin}} = 0
-\\
-\small{\text{Xmax}} \amp = 0 \amp\amp \small{\text{Ymax}} = 20
-\\
-\small{\text{Xscl}} \amp = 20 \amp\amp \small{\text{Yscl}} = 2
-\end{align*}
-%
-\end{exercisegroup}
-\par\smallskip\noindent
-\hypertarget{exercisegroup-6}{}\par\noindent For Problems 45–52, \leavevmode%
 \begin{enumerate}[label=\alph*]
-\item\hypertarget{li-235}{}Find the \(\text{}\)- and \(y\)-intercepts.%
-\item\hypertarget{li-236}{}Solve the equation for \(y\).%
-\item\hypertarget{li-237}{}Choose a graphing window in which both intercepts are visible, and graph the equation on your calculator.%
+\item\hypertarget{li-132}{}Approximately \(\$1920\)%
+\item\hypertarget{li-133}{}\(\$5\) or \(\$15\)%
+\item\hypertarget{li-134}{}\(7.50\lt d\lt 12.50\)%
 \end{enumerate}
 %
-\begin{exercisegroup}(2)
-\exercise[45.]\hypertarget{exercise-52}{}\(x + 4y = 100\)%
+\exercise[38.]\hypertarget{exercise-48}{}The graph shows \(S\) as a function of \(w\). \(S\) represents the weekly sales of a best-selling book, in thousands of dollars, \(w\) weeks after it is released.%
+\includegraphics[width=0.5\linewidth]{images/fig-ex-1-2-38}
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-135}{}In which weeks were sales over \(\$7000\)?%
+\item\hypertarget{li-136}{}In which week did sales fall below \(\$5000\) on their way down?%
+\item\hypertarget{li-137}{}For what values of \(w\) is \(S\gt 3.4\)?%
+\end{enumerate}
+\exercise[39.]\hypertarget{exercise-49}{}The graph shows the federal minimum wage, \(M\), as a function of time, \(t\), adjusted for inflation to reflect its buying power in 2004 dollars. (Source: www.infoplease.com) \includegraphics[width=1\linewidth]{images/fig-ex-1-2-39}
+ \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-138}{}When did the minimum wage reach its highest buying power, and what was it worth in 2004 dollars?%
+\item\hypertarget{li-139}{}When did the minimum wage fall to its lowest buying power after its peak, and what was its worth at that time?%
+\item\hypertarget{li-140}{}Give two years in which the minimum wage was worth \(\$8\) in 2004 dollars.%
+\end{enumerate}
+%
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-30}{}\quad
 \leavevmode%
 \begin{enumerate}[label=\alph*]
-\item\hypertarget{li-238}{}\((100, 0), (0, 25)\)%
-\item\hypertarget{li-239}{}\(y = 25 - \dfrac{1}{4}x\)%
-\item\hypertarget{li-240}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-45.jpg}
-%
+\item\hypertarget{li-141}{}1968, about \(\$8.70\)%
+\item\hypertarget{li-142}{}1989, about \(\$5.10\)%
+\item\hypertarget{li-143}{}1967, approximately 1970%
 \end{enumerate}
 %
-\exercise[46.]\hypertarget{exercise-53}{}\(2x - 3y = -72\)%
-\exercise[47.]\hypertarget{exercise-54}{}\(25x - 20y = 1\)%
+\exercise[40.]\hypertarget{exercise-50}{}The graph shows the U.S. unemployment rate, \(U\), as a function of time, \(t\), for the years 1985–2004. (Source: U.S. Bureau of Labor Statistics) \includegraphics[width=0.6\linewidth]{images/fig-ex-1-2-40}
+ \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-144}{}When did the unemployment rate reach its highest value, and what was its highest value?%
+\item\hypertarget{li-145}{}When did the unemployment rate fall to its lowest value, and what was its lowest value?%
+\item\hypertarget{li-146}{}Give two years in which the unemployment rate was \(4.5\%\).%
+\end{enumerate}
+%
+\end{exercisegroup}
+\par\smallskip\noindent
+\hypertarget{exercisegroup-6}{}\par\noindent In Problems 41–48, evaluate each function for the given values.%
+\begin{exercisegroup}(2)
+\exercise[41.]\hypertarget{exercise-51}{}\(f (x) = 6 - 2x\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-147}{}\(f(3)\)%
+\item\hypertarget{li-148}{}\(f(-2)\)%
+\item\hypertarget{li-149}{}\(f(12.7)\)%
+\item\hypertarget{li-150}{}\(f\left(\dfrac{2}{3}\right)\)%
+\end{enumerate}
+\end{multicols}
+%
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-31}{}\quad
 \leavevmode%
+\begin{multicols}{2}
 \begin{enumerate}[label=\alph*]
-\item\hypertarget{li-241}{}\((0.04, 0), (0, -0.05)\)%
-\item\hypertarget{li-242}{}\(y = 1.25x - 0.05\)%
-\item\hypertarget{li-243}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-47.jpg}
-%
+\item\hypertarget{li-151}{}\(0\)%
+\item\hypertarget{li-152}{}\(10\)%
+\item\hypertarget{li-153}{}\(-19.4\)%
+\item\hypertarget{li-154}{}\(\dfrac{14}{3} \)%
 \end{enumerate}
+\end{multicols}
 %
-\exercise[48.]\hypertarget{exercise-55}{}\(4x + 75y = 60,000\)%
-\exercise[49.]\hypertarget{exercise-56}{}\(\dfrac{y}{12} - \dfrac{x}{60}= 1\)%
+\exercise[42.]\hypertarget{exercise-52}{}\(g(t) = 5t - 3\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-155}{}\(g(1)\)%
+\item\hypertarget{li-156}{}\(g(-4)\)%
+\item\hypertarget{li-157}{}\(g(14.1)\)%
+\item\hypertarget{li-158}{}\(g\left(\dfrac{3}{4}\right)\)%
+\end{enumerate}
+\end{multicols}
+%
+\exercise[43.]\hypertarget{exercise-53}{}\(h(v) = 2v^2 - 3v + 1\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-159}{}\(h(0)\)%
+\item\hypertarget{li-160}{}\(h(-1)\)%
+\item\hypertarget{li-161}{}\(h\left(\dfrac{1}{4}\right)\)%
+\item\hypertarget{li-162}{}\(h(-6.2)\)%
+\end{enumerate}
+\end{multicols}
+%
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-32}{}\quad
 \leavevmode%
+\begin{multicols}{2}
 \begin{enumerate}[label=\alph*]
-\item\hypertarget{li-244}{}\((-60, 0), (0, 12)\)%
-\item\hypertarget{li-245}{}\(y = 12 + \dfrac{1}{5}x\)%
-\item\hypertarget{li-246}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-49.jpg}
-%
+\item\hypertarget{li-163}{}\(1\)%
+\item\hypertarget{li-164}{}\(6\)%
+\item\hypertarget{li-165}{}\(\dfrac{3}{8}\)%
+\item\hypertarget{li-166}{}\(96.48 \)%
 \end{enumerate}
+\end{multicols}
 %
-\exercise[50.]\hypertarget{exercise-57}{}\(\dfrac{x}{80} + \dfrac{y}{400}= 1\)%
-\exercise[51.]\hypertarget{exercise-58}{}\(-2x = 3y + 84\)%
+\exercise[44.]\hypertarget{exercise-54}{}\(r (s) = 2s - s^2\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-167}{}\(r(2)\)%
+\item\hypertarget{li-168}{}\(r(-4)\)%
+\item\hypertarget{li-169}{}\(r\left(\dfrac{1}{3}\right)\)%
+\item\hypertarget{li-170}{}\(r(-1.3)\)%
+\end{enumerate}
+\end{multicols}
+%
+\exercise[45.]\hypertarget{exercise-55}{}\(H(z) = \dfrac{2z - 3}{z + 2}\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-171}{}\(H(4)\)%
+\item\hypertarget{li-172}{}\(H(-3)\)%
+\item\hypertarget{li-173}{}\(H\left(\dfrac{4}{3}\right)\)%
+\item\hypertarget{li-174}{}\(H(4.5)\)%
+\end{enumerate}
+\end{multicols}
+%
 \par\smallskip
 \noindent\textbf{Answer.}\hypertarget{answer-33}{}\quad
 \leavevmode%
+\begin{multicols}{2}
 \begin{enumerate}[label=\alph*]
-\item\hypertarget{li-247}{}\((-42, 0), (0, -28)\)%
-\item\hypertarget{li-248}{}\(y = \dfrac{-2}{3}x-28\)%
-\item\hypertarget{li-249}{}\includegraphics[width=0.5\linewidth]{images/fig-ans-1-1-51.jpg}
+\item\hypertarget{li-175}{}\(\dfrac{5}{6} \)%
+\item\hypertarget{li-176}{}\(9\)%
+\item\hypertarget{li-177}{}\(\dfrac{-1}{10}\)%
+\item\hypertarget{li-178}{}\(\dfrac{12}{13}\approx 0.923 \)%
+\end{enumerate}
+\end{multicols}
+%
+\exercise[46.]\hypertarget{exercise-56}{}\(F(x) = \dfrac{1-x}{2x-3}\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-179}{}\(F(0)\)%
+\item\hypertarget{li-180}{}\(F(-3)\)%
+\item\hypertarget{li-181}{}\(F\left(\dfrac{5}{2}\right)\)%
+\item\hypertarget{li-182}{}\(F(9.8)\)%
+\end{enumerate}
+\end{multicols}
+%
+\exercise[47.]\hypertarget{exercise-57}{}\(E(t) =\sqrt{t-4}\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-183}{}\(E(16)\)%
+\item\hypertarget{li-184}{}\(E(4)\)%
+\item\hypertarget{li-185}{}\(E(7)\)%
+\item\hypertarget{li-186}{}\(E(4.2)\)%
+\end{enumerate}
+\end{multicols}
+%
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-34}{}\quad
+\leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-187}{}\(\sqrt{12} \)%
+\item\hypertarget{li-188}{}\(0\)%
+\item\hypertarget{li-189}{}\(\sqrt{3}\)%
+\item\hypertarget{li-190}{}\(\sqrt{0.2}\approx 0.447 \)%
+\end{enumerate}
+\end{multicols}
+%
+\exercise[48.]\hypertarget{exercise-58}{}\(D(r) =\sqrt{5-r}\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-191}{}\(D(4)\)%
+\item\hypertarget{li-192}{}\(D(-3)\)%
+\item\hypertarget{li-193}{}\(D(-9)\)%
+\item\hypertarget{li-194}{}\(D(4.6)\)%
+\end{enumerate}
+\end{multicols}
+%
+\end{exercisegroup}
+\par\smallskip\noindent
+\item[49.]\hypertarget{exercise-59}{}A sport utility vehicle costs \(\$28,000\) and depreciates according to the formula \(V(t) = 28,000 (1 - 0.08t)\),where \(V\) is the value of the vehicle after \(t\) years. \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-195}{}Evaluate \(V(12)\) and explain what it means.%
+\item\hypertarget{li-196}{}Solve the equation \(V(t) = 0\) and explain what it means.%
+\item\hypertarget{li-197}{}If this year is \(t = n\), what does \(V(n + 2)\) mean?%
+\end{enumerate}
+%
+\par\smallskip
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-35}{}\quad
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-198}{}\(V(12) = 1120\): After 12 years, the SUV is worth \(\$1120\).%
+\item\hypertarget{li-199}{}\(t = 12.5\): The SUV has zero value after \(12\frac{1}{2}\) years.%
+\item\hypertarget{li-200}{}The value 2 years later%
+\end{enumerate}
+%
+\item[50.]\hypertarget{exercise-60}{}In a profit-sharing plan, an employee receives a salary of \(S(x) = 20,000 + 0.01x\), where \(x\) represents the company's profit for the year. \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-201}{}Evaluate \(S(850,000)\) and explain what it means.%
+\item\hypertarget{li-202}{}Solve the equation \(S(x) = 30,000\) and explain what it means.%
+\item\hypertarget{li-203}{}If the company made a profit of \(p\) dollars this year, what does \(S(2p)\) mean?%
+\end{enumerate}
+%
+\par\smallskip
+\item[51.]\hypertarget{exercise-61}{}The number of compact cars that a large dealership can sell at price \(p\) is given by \(N( p) = \dfrac{12,000,000}{p}\). \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-204}{}Evaluate \(N(6000)\) and explain what it means.%
+\item\hypertarget{li-205}{}As \(p\) increases, does \(N(p)\) increase or decrease? Why is this reasonable?%
+\item\hypertarget{li-206}{}If the current price for a compact car is \(D\), what does \(2N(D)\) mean?%
+\end{enumerate}
+%
+\par\smallskip
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-36}{}\quad
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-207}{}\(N(6000) = 2000\): \(2000\) cars will be sold at a price of \(\$6000\).%
+\item\hypertarget{li-208}{}\(N(p)\) decreases with increasing \(p\) because fewer cars will be sold when the price increases.%
+\item\hypertarget{li-209}{}\(2N(D)\) represents twice the number of cars that can be sold at the current price.%
+\end{enumerate}
+%
+\item[52.]\hypertarget{exercise-62}{}A department store finds that the market value of its Christmas-related merchandise is given by \(M(t) = \dfrac{600,000}{t},~ t\le 30\), where \(t\) is the number of weeks after Christmas. \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-210}{}Evaluate \(M(2)\) and explain what it means.%
+\item\hypertarget{li-211}{}As \(t\) increases, does \(M(t)\) increase or decrease? Why is this reasonable?%
+\item\hypertarget{li-212}{}If this week \(t = n\), what does \(M(n + 1)\) mean?%
+\end{enumerate}
+%
+\par\smallskip
+\item[53.]\hypertarget{exercise-63}{}The velocity of a car that brakes suddenly can be determined from the length of its skid marks, \(d\), by \(v(d) = \sqrt{12d}\), where \(d\) is in feet and \(v\) is in miles per hour. \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-213}{}Evaluate \(v(250)\) and explain what it means.%
+\item\hypertarget{li-214}{}Estimate the length of the skid marks left by a car traveling at \(100\) miles per hour.%
+\item\hypertarget{li-215}{}Write your answer to part (b) with function notation.%
+\end{enumerate}
+%
+\par\smallskip
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-37}{}\quad
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-216}{}\(v(250) = 54.8\) is the speed of a car that left \(250\)-foot skid marks.%
+\item\hypertarget{li-217}{}\(833\dfrac{1}{3}\) feet%
+\item\hypertarget{li-218}{}\(v\left(833\dfrac{1}{3}\right)= 100\)%
+\end{enumerate}
+%
+\item[54.]\hypertarget{exercise-64}{}The distance, \(d\), in miles that a person can see on a clear day from a height, \(h\), in feet is given by \(d(h) = 1.22\sqrt{h}\). \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-219}{}Evaluate \(d(20,320)\) and explain what it means.%
+\item\hypertarget{li-220}{}Estimate the height you need in order to see \(100\) miles.%
+\item\hypertarget{li-221}{}Write your answer to part (b) with function notation.%
+\end{enumerate}
+%
+\par\smallskip
+\item[55.]\hypertarget{exercise-65}{}The figure gives data about snowfall, air temperature, and number of avalanches on the Mikka glacier in Sarek, Lapland, in 1957. (Source: Leopold, Wolman, Miller, 1992) \includegraphics[width=1\linewidth]{images/fig-ex-1-2-55}
+ \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-222}{}During June and July, avalanches occurred over three separate time intervals. What were they?%
+\item\hypertarget{li-223}{}Over what three time intervals did snow fall?%
+\item\hypertarget{li-224}{}When was the temperature above freezing (\(0\degree\)C)?%
+\item\hypertarget{li-225}{}Using your answers to parts (a)–(c), make a conjecture about the conditions that encourage avalanches.%
+\end{enumerate}
+%
+\par\smallskip
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-38}{}\quad
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-226}{}June 21–24, June 29–July 3, July 8–14%
+\item\hypertarget{li-227}{}June 17–21, June 25–29, July 4–7%
+\item\hypertarget{li-228}{}June 22–24, June 27, June 29–July 4, July 8–14%
+\item\hypertarget{li-229}{}Avalanches occur when temperatures rise above freezing immediately after snowfall.%
+\end{enumerate}
+%
+\item[56.]\hypertarget{exercise-66}{}The bar graph shows the percent of Earth's surface that lies at various altitudes or depths below the surface of the oceans. (Depths are given as negative altitudes.) (Source: Open University) \includegraphics[width=0.7\linewidth]{images/fig-ex-1-2-56}
+ \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-230}{}Read the graph and complete the table. \begin{tabular}{AcAcA}\hrulethick
+Altitude (km)&\tablecelllines{c}{m}
+{Percent of\\
+Earth's surface}
+\tabularnewline\hrulethin
+\(-7\) to \(-6\)&\(\)\tabularnewline\hrulethin
+\(-6\) to \(-5\)&\(\)\tabularnewline\hrulethin
+\(-5\) to \(-4\)&\(\)\tabularnewline\hrulethin
+\(-4\) to \(-3\)&\(\)\tabularnewline\hrulethin
+\(-3\) to \(-2\)&\(\)\tabularnewline\hrulethin
+\(-2\) to \(-1\)&\(\)\tabularnewline\hrulethin
+\(-1\) to \(0\)&\(\)\tabularnewline\hrulethin
+\(0\) to \(1\)&\(\)\tabularnewline\hrulethin
+\(1\) to \(2\)&\(\)\tabularnewline\hrulethin
+\(2\) to \(3\)&\(\)\tabularnewline\hrulethin
+\(3\) to \(4\)&\(\)\tabularnewline\hrulethin
+\(4\) to \(5\)&\(\)\tabularnewline\hrulethin
+\end{tabular}
+%
+\item\hypertarget{li-231}{}What is the most common altitude? What is the second most common altitude??%
+\item\hypertarget{li-232}{}Approximately what percent of the Earth's surface is below sea level?%
+\item\hypertarget{li-233}{}The height of Mt. Everest is \(8.85\) kilometers. Can you think of a reason why it is not included in the graph?%
+\end{enumerate}
+%
+\par\smallskip
+\item[57.]\hypertarget{exercise-67}{}The graph shows the temperature of the ocean at various depths. (Source: Open University) \includegraphics[width=0.4\linewidth]{images/fig-ex-1-2-57}
+ \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-234}{}Is depth a function of temperature?%
+\item\hypertarget{li-235}{}Is temperature a function of depth?%
+\item\hypertarget{li-236}{}The axes are scaled in an unusual way. Why is it useful to present the graph in this way?%
+\end{enumerate}
+%
+\par\smallskip
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-39}{}\quad
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-237}{}No%
+\item\hypertarget{li-238}{}Yes%
+\item\hypertarget{li-239}{}Moving downwards on the graph corresponds to moving downwards in the ocean.%
+\end{enumerate}
+%
+\item[58.]\hypertarget{exercise-68}{}The graph shows the relationship between annual precipitation, \(p\), in a region and the amount of erosion, measured in tons per square mile, \(s\). (Source: Leopold, Wolman, Miller, 1992) \includegraphics[width=0.5\linewidth]{images/fig-ex-1-2-58}
+ \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-240}{}Is the amount of erosion a function of the amount of precipitation?%
+\item\hypertarget{li-241}{}At what annual precipitation is erosion at a maximum, and what is that maximum?%
+\item\hypertarget{li-242}{}Over what interval of annual precipitation does erosion decrease?%
+\item\hypertarget{li-243}{}An increase in vegetation inhibits erosion, and precipitation encourages vegetation. What happens to the amount of erosion as precipitation increases in each of these three environments? \begin{tabular}{ll}
+desert shrub&\(0\lt 0\lt 12\)\tabularnewline[0pt]
+grassland&\(12\lt 0\lt 30\)\tabularnewline[0pt]
+forest&\(30\lt 0\lt 60\)
+\end{tabular}
 %
 \end{enumerate}
 %
-\exercise[52.]\hypertarget{exercise-59}{}\(7x = 91 - 13y\)%
+\par\smallskip
+\hypertarget{exercisegroup-7}{}\par\noindent Evaluate the function and simplify.%
+\begin{exercisegroup}(2)
+\exercise[59.]\hypertarget{exercise-69}{}\(G(s) = 3s^2 - 6s\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-244}{}\(G(3a)\)%
+\item\hypertarget{li-245}{}\(G(a + 2)\)%
+\item\hypertarget{li-246}{}\(G(a) + 2\)%
+\item\hypertarget{li-247}{}\(G(-a)\)%
+\end{enumerate}
+\end{multicols}
+%
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-40}{}\quad
+\leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-248}{}\(27a^2 - 18a\)%
+\item\hypertarget{li-249}{}\(3a^2 + 6a\)%
+\item\hypertarget{li-250}{}\(3a^2 - 6a + 2\)%
+\item\hypertarget{li-251}{}\(3a^2 + 6a \)%
+\end{enumerate}
+\end{multicols}
+%
+\exercise[60.]\hypertarget{exercise-70}{}\(h(x) = 2x^2 + 6x - 3\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-252}{}\(h(2a)\)%
+\item\hypertarget{li-253}{}\(h(a + 3)\)%
+\item\hypertarget{li-254}{}\(h(a) + 3\)%
+\item\hypertarget{li-255}{}\(h(-a)\)%
+\end{enumerate}
+\end{multicols}
+%
+\exercise[61.]\hypertarget{exercise-71}{}\(g(x) = 8\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-256}{}\(g(2)\)%
+\item\hypertarget{li-257}{}\(g(8)\)%
+\item\hypertarget{li-258}{}\(g(a + 1)\)%
+\item\hypertarget{li-259}{}\(g(-x)\)%
+\end{enumerate}
+\end{multicols}
+%
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-41}{}\quad
+\leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-260}{}\(8\)%
+\item\hypertarget{li-261}{}\(8\)%
+\item\hypertarget{li-262}{}\(8\)%
+\item\hypertarget{li-263}{}\(8 \)%
+\end{enumerate}
+\end{multicols}
+%
+\exercise[62.]\hypertarget{exercise-72}{}\(f (t) = -3\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-264}{}\(f (4)\)%
+\item\hypertarget{li-265}{}\(f (-3)\)%
+\item\hypertarget{li-266}{}\(f (b - 2)\)%
+\item\hypertarget{li-267}{}\(f (-t)\)%
+\end{enumerate}
+\end{multicols}
+%
+\exercise[63.]\hypertarget{exercise-73}{}\(P(x) = x^3 - 1\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-268}{}\(P(2x)\)%
+\item\hypertarget{li-269}{}\(2P(x)\)%
+\item\hypertarget{li-270}{}\(P(x^2)\)%
+\item\hypertarget{li-271}{}\([P(x)]^2\)%
+\end{enumerate}
+\end{multicols}
+%
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-42}{}\quad
+\leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-272}{}\(8x^3 - 1\)%
+\item\hypertarget{li-273}{}\(2x^3 - 2\)%
+\item\hypertarget{li-274}{}\(x^6 - 1\)%
+\item\hypertarget{li-275}{}\(x^6 - 2x^3 + 1 \)%
+\end{enumerate}
+\end{multicols}
+%
+\exercise[64.]\hypertarget{exercise-74}{}\(Q(t) = 5t^3\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-276}{}\(Q(2t)\)%
+\item\hypertarget{li-277}{}\(2Q(t)\)%
+\item\hypertarget{li-278}{}\(Q(t^2)\)%
+\item\hypertarget{li-279}{}\([Q(t)]^2\)%
+\end{enumerate}
+\end{multicols}
+%
 \end{exercisegroup}
 \par\smallskip\noindent
+\hypertarget{exercisegroup-8}{}\par\noindent Evaluate each function for the given expressions and simplify.%
+\begin{exercisegroup}(2)
+\exercise[65.]\hypertarget{exercise-75}{}\(f (x) = x^3\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-280}{}\(f (a^2)\)%
+\item\hypertarget{li-281}{}\(a^3 \cdot f (a^3)\)%
+\item\hypertarget{li-282}{}\(f (ab)\)%
+\item\hypertarget{li-283}{}\(f (a + b)\)%
+\end{enumerate}
+\end{multicols}
+%
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-43}{}\quad
+\leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-284}{}\(a^6\)%
+\item\hypertarget{li-285}{}\(a^{12}\)%
+\item\hypertarget{li-286}{}\(a^3b^3\)%
+\item\hypertarget{li-287}{}\(a^3 + 3a^2b + 3ab^2 + b^3 \)%
+\end{enumerate}
+\end{multicols}
+%
+\exercise[66.]\hypertarget{exercise-76}{}\(g(x) = x^4\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-288}{}\(g(a^3)\)%
+\item\hypertarget{li-289}{}\(a^4\cdot g(a^4)\)%
+\item\hypertarget{li-290}{}\(g(ab)\)%
+\item\hypertarget{li-291}{}\(g(a + b)\)%
+\end{enumerate}
+\end{multicols}
+%
+\exercise[67.]\hypertarget{exercise-77}{}\(F(x) = 3x^5\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-292}{}\(F(2a)\)%
+\item\hypertarget{li-293}{}\(2 F(a)\)%
+\item\hypertarget{li-294}{}\(F(a^2)\)%
+\item\hypertarget{li-295}{}\([F(a)]^2\)%
+\end{enumerate}
+\end{multicols}
+%
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-44}{}\quad
+\leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-296}{}\(96a^5\)%
+\item\hypertarget{li-297}{}\(6a^5\)%
+\item\hypertarget{li-298}{}\(3a^{10}\)%
+\item\hypertarget{li-299}{}\(9a^{10} \)%
+\end{enumerate}
+\end{multicols}
+%
+\exercise[68.]\hypertarget{exercise-78}{}\(G(x) = 4x^3\) \leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-300}{}\(G(3a)\)%
+\item\hypertarget{li-301}{}\(3G(a)\)%
+\item\hypertarget{li-302}{}\(G(a^4)\)%
+\item\hypertarget{li-303}{}\([G(a)]^4\)%
+\end{enumerate}
+\end{multicols}
+%
+\end{exercisegroup}
+\par\smallskip\noindent
+\hypertarget{exercisegroup-9}{}\par\noindent For the functions in Problems 69–76, compute the following: \leavevmode%
+\begin{multicols}{4}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-304}{}\(f (2) + f (3)\)%
+\item\hypertarget{li-305}{}\(f (2 + 3)\)%
+\item\hypertarget{li-306}{}\(f (a) + f (b)\)%
+\item\hypertarget{li-307}{}\(f (a + b)\)%
+\end{enumerate}
+\end{multicols}
+ For which functions does \(f (a + b) = f (a) + f (b)\) for all values of \(a\) and \(b\)?%
+\begin{exercisegroup}(3)
+\exercise[69.]\hypertarget{exercise-79}{}\(f (x) = 3x - 2\)%
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-45}{}\quad
+\leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-308}{}\(11\)%
+\item\hypertarget{li-309}{}\(13\)%
+\item\hypertarget{li-310}{}\(3a + 3b - 4\)%
+\item\hypertarget{li-311}{}\(3a + 3b - 2 \)%
+\end{enumerate}
+\end{multicols}
+ This function does NOT satisfy \(f (a + b) = f (a) + f (b)\).%
+\exercise[70.]\hypertarget{exercise-80}{}\(f (x) = 1 - 4x\)%
+\exercise[71.]\hypertarget{exercise-81}{}\(f (x) = x^2 + 3\)%
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-46}{}\quad
+\leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-312}{}\(19\)%
+\item\hypertarget{li-313}{}\(28\)%
+\item\hypertarget{li-314}{}\(a^2 + b^2 + 6\)%
+\item\hypertarget{li-315}{}\(a^2 + 2ab + b^2 + 3 \)%
+\end{enumerate}
+\end{multicols}
+ This function does NOT satisfy \(f (a + b) = f (a) + f (b)\).%
+\exercise[72.]\hypertarget{exercise-82}{}\(f (x) = x^2 - 1\)%
+\exercise[73.]\hypertarget{exercise-83}{}\(f (x) =\sqrt{x+1} \)%
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-47}{}\quad
+\leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-316}{}\(\sqrt{3}+2 \)%
+\item\hypertarget{li-317}{}\(\sqrt{6} \)%
+\item\hypertarget{li-318}{}\(\sqrt{a+1}+\sqrt{b+1} \)%
+\item\hypertarget{li-319}{}\(\sqrt{a+b+1} \)%
+\end{enumerate}
+\end{multicols}
+ This function does NOT satisfy \(f (a + b) = f (a) + f (b)\).%
+\exercise[74.]\hypertarget{exercise-84}{}\(f (x) = \sqrt{6-x}\)%
+\exercise[75.]\hypertarget{exercise-85}{}\(f (x) =\dfrac{-2}{x} \)%
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-48}{}\quad
+\leavevmode%
+\begin{multicols}{2}
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-320}{}\(\dfrac{-5}{3} \)%
+\item\hypertarget{li-321}{}\(\dfrac{-2}{5} \)%
+\item\hypertarget{li-322}{}\(\dfrac{-2}{a}-\dfrac{-2}{b} \)%
+\item\hypertarget{li-323}{}\(\dfrac{-2}{a+b} \)%
+\end{enumerate}
+\end{multicols}
+ This function does NOT satisfy \(f (a + b) = f (a) + f (b)\).%
+\exercise[76.]\hypertarget{exercise-86}{}\(f (x) = \dfrac{3}{x}\)%
+\end{exercisegroup}
+\par\smallskip\noindent
+\item[77.]\hypertarget{exercise-87}{}Use a table of values to estimate a solution to \(f (x) = 800 + 6x - 0.2x^2 = 500\) as follows: \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-324}{}Make a table starting at \(x = 0\) and increasing by \(\Delta x = 10\), as shown in the accompanying tables. Find two \(x\)-values \(a\) and \(b\) so that \(f (a)\gt 500\gt f (b)\). \begin{tabular}{AcAcAcAcAcAcAcAcAcAcAcAcA}\hrulethick
+\(x\)&\(0\)&\(10\)&\(20\)&\(30\)&\(40\)&\(50\)&\(60\)&\(70\)&\(80\)&\(90\)&\(100\)\tabularnewline\hrulethin
+\(f(x)\)&\(\)&\(\)&\(\)&\(\)&\(\)&\(\)&\(\)&\(\)&\(\)&\(\)&\(\)\tabularnewline\hrulethin
+\end{tabular}
+%
+\item\hypertarget{li-325}{}Make a new table starting at \(x = a\) and increasing by \(\Delta x = 1\). Find two \(x\)-values, \(c\) and \(d\), so that \(f (c)\gt 500\gt f (d)\).%
+\item\hypertarget{li-326}{}Make a new table starting at \(x = c\) and increasing by \(\Delta x = 0.1\). Find two \(x\)-values, \(p\) and \(q\), so that \(f (p)\gt 500\gt f (q)\).%
+\item\hypertarget{li-327}{}Take the average of \(p\) and \(q\), that is, set \(s = \dfrac{p + q}{2}\). Then \(s\) is an approximate solution that is off by at most \(0.05\).%
+\item\hypertarget{li-328}{}Evaluate \(f (s)\) to check that the output is approximately \(500\).%
+\end{enumerate}
+%
+\par\smallskip
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-49}{}\quad
+\leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-329}{}\(x = 50\) and \(x = 60\) \begin{tabular}{AcAcAcAcAcAcAcAcAcAcAcAcA}\hrulethick
+\(x\)&\(0\)&\(10\)&\(20\)&\(30\)&\(40\)&\(50\)&\(60\)&\(70\)&\(80\)&\(90\)&\(100\)\tabularnewline\hrulethin
+\(f(x)\)&\(800\)&\(840\)&\(840\)&\(800\)&\(720\)&\(600\)&\(440\)&\(240\)&\(0\)&\(-280\)&\(-600\)\tabularnewline\hrulethin
+\end{tabular}
+%
+\item\hypertarget{li-330}{}\(x = 56\) and \(x = 57\) \begin{tabular}{AcAcAcAcAcAcAcAcAcAcA}\hrulethick
+\(x\)&\(50\)&\(51\)&\(52\)&\(53\)&\(54\)&\(55\)&\(56\)&\(57\)&\(58\)\tabularnewline\hrulethin
+\(f(x)\)&\(600\)&\(585.8\)&\(571.2\)&\(556.2\)&\(540.8\)&\(525\)&\(508.8\)&\(492.2\)&\(475.2\)\tabularnewline\hrulethin
+\end{tabular}
+%
+\item\hypertarget{li-331}{}\(x = 56.5\) and \(x = 56.6\) \begin{tabular}{AcAcAcAcAcAcAcAcA}\hrulethick
+\(x\)&\(56\)&\(56.1\)&\(56.2\)&\(56.3\)&\(56.4\)&\(56.5\)&\(56.6\)\tabularnewline\hrulethin
+\(f(x)\)&\(508.8\)&\(507.158\)&\(505.512\)&\(503.862\)&\(502.208\)&\(500.55\)&\(498.888\)\tabularnewline\hrulethin
+\end{tabular}
+%
+\item\hypertarget{li-332}{}\(s = 56.55\)%
+\item\hypertarget{li-333}{}\(f (56.55) = 499.7195\)%
+\end{enumerate}
+%
+\item[78.]\hypertarget{exercise-88}{}Use a table of values to estimate a solution to \(f (x) = x^3 - 4x^2 + 5x = 18, 000\) as follows: \leavevmode%
+\begin{enumerate}[label=\alph*]
+\item\hypertarget{li-334}{}Make a table starting at \(x = 0\) and increasing by \(\Delta x = 10\), as shown in the accompanying tables. Find two \(x\)-values \(a\) and \(b\) so that \(f (a)\lt 18,000\lt f (b)\). \begin{tabular}{AcAcAcAcAcAcAcAcAcAcAcAcA}\hrulethick
+\(x\)&\(0\)&\(10\)&\(20\)&\(30\)&\(40\)&\(50\)&\(60\)&\(70\)&\(80\)&\(90\)&\(100\)\tabularnewline\hrulethin
+\(f(x)\)&\(\)&\(\)&\(\)&\(\)&\(\)&\(\)&\(\)&\(\)&\(\)&\(\)&\(\)\tabularnewline\hrulethin
+\end{tabular}
+%
+\item\hypertarget{li-335}{}Make a new table starting at \(x = a\) and increasing by \(\Delta x = 1\). Find two \(x\)-values, \(c\) and \(d\), so that \(f (c)\lt 18,000\lt f (d)\).%
+\item\hypertarget{li-336}{}Make a new table starting at \(x = c\) and increasing by \(\Delta x = 0.1\). Find two \(x\)-values, \(p\) and \(q\), so that \(f (p)\lt 18,000\lt f (q)\).%
+\item\hypertarget{li-337}{}Take the average of \(p\) and \(q\), that is, set \(s = \dfrac{p + q}{2}\). Then \(s\) is an approximate solution that is off by at most \(0.05\).%
+\item\hypertarget{li-338}{}Evaluate \(f (s)\) to check that the output is approximately \(18,000\).%
+\end{enumerate}
+%
+\par\smallskip
+\item[79.]\hypertarget{exercise-89}{}Use tables of values to estimate the positive solution to \(f (x) = x^2 - \dfrac{1}{x} = 9000\), accurate to within \(0.05\).%
+\par\smallskip
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-50}{}\quad
+\(94.85\)%
+\item[80.]\hypertarget{exercise-90}{}Use tables of values to estimate the positive solution to \(f (x) = \dfrac{8}{x}+500-\dfrac{x^2}{9} = 300\), accurate to within \(0.05\).%
+\par\smallskip
+\par\smallskip
+\noindent\textbf{Answer.}\hypertarget{answer-51}{}\quad
+\(94.85\)%
+\end{exerciselist}
 \end{document}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--* Generated from MathBook XML source *-->
-<!--*    on 2017-05-23T16:06:21-07:00    *-->
+<!--*    on 2017-05-24T09:05:41-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -64,6 +64,8 @@ MathJax.Hub.Config({
 \delimitershortfall-1sp
 \newcommand\abs[1]{\left|#1\right|}
 \newcommand\degree[0]{^{\circ}}
+
+\renewcommand{\CancelColor}{blue}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -183,31 +185,31 @@ MathJax.Hub.Config({
 <h2 class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in MathBook XML</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
 </div></aside><main class="main"><div id="content" class="mathbook-content"><section class="chapter" id="chap8"><header title="Chapter 8 Linear Systems"><h1 class="heading" alt="Chapter 8 Linear Systems">
 <span class="type">Chapter</span><span class="codenumber">8</span><span class="title">Linear Systems</span><a href="chap8.html" class="permalink">¶ permalink</a>
-</h1></header><section class="introduction" id="introduction-419"><p id="p-14280"><img width="60%" src="images/squirrel.jpg" alt=""></p>
-<p id="p-14281"><em class="terminology">Linear programming</em> is an application of linear systems developed in the 1940s to solve complex optimization problems during wartime operations. Today, linear programming is used in scheduling and allocation of resources, in shipping and telecommunications networks, and in the selection of stocks and bonds for portfolios. In 1980, the computer scientist Laszlo Lovasz said, “If one would take statistics about which mathematical problem is using up most of the computer time in the world, ... the answer would probably be linear programming.”</p>
-<p id="p-14282">George Dantzig (1914–2005) invented the simplex method for solving linear programming problems in 1947. His first application of the method was to determine an adequate diet of least cost. This problem involved 9 equations in 77 unknowns and took 120 days to solve using the desk calculators available at the time. In this chapter, we use a graphing technique to solve problems in two unknowns. For example, the diet of the Columbian ground squirrel consists of two foods: grass and forb (a type of flowering weed). Small animals spend most of their time foraging for food, but they must also be alert for predators. Which foraging strategy favors survival: Should the squirrel try to satisfy its dietary requirements in minimum time, thus minimizing its exposure to predators and the elements, or should it try to maximize its intake of nutrients?</p>
+</h1></header><section class="introduction" id="introduction-419"><p id="p-14284"><img width="60%" src="images/squirrel.jpg" alt=""></p>
+<p id="p-14285"><em class="terminology">Linear programming</em> is an application of linear systems developed in the 1940s to solve complex optimization problems during wartime operations. Today, linear programming is used in scheduling and allocation of resources, in shipping and telecommunications networks, and in the selection of stocks and bonds for portfolios. In 1980, the computer scientist Laszlo Lovasz said, “If one would take statistics about which mathematical problem is using up most of the computer time in the world, ... the answer would probably be linear programming.”</p>
+<p id="p-14286">George Dantzig (1914–2005) invented the simplex method for solving linear programming problems in 1947. His first application of the method was to determine an adequate diet of least cost. This problem involved 9 equations in 77 unknowns and took 120 days to solve using the desk calculators available at the time. In this chapter, we use a graphing technique to solve problems in two unknowns. For example, the diet of the Columbian ground squirrel consists of two foods: grass and forb (a type of flowering weed). Small animals spend most of their time foraging for food, but they must also be alert for predators. Which foraging strategy favors survival: Should the squirrel try to satisfy its dietary requirements in minimum time, thus minimizing its exposure to predators and the elements, or should it try to maximize its intake of nutrients?</p>
 <div class="sidebyside" style="" id="sidebyside-151"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel" style="width:50%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-minimize-time-eating.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
 <div class="sbspanel" style="width:50%;justify-content:flex-start;"><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-maximize-energy.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></div>
 </div></div>
-<p id="p-14283">Using linear programming, Gary Belovsky of Notre Dame University identified the optimal amounts of forb and grass for each foraging strategy. We can compare those solutions to the squirrel's actual diet to see which strategy the squirrel favors.</p>
+<p id="p-14287">Using linear programming, Gary Belovsky of Notre Dame University identified the optimal amounts of forb and grass for each foraging strategy. We can compare those solutions to the squirrel's actual diet to see which strategy the squirrel favors.</p>
 <article class="example-like" id="investigation-13"><h5 class="heading">
 <span class="type">Investigation</span><span class="codenumber">8.1</span><span class="title">Interpolating Polynomials</span>
 </h5>
-<p id="p-14284">In <span>&lt;&lt;chap6&gt;&gt;</span>, we learned to fit a quadratic function through three points on its graph. A polynomial whose graph passes through a given set of points is called an <em class="terminology">interpolating polynomial</em>. Because polynomials are easy to evaluate and manipulate, they are often used to approximate more complicated functions and to describe the shapes of curves.</p>
-<p id="p-14285">In this Investigation, we find interpolating polynomials of degrees \(1\text{,}\) \(2\text{,}\) and \(3\) to approximate the function \(f(x) = \frac{12}{x}\text{.}\)</p>
-<p id="p-14286"></p>
+<p id="p-14288">In <span>&lt;&lt;chap6&gt;&gt;</span>, we learned to fit a quadratic function through three points on its graph. A polynomial whose graph passes through a given set of points is called an <em class="terminology">interpolating polynomial</em>. Because polynomials are easy to evaluate and manipulate, they are often used to approximate more complicated functions and to describe the shapes of curves.</p>
+<p id="p-14289">In this Investigation, we find interpolating polynomials of degrees \(1\text{,}\) \(2\text{,}\) and \(3\) to approximate the function \(f(x) = \frac{12}{x}\text{.}\)</p>
+<p id="p-14290"></p>
 <ol id="ol-2602" style="list-style-type: decimal;">
 <li id="li-8352">
-<p id="p-14287"></p>
+<p id="p-14291"></p>
 <ol id="ol-2603" style="list-style-type: lower-alpha;">
-<li id="li-8353"><p id="p-14288">Graph the function \(f(x) = \frac{12}{x}\) in the window
+<li id="li-8353"><p id="p-14292">Graph the function \(f(x) = \frac{12}{x}\) in the window
 \begin{align*}
 \text{Xmin} \amp = -2 \amp\amp \text{Xmax} = 7.4\\
 \text{Ymin} \amp = -5 \amp\amp \text{Ymax} = 20
 \end{align*}
 </p></li>
-<li id="li-8354"><p id="p-14289">Complete the table of values. <table>
+<li id="li-8354"><p id="p-14293">Complete the table of values. <table>
 <tr>
 <td class="c m b1 r1 l1 t3 lines">\(x\)</td>
 <td class="c m b1 r1 l0 t3 lines">\(1\)</td>
@@ -231,36 +233,36 @@ MathJax.Hub.Config({
 <p></p>
 </li>
 <li id="li-8355">
-<p id="p-14290">First we will find a linear polynomial \(P_1(x) = ax + b\) that matches \(f(x)\) at \(x = 1\) and \(x=6\text{.}\) We must find constants \(a\) and \(b\) so that \(P_1(1) = f(1)\) and \(P_1(6) = f(6)\text{.}\) </p>
+<p id="p-14294">First we will find a linear polynomial \(P_1(x) = ax + b\) that matches \(f(x)\) at \(x = 1\) and \(x=6\text{.}\) We must find constants \(a\) and \(b\) so that \(P_1(1) = f(1)\) and \(P_1(6) = f(6)\text{.}\) </p>
 <ol id="ol-2604" style="list-style-type: lower-alpha;">
-<li id="li-8356"><p id="p-14291">The two conditions above translate into equations about \(a\) and \(b\text{.}\) The constants \(a\) and \(b\) must satisfy the system
+<li id="li-8356"><p id="p-14295">The two conditions above translate into equations about \(a\) and \(b\text{.}\) The constants \(a\) and \(b\) must satisfy the system
 \begin{align*}
 a \cdot 1 + b \amp = f (1)\\
 a \cdot 6 + b \amp = f (6)
 \end{align*}
 Solve the system and find the polynomial \(P_1(x)\text{.}\)</p></li>
-<li id="li-8357"><p id="p-14292">Graph \(P_1(x)\) in the same window with \(f(x)\text{.}\)</p></li>
+<li id="li-8357"><p id="p-14296">Graph \(P_1(x)\) in the same window with \(f(x)\text{.}\)</p></li>
 </ol>
 <p></p>
 </li>
 <li id="li-8358">
-<p id="p-14293">Next, we will find a quadratic polynomial \(P_2(x) = ax^2 + bx + c\) that matches \(f(x)\) at \(x = 1\text{,}\) \(2.5\text{,}\) and \(6\text{.}\) </p>
+<p id="p-14297">Next, we will find a quadratic polynomial \(P_2(x) = ax^2 + bx + c\) that matches \(f(x)\) at \(x = 1\text{,}\) \(2.5\text{,}\) and \(6\text{.}\) </p>
 <ol id="ol-2605" style="list-style-type: lower-alpha;">
-<li id="li-8359"><p id="p-14294">Write and solve a system of equations for the constants \(a\text{,}\) \(b\text{,}\) and \(c\text{.}\)</p></li>
-<li id="li-8360"><p id="p-14295">Graph \(P_2(x)\) in the same window with \(f(x)\text{.}\)</p></li>
+<li id="li-8359"><p id="p-14298">Write and solve a system of equations for the constants \(a\text{,}\) \(b\text{,}\) and \(c\text{.}\)</p></li>
+<li id="li-8360"><p id="p-14299">Graph \(P_2(x)\) in the same window with \(f(x)\text{.}\)</p></li>
 </ol>
 <p></p>
 </li>
 <li id="li-8361">
-<p id="p-14296">We can also find a cubic polynomial \(P_3(x) = ax^3 + bx^2 + cx + d\) that matches \(f(x)\) at \(x = 1\text{,}\) \(3\text{,}\) \(4\text{,}\) and \(6\text{.}\) </p>
+<p id="p-14300">We can also find a cubic polynomial \(P_3(x) = ax^3 + bx^2 + cx + d\) that matches \(f(x)\) at \(x = 1\text{,}\) \(3\text{,}\) \(4\text{,}\) and \(6\text{.}\) </p>
 <ol id="ol-2606" style="list-style-type: lower-alpha;">
-<li id="li-8362"><p id="p-14297">Write a system of equations for \(a\text{,}\) \(b\text{,}\) \(c\text{,}\) and \(d\text{.}\) We will see how to solve such a system later in this chapter. For now, we will use the calculator's cubic regression feature.</p></li>
-<li id="li-8363"><p id="p-14298">Enter the coordinates of \(P_3(x)\) evaluated at \(x=1\text{,}\) \(3\text{,}\) \(4\text{,}\) and \(6\) into \(L_1\) and \(L_2\) under the <!--Style me with CSS--><em>STAT EDIT</em> menu. Then, from the <!--Style me with CSS--><em>STAT CALC</em> menu, choose <!--Style me with CSS--><em>6: CubicReg</em> and press <tt class="code-inline tex2jax_ignore">ENTER</tt>.</p></li>
-<li id="li-8364"><p id="p-14299">Graph \(P_3(x)\) in the same window with \(f(x)\text{.}\)</p></li>
+<li id="li-8362"><p id="p-14301">Write a system of equations for \(a\text{,}\) \(b\text{,}\) \(c\text{,}\) and \(d\text{.}\) We will see how to solve such a system later in this chapter. For now, we will use the calculator's cubic regression feature.</p></li>
+<li id="li-8363"><p id="p-14302">Enter the coordinates of \(P_3(x)\) evaluated at \(x=1\text{,}\) \(3\text{,}\) \(4\text{,}\) and \(6\) into \(L_1\) and \(L_2\) under the <!--Style me with CSS--><em>STAT EDIT</em> menu. Then, from the <!--Style me with CSS--><em>STAT CALC</em> menu, choose <!--Style me with CSS--><em>6: CubicReg</em> and press <tt class="code-inline tex2jax_ignore">ENTER</tt>.</p></li>
+<li id="li-8364"><p id="p-14303">Graph \(P_3(x)\) in the same window with \(f(x)\text{.}\)</p></li>
 </ol>
 <p></p>
 </li>
-<li id="li-8365"><p id="p-14300">How well does each interpolating polynomial approximate the function \(f(x)\text{?}\) Graph the "error function," \(E_n(x)\text{,}\) for each polynomial on the interval \([-2, 7.4]\text{.}\)
+<li id="li-8365"><p id="p-14304">How well does each interpolating polynomial approximate the function \(f(x)\text{?}\) Graph the "error function," \(E_n(x)\text{,}\) for each polynomial on the interval \([-2, 7.4]\text{.}\)
 \begin{align*}
 E_1(x) \amp = f(x) - P_1(x)\\
 E_2(x) \amp = f(x) - P_2(x)\\
