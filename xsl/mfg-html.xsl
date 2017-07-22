@@ -29,7 +29,7 @@
 <xsl:param name="html.knowl.exercise.inline" select="'yes'" />
 <xsl:param name="html.knowl.example.solution" select="'yes'" />
 <xsl:param name="html.knowl.warning" select="'no'" />
-<xsl:param name="html.knowl.technology" select="'no'" />
+<xsl:param name="html.knowl.technology" select="'yes'" />
 <!-- color theme -->
 <xsl:param name="html.css.file"   select="'mathbook-3.css'" />
 
