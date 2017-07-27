@@ -48,7 +48,7 @@
 	<li><p>
 		Property (2):
 		\begin{align*}
-		\log_{2}{8} \amp=\log_{2}{\frac{16}{2}} \amp\amp=\log_2{16}-\log_2 2 \amp \text{ because }2^\alert{3}  \amp= \frac{2^\alert{4}}{\cdot 2^\alert{1}} \\
+		\log_{2}{8} \amp=\log_{2}{\frac{16}{2}} \amp\amp=\log_2{16}-\log_2 2 \amp \text{ because }2^\alert{3}  \amp= \frac{2^\alert{4}}{2^\alert{1}} \\
 		 \alert{3} 		\amp\amp\amp = \alert{4} - \alert{1}		\amp 8 					\amp = \frac{16}{2}
 		\end{align*}
 	</p></li>
@@ -98,12 +98,12 @@
 <p>
 	Be careful when using the properties of logarithms! Compare the statements below:
 	<ol>
-		<li><p><m>\log_{b}{(2x)} = \log_{b}{2} + \log_{b}{x}  \text{ by Property 1,}</m></p>
+		<li><p><m>\log_{b}{(2x)} = \log_{b}{2} + \log_{b}{x}    \text{   by Property 1,}</m></p>
 		<p>but</p>
 		<p><m>\log_{b}{(2 + x)} \ne \log_{b}{2} + \log_{b}{x}</m></p><p></p></li>
-		<li><p><m>\log_{b}{\left(\frac{x}{5}\right)}= \log_b x - \log_b 5 \text{ by Property 2,}</m></p>
+		<li><p><m>\log_{b}{\left(\dfrac{x}{5}\right)}= \log_b x - \log_b 5   \text{   by Property 2,}</m></p>
 		<p>but</p>
-		<p><m>\log_{b}{\left(\frac{x}{5}\right)} \ne  \frac{\log_b x}{\log_b 5}</m></p></li>
+		<p><m>\log_{b}{\left(\dfrac{x}{5}\right)} \ne  \dfrac{\log_b x}{\log_b 5}</m></p></li>
 	</ol>
 </p>
 </warning>
@@ -159,8 +159,8 @@
 
 <warning>
 <p>
-	Do not confuse the expression <m>\frac{\log_{10}{7}}{\log_{10}{5}}</m> with <m>\log_{10}{\left(\frac{7}{5}\right)}</m>; they are not the same! Property (2) allows us to simplify <m>\log{\left(\frac{x}{y}\right)}</m>, but not <m>\frac{\log x}{\log y}</m>. We cannot rewrite <m>\frac{\log_{10}{7}}{\log_{10}{5}}</m>, so we must evaluate it as <m>(\log 7)/(\log 5)</m>. You can check on your calculator that
-	<me>\frac{\log_{10}{7}}{\log_{10}{5}}\ne \log_{10}{\left(\frac{7}{5}\right)}= \log_{10}{1.4}</me>.
+	Do not confuse the expression <m>\dfrac{\log_{10}{7}}{\log_{10}{5}}</m> with <m>\log_{10}{\left(\dfrac{7}{5}\right)}</m>; they are not the same! Property (2) allows us to simplify <m>\log{\left(\dfrac{x}{y}\right)}</m>, but not <m>\dfrac{\log x}{\log y}</m>. We cannot rewrite <m>\dfrac{\log_{10}{7}}{\log_{10}{5}}</m>, so we must evaluate it as <m>(\log 7)/(\log 5)</m>. You can check on your calculator that
+	<me>\dfrac{\log_{10}{7}}{\log_{10}{5}}\ne \log_{10}{\left(\dfrac{7}{5}\right)}= \log_{10}{1.4}</me>.
 </p>
 </warning>
 
@@ -170,9 +170,9 @@
 </p>
 <solution>
 <p>
-	Divide both sides by <m>80</m> to obtain
+	First we divide both sides by <m>80</m> to obtain
 	<me>20.5 = 6^{0.03x}</me>
-	Take the base <m>10</m> logarithm of both sides of the equation and use Property (3) of logarithms to get
+	Next, we take the base <m>10</m> logarithm of both sides of the equation and use Property (3) of logarithms to get
 	<me>\log_{10}{20.5} = \log_{10}{6^{0.03x}}= 0.03x \log_{10}{6}</me>
 	On the right side of the equation, <m>x</m> is multiplied by two constants, <m>0.03</m> and <m>\log_{10}{6}</m>. So, to solve for <m>x</m> we must divide both sides of the equation by <m>0.03 \log_{10}{6}</m>. We use a calculator to evaluate the answer:
 	<me>x = \frac{\log_{10}{20.5}}{0.03 \log_{10}{6}}\approx 56.19</me>
@@ -210,7 +210,7 @@
 		<p>Divide both sides by 5.</p>
 		<p>Take the log of both sides.</p>
 		<p>Apply Property (3) to simplify the left side.</p>
-		<p>Solve for x.</p>
+		<p>Solve for <m>x</m>.</p>
 	</hint>
 	<answer><p><m>x=\dfrac{\log 15.4}{2.5\log 1.2}\approx 5.999 </m></p></answer>
 </exercise>
@@ -237,7 +237,7 @@
 	6500 \cdot 3^{t/12} \amp = 75,000\amp\amp\text{ Divide both sides by 6500.}\\
 	3^{t/12} \amp = \frac{150}{13} 
 	\end{align*}
-	Take the base <m>10</m> logarithm of both sides and solve for <m>t</m>.
+	Now we take the base <m>10</m> logarithm of both sides and solve for <m>t</m>.
 	\begin{align*}
 	\log_{10}{(3^{t/12})} \amp = \log_{10}\left(\frac{150}{13}\right)
 	\amp\amp\text{Apply Property (3).}\\
@@ -273,7 +273,7 @@
 <p>
 	The amount of money in an account that earns interest compounded annually grows exponentially according to the formula
 	<me>A(t) = P(1 + r )^t</me>
-	(See <xref ref="Exponential-Growth-and-Decay" autoname="yes"/> to review compound interest.) Many accounts compound interest more frequently than once a year. If the interest is compounded <m>n</m> times per year, then in <m>t</m> years there will be <m>nt</m> compounding periods, and in each period the account earns interest at a rate of <m>\frac{r}{n}</m>. The amount accumulated is given by a generalization of our earlier formula.
+	(See <xref ref="Exponential-Growth-and-Decay" autoname="yes"/> to review compound interest.) Many accounts compound interest more frequently than once a year. If the interest is compounded <m>n</m> times per year, then in <m>t</m> years there will be <m>nt</m> compounding periods, and in each period the account earns interest at a rate of <m>\dfrac{r}{n}</m>. The amount accumulated is given by a generalization of our earlier formula.
 </p>
 <assemblage xml:id="assemblage-Compound-Interest"><title>Compound Interest</title>
 <p>

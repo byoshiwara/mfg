@@ -14,7 +14,8 @@
 		\begin{bmatrix} 4\\5\\6
 		\end{bmatrix}
 	</me>
-	are matrices. A matrix of <term index="yes">order</term>, or <term index="yes" >dimension</term>, <m>n\times m</m> (read "<m>n</m> by <m>m</m>") has <m>n</m> (horizontal) rows and <m>m</m> (vertical) columns. The matrices above are <m>3\times 3</m>, <m>2\times 3</m>, and <m>3\times 1</m>, respectively. The first matrix—in which the number of rows is equal to the number of columns—is an example of a <term index="yes" >square matrix</term>.
+	are matrices. A matrix of <term index="yes">order</term>, or <term index="yes" >dimension</term>, <m>n\times m</m> (read "<m>n</m> by <m>m</m>") has <m>n</m> (horizontal) rows and <m>m</m> (vertical) columns.</p>
+	<p> The matrices above are <m>3\times 3</m>, <m>2\times 3</m>, and <m>3\times 1</m>, respectively. The first matrix—in which the number of rows is equal to the number of columns—is an example of a <term index="yes" >square matrix</term>.
 </p>
 
 <subsection><title>Coefficient Matrix and Augmented Matrix of a System</title>
@@ -234,7 +235,7 @@
 
 <exercise><statement>
 	<p>
-		Subtract <m></m> times row 2 from row 3.
+		Subtract <m>4</m> times row 2 from row 3.
 		<me>
 			\left[ \begin{array}{@{}ccc|c@{}}
 				3 \amp 2  \amp -5 \amp -3 \\ 
@@ -563,7 +564,7 @@
 				2 \amp  0\amp -3 \amp -11
 			\end{array}\right]		
 		</me>
-		Obtain <m>1</m> as the first entry of the first row by multiplying each entry in the first row by <m>\frac{1}{2}</m>. This will make it easier to obtain zeros in the first entries of the second and third rows.
+		We obtain <m>1</m> as the first entry of the first row by multiplying each entry in the first row by <m>\frac{1}{2}</m>. This will make it easier to obtain zeros in the first entries of the second and third rows.
 		<sidebyside valigns="middle middle ">
 			<paragraphs>
 				<p>
@@ -621,7 +622,7 @@
 				</p>
 		</paragraphs>
 	</sidebyside>
-	Next, obtain zeros in the first entries of the second and third rows by adding suitable multiples of the first row:
+	Next, we obtain zeros in the first entries of the second and third rows by adding suitable multiples of the first row:
 <me>-3(\text{row }1) + 2~~{\Bigg\downarrow}~~3(\text{row }1) + 3 </me>
 		<sidebyside valigns="middle  middle" >
 			<paragraphs>
@@ -651,7 +652,7 @@
 				</p>
 		</paragraphs>
 	</sidebyside>
-	Finally, obtain a zero in the second entry of the third row by adding <m>-2(\text{row }2)</m> to <m>\text{row }3</m>:
+	Finally, we obtain a zero in the second entry of the third row by adding <m>-2(\text{row }2)</m> to <m>\text{row }3</m>:
 
 	<me>-2(\text{row }2) + 3~~{\Bigg\downarrow}~~\hphantom{3(\text{row }1) + 3} </me>
 		<sidebyside valigns="middle  middle" >
@@ -682,7 +683,7 @@
 				</p>
 		</paragraphs>
 	</sidebyside>
-	The system is now in upper triangular form, and we use back-substitution to find the solution. Solve the last equation to get <m>z=3</m> and substitute <m>3</m> for <m>z</m> in the second equation to find <m>y=-2</m>. Finally, substitute <m>3</m> for <m>z</m> and <m>-2</m> for <m>y</m> in the first equation to find <m>x=-1</m>. The solution is the ordered triple <m>(-1,-2, 3)</m>.
+	The system is now in upper triangular form, and we use back-substitution to find the solution. We solve the last equation to get <m>z=3</m> and substitute <m>3</m> for <m>z</m> in the second equation to find <m>y=-2</m>. Finally, we substitute <m>3</m> for <m>z</m> and <m>-2</m> for <m>y</m> in the first equation to find <m>x=-1</m>. The solution is the ordered triple <m>(-1,-2, 3)</m>.
 </p>
 </solution></example>
 
@@ -715,7 +716,7 @@
 				Add <m>2</m>(row 2) to (row 3).
 			</p></li>
 			<li><p>
-				Add <m>2</m>(row 2) to (row 3).
+				Solve the resulting system by back-substitution.
 			</p></li>
 		</ol>
 	</p>
@@ -919,7 +920,8 @@
 			 \amp {} {}\amp   \amp {} {}\amp  \amp {} {}\amp 12z\amp =\amp 36
 		</mrow>
 	</md>
-	which we solve by back-substitution. From the last equation, we find <m>z=3</m>, and by substituting <m>3</m> for <m>z</m> in the third equation, we find <m>y=-1</m>. Next, we substitute <m>-1</m> for <m>y</m> and <m>3</m> for <m>z</m> in the second equation to find <m>x=1</m>, and finally, we substitute <m>x=1</m>, <m>y=-1</m>, <m>z=3</m> into the first equation to find <m>w=-2</m>. The solution is the ordered four-tuple <m>(-2, 1, -1, 3)</m>. We can verify that these values satisfy all four equations of the original system.
+	which we solve by back-substitution. From the last equation, we find <m>z=3</m>, and by substituting <m>3</m> for <m>z</m> in the third equation, we find <m>y=-1</m>. Next, we substitute <m>-1</m> for <m>y</m> and <m>3</m> for <m>z</m> in the second equation to find <m>x=1</m>, and finally, we substitute <m>x=1</m>, <m>y=-1</m>, <m>z=3</m> into the first equation to find <m>w=-2</m>.</p>
+	<p> The solution is the ordered four-tuple <m>(-2, 1, -1, 3)</m>. We can verify that these values satisfy all four equations of the original system.
 	</p>
 </solution></example>
 
@@ -949,9 +951,16 @@
 <answer><p><m>(-3, 2, 1, -1)</m></p></answer>
 </exercise>
 
-<remark><title><!--<image source="images/icon-GC.jpg" alt="Graphing Calculator" width="8%" />-->Reduced Row Echelon Form</title>
+<technology><title><!--<image source="images/icon-GC.jpg" alt="Graphing Calculator" width="8%" />-->Reduced Row Echelon Form</title>
 <p>
-	The triangular matrix we obtain by row reduction is an example of <term index="yes" >row echelon form</term>. In a row echelon matrix, (1) the first nonzero entry in any row is farther to the right than the first nonzero entry in the rows above it, (2) the entries directly below the first nonzero entry in any row are all zeros, and (3) any row consisting entirely of zeros is below all rows with any nonzero entry. If we divide each row by its leading nonzero entry, so that the leading entry is <m>1</m>, and if we use row reduction to obtain <m>0</m>s above the leading <m>1</m> as well as below it, the resulting matrix is said to be in <term index="yes" >reduced row echelon form</term>. This form is especially convenient because we do not have to use backsubstitution to finish solving the system; we can read off the solutions directly from the matrix. For example, you can check that the matrix
+	The triangular matrix we obtain by row reduction is an example of <term index="yes" >row echelon form</term>. In a row echelon matrix,
+	<ol>
+	<li> The first nonzero entry in any row is farther to the right than the first nonzero entry in the rows above it.</li>
+	<li> The entries directly below the first nonzero entry in any row are all zeros.</li>
+	<li> Any row consisting entirely of zeros is below all rows with any nonzero entry.</li>
+	</ol>
+	 If we divide each row by its leading nonzero entry, so that the leading entry is <m>1</m>, and if we use row reduction to obtain <m>0</m>s above the leading <m>1</m> as well as below it, the resulting matrix is said to be in <term index="yes" >reduced row echelon form</term>. This form is especially convenient because we do not have to use backsubstitution to finish solving the system; we can read off the solutions directly from the matrix.</p>
+	 <p> For example, you can check that the matrix
 	<me>
 		\left[ \begin{array}{@{}cccc|c@{}}
 			1 \amp 0  \amp 0 \amp 0 \amp -2  \\ 
@@ -980,7 +989,6 @@
 <p>
 	TI-84 and TI-83 calculators have a command for finding the reduced row echelon form of a matrix.
 </p>
-</remark>
 
 <example>
 	<p>
@@ -1014,23 +1022,23 @@
 	</me>
 	We enter this matrix into the calculator as follows: First access the <em>MATRIX</em> menu by pressing <c>2nd</c> <m>\boxed{x^{-1}}</m> on a TI-84 or<c>MATRX</c>  on a TI-83. You will see the menu shown in <xref ref="fig-GC-matrix-editing" autoname="yes"/>a. We will use matrix [A], which is already selected, and we presss <c>→</c><c>→</c> <c>ENTER</c> to <em>EDIT</em> (or enter) the matrix, shown in <xref ref="fig-GC-matrix-editing" autoname="yes"/>b.
 	</p>
-	<figure xml:id="fig-GC-matrix-editing"><image source="images/fig-GC-matrix-editing.jpg" alt="GC windows to edit or create a matrix"/><caption></caption> </figure>
+	<figure xml:id="fig-GC-matrix-editing"><image source="images/fig-GC-matrix-editing.jpg" alt="GC windows to edit or create a matrix" width="60%"/><caption></caption> </figure>
 	<p>
 		We want to enter a <m>4\times 5</m> matrix, so we press <m>4</m><c>ENTER</c><m>5</m><c>ENTER</c>, and we see the display in <xref ref="fig-GC-matrix-editing2" autoname="yes"/>a. Now type in the first row of the matrix, pressing <c>ENTER</c> after each entry. The calculator automatically moves to the second row. Continue filling in the rest of the augmented matrix, as shown in <xref ref="fig-GC-matrix-editing2" autoname="yes"/>b.
 	</p>
-	<figure xml:id="fig-GC-matrix-editing2"><image source="images/fig-GC-matrix-editing2.jpg" alt="GC windows of matrices being edited"/><caption></caption> </figure>
+	<figure xml:id="fig-GC-matrix-editing2"><image source="images/fig-GC-matrix-editing2.jpg" alt="GC windows of matrices being edited" width="60%"/><caption></caption> </figure>
 	<p>
 		To make sure you have entered the values correctly, press <c>2nd</c><c>MODE</c> to quit to the home screen, then open the matrix menu again. Press <m>1</m><c>ENTER</c> to retrieve matrix [A]; the calculator display should look like <xref ref="fig-GC-matrix-viewing" autoname="yes"/>a. To check the rest of the matrix, press the right arrow key until you see the last column, as in <xref ref="fig-GC-matrix-viewing" autoname="yes"/>b.
 	</p>
-	<figure xml:id="fig-GC-matrix-viewing"><image source="images/fig-GC-matrix-viewing.jpg" alt="GC windows scrolling to see a matrix"/><caption></caption> </figure>
+	<figure xml:id="fig-GC-matrix-viewing"><image source="images/fig-GC-matrix-viewing.jpg" alt="GC windows scrolling to see a matrix" width="60%"/><caption></caption> </figure>
 	<p>
 		We are now ready to compute the reduced row echelon form of the matrix. Access the matrix menu again, but this time press the right arrow once to highlight <em>MATH</em> (<xref ref="fig-GC-matrix-transform" autoname="yes"/>a). Scroll down until the rref( command is highlighted, as shown in <xref ref="fig-GC-matrix-transform" autoname="yes"/>b, and press <c>ENTER</c>.
 	</p>
-	<figure xml:id="fig-GC-matrix-transform"><image source="images/fig-GC-matrix-transform.jpg" alt="GC windows to manipulate a matrix"/><caption></caption> </figure>
+	<figure xml:id="fig-GC-matrix-transform"><image source="images/fig-GC-matrix-transform.jpg" alt="GC windows to manipulate a matrix" width="60%"/><caption></caption> </figure>
 	<p>
 		Finally, enter matrix [A] after the rref( command by pressing <c>2nd</c> <m>\boxed{x^{-1}}</m> <m>1</m><c>)</c> <c>ENTER</c> or <m>MATRX</m> <m>1</m><c>)</c> <c>ENTER</c>. The display should now look like <xref ref="fig-GC-rref" autoname="yes"/>a). The last column of the matrix gives decimal approximations for the solutions.
 	</p>
-	<figure xml:id="fig-GC-rref"><image source="images/fig-GC-rref.jpg" alt="GC windows showing rref"/><caption></caption> </figure>
+	<figure xml:id="fig-GC-rref"><image source="images/fig-GC-rref.jpg" alt="GC windows showing rref" width="60%"/><caption></caption> </figure>
 	<p>
 		The calculator can also display the rational form of the solutions: Press <c>MATH</c> <c>ENTER</c> <c>ENTER</c> to see <xref ref="fig-GC-rref" autoname="yes"/>b. The reduced row echelon form of the augmented matrix is thus
 		<me>
@@ -1043,6 +1051,7 @@
 		</me>and the solution is the ordered four-tuple <m>(2, \frac{1}{3}, \frac{-2}{3}, \frac{3}{2})</m>. You can verify that these values satisfy each of the original four equations.
 	</p>
 </solution></example>
+</technology>
 
 <exercise><statement>
 	<ol label="a">
