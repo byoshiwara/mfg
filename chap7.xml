@@ -15,12 +15,11 @@
 </p>
 <image source="images/Letter-a" alt="design of the letter a" width="80%"/>
 
-<investigation><title>Bézier Curves</title><statement>
+<investigation xml:id="investigation-bezier"><title>Bézier Curves</title><statement>
 <p>
     A Bézier curve is actually a sequence of short curves pieced together. Each piece has two endpoints and (for nonlinear curves) at least one control point. The control points do not lie on the curve itself, but they determine its shape. Two polynomials define the curve, one for the <m>x</m>-coordinate and one for the <m>y</m>-coordinate.
 </p>
-<ol label="*I*"><li><p>Sketching by Hand</p>
-<ol label="a">
+<ol label="A">
     <li>
         <p>Linear Bézier Curves</p>
         <p>
@@ -32,7 +31,7 @@
                 \end{aligned}
             </me>
             for <m>0\le t\le 1</m>.
-            <ol label="*1*">
+            <ol label="1">
                 <li xml:id="bezier-linear-formulas"><p>
                     Find the functions <m>f</m> and <m>g</m> defining the linear Bézier curve joining the two points <m>(-4, 7)</m> and <m>(2, 0)</m>. Simplify the formulas defining each function.
                 </p></li>
@@ -83,7 +82,7 @@
                 \end{aligned}
             </me>
             for <m>0\le t\le 1</m>.
-            <ol label="*1*">
+            <ol label="1">
                 <li xml:id="bezier-quad-formulas"><p>
                     Find the functions <m>f</m> and <m>g</m> for the quadratic Bézier curve defined by the endpoints <m>(-4, 7)</m> and <m>(2, 0)</m>, and the control point <m>(0, 5)</m>. Simplify the formulas defining each function.
                 </p></li>
@@ -209,19 +208,16 @@
                     <figure valign="middle" width="60%"><image source="images/fig-8x8-grid" alt="8 by 8 grid"/></figure></sidebyside>
                 </p></li>
                 <li><p>
-                    Connect the four given points in order using three line segments. How does the position of the control points affect the curve? Finish the letter y by including the linear Bézier curve you drew for <xref ref="y-stroke">step</xref> in Part 1.
+                    Connect the four given points in order using three line segments. How does the position of the control points affect the curve? Finish the letter y by including the linear Bézier curve you drew for <xref ref="y-stroke">step</xref>.
                 </p></li>
             </ol>
         </p>
     </li>
 </ol>
-
-</li>
-<li>
-    <p>Using a Graphing Calculator</p>
-    <ol label="a">
+</statement></investigation>
+<technology><title>Bézier Curves on the Graphing Calculator</title><investigation><p>
+    <ol label="A">
         <li>
-            <p>Bézier Curves on the Graphing Calculator</p>
             <p>
                 We can draw Bézier curves on the graphing calculator using the parametric mode. First, press the <c>MODE</c> key and highlight <em>PAR</em>, as shown in <xref ref="fig-GC-bezier" autoname="yes"/>a. To remove the <m>x</m>- and <m>y</m>-axes from the display, press <c>2nd</c> <c>ZOOM</c> to get the <m>Format</m> menu, then choose <m>AxesOff</m> as shown in Figure <xref ref="fig-GC-bezier" autoname="yes"/>b. Finally, we set the viewing window: Press <c>WINDOW</c> and set
                 \begin{align}
@@ -242,20 +238,21 @@
             <p>Designing a Numeral 7</p>
             <ol label="*1*">
                 <li xml:id="bezier-quad-formulas-GC"><p>
-                    Press <c>2nd</c> <c>Y=</c> and enter the formulas for the quadratic Bézier curve defined by the endpoints <m>(4, 7)</m> and <m>(0,-7)</m>, and the control point <m>(0, 5)</m> under <m>X_{1T}</m> and <m>Y_{1T}</m>. (These are the same formulas you found in <xref ref="bezier-quad-formulas">step</xref>.)
+                    Press <c>2nd</c> <c>Y=</c> and enter the formulas for the quadratic Bézier curve defined by the endpoints <m>(4, 7)</m> and <m>(0,-7)</m>, and the control point <m>(0, 5)</m> under <m>X_{1T}</m> and <m>Y_{1T}</m>. (These are the same formulas you found in <xref ref="bezier-quad-formulas">step</xref> of <xref ref="investigation-bezier" autoname="yes" />.)
                 </p></li>
                 <li><p>
                     Find the functions <m>f</m> and <m>g</m> for the linear Bézier curve joining the points <m>(-4, 7)</m> and <m>(4, 7)</m>. Simplify the formulas for those functions and enter them into your calculator under <m>X_{2T}</m> and <m>Y_{2T}</m>. Press <c>GRAPH</c> to see the graph.
                 </p></li>
                 <li><p>
-                    Now we will alter the image slightly: Go back to <m>X_{1T}</m> and <m>Y_{1T}</m> and change the control point to <m>(0,-3)</m>. (These are the formulas you found in <xref ref="bezier-quad-formulas2">step</xref>.) How does the graph change?
+                    Now we will alter the image slightly: Go back to <m>X_{1T}</m> and <m>Y_{1T}</m> and change the control point to <m>(0,-3)</m>. (These are the formulas you found in <xref ref="bezier-quad-formulas2">step</xref> of <xref ref="investigation-bezier" autoname="yes" />.) How does the graph change?
                 </p></li>
                 <li><p>
                     We can see exactly how the control point affects the graph by connecting the three data points with line segments. Press <c>STAT</c> <c>ENTER</c> and enter the coordinates of <m>(4, 7)</m>, <m>(0,-3)</m>, and <m>(0,-7)</m> in <m>L_1</m> and <m>L_2</m>, as shown in <xref ref="fig-GC-bezier3" autoname="yes"/>a. Press <c>2nd</c> <c>Y=</c> <c>ENTER</c>, turn on <em>Plot1</em>, and select the second plot type, as shown in <xref ref="fig-GC-bezier3" autoname="yes"/>b. You should see the line segments superimposed on your numeral 7. How are those segments related to the curve?
                     <figure xml:id="fig-GC-bezier3"><image source="images/fig-GC-bezier3.jpg" alt="GC screens of setup for drawing parametric curves" width="80%"/><caption></caption> </figure>
                 </p></li>
                 <li><p>
-                    Now edit <m>L_2</m> so that the control point is <m>(0, 5)</m>, and again define <m>X_{1T}</m> and <m>Y_{1T}</m> as in <xref ref="bezier-quad-formulas-GC">step</xref> to see how the graph is altered. Experiment by using different coordinates for the control point and entering the appropriate new equations in <m>X_{1T}</m> and <m>Y_{1T}</m>. Describe how the point <m>(x_2, y_2)</m> affects the direction of the quadratic Bézier curve. (Hint: Consider the direction of the curve starting off from either endpoint.)
+                    Now edit <m>L_2</m> so that the control point is <m>(0, 5)</m>, and again define <m>X_{1T}</m> and <m>Y_{1T}</m> as in <xref ref="bezier-quad-formulas-GC">step</xref> to see how the graph is altered. Experiment by using different coordinates for the control point and entering the appropriate new equations in <m>X_{1T}</m> and <m>Y_{1T}</m>. Describe how the point <m>(x_2, y_2)</m> affects the direction of the quadratic Bézier curve. 
+                    <hint>Consider the direction of the curve starting off from either endpoint.</hint>
                 </p></li>
             </ol>
         </li>
@@ -266,7 +263,7 @@
                     First, turn off Plot1 by pressing <c>Y=</c> <c>↑</c> <c>ENTER</c>.
                 </p></li>
                 <li><p>
-                    Enter the formulas for the cubic Bézier curve from <xref ref="bezier-cubic-formulas">part</xref> under <m>X_{1T}</m> and <m>Y_{1T}</m>. Modify the expressions in <m>X_{2T}</m> and <m>Y_{2T}</m> to the linear Bézier curve joining the points <m>(-4, 7)</m> and <m>(2, 0)</m> from <xref ref="bezier-linear-formulas">step</xref>.
+                    Enter the formulas for the cubic Bézier curve from <xref ref="bezier-cubic-formulas">part</xref> under <m>X_{1T}</m> and <m>Y_{1T}</m>. Modify the expressions in <m>X_{2T}</m> and <m>Y_{2T}</m> to the linear Bézier curve joining the points <m>(-4, 7)</m> and <m>(2, 0)</m> from <xref ref="bezier-linear-formulas">step</xref> of <xref ref="investigation-bezier" autoname="yes" />.
                 </p></li>
                 <li><p>
                     How do the control points affect the direction of the Bézier curve? (Suggestion: Enter the coordinates of the four points under <m>L_1</m> and <m>L_2</m> and turn <em>Plot1</em> back on.)
@@ -274,13 +271,10 @@
             </ol>
         </li>
     </ol>
-</li>
-</ol>
 <p>
     When you finish experimenting with Bézier curves, set the calculator <c>MODE</c> (<c>2nd</c> <c>QUIT</c>) back to <c>FUNC</c>, and reset the <c>FORMAT</c>(<c>2nd</c> <c>ZOOM</c>)to <em>AxesOn</em>.
 </p>
-</statement></investigation>
-
+</p></investigation></technology>
 
 </introduction>
 

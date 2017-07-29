@@ -278,7 +278,7 @@
 	</p>
 <solution>
 	<p>
-		<dl>
+<!--		<dl>
 			<li><title>Step 1:</title><p>
 				<md>
 					<mrow>\text{Number of packages purchased from Company A: } ~x</mrow>
@@ -345,7 +345,75 @@
 			<li><title>Step 5:</title><p>
 				The Healthy Food Store should buy three packages from Company A and two packages from Company B. It will pay <m>\$95</m> for its stock of granola and muesli.
 			</p></li>
-		</dl>
+		</dl> -->
+		<ol label="1">
+			<li><p>
+				<md>
+					<mrow>\text{Number of packages purchased from Company A: } ~x</mrow>
+					<mrow>\text{Number of packages purchased from Company B: } ~y</mrow>
+				</md>
+				First, we write the objective function. The store would like to minimize its cost, so
+				<me>C = 15x + 25y</me>
+				Next, we write the constraints. These will be a system of inequalities. It may help to organize the information into a table.
+				<table><tabular halign="center" left="minor" right="minor" top="minor" bottom="minor">
+					<row>
+						<cell></cell>
+						<cell>Company A</cell>
+						<cell>Company B</cell>
+						<cell>Required</cell>
+					</row>
+					<row>
+						<cell>Granola</cell>
+						<cell><m>2x</m></cell>
+						<cell><m>3y</m></cell>
+						<cell>12</cell>
+					</row>
+					<row>
+						<cell>Muesli</cell>
+						<cell><m>x</m></cell>
+						<cell><m>3y</m></cell>
+						<cell>9</cell>
+					</row>					
+				</tabular></table>
+				The Healthy Food Store will have <m>2x</m> kilograms of granola and <m>x</m> kilograms of muesli from Company A, and <m>3y</m> kilograms of granola and <m>3y</m> kilograms of muesli from Company B. The store requires that
+				<md>
+					<mrow>2x + 3y \amp\ge 12</mrow>
+					<mrow>x + 3y \amp\ge 9</mrow>
+				</md>
+				Because the store cannot purchase negative quantities, we also have
+				<me>x \ge 0, ~~~~~y \ge 0</me>
+			</p></li>
+			<li><p>
+				We graph the solutions to the constraint system. The feasible solutions form the shaded region shown in <xref ref="fig-unbounded-feasible-set" autoname="yes"/>. Any ordered point on this graph corresponds to a way to purchase granola and muesli that meets the store’s needs, but some of these choices cost more than others.
+				<figure xml:id="fig-unbounded-feasible-set"><image source="images/fig-unbounded-feasible-set" alt="unbunded set of feasible solutions" width="60%"/><caption></caption> </figure>
+			</p></li>
+			<li><p>
+				We know that the minimum cost will occur at one of the vertex points, which are labeled in the figure. The coordinates of <m>P</m> and <m>R</m> are easy to see. To find the coordinates of <m>Q</m>, we notice that it is the intersection of the lines <m>2x + 3y = 12</m> and <m>x + 3y = 9</m>. Thus, we must solve the system
+				<md>
+					<mrow>2x + 3y \amp= 12</mrow>
+					<mrow>x + 3y \amp = 9</mrow>
+				</md>
+				Subtracting the second equation from the first, we find that <m>x=3</m>. Substituting this value into either of the original two equations, we find that <m>y=2</m>. Thus the point <m>Q</m> has coordinates <m>(3, 2)</m>.
+			</p></li>
+			<li><p>
+				Now we evaluate the objective function at each of the three vertices.
+				<md>
+					<mrow>
+						\amp\text{At }P (0, 4): \amp C \amp= 15(\alert{0})+ 25(\blert{4}) = 100{}
+					</mrow>
+					<mrow>
+						\amp\text{At }P (3,2):\amp C \amp= 15(\alert{3})+ 25(\blert{2}) = 95{}\amp\amp\text{Minimum cost}
+					</mrow>
+					<mrow>
+						\amp\text{At }P (9,0): \amp C \amp= 15(\alert{9})+ 25(\blert{0}) = 135{}\amp
+					</mrow>
+				</md>
+				The minimum cost occurs at point <m>Q</m>.
+			</p></li>
+			<li><p>
+				The Healthy Food Store should buy three packages from Company A and two packages from Company B. It will pay <m>\$95</m> for its stock of granola and muesli.
+			</p></li>
+		</ol>
 	</p>
 </solution></example>
 
