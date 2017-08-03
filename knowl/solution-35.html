@@ -2,7 +2,7 @@
 <html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-07-28T11:58:17-07:00    *-->
+<!--*    on 2017-08-03T15:49:11-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,13 +13,22 @@
 </head>
 <body>
 <span class="solution"><h5 class="heading">
-<span class="type">Solution</span><span class="codenumber">1.129.1</span>
+<span class="type">Solution</span><span class="codenumber">1.191.1</span>
 </h5>
-<p>We enter the time data under \(L_1\) and the height data under \(L_2\text{.}\) Then we calculate and store the quadratic regression equation in \(Y_1\text{,}\) as we did in <a knowl="./knowl/example-GC-quadratic-fit.html" knowl-id="xref-example-GC-quadratic-fit" alt="Example 1.123 " title="Example 1.123 ">Example 1.123</a>. The regression equation is</p>
+<p></p>
+<ol style="list-style-type: lower-alpha;">
+<li>We have two data points of the form \((t, W)\text{,}\) namely \((3, 188.6)\) and \((13, 258.3)\text{.}\) We use the point-slope formula to fit a line through these two points. First, we compute the slope.
 \begin{equation*}
-y = -0.00297x2 + 0x + 8.834
+\frac{\Delta W}{\Delta t}=\frac {258.3 - 188.6}{13 - 3}= 6.97
 \end{equation*}
-<p>From either the graph of the regression equation or from the table (see figure below), we can see that the fit is not perfect, although the curve certainly fits the data better than any straight line could.</p>
-<object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/fig-GC-bad-quadratic-fit.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><p>If we scroll down the table, we find that this equation predicts a height of approximately \(4.08\) feet at time \(40\) minutes. (See figure c.) This is a preposterous estimate! The position of the minute hand at \(40\) minutes after noon should be the same as it was exactly one hour earlier (at 20 minutes before noon), when it was \(7.50\) feet.</p></span><span class="incontext"><a href="Curve-Fitting.html#solution-35">in-context</a></span>
+Next, we use the slope m = \(6.97\) and either of the two data points in the point-slope formula. \begin{align*} W \amp =W_1 + m(t - t_1) \\ W \amp = 188.6 + 6.97(t - 3) \\ W \amp = 167.69 + 6.97t \end{align*} Thus, \(W = f (t) = 167.69 + 6.97t\text{.}\)</li>
+<li>The slope gives us the rate of change of the function, and the units of the variables can help us interpret the slope in context.
+\begin{equation*}
+\frac{\Delta W}{\Delta t}= 
+\frac{258.3 - 188.6 \text{millions of cases}}{13 - 3\text{ years}}
+= 6.97 millions of cases /year
+\end{equation*}
+Over the 10 years between 1993 and 2003, wine consumption in the United States increased at a rate of 6.97 million cases per year.</li>
+</ol></span><span class="incontext"><a href="linear-regression.html#solution-35">in-context</a></span>
 </body>
 </html>
