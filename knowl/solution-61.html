@@ -1,8 +1,8 @@
 <!doctype html>
-<html>
+<html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2017-08-05T21:12:07-07:00    *-->
+<!--*    on 2017-08-06T14:51:07-07:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -13,55 +13,44 @@
 </head>
 <body>
 <span class="solution"><h5 class="heading">
-<span class="type">Solution</span><span class="codenumber">2.208.1</span>
+<span class="type">Solution</span><span class="codenumber">2.164.1</span>
 </h5>
 <ol style="list-style-type: lower-alpha;">
-<li>Marlene gets closer to the mall for each mile that she has driven on the highway until she has driven 15 miles, and after that she gets farther from the mall. <figure class="figure-like"><table>
-<tr>
-<td class="c m b1 r1 l1 t3 lines">Miles on highway</td>
-<td class="c m b1 r1 l0 t3 lines">\(0\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(5\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(10\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(15\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(20\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(25\)</td>
-<td class="c m b1 r1 l0 t3 lines">\(30\)</td>
-</tr>
-<tr>
-<td class="c m b1 r1 l1 t0 lines">Miles from mall</td>
-<td class="c m b1 r1 l0 t0 lines">\(15\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(10\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(5\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(0\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(5\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(10\)</td>
-<td class="c m b1 r1 l0 t0 lines">\(15\)</td>
-</tr>
-</table></figure>
+<li>
+<p>An income of \(x = \alert{500}\) is in the first tax bracket, so the tax is</p>
+\begin{equation*}
+T(\alert{500}) = 0 + 0.10(\alert{500}) = 50
+\end{equation*}
+<p>The income \(x = 29,700\) is just on the upper edge of the second tax bracket. The amount over $7300 is $29,700 - $7300, so</p>
+\begin{equation*}
+T(\alert{29,700}) = 730 + 0.15(\alert{29,700} - 7300) = 4090
+\end{equation*}
+<p>The income \(x = 40,000\) is in the third bracket, so the tax is</p>
+\begin{equation*}
+T (\alert{40,000}) = 4090 + 0.25(\alert{40,000} - 29,700) = 6665
+\end{equation*}
 </li>
-<li>Plot the points in the table to obtain the graph shown in <a knowl="./knowl/fig-abs-highway-distance.html" knowl-id="xref-fig-abs-highway-distance" alt="Figure 2.211 " title="Figure 2.211 ">Figure 2.211</a>. This graph looks like the absolute value function defined in <a href="basic-functions.html" alt="Section 2.2 Some Basic Functions" title="Section 2.2 Some Basic Functions">Section 2.2</a>, except that the vertex is the point \((15, 0)\) instead of the origin. <figure class="figure-like"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/fig-abs-highway-distance.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.211</span></figcaption></figure>
-</li>
-<li>Let \(x\) represent the number of miles on the highway and \(f (x)\) the number of miles from the mall. For \(x\)-values less than \(15\text{,}\) the graph is a straight line with slope \(-1\) and \(y\)-intercept at \((0, 15)\text{,}\) so its equation is \(y = -x + 15\text{.}\) Thus,
+<li>
+<p>The first two columns of the table give the tax brackets, or the \(x\)-intervals on which each piece of the function is defined. In each bracket, the tax \(T(x)\) is given by</p>
 \begin{equation*}
-f (x) = -x + 15 \text{ when } 0 \le x \lt 15
+\text{Base tax} + \text{Rate}\cdot(\text{Amount over bracket base}) 
 \end{equation*}
-On the other hand, when \(x \ge 15\text{,}\) the graph of \(f\) is a straight line with slope \(1\) that passes through the point \((15, 0)\text{.}\) The point-slope form of this line is
+<p>For example, the tax in the second bracket is</p>
 \begin{equation*}
-y = 0 + 1(x - 15)
+T (x) = 730 + 0.15(x - 7300)
 \end{equation*}
-so \(y = x - 15\text{.}\) Thus,
+<p>Writing the formulas for each of the four tax brackets gives us</p>
 \begin{equation*}
-f (x) = x - 15 \text{ when }  x \ge 15
-\end{equation*}
-Combining the two pieces, we obtain
-\begin{equation*}
-f (x) =
+T(x) =
 \begin{cases}
--x + 15 \amp \text{when } 0\le x\lt 15\\
-x - 15  \amp \text{when } x\ge 15
+0.10x \amp  0 \le x \le 7300\\
+730 + 0.15(x - 7300)  \amp  7300\lt x\le 29,700\\
+4090 + 0.25(x - 29,700) \amp  29,700\lt x\le 71,950\\
+14,652.50 + 0.28(x - 71,950)\amp 71,950\lt x\le 150,150\\
 \end{cases}
 \end{equation*}
-The graph of \(f (x)\) is a part of the graph of \(y = \abs{x - 15}\text{.}\) If we think of the highway as a portion of the real number line, with Marlene’s on-ramp located at the origin, then the outlet mall is located at \(15\text{.}\) Marlene's coordinate as she drives along the highway is \(x\text{,}\) and the distance from Marlene to the mall is given by \(f (x) = \abs{x - 15}\text{.}\)</li>
-</ol></span><span class="incontext"><a href="AbsoluteValue.html#solution-61">in-context</a></span>
+</li>
+<li><p>The graph of \(T\) is piecewise linear. The first piece starts at the origin and has slope \(0.10\text{.}\) The second piece is in point-slope form, \(y = y_1 + m(x - x_1)\text{,}\) so it has slope \(0.15\) and passes through the point \((7300, 730)\text{.}\) Similarly, the third piece has slope \(0.25\) and passes through \((29,700, 40,490)\text{,}\) and the fourth piece has slope \(0.28\) and passes through \((71,950, 14,652.5)\text{.}\) You can check that for this function, all four pieces are connected at their endpoints, as shown in <a knowl="./knowl/fig-income-tax.html" knowl-id="xref-fig-income-tax" alt="Figure 2.166 " title="Figure 2.166 ">Figure 2.166</a>. <figure class="figure-like"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/fig-income-tax.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">2.166</span></figcaption></figure></p></li>
+</ol></span><span class="incontext"><a href="MathModels.html#solution-61">in-context</a></span>
 </body>
 </html>
