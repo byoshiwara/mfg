@@ -10,12 +10,18 @@ Copyright 2016 Katherine Yoshiwara
 
 <xi:include href="./bookinfo.xml" />   <!-- ISBN, website, other metadata -->
 
-<book xml:id="Test"><title>Test chapter</title><subtitle>test subtitle</subtitle>
+<book xml:id="Test-Section">
+   <title>Testing section</title>
+   <subtitle>test subtitle</subtitle>
 
-    <chapter xml:id="testchap"  xmlns:xi="http://www.w3.org/2001/XInclude">
-        <title>Fake chapter</title>
-        <introduction>This is a fake intro.</introduction>
-<xi:include href="./section-8-5.xml" />
+   <xi:include href="./frontmatter.xml" />            <!--  Title Page, Preface, etc.  -->
+
+        <chapter xml:id="testchap">
+            <title>Fake chapter</title>
+            <introduction><p>This is a fake chapter intro.</p>
+            </introduction>
+
+            <xi:include href="./section-6-5.xml" />
 <!--   
 <xi:include href="./section-8-5.xml" />
 <xi:include href="./chap5-summary.xml" />  
