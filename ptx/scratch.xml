@@ -190,11 +190,51 @@
             -->
 
 
-<sidebyside widths="53% 28%" valigns="middle middle"><paragraphs><p> Consider again the graph of <m>y = 2x + 3</m>, shown in <xref ref="fig-graph-to-solve3" text="type-global"/>. We saw that <m>x = 2</m> is the solution of the equation <m>2x + 3 = 7</m>. When we use <m>x = 2</m> as the input for the function <m>f(x) = 2x + 3</m>, the output is <m>y = 7</m>. Which input values for <m>x</m> produce output values greater than <m>7</m>?</p>
-<p>You can see in <xref ref="fig-graph-to-solve3" text="type-global"/> that <m>x</m>-values greater than <m>2</m> produce <m>y</m>-values greater than <m>7</m>, because points on the graph with <m>x</m>-values greater than <m>2</m> have <m>y</m>-values greater than <m>7</m>. Thus, the solutions of the inequality <m>2x + 3 \gt 7</m> are <m>x\gt 2</m>. You can verify this result by solving the inequality algebraically.</p></paragraphs>
+<example xml:id="example-radical-equationS"><statement>
+    <p>
+        Solve the equation <m>\sqrt{x+2}+4=x </m>.
+    </p></statement>
+<solution>
+    <p>
+        First, isolate the radical expression on one side of the equation. (This will make it easier to square both sides.)
+        <md>
+            <mrow>
+                \sqrt{x+2}\amp = x-4\amp\amp\text{Square both sides of the equation.}
+            </mrow>
+            <mrow>
+                \left(\sqrt{x+2}\right)^\alert{2}\amp = (x-4)^\alert{2}
+            </mrow>
+            <mrow>
+                x+2\amp = x^2-8x+16 \amp\amp\text{Subtract }x + 2 \text{ from both sides.}
+            </mrow>
+            <mrow>
+                x^2-9x+14\amp = 0\amp\amp\text{Factor the left side.}
+            </mrow>
+            <mrow>
+                (x-2)(x-7)\amp = 0 \amp\amp\text{Set each factor to zero.}
+            </mrow>
+            <mrow>
+                x=2\hphantom{000}\amp\text{or}\hphantom{000}x=7
+            </mrow>
+        </md>
+    </p>
 
-<figure xml:id="fig-graph-to-solve3"><caption></caption><image source="images/fig-graph-to-solve3"><description>function graph</description></image></figure>
-</sidebyside>
+    <p><em>Check</em></p><sidebyside margins="5%"><paragraphs>
+    <p>Does <m>\sqrt{\alert{2}+2}+4=\alert{2} </m>? <m>\hphantom{blank}{\text{No; }2\text{ is not a solution.}} </m></p>
+    <p>Does <m>\sqrt{\alert{7}+2}+4=\alert{7} </m>? <m>\hphantom{blank}{\text{Yes; }7\text{ is  a solution.}} </m>
+    </p></paragraphs></sidebyside>
+        
+    <p>
+        The apparent solution <m>2</m> is extraneous. The only solution to the original equation is <m>7</m>. We can verify the solution by graphing the equations
+        <me>y_1=\sqrt{x+2} ~~~\text{ and }~~~ y_2=x-4</me>
+        as shown in <xref ref="fig-radical-equation" text="type-global"/>. The graphs intersect in only one point, <m>(7, 3)</m>, so there is only one solution, <m>x=7</m>.
+    </p>
+    <figure xml:id="fig-radical-equation"><caption></caption><image source="images/fig-radical-equation"  width="40%"><description>graphs of both sides of radical equation</description></image></figure>
+
+</solution></example>
+
+
+
 
 
 
