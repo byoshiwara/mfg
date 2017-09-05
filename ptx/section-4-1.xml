@@ -41,7 +41,7 @@
         <li><p>How many bacteria will there be after <m>8</m> weeks? After <m>5</m> days?</p></li>
     </ol>
 </p>
-</statement><solution>
+</statement><solution><p>
     <ol label="a">
         <li><p>The initial value of the population was <m>P_0 = 300</m>, and its weekly growth factor is <m>b = 2</m>. Thus, a formula for the population after <m>t</m> weeks is
         <me>P(t) = 300 \cdot 2^t</me>
@@ -52,15 +52,15 @@
         <me>P\left(\frac{5}{7}\right)= 300 \cdot 2^{5/7} = 492.2</me>
         We cannot have a fraction of a bacterium, so we round to the nearest whole number, <m>492</m>.</p></li>
     </ol>
-</solution>
+</p></solution>
 </example>
 
-<warning><statement>
+<warning>
 <p>
     In <xref ref="example-bacteria" text="type-global"/>a, note that
     <me>300 \cdot 2^8 \ne 600^8</me>
     According to the order of operations, we compute the power <m>2^8</m> first, then multiply by <m>300</m>.
-</p></statement>
+</p>
 </warning>
 
 <exercise xml:id="exercise-fruit-flies"><statement>
@@ -179,12 +179,12 @@
     \amp = 100(1.05)^3
     \end{align*}
 </p>
-<sidebyside><paragraphs width="70%">
+<sidebyside>
 <p>
     At the end of each year, we multiply the old balance by another factor of <m>1.05</m> to get the new amount. We organize our results into <xref ref="table-percent-increase" text="type-global"/>, where <m>A(t)</m> represents the amount of money in the account after <m>t</m> years. For this example, a formula for the amount after <m>t</m> years is
     <me>A(t) = 100(1.05)^t</me>
-</p></paragraphs>
-<table xml:id="table-percent-increase" valign="top"><caption></caption><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+</p>
+<table xml:id="table-percent-increase"><caption></caption><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
     <row bottom="minor">
         <cell><m>t</m></cell>
         <cell><m>P(1 + r)^t</m></cell>
@@ -243,7 +243,7 @@
         <li><p>Graph the function you found in part (b).</p></li>
     </ol>
 </p>
-</statement><solution>
+</statement><solution><p>
     <ol label="a">
         <li><p>The percent increase in the price of butter is <m>12</m><percent/> every <m>6</m> months. Therefore, the growth factor for the price of butter is <m>1 + 0.12 = 1.12</m> every half-year. If <m>P(t)</m> represents the price of butter after <m>t</m> years, then <m>P(0) = 2</m>, and every half-year we multiply the price by <m>1.12</m>, as shown in <xref ref="table-inflation" text="type-global"/>.
         <table xml:id="table-inflation"><image source="images\fig-table-inflation"  width="66%"><description>table for inflation</description></image><caption></caption></table>
@@ -266,9 +266,9 @@
         <li><p>Evaluate the function
             <me>P(t) = 2(1.12)^{2t}</me>
             for several values, as shown in <xref ref="table-inflation2" text="type-global"/>. We plot the points and connect them with a smooth curve to obtain the graph shown in <xref ref="fig-inflation" text="type-global"/>.</p>
-            <p>
+            
             <sidebyside widths="45% 35%">
-            <table valign="center" xml:id="table-inflation2"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+            <table valign="center" xml:id="table-inflation2"><caption></caption><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
                 <row bottom="minor">
                     <cell><m>t</m></cell>
                     <cell><m>P(t)</m></cell>
@@ -293,12 +293,12 @@
                     <cell><m>4</m></cell>
                     <cell><m>4.95</m></cell>
                 </row>
-            </tabular><caption></caption></table>
+            </tabular></table>
             <figure xml:id="fig-inflation"><caption></caption><image source="images/fig-inflation"><description>graph of inflation</description></image></figure>
             </sidebyside>
-        </p></li>
+        </li>
     </ol>
-</solution>
+</p></solution>
 </example>
 
 <p>
@@ -310,7 +310,7 @@
     Thus, the annual growth factor for the price of butter is <m>1.2544</m>, and the annual percent growth rate is <m>25.44</m><percent/>.
 </p>
 
-<exercise xml:id="exercise-inflation"><statement>
+<exercise xml:id="exercise-inflation"><statement><p>
     In <m>1998</m>, the average annual cost of attending a public college was <m>\$10,069</m>, and costs were climbing by <m>6</m><percent/> per year.
     <ol label="a">
         <li><p>Write a formula for <m>C(t)</m>, the cost of one year of college <m>t</m> years after <m>1998</m>.</p></li>
@@ -341,10 +341,10 @@
         <li><p>If the percent growth rate continues to remain steady, how much will a year of college cost in <m>2020</m>?
         </p></li>
     </ol>
-</statement>
+</p></statement>
 <answer><p><ol label="a">
     <li><p><m>C(t) = 10,069\cdot 1.06^t</m></p></li>
-    <li><p>
+    <li><sidebyside>
         <tabular left="minor" right="minor" top="major" bottom="minor" halign="right"><col halign="left"/>
             <row>
                 <cell><m>t</m></cell>
@@ -364,13 +364,13 @@
                 <cell><m>32,293</m></cell>
                 <cell><m>43,215</m></cell>
             </row>
-        </tabular>
-        <image source="images/fig-in-ex-ans-4-1-3"  width="40%">
+        </tabular></sidebyside>
+        <sidebyside width="40%"><image source="images/fig-in-ex-ans-4-1-3">
           <description>
             exponential growth
           </description>
         </image>
-    </p></li>
+    </sidebyside></li>
     <li><p><m>$15,140</m> per year</p></li>
     <li><p><m>$36,284</m></p></li>
 </ol></p></answer>
@@ -386,7 +386,7 @@
 </p>
 
 
-<investigation xml:id="investigation-exponential-decay"><title>Exponential Decay</title><statement>
+<investigation xml:id="investigation-exponential-decay"><title>Exponential Decay</title><statement><p>
 <ol label="A">
     <li><p>
         A small coal-mining town has been losing population since 1940, when 5000 people lived there. At each census thereafter (taken at 10-year intervals), the population declined to approximately 0.90 of its earlier figure.</p><p>
@@ -399,7 +399,7 @@
             </p></li>
             <li><p>
                 Write a function that gives the population of the town at any time <m>t</m> in years after 1940.
-                <hint>Express the values you calculated in part (1) using powers of <m>0.90</m>. Do you see a connection between the value of <m>t</m> and the exponent on <m>0.90</m>?</hint>
+                <hint><p>Express the values you calculated in part (1) using powers of <m>0.90</m>. Do you see a connection between the value of <m>t</m> and the exponent on <m>0.90</m>?</p></hint>
             </p></li>
             <li><p>
                 Graph your function from part (3) using a calculator. (Use the table to choose an appropriate domain and range.) The graph should resemble your hand-drawn graph from part (2).
@@ -544,7 +544,7 @@
             </image></p>
         </sidebyside> 
     </li>
-</ol></statement>
+</ol></p></statement>
 </investigation>
 
 </subsection>
@@ -576,7 +576,7 @@
         </p></li>
     </ol>
 </p>
-</statement><solution>
+</statement><solution><p>
 <ol label="a">
     <li><p>
         The initial value of the equipment is <m>V_0 = 50,000</m>. Every <m>18</m> months, the value of the equipment is multiplied by
@@ -595,10 +595,10 @@
         To the nearest dollar, the equipment is worth <dollar/>4961.
     </p></li>
 </ol>
-</solution>
+</p></solution>
 </example>
 
-<exercise xml:id="exercise-butterflies"><statement>
+<exercise xml:id="exercise-butterflies"><statement><p>
 The number of butterflies visiting a nature station is declining by 18<percent/> per year. In 1998, <m>3600</m> butterflies visited the nature station.
 <ol label="a">
     <li><p>What is the decay factor in the annual butterfly count?</p></li>
@@ -626,11 +626,11 @@ The number of butterflies visiting a nature station is declining by 18<percent/>
     </tabular></sidebyside>
     </p></li>
 </ol>
-</statement>
+</p></statement>
 <answer><p><ol label="a">
     <li><p><m>0.82</m></p></li>
     <li><p><m>B(t) = 3600\cdot 0.82^t</m></p></li>
-    <li><p>
+    <li><sidebyside>
     <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
             <cell><m>t</m></cell>
@@ -650,13 +650,13 @@ The number of butterflies visiting a nature station is declining by 18<percent/>
             <cell><m>736</m></cell>
             <cell><m>495</m></cell>
         </row>
-    </tabular>
-    <image source="images/fig-in-ex-ans-4-1-4"  width="40%">
+    </tabular></sidebyside>
+    <sidebyside width="40%"><image source="images/fig-in-ex-ans-4-1-4">
       <description>
         exponential decay
       </description>
     </image>
-    </p></li>
+    </sidebyside></li>
 </ol></p></answer>
 </exercise>
 
@@ -693,7 +693,7 @@ models exponential growth and decay.</p>
     whose graphs are shown in <xref ref="fig-linear-vs-exponential" text="type-global"/>.
 </p>
 <sidebyside widths="25% 25% 27%">
-<table valign="top" xml:id="table-linear"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+<table xml:id="table-linear"><caption><m>m=2</m></caption><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
             <cell><m>t</m></cell>
             <cell><m>L(t)</m></cell>
@@ -718,9 +718,9 @@ models exponential growth and decay.</p>
             <cell><m>4</m></cell>
             <cell><m>13</m></cell>
         </row>
-    </tabular><caption><m>m=2</m></caption></table>
+    </tabular></table>
 
-<table valign="top" xml:id="table-exponential"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+<table xml:id="table-exponential"><caption>Growth factor <m>b=2</m></caption><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
             <cell><m>t</m></cell>
             <cell><m>E(t)</m></cell>
@@ -745,9 +745,9 @@ models exponential growth and decay.</p>
             <cell><m>4</m></cell>
             <cell><m>80</m></cell>
         </row>
-    </tabular><caption>Growth factor <m>b=2</m></caption></table>
+    </tabular></table>
 
-<figure valign="top" xml:id="fig-linear-vs-exponential"><caption></caption><image source="images/fig-linear-vs-exponential"><description>graph of linear and exponential</description></image></figure>
+<figure xml:id="fig-linear-vs-exponential"><caption></caption><image source="images/fig-linear-vs-exponential"><description>graph of linear and exponential</description></image></figure>
 </sidebyside>
 
 <p>
@@ -767,7 +767,7 @@ models exponential growth and decay.</p>
         </p></li>
     </ol>
 </p>
-</statement><solution>
+</statement><solution><p>
     <ol label="a">
         <li><p>
             Let <m>L(t)</m> represent the company's total sales <m>t</m> years after starting business, where <m>t = 0</m> is the first year of operation. If sales grow linearly, then <m>L(t)</m> has the form <m>L(t) = mt + b</m>. Now <m>L(0) = 80,000</m>, so the intercept <m>b</m> is <m>80,000</m>. The slope <m>m</m> of the graph is
@@ -790,9 +790,9 @@ models exponential growth and decay.</p>
                 E(2) = 80,000(1.10)^2= 96,800
             </me>
             The values of <m>E(t)</m> for <m>t=0</m> to <m>t=4</m> are shown in the last column of <xref ref="table-linear-exponential" text="type-global"/>. The exponential graph of <m>E(t)</m> is shown in <xref ref="fig-linear-vs-exponential2" text="type-global"/>.</p>
-            <p>
+            
             <sidebyside widths="45% 45%">
-            <table xml:id="table-linear-exponential"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+            <table xml:id="table-linear-exponential"><caption></caption><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
                 <row bottom="minor">
                     <cell><m>t</m></cell>
                     <cell><m>L(t)</m></cell>
@@ -823,15 +823,15 @@ models exponential growth and decay.</p>
                     <cell><m>112,000</m></cell>
                     <cell><m>117,128</m></cell>
                 </row>
-            </tabular><caption></caption></table>
+            </tabular></table>
             <figure xml:id="fig-linear-vs-exponential2"><caption></caption><image source="images/fig-linear-vs-exponential2"><description>linear and exponential growth</description></image></figure>
             </sidebyside>
-        </p></li>
+        </li>
     </ol>
-</solution>
+</p></solution>
 </example>
 
-<exercise xml:id="exercise-depreciation"><statement>
+<exercise xml:id="exercise-depreciation"><statement><p>
 A new car begins to depreciate in value as soon as you drive it off the lot. Some models depreciate linearly, and others depreciate exponentially. Suppose you buy a new car for <dollar/><m>20,000</m>, and <m>1</m> year later its value has decreased to <dollar/><m>17,000</m>.
 <ol label="a">
     <li><p>
@@ -844,7 +844,7 @@ A new car begins to depreciate in value as soon as you drive it off the lot. Som
         Calculate the value of your car when it is <m>5</m> years old under each assumption, linear or exponential depreciation.
     </p></li>
 </ol>
-</statement>
+</p></statement>
 <answer><p><ol label="a">
     <li><p><m>\$3000</m> per year</p></li>
     <li><p><m>0.85</m>; <m>15\%</m></p></li>
