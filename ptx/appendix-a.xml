@@ -1532,8 +1532,7 @@
 <p>
     To reduce a fraction, we divide both numerator and denominator by any common factors.
     <me>
-        \require{cancel} \require{color} \renewcommand{\CancelColor}{\blue}
-        \frac{x^7}{x^4}=\frac{xxx\cancel{x}\cancel{x}\cancel{x}\cancel{x}}{\cancel{x}\cancel{x}\cancel{x}\cancel{x}}=\frac{x^3}{1}=x^3
+        \frac{x^7}{x^4}=\frac{xxx\Ccancel[blue]{x}\Ccancel[blue]{x}\Ccancel[blue]{x}\Ccancel[blue]{x}}{\Ccancel[blue]{x}\Ccancel[blue]{x}\Ccancel[blue]{x}\Ccancel[blue]{x}}=\frac{x^3}{1}=x^3
     </me>
     We can obtain the same result more quickly by <em>subtracting</em> the exponent of the denominator from the exponent of the numerator.
     <me>\frac{x^7}{x^4}=x^{7-4}=x^3</me>
@@ -1541,7 +1540,7 @@
 <p>
     What if the larger power occurs in the denominator of the fraction?
     <me>
-        \frac{x^4}{x^7}=\frac{\cancel{x}\cancel{x}\cancel{x}\cancel{x}}{xxx\cancel{x}\cancel{x}\cancel{x}\cancel{x}}=\frac{1}{x^3}
+        \frac{x^4}{x^7}=\frac{\Ccancel[blue]{x}\Ccancel[blue]{x}\Ccancel[blue]{x}\Ccancel[blue]{x}}{xxx\Ccancel[blue]{x}\Ccancel[blue]{x}\Ccancel[blue]{x}\Ccancel[blue]{x}}=\frac{1}{x^3}
     </me>
     In this case, we subtract the exponent of the numerator from the exponent of the denominator.
     <me>\frac{x^4}{x^7}=\frac{1}{x^{7-4}}=\frac{1}{x^3}</me>
@@ -1778,9 +1777,8 @@ power to a power, so we multiply the exponents.
         Begin by applying the fifth law.
         <md>
             <mrow>
-                \require{\stackengine}
                 \left(\frac{2x}{z^2}\right)^3 \amp = \frac{(2x)^3}{\left(z^2\right)^2}\amp\amp
-                {\text{Apply the fourth law to the numerator }}{\text{and the third law to the denominator.}}
+                \text{Apply the fourth law to the numerator and the third law to the denominator.}
             </mrow>
             <mrow>
                 \amp = \frac{2^3x^3}{z^6}=\frac{8x^3}{z^6}
@@ -2210,7 +2208,7 @@ Hence, we have the following important relationship.
                 <figure xml:id="fig-factor-trinomial"><caption></caption><image source="images/fig-factor-trinomial.jpg"  width="25%"><description>list of possible binomial factor pairs</description></image> </figure>
             </li>
             <li><p>
-                Select the combinations of the products ❶ and ❷ whose sum or difference could be the linear term, <m>-21x</m>.
+                Select the combinations of the products ① and ② whose sum or difference could be the linear term, <m>-21x</m>.
                 <me>(8x \hphantom{000} 3) (x \hphantom{000} 3)</me>
             </p></li>
             <li><p>
@@ -2513,7 +2511,7 @@ Hence, we have the following important relationship.
             </m></p></li>
             <li><p><m>
                 \begin{aligned}
-                \frac{6x-3}{3} \amp = \frac{\cancel{3}(2x+1) }{\cancel{3}} \\
+                \frac{6x-3}{3} \amp = \frac{\Ccancel[blue]{3}(2x+1) }{\Ccancel[blue]{3}} \\
                 \amp = 2x+1
                 \end{aligned}
             </m></p></li>
@@ -2555,13 +2553,13 @@ Hence, we have the following important relationship.
         <ol label="a">
             <li><p><m>
                 \begin{aligned}
-                \frac{4x + 2}{4} \amp = \frac{\cancel{2}(2x + 1)}{\cancel{2} (2)}\\
+                \frac{4x + 2}{4} \amp = \frac{\Ccancel[blue]{2}(2x + 1)}{\Ccancel[blue]{2} (2)}\\
                 \amp = \frac{2x+1}{2}
                 \end{aligned}
             </m></p></li>
             <li><p><m>
                 \begin{aligned}
-                \frac{9x^2+3}{6x+3} \amp = \frac{\cancel{3}(3x^2 + 1)}{\cancel{3} (2x+1)}\\
+                \frac{9x^2+3}{6x+3} \amp = \frac{\Ccancel[blue]{3}(3x^2 + 1)}{\Ccancel[blue]{3} (2x+1)}\\
                 \amp = \frac{3x^2 + 1}{2x+1}
                 \end{aligned}
             </m></p></li>
@@ -2614,11 +2612,11 @@ Hence, we have the following important relationship.
                 Factor numerator and denominator to obtain
                 <me>\frac{(x - 6) (x - 1)}{(6 - x) (6 + x)} </me>
                 The factor <m>x-6</m> in the numerator is the opposite of the factor <m>6-x</m> in the denominator. That is, <m>x - 6 = -1 (6 - x)</m>. Thus,
-                <me>\frac{-1 \cancel{(6 - x )}(x - 1)}{\cancel{(6 - x )}(6 + x)}=\frac{-1 (x - 1)}{6 + x}=\frac{1-x}{6+x} </me>
+                <me>\frac{-1 \Ccancel[blue]{(6 - x )}(x - 1)}{\Ccancel[blue]{(6 - x )}(6 + x)}=\frac{-1 (x - 1)}{6 + x}=\frac{1-x}{6+x} </me>
             </p></li>
             <li><p>
                 The numerator of the fraction is a difference of two cubes, and the denominator is a difference of two squares. Factor each to obtain
-                <me>\frac{\cancel{(3x-1)}(9x^2+3x+1)}{\cancel{(3x-1)}(3x+1)}=\frac{9x^2+3x+1}{3x+1} </me>
+                <me>\frac{\Ccancel[blue]{(3x-1)}(9x^2+3x+1)}{\Ccancel[blue]{(3x-1)}(3x+1)}=\frac{9x^2+3x+1}{3x+1} </me>
             </p></li>
         </ol>
     </p>
@@ -2636,7 +2634,7 @@ Hence, we have the following important relationship.
         <mrow>\amp =\frac{3x^3(2y)}{2y}=3x^3 </mrow>
     </md>
     We can simplify the process by first factoring each numerator and denominator and dividing out any common factors.
-    <me>\frac{6x^2}{y}\cdot\frac{\cancel{2}\cdot 3x^2}{\bcancel{y}}\cdot\frac{x\bcancel{y}}{\cancel{2}}=3x^3 </me>
+    <me>\frac{6x^2}{y}\cdot\frac{\Ccancel[blue]{2}\cdot 3x^2}{\bcancel{y}}\cdot\frac{x\bcancel{y}}{\Ccancel[blue]{2}}=3x^3 </me>
 </p>
 <p>
     In general, we have the following procedure for finding the product of algebraic fractions.
@@ -2681,10 +2679,10 @@ Hence, we have the following important relationship.
                 Factor each numerator and each denominator. Look for common factors.
                 <md>
                     <mrow>
-                        \frac{4y^2-1}{4-y^2}\cdot\frac{y^2-2y}{4y+2} \amp = \frac{(2y-1)(\bcancel{2y+1})}{\cancel{(2-y)}(2+y)} \cdot \frac{y\cancelto{\alert{-1}}{(y-2)}}{2(\bcancel{y+1})}\amp\amp\text{Divide out common factors.}
+                        \frac{4y^2-1}{4-y^2}\cdot\frac{y^2-2y}{4y+2} \amp = \frac{(2y-1)(\bcancel{2y+1})}{\cancel{(2-y)}(2+y)} \cdot \frac{y\cancelto{\alert{-1}}{(y-2)}}{2(\bcancel{2y+1})}\amp\amp\text{Divide out common factors.}
                     </mrow>
                     <mrow>
-                        \amp =\frac{-y(2y-1)}{y(y+2)} \amp\amp\text{Note: }y-2=-(2-y)
+                        \amp =\frac{-y(2y-1)}{2(y+2)} \amp\amp\text{Note: }y-2=-(2-y)
                     </mrow>
                 </md>
             </p></li>
@@ -2703,7 +2701,7 @@ Hence, we have the following important relationship.
             \frac{2x^3}{3y}\div \frac{4x}{5y^2}\amp = \frac{2x^3}{3y}\cdot \frac{5y^2}{4x}
         </mrow>
         <mrow>
-            \amp = \frac{\bcancel{2x}\cdot x^2}{3\cancel{y}}\cdot \frac{5y\cdot\cancel{y}}{2\cdot \bcancel{2x}}=\frac{5x^2y}{6}
+            \amp = \frac{\bcancel{2x}\cdot x^2}{3\Ccancel[blue]{y}}\cdot \frac{5y\cdot\Ccancel[blue]{y}}{2\cdot \bcancel{2x}}=\frac{5x^2y}{6}
         </mrow>
     </md>
 </p>
@@ -2753,7 +2751,7 @@ Hence, we have the following important relationship.
                         \amp =\frac{x^2-1}{x+3}\cdot\frac{x^2+5x+6}{x^2-x-2} \amp\amp\text{Factor.}
                     </mrow>
                     <mrow>
-                        \amp = \frac{(x-1)(\cancel{x+1})}{\bcancel{x+3}}\cdot\frac{(\bcancel{x+3})(x+2)}{(\cancel{x+1})(x-2)}
+                        \amp = \frac{(x-1)(\Ccancel[blue]{x+1})}{\bcancel{x+3}}\cdot\frac{(\bcancel{x+3})(x+2)}{(\Ccancel[blue]{x+1})(x-2)}
                     </mrow>
                     <mrow>
                         \amp = \frac{(x-1)(x+2)}{x-2}
@@ -3020,7 +3018,7 @@ Hence, we have the following important relationship.
             <li><!--<title>Step 4</title>--><p>
                 Reduce the fraction to find
                 <me>
-                    \frac{3\cancel{a}}{\cancel{a}(a+1)}=\frac{3}{a+1}
+                    \frac{3\Ccancel[blue]{a}}{\Ccancel[blue]{a}(a+1)}=\frac{3}{a+1}
                 </me>
             </p></li>
         </ol>
@@ -3229,9 +3227,7 @@ Hence, we have the following important relationship.
             \sqrt[3]{x^{11}} \amp = \sqrt[3]{x^9 \cdot x^2}\amp\amp\text{Apply Property (1).}
         </mrow>
         <mrow>\amp = \sqrt[3]{x^9}\cdot\sqrt[3]{2} \amp\amp\text{Simplify }\sqrt[3] {x^9}=x^{9/3}. </mrow>
-    </md>
-    <md>
-        \amp = x^3 \sqrt[3]{x^2}
+        <mrow>\amp = x^3 \sqrt[3]{x^2}</mrow>
     </md>
 </p>
 
