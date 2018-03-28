@@ -20,6 +20,8 @@
 <xsl:param name="numbering.projects.level" select="'1'" />
 <xsl:param name="numbering.theorems.level" select="'1'" /> 
 <xsl:param name="numbering.maximum.level" select="'2'" /> 
+<xsl:param name="numbering.equations.level" select="'1'" />
+<xsl:param name="numbering.footnotes.level" select="'1'" />
 <xsl:template match="exercises//exercise" mode="xref-number">
     <xsl:apply-templates select="." mode="serial-number" />
 </xsl:template>
