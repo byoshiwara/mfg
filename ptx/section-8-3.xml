@@ -43,8 +43,7 @@
 	</me>
 	are called the <term>coefficient matrix</term><idx>coefficient matrix</idx> and the <term>augmented matrix</term><idx>augmented matrix</idx>, respectively. Each row of the augmented matrix represents one of the equations of the system. For example, the augmented matrix of the system</p>
 	<sidebyside valigns="middle middle middle" widths="45% 10% 45%">
-	<paragraphs>
-		<p>
+	<p>
 			<md alignment="alignat">
 				<mrow>
 					3x\amp {}-{}\amp 4y\amp {}+{}\amp z\amp =\amp 2
@@ -57,21 +56,17 @@
 				</mrow>
 		</md>
 		</p>
-	</paragraphs>
-	<paragraphs><p>is</p></paragraphs>
-	<paragraphs>
-		<p>
+	<p>is</p>
+	<p>
 			<me>
 						\left[ \begin{array}{@{}ccc|c@{}}
 			3\amp -4\amp 1 \amp 2\\ -1 \amp 2 \amp  0 \amp -1\\ 2 \amp -1\amp 3  \amp 4
 		\end{array}\right]
-
 			</me>
 		</p>
-	</paragraphs></sidebyside>
+	</sidebyside>
 	<p>and the augmented matrix of the system</p>
 	<sidebyside valigns="middle middle middle" widths="45% 10% 45%">
-	<paragraphs>
 		<p>
 			<md alignment="alignat">
 				<mrow>
@@ -85,9 +80,7 @@
 				</mrow>
 		</md>
 		</p>
-	</paragraphs>
-	<paragraphs><p>is</p></paragraphs>
-	<paragraphs>
+	<p>is</p>
 		<p>
 			<me>
 				\left[ \begin{array}{@{}ccc|c@{}}
@@ -95,7 +88,7 @@
 				\end{array}\right]
 			</me>
 		</p>
-	</paragraphs></sidebyside>
+	</sidebyside>
 	<p>The augmented matrix of this last system, which has all zero entries in the lower left corner (below the diagonal), is said to be in <term>upper triangular form</term><idx>upper triangular form</idx>. As we saw in <xref ref="Systems-of-Linear-Equations-in-Three-Variables" text="type-global"/>, it is easy to find the solution of such a system by back-substitution.
 </p>
 
@@ -501,150 +494,134 @@
 </p>
 
 <example xml:id="example-matrix-3x3-system"><statement>
-	<p>
-		Use matrix reduction to solve the system.
-		<md alignment="alignat">
-			<mrow>
-				2x\amp {}-{}\amp 4y\amp {}{}\amp \amp =\amp 6
-			</mrow>
-			<mrow>
-				3x\amp {}-{}\amp 4y\amp {}+{}\amp z \amp =\amp 8
-			</mrow>
-				<mrow>
-				2x\amp {}{}\amp \amp {}-{}\amp 3z\amp =\amp -11
-			</mrow>
-		</md>
-	</p>
+    <p>
+        Use matrix reduction to solve the system.
+        <md alignment="alignat">
+            <mrow>
+                2x\amp {}-{}\amp 4y\amp {}{}\amp \amp =\amp 6
+            </mrow>
+            <mrow>
+                3x\amp {}-{}\amp 4y\amp {}+{}\amp z \amp =\amp 8
+            </mrow>
+                <mrow>
+                2x\amp {}{}\amp \amp {}-{}\amp 3z\amp =\amp -11
+            </mrow>
+        </md>
+    </p>
 </statement><solution>
-	<p>
-		The augmented matrix is
-		<me>
-			\left[ \begin{array}{@{}ccc|c@{}}
-				2 \amp -4\amp 0  \amp 6  \\ 
-				3 \amp -4\amp 1  \amp 8  \\ 
-				2 \amp  0\amp -3 \amp -11
-			\end{array}\right]		
-		</me>
-		We obtain <m>1</m> as the first entry of the first row by multiplying each entry in the first row by <m>\dfrac{1}{2}</m>. This will make it easier to obtain zeros in the first entries of the second and third rows.</p>
-		<sidebyside valigns="middle middle ">
-			<paragraphs>
-				<p>
-					<me>
-						\left[ \begin{array}{@{}ccc|c@{}}
-							2 \amp -4\amp 0  \amp 6  \\ 
-							3 \amp -4\amp 1  \amp 8  \\ 
-							2 \amp  0\amp -3 \amp -11
-						\end{array}\right]		
-					</me>
-				</p>
-			</paragraphs>
-			<paragraphs>
-				<p>
-					<md alignment="alignat">
-						<mrow>
-							2x\amp {}-{}\amp 4y\amp {}+{}\amp0z \amp =\amp 6
-						</mrow>
-						<mrow>
-							3x\amp {}-{}\amp 4y\amp {}+{}\amp z \amp =\amp 8
-						</mrow>
-							<mrow>
-							2x\amp {}+{}\amp 0y\amp {}-{}\amp 3z\amp =\amp -11
-						</mrow>
-					</md>
-				</p>
-			</paragraphs>
-		</sidebyside>
+    <p>
+        The augmented matrix is
+        <me>
+            \left[ \begin{array}{@{}ccc|c@{}}
+                2 \amp -4\amp 0  \amp 6  \\ 
+                3 \amp -4\amp 1  \amp 8  \\ 
+                2 \amp  0\amp -3 \amp -11
+            \end{array}\right]      
+        </me>
+        We obtain <m>1</m> as the first entry of the first row by multiplying each entry in the first row by <m>\dfrac{1}{2}</m>. This will make it easier to obtain zeros in the first entries of the second and third rows.</p>
+        <sidebyside valigns="middle middle ">
+                <p>
+                    <me>
+                        \left[ \begin{array}{@{}ccc|c@{}}
+                            2 \amp -4\amp 0  \amp 6  \\ 
+                            3 \amp -4\amp 1  \amp 8  \\ 
+                            2 \amp  0\amp -3 \amp -11
+                        \end{array}\right]      
+                    </me>
+                </p>
+                <p>
+                    <md alignment="alignat">
+                        <mrow>
+                            2x\amp {}-{}\amp 4y\amp {}+{}\amp0z \amp =\amp 6
+                        </mrow>
+                        <mrow>
+                            3x\amp {}-{}\amp 4y\amp {}+{}\amp z \amp =\amp 8
+                        </mrow>
+                            <mrow>
+                            2x\amp {}+{}\amp 0y\amp {}-{}\amp 3z\amp =\amp -11
+                        </mrow>
+                    </md>
+                </p>
+        </sidebyside>
 <p><me>\stackrel{\displaystyle{\frac{1}{2}}(\text{row }1)}{\big\downarrow}</me></p>
-		<sidebyside valigns="middle  middle">
-			<paragraphs>
-				<p>
-					<me>
-						\left[ \begin{array}{@{}ccc|c@{}}
-							1 \amp -2\amp 0  \amp 3  \\ 
-							3 \amp -4\amp 1  \amp 8  \\ 
-							2 \amp  0\amp -3 \amp -11
-						\end{array}\right]		
-					</me>
-				</p>
-			</paragraphs>
-			<paragraphs>
-				<p>
-					<md alignment="alignat">
-						<mrow>
-							x\amp {}-{}\amp 2y\amp {}+{}\amp 0z \amp =\amp 3
-						</mrow>
-						<mrow>
-							3x\amp {}-{}\amp 4y\amp {}+{}\amp z \amp =\amp 8
-						</mrow>
-							<mrow>
-							2x\amp {}+{}\amp 0y\amp {}-{}\amp 3z\amp =\amp -11
-						</mrow>
-					</md>
-				</p>
-		</paragraphs>
-	</sidebyside>
-	<p>Next, we obtain zeros in the first entries of the second and third rows by adding suitable multiples of the first row:
+        <sidebyside valigns="middle  middle">
+                <p>
+                    <me>
+                        \left[ \begin{array}{@{}ccc|c@{}}
+                            1 \amp -2\amp 0  \amp 3  \\ 
+                            3 \amp -4\amp 1  \amp 8  \\ 
+                            2 \amp  0\amp -3 \amp -11
+                        \end{array}\right]      
+                    </me>
+                </p>
+                <p>
+                    <md alignment="alignat">
+                        <mrow>
+                            x\amp {}-{}\amp 2y\amp {}+{}\amp 0z \amp =\amp 3
+                        </mrow>
+                        <mrow>
+                            3x\amp {}-{}\amp 4y\amp {}+{}\amp z \amp =\amp 8
+                        </mrow>
+                            <mrow>
+                            2x\amp {}+{}\amp 0y\amp {}-{}\amp 3z\amp =\amp -11
+                        </mrow>
+                    </md>
+                </p>
+    </sidebyside>
+    <p>Next, we obtain zeros in the first entries of the second and third rows by adding suitable multiples of the first row:
 <me>-3(\text{row }1) + 2~~{\Bigg\downarrow}~~3(\text{row }1) + 3 </me></p>
-		<sidebyside valigns="middle  middle">
-			<paragraphs>
-				<p>
-					<me>
-						\left[ \begin{array}{@{}ccc|c@{}}
-							1 \amp -2\amp 0  \amp 3  \\ 
-							0 \amp 2 \amp 1  \amp -1  \\ 
-							0 \amp  4\amp -3 \amp -17
-						\end{array}\right]		
-					</me>
-				</p>
-			</paragraphs>
-			<paragraphs>
-				<p>
-					<md alignment="alignat">
-						<mrow>
-							x\amp {}-{}\amp 2y\amp {}+{}\amp 0z \amp =\amp 3
-						</mrow>
-						<mrow>
-							0x\amp {}+{}\amp 2y\amp {}+{}\amp z \amp =\amp -1
-						</mrow>
-							<mrow>
-							0x\amp {}+{}\amp 4y\amp {}-{}\amp 3z\amp =\amp -17
-						</mrow>
-					</md>
-				</p>
-		</paragraphs>
-	</sidebyside>
-	<p>Finally, we obtain a zero in the second entry of the third row by adding <m>-2(\text{row }2)</m> to <m>\text{row }3</m>:
+        <sidebyside valigns="middle  middle">
+                <p>
+                    <me>
+                        \left[ \begin{array}{@{}ccc|c@{}}
+                            1 \amp -2\amp 0  \amp 3  \\ 
+                            0 \amp 2 \amp 1  \amp -1  \\ 
+                            0 \amp  4\amp -3 \amp -17
+                        \end{array}\right]      
+                    </me>
+                </p>
+                <p>
+                    <md alignment="alignat">
+                        <mrow>
+                            x\amp {}-{}\amp 2y\amp {}+{}\amp 0z \amp =\amp 3
+                        </mrow>
+                        <mrow>
+                            0x\amp {}+{}\amp 2y\amp {}+{}\amp z \amp =\amp -1
+                        </mrow>
+                            <mrow>
+                            0x\amp {}+{}\amp 4y\amp {}-{}\amp 3z\amp =\amp -17
+                        </mrow>
+                    </md>
+                </p>
+    </sidebyside>
+    <p>Finally, we obtain a zero in the second entry of the third row by adding <m>-2(\text{row }2)</m> to <m>\text{row }3</m>:
 
-	<me>-2(\text{row }2) + 3~~{\Bigg\downarrow}~~\hphantom{3(\text{row }1) + 3} </me></p>
-		<sidebyside valigns="middle  middle">
-			<paragraphs>
-				<p>
-					<me>
-						\left[ \begin{array}{@{}ccc|c@{}}
-							1 \amp -2\amp 0  \amp 3  \\ 
-							0 \amp 2 \amp 1  \amp -1  \\ 
-							0 \amp 0 \amp -5 \amp -15
-						\end{array}\right]		
-					</me>
-				</p>
-			</paragraphs>
-			<paragraphs>
-				<p>
-					<md alignment="alignat">
-						<mrow>
-							x\amp {}-{}\amp 2y\amp {}+{}\amp 0z \amp =\amp 3
-						</mrow>
-						<mrow>
-							0x\amp {}+{}\amp 2y\amp {}+{}\amp z \amp =\amp -1
-						</mrow>
-							<mrow>
-							0x\amp {}+{}\amp 0y\amp {}-{}\amp 5z\amp =\amp -15
-						</mrow>
-					</md>
-				</p>
-		</paragraphs>
-	</sidebyside>
-	<p>The system is now in upper triangular form, and we use back-substitution to find the solution. We solve the last equation to get <m>z=3</m> and substitute <m>3</m> for <m>z</m> in the second equation to find <m>y=-2</m>. Finally, we substitute <m>3</m> for <m>z</m> and <m>-2</m> for <m>y</m> in the first equation to find <m>x=-1</m>. The solution is the ordered triple <m>(-1,-2, 3)</m>.
+    <me>-2(\text{row }2) + 3~~{\Bigg\downarrow}~~\hphantom{3(\text{row }1) + 3} </me></p>
+        <sidebyside valigns="middle  middle">
+                <p>
+                    <me>
+                        \left[ \begin{array}{@{}ccc|c@{}}
+                            1 \amp -2\amp 0  \amp 3  \\ 
+                            0 \amp 2 \amp 1  \amp -1  \\ 
+                            0 \amp 0 \amp -5 \amp -15
+                        \end{array}\right]      
+                    </me>
+                </p>
+                <p>
+                    <md alignment="alignat">
+                        <mrow>
+                            x\amp {}-{}\amp 2y\amp {}+{}\amp 0z \amp =\amp 3
+                        </mrow>
+                        <mrow>
+                            0x\amp {}+{}\amp 2y\amp {}+{}\amp z \amp =\amp -1
+                        </mrow>
+                            <mrow>
+                            0x\amp {}+{}\amp 0y\amp {}-{}\amp 5z\amp =\amp -15
+                        </mrow>
+                    </md>
+                </p>
+    </sidebyside>
+    <p>The system is now in upper triangular form, and we use back-substitution to find the solution. We solve the last equation to get <m>z=3</m> and substitute <m>3</m> for <m>z</m> in the second equation to find <m>y=-2</m>. Finally, we substitute <m>3</m> for <m>z</m> and <m>-2</m> for <m>y</m> in the first equation to find <m>x=-1</m>. The solution is the ordered triple <m>(-1,-2, 3)</m>.
 </p>
 </solution></example>
 
@@ -732,152 +709,143 @@
 </p>
 
 <example xml:id="example-matrix-4x4-system"><statement>
-	<p>
-		Write the augmented matrix for the system
-		<md alignment="alignat">
-			<mrow>
-				-w\amp {}+{} \amp x \amp {}-{}\amp y\amp {}+{}\amp z \amp =\amp 7
-			</mrow>
-			<mrow>
-				2w\amp {}-{}\amp 2x\amp {}-{}\amp 4y\amp {}-{}\amp 5z \amp =\amp -17
-			</mrow>
-			<mrow>
-				-3w\amp {}+{}\amp 9x\amp {}+{}\amp 3y\amp {}+{}\amp 6z\amp =\amp 30
-			</mrow>
-			<mrow>
-				4w\amp {}+{}\amp 8x\amp {}-{}\amp 2y\amp {}+{}\amp 5z\amp =\amp 17
-			</mrow>
-		</md>
-		Use matrix reduction and back-substitution to solve the system.
-	</p>
+    <p>
+        Write the augmented matrix for the system
+        <md alignment="alignat">
+            <mrow>
+                -w\amp {}+{} \amp x \amp {}-{}\amp y\amp {}+{}\amp z \amp =\amp 7
+            </mrow>
+            <mrow>
+                2w\amp {}-{}\amp 2x\amp {}-{}\amp 4y\amp {}-{}\amp 5z \amp =\amp -17
+            </mrow>
+            <mrow>
+                -3w\amp {}+{}\amp 9x\amp {}+{}\amp 3y\amp {}+{}\amp 6z\amp =\amp 30
+            </mrow>
+            <mrow>
+                4w\amp {}+{}\amp 8x\amp {}-{}\amp 2y\amp {}+{}\amp 5z\amp =\amp 17
+            </mrow>
+        </md>
+        Use matrix reduction and back-substitution to solve the system.
+    </p>
 </statement><solution>
-	<p>
-		The augmented matrix is
-		<me>
-		\left[ \begin{array}{@{}cccc|c@{}}
-			-1 \amp 1  \amp -1 \amp 1  \amp 7  \\ 
-			2  \amp -2 \amp -4 \amp -5 \amp -17  \\ 
-			-3 \amp 9  \amp 3  \amp 6  \amp 30 \\
-			4  \amp 8  \amp -2 \amp 5  \amp 17 
-		\end{array}\right]			
-		</me>
-		We use row operations to put the matrix in upper triangular form. First, we add multiples of the first row to the rows below it to get <m>0</m>s in the first column.</p>
-		<sidebyside valigns="middle  middle middle" widths="40% 40% 20%">
-				<tabular halign="right">
-					<row>
-						<cell><m>~~</m></cell>
-					</row>
-					<row>
-						<cell><m>2(\text{row }1) + \text{row }2</m></cell>
-					</row>
-					<row>
-						<cell><m>-3(\text{row }1) + \text{row }3</m></cell>
-					</row>
-					<row>
-						<cell><m>4(\text{row }1) + \text{row }4</m></cell>
-					</row>
-				</tabular>
-			<paragraphs>
-				<p>
-					<me>
-						\left[ \begin{array}{@{}cccc|c@{}}
-							-1 \amp 1  \amp -1 \amp 1  \amp 7  \\ 
-							0  \amp 0  \amp -6 \amp -3 \amp -3  \\ 
-							0  \amp 6  \amp 6  \amp 3  \amp 9 \\
-							0  \amp 12 \amp -6 \amp 9  \amp 45 
-						\end{array}\right]		
-					</me>
-				</p>
-			</paragraphs>
-			<paragraphs><p></p></paragraphs>
-	</sidebyside>
-	<p>The second row has <m>0</m> as its second entry, so we interchange the second and third rows to put a nonzero entry in the second column.
-	<me>
-		\left[ \begin{array}{@{}cccc|c@{}}
-			-1 \amp 1  \amp -1 \amp 1  \amp 7  \\ 
-			0  \amp 6  \amp 6  \amp 3  \amp 9 \\
-			0  \amp 0  \amp -6 \amp -3 \amp -3  \\ 
-			0  \amp 12 \amp -6 \amp 9  \amp 45 
-		\end{array}\right]		
-	</me>
-	Now we want <m>0</m>s in the last two rows of the second column. The third row already has <m>0</m> in the second column, so we only need to add a multiple of the second row to the fourth row.</p>
-	<sidebyside valigns="middle  middle middle" widths="40% 40% 20%">
-			<tabular halign="right">
-				<row>
-					<cell><m>~~</m></cell>
-				</row>
-				<row>
-					<cell><m>~~</m></cell>
-				</row>
-				<row>
-					<cell><m>~~</m></cell>
-				</row>
-				<row>
-					<cell><m>-2(\text{row }2) + \text{row }4</m></cell>
-				</row>
-			</tabular>
-		<paragraphs>
-			<p>
-				<me>
-					\left[ \begin{array}{@{}cccc|c@{}}
-						-1 \amp 1  \amp -1 \amp 1  \amp 7  \\ 
-						0  \amp 6  \amp 6  \amp 3  \amp 9 \\
-						0  \amp 0  \amp -6 \amp -3 \amp -3  \\ 
-						0  \amp 0  \amp -18\amp 3  \amp 27 
-					\end{array}\right]		
-				</me>
-			</p>
-		</paragraphs>
-		<paragraphs><p></p></paragraphs>
-	</sidebyside>
-	<p>Finally, we add a multiple of the third row to the fourth row to get 0 in the third column.
--	<sidebyside valigns="middle  middle middle" widths="40% 40% 20%">
-			<tabular halign="right">
-				<row>
-					<cell><m>~~</m></cell>
-				</row>
-				<row>
-					<cell><m>~~</m></cell>
-				</row>
-				<row>
-					<cell><m>~~</m></cell>
-				</row>
-				<row>
-					<cell><m>-3(\text{row }3) + \text{row }4</m></cell>
-				</row>
-			</tabular>
-		<paragraphs>
-			<p>
-				<me>
-					\left[ \begin{array}{@{}cccc|c@{}}
-						-1 \amp 1  \amp -1 \amp 1  \amp 7  \\ 
-						0  \amp 6  \amp 6  \amp 3  \amp 9 \\
-						0  \amp 0  \amp -6 \amp -3 \amp -3  \\ 
-						0  \amp 0  \amp 0  \amp 12  \amp 36 
-					\end{array}\right]		
-				</me>
-			</p>
-		</paragraphs>
-		<paragraphs><p></p></paragraphs>
-	</sidebyside>
-	This triangular matrix corresponds to the system
-	<md alignment="alignat">
-		<mrow>
-			-w\amp {}+{} \amp x \amp {}-{}\amp y\amp {}+{}\amp z \amp =\amp 7
-		</mrow>
-		<mrow>
-			  \amp {} {}\amp 6x\amp {}+{}\amp 6y\amp {}+{}\amp 3z \amp =\amp 9
-		</mrow>
-		<mrow>
-			 \amp {}{}\amp  \amp {} {}\amp 6y\amp {}+{}\amp 3z\amp =\amp -3
-		</mrow>
-		<mrow>
-			 \amp {} {}\amp   \amp {} {}\amp  \amp {} {}\amp 12z\amp =\amp 36
-		</mrow>
-	</md>
-	which we solve by back-substitution. From the last equation, we find <m>z=3</m>, and by substituting <m>3</m> for <m>z</m> in the third equation, we find <m>y=-1</m>. Next, we substitute <m>-1</m> for <m>y</m> and <m>3</m> for <m>z</m> in the second equation to find <m>x=1</m>, and finally, we substitute <m>x=1</m>, <m>y=-1</m>, <m>z=3</m> into the first equation to find <m>w=-2</m>.</p>
-	<p> The solution is the ordered four-tuple <m>(-2, 1, -1, 3)</m>. We can verify that these values satisfy all four equations of the original system.
-	</p>
+    <p>
+        The augmented matrix is
+        <me>
+        \left[ \begin{array}{@{}cccc|c@{}}
+            -1 \amp 1  \amp -1 \amp 1  \amp 7  \\ 
+            2  \amp -2 \amp -4 \amp -5 \amp -17  \\ 
+            -3 \amp 9  \amp 3  \amp 6  \amp 30 \\
+            4  \amp 8  \amp -2 \amp 5  \amp 17 
+        \end{array}\right]          
+        </me>
+        We use row operations to put the matrix in upper triangular form. First, we add multiples of the first row to the rows below it to get <m>0</m>s in the first column.</p>
+        <sidebyside valigns="middle  middle" widths="30% 60%" margins="5% 5%">
+                <tabular halign="right">
+                    <row>
+                        <cell><m>~~</m></cell>
+                    </row>
+                    <row>
+                        <cell><m>2(\text{row }1) + \text{row }2</m></cell>
+                    </row>
+                    <row>
+                        <cell><m>-3(\text{row }1) + \text{row }3</m></cell>
+                    </row>
+                    <row>
+                        <cell><m>4(\text{row }1) + \text{row }4</m></cell>
+                    </row>
+                </tabular>
+                <p>
+                    <me>
+                        \left[ \begin{array}{@{}cccc|c@{}}
+                            -1 \amp 1  \amp -1 \amp 1  \amp 7  \\ 
+                            0  \amp 0  \amp -6 \amp -3 \amp -3  \\ 
+                            0  \amp 6  \amp 6  \amp 3  \amp 9 \\
+                            0  \amp 12 \amp -6 \amp 9  \amp 45 
+                        \end{array}\right]      
+                    </me>
+                </p>
+    </sidebyside>
+    <p>The second row has <m>0</m> as its second entry, so we interchange the second and third rows to put a nonzero entry in the second column.
+    <me>
+        \left[ \begin{array}{@{}cccc|c@{}}
+            -1 \amp 1  \amp -1 \amp 1  \amp 7  \\ 
+            0  \amp 6  \amp 6  \amp 3  \amp 9 \\
+            0  \amp 0  \amp -6 \amp -3 \amp -3  \\ 
+            0  \amp 12 \amp -6 \amp 9  \amp 45 
+        \end{array}\right]      
+    </me>
+    Now we want <m>0</m>s in the last two rows of the second column. The third row already has <m>0</m> in the second column, so we only need to add a multiple of the second row to the fourth row.</p>
+    <sidebyside valigns="middle  middle" widths="30% 60%" margins="5% 5%">
+            <tabular halign="right">
+                <row>
+                    <cell><m>~~</m></cell>
+                </row>
+                <row>
+                    <cell><m>~~</m></cell>
+                </row>
+                <row>
+                    <cell><m>~~</m></cell>
+                </row>
+                <row>
+                    <cell><m>-2(\text{row }2) + \text{row }4</m></cell>
+                </row>
+            </tabular>
+            <p>
+                <me>
+                    \left[ \begin{array}{@{}cccc|c@{}}
+                        -1 \amp 1  \amp -1 \amp 1  \amp 7  \\ 
+                        0  \amp 6  \amp 6  \amp 3  \amp 9 \\
+                        0  \amp 0  \amp -6 \amp -3 \amp -3  \\ 
+                        0  \amp 0  \amp -18\amp 3  \amp 27 
+                    \end{array}\right]      
+                </me>
+            </p>
+    </sidebyside>
+    <p>Finally, we add a multiple of the third row to the fourth row to get 0 in the third column.</p>
+-   <sidebyside valigns="middle  middle" widths="30% 60%" margins="5% 5%">
+            <tabular halign="right">
+                <row>
+                    <cell><m>~~</m></cell>
+                </row>
+                <row>
+                    <cell><m>~~</m></cell>
+                </row>
+                <row>
+                    <cell><m>~~</m></cell>
+                </row>
+                <row>
+                    <cell><m>-3(\text{row }3) + \text{row }4</m></cell>
+                </row>
+            </tabular>
+            <p>
+                <me>
+                    \left[ \begin{array}{@{}cccc|c@{}}
+                        -1 \amp 1  \amp -1 \amp 1  \amp 7  \\ 
+                        0  \amp 6  \amp 6  \amp 3  \amp 9 \\
+                        0  \amp 0  \amp -6 \amp -3 \amp -3  \\ 
+                        0  \amp 0  \amp 0  \amp 12  \amp 36 
+                    \end{array}\right]      
+                </me>
+            </p>
+    </sidebyside>
+    <p>This triangular matrix corresponds to the system
+    <md alignment="alignat">
+        <mrow>
+            -w\amp {}+{} \amp x \amp {}-{}\amp y\amp {}+{}\amp z \amp =\amp 7
+        </mrow>
+        <mrow>
+              \amp {} {}\amp 6x\amp {}+{}\amp 6y\amp {}+{}\amp 3z \amp =\amp 9
+        </mrow>
+        <mrow>
+             \amp {}{}\amp  \amp {} {}\amp 6y\amp {}+{}\amp 3z\amp =\amp -3
+        </mrow>
+        <mrow>
+             \amp {} {}\amp   \amp {} {}\amp  \amp {} {}\amp 12z\amp =\amp 36
+        </mrow>
+    </md>
+    which we solve by back-substitution. From the last equation, we find <m>z=3</m>, and by substituting <m>3</m> for <m>z</m> in the third equation, we find <m>y=-1</m>. Next, we substitute <m>-1</m> for <m>y</m> and <m>3</m> for <m>z</m> in the second equation to find <m>x=1</m>, and finally, we substitute <m>x=1</m>, <m>y=-1</m>, <m>z=3</m> into the first equation to find <m>w=-2</m>.</p>
+    <p> The solution is the ordered four-tuple <m>(-2, 1, -1, 3)</m>. We can verify that these values satisfy all four equations of the original system.
+    </p>
 </solution></example>
 
 <p>
