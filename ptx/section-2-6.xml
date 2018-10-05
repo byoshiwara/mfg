@@ -124,10 +124,31 @@
 </p></statement>
 <answer><p>
     range: <m>[-12, 23]</m></p>
-    <sidebyside width="25%"><image source="images/fig-in-ex-ans-2-6-2">
+    <sidebyside width="25%"><!--<image source="images/fig-in-ex-ans-2-6-2">
       <description>
         cubic on finite domain
       </description>
+    </image>-->
+    <image xml:id="fig-in-ex-ans-2-6-2">
+        <description>cubic on finite domain</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [xscale=.4, yscale = .08]
+        \draw[lightgray] (-4,-15) grid[ystep=5] (4,25);
+        \draw[black,thick,->,>=stealth'] (-4,0)--(4.8,0) node[right] {$x$};
+        \draw[black,thick,->,>=stealth'] (0,-15)--(0,28) node[above] {$g(x)$};
+        \foreach \x   in  {-4, 4} {
+         \draw[black, thick] (\x,0.8) --++(0,-1.6) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$\x$};
+        };
+         \draw[black, thick] (0.14,20) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$20$};
+
+        \draw[samples=65,domain=-2:3,smooth,variable=\x,red!80!black,ultra thick] plot ({\x},{\x^3 -4)});
+        \filldraw[red!80!black] (-2,-12) ellipse (.15 and .75);
+        \filldraw[red!80!black] (3,23) ellipse (.15 and .75);
+        \end{tikzpicture}]]>
+    </latex-image>
     </image>
 </sidebyside></answer>
 </exercise>
