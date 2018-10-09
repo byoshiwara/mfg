@@ -252,8 +252,31 @@
     <li><sidebyside widths ="60%"><image source="images/fig-5-2-25-I"><description>transformed log</description></image> </sidebyside></li>
     <li><sidebyside width="60%"><image source="images/fig-5-2-25-II"><description>transformed log</description></image> </sidebyside></li>
     <li><sidebyside width="60%"><image source="images/fig-5-2-25-III"><description>transformed log</description></image> </sidebyside></li>
-    <li><sidebyside width="60%"><image source="images/fig-5-2-25-IV"><description>transformed log</description></image> </sidebyside></li>
-</ol></p></statement>
+    <li><sidebyside width="60%"><!--<image source="images/fig-5-2-25-IV"><description>transformed log</description></image>-->
+    <image xml:id="fig-5-2-25-IV">
+        <description>transformed log</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [xscale=.04, yscale = .4]
+        \draw[lightgray] (0,-2) grid[xstep=20, ystep=2] (100,8);
+        \draw[black,thick,->,>=stealth'] (0,0)--(108,0) node[right] {$x$};
+        \draw[black,thick,->,>=stealth'] (0,-2)--(0,8.8) node[above] {$y$};
+        \foreach \x   in  {20,60,100} {
+         \draw[black, thick] (\x,0.15) --++(0,-.3) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$\x$};
+        };
+        \foreach \y   in  {4,8} {
+         \draw[black, thick] (2,\y) --++(-4,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$\y$};
+        };
+
+        \draw[samples=65,domain={3+1/2^2}:100,smooth,variable=\x,red!95!black,very thick, <->, >=stealth'] plot ({\x},{ln(\x -3)/ln(2)});
+        \end{tikzpicture}]]>
+    </latex-image>
+    </image>
+</sidebyside></li>
+</ol></p>
+</statement>
 <answer><p><ol cols="4">
     <li><p>IV</p></li>
     <li><p>I</p></li>
