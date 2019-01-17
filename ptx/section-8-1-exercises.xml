@@ -127,7 +127,28 @@ Verify algebraically that your solution satisfies both equations.</p></introduct
     8x - 4y = 8
     \end{aligned}
 </m></p></statement>
-<answer><sidebyside width="50%"><image source="images/fig-ans-8-1-9"><description>two lines</description></image></sidebyside><p>Inconsistent</p></answer>
+<answer><sidebyside width="50%"><!--<image source="images/fig-ans-8-1-9"><description>two lines</description></image>-->
+    <image xml:id="fig-ans-8-1-9">
+        <description>two lines</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.25]
+        \draw[cyan!70!white] (-10,-10) grid (10,10);
+        \draw[black,thick,->,>=stealth'] (-10,0)--(10.8,0) node[right] {$x$};
+        \draw[black,thick,->,>=stealth'] (0,-10)--(0,10.8) node[above] {$y$};
+        \foreach \x   in  {5, 10, -5, -10} {
+         \draw[black, thick] (\x,0.15) --++(0,-.3) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$\x$};
+         \draw[black, thick] (0.14,\x) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$\x$};
+        };
+
+        \draw[samples=65,domain=-3:7,smooth,variable=\x,blue,very thick, <->, >=stealth'] plot ({\x},{2*\x - 4});
+        \draw[samples=65,domain=-4:6,smooth,variable=\x,blue,very thick, <->, >=stealth'] plot ({\x},{2*\x - 2});
+        \end{tikzpicture}]]>
+    </latex-image>
+    </image>
+</sidebyside><p>Inconsistent</p></answer>
 </exercise>
 
 <exercise number="10"><statement><p><m>
@@ -230,7 +251,7 @@ Verify algebraically that your solution satisfies both equations.</p></introduct
 </exercisegroup>
 
 
-<exercisegroup><introduction><p>Use linear combinations to identify each system in Problems 15<ndash/>20 as dependent, inconsistent, or consistent and independent. (See Algebra Skills Refresher <xref ref="appendix-Graphs-and-Equations" text="type-global"/> to review linear combinations.)</p></introduction>
+<exercisegroup><introduction><p>Solve Problems 21<ndash/>30 by graphing a system of equations.</p></introduction>
 
 <exercise number="21"><statement><p>Dash Phone Company charges a monthly fee of <m>\$10</m>, plus <m>\$0.09</m> per minute for long distance calls. Friendly Phone Company charges <m>\$15</m> per month, plus <m>\$0.05</m> per minute for long-distance calls.
 <ol>
@@ -275,7 +296,7 @@ Verify algebraically that your solution satisfies both equations.</p></introduct
 <ol>
     <li><p>What is the supply equation?</p></li>
     <li><p>What is the demand equation?</p></li>
-    <li><p>Graph both equations and solve the sustem. Find the equilibrium price and the number of bushels of wheat Yasuo can sell at that prince.</p></li>
+    <li><p>Graph both equations and solve the system. Find the equilibrium price and the number of bushels of wheat Yasuo can sell at that prince.</p></li>
 </ol></p></statement>
 <answer><p><ol cols="2">
     <li><p><m>y = 50x</m></p></li>
@@ -293,7 +314,7 @@ Verify algebraically that your solution satisfies both equations.</p></introduct
 
 <exercise number="25"><statement><p>The Aquarius jewelry company determines that each production run to manufacture a pendant involves an initial set-up cost of <m>\$200</m> and <m>\$4</m> for each pendant produced. The pendants sell for <m>\$12</m> each.
 <ol>
-    <li><p>Express the cost <m>C</m> of production in terms of the number <m>x</m> of pendants produced</p></li>
+    <li><p>Express the cost <m>C</m> of production in terms of the number <m>x</m> of pendants produced.</p></li>
     <li><p>Express the revenue <m>R</m> in terms of the number <m>x</m> of pendants sold.</p></li>
     <li><p>Graph the revenue and cost on the same set of axes. How many pendants must be sold for the Aquarius company to break even on a particular production run?</p></li>
 </ol></p></statement>
@@ -368,7 +389,7 @@ in <m>\$465.50</m> for <m>82</m> paid admissions. How many adults and how many s
             <cell>Students</cell>
             <cell><m>y</m></cell>
             <cell><m>4.25</m></cell>
-            <cell><m>4.256</m></cell>
+            <cell><m>4.25y</m></cell>
         </row>
         <row>
             <cell>Total</cell>
@@ -420,7 +441,7 @@ in <m>\$465.50</m> for <m>82</m> paid admissions. How many adults and how many s
 </ol></p></statement>
 </exercise>
 
-<exercise number="29"><statement><p>Earthquakes simultaneously send out two types of waves, called P waves and S waves, but the two types travel at different speeds. A seismograph records arrival of P waves from an earthquake, and mq90 seconds later the seismograph receives S waves from the same earthquake. The P waves travel at <m>5.4</m> miles per second, and S waves at <m>3</m> miles per second. How far is the seismograph from the earthquake?
+<exercise number="29"><statement><p>Earthquakes simultaneously send out two types of waves, called P waves and S waves, but the two types travel at different speeds. A seismograph records arrival of P waves from an earthquake, and ninety seconds later the seismograph receives S waves from the same earthquake. The P waves travel at <m>5.4</m> miles per second, and S waves at <m>3</m> miles per second. How far is the seismograph from the earthquake?
 <ol>
     <li><p>Let <m>x</m> represent the time in seconds for the P to arrive at the seismograph, and <m>y</m> the distance in miles between the earthquake and seismograph. Fill in the table.</p>
     <sidebyside><tabular left="minor" right="minor" top="minor" bottom="minor" halign="center"><col halign="left"/><col/><col/><col/>
@@ -444,7 +465,7 @@ in <m>\$465.50</m> for <m>82</m> paid admissions. How many adults and how many s
         </row>
     </tabular></sidebyside>
     </li>
-    <li><p>Write an equation about how far the S waves travel</p></li>
+    <li><p>Write an equation about how far the S waves travel.</p></li>
     <li><p>Write a second equation about how far the P waves travel.</p></li>
     <li><p>Solve the system and answer the question in the problem.</p></li>
 </ol></p></statement>
