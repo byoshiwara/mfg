@@ -15,8 +15,8 @@ We have shown that the two functions <m>f(x) = x^3</m> and <m>g(x) = \sqrt[3]{x}
 <p>In <xref ref="chap4" text="type-global"/>, we saw that a similar rule relates the operations of raising a base <m>b</m> to a power and taking a base <m>b</m> logarithm, because they are inverse operations.</p>
 
 <assemblage><title>Conversion Formulas for Logarithms</title>
-	<p>For any base <m>b \gt 0, b\ne 1</m>,
-		<me>y = \log_{b}{x} ~~~~\text{ if and only if }~~~~ x = b^y</me></p>
+    <p>For any base <m>b \gt 0, b\ne 1</m>,
+        <me>y = \blert{\log_{b}{x}} ~~~~\text{ if and only if }~~~~ \blert{x = b^y}</me></p>
 </assemblage>
 
 <p>We can now define the <term>logarithmic function</term>, <m>g(x) = \log_{b}{x}</m>, that takes the log base <m>b</m> of its input values. The conversion formulas tell us that the log function, <m>g(x) = \log_{b}{x}</m>, is the inverse of the exponential function, <m>f(x) = b^x</m>.</p>
@@ -203,28 +203,28 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 	</ol></p></statement>
 <solution><p><ol label="a">
 		<li><p>We write the function as <m>y = 2^{x-3} - 4</m>, and solve for <m>x</m> in terms of <m>y</m>. First, we isolate the power:
-			\begin{align*}
+			<!--*****--><me>\begin{aligned}[t]
 			y + 4 \amp= 2^{x-3}\amp\amp \blert{\text{Take logs base 2.}}\\
 			\log_{2}{(y + 4)} \amp= \log_{2}{2}^{x-3}  = x - 3\\
 			x \amp = 3 + \log_{2}{(y + 4)}
-			\end{align*}
+			\end{aligned}</me><!--*****-->
 			The inverse function is <m>f^{-1}(y) = 3 + \log_{2}{(y + 4)}</m>. However, to graph both <m>f</m> and <m>f^{-1}</m> on the same grid, we write the inverse function as <m>f^{-1}(x) = 3 + \log_{2}{(x + 4)}</m>.</p></li>
 		<li><p>To graph <m>f</m>, we translate the graph of <m>y = 2^x</m> by <m>3</m> units to the right and <m>4</m> units down. The graph of <m>f^{-1}</m> looks like the graph of <m>y = \log_2 x</m>, but shifted <m>4</m> units to the left and <m>3</m> units up. The graphs are shown below, along with the line <m>y = x</m>.</p>
 			<sidebyside  width="60%"><image source="images/fig-invert-translated-exponential" ><description>graph of translated exponential and inverse</description></image></sidebyside></li>
 		<li><p>The function <m>f</m> is a translation of an exponential function, and its domain consists of all real numbers. Because the graph is shifted <m>4</m> units down, the range of <m>f</m> is <m>(-4,\infty)</m>. Because the log of a negative number or zero is undefined, for <m>f^{-1}(x) = 3 + \log_{2}{(x + 4)}</m>, we must have <m>x + 4 \gt 0</m>, or <m>x \gt -4</m>. We can verify on the graph that the range of <m>f^{-1}</m> includes all real numbers. Thus,
-			\begin{align*}
+			<!--*****--><me>\begin{aligned}[t]
 			\amp\text{Domain}(f) = \text{all real numbers} = \text{Range}(f^{-1})\\
 			\amp\text{Range}(f) = (-4,\infty) = \text{Domain} (f^{-1})
-			\end{align*}</p></li>
+			\end{aligned}</me><!--*****--></p></li>
 	</ol></p></solution></example>
 
 <exercise><statement><ol label="a">
 		<li>Find the inverse function for <m>f(x) = 2 \log(x + 1)</m>.</li>
 		<li>Graph <m>f</m> and <m>f^{-1}</m> in the window
-			\begin{align}
+			<me>\begin{aligned}[t]
 	        \text{Xmin} \amp = -6 \amp\amp \text{Xmax} = 6\\
 	        \text{Ymin} \amp = -4 \amp\amp \text{Ymax} = 4
-	        \end{align}</li>
+	        \end{aligned}</me></li>
 	    <li>State the domain and range of <m>f</m> and <m>f^{-1}</m>.</li>
 	</ol></statement>
 <answer><p><ol label="a">
@@ -259,7 +259,7 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 <p>A <term>logarithmic equation</term><idx>logarithmic equation</idx> is one in which the variable appears inside of a logarithm. For example,
 	<me>\log_4 x = 3</me>
 is a log equation. To solve a log equation, remember that logarithms and exponentials with the same base are inverse functions. Therefore, 
-	<me>y = \log_b x ~~ \text{ if and only if } ~~ x = b^y</me> 
+	<me>y = \blert{\log_b x} ~~ \text{ if and only if } ~~ \blert{x = b^y}</me> 
 Thus, we can rewrite a logarithmic equation in exponential form.</p>
 
 <example xml:id="example-log-equations"><statement><p>Solve for <m>x</m>.<ol label="a" cols="2">
@@ -268,11 +268,11 @@ Thus, we can rewrite a logarithmic equation in exponential form.</p>
 	</ol></p></statement>
 <solution><p><ol label="a">
 		<li><p>We isolate the logarithm, then rewrite the equation in exponential form:
-			\begin{align*}
+			<!--*****--><me>\begin{aligned}[t]
 			2(\log_3 x) \amp = 5\amp\amp \blert{\text{Divide both sides by 5.}}\\
 			\log_3 x \amp = \frac{5}{2}\amp\amp \blert{\text{Convert to exponential form.}}\\
 			x \amp = 3^{5/2}
-			\end{align*}</p></li>
+			\end{aligned}</me><!--*****--></p></li>
 		<li><p>First, we convert the equation to exponential form.
 			<me>2x + 100 = 10^3 = 1000</me>
 			Now we can solve for <m>x</m> to find <m>2x = 900</m>, or <m>x = 450</m>.</p></li>
@@ -316,11 +316,11 @@ Thus, we can rewrite a logarithmic equation in exponential form.</p>
 Once the left-hand side is expressed as a single logarithm, we can rewrite the equation in exponential form as
 	<me>(x + 1)(x - 2) = 10^1</me>
 from which
-	\begin{align*}
+	<!--*****--><me>\begin{aligned}[t]
 	x^2 - x - 2 \amp = 10\amp\amp \blert{\text{Subtract 10 from both sides.}}\\
 	x^2 - x - 12 \amp = 0\amp\amp \blert{\text{Factor the left side.}}\\
 	(x - 4)(x + 3) \amp= 0\amp\amp \blert{\text{Apply the zero-factor principle.}}
-	\end{align*}
+	\end{aligned}</me><!--*****-->
 	Thus, <m>x = 4</m> or <m>x = -3</m>. The number <m>-3</m> is not a solution of the original equation, because neither <m>\log_{10}{(x + 1)}</m> nor <m>\log_{10}{(x - 2)}</m> is defined for <m>x = -3</m>. The solution of the original equation is <m>4</m>.</p></solution></example>
 
 <p>In <xref ref="example-solve-log-equation" text="type-global"/>, the apparent solution <m>x = -3</m> is called <term>extraneous</term><idx>extraneous</idx> because it does not solve the original equation. We should always check for extraneous solutions when solving log equations. The following steps give a rough outline for solving log equations.</p>

@@ -98,10 +98,10 @@ In general, natural logs obey the same conversion formulas that work for logs to
 <xi:include href="./assemblage-conversion-formulas-for-natural-logs.xml" />
 
 <p>In particular,
-	\begin{align*}
+	<!--*****--><me>\begin{aligned}[t]
 	\ln e \amp = 1 \text{ because } e^1 = e \\
 	\ln 1 \amp = 0  \text{ because } e^0 = 1 \\
-	\end{align*}</p>
+	\end{aligned}</me><!--*****--></p>
 
 <p>The conversion formulas tell us that the <term>natural log function</term><idx>natural log function</idx>, <m>g(x) = \ln x</m>, is the inverse function for the natural exponential function, <m>f(x) = e^x</m>.</p>
 
@@ -224,19 +224,19 @@ In general, natural logs obey the same conversion formulas that work for logs to
 <solution><p>First, we divide each side by <m>20</m> to obtain
 		<me>7 = e^{0.4x}</me>
 	Then we convert the equation to logarithmic form.
-		\begin{align*}
+		<!--*****--><me>\begin{aligned}[t]
 		0.4x \amp = \ln 7 \amp\amp \blert{\text{Divide both sides by 0.4.}}\\
 		x \amp= \frac{\ln 7}{0.4}
-		\end{align*}
+		\end{aligned}</me><!--*****-->
 	Rounded to four decimal places, <m>x \approx 4.8648</m>.</p></solution></example>
 
 <note><p>We can also solve the equation in <xref ref="example-solve-natural-exponential" text="type-global"/>,
 	<me>7 = e^{0.4x}</me>
 by taking the natural logarithm of both sides. This gives us
-	\begin{align*}
+	<!--*****--><me>\begin{aligned}[t]
 	\ln 7 \amp = \ln e^{0.4x}\amp\amp \blert{\text{Simplify the right side.}} \\
 	\ln 7 \amp = 0.4x
-	\end{align*}
+	\end{aligned}</me><!--*****-->
 because <m>\ln{e^a} = a</m> for any number <m>a</m>. We then proceed with the solution as before.</p></note>
 
 <exercise><statement><p>Solve <me>80 -16e^{-0.2x} = 70.3</me></p></statement>
@@ -249,12 +249,12 @@ because <m>\ln{e^a} = a</m> for any number <m>a</m>. We then proceed with the so
 <solution><p>We multiply both sides of the equation by the denominator, <m>1 + be^{-kt}</m>, to get
 		<me>P(1 + be^{-kt} ) = a</me>
 	Then we isolate the power, <m>e^{-kt}</m>, as follows:
-		\begin{align*}
+		<!--*****--><me>\begin{aligned}[t]
 		1 + be^{-kt} \amp = \frac{a}{P}\amp\amp \blert{\text{Subtract 1 from both sides.}}\\
 		be^{-kt} \amp = \frac{a}{P}- 1 \amp\amp \blert{\text{Rewrite the right side. }}\\
 		be^{-kt} \amp = \frac{a - P}{P}\amp\amp \blert{\text{Divide both sides by }b.}\\
 		e^{-kt} \amp= \frac{a - P}{bP}
-		\end{align*}
+		\end{aligned}</me><!--*****-->
 	Next, we take the natural logarithm of both sides to get
 		<me>\ln {e^{-kt}} = \ln{\frac{a - P}{bP}}</me>
 	and recall that <m>\ln {e^x} = x</m> to simplify the left side.
@@ -280,10 +280,10 @@ which describe exponential growth when <m>b \gt 1</m> and exponential decay when
 		\blert{P(t) = P_0 \cdot e^{kt}}
 	</me>
 where we have substituted <m>e^k</m> for the growth factor <m>b</m>, so that 
-	\begin{align*}
+	<!--*****--><me>\begin{aligned}[t]
 	P(t) \amp = P_0 \cdot b^t\\
 	\amp = P_0 \cdot \left(e^k\right)^t = P_0 \cdot e^{kt}\\
-	\end{align*}
+	\end{aligned}</me><!--*****-->
 We can find the value of <m>k</m> by solving the equation <m>b = e^k</m> for <m>k</m>, to get <m>k = \ln b</m>.</p>
 
 <p>For instance, in <xref ref="example-bacteria" text="type-global"/> in <xref ref="Exponential-Growth-and-Decay" text="type-global"/> we found that a colony of bacteria grew according to the formula
@@ -326,11 +326,11 @@ Thus, for negative values of <m>k</m>, the function <m>P(t) = P_0 e^{kt}</m> des
 <example xml:id="example-write-decay-with-e"><statement><p>Express the decay law <m>N(t) = 60 (0.8)^t</m> in the form <m>N(t) = N_0 e^{kt}</m>.</p></statement>
 
 <solution><p>For this decay law, <m>N_0 = 60</m> and <m>b = 0.8</m>. We would like to find a value for <m>k</m> so that <m>e^k = b = 0.8</m>, that is, we must solve the equation
-		\begin{align*}
+		<!--*****--><me>\begin{aligned}[t]
 		e^k \amp = 0.8\amp\amp \blert{\text{Take natural log of both sides.}}\\
 		\ln e^k\amp = \ln 0.8\amp\amp \blert{\text{Simplify.}}\\
 		k\amp = \ln 0.8 \approx -0.2231
-		\end{align*}
+		\end{aligned}</me><!--*****-->
 Replacing <m>b</m> with <m>e^k</m>, we find that the decay law is
 		<me>N(t) \approx 60e^{-0.2231t}</me></p></solution></example>
 
@@ -433,19 +433,19 @@ where <m>P</m> is the principal invested.</p>
 		    <image source="images/fig-continuous-compound"  width="80%"><description>graph of continuous compounded interest</description></image></sidebyside></li>
 		<li>The graph of <m>A(t)</m> is shown above.</li>
 		<li>We evaluate <m>A(t)</m> for <m>t = 10</m>.
-			\begin{align*}
+			<!--*****--><me>\begin{aligned}[t]
 			A(10) \amp= 500 e^{0.08(10)}\\
 			\amp = 500 e^{0.8}\\
 			\amp \approx 500(2.2255) = 1112.77
-			\end{align*}
+			\end{aligned}</me><!--*****-->
 		The account will be worth $<m>1112.77</m> after <m>10</m> years.</li>
 		<li>We substitute <m>1000</m> for <m>A(t)</m> and solve the equation.
-			\begin{align*}
+			<!--*****--><me>\begin{aligned}[t]
 			1000 \amp= 500 e^{0.08t}\amp\amp \blert{\text{Divide both sides by 500.}}\\
 			2 \amp = e^{0.08t}\amp\amp \blert{\text{Take natural log of both sides.}}\\
 			\ln 2 \amp= \ln e^{0.08t} = 0.08t\amp\amp \blert{\text{Divide both sides by 0.08.}}\\
 			t \amp= \frac{\ln 2}{0.08}\approx 8.6643
-			\end{align*} 
+			\end{aligned}</me><!--*****--> 
 		The account will be worth $<m>1000</m> after approximately <m>8.7</m> years.</li>
 	</ol></p></solution></example>
 
