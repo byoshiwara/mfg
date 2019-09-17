@@ -2,8 +2,11 @@
 <!-- <mathbook><book> -->
 
 <section xml:id="AbsoluteValue"   xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>The Absolute Value Function</title><introduction>
-<p>The absolute value function is used to model problems involving distance. Recall that the absolute value of a number gives the distance from the origin to that number on the number line.</p>
+<title>The Absolute Value Function</title>
+<subsection><title>Introduction</title>
+<p>
+    The absolute value function is used to model problems involving distance. Recall that the absolute value of a number gives the distance from the origin to that number on the number line.
+</p>
 
 <assemblage><title>Distance and Absolute Value</title>
 <p>The distance between two points <m>x</m> and <m>a</m> is given by <m>\abs{x - a}</m>.</p>
@@ -37,12 +40,75 @@
     <ol label="a">
         <li><p><m>x</m> is five units away from <m>-3</m>.</p></li>
         <li><p><m>x</m> is at least six units away from <m>4</m>.</p></li>
+<<<<<<< HEAD
     </ol></p></statement>
 <answer><p><ol label="a" cols="2">
     <li><m>\abs{x+3} = 5</m><figure xml:id="fig-2-5-exer1ansa.png"><image source="images/fig-2-5-exer1ansa.png"  width="90%"><description>number line</description></image></figure></li>
     <li><m>\abs{x-4} \ge 6</m><figure xml:id="fig-2-5-exer1ansb.png"><image source="images/fig-2-5-exer1ansa.png"  width="90%"><description>number line</description></image></figure></li>
 </ol></p></answer></exercise>
 </introduction>
+=======
+    </ol>
+</p></statement><answer><p><ol label="a">
+    <li><p><m>\abs{x+3}=5</m></p>
+    <sidebyside width="55%" margins="0% 45%">
+    <image xml:id="fig-ex-2-5-1">
+        <description>number line</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.7]
+        \draw[black,thick,->,>=stealth'] (-9.4,0)--(2.85,0);
+        \foreach \x  in  {-8, -7, ..., 2}
+         \draw[black] (\x,.15) --++(0,-.3);
+        \foreach \x in  {-8, -6, ..., 2} {
+         \node[below] at (\x,-.1) {\x};
+        }
+        \draw [black, decorate, decoration={brace,amplitude=5pt}]
+        (-8,.25) -- ++(5,0) node [black,above,midway, yshift=.2cm] 
+        {Five units};
+        \draw [black, decorate, decoration={brace,amplitude=5pt}]
+        (-3,.25) -- ++(5,0) node [black,above,midway, yshift=.2cm] 
+        {Five units};
+        \filldraw[red] (-8,0) circle (.1);
+        \filldraw[red] (2,0) circle (.1);
+        \end{tikzpicture}]]>
+    </latex-image>
+    </image>
+    </sidebyside></li>
+    <li><p><m>\abs{x-4}\ge 6</m></p>
+    <sidebyside width="55%" margins="0% 45%">
+    <image xml:id="fig-ex-2-5-1b">
+        <description>number line</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.4]
+        \draw[black,thick] (-5.9,0)--(13.,0);
+        \foreach \x  in  {-5, -4, ..., 13}
+         \draw[black] (\x,.25) --++(0,-.5);
+        \foreach \x in  {-4, -2, ..., 12} {
+         \node[below] at (\x,-.2) {\x};
+        }
+        \draw [black, decorate, decoration={brace,amplitude=5pt}]
+        (-2,.35) -- ++(6,0) node [black,above,midway, yshift=.2cm] 
+        {Six units};
+        \draw [black, decorate, decoration={brace,amplitude=5pt}]
+        (4,.35) -- ++(6,0) node [black,above,midway, yshift=.2cm] 
+        {Six units};
+        \draw[red, ultra thick,->, >=stealth'] (-2,0)--(-5.9,0);
+        \draw[red, ultra thick,->, >=stealth'] (10,0)--(13.9,0);
+        \filldraw[red] (-2,0) circle (.15);
+        \filldraw[red] (10,0) circle (.15);
+        \end{tikzpicture}]]>
+    </latex-image>
+    </image>
+    </sidebyside></li>
+</ol></p></answer></exercise>
+</subsection>
+>>>>>>> 54089957532e945f789024bde21ca1c96994f826
 
 <subsection><title>Absolute Value Equations</title>
 <p>We can use distances on a number line to solve simple equations such as
@@ -96,6 +162,7 @@
     <ol label="a">
         <li>Graph <m>y = \abs{2x + 7}</m> for <m>-12 \le x \le 8</m>.</li>
         <li>Use your graph to solve the equation <m>\abs{2x + 7} = 11</m>.</li>
+<<<<<<< HEAD
     </ol></statement>
 <answer><p><ol label="a">
     <li><p><figure xml:id="fig-2-5-exer2ans.png"><image source="images/fig-2-5-exer2ans.png" width="30%"><description>graph</description></image></figure></p></li>
@@ -103,6 +170,41 @@
 </exercise>
 
 <p>To solve an absolute value equation algebraically, we use the definition of absolute value.</p>
+=======
+    </ol>
+</statement><answer><p><ol label="a" cols="2">
+    <li><sidebyside>
+    <image xml:id="exercise-2-5-2">
+        <description>abs(2x+3)</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.3]
+        \draw[cyan] (-12,-4) grid[step=2] (8,16);
+        \draw[black,thick, ->, >=stealth'] (-12,0)--(8.9,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-4)--(0,16.9) node[above]{$y$};
+        \foreach \x in  {-8, 6, 8} {
+         \node[below, fill=white, inner sep=1] at (\x,-.3) {\x};
+        }
+        \draw[gray, very thick, dashed] (-9,0)--++(0,11);
+        \draw[gray, very thick, dashed] (2,0)--++(0,11);
+        \draw[blue, very thick] (-12,11)--(8,11) node[above, xshift=-0.52cm, fill=white, inner sep=1] {$y=11$};
+        \\draw[red, ultra thick,->, >=stealth'] (-2,0)--(-5.9,0);
+        \draw[red, thick,->, >=stealth'] (-7/2,0)--(-11.5,16) node[right, xshift=.4cm, yshift=-.5cm, fill=white, inner sep=1] {$y= | 2x+7|$};
+        \draw[red, thick,->, >=stealth'] (-7/2,0)--(4.5,16);
+        \filldraw[red] (-9,0) circle (.25);
+        \filldraw[red] (2,0) circle (.25);
+        \end{tikzpicture}]]>
+    </latex-image>
+    </image>
+    </sidebyside></li>
+    <li><p><m>x=9</m> or <m>x=2</m></p></li>
+</ol></p></answer></exercise>
+<p>
+    To solve an absolute value equation algebraically, we use the definition of absolute value.
+</p>
+>>>>>>> 54089957532e945f789024bde21ca1c96994f826
 
 <example xml:id="example-abs-algebraic"><statement>
     <p>Solve the equation <m>\abs{3x - 6} = 9</m> algebraically.</p></statement>
@@ -132,8 +234,12 @@
 
 <exercise xml:id="exercise-solve-abs-algebraic"><statement><p>
     Solve <m>\abs{2x + 7} = 11</m> algebraically.
+<<<<<<< HEAD
 </p></statement>
 <answer><m>x=-9,~2</m></answer></exercise>
+=======
+</p></statement><answer><p><m>x=9</m> or <m>x=2</m></p></answer></exercise>
+>>>>>>> 54089957532e945f789024bde21ca1c96994f826
 </subsection>
 
 <subsection><title>Absolute Value Inequalities</title>
@@ -175,11 +281,19 @@
     <ol label="a">
         <li>Solve the inequality <m>\abs{2x + 7} \lt 11</m>.</li>
         <li>Solve the inequality <m>\abs{2x + 7} \gt 11</m>.</li>
+<<<<<<< HEAD
     </ol></statement>
 <answer><p><ol label = "a" cols="2">
     <li><m>(-9,2)</m></li>
     <li><m>(-\infty,-9) \cup (2,\infty)</m></li></ol></p></answer>
 </exercise>
+=======
+    </ol>
+</statement><answer><p><ol label="a" cols="2">
+    <li><p><m>(-9,2)</m></p></li>
+    <li><p><m>(-\infty,-9) \cup (2,\infty)</m></p></li>
+</ol></p></answer></exercise>
+>>>>>>> 54089957532e945f789024bde21ca1c96994f826
 </subsection>
 
 <subsection><title>Using the Absolute Value in Modeling</title>
@@ -243,11 +357,79 @@
     <ol label="a">
         <li>Use the graph in <xref ref="fig-abs-highway-distance" text="type-global"/> from <xref ref="example-Marlene-highway" text="type-global"/> to determine how far Marlene has driven when she is within <m>5</m> miles of the mall. Write and solve an absolute value inequality to verify your answer.</li>
         <li>Write and solve an absolute value inequality to determine how far Marlene has driven when she is at least <m>10</m> miles from the mall.</li>
+<<<<<<< HEAD
     </ol></statement>
 <answer><p><ol label="a">
     <li><m>\abs{x-15} \lt 5; ~10 \lt x \le 20</m><figure xml:id="fig-2-5-exer5ansa.png"><image source="images/fig-2-5-exer5ansa.png" width="40%"><description>graph</description></image></figure></li>
     <li><m>\abs{x-15} \ge 10; ~x \le 5 \text{ or } x \ge 25</m><figure xml:id="fig-2-5-exer5ansb.png"><image source="images/fig-2-5-exer5ansb.png" width="40%"><description>graph</description></image></figure></li></ol></p></answer>
 </exercise>
+=======
+    </ol>
+</statement><answer><ol label="a">
+    <li><p><m>\abs{x-15} \lt 5</m>; <m>~10 \lt x \lt 20</m></p><sidebyside width="45%" margins="0% 55%">
+    <image xml:id="fig-ex-2-5-5a">
+        <description>absolute value inequality</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.2]
+        \draw[cyan] (0,0) grid[step=5/2] (30,15);
+        \draw[black,thick, ->, >=stealth'] (0,0)--(32,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,0)--(0,17) node[above]{$y$};
+        \foreach \x in  {10,20,30} {
+         \node[below] at (\x,-.4) {\x};
+        }
+        \foreach \y in  {5,10,15} {
+         \node[left, fill=white, inner sep=1] at (-.3,\y) {\y};
+        }
+        \draw[black,thick] (0,15)--(15,0)--(30,15);
+        \draw[red, very thick] (10,5)--(15,0)--(20,5);
+        \draw[red, very thick] (10,0)--(20,0);
+        \draw[red, fill=white] (10,5) circle (.35);
+        \draw[red, fill=white] (20,5) circle (.35);
+        \draw[red, fill=white] (10,0) circle (.35);
+        \draw[red, fill=white] (20,0) circle (.35);
+          \node[label=left:\rotatebox{90}{Miles from mall}] at (-2.5,8) {};
+          \node[below] at (15,-2.5) {Miles on highway};
+        \end{tikzpicture}]]>
+    </latex-image>
+    </image>
+    </sidebyside></li>
+    <li><p><m>\abs{x-15} \ge 10</m>; <m>~x\le 5~</m> or <m>~x\ge25</m></p><sidebyside width="45%" margins="0% 55%">
+    <image xml:id="fig-ex-2-5-5b">
+        <description>absolute value inequality</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.2]
+        \draw[cyan] (0,0) grid[step=5/2] (30,15);
+        \draw[black,thick, ->, >=stealth'] (0,0)--(32,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,0)--(0,17) node[above]{$y$};
+        \foreach \x in  {10,20,30} {
+         \node[below] at (\x,-.4) {\x};
+        }
+        \foreach \y in  {5,10,15} {
+         \node[left, fill=white, inner sep=1] at (-.3,\y) {\y};
+        }
+        \draw[black,thick] (0,15)--(15,0)--(30,15);
+        \draw[red, very thick] (0,15)--(5,10);
+        \draw[red, very thick] (0,0)--(5,0);
+        \draw[red, very thick] (30,15)--(25,10);
+        \draw[red, very thick] (30,0)--(25,0);
+        \draw[red, fill=red] (5,10) circle (.35);
+        \draw[red, fill=red] (25,10) circle (.35);
+        \draw[red, fill=red] (5,0) circle (.35);
+        \draw[red, fill=red] (25,0) circle (.35);
+          \node[label=left:\rotatebox{90}{Miles from mall}] at (-2.5,8) {};
+          \node[below] at (15,-2.5) {Miles on highway};
+        \end{tikzpicture}]]>
+    </latex-image>
+    </image>
+    </sidebyside></li>    
+</ol></answer></exercise>
+>>>>>>> 54089957532e945f789024bde21ca1c96994f826
 </subsection>
 
 <subsection><title>Measurement Error</title>
@@ -275,15 +457,22 @@ Note that the solution of this inequality is <m>5.95 \le m \le 6.05</m>.</p>
 </solution></example>
 
 <exercise xml:id="exercise-tolerance-temperature"><statement><p>
-    The temperature, <m>T</m>, in a laboratory must remain between <m>9\degree</m>C and <m>12\degree</m>C.
+    The temperature, <m>T</m>, in a laboratory must remain between <m>9\degree\text{C}</m> and <m>12\degree\text{C}</m>.
     <ol label="a">
         <li>Write the error tolerance as an absolute value inequality.</li>
         <li>For a special experiment, the temperature in degrees celsius must satisfy <m>~~\abs{T - 6.7} \le 0.03</m>. Give the interval of possible temperatures.</li>
+<<<<<<< HEAD
     </ol></p></statement>
 <answer><p><ol label="a" cols="2">
     <li><m>\abs{T-10.5} \lt 1.5</m></li>
     <li><m>6.67 \le T \le 6.73</m></li></ol></p>  
 </answer></exercise>
+=======
+    </ol></p></statement><answer><p><ol label="a" cols="2">
+        <li><p><m>\abs{T-10.5} \lt 1.5 </m></p></li>
+        <li><p><m>6.66 \le T \le 6.73 </m></p></li>
+    </ol></p></answer></exercise>
+>>>>>>> 54089957532e945f789024bde21ca1c96994f826
 
 </subsection>
 <xi:include href="./summary-2-5.xml" /> <!-- summary  -->
