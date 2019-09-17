@@ -147,8 +147,7 @@ The solution of this equation is <m>x = \log_{2}{26}</m>, but can we find a deci
 	\end{align*} 
 Thus, <m>\log_{2}{26}</m> must be between <m>4</m> and <m>5</m>. We can use trial and error to find the value of <m>\log_{2}{26}</m> to the nearest tenth. Use your calculator to make a table of values for <m>y = 2^x</m>, starting with <m>x = 4</m> and using increments of <m>0.1</m>.</p>
 
-<table xml:id="table-decimal-powers-of-two"><caption></caption>
-    <tabular halign="center" right="minor" left="minor" bottom="minor"><col top="minor" /><col top="minor" /><col top="none"/>
+ <p><sidebyside>   <tabular halign="center" right="minor" left="minor" bottom="minor"><col top="minor" /><col top="minor" /><col top="none"/>
         <col top="minor"/><col top="minor"/>
                 
         <row bottom="major">
@@ -187,9 +186,9 @@ Thus, <m>\log_{2}{26}</m> must be between <m>4</m> and <m>5</m>. We can use tria
             <cell bottom="none"></cell>
             <cell><m>4.9</m></cell>
             <cell><m>2^{4.9}=29.857</m></cell></row>
-     </tabular></table>
+     </tabular></sidebyside></p>
 
-<p>From <xref ref="table-decimal-powers-of-two" text="type-global"/>, we see that <m>26</m> is between <m>2^{4.7}</m> and <m>2^{4.8}</m>, and is closer to <m>2^{4.7}</m>. To the nearest tenth, <m>\log_{2}{26} \approx 4.7</m>.</p>
+<p>From the table we see that <m>26</m> is between <m>2^{4.7}</m> and <m>2^{4.8}</m>, and is closer to <m>2^{4.7}</m>. To the nearest tenth, <m>\log_{2}{26} \approx 4.7</m>.</p>
 
 <p>Trial and error can be a time-consuming process. In Example 4, we illustrate a graphical method for estimating the value of a logarithm.</p>
 
@@ -197,10 +196,10 @@ Thus, <m>\log_{2}{26}</m> must be between <m>4</m> and <m>5</m>. We can use tria
 <p>Approximate <m>\log_{3}{7}</m> to the nearest hundredth.</p></statement>
 
 <solution><p>If <m>\log_{3}{7}=x</m>, then <m>3^x = 7</m>. We will use the graph of <m>y = 3^x</m> to approximate a solution to <m>3^x = 7</m>.</p>
-<p> We graph <m>Y_1 =3</m><c>^</c> X and <m>Y_2 = 7</m> in the standard window (<c>ZOOM</c> 6) to obtain the graph shown in <xref ref="fig-GC-approx-log" text="type-global"/>. Next we activate the intersect feature to find that the two graphs intersect at the point <m>(1.7712437, 7)</m>. Because this point lies on the graph of <m>y = 3^x</m> , we know that
+<p> We graph <m>Y_1 =3</m><c>^</c> X and <m>Y_2 = 7</m> in the standard window (<c>ZOOM</c> 6) to obtain the graph shown below. Next we activate the intersect feature to find that the two graphs intersect at the point <m>(1.7712437, 7)</m>. Because this point lies on the graph of <m>y = 3^x</m> , we know that
 	<me>3^{1.7712437} \approx 7~~~\text{, or }~~~ \log_{3}{7} \approx 1.7712437</me>
 To the nearest hundredth, <m>\log_{3}{7} \approx 1.77</m>.</p>
-<figure xml:id="fig-GC-approx-log"><caption></caption><image source="images/fig-GC-approx-log"  width="40%"><description>GC intersection of expnential curve and horizontal line</description></image></figure>
+<sidebyside width="40%"><image source="images/fig-GC-approx-log"><description>GC intersection of expnential curve and horizontal line</description></image></sidebyside>
 </solution></example>
 
 <exercise xml:id="exercise-approximate-log"><statement><ol label="a">
@@ -276,7 +275,7 @@ To <m>4</m> decimal places, the solution is <m>1.3522</m>.</p>
 
 <xi:include href="./assemblage-steps-solving-base-10-exponential.xml" />
 
-<example xml:id="example-solve-exponential"><statement><p>Solve the equation <m>~~38 = 95 - 15 \cdot 10^{0.4x}</m>.</p>
+<example xml:id="example-solve-exponential"><statement><p>Solve the equation <m>~~38 = 95 - 15 \cdot 10^{0.4x}</m></p>
 </statement>
 <solution><p>First, we isolate the power of <m>10</m>: We subtract <m>95</m> from both sides of the equation and divide by <m>-15</m> to obtain
 	\begin{align*}
@@ -307,7 +306,7 @@ We can evaluate this expression on the calculator by entering</p>
 		</tabular></sidebyside>
 <p>But if we want to evaluate <m>\dfrac{\log{3.8}}{0.4}</m>, we must enclose <m>3.8</m> in parentheses, as shown in <xref ref="example-solve-exponential" text="type-global"/>. If we omit the parenthesis after <m>3.8</m>, the calculator will interpret the expression as <m>\log{\left(\dfrac{3.8}{0.4}\right)}</m>, which is not the expression we wanted.</p></warning>
 
-<exercise xml:id="exercise-solve-exponential"><statement><p>Solve <m>~~12 - 30(10^{-0.2x} ) = 11.25</m>.</p></statement>
+<exercise xml:id="exercise-solve-exponential"><statement><p>Solve <m>~~12 - 30(10^{-0.2x} ) = 11.25</m></p></statement>
 <answer><p><m>8.01</m></p></answer></exercise>
 </subsection>
 
@@ -320,7 +319,9 @@ We can evaluate this expression on the calculator by entering</p>
 	</ol>
 To answer the first question, we evaluate the function <m>P(t)</m> at the appropriate value. To answer the second question, we must solve an exponential equation, and this usually involves logarithms.</p>
 
-<example xml:id="example-tractor-depreciates"><statement><p>The value of a large tractor originally worth <dollar/><m>30,000</m> depreciates exponentially according to the formula <me>V(t) = 30,000(10)^{-0.04t}</me>, where <m>t</m> is in years. When will the tractor be worth half its original value?</p></statement>
+<example xml:id="example-tractor-depreciates"><statement><p>The value of a large tractor originally worth <dollar/><m>30,000</m> depreciates exponentially according to the formula 
+<me>V(t) = 30,000(10)^{-0.04t}</me> 
+where <m>t</m> is in years. When will the tractor be worth half its original value?</p></statement>
 
 <solution><p>We want to find the value of <m>t</m> for which <m>V(t) = 15,000</m>. That is, we want to solve the equation
 	<me>15,000 = 30,000(10)^{-0.04t}</me>
@@ -335,7 +336,9 @@ To evaluate this expression, we key in</p>
 <p>to find <m>t \approx 7.525749892</m>. The tractor will be worth <dollar/>15,000 in approximately <m>7\frac{1}{2}</m> years.</p>
 </solution></example>
 
-<exercise xml:id="exercise-home-computers"><statement><p>The percentage of American homes with computers grew exponentially from 1994 to 1999. For <m>t = 0</m> in 1994, the growth law was <me>P(t) = 25.85(10)^{0.052t}</me>. [Source: Los Angeles Times, August 20, 1999]<ol label="a">
+<exercise xml:id="exercise-home-computers"><statement><p>The percentage of American homes with computers grew exponentially from 1994 to 1999. For <m>t = 0</m> in 1994, the growth law was 
+<me>P(t) = 25.85(10)^{0.052t}</me> 
+[Source: Los Angeles Times, August 20, 1999]<ol label="a">
 	<li><p>What percent of American homes had computers in 1994?</p></li>
 	<li><p>If the percentage of homes with computers continued to grow at the same rate, when did <m>90</m><percent/> of American homes have a computer?</p></li>
 	<li><p>Do you think that the function <m>P(t)</m> will continue to model the percentage of American homes with computers? Why or why not?</p></li>

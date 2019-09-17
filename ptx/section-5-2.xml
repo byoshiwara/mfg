@@ -26,27 +26,27 @@ We have shown that the two functions <m>f(x) = x^3</m> and <m>g(x) = \sqrt[3]{x}
 </assemblage>
 
 <p>For example, the function <m>g(x) = \log_2 x</m> is the inverse of <m>f(x) = 2^x</m>. Each function undoes the effect of the other. So, if we start with <m>x = 3</m>, apply <m>f</m>, and then apply <m>g</m> to the result, we return to the original number, 3.
-	<me>x=\alert{3}\mathrel{\mathop{\rightarrow}^{\text{Apply the}}_{\text{exponential function}}}
+	<me>x=\alert{3}\mathrel{\mathop{\rightarrow}^{\blert{\text{Apply the}}}_{\blert{\text{exponential function}}}}
 		 f(\alert{3})=2^{\alert{3}}=8		
-		\mathrel{\mathop{\rightarrow}^{\text{Apply the}}_{\text{log function}}}
+		\mathrel{\mathop{\rightarrow}^{\blert{\text{Apply the}}}_{\blert{\text{log function}}}}
 		 g(8)=\log_2 8 = 
-		\mathrel{\mathop{\alert{3}}^{\text{Original}}_{\text{number}}}</me>
+		\mathrel{\mathop{\alert{3}}^{\blert{\text{Original}}}_{\blert{\text{number}}}}</me>
 We can write both calculations together as
 	<me>\log_{2}\left(2^\alert{3}\right) = \alert{3}</me>
 A similar equation holds for any value of <m>x</m> and for any base <m>b \gt 0</m>. In other words, applying first the exponential function and then the log function returns the original input value, so that
 	<me>\blert{\log_{b}{b^x} = x}</me></p>
 
-<example xml:id="example-log-of-exp"><statement><p>Simplify each expression.<ol label="a">
+<example xml:id="example-log-of-exp"><statement><p>Simplify each expression.<ol label="a" cols="2">
 		<li><m>\log_{4}{4^6}</m></li>
 		<li><m>\log_{8}{8^{2a+3}}</m></li>
 	</ol></p></statement>
 <solution><p><ol label="a">
 	<li><p>In this expression, we start with <m>6</m>, apply the exponential function with base <m>4</m>, and then take a logarithm base <m>4</m>. Because the logarithm is the inverse of the exponential function, we return to the original number, <m>6</m>.
-		<me>x=\alert{6}\mathrel{\mathop{\rightarrow}^{\text{Apply the}}_{\text{exponential function}}}
+		<me>x=\alert{6}\mathrel{\mathop{\rightarrow}^{\blert{\text{Apply the}}}_{\blert{\text{exponential function}}}}
 				 4^{\alert{6}}		
-				\mathrel{\mathop{\rightarrow}^{\text{Apply the}}_{\text{log function}}}
+				\mathrel{\mathop{\rightarrow}^{\blert{\text{Apply the}}}_{\blert{\text{log function}}}}
 				\log_{4}\left(4^{\alert{6}}\right) = 
-				\mathrel{\mathop{\alert{6}}^{\text{Original}}_{\text{number}}}</me></p></li>
+				\mathrel{\mathop{\alert{6}}^{\blert{\text{Original}}}_{\blert{\text{number}}}}</me></p></li>
 	<li><p>The input of the exponential function is the expression <m>2a + 3</m>. Because the bases of the log and the exponential function are both <m>8</m>, they are inverse functions, and applying them in succession returns us to the original input. Thus, <m>\log_{8}{8^{2a+3}} = 2a + 3</m>.</p></li>
 	</ol></p></solution></example>
 
@@ -62,11 +62,11 @@ A similar equation holds for any value of <m>x</m> and for any base <m>b \gt 0</
 <p>We can also apply the two functions in the opposite order. For example,
 	<me>2^{\log_2 \alert{8} }= \alert{8}</me>
 To see that this equation is true, we simplify the exponent first. We start with <m>8</m>, and apply the log base <m>2</m> function. Because <m>\log_2 8 = 3</m>, we have
-	<me>\alert{8}\mathrel{\mathop{\rightarrow}^{\text{Apply the}}_{\text{log function}}}
+	<me>\alert{8}\mathrel{\mathop{\rightarrow}^{\blert{\text{Apply the}}}_{\blert{\text{log function}}}}
 		 \log_{2}{\alert{8}}=3		
-		\mathrel{\mathop{\rightarrow}^{\text{Apply the}}_{\text{exponential function}}}
+		\mathrel{\mathop{\rightarrow}^{\blert{\text{Apply the}}}_{\blert{\text{exponential function}}}}
 		 2^{\log_2 \alert{8} }= 
-		\mathrel{\mathop{\alert{8}}^{\text{Original}}_{\text{number}}}</me>
+		\mathrel{\mathop{\alert{8}}^{\blert{\text{Original}}}_{\blert{\text{number}}}}</me>
 Of course, a similar equation holds for any positive value of <m>x</m> and any base <m>b \gt 0, b\ne 1</m>:
 	<me>\blert{b^{\log_b x} = x}</me></p>
 
@@ -79,7 +79,7 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 		<li>The log function, <m>\log_{Q}{x}</m>, and the exponential function, <m>Q^x</m>, are inverse functions, so <me>Q^{\log_{Q}{25}} = 25</me></li>
 	</ol></p></solution></example>
 
-<exercise xml:id="exercise-exp-of-log"><statement><p>Simplify each expression.<ol label="a">
+<exercise xml:id="exercise-exp-of-log"><statement><p>Simplify each expression.<ol label="a" cols="2">
 			<li><m>4^{\log_4 {64}}</m></li>
 			<li><m>2^{\log_{2}{(x^2+1)}}</m></li>
 	</ol></p></statement>
@@ -96,8 +96,8 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 
 <subsection><title>Graphs of Logarithmic Functions</title>
 
-<p>We can obtain a table of values for <m>g(x) = \log_2 x</m> by making a table for <m>f(x) = 2^x</m> and then interchanging the columns, as shown in <xref ref="table-base-2-exp">Tables</xref> and <xref ref="table-base-2-log" text="global"/>. You can see that the graphs of <m>f(x) = 2^x</m> and <m>g(x) = \log_2 x</m>, shown in <xref ref="fig-log-and-exp-on-same-grid" text="type-global"/>, are symmetric about the line <m>y = x</m>.</p>
-	<sidebyside widths="33% 33% 28%"><table xml:id="table-base-2-exp"><caption></caption><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+<p>We can obtain a table of values for <m>g(x) = \log_2 x</m> by making a table for <m>f(x) = 2^x</m> and then interchanging the columns, as shown in the tables below. You can see that the graphs of <m>f(x) = 2^x</m> and <m>g(x) = \log_2 x</m>, shown in the figre, are symmetric about the line <m>y = x</m>.</p>
+	<sidebyside widths="20% 20% 32%" margins="10% 10%" valigns="middle middle middle"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
             <cell><m>x</m></cell>
             <cell><m>f(x)=2^x</m></cell></row>
@@ -116,9 +116,9 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
         <row>
             <cell><m>2</m></cell>
             <cell><m>4</m></cell></row>
-    </tabular></table>
+    </tabular>
 
-	<table xml:id="table-base-2-log"><caption></caption><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+	<tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
             <cell><m>x</m></cell>
             <cell><m>g(x)=\log_{2}{x}</m></cell></row>
@@ -137,13 +137,13 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
         <row>
             <cell><m>4</m></cell>
             <cell><m>2</m></cell></row>
-   </tabular></table>
-	<figure xml:id="fig-log-and-exp-on-same-grid"><caption></caption><image source="images/fig-log-and-exp-on-same-grid"><description>graph of log and exponential base 2</description></image></figure></sidebyside>
+   </tabular>
+	<image source="images/fig-log-and-exp-on-same-grid"><description>graph of log and exponential base 2</description></image>
+</sidebyside>
 
 <example xml:id="example-log10-and-exp"><statement><p>Graph the function <m>f(x)=10^x</m> and its inverse <m>g(x)=\log_{10}{x}</m> on the same axes.</p></statement>
-
 <solution><p>We start by making a table of values for the function <m>f(x)=10^x</m>. We can make a table of values for the inverse function, <m>g(x) = \log_{10}{x}</m>, by interchanging the components of each ordered pair in the table for <m>f</m>.</p>
-	<sidebyside widths="25% 25% 35%" valigns="middle middle middle">
+	<sidebyside widths="25% 25% 50%" valigns="middle middle middle">
 	<tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
             <cell><m>x</m></cell>
@@ -184,15 +184,15 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
             <cell><m>100</m></cell>
             <cell><m>2</m></cell></row>
     </tabular>
-	<figure xml:id="fig-log10-and-exp-on-same-grid"><caption></caption><image source="images/fig-log10-and-exp-on-same-grid"><description>graph of common log and exponential</description></image></figure>
-</sidebyside><p>We plot each set of points and connect them with smooth curves to obtain the graphs shown in <xref ref="fig-log10-and-exp-on-same-grid" text="type-global"/>.</p>
+	<image source="images/fig-log10-and-exp-on-same-grid"><description>graph of common log and exponential</description></image>
+</sidebyside><p>We plot each set of points and connect them with smooth curves to obtain the graphs shown above.</p>
 </solution></example>
 
 <exercise xml:id="exercise-log-base-4"><statement><p>Make a table of values and graph the function <m>h(x) = \log_4 x</m>.</p>
 </statement>
 <answer><sidebyside width="30%"><image source="images/fig-in-ex-ans-5-2-3"><description>log</description></image></sidebyside></answer></exercise>
 
-<p>While an exponential growth function increases very rapidly for positive values, its inverse, the logarithmic function, grows extremely slowly, as you can see in <xref ref="fig-log10-and-exp-on-same-grid" text="type-global"/>. In addition, the logarithmic function <m>y = \log_b x</m> for any base <m>b \gt 0, b \ne 1</m>, has the following properties.</p>
+<p>While an exponential growth function increases very rapidly for positive values, its inverse, the logarithmic function, grows extremely slowly, as you can see in <xref ref="example-log10-and-exp"/>. In addition, the logarithmic function <m>y = \log_b x</m> for any base <m>b \gt 0, b \ne 1</m>, has the following properties.</p>
 
 <xi:include href="./assemblage-logarithmic-functions-base-b.xml" />
 
@@ -209,8 +209,8 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 			x \amp = 3 + \log_{2}{(y + 4)}
 			\end{align*}
 			The inverse function is <m>f^{-1}(y) = 3 + \log_{2}{(y + 4)}</m>. However, to graph both <m>f</m> and <m>f^{-1}</m> on the same grid, we write the inverse function as <m>f^{-1}(x) = 3 + \log_{2}{(x + 4)}</m>.</p></li>
-		<li><p>To graph <m>f</m>, we translate the graph of <m>y = 2^x</m> by <m>3</m> units to the right and <m>4</m> units down. The graph of <m>f^{-1}</m> looks like the graph of <m>y = \log_2 x</m> shown in <xref ref="fig-log-and-exp-on-same-grid" text="type-global"/>, but shifted <m>4</m> units to the left and <m>3</m> units up. The graphs are shown in <xref ref="fig-invert-translated-exponential" text="type-global"/>, along with the line <m>y = x</m>.</p>
-			<figure xml:id="fig-invert-translated-exponential"><caption></caption><image source="images/fig-invert-translated-exponential"  width="50%"><description>graph of translated exponential and inverse</description></image></figure></li>
+		<li><p>To graph <m>f</m>, we translate the graph of <m>y = 2^x</m> by <m>3</m> units to the right and <m>4</m> units down. The graph of <m>f^{-1}</m> looks like the graph of <m>y = \log_2 x</m>, but shifted <m>4</m> units to the left and <m>3</m> units up. The graphs are shown below, along with the line <m>y = x</m>.</p>
+			<sidebyside  width="60%"><image source="images/fig-invert-translated-exponential" ><description>graph of translated exponential and inverse</description></image></sidebyside></li>
 		<li><p>The function <m>f</m> is a translation of an exponential function, and its domain consists of all real numbers. Because the graph is shifted <m>4</m> units down, the range of <m>f</m> is <m>(-4,\infty)</m>. Because the log of a negative number or zero is undefined, for <m>f^{-1}(x) = 3 + \log_{2}{(x + 4)}</m>, we must have <m>x + 4 \gt 0</m>, or <m>x \gt -4</m>. We can verify on the graph that the range of <m>f^{-1}</m> includes all real numbers. Thus,
 			\begin{align*}
 			\amp\text{Domain}(f) = \text{all real numbers} = \text{Range}(f^{-1})\\
