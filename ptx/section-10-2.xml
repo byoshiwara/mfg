@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- <mathbook><book> -->
+
+<section xml:id="Properties-of-Lines"   xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Distance and Midpoint</title>
+                
+<subsection><title>Computing Distances in the Coordinate Plane</title>   
+                   
+<p>Many airplanes carry an inertial navigational system (INS), which computes the airplane's current position relative to its starting point. Suppose that Francine left Oldfield Airport in her light plane and is now 253 miles east and 124 miles north of the airport. She knows that Preston Airport is 187 miles east and 201 miles south of Oldfield Airport.  Which airport is closer to Francine's present location?</p>
+<p>We can sketch the situation on the <m>xy</m>-plane. If we place Oldfield Airport at the origin, then Francine is located at the point <m>F(253,124)</m>, and Preston Airport is at <m>P(187-201)</m>, as shown in Figure a.</p>
+<image source="images/fig-10-2-airport.png" width="80%"><description>grid</description></image>
+
+<p>The <term>distance</term> <m>OF</m> from Francine to Oldfield Airport is the hypotenuse of a right triangle whose base is 253 miles and whose height is 124 miles. (See Figure b.) If we apply the Pythagorean theorem to this triangle, we find
+	<me>\begin{aligned}
+                (OF)^2 \amp = 253^2+124^2\\
+                		\amp = 79,835\\
+                 	OF	\amp = \sqrt{79,835} \approx 281.7                
+                \end{aligned}</me>
+
+Francine is approximately 282 miles from Oldfield Airport.</p>  
+
+<sidebyside widths="55% 45%"><p>The distance <m>FP</m> from Francine to Preston Airport is the hypotenuse of another right triangle, as shown at right.  To find the base of this triangle we compute the difference in the <m>x</m>-coordinates of points <m>P</m> and <m>F</m>:
+	<me>253-187=66</me>
+so the base is 66 miles long. To find the height of the triangle we compute the difference in the <m>y</m>-coordinates: 
+	<me>124-(-201)=325</me></p>
+<image source="images/fig-10-2-airport2.png" width="80%"><description>grid</description></image></sidebyside>
+
+<p>so the height is 325 miles.  Applying the Pythagorean theorem again gives us 
+	<me>\begin{aligned}
+                (FP)^2 \amp = 66^2+325^2\\
+                		\amp = 109,981\\
+                 	OF	\amp = \sqrt{109,981} \approx 331.6                
+                \end{aligned}</me>
+
+Francine is about 332 miles from Preston Airport. At the moment, she is closer to Oldfield Airport.</p>
+</subsection>
+
+<subsection><title>The Distance Formula</title>
+<p>By using the Pythagorean theorem, we can derive a formula for the distance between two points, <m>P_1</m> and <m>P_2</m>, in terms of their coordinates. We first label a right triangle, as we did in the exmple above.
+<ul>
+	<li>Draw a horizontal line through <m>P_1</m> and a vertical line through <m>P_2</m>.</li> 
+	<li>These lines meet at a point <m>P_3</m>, as shown below. (Two possibilities are shown.)</li>  
+	<li>The <m>x</m>-coordinate of <m>P_3</m> is the same as the <m>x</m>-coordinate of <m>P_2</m>, and the <m>y</m>-coordinate of <m>P_3</m> is the same as the <m>y</m>-coordinate of <m>P_1</m>.</li>
+	<li>Thus, the coordinates of <m>P_3</m> are <m>(x_2,y_1)</m>.</li></ul></p>
+<image source="images/fig-10-2-distance.png" width="70%"><description>triangles</description></image>	
+
+<p>	The distance between <m>P_1</m> and <m>P_3</m> is <m>\abs{x_2-x_1}</m>, and the distance between <m>P_2</m> and <m>P_3</m> is <m>\abs{y_2-y_1}</m>. These two numbers are the lengths of the legs of the right triangle.  The length of the hypotenuse is the distance between <m>P_1</m> and <m>P_2</m>, which we'll call <m>d</m>. By the Pythagorean theorem,
+	<me>d^2=(x_2-x_1)^2+(y_2-y_1)^2</me>
+Taking the (positive) square root of each side of this equation gives us the <term>distance formula</term>.</p>
+
+<assemblage><title>Distance Formula</title>
+<p>The <term>distance</term> <m>d</m> between points <m>P_1(x_1,y_1)</m> and <m>P_2(x_2,y_2)</m> is
+		<me>\blert{d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}}</me></p></assemblage>
+
+<example><statement><p>Find the distance between <m>(2,-1)</m> and <m>(4,3)</m>.</p></statement>
+
+<solution><p>Substitute <m>(2,-1)</m> for <m>(x_1,y_1)</m> and <m>(4,3)</m> for <m>(x_2,y_2)</m> in the distance formula to obtain
+	<me>\begin{aligned}
+                d \amp = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\\
+                	\amp = \sqrt{(4-2)^2+[3-(-1)]^2}\\
+                 	\amp = \sqrt{4+16} =\sqrt{20} \approx 4.47                
+                \end{aligned}</me></p></solution></example>
+
+<note><p>In Example 1 we obtain the same answer if we use <m>(4,3)</m> for <m>P_1</m> and <m>(2,-1)</m> for <m>P_2</m>:
+	<me>\begin{aligned}
+                d \amp = \sqrt{(2-4)^2+[(-1)-3]^2}\\
+                 	\amp = \sqrt{4+16} =\sqrt{20}                
+                \end{aligned}</me></p></note>
+
+<exercise><statement><p><ol label="a">
+	<li>Find the distance between the points <m>(-5,3)</m> and <m>(3,-9)</m>.</li>
+	<li>Plot the points, and illustrate how the Pythagorean theorem is used in calculating the distance.</li>
+</ol></p></statement>
+<answer><p><ol label="a">
+	<li><m>\sqrt{208}</m></li>
+	<li><image source="images/fig-10-2-ex1bans.png" width="70%" valign="middle"><description>triangle</description></image></li>
+</ol></p></answer></exercise>
+</subsection>
+
+<subsection><title>Finding the Midpoint</title>
+<p>Suppose that Francine flies from her present position at <m>(253,124)</m> towards Preston Airport at <m>(187,-201)</m>. What are her coordinates when she is halfway to Preston?</p>
+
+<image source="images/fig-10-2-midpoint.png" width="80%" valign="middle"><description>triangle</description></image>
+
+<p>When she is halfway to Preston, Francine will be at the center of the rectangle shown in Figure a. The <m>x</m>-coordinate of the center is the average of the <m>x</m>-coordinates at the left and right sides, or   
+	<me>x_m=\dfrac{187+253}{2}=220</me>
+Similarly, the <m>y</m>-coordinate of the center is the average of the <m>y</m>-coordinates at the bottom and the top: 
+	<me>y_m=\dfrac{-201+124}{2}=-38.5</me>   
+Francine will be 220 miles east and 38.5 miles south of Oldfield when she is half-way to Preston.</p>
+</subsection>
+
+<subsection><title>The Midpoint Formula</title>
+<p>If we know the coordinates of two points, we can calculate the coordinates of the point halfway between them using the <term>midpoint</term> formula. Each coordinate of the midpoint is the average of the corresponding coordinates of the two points.</p>
+
+<assemblage><title>Midpoint Formula</title>
+<p>The <term>midpoint</term> of the line segment joining the points <m>P_1(x_1,y_1)</m> and <m>P_2(x_2,y_2)</m>   is the point <m>M(\overline{x},\overline{y})</m>, where
+	<me>\blert{\overline{x}=\dfrac{x_1+x_2}{2}}~~~~\text{and}~~~~\blert{\overline{y}=\dfrac{y_1+y_2}{2}}</me></p>
+</assemblage>
+
+<example><statement><p>Find the midpoint of the line segment joining the points <m>(-2,1)</m> and <m>(4,3)</m>.</p></statement>
+
+<solution><p>We substitute <m>(-2,1)</m> for <m>(x_1,y_1)</m> and <m>(4,3)</m> for <m>(x_2,y_2)</m> in the midpoint formula to obtain 
+	<md><mrow>\overline{x}=\dfrac{x_1+x_2}{2}=\dfrac{-2+4}{2}=1</mrow>
+		<mrow>\overline{y}=\dfrac{y_1+y_2}{2}=\dfrac{1+3}{2}=2</mrow></md>
+The midpoint of the segment is the point <m>(\overline{x},\overline{y})=(1,2)</m>.</p></solution></example>
+
+<exercise><statement><p><ol label="a">
+	<li>Find the midpoint of the line joining the points <m>(-5,3)</m> and <m>(3,-9)</m>.</li>
+	<li>Plot the points and draw a rectangle with the points as opposite vertices. Illustrate that the midpoint is the center of the rectangle.</li>
+</ol></p></statement>
+
+<answer><p><ol label="a">
+	<li><m>(-1,-3)</m></li>
+	<li><image source="images/fig-10-2-ex2bans.png" width="70%" valign="middle"><description>rectangle</description></image></li>
+</ol></p></answer></exercise>
+</subsection>
+
+<subsection><title>Circles</title>
+<p>A <term>circle</term> is the set of all points in a plane that lie at a given distance, called the <term>radius</term>, from a fixed point called the <term>center</term>. We can use the distance formula to find an equation for a circle.</p> 
+<sidebyside widths="60% 35%"><p>First consider the circle at right, whose center is the origin, <m>(0,0)</m>.The distance from the origin to any point <m>P(x,y)</m> on the circle is <m>r</m>. Therefore, 
+	<me>\sqrt{(x-0)^2+(y-0)^2}=r</me>
+or, squaring both sides,
+	<me>(x-0)^2+(y-0)^2=r^2</me></p>
+ 
+<image source="images/fig-10-2-circle1.png"><description>circle</description></image></sidebyside>
+
+<p>Thus, the equation for a circle of radius <m>r</m> centered at the origin is
+ 	<me>\blert{x^2+y^2=r^2}</me></p>
+
+<sidebyside widths="55% 35%"><p>Now consider the circle at right, whose center is the point <m>(h,k)</m>.  Every point <m>P(x,y)</m> on the circle lies a distance <m>r</m> from <m>(h,k)</m>, so the equation of the circle is given by the following formula.</p>
+
+<image source="images/fig-10-2-circle2.png"><description>circle</description></image></sidebyside>
+
+<assemblage><title>Standard Form for a Circle</title>
+<p>The equation for a <term>circle</term> of radius <m>r</m> centered at the point <m>(k,k)</m> is
+	<me>\blert{(x-h)^2+(y-k)^2=r^2}</me></p></assemblage>
+
+<p>This equation is the standard form for a circle of radius <m>r</m> with center at <m>(h,k)</m>. It is easy to graph a circle if its equation is given in standard form.</p>
+
+<example><statement><p>Graph the circles.</p><p><ol label="a" cols="2">
+	<li><m>(x-2)^2+(y+3)^2=16</m></li>
+	<li><m>x^2+(y-4)^2=7</m></li></ol></p></statement>
+
+<solution><p><ol label="a">
+	<li><p>The graph of <m>(x-2)^2+(y+3)^2=16</m> is a circle with radius 4 and center at <m>(2,-3)</m>. To sketch the graph, we first locate the center of the circle. (The center is not part of the graph of the circle.) From the center, we move a distance of 4 units (the radius of the circle) in each of four directions:  up, down, left, and right. This locates four points that lie on the circle: <m>(2,1),~(2,-7),~(-2,-3),</m> and <m>(6,-3)</m>.  We sketch the circle through these four points.</p> 
+
+	<image source="images/fig-10-2-exm3.png"><description>circles</description></image></li>
+
+	<li><p>The graph of <m>x^2+(y-4)^2=7</m> is a circle with radius <m>\sqrt{7}</m> and center at <m>(0,4)</m>.  From the center, we move approximately <m>\sqrt{7}</m>, or 2.6 units in each of the four coordinate directions to obtain the points <m>(0,6.6)~(0,1.4)~(-2.6,4),</m> and <m>(2.6,4)</m>. We sketch the circle through these four points.</p></li>
+</ol></p></solution></example>
+
+<exercise><statement><p><ol label="a">
+	<li><p>State the center and radius of the circle
+		<me>(x-3)^2+(y+2)^2=16</me></p></li>
+	<li>Graph the circle.</li></ol></p></statement>
+
+<answer><p><ol label="a">
+	<li><p>center <m>(-3,-2)</m>, radius 4</p></li>
+	<li><image source="images/fig-10-2-ex3ans.png" width="30%"><description>circles</description></image></li>
+</ol></p></answer></exercise>
+</subsection>
+
+<subsection><title>General Form for Circles</title>
+<p>The equations of circles often appear in a general quadratic form, rather than the standard form described above.  For example, we can expand the squares of binomials in Example 3a,
+	<me>(x-2)^2+(y+3)^2=16</me>
+to obtain
+	<me>x^2-4x+4+y^2+6y+9=16</me>
+or
+	<me>x^2+y^2-4x+6y-3=0</me>
+This is a quadratic equation in two variables. Such an equation describes a circle if the coefficients of the quadratic, or squared, terms are equal.</p>  
+
+<p>Conversely, an equation of the form      
+	<me>x^2+y^2+ax+by+c=0</me>
+can be converted to standard form by completing the square in both variables.  Once this is done, the center and radius of the circle can be determined directly from the equation.</p>
+
+<example><statement><p>Write the equation of the circle
+	<me>x^2+y^2+8x-2y+6=0</me>
+in standard form, and graph the equation.</p></statement>
+
+<solution><p>We prepare to complete the square in both variables by writing the equation as
+	<me>(x^2+8x+<fillin characters="6"/>)+(y^2-2y+<fillin characters="6"/>)=-6</me>
+We complete the square in <m>x</m> by adding 16 to each side of the equation, and complete thesquare in <m>y</m> by adding 1 to each side, to get
+	<me>(x^2+8x+\alert{16})+(y^2-2y+\alert{1})=-6+\alert{16}+\alert{1}</me>
+from which we obtain the standard form,
+	<me>(x+4)^2+(y-1)^2=11</me>
+Thus, the circle has its center at <m>(-4,1)</m>, and its radius is <m>\sqrt{11}</m>, or approximately 3.3.  The graph is shown below.
+
+<image source="images/fig-10-2-exm4.png" width="50%"><description>circle</description></image></p></solution>
+</example>
+
+<exercise><statement><p>Write the equation of the circle
+	<me>x^2+y^2-14x+4y+25=0</me>
+in standard form.</p></statement>
+
+<answer><p><m>(x-7)^2+(y+2)^2=28</m></p></answer></exercise>
+
+<p>We can write an equation for any circle if we can find its center and radius.</p>
+
+<example><statement><p>Find an equation for the circle whose diameter has endpoints <m>(7,5)</m> and <m>(1,-1)</m>.</p></statement> 
+
+<solution><sidebyside widths="60% 35%"><p>The center of the circle is the midpoint of its diameter.  We use the midpoint formula to find the center:
+		<md><mrow>h=\overline{x}=\dfrac{7+1}{2}=4</mrow>
+			<mrow>k=\overline{y}=\dfrac{5-1}{2}=2</mrow></md>
+Thus, the center is the point <m>(h,k)=(4,2)</m>.  </p> 
+<image source="images/fig-10-2-exm5.png"><description>circle</description></image></sidebyside>
+
+<p>The radius is the distance from the center to either of the endpoints of the diameter, say the point <m>(7,5)</m>. We use the distance formula with the points <m>(7,5)</m> and <m>(4,2)</m> to find the radius.
+	<me>\begin{aligned}
+                r \amp = \sqrt{(7-4)^2+(5-2)^2}\\
+                \amp = \sqrt{3^2+3^2}=\sqrt{18}   
+                \end{aligned}</me> 
+Finally, we substitute 4 for<m>h</m> and 2 for <m>k</m> (the coordinates of the center) and <m>\sqrt{18}</m> for <m>r</m> (the radius) into the standard form 
+	<me>(x-h)^2+(y-k)^2=r^2</me>
+to obtain 
+	<me>(x-4)^2+(y-2)^2=18</me></p></solution></example>
+
+</subsection>
+</section>

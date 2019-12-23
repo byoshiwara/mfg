@@ -15,8 +15,8 @@ We have shown that the two functions <m>f(x) = x^3</m> and <m>g(x) = \sqrt[3]{x}
 <p>In <xref ref="chap4" text="type-global"/>, we saw that a similar rule relates the operations of raising a base <m>b</m> to a power and taking a base <m>b</m> logarithm, because they are inverse operations.</p>
 
 <assemblage><title>Conversion Formulas for Logarithms</title>
-	<p>For any base <m>b \gt 0, b\ne 1</m>,
-		<me>y = \log_{b}{x} ~~~~\text{ if and only if }~~~~ x = b^y</me></p>
+    <p>For any base <m>b \gt 0, b\ne 1</m>,
+        <me>\blert{y = \log_{b}{x}} ~~~~\text{ if and only if }~~~~ \blert{x = b^y}</me></p>
 </assemblage>
 
 <p>We can now define the <term>logarithmic function</term>, <m>g(x) = \log_{b}{x}</m>, that takes the log base <m>b</m> of its input values. The conversion formulas tell us that the log function, <m>g(x) = \log_{b}{x}</m>, is the inverse of the exponential function, <m>f(x) = b^x</m>.</p>
@@ -32,7 +32,7 @@ We have shown that the two functions <m>f(x) = x^3</m> and <m>g(x) = \sqrt[3]{x}
 		 g(8)=\log_2 8 = 
 		\mathrel{\mathop{\alert{3}}^{\blert{\text{Original}}}_{\blert{\text{number}}}}</me>
 We can write both calculations together as
-	<me>\log_{2}\left(2^\alert{3}\right) = \alert{3}</me>
+	<me>\log_{2}\left(2^{\alert{3}}\right) = \alert{3}</me>
 A similar equation holds for any value of <m>x</m> and for any base <m>b \gt 0</m>. In other words, applying first the exponential function and then the log function returns the original input value, so that
 	<me>\blert{\log_{b}{b^x} = x}</me></p>
 
@@ -50,7 +50,7 @@ A similar equation holds for any value of <m>x</m> and for any base <m>b \gt 0</
 	<li><p>The input of the exponential function is the expression <m>2a + 3</m>. Because the bases of the log and the exponential function are both <m>8</m>, they are inverse functions, and applying them in succession returns us to the original input. Thus, <m>\log_{8}{8^{2a+3}} = 2a + 3</m>.</p></li>
 	</ol></p></solution></example>
 
-<exercise xml:id="exercise-log-of-exponential"><statement><p>Simplify each expression.<ol label="a">
+<exercise><statement><p>Simplify each expression.<ol label="a">
 		<li><m>\log_{10}{10^6}</m></li>
 		<li><m>\log_{w}{w^{x+1}},~~</m> for <m>~~~~w \gt 0, ~~w\ne 1</m></li>
 	</ol></p></statement>
@@ -79,7 +79,7 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 		<li>The log function, <m>\log_{Q}{x}</m>, and the exponential function, <m>Q^x</m>, are inverse functions, so <me>Q^{\log_{Q}{25}} = 25</me></li>
 	</ol></p></solution></example>
 
-<exercise xml:id="exercise-exp-of-log"><statement><p>Simplify each expression.<ol label="a" cols="2">
+<exercise><statement><p>Simplify each expression.<ol label="a" cols="2">
 			<li><m>4^{\log_4 {64}}</m></li>
 			<li><m>2^{\log_{2}{(x^2+1)}}</m></li>
 	</ol></p></statement>
@@ -188,7 +188,7 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 </sidebyside><p>We plot each set of points and connect them with smooth curves to obtain the graphs shown above.</p>
 </solution></example>
 
-<exercise xml:id="exercise-log-base-4"><statement><p>Make a table of values and graph the function <m>h(x) = \log_4 x</m>.</p>
+<exercise><statement><p>Make a table of values and graph the function <m>h(x) = \log_4 x</m>.</p>
 </statement>
 <answer><sidebyside width="30%"><image source="images/fig-in-ex-ans-5-2-3"><description>log</description></image></sidebyside></answer></exercise>
 
@@ -203,28 +203,28 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 	</ol></p></statement>
 <solution><p><ol label="a">
 		<li><p>We write the function as <m>y = 2^{x-3} - 4</m>, and solve for <m>x</m> in terms of <m>y</m>. First, we isolate the power:
-			\begin{align*}
+			<!--*****--><me>\begin{aligned}[t]
 			y + 4 \amp= 2^{x-3}\amp\amp \blert{\text{Take logs base 2.}}\\
 			\log_{2}{(y + 4)} \amp= \log_{2}{2}^{x-3}  = x - 3\\
 			x \amp = 3 + \log_{2}{(y + 4)}
-			\end{align*}
+			\end{aligned}</me><!--*****-->
 			The inverse function is <m>f^{-1}(y) = 3 + \log_{2}{(y + 4)}</m>. However, to graph both <m>f</m> and <m>f^{-1}</m> on the same grid, we write the inverse function as <m>f^{-1}(x) = 3 + \log_{2}{(x + 4)}</m>.</p></li>
 		<li><p>To graph <m>f</m>, we translate the graph of <m>y = 2^x</m> by <m>3</m> units to the right and <m>4</m> units down. The graph of <m>f^{-1}</m> looks like the graph of <m>y = \log_2 x</m>, but shifted <m>4</m> units to the left and <m>3</m> units up. The graphs are shown below, along with the line <m>y = x</m>.</p>
 			<sidebyside  width="60%"><image source="images/fig-invert-translated-exponential" ><description>graph of translated exponential and inverse</description></image></sidebyside></li>
 		<li><p>The function <m>f</m> is a translation of an exponential function, and its domain consists of all real numbers. Because the graph is shifted <m>4</m> units down, the range of <m>f</m> is <m>(-4,\infty)</m>. Because the log of a negative number or zero is undefined, for <m>f^{-1}(x) = 3 + \log_{2}{(x + 4)}</m>, we must have <m>x + 4 \gt 0</m>, or <m>x \gt -4</m>. We can verify on the graph that the range of <m>f^{-1}</m> includes all real numbers. Thus,
-			\begin{align*}
+			<!--*****--><me>\begin{aligned}[t]
 			\amp\text{Domain}(f) = \text{all real numbers} = \text{Range}(f^{-1})\\
 			\amp\text{Range}(f) = (-4,\infty) = \text{Domain} (f^{-1})
-			\end{align*}</p></li>
+			\end{aligned}</me><!--*****--></p></li>
 	</ol></p></solution></example>
 
-<exercise xml:id="exercise-invert-translated-log"><statement><ol label="a">
+<exercise><statement><ol label="a">
 		<li>Find the inverse function for <m>f(x) = 2 \log(x + 1)</m>.</li>
 		<li>Graph <m>f</m> and <m>f^{-1}</m> in the window
-			\begin{align}
+			<me>\begin{aligned}[t]
 	        \text{Xmin} \amp = -6 \amp\amp \text{Xmax} = 6\\
 	        \text{Ymin} \amp = -4 \amp\amp \text{Ymax} = 4
-	        \end{align}</li>
+	        \end{aligned}</me></li>
 	    <li>State the domain and range of <m>f</m> and <m>f^{-1}</m>.</li>
 	</ol></statement>
 <answer><p><ol label="a">
@@ -250,7 +250,7 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 		<li><m>2 f(16) + 1 = 2(\log_{10}{16}) + 1\approx2(1.204) + 1 = 3.408</m></li>
 	</ol></p></solution></example>
 
-<exercise xml:id="exercise-tumor-doubling-time"><statement><p>The formula <m>T = \dfrac{\log 2 \cdot t_i}{3 \log(D_f /D_0)}</m> is used by X-ray technicians to calculate the doubling time of a malignant tumor. <m>D_0</m> is the diameter of the tumor when first detected, <m>D_f</m> is its diameter at the next reading, and <m>t_i</m> is the time interval between readings, in days. Calculate the doubling time of the following tumor: its diameter when first detected was <m>1</m> cm, and <m>7</m> days later its diameter was <m>1.05</m> cm.</p></statement>
+<exercise><statement><p>The formula <m>T = \dfrac{\log 2 \cdot t_i}{3 \log(D_f /D_0)}</m> is used by X-ray technicians to calculate the doubling time of a malignant tumor. <m>D_0</m> is the diameter of the tumor when first detected, <m>D_f</m> is its diameter at the next reading, and <m>t_i</m> is the time interval between readings, in days. Calculate the doubling time of the following tumor: its diameter when first detected was <m>1</m> cm, and <m>7</m> days later its diameter was <m>1.05</m> cm.</p></statement>
 <answer><p><m>33</m> days</p></answer></exercise>
 </subsection>
 
@@ -259,7 +259,7 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 <p>A <term>logarithmic equation</term><idx>logarithmic equation</idx> is one in which the variable appears inside of a logarithm. For example,
 	<me>\log_4 x = 3</me>
 is a log equation. To solve a log equation, remember that logarithms and exponentials with the same base are inverse functions. Therefore, 
-	<me>y = \log_b x ~~ \text{ if and only if } ~~ x = b^y</me> 
+        <me>\blert{y = \log_{b}{x}} ~~~~\text{ if and only if }~~~~ \blert{x = b^y}</me>
 Thus, we can rewrite a logarithmic equation in exponential form.</p>
 
 <example xml:id="example-log-equations"><statement><p>Solve for <m>x</m>.<ol label="a" cols="2">
@@ -268,17 +268,17 @@ Thus, we can rewrite a logarithmic equation in exponential form.</p>
 	</ol></p></statement>
 <solution><p><ol label="a">
 		<li><p>We isolate the logarithm, then rewrite the equation in exponential form:
-			\begin{align*}
+			<!--*****--><me>\begin{aligned}[t]
 			2(\log_3 x) \amp = 5\amp\amp \blert{\text{Divide both sides by 5.}}\\
 			\log_3 x \amp = \frac{5}{2}\amp\amp \blert{\text{Convert to exponential form.}}\\
 			x \amp = 3^{5/2}
-			\end{align*}</p></li>
+			\end{aligned}</me><!--*****--></p></li>
 		<li><p>First, we convert the equation to exponential form.
 			<me>2x + 100 = 10^3 = 1000</me>
 			Now we can solve for <m>x</m> to find <m>2x = 900</m>, or <m>x = 450</m>.</p></li>
 	</ol></p></solution></example>
 
-<exercise xml:id="exercise-log-equation"><statement><p>Solve for the unknown value in each equation.<ol label="a" cols="2">
+<exercise><statement><p>Solve for the unknown value in each equation.<ol label="a" cols="2">
 		<li><m>\log_b 2 = \dfrac{1}{2}</m></li>
 		<li><m>\log_{3}{(2x - 1)} = 4</m></li>
 	</ol></p></statement>
@@ -303,7 +303,7 @@ Thus, we can rewrite a logarithmic equation in exponential form.</p>
 	which gives the same answer as before.</p>
 </note>
 
-<exercise xml:id="exercise-common-log-equation"><statement><p>Imagine the graph of <m>f(x) = \log_{10}{x}</m>. How far must you travel along the <m>x</m>-axis until the <m>y</m>-coordinate reaches a height of <m>5.25</m>?</p></statement>
+<exercise><statement><p>Imagine the graph of <m>f(x) = \log_{10}{x}</m>. How far must you travel along the <m>x</m>-axis until the <m>y</m>-coordinate reaches a height of <m>5.25</m>?</p></statement>
 <answer><p><m>x = 177,827.941</m></p></answer></exercise>
 </subsection>
 
@@ -316,18 +316,18 @@ Thus, we can rewrite a logarithmic equation in exponential form.</p>
 Once the left-hand side is expressed as a single logarithm, we can rewrite the equation in exponential form as
 	<me>(x + 1)(x - 2) = 10^1</me>
 from which
-	\begin{align*}
+	<!--*****--><me>\begin{aligned}[t]
 	x^2 - x - 2 \amp = 10\amp\amp \blert{\text{Subtract 10 from both sides.}}\\
 	x^2 - x - 12 \amp = 0\amp\amp \blert{\text{Factor the left side.}}\\
 	(x - 4)(x + 3) \amp= 0\amp\amp \blert{\text{Apply the zero-factor principle.}}
-	\end{align*}
+	\end{aligned}</me><!--*****-->
 	Thus, <m>x = 4</m> or <m>x = -3</m>. The number <m>-3</m> is not a solution of the original equation, because neither <m>\log_{10}{(x + 1)}</m> nor <m>\log_{10}{(x - 2)}</m> is defined for <m>x = -3</m>. The solution of the original equation is <m>4</m>.</p></solution></example>
 
 <p>In <xref ref="example-solve-log-equation" text="type-global"/>, the apparent solution <m>x = -3</m> is called <term>extraneous</term><idx>extraneous</idx> because it does not solve the original equation. We should always check for extraneous solutions when solving log equations. The following steps give a rough outline for solving log equations.</p>
 
 <xi:include href="./assemblage-steps-for-solving-logarithmic-equations.xml" />
 
-<exercise xml:id="exercise-solve-log-equation"><statement><p>Solve <m>~~\log_2 x + \log_{2}{(x - 2)} = 3</m>.</p></statement>
+<exercise><statement><p>Solve <m>~~\log_2 x + \log_{2}{(x - 2)} = 3</m>.</p></statement>
 <hint>
 	<p>Rewrite the left side as a single logarithm.</p>
 	<p>Rewrite the equation in exponential form.</p>
@@ -435,7 +435,7 @@ where <m>P</m> is the principal invested, <m>r</m> is the interest rate, and <m>
 					<row left="none">
 						<cell  halign="left" colspan="2" right="none" bottom="none"><m>~~1000e^{0.15}= </m></cell></row>
 				</tabular></sidebyside></li>
-			<li><sidebyside><tabular left="minor" right="minor" top="minor" bottom="minor" halign="center"><col halign="right"/>
+			<li><sidebyside><tabular left="minor" right="minor" top="minor" bottom="minor" halign="center"><col halign="right"/><col/>
 					<row>
 						<cell  halign="center"  colspan="2"><m>r=1</m></cell></row>
 					<row>

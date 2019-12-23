@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<section xml:id="appendix-Working-with-Radicals"><title>Working with Radicals</title><introduction>
+<section xml:id="appendix-Working-with-Radicals" xmlns:xi="http://www.w3.org/2001/XInclude" ><title>Working with Radicals</title><introduction>
 <p>In some situations, radical notation is more convenient to use than exponents. In these cases, we usually simplify radical expressions algebraically as much as possible before using a calculator to obtain decimal approximations.</p></introduction>
 
 <subsection><title>Properties of Radicals</title>
@@ -104,12 +104,12 @@ Like radicals, that is, radicals of the same index and radicand, can be combined
 
 <example xml:id="example-like-radicals"><p><ol label="a">
         <li><p><m>
-                \begin{aligned}
+                \begin{aligned}[t]
                 3\sqrt{3}+4\sqrt{3} \amp = (3+4)\sqrt{3}\\
                 \amp = 7\sqrt{3}
                 \end{aligned}</m></p></li>
         <li><p><m>
-                \begin{aligned}
+                \begin{aligned}[t]
                 4\sqrt[3]{y}-6\sqrt[3]{y} \amp = (4-6)\sqrt[3]{y}\\
                 \amp = -2\sqrt[3]{y}
                 \end{aligned}</m></p></li>
@@ -142,12 +142,12 @@ Like radicals, that is, radicals of the same index and radicand, can be combined
 
 <example><p><ol label="a">
     <li><p><m>
-            \begin{aligned}
+            \begin{aligned}[t]
             \sqrt{3} \left(\sqrt{2x}+\sqrt{6} \right) \amp = \sqrt{3\cdot 2x}+ \sqrt{3\cdot 6}\\
             \amp = \sqrt{6x}+\sqrt{18}=\sqrt{6x}+3\sqrt{2}
             \end{aligned}</m></p></li>
     <li><p><m>
-            \begin{aligned}
+            \begin{aligned}[t]
             \left(\sqrt{x}-\sqrt{y} \right)\left(\sqrt{x}+\sqrt{y} \right) \amp = \sqrt{x^2}+\sqrt{xy}-\sqrt{xy}-\sqrt{y^2}\\
             \amp = x-y
             \end{aligned}</m></p></li>
@@ -164,7 +164,7 @@ Like radicals, that is, radicals of the same index and radicand, can be combined
         </ol></p></statement>
 <solution><p><ol label="a">
             <li><p>Apply Property (2) to write the radical as a quotient.</p><p><m>
-                    \begin{aligned}
+                    \begin{aligned}[t]
                     \sqrt{\frac{1}{3}}\amp = \frac{\sqrt{1}}{\sqrt{3}} \\
                     \amp =\frac{1}{\sqrt{3}}
                     \amp\amp\blert{\text{Multiply numerator and denominator by } \sqrt{3}.}\\
@@ -172,7 +172,7 @@ Like radicals, that is, radicals of the same index and radicand, can be combined
                     \amp = \frac{\sqrt{3}}{3}
                     \end{aligned}</m></p></li>
             <li><p>It is always best to simplify the denominator before rationalizing.</p><p><m>
-                    \begin{aligned}
+                    \begin{aligned}[t]
                     \frac{\sqrt{2}}{\sqrt{50x}}\amp = \frac{\sqrt{2}}{5\sqrt{2x}} 
                     \amp\amp\blert{\text{Multiply numerator and denominator by } \sqrt{2x}.}\\
                     \amp = \frac{\sqrt{2}\cdot \alert{\sqrt{2x}}}{5\sqrt{2x}\cdot \alert{\sqrt{2x}}}
@@ -238,7 +238,7 @@ Instead, we see that, for even roots, <m>\sqrt[n]{a^n}=\abs{a} </m>.</p>
 <p>It is important to check the solution to a radical equation, because it is possible to introduce false, or <term>extraneous</term><idx>extraneous</idx>, solutions when we square both sides of the equation. For example, the equation 
     <me>\sqrt{x}=-5 </me>
 has no solution, because <m>\sqrt{x}</m> is never a negative number. However, if we try to solve the equation by squaring both sides, we find
-    <md><mrow>(\sqrt{x})^\alert{2}\amp = (-5)^\alert{2}</mrow>
+    <md><mrow>(\sqrt{x})^{\alert{2}}\amp = (-5)^{\alert{2}}</mrow>
         <mrow>x\amp = 25</mrow></md>
 You can check that <m>25</m> is <em>not</em> a solution to the original equation, <m>\sqrt{x}=-5 </m>, because <m>\sqrt{25} </m> does not equal <m>-5</m>.</p>
 
@@ -248,7 +248,7 @@ You can check that <m>25</m> is <em>not</em> a solution to the original equation
  
  <solution><p>First, isolate the radical expression on one side of the equation. (This will make it easier to square both sides.)
         <md><mrow>\sqrt{x+2}\amp = x-4\amp\amp\blert{\text{Square both sides of the equation.}}</mrow>
-            <mrow>\left(\sqrt{x+2}\right)^\alert{2}\amp = (x-4)^\alert{2}</mrow>
+            <mrow>\left(\sqrt{x+2}\right)^{\alert{2}}\amp = (x-4)^{\alert{2}}</mrow>
             <mrow>x+2\amp = x^2-8x+16 \amp\amp\blert{\text{Subtract }x + 2 \text{ from both sides.}}</mrow>
             <mrow> x^2-9x+14\amp = 0\amp\amp\blert{\text{Factor the left side.}}</mrow>
             <mrow> x=2\hphantom{000}\amp\text{or}\hphantom{000}x=7</mrow>
@@ -258,10 +258,10 @@ You can check that <m>25</m> is <em>not</em> a solution to the original equation
 <sidebyside widths="40% 45%" margins="5% 10%">
 <p>Does <m>\sqrt{\alert{7}+2}+4=\alert{7} </m>?</p><p> <m>\hphantom{blank}\blert{{\text{Yes; }7\text{ is  a solution.}}} </m></p>
 </sidebyside>
-<p>The apparent solution <m>2</m> is extraneous. The only solution to the original equation is <m>7</m>. We can verify the solution by graphing the equations
-        <me>y_1=\sqrt{x+2} ~~~\text{ and }~~~ y_2=x-4</me>
- as shown in <xref ref="fig-radical-equation" text="type-global"/>. The graphs intersect in only one point, <m>(7, 3)</m>, so there is only one solution, <m>x=7</m>.</p>
-    <figure xml:id="fig-radical-equation"><caption></caption><image source="images/fig-radical-equation"  width="40%"><description>graphs of both sides of radical equation</description></image></figure></solution></example>
+<p>The apparent solution <m>2</m> is extraneous. The only solution to the original equation is <m>7</m>. We can verify the solution by graphing the equations</p>
+<sidebyside  widths="55% 40%" valigns="middle middle" margins="0%"><p>
+    <me>y_1=\sqrt{x+2} ~~~\text{ and }~~~ y_2=x-4</me>as shown at right. The graphs intersect in only one point, <m>(7, 3)</m>, so there is only one solution, <m>x=7</m>.</p>
+    <image source="images/fig-radical-equation"><description>graphs of both sides of radical equation</description></image></sidebyside></solution></example>
 
 <warning><p>When we square both sides of an equation, it is <em>not</em> correct to square each term of the equation separately. Thus, in <xref ref="example-radical-equationS" text="type-global"/>, the original equation is not equivalent to
         <me>(\sqrt{x+2})^2+4^2=x^2 </me>
@@ -278,7 +278,7 @@ This is because <m>(a + b)^2 \ne a^2 + b^2</m>. Instead, we must square the <em>
 </statement><solution><p>First, isolate the more complicated radical on one side of the equation. (This will make it easier to square both sides.) We will subtract <m>\sqrt{x} </m> from both sides.
         <me>\sqrt{x-7}=7-\sqrt{x} </me>
 Now square each side to remove one radical. Be careful when squaring the binomial <m>7-\sqrt{x} </m>.
-        <md><mrow>(\sqrt{x-7})^\alert{2}\amp =(7-\sqrt{x})^\alert{2}</mrow>
+        <md><mrow>(\sqrt{x-7})^{\alert{2}}\amp =(7-\sqrt{x})^{\alert{2}}</mrow>
             <mrow> x-7\amp = 49-14\sqrt{x}+x</mrow>
         </md>
 Collect like terms, and isolate the radical on one side of the equation.
@@ -286,7 +286,7 @@ Collect like terms, and isolate the radical on one side of the equation.
             <mrow>4 \amp = \sqrt{x}</mrow>
         </md>
 Now square again to obtain
-        <md><mrow>(4)^\alert{2} \amp = (\sqrt{x})^\alert{2}</mrow>
+        <md><mrow>(4)^{\alert{2}} \amp = (\sqrt{x})^{\alert{2}}</mrow>
             <mrow>16 \amp = x</mrow>
         </md></p>
 <p><em>Check</em></p><sidebyside widths="40% 45%" margins="5% 10%"><p>
@@ -300,5 +300,4 @@ We must square the <em>entire expression</em> on each side of the equal sign as 
 
 <xi:include href="./summary-A-10.xml" /> <!-- summary  -->
 <xi:include href="./section-A-10-exercises.xml" /> <!-- exercises  -->
-
 </section>

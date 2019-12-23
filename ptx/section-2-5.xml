@@ -21,7 +21,7 @@
     </ol></p></statement>
 <solution><p>First, restate each statement in terms of distance.<ol label="a">
         <li><p>The distance between <m>x</m> and the origin is three units, or <m>\abs{x} = 3</m>. Thus, <m>x</m> can be <m>3</m> or <m>-3</m>. </p>
-        <sidebyside width="70%"><image source="images/fig-abs-x-is-3"><description>absolute value of x is 3</description></image></sidebyside></li>
+        <sidebyside width="70%"><image source="images/fig-abs-x-is-3"><description>absolut value of x is 3</description></image></sidebyside></li>
         <li><p>The distance between <m>p</m> and <m>5</m> is two units, or 
         <m>\abs{p - 5} = 2</m>. If we count two units on either side of <m>5</m>, we see that <m>p</m> can be <m>3</m> or <m>7</m>. </p>
         <sidebyside width="70%"><image source="images/fig-abs-p-minus-5-is-2" ><description>absolut value of p-5 is 2</description></image></sidebyside></li>
@@ -101,11 +101,11 @@
     <me>\abs{3x - 6} = 9</me>
  First, we factor out the coefficient of <m>x</m>, to get <m>\abs{3(x - 2)} = 9</m>. Because of the multiplicative property of the absolute value, namely that 
     <m>\abs{ab} = \abs{a}\abs{b}</m>, we can write the left side as 
-    \begin{align*}
+    <!--*****--><me>\begin{aligned}[t]
     \abs{3}\abs{x - 2} \amp = 9 \\
     3\abs{x - 2} \amp= 9 \amp\amp \blert{\text{Divide both sides by 3.}}\\
      \abs{x - 2} \amp = 3 
-     \end{align*}
+     \end{aligned}</me><!--*****-->
 which tells us that the distance between <m>x</m> and <m>2</m> is <m>3</m> units, so the solutions are <m>x = -1</m> and <m>x = 5</m>. </p>
 
 <sidebyside widths= "55% 35%" valigns="middle middle" margins="0% 5%">
@@ -120,12 +120,12 @@ which tells us that the distance between <m>x</m> and <m>2</m> is <m>3</m> units
     </ol></p></statement>
 <solution><sidebyside width="30%"><image source="images/fig-abs-3x-6"><description>absolute value of 3x-6</description></image></sidebyside><p><ol label="a">
     <li><p>The graph shows the graphs of <m>y = \abs{3x - 6}</m> and <m>y = 9</m>. We see that there are two points on the graph of <m>y = \abs{3x - 6}</m> that have <m>y = 9</m>, and those points have <m>x</m>-coordinates <m>x = -1</m> and <m>x = 5</m>. We can verify algebraically that the solutions are <m>-1</m> and <m>5</m>. 
-        \begin{align*}
+        <!--*****--><me>\begin{aligned}[t]
             x \amp = \alert{-1}\text{: } 
             ~ ~ \abs{3(\alert{-1}) - 6} = \abs{-9} = 9\\
             x \amp = \alert{5}\text{: } 
             ~ ~ \abs{3(\alert{5}) - 6} = \abs{9} = 9
-         \end{align*}</p></li>
+         \end{aligned}</me><!--*****--></p></li>
     <li><p>There are no points on the graph of <m>y = \abs{3x - 6}</m> with <m>y = -2</m>, so the equation <m>\abs{3x - 6} = -2</m> has no solutions.</p></li>
     </ol></p></solution></example>
 
@@ -133,13 +133,12 @@ which tells us that the distance between <m>x</m> and <m>2</m> is <m>3</m> units
 <p>We can use a graphing calculator to solve the equations in <xref ref="example-abs-equation" text="type-global"/>.</p>
     <sidebyside widths="55% 35%" valigns="middle middle"><p>The graph shows the graphs of 
         <m>Y_1 = \text{abs}(3X - 6)</m> and <m>Y_2 = 9</m> in the window
-            \begin{align}
+            <me>\begin{aligned}[t]
             \text{Xmin} \amp = -2.7 \amp\amp \text{Xmax} = 6.7\\
             \text{Ymin} \amp = -2 \amp\amp \text{Ymax} = 12
-            \end{align}
-        We use the <c>Trace</c> or the <em>intersect</em> feature to locate the intersection points at <m>(-1, 9)</m> and <m>(5, 9)</m>.
-    </p>
-    <figure xml:id="fig-GC-abs-3x-6"><caption></caption><image source="images/fig-GC-abs-3x-6"><description>absolute value of 3x-6</description></image></figure></sidebyside>
+            \end{aligned}</me>
+    We use the <c>Trace</c> or the <em>intersect</em> feature to locate the intersection points at <m>(-1, 9)</m> and <m>(5, 9)</m>.</p>
+    <image source="images/fig-GC-abs-3x-6"><description>absolute value of 3x-6</description></image></sidebyside>
 </technology>
 
 <exercise xml:id="exercise-GC-solve-abs-equation"><statement>
@@ -176,16 +175,15 @@ which tells us that the distance between <m>x</m> and <m>2</m> is <m>3</m> units
     </sidebyside></li>
     <li><p><m>x=9</m> or <m>x=2</m></p></li>
 </ol></p></answer></exercise>
-<p>
-    To solve an absolute value equation algebraically, we use the definition of absolute value.
-</p>
 
-<example xml:id="example-abs-algebraic"><statement>
-    <p>Solve the equation <m>\abs{3x - 6} = 9</m> algebraically.</p></statement>
+<p>To solve an absolute value equation algebraically, we use the definition of absolute value.</p>
+
+<example xml:id="example-abs-algebraic"><statement><p>Solve the equation <m>\abs{3x - 6} = 9</m> algebraically.</p></statement>
+<solution><p>We write the piecewise definition of <m>\abs{3x - 6}</m>.
     <me>
-        \abs{3x-6} =
-        \begin{cases}
-     3x-6 \amp \text{if } 3x-6\ge 0 \text{, or  } x\ge 2\\
+    \abs{3x-6} =
+    \begin{cases}
+    3x-6 \amp \text{if } 3x-6\ge 0 \text{, or  } x\ge 2\\
     -(3x-6)  \amp \text{if } 3x - 6\lt 0  \text{, or  }x\lt 2
     \end{cases}
     </me>
@@ -204,17 +202,17 @@ Solving these two equations gives us the same solutions we found in <xref ref="e
     <me>ax + b = c ~~\text{ or }~~ ax + b = -c</me></p>
 </assemblage>
 
-<exercise xml:id="exercise-solve-abs-algebraic"><statement><p>
-    Solve <m>\abs{2x + 7} = 11</m> algebraically.
-</p></statement><answer><p><m>x=9</m> or <m>x=2</m></p></answer></exercise>
+<exercise><statement><p>Solve <m>\abs{2x + 7} = 11</m> algebraically.</p></statement>
+<answer><p><m>x=-9</m> or <m>x=2</m></p></answer></exercise>
 </subsection>
 
 <subsection><title>Absolute Value Inequalities</title>
-<p>We can also use graphs to solve absolute value inequalities. Look again at the graph of <m>y = \abs{3x - 6}</m> in <xref ref="fig-abs-inequality" text="type-global"/>a. </p>
 
-    <figure xml:id="fig-abs-inequality"><caption></caption><image source="images/fig-abs-inequality"  width="60%"><description>abs-3x-6</description></image></figure>
+<p>We can also use graphs to solve absolute value inequalities. Look again at the graph of <m>y = \abs{3x - 6}</m> in figure (a) below. </p>
 
-<p>Because of the V-shape of the graph, all points with <m>y</m>-values less than <m>9</m> lie between the two solutions of <m>\abs{3x - 6} = 9</m>, that is, between <m>-1</m> and <m>5</m>. Thus, the solutions of the inequality <m>\abs{3x - 6} \lt 9</m> are <m>-1 \lt x \lt 5</m>. (In the Homework problems, you will be asked to show this algebraically.) </p>
+    <sidebyside width="70%"><image source="images/fig-abs-inequality"><description>abs-3x-6</description></image></sidebyside>
+
+<p>Because of the V-shape of the graph, all points with <m>y</m>-values less than <m>9</m> lie between the two solutions of <m>~\abs{3x - 6} = 9~</m>, that is, between <m>-1</m> and <m>5</m>. Thus, the solutions of the inequality <m>~\abs{3x - 6} \lt 9~</m> are <m>-1 \lt x \lt 5</m>. (In the Homework Problems, you will be asked to show this algebraically.) </p>
 
 <p>On the other hand, to solve the inequality <m>~\abs{3x - 6} \gt 9~</m>, we look for points on the graph with <m>y</m>-values greater than <m>9</m>. In figure (b), we see that these points have <m>x</m>-values outside the interval between <m>-1</m> and <m>5</m>. In other words, the solutions of the inequality <m>~\abs{3x - 6} \gt 9~</m> are <m>x \lt -1</m> or <m>x \gt 5</m>.</p>
 
@@ -232,7 +230,7 @@ Solving these two equations gives us the same solutions we found in <xref ref="e
 <example xml:id="example-abs-inequality"><statement><p>Solve <m>~\abs{4x - 15} \lt 0.01</m></p></statement>
 <solution><p>First, we solve the equation <m>~\abs{4x - 15} = 0.01</m>. There are two cases:
     <me>
-        \begin{aligned}
+        \begin{aligned}[t]
         4x - 15 \amp = 0.01 \amp \text{or} \amp\amp 4x - 15 \amp= -0.01 \\
         4x \amp = 15.01 \amp\amp\amp 4x \amp = 14.99 \\
         x \amp = 3.7525 \amp\amp\amp x \amp= 3.7475
@@ -240,13 +238,13 @@ Solving these two equations gives us the same solutions we found in <xref ref="e
     </me>
 Because the inequality symbol is <m>\lt</m>, the solutions of the inequality are between these two values: <m>3.7475 \lt x \lt 3.7525</m>. In interval notation, the solutions are <m>(3.7475, 3.7525)</m>.</p> </solution></example>
 
-<exercise xml:id="exercise-solve-abs-algebraic2"><statement><ol label="a">
+<exercise><statement><ol label="a">
         <li>Solve the inequality <m>~\abs{2x + 7} \lt 11</m></li>
         <li>Solve the inequality <m>~\abs{2x + 7} \gt 11</m></li>
     </ol></statement>
-<answer><p><ol label="a">
-    <li><m>(-9,2)</m></li>
-    <li><m>(-\infty,-9) \cup (2, \infty)</m></li>
+<answer><p><ol label="a" cols="2">
+    <li><p><m>(-9,2)</m></p></li>
+    <li><p><m>(-\infty,-9) \cup (2, \infty)</m></p></li>
     </ol></p>  </answer></exercise>
 </subsection>
 
@@ -302,11 +300,11 @@ Because the inequality symbol is <m>\lt</m>, the solutions of the inequality are
     The graph of <m>f (x)</m> is a part of the graph of <m>y = \abs{x - 15}</m>. If we think of the highway as a portion of the real number line, with Marlene’s on-ramp located at the origin, then the outlet mall is located at <m>15</m>. Marlene's coordinate as she drives along the highway is <m>x</m>, and the distance from Marlene to the mall is given by <m>f (x) = \abs{x - 15}</m>.</p></li>
 </ol></p></solution></example>
 
-<exercise xml:id="exercise-Marlene-highway"><statement><ol label="a">
+<exercise><statement><ol label="a">
         <li>Use the graph in <xref ref="example-Marlene-highway" text="type-global"/> to determine how far Marlene has driven when she is within <m>5</m> miles of the mall. Write and solve an absolute value inequality to verify your answer.</li>
         <li>Write and solve an absolute value inequality to determine how far Marlene has driven when she is at least <m>10</m> miles from the mall.</li>
-    </ol>
-</statement><answer><ol label="a">
+    </ol></statement>
+<answer><ol label="a">
     <li><p><m>\abs{x-15} \lt 5</m>; <m>~10 \lt x \lt 20</m></p><sidebyside width="45%" margins="0% 55%">
     <image xml:id="fig-ex-2-5-5a">
         <description>absolute value inequality</description>
@@ -373,8 +371,8 @@ Because the inequality symbol is <m>\lt</m>, the solutions of the inequality are
 </subsection>
 
 <subsection><title>Measurement Error</title>
+
 <p>If you weigh a sample in chemistry lab, the scale’s digital readout might show <m>6.0</m> grams. But it is unlikely that the sample weighs <em>exactly</em> <m>6</m> grams; there is always some error in measured values.</p>
-    
 <p> Because the scale shows the weight as <m>6.0</m> grams, we know that the true weight of the sample must be between <m>5.95</m> grams and <m>6.05</m> grams: If the weight were less than <m>5.95</m> grams, the scale would round down to <m>5.9</m> grams, and if the weight were more than <m>6.05</m> grams, the scale would round up to <m>6.1</m> grams. We should report the mass of the sample as <m>6 \pm 0.05</m> grams, which tells the reader that the error in the measurement is no more than <m>0.05</m> grams. </p>
 
 <p>We can also describe this measurement error, or <term>error tolerance</term><idx>error tolerance</idx>, using an absolute value inequality. Because the measured mass m can be no more than <m>0.05</m> from <m>6</m>, we write 
@@ -393,13 +391,13 @@ Note that the solution of this inequality is <m>5.95 \le m \le 6.05</m>.</p>
         <me>\abs{d - 350} \le 100</me></p></li>
     </ol></p></solution></example>
 
-<exercise xml:id="exercise-tolerance-temperature"><statement><p>The temperature, <m>T</m>, in a laboratory must remain between <m>9\degree</m>C and <m>12\degree</m>C.<ol label="a">
+<exercise><statement><p>The temperature, <m>T</m>, in a laboratory must remain between <m>9\degree\text{C}</m> and <m>12\degree\text{C}</m>.<ol label="a">
         <li>Write the error tolerance as an absolute value inequality.</li>
         <li>For a special experiment, the temperature in degrees celsius must satisfy <m>~~\abs{T - 6.7} \le 0.03</m>. Give the interval of possible temperatures.</li>
     </ol></p></statement>
 <answer><p><ol label="a" cols="2">
-    <li><m>\abs{T-10.5} \lt 1.5</m></li>
-    <li><m>6.67 \le T \le 6.73</m></li>
+    <li><p><m>\abs{T-10.5} \lt 1.5</m></p></li>
+    <li><p><m>6.67 \le T \le 6.73</m></p></li>
 </ol></p></answer></exercise>
 
 </subsection>
