@@ -32,7 +32,7 @@
 <xsl:param name="html.knowl.warning" select="'no'" />
 <xsl:param name="html.knowl.technology" select="'no'" />
 <!-- color theme -->
-<xsl:param name="html.css.file"   select="'mathbook-3.css'" />
+<xsl:param name="html.css.colorfile" select="'colors_default.css'" />
 
 <!--
  Exercises have "solution"s which should be put in the back. 
