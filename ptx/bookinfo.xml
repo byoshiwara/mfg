@@ -14,7 +14,7 @@
 
 <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
 
-<brandlogo url="https://yoshiwarabooks.org/mfg/" source="images/cover.png" /> 
+<brandlogo url="https://yoshiwarabooks.org/" source="images/cover.png" /> 
 
 <!--    <website> -->
 <!--         <title>MFG-online</title> -->
@@ -22,7 +22,7 @@
 <!--     </website> -->
 
 <!-- rename blocks -->
-        <rename element="warning" lang="en-US">Caution</rename>
+        <rename element="warning">Caution</rename>
 <!--        <rename element="theorem" lang="en-US">Key Idea</rename> -->
 
 
@@ -47,8 +47,11 @@
     <!-- tikz package and libraries for images -->
       <latex-image-preamble>
         \usepackage{tikz}
-        \usepackage{xcolor} 
-        \usepackage{stackengine} 
+        \usetikzlibrary{calc}
+        \usetikzlibrary{arrows}
+        \usetikzlibrary{decorations.pathreplacing}
+        \usetikzlibrary{patterns}
+\usetikzlibrary{calc,intersections,through,backgrounds}
     </latex-image-preamble>
 
     <macros>
@@ -56,11 +59,11 @@
             \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
     </macros>
 
-        <search>
+<!--        <search>
             <google>
                 <cx>006592449927388994635:w0x-ox5bpme</cx>
             </google>
-        </search>
+        </search> -->
 
 <!-- intended to make circled 1 and circled 2 available for latex 
 <xsl:param name="latex.preamble.late">
