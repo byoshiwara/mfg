@@ -127,51 +127,231 @@
     <li><p>In part (a), we were given a value of <m>t</m> and we <term>evaluated the expression</term>  <m>5+3t</m> to find <m>C</m>.</p></li>  
     <li><p>In part (b) we were given a value of <m>C</m> and we <term>solved the equation</term> <m>C=5+3t</m> to find <m>t</m>.</p></li> </ul></p></note>
 
-<exercise  xml:id="exercise-Frank-plants"><title>Practice 1</title> <statement>
-    <sidebyside  valigns="middle middle" widths="60% 30%">
-        <stack><p> Frank plants a dozen corn seedlings, each 6 inches tall.  With plenty of water and sunlight they will grow approximately 2 inches per day.  Complete the table of values for the height, <m>h</m>, of the seedlings after <m>t</m> days.</p>
-        <p></p><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-            <row bottom="minor">
-                <cell><m>t</m></cell>
-                <cell><m>0</m></cell>
-                <cell><m>5</m></cell>
-                <cell><m>10</m></cell>
-                <cell><m>15</m></cell>
-                <cell><m>20</m></cell></row>
-            <row> 
-                <cell><m>h</m></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell>
-                <cell></cell></row>
-            </tabular>
-        </stack>
-        <image source="images/fig-Example2"><description>grid</description></image></sidebyside>
-    <p><ol label="a">
-        <li><p>Write an equation for the height of the seedlings in terms of the number of days since they were planted.</p></li>
-        <li><p>Graph the equation.</p></li>
-    </ol></p></statement>
+<exercise  xml:id="exercise-Frank-plants">
+    <title>Practice 1</title>
+    <introduction>
+    <sidebyside widths="55% 25%" valigns="middle middle">
+    <p>
+    Frank plants a dozen corn seedlings, each 6 inches tall. With plenty of water and sunlight they will grow approximately 2 inches per day.   Complete the table of values for the height, <m>h</m>, of the seedlings after <m>t</m> days.
+  </p>
+  <image source="images/fig-Example2"><description> grid </description></image>
+  </sidebyside>
+  </introduction>
+  <webwork>
+    <pg-macros>
+        loadMacros(
+          "PGstandard.pl",
+          "MathObjects.pl",
+          "parserImplicitPlane.pl",
+          "PGgraphmacros.pl",
+          "scaffold.pl",
+          "niceTables.pl"
+        ) ;
+    </pg-macros>
+    <setup>
+      <pg-code>
+    $diff = 5;   
+    $t0 = 0;      
+    $t1 = $t0 + $diff;
+    $t2 = $t1 + $diff;
+    $t3 = $t2 + $diff;
+    $t4 = $t3 + $diff;
 
-<answer><p>
-    <ol label="a" cols="2">
-        <li><p><m>h = 6 + 2t</m></p></li>
-        <li><sidebyside width="50%" margins="0% 25%"><image source="images/fig-in-ex-ans-1-1-1"><description>line</description></image></sidebyside></li></ol></p>
-    </answer></exercise>
+    $growthRate = 2; 
+    $h0 = 6;   
+    $h1 = $h0 + $diff*$growthRate;
+    $h2 = $h1 + $diff*$growthRate;
+    $h3 = $h2 + $diff*$growthRate;
+    $h4 = $h3 + $diff*$growthRate;
 
-<exercise><title>Practice 2</title><statement><p> Use your equation from <xref ref="exercise-Frank-plants" text="type-global"/> to answer the questions.  Illustrate each answer on the graph. </p>
+
+    #--------------------------------
+    # Part (b) set-up
+
+    Context("ImplicitPlane");
+    Context()->variables->add(t=>"Real",h=>"Real");
+
+    $equation = ImplicitPlane("h = $growthRate*t + $h0");
+
+    # Part (c) set-up
+    Context("Numeric");
+    $displayEq = "\(h = $growthRate t + $h0\)";   
+
+    $refreshCachedImages=1;
+
+    $xmin = -5;
+    $ymin = -8;
+    $xmax = 45;
+    $ymax = 88;
+    #---------Define the function----------
+    $fun = "$growthRate*x + $h0";
+
+    $color = list_random("blue", "red", "green");
+    $color =  "red";
+
+    #---------Define the graph
+    $graph = init_graph($xmin,$ymin,$xmax,$ymax,'axes'=>[0,0],grid=>[10,12],size=>[240,360]);
+    $graph  -> lb('reset'); #remove default label and tick marks
+
+    $i = 0;           # Number the axes
+    do {
+      $xtick = $i;
+      $labelx[$i] = new Label($xtick,0, "$xtick",'black','center');
+      if ($xtick!=0) {$graph->lb($labelx[$i]); }
+      $i =$i+10;
+    } while  ($i &lt; $xmax);
+
+    $i = 0;
+    do {
+      $ytick = $i;
+      $labely[$i] = new Label(-.4,$ytick, "$ytick",'black','right', middle);
+      if ($ytick!=0) {$graph->lb($labely[$i]); } 
+      $i = $i + 40;
+    } while ($i &lt; $ymax);
+
+    add_functions($graph,"$fun for x in &lt;0,$xmax&gt; using color=$color and weight=2" );
+
+    $labelx =  new Label($xmax-1,1,"t",'black','center','bottom');
+    $labelx->font(GD::Font->Giant);
+    $graph -> lb($labelx);
+    $labely =  new Label(1,$ymax-3,"h",'black','left','middle');
+    $labely->font(GD::Font->Giant);
+    $graph -> lb($labely);
+
+        </pg-code>
+        </setup>
+    <statement>
+    <p>Complete the table of values for the height, <m>h</m> of the seedlings after <m>t</m> days.</p>
+    <p>
+    <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row bottom="minor">
+                    <cell><m>t</m></cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>5</m></cell>
+                    <cell><m>10</m></cell>
+                    <cell><m>15</m></cell>
+                    <cell><m>20</m></cell>
+                </row>
+                <row> 
+                    <cell><m>h</m></cell>
+                    <cell><var name="$h0" width="2"/></cell>
+                    <cell><var name="$h1" width="2"/></cell>
+                    <cell><var name="$h2" width="2"/></cell>
+                    <cell><var name="$h3" width="2"/></cell>
+                    <cell><var name="$h4" width="2"/></cell>
+                </row>
+                </tabular>
+    </p>
+    </statement>
+    <solution> 
+        <p>The height of the seedlings begins at 6 inches, so <m>h=6</m> when <m>t=0</m>.</p>
+        <p>Because the seedlings grow 2 inches per day, they grow by <m>2\times 5 =10</m> inches in each 5 day increment. We add 10 inches to the height for every 5 more days of growth.</p>
+        <p>(Another possible strategy is given in the solution to the next part.)</p>
+    </solution>
+    <statement>
         <ol label="a">
-            <li><p> How tall is the corn after 3 weeks? </p></li>
-            <li><p> How long will it be before the corn is 6 feet tall?                 
-            </p></li>
-        </ol></statement>
-<hint><p>For part (b), convert feet to inches.</p></hint>
-    
-<answer><p>
-    <ol label="a" cols="2">
-        <li><p><m>48</m> inches tall</p></li>
-        <li><p><m>33</m> days </p></li>
-    </ol></p></answer></exercise>
+            <li>
+                <p>Write an equation for the height <m>h</m> of the seedlings in terms of the number <m>t</m> of days since they were planted.</p>
+                <p>
+                Equation: <var name="$equation" width="20"/></p>
+            </li>
+            <li>
+                <p>Graph the equation.</p>
+            </li>
+        </ol>
+    </statement>
+    <solution> 
+        <ol label="a">
+            <li>
+                <p>The height after <m>t</m> days will be the initial height plus (<m>t</m> days) <m>\times</m> (2 inches per day).</p>
+                <p><m>h=6+2t</m></p>
+                <p>(Notice that we could now evaluate the expression <m>6+2t</m> for each of the values of <m>t</m> in the table in order to find the corresponding values of <m>h</m>.)</p>
+            </li>
+            <li>
+                <p>The graph of seedling height vs time is shown below.</p>
+                <sidebyside widths="40%">
+                    <image pg-name="$graph"><description>graph of corn seedlings height vs time</description></image>
+                </sidebyside>
+            </li>       
+    </ol>
+    </solution>
+
+  </webwork>
+  <conclusion>
+    <p>The graph of seedling height vs time is shown below.</p>
+    <sidebyside width="25%" margins="0% 75%">
+        <image source="images/fig-in-ex-ans-1-1-1"><description>graph of seedlings height vs time</description></image>
+    </sidebyside>
+  </conclusion>
+</exercise>
+
+<exercise>
+    <title>Practice 2</title>
+    <introduction>
+    <p>
+ Use your equation from <xref ref="exercise-Frank-plants" text="type-global"/> to answer the questions.  Illustrate each answer on the graph. </p> 
+   </introduction>
+  <webwork>
+    <pg-macros>
+        loadMacros(
+          "PGstandard.pl",
+          "MathObjects.pl",
+          "AnswerFormatHelp.pl",
+        ) ;
+    </pg-macros>
+    <setup>
+      <pg-code>
+        #$diff = random(2,5,1);   
+        $diff = 5;    #---COMMENT OUT THIS LINE FOR RANDOMIZATION
+
+        #$growthRate = random(2,3,1);
+        $growthRate = 2;   #---COMMENT OUT THIS LINE FOR RANDOMIZATION
+        #$h0 = random(3,8,1);
+        $h0 = 6;     #---COMMENT OUT THIS LINE FOR RANDOMIZATION
+        $h4 = $h3 + $diff*$growthRate;
+        Context()->variables->add(t=>"Real",h=>"Real");
+        $f = Formula("6+2*t")->reduce;
+        $displayEq = "h = $growthRate t + $h0";   
+
+        #$Tweek=random(2,5);
+        $Tweek = 3;
+        $Tdays = $Tweek*7;
+        $H = $f->eval(t=>$Tdays);  
+        $height = FormulaWithUnits(
+        "$H in");
+
+        $Hft = 6;
+        $Hinches = $Hft*12;
+        $Hdiff = $Hinches-$h0;
+        $time0=($Hdiff)/$growthRate;
+        $time = NumberWithUnits(
+        "$time0 day");
+    </pg-code>
+    </setup>
+    <statement>
+        <p>How tall is the corn after <var name="$Tweek"/> weeks?</p>
+        <p>Answer (including units): <var  name="$height" width="8"/></p>
+        <instruction>(Note: to answer "2 feet", enter "2 ft", but to answer 12 inches, use "12 in".)
+        </instruction>
+        <p>How long will it be before the corn is <var name="$Hft"/> feet tall?</p>
+        <p>Answer (including units): <var  name="$time" width="8"/></p>
+        <instruction>
+         (To answer "7 days" enter "7 day".
+         WeBWorK recognizes "hr" for hour or hours, "min" for minute or minutes, and "s" for second or seconds.)
+        </instruction>
+    </statement>
+    <solution> 
+        <p><var name="$Tweek"/> weeks is <var name="$Tdays"/> days, so we evaluate <m><var name="$f"/></m> for <m>t=<var name="$Tdays"/></m> to get <m><var name="$h0"/>+2\cdot<var name="$Tdays"/>=<var name="$H"/></m> inches.</p>        
+        <p><var name="$Hft"/> ft is <var name="$Hinches"/> in, so we solve <m><var name="$displayEq"/></m> when <m>h=<var name="$Hinches"/></m></p>
+        <p><md>
+            <mrow><var name="$Hinches"/>\amp =<var name="$h0"/> +<var name="$growthRate"/>t</mrow>
+            <mrow><var name="$Hdiff"/>\amp =<var name="$growthRate"/> t</mrow>
+            <mrow><var name="$time0"/>\amp =t</mrow>
+        </md></p> 
+        <p>It will take <var name="$time0"/> days before the corn is <var name="$Hft"/> feet tall.</p>
+    </solution>
+  </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -254,59 +434,162 @@
 
     <note><p>The graphs in the preceding examples are <term>increasing graphs</term> <idx>increasing graphs</idx>.  As we move along the graph from left to right (in the direction of increasing <m>t</m> ), the second coordinate increases as well.  Try <xref ref="exercise-Silver-Lake" text="type-global"/>, which illustrates a <term>decreasing graph</term><idx>decreasing graph</idx>.</p></note>
 
-<exercise xml:id="exercise-Silver-Lake"><title>Practice 3</title><statement><p>Silver Lake has been polluted by industrial waste products.  The concentration of toxic chemicals in the water is currently 285 parts per million (ppm).  Environmental officials would like to reduce the concentration by 15 ppm each year.<ol label="a">
-    <li><p>Complete the table of values showing the desired concentration, <m>C,</m><nbsp /> of toxic chemicals <m>t</m> years from now.  For each <m>t</m>-value, calculate the corresponding value for <m>C</m>.  Write your answers as ordered pairs.</p>
-            <sidebyside>
-            <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+<exercise xml:id="exercise-Silver-Lake">
+    <title>Practice 3</title>
+    <introduction>
+    <p>
+    Silver Lake has been polluted by industrial waste products. The concentration of toxic chemicals in the water is currently 285 parts per million (ppm). Environmental officials would like to reduce the concentration by 15 ppm each year.
+    </p>
+    <sidebyside width="40%">
+        <image source="images/fig-Exercise3"><description>graph of seedlings height vs time</description></image>
+    </sidebyside>
+  </introduction>
+  <webwork>
+    <setup>
+      <pg-code>
+            # Part (a) set-up
+
+            $diff = 5;    
+            $t0 = 0;      
+            $t1 = $t0 + $diff;
+            $t2 = $t1 + $diff;
+            $t3 = $t2 + $diff;
+            $t4 = $t3 + $diff;
+
+            $growthRate = -15; 
+            $C0 = 285;   
+            $C1 = $C0 + $diff*$growthRate;
+            $C2 = $C1 + $diff*$growthRate;
+            $C3 = $C2 + $diff*$growthRate;
+            $C4 = $C3 + $diff*$growthRate;
+
+
+            Context("ImplicitPlane");
+            Context()->variables->add(t=>"Real",C=>"Real");
+
+            $equation = ImplicitPlane("C = $C0 + $growthRate*t");
+<!--
+
+            # Graph
+            Context("Numeric");
+            $displayEq = "C = $C0 +$growthRate t";   
+
+            $refreshCachedImages=1;
+
+            $xmin = -5;
+            $ymin = -30;
+            $xmax = 22;
+            $ymax = 330;
+            $fun = "$growthRate*x + $C0";
+
+            $color = "red";
+
+#$graph1 = init_graph($xmin,$ymin,$xmax,$ymax,axes=>[0,0]);
+$graph1 = init_graph(-2,-30,22,330,axes=>[0,0], grid=>[12,12],size=>[360,360]);
+$graph1  -> lb('reset'); #remove default label and tick marks
+# specify the grid manually
+$graph1->v_grid("gray",10,20);
+$graph1->h_grid("gray",60,120,180,240,300);
+
+
+$i = 0;           # Number the axes
+do {
+  $xtick = $i*10;
+  $labelx[$i] = new Label($xtick,0, "$xtick",'black','center','below');
+  if ($xtick!=0) {$graph1->lb($labelx[$i]); }
+  $i =$i+1;
+} while  ($xtick &lt;= $xmax);
+
+$i = 0;
+do {
+  $ytick = $i*60;
+  $labely[$i] = new Label(-1.6,$ytick, "$ytick",'black','middle');
+  if ($ytick!=0) {$graph1->lb($labely[$i]); } 
+  $i = $i + 1;
+} while ($i &lt; $ymax);
+
+add_functions($graph1,"$fun for x in &lt;0,19&gt; using color=$color and weight=2" );
+
+$labelx =  new Label($xmax-0.6,-1,"t",'black','center','above');
+$labelx->font(GD::Font->Giant);
+$graph1 -> lb($labelx);
+$labely =  new Label(0.8,$ymax-8,"C",'black','center','middle');
+$labely->font(GD::Font->Giant);
+$graph1 -> lb($labely); -->
+        </pg-code>
+        </setup>
+    <statement>
+    <p><ol label="a">
+        <li><p>Complete the table of values showing the desired concentration, <m>C</m>, of toxic chemicals <m>t</m> years from now. For each <m>t</m>-value, calculate the corresponding value for <m>C</m>.  Write your answers as ordered pairs.</p>
+        <sidebyside>
+                <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
                 <row bottom="minor">
                     <cell><m>t</m></cell>
                     <cell><m>C</m></cell>
                     <cell></cell>
-                    <cell><m>(t,C)</m></cell></row>
+                    <cell><m>(t,C)</m></cell>
+                </row>
                 <row> 
                     <cell><m>0</m></cell>
                     <cell></cell>
                     <cell><m>C=285-15(\alert{0})</m></cell>
-                    <cell><m>(0, ~~~~ )</m></cell></row>
+                    <cell>(0, <var name="$C0" width="3"/> )</cell>
+                </row>
                 <row> 
                     <cell><m>5</m></cell>
                     <cell></cell>
                     <cell><m>C=285-15(\alert{5})</m></cell>
-                    <cell><m>(5, ~~~~ )</m></cell></row>
+                    <cell>(5, <var name="$C1" width="3"/> )</cell>
+                </row>
                 <row> 
                     <cell><m>10</m></cell>
                     <cell></cell>
                     <cell><m>C=285-15(\alert{10})</m></cell>
-                    <cell><m>(10, ~~~~ )</m></cell></row>
+                    <cell>(10, <var name="$C2" width="3"/> )</cell>
+                </row>
                 <row> 
                     <cell><m>15</m></cell>
                     <cell></cell>
                     <cell><m>C=285-15(\alert{15})</m></cell>
-                    <cell><m>(15, ~~~~ )</m></cell></row>
+                    <cell>(15, <var name="$C3" width="3"/> )</cell>
+                </row>
+            </tabular>
+        </sidebyside></li>
+        <li>
+            <p>To choose scales for the axes, notice that the value of <m>C</m> starts at 285 and decreases from there. We'll scale the vertical axis up to 300, and use 10 tick marks at intervals of 30. Graph the ordered pairs on the grid, and connect them with a straight line. Extend the graph until it reaches the horizontal axis, but no farther. Points with negative <m>C</m>-coordinates have no meaning for the problem.</p>
+        </li>
+        <li>
+            <p>Write an equation for the concentration, <m>C</m>,  of toxic chemicals <m>t</m> years from now.</p>
+        <p>Equation: <var name="$equation" width="20"/></p>            
+        </li></ol></p>
+     </statement>
+    <hint><p>For part (c): The concentration is initially 285 ppm, and we subtract 15 ppm for each year that passes, or <m>15 \times t</m>.</p></hint>
+    <solution> 
+        <p><ol label="a" cols="3">
+            <li><sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row>
+                    <cell><m>(t,C)</m></cell></row>
+                <row>
+                    <cell><m>(0,285)</m></cell></row>
+                <row>
+                    <cell><m>(5,210)</m></cell></row>
+                <row>
+                    <cell><m>(10,135)</m></cell></row>
+                <row>
+                    <cell><m>(15,60)</m></cell></row>
             </tabular></sidebyside></li>
-    <li><p>To choose scales for the axes, notice that the value of <m>C</m> starts at 285 and decreases from there.  We'll scale the vertical axis up to 300, and use 10 tick marks at intervals of 30.  Graph the ordered pairs on the grid, and connect them with a straight line. Extend the graph until it reaches the horizontal axis, but no farther.  Points with negative <m>C</m>-coordinates have no meaning for the problem.</p>
-            <sidebyside width="40%"><image source="images/fig-Exercise3"><description>grid</description></image></sidebyside></li>
-    <li><p>Write an equation for the concentration, <m>C</m>, of toxic chemicals <m>t</m> years from now.</p></li>
-        </ol></p></statement>
-
-<hint><p>For part (c): The concentration is initially 285 ppm, and we subtract 15 ppm for each year that passes, or <m>15 \times t</m>.</p></hint>
-
-<answer><p><ol label="a" cols="3">
-    <li><sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-                    <row>
-                        <cell><m>(t,C)</m></cell></row>
-                    <row>
-                        <cell><m>(0,285)</m></cell></row>
-                    <row>
-                        <cell><m>(5,210)</m></cell></row>
-                    <row>
-                        <cell><m>(10,135)</m></cell></row>
-                    <row>
-                        <cell><m>(15,60)</m></cell></row>
-                </tabular></sidebyside></li>
-    <li><sidebyside   width="75%"><image source="images/fig-in-ex-ans-1-1-3"><description>decreasing graph</description></image></sidebyside></li>
-    <li><p><m>C = 285 - 15t</m></p></li></ol></p></answer>
-</exercise> 
+            <li><p>Plot the points in the table and draw a line segment that meets the axes and passes through those points.</p>
+            <p>A plot is below.</p>
+<!--            <sidebyside widths="40%">
+                <image pg-name="$graph1"><description>graph of toxic chemical concentration vs time</description></image>
+            </sidebyside> -->
+            </li>
+            <li> <p>Looking at the computations shown in the table, we see that the concentration began at 285 and decreased by <m>15\times t</m> after <m>t</m> years. So
+            <me>C=285-15t</me></p></li></ol></p>
+    </solution>
+  </webwork>
+  <conclusion><sidebyside width="25%"><image source="images/fig-in-ex-ans-1-1-3"><description>decreasing graph</description></image></sidebyside></conclusion> 
+</exercise>
 
 <note><p>In the previous Exercise, we extend the graph until it reaches the horizontal axis, but no farther.  Points with negative <m>C</m>-coordinates have no meaning for the problem.</p></note>  
 
@@ -361,30 +644,91 @@
         Finally, we press <c>GRAPH</c>. The graph is shown in the figure.</p>
         <sidebyside width="40%"><image source="images/fig-GC-house-price"><description>grid</description></image></sidebyside></solution></example>
 
-<exercise><title>Practice 4</title><statement><p>
-    <ol label="a">
-        <li><p>Solve the equation <m>2y - 1575 = 45x</m> for <m>y</m> in terms of <m>x</m>.</p></li>
-       <li><p>Graph the equation with a graphing utility. Use the window</p>
-        <sidebyside><tabular>
+<exercise>
+    <title>Practice 4</title>
+  <webwork>
+    <setup>
+      <pg-code>
+        $fun=Formula("(1575+45*x)/2");
+        Context("Numeric")->variables->add(y=>'Real');
+        $gr = init_graph(-50,-500,50,1000,axes=>[0,0],grid=>[10,15],size=>[240,240]);
+        $gr->lb('reset');
+        for my $j (-20,20,40) {
+          $gr->lb( new Label($j, 0, $j,'black','center','top','large'));
+        }
+        for my $j (500,1000) {
+          $gr->lb( new Label(0, $j, $j,'black','right','middle','large'));
+        }
+        add_functions($gr, "$fun for x in &lt;-50,50>  using color:red and weight:2");
+      </pg-code>
+    </setup>
+    <statement>
+      <p>
+        <ol label="a">
+          <li>
+            <p>
+              Solve the equation <m>2y-1575=45x</m> for <m>y</m> in terms of <m>x</m>.</p>
+              <p><m>y=</m><var name="$fun" width="10" />
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Graph the equation with a graphing utility. Use the window
+            </p>
+        <sidebyside>
+            <tabular>
                 <row>
                     <cell>Xmin<m>=-50</m></cell>
                     <cell></cell>
                     <cell>Xmax<m>=50</m></cell>
                     <cell></cell>
-                    <cell>Xscl<m>=5</m></cell></row>
+                    <cell>Xscl<m>=5</m></cell>
+                </row>
                 <row>
                     <cell>Ymin<m>=-500</m></cell>
                     <cell></cell>
                     <cell>Ymax<m>=1000</m></cell>
                     <cell></cell>
-                    <cell>Yscl<m>=100</m></cell></row>
-            </tabular></sidebyside></li>
-        <li><p>Sketch the graph on paper. Use the window settings to choose appropriate scales for the axes.</p></li></ol></p></statement>
+                    <cell>Yscl<m>=100</m></cell>
+                </row>
+            </tabular>
+        </sidebyside>
+          </li>
 
-<answer><p><ol label="a" cols="2">
-    <li><p><m>y = (1575 + 45x)/ 2 </m></p></li>
-    <li><sidebyside width="70%"><image source="images/fig-in-ex-ans-1-1-4b.jpg"><description>GC graph</description></image> </sidebyside></li>
-    <li><sidebyside width="50%"><image source="images/fig-in-ex-ans-1-1-4c"><description>graph</description></image></sidebyside></li></ol></p></answer></exercise>
+          <li>
+            <p>
+              Sketch the graph on paper. Use the window settings to choose appropriate scales for the axes
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol label="a.">
+          <li>
+            <p>
+              <m>y=<var name="$fun"/></m>.
+            </p>
+          </li>
+
+          <li>
+              <sidebyside widths="40%">
+                <image pg-name="$gr" />
+              </sidebyside>
+          </li>
+          <li>
+              <p>A graph is below.</p>
+          </li>
+        </ol>
+      </p>
+    </solution>
+  </webwork>
+  <conclusion>
+      <sidebyside width="25%"><image source="images/fig-in-ex-ans-1-1-4c"><description>graph</description></image></sidebyside>
+  </conclusion>
+</exercise>
 </subsection>
 
 <exercise><title>QuickCheck 4</title>
@@ -439,41 +783,91 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
         <image source="images/fig-example-advertising"><description>grid</description></image></sidebyside></li>
     </ol></p></solution></example>
 
-<exercise xml:id="exercise-crops"><title>Practice 5</title><statement><p>In central Nebraska, each acre of corn requires 25 acre-inches of water per year, and each acre of winter wheat requires 18 acre-inches of water. (An acre-inch is the amount of water needed to cover one acre of land to a depth of one inch.)  A farmer can count on 9000 acre-inches of water for the coming year.  (Source:  Institute of Agriculture and Natural Resources, University of Nebraska)
-    <ol label="a">
-        <li><p>Write an equation relating the number of acres of corn, <m>x</m>, and the number of acres of wheat, <m>y</m>, that the farmer can plant.</p></li>
-        <li><p>Complete the table.</p>
+<exercise xml:id="exercise-crops">
+    <title>Practice 5</title>
+    <webwork>
+    <setup>
+      <pg-code>
+        $fun=Formula("(9000-25*x)/18");
+        @x=(50, 100, 150, 200);
+        $i=0;
+        do {
+        $y[$i] = $fun->eval(x=>$x[$i]);
+        $i=$i+1
+        } while ($i &lt; 4);
+     
+    Context("ImplicitPlane");
+    Context()->variables->add(y=>"Real");
+
+    $equation = ImplicitPlane("25x+18y=9000");
+   
+      </pg-code>
+    </setup>
+    <statement>
+        <p>In central Nebraska, each acre of corn requires 25 acre-inches of water per year, and each acre of winter wheat requires 18 acre-inches of water. (An acre-inch is the amount of water needed to cover one acre of land to a depth of one inch.) A farmer can count on 9000 acre-inches of water for the coming year. (Source: Institute of Agriculture and Natural Resources, University of Nebraska)</p>
+ 
+      <p>
+        <ol label="a">
+          <li>
+            <p>
+              Write an equation relating the number of acres of corn, <m>x</m>,  and the number of acres of wheat, <m>y</m>,  that the farmer can plant.</p>
+              <p><var name="$equation" width="15" />
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Complete the table
+            </p>
         <sidebyside>
-            <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row bottom="minor">
+                    <cell><m>x</m></cell>
+                    <cell><m>50</m></cell>
+                    <cell><m>100</m></cell>
+                    <cell><m>150</m></cell>
+                    <cell><m>200</m></cell>
+                </row>
+                <row> 
+                    <cell><m>y</m></cell>
+                    <cell><var name="$y[0]" width="4"/></cell>
+                    <cell><var name="$y[1]" width="4"/></cell>
+                    <cell><var name="$y[2]" width="4"/></cell>
+                    <cell><var name="$y[3]" width="4"/></cell>
+                </row>
+                </tabular>
+        </sidebyside>
+            <instruction>Give your answers in the table to the nearest tenth.</instruction>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <ol label="a.">
+            <li>
+            <p>
+              The total water needed is <m>25\times</m>(acres of corn) <m>18\times</m>(acres of wheat), and the amount of water available is 9000: <m>25x+18y=9000</m>
+            </p>
+            </li>
+            <li><sidebyside width="45%" margins="0% 55%"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
                 <row bottom="minor">
                     <cell><m>x</m></cell>
                     <cell><m>50</m></cell>
                     <cell><m>100</m></cell>
                     <cell><m>150</m></cell>
                     <cell><m>200</m></cell></row>
-                <row> 
-                    <cell><m>y</m></cell>
-                    <cell><m>\hphantom{0000}</m></cell>
-                    <cell><m>\hphantom{0000}</m></cell>
-                    <cell><m>\hphantom{0000}</m></cell>
-                    <cell><m>\hphantom{0000}</m></cell></row>
-            </tabular></sidebyside></li></ol></p></statement>
-
-<answer><p><ol label="a">
-    <li><p><m>25x + 18y = 9000</m></p></li>
-    <li><sidebyside width="45%" margins="0% 55%"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-                        <row bottom="minor">
-                            <cell><m>x</m></cell>
-                            <cell><m>50</m></cell>
-                            <cell><m>100</m></cell>
-                            <cell><m>150</m></cell>
-                            <cell><m>200</m></cell></row>
-                        <row> <cell><m>y</m></cell>
-                            <cell><m>430.6</m></cell>
-                            <cell><m>361.1</m></cell>
-                            <cell><m>291.7</m></cell>
-                            <cell><m>222.2</m></cell></row>
-                    </tabular></sidebyside></li></ol></p></answer></exercise>
+                <row> <cell><m>y</m></cell>
+                    <cell><m>430.6</m></cell>
+                    <cell><m>361.1</m></cell>
+                    <cell><m>291.7</m></cell>
+                    <cell><m>222.2</m></cell></row>
+            </tabular></sidebyside></li>        
+        </ol>
+      </p>
+    </solution>
+  </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -566,11 +960,56 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 6</title><statement><ol label="a">
-        <li><p>Find the intercepts of the graph in <xref ref="example-advertising" text="type-global"/>, about the advertising budget for Albert's Appliances: <m>150x + 50y = 3000</m>.</p></li>
-        <li><p>What do the intercepts tell us about the problem?</p></li></ol></statement>
+<exercise>
+    <title>Practice 6</title>
+        <introduction>    
+            <p>Find the intercepts of the graph in <xref ref="example-advertising" text="type-global"/>, about the advertising budget for Albert's Appliances: <m>150x + 50y = 3000</m>.</p>
+         </introduction>
+    <webwork>
+        <setup>
+            <pg-code>
+                $xi = RadioButtons(
+                    ["Gives the cost of a tv ad.","Gives the number of tv ads the manager can buy if she buys no radio ads.","Gives the cost of a radio ad.","Gives the number of radio ads the manager can buy if she buys no tv ads."],
+                    "Gives the number of tv ads the manager can buy if she buys no radio ads."
+                );
+                $yi = RadioButtons(
+                    ["Gives the cost of a tv ad.","Gives the number of tv ads the manager can buy if she buys no radio ads.","Gives the cost of a radio ad.","Gives the number of radio ads the manager can buy if she buys no tv ads."],
+                    "Gives the number of radio ads the manager can buy if she buys no tv ads."
+                );
 
-<answer><p><m>(20, 0)</m>: The manager can buy <m>20</m> television ads if she buys no radio ads. <m>(0, 60)</m>: The manager can buy <m>60</m> radio ads if she buys no television ads.</p></answer></exercise>
+                Context("Point");
+                $x0=20;
+                $y0=60;
+                $xint = Point($x0,0);
+                $yint = Point(0,$y0);
+            </pg-code>
+        </setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Enter each intercept as an ordered pair, such as <m>(0,1)</m> or <m>(3,0)</m>.</p>
+                <p>The <m>x</m>-intercept is <var name="$xint"  width="4"/>.  </p>
+                <p>The <m>y</m>-intercept is <var name="$yint"  width="4"/>.  
+                </p></li>
+            <li>
+                <p>What do the intercepts tell us about the problem?</p>
+            <p><m>x</m>-intercept:</p>
+            <p><var name="$xi" form="buttons"/> </p>
+            <p><m>y</m>-intercept:</p> 
+            <p><var name="$yi" form="buttons"/> </p></li>
+            </ol></p>
+
+        </statement>
+
+        <solution>
+            <p><ol label="a">
+                <li><p>We find the <m>x</m>-intercept by setting <m>y=0</m> and solving for <m>x</m> to learn that <m>x=<var name="$x0"/></m>, so the <m>x</m>-intercept is <m><var name="$xint"/></m>.</p> 
+                <p>We find the <m>y</m>-intercept by setting <m>x=0</m> and solving for <m>y</m> to learn that <m>y=<var name="$y0"/></m>, so the <m>y</m>-intercept is <m><var name="$yint"/></m>.</p></li>
+                <li><p>The <m>x</m>-intercept has <m>y=0</m>, that is, it corresponds to when there are zero radio ads. The <m>y</m>-intercept has <m>x=0</m>, that is, it corresponds to when there are zero tv ads.</p></li>
+            </ol></p>
+        </solution>
+
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -672,15 +1111,61 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
             </tabular></sidebyside>
   </technology>
 
-<exercise><title>Practice 7</title><statement>
-    <ol label="a">
-        <li><p>In <xref ref="exercise-crops" text="type-global"/>, you wrote an equation about crops in Nebraska. Find the intercepts of the graph.</p></li>
-        <li><p>Use the intercepts to help you choose appropriate scales for the axes, and then graph the equation.</p></li>
-        <li><p>What do the intercepts tell us about the problem?</p></li>
-    </ol></statement>
+<exercise>
+    <title>Practice 7</title>
+    <introduction>    
+        <p>In <xref ref="exercise-crops" text="type-global"/> you wrote an equation about crops in Nebraska.</p>
+     </introduction>
+    <webwork>
+        <setup>
+            <pg-code>
+                $xi = RadioButtons(
+                    ["water usage of corn","acres of corn the farmer can plant if the farmer plants no wheat","water usage of wheat","acres of wheat the farmer can plant if the farmer plants no corn"],
+                    "acres of corn the farmer can plant if the farmer plants no wheat"
+                );
+                $yi = RadioButtons(
+                    ["water usage of corn","acres of corn the farmer can plant if the farmer plants no wheat","water usage of wheat","acres of wheat the farmer can plant if the farmer plants no corn"],
+                    "acres of wheat the farmer can plant if the farmer plants no corn"
+                );
 
-<answer><p>a., c. <m>~~(360, 0)</m>: If he plants no wheat, the farmer can plant <m>360</m> acres of corn. <m>(0, 500)</m>: If he plants no corn, the farmer can plant 500 acres of wheat.</p>
-    <sidebyside widths="5% 25% 60%" margins="0%"><p>b.</p><image source="images/fig-in-ex-ans-1-1-7"><description>line in first quadrant</description></image><p> </p></sidebyside></answer></exercise>
+                Context("Point");
+                $x0=360;
+                $y0=500;
+                $xint = Point($x0,0);
+                $yint = Point(0,$y0);
+            </pg-code>
+        </setup>
+        <statement>
+            <p><ol label="a">
+                <li><p> Find the intercepts of the graph.</p>
+                <p>Note: Enter each intercept as an ordered pair, such as <m>(0,1)</m> or <m>(3,0)</m>.</p>
+                <p>The <m>x</m>-intercept is <var name="$xint"  width="6"/>.  </p>
+                <p>The <m>y</m>-intercept is <var name="$yint"  width="6"/>.  
+                </p>
+                </li>
+                <li><p>Use the intercepts to help you choose appropriate scales for the axes, and then graph the equation.</p></li>
+                <li><p>What do the intercepts tell us about the problem?</p>
+                <p><m>x</m>-intercept:</p> 
+                <p><var name="$xi" form="buttons"/> .</p>
+                <p><m>y</m>-intercept:</p> 
+                <p><var name="$yi" form="buttons"/> .</p></li>
+            </ol></p>                
+
+        </statement>
+
+        <solution>
+            <p><ol label="a">
+                <li><p>We find the <m>x</m>-intercept by setting <m>y=0</m> and solving for <m>x</m> to learn that <m>x=<var name="$x0"/></m>, so the <m>x</m>-intercept is <m><var name="$xint"/></m>.</p> 
+                <p>We find the <m>y</m>-intercept by setting <m>x=0</m> and solving for <m>y</m> to learn that <m>y=<var name="$y0"/></m>, so the <m>y</m>-intercept is <m><var name="$yint"/></m>.</p></li>
+                <li><p>The <m>x</m>-intercept has <m>y=0</m>, that is, it corresponds to when there are zero radio ads. The <m>y</m>-intercept has <m>x=0</m>, that is, it corresponds to when there are zero tv ads.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion><p>A graph is shown below.</p>
+    <sidebyside width='25%'>
+    <image source="images/fig-in-ex-ans-1-1-7"><description>graph of acres of wheat vs acres of corn</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <note><p>The examples in this section model simple linear relationships between two variables.
 Such relationships, in which the value of one variable is determined by the value of the
