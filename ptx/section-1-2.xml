@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- <mathbook><book> -->
 
-<section xml:id="functions"   xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Functions</title>
+<section xml:id="functions"   xmlns:xi="http://www.w3.org/2001/XInclude"><title>Functions</title>
+
 <subsection><title>Definition of Function</title>   
+
 <p>We often want to predict values of one variable from the values of a related variable. For example, when a physician prescribes a drug in a certain dosage, she needs to know how long the dose will remain in the bloodstream. A sales manager needs to know how the price of his product will affect its sales. A <term>function</term><idx>function</idx> is a special type of relationship between variables that allows us to make such predictions.</p>
 
 <p>Suppose it costs $800 for flying lessons, plus $30 per hour to rent a plane. If we let <m>C</m> represent the total cost for <m>t</m> hours of flying lessons, then
@@ -61,7 +62,8 @@
     <li><p>The cost of a fill-up with unleaded gasoline is a function of the number of gallons purchased. The gas pump represents the function by displaying the corresponding values of the input variable (number of gallons) and the output variable (cost).</p></li>
     <li><p>Score on the Scholastic Aptitude Test (SAT) is not a function of score on an IQ test, because two people with the same score on an IQ test may score differently on the SAT; that is, a person’s score on the SAT is not uniquely determined by his or her score on an IQ test.</p></li></ol></p></example>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>Practice 1</title>
+    <statement><p><ol label="a">
     <li><p>As part of a project to improve the success rate of freshmen, the counseling department studied the grades earned by a group of students in English and algebra. Do you think that a student’s grade in algebra is a function of his or her grade in English? Explain why or why not.</p></li>
     <li><p>Phatburger features a soda bar, where you can serve your own soft drinks in any size. Do you think that the number of calories in a serving of Zap Kola is a function of the number of fluid ounces? Explain why or why not.</p></li>
     </ol></p></statement>
@@ -70,6 +72,26 @@
         <li><p>No, students with the same grade in English can have different grades in algebra.</p></li>
         <li><p>Yes, the number of calories is proportional to the number of fluid ounces.</p></li>
     </ol> </p></answer></exercise>
+
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $twoout = RadioButtons(
+              ["The variables are related by a formula.",
+              "The values of the input and output variables must be different.",
+              "There cannot be two output values for a single input value.",
+              "There cannot be two input values for a single output value."],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What distinguishes a function from other variable relationships?</p>
+        <p><var name="$twoout" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>There cannot be two output values for a single input value.</p>
+    </solution>
+</webwork></exercise>
 
 <p>A function can be described in several different ways. In the following examples, we consider functions defined by tables, by graphs, and by equations.</p>
 </subsection>
@@ -127,7 +149,7 @@
             <cell>$1.73</cell></row>
     </tabular></sidebyside>
 
-<p>If we know the weight of the article being shipped, we can determine the required postage from the table. For instance, a catalog weighing 4.5 ounces would require $1.31 in postage. In this example, <m>w</m> is the input variable and <m>p</m> is the output variable. We say that <m>p</m> <em>is a function of</em> <m>w</m>.</p></li>
+<p>If we know the weight of the article being shipped, we can find the postage from the table. For instance, a catalog weighing 4.5 ounces would require $1.31 in postage. In this example, <m>w</m> is the input variable and <m>p</m> is the output variable. We say that <m>p</m> <em>is a function of</em> <m>w</m>.</p></li>
 
     <li><p>The table below records the age and cholesterol count for 20 patients tested in a hospital survey.</p>
         <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -202,7 +224,7 @@
     <p>According to these data, cholesterol count is <em>not</em> a function of age, because several patients who are the same age have different cholesterol levels. For example, three different patients are 51 years old but have cholesterol counts of 227, 209, and 216, respectively. Thus, we cannot determine a <em>unique</em> value of the output variable (cholesterol count) from the value of the input variable (age). Other factors besides age must influence a person’s cholesterol count.</p></li>
     </ol></p></statement></example>
 
-<exercise>
+<exercise><title>Practice 2</title>
     <statement><p>Decide whether each table describes <m>y</m> as a function of <m>x</m>. Explain your choice.
     <ol label="a">
         <li><sidebyside width="63%" margins="0% 37%">
@@ -254,6 +276,26 @@
             <li><p>No, for example, <m>x = 3.5</m> corresponds both to <m>y = 2.5</m> and also to <m>y = 4.0</m>.</p></li>
             <li><p>Yes, each value of <m>x</m> has exactly one value of <m>y</m> associated with it.</p></li>
         </ol></p></answer></exercise>
+
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $table = RadioButtons(
+              ["The output values are all the same.",
+              "The input values are not evely spaced.",
+              "Two different input values have the same output value.",
+              "Two different output values have the same input value."],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>How would you know if a table of values does not come from a function?</p>
+        <p><var name="$table" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Two different output values have the same input value.</p>
+    </solution>
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Functions Defined by Graphs</title>
@@ -279,8 +321,8 @@
     <li><p>The maximum value of 14.4 hours occurs on the longest day of the year, when <m>t \approx 170</m>, about three weeks into June. The minimum of 9.6 hours occurs on the shortest day, when <m>t \approx 355</m>, about three weeks into December.</p></li>
     </ol></p></solution></example>
 
-<exercise><statement><p>
-    The graph shows the elevation in feet, <m>a</m>, of the Los Angeles Marathon course at a distance <m>d</m> miles into the race. (Source: <em>Los Angeles Times</em>, March 3, 2005)</p>
+<exercise><title>Practice 3</title>
+    <statement><p>The graph shows the elevation in feet, <m>a</m>, of the Los Angeles Marathon course at a distance <m>d</m> miles into the race. (Source: <em>Los Angeles Times</em>, March 3, 2005)</p>
     <sidebyside   width="80%"><image source="images/fig-LA-marathon" ><description>LA marathon elevation</description></image></sidebyside>
     <p><ol label="a">
         <li><p>Which variable is the input, and which is the output?</p></li>
@@ -306,9 +348,30 @@
     <p>As of 2016,  One World Trade Center in New York City is the nation’s tallest building, at 1776 feet. If an algebra book is dropped from the top of One World Trade Center, its height above the ground after <m>t</m> seconds is given by the equation <me>h = 1776 - 16t^2</me> Thus, after <m>\alert{1}</m> second the book’s height is <me>h = 1776 - 16(\alert{1})^2 = 1760 \text{ feet}</me> After <m>\alert{2}</m> seconds its height is <me>h = 1776 - 16(\alert{2})^2 = 1712 \text{ feet}</me> For this function, <m>t</m> is the input variable and <m>h</m> is the output variable. For any value of <m>t</m>, a unique value of <m>h</m> can be determined from the equation for <m>h</m>. We say that <m>h</m> <em>is a function of</em> <m>t</m>.</p>
  </example>  
 
-<exercise><statement><p>Write an equation that gives the volume, <m>V</m>, of a sphere as a function of its radius, <m>r</m>.</p>
+<exercise><title>Practice 4</title>
+<statement><p>Write an equation that gives the volume, <m>V</m>, of a sphere as a function of its radius, <m>r</m>.</p>
 </statement>
 <answer><p><m>V = \dfrac{4}{3}\pi r^3</m></p></answer></exercise>
+
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $threeways = RadioButtons(
+              ["By inputs, outputs, or evaluation",
+              "By tables, equations, or graphs",
+              "By the intercepts, the slope, or the vertex",
+              "By numbers, letters, or diagrams"],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Name three ways to describe a function.</p>
+        <p><var name="$threeways" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>By tables, equations, or graphs</p>
+    </solution>
+</webwork></exercise>
 
 <technology>
     <title><!--<image source="images/icon-GC.jpg"  width="8%"><description>Graphing Calculator</description></image>-->Making a Table of Values with a Calculator</title>
@@ -329,6 +392,16 @@
 
     <p>Now try making a table of values with <m>TblStart = 0</m> and <m>\Delta Tbl = 0.5</m>. Use the  <!-- <m>\boxed{\uparrow}</m>  --><m>\boxed{\uparrow}</m> and <m>\boxed{\downarrow}</m> <!--<c>↓</c>--> arrow keys to scroll up and down the table.</p>
 </technology>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Write one question you still have about functions.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Function Notation</title>
@@ -383,7 +456,8 @@ We see that</p>
     <image  source="images/fig-Function-Notation.png"><description>Function Notation</description></image></sidebyside>
 </assemblage>
 
-<exercise><statement><p>Let <m>F</m> be the name of the function defined by the graph in <xref ref="example-sun-hours" text="type-global"/>, the number of hours of daylight in Peoria.
+<exercise><title>Practice 5</title>
+<statement><p>Let <m>F</m> be the name of the function defined by the graph in <xref ref="example-sun-hours" text="type-global"/>, the number of hours of daylight in Peoria.
 <ol label="a">
     <li><p>Use function notation to state that <m>H</m> is a function of <m>t</m>.</p></li>
     <li><p>What does the statement <m>F(15) = 9.7</m> mean in the context of the problem?</p></li>
@@ -393,6 +467,26 @@ We see that</p>
         <li><p><m>H = F(t)</m></p></li>
         <li><p>The sun is above the horizon in Peoria for <m>9.7</m> hours on January 16.</p></li></ol>
 </p></answer></exercise>
+
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $deffun = RadioButtons(
+              ["\(L=w(p)\)",
+              "\(w=L(p)\)",
+              "\(p=L(w)\)",
+              "\(L=p(w)\)"],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Use function notation to write the statement "<m>L</m> defines <m>w</m> as a function of <m>p</m>."</p>
+        <p><var name="$deffun" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>w=L(p)</m></p>
+    </solution>
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Evaluating a Function</title>
@@ -423,8 +517,8 @@ We see that</p>
      </tabular></sidebyside>
      <p>Thus, a letter weighing 1 ounce costs $0.47 to mail, a letter weighing 3 ounces costs $0.89, and a letter weighing 6.75 ounces costs $1.73.</p></solution></example>
 
-<exercise><statement><p>
-    When you exercise, your heart rate should increase until it reaches your target heart rate. The table shows target heart rate, <m>r = f(a)</m>, as a function of age.</p>
+<exercise><title>Practice 6</title>
+    <statement><p>When you exercise, your heart rate should increase until it reaches your target heart rate. The table shows target heart rate, <m>r = f(a)</m>, as a function of age.</p>
     <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
         <cell><m>a</m></cell>
         <cell><m>20</m></cell>
@@ -461,6 +555,26 @@ We see that</p>
         <li><p><m>f (25) = 146, ~~f (50) = 127</m></p></li>
         <li><p><m>a = 40</m></p></li></ol></p></answer></exercise>
 
+<exercise><title>QuickCheck 5</title>
+<webwork>
+    <setup><pg-code>       
+            $inout = RadioButtons(
+              ["\(f\) is the output and \(n\) is the input",
+              "\(a\) is the input and \(f\) is the output",
+              "\(a\) is the input and \(n\) is the output",
+              "\(f(a)\) is the input and \(n\) is the output"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>If <m>n=f(a)</m>, what are the input and output variables?</p>
+        <p><var name="$inout" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>a</m> is the input and <m>n</m> is the output</p>
+    </solution>
+</webwork></exercise>
+
 <p>If a function is described by an equation, we simply substitute the given input value into the equation to find the corresponding output, or function value.</p>
 
 <example xml:id="example-evaluate-function"><statement>
@@ -477,8 +591,8 @@ We see that</p>
             \dfrac{\sqrt{2}}{-1}=-\sqrt{2}</m>. Thus, <m>f(-1)=-\sqrt{2}</m>.</p></li></ol></p>
     </solution></example>
 
-<exercise xml:id="exercise-function-notation"><statement><p>
-    Complete the table displaying ordered pairs for the function <m>f(x) = 5 - x^3</m>. Evaluate the function to find the corresponding <m>f(x)</m>-value for each value of <m>x</m>.</p>
+<exercise xml:id="exercise-function-notation"><title>Practice 7</title>
+    <statement><p>Complete the table displaying ordered pairs for the function <m>f(x) = 5 - x^3</m>. Evaluate the function to find the corresponding <m>f(x)</m>-value for each value of <m>x</m>.</p>
     <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <col halign="center"  />
         <col halign="center" />
@@ -555,11 +669,21 @@ We see that</p>
     The cost of producing 500 backpacks is $13,000.</p></solution>
 </example>
 
-<exercise>
+<exercise><title>Practice 8</title>
     <statement><p>The volume of a sphere of radius <m>r</m> centimeters is given by
         <me>V = V(r) = \frac{4}{3}\pi r^3</me>
     Evaluate <m>V(10)</m> and explain what it means.</p></statement>
 <answer><p><m>V(10) = 4000\pi/3\approx 4188.79 \text{ cm}^3</m> is the volume of a sphere whose radius is <m>10</m> cm.</p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Do linear equations <m>y=mx+b</m> and quadratic equations <m>y=ax^2+bx+c</m> define functions? Why or why not?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Operations with Function Notation</title>
@@ -580,9 +704,8 @@ We see that</p>
             <me>C(\alert{1.5b}) = 3000 + 20(\alert{1.5b}) = 3000 + 30b</me></li>
         </ol></p></solution></example>
 
-<exercise>
-    <statement><p>
-        A spherical balloon has a radius of 10 centimeters.
+<exercise><title>Practice 9</title>
+    <statement><p>A spherical balloon has a radius of 10 centimeters.
         <ol label="a">
             <li>If we increase the radius by <m>h</m> centimeters, what will the new volume be?</li>
             <li>If <m>h = 2</m>, how much did the volume increase?</li>
@@ -624,8 +747,28 @@ To compute <m>f(a) + f(3)</m>, we must first compute <m>f(a)</m> and <m>f(3)</m>
 <p>In general, it is not true that <m>f(a + b) = f(a) + f(b)</m>. Remember that the parentheses in the expression <m>f(x)</m> do not indicate multiplication, so the distributive law does not apply to the expression <m>f(a + b)</m>.</p>
 </warning>
 
-<exercise><statement><p>
-    Let <m>f(x) = x^3 - 1</m> and evaluate each expression.
+<exercise><title>QuickCheck 6</title>
+<webwork>
+    <setup><pg-code>       
+            $fnot = RadioButtons(
+              ["\(f(x)+f(y)\)",
+              "\(f(x+y)^2\)",
+              "\(x^2+y^2\)",
+              "\((x+y)^2\)"],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Define the function <m>f(x)=x^2</m>. Which of these is equal to <m>f(x+y)</m>?</p>
+        <p><var name="$fnot" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>(x+y)^2</m></p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 10</title>
+<statement><p>Let <m>f(x) = x^3 - 1</m> and evaluate each expression.
     <ol label="a">
         <li><m>f(2) + f(3)</m></li>
         <li><m>f(2 + 3)</m></li>
@@ -638,8 +781,17 @@ To compute <m>f(a) + f(3)</m>, we must first compute <m>f(a)</m> and <m>f(3)</m>
         <li><p><m>124</m></p></li>
         <li><p><m>2x^3 + 1</m></p></li>
     </ol>
-</p></answer>
-</exercise>
+</p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain why <m>f(a+b)</m> is not the same as <m>f(a)+f(b)</m> for most functions.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 
 </subsection>
 
