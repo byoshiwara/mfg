@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- <mathbook><book> -->
 
-<section xml:id="linear-regression"   xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Linear Regression</title><introduction>
+<section xml:id="linear-regression"   xmlns:xi="http://www.w3.org/2001/XInclude"><title>Linear Regression</title>
 
+<introduction>
 <p>We have spent most of this chapter analyzing models described by graphs or equations. To create a model, however, we often start with a quantity of data. Choosing an appropriate function for a model is a complicated process. In this section, we consider only linear models and explore methods for fitting a linear function to a collection of data points. First, we fit a line through two data points.</p></introduction>
 
-<subsection><title>Fitting a Line through Two Points</title>   
+<subsection><title>Fitting a Line through Two Points</title>
+
 <p>If we already know that two variables are related by a linear function, we can find a formula from just two data points. For example, variables that increase or decrease at a constant rate can be described by linear functions.</p>
 
 <example xml:id="example-wine"><statement>
@@ -40,8 +41,8 @@
                 <me>y = y_1 + m(x - x_1)</me></p></li>
     </ol></p></assemblage>
 
-<exercise><statement><p>
-In 1991, there were 64.6 burglaries per 1000 households in the United States. The number of burglaries reported annually declined at a roughly constant rate over the next decade, and in 2001 there were 28.7 burglaries per 1000 households. (Source: U.S. Department of Justice)
+<exercise><title>Practice 1</title>
+<statement><p>In 1991, there were 64.6 burglaries per 1000 households in the United States. The number of burglaries reported annually declined at a roughly constant rate over the next decade, and in 2001 there were 28.7 burglaries per 1000 households. (Source: U.S. Department of Justice)
 <ol label="a">
     <li><p>Find a function for the number of burglaries, <m>B</m>, as a function of time, <m>t</m>, in years, since 1990.</p> </li>
     <li><p>State the slope as a rate of change. What does the slope tell us about this problem?</p></li>
@@ -51,6 +52,26 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
     <li><p><m>-3.59</m> burglaries per <m>1000</m> households per year. From 1991 to 2001, the burglary rate declined by <m>3.59</m> burglaries per 1000 households every year.</p></li>
 </ol></p></answer>
 </exercise>
+
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $tpts = RadioButtons(
+              ["Draw the line, use the point-slope formula",
+              "Compute the slope, find the \(y\)-intercept",
+              "Compute the slope, use the point-slope formula",
+              "Find the intercepts, compute the slope"],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What are the two steps to find the equation of a line through two points?</p>
+        <p><var name="$tpts" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Compute the slope, use the point-slope formula</p>
+    </solution>
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Scatterplots</title>
@@ -94,7 +115,8 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
 
 <warning><p>  To find the slope of your estimated line, be sure to choose points <em>on the line</em>; do not choose any of the data points (unless they happen to lie on your line).</p></warning>
 
-<exercise xml:id="exercise-scatterplot"><statement><p><ol label="a">
+<exercise xml:id="exercise-scatterplot"><title>Practice 2</title>
+<statement><p><ol label="a">
         <li><p>Plot the data points. Do the points lie on a line?</p></li>
         <li><p>Draw a line that fits the data.</p></li>
     </ol></p>
@@ -129,6 +151,26 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
     </ul></p>
 <sidebyside width="80%"><image source="images/fig-scatterplots"><description>three scatterplots</description></image></sidebyside>
 
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $yn = RadioButtons(
+              ["Yes, Yes",
+              "Yes, No",
+              "No, Yes",
+              "No, No"],
+              0, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Can two points on a scatterplot have the same <m>x</m>-coordinate? Can two points have the same <m>y</m>-coordinate?</p>
+        <p><var name="$yn" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Yes, Yes</p>
+    </solution>
+</webwork></exercise>
+
 <p>If the data in a scatterplot are roughly linear, we can estimate the location of an imaginary <term>line of best</term><idx>line of best</idx> fit that passes as close as possible to the data points. We can then use this line to make predictions about the data.</p>
 </subsection>
 
@@ -137,7 +179,7 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
 <p>One measure of a person's physical fitness is the <em>body mass index</em><idx>body mass index</idx>, or BMI. Your BMI is the ratio of your weight in kilograms to the square of your height in centimeters. Thus, thinner people have lower BMI scores, and fatter people have higher scores. The Centers for Disease Control considers a BMI between 18.5 and 24.9 to be healthy.</p>
 
 <p> The points on the scatterplot below show the BMI of Miss America from 1921 to 1991. From the data in the scatterplot, can we see a trend in Americans’ ideal of female beauty?</p>
-    <sidebyside width="80%"><image source="images/fig-BMI" ><description>Miss America BMI</description></image></sidebyside>
+<sidebyside width="80%"><image source="images/fig-BMI" ><description>Miss America BMI</description></image></sidebyside>
 
 <example xml:id="example-BMI"><statement><p><ol label="a">
         <li>Estimate a line of best fit for the scatterplot above. (Source: http://www.pbs.org)</li>
@@ -150,8 +192,28 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
     <li>We see that when <m>t = 60</m> on this line, the <m>y</m>-value is approximately 18.3. We therefore estimate that Miss America 1980 had a BMI of 18.3. (Her actual BMI was 17.85.)</li>
     </ol>   </p></solution></example>
 
-<exercise><statement><p>
-    Human brains consume a large amount of energy, about 16 times as much as muscle tissue per unit weight. In fact, brain metabolism accounts for about 25% of an adult human’s energy needs, as compared to about 5% for other mammals.</p>
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $bf = RadioButtons(
+              ["The first and last data points",
+              "Two data points in the middle",
+              "Either of these",
+              "None of these"],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>We can estimate a line of best fit by drawing the line that passes through:</p>
+        <p><var name="$bf" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>None of these</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 3</title>
+<statement><p>Human brains consume a large amount of energy, about 16 times as much as muscle tissue per unit weight. In fact, brain metabolism accounts for about 25<percent/> of an adult human’s energy needs, as compared to about 5<percent/> for other mammals.</p>
     <p> As hominid species evolved, their brains required larger and larger amounts of energy, as shown below. (Source: Scientific American, December 2002)</p>
     <sidebyside width="50%"><image source="images/fig-hominid-brains"><description>hominid brains</description></image></sidebyside>
     <p><ol label="a">
@@ -184,7 +246,28 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
         This value agrees well with the estimate we made in <xref ref="example-BMI" text="type-global" />.</li>
     </ol></p></solution></example>
 
-<exercise><statement><p>The number of manatees killed by watercraft in Florida waters has been increasing since 1975. Data are given at 5-year intervals in the table. (Source: Florida Fish and Wildlife Conservation Commission)</p>
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $rl = RadioButtons(
+              ["Three",
+              "Two",
+              "One",
+              "None"],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>How many data points must a good regression line pass through?</p>
+        <p><var name="$rl" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>None</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 4</title>
+<statement><p>The number of manatees killed by watercraft in Florida waters has been increasing since 1975. Data are given at 5-year intervals in the table. (Source: Florida Fish and Wildlife Conservation Commission)</p>
     <sidebyside valigns="middle middle"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
             <cell>Year</cell>
@@ -218,6 +301,16 @@ In 1991, there were 64.6 burglaries per 1000 households in the United States. Th
         <li><p><m>y = 4.7 + 2.6t</m> </p></li>
         <li><p><m>65</m></p></li>
     </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Describe a strategy for sketching a line of best fit by eye.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Linear Interpolation and Extrapolation</title>
@@ -247,16 +340,47 @@ Even if the Miss America pageant is still operating in 600 years, the winner can
 
 <p>The graph at right shows a child’s height each month. The graph is not linear because her rate of growth is not constant; her growth slows down as she approaches her adult height. However, over a short time interval the graph is close to a line, and that line can be used to approximate the coordinates of points on the curve.</p></sidebyside>
 
-<exercise><statement><p>Emily was 82 centimeters tall at age 36 months and 88 centimeters tall at age 48 months.<ol label="a">
-        <li><p>Find a linear equation that approximates Emily's height in terms of her age over the given time interval.</p></li>
-        <li><p>Use linear interpolation to estimate Emily’s height when she was 38 months old, and extrapolate to predict her height at age 50 months.</p></li>
-        <li><p>Predict Emily's height at age 25 (300 months). Is your answer reasonable?</p></li>
+<exercise><title>QuickCheck 5</title>
+<webwork>
+    <setup><pg-code>       
+            $rlc = RadioButtons(
+              ["Yes",
+              "No",
+              "Only the slope could change.",
+              "Only the intercept could change."],
+              0, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>If you add more data points to the scatterplot, could the regression line change?</p>
+        <p><var name="$rlc" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Yes</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 5</title>
+<statement><p>Emily was 82 centimeters tall at age 36 months and 88 centimeters tall at age 48 months.<ol label="a">
+    <li><p>Find a linear equation that approximates Emily's height in terms of her age over the given time interval.</p></li>
+    <li><p>Use linear interpolation to estimate Emily's height when she was 38 months old, and extrapolate to predict her height at age 50 months.</p></li>
+    <li><p>Predict Emily's height at age 25 (300 months). Is your answer reasonable?</p></li>
     </ol></p></statement>
 <answer><p><ol label="a" cols="3">
         <li><p><m>y = 64 + 0.5x</m></p></li>
         <li><p><m>83</m> cm, <m>89</m> cm</p></li>
         <li><p><m>214</m> cm; No</p></li>
     </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain the difference between interpolation and extrapolation.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 
 <p>Estimating a line of best fit is a subjective process. Rather than base their estimates on such a line, statisticians often use the <term>least squares regression line</term><idx>least squares regression line</idx>.</p>
 
@@ -265,7 +389,7 @@ Even if the Miss America pageant is still operating in 600 years, the winner can
 <p>This regression line minimizes the sum of the squares of all the vertical distances between the data points and the corresponding points on the line, as shown at left. Many calculators are programmed to find the least squares regression line, using an algorithm that depends only on the data, not on the appearance of the graph.
 </p></sidebyside>
 
-<technology><title><!--<image source="images/icon-GC.jpg"  width="8%"><description>Graphing Calculator</description></image>-->Using a Calculator for Linear Regression</title>
+<technology><title><!--<image source="images/icon-GC.jpg"  width="8%"><description>Graphing Calculator</description></image>-->Using Technology for Linear Regression</title>
 
 <p>You can use a graphing calculator to make a scatterplot, find a regression line, and graph the regression line with the data points. On the TI-83 calculator, we use the statistics mode, which you can access by pressing <c>STAT</c>. You will see a display that looks like figure (a) below. Choose <m>1</m> to <m>Edit</m> (enter or alter) data.</p> 
 
@@ -304,9 +428,10 @@ Even if the Miss America pageant is still operating in 600 years, the winner can
 
 <warning><p>When you are through with the scatterplot, press <c>Y=</c><!--<m>\boxed{\uparrow}</m>  --> <m>\boxed{\uparrow}</m>  <c>ENTER</c> to turn off the <m>Stat Plot</m>. If you neglect to do this, the calculator will continue to show the scatterplot even after you ask it to plot a new equation.</p></warning>
 
-<exercise><statement><p><ol label="a">
-        <li><p>Use your calculator’s statistics features to find the least squares regression equation for the data in <xref ref="exercise-scatterplot" text="type-global" />.</p></li>
-        <li><p>Plot the data and the graph of the regression equation.</p></li>
+<exercise><title>Practice 6</title>
+<statement><p><ol label="a">
+    <li><p>Use your calculator’s statistics features to find the least squares regression equation for the data in <xref ref="exercise-scatterplot" text="type-global" />.</p></li>
+    <li><p>Plot the data and the graph of the regression equation.</p></li>
     </ol></p></statement>
 <answer><p><ol label="a" cols="2">
         <li><p><m>y = 1.34 + 0.71x</m></p></li>
