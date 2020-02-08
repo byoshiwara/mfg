@@ -8,8 +8,9 @@
 <p>We begin by reviewing the absolute value.</p>
 </introduction>
 
-<subsection><title>Absolute Value</title>  
-<p>The absolute value is used to discuss problems involving distance. For example, consider the number line shown below. Starting at the origin, we travel in opposite directions to reach the two numbers <m>6</m> and <m>-6</m>, but the distance we travel in each case is the same.</p> 
+<subsection><title>Absolute Value</title>
+
+<p>The absolute value is used to discuss problems involving distance. For example, consider the number line shown below. Starting at the origin, we travel in opposite directions to reach the two numbers <m>6</m> and <m>-6</m>, but the <em>distance</em> we travel in each case is the same.</p> 
 <sidebyside width="50%"><image source="images/fig-abs-six"><description>absolute value</description></image></sidebyside>
 
 <p>The distance from a number <m>c</m> to the origin is called the <term>absolute value</term><idx>absolute value</idx> of <m>c</m>, denoted by <m>\abs{c}</m>. Because distance is never negative, the absolute value of a number is always positive (or zero). Thus, <m>\abs{6}= 6</m> and <m>\abs{-6} = 6</m>. In general, we define the absolute value of a number <m>x</m> as follows.</p>
@@ -26,6 +27,26 @@
 
 <note><p>This definition says that the absolute value of a positive number (or zero) is the same as the number. To find the absolute value of a negative number, we take the opposite of the number, which results in a positive number. For instance,
     <me>\abs{-6} = -(-6) = 6</me></p></note>
+
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $absneg = RadioButtons(
+              ["\( x \) must be zero.",
+              "\( x \) must be negative.",
+              "\( x \) must be zero or negative.",
+              "This cannot happen for any value of \( x \)."],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>If <m> \left| x \right| =-x </m>, what can you say about <m> x </m>?</p>
+        <p><var name="$absneg" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m> x </m> must be zero or negative.</p>
+    </solution>
+</webwork></exercise>
     
 <p>Absolute value bars act like grouping devices in the order of operations: You should complete any operations that appear inside absolute value bars before you compute the absolute value.</p>
 
@@ -40,7 +61,8 @@
             <me>\abs{3} - \abs{8} = 3 - 8 = -5</me></p></li>
     </ol></p></solution></example>
 
-<exercise><statement><p>Simplify each expression.
+<exercise><title>Practice 1</title>
+<statement><p>Simplify each expression.
     <ol label="a" cols = "2">
         <li><p><m>12 - 3\abs{-6}</m></p></li>
         <li><p><m>-7 - 3\abs{2 - 9}</m></p></li>
@@ -402,19 +424,30 @@
 </subsection>
 
 <subsection><title>Graphs of Eight Basic Functions</title>
-    <p>The graphs of the eight basic functions considered in <xref ref="Eight-basic-functions" text="type-global"/> are shown below. Once you know the shape of each graph, you can sketch an accurate picture by plotting a few guidepoints and drawing the curve through those points. Usually, points (or vertical asymptotes!) at <m>x = -1</m>, <m>0</m>, and <m>1</m> make good guidepoints.</p>
+
+<p>The graphs of the eight basic functions considered in <xref ref="Eight-basic-functions" text="type-global"/> are shown below. Once you know the shape of each graph, you can sketch an accurate picture by plotting a few guidepoints and drawing the curve through those points. Usually, points (or vertical asymptotes!) at <m>x = -1</m>, <m>0</m>, and <m>1</m> make good guidepoints.</p>
 <sidebyside><image source="images/fig-basic-a-c"><description>parabola, cubic, square root</description></image></sidebyside>
 <sidebyside><image source="images/fig-basic-d-f"><description>parabola, cubic, square root</description></image></sidebyside>
 <sidebyside  width="60%"><image source="images/fig-basic-g-h"><description>parabola, cubic, square root</description></image></sidebyside>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Which of the eight basic functions are undefined at <m>x=0</m>? Which are undefined for negative <m>x</m>? Which are always positive?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
-<subsection><title>Properties of the Basic Functions</title>
+<subsection><title>Some Properties of Absolute Value</title>
 
 <p>In <xref ref="functions" text="type-global"/>, we saw that for most functions, <m>f (a + b)</m> is not equal to <m>f (a) + f (b)</m>. We may be able to find <em>some</em> values of <m>a</m> and <m>b</m> for which <m>f (a + b) = f (a) + f (b)</m> is true, but if it is not true for <em>all</em> values of <m>a</m> and <m>b</m>, we cannot claim that <m>f (a + b) = f (a) + f (b)</m> for that function.</p> 
+
 <p>For example, for the function <m>f (x) = x^2</m>, if we choose <m>a = 3</m> and <m>b = 4</m>, then
     <md><mrow>f (3 + 4) \amp = f (7) = 7^2 = 49</mrow>
-        <mrow>\text{but }~~~~~ f (3) + f (4) \amp = 3^2 + 4^2 = 9 + 16 = 25</mrow>
-    </md>
+        <mrow>\text{but }~~~~~ f (3) + f (4) \amp = 3^2 + 4^2 = 9 + 16 = 25</mrow></md>
     so we have proved that <m>f (a + b) \ne f (a) + f (b)</m> for the squaring function. (In fact, we already knew this because <m>(a + b)^2 \ne a^2 + b^2</m> as long as neither <m>a</m> nor <m>b</m> is <m>0</m>.)</p>
 
 <p>What about multiplication? Which of the basic functions have the property that <m>f (ab) = f (a) f (b)</m> for all <m>a</m> and <m>b</m>? You will consider this question in the homework problems, but in particular you will need to recall the following  properties of absolute value.</p>
@@ -429,23 +462,44 @@
 <example xml:id="example-triangle-inequality"><statement><p>Verify the triangle inequality for three cases: <m>a</m> and <m>b</m> are both positive, <m>a</m> and <m>b</m> are both negative, and <m>a</m> and <m>b</m> have opposite signs.</p></statement>
 <solution><p><ul>
     <li><p>We choose positive values for <m>a</m> and <m>b</m>, say <m>a = 3</m> and <m>b = 5</m>. Then 
-    <me>\abs{3 + 5} = \abs{8} = 8 ~\text{ and } ~ \abs{3}+\abs{5}= 3 + 5 = 8</me>
+        <me>\abs{3 + 5} = \abs{8} = 8 ~\text{ and } ~ \abs{3}+\abs{5}= 3 + 5 = 8</me>
     so <m>\abs{3 + 5} = \abs{3} + \abs{5}</m>.</p></li>
     <li><p> For the second case, we choose <m>a = -3</m> and <m>b = -5</m>. Then
-    <me>\abs{-3 + (-5)} = \abs{-8} = 8 ~\text{ and } ~ \abs{-3}+\abs{-5} = 3 + 5 = 8</me>
+        <me>\abs{-3 + (-5)} = \abs{-8} = 8 ~\text{ and } ~ \abs{-3}+\abs{-5} = 3 + 5 = 8</me>
     so <m>\abs{-3 + (-5)} =\abs{-3}+\abs{-5}</m>.</p></li>
     <li><p> For the third case, we choose <m>a = 3</m> and <m>b = -5</m>. Then
-    <me>\abs{3 + (-5)}=\abs{-2} = 2  ~\text{ and } ~ \abs{3}+\abs{-5}=3 + 5 = 8</me>
+        <me>\abs{3 + (-5)}=\abs{-2} = 2  ~\text{ and } ~ \abs{3}+\abs{-5}=3 + 5 = 8</me>
     so <m>\abs{3 + (-5)} \lt \abs{3}+\abs{-5}</m>. In each case, <m>\abs{a + b}\le\abs{a} +\abs{b}</m>.</p></li>
 </ul></p></solution></example>
 
 <note><p>Note that <em>verifying</em> a statement for one or two values of the variables does not <em>prove</em> the statement is true for <em>all</em> values of the variables. However, working with examples can help us understand the meaning and significance of mathematical properties.</p></note>
 
-<exercise><statement><p>Verify the multiplicative property of absolute value for the three cases in <xref ref="example-triangle-inequality" text="type-global" />.</p></statement>
+<exercise><title>Practice 2</title>
+<statement><p>Verify the multiplicative property of absolute value for the three cases in <xref ref="example-triangle-inequality" text="type-global" />.</p></statement>
 <answer><p><ul><li><m>\abs{3}\abs{5}=15=\abs{3\cdot 5} </m></li><li> 
 <m>\abs{-3}\abs{-5}=15=\abs{(-3)\cdot (-5)}</m></li><li>
 <m>\abs{3}\abs{-5}=15=\abs{3(-5)}</m></li>
 </ul></p></answer></exercise>
+
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $absineq = RadioButtons(
+              ["\( \left| a-b \right| \le \left| a \right| - \left| b \right| \)",
+              "\( \left| a-b \right| \ge \left| a \right| - \left| b \right| \)",
+              "\( \left| a-b \right| \ge \left| a \right| + \left| b \right| \)",
+              "\( \left| a+b \right| \ge \left| a \right| + \left| b \right| \)"],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Which of these is true for all <m>a</m> and <m>b</m>?</p>
+        <p><var name="$absineq" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m> \left| a-b \right| \ge \left| a \right| - \left| b \right| </m></p>
+    </solution>
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Functions Defined Piecewise</title>
@@ -469,7 +523,8 @@
     <image source="images/fig-piecewise"><description>piecewise function</description></image></sidebyside>
 </solution></example>
 
-<exercise><statement><p>Graph the piecewise defined function
+<exercise><title>Practice 3</title>
+<statement><p>Graph the piecewise defined function
     <me>
         g(x) =\begin{cases}
         -1 - x \amp \text { if } x \le -1\\
@@ -477,6 +532,26 @@
         \end{cases}
     </me></p></statement>
 <answer><sidebyside width="20%"><image source="images/fig-in-ex-ans-2-2-3"><description>piercewise defined function</description></image></sidebyside></answer></exercise>
+
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $pcws = RadioButtons(
+              ["\(0\)",
+              "\(-1\)",
+              "\(-2\)",
+              "undefined"],
+              0, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>In Exercise 3, what is the value of <m>g(-1)</m>?</p>
+        <p><var name="$pcws" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>0</m></p>
+    </solution>
+</webwork></exercise>
 
 <p>The absolute value function <m>f (x) = \abs{x}</m> is an example of a function that is defined piecewise.
     <me>
@@ -495,7 +570,7 @@
 </ol></p>
 </statement>
 <solution><p><ol label="a">
-        <li><p>In the definition for <m>\abs{x}</m>, we replace <m>x</m> by <m>x - 3</m> to get
+    <li><p>In the definition for <m>\abs{x}</m>, we replace <m>x</m> by <m>x - 3</m> to get
             <me>
                 g(x) =\abs{x-3} =
                 \begin{cases}
@@ -503,7 +578,7 @@
                 -(x-3)  \amp \text{if }~ x-3\lt 0
                 \end{cases}
             </me>
-        We can simplify this expression to
+    We can simplify this expression to
             <me>
                 g(x) =\abs{x-3} =
                 \begin{cases}
@@ -511,11 +586,12 @@
                 -x+3  \amp \text{if }~ x\lt 3
                 \end{cases}
             </me></p></li>
-        <li><p>In the first region, <m>x \ge 3</m>, we graph the line <m>y = x - 3</m>. Because <m>x = 3</m> is included in this region, the endpoint of this portion of the graph, <m>(3, 0)</m>, is included, too.</p>
-        <p> In the second region, <m>x \lt 3</m>, we graph the line <m>y = -x + 3</m>. Note that the two pieces of the graph meet at the point <m>(0, 3)</m>, as shown below.</p>
+    <li><p>In the first region, <m>x \ge 3</m>, we graph the line <m>y = x - 3</m>. Because <m>x = 3</m> is included in this region, the endpoint of this portion of the graph, <m>(3, 0)</m>, is included, too.</p>
+    <p> In the second region, <m>x \lt 3</m>, we graph the line <m>y = -x + 3</m>. Note that the two pieces of the graph meet at the point <m>(0, 3)</m>, as shown below.</p>
         <sidebyside width="45%"><image source="images/fig-piecewise2"><description>piecewise function</description></image></sidebyside></li></ol></p></solution></example>
 
-<exercise><statement>
+<exercise><title>Practice 4</title>
+<statement>
     <ol label="a">
         <li><p>Use your calculator to graph <m>g(x) =\abs{x-3}</m> and <m>h(x) =\abs{x} + \abs{-3}</m>. Are the graphs the same?</p></li>
         <li><p>Explain why the functions <m>f (x) =\abs{x + k}</m> and <m>g(x) =\abs{x} + \abs{k}</m> are not the same if <m>k\ne 0</m>.
@@ -525,6 +601,16 @@
     <li><p>No</p></li>
     <li><p>Because <m>\abs{x + k}\ne \abs{x} + \abs{k}</m> when <m>x</m> and <m>k</m> have opposite signs.</p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>What relationship do you see between the graphs of <m>f(x)=x^3</m> and <m>g(x)=\sqrt[3]{x}</m> ?  Between the graphs of <m>f(x)=x^2</m> and <m>g(x)=\sqrt{x}</m> ?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 
 </subsection>
 <xi:include href="./summary-2-2.xml" /> <!-- summary  -->
