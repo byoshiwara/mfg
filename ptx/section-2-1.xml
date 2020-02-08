@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- <mathbook><book> -->
 
-<section xml:id="nonlinear-models"   xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Nonlinear Models</title><introduction>
+<section xml:id="nonlinear-models"   xmlns:xi="http://www.w3.org/2001/XInclude"><title>Nonlinear Models</title>
 
-<p>In Chapter 1, we considered models described by linear functions. In this chapter, we begin our study of nonlinear models.</p>
+<introduction><p>In Chapter 1, we considered models described by linear functions. In this chapter, we begin our study of nonlinear models.</p>
 </introduction>
 
 <subsection><title>Solving Nonlinear Equations</title> 
+
 <p>When studying nonlinear models, we will need to solve nonlinear equations. For example, in <xref ref="investigation-Perimeter-and-Area" text="type-hybrid"/> we used a graph to solve the quadratic equation <me>18x - x^2 = 80</me></p>
 <p>Here is another example. The figure shows a table and a graph for the function <m>y = 2x^2 - 5</m>.</p>
 <sidebyside widths="30% 50%" valigns="top middle" margins="6%"><image source="images/fig-parabola"><description>parabola</description></image>
@@ -44,10 +44,30 @@ we need only find the <m>x</m>-coordinates of these points. From the graph, the 
     and then take square roots to find
     <me>x = \pm\sqrt{6}</me></p>
 
-<warning><p>Don't forget that every positive number has two square roots. The symbol <m>\blert{\pm}</m> (read “plus or minus”) is a shorthand notation used to indicate both square roots of <m>6</m>.</p>
+<warning><p>Don't forget that every positive number has <em>two</em> square roots. The symbol <m>\blert{\pm}</m> (read “plus or minus”) is a shorthand notation used to indicate both square roots of <m>6</m>.</p>
 </warning>
  
- <p>The exact solutions are thus <m>\sqrt{6}</m> and <m>-\sqrt{6}</m>. We can also find decimal approximations for the solutions using a calculator. Rounded to two decimal places, the approximate solutions are <m>2.45</m> and <m>-2.45</m>.</p>
+ <p>The exact solutions are thus <m>\sqrt{6}</m> and <m>-\sqrt{6}</m>. We can also find decimal <em>approximations</em> for the solutions using a calculator. Rounded to two decimal places, the approximate solutions are <m>2.45</m> and <m>-2.45</m>.</p>
+
+ <exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $quadtrue = RadioButtons(
+              ["A quadratic equation may include a linear or a constant term.",
+              "The solutions of a quadratic equation are always of the form \(\pm k\) .",
+              "Your calculator gives exact decimal values for square roots of integers.",
+              "The coefficients of a quadratic equation are called parabolas."],
+              0, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Which statement is true?</p>
+        <p><var name="$quadtrue" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>A quadratic equation may include a linear or a constant term.</p>
+    </solution>
+</webwork></exercise>
 
 <p>In general, we can solve equations of the form 
     <m>ax^2 + c = 0</m>
@@ -62,7 +82,8 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
     </ol></p>
 </assemblage>
 
-<example xml:id="example-cat-falling"><statement><p>If a cat falls off a tree branch 20 feet above the ground, its height <m>t</m> seconds later is given by <m>h = 20 - 16t^2</m>.  <ol label="a">
+<example xml:id="example-cat-falling">
+<statement><p>If a cat falls off a tree branch 20 feet above the ground, its height <m>t</m> seconds later is given by <m>h = 20 - 16t^2</m>.  <ol label="a">
         <li>What is the height of the cat <m>0.5</m> second later?</li>
         <li>How long does the cat have to get in position to land on its feet before it reaches the ground?</li>
     </ol></p></statement>
@@ -91,10 +112,30 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
 </p> </stack></sidebyside>
 </solution></example>
 
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $approx = RadioButtons(
+              ["\(x^2=40\); \(~~~~~~ \pm 6.32455532\)",
+              "\(t^2=\dfrac{81}{64}\);   \(~~~~~~ \pm 1.125\)",
+              "\(w^2=50\);   \(~~~~~~ \pm 5\sqrt{2}\)",
+              "\(b^2=(0.632)^2\);  \(~~~~~~ \pm 0.632\)"],
+              0, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Which solutions are approximations?</p>
+        <p><var name="$approx" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>x=\pm 6.32455532</m></p>
+    </solution>
+</webwork></exercise>
+
 <note><p>In part (a) of <xref ref="example-cat-falling" text="type-global"/> we <term>evaluated</term> the expression <m>20 - 16t^2</m> to find a value for <m>h</m>, and in part (b) we <term>solved</term> the equation <m>0 = 20 - 16t^2</m> to find a value for <m>t</m>.</p></note>
 
-<exercise><statement>
-    <p><ol label="a">
+<exercise><title>Practice 1</title>
+    <statement><p><ol label="a">
         <li><p>Solve by extracting roots
             <m>\dfrac{3x^2 - 8}{5}= 10.</m> </p>
             <p><m>\blert{\text{First, isolate } x^2.}</m></p> 
@@ -102,6 +143,16 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
         <li><p>Give exact answers; then give approximations rounded to two decimal places.</p></li>
     </ol></p></statement>
 <answer><p><m>x=\pm\sqrt{\dfrac{58}{3}}\approx \pm 4.40 </m></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Use graphs to explain why a linear equation can have only one solution, but a quadratic equation may have two solutions.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Solving Formulas</title>
@@ -121,9 +172,8 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
     Because the radius of a cone must be a positive number, we use only the positive square root: 
     <m>r = \sqrt{\dfrac{3V}{\pi h}}</m>.</p></solution></example>
 
-<exercise><statement>
-    <p>Find a formula for the radius of a circle in terms of its area.</p>
-</statement>
+<exercise><title>Practice 2</title>
+    <statement><p>Find a formula for the radius of a circle in terms of its area.</p></statement>
     <hint>
     <p>Start with the formula for the area of a circle: <m>A =</m> <fillin characters="8" /></p>
     <p>Solve for <m>r</m> in terms of <m>A</m>.</p></hint>
@@ -133,7 +183,7 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
 <subsection><title>More Extraction of Roots</title>
 
 <p>Equations of the form
-    <me>a(px + q)^2 + r = 0</me>
+    <me>\blert{a(px + q)^2 + r = 0}</me>
     can also be solved by extraction of roots after isolating the squared expression, <m>(px + q)^2</m>.</p>
 
 <example xml:id="example-extracting-roots"><statement><p>Solve the equation <m>~3(x - 2)^2 = 48</m></p></statement>
@@ -167,7 +217,8 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
     <li>Solve each equation. There are two solutions.</li>
 </ol></p></assemblage>
 
-<exercise><statement><p>Solve <m>~~2(5x + 3)^2 = 38~~</m> by extracting roots.<ol label="a">
+<exercise><title>Practice 3</title>
+<statement><p>Solve <m>~~2(5x + 3)^2 = 38~~</m> by extracting roots.<ol label="a">
         <li>Give your answers as exact values.</li>
         <li>Find approximations for the solutions to two decimal places.</li>
     </ol></p></statement>
@@ -175,9 +226,30 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
         <li><p><m>x=\dfrac{-3\pm \sqrt{19}}{5} </m></p></li>
         <li><p><m>x\approx -1.47</m> or <m>x\approx 0.27</m></p></li>
     </ol></p></answer></exercise>
+
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $cannot = RadioButtons(
+              ["\(2x^2+3=8\)",
+              "\(2x^2+3x=8\)",
+              "\(2(x+3)^2=8\)",
+              "\(2x^2-3=0\)"],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Which of the following equations cannot be solved by extraction of roots?</p>
+        <p><var name="$cannot" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>2x^2+3x=8</m></p>
+    </solution>
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Compound Interest and Inflation</title>
+
 <p>Many savings institutions offer accounts on which the interest is <em>compounded annually</em>. At the end of each year, the interest earned is added to the principal, and the interest for the next year is computed on this larger sum of money.</p>
 
 <assemblage><title>Compound Interest</title>
@@ -192,18 +264,38 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
         <li>What interest rate would be necessary for Carmella's account to grow to $3500 in two years?</li>
     </ol></p></statement>
 <solution><p><ol label="a">
-        <li>We use the formula above with <m>P = 3000</m> and <m>n = 2</m>. Carmella’s account balance will be
+    <li>We use the formula above with <m>P = 3000</m> and <m>n = 2</m>. Carmella’s account balance will be
             <me>A = 3000(1 + r)^2</me></li>
-        <li>We substitute <m>3500</m> for <m>A</m> in the equation.
+    <li>We substitute <m>3500</m> for <m>A</m> in the equation.
         <me>\alert{3500} = 3000(1 + r)^2</me>
-        We can solve this equation in <m>r</m> by extraction of roots. First, we isolate the perfect square.
+    We can solve this equation in <m>r</m> by extraction of roots. First, we isolate the perfect square.
         <me>\begin{aligned}[t]
         3500 \amp = 3000(1 + r )^2 \amp\amp \blert{\text{Divide both sides by 3000.}} \\
         1.1\overline{6} \amp = (1 + r )^2 \amp\amp \blert{\text{Take the square root of both sides.}} \\
         \pm 1.0801 \amp\approx 1 + r \amp\amp \blert{\text{Subtract 1 from both sides.}}\\
         r \amp\approx 0.0801   \text{  or  } r \approx -2.0801
         \end{aligned}</me>
-        Because the interest rate must be a positive number, we discard the negative solution. Carmella needs an account with interest rate <m>r \approx 0.0801</m>, or just over 8%, to achieve an account balance of $3500 in two years.</li></ol></p></solution></example>
+    Because the interest rate must be a positive number, we discard the negative solution. Carmella needs an account with interest rate <m>r \approx 0.0801</m>, or just over 8%, to achieve an account balance of $3500 in two years.</li></ol></p></solution></example>
+
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $first = RadioButtons(
+              ["Expand \((x+1)^2\)",
+              "Get zero on one side",
+              "Divide both sides by 2",
+              "Take the square root of both sides"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What is the first step in solving the equation <m>2(x+1)^2=17</m>?</p>
+        <p><var name="$first" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Divide both sides by 2</p>
+    </solution>
+</webwork></exercise>
 
 <p>The formula for compound interest also applies to the effects of inflation. For instance, if there is a steady inflation rate of 4% per year, in two years an item that now costs $100 will cost
     <me>\begin{aligned}[t]
@@ -211,7 +303,8 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
     \amp = 100(1 + 0.04)^2 = \$108.16
     \end{aligned}</me></p>
 
-<exercise><statement><p>Two years ago, the average cost of dinner and a movie was $24. This year the average cost is $25.44. What was the rate of inflation over the past two years?</p></statement>
+<exercise><title>Practice 4</title>
+<statement><p>Two years ago, the average cost of dinner and a movie was $24. This year the average cost is $25.44. What was the rate of inflation over the past two years?</p></statement>
 <answer><p><m>r\approx 2.96\%</m></p></answer></exercise>
 </subsection>
 
@@ -219,21 +312,42 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
 
 <p>Because squaring and taking square roots are opposite operations, we can solve the equation
     <me>\sqrt{x} = 8.2</me>
-    by squaring both sides to get
+by squaring both sides to get
     <!--*****--><me>\begin{aligned}[t]
     (\sqrt{x})^2 \amp= 8.2^2 \\
     x \amp = 67.24
     \end{aligned}</me><!--*****-->
-    Similarly, we can solve
+Similarly, we can solve
     <me>x^3 = 258</me>
-    by taking the cube root of both sides, because cubing and taking cube roots are opposite operations. Rounding to three places, we find 
+by taking the cube root of both sides, because cubing and taking cube roots are opposite operations. Rounding to three places, we find 
     <me>\begin{aligned}[t]
     \sqrt[3]{x^3}\amp=258\\
     x \amp \approx 6.366
-    \end{aligned}</me>
-    The notion of undoing operations can help us solve a variety of simple nonlinear equations. The operation of taking a reciprocal is its own opposite, so we solve the equation
+    \end{aligned}</me></p>
+
+<exercise><title>QuickCheck 5</title>
+<webwork>
+    <setup><pg-code>       
+            $sqneg = RadioButtons(
+              ["Nothing; that is the right answer.",
+              "He should have put parentheses around \(6^2\).",
+              "He should have put parentheses around \(-6\).",
+              "You cannot square a negative number on a calculator."],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Delbert squared <m>-6</m> by entering <m>-6^2</m> into his calculator, and got <m>-36</m>. What went wrong?</p>
+        <p><var name="$sqneg" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>He should have put parentheses around <m>-6</m>.</p>
+    </solution>
+</webwork></exercise>
+
+<p>The notion of undoing operations can help us solve a variety of simple nonlinear equations. The operation of taking a reciprocal is its own opposite, so we solve the equation
     <me>\frac{1}{x} = 50</me>
-    by taking the reciprocal of both sides to get
+by taking the reciprocal of both sides to get
     <me>x = \frac{1}{50}= 0.02</me></p>
 
 <example xml:id="example-nonlinear-equation"><statement><p>Solve <m>~~\dfrac{3}{x - 2}= 4</m></p></statement>
@@ -245,36 +359,66 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
     x \amp = 2 + \frac{3}{4}= \frac{11}{4} \amp\amp \blert{\tfrac{2}{1}=\tfrac{8}{4}
     \text{, so } \tfrac{2}{1}+ \tfrac{3}{4}=\tfrac{8}{4}+\tfrac{3}{4}=\tfrac{11}{4}}\\
     \end{aligned}</me>
-    The solution is <m>\dfrac{11}{4}</m>, or <m>2.75</m>.</p></solution></example>  
+    The solution is <m>\dfrac{11}{4}</m>, or <m>2.75</m>.</p></solution></example>
 
-<exercise><statement><p>Solve <m>~~2\sqrt{x + 4} = 6</m></p></statement>
+<exercise><title>QuickCheck 6</title>
+<webwork>
+    <setup><pg-code>       
+            $recip = RadioButtons(
+              ["\(\dfrac{1}{x}\)",
+              "\(\dfrac{1}{x^2}\)",
+              "\(x^2\)",
+              "\(\sqrt{x}\)"],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What is the reciprocal of <m>\dfrac{1}{\sqrt{x}}</m>?</p>
+        <p><var name="$recip" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>\sqrt{x}</m></p>
+    </solution>
+</webwork></exercise>  
+
+<exercise><title>Practice 5</title>
+<statement><p>Solve <m>~~2\sqrt{x + 4} = 6</m></p></statement>
 <answer><p><m>x=5</m></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>What is the difference between a rational number and an irrational number? Give examples of each.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 
 <technology><title>Using the Intersect Feature</title>
     <p>We can use the <em>intersect</em> feature on a graphing calculator to solve equations.</p>
 
-<example xml:id="example-GC-nonlinear-equation"><statement><p>Use a graphing calculator to solve <m>~~\dfrac{3}{x -2}= 4</m></p>
-</statement>
+<example xml:id="example-GC-nonlinear-equation">
+<statement><p>Use a graphing calculator to solve <m>~~\dfrac{3}{x -2}= 4</m></p></statement>
 <solution><p>We would like to find the points on the graph of <m>~~y = \dfrac{3}{x -2}~~</m> that have <m>y</m>-coordinate equal to <m>4</m>. We graph the two functions
     <me>\begin{aligned}[t]
     Y_1 \amp = 3/(X - 2)  \\
     Y_2 \amp = 4
     \end{aligned}</me>
 
-    in the window
+in the window
     <me>\begin{aligned}[t]
     \text{Xmin} \amp = -9.4 \amp\amp \text{Xmax} = 9.4\\
     \text{Ymin} \amp = -10 \amp\amp \text{Ymax} = 10
     \end{aligned}</me>
-    The point where the two graphs intersect locates the solution of the equation. If we trace along the graph of <m>Y_1</m>, the closest we can get to the intersection point is <m>(2.8, 3.75)</m>, as shown in figure (a). We get a better approximation using the <em>intersect</em> feature.</p>
+The point where the two graphs intersect locates the solution of the equation. If we trace along the graph of <m>Y_1</m>, the closest we can get to the intersection point is <m>(2.8, 3.75)</m>, as shown in figure (a). We get a better approximation using the <em>intersect</em> feature.</p>
     <sidebyside  width="80%"><image source="images/fig-GC-nonlinear"><description>GC displays</description></image></sidebyside>
 <p>Use the arrow keys to position the Trace bug as close to the intersection point as you can. Then press <c>2nd</c> <c>TRACE</c> to see the Calculate menu. Press <m>5</m> for intersect; then respond to each of the calculator's questions, <em>First curve?</em>, <em>Second curve?</em>, and <em>Guess?</em> by pressing <c>ENTER</c>. The calculator will then display the intersection point, <m>x = 2.75</m>, <m>y = 4</m>, as shown in figure (b). The solution of the original equation is <m>x = 2.75</m>.</p></solution>
 </example>
 </technology>
 
-<exercise><statement><p>
-    Use the intersect feature to solve the equation <m>2x^2 - 5 = 7</m>. Round your answers to three decimal places.
-</p></statement>
+<exercise><title>Practice 6</title>
+<statement><p>Use the intersect feature to solve the equation <m>2x^2 - 5 = 7</m>. Round your answers to three decimal places.</p></statement>
 <answer><p><m>x=\pm 2.449</m></p></answer>
 </exercise>
 
