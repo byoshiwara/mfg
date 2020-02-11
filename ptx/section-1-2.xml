@@ -63,15 +63,52 @@
     <li><p>Score on the Scholastic Aptitude Test (SAT) is not a function of score on an IQ test, because two people with the same score on an IQ test may score differently on the SAT; that is, a person’s score on the SAT is not uniquely determined by his or her score on an IQ test.</p></li></ol></p></example>
 
 <exercise><title>Practice 1</title>
-    <statement><p><ol label="a">
-    <li><p>As part of a project to improve the success rate of freshmen, the counseling department studied the grades earned by a group of students in English and algebra. Do you think that a student’s grade in algebra is a function of his or her grade in English? Explain why or why not.</p></li>
-    <li><p>Phatburger features a soda bar, where you can serve your own soft drinks in any size. Do you think that the number of calories in a serving of Zap Kola is a function of the number of fluid ounces? Explain why or why not.</p></li>
-    </ol></p></statement>
-<answer><p>
-    <ol label="a">
-        <li><p>No, students with the same grade in English can have different grades in algebra.</p></li>
-        <li><p>Yes, the number of calories is proportional to the number of fluid ounces.</p></li>
-    </ol> </p></answer></exercise>
+<webwork>
+    <setup>
+        <pg-code>
+             $YNgrade = PopUp(
+              ["?","Yes","No"],
+              2, # index of correct answer; could also just be the correct answer
+            );
+            $WHYgrade = RadioButtons(
+              ["Each value of \( x \) has exactly one value of \( y \) associated with it.","Two students with the same grade English can have different grades in algebra.","Two students with the same grade math will also have the same grade in English.","Two students with the same grade math can have different grades in English."],
+              1, # index of correct answer; could also just be the correct answer
+            );
+             $YNcalories = PopUp(
+              ["?","Yes","No"],
+              1, # index of correct answer; could also just be the correct answer
+            );
+            $WHYcalories = RadioButtons(
+              ["The number of calories is proportional to the number of fluid ounces.","Two servings with the same calories will have different fluid ounces.","Two servings with the same flid ounces will have different calories."],
+              0, # index of correct answer; could also just be the correct answer
+            );
+        </pg-code>
+    </setup>
+
+    <statement>
+        <ol label="a">
+        <li><p>As part of a project to improve the success rate of freshmen, the counseling department studied the grades earned by a group of students in English and algebra. Do you think that a student's grade in algebra is a function of his or her grade in English? <var name="$YNgrade" form="popup"/></p>
+        <p>Explain why or why not.</p>
+        <p><var name="$WHYgrade" form="buttons"/></p></li>
+        <li><p>Phatburger features a soda bar, where you can serve your own soft drinks in any size. Do you think that the number of calories in a serving of Zap Kola is a function of the number of fluid ounces? <var name="$YNcalories" form="popup"/></p>
+        <p>Explain why or why not.</p>
+        <p><var name="$WHYcalories" form="buttons"/></p></li>
+        </ol>
+    </statement>
+
+    <solution>
+        <p><ol label="a">
+            <li><p>
+                No, students with the same grade in English can have different grades in algebra.
+            </p></li>
+            <li><p>
+                Yes, the number of calories is proportional to the number of fluid ounces.
+            </p></li>
+        </ol></p>
+    </solution>
+
+</webwork>
+</exercise>
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
@@ -225,8 +262,32 @@
     </ol></p></statement></example>
 
 <exercise><title>Practice 2</title>
-    <statement><p>Decide whether each table describes <m>y</m> as a function of <m>x</m>. Explain your choice.
-    <ol label="a">
+<introduction><p>Decide whether each table describes <m>y</m> as a function of <m>x</m>. Explain your choice.</p></introduction>
+<webwork>
+    <setup>
+        <pg-code>
+            $YN1 = PopUp(
+              ["?","Yes","No"],
+              2, # index of correct answer; could also just be the correct answer
+            );
+            $WHY1 = RadioButtons(
+              ["Each value of \(x\) has exactly one value of \(y\) associated with it.","For example, \(x=3.5\) corresponds both to \(y=2.5\) and also to \(y=4.0\)"],
+              1, # index of correct answer; could also just be the correct answer
+            );
+
+            $YN2 = PopUp(
+              ["?","Yes","No"],
+              1, # index of correct answer; could also just be the correct answer
+            );
+            $WHY2 = RadioButtons(
+              ["Each value of \(x\) has exactly one value of \(y\) associated with it.","For example, \(y=3\) corresponds both to \(x=-2\) and also to \(x=2\)"],
+              0, # index of correct answer; could also just be the correct answer
+            );
+        </pg-code>
+    </setup>
+
+    <statement><p>
+        <ol label="a">
         <li><sidebyside width="63%" margins="0% 37%">
             <tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
             <cell><m>x</m></cell>
@@ -249,7 +310,8 @@
             <cell><m>2.0</m></cell>
             <cell><m>2.5</m></cell></row>
             </tabular></sidebyside>
-        </li>
+            <p>Is  <m>y</m> a function of <m>x</m>? <var name="$YN1" form="popup"/> </p>
+        <p><var name="$WHY1" form="buttons"/></p></li>
         <li><sidebyside  width="50%" margins="0% 50%">
             <tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
             <cell><m>x</m></cell>
@@ -269,13 +331,24 @@
             <cell><m>0</m></cell>
             <cell><m>3</m></cell>
             <cell><m>17</m></cell></row>
-        </tabular></sidebyside></li>
-    </ol></p></statement>
-    <answer><p>
-        <ol label="a">
-            <li><p>No, for example, <m>x = 3.5</m> corresponds both to <m>y = 2.5</m> and also to <m>y = 4.0</m>.</p></li>
-            <li><p>Yes, each value of <m>x</m> has exactly one value of <m>y</m> associated with it.</p></li>
-        </ol></p></answer></exercise>
+        </tabular></sidebyside><p>Is  <m>y</m> a function of <m>x</m>? <var name="$YN2" form="popup"/></p>
+        <p><var name="$WHY2" form="buttons"/></p></li>
+        </ol></p>
+    </statement>
+
+    <solution>
+        <p><ol label="a">
+            <li><p>
+                No, for example, <m>x=3.5</m> corresponds both to <m>y=2.5</m> and also to <m>y=4</m>.
+            </p></li>
+            <li><p>
+                Yes, each value of <m>x</m> has exactly one value of <m>y</m> associated with it.
+            </p></li>
+        </ol></p>
+    </solution>
+
+</webwork>
+</exercise>
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
@@ -322,23 +395,78 @@
     </ol></p></solution></example>
 
 <exercise><title>Practice 3</title>
-    <statement><p>The graph shows the elevation in feet, <m>a</m>, of the Los Angeles Marathon course at a distance <m>d</m> miles into the race. (Source: <em>Los Angeles Times</em>, March 3, 2005)</p>
-    <sidebyside   width="80%"><image source="images/fig-LA-marathon" ><description>LA marathon elevation</description></image></sidebyside>
-    <p><ol label="a">
-        <li><p>Which variable is the input, and which is the output?</p></li>
-        <li><p>What is the elevation at mile 20?</p></li>
-        <li><p>At what distances is the elevation 150 feet?</p></li>
-        <li><p>What are the maximum and minimum values of <m>a</m>, and when do these values occur?</p></li>
-        <li><p>The runners pass by the Los Angeles Coliseum at about 4.2 miles into the race. What is the elevation there?</p></li>
-    </ol></p></statement>
+<introduction><p>The graph shows the elevation in feet, <m>a</m>, of the Los Angeles Marathon course at a distance <m>d</m> miles into the race. (Source: <em>Los Angeles Times</em>, March 3, 2005)</p>
+    <sidebyside   width="90%"><image source="images/fig-LA-marathon" ><description>LA marathon elevation</description></image></sidebyside></introduction>
+<webwork>
+    <setup>
+        <pg-code>
+            $input = RadioButtons(
+              ["The input variable is \( d \), and the output variable is \( a \).","The input variable is \( a \), and the output variable is \( d \)."],
+              0, # index of correct answer; could also just be the correct answer
+            );
 
-<answer><p><ol label="a">
-        <li><p>The input variable is <m>d</m>, and the output variable is <m>a</m>.</p></li>
-        <li><p>Approximately <m>210</m> feet</p></li>
-        <li><p>Approximately where <m>d\approx 5</m>, <m>d\approx 11</m>, <m>d\approx 12</m>, <m>d\approx 16</m>, <m>d\approx 17.5</m>, and <m>d\approx 18</m></p></li>
-        <li><p>The maximum value of <m>300</m> feet occurs at the start, when <m>d = 0</m>. The minimum of <m>85</m> feet occurs when <m>d\approx 15</m>.</p></li>
-        <li><p>Approximately <m>165</m> feet</p></li>
-    </ol></p></answer>
+
+            $a1 = Compute("210")->with(
+              tolType => 'absolute',
+              tolerance => 10,
+            );
+            $ds = List("5,11,12,16,17.5,18")->with(
+              tolType => 'absolute',
+              tolerance => .5,
+            );
+            $my_evaluator = $ds -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+            $max = Compute("300")->with(
+              tolType => 'absolute',
+              tolerance => 5,
+            );
+            $maxd =0;
+            $min = Compute("85")->with(
+              tolType => 'absolute',
+              tolerance => 10,
+            );
+            $mind =Compute("15")->with(
+              tolType => 'absolute',
+              tolerance => .1,
+            );
+            $a2=Compute("165")->with(
+              tolType => 'absolute',
+              tolerance => 10,
+            );            
+
+        </pg-code>
+    </setup>
+
+    <statement>
+    <p><ol label="a">
+        <li><p>Which variable is the input, and which is the output?</p>
+        <p><var name="$input" form="buttons"/></p>
+        </li>
+        <li><p>What is the elevation at mile 20?</p>
+        <p>Answer: <var name="$a1" width="3"/> feet</p></li>
+        <li><p>At what distances is the elevation 150 feet?</p>
+        <p>The relevant distances (to the nearest half-mile) separated by commas: <var name="$ds" width="18" evaluator="$my_evaluator"/> miles</p></li>
+        <li><p>What are the maximum and minimum values of <m> a </m>, and when do these values occur?</p>
+        <p>The maximum elevation is <m> a= </m><var name="$max" width="3"/> feet which occurs at <m> d= </m><var name="$maxd" width="2"/>.</p></li>
+        <li><p>The runners pass by the Los Angeles Coliseum at about 4.2 miles into the race. What is the elevation there?</p>
+        <p>Approximately (within 5) <var name="$a2" width="3"/> feet</p></li>
+    </ol></p>
+    </statement>
+
+    <solution>
+        <p><ol label="a">
+        <li><p>The input variable is <m> d </m>, and the output variable is <m> a </m>.</p></li>
+        <li><p>Approximately 210 feet</p></li>
+        <li><p>Approximately where <m> d\approx 5 </m>, <m> d\approx 11 </m>, <m> d\approx 12 </m>, <m> d\approx 16 </m>, <m> d\approx 17.5 </m>, and <m> d\approx 18 </m></p></li>
+        <li><p>The maximum value of 300 feet occurs at the start, when <m> d = 0 </m>. The minimum of 85 feet occurs when <m> d\approx 15 </m>.</p></li>
+        <li><p>Approximately 165 feet</p></li>
+    </ol></p>
+    </solution>
+
+</webwork>
 </exercise>
 </subsection>
 
@@ -349,9 +477,18 @@
  </example>  
 
 <exercise><title>Practice 4</title>
-<statement><p>Write an equation that gives the volume, <m>V</m>, of a sphere as a function of its radius, <m>r</m>.</p>
-</statement>
-<answer><p><m>V = \dfrac{4}{3}\pi r^3</m></p></answer></exercise>
+    <webwork><setup>
+        <pg-code>
+            Context("Fraction")->variables->add(r=>'Real');
+            $V=Formula("4/3 * pi* r**3");
+        </pg-code>
+    </setup>
+    <statement>
+        <p>Write an equation that gives the volume, <m> V </m>, of a sphere as a function of its radius, <m>r</m>.</p>
+        <p><m> V= </m><var name="$V" width="8"/></p>
+        <instruction>Note: Use "pi" to enter the number <m> \pi </m>.</instruction>
+    </statement></webwork>    
+</exercise>
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
@@ -457,16 +594,37 @@ We see that</p>
 </assemblage>
 
 <exercise><title>Practice 5</title>
-<statement><p>Let <m>F</m> be the name of the function defined by the graph in <xref ref="example-sun-hours" text="type-global"/>, the number of hours of daylight in Peoria.
-<ol label="a">
-    <li><p>Use function notation to state that <m>H</m> is a function of <m>t</m>.</p></li>
-    <li><p>What does the statement <m>F(15) = 9.7</m> mean in the context of the problem?</p></li>
-</ol></p></statement>
-
-<answer><p><ol label="a">
-        <li><p><m>H = F(t)</m></p></li>
-        <li><p>The sun is above the horizon in Peoria for <m>9.7</m> hours on January 16.</p></li></ol>
-</p></answer></exercise>
+    <introduction><p>
+        Let <m> F </m> be the name of the function defined by the graph in <xref ref="example-sun-hours" text="type-global"/>, the number of hours of daylight in Peoria.
+    </p></introduction>
+    <webwork>
+        <setup>
+            <pg-code>
+            $function = RadioButtons(
+              [ "\( F=H(t) \)", "\( H=F(t) \)","\( t=F(H) \)","\( H=t(F) \)"],
+              1, # index of correct answer; could also just be the correct answer
+            );
+            $meaning = RadioButtons(
+              ["The sun is 9.7 degrees above the horizon in Peoria on January 15.", "The sun is above the horizon in Peoria for 15 hours on January 10.","The sun is above the horizon in Peoria for 9.7 hours on January 16."],
+              2, # index of correct answer; could also just be the correct answer
+            );
+                
+            </pg-code>
+        </setup>
+        <statement><p><ol>
+            <li><p>Use function notation to state that <m> H </m> is a function of <m> t </m>.</p>
+            <p><var name="$function" form="buttons"/></p></li>
+            <li><p>What does the statement <m> F(15) = 9.7 </m> mean in the context of the problem?   </p>
+            <p><var name="$meaning" form="buttons"/></p></li>
+        </ol></p></statement>
+        <solution>
+            <p><ol label="a">
+            <li><p><m> H = F(t) </m></p></li>
+            <li><p>The sun is above the horizon in Peoria for 9.7 hours on January 16.</p></li></ol>
+            </p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
@@ -518,42 +676,61 @@ We see that</p>
      <p>Thus, a letter weighing 1 ounce costs $0.47 to mail, a letter weighing 3 ounces costs $0.89, and a letter weighing 6.75 ounces costs $1.73.</p></solution></example>
 
 <exercise><title>Practice 6</title>
-    <statement><p>When you exercise, your heart rate should increase until it reaches your target heart rate. The table shows target heart rate, <m>r = f(a)</m>, as a function of age.</p>
+    <webwork><setup>
+        <pg-code>
+            $r0=146;
+            $r1=127;
+            $a0=40;
+        </pg-code>
+    </setup>
+    <statement>
+<p>
+    When you exercise, your heart rate should increase until it reaches your target heart rate. The table shows target heart rate, <m> r = f(a) </m>, as a function of age.</p>
     <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
-        <cell><m>a</m></cell>
-        <cell><m>20</m></cell>
-        <cell><m>25</m></cell>
-        <cell><m>30</m></cell>
-        <cell><m>35</m></cell>
-        <cell><m>40</m></cell>
-        <cell><m>45</m></cell>
-        <cell><m>50</m></cell>
-        <cell><m>55</m></cell>
-        <cell><m>60</m></cell>
-        <cell><m>65</m></cell>
-        <cell><m>70</m></cell></row>
+        <cell><m> a </m></cell>
+        <cell>20</cell>
+        <cell>25</cell>
+        <cell>30</cell>
+        <cell>35</cell>
+        <cell>40</cell>
+        <cell>45</cell>
+        <cell>50</cell>
+        <cell>55</cell>
+        <cell>60</cell>
+        <cell>65</cell>
+        <cell>70</cell></row>
     <row>
-        <cell><m>r</m></cell>
-        <cell><m>150</m></cell>
-        <cell><m>146</m></cell>
-        <cell><m>142</m></cell>
-        <cell><m>139</m></cell>
-        <cell><m>135</m></cell>
-        <cell><m>131</m></cell>
-        <cell><m>127</m></cell>
-        <cell><m>124</m></cell>
-        <cell><m>120</m></cell>
-        <cell><m>116</m></cell>
-        <cell><m>112</m></cell></row>
+        <cell><m> r </m></cell>
+        <cell>150</cell>
+        <cell>146</cell>
+        <cell>142</cell>
+        <cell>139</cell>
+        <cell>135</cell>
+        <cell>131</cell>
+        <cell>127</cell>
+        <cell>124</cell>
+        <cell>120</cell>
+        <cell>116</cell>
+        <cell>112</cell></row>
     </tabular></sidebyside> 
     <p><ol label="a">
-        <li><p>Find <m>f(25)</m> and <m>f(50)</m>.</p></li>
-        <li><p>Find a value of <m>a</m> for which <m>f(a) = 135</m>.</p></li></ol>
-    </p></statement>
-<answer><p>
-    <ol label="a">
-        <li><p><m>f (25) = 146, ~~f (50) = 127</m></p></li>
-        <li><p><m>a = 40</m></p></li></ol></p></answer></exercise>
+        <li><p>Find <m> f(25) </m> and <m> f(50) </m>.</p>
+        <p><m> f(25)= </m><var name="$r0" width="3"/></p>
+        <p><m> f(50)= </m><var name="$r1" width="3"/></p>
+        </li>
+        <li><p>Find a value of <m> a </m> for which <m> f(a) = 135 </m>.</p>
+        <p><m> a= </m><var name="$a0" width="3"/></p>
+        </li></ol></p>
+    </statement>
+    <solution>
+        <p>
+        <ol label="a">
+            <li><p><m> f (25) = 146 </m>,  <m> f(50) = 127 </m></p></li>
+            <li><p><m> a = 40 </m></p></li>
+        </ol></p>
+    </solution>
+</webwork>
+</exercise>
 
 <exercise><title>QuickCheck 5</title>
 <webwork>
@@ -592,7 +769,24 @@ We see that</p>
     </solution></example>
 
 <exercise xml:id="exercise-function-notation"><title>Practice 7</title>
-    <statement><p>Complete the table displaying ordered pairs for the function <m>f(x) = 5 - x^3</m>. Evaluate the function to find the corresponding <m>f(x)</m>-value for each value of <m>x</m>.</p>
+    <webwork><setup>
+        <pg-code>
+            $func = Formula("5-x**3");
+            $x[0] = -2;
+            $x[1] = 0;
+            $x[2] = 1;
+            $x[3] = 3;
+            $i = 0;
+            do {
+            $y[$i] = $func->eval(x=>$x[$i]);
+            $i = $i+1;
+            } 
+            while ($i &lt; 4);
+
+        </pg-code>
+    </setup>
+    <statement><p>
+    Complete the table displaying ordered pairs for the function <m>f(x) = 5 - x^3</m>. Evaluate the function to find the corresponding <m>f(x)</m>-value for each value of <m>x</m>.</p>
     <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <col halign="center"  />
         <col halign="center" />
@@ -603,23 +797,24 @@ We see that</p>
                 <cell bottom="none"></cell></row>
             <row>
                 <cell><m>-2</m></cell>
-                <cell><m></m></cell>
+                <cell><var name="$y[0]" width="3"/></cell>
                 <cell bottom="none"><m>f(\alert{-2})=5-(\alert{-2})^3=~</m> </cell></row>
             <row> 
                 <cell><m>0</m></cell>
-                <cell><m></m></cell>
+                <cell><var name="$y[1]" width="3"/></cell>
                 <cell bottom="none"><m>f(\alert{0})=5-\alert{0}^3=</m></cell></row>
             <row> 
                 <cell><m>1</m></cell>
-                <cell><m></m></cell>
+                <cell><var name="$y[2]" width="3"/></cell>
                 <cell bottom="none"><m>f(\alert{1})=5-\alert{1}^3=</m></cell></row>
             <row> 
                 <cell><m>3</m></cell>
-                <cell><m></m></cell>
+                <cell><var name="$y[3]" width="3"/></cell>
                 <cell bottom="none"><m>f(\alert{3})=5-\alert{3}^3=</m></cell></row>
-        </tabular></sidebyside></statement>
-
-<answer><sidebyside>
+        </tabular></sidebyside>
+    </statement>
+    <solution>
+        <sidebyside>
     <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <col halign="center"  />
         <col halign="center" />
@@ -638,7 +833,10 @@ We see that</p>
             <row> 
                 <cell><m>3</m></cell>
                 <cell><m>-22</m></cell></row>
-        </tabular></sidebyside></answer></exercise>
+        </tabular></sidebyside>
+    </solution>
+</webwork>    
+</exercise>
 
 <technology>
     <title><!--<image source="images/icon-GC.jpg"  width="8%"><description>Graphing Calculator</description></image>-->Evaluating a Function</title>
@@ -670,10 +868,29 @@ We see that</p>
 </example>
 
 <exercise><title>Practice 8</title>
-    <statement><p>The volume of a sphere of radius <m>r</m> centimeters is given by
-        <me>V = V(r) = \frac{4}{3}\pi r^3</me>
-    Evaluate <m>V(10)</m> and explain what it means.</p></statement>
-<answer><p><m>V(10) = 4000\pi/3\approx 4188.79 \text{ cm}^3</m> is the volume of a sphere whose radius is <m>10</m> cm.</p></answer></exercise>
+    <webwork><setup>
+        <pg-code>
+            $meaning = PopUp(
+                ["?","the volume (in cm) of a sphere whose radius is 10 cu. cm","the radius (in cm) of a sphere whose volume is 10 cm","the volume (in sq. cm) of a sphere whose radius is 10 cm","the volume (in cu. cm) of a sphere whose radius is 10 cm"],
+              4, # index of correct answer; could also just be the correct answer
+            );
+            Context("Fraction")->variables->add(r=>'Real');
+            $V=Formula("4/3 * pi* r**3");
+            $V0 = $V->eval(r=>10);
+        </pg-code>
+    </setup>
+    <statement>
+        <p>The volume of a sphere of radius <m> r </m> centimeters is given by
+        <me> V = V(r) = \frac{4}{3}\pi r^3 </me>
+        Evaluate <m> V(10) </m> and explain what it means.</p>
+        <p><m> V(10)= </m><var name="$V0" width="12"/>, which represents <var name="$meaning" form="popup"/></p>
+        <instruction>Note: You may use "pi" to enter the number <m>\pi</m>.</instruction>
+    </statement>
+    <solution>
+        <p><m> V(10) = 4000\pi/3\approx 4188.79 \text{ cm}^3 </m> is the volume of a sphere whose radius is 10 cm.</p>
+    </solution>
+    </webwork>    
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -705,16 +922,41 @@ We see that</p>
         </ol></p></solution></example>
 
 <exercise><title>Practice 9</title>
-    <statement><p>A spherical balloon has a radius of 10 centimeters.
+    <webwork><setup>
+        <pg-code>
+            $V1 = RadioButtons(
+                ["\( V(10)+h=\frac{4}{3}\pi(10^3)+h \) cu. cm", "\( V(10)+h=\frac{4}{3}\pi(10^{3+h}) \) cu. cm", "\( V(10+h)=\frac{4}{3}\pi\cdot 10^3+h \) cu. cm","\( V(10+h)=\frac{4}{3}\pi(10+h)^3 \) cu. cm"],
+              3, # index of correct answer; could also just be the correct answer
+            );
+            Context("Fraction")->variables->add(r=>'Real');
+            $V=Formula("4/3 * pi* r**3");
+            $V0 = $V->eval(r=>10);
+            $Vp = $V->eval(r=>12);
+            $deltaV = $Vp - $V0->with(
+              tolType => 'absolute',
+              tolerance => 0.05,
+            );
+        </pg-code>
+    </setup>
+    <statement>
+        <p>A spherical balloon has a radius of 10 centimeters.
+            <ol label="a">
+            <li><p>If we increase the radius by <m> h </m> centimeters, what will the new volume be?</p>
+            <p><var name="$V1" form="buttons"/></p></li>
+            <li><p>If <m> h = 2 </m>, how much did the volume increase?</p>
+            <p>It increased by <var name="$deltaV" width="18"/> <m> \text{cm}^3 </m>. </p>
+            </li>
+        </ol></p>
+        <instruction>Note: You may use "pi" to enter the number <m> \pi </m>. You may also enter the computation needed--appropriate expressions that use addition, subtraction, multiplication, and division, etc. are allowed, as well as an accurate decimal approximation.</instruction>
+    </statement>
+    <solution><p>
         <ol label="a">
-            <li>If we increase the radius by <m>h</m> centimeters, what will the new volume be?</li>
-            <li>If <m>h = 2</m>, how much did the volume increase?</li>
-        </ol></p></statement>
-    <answer><p>
-        <ol label="a">
-            <li><p><m>V(10 + h) = \dfrac{4}{3}\pi(10 + h)^3 \text{ cm}^3</m></p></li>
-            <li><p>By <m>3049.44 \text{ cm}^3</m></p></li></ol>
-    </p></answer></exercise>
+            <li><p><m> V(10 + h) = \dfrac{4}{3}\pi(10 + h)^3 \text{ cm}^3 </m></p></li>
+            <li><p>From <m> V(10) </m> to <m> V(12) </m> is an increase of about <m> 3049.44 \text{ cm}^3 </m></p></li>
+        </ol></p>
+    </solution>
+    </webwork>    
+</exercise>
 
 <example xml:id="example-evaluate-quadratic"><statement>
     <p>Evaluate the function <m>f(x)=4x^2 - x + 5</m> for the following expressions.<ol label="a" cols = "2">
@@ -768,20 +1010,34 @@ To compute <m>f(a) + f(3)</m>, we must first compute <m>f(a)</m> and <m>f(3)</m>
 </webwork></exercise>
 
 <exercise><title>Practice 10</title>
-<statement><p>Let <m>f(x) = x^3 - 1</m> and evaluate each expression.
+    <webwork><setup>
+        <pg-code>
+            Context()->variables->add(h=>'Real',a=>'Real');
+            $func=Formula("x**3 - 1");
+            $f2 = $func->eval(x=>2);
+            $f3 = $func->eval(x=>3);
+            $fsum = $f2 + $f3;
+            $f5 = $func->eval(x=>5);
+            $func2=Formula("2(x**3 - 1)+3");
+        </pg-code>
+    </setup>
+    <statement><p>
+    Let <m> f(x) = x^3 - 1 </m> and evaluate each expression.
     <ol label="a">
-        <li><m>f(2) + f(3)</m></li>
-        <li><m>f(2 + 3)</m></li>
-        <li><m>2 f(x) + 3</m></li>
+        <li><p><m> f(2) + f(3)= </m><var name="$fsum" width="7"/></p></li>
+        <li><p><m> f(2 + 3)= </m><var name="$f5" width="7"/></p></li>
+        <li><p><m> 2 f(x) + 3 </m><var name="$func2" width="7"/></p></li>
     </ol></p>
-</statement>
-<answer><p>
+    </statement>
+    <solution><p>
     <ol label="a" cols="3">
-        <li><p><m>33</m></p></li>
-        <li><p><m>124</m></p></li>
-        <li><p><m>2x^3 + 1</m></p></li>
+        <li><p><m> 33 </m></p></li>
+        <li><p><m> 124 </m></p></li>
+        <li><p><m> 2x^3 + 1 </m></p></li>
     </ol>
-</p></answer></exercise>
+    </p></solution>
+    </webwork>    
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>

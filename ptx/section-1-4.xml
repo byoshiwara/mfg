@@ -27,9 +27,25 @@ Because their rate of growth is larger, the Hybrid A seedlings grow faster.
 
 <p>By computing the growth of each strain of wheat seedling over the same unit of time, a single day, we have a basis for comparison. In this case, the ratio <m>\dfrac{\text{centimeters}}{\text{day}}</m> measures the rate of growth of the wheat seedlings.</p>
 
-<exercise xml:id="exercise-gas-mileage"><title>Practice 1</title>
-<statement><p>Delbert traveled <m>258</m> miles on <m>12</m> gallons of gas, and Francine traveled <m>182</m> miles on <m>8</m> gallons of gas. Compute the ratio <m>\dfrac{\text{miles}}{\text{gallon}}</m> for each car. Whose car gets the better gas mileage?</p></statement> 
-<answer><p>Delbert: <m>21.5</m> mpg, Francine: <m>22.75</m> mpg. Francine gets better mileage.</p></answer>  
+<exercise xml:id="exercise-gas-mileage">
+    <title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            $Delbert = 258/12;
+            $Francine = 182/8;
+            $Answer = PopUp(
+              ["?","Delbert","Francine"],
+              2, # index of correct answer; could also just be the correct answer
+            );
+
+        </pg-code></setup>
+        <statement><p>Delbert traveled <m>258</m> miles on <m>12</m> gallons of gas, and Francine traveled <m>182</m> miles on <m>8</m> gallons of gas. Compute the ratio <m>\dfrac{\text{miles}}{\text{gallon}}</m> for each car. </p>
+        <p>Delbert: <var name="$Delbert" width="5"/> <m>\dfrac{\text{miles}}{\text{gallon}}</m></p>
+        <p>Francine: <var name="$Francine" width="5"/> <m>\dfrac{\text{miles}}{\text{gallon}}</m></p>
+        <p>Whose car gets the better gas mileage? <var name="$Answer" form="popup"/></p>
+        </statement>
+        <solution><p>Delbert: <m>\dfrac{258}{12}= <var name="$Delbert"/></m> mpg, Francine: <m>\dfrac{182}{8}=<var name="$Francine"/></m> mpg. Francine gets better mileage.</p></solution>
+    </webwork>
 </exercise>
 
 <exercise><title>QuickCheck 1</title>
@@ -72,29 +88,24 @@ and for Lone Pine trail, the ratio is
     <me>\frac{360 \text{ feet}}{1800 \text{ feet}}= 0.20 </me> 
 Lone Pine trail is steeper, because it has a vertical gain of 0.20 foot for every foot traveled horizontally. Or, in more practical units, Lone Pine trail rises 20 feet for every 100 feet of horizontal distance, whereas Stony Point trail rises only 16 feet over a horizontal distance of 100 feet.</p></solution></example>
 
-<exercise><title>Practice 2</title>
-<statement><p>Which is steeper, a staircase that rises <m>10</m> feet over a horizontal distance of <m>4</m> feet, or the steps in the football stadium, which rise <m>20</m> yards over a horizontal distance of <m>12</m> yards?</p></statement>
-    <answer><p>The staircase is steeper.</p></answer></exercise>
+<exercise>
+    <title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            $staircase = 10/4;
+            $steps = 20/12;
+            $Answer = PopUp(
+              ["?","staircase","steps in stadium"],
+              1, # index of correct answer; could also just be the correct answer
+            );
 
-<exercise><title>QuickCheck 2</title>
-<webwork>
-    <setup><pg-code>       
-            $rat = RadioButtons(
-              ["To compute a unit price",
-              "To work with fractions",
-              "To provide accuracy",
-              "To provide a basis for comparison"],
-              3, 
-            );            
         </pg-code></setup>
-    <statement>
-        <p>What do we use ratios and rates for?</p>
-        <p><var name="$rat" form="buttons"/></p>      
-    </statement>
-    <solution>
-        <p>To provide a basis for comparison</p>
-    </solution>
-</webwork></exercise>
+        <statement><p>Which is steeper, a staircase that rises <m>10</m> feet over a horizontal distance of <m>4</m> feet, or the steps in the football stadium, which rise <m>20</m> yards over a horizontal distance of <m>12</m> yards?</p>
+        <p>Answer: <var name="$Answer" form="popup"/></p>
+        </statement>
+        <solution><p>Staircase: <m>\dfrac{10}{4}= <var name="$staircase"/></m>, Steps: <m>\dfrac{20}{12}\approx <var name="$steps"/></m>. The staircase is steeper.</p></solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Definition of Slope</title>
@@ -121,11 +132,21 @@ For example, as we travel along the line representing Stony Point trail, we move
     <me>\frac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}=\frac{3}{4}</me> 
 </p></solution></example>
 
-<exercise><title>Practice 3</title>
-<statement><sidebyside widths="50% 25%" valigns="middle middle"><p>Compute the slope of the line through the indicated points on the graph at right. On both axes, one square represents one unit. 
-    <me>\frac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}=</me> </p>
-    <image source="images/fig-slope-grid2"><description>line on grid</description></image></sidebyside></statement>
-<answer><p><m>\dfrac{1}{4} </m></p></answer></exercise>
+<exercise>
+    <title>Practice 3</title>
+    <introduction><sidebyside width="28%">
+        <image source="images/fig-slope-grid2"><description>line on grid</description></image>
+    </sidebyside></introduction>
+    <webwork>
+        <setup><pg-code>
+            Context("Fraction");
+            $slope = Compute("2/8");
+        </pg-code></setup>
+        <statement><p>Compute the slope of the line through the indicated points on the graph above. On both axes, one square represents one unit. </p>
+        <p><m>\dfrac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}= </m><var name="$slope" width="3" /></p></statement>
+        <solution><p><m>\dfrac{1}{4} </m></p></solution>
+    </webwork>
+</exercise>
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
@@ -170,12 +191,28 @@ and the slope of the side is
         
 <image source="images/fig-Great-Pyramid"><description>Great Pyramid</description></image></sidebyside></solution></example>
 
-<exercise><title>Practice 4</title>
-<statement><p>The Kukulcan Pyramid at Chichen Itza in Mexico was built around 800 A.D. It is <m>24</m> meters high, with a temple built on its top platform, as shown below.</p>
-<sidebyside widths="45% 50%"><p>The square base is <m>55</m> meters on each side, and the top platform is <m>19.5</m> meters on each side. Calculate the slope of the sides of the pyramid. Which pyramid is steeper, Kukulcan or the Great Pyramid?</p>
-    <image source="images/fig-Kukulcan-Pyramid"   width="110%"><description>Kukulcan Pyramid</description></image></sidebyside>
-</statement>
-<answer><p><m>1.35</m>; Kukulcan is steeper.</p></answer></exercise>
+<exercise>
+    <title>Practice 4</title>
+    <introduction>
+        <sidebyside widths="40% 58%" valigns="middle middle"><p>The Kukulcan Pyramid at Chichen Itza in Mexico was built around 800 A.D. It is <m>24</m> meters high, with a temple built on its top platform, as shown at right.</p>
+        <image source="images/fig-Kukulcan-Pyramid"   width="110%"><description>Kukulcan Pyramid</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            $Delx = (55-19.5)/2;
+            $m = Compute("24/$Delx");
+            $Answer = PopUp(
+              ["?","Kukulcan","Great Pyramid"],
+              1, # index of correct answer; could also just be the correct answer
+            );
+
+        </pg-code></setup>
+        <statement><p>The square base is 55 meters on each side, and the top platform is 19.5 meters on each side. Calculate the slope of the sides of the pyramid. Which pyramid is steeper, Kukulcan or the Great Pyramid (whose slope, rounded to two decimals, is 1.28)?</p>
+        <p>Answer: <var name="$Answer" form="popup"/></p>
+        </statement>
+        <solution><p>The horizontal change <m>\Delta x</m> is half the difference between the sides of the base and of the top platform: <m>\Delta x=\frac{1}{2}(55-19.5)= <var name="$Delx"/></m>, so the slope is <m>m=\dfrac{\Delta y}{\Delta x}= \dfrac{24}{<var name="$Delx"/>} \approx <var name="$m"/></m>, which is greater than 1.28. Kukulcan is steeper.</p></solution>
+    </webwork>
+</exercise>
 
 <p>So far, we have only considered examples in which <m>\Delta x</m> and <m>\Delta y</m> are positive numbers, but they can also be negative.
     <me>\Delta x = \begin{cases}
@@ -215,18 +252,39 @@ and the slope of the side is
 
 <p>How do we know which two points to choose when we want to compute the slope of a line? It turns out that any two points on the line will do.</p>    
 
-<exercise xml:id="exercise-slope-any-points"><title>Practice 5</title>
-    <statement><ol label="a">
-        <li><p>Graph the line <m>4x - 2y = 8</m> by finding the <m>x</m>- and <m>y</m>-intercepts</p></li>
-        <li><p>Compute the slope of the line using the <m>x</m>-intercept and <m>y</m>-intercept.</p></li>
-        <li><p>Compute the slope of the line using the points <m>(4, 4)</m> and <m>(1, -2)</m>.</p></li>
-    </ol></statement>
-<answer><p>
-    <ol label="a" cols="3">
-        <li><sidebyside width="78%"><image source="images/fig-in-ex-ans-1-4-5"><description>line</description></image></sidebyside></li>
-        <li><p><m>2</m></p></li>
-        <li><p><m>2</m></p></li>
-    </ol></p></answer></exercise>
+<exercise xml:id="exercise-slope-any-points">
+    <title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+        Context("Point");
+        $x = 2;
+        $y = -4;
+        $xi=Point("($x,0)");
+        $yi=Point("(0,$y)");
+        $m = -$y/$x;
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+            <li><p>Graph the line <m>4x - 2y = 8</m> by finding the <m>x</m>- and <m>y</m>-intercepts</p>
+            <p><m>x</m>-intercept: <var name="$xi" width="5"/> </p>
+            <p><m>y</m>-intercept: <var name="$yi" width="5"/></p>
+            <p>Note: Enter each intercept as an ordered pair, such as <m>(0,1)</m> or <m>(3,0)</m>.</p></li>
+            <li><p>Compute the slope of the line using the <m>x</m>-intercept and <m>y</m>-intercept.</p>
+            <p><m>m=</m><var name="$m" width="2"/></p></li>
+            <li><p>Compute the slope of the line using the points <m>(4, 4)</m> and <m>(1, -2)</m>.</p>
+            <p><m>m=</m><var name="$m" width="2"/></p></li>
+            </ol></p>
+        </statement>
+        <solution><p><ol label="a">
+        <li><p>A graph of the line is shown below this exercise.</p></li>
+        <li><p>The <m>x</m>-intercept is <m><var name="$xi"/></m> and the <m>y</m>-intercept is <m><var name="$yi"/></m>.</p> 
+        <p>The slope is <m>m=\dfrac{\Delta y}{\Delta x}= \dfrac{-<var  name="$y"/>}{<var name="$x"/>} = <var name="$m"/></m></p></li>
+        <li><p>The slope is <m>m=\dfrac{\Delta y}{\Delta x}= \dfrac{-2-4}{1-4}=\dfrac{-6}{-3} = <var name="$m"/></m></p></li>
+        </ol></p></solution>
+    </webwork>
+    <conclusion><p>Here is a graph of the line.</p>
+    <sidebyside width="28%"><image source="images/fig-in-ex-ans-1-4-5"><description>line</description></image></sidebyside></conclusion>
+</exercise>
 
 <note><p><xref ref="exercise-slope-any-points" text="type-global"/> illustrates an important property of lines: They have constant slope. No matter which two points we use to calculate the slope, we will always get the same result. We will see later that lines are the only graphs that have this property.</p></note>
 
@@ -296,16 +354,39 @@ stands for
                 The slope represents the trucker’s average speed or velocity.</p></li>
         </ol></p></solution></example>
 
-<exercise><title>Practice 6</title>
-<statement><sidebyside widths="55% 30%" valigns="middle middle"><p>The graph shows the altitude, <m>a</m> (in feet), of a skier <m>t</m> minutes after getting on a ski lift.<ol label="a">
-        <li><p>Choose two points and compute the slope (including units).</p></li>
-        <li><p>What does the slope tell us about the problem?</p></li>
-    </ol></p>
-    <image source="images/fig-ski-lift"><description>ski lift graph</description></image></sidebyside></statement>
-<answer><p><ol label="a">
-        <li><p><m>150</m></p></li>
+<exercise>
+    <title>Practice 6</title>
+    <introduction>
+        <sidebyside widths="55% 35%" valigns="middle middle"><p>The graph shows the altitude, <m>a</m> (in feet), of a skier <m>t</m> minutes after getting on a ski lift.</p>
+        <image source="images/fig-ski-lift"><description>ski lift graph</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            $x0 = 0;
+            $y0 = 100;
+            $x1 = 4;
+            $y1 = 700;
+            $m = NumberWithUnits(
+            "($y1-$y0)/($x1-$x0) ft/min");
+            $meaning = RadioButtons(
+                ["The steepness of the ski lift.","The increase in altitude per minute.","The time to rise a foot in altitude.","The cost of using the ski lift."],
+                1
+            );
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+        <li><p>Choose two points and compute the slope (including units). (Note: Use "ft" for feet and use "min" for minutes.)</p>
+        <p><m>m=</m><var name="$m" width="12"/> </p></li>
+        <li><p>What does the slope tell us about the problem?</p>
+        <p><var name="$meaning" form="buttons"/> </p></li>
+        </ol></p>
+        </statement>
+        <solution><p><ol label="a">
+        <li><p><m>m=\dfrac{\Delta y}{\Delta x}= \dfrac{<var name="$y1"/> \text{ ft}-<var name="$y0"/>\text{ ft}}{<var name="$x1"/>\text{ min}-<var name="$x0"/>\text{ min}}= <var name="$m"/></m></p></li>
         <li><p>Altitude increases by <m>150</m> feet per minute.</p></li>
-    </ol></p></answer></exercise>
+    </ol></p></solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -354,14 +435,31 @@ We now have a formula for the slope of a line that works even if we do not have 
         <me>m = \frac{y_2 - y_1}{x_2 - x_1}= \frac{3 - (-3)}{4 - 6} = \frac{6}{-2}= -3</me>
 This value for the slope, <m>-3</m>, is the same value we found above.</p></solution></example>
 
-<exercise><title>Practice 7</title>
-<statement><ol label="a">
-        <li><p>Find the slope of the line passing through the points <m>(2, -3)</m> and <m>( -2, -1)</m>.</p></li>
-        <li><p>Sketch a graph of the line by hand.</p></li>
-    </ol></statement>
-<answer><p><ol label="a" cols="2">
-        <li><p><m>\dfrac{-1}{2} </m></p></li>
-        <li><sidebyside  width="50%"><image source="images/fig-in-ex-ans-1-4-7"><description>line</description></image></sidebyside></li></ol></p></answer></exercise>
+<exercise>
+    <title>Practice 7</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Fraction");
+            $x0 = 2;
+            $y0 = -3;
+            $x1 = -2;
+            $y1 = -1;           
+            $m = Fraction("($y1-$y0)/($x1-$x0)");
+        </pg-code></setup>
+        <statement><p>
+            <ol label="a">
+                <li><p>Find the slope of the line passing through the points <m>(2, -3)</m> and <m>( -2, -1)</m>.</p>
+                <p><m>m=</m><var name="$m" width="3"/> </p></li>
+                <li><p>Sketch a graph of the line by hand.</p></li>
+            </ol>
+        </p></statement>
+        <solution><p><ol label="a" cols="2">
+        <li><p><p><m>m=\dfrac{\Delta y}{\Delta x}= \dfrac{<var name="$y1"/> -<var name="$y0"/>}{<var name="$x1"/>-<var name="$x0"/>}= <var name="$m"/></m></p></p></li>
+        <li><p>A graph is shown below.</p></li>
+        </ol></p></solution>
+    </webwork>
+    <conclusion><sidebyside  width="25%" margins="0% 75%"><image source="images/fig-in-ex-ans-1-4-7"><description>line</description></image></sidebyside></conclusion>
+</exercise>
 
 <exercise><title>QuickCheck 5</title>
 <webwork>
@@ -415,18 +513,51 @@ This value for the slope, <m>-3</m>, is the same value we found above.</p></solu
 
 <p>Note that the graph of <m>f</m> is not a straight line and that the slope is not constant.</p>
 
-<exercise><title>Practice 8</title>
-<statement><p>The figure shows the graph of a function <m>f</m>.</p><sidebyside widths="60% 30%"><p><ol label="a">
-            <li>Find <m>f (3)</m> and <m>f (5)</m>. </li>
-            <li>Compute the slope of the line segment joining the points at <m>x = 3</m> and <m>x = 5</m>.</li>
-            <li>Write an expression for the slope of the line segment joining the points at <m>x = a</m> and <m>x = b</m>.</li>
-    </ol></p>
-    <image source="images/fig-slope-on-curve"><description>increasing curve</description></image></sidebyside></statement>
-<answer><p><ol label="a">
+<exercise>
+    <title>Practice 8</title>
+    <introduction><sidebyside widths="50% 35%" valigns="middle middle">
+        <p>The figure shows the graph of a function <m>f</m>.</p>
+        <image source="images/fig-slope-on-curve"><description>increasing curve</description></image>
+    </sidebyside></introduction>
+    <webwork>
+    <pg-macros>
+        loadMacros(
+          "parserFunction.pl"
+        ) ;
+    </pg-macros>
+        <setup><pg-code>
+            $x0 = 3;
+            $x1 = 5;
+            $y0 = 2;
+            $y1 = 8;
+            $m = ($y1-$y0)/($x1-$x0);
+            Context("Numeric")->variables->add(a=>"Real", b=>"Real");
+            parserFunction("f(x)" => "e**x"); #arbitrary function
+
+            $answer = Formula("(f(b)-f(a))/(b-a)");
+        </pg-code></setup>
+        <statement>
+        <p><ol label="a">
+            <li><p>Find <m>f (3)</m> and <m>f (5)</m>.</p> 
+            <p><m>f(3)=</m><var name="$y0" width="3"/>  </p>
+            <p><m>f(5)=</m><var name="$y1" width="3"/>  </p>
+            </li>
+            <li><p>Compute the slope of the line segment joining the points at <m>x = 3</m> and <m>x = 5</m>.</p>
+            <p><m>m=</m><var name="$m" width="3"/> </p>
+            </li>
+            <li><p>Write an expression for the slope of the line segment joining the points at <m>x = a</m> and <m>x = b</m>.</p>
+            <p><m>m=</m><var name="$answer" width="20"/> </p>
+            <p>Note: Be careful to use appropriate parentheses. Press the "Preview My Answers" button below to see if you are entering an appropriate expression.</p>
+            </li>
+        </ol></p>
+        </statement>
+        <solution><p><ol label="a">
             <li><p><m>f (3) = 2, ~f (5) = 8</m></p> </li>
             <li><p><m>3</m></p></li>
             <li><p><m>\dfrac{f(b)-f(a)}{b-a} </m></p></li>
-    </ol></p></answer></exercise>
+        </ol></p></solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
