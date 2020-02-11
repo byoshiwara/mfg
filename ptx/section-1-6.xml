@@ -41,16 +41,46 @@
                 <me>y = y_1 + m(x - x_1)</me></p></li>
     </ol></p></assemblage>
 
-<exercise><title>Practice 1</title>
-<statement><p>In 1991, there were 64.6 burglaries per 1000 households in the United States. The number of burglaries reported annually declined at a roughly constant rate over the next decade, and in 2001 there were 28.7 burglaries per 1000 households. (Source: U.S. Department of Justice)
-<ol label="a">
-    <li><p>Find a function for the number of burglaries, <m>B</m>, as a function of time, <m>t</m>, in years, since 1990.</p> </li>
-    <li><p>State the slope as a rate of change. What does the slope tell us about this problem?</p></li>
-</ol></p></statement>
-<answer><p><ol label="a">
-    <li><p><m>y = 68.19 - 3.59x</m></p> </li>
-    <li><p><m>-3.59</m> burglaries per <m>1000</m> households per year. From 1991 to 2001, the burglary rate declined by <m>3.59</m> burglaries per 1000 households every year.</p></li>
-</ol></p></answer>
+<exercise>
+    <title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Numeric")->variables->add(t=>'Real');
+            $x1 = 1;
+            $y1 = 64.6;
+            $x2 = 11;
+            $y2 = 28.7;
+            $m = ($y2-$y1)/($x2-$x1);
+            $absm = abs($m);
+            $b = $y1 + $m*(0 - $x1);
+            $func = Formula("$b + $m*t")->reduce;
+            $units = PopUp(
+                ["?","burglaries per decade","burglaries per 1000 households per year","households per burglary per year","burglaries per year"],
+                2
+            );
+            $tale = RadioButtons(
+                ["The burglary rate declined by $absm burglaries per decade","The burglary rate declined by $absm burglaries per 1000 households every year","The burglary rate declined by $absm burglaries per year"],
+                2
+            );
+
+        </pg-code></setup>
+        <statement>
+            <p>In 1991, there were 64.6 burglaries per 1000 households in the United States. The number of burglaries reported annually declined at a roughly constant rate over the next decade, and in 2001 there were 28.7 burglaries per 1000 households. (Source: U.S. Department of Justice)
+            <ol label="a">
+                <li><p>Find a function for the number of burglaries, <m>B</m>, as a function of time, <m>t</m>, in years, since 1990.</p>
+                <p><m>y=</m><var name="$func" width="15"/></p> </li>
+                <li><p>State the slope as a rate of change. </p>
+                <p><m>m</m> is <var name="$m" width="3"/><var name="$units" form="popup"/> </p>
+                <p>What does the slope tell us about this problem?</p>
+                <p><var name="$tale" form="buttons"/></p> 
+                <p>(in the years 1991 to 2001).</p></li>
+            </ol></p>
+        </statement>
+        <solution><p><ol label="a">
+            <li><p>Because <m>t=0</m> corresponds to 1990, we have the two points (1,64.6) and (11,28.7) to compute the slope <m>m=<var name="$m"/></m>. Using the point-slope formula with either point and then simplifying, we find that <m>y = <var name="$func"/> </m></p> </li>
+            <li><p><m>-3.59</m> burglaries per 1000 households per year. From 1991 to 2001, the burglary rate declined by 3.59 burglaries per 1000 households every year.</p></li>
+        </ol></p></solution>
+    </webwork>
 </exercise>
 
 <exercise><title>QuickCheck 1</title>
@@ -115,33 +145,48 @@
 
 <warning><p>  To find the slope of your estimated line, be sure to choose points <em>on the line</em>; do not choose any of the data points (unless they happen to lie on your line).</p></warning>
 
-<exercise xml:id="exercise-scatterplot"><title>Practice 2</title>
-<statement><p><ol label="a">
-        <li><p>Plot the data points. Do the points lie on a line?</p></li>
-        <li><p>Draw a line that fits the data.</p></li>
-    </ol></p>
-    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-        <row bottom="minor">
-            <cell><m>x</m></cell>
-            <cell><m>1.49</m></cell>
-            <cell><m>3.68</m></cell>
-            <cell><m>4.95</m></cell>
-            <cell><m>5.49</m></cell>
-            <cell><m>7.88</m></cell>
-            <cell><m>8.41</m></cell></row>
-        <row>
-            <cell><m>y</m></cell>
-            <cell><m>2.69</m></cell>
-            <cell><m>3.7</m></cell>
-            <cell><m>4.6</m></cell>
-            <cell><m>5.2</m></cell>
-            <cell><m>7.2</m></cell>
-            <cell><m>7.3</m></cell></row>
-    </tabular></sidebyside></statement>
-<answer><p><ol label="a" cols="2">
-        <li><sidebyside width="75%"><image source="images/fig-in-ex-ans-1-6-2a"><description>scatterplot</description></image></sidebyside></li>
-        <li><sidebyside width="75%"><image source="images/fig-in-ex-ans-1-6-2b"><description>scatterplot with regression line</description></image></sidebyside></li>
-    </ol></p></answer></exercise>
+<exercise xml:id="exercise-scatterplot">
+    <title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            $YN = PopUp(
+                ["?","Yes","No"],
+                2
+            );
+        </pg-code></setup>
+        <statement><p><ol label="a">
+            <li><p>Plot the data points. Do the points lie on a line?</p>
+            <p><var name="$YN" form="popup"/> </p></li>
+            <li><p>Draw a line that fits the data.</p></li>
+        </ol></p>
+        <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+            <row bottom="minor">
+                <cell><m>x</m></cell>
+                <cell><m>1.49</m></cell>
+                <cell><m>3.68</m></cell>
+                <cell><m>4.95</m></cell>
+                <cell><m>5.49</m></cell>
+                <cell><m>7.88</m></cell>
+                <cell><m>8.41</m></cell></row>
+            <row>
+                <cell><m>y</m></cell>
+                <cell><m>2.69</m></cell>
+                <cell><m>3.7</m></cell>
+                <cell><m>4.6</m></cell>
+                <cell><m>5.2</m></cell>
+                <cell><m>7.2</m></cell>
+                <cell><m>7.3</m></cell></row>
+        </tabular></sidebyside></statement>
+        <solution><p><ol label="a" cols="2">
+        <li><p>No. A scatterplot is shown below.</p></li>
+        <li><p>See the graph below</p></li>
+        </ol></p></solution>
+    </webwork>
+    <conclusion><p><ol label="a" cols="2">
+    <li><sidebyside width="75%"><image source="images/fig-in-ex-ans-1-6-2a"><description>scatterplot</description></image></sidebyside></li>
+    <li><sidebyside width="75%"><image source="images/fig-in-ex-ans-1-6-2b"><description>scatterplot with regression line</description></image></sidebyside></li>
+    </ol></p></conclusion>
+</exercise>
 
 <p>The graph in <xref ref="example-gas-mileage" text="type-global" /> is called a <term>scatterplot</term><idx>scatterplot</idx>. The points on a scatterplot may or may not show some sort of pattern. Consider the three plots shown below. 
     <ul>
@@ -212,19 +257,35 @@
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 3</title>
-<statement><p>Human brains consume a large amount of energy, about 16 times as much as muscle tissue per unit weight. In fact, brain metabolism accounts for about 25<percent/> of an adult human’s energy needs, as compared to about 5<percent/> for other mammals.</p>
-    <p> As hominid species evolved, their brains required larger and larger amounts of energy, as shown below. (Source: Scientific American, December 2002)</p>
-    <sidebyside width="50%"><image source="images/fig-hominid-brains"><description>hominid brains</description></image></sidebyside>
-    <p><ol label="a">
-        <li>Draw a line of best fit through the data points.</li>
-        <li>Estimate the amount of energy used by the brain of a hominid species that lived three million years ago.</li>
-    </ol></p></statement>
-
-<answer><p><ol label="a">
-        <li><sidebyside  width="40%" margins="0% 60%"><image source="images/fig-in-ex-ans-1-6-3"><description>scatterplot with regression line</description></image></sidebyside></li>
-        <li><p>About <m>10.5\%</m> </p></li>
-    </ol></p></answer></exercise>
+<exercise>
+    <title>Practice 3</title>
+    <introduction>
+        <sidebyside width="50%"><image source="images/fig-hominid-brains"><description>hominid brains</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            $answer = Compute("10.5")->with(
+              tolType => 'absolute',
+              tolerance => .51,
+            );
+        </pg-code></setup>
+        <statement>
+            <p>Human brains consume a large amount of energy, about 16 times as much as muscle tissue per unit weight. In fact, brain metabolism accounts for about 25% of an adult human's energy needs, as compared to about 5% for other mammals.</p>
+            <p><ol label="a">
+                <li><p>Draw a line of best fit through the data points.</p></li>
+                <li><p>Estimate the amount of energy used by the brain of a hominid species that lived three million years ago.</p>
+                <p><var name="$answer" width="3" />% </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p>A graph is below.</p></li>
+                <li><p>About 10.5% </p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion><sidebyside  width="60%" margins="0% 60%"><image source="images/fig-in-ex-ans-1-6-3"><description>scatterplot with regression line</description></image></sidebyside></conclusion>
+</exercise>
 
 <p>The process of predicting an output value based on a straight line that fits the data is called <term>linear regression</term><idx>linear regression</idx>, and the line itself is called the <term>regression line</term><idx>regression line</idx>. The equation of the regression line is usually used (instead of a graph) to predict values.</p>
 
@@ -266,41 +327,71 @@
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 4</title>
-<statement><p>The number of manatees killed by watercraft in Florida waters has been increasing since 1975. Data are given at 5-year intervals in the table. (Source: Florida Fish and Wildlife Conservation Commission)</p>
-    <sidebyside valigns="middle middle"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-        <row bottom="minor">
-            <cell>Year</cell>
-            <cell>Manatee deaths</cell></row>
-        <row>
-            <cell><m>1975</m></cell>
-            <cell><m>6</m></cell></row>
-        <row>
-            <cell><m>1980</m></cell>
-            <cell><m>16</m></cell></row>
-        <row>
-            <cell><m>1985</m></cell>
-            <cell><m>33</m></cell></row>
-        <row>
-            <cell><m>1990</m></cell>
-            <cell><m>47</m></cell></row>
-        <row>
-            <cell><m>1995</m></cell>
-            <cell><m>42</m></cell></row>
-        <row>
-            <cell><m>2000</m></cell>
-            <cell><m>78</m></cell></row>
-    </tabular>
-    <image source="images/fig-manatees" width="60%"><description>manatee deaths</description></image></sidebyside>
-    <p><ol label="a">
+<exercise>
+    <title>Practice 4</title>
+    <introduction>
+        <sidebyside width="50%">
+            <image source="images/fig-manatees" width="60%"><description>manatee deaths</description></image>
+        </sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            Context("Numeric")->variables->add(t=>'Real');
+            $f = Formula("4.7 + 2.6*t")->with(
+              tolType => 'relative',
+              tolerance => 0.1,
+            );
+            $f->{limits} = [0,30];
+            $killed = Compute("65")->with(
+              tolType => 'absolute',
+              tolerance => 5,
+            );
+        </pg-code></setup>
+        <statement>
+            <p>The number of manatees killed by watercraft in Florida waters has been increasing since 1975. Data are given at 5-year intervals in the table. (Source: Florida Fish and Wildlife Conservation Commission)</p>
+            <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+            <row bottom="minor">
+                <cell>Year</cell>
+                <cell>Manatee deaths</cell></row>
+            <row>
+                <cell><m>1975</m></cell>
+                <cell><m>6</m></cell></row>
+            <row>
+                <cell><m>1980</m></cell>
+                <cell><m>16</m></cell></row>
+            <row>
+                <cell><m>1985</m></cell>
+                <cell><m>33</m></cell></row>
+            <row>
+                <cell><m>1990</m></cell>
+                <cell><m>47</m></cell></row>
+            <row>
+                <cell><m>1995</m></cell>
+                <cell><m>42</m></cell></row>
+            <row>
+                <cell><m>2000</m></cell>
+                <cell><m>78</m></cell></row>
+        </tabular></sidebyside>
+        <p><ol label="a">
         <li>Draw a regression line through the data points shown in the figure.</li>
-        <li>Use the regression equation to estimate the number of manatees killed by watercraft in 1998.</li>
-    </ol></p></statement>
-<answer><p><ol label="a">
-        <li><sidebyside width="45%" margins="0% 55%"><image source="images/fig-in-ex-ans-1-6-4"><description>scatterplot with regression line</description></image></sidebyside></li>
-        <li><p><m>y = 4.7 + 2.6t</m> </p></li>
-        <li><p><m>65</m></p></li>
-    </ol></p></answer></exercise>
+        <li><p>Find an equation for the regression line, using <m>t\approx 0</m> in 1975.</p>
+        <p><m>y=</m><var name="$f" width="10"/> </p></li>
+        <li><p>Use the regression equation to estimate the number of manatees killed by watercraft in 1998.</p>
+        <p><var name="$killed" width="2"/> manatees </p></li>
+    </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p>A graph is below.</p></li>
+                <li><p><m>y = <var name="$f"/> </m> </p></li>
+                <li><p><var name="$killed"/> </p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="45%" margins="0% 55%"><image source="images/fig-in-ex-ans-1-6-4"><description>scatterplot with regression line</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -360,17 +451,53 @@ Even if the Miss America pageant is still operating in 600 years, the winner can
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 5</title>
-<statement><p>Emily was 82 centimeters tall at age 36 months and 88 centimeters tall at age 48 months.<ol label="a">
-    <li><p>Find a linear equation that approximates Emily's height in terms of her age over the given time interval.</p></li>
-    <li><p>Use linear interpolation to estimate Emily's height when she was 38 months old, and extrapolate to predict her height at age 50 months.</p></li>
-    <li><p>Predict Emily's height at age 25 (300 months). Is your answer reasonable?</p></li>
-    </ol></p></statement>
-<answer><p><ol label="a" cols="3">
-        <li><p><m>y = 64 + 0.5x</m></p></li>
-        <li><p><m>83</m> cm, <m>89</m> cm</p></li>
-        <li><p><m>214</m> cm; No</p></li>
-    </ol></p></answer></exercise>
+<exercise>
+    <title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Numeric")->variables->add(t=>'Real');
+            $x1 = 36;
+            $y1 = 82;
+            $x2 = 48;
+            $y2 = 88;
+            $m = ($y2-$y1)/($x2-$x1);
+            $func = Formula ("$y1 + $m*(t-$x1)")->reduce;
+            $age1 = 38;
+            $height1 = $func->eval(t=>$age1)->with(
+              tolType => 'relative',
+              tolerance => 0.01,
+            );
+            $age2 = 50;
+            $age3 = 300;
+            $height2 = $func->eval(t=>$age2);
+            $height3 = $func->eval(t=>$age3);
+            $YN = PopUp(
+            ["?","Yes","No"],
+            2, # index of correct answer; could also just be the correct answer
+            );
+        </pg-code></setup>
+        <statement>
+            <p>Emily was 82 centimeters tall at age 36 months and 88 centimeters tall at age 48 months.
+                <ol label="a">
+                <li><p>Find a linear equation that approximates Emily's height in terms of her age over the given time interval. Let <m>t</m> be Emily's age in months.</p>
+                <p><m>y=</m><var name="$func" width="12"/></p></li>
+                <li><p>Use linear interpolation to estimate Emily's height when she was 38 months old, and extrapolate to predict her height at age 50 months.</p>
+                <p>Age 38 months: <var name="$height1" width="3"/> cm </p>
+                <p>Age 50 months: <var name="$height2" width="3"/> cm </p></li>
+                <li><p>Predict Emily's height at age 25 (300 months). </p>
+                <p>Age 25 years: <var name="$height3" width="3"/> cm </p>
+                <p>Is your answer reasonable? <var name="$YN" form="popup"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="3">
+                <li><p><m>y = 64 + 0.5t</m></p></li>
+                <li><p><m>83</m> cm, <m>89</m> cm</p></li>
+                <li><p><m>214</m> cm; No</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -428,15 +555,38 @@ Even if the Miss America pageant is still operating in 600 years, the winner can
 
 <warning><p>When you are through with the scatterplot, press <c>Y=</c><!--<m>\boxed{\uparrow}</m>  --> <m>\boxed{\uparrow}</m>  <c>ENTER</c> to turn off the <m>Stat Plot</m>. If you neglect to do this, the calculator will continue to show the scatterplot even after you ask it to plot a new equation.</p></warning>
 
-<exercise><title>Practice 6</title>
-<statement><p><ol label="a">
-    <li><p>Use your calculator’s statistics features to find the least squares regression equation for the data in <xref ref="exercise-scatterplot" text="type-global" />.</p></li>
-    <li><p>Plot the data and the graph of the regression equation.</p></li>
-    </ol></p></statement>
-<answer><p><ol label="a" cols="2">
-        <li><p><m>y = 1.34 + 0.71x</m></p></li>
-        <li><sidebyside width="70%" margins="0% 30%"><image source="images/fig-in-ex-ans-1-6-6.jpg"><description>GC scatterplot with regression line</description></image></sidebyside></li>
-    </ol></p></answer>  </exercise>
+<exercise>
+    <title>Practice 6</title>
+    <introduction>
+        <p>Use your calculator’s statistics features to find the least squares regression equation for the data in <xref ref="exercise-scatterplot" text="type-global" />.</p>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            $a = .7108382617;
+            $b = 1.335709908;
+            $func = Formula("$a*x + $b")->with(
+              tolType => 'relative',
+              tolerance => 0.001,
+            );
+            $func->{limits} = [1,10];
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>The equation: <m>y=</m><var name="$func" width="10"/> </p></li>
+                <li><p>Plot the data and the graph of the regression equation.</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+            <li><p><m>y = 1.34 + 0.71x</m></p></li>
+            <li><p>A graph is below.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="35%" margins="0% 70%"><image source="images/fig-in-ex-ans-1-6-6.jpg"><description>GC scatterplot with regression line</description></image></sidebyside>
+    </conclusion>
+</exercise>
 </subsection>
 
 <xi:include href="./summary-1-6.xml" /> <!-- summary  -->
