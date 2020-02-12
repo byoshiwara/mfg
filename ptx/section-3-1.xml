@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- <mathbook><book> -->
 
-<section xml:id="Variation"   xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Variation</title><introduction>
+<section xml:id="Variation"   xmlns:xi="http://www.w3.org/2001/XInclude"><title>Variation</title>
 
-<p>Two types of functions are widely used in modeling and are known by special names: <term>direct variation</term> and <term>inverse variation</term>.</p></introduction>
+<introduction><p>Two types of functions are widely used in modeling and are known by special names: <term>direct variation</term> and <term>inverse variation</term>.</p></introduction>
 
-<subsection><title>Direct Variation</title><idx>direct variation</idx>
+<subsection><title>Direct Variation</title><idx>directvariation</idx>
 
-<p>Two variables are <term>directly proportional</term><idx>directly proportional</idx> (or just <term>proportional</term><idx>proportional</idx>) if the ratios of their corresponding values are always equal. Consider the functions described in the tables below. The first table shows the price of gasoline as a function of the number of gallons purchased.</p><sidebyside>
-<tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+<p>Two variables are <term>directly proportional</term><idx>directly proportional</idx> (or just <term>proportional</term><idx>proportional</idx>) if the ratios of their corresponding values are always equal. Consider the functions described in the tables below. The first table shows the price of gasoline as a function of the number of gallons purchased.</p>
+
+<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
             <cell><line>Gallons of</line><line>gasoline</line></cell>
             <cell><line>Total</line><line>price</line></cell>
@@ -69,8 +69,28 @@
 
 <p>The ratio <m>\dfrac{\text{total price}}{\text{number of gallons}}</m>, or price per gallon, is the same for each pair of values in the first table. This agrees with everyday experience: The price per gallon of gasoline is the same no matter how many gallons you buy. Thus, the total price of a gasoline purchase is directly proportional to the number of gallons purchased.</p>
 
-<p>The second table shows the population of a small town as a function of the town’s age. The ratio <m>\dfrac{\text{number of people}}{\text{number of years}}</m> gives the average rate of growth of the population in people per year. You can see that this ratio is not constant; in fact, it increases as time goes on. Thus, the population of the town is not proportional to its age.
-</p>
+<p>The second table shows the population of a small town as a function of the town’s age. The ratio <m>\dfrac{\text{number of people}}{\text{number of years}}</m> gives the average rate of growth of the population in people per year. You can see that this ratio is <em>not</em> constant; in fact, it increases as time goes on. Thus, the population of the town is <em>not</em> proportional to its age.</p>
+
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $dirvar = RadioButtons(
+              ["If it has a constant slope",
+              "If it includes the point \((0,0)\)",
+              "If the ratio output/input is constant",
+              "If each output is double the previous one"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>When does a table represent direct variation?</p>
+        <p><var name="$dirvar" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>If the ratio output/input is constant</p>
+    </solution>
+</webwork></exercise>
+
 <p>The graphs of these two functions are shown below.</p>
 
 <sidebyside width="80%"><image source="images/fig-gasoline-and-population-graphs"  ><description>graphs of gas price and population growth</description></image></sidebyside>
@@ -103,10 +123,30 @@ which we recognize as the equation of a line through the origin.</p>
 	<me>y = f (x) = kx</me>
 The positive constant <m>k</m> in the equation <m>y = kx</m> is just the slope of the graph, so it tells us how rapidly the graph increases. Compared to the standard form for a linear function, <m>y = b + mx</m>, the constant term, <m>b</m>, is zero, so the graph of a direct variation passes through the origin.</p>
 
-<exercise><statement><p>
-	Which of the graphs below could represent direct variation? Explain why.</p>
+<exercise><title>Practice 1</title>
+<statement><p>Which of the graphs below could represent direct variation? Explain why.</p>
 	<sidebyside width="60%"><image source="images/fig-three-lines"><description>graphs of three lines</description></image></sidebyside></statement>
 <answer><p>(b): The graph is a straight line through the origin.</p></answer></exercise>
+
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $convar = RadioButtons(
+              ["The \(y\)-intercept of the graph",
+              "The slope of the graph",
+              "What happens to \(y\) when you double \(x\)",
+              "The size of the input values"],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>If \(y\) varies directly with \(x\), what does the constant of variation tell us?</p>
+        <p><var name="$convar" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>The slope of the graph</p>
+    </solution>
+</webwork></exercise>
 
 </subsection>
 
@@ -138,9 +178,29 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
 	Thus, <m>C(S)</m> is a linear function of <m>S</m> with a <m>C</m>-intercept of zero, so Imogen's earnings do vary directly with her sales. This is an example of direct variation. (See figure (b).)</p></li>
 </ol></p></solution></example>
 
-<exercise><statement><p>Which table could represent direct variation? Explain why. (Hint: What happens to<m>y</m> if you multiply <m>x</m> by a constant?)<ol label="a">
-	<li>
-		<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $scpr = RadioButtons(
+              ["The output is found by scaling the input.",
+              "The output can be regarded as a scale.",
+              "The constant of variation can be multiplied by any factor.",
+              "If we multiply the input by \(p\), the output will also be multiplied by \(p\)."],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What does the scaling property of direct variation tell us?</p>
+        <p><var name="$scpr" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>If we multiply the input by <m>p</m>, the output will also be multiplied by <m>p</m>.</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 2</title>
+<statement><p>Which table could represent direct variation? Explain why. (Hint: What happens to<m>y</m> if you multiply <m>x</m> by a constant?)<ol label="a">
+	<li><sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
             <cell><m>x</m></cell>
             <cell><m>1</m></cell>
@@ -204,7 +264,28 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
 		<sidebyside width="40%"><image source="images/fig-GC-falling-into-grand-canyon"><description>GC graph</description></image></sidebyside></li>
 	</ol></p></solution></example>
 
-<exercise><statement><p>The volume of a bag of rice, in cups, is directly proportional to the weight of the bag. A <m>2</m>-pound bag contains <m>3.5</m> cups of rice.<ol label="a">
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $exdir = RadioButtons(
+              ["Yes, it is linear.",
+              "Yes, the scale factor is 0.3.",
+              "No, the graph does not pass through the origin.",
+              "No, its slope is less than 1."],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Is the function <m>f(x)=0.3x+5</m> an example of direct variation?</p>
+        <p><var name="$exdir" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>No, the graph does not pass through the origin.</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 3</title>
+<statement><p>The volume of a bag of rice, in cups, is directly proportional to the weight of the bag. A <m>2</m>-pound bag contains <m>3.5</m> cups of rice.<ol label="a">
 		<li>Express the volume, <m>V</m>, of a bag of rice as a function of its weight, <m>w</m>.</li>
 		<li>How many cups of rice are in a <m>15</m>-pound bag?</li>
 	</ol></p></statement>
@@ -212,6 +293,16 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
     <li><p><m>V = 1.75w</m></p></li>
     <li><p><m>26.25</m></p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>For direct variation, how can you find the constant of variation from data? From a graph? </p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Direct Variation with a Power of <m>x</m></title>
@@ -234,7 +325,8 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
 	\end{aligned}</me><!--*****-->
 	Thus, <m>S = f (r ) = 4\pi r^2</m>.</p></solution></example>
 
-<exercise><statement><p>The volume of a sphere varies directly with the <em>cube</em> of its radius. A balloon of radius <m>5</m> centimeters has volume <m>\dfrac{500\pi}{3}</m> cubic centimeters, or about <m>524</m> cubic centimeters. Find a formula for the volume of a sphere as a function of its radius.</p></statement>
+<exercise><title>Practice 4</title>
+<statement><p>The volume of a sphere varies directly with the <em>cube</em> of its radius. A balloon of radius <m>5</m> centimeters has volume <m>\dfrac{500\pi}{3}</m> cubic centimeters, or about <m>524</m> cubic centimeters. Find a formula for the volume of a sphere as a function of its radius.</p></statement>
 <answer><p><m>V=\dfrac{4}{3}\pi r^3</m></p></answer></exercise>
 
 <p>In any example of direct variation, as the input variable increases through positive values, the output variable increases also. Thus, a direct variation is an increasing function, as we can see when we consider the graphs of some typical direct variations shown below.</p>
@@ -245,7 +337,7 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
 <p>Even without an equation, we can check whether a table of data describes direct variation or merely an increasing function. If <m>y</m> varies directly with <m>x^n</m> , then <m>y = kx^n</m> , or, equivalently,<m>\dfrac{y}{x^n} = k</m>.</p>
 
 <assemblage><title>Test for Direct Variation</title>
-<p>If the ratio <m>\dfrac{y}{x^n}</m> is constant, then <m>y</m> varies directly with <m>x^n</m>.</p></assemblage>
+    <p>If the ratio <m>\dfrac{y}{x^n}</m> is constant, then <m>y</m> varies directly with <m>x^n</m>.</p></assemblage>
 
 <example xml:id="example-test-variation-with-square"><statement><p>Delbert collects the following data and would like to know if <m>y</m> varies directly with the square of <m>x</m>. What should he calculate?</p>
 	<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -288,10 +380,30 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
             <cell><m>0.54</m></cell>
             <cell><m>0.53</m></cell></row>
     </tabular></sidebyside>
-	<p>Because the ratio <m>\dfrac{y}{x^2}</m> is not constant, <m>y</m> does not vary directly with <m>x^2</m>.</p></solution>
-</example>
+	<p>Because the ratio <m>\dfrac{y}{x^2}</m> is not constant, <m>y</m> does not vary directly with <m>x^2</m>.</p></solution></example>
 
-<exercise><statement><p>Does <m>B</m> vary directly with the cube of <m>r</m>? Explain your decision.</p>
+<exercise><title>QuickCheck 5</title>
+<webwork>
+    <setup><pg-code>       
+            $powvar = RadioButtons(
+              ["Plot the points.",
+              "Check whether \(y^n\) is a constant.",
+              "Check whether \(y/x^n\) is a constant.",
+              "Check whether \(y^n/x^n\) is a constant."],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>How can you test whether a table for <m>y=f(x)</m> represents direct variation with a power?</p>
+        <p><var name="$powvar" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Check whether <m>y/x^n</m> is a constant.</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 5</title>
+<statement><p>Does <m>B</m> vary directly with the cube of <m>r</m>? Explain your decision.</p>
 	<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
             <cell><m>r</m></cell>
@@ -332,8 +444,8 @@ where the constant <m>k</m> depends on the material of the model. If we double t
 	</me>
 The weight of the new model is <m>2^3 = 8</m> times the weight of the original model.</p></solution></example>
 
-<exercise><statement><p>
-	Use the formula for the area of a circle to show that doubling the diameter of a pizza quadruples its area.
+<exercise><title>Practice 6</title>
+<statement><p>Use the formula for the area of a circle to show that doubling the diameter of a pizza quadruples its area.
 </p></statement>
 <answer><p><m>A =\pi r^2</m>, so <m>A_\text{new} = \pi(2r )^2 = 4\pi r^2 = 4A_\text{old}</m></p></answer>
 </exercise>
@@ -427,6 +539,26 @@ where <m>k</m> is a positive constant.</p></assemblage>
             <cell><m>600</m></cell></row>
     </tabular></sidebyside>
 
+<exercise><title>QuickCheck 6</title>
+<webwork>
+    <setup><pg-code>       
+            $invvar = RadioButtons(
+              ["Check whether \(xy\) is a constant.",
+              "Check whether the function is decreasing.",
+              "Check whether \(y\) is the reciprocal of \(x\).",
+              "Check whether \(y/x\) is a constant."],
+              0, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>How can you test whether a table for <m>y=f(x)</m> represents inverse variation?</p>
+        <p><var name="$invvar" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Check whether <m>xy</m> is a constant.</p>
+    </solution>
+</webwork></exercise>
+
 <p>We can also define inverse variation with a power of the variable.</p>
 
 <assemblage><title>Inverse Variation with a power</title><idx>inverse variation with a power</idx>
@@ -438,14 +570,15 @@ where <m>k</m> is a positive constant.</p></assemblage>
 
 <example xml:id="example-weight-vs-distance-from-earth"><statement><p>The weight, <m>w</m>, of an object varies inversely with the square of its distance, <m>d</m>, from the center of the Earth. Thus,
 		<me>w = \dfrac{k}{d^2}</me>
-If you double your distance from the center of the Earth, what happens to your weight? What if you triple the distance?</p>
-</statement>
+If you double your distance from the center of the Earth, what happens to your weight? What if you triple the distance?</p></statement>
+
 <solution><p>Suppose you weigh <m>W</m> pounds at distance <m>D</m> from the center of the Earth. Then 	<m>W = \dfrac{k}{D^2}</m>. At distance <m>2D</m>, your weight will be
 	<me>w = \frac{k}{(2D)^2}= \frac{k}{4D^2}= \frac{1}{4}\cdot\frac{k}{D^2}
 		= \frac{1}{4}W</me>
 Your new weight will be <m>\dfrac{1}{4}</m> of your old weight. By a similar calculation, you can check that by tripling the distance, your weight will be reduced to <m>\dfrac{1}{9}</m> of its original value.</p></solution></example>
 
-<exercise xml:id="exercise-rusty-bolt"><statement><p>The amount of force, <m>F</m>, (in pounds) needed to loosen a rusty bolt with a wrench is inversely proportional to the length, <m>l</m>, of the wrench. Thus,
+<exercise xml:id="exercise-rusty-bolt"><title>Practice 7</title>
+<statement><p>The amount of force, <m>F</m>, (in pounds) needed to loosen a rusty bolt with a wrench is inversely proportional to the length, <m>l</m>, of the wrench. Thus,
 	<me>F = \frac{k}{l}</me>
 If you increase the length of the wrench by 50<percent/> so that the new length is <m>1.5l</m>, what happens to the amount of force required to loosen the bolt?
 </p></statement>
@@ -475,7 +608,8 @@ If you increase the length of the wrench by 50<percent/> so that the new length 
 	At a distance of <m>5</m> kilometers from the station, the signal strength is <m>0.00064</m> watt per square meter.</li>
 </ol></p></solution></example>
 
-<exercise><statement><p>Delbert’s officemates want to buy a <dollar/>120 gold watch for a colleague who is retiring. The cost per person is inversely proportional to the number of people who contribute.<ol label="a">
+<exercise><title>Practice 8</title>
+<statement><p>Delbert’s officemates want to buy a <dollar/>120 gold watch for a colleague who is retiring. The cost per person is inversely proportional to the number of people who contribute.<ol label="a">
 		<li><p>Express the cost per person, <m>C</m>, as a function of the number of people, <m>p</m>, who contribute.</p></li>
 		<li><p>Sketch the function on the domain <m>0 \le p \le 20</m>.</p>
             <sidebyside widths="35% 35%" margins="5% 5%">
@@ -494,6 +628,16 @@ If you increase the length of the wrench by 50<percent/> so that the new length 
     <li><p><m>C=\dfrac{120}{p} </m></p></li>
     <li><sidebyside width="30%"><image source="images/fig-in-ex-ans-3-1-8"><description>reciprocal</description></image></sidebyside></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>What distinguishes inverse variation from other decreasing functions?  Mention properties of the graph and the formula.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <xi:include href="./summary-3-1.xml" /> <!-- summary  -->

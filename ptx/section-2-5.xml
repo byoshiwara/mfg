@@ -14,11 +14,32 @@
 <p>For example, the equation <m>\abs{x - 2} = 6</m> means "the distance between <m>x</m> and <m>2</m> is <m>6</m> units." The number <m>x</m> could be to the left or the right of <m>2</m> on the number line. Thus, the equation has two solutions, <m>8</m> and <m>-4</m>, as shown below.</p>
 <sidebyside width="70%"><image source="images/fig-abs-x-minus-2-is-6"  ><description>6 units from 2</description></image></sidebyside>
 
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $absdist = RadioButtons(
+              ["change its sign.",
+              "subtract it from 0.",
+              "find its distance from 0.",
+              "square it."],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>To find the absolute value of a number, we can</p>
+        <p><var name="$absdist" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>find its distance from 0.</p>
+    </solution>
+</webwork></exercise>
+
 <example xml:id="example-distances"><statement><p>Write each statement using absolute value notation. Illustrate the solutions on a number line.<ol label="a">
         <li><m>x</m> is three units from the origin.</li>
         <li><m>p</m> is two units from <m>5</m>.</li>
         <li><m>a</m> is within four units of <m>-2</m>.</li>
     </ol></p></statement>
+
 <solution><p>First, restate each statement in terms of distance.<ol label="a">
         <li><p>The distance between <m>x</m> and the origin is three units, or <m>\abs{x} = 3</m>. Thus, <m>x</m> can be <m>3</m> or <m>-3</m>. </p>
         <sidebyside width="70%"><image source="images/fig-abs-x-is-3"><description>absolut value of x is 3</description></image></sidebyside></li>
@@ -29,8 +50,28 @@
         <sidebyside width="70%"><image source="images/fig-4-units-from-negative-2"><description>4 units from -2</description></image></sidebyside></li>
     </ol></p></solution></example>
 
-<exercise xml:id="exercise-write-abs"><statement><p>
-    Write each statement using absolute value notation; then illustrate the solutions on a number line.
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $dist5 = RadioButtons(
+              ["\(x\) is 3 units bigger than 5.",
+              "the distance between \(x\) and 5 is 3 units.",
+              "5 and 3 are \(x\) units apart.",
+              "the distance between \(x\) and 3 is 5 units."],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>The notation <m>|x-3|=5</m> means</p>
+        <p><var name="$dist5" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>the distance between <m>x</m> and 3 is 5 units.</p>
+    </solution>
+</webwork></exercise>
+
+<exercise xml:id="exercise-write-abs"><title>Practice 1</title>
+<statement><p>Write each statement using absolute value notation; then illustrate the solutions on a number line.
     <ol label="a">
         <li><p><m>x</m> is five units away from <m>-3</m>.</p></li>
         <li><p><m>x</m> is at least six units away from <m>4</m>.</p></li>
@@ -112,12 +153,33 @@ which tells us that the distance between <m>x</m> and <m>2</m> is <m>3</m> units
 <stack><p>Alternatively, we can use graphs when working with absolute values. For example, we know that the simple equation <m>\abs{x} = 5</m> has two solutions, <m>x = 5</m> and <m>x = -5</m>.</p><p> In fact, we can see from the graph at right that the equation <m>\abs{x} = k</m> has two solutions if <m>k \gt 0</m>, one solution if <m>k = 0</m>, and no solution if <m>k \lt 0</m>.</p></stack>
 <image source="images/fig-abs-x-is-k"><description>4 units from -2</description></image></sidebyside>
 
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $absq = RadioButtons(
+              ["The graph of \(y=|2x-8|\) has no negative inputs.",
+              "The equation \(|2x-8|=-4\) has two solutions.",
+              "Depending on \(x,~~~|2x-8|\) can equal \(2x-8\) or \(8-2x\).",
+              "The graph of \(y=|2x-8|\) is a straight line."],
+              2,           
+              );            
+        </pg-code></setup>
+    <statement>
+        <p>Which statement is true?</p>
+        <p><var name="$absq" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Depending on <m>x</m>, <m>|2x-8|</m> can equal <m>2x-8</m> or <m>8-2x</m>.</p>
+    </solution>
+</webwork></exercise>
+
 <example xml:id="example-abs-equation"><statement><p><ol label="a">
         <li><p>Use a graph of <m>y = \abs{3x - 6}</m> to solve the equation 
             <m>\abs{3x - 6} = 9</m>.</p></li>
         <li><p>Use a graph of <m>y = \abs{3x - 6}</m> to solve the equation
             <m>\abs{3x - 6} = -2</m>.</p></li>
     </ol></p></statement>
+
 <solution><sidebyside width="30%"><image source="images/fig-abs-3x-6"><description>absolute value of 3x-6</description></image></sidebyside><p><ol label="a">
     <li><p>The graph shows the graphs of <m>y = \abs{3x - 6}</m> and <m>y = 9</m>. We see that there are two points on the graph of <m>y = \abs{3x - 6}</m> that have <m>y = 9</m>, and those points have <m>x</m>-coordinates <m>x = -1</m> and <m>x = 5</m>. We can verify algebraically that the solutions are <m>-1</m> and <m>5</m>. 
         <!--*****--><me>\begin{aligned}[t]
@@ -141,12 +203,12 @@ which tells us that the distance between <m>x</m> and <m>2</m> is <m>3</m> units
     <image source="images/fig-GC-abs-3x-6"><description>absolute value of 3x-6</description></image></sidebyside>
 </technology>
 
-<exercise xml:id="exercise-GC-solve-abs-equation"><statement>
-    <ol label="a">
+<exercise xml:id="exercise-GC-solve-abs-equation"><title>Practice 2</title>
+<statement><ol label="a">
         <li>Graph <m>y = \abs{2x + 7}</m> for <m>-12 \le x \le 8</m>.</li>
         <li>Use your graph to solve the equation <m>\abs{2x + 7} = 11</m>.</li>
-    </ol>
-</statement><answer><p><ol label="a" cols="2">
+    </ol></statement>
+<answer><p><ol label="a" cols="2">
     <li><sidebyside>
     <image xml:id="exercise-2-5-2">
         <description>abs(2x+7)</description>
@@ -202,8 +264,19 @@ Solving these two equations gives us the same solutions we found in <xref ref="e
     <me>ax + b = c ~~\text{ or }~~ ax + b = -c</me></p>
 </assemblage>
 
-<exercise><statement><p>Solve <m>\abs{2x + 7} = 11</m> algebraically.</p></statement>
+<exercise><title>Practice 3</title>
+<statement><p>Solve <m>\abs{2x + 7} = 11</m> algebraically.</p></statement>
 <answer><p><m>x=-9</m> or <m>x=2</m></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain how the equation <m>|ax+b|=c</m> can have two solutions, one solution, or no solutions.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Absolute Value Inequalities</title>
@@ -227,6 +300,26 @@ Solving these two equations gives us the same solutions we found in <xref ref="e
         <me>x \lt  r ~~\text{ or }~~ x \gt  s</me></li>
     </ol></p></assemblage>
 
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $absgr = RadioButtons(
+              ["either \(x-3 \gt 5\) or \(x-3 \gt -5\).",
+              "\(5 \gt x-3 \gt -5\).",           
+              "either \(x-3 \gt 5\) or \(x-3 \lt -5\).",
+              "\(-5 \gt x-3 \lt 5\)."],
+              2, 
+              );   
+        </pg-code></setup>
+    <statement>
+        <p>If <m>|x-3| \gt 5</m>, then</p>
+        <p><var name="$absgr" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>either <m>x-3 \gt 5</m> or <m>x-3 \lt -5</m>.</p>
+    </solution>
+</webwork></exercise>
+
 <example xml:id="example-abs-inequality"><statement><p>Solve <m>~\abs{4x - 15} \lt 0.01</m></p></statement>
 <solution><p>First, we solve the equation <m>~\abs{4x - 15} = 0.01</m>. There are two cases:
     <me>
@@ -238,7 +331,8 @@ Solving these two equations gives us the same solutions we found in <xref ref="e
     </me>
 Because the inequality symbol is <m>\lt</m>, the solutions of the inequality are between these two values: <m>3.7475 \lt x \lt 3.7525</m>. In interval notation, the solutions are <m>(3.7475, 3.7525)</m>.</p> </solution></example>
 
-<exercise><statement><ol label="a">
+<exercise><title>Practice 4</title>
+<statement><ol label="a">
         <li>Solve the inequality <m>~\abs{2x + 7} \lt 11</m></li>
         <li>Solve the inequality <m>~\abs{2x + 7} \gt 11</m></li>
     </ol></statement>
@@ -259,6 +353,7 @@ Because the inequality symbol is <m>\lt</m>, the solutions of the inequality are
         <li>Make a graph of Marlene’s distance from the mall versus the number of miles she has driven on the highway. Which of the basic graphs from Section 2.2 does your graph most resemble?</li>
         <li>Find a piecewise defined formula that describes Marlene’s distance from the mall as a function of the distance she has driven on the highway.</li>
     </ol></p></statement>
+
 <solution><p><ol label="a">
     <li><p>Marlene gets closer to the mall for each mile that she has driven on the highway until she has driven 15 miles, and after that she gets farther from the mall.</p>
         <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -300,7 +395,8 @@ Because the inequality symbol is <m>\lt</m>, the solutions of the inequality are
     The graph of <m>f (x)</m> is a part of the graph of <m>y = \abs{x - 15}</m>. If we think of the highway as a portion of the real number line, with Marlene’s on-ramp located at the origin, then the outlet mall is located at <m>15</m>. Marlene's coordinate as she drives along the highway is <m>x</m>, and the distance from Marlene to the mall is given by <m>f (x) = \abs{x - 15}</m>.</p></li>
 </ol></p></solution></example>
 
-<exercise><statement><ol label="a">
+<exercise><title>Practice 5</title>
+<statement><ol label="a">
         <li>Use the graph in <xref ref="example-Marlene-highway" text="type-global"/> to determine how far Marlene has driven when she is within <m>5</m> miles of the mall. Write and solve an absolute value inequality to verify your answer.</li>
         <li>Write and solve an absolute value inequality to determine how far Marlene has driven when she is at least <m>10</m> miles from the mall.</li>
     </ol></statement>
@@ -373,6 +469,7 @@ Because the inequality symbol is <m>\lt</m>, the solutions of the inequality are
 <subsection><title>Measurement Error</title>
 
 <p>If you weigh a sample in chemistry lab, the scale’s digital readout might show <m>6.0</m> grams. But it is unlikely that the sample weighs <em>exactly</em> <m>6</m> grams; there is always some error in measured values.</p>
+
 <p> Because the scale shows the weight as <m>6.0</m> grams, we know that the true weight of the sample must be between <m>5.95</m> grams and <m>6.05</m> grams: If the weight were less than <m>5.95</m> grams, the scale would round down to <m>5.9</m> grams, and if the weight were more than <m>6.05</m> grams, the scale would round up to <m>6.1</m> grams. We should report the mass of the sample as <m>6 \pm 0.05</m> grams, which tells the reader that the error in the measurement is no more than <m>0.05</m> grams. </p>
 
 <p>We can also describe this measurement error, or <term>error tolerance</term><idx>error tolerance</idx>, using an absolute value inequality. Because the measured mass m can be no more than <m>0.05</m> from <m>6</m>, we write 
@@ -383,6 +480,7 @@ Note that the solution of this inequality is <m>5.95 \le m \le 6.05</m>.</p>
     <li>The specifications for a computer chip state that its thickness in millimeters must satisfy <m>\abs{t - 0.023} \lt 0.001</m>. What are the acceptable values for the thickness of the chip?</li>
     <li>The safe dosage of a new drug is between <m>250</m> and <m>450</m> milligrams, inclusive. Write the safe dosage as an error tolerance involving absolute values.</li>
 </ol></p></statement>
+
 <solution><p><ol label="a">
         <li><p>The error tolerance can also be stated as <m>t = 0.023 \pm 0.001</m> millimeters, so the acceptable values are between <m>0.022</m> and <m>0.024</m> millimeters.</p></li>
         <li><p>The safe dosage <m>d</m> satisfies <m>250 \le d \le 450</m>, as shown below.</p>
@@ -391,14 +489,46 @@ Note that the solution of this inequality is <m>5.95 \le m \le 6.05</m>.</p>
         <me>\abs{d - 350} \le 100</me></p></li>
     </ol></p></solution></example>
 
-<exercise><statement><p>The temperature, <m>T</m>, in a laboratory must remain between <m>9\degree\text{C}</m> and <m>12\degree\text{C}</m>.<ol label="a">
+<exercise><title>QuickCheck 5</title>
+<webwork>
+    <setup><pg-code>       
+            $absf = RadioButtons(
+              ["The equation \( |3x+12|=0 \) has one solution.",
+              "The statement \( |T-0.1| \lt 0.05 \) describes an error tolerance of 0.05 units.",           
+              "\( |mx+b| \lt k \) is equivalent to \( -k \lt mx+b \lt k \).",
+              "The solutions of \( |3x+12| \gt 6 \) form a closed interval."],
+              0, 
+              );   
+        </pg-code></setup>
+    <statement>
+        <p>Which statement is false?</p>
+        <p><var name="$absf" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>The solutions of <m>|3x+12| \gt 6</m> form a closed interval.</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 6</title>
+<statement><p>The temperature, <m>T</m>, in a laboratory must remain between <m>9\degree\text{C}</m> and <m>12\degree\text{C}</m>.<ol label="a">
         <li>Write the error tolerance as an absolute value inequality.</li>
         <li>For a special experiment, the temperature in degrees celsius must satisfy <m>~~\abs{T - 6.7} \le 0.03</m>. Give the interval of possible temperatures.</li>
     </ol></p></statement>
+
 <answer><p><ol label="a" cols="2">
     <li><p><m>\abs{T-10.5} \lt 1.5</m></p></li>
     <li><p><m>6.67 \le T \le 6.73</m></p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>What is error tolerance used for, and why do we need it?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 
 </subsection>
 <xi:include href="./summary-2-5.xml" /> <!-- summary  -->
