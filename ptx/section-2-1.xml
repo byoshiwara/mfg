@@ -134,15 +134,41 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
 
 <note><p>In part (a) of <xref ref="example-cat-falling" text="type-global"/> we <term>evaluated</term> the expression <m>20 - 16t^2</m> to find a value for <m>h</m>, and in part (b) we <term>solved</term> the equation <m>0 = 20 - 16t^2</m> to find a value for <m>t</m>.</p></note>
 
-<exercise><title>Practice 1</title>
-    <statement><p><ol label="a">
-        <li><p>Solve by extracting roots
-            <m>\dfrac{3x^2 - 8}{5}= 10.</m> </p>
-            <p><m>\blert{\text{First, isolate } x^2.}</m></p> 
-            <p><m>\blert{\text{Take the square root of both sides.}}</m></p></li>
-        <li><p>Give exact answers; then give approximations rounded to two decimal places.</p></li>
-    </ol></p></statement>
-<answer><p><m>x=\pm\sqrt{\dfrac{58}{3}}\approx \pm 4.40 </m></p></answer></exercise>
+<exercise>
+    <title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            $a = 3;
+            $d = 5*10+8;
+            Context("Fraction");
+            $xsq = Fraction("$d/$a");
+            Context("LimitedRadical");
+            $x0 = Formula("sqrt($xsq)");
+            $answer = List("$x0, -$x0");
+            $pos = sqrt($xsq);
+            Context("Numeric");
+            $approx = List("4.40, -4.40");
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Solve by extracting roots
+                    <m>\dfrac{3x^2 - 8}{5}= 10</m>.</p>
+                    <p><m>
+                        \blert{{\small\text{First, isolate } x^2.}} \hphantom{0000000000000000} x^2=</m><var name="$xsq" width="5"/></p>
+                    <p><m>\blert{{\small\text{Take the square root of both sides.}}}\hphantom{000} x=\pm</m><var name="$x0" width="9"/> </p>
+                    <p>Note: Use "sqrt(2)" to get <m>\sqrt{2}</m>, etc.</p>
+                </li>
+                <li><p>Give exact answers above; then give approximations rounded to two decimal places.</p>
+                      <p><m>x\approx</m><var name="$approx" width="12"/></p>
+                    <p>Note: Enter a comma between solutions.</p>
+                </li>
+            </ol></p>        
+        </statement>
+        <solution>
+            <p><m>x=\pm\sqrt{\dfrac{58}{3}}\approx \pm 4.40 </m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -172,12 +198,29 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
     Because the radius of a cone must be a positive number, we use only the positive square root: 
     <m>r = \sqrt{\dfrac{3V}{\pi h}}</m>.</p></solution></example>
 
-<exercise><title>Practice 2</title>
-    <statement><p>Find a formula for the radius of a circle in terms of its area.</p></statement>
-    <hint>
-    <p>Start with the formula for the area of a circle: <m>A =</m> <fillin characters="8" /></p>
-    <p>Solve for <m>r</m> in terms of <m>A</m>.</p></hint>
-<answer><p><m>r=\sqrt{A/ \pi} </m></p></answer></exercise>
+<exercise>
+    <title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+             Context()->variables->add(A=>"Real");
+             $radius = Formula("sqrt(A/pi)");
+        </pg-code></setup>
+        <statement>
+            <p>Find a formula for the radius of a circle in terms of its area.</p>
+            <p><m>r=</m><var name="$radius" width="15"/> </p>
+            <instruction>
+                Note: use "sqrt(2)" to get <m>\sqrt{2}</m>, and use "pi" to get <m>\pi</m>.
+            </instruction>
+         </statement>
+       <hint>
+            <p>Start with the formula for the area of a circle: <m>A =</m> </p>
+            <p>Solve for <m>r</m> in terms of <m>A</m>.</p>
+        </hint>
+        <solution>
+            <p><m>r=\sqrt{A/ \pi} </m></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>More Extraction of Roots</title>
@@ -217,15 +260,37 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
     <li>Solve each equation. There are two solutions.</li>
 </ol></p></assemblage>
 
-<exercise><title>Practice 3</title>
-<statement><p>Solve <m>~~2(5x + 3)^2 = 38~~</m> by extracting roots.<ol label="a">
-        <li>Give your answers as exact values.</li>
-        <li>Find approximations for the solutions to two decimal places.</li>
-    </ol></p></statement>
-<answer><p><ol label="a" cols="2">
-        <li><p><m>x=\dfrac{-3\pm \sqrt{19}}{5} </m></p></li>
-        <li><p><m>x\approx -1.47</m> or <m>x\approx 0.27</m></p></li>
-    </ol></p></answer></exercise>
+<exercise>
+    <title>Practice 3</title>
+    <webwork>
+        <setup><pg-code>
+            $x0 = Compute("(-3 + sqrt(19))/5");
+            $x1 = Formula("(-3 - sqrt(19))/5");
+            $exact = List("$x0,$x1");
+            $approx = List("$x0,$x1")->with(
+              tolType => 'absolute',
+              tolerance => .0051,
+            );
+        </pg-code></setup>
+        <statement>
+            <p>Solve <m>2(5x + 3)^2 = 38</m> by extracting roots.</p>
+            <p><ol label="a">
+                <li><p>Give your answers as exact values, separating the solutions with a comma.</p>
+                <p><var name="$exact" width="25"/> </p>
+                <p>Note: Use "sqrt(2)" to get <m>\sqrt{2}</m>, and take care to use parentheses appropriately. </p>
+                <p>Use the "Preview My Answers" button to see if you have entered valid syntax.</p></li>
+                <li><p>Find approximations for the solutions to two decimal places, separating the solutions with a comma.</p>
+                <p><var name="$approx" width="15"/></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>x=\dfrac{-3\pm \sqrt{19}}{5} </m></p></li>
+                <li><p><m>x\approx -1.47</m> or <m>x\approx 0.27</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
@@ -303,9 +368,24 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
     \amp = 100(1 + 0.04)^2 = \$108.16
     \end{aligned}</me></p>
 
-<exercise><title>Practice 4</title>
-<statement><p>Two years ago, the average cost of dinner and a movie was $24. This year the average cost is $25.44. What was the rate of inflation over the past two years?</p></statement>
-<answer><p><m>r\approx 2.96\%</m></p></answer></exercise>
+<exercise>
+    <title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+            $r = Compute("100*(sqrt(25.44/24)-1)")->with(
+              tolType => 'absolute',
+              tolerance => .0051,
+            );
+        </pg-code></setup>
+        <statement>
+            <p>Two years ago, the average cost of dinner and a movie was $24. This year the average cost is $25.44. What was the rate of inflation over the past two years?</p>
+            <p><m>r\approx</m><var name="$r" width="3"/>% </p>
+        </statement>
+        <solution>
+            <p><m>r\approx 2.96\%</m></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Other Nonlinear Equations</title>
@@ -381,9 +461,21 @@ by taking the reciprocal of both sides to get
     </solution>
 </webwork></exercise>  
 
-<exercise><title>Practice 5</title>
-<statement><p>Solve <m>~~2\sqrt{x + 4} = 6</m></p></statement>
-<answer><p><m>x=5</m></p></answer></exercise>
+<exercise>
+    <title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+            $answer = 5;
+        </pg-code></setup>
+        <statement>
+            <p>Solve <m>2\sqrt{x + 4} = 6</m></p>
+            <p><m>x=</m><var name="$answer" width="2"/> </p>
+        </statement>
+        <solution>
+            <p><m>x=5</m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -417,9 +509,30 @@ The point where the two graphs intersect locates the solution of the equation. I
 </example>
 </technology>
 
-<exercise><title>Practice 6</title>
-<statement><p>Use the intersect feature to solve the equation <m>2x^2 - 5 = 7</m>. Round your answers to three decimal places.</p></statement>
-<answer><p><m>x=\pm 2.449</m></p></answer>
+<exercise>
+    <title>Practice 6</title>
+    <webwork>
+        <setup><pg-code>
+            $x0=sqrt(6);
+            $answer=List("$x0, -$x0")->with(
+              tolType => 'absolute',
+              tolerance => .00051,
+            );
+            $my_evaluator = $answer -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+        </pg-code></setup>
+        <statement>
+            <p>Use the intersect feature to solve the equation <m>2x^2 - 5 = 7</m>. Round your answers to three decimal places. Separate solutions with a comma.
+            </p>
+            <p><var name="$answer" width="10" evaluator="$my_evaluator"/> </p>
+        </statement>
+        <solution>
+            <p><m>x=\pm 2.449</m></p>
+        </solution>
+    </webwork>
 </exercise>
 
 </subsection>

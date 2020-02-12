@@ -61,16 +61,29 @@
             <me>\abs{3} - \abs{8} = 3 - 8 = -5</me></p></li>
     </ol></p></solution></example>
 
-<exercise><title>Practice 1</title>
-<statement><p>Simplify each expression.
-    <ol label="a" cols = "2">
-        <li><p><m>12 - 3\abs{-6}</m></p></li>
-        <li><p><m>-7 - 3\abs{2 - 9}</m></p></li>
-    </ol></p></statement>
-<answer><p><ol label="a" cols="2">
-        <li><p><m>-6</m></p></li>
-        <li><p><m>-28</m></p></li>
-    </ol></p></answer></exercise>
+<exercise>
+    <title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            Context("LimitedNumeric");
+            $ans1 = 12 - 3*abs(-6);
+            $ans2 = -7 - 3*abs(2 - 9);
+        </pg-code></setup>
+        <statement>
+            <p>Simplify each expression.</p>
+            <p><ol label="a" cols = "2">
+                <li><p><m>12 - 3 \left|-6\right|=</m><var name="$ans1" width="2"/> </p></li>
+                <li><p><m>-7 - 3\left|2 - 9\right|=</m><var name="$ans2" width="2"/></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>-6</m></p></li>
+                <li><p><m>-28</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Examples of Models</title>
@@ -474,12 +487,36 @@
 
 <note><p>Note that <em>verifying</em> a statement for one or two values of the variables does not <em>prove</em> the statement is true for <em>all</em> values of the variables. However, working with examples can help us understand the meaning and significance of mathematical properties.</p></note>
 
-<exercise><title>Practice 2</title>
-<statement><p>Verify the multiplicative property of absolute value for the three cases in <xref ref="example-triangle-inequality" text="type-global" />.</p></statement>
-<answer><p><ul><li><m>\abs{3}\abs{5}=15=\abs{3\cdot 5} </m></li><li> 
-<m>\abs{-3}\abs{-5}=15=\abs{(-3)\cdot (-5)}</m></li><li>
-<m>\abs{3}\abs{-5}=15=\abs{3(-5)}</m></li>
-</ul></p></answer></exercise>
+<exercise>
+    <title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            $YN = PopUp(
+            ["?","Yes","No"],
+            1, 
+            );
+        </pg-code></setup>
+        <statement>
+            <p>Verify the multiplicative property of absolute value for the three cases in the previous example.</p>
+            
+            <p><ul>
+                <li><p>Case <m>a = 3</m> and <m>b = 5</m></p>
+                <p>Does <m>\left|3\right| \left|5\right| = \left|3\cdot 5\right|</m>? <var name="$YN" form="popup"/> </p></li>
+                <li><p>Case <m>a = -3</m> and <m>b = -5</m></p>
+                <p>Does <m>\left|-3\right|\left|-5\right| = \left|(-3)\cdot (-5)\right|</m>? <var name="$YN" form="popup"/>  </p></li>
+                <li><p>Case <m>a = 3</m> and <m>b = -5</m></p>
+                <p>Does <m>\left|3\right|\left|-5\right| = \left|3(-5)\right|</m>? <var name="$YN" form="popup"/>  </p></li>
+            </ul></p>        
+        </statement>
+        <solution>
+            <p><ul>
+                <li><p><m>\left|3\right| \left|5\right|=15=\left|3\cdot 5\right|</m></p></li>
+                <li><p><m>\left|-3\right|\left|-5\right|=15=\left|(-3)\cdot (-5)\right|</m></p></li>
+                <li><p><m>\left|3\right|\left|-5\right|=15=\left|3(-5)\right|</m></p></li>
+            </ul></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
@@ -523,7 +560,8 @@
     <image source="images/fig-piecewise"><description>piecewise function</description></image></sidebyside>
 </solution></example>
 
-<exercise><title>Practice 3</title>
+<exercise>
+    <title>Practice 3</title>
 <statement><p>Graph the piecewise defined function
     <me>
         g(x) =\begin{cases}
@@ -531,7 +569,25 @@
         x^3 \amp \text{ if } x \gt -1
         \end{cases}
     </me></p></statement>
-<answer><sidebyside width="20%"><image source="images/fig-in-ex-ans-2-2-3"><description>piercewise defined function</description></image></sidebyside></answer></exercise>
+<answer><sidebyside width="25%"><image source="images/fig-in-ex-ans-2-2-3"><description>piercewise defined function</description></image></sidebyside></answer>
+<!--
+    <webwork>
+        <setup><pg-code></pg-code></setup>
+        <statement>
+            <p>Graph the piecewise defined function</p>
+            <p><me>
+                g(x) =\begin{cases}
+                -1 - x \amp \text { if } x \le -1\\
+                x^3 \amp \text{ if } x \gt -1
+                \end{cases}
+            </me></p>
+        </statement>
+    </webwork>
+    <conclusion>
+        <sidebyside width="25%"><image source="images/fig-in-ex-ans-2-2-3"><description>piercewise defined function</description></image></sidebyside>
+    </conclusion>
+-->
+</exercise>
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
@@ -590,17 +646,29 @@
     <p> In the second region, <m>x \lt 3</m>, we graph the line <m>y = -x + 3</m>. Note that the two pieces of the graph meet at the point <m>(0, 3)</m>, as shown below.</p>
         <sidebyside width="45%"><image source="images/fig-piecewise2"><description>piecewise function</description></image></sidebyside></li></ol></p></solution></example>
 
-<exercise><title>Practice 4</title>
-<statement>
-    <ol label="a">
-        <li><p>Use your calculator to graph <m>g(x) =\abs{x-3}</m> and <m>h(x) =\abs{x} + \abs{-3}</m>. Are the graphs the same?</p></li>
-        <li><p>Explain why the functions <m>f (x) =\abs{x + k}</m> and <m>g(x) =\abs{x} + \abs{k}</m> are not the same if <m>k\ne 0</m>.
-        </p></li>
-    </ol></statement>
-<answer><p><ol label="a">
-    <li><p>No</p></li>
-    <li><p>Because <m>\abs{x + k}\ne \abs{x} + \abs{k}</m> when <m>x</m> and <m>k</m> have opposite signs.</p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+            $YN = PopUp(
+            ["?","Yes","No"],
+            2, 
+            );
+            $explain = RadioButtons(
+                    ["Because \(\left|x + k\right| \ne \left|x\right| + \left|k\right|\) when \(x\) and \(k\) have opposite signs.","Because \(\left|x + k\right| \ne \left|x\right| + \left|k\right|\) when \(x\) and \(k\) have the same sign.","Because \(\left|x + k\right|\) can be negative.","Because \(\left|x\right| + \left|k\right|\) can be negative."],
+                    0,
+                );
+         </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+            <li><p>Use your calculator to graph <m>g(x) =\left|x-3\right|</m> and <m>h(x) =\left|x\right| + \left|-3\right|</m>. Are the graphs the same? <var name="$YN" form="popup"/> </p></li>
+            <li><p>Explain why the functions <m>f (x) =\left|x + k\right|</m> and <m>g(x) =\left|x\right| + \left|k\right|</m> are not the same if <m>k\ne 0</m>.
+            </p>
+            <p><var name="$explain" form="buttons"/> </p></li>
+        </ol></p>
+        </statement>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>

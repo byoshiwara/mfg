@@ -50,17 +50,43 @@ values of the two variables. </p>
 </webwork></exercise>
 
 <exercise><title>Practice 1</title>
-    <statement><p>The water level in Lake Huron alters unpredictably over time. The graph below gives the average water level, <m>L(t)</m>, in meters in the year <m>t</m> over a 20-year period. (Source: The Canadian Hydrographic Service)</p>
-       <sidebyside  width="60%"><image source="images/fig-Lake-Huron" ><description>graph of Lake Huron water level</description></image></sidebyside><p>
-       <ol label="a">
-           <li><p>The coordinates of point <m>H</m> on the graph are <m>(1997, 176.98)</m>. What do the coordinates tell you about the function <m>L</m>?</p></li>
-           <li><p>The average water level in <m>2004</m> was <m>176.11</m> meters. Write this fact in function notation. What can you say about the graph of <m>L</m>?</p></li>
-       </ol></p></statement>
-<answer><p>
+    <introduction>
+        <p>The water level in Lake Huron alters unpredictably over time. The graph below gives the average water level, <m>L(t)</m>, in meters in the year <m>t</m> over a 20-year period. (Source: The Canadian Hydrographic Service)</p>
+       <sidebyside width="70%"><image source="images/fig-Lake-Huron" ><description>graph of Lake Huron water level</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup>
+            <pg-code>
+                $coord = RadioButtons(
+                    ["\(L(1997) = 176.98\); the average water level was 176.98 meters in 1997.", "\(L(176.98) = 176.98\); the average water level was 176.98 meters in 1997."],
+                  0, # index of correct answer; could also just be the correct answer
+                );
+                $point = RadioButtons(
+                    ["\(L(176.11) = 2004\). The point \((176.11, 2004)\) lies on the graph of \(L\).", "\(L(2004) = 176.11\). The point \((2004, 176.11)\) lies on the graph of \(L\)."],
+                  1, # index of correct answer; could also just be the correct answer
+                );
+            </pg-code>
+        </setup>
+        <statement>
+          <p>
+            <ol label="a">
+           <li><p>The coordinates of point <m>H</m> on the graph are <m>(1997, 176.98)</m>. What do the coordinates tell you about the function <m>L</m>?</p>
+            <p>
+                <var name="$coord" form="buttons"/>
+            </p></li>
+           <li><p>The average water level in <m>2004</m> was <m>176.11</m> meters. Write this fact in function notation. What can you say about the graph of <m>L</m>?</p>
+            <p>
+                <var name="$point" form="buttons"/>
+            </p></li>
+       </ol></p>  
+        </statement>
+        <solution><p>
     <ol label="a">
         <li><p><m>L(1997) = 176.98</m>; the average water level was <m>176.98</m> meters in <m>1997</m>.</p></li>
         <li><p><m>L(2004) = 176.11</m>. The point <m>(2004, 176.11)</m> lies on the graph of <m>L</m>.</p></li>
-    </ol></p></answer></exercise>
+    </ol></p></solution>
+    </webwork>
+</exercise>
 
 <p>Here is another way of describing how a graph depicts a function.</p>
 
@@ -83,20 +109,56 @@ values of the two variables. </p>
     </ol></p></solution></example>
 
 <exercise><title>Practice 2</title>
-    <statement><p>Refer to the graph of the function <m>g</m> shown in <xref ref="example-function-graph" text="type-global"/>.
-    <ol label="a">
-        <li>Find <m>g(0)</m>.</li>
-        <li>For what value(s) of <m>t</m> is <m>g(t) = 0</m>?</li>
-        <li>What is the smallest, or minimum, value of <m>g(t)</m>? For what value of <m>t</m> does the function take on its minimum value?</li>
-        <li>On what intervals is <m>g</m> decreasing?</li>
-    </ol></p></statement>  
-<answer><p>
+    <introduction>
+        <p>Refer to the graph of the function <m>g</m> shown in <xref ref="example-function-graph" text="type-global"/>.</p><sidebyside width="35%"><image source="images/fig-function"><description>graph of a function</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            $yint = 3;
+            $zeros = List("-2,2,4");
+            $my_evaluator = $zeros -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+            $min = -3;
+            $tmin = -4;
+            $intervals = new_checkbox_multiple_choice();
+            $intervals -> qa (
+            "A question can go here, but PTX ignores this",
+            "from \( -5 \) to \( -4 \)$BR",
+            "from \( 1 \) to \( 3 \)$BR",
+            );
+            $intervals -> extra(
+            "from \( 2 \) to \( 4 \)$BR",
+            "from \( -5 \) to \( -2 \)$BR",
+            );
+            $intervals -> makeLast("None of the above");
+
+        </pg-code></setup>
+        <statement><p>
+            <ol label="a">
+                <li><p><m> g(0)= </m><var name="$yint" width="3"/> </p></li>
+                <li><p> List the value(s) of <m> t </m> for which <m> g(t) = 0 </m>. Separate different values with commas.</p>
+                <p><var name="$zeros" width="10" evaluator="$my_evaluator"/>  </p></li>
+                <li><p>What is the smallest, or minimum, value of <m> g(t) </m>?</p>
+                <p>Minimum: <var name="$min" width="3"/></p> 
+                <p>For what value of <m> t </m> does the function take on its minimum value?</p>
+                <p><m> t= </m><var name="$tmin" width="3"/></p></li>
+                <li><p>Select all the intervals listed below where <m> g </m> is decreasing?</p>
+                <p><var name="$intervals" form="checkboxes"/></p>
+                </li>
+            </ol>
+        </p></statement>
+        <solution><p>
         <ol label="a" cols="2">
             <li><p><m>3</m></p></li>
-            <li><p><m>-2, 2, 4</m></p></li>
-            <li><p><m>-3</m>; <m>t = -4</m></p></li>
-            <li><p><m>(-5, -4)</m> and <m>(1, 3)</m></p></li>
-        </ol></p></answer></exercise>
+            <li><p><m> -2, 2, 4 </m></p></li>
+            <li><p><m> -3 </m>; <m> t = -4 </m></p></li>
+            <li><p><m> (-5, -4) </m> and <m> (1, 3) </m></p></li>
+        </ol></p></solution>
+    </webwork>
+</exercise>
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
@@ -197,8 +259,22 @@ and press <c>ZOOM</c> <m>6</m> for the standard window.  The graph is shown belo
 </technology>
 
 <exercise><title>Practice 3</title>
-    <statement><p><m>f(x) = x^3 - 2</m><ol label="a">
-            <li><p>Complete the table of values and sketch a graph of the function.</p><sidebyside>
+    <webwork>
+        <setup><pg-code>
+            Context("Fraction")->variables->add(r=>'Real');
+            $func = Formula("x**3-2");
+            $a0 = $func->eval(x=>-2);
+            $a1 = $func->eval(x=>-1);
+            $a2 = $func->eval(x=>-1/2);
+            $a2 = Fraction($a2);
+            $a3 = $func->eval(x=>0);
+            $a4 = $func->eval(x=>1/2);
+            $a4 = Fraction($a4);
+            $a5 = $func->eval(x=>1);
+            $a6 = $func->eval(x=>2);
+        </pg-code></setup>
+        <statement><p>Let <m>f(x) = <var name="$func"/></m></p>
+        <p>Complete the table of values and sketch a graph of the function.</p> <sidebyside>
                 <tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
                     <cell><m>x</m></cell>
                     <cell><m>-2</m></cell>
@@ -210,19 +286,16 @@ and press <c>ZOOM</c> <m>6</m> for the standard window.  The graph is shown belo
                     <cell><m>2</m></cell></row>
                 <row>
                     <cell><m>f(x)</m></cell>
-                    <cell><m>\hphantom{000}</m></cell>
-                    <cell><m>\hphantom{000}</m></cell>
-                    <cell><m>\hphantom{000}</m></cell>
-                    <cell><m>\hphantom{000}</m></cell>
-                    <cell><m>\hphantom{000}</m></cell>
-                    <cell><m>\hphantom{000}</m></cell>
-                    <cell><m>\hphantom{000}</m></cell></row>
-                </tabular></sidebyside></li>
-         <li><p>Use technology to make a table of values and graph the function.</p></li>
-    </ol></p></statement>
-<answer><p><ol label="a">
-            <li><sidebyside width="60%" margins="0% 40%">
-    <tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
+                    <cell><var name="$a0" width="2"/></cell>
+                    <cell><var name="$a1" width="2"/></cell>
+                    <cell><var name="$a2" width="3"/></cell>
+                    <cell><var name="$a3" width="1"/></cell>
+                    <cell><var name="$a4" width="3"/></cell>
+                    <cell><var name="$a5" width="2"/></cell>
+                    <cell><var name="$a6" width="1"/></cell></row>
+                </tabular></sidebyside></statement>
+        <solution><sidebyside width="60%" margins="0% 40%">
+        <tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
                     <cell><m>x</m></cell>
                     <cell><m>-2</m></cell>
                     <cell><m>-1</m></cell>
@@ -240,9 +313,12 @@ and press <c>ZOOM</c> <m>6</m> for the standard window.  The graph is shown belo
                     <cell><m>\frac{-15}{8} </m></cell>
                     <cell><m>-1</m></cell>
                     <cell><m>6</m></cell></row>
-                </tabular></sidebyside></li>
-            <li><sidebyside width="20%" margins="0% 75%"><image source="images/fig-in-ex-ans-1-3-3"><description>cubic</description></image></sidebyside></li>
-        </ol></p></answer></exercise>
+                </tabular></sidebyside>
+            <p>The graph is shown below.</p>
+        </solution>                
+    </webwork>
+    <conclusion><sidebyside width="25%" margins="0% 75%"><image source="images/fig-in-ex-ans-1-3-3"><description>cubic</description></image></sidebyside></conclusion>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -300,10 +376,32 @@ at most one point.</p></assemblage>
 </webwork></exercise>
 
 <exercise><title>Practice 4</title>
-    <statement><p>Use the vertical line test to determine which of the graphs below represent functions.</p>
-    <sidebyside ><image source="images/fig-vertical-line-test3" ><description>vertical line test</description></image></sidebyside>
-    </statement>
-<answer><p>Only (b) is a function.</p></answer></exercise>
+    <introduction><p>Use the vertical line test to determine which of the graphs below represent functions.</p>
+    <sidebyside ><image source="images/fig-vertical-line-test3" ><description>vertical line test</description></image></sidebyside></introduction>
+    <webwork>
+        <setup><pg-code>
+            $functions = new_checkbox_multiple_choice();
+            $functions -> qa (
+            "A question can go here, but PTX ignores this",
+            "(b)$BR",
+            );
+            $functions -> extra(
+            "(a)$BR",
+            "(c)$BR",
+            );
+            $functions -> makeLast(
+            "(a)$BR",
+            "(b)$BR",
+            "(c)$BR",
+            "None of the above");
+        </pg-code></setup>
+        <statement><p>
+            <var name="$functions" form="checkboxes"/>
+        </p></statement>
+        <solution><p>Only (b) is a function.</p></solution>
+    </webwork>
+</exercise>
+
 </subsection>
 
 <subsection><title>Graphical Solution of Equations and Inequalities</title>
@@ -360,12 +458,29 @@ at most one point.</p></assemblage>
 </ul></p></note>
 
 <exercise><title>Practice 5</title>
-    <statement><p><ol label="a">
-        <li><p>Use the graph of <m>y = 30 - 8x</m> shown in the figure to solve the equation <me>30 - 8x = 50</me></p></li>
+    <introduction>
+        <sidebyside width="30%"><image source="images/fig-graph-to-solve2"><description>function graph</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            $answer=-2.5;
+        </pg-code></setup>
+        <statement><p><ol label="a">
+        <li><p>Use the graph of <m>y = 30 - 8x</m> shown above to solve the equation <me>30 - 8x = 50</me></p>
+        <p><m>x=</m><var name="$answer" width="3"/> </p></li>
         <li><p>Verify your solution algebraically.</p></li>
-    </ol></p>
-   <sidebyside width="30%"><image source="images/fig-graph-to-solve2"><description>function graph</description></image></sidebyside></statement>
-<answer><p><m>-2.5</m></p></answer></exercise>
+    </ol></p></statement>
+    <solution><p><ol label="a">
+        <li><p>The point on the line where the <m>y</m>-coordinate is 50 is the point <m>(-2.5,50)</m>, so <m>x=-2.5</m> is the solution.</p></li>
+        <li><p>We verify that we have an identity when we substitute <m>x=-2.5</m> into the equation <m>30 - 8x = 50</m>.</p>
+        <p><md>
+            <mrow>30-8(\alert{-2.5}) \amp \stackrel{\text{?}}{=} 50</mrow>
+            <mrow>30 - (-20) \amp = 50 \amp \blert{\text{Yes!}}</mrow>
+        </md></p></li>
+        </ol></p>
+    </solution>
+    </webwork>
+</exercise>
 
 <p>In a similar fashion, we can solve inequalities with a graph.</p>
 
@@ -405,11 +520,32 @@ at most one point.</p></assemblage>
 </webwork></exercise>
 
 <exercise><title>Practice 6</title>
-    <statement><p><ol label="a">
-        <li>Use the graph of <m>y = 30 - 8x</m> in  the previous Checkpoint to solve the inequality <me>30 - 8x \le 50</me></li>
+    <introduction>
+        <sidebyside width="30%"><image source="images/fig-graph-to-solve2"><description>function graph</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            Context("Inequalities");
+
+            $answer= Compute("x >= -2.5");
+        </pg-code></setup>
+        <statement><p><ol label="a">
+        <li><p>Use the graph of <m> y = 30 - 8x </m> in  the previous Checkpoint to solve the inequality <me> 30 - 8x \le 50 </me></p>
+        <p>Answer: <var name="$answer" width="8"/> </p>
+        <p>Note: Use "<m> \lt= </m>" for the <m> \le </m> symbol, and use "<m> \gt= </m>" for <m> \ge </m>.</p></li>
         <li>Solve the inequality algebraically.</li>
-    </ol></p></statement> 
-<answer><p><m>x\ge -2.5</m></p></answer>  
+        </ol></p>
+        </statement>
+    <solution><p><ol label="a">
+        <li><p>As we found in the previous Checkpoint, the point on <m>y=30-8x</m> where <m> y=50 </m> occurs when <m> x=-2.5 </m>. The <m> y </m>-coordinates are smaller as we move to the right on the graph, that is, for the points where <m> x\ge -2.5 </m>.</p></li>
+        <li><p><md>
+            <mrow> 30-8x \amp \le 50 \amp\amp\blert{{\small \text{Subtract 30 from both sides.}}} </mrow>
+            <mrow> -8x \amp \le 20 \amp\amp \blert{{\small \text{Divide by } -8 \text{ and reverse inequality.}}} </mrow>
+            <mrow>x \amp \ge -2.5</mrow>
+        </md></p></li>
+        </ol></p>
+    </solution>
+    </webwork>
 </exercise>
 
 <p>We can also use this graphical technique to solve nonlinear equations and inequalities.</p>
@@ -432,11 +568,32 @@ at most one point.</p></assemblage>
 </solution></example>
 
 <exercise xml:id="exercise-graph-to-solve-quadratic"><title>Practice 7</title>
-    <statement><p>Use the graph of <m>~y = \frac{1}{2}n^2 + 2n - 10~</m> shown below to solve
-    <me>\frac{1}{2}n^2 + 2n - 10 = 6</me>
-    and verify your solutions algebraically.</p>
-<sidebyside width="30%"><image source="images/fig-graph-to-solve-quadratic"><description>graph of cubic</description></image></sidebyside></statement> 
-<answer><p><m>-8, 4</m></p></answer>  </exercise>
+    <introduction>
+        <sidebyside width="35%"><image source="images/fig-graph-to-solve-quadratic"><description>graph of cubic</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            $answer=List("-8,4");
+            $my_evaluator = $answer -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+        </pg-code></setup>
+        <statement>
+            <p>Use the graph of <m> y = \frac{1}{2}n^2 + 2n - 10 </m> shown above  to solve
+            <me> \frac{1}{2}n^2 + 2n - 10 = 6 </me>
+            and verify your solutions algebraically.</p>
+            <p><m> n= </m><var name="$answer" width="10" evaluator="$my_evaluator" />  </p>
+            <instruction>
+                Separate different values with a comma.
+            </instruction>
+        </statement>
+        <solution>
+            <p><m> -8, 4 </m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>QuickCheck 7</title>  
 <webwork>
@@ -481,10 +638,30 @@ at most one point.</p></assemblage>
 <solution><p>We first locate all points on the graph that have <m>y</m>-coordinates greater than or equal to <m>15</m>. The <m>x</m>-coordinates of these points are the solutions of the inequality.</p>
 <p> The figure below shows the points in red, and their <m>x</m>-coordinates as intervals on the <m>x</m>-axis. The solutions are <m>x \le -3</m> and <m>1\le x \le 2.5</m>, or in interval notation, <m>(-\infty, -3] \cup [1, 2.5]</m>.</p><sidebyside width="35%"><image source="images/fig-graph-to-solve-cubic2"><description>graph of cubic</description></image></sidebyside></solution></example>
 
-<exercise><title>Practice 7</title>
-    <statement><p>Use the graph in <xref ref="exercise-graph-to-solve-quadratic" text="type-global" /> to solve the inequality
-    <me>\frac{1}{2}n^2 + 2n - 10 \lt 6</me></p></statement>
-<answer><p><m>(-8, 4)</m></p></answer></exercise>
+<exercise>
+    <title>Practice 8</title>
+    <introduction>
+        <sidebyside width="35%"><image source="images/fig-graph-to-solve-quadratic"><description>graph of cubic</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            Context("Inequalities")->variables->add(n=>"Real");
+            $answer= Compute("-8 &lt; n &lt; 4");
+        </pg-code></setup>
+        <statement>
+            <p>Use the graph above from <xref ref="exercise-graph-to-solve-quadratic" text="type-global" /> to solve the inequality
+            <md>
+                <mrow> \frac{1}{2}n^2 + 2n - 10 \lt 6 </mrow>
+            </md>
+            </p>
+            <p>Answer: <var name="$answer" width="12"/> </p>
+            <instruction>Note: Use interval notation or inequalities.</instruction>
+        </statement>
+        <solution>
+            <p><m> (-8, 4) </m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
