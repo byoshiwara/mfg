@@ -157,15 +157,36 @@ The figure below shows the graphs of <m>f(x) = x^2 + 4</m>, <m>g(x) = x^2 - 4</m
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 1</title>
-<statement><p><ol label="a">
-        <li>Graph the function <m>f(x) = \abs{x} + 1</m>.</li>
-        <li>How is the graph of <m>f</m> different from the graph of <m>y = \abs{x}</m>?</li>
-    </ol></p></statement>
-<answer><p><ol label="a" cols="2">
-    <li><sidebyside width="50%" margins="0% 50%"><image source="images/fig-in-ex-ans-2-3-1"><description>shifted absolute value</description></image></sidebyside></li>
-    <li><p>Translate <m>y =\abs{x}</m> one unit up.</p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            $explain = RadioButtons(
+                    ["Translate  \(y=\left|x\right|\) one unit right.","Translate  \(y=\left|x\right|\) one unit left.","Translate  \(y=\left|x\right|\) one unit up.","Translate  \(y=\left|x\right|\) one unit down."],
+                    2,
+                );
+            
+        </pg-code></setup>
+        <statement>
+            <p>
+        <ol label="a">
+            <li><p>Graph the function <m>f (x) = \left|x\right| + 1</m>.</p></li>
+            <li><p>How is the graph of <m>f</m> different from the graph of <m>y = \left|x\right|</m>?</p>
+            <p>To get the graph of <m>f</m>, </p>
+            <p><var name="$explain" form="buttons"/> </p></li>
+        </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+        <li><p>A graph is below.</p></li>
+        <li><p>Translate <m>y =\left|x\right|</m> one unit up.</p></li>
+    </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="25%" margins="0% 75%"><image source="images/fig-in-ex-ans-2-3-1"><description>shifted absolute value</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <example xml:id="example-electrical"><statement><sidebyside widths= "50% 40%">
     <p>The function <m>E = f (h)</m> graphed at right gives the amount of electrical power, in megawatts, drawn by a community from its local power plant as a function of time during a 24-hour period in 2002. Sketch a graph of <m>y = f (h) + 300</m> and interpret its meaning.</p>
@@ -176,11 +197,35 @@ The figure below shows the graphs of <m>f(x) = x^2 + 4</m>, <m>g(x) = x^2 - 4</m
         <image source="images/fig-translate-electrical"><description>electrical power</description></image></sidebyside>
 </solution></example>
 
-<exercise><title>Practice 2</title>
-<statement><p>An evaporative cooler, or swamp cooler, is an energy-efficient type of air conditioner used in dry climates. A typical swamp cooler can reduce the temperature inside a house by 15 degrees.</p>
-<p> Figure (a) shows the graph of <m>T = f (t)</m>, the temperature inside Kate’s house <m>t</m> hours after she turns on the swamp cooler. Write a formula in terms of <m>f</m> for the function <m>g</m> shown in figure (b), and give a possible explanation of its meaning.</p>
-    <sidebyside  width="80%"><image source="images/fig-swamp-cooler" ><description>swamp cooler graphs</description></image></sidebyside></statement>
-<answer><p><m>g(t) = f (t) + 10</m>. The outside temperature was <m>10\degree</m> hotter.</p></answer></exercise>
+<exercise>
+    <title>Practice 2</title>
+    <introduction>
+        <sidebyside  width="80%"><image source="images/fig-swamp-cooler" ><description>swamp cooler graphs</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(t=>'Real');
+            parserFunction("f(t)" => "110-15*e**(-t)");
+            $g = Formula("f(t)+10");
+
+            $explain = RadioButtons(
+                    ["\( g \) is the temperature in the house on a day that was \( 10^\circ \) hotter.",
+                    "\( g \) is the temperature in the house on a day that was \( 10^\circ \) cooler.",
+                    "\( g \) is the temperature in the house 10 hours after turning on the swamp cooler."],
+                    0,
+                );
+        </pg-code></setup>
+        <statement>
+            <p>An evaporative cooler, or swamp cooler, is an energy-efficient type of air conditioner used in dry climates. A typical swamp cooler can reduce the temperature inside a house by 15 degrees.</p>
+            <p> Figure (a) shows the graph of \(T = f (t)\), the temperature inside Kate's house \(t\) hours after she turns on the swamp cooler. Write a formula in terms of \(f\) for the function \(g\) shown in figure (b), and give a possible explanation of its meaning.</p>
+            <p><m>g(t)=</m><var name="$g" width="10"/> </p>
+            <p><var name="$explain" form="buttons"/> </p>
+        </statement>
+        <solution>
+            <p><m>g(t) = f (t) + 10</m>. The outside temperature was <m>10^{\circ}</m> hotter.</p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Horizontal Translations</title>  
@@ -291,15 +336,32 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 3</title>
-<statement><ol label="a">
-        <li><p>Graph the function <m>f (x) = \abs{x + 1}</m>.</p></li>
-        <li><p>How is the graph of <m>f</m> different from the graph of <m>y = \abs{x}</m>?</p></li>
-    </ol></statement>
-<answer><p><ol label="a" cols="2">
-    <li><sidebyside width="50%" margins="0% 50%"><image source="images/fig-in-ex-ans-2-3-3"><description>shifted absolute value</description></image></sidebyside></li>
-    <li><p>Translate <m>y =\abs{x}</m> one unit left.</p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 3</title>
+    <webwork>
+        <setup><pg-code>
+            $explain = RadioButtons(
+                    ["Translate  \(y=\left|x\right|\) one unit right.","Translate  \(y=\left|x\right|\) one unit left.","Translate  \(y=\left|x\right|\) one unit up.","Translate  \(y=\left|x\right|\) one unit down."],
+                    1,
+                );
+        </pg-code></setup>
+        <statement><ol label="a">
+            <li><p>Graph the function <m>f(x) = \left|x +1\right|</m>.</p></li>
+            <li><p>How is the graph of <m>f</m> different from the graph of <m>y=\left|x\right|</m>?</p>
+            <p><var name="$explain" form="buttons"/> </p></li>
+            </ol>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p>A graph is shown below.</p></li>
+                <li><p>Translate <m>y =\left|x\right|</m> one unit left.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="25%" margins="0% 50%"><image source="images/fig-in-ex-ans-2-3-3"><description>shifted absolute value</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <example xml:id="example-shift-bell-curve"><statement><sidebyside widths= "50% 40%" valigns="middle middle">
     <p>The function <m>N = f(p)</m> graphed at right gives the number of people who have a given eye pressure level <m>p</m> from a sample of 100 people with healthy eyes, and the function <m>g</m> gives the number of people with pressure level <m>p</m> in a sample of 100 glaucoma patients.</p>
@@ -313,25 +375,63 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
     <li>Pressure readings above <m>40</m> are a strong indication of glaucoma. Readings between <m>10</m> and <m>40</m> cannot conclusively distinguish healthy eyes from those with glaucoma.</li>
         </ol></p></solution></example>
 
-<exercise><title>Practice 4</title>
-<statement><p>The function <m>C = f (t)</m> shown below gives the caffeine level in Delbert's bloodstream at time <m>t</m> hours after he drinks a cup of coffee, and <m>g(t)</m> gives the caffeine level in Francine's bloodstream. Write a formula for <m>g</m> in terms of <m>f</m>, and explain what it tells you about Delbert and Francine.</p>
-    <sidebyside  width="50%"><image source="images/fig-shift-surge-curve" ><description>shift of caffeine surge curve</description></image></sidebyside></statement>
-<answer><p><m>g(t) = f(t - 3)</m>. Francine drank her coffee <m>3</m> hours after Delbert drank his.</p></answer></exercise>
+<exercise>
+    <title>Practice 4</title>
+    <introduction>
+        <sidebyside  width="50%"><image source="images/fig-shift-surge-curve" ><description>shift of caffeine surge curve</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(t=>'Real');
+            parserFunction("f(t)" => "80*t*e**(-t/2.5)");
+            $g = Formula("f(t-3)");
+            $explain = RadioButtons(
+                    ["Francine drank her coffee 3 hours after Delbert drank his.","Delbert drank his coffee 3 hours after Francine drank hers.","Francine drank 3 time as much coffee as Delbert drank.","Francine drank 3 more cups of coffee than Delbert drank."],
+                    0,
+                );
+        </pg-code></setup>
+        <statement>
+            <p>The function <m>C = f (t)</m> shown above gives the caffeine level in Delbert's bloodstream at time <m>t</m> hours after he drinks a cup of coffee, and <m>g(t)</m> gives the caffeine level in Francine's bloodstream. Write a formula for <m>g</m> in terms of <m>f</m>, and explain what it tells you about Delbert and Francine.</p>
+            <p><m>g(t)=</m><var name="$g" width="8"/> </p>
+            <p><var name="$explain" form="buttons"/> </p>
+        </statement>
+        <solution>
+            <p><m>g(t) = f(t - 3)</m>. Francine drank her coffee <m>3</m> hours after Delbert drank his.</p>
+        </solution>
+    </webwork>
+</exercise>
 
 <example xml:id="example-translate-cubic"><statement><p>Graph <m>~~f(x) = (x + 4)^3 + 2</m></p></statement>
 <solution><p>We identify the basic graph from the structure of the formula for <m>f (x)</m>. In this case, the basic graph is <m>y = x^3</m>, so we begin by locating a few points on that graph, say, <m>(0,0),~(1,1),</m> and <m>(-1,-1).</m> </p> 
 <p>We'll perform the translations separately, following the order of operations. First, we sketch a graph of <m>y = (x + 4)^3</m> by shifting each point on the basic graph four units to the left. We then move each point up two units to obtain the graph of <m>f(x) = (x + 4)^3 + 2</m>. All three graphs are shown below.</p>
     <sidebyside  width="40%"><image source="images/fig-translate-cubic"><description>translations of cubic curve</description></image></sidebyside></solution></example>
 
-<exercise><title>Practice 5</title>
-<statement><ol label="a">
-        <li>Graph the function <m>f(x) = \abs{x - 2} - 1</m>.</li>
-        <li>How is the graph of <m>f</m> different from the graph of <m>y=\abs{x}</m>?</li>
-    </ol></statement>
-<answer><p><ol label="a" cols="2">
-    <li><sidebyside width="50%" margins="0% 50%"><image source="images/fig-in-ex-ans-2-3-5"><description>shifted absolute value</description></image></sidebyside></li>
-    <li><p>Translate <m>y =\abs{x}</m> one unit down and two units right.</p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+                $explain = RadioButtons(
+                        ["Translate  \(y=\left|x\right|\) two units left and one unit down.","Translate  \(y=\left|x\right|\)  two units right and one unit down.","Translate  \(y=\left|x\right|\)  two units left and one unit up.","Translate  \(y=\left|x\right|\)  two units right and one unit up."],
+                        1,
+                    );
+        </pg-code></setup>
+        <statement><ol label="a">
+            <li><p>Graph the function <m>f(x) = \left|x - 2\right| - 1</m>.</p></li>
+            <li><p>How is the graph of <m>f</m> different from the graph of <m>y=\left|x\right|</m>?</p>
+            <p><var name="$explain" form="buttons"/> </p></li>
+            </ol>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p>A graph is shown below.</p></li>
+                <li><p>Translate <m>y =\left|x\right|</m> one unit down and two units right.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="25%" margins="0% 50%"><image source="images/fig-in-ex-ans-2-3-5"><description>shifted absolute value</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -487,15 +587,32 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
             <sidebyside  width="40%"><image source="images/fig-scale-abs"><description>scale absolute value</description></image></sidebyside></li>
         </ol></p></solution></example>
 
-<exercise><title>Practice 6</title>
-<statement><ol label="a">
-        <li>Graph the function <m>f (x) = 2\abs{x}</m>.</li>
-        <li>How is the graph of <m>f</m> different from the graph of <m>y =\abs{x}</m>?</li>
-    </ol></statement>
-<answer><p><ol label="a" cols="2">
-    <li><sidebyside width="40%" margins="0% 50%"><image source="images/fig-in-ex-ans-2-3-6"><description>shifted absolute value</description></image></sidebyside></li>
-    <li><p>Stretch <m>y =\abs{x}</m> vertically by a factor of 2.</p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 6</title>
+    <webwork>
+        <setup><pg-code>
+            $explain = RadioButtons(
+                    ["Translate  \(y=\left|x\right|\) one unit up.","Translate  \(y=\left|x\right|\) one unit right.","Stretch  \(y=\left|x\right|\) by a factor of 2.","Shrink  \(y=\left|x\right|\) by a factor of \(\frac{1}{2}\)."],
+                    2,
+                );
+        </pg-code></setup>
+        <statement><p><ol label="a">
+            <li><p>Graph the function <m>f (x) = 2\left|x\right|</m>.</p></li>
+            <li><p>How is the graph of <m>f</m> different from the graph of <m>y =\left|x\right|</m>?</p>
+            <p><var name="$explain" form="buttons"/>  </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p>A graph is shown below.</p></li>
+                <li><p>Stretch <m>y =\left|x\right|</m> vertically by a factor of 2.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="20%" margins="0% 80%"><image source="images/fig-in-ex-ans-2-3-6"><description>shifted absolute value</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
@@ -522,11 +639,39 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
 <solution><p>To sketch a graph of <m>g</m>, we stretch the graph of <m>f</m> vertically by a factor of <m>2</m>, as shown below. At each time <m>t</m>, the person’s blood alcohol level is twice the value given by <m>f</m>. The function <m>g</m> could represent a person's blood alcohol level <m>t</m> hours after drinking two martinis.</p>
     <sidebyside width="40%" ><image source="images/fig-surge-alcohol2"><description>alcohol level after more alcohol</description></image></sidebyside></solution></example>
 
-<exercise xml:id="daylight-hours"><title>Practice 7</title>
-<statement><p>If the Earth were not tilted on its axis, there would be 12 daylight hours every day all over the planet. But in fact, the length of a day in a particular location depends on the latitude and the time of year.</p> 
-<p>The graph below shows <m>H = f(t)</m>, the length of a day in Helsinki, Finland, <m>t</m> days after January 1, and <m>R = g(t)</m>, the length of a day in Rome. Each is expressed as the number of hours greater or less than 12. Write a formula for <m>f</m> in terms of <m>g</m>. What does this formula tell you?</p>
-    <sidebyside width="70%" ><image source="images/fig-daylight-hours"><description>daylight hours at two latitudes</description></image></sidebyside></statement>
-<answer><p><m>f(t)\approx 2g(t)</m>. On any given day, the number of daylight hours  varies from <m>12</m> hours about twice as much in Helsinki as it does in Rome.</p></answer></exercise>
+<exercise xml:id="daylight-hours">
+    <title>Practice 7</title>
+    <introduction>
+        <sidebyside width="70%" ><image source="images/fig-daylight-hours"><description>daylight hours at two latitudes</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(t=>'Real');
+            parserFunction("g(t)" => "-3*cos(pi/6*t)");
+            $f = Formula("2*g(t)")->with(
+              tolType => "relative",
+              tolerance => .051,
+            );
+
+            $explain = RadioButtons(
+                    ["2 hours more in Helsinki as in Rome.","3 hours more in Helsinki as in Rome.","twice as much in Helsinki as in Rome.","half as much in Helsinki as in Rome."],
+                    2,
+                );
+        </pg-code></setup>
+        <statement>
+            <p>If the Earth were not tilted on its axis, there would be 12 daylight hours every day all over the planet. But in fact, the length of a day in a particular location depends on the latitude and the time of year.</p> 
+            <p>The graph above shows <m>H = f(t)</m>, the length of a day in Helsinki, Finland, <m>t</m> days after January 1, and <m>R = g(t)</m>, the length of a day in Rome. Each is expressed as the number of hours greater or less than 12. Write a formula for <m>f</m> in terms of <m>g</m>.</p> 
+            <p><m>f(t)=</m><var name="$f" width="10"/> </p>
+            <p>What does this formula tell you?</p>
+            <p>On any given day, the number of daylight hours varies from 12 hours by about...</p>
+            <p><var name="$explain" form="buttons" /></p>
+
+        </statement>
+        <solution>
+            <p><m>f(t)\approx 2g(t)</m>. On any given day, the number of daylight hours  varies from <m>12</m> hours about twice as much in Helsinki as it does in Rome.</p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>

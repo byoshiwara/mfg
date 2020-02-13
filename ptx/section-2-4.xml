@@ -22,7 +22,24 @@
     <li><p>The graph begins like the graph in part (b). The last section of the graph represents the bus ride. It has a constant slope because the bus is moving at a constant speed. Because the bus (probably) moves faster than Forrest walks, the slope of this segment is greater than the slope for the walking section. The graph is shown in figure (c).</p></li>
 </ol></p></solution></example>
 
-<exercise><title>Practice 1</title>
+<exercise>
+    <title>Practice 1</title>
+<!--
+    <webwork>
+        <setup><pg-code>
+            
+        </pg-code></setup>
+        <statement>
+            <p>Erin walks from her home to a convenience store, where she buys some cat food, and then walks back home. Sketch a possible graph of her distance from home as a function of time.</p>
+        </statement>
+        <solution>
+            <p>A possible graph is shown below.</p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="35%" margins="0% 65%"><image source="images/fig-in-ex-ans-2-4-1"><description>piecewise graph</description></image></sidebyside>
+    </conclusion>
+-->    
 <statement><p>Erin walks from her home to a convenience store, where she buys some cat food, and then walks back home. Sketch a possible graph of her distance from home as a function of time.</p></statement>
 <answer><sidebyside width="30%"><image source="images/fig-in-ex-ans-2-4-1"><description>piecewise graph</description></image></sidebyside></answer></exercise>
 
@@ -108,10 +125,51 @@
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 2</title>
-<statement><p>Francine bought a cup of cocoa at the cafeteria. The cocoa cooled off rapidly at first, and then gradually approached room temperature. Which graph more accurately reflects the temperature of the cocoa as a function of time? Explain why. Is the graph you chose concave up or concave down?</p>
-    <sidebyside  width="45%"><image source="images/fig-concavity2"><description>decreasing graphs of opposite concavity</description></image></sidebyside></statement>
-<answer><p>(a): The graph has a steep negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa. The graph becomes closer to a horizontal line, corresponding to the cocoa approaching room temperature. The graph is concave up.</p></answer></exercise>
+<exercise>
+    <title>Practice 2</title>
+    <introduction>
+        <sidebyside  width="45%"><image source="images/fig-concavity2"><description>decreasing graphs of opposite concavity</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            $ab = PopUp(
+            ["?","(a)","(b)"],
+            1, 
+            );
+            $explain = new_checkbox_multiple_choice();
+            $explain -> qa (
+            "A question can go here, but PTX ignores this",
+            "The graph has a steep negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa. $BR",
+            "The graph becomes closer to a horizontal line, corresponding to the cocoa approaching room temperature.$BR",
+            );
+            $explain -> extra(
+            "The graph has a slight negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa.$BR",
+            "The graph becomes grows steeper and steeper, corresponding to the cocoa approaching room temperature.$BR",
+            );
+            $explain -> makeLast(
+            "The graph has a steep negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa. $BR",
+            "The graph becomes closer to a horizontal line, corresponding to the cocoa approaching room temperature.$BR",
+            "The graph has a slight negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa.$BR",
+            "The graph becomes grows steeper and steeper, corresponding to the cocoa approaching room temperature.$BR",
+                       "None of the above");
+            $concavity = PopUp(
+            ["?","Concave up","Concave down"],
+            1, 
+            );
+        </pg-code></setup>
+        <statement>
+            <p>Francine bought a cup of cocoa at the cafeteria. The cocoa cooled off rapidly at first, and then gradually approached room temperature. Which graph more accurately reflects the temperature of the cocoa as a function of time? 
+            <var name="$ab" form="popup"/> </p>
+            <p>Explain why. (Select all that apply.)</p>
+            <p><var name="$explain" form="checkboxes"/> </p>
+            <p>Is the graph you chose concave up or concave down? <var name="$concavity" form="popup"/> </p>
+    
+        </statement>
+        <solution>
+            <p>(a): The graph has a steep negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa. The graph becomes closer to a horizontal line, corresponding to the cocoa approaching room temperature. The graph is concave up.</p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -191,47 +249,78 @@
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 3</title>
-<statement><p>The ultraviolet index (UVI) is issued by the National Weather Service as a forecast of the amount of ultraviolet radiation expected to reach Earth around noon on a given day. The data show how much exposure to the sun people can take before risking sunburn.</p>
-    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-        <row bottom="minor">
-            <cell>UVI</cell>
-            <cell><m>2</m></cell>
-            <cell><m>3</m></cell>
-            <cell><m>4</m></cell>
-            <cell><m>5</m></cell>
-            <cell><m>6</m></cell>
-            <cell><m>8</m></cell>
-            <cell><m>10</m></cell>
-            <cell><m>12</m></cell></row>
-        <row>
-             <cell><line>Minutes to burn</line><line>(more sensitive)</line></cell>
-            <cell><m>30</m></cell>
-            <cell><m>20</m></cell>
-            <cell><m>15</m></cell>
-            <cell><m>12</m></cell>
-            <cell><m>10</m></cell>
-            <cell><m>7.5</m></cell>
-            <cell><m>6</m></cell>
-            <cell><m>5</m></cell></row>
-        <row>
-             <cell><line>Minutes to burn</line><line>(more sensitive)</line></cell>
-            <cell><m>150</m></cell>
-            <cell><m>100</m></cell>
-            <cell><m>75</m></cell>
-            <cell><m>60</m></cell>
-            <cell><m>50</m></cell>
-            <cell><m>37.5</m></cell>
-            <cell><m>30</m></cell>
-            <cell><m>25</m></cell></row>
-    </tabular></sidebyside><p><ol label="a">
-        <li><p>Plot <m>m</m>, the minutes to burn, against <m>u</m>, the UVI, to obtain two graphs, one for people who are more sensitive to sunburn, and another for people less sensitive to sunburn. Which of the basic functions do your graphs most resemble?</p></li>
-        <li><p>For each graph, find a value of <m>k</m> so that <m>m = k f(u)</m> fits the data.</p></li>
-    </ol></p></statement>
-<answer><p><ol label="a">
-    <li><sidebyside width="25%"><image source="images/fig-in-ex-ans-2-4-3"><description>two concave up decreasing curves</description></image></sidebyside><p>The graphs resemble <m>f (x) = \dfrac{1}{x}</m>. </p></li>
+<exercise>
+    <title>Practice 3</title>
+    <webwork>
+        <setup><pg-code>
+            $basic = RadioButtons(
+                    ["\(y= x^2 \)",
+                    "\(y= x^3 \)",
+                    "\(y= \sqrt{x} \)",
+                    "\(y= \sqrt[3]{x} \)",
+                    "\(y= \frac{1}{x} \)",
+                    "\(y= \frac{1}{x^2} \)",
+                    "\(y= x \)",
+                    "\(y= \left| x\right|\)"],
+                    4,
+                );
+            $more = Compute("60");
+            $less = Compute("300");
+        </pg-code></setup>
+        <statement>
+            <p>The ultraviolet index (UVI) is issued by the National Weather Service as a forecast of the amount of ultraviolet radiation expected to reach Earth around noon on a given day. The data show how much exposure to the sun people can take before risking sunburn.</p>
+            <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row bottom="minor">
+                    <cell>UVI</cell>
+                    <cell><m>2</m></cell>
+                    <cell><m>3</m></cell>
+                    <cell><m>4</m></cell>
+                    <cell><m>5</m></cell>
+                    <cell><m>6</m></cell>
+                    <cell><m>8</m></cell>
+                    <cell><m>10</m></cell>
+                    <cell><m>12</m></cell></row>
+                <row>
+                     <cell><line>Minutes to burn</line><line>(more sensitive)</line></cell>
+                    <cell><m>30</m></cell>
+                    <cell><m>20</m></cell>
+                    <cell><m>15</m></cell>
+                    <cell><m>12</m></cell>
+                    <cell><m>10</m></cell>
+                    <cell><m>7.5</m></cell>
+                    <cell><m>6</m></cell>
+                    <cell><m>5</m></cell></row>
+                <row>
+                     <cell><line>Minutes to burn</line><line>(more sensitive)</line></cell>
+                    <cell><m>150</m></cell>
+                    <cell><m>100</m></cell>
+                    <cell><m>75</m></cell>
+                    <cell><m>60</m></cell>
+                    <cell><m>50</m></cell>
+                    <cell><m>37.5</m></cell>
+                    <cell><m>30</m></cell>
+                    <cell><m>25</m></cell></row>
+            </tabular></sidebyside>
+            <p><ol label="a">
+                <li><p>Plot <m>m</m>, the minutes to burn, against <m>u</m>, the UVI, to obtain two graphs, one for people who are more sensitive to sunburn, and another for people less sensitive to sunburn. Which of the basic functions do your graphs most resemble?</p>
+                <p><var name="$basic" form="buttons"/> </p></li>
+                <li><p>For each graph, find a value of <m>k</m> so that <m>m = k f(u)</m> fits the data.</p>
+                <p>More sensitive: <m>k=</m><var name="$more" width="4"/> </p>
+                <p>Less sensitive: <m>k=</m><var name="$less" width="4"/> </p>
+                </li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+    <li><p>The graphs are shown below. They resemble <m>f (x) = \dfrac{1}{x}</m>. </p></li>
     <li><p>More sensitive: <m>k = 60</m>, Less sensitive: <m>k = 300</m> </p></li>
-</ol></p></answer></exercise>
+</ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="25%" margins="0% 75%"><image source="images/fig-in-ex-ans-2-4-3"><description>two concave up decreasing curves</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
@@ -375,21 +464,48 @@
     </solution>
 </webwork></exercise>
 
-<exercise xml:id="exercise-water-bill"><title>Practice 4</title>
-<statement><p>As part of a water conservation program, the utilities commission in Arid, New Mexico, establishes a two-tier system of monthly billing for residential water usage: The commission charges a $30 service fee plus $2 per hundred cubic feet (HCF) of water if you use 50 HCF or less, and a $50 service fee plus $3 per HCF of water if you use over 50 HCF (1 HCF of water is about 750 gallons).<ol label="a">
-        <li><p>Write a piecewise formula for the water bill, <m>B(w)</m>, as a function of the amount of water used, <m>w</m>, in HCF.</p></li>
-        <li><p>Graph the function <m>B</m>.</p></li>
-    </ol></p></statement>
-<answer><p><ol label="a">
-    <li><p><m>
-                B(w) =
-                \begin{cases}
-                30 + 2w \amp  0 \le w \le 50\\
-                50 + 3w \amp w \gt 50\\
-                \end{cases}
-            </m></p></li>
-    <li><sidebyside width="40%"><image source="images/fig-in-ex-ans-2-4-4"><description>broken piecewise graph</description></image></sidebyside></li>
-</ol></p></answer></exercise>
+<exercise xml:id="exercise-water-bill">
+    <title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(w=>'Real');
+            $f = Formula("30+2w");
+            $g = Formula("50+3w");
+        </pg-code></setup>
+        <statement>
+            <p>As part of a water conservation program, the utilities commission in Arid, New Mexico, establishes a two-tier system of monthly billing for residential water usage: The commission charges a $30 service fee plus $2 per hundred cubic feet (HCF) of water if you use 50 HCF or less, and a $50 service fee plus $3 per HCF of water if you use over 50 HCF (1 HCF of water is about 750 gallons).</p>
+            <p><ol label="a">
+                <li><p>Write a piecewise formula for the water bill, <m>B(w)</m>, as a function of the amount of water used, <m>w</m>, in HCF.</p>
+                <p><m>
+                    B(w) =
+                    \begin{cases}
+                    f(w) \amp  0 \le w \le 50\\
+                    g(w) \amp w \gt 50\\
+                    \end{cases}
+                </m></p>
+                <p>where <m>f(w)=</m><var name="$f" width="6"/></p>
+                <p>and <m>g(w)=</m><var name="$g" width="5"/></p>
+                </li>
+                <li><p>Graph the function <m>B</m>.</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p><m>
+                            B(w) =
+                            \begin{cases}
+                            30 + 2w \amp  0 \le w \le 50\\
+                            50 + 3w \amp w \gt 50\\
+                            \end{cases}
+                        </m></p></li>
+                <li><p>A graph is below.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="40%" margins="0% 60%"><image source="images/fig-in-ex-ans-2-4-4"><description>broken piecewise graph</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
