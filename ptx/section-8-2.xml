@@ -3,11 +3,11 @@
 
 <section xml:id="Systems-of-Linear-Equations-in-Three-Variables"   xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Systems of Linear Equations in Three Variables</title>
+
 <introduction>
-<p>
-	Some problems involve three (or more) unknown quantities, and efficient techniques for solving linear systems in many variables are available. In this section, we solve systems of three linear equations in three variables.
-</p>
-</introduction>
+<p>Some problems involve three (or more) unknown quantities, and efficient techniques for solving linear systems in many variables are available. In this section, we solve systems of three linear equations in three variables.
+</p></introduction>
+
 <subsection><title><m>3\times 3</m> Linear Systems</title>
 
 <p>A solution to an equation in three variables, such as
@@ -32,6 +32,16 @@ As with the two-variable case, a single linear equation in three variables has i
 </ul></p>
 
 <p>It is impractical to solve <m>3\times 3</m> systems by graphing. Even when technology for producing three-dimensional graphs is available, we cannot read coordinates on such graphs with any confidence. Thus, we will restrict our attention to algebraic methods of solving such systems.</p>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>What is a solution to a 3x3 linear system?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Back-Substitution</title>
@@ -47,29 +57,46 @@ As with the two-variable case, a single linear equation in three variables has i
 		    <mrow>        \amp {}{} \amp 3z \amp {}={} \amp -3</mrow>
 		 </md></p></statement>
 <solution><p>The third equation involves only the variable <m>z</m>, so we solve that equation to find <m>z = -1</m>. Then we substitute <m>-1</m> for <m>z</m> in the second equation and solve for <m>y</m>.
-		<md>
-			<mrow>-2y - 4(\alert{-1}) \amp = -2</mrow>
+		<md><mrow>-2y - 4(\alert{-1}) \amp = -2</mrow>
 			<mrow>-2y + 4 \amp= -2</mrow>
 			<mrow>-2y \amp = -6</mrow>
-			<mrow>y\amp=3</mrow>
-		</md>
+			<mrow>y\amp=3</mrow></md>
 Finally, we substitute <m>-1</m> for <m>z</m> and <m>3</m> for <m>y</m> into the first equation to find <m>x</m>.
-		<md>
-			<mrow>x + 2(\blert{3}) + 3(\alert{-1}) \amp= 2</mrow>
+		<md><mrow>x + 2(\blert{3}) + 3(\alert{-1}) \amp= 2</mrow>
 			<mrow>x + 6 - 3 \amp = 2</mrow>
-			<mrow>x\amp=-1</mrow>
-		</md>
+			<mrow>x\amp=-1</mrow></md>
 The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that this triple satisfies all three equations of the system.</p></solution></example>
 
 <p>The technique used in <xref ref="example-back-substitution" text="type-global"/> is called <term>back-substitution</term><idx>back-substitution</idx>. It works in the special case where one of the equations involves exactly one variable, and a second equation involves that same variable and just one other variable. A <m>3\times 3</m> linear system with these properties is said to be in <term>triangular form</term><idx>triangular form</idx>. If we can transform a system into triangular form, we can use back-substitution to complete the solution.</p>
 
-<exercise><statement><p>Use back-substitution to solve the system
+<exercise><title>Practice 1</title>
+<statement><p>Use back-substitution to solve the system
 		<md alignment="alignat">
 		    <mrow> 2x +{}  2y \amp {}+{} \amp z \amp {}={} \amp 10</mrow>
 		    <mrow>          y  \amp {}-{} \amp  4z \amp {}={} \amp 9</mrow>
 		    <mrow>        \amp {}{} \amp 3z \amp {}={} \amp -6</mrow>
 		 </md></p></statement>
 <answer><p><m>(5, 1, -2)</m></p></answer></exercise>
+
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $trsy = RadioButtons(
+              ["Any linear system",
+              "A triangular system",
+              "A dependent system",
+              "A complex system"],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What sort of system can be solved by back-substitution?</p>
+        <p><var name="$trsy" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>A triangular system</p>
+    </solution>
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Gaussian Reduction</title>
@@ -363,6 +390,26 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
 		The solution to the system is the ordered triple <m>(1, 2, 3)</m>. You can verify that this triple satisfies all three of the original equations.</p></li>
 	</ol></p>
 
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $elsm = RadioButtons(
+              ["Eliminate a different variable from the same pair of equations.",
+              "Eliminate the same variable from a different pair of equations.",
+              "Eliminate a different variable from a different pair of equations.",
+              "Substitute into the third equation."],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>After we eliminate one variable from a pair of equations, what is the next step?</p>
+        <p><var name="$elsm" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Eliminate the same variable from a different pair of equations.</p>
+    </solution>
+</webwork></exercise>
+
 <p>The method described above for putting a linear system into triangular form is called <term>Gaussian reduction</term><idx>Gaussian reduction</idx>, after the German mathematician Carl Gauss. We summarize our method for solving a <m>3\times 3</m> linear system as follows.</p>
 
 <xi:include href="./assemblage-steps-for-solving-3-by-3.xml" />
@@ -567,7 +614,8 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
 		We use back-substitution to find the solution. You can verify that the ordered triple <m>(1, -1, 2)</m> satisfies all three of the original equations of the system.</p></li>
 		</ol></p></solution></example>
 
-<exercise><statement><p>Use Gaussian reduction to solve the system
+<exercise><title>Practice 2</title>
+<statement><p>Use Gaussian reduction to solve the system
 	<md alignment="alignat">
 		<mrow>x\amp{}-{}\amp 2y \amp {}+{} \amp z \amp {}={} \amp -1\amp\hphantom{blankblank} (1)</mrow>
 		<mrow>\frac{2}{3}x \amp {}+{} \amp \frac{1}{3}y \amp {}-{} \amp z \amp {}={} \amp 1\amp\hphantom{blankblank} (2)</mrow>
@@ -581,6 +629,16 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
 			<li><p>Form a triangular system and solve by back-substitution.</p></li>
 		</ol></p></statement>
 <answer><p><m>(2, 2, 1)</m></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>What should you do if one of the original equations in a 3x3 system is "missing" one of the variables?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Inconsistent and Dependent Systems</title>
@@ -639,7 +697,8 @@ then the system is dependent and has infinitely many solutions.</p>
 		</md> -->
 	<p>Since the resulting equation has no solution, the system is <em>inconsistent</em>.</p></solution></example>
 
-<exercise><statement><p>Decide whether the system is inconsistent, dependent, or consistent and independent.
+<exercise><title>Practice 3</title>
+<statement><p>Decide whether the system is inconsistent, dependent, or consistent and independent.
 		<md alignment="alignat">
 			<mrow>x\amp {}+{}\amp 3y\amp {}-{}\amp z\amp =\amp 4 </mrow>
 			<mrow>-2x\amp {}-{}\amp 6y\amp {}+{}\amp 2z\amp =\amp 1 </mrow>
@@ -682,13 +741,47 @@ then the system is dependent and has infinitely many solutions.</p>
 		</tabular></sidebyside>
 	<p>Since the resulting equation vanishes, the system is dependent and has infinitely many solutions.</p></solution></example>
 
-<exercise><statement><p>Decide whether the system is inconsistent, dependent, or consistent and independent.
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $nosol = RadioButtons(
+              ["The system has no solution.",
+              "The system is dependent.",
+              "The solution is \((0,0,0)\).",
+              "The system is triangular."],
+              0, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What does it mean if you obtain an equation of the form <m>0x+0y+0z=k, k \not= 0</m> ?</p>
+        <p><var name="$nosol" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>The system has no solution.</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 4</title>
+<statement><p>Decide whether the system is inconsistent, dependent, or consistent and independent.
 		<md>
 			<mrow>a - c \amp = 2</mrow>
 			<mrow>2a + b \amp = 5</mrow>
 			<mrow>a + b + c \amp = 3</mrow>
 		</md></p></statement>
 <answer><p>Dependent</p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain how you know immediately that the following system is dependent:
+            <md><mrow>x+y+z=3</mrow>
+                <mrow>2x+2y+2z=6</mrow>
+                <mrow>-x-y-z=-3</mrow></md></p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Applications</title>
@@ -943,7 +1036,8 @@ then the system is dependent and has infinitely many solutions.</p>
 			<li><p>The angles measure <m>52\degree</m>, <m>28\degree</m>, and <m>100\degree</m>.</p></li>
 		</ol></p></solution></example>
 
-<exercise><statement><p>A manufacturer of office supplies makes three types of file cabinet: two-drawer, four-drawer, and horizontal. The manufacturing process is divided into three phases: assembly, painting, and finishing. 
+<exercise><title>Practice 5</title>
+<statement><p>A manufacturer of office supplies makes three types of file cabinet: two-drawer, four-drawer, and horizontal. The manufacturing process is divided into three phases: assembly, painting, and finishing. 
 		<ul>
 			<li>A two-drawer cabinet requires 3 hours to assemble, 1 hour to paint, and 1 hour to finish.</li>
 			<li> The four-drawer model takes 5 hours to assemble, 90 minutes to paint, and 2 hours to finish.</li>
