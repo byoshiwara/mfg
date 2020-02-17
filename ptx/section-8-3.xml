@@ -62,6 +62,16 @@ are called the <term>coefficient matrix</term><idx>coefficient matrix</idx> and 
 				\end{array}\right]
 			</me></p></sidebyside>
 <p>The augmented matrix of this last system, which has all zero entries in the lower left corner (below the diagonal), is said to be in <term>upper triangular form</term><idx>upper triangular form</idx>. As we saw in <xref ref="Systems-of-Linear-Equations-in-Three-Variables" text="type-global"/>, it is easy to find the solution of such a system by back-substitution.</p>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>What is the difference between a coefficient matrix and an augmented matrix?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Elementary Row Operations</title>
@@ -75,10 +85,8 @@ are called the <term>coefficient matrix</term><idx>coefficient matrix</idx> and 
 	is also a solution of the equation
 			<me>kax + kby = kc</me></p></li>
 	<li><p>Adding (or subtracting) two linear equations does not change their common solutions. That is, any solution of the system
-			<md>
-				<mrow>a_1 x + b_1 y \amp = c_1</mrow>
-				<mrow>a_2 x + b_2 y \amp = c_2</mrow>
-			</md>
+			<md><mrow>a_1 x + b_1 y \amp = c_1</mrow>
+				<mrow>a_2 x + b_2 y \amp = c_2</mrow></md>
 		is also a solution of the equation
 			<me>(a_1 + a_2)x + (b_1 + b_2)y = c_1 + c_2</me></p></li>
 	</ol></p></assemblage>
@@ -91,6 +99,26 @@ are called the <term>coefficient matrix</term><idx>coefficient matrix</idx> and 
 Because each equation of the system corresponds to a row in the augmented matrix, the three operations above correspond to three <term>elementary row operations</term> for the augmented matrix. We can perform one or more of these operations on a matrix without changing the solution of the system it represents.</p>
 
 <xi:include href="./assemblage-elementary-row-operations.xml" />
+
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $noro = RadioButtons(
+              ["Divide the entries in a row by a nonzero number",
+              "Add two rows together",
+              "Interchange two elements in a row",
+              "Interchange the first and last rows"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Which of the following is not an allowed row operation?</p>
+        <p><var name="$noro" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Interchange two elements in a row</p>
+    </solution>
+</webwork></exercise>
 
 <example><p><ol label="a">
     <li><p><m>A=
@@ -143,7 +171,8 @@ Because each equation of the system corresponds to a row in the augmented matrix
     <p>represent equivalent systems becausewe can add <m>-2</m> times each entry of the first row of <m>A</m> to the corresponding entry of the second row of <m>A</m> to obtain <m>B</m>.</p></li>
     </ol></p></example>
 
-<exercise><statement><p>Subtract <m>4</m> times row 2 from row 3.
+<exercise><title>Practice 1</title>
+<statement><p>Subtract <m>4</m> times row 2 from row 3.
 		<me>\left[ \begin{array}{@{}ccc|c@{}}
 				3 \amp 2  \amp -5 \amp -3 \\ 
 				2 \amp -3 \amp 2  \amp 6 \\ 
@@ -179,7 +208,8 @@ Because each equation of the system corresponds to a row in the augmented matrix
 			0 \amp 18 \amp 18 \\ 
 		\end{array}\right]				</me></p></solution></example>
 
-<exercise><statement><p>Use row operations to form an equivalent matrix with the given elements:
+<exercise><title>Practice 2</title>
+<statement><p>Use row operations to form an equivalent matrix with the given elements:
 	<me>\left[ \begin{array}{@{}cc|c@{}}
 			-1 \amp -3  \amp 7  \\ 
 			-2 \amp 4 \amp -6\\ 
@@ -234,7 +264,8 @@ Next we obtain a zero as the second entry of the third row by adding a suitable 
 		\end{array}\right]	</me>
 The last matrix is in upper triangular form.</p></solution></example>
 
-<exercise><statement><p>Use the suggested row operations to form an equivalent matrix in upper triangular form. 
+<exercise><title>Practice 3</title>
+<statement><p>Use the suggested row operations to form an equivalent matrix in upper triangular form. 
 	<me>\left[ \begin{array}{@{}ccc|c@{}}
 			1 \amp -2  \amp 4  \amp 3 \\ 
 			5 \amp -7  \amp 8  \amp 6\\ 
@@ -299,7 +330,8 @@ Now we use back-substitution to solve the system. From Equation (2), <m>y=3</m>.
 		</md>
 The solution is the ordered pair <m>(1, 3)</m>.</p></solution></example>
 
-<exercise><statement><p>Use matrix reduction to solve the system
+<exercise><title>Practice 4</title>
+<statement><p>Use matrix reduction to solve the system
 		<md alignment="alignat">
 			<mrow>4x\amp {}+{}\amp 4y\amp  = {}\amp 3</mrow>
 			<mrow>3x\amp {}+{}\amp 8y\amp  = \amp 1</mrow>
@@ -311,6 +343,16 @@ Follow the suggested steps:
 			<li><p>Solve the resulting system by back-substitution.</p></li>
 		</ol></p></statement>
 <answer><p><m>(-5, 2)</m></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Why do we want to put a matrix into upper triangular form?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Reducing a <m>3\times 3</m> Matrix</title>
@@ -321,15 +363,33 @@ Follow the suggested steps:
 
 <p>If you cannot obtain nonzero entries on the diagonal, then the system does not have a unique solution; the system is either inconsistent or dependent. See Homework Problems 45<ndash/>48.</p>
 
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $nzd = RadioButtons(
+              ["There is no solution.",
+              "There is no unique solution.",
+              "We should reduce the matrix.",
+              "We should augment the matrix."],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What happens if we cannot obtain nonzero entries on the diagonal?</p>
+        <p><var name="$nzd" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>There is no unique solution.</p>
+    </solution>
+</webwork></exercise>
+
 <example xml:id="example-matrix-3x3-system"><statement><p>Use matrix reduction to solve the system.
         <md alignment="alignat">
             <mrow>2x\amp {}-{}\amp 4y\amp {}{}\amp \amp =\amp 6</mrow>
             <mrow>3x\amp {}-{}\amp 4y\amp {}+{}\amp z \amp =\amp 8</mrow>
              <mrow>2x\amp {}{}\amp \amp {}-{}\amp 3z\amp =\amp -11</mrow>
         </md></p></statement>
-<solution>
-    <p>
-        The augmented matrix is
+<solution><p>The augmented matrix is
         <me>
             \left[ \begin{array}{@{}ccc|c@{}}
                 2 \amp -4\amp 0  \amp 6  \\ 
@@ -339,112 +399,67 @@ Follow the suggested steps:
         </me>
         We obtain <m>1</m> as the first entry of the first row by multiplying each entry in the first row by <m>\dfrac{1}{2}</m>. This will make it easier to obtain zeros in the first entries of the second and third rows.</p>
         <sidebyside valigns="middle middle ">
-                <p>
-                    <me>
+                <p><me>
                         \left[ \begin{array}{@{}ccc|c@{}}
                             2 \amp -4\amp 0  \amp 6  \\ 
                             3 \amp -4\amp 1  \amp 8  \\ 
                             2 \amp  0\amp -3 \amp -11
                         \end{array}\right]      
-                    </me>
-                </p>
-                <p>
-                    <md alignment="alignat">
-                        <mrow>
-                            2x\amp {}-{}\amp 4y\amp {}+{}\amp0z \amp =\amp 6
-                        </mrow>
-                        <mrow>
-                            3x\amp {}-{}\amp 4y\amp {}+{}\amp z \amp =\amp 8
-                        </mrow>
-                            <mrow>
-                            2x\amp {}+{}\amp 0y\amp {}-{}\amp 3z\amp =\amp -11
-                        </mrow>
-                    </md>
-                </p>
-        </sidebyside>
+                    </me></p>
+                <p><md alignment="alignat">
+                        <mrow>2x\amp {}-{}\amp 4y\amp {}+{}\amp0z \amp =\amp 6</mrow>
+                        <mrow>3x\amp {}-{}\amp 4y\amp {}+{}\amp z \amp =\amp 8</mrow>
+                         <mrow>2x\amp {}+{}\amp 0y\amp {}-{}\amp 3z\amp =\amp -11</mrow></md>
+                </p></sidebyside>
 <p><me>\stackrel{\displaystyle{\frac{1}{2}}(\text{row }1)}{\big\downarrow}</me></p>
         <sidebyside valigns="middle  middle">
-                <p>
-                    <me>
+                <p><me>
                         \left[ \begin{array}{@{}ccc|c@{}}
                             1 \amp -2\amp 0  \amp 3  \\ 
                             3 \amp -4\amp 1  \amp 8  \\ 
                             2 \amp  0\amp -3 \amp -11
                         \end{array}\right]      
-                    </me>
-                </p>
-                <p>
-                    <md alignment="alignat">
-                        <mrow>
-                            x\amp {}-{}\amp 2y\amp {}+{}\amp 0z \amp =\amp 3
-                        </mrow>
-                        <mrow>
-                            3x\amp {}-{}\amp 4y\amp {}+{}\amp z \amp =\amp 8
-                        </mrow>
-                            <mrow>
-                            2x\amp {}+{}\amp 0y\amp {}-{}\amp 3z\amp =\amp -11
-                        </mrow>
-                    </md>
-                </p>
-    </sidebyside>
+                    </me></p>
+                <p><md alignment="alignat">
+                        <mrow>x\amp {}-{}\amp 2y\amp {}+{}\amp 0z \amp =\amp 3</mrow>
+                        <mrow>3x\amp {}-{}\amp 4y\amp {}+{}\amp z \amp =\amp 8</mrow>
+                        <mrow>2x\amp {}+{}\amp 0y\amp {}-{}\amp 3z\amp =\amp -11</mrow></md>
+                </p> </sidebyside>
     <p>Next, we obtain zeros in the first entries of the second and third rows by adding suitable multiples of the first row:
 <me>-3(\text{row }1) + 2~~{\Bigg\downarrow}~~3(\text{row }1) + 3 </me></p>
         <sidebyside valigns="middle  middle">
-                <p>
-                    <me>
+                <p><me>
                         \left[ \begin{array}{@{}ccc|c@{}}
                             1 \amp -2\amp 0  \amp 3  \\ 
                             0 \amp 2 \amp 1  \amp -1  \\ 
                             0 \amp  4\amp -3 \amp -17
                         \end{array}\right]      
-                    </me>
-                </p>
-                <p>
-                    <md alignment="alignat">
-                        <mrow>
-                            x\amp {}-{}\amp 2y\amp {}+{}\amp 0z \amp =\amp 3
-                        </mrow>
-                        <mrow>
-                            0x\amp {}+{}\amp 2y\amp {}+{}\amp z \amp =\amp -1
-                        </mrow>
-                            <mrow>
-                            0x\amp {}+{}\amp 4y\amp {}-{}\amp 3z\amp =\amp -17
-                        </mrow>
-                    </md>
-                </p>
-    </sidebyside>
+                    </me> </p>
+                <p><md alignment="alignat">
+                        <mrow>x\amp {}-{}\amp 2y\amp {}+{}\amp 0z \amp =\amp 3</mrow>
+                        <mrow>x\amp {}+{}\amp 2y\amp {}+{}\amp z \amp =\amp -1</mrow>
+                        <mrow>0x\amp {}+{}\amp 4y\amp {}-{}\amp 3z\amp =\amp -17</mrow></md>
+                </p></sidebyside>
     <p>Finally, we obtain a zero in the second entry of the third row by adding <m>-2(\text{row }2)</m> to <m>\text{row }3</m>:
-
-    <me>-2(\text{row }2) + 3~~{\Bigg\downarrow}~~\hphantom{3(\text{row }1) + 3} </me></p>
+    	<me>-2(\text{row }2) + 3~~{\Bigg\downarrow}~~\hphantom{3(\text{row }1) + 3} </me></p>
         <sidebyside valigns="middle  middle">
-                <p>
-                    <me>
+                <p><me>
                         \left[ \begin{array}{@{}ccc|c@{}}
                             1 \amp -2\amp 0  \amp 3  \\ 
                             0 \amp 2 \amp 1  \amp -1  \\ 
                             0 \amp 0 \amp -5 \amp -15
                         \end{array}\right]      
-                    </me>
-                </p>
-                <p>
-                    <md alignment="alignat">
-                        <mrow>
-                            x\amp {}-{}\amp 2y\amp {}+{}\amp 0z \amp =\amp 3
-                        </mrow>
-                        <mrow>
-                            0x\amp {}+{}\amp 2y\amp {}+{}\amp z \amp =\amp -1
-                        </mrow>
-                            <mrow>
-                            0x\amp {}+{}\amp 0y\amp {}-{}\amp 5z\amp =\amp -15
-                        </mrow>
-                    </md>
-                </p>
-    </sidebyside>
-    <p>The system is now in upper triangular form, and we use back-substitution to find the solution. We solve the last equation to get <m>z=3</m> and substitute <m>3</m> for <m>z</m> in the second equation to find <m>y=-2</m>. Finally, we substitute <m>3</m> for <m>z</m> and <m>-2</m> for <m>y</m> in the first equation to find <m>x=-1</m>. The solution is the ordered triple <m>(-1,-2, 3)</m>.
-</p>
+                    </me></p>
+                <p><md alignment="alignat">
+                    <mrow>x\amp {}-{}\amp 2y\amp {}+{}\amp 0z \amp =\amp 3</mrow>
+                    <mrow>0x\amp {}+{}\amp 2y\amp {}+{}\amp z \amp =\amp -1</mrow>
+                    <mrow>0x\amp {}+{}\amp 0y\amp {}-{}\amp 5z\amp =\amp -15</mrow></md>
+                </p></sidebyside>
+    <p>The system is now in upper triangular form, and we use back-substitution to find the solution. We solve the last equation to get <m>z=3</m> and substitute <m>3</m> for <m>z</m> in the second equation to find <m>y=-2</m>. Finally, we substitute <m>3</m> for <m>z</m> and <m>-2</m> for <m>y</m> in the first equation to find <m>x=-1</m>. The solution is the ordered triple <m>(-1,-2, 3)</m>.</p>
 </solution></example>
 
-<exercise><statement><p>Use matrix reduction to solve the system
+<exercise><title>Practice 5</title>
+<statement><p>Use matrix reduction to solve the system
 		<md>
 			<mrow>x + 3z \amp = -11</mrow>
 			<mrow>2x + y + z \amp = 1</mrow>
@@ -485,6 +500,26 @@ We then follow the two-step procedure described above to find
 			0 \amp 1 \amp 2  \amp 3  \\ 
 			0 \amp 0 \amp -7 \amp -7
 		\end{array}\right]		</me></p>
+
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $nzd = RadioButtons(
+              ["Interchange two columns",
+              "Interchange two rows",
+              "Add the first row to the second row",
+              "Obtain zeros below that entry"],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What should you do if the first entry in the first row is zero?</p>
+        <p><var name="$nzd" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Interchange two rows</p>
+    </solution>
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Solving Larger Systems</title>
@@ -565,7 +600,8 @@ which we solve by back-substitution.</p>
 
 <p>Our strategy for reducing <m>3\times 4</m> augmented matrices can be generalized for larger matrices, as demonstrated in <xref ref="example-matrix-4x4-system" text="type-global"/>. Starting with the first row, we work our way along the diagonal, using row operations to obtain nonzero entries on the diagonal and zeros below the diagonal entry.</p>
 
-<exercise><statement><p>Use matrix reduction to solve the system
+<exercise><title>Practice 6</title>
+<statement><p>Use matrix reduction to solve the system
 		<md alignment="alignat">
 			<mrow>w\amp {}+{} \amp x \amp {}+{}\amp y\amp {}+{}\amp z \amp =\amp -1</mrow>
 			<mrow>-w\amp {}+{}\amp x\amp {}-{}\amp y\amp {}+{}\amp z \amp =\amp 3</mrow>
@@ -573,6 +609,16 @@ which we solve by back-substitution.</p>
 			<mrow>3w\amp {}+{}\amp 9x\amp {}-{}\amp 3y\amp {}+{}\amp 6z\amp =\amp 0</mrow>
 		</md></p></statement>
 <answer><p><m>(-3, 2, 1, -1)</m></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>How is matrix reduction similar to Gaussian reduction?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Reduced Row Echelon Form</title>
@@ -598,6 +644,26 @@ corresponds to the system
 		<mrow>0a\amp {}+{}\amp 0b\amp {}+{}\amp 0c\amp {}+{}\amp d\amp =\amp 4</mrow>
 	</md>
 From this system, it is easy to read the solutions <m>a=-2</m>, <m>b=3</m>, <m>c=-3</m>, and <m>d=4</m></p>
+
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $nzd = RadioButtons(
+              ["It makes the elements in each row smaller.",
+              "It lets us read the solutions of a system.",
+              "It reduces the number of rows.",
+              "It solves the matrix."],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Why is reduced row echelon form useful?</p>
+        <p><var name="$nzd" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>It lets us read the solutions of a system.</p>
+    </solution>
+</webwork></exercise>
 
 <technology><!--<image source="images/icon-GC.jpg"  width="8%"><description>Graphing Calculator</description></image>-->
 <p>TI-84 and TI-83 calculators have a command for finding the reduced row echelon form of a matrix.</p>

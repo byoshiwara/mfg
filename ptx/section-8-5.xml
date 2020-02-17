@@ -22,6 +22,26 @@ This expression for <m>P</m> is called the <term>objective function</term><idx>o
 In addition, suppose that TrailGear's suppliers can provide at most <m>1000</m> ounces of silicone gel each week, with each pair of Weekenders using <m>2</m> ounces and each Sierra model using <m>1</m> ounce. This means that
 	<me>2x + y \le 1000</me>
 Of course, we will also require that <m>x\ge 0</m> and <m>y\ge 0</m>. These four inequalities are called the <term>constraints</term><idx>constraints</idx> of the problem.</p>
+
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $obfn = RadioButtons(
+              ["\(2x+5y \le 50\)",
+              "\(M=2x+5y\)",
+              "\(y \ge 2x+50\)",
+              "\(2x+5y=50\)"],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Which of these could be an objective function?</p>
+        <p><var name="$obfn" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>M=2x+5y</m></p>
+    </solution>
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Feasible Solutions</title>
@@ -54,7 +74,28 @@ Our goal is to find values for <m>x</m> and <m>y</m> that satisfy the constraint
 				<me>P = 8(\alert{200}) + 10(\blert{300}) = 4600</me></p></li>
 	</ol></p></solution></example>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $feas = RadioButtons(
+              ["The vertices of the solution set",
+              "The values of the objective function",
+              "The set of points that satisfy the constraints",
+              "The boundary lines of the inequalities"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What is the set of feasible solutions?</p>
+        <p><var name="$feas" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>The set of points that satisfy the constraints</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 1</title>
+<statement><p><ol label="a">
 		<li><p>Determine which of the points <m>(0, 400)</m>, <m>(400, 200)</m>, <m>(500, 0)</m>, and <m>(500, 400)</m> represent feasible solutions for the TrailGear problem.</p></li>
 		<li><p>Find the values of the objective function <m>P = 8x + 10y</m> at the feasible solutions in part (a).</p></li>
 	</ol></p></statement>
@@ -62,6 +103,16 @@ Our goal is to find values for <m>x</m> and <m>y</m> that satisfy the constraint
 	<li><p><m>(0, 400)</m>, <m>(400, 200)</m>, and <m>(500, 0)</m></p></li>
 	<li><p>At <m>(0, 400)</m>, <m>P = 4000</m>; at <m>(400, 200)</m>, <m>P = 5200</m>; at <m>(500, 0)</m>, <m>P = 4000</m></p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain how to find the set of feasible solutions.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>The Optimum Solutions</title>
@@ -75,7 +126,27 @@ If TrailGear would like to make $<m>2000</m> on hiking boots, it could produce <
 represents a combination of Weekenders and Sierra boots that will yield a profit of $<m>2000</m>. This line is labeled <m>P = 2000</m> in the figure below.</p>
 <sidebyside   width="40%"><image source="images/fig-objective-function-contours-over-feasibles"><description>lines of constant objective function drawn over feasible solutions</description></image></sidebyside>
 
-<p>If TrailGear would like to make $<m>4000</m> on boots, it should choose a point on the line labeled <m>P = 4000</m>. Similarly, all the points on the line labeled <m>P = 6000</m> will yield a profit of $<m>6000</m>, and so on. Different values of <m>P</m> correspond to parallel lines on the graph. Smaller values of <m>P</m> correspond to lines near the origin, and larger values of <m>P</m> have lines farther from the origin. Here is another example.</p>
+<p>If TrailGear would like to make $<m>4000</m> on boots, it should choose a point on the line labeled <m>P = 4000</m>. Similarly, all the points on the line labeled <m>P = 6000</m> will yield a profit of $<m>6000</m>, and so on. Different values of <m>P</m> correspond to parallel lines on the graph. Smaller values of <m>P</m> correspond to lines near the origin, and larger values of <m>P</m> have lines farther from the origin.</p>
+
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $opso = RadioButtons(
+              ["The largest or smallest feasible solution",
+              "The largest or smallest value of the objective function in the set of feasible solutions",
+              "The vertex farthest from the origin",
+              "The largest or smallest constrained \(y\)-value"],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What is an optimal solution?</p>
+        <p><var name="$opso" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>The largest or smallest value of the objective function in the set of feasible solutions</p>
+    </solution>
+</webwork></exercise>
 
 <example><statement><p>The figure below shows the feasible solutions for another linear programming problem. The objective function is <m>C = 3x + 5y</m>.</p>
 		<sidebyside   width="30%"><image source="images/fig-feasible-solutions2"><description>system of inequalities defining the feasible solutions</description></image></sidebyside><p><ol label="a">
@@ -94,7 +165,8 @@ represents a combination of Weekenders and Sierra boots that will yield a profit
 	<li><p>The line <m>3x + 5y = 45</m> includes all points for which <m>C=45</m>. This line does not intersect the set of feasible solutions, as we see in the figure. Thus, there are no feasible solutions that result in an objective value of <m>45</m>.</p></li>
 </ol></p></solution></example>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>Practice 2</title>
+<statement><p><ol label="a">
 	<li><p>Returning to the TrailGear problem of <xref ref="example-TrailGear" text="type-global"/>, find all feasible solutions for which the objective function <m>P = 8x + 10y</m> has a value of <m>5200</m>.</p></li>
 	<li><p>Find all feasible solutions that result in an objective value of <m>6000</m>.</p></li>
 </ol></p></statement>
@@ -119,7 +191,8 @@ represents a combination of Weekenders and Sierra boots that will yield a profit
 		<me>P = 8(400) + 10(200) = 5200</me>
 so the maximum weekly profit is $<m>5200</m>.</p></solution></example>
 
-<exercise><statement><p>The figure below shows the feasible solutions for a linear programming problem. The objective function is <m>R = x + 5y</m>.</p>
+<exercise><title>Practice 3</title>
+<statement><p>The figure below shows the feasible solutions for a linear programming problem. The objective function is <m>R = x + 5y</m>.</p>
 	<sidebyside   width="25%"><image source="images/fig-feasible-solutions5"><description>system of inequalities defining the feasible solutions</description></image></sidebyside>
 <p><ol label="a">
 	<li><p>Sketch lines for objective values of <m>R=5</m>, <m>R=15</m>, <m>R = 25</m>, and <m>R=35</m>.</p></li>
@@ -137,6 +210,26 @@ so the maximum weekly profit is $<m>5200</m>.</p></solution></example>
 <p>We can now formulate a strategy for solving problems by linear programming.</p>
 
 <xi:include href="./assemblage-solve-linear-programming-problem.xml" />
+
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $linpro = RadioButtons(
+              ["find the vertices of a region.",
+              "solve a system of inequalities.",
+              "write a set of inequalities in two variables.",
+              "find an optimal solution subject to a set of constraints."],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Linear programming is used to</p>
+        <p><var name="$linpro" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>find an optimal solution subject to a set of constraints.</p>
+    </solution>
+</webwork></exercise>
 
 <p>In <xref ref="example-unbounded-feasible-set" text="type-global"/>, the set of feasible solutions is an unbounded region.</p>
 
@@ -265,8 +358,19 @@ How much should the Healthy Food Store purchase from each company in order to mi
 		<li><p>The Healthy Food Store should buy three packages from Company A and two packages from Company B. It will pay $<m>95</m> for its stock of granola and muesli.</p></li>
 	</ol></p></solution></example>
 
-<exercise><statement><p>Find the minimum value of the objective function, <m>O = 5x + 3y</m>, subject to the constraints <m>x\ge 0</m>, <m>y\ge 0</m>, <m>x + y \ge 7</m>, and <m>5x + 2y \ge 20</m>.</p></statement>
+<exercise><title>Practice 4</title>
+<statement><p>Find the minimum value of the objective function, <m>O = 5x + 3y</m>, subject to the constraints <m>x\ge 0</m>, <m>y\ge 0</m>, <m>x + y \ge 7</m>, and <m>5x + 2y \ge 20</m>.</p></statement>
 <answer><p><m>25</m></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>What fact helps us find the optimal solution?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 
 <technology><title><!--<image source="images/icon-GC.jpg"  width="8%"><description>Graphing Calculator</description></image>-->Using a Graphing Calculator</title>
 
