@@ -72,15 +72,30 @@ or
 <p>81 <c>^</c> 0.75 <c>ENTER</c>
 </p></note>
 
-<exercise><title>Practice 1</title>
-<statement><p>Evaluate each power.<ol label="a" cols="2">
-        <li><p><m> 32^{-3/5}</m></p></li>
-        <li><p><m> -81^{1.25}</m></p></li>
-    </ol></p></statement>
-<answer><p><ol cols="2" label="a">
-    <li><p><m>\dfrac{1}{8} </m></p></li>
-    <li><p><m>-243</m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            Context(Fraction)->operators->undefine("^","**");
+            Context()->functions->disable("All");
+
+            $a = Compute("1/8");
+            $b = Compute("-243");
+        </pg-code></setup>
+        <statement>
+            <p>Evaluate each power.<ol label="a">
+                <li><p><m> 32^{-3/5}=</m><var name="$a" width="3"/> </p></li>
+                <li><p><m> -81^{1.25}=</m><var name="$b" width="3"/></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol cols="2" label="a">
+                <li><p><m>\dfrac{1}{8} </m></p></li>
+                <li><p><m>-243</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -175,58 +190,106 @@ where <m>m</m> is the mass of the animal in kilograms and the BMR is measured in
     <li><p>If energy consumption were proportional to body weight, the graph would be a straight line. But because the exponent in Kleiber’s rule, <m>\dfrac{3}{4}</m>, is less than <m>1</m>, the graph is concave down, or bends downward. Therefore, larger species eat less than smaller ones, relative to their body weight. </p></li>
 </ol></p></solution></example>
 
-<exercise><title>Practice 2</title>
-<statement><p><ol label="a">
-    <li><p>Complete the table of values for the function <m>f (x) = x^{-3/4}</m>.</p>
-    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-        <row bottom="minor">
-            <cell><m>x</m></cell>
-            <cell><m>0.1</m></cell>
-            <cell><m>0.2</m></cell>
-            <cell><m>0.5</m></cell>
-            <cell><m>1</m></cell>
-            <cell><m>2</m></cell>
-            <cell><m>5</m></cell>
-            <cell><m>8</m></cell>
-            <cell><m>10</m></cell></row>
-        <row>
-            <cell><m>f (x)</m></cell>
-            <cell><m></m></cell>
-            <cell><m></m></cell>
-            <cell><m></m></cell>
-            <cell><m></m></cell>
-            <cell><m></m></cell>
-            <cell><m></m></cell>
-            <cell><m></m></cell>
-            <cell><m></m></cell></row>
-    </tabular></sidebyside></li>
-    <li><p>Sketch the graph of the function.</p></li>
-</ol></p></statement>
-<answer><p><ol label="a">
-    <li><sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-        <row bottom="minor">
-            <cell><m>x</m></cell>
-            <cell><m>0.1</m></cell>
-            <cell><m>0.2</m></cell>
-            <cell><m>0.5</m></cell>
-            <cell><m>1</m></cell>
-            <cell><m>2</m></cell>
-            <cell><m>5</m></cell>
-            <cell><m>8</m></cell>
-            <cell><m>10</m></cell></row>
-        <row>
-            <cell><m>f (x)</m></cell>
-            <cell><m>5.623</m></cell>
-            <cell><m>3.344</m></cell>
-            <cell><m>1.682</m></cell>
-            <cell><m>1</m></cell>
-            <cell><m>0.595</m></cell>
-            <cell><m>0.299</m></cell>
-            <cell><m>0.210</m></cell>
-            <cell><m>0.178</m></cell></row>
-    </tabular></sidebyside></li>
-    <li><sidebyside width="35%"><image source="images/fig-in-ex-ans-3-4-2"><description>power function</description></image></sidebyside></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            $f = Formula("x**(-3/4)");
+            $x[0]=0.1;
+            $x[1]=0.2;
+            $x[2]=0.5;
+            $x[3]=1;
+            $x[4]=2;
+            $x[5]=5;
+            $x[6]=8;
+            $x[7]=10;
+            foreach my $i (0..7) {
+            $y[$i]=$f->eval(x=>$x[$i])->with(
+              tolType => 'absolute',
+              tolerance => .0005,
+            );
+            }            
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Complete the table of values for the function <m>f (x) = x^{-3/4}</m>.</p>
+                <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                    <row bottom="minor">
+                        <cell><m>x</m></cell>
+                        <cell><m>0.1</m></cell>
+                        <cell><m>0.2</m></cell>
+                        <cell><m>0.5</m></cell>
+                        <cell><m>1</m></cell>
+                    </row>
+                    <row>
+                        <cell><m>f (x)</m></cell>
+                        <cell><var name="$y[0]" width="4"/></cell>
+                        <cell><var name="$y[1]" width="4"/></cell>
+                        <cell><var name="$y[2]" width="4"/></cell>
+                        <cell><var name="$y[3]" width="4"/></cell>
+                    </row>
+                </tabular></sidebyside>
+                <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                    <row bottom="minor">
+                        <cell><m>x</m></cell>
+                        <cell><m>2</m></cell>
+                        <cell><m>5</m></cell>
+                        <cell><m>8</m></cell>
+                        <cell><m>10</m></cell></row>
+                    <row>
+                        <cell><m>f (x)</m></cell>
+                        <cell><var name="$y[4]" width="4"/></cell>
+                        <cell><var name="$y[5]" width="4"/></cell>
+                        <cell><var name="$y[6]" width="4"/></cell>
+                        <cell><var name="$y[7]" width="4"/></cell>
+                    </row>
+                </tabular></sidebyside>                
+                </li>
+                <li><p>Sketch the graph of the function.</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li>
+                    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                    <row bottom="minor">
+                        <cell><m>x</m></cell>
+                        <cell><m>0.1</m></cell>
+                        <cell><m>0.2</m></cell>
+                        <cell><m>0.5</m></cell>
+                        <cell><m>1</m></cell>
+                    </row>
+                    <row>
+                        <cell><m>f (x)</m></cell>
+                        <cell><m>5.623</m></cell>
+                        <cell><m>3.344</m></cell>
+                        <cell><m>1.682</m></cell>
+                        <cell><m>1</m></cell>
+                    </row>
+                    </tabular></sidebyside>
+                    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                    <row bottom="minor">
+                        <cell><m>x</m></cell>
+                        <cell><m>2</m></cell>
+                        <cell><m>5</m></cell>
+                        <cell><m>8</m></cell>
+                        <cell><m>10</m></cell></row>
+                    <row>
+                        <cell><m>f (x)</m></cell>
+                        <cell><m>0.595</m></cell>
+                        <cell><m>0.299</m></cell>
+                        <cell><m>0.210</m></cell>
+                        <cell><m>0.178</m></cell></row>
+                    </tabular></sidebyside>
+                </li>
+                <li><p>A graph is below.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="35%"><image source="images/fig-in-ex-ans-3-4-2"><description>power function</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
@@ -265,9 +328,27 @@ and arrived at the figure <m>297</m> g of LSD. Unfortunately, the elephant did n
 <example xml:id="example-Kleiber-elephant-LSD-dose"><statement><p>Use Kleiber's rule and the dosage for a cat to estimate the corresponding dose for an elephant.</p></statement>
 <solution><p>If the experimenters had taken into account the scaling exponent of <m>0.75</m> in metabolic rate, they would have used a smaller dose. Because the elephant weighs <m>\dfrac{2970}{2.6}</m> , or about <m>1142</m> times as much as the cat, the dose would be <m>1142^{0.75} = 196</m> times the dosage for a cat, or about <m>51</m> grams.</p></solution></example>
 
-<exercise><title>Practice 3</title>
-<statement><p>A human being weighs about <m>70</m> kg, and <m>0.2</m> mg of LSD is enough to induce severe psychotic symptoms. Use these data and Kleiber's rule to predict what dosage would produce a similar effect in an elephant.</p></statement>
-<answer><p>About <m>3.3</m> mg</p></answer></exercise>
+<exercise>
+    <title>Practice 3</title>
+    <webwork>
+        <setup><pg-code>
+            $mHuman = 70;
+            $mElephant = 2970;
+            $dHuman = 0.2;
+            $dElephant = Compute("($mElephant/$mHuman)**(0.75)*$dHuman")->with(
+              tolType => 'absolute',
+              tolerance => .05,
+            );
+        </pg-code></setup>
+        <statement>
+            <p>A human being weighs about <m>70</m> kg, and <m>0.2</m> mg of LSD is enough to induce severe psychotic symptoms. Use these data and Kleiber's rule to predict what dosage would produce a similar effect in an elephant.</p>
+            <p>About <var name="$dElephant" width="2"/> mg </p>
+        </statement>
+        <solution>
+            <p>About <m>3.3</m> mg</p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Radical Notation</title><idx>radical notation</idx>
@@ -286,15 +367,43 @@ and arrived at the figure <m>297</m> g of LSD. Unfortunately, the elephant did n
         <li><p><m>6w^{-3/4} = \dfrac{6}{\sqrt[4]{w^3}}</m></p></li>
     </ol></p></statement></example>
 
-<exercise><title>Practice 4</title>
-<statement><p>Write each expression in radical notation.<ol label="a" cols="2">
-    <li><p><m>5t^{1.25}</m></p></li>
-    <li><p><m> 3m^{-5/3}</m></p></li>
-</ol></p></statement>
-<answer><p><ol cols="2" label="a">
-    <li><p><m>5\sqrt[4]{t^5} </m></p></li>
-    <li><p><m>\dfrac{3}{\sqrt[3]{m^5} } </m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+            $A =  RadioButtons(
+                    ["\( \sqrt[4]{5t^{5}} \)",
+                    "\( \sqrt[4]{(5t)^{5}} \)",
+                    "\( 5\sqrt[4]{t^{5}} \)",
+                    "\( 5\sqrt{(t/4)^{5}} \)"
+                    ], 2
+                );
+            $B =  RadioButtons(
+                    ["\( \dfrac{3}{\sqrt[3]{m^{5}}} \)",
+                    "\( \dfrac{1}{\sqrt[3]{3m^{5}}} \)",
+                    "\( \dfrac{1}{3\sqrt[3]{m^{5}}} \)",
+                    "\( -3 \sqrt[3]{m^{5}} \)",
+                    ], 0
+                );
+        </pg-code></setup>
+        <statement>
+            <p>Write each expression in radical notation.<ol label="a">
+                <li><p><m>5t^{1.25}</m></p>
+                <p><var name="$A" form="buttons"/> </p>
+                </li>
+                <li><p><m> 3m^{-5/3}</m></p>
+                <p><var name="$B" form="buttons"/> </p>
+                </li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol cols="2" label="a">
+                <li><p><m>5\sqrt[4]{t^5} </m></p></li>
+                <li><p><m>\dfrac{3}{\sqrt[3]{m^5} } </m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
@@ -325,15 +434,30 @@ and arrived at the figure <m>297</m> g of LSD. Unfortunately, the elephant did n
     <li><p><m> \sqrt[3]{2y^2} = \left(2y^2\right)^{1/3} = 2^{1/3} y^{2/3}</m></p></li>
 </ol></p></statement></example>
 
-<exercise><title>Practice 5</title>
-<statement><p>Convert to exponential notation.</p><ol label="a" cols="2">
-        <li><p><m>\sqrt[3]{6w^2}</m></p></li>
-        <li><p><m>  \sqrt[4]{\dfrac{v^3}{s^5}}</m></p></li>
-    </ol></statement>
-<answer><p><ol cols="2" label="a">
-    <li><p><m>6^{1/3} w^{2/3} </m></p></li>
-    <li><p><m>v^{3/4} s^{-5/4} </m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+            Context(Fraction)->variables->add(w=>"Real", v=>"Real", s=>"Real");
+            Context()->flags->set(limits=>[2,5]);
+            $a = Formula("6**(1/3)* w**(2/3)");
+            $b = Formula(" v**(3/4)*s**(-5/4) ");
+        </pg-code></setup>
+        <statement>
+            <p>Convert to exponential notation.</p>
+            <p><ol label="a">
+                <li><p><m>\sqrt[3]{6w^2}=</m><var name="$a" width="12"/></p></li>
+                <li><p><m>  \sqrt[4]{\dfrac{v^3}{s^5}}=</m><var name="$b" width="12"/></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol cols="2" label="a">
+            <li><p><m>6^{1/3} w^{2/3} </m></p></li>
+            <li><p><m>v^{3/4} s^{-5/4} </m></p></li>
+        </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Operations with Rational Exponents</title>
@@ -366,15 +490,72 @@ and arrived at the figure <m>297</m> g of LSD. Unfortunately, the elephant did n
     </p></li>
 </ol></p></statement></example>
 
-<exercise><title>Practice 6</title>
-<statement><p>Simplify by applying the laws of exponents.<ol label="a" cols="2">
-        <li><m> x^{1/3}\left(x + x^{2/3}\right)</m></li>
-        <li><m> \dfrac{n^{9/4}}{4n^{3/4}}</m></li>
-    </ol></p></statement>
-<answer><p><ol label="a" cols="2">
-    <li><p><m>x^{4/3}+x </m></p></li>
-    <li><p><m>\dfrac{n^{3/2}}{4} </m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 6</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->flags->set(reduceConstants=>0);
+            Context()->flags->set(limits=>[1,10]);
+            Context()->operators->set(
+            '+' => {class => 'bizarro::BOP::add', isCommand => 1},
+            '/' => {class => 'bizarro::BOP::divide', isCommand => 1},
+            '**' => {class => 'bizarro::BOP::power', isCommand => 1, perl=>undef},
+            '^' => {class => 'bizarro::BOP::power', isCommand => 1, perl=>undef},
+            );
+            #Context()->flags->set(bizarroPow=>1);
+            Context()->variables->add(n=>"Real");
+            Context()->flags->set(limits=>[2,5]);
+            Context()->flags->set(bizarroAdd=>1);
+            Context()->flags->set(bizarroDiv=>1);
+
+            $f = Formula("x**(4/3) + x");
+            $g = Formula("n**(3/2)/4");
+
+            $f_evaluator = $f -> cmp(checker=>sub{
+            my ( $correct, $student, $ansHash ) = @_;
+            return 0 if $ansHash->{isPreview} || $correct != $student;
+            $student = $ansHash->{student_formula};
+            $correct = $correct->{original_formula} if defined $correct->{original_formula};
+            $student = Formula("$student"); $correct = Formula("$correct");
+            return 0 unless ($correct == $student);
+            #Context()->flags->set(bizarroDiv=>0,bizarroAdd=>0);
+            delete $correct->{test_values};
+            delete $student->{test_values};
+            my $OK = (($correct == $student) or ($student == $correct));
+            Value::Error("Your answer is equivalent, but please use the proper format") unless $OK;
+            return $OK;
+            });
+
+            $g_evaluator = $g -> cmp(checker=>sub{
+            my ( $correct, $student, $ansHash ) = @_;
+            return 0 if $ansHash->{isPreview} || $correct != $student;
+            $student = $ansHash->{student_formula};
+            $correct = $correct->{original_formula} if defined $correct->{original_formula};
+            $student = Formula("$student"); $correct = Formula("$correct");
+            return 0 unless ($correct == $student);
+            Context()->flags->set(bizarroDiv=>0,bizarroAdd=>0);
+            delete $correct->{test_values};
+            delete $student->{test_values};
+            my $OK = (($correct == $student) or ($student == $correct));
+            Value::Error("Your answer is equivalent, but please use the proper format") unless $OK;
+            return $OK;
+            });
+        </pg-code></setup>
+        <statement>
+            <p>Simplify by applying the laws of exponents.</p>
+            <p><ol label="a">
+                <li><p><m> x^{1/3}\left(x + x^{2/3}\right)=</m><var name="$f" width="12" evaluator="$f_evaluator"/> </p></li>
+                <li><p><m> \dfrac{n^{9/4}}{4n^{3/4}}=</m><var name="$g" width="12" evaluator="$g_evaluator"/></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>x^{4/3}+x </m></p></li>
+                <li><p><m>\dfrac{n^{3/2}}{4} </m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
@@ -439,13 +620,29 @@ The solution is <m>8</m>.</p>
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 7</title>
-<statement><p>Solve the equation <m>3.2z^{0.6} - 9.7 = 8.7</m>. Round your answer to two decimal places.</p></statement>
-<hint>
-    <p><m>\blert{\text{Isolate the power.}}</m></p>
-    <p><m>\blert{\text{Raise both sides to the reciprocal power}}.</m></p>
-</hint>
-<answer><p><m>18.45</m></p></answer></exercise>
+<exercise>
+    <title>Practice 7</title>
+    <webwork>
+        <setup><pg-code>
+            $answer = Compute("(18.4/3.2)**(1/0.6) ")->with(
+              tolType => 'absolute',
+              tolerance => .005,
+            );
+
+        </pg-code></setup>
+        <statement>
+            <p>Solve the equation <m>3.2z^{0.6} - 9.7 = 8.7</m>. Round your answer to two decimal places.</p>
+            <p>Answer: <var name="$answer" width="4"/> </p>
+        </statement>
+        <hint>            
+        <p><m>\blert{\text{Isolate the power.}}</m></p>
+        <p><m>\blert{\text{Raise both sides to the reciprocal power}}.</m></p>
+        </hint>
+        <solution>
+            <p><m>18.45</m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>

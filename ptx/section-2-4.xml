@@ -24,24 +24,75 @@
 
 <exercise>
     <title>Practice 1</title>
-<!--
-    <webwork>
-        <setup><pg-code>
-            
-        </pg-code></setup>
-        <statement>
+  <webwork>
+    <setup>
+      <pg-code>
+        $fun=Formula("1.5-abs(x-11.5)");
+        $fake=Formula("6*x");
+        $fake2=Formula("120-6*x");
+        $fake3=Formula("120-x^2/4");
+
+        foreach my $i (0..3) {
+        $gr[$i] = init_graph(-.1,-.1,3.1,3.1, axes=>[0,0], grid=>[1,1], size=>[240,240]);
+        $gr[$i]->lb('reset');
+        }
+
+        $gr[0]->moveTo(0,0);
+        $gr[0]->lineTo(1,1,'red',2);
+        $gr[0]->lineTo(2,1,'red',2);
+        $gr[0]->lineTo(3,0,'red',2);
+        $gr[0]->lb( new Label(1.5,1.5,"(B)", $j,'black','center','top','large'));
+
+        $gr[1]->moveTo(0,0);
+        $gr[1]->lineTo(1,1,'red',2);
+        $gr[1]->lineTo(1,2,'red',2);
+        $gr[1]->lineTo(0,3,'red',2);
+        $gr[1]->lb( new Label(1.5,1.5,"(A)",$j,'black','center','top','large')); 
+
+        $gr[2]->moveTo(0,0);
+        $gr[2]->lineTo(2.5,2.5,'red',2);
+        $gr[2]->lineTo(2.5,0,'red',2);
+        $gr[2]->lb( new Label(1.2,1.8,"(D)", $j,'black','center','top','large'));
+
+        $gr[3]->moveTo(0,0);
+        $gr[3]->lineTo(2.5,2.5,'red',2);
+        $gr[3]->lineTo(0,2.5,'red',2);
+        $gr[3]->lb( new Label(1.8,1.5,"(C)", $j,'black','center','top','large'));
+
+
+        $mc = RadioButtons(
+                    [ "(A)", "(B)", "(C)","(D)",
+                    "none of the above"],
+                    1
+                );
+      </pg-code>
+    </setup>
+    <statement>
             <p>Erin walks from her home to a convenience store, where she buys some cat food, and then walks back home. Sketch a possible graph of her distance from home as a function of time.</p>
-        </statement>
-        <solution>
-            <p>A possible graph is shown below.</p>
-        </solution>
-    </webwork>
+            <sidebyside widths="35% 35%" margins="5% 5%">
+                <image pg-name="$gr[1]"/>
+                <image pg-name="$gr[0]"/>
+            </sidebyside>
+            <sidebyside widths="35% 35%" margins="5% 5%">
+                <image pg-name="$gr[3]"/>
+                <image pg-name="$gr[2]"/>
+            </sidebyside>
+            <p>The graph of Erin's distance from home is</p>
+            <p><var name="$mc" form="buttons"/> </p>
+    </statement>
+    <solution>
+        <sidebyside widths="40%">
+                <image pg-name="$gr[0]"/>
+            </sidebyside>
+            <p>
+              A graph is also shown below..
+            </p>
+    </solution>
+  </webwork>
     <conclusion>
         <sidebyside width="35%" margins="0% 65%"><image source="images/fig-in-ex-ans-2-4-1"><description>piecewise graph</description></image></sidebyside>
     </conclusion>
--->    
-<statement><p>Erin walks from her home to a convenience store, where she buys some cat food, and then walks back home. Sketch a possible graph of her distance from home as a function of time.</p></statement>
-<answer><sidebyside width="30%"><image source="images/fig-in-ex-ans-2-4-1"><description>piecewise graph</description></image></sidebyside></answer></exercise>
+</exercise>
 
 <p>The graphs in <xref ref="example-home-to-school" text="type-global"/> are piecewise linear, because Forrest traveled at a constant rate in each segment. In addition to choosing a graph that is increasing, decreasing, or constant to model a process, we can consider graphs that bend upward or downward. The bend is called the <term>concavity</term><idx>concavity</idx> of the graph.</p>
 
