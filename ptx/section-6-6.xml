@@ -164,7 +164,8 @@
 	</tabular></sidebyside>
 		<p>Solving this last equation gives us <m>b = 2</m>. Then we substitute <m>b = 2</m> into either of Equations (4) or (5) to find <m>a = -3</m>. Finally, we substitute both values into one of the three original equations to find <m>c = 4</m>. The solution of the system is <m>a = -3</m>, <m>b = 2</m>, <m>c = 4</m>.</p></solution></example>
 
-<exercise><statement><p>Follow the steps to solve the system
+<exercise><title>Practice 1</title>
+<statement><p>Follow the steps to solve the system
 		<me>
 		\begin{alignedat}{9}
 		a \amp {}+{} \amp b \amp {}+{} \amp c \amp {}={} \amp 3\amp\hphantom{blankblank} \amp(1)\\
@@ -289,7 +290,28 @@ Thus, the equation of the parabola is
 The parabola and the three points are shown below.</p>
 	<sidebyside width="25%"><image source="images/fig-parabola-through-3-specified-points" ><description>parabola through-3 specified points</description></image></sidebyside></solution></example>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $elim = RadioButtons(
+              ["\(a\)",
+              "\(b\)",
+              "\(c\)",
+              "\(x\)"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>When we solve a system to fit a parabola through three points, which variable should we eliminate first?</p>
+        <p><var name="$elim" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>c</m></p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 2</title>
+<statement><p><ol label="a">
 	<li><p>Find the equation of a parabola
 				<me>y = ax^2 + bx + c</me>
 	that passes through the points <m>(0, 80)</m>, <m>(15, 95)</m>, and <m>(25, 55)</m>.</p></li>
@@ -349,7 +371,8 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
 		<me>C = 0.006v^2 - 0.5v + 16.2</me> The graph of this function, along with the data points, is shown at right.</p>
 	<image source="images/fig-parabola-fitting-scatterplot"><description>parabola fitting nonlinear scatterplot</description></image></sidebyside></solution></example>
 
-<exercise><statement><p>Sara plans to start a side business selling eggs. She finds that the total number of eggs produced each day depends on the number of hens confined in the henhouse, as shown in the table. Use the first three data points to find a quadratic model <m>E = an^2 + bn + c</m>. Plot the data and sketch the curve on the same axes.</p>
+<exercise><title>Practice 3</title>
+<statement><p>Sara plans to start a side business selling eggs. She finds that the total number of eggs produced each day depends on the number of hens confined in the henhouse, as shown in the table. Use the first three data points to find a quadratic model <m>E = an^2 + bn + c</m>. Plot the data and sketch the curve on the same axes.</p>
 	<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
 			<row>
 				<cell>Number of hens, <m>n</m> </cell>
@@ -370,6 +393,16 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
 		</tabular></sidebyside></statement>
 <answer><p><m>E = -0.02n^2 + 1.3n</m></p>
 <sidebyside width="30%"><image source="images/fig-in-ex-ans-6-6-3"><description>parabola fit to points</description></image></sidebyside></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain how to fit a parabola through three points.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Finding an Equation in Vertex Form</title>
@@ -408,7 +441,28 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
 	Andre's shot will score.</p></li>
 	</ol></p></solution></example>
 
-<exercise><statement><p>Francine is designing a synchronized fountain display for a hotel in Las Vegas. For each fountain, water emerges in a parabolic arc from a nozzle <m>3</m> feet above the ground. Francine would like the vertex of the arc to be <m>8</m> feet high and <m>2</m> feet horizontally from the nozzle.<ol label="a">
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $morpt = RadioButtons(
+              ["One",
+              "Two",
+              "Three",
+              "None"],
+              0, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>If you know the vertex of a parabola, how many more points do you need to find its equation?</p>
+        <p><var name="$morpt" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>One</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 4</title>
+<statement><p>Francine is designing a synchronized fountain display for a hotel in Las Vegas. For each fountain, water emerges in a parabolic arc from a nozzle <m>3</m> feet above the ground. Francine would like the vertex of the arc to be <m>8</m> feet high and <m>2</m> feet horizontally from the nozzle.<ol label="a">
 		<li><p>Choose a coordinate system for the diagram below and write a function for the path of the water.</p>
 		<sidebyside  width="35%"><image source="images/fig-water-fountain"><description>water fountain with parabolic water stream</description></image></sidebyside></li>
 		<li><p>How far from the base of the nozzle will the stream of water hit the ground?</p></li>
@@ -435,7 +489,8 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
 			<sidebyside width="70%"><image source="images/fig-GC-quadratic-regression2" ><description>GC plot and GC table quadratic regression output</description></image></sidebyside></li>
 	</ol></p></solution></example>
 
-<exercise><statement><p>To test the effects of radiation, a researcher irradiated male mice with various dosages and bred them with unexposed female mice. The table below shows the fraction of fertilized eggs that survived, as a function of the radiation dosage. (Source: Strickberger, Monroe W., 1976)</p>
+<exercise><title>Practice 5</title>
+<statement><p>To test the effects of radiation, a researcher irradiated male mice with various dosages and bred them with unexposed female mice. The table below shows the fraction of fertilized eggs that survived, as a function of the radiation dosage. (Source: Strickberger, Monroe W., 1976)</p>
 		<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
 	        <row bottom="minor">
 	            <cell>Radiation (rems)</cell>
@@ -464,6 +519,26 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
 	<li><p><m>y = 3.65x^2 - 0.001x + 1.02</m></p>
 	<sidebyside width="40%"><image source="images/fig-in-ex-ans-6-6-5"><description>parabola fit to points</description></image></sidebyside></li>
 </ol></p></answer></exercise>
+
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $qureg = RadioButtons(
+              ["One",
+              "Two",
+              "Three",
+              "None"],
+              3, 
+            );             
+        </pg-code></setup>
+    <statement>
+        <p>How many data points must a quadratic regression graph pass through?</p>
+        <p><var name="$qureg" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>None</p>
+    </solution>
+</webwork></exercise>
 
 <warning><p>We must be careful that our data set gives a complete picture of the situation we want to model. A regression equation may fit a particular collection of data and still be a poor model if the rest of the data diverge from the regression graph.</p>
 <sidebyside widths="30% 50%" valigns="middle middle">
@@ -512,9 +587,31 @@ From either the graph of the regression equation or from the table (see figure b
 <image source="images/fig-quadratic-fit-of-periodic"><description>parabola fit on part of a periodic wave</description></image> 
 <p>The graph of the height is shown at left, along with the graph of our quadratic regression equation. You can see that the regression equation fits the actual curve only on a small interval.</p>
 </sidebyside>
+
 <p>Your calculator can always compute a regression equation, but that equation is not necessarily appropriate for your data. Choosing a reasonable type of regression equation for a particular data set requires knowledge of different kinds of models and the physical or natural laws that govern the situation at hand.</p>
 
-<exercise><statement><p>A speeding motorist slams on the brakes when she sees an accident directly ahead of her. The distance she has traveled <m>t</m> seconds after braking is shown in the table.</p>
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $limpar = RadioButtons(
+              ["A parabola is a good model for any non-linear curve.",
+              "We will get the same equation by fitting a parabola through any three points of a data set.",
+              "We can use elimination to fit a parabola through three points.",
+              "When we use quadratic regression, the lowest (or highest) point of a data set will be the vertex of the parabola."],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Which statement is true?</p>
+        <p><var name="$limpar" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>We can use elimination to fit a parabola through three points.</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 6</title>
+<statement><p>A speeding motorist slams on the brakes when she sees an accident directly ahead of her. The distance she has traveled <m>t</m> seconds after braking is shown in the table.</p>
 		<sidebyside><tabular  top="major" halign="center" right="minor" left="minor" bottom="minor">
 			<row>
 				<cell>Time (seconds)</cell>
@@ -541,6 +638,16 @@ From either the graph of the regression equation or from the table (see figure b
 	<sidebyside width="40%"><image source="images/fig-in-ex-ans-6-6-6.jpg"><description>parabola fit to points</description></image></sidebyside></li>
 	<li><p><m>(3.67, 201)</m>: The car came to a stop in <m>3.67</m> seconds, after sliding <m>201</m> feet.</p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Why is it a bad idea to clculate a regression equation without first plotting the data?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 
 </subsection>
 <xi:include href="./summary-6-6.xml" /> <!-- summary  -->

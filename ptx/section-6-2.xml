@@ -42,6 +42,26 @@ where the left side of the equation includes the square of a binomial, or a <ter
 	<me>(x + p)^2= x^2 + 2px + p^2</me>
 Note that the coefficient of the linear term, <m>2p</m>, is twice the constant in the binomial, and the constant term of the trinomial, <m>p^2</m>, is its square.</p>
 
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $lint = RadioButtons(
+              ["\(x^2\)",
+              "\(6x\)",
+              "\(12x\)",
+              "\(36\)"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What is the linear term of <m>(x+6)^2</m> ?</p>
+        <p><var name="$lint" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>12x</m></p>
+    </solution>
+</webwork></exercise>
+
 <p>We would like to reverse the process and write a quadratic expression as the square of a binomial. For example, what constant term can we add to
 	<me>x^2 - 16x</me>
 to produce a perfect square trinomial? Compare the expression to the formula above:
@@ -78,7 +98,8 @@ Notice that in the resulting trinomial, the constant term is equal to <em>the sq
 	<li>In figure (c) we see that the missing corner piece has area <m>p^2 = 5^2 = 25</m>.</li></ul></p>
 <sidebyside  width="70%"> <image source="images/fig-completing-the-square" ><description>completing the square</description></image></sidebyside></note>
 
-<exercise><statement><p>Complete the square by adding an appropriate constant; write the result as the square of a binomial.<ol label="a">
+<exercise><title>Practice 1</title>
+<statement><p>Complete the square by adding an appropriate constant; write the result as the square of a binomial.<ol label="a">
 		<li><m>x^2 - 18x{} + {}<fillin characters="6" />{}= (x{}<fillin characters="6" /> )^2</m></li>
 		<li><m>x^2 +9x{} + {}<fillin characters="6" />{}= (x{}<fillin characters="6" /> )^2</m></li>
 		</ol></p></statement>
@@ -98,26 +119,29 @@ Notice that in the resulting trinomial, the constant term is equal to <em>the sq
 	<me>x^2 - 6x - 7 = 0</me>
 and follow the steps to find the solutions.</p>
 
-<p><em>Step 1</em>  Begin by moving the constant term to the other side of the equation, to get
-<me>x^2 - 6x{}<fillin characters="6"/> = 7</me>
-</p>
-<p><em>Step 2</em>  Now complete the square on the left. Because
+<p><em>Step 1</em></p>  
+<p>Begin by moving the constant term to the other side of the equation, to get
+<me>x^2 - 6x{}<fillin characters="6"/> = 7</me></p>
+<p><em>Step 2</em></p>  
+<p>Now complete the square on the left. Because
 		<me>p = \frac{1}{2}(-6) = -3 ~~~\text{ and } ~~~ p^2 = (-3)^2 = 9</me>
 	we add <m>9</m> to <em>both</em> sides of our equation to get
 		<me>x^2 - 6x \alert{{}+9}=7\alert{{}+9}</me></p>
-<p><em>Step 3</em>  The left side of the equation is now the square of a binomial, namely <m>(x - 3)^2</m>. We write the left side in its square form and simplify the right side, which gives us
+<p><em>Step 3</em></p>  
+<p>The left side of the equation is now the square of a binomial, namely <m>(x - 3)^2</m>. We write the left side in its square form and simplify the right side, which gives us
 		<me>(x - 3)^2 =16</me>
 	(You can check that this equation is equivalent to the original one; if you expand the left side and collect like terms, you will return to the original equation.)</p>
-<p><em>Step 4</em>  We can now use extraction of roots to find the solutions. Taking square roots of both sides, we get
+<p><em>Step 4</em></p>  
+<p>We can now use extraction of roots to find the solutions. Taking square roots of both sides, we get
 		<!--*****--><me>\begin{aligned}[t]
 		x - 3 \amp =4 \amp\text{or}\amp\amp x - 3 \amp= -4\amp \blert{\text{Solve each equation.}}\\
 		x \amp =7 \amp\text{or}\amp\amp x \amp= -1
 		\end{aligned}</me><!--*****-->
 	The solutions are <m>7</m> and <m>-1</m>.</p>
 
-<sidebyside widths="25% 50%" valigns="middle middle">
+ <note><sidebyside widths="25% 50%" valigns="middle middle">
 <image source="images/fig-parabola-with-symmetry-line"><description>parabola </description></image>
-<p>The graph of <m>y = x^2 - 6x - 7</m> is shown in at left. Note that the <m>x</m>-intercepts of the graph are <m>x = 7</m> and <m>x = -1</m>, and the parabola is symmetric about the vertical line halfway between the intercepts, at <m>x = 3</m>.</p></sidebyside>
+<p>The graph of <m>y = x^2 - 6x - 7</m> is shown in at left. Note that the <m>x</m>-intercepts of the graph are <m>x = 7</m> and <m>x = -1</m>, and the parabola is symmetric about the vertical line halfway between the intercepts, at <m>x = 3</m>.</p></sidebyside></note>
 
 <p>We can also solve <m>x^2 - 6x - 7 = 0</m> by factoring instead of completing the square. Of course, we get the same solutions by either method. In <xref ref="example-completing-the-square2" text="type-global"/>, we will solve an equation that cannot be solved by factoring.
 </p> 
@@ -143,7 +167,28 @@ and follow the steps to find the solutions.</p>
 		<sidebyside  width="25%"><image source="images/fig-parabola-with-symmetry-line2" ><description>parabola showing x-intercepts and line of symmetry</description></image></sidebyside></li>
 </ol></p></solution></example>
 
-<exercise xml:id="exercise-completing-the-square2"><statement><p><ol label="a">
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $cps = RadioButtons(
+              ["\(25\)",
+              "\(-25\)",
+              "\(\dfrac{25}{4}\)",
+              "\(10\)"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What should we add to <m>x^2-5x</m> to create a perfect square?</p>
+        <p><var name="$cps" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>\dfrac{25}{4}</m></p>
+    </solution>
+</webwork></exercise>
+
+<exercise xml:id="exercise-completing-the-square2"><title>Practice 2</title>
+<statement><p><ol label="a">
 	<li><p>Follow the steps to solve by completing the square: <m>x^2 - 1 = 3x</m>.<ol label="1">
 		<li><p>Write the equation with the constant on the right.</p></li>
 		<li><p>Complete the square on the left:
@@ -163,6 +208,16 @@ and follow the steps to find the solutions.</p>
 	<li><p><m>x=\dfrac{3}{2}\pm\sqrt{\frac{13}{4}} </m></p></li>
 	<li><p><m>x\approx -0.30</m> or <m>x\approx 3.30</m></p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain how to tell whether <m>x^2+bx+c</m> is the square of a binomial.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>The General Case</title>
@@ -195,7 +250,28 @@ and follow the steps to find the solutions.</p>
 		\end{aligned}</me><!--*****-->
 You can check that <m>(2x - 3)^2</m> is not equal to <m>2x^2 - 6x + 9</m>. We have not written the left side of the equation as a perfect square, so the solutions we obtain by extracting roots will not be correct.</p></warning>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $fst = RadioButtons(
+              ["Divide \(-6\) by 2",
+              "Get zero on one side",
+              "Divide both sides by 3",
+              "Factor the left side"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What is the first step in solving <m>3x^2-6x=2</m> ?</p>
+        <p><var name="$fst" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Divide both sides by 3</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 3</title>
+<statement><p><ol label="a">
 	<li><p>Follow the steps to solve by completing the square: <me>-4x^2 - 36-65 = 0</me>.<ol label="1">
 		<li><p>Divide each term by <m>-4</m>. Write the equation with the constant on the right.</p></li>
 		<li><p>Complete the square on the left:
@@ -216,6 +292,16 @@ You can check that <m>(2x - 3)^2</m> is not equal to <m>2x^2 - 6x + 9</m>. We ha
 
 <xi:include href="./assemblage-solve-quadratic-by-completing-square.xml" />
 
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>How does creating the square of a binomial help us solve a quadratic equation?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
+
 </subsection>
 
 <subsection><title>Quadratic Formula</title><idx>quadratic formula</idx>
@@ -226,9 +312,33 @@ and obtain a formula for the solutions of any quadratic equation.</p>
 
 <xi:include href="./assemblage-quadratic-formula.xml" />
 
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $rttm = RadioButtons(
+              ["No, it should be \(b-2\sqrt{ac}\).",
+              "Yes, we take the square root of each term.",
+              "No, we cannot take the square root of a negative number.",
+              "No, \(\sqrt{x+y} \not= \sqrt{x}+\sqrt{y}\)."],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Does <m>\sqrt{b^2-4ac}=b-\sqrt{4ac}</m> ? Why or why not?</p>
+        <p><var name="$rttm" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>No, <m>\sqrt{x+y} \not= \sqrt{x}+\sqrt{y}</m>.</p>
+    </solution>
+</webwork></exercise>
+
 <p>This formula expresses the solutions of a quadratic equation in terms of its coefficients. (The proof of the formula is considered in the Homework problems.) The symbol <m>\pm</m>, read plus or minus, is used to combine the two equations
 	<me>x =\dfrac{-b + \sqrt{b^2 - 4ac}}{2a} ~~~~ \text{and} ~~~~x =\dfrac{-b - \sqrt{b^2 - 4ac}}{2a}</me> 
 into a single equation.</p>
+
+<note><p>Notice that the two solutions can be written as
+	<me>x =\dfrac{-b}{2a} + \dfrac{\sqrt{b^2 - 4ac}}{2a} ~~~~ \text{and} ~~~~x =\dfrac{-b}{2a} - \dfrac{\sqrt{b^2 - 4ac}}{2a}</me>
+	These expressions show us again that the <m>x</m>-intercepts of the graph of <m>y=ax^2+bx+c~~</m> lie an equal distance on either side of the vertical line <m>x=\dfrac{-b}{2a}</m>, which is the axis of symmetry of the parabola. We'll consider these facts more fully in the next section, Graphing Parabolas.</p></note>
 
 <p>To solve a quadratic equation using the quadratic formula, all we have to do is substitute the coefficients <m>a</m>, <m>b</m>, and <m>c</m> into the formula.</p>
 
@@ -245,11 +355,22 @@ Using a calculator, we find that the solutions are approximately <m>1.707</m> an
 and <m>0.293</m>, as shown below.</p>
 	<sidebyside  width="30%"><image source="images/fig-parabola-intercepts" ><description>parabola with irrational x-intercepts</description></image></sidebyside></solution></example>
 
-<exercise><statement><p>Use the quadratic formula to solve <m>~~x^2 - 3x = 1</m>.</p>
+<exercise><title>Practice 4</title>
+<statement><p>Use the quadratic formula to solve <m>~~x^2 - 3x = 1</m>.</p>
 </statement>
 <answer><p><m>x=\dfrac{3\pm \sqrt{13}}{2} </m></p></answer></exercise>
 
 <p>Note that the solutions to this equation are the same as the solutions we found in <xref ref="exercise-completing-the-square2" text="type-global"/>.</p>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>How can you decide which of the three methods for solving a quadratic equation you should use?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Applications</title>
@@ -261,6 +382,26 @@ and <m>0.293</m>, as shown below.</p>
 		<li>Quadratic formula</li>
 	</ol>
 	Factoring and extraction of roots are relatively fast and simple, but they do not work on all quadratic equations. The quadratic formula will work on any quadratic equation.</p>
+
+<exercise><title>QuickCheck 5</title>
+<webwork>
+    <setup><pg-code>       
+            $qform = RadioButtons(
+              ["Nothing.",
+              "We should simplify the radical.",
+              "\(-b\) should be over \(2a\).",
+              "It should be \(\pm b\)."],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p> What is wrong with this statement of the quadratic formula? <m>x=-b \pm \dfrac{\sqrt{b^2-4ac}}{2a}</m>  </p>
+        <p><var name="$qform" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>-b</m> should be over <m>2a</m>.</p>
+    </solution>
+</webwork></exercise>
 
 <example xml:id="example-fencing-areas"><statement><p>The owners of a day-care center plan to enclose a divided play area against the back wall of their building, as shown below. They have <m>300</m> feet of picket fence and would like the total area of the playground to be <m>6000</m> square feet. Can they enclose the playground with the fence they have, and if so, what should the dimensions of the playground be?</p>
 	<sidebyside  width="30%"><image source="images/fig-fencing-areas" ><description>two fenced rectangles against wall</description></image> </sidebyside></statement>
@@ -281,7 +422,8 @@ Simplifying the last fraction, we find that <m>x \approx 72.35</m> or <m>x\appro
 	<li> If the width is <m>27.65</m> feet, the length is <m>300 - 3(27.65)</m>, or <m>217.05</m> feet.</li>
 	</ul></p></solution></example>
 
-<exercise><statement><p>In <xref ref="investigation-height-of-baseball" text="type-global"/>, we considered the height of a baseball, given by the equation
+<exercise><title>Practice 5</title>
+<statement><p>In <xref ref="investigation-height-of-baseball" text="type-global"/>, we considered the height of a baseball, given by the equation
 	<me>h = -16t^2 + 64t + 4</me>
 Find two times when the ball is at a height of <m>20</m> feet. Give your answers to two decimal places.</p></statement>
 <answer><p><m>0.27</m> sec, <m>3.73</m> sec</p></answer></exercise>
@@ -297,8 +439,19 @@ Expressions in <m>y</m> are treated as constants with respect to <m>x</m>, so th
 		\amp = \frac{y \pm\sqrt{y^2 - 4y + 8}}{2}
 		\end{aligned}</me><!--*****--></p></solution></example>
 
-<exercise xml:id="exercise-quadratic-in-two-variables"><statement><p>Solve <m>~~2x^2 + kx + k^2 = 1~~</m> for <m>x</m> in terms of <m>k</m>.</p></statement>
+<exercise xml:id="exercise-quadratic-in-two-variables"><title>Practice 6</title>
+<statement><p>Solve <m>~~2x^2 + kx + k^2 = 1~~</m> for <m>x</m> in terms of <m>k</m>.</p></statement>
 <answer><p><m>x=\dfrac{-k\pm\sqrt{8-7k^2}}{4} </m></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain in words how to evaluate the quadratic formula.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 
 </subsection>
 <xi:include href="./summary-6-2.xml" /> <!-- summary  -->

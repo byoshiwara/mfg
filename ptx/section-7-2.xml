@@ -52,6 +52,26 @@
 	<p>The graph of <m>P(x) = x^3 - 4x</m> is shown in figure (b). It is not exactly the same shape as the basic cubic—it has two turning points—but it is similar, especially at the edges of the graphs.</p>
 </solution></example>
 
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $infl = RadioButtons(
+              ["direction.",
+              "concavity.",
+              "sign.",
+              "all of these."],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>At an inflection point, a graph changes</p>
+        <p><var name="$infl" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>concavity.</p>
+    </solution>
+</webwork></exercise>
+
 <p>Despite the differences in the central portions of the two graphs, they exhibit similar <em>long-term</em> behavior. <ul>
 		<li>For very large and very small values of <m>x</m>, both graphs look like the power function <m>y = x^3</m>.</li>
 		<li> The <m>y</m>-values increase from <m>-\infty</m> toward zero in the third quadrant, and they increase from zero toward <m>+\infty</m> in the first quadrant. Or we might say that the graphs start at the lower left and extend to the upper right.</li>
@@ -63,7 +83,8 @@ All cubic polynomials display this behavior when their lead coefficients (the co
 	<li> The domain of any polynomial function is the entire set of real numbers.</li>
 	</ul></p>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>Practice 1</title>
+<statement><p><ol label="a">
 	<li><p>Complete the table of values below for <m>C(x) = -x^3 - 2x^2 + 4x + 4</m>.</p>
 		<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
 			        <row bottom="minor">
@@ -167,7 +188,8 @@ All cubic polynomials display this behavior when their lead coefficients (the co
 	
 <p>As in <xref ref="example-two-cubics" text="type-global"/>, both graphs have similar long-term behavior. The <m>y</m>-values decrease from <m>-\infty</m> toward zero as <m>x</m> increases from <m>-\infty</m>, and the <m>y</m>-values increase toward <m>+\infty</m> as <m>x</m> increases to <m>+\infty</m>. This long-term behavior is similar to that of the power function <m>y = x^4</m>. Its graph also starts at the upper left and extends to the upper right.</p></solution></example>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>Practice 2</title>
+<statement><p><ol label="a">
 	<li><p>Complete the following table of values for <m>Q(x) = -x^4 - x^3 - 6x^2 + 2</m>.</p>
 		<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
 			        <row bottom="minor">
@@ -241,6 +263,26 @@ All cubic polynomials display this behavior when their lead coefficients (the co
 
 <note><p>Another way to describe the long-term behavior of a polynomial graph is to note that for large values of <m>\abs{x}</m>, the shape is similar to a power function of the same degree. It is the presence of the lower-degree terms in the polynomial that are responsible for any extra wiggles or turning points in the graph.
 </p></note>
+
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $longt = RadioButtons(
+              ["depends on the number of its zeros.",
+              "is the same as the behavior of \(y=kx^n\).",
+              "may have a horizontal asymptote.",
+              "cannot be determined without a graph."],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>The long-term behavior of a polynomial of degree <m>n</m></p>
+        <p><var name="$longt" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>is the same as the behavior of <m>y=kx^n</m>.</p>
+    </solution>
+</webwork></exercise>
 </subsection>
 
 <subsection><title><m>x</m>-Intercepts and the Factor Theorem</title>
@@ -248,17 +290,54 @@ All cubic polynomials display this behavior when their lead coefficients (the co
 <p>In <xref ref="chap6" text="type-global"/>, we saw that the x-intercepts of a quadratic polynomial, <m>f(x) = ax^2 + bx + c</m>, occur at values of <m>x</m> for which <m>f(x) = 0</m>, that is, at the real-valued solutions of the equation <m>ax^2 + bx + c = 0</m>. The same holds true for polynomials of higher degree.</p>
 
 <p>Solutions of the equation <m>P(x) = 0</m> are called <term>zeros</term> of the polynomial <m>P</m>. In <xref ref="example-two-cubics" text="type-global"/>, we graphed the cubic polynomial <m>P(x) = x^3 - 4x</m>. Its <m>x</m>-intercepts are the solutions of the equation <m>x^3 - 4x = 0</m>, which we can solve by factoring the polynomial <m>P(x)</m>.
-	<md>
-		<mrow>
-			x^3 - 4x \amp= 0</mrow>
-		<mrow>
-			x(x - 2)(x + 2) \amp= 0</mrow>
-	</md>
+	<md><mrow>x^3 - 4x \amp= 0</mrow>
+		<mrow>x(x - 2)(x + 2) \amp= 0</mrow></md>
 The zeros of <m>P</m> are <m>0</m>, <m>2</m>, and <m>-2</m>. Each zero of <m>P</m> corresponds to a factor of <m>P(x)</m>. This result suggests the following theorem, which holds for any polynomial <m>P</m>.</p>
 
 <xi:include href="./assemblage-factor-theorem.xml" />
 
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $noxi = RadioButtons(
+              ["It is quartic.",
+              "All of its coefficients are positive.",
+              "It cannot be factored further.",
+              "It has no turning points."],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Without graphing, how can you tell that the polynomial <m>p(x)=(x^2+1)(x^2+2)</m> has no <m>x</m>-intercepts?
+</p>
+        <p><var name="$noxi" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>It cannot be factored further.</p>
+    </solution>
+</webwork></exercise>
+
 <p>The factor theorem follows from the division algorithm for polynomials. We will consider both of these results in more detail in the Homework problems.</p>
+
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $must = RadioButtons(
+              ["Quadratic",
+              "Cubic",
+              "Quartic",
+              "None of these"],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>The graph of which type of polynomial must have an <m>x</m>-intercept?</p>
+        <p><var name="$must" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Cubic</p>
+    </solution>
+</webwork></exercise>
 
 <p>Because a polynomial function of degree <m>n</m> can have at most <m>n</m> linear factors of the form <m>(x - a)</m>, it follows that <m>P</m> can have at most <m>n</m> distinct zeros.</p> 
 	
@@ -294,7 +373,8 @@ The zeros of <m>P</m> are <m>0</m>, <m>2</m>, and <m>-2</m>. Each zero of <m>P</
 			<sidebyside   width="80%"><image source="images/fig-cubic-with-2-zeros-and-quartic-with-2-zeros" ><description>a cubic with two zeros and a quartic with two zeros</description></image></sidebyside></li>
 		</ol></p></solution></example>
 
-<exercise><statement><ol label="a">
+<exercise><title>Practice 3</title>
+<statement><ol label="a">
 	<li><p>Find the real-valued zeros of <m>P(x) = -x^4 + x^3 + 2x^2</m> by factoring.</p></li>
 	<li><p>Sketch a rough graph of <m>y = P(x)</m> by hand.</p></li>
 </ol></statement>
@@ -302,6 +382,16 @@ The zeros of <m>P</m> are <m>0</m>, <m>2</m>, and <m>-2</m>. Each zero of <m>P</
 	<li><p><m>-1, 0, 2</m></p></li>
 	<li><sidebyside width="50%"><image source="images/fig-in-ex-ans-7-2-3"><description>quartic</description></image></sidebyside></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>How may the graph of a polynomial differ from the graph of a power function of the same degree?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Zeros of Multiplicity Two or Three</title>
@@ -333,8 +423,19 @@ The zeros of <m>P</m> are <m>0</m>, <m>2</m>, and <m>-2</m>. Each zero of <m>P</
 <m>f</m> has a zero of multiplicity three at <m>x = -2</m>, a zero of multiplicity one at <m>x = 1</m>, and a zero of multiplicity two at <m>x = 3</m>. The graph has an S-shaped curve at <m>x = -2</m>, crosses the <m>x</m>-axis at <m>x = 1</m>, touches the <m>x</m>-axis at <m>x = 3</m>, and then changes direction, as shown below.</p>
 	<sidebyside   width="35%"><image source="images/fig-sixth-degree-polynomial"><description>graph of sixth degree polynomial with zero of multiplicity 3, another of  multiplicity two. and a zero of multiplicity 1</description></image></sidebyside></solution></example>
 
-<exercise><statement><p>Sketch a rough graph of <m>f(x) = (x + 3)(x - 1)^2</m> by hand. Label the <m>x</m>- and <m>y</m>-intercepts.</p></statement>
+<exercise><title>Practice 4</title>
+<statement><p>Sketch a rough graph of <m>f(x) = (x + 3)(x - 1)^2</m> by hand. Label the <m>x</m>- and <m>y</m>-intercepts.</p></statement>
 <answer><sidebyside width="25%"><image source="images/fig-in-ex-ans-7-2-4"><description>cubic</description></image></sidebyside></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain how the multiplicity of a zero affects the shape of the graph near that zero.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 
 </subsection>
 <xi:include href="./summary-7-2.xml" /> <!-- summary  -->

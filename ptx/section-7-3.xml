@@ -20,7 +20,8 @@ has no real solutions.</p>
 Because <m>\sqrt{-4}</m> is not a real number, the equation <m>x^2 - 2x + 2 = 0</m> has no real solutions.</p>
 </solution></example>
 
-<exercise><statement><p>Solve the equation <m>x^2 - 6x + 13 = 0</m> by using the quadratic formula.</p></statement>
+<exercise><title>Practice 1</title>
+<statement><p>Solve the equation <m>x^2 - 6x + 13 = 0</m> by using the quadratic formula.</p></statement>
 <answer><p><m>x=\dfrac{6\pm\sqrt{-16} }{2} </m></p></answer></exercise>
 </subsection>
 
@@ -37,14 +38,33 @@ Because <m>\sqrt{-4}</m> is not a real number, the equation <m>x^2 - 2x + 2 = 0<
 	<me>i^2=-1 ~~~\text{ or }~~~ i=\sqrt{-1}</me></p></assemblage>
 
 <warning><p>The letter <m>i</m> used in this way is not a variable; it is the name of a specific number and hence is a constant. </p></warning>
+
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $imun = RadioButtons(
+              ["\(-1\)",
+              "\((-1)^2\)",
+              "\(i^2\)",
+              "\(\sqrt{-1}\)"],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What is the imaginary unit?</p>
+        <p><var name="$imun" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>\sqrt{-1}</m></p>
+    </solution>
+</webwork></exercise>
 	
 <p> The square root of any negative number can be written as the product of a real number and <m>i</m>. For example,
 	<md>
 		<mrow>\sqrt{-4}\amp=\sqrt{-1\cdot 4}</mrow>
 		<mrow>\amp= \sqrt{-1}\sqrt{4}=i\cdot2</mrow>
 	</md>
-or <m>\sqrt{-4}=2i</m>. Any number that is the product of <m>i</m> and a real number is called an <term>imaginary number</term>.
-</p>
+or <m>\sqrt{-4}=2i</m>. Any number that is the product of <m>i</m> and a real number is called an <term>imaginary number</term>.</p>
 
 <assemblage><title>Imaginary Numbers</title><idx>imaginary number</idx>
 <p>For <m>a\gt 0</m>,
@@ -69,7 +89,8 @@ or <m>\sqrt{-4}=2i</m>. Any number that is the product of <m>i</m> and a real nu
 					\end{aligned}</m></li>
 		</ol></p></solution></example>
 
-<exercise><statement><p>Write each radical as an imaginary number.<ol label="a" cols="2">
+<exercise><title>Practice 2</title>
+<statement><p>Write each radical as an imaginary number.<ol label="a" cols="2">
 			<li><m>\sqrt{-18}</m></li>
 			<li><m>-6\sqrt{-5}</m></li>
 		</ol></p></statement>
@@ -107,7 +128,8 @@ In a complex number <m>a+bi</m>, <m>a</m> is called the <term>real part</term><i
 </p></statement>
 <solution><p>Because <m>\sqrt{-4}=\sqrt{-1}\sqrt{4}=2i</m>, we have <m>\dfrac{2\pm\sqrt{-4}}{2}=\dfrac{2\pm2i}{2}</m>, or <m>1\pm i</m>. The solutions are <m>1+i</m> and <m>1-i</m>.</p></solution></example>
 
-<exercise><statement><p>Use extraction of roots to solve <m>(2x + 1)^2 + 9 = 0</m>. Write your answers as complex numbers.</p>
+<exercise><title>Practice 3</title>
+<statement><p>Use extraction of roots to solve <m>(2x + 1)^2 + 9 = 0</m>. Write your answers as complex numbers.</p>
 </statement>
 <answer><p><m>x=\dfrac{-1}{2}\pm\dfrac{3}{2}i </m></p></answer></exercise>
 </subsection>
@@ -115,6 +137,26 @@ In a complex number <m>a+bi</m>, <m>a</m> is called the <term>real part</term><i
 <subsection><title>Arithmetic of Complex Numbers</title>
 
 <p>All the properties of real numbers listed in Algebra Skills Refresher  <xref ref="appendix-The-Real-Number-System" text="type-global"/>  are also true of complex numbers. We can carry out arithmetic operations with complex numbers.</p>
+
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $cono = RadioButtons(
+              ["A complex number has a real part and an imaginary part.",
+              "We can perform all four arithmetic operations on complex numbers.",
+              "Every quadratic equation has solutions in the complex numbers.",
+              "Complex numbers cannot be combined with real numbers."],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Which statement about complex numbers is false?</p>
+        <p><var name="$cono" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Complex numbers cannot be combined with real numbers.</p>
+    </solution>
+</webwork></exercise>
 
 <p>We add and subtract complex numbers by combining their real and imaginary parts separately. For example,
 	<md>
@@ -133,7 +175,8 @@ In a complex number <m>a+bi</m>, <m>a</m> is called the <term>real part</term><i
 			<mrow>\amp = 3 + (-8)i = 3 - 8i</mrow>
 		</md></p></solution></example>
 
-<exercise><statement><p>Subtract: <m>(-3 + 2i ) - (-3 - 2i )</m>.</p></statement>
+<exercise><title>Practice 4</title>
+<statement><p>Subtract: <m>(-3 + 2i ) - (-3 - 2i )</m>.</p></statement>
 <answer><p><m>4i</m></p></answer></exercise>
 </subsection>
 
@@ -159,7 +202,8 @@ Finally, we combine the real parts and imaginary parts to obtain
 			<mrow>\amp= -18 + i\amp\amp \blert{\text{parts.}}</mrow>
 		</md></p></solution></example>
 
-<exercise><statement><p>Multiply <m>(-3 + 2i )(-3 - 2i )</m>.</p></statement>
+<exercise><title>Practice 5</title>
+<statement><p>Multiply <m>(-3 + 2i )(-3 - 2i )</m>.</p></statement>
 <answer><p><m>13</m></p></answer></exercise>
 
 <p>You can verify that in general the following rule holds.</p>
@@ -174,6 +218,16 @@ but
 so in this case
 		<me>\sqrt{ab}\ne\sqrt{a}\cdot\sqrt{b}</me>
 We can avoid possible errors by writing square roots of negative numbers as imaginary numbers.</p></warning>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>How is multiplying complex numbers similar to multiplying binomials?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Quotients of Complex Numbers</title>
@@ -200,12 +254,33 @@ To write the quotient in the form <m>a + bi</m>, we divide <m>-2</m> into each t
 		</md>
 The quotient is <m>-3 - 2i</m>.</p></solution></example>
 
-<exercise><statement><p>Divide <m>~~\displaystyle{\frac{8+9i}{3i}}</m></p></statement>
+<exercise><title>Practice 6</title>
+<statement><p>Divide <m>~~\displaystyle{\frac{8+9i}{3i}}</m></p></statement>
 <answer><p><m>3-\dfrac{8}{3}i </m></p></answer></exercise>
 
 <p>If <m>z = a + bi</m>  is any nonzero complex number, then the number <m>\overline{z} = a - bi</m>  is called the <term>complex conjugate</term><idx>complex conjugate</idx> of <m>z</m>. The product of a nonzero complex number and its conjugate is always a positive real number.
 	<me>z\overline{z} = (a + bi)(a - bi) = a^2 - b^2i^2 = a^2 - b^2(-1) = a^2 + b^2</me>
 We use this fact to find the quotient of complex numbers. If the divisor has both a real and an imaginary part, we multiply numerator and denominator by the conjugate of the denominator.</p>
+
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $conj = RadioButtons(
+              ["\(a-bi\)",
+              "\(a^2+b^2\)",
+              "\(a^2-b^2\)",
+              "\(ai+b\)"],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What is the product of <m>z=a+bi</m> with its complex conjugate?</p>
+        <p><var name="$conj" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>a^2+b^2</m></p>
+    </solution>
+</webwork></exercise>
 
 <example><statement><p>Divide <m>~~\displaystyle{\frac{2+3i}{4-2i}}</m></p></statement>
 <solution><p>We multiply numerator and denominator by <m>\alert{4 + 2i}</m>, the conjugate of the denominator.
@@ -219,8 +294,19 @@ We use this fact to find the quotient of complex numbers. If the divisor has bot
 		</md>
 	</p></solution></example>
 
-<exercise><statement><p>Write the quotient <m>~\displaystyle{\frac{4 - 2i}{1 + i}}~</m> in the form <m>a + bi</m>.</p></statement>
+<exercise><title>Practice 7</title>
+<statement><p>Write the quotient <m>~\displaystyle{\frac{4 - 2i}{1 + i}}~</m> in the form <m>a + bi</m>.</p></statement>
 <answer><p><m>1-3i</m></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain how to divide one complex number by another.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Zeros of Polynomials</title>
@@ -237,7 +323,8 @@ We use this fact to find the quotient of complex numbers. If the divisor has bot
 		</md>
 Thus, <m>f(1 + i ) = 0</m>, so <m>1 + i</m> is a solution of <m>x^2 - 2x + 2 = 0</m>.</p></solution></example>
 
-<exercise><statement><p>If <m>f(x) = x^2 - 6x + 13</m>, evaluate <m>f(3 + 2i )</m>.</p></statement>
+<exercise><title>Practice 8</title>
+<statement><p>If <m>f(x) = x^2 - 6x + 13</m>, evaluate <m>f(3 + 2i )</m>.</p></statement>
 <answer><p><m>0</m></p></answer></exercise>
 
 <p>In <xref ref="chap6" text="type-global"/>, we learned that irrational solutions of quadratic equations occur in conjugate pairs,
@@ -271,7 +358,8 @@ Thus, if we know that <m>z</m> is a complex solution of a quadratic equation, we
 		The equation is <m>x^2 - 14x + 74 = 0</m>.</p></li>
 		</ol></p></solution></example>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>Practice 9</title>
+<statement><p><ol label="a">
 			<li>Let <m>z = -3 + 4i</m>. Compute <m>z\overline{z}</m>.</li>
 			<li>Find a quadratic equation with one solution being <m>z = -3 + 4i</m>.</li>
 		</ol></p></statement>
@@ -299,6 +387,26 @@ so <m>x^4+4=(-4)+4=0</m>.</p>
 
 <note><p>The four solutions to <m>x^4 + 4 = 0</m> form two complex conjugate pairs, namely <m>1\pm i</m> and <m>-1\pm i</m>. In fact, for every polynomial with real coefficients, the nonreal zeros always occur in complex conjugate pairs.</p></note>
 
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $conj = RadioButtons(
+              ["\(5+3i\)",
+              "\(9+25\)",
+              "\(3-5i\)",
+              "\(5-3i\)"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>If <m>z=3+5i</m> is a solution to a polynomial equation, then so is:</p>
+        <p><var name="$conj" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>3-5i</m></p>
+    </solution>
+</webwork></exercise>
+
 <example><statement><p>Find a fourth-degree polynomial with real coefficients, two of whose zeros are <m>3i</m> and <m>2 + i</m>.
 </p></statement>
 <solution><p>The other two zeros are <m>-3i</m> and <m>2 - i</m>. The factored form of the polynomial is
@@ -312,7 +420,8 @@ Finally, we multiply these two partial products to find the polynomial we seek,
 		<me>(x^2 + 9)(x^2 - 4x + 5) = x^4 - 4x^3 + 14x^2 - 36x + 45
 		</me></p></solution></example>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>Practice 10</title>
+<statement><p><ol label="a">
 			<li><p>Find the zeros of the polynomial <m>f(x) = x^4 + 15x^2 - 16</m>.</p></li>
 			<li><p>Write the polynomial in factored form.</p></li>
 		</ol></p></statement>
@@ -320,6 +429,16 @@ Finally, we multiply these two partial products to find the polynomial we seek,
 	<li><p><m>\pm 1, ~\pm 4i</m></p></li>
 	<li><p><m>(x - 1)(x + 1)(x - 4i )(x + 4i )</m></p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>What can you say about the graph of a quadratic function whose zeros are complex numbers?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Graphing Complex Numbers</title>
@@ -341,7 +460,8 @@ Finally, we multiply these two partial products to find the polynomial we seek,
  All four points are plotted at right.</p>
 	<image source="images/fig-4-complex-numbers-symmetrically-to-axes"><description>figure of comlex numbers  arranged symmetrically with respect to the axes</description></image></sidebyside></solution></example>
 
-<exercise><statement><p>Plot the following numbers as points on the complex plane.
+<exercise><title>Practice 1</title>
+<statement><p>Plot the following numbers as points on the complex plane.
 		<ul cols="2">
 			<li><m>z = 1 + i</m></li>
 			<li><m>i z = i + i^2</m></li>
