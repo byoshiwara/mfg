@@ -61,15 +61,36 @@
 <image source="images/fig-3-exponentials"><description>graph of 3 exponential functions</description></image>
 </sidebyside>
 
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $esq = RadioButtons(
+              ["\(3\)",
+              "\(5\)",
+              "\(7\)",
+              "\(9\)"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>The value of <m>e^2</m> is closest to</p>
+        <p><var name="$esq" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>7</p>
+    </solution>
+</webwork></exercise>
+
 <example xml:id="example-translate-exponential"><statement><p>Graph each function. How does each graph differ from the graph of <m>y = e^x</m>?<ol label="a" cols="2">
 			<li><m>g(x) = e^{x+2}</m></li>
 			<li><m>h(x) = e^x + 2</m></li>
 		</ol></p></statement>
-<solution>
-<sidebyside width="30%"><image source="images/fig-translate-exponential"><description>translations of the exponential</description></image></sidebyside>
+
+<solution><sidebyside width="30%"><image source="images/fig-translate-exponential"><description>translations of the exponential</description></image></sidebyside>
 <p> If <m>f(x) = e^x</m>, then <m>g(x) = f(x + 2)</m>, so the graph of <m>g</m> is shifted <m>2</m> units to the left of <m>y = e^x</m>. Also, <m>h(x) = f(x) + 2</m>, so the graph of <m>h</m> is shifted <m>2</m> units up from <m>y = e^x</m>. The graphs are shown above.</p></solution></example>
 
-<exercise><statement><p>Use your calculator to evaluate the following powers.
+<exercise><title>Practice 1</title>
+<statement><p>Use your calculator to evaluate the following powers.
 		<ol label="a" cols="3">
 			<li><m>e^2</m></li>
 			<li><m>e^{3.5}</m></li>
@@ -97,6 +118,26 @@ In general, natural logs obey the same conversion formulas that work for logs to
 
 <xi:include href="./assemblage-conversion-formulas-for-natural-logs.xml" />
 
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $loge = RadioButtons(
+              ["\(e^k=x\)",
+              "\(\ln e=x\)",
+              "\(\ln k=x\)",
+              "\(k^x=e\)"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p> Which of the following is equivalent to <m>e^x=k</m> ?</p>
+        <p><var name="$loge" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>\ln k=x</m></p>
+    </solution>
+</webwork></exercise>
+
 <p>In particular,
 	<!--*****--><me>\begin{aligned}[t]
 	\ln e \amp = 1 \text{ because } e^1 = e \\
@@ -108,9 +149,10 @@ In general, natural logs obey the same conversion formulas that work for logs to
 <example xml:id="example-ln-and-exponential"><statement><p><ol label="a">
 		<li>Graph <m>f(x) = e^x</m> and <m>f^{-1}(x) = \ln x</m> on the same grid.</li>
 		<li>Give the domain and range of the natural log function.</li>
-	</ol></p></statement><solution><p>
-	<ol label="a">
-		<li><p>We can make a table of values for <m>f^{-1}(x) = \ln x</m> by interchanging the columns in the table for <m>f(x) = e^x</m>. Plotting the points gives us the graph below.</p>
+	</ol></p></statement>
+
+<solution><p><ol label="a">
+	<li><p>We can make a table of values for <m>f^{-1}(x) = \ln x</m> by interchanging the columns in the table for <m>f(x) = e^x</m>. Plotting the points gives us the graph below.</p>
 		<p></p><sidebyside widths="50% 35%" valigns="middle middle">
 			<tabular top="major" left="minor" right="minor" bottom="minor" halign="center">
 				<row bottom="major">
@@ -138,14 +180,15 @@ In general, natural logs obey the same conversion formulas that work for logs to
 					<cell><m>20.086</m></cell>
 					<cell><m>3</m></cell></row>
 				</tabular>
-			<image source="images/fig-ln-and-exponential"><description>graphs of ln and natural exponential</description></image>
+		<image source="images/fig-ln-and-exponential"><description>graphs of ln and natural exponential</description></image>
 		</sidebyside></li>
 		<li>The domain of the natural log function is the same as the range of <m>y = e^x</m>, or all positive numbers. The range of <m>y = \ln x</m> is the same as the domain of <m>y = e^x</m>, or all real numbers. These results are confirmed by the graph of <m>y = \ln x</m>.</li>
 	</ol></p></solution></example>
 
 <warning><p>Observe that the natural log of a number greater than <m>1</m> is positive, while the logs of fractions between <m>0</m> and <m>1</m> are negative. In addition, <em>the natural logs of negative numbers and zero are undefined</em>.</p></warning>
 
-<exercise><statement><p>Use your calculator to evaluate each logarithm. Round your answers to four decimal places.<ol label="a" cols="3">
+<exercise><title>Practice 2</title>
+<statement><p>Use your calculator to evaluate each logarithm. Round your answers to four decimal places.<ol label="a" cols="3">
 			<li><m>\ln 100</m></li>
 			<li><m>\ln 0.01</m></li>
 			<li><m>\ln e^3</m></li>
@@ -154,6 +197,16 @@ In general, natural logs obey the same conversion formulas that work for logs to
 			<li><m>\ln 100\approx 4.6052</m></li>
 			<li><m>\ln 0.01\approx -4.6052</m></li>
 			<li><m>\ln e^3 =3</m></li></ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain why <m>\ln\dfrac{1}{e^3} = -3</m>.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Properties of the Natural Logarithm</title>
@@ -183,7 +236,8 @@ In general, natural logs obey the same conversion formulas that work for logs to
 		Then <m>e^{2 \ln(x+3)} = e^{\ln(x+3)^2} = (x + 3)^2</m>.</p></li>
 	</ol></p></solution></example>
 
-<exercise><statement><p>Simplify each expression.<ol label="a" cols="2">
+<exercise><title>Practice 3</title>
+<statement><p>Simplify each expression.<ol label="a" cols="2">
 			<li><m>e^{(\ln x)/2}</m></li>
 			<li><m>\ln\left(\dfrac{1}{e^{4x}}\right)</m></li>
 		</ol></p></statement>
@@ -208,7 +262,8 @@ In general, natural logs obey the same conversion formulas that work for logs to
 			<me>x = e^{3.5} \approx 33.1155</me></p></li>
 	</ol></p></solution></example>
 
-<exercise><statement><p>Solve each equation. Round your answers to four decimal places.
+<exercise><title>Practice 5</title>
+<statement><p>Solve each equation. Round your answers to four decimal places.
 		<ol label="a" cols="2">
 			<li><m>\ln x =-0.2</m></li>
 			<li><m>e^x = 8</m></li>
@@ -217,6 +272,26 @@ In general, natural logs obey the same conversion formulas that work for logs to
 	<li><p><m>0.8187 </m></p></li>
 	<li><p><m>2.0794</m></p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $button = RadioButtons(
+              ["8 is larger than 6.5.",
+              "\(k\) is a constant.",
+              "There is a button for log base  on the calculator, but not a button for log base 8.",
+              "Because \(e\) is an irrational number."],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p> Why is the equation <m>e^x=6.5</m> easier to solve than <m>8^x=6.5</m> ?</p>
+        <p><var name="$button" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>There is a button for log base  on the calculator, but not a button for log base 8.</p>
+    </solution>
+</webwork></exercise>
 
 <p>To solve more complicated exponential equations, we isolate the power on one side of the equation before converting to logarithmic form.</p>
 
@@ -239,7 +314,8 @@ by taking the natural logarithm of both sides. This gives us
 	\end{aligned}</me><!--*****-->
 because <m>\ln{e^a} = a</m> for any number <m>a</m>. We then proceed with the solution as before.</p></note>
 
-<exercise><statement><p>Solve <me>80 -16e^{-0.2x} = 70.3</me></p></statement>
+<exercise><title>Practice 5</title>
+<statement><p>Solve <me>80 -16e^{-0.2x} = 70.3</me></p></statement>
 <hint><p><m>\blert{\text{Subtract <m>80</m> from both sides and divide by}~ -16.}</m></p>
 	<p><m>\blert{\text{Take the natural log of both sides.}}</m></p>
 	<p><m>\blert{\text{Divide by}~ -0.2.}</m></p></hint>
@@ -262,11 +338,22 @@ because <m>\ln{e^a} = a</m> for any number <m>a</m>. We then proceed with the so
 	Finally, we divide both sides by <m>-k</m> to solve for <m>t</m>.
 		<me>t =\frac{-1}{k}\ln{\frac{a-P}{bP}}</me></p></solution></example>
 
-<exercise><statement><p>Solve <m>N = Ae^{-kt}</m> for <m>k</m>.</p></statement>
+<exercise><title>Practice 6</title>
+<statement><p>Solve <m>N = Ae^{-kt}</m> for <m>k</m>.</p></statement>
 <hint><p><m>\blert{\text{Divide both sides by}~ A.}</m></p>
 	<p><m>\blert{\text{Take the natural log of both sides.}}</m></p>
 	<p><m>\blert{\text{Divide both sides by}~ -t.}</m></p></hint>
 <answer><p><m>k=\dfrac{-\ln(N/A) }{t} </m></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Delbert says that he will begin solving the equation <m>100e^{0.6t}=40</m> by computing <m>e^{0.6t}</m>. Is this a good strategy? Why or why not?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Exponential Growth and Decay</title>
@@ -307,7 +394,8 @@ By graphing both functions on your calculator, you can verify that <me>P(t) = 10
 			so <m>P(t) = 768,000 e^{0.062t}</m>.</p></li>
 	</ol></p></solution></example>
 
-<exercise><statement><p>From 1994 to 1998, the number of personal computers connected to the Internet grew according to the formula <m>N(t) = 2.8e^{0.85t}</m>, where <m>t = 0</m> in 1994 and <m>N</m> is in millions. (Source: Los Angeles Times, September 6, 1999)<ol label="a">
+<exercise><title>Practice 7</title>
+<statement><p>From 1994 to 1998, the number of personal computers connected to the Internet grew according to the formula <m>N(t) = 2.8e^{0.85t}</m>, where <m>t = 0</m> in 1994 and <m>N</m> is in millions. (Source: Los Angeles Times, September 6, 1999)<ol label="a">
 		<li>Evaluate <m>N(1)</m>. By what percent did the number of Internet users grow in one year?</li>
 		<li>Express the growth law in the form <m>N(t) = N_0 (1 + r)^t</m>. </li>
 		</ol></p></statement>
@@ -323,6 +411,26 @@ Thus, for negative values of <m>k</m>, the function <m>P(t) = P_0 e^{kt}</m> des
 
 <xi:include href="./assemblage-exponential-growth-and-decay.xml" />
 
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $lnfrac = RadioButtons(
+              ["positive.",
+              "negative.",
+              "undefined.",
+              "between \(e^0\) and \(e^1\)."],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p> The natural log of a fraction between 0 and 1 is</p>
+        <p><var name="$lnfrac" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>negative.</p>
+    </solution>
+</webwork></exercise>
+
 <example xml:id="example-write-decay-with-e"><statement><p>Express the decay law <m>N(t) = 60 (0.8)^t</m> in the form <m>N(t) = N_0 e^{kt}</m>.</p></statement>
 
 <solution><p>For this decay law, <m>N_0 = 60</m> and <m>b = 0.8</m>. We would like to find a value for <m>k</m> so that <m>e^k = b = 0.8</m>, that is, we must solve the equation
@@ -334,7 +442,8 @@ Thus, for negative values of <m>k</m>, the function <m>P(t) = P_0 e^{kt}</m> des
 Replacing <m>b</m> with <m>e^k</m>, we find that the decay law is
 		<me>N(t) \approx 60e^{-0.2231t}</me></p></solution></example>
 
-<exercise><statement><p>A scientist isolates <m>25</m> grams of krypton-91, which decays according to the formula
+<exercise><title>Practice 8</title>
+<statement><p>A scientist isolates <m>25</m> grams of krypton-91, which decays according to the formula
 	<me>N(t) = 25e^{-0.07t}</me>, 
 where <m>t</m> is in seconds.<ol label="a">
 		<li><p>Complete the table of values showing the amount of krypton-91 left at <m>10</m>-second intervals over the first minute.</p>
@@ -386,6 +495,16 @@ where <m>t</m> is in seconds.<ol label="a">
 	<li><sidebyside width="35%"><image source="images/fig-in-ex-ans-5-3-8.jpg"><description>decay</description></image></sidebyside></li>
 	<li><p><m>25 e^{-0.07t} = 0.40(25)</m>; <m>~~t=\dfrac{\ln(0.4)}{-0.07}\approx 13.09 </m> seconds</p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain how to rewrite <m>P(t)=P_0 b^t</m> with the natural base.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Continuous Compounding</title>
@@ -402,6 +521,7 @@ where <m>P</m> is the principal invested.</p>
 		<li>How much will the account be worth after <m>10</m> years?</li>
 		<li>How long will it be before the account is worth $<m>1000</m>?</li>
 	</ol></p></statement>
+
 <solution><p><ol label="a">
 		<li>We substitute <m>500</m> for <m>P</m>, and <m>0.08</m> for <m>r</m> to find
 			<me>A(t) = 500e^{0.08t}</me></li>
@@ -449,9 +569,20 @@ where <m>P</m> is the principal invested.</p>
 		The account will be worth $<m>1000</m> after approximately <m>8.7</m> years.</li>
 	</ol></p></solution></example>
 
-<exercise><statement><p>Zelda invested $<m>1000</m> in an account that pays <m>4.5\%</m> interest compounded continuously. How long will it be before the account is worth $<m>2000</m>?</p>
+<exercise><title>Practice 9</title>
+<statement><p>Zelda invested $<m>1000</m> in an account that pays <m>4.5\%</m> interest compounded continuously. How long will it be before the account is worth $<m>2000</m>?</p>
 </statement>
 <answer><p>About <m>15.4</m> years</p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain why solving exponential equations in base <m>e</m> is no harder than solving exponential equations in base 10.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <xi:include href="./summary-5-3.xml" /> <!-- summary  -->

@@ -51,10 +51,41 @@ then it must be true that either <m>x - 5 = 0</m> or <m>2x + 1 = 0</m>. Thus, we
 
 <xi:include href="./assemblage-x-intercepts-of-graph.xml" />
 
-<exercise><statement><p>Graph the function
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $xint = RadioButtons(
+              ["\(\dfrac{7}{2}\) and \(-2\)",
+              "\(-\dfrac{7}{2}\) and \(2\)",
+              "\(3, \dfrac{7}{2}\) and \(-2\)",
+              "\(3, -\dfrac{7}{2}\) and \(2\)"],
+              0, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What are the <m>x</m>-intercepts of the graph of <m>y=3(2x-7)(x+2)</m> ?</p>
+        <p><var name="$xint" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>\dfrac{7}{2}</m> and <m>-2</m></p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 1</title>
+<statement><p>Graph the function
 		<me>f(x) = (x - 3)(2x + 3)</me>
 on a calculator, and use your graph to solve the equation <m>f(x) = 0</m>. (Use<m>\text{Xmin} = -9.4</m>, <m>\text{Xmax} = 9.4</m>.) Check your answer with the zero-factor principle.</p></statement>
 <answer><p><m>x=-\dfrac{3}{2} </m>, <m>~x=3</m></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>How can you use a graph to factor a quadratic expression?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Solving Quadratic Equations by Factoring</title>
@@ -88,7 +119,7 @@ on a calculator, and use your graph to solve the equation <m>f(x) = 0</m>. (Use<
 		<me>x = \frac{2}{3} ~~\text{ or }~~ x = -1</me>
 	The solutions are <m>\dfrac{2}{3}</m> and <m>-1</m>.</p></solution></example>
 
-<warning><title></title><p>When we apply the zero-factor principle, one side of the equation <em>must be zero</em>. For example, to solve the equation
+<warning><p>When we apply the zero-factor principle, one side of the equation <em>must be zero</em>. For example, to solve the equation
 	<me>(x - 2)(x - 4) = 15</me>
 it is incorrect to set each factor equal to <m>15</m>! (There are many ways that the product of two numbers can equal <m>15</m>; it is not necessary that one of the numbers be <m>15</m>.) We must first simplify the left side and write the equation in standard form. (The correct solutions are <m>7</m> and <m>-1</m>; make sure you can find these solutions.)</p></warning>
 
@@ -96,7 +127,8 @@ it is incorrect to set each factor equal to <m>15</m>! (There are many ways that
 
 <xi:include href="./assemblage-solve-quadratic-by-factoring.xml" />
 
-<exercise><statement><p>Solve by factoring: <m>~~(t - 3)^2 = 3(9 - t)</m></p>
+<exercise><title>Practice 2</title>
+<statement><p>Solve by factoring: <m>~~(t - 3)^2 = 3(9 - t)</m></p>
 </statement>
 <answer><p><m>x=-3</m>, <m>~x=6</m></p></answer></exercise>
 
@@ -133,9 +165,30 @@ This graph has the same <m>x</m>-values when <m>y = 0</m>. The factor of <m>4</m
 
 <sidebyside width="35%"><image source="images/fig-GC-scaled-parabola"  ><description>two parabolas with the same x-intercepts</description></image></sidebyside>
 
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $intmult = RadioButtons(
+              ["They are tripled.",
+              "They are divided by 3.",
+              "They move 3 units to the right.",
+              "They are unchanged."],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What happens to the <m>x</m>-intercepts when you multiply the right side of <m>y=ax^2+bx+c</m> by 3?</p>
+        <p><var name="$intmult" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>They are unchanged.</p>
+    </solution>
+</webwork></exercise>
+
 <p> The value of the constant factor <m>a</m> in the factored form of a quadratic function, <m>f(x) = a(x - r_1)(x - r_2)</m>, does not affect the location of the <m>x</m>-intercepts, because it does not affect the solutions of the equation <m>a(x - r_1)(x - r_2) = 0</m>.</p>     
 
-<exercise><statement><ol label="a">
+<exercise><title>Practice 3</title>
+<statement><ol label="a">
 	<li>Solve <m>f(t) = 4t - t^2 = 0</m> by factoring.</li>
 	<li>Solve <m>g(t) = 20t - 5t^2 = 0</m> by factoring.</li>
 	<li>Graph <m>y = f(t)</m> and <m>y = g(t)</m> together in the window
@@ -150,6 +203,16 @@ This graph has the same <m>x</m>-values when <m>y = 0</m>. The factor of <m>4</m
 	<li><p><m>t=0</m>,	<m>~t=4</m></p></li>
 	<li><p><m>(0,0) </m>, <m>~(4,0) </m></p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain why the solutions of <m>(x-3)(x-6)=10</m> are not 3 and 6.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Applications</title>
@@ -179,17 +242,37 @@ Solve the equation. Begin by simplifying the left side.
 		\end{aligned}</me><!--*****-->
 Because the width of the screen cannot be a negative number, we discard the solution <m>w = -12</m>. Thus, the width is <m>w = 9</m> inches, and the length is <m>w + 3 = 12</m> inches.</p></solution></example>
 
-<exercise><statement><sidebyside widths="65% 25%" valigns="middle middle"><p>Francine is designing the layout for a botanical garden. The plan includes a square herb garden, with a path <m>5</m> feet wide through the center of the garden, as shown at right. To include all the species of herbs, the planted area must be <m>300</m> square feet. Find the dimensions of the herb garden.</p>
+<exercise><title>Practice 4</title>
+<statement><sidebyside widths="65% 25%" valigns="middle middle"><p>Francine is designing the layout for a botanical garden. The plan includes a square herb garden, with a path <m>5</m> feet wide through the center of the garden, as shown at right. To include all the species of herbs, the planted area must be <m>300</m> square feet. Find the dimensions of the herb garden.</p>
 <image source="images/fig-garden"><description>garden</description></image></sidebyside></statement>
 <answer><p><m>20</m> feet by <m>20</m> feet</p></answer></exercise>
+
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $rect = RadioButtons(
+              ["\(56-x\)",
+              "\(28-x\)",
+              "\(56x\)",
+              "\(\dfrac{28}{x}\)"],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>If the perimeter of a rectangle is 56 inches and its width is <m>x</m> inches, what is an expression for its length?</p>
+        <p><var name="$rect" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>28-x</m></p>
+    </solution>
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Solutions of Quadratic Equations</title>
 
 <p>We have seen that the solutions of the quadratic equation
 	<me>a(x - r_1)(x - r_2) = 0</me>
-are <m>r_1</m> and <m>r_2</m>. Thus, if we know the two solutions of a quadratic equation, we can work backward and reconstruct the equation, starting from its factored form. We can then write the equation in standard form by multiplying together the factors.
-</p>
+are <m>r_1</m> and <m>r_2</m>. Thus, if we know the two solutions of a quadratic equation, we can work backward and reconstruct the equation, starting from its factored form. We can then write the equation in standard form by multiplying together the factors.</p>
 
 <example xml:id="example-quadratic-equation-from-solutions"><statement><p>Find a quadratic equation whose solutions are <m>\dfrac{1}{2}</m> and <m>-3</m>.</p></statement>
 <solution><p>The quadratic equation is 
@@ -206,7 +289,28 @@ We can also find an equation with integer coefficients if we clear the equation 
 		\end{aligned}</me><!--*****-->
 You can check that the solutions of this last equation are in fact <m>\dfrac{1}{2}</m> and <m>-3</m>. Multiplying both sides of an equation by a constant factor does not change its solutions.</p></solution></example>
 
-<exercise><statement><p>Find a quadratic equation with integer coefficients whose solutions are <m>\dfrac{2}{3}</m> and <m>-5</m>.</p></statement>
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $wch = RadioButtons(
+              ["All rectangles with the same perimeter have the same area.",
+              "The solutions of \(x(18-x)=80\) are 18 and 80.",
+              "If the perimeter of a rectangle is 20 cm, the largest area it can have is 20 sq cm.",
+              "If you know the \(x\)-intercepts of the graph of \(y=x^2+bx+c\), you can write it in factored form."],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Which statement is true?</p>
+        <p><var name="$wch" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>If you know the <m>x</m>-intercepts of the graph of <m>y=x^2+bx+c</m>, you can write it in factored form.</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 5</title>
+<statement><p>Find a quadratic equation with integer coefficients whose solutions are <m>\dfrac{2}{3}</m> and <m>-5</m>.</p></statement>
 <answer><p><m>3x^2 + 13x - 10 = 0</m></p></answer></exercise>
 
 <note><p>A quadratic equation in one variable always has two solutions. However, in some cases, the solutions may be equal. For example, the equation
@@ -240,7 +344,8 @@ You can verify that the solutions of the original equation are <m>-1</m> and <m>
 
 <p>We say that the equation in <xref ref="example-quadratic-in-form" text="type-global"/>, <m>x^6 - 4x^3 - 5 = 0</m>, is <term>quadratic in</term><idx>quadratic in</idx> <m>x^3</m>. We chose the substitution <m>u = x^3</m> because <m>x^6 = u^2</m>.</p>
 
-<exercise xml:id="exercise-quadratic-in-form"><statement><p>Use the substitution <m>u = x^2</m> to solve the equation <m>x^4 - 5x^2 + 6 = 0</m>.</p></statement>
+<exercise xml:id="exercise-quadratic-in-form"><title>Practice 6</title>
+<statement><p>Use the substitution <m>u = x^2</m> to solve the equation <m>x^4 - 5x^2 + 6 = 0</m>.</p></statement>
 <answer><p><m>x=\pm\sqrt{2} </m>, <m>~x=\pm\sqrt{3} </m></p></answer></exercise>
 
 <p>Usually, you can choose the simpler variable term in the equation for the <m>u</m>-substitution. For example, in  <xref ref="exercise-quadratic-in-form" text="type-global"/> we chose <m>u = x^2</m> because <m>u^2 = \left(x^2\right)^2 = x^4</m>, which is the first term of the equation. Once you have chosen the <m>u</m>-substitution, you should check that the other variable term is then a multiple of <m>u^2</m>; otherwise, the equation is not quadratic in form.</p>
@@ -260,8 +365,19 @@ Finally, we replace <m>u</m> by <m>e^x</m> and solve for <m>x</m>.
 		\end{aligned}</me><!--*****-->
 You should verify that the solutions of the original equation are <m>\ln 3</m> and <m>\ln 4</m>.</p></solution></example>
 
-<exercise><statement><p>Solve the equation <m>~~10^{2x} - 3 \cdot 10^x + 2 = 0~~</m>, and check the solutions.</p></statement>
+<exercise><title>Practice 7</title>
+<statement><p>Solve the equation <m>~~10^{2x} - 3 \cdot 10^x + 2 = 0~~</m>, and check the solutions.</p></statement>
 <answer><p><m>x=0</m>, <m>~x=\log 2</m></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain why we cannot "cancel" <m>(x-5)</m> from both sides of the equation <m>3x(x-5)=6(x-5)</m>. What are the solutions of the equation?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 
 </subsection>
 <xi:include href="./summary-6-1.xml" /> <!-- summary  -->

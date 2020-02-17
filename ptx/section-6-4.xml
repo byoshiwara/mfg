@@ -135,17 +135,68 @@ Usually, when the price of an item increases, the number of items sold decreases
 
 <note><p>If the equation relating two variables is quadratic, then the maximum or minimum value is easy to find: It is the value at the vertex. If the parabola opens downward, as in <xref ref="example-maximum-revenue" text="type-global"/>, there is a maximum value at the vertex. If the parabola opens upward, there is a minimum value at the vertex.</p></note>
 
-<exercise><statement><p>The Metro Rail service sells <m>1200 - 80x</m> tickets each day when it charges <m>x</m> dollars per ticket.<ol label="a">
-			<li><p>Write an equation for the revenue, <m>R</m>, as a function of the price of a ticket.</p></li>
-			<li><p>What ticket price will return the maximum revenue? What is the maximum revenue?</p></li>
-		</ol></p></statement>
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $golf = RadioButtons(
+              ["How long the golf ball is in the air",
+              "The starting height of the golf ball",
+              "When the golf ball reaches its maximum height",
+              "The speed of the golf ball"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>The height of golf ball in meters is given by <m>h=-4.9t^2+20t</m>. What does the vertex of the graph tell us about the golf ball? </p>
+        <p><var name="$golf" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>When the golf ball reaches its maximum height</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 1</title>
+<statement><p>The Metro Rail service sells <m>1200 - 80x</m> tickets each day when it charges <m>x</m> dollars per ticket.<ol label="a">
+		<li><p>Write an equation for the revenue, <m>R</m>, as a function of the price of a ticket.</p></li>
+		<li><p>What ticket price will return the maximum revenue? What is the maximum revenue?</p></li>
+	</ol></p></statement>
 <answer><p><ol label="a" cols="2">
 	<li><p><m>R = 1200x - 80x^2</m></p></li>
 	<li><p>$<m>7.50,~</m> $<m>4500</m></p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain why revenue will probably not increase indefinitely as price increases.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>The Vertex Form for a Parabola</title>
+
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $verx = RadioButtons(
+              ["\(4\)",
+              "\(-16\)",
+              "\(6\)",
+              "\(-3\)"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What is the <m>x</m>-coordinate of the vertex of the parabola <m>y=4(x-2)(x+8)</m> ?</p>
+        <p><var name="$verx" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>-3</m></p>
+    </solution>
+</webwork></exercise>
 
 <p>Consider the quadratic equation
 	<me>y = 2(x - 3)^2 - 8</me>
@@ -185,7 +236,8 @@ which confirms that when <m>x = 4</m>, <m>y = 6</m>. Next, notice that if <m>x</
 
 <p>You can also rewrite <m>y = -3(x - 4)^2 + 6</m> in standard form and use the formula <m>x_v = \dfrac{-b}{2a}</m> to confirm that the vertex is the point <m>(4, 6)</m>.</p>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>Practice 2</title>
+<statement><p><ol label="a">
 		<li>Find the vertex of the graph of <m>y = 5 - \dfrac{1}{2}(x + 2)^2</m>.</li>
 		<li>Write the equation of the parabola in standard form.</li>
 	</ol></p></statement>
@@ -193,6 +245,26 @@ which confirms that when <m>x = 4</m>, <m>y = 6</m>. Next, notice that if <m>x</
 	<li><p><m>(-2,5) </m></p></li>
 	<li><p><m>y=-\frac{1}{2}x^2-2x+3 </m></p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $miny = RadioButtons(
+              ["\(6\)",
+              "\(4\)",
+              "\(12\)",
+              "We can't tell without graphing"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What is the smallest <m>y</m>-value on the graph of <m>y=4(x-6)^2+12</m> ?</p>
+        <p><var name="$miny" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>12</m></p>
+    </solution>
+</webwork></exercise>
 
 <p>Any quadratic equation in vertex form can be written in standard form by expanding, and any quadratic equation in standard form can be put into vertex form by completing the square.</p>
 
@@ -232,7 +304,8 @@ The vertex of the parabola is <m>(1,-4)</m>.</p></solution></example>
 <answer><p><m>y = 2(x + 3)^2 - 5</m>;   <m>(-3,-5)</m></p></answer>
 </exercise>
 -->
-<exercise><statement><p>Write the equation <m>y = 2x^2 + 12x + 13</m> in vertex form, and find the vertex of its graph.</p>
+<exercise><title>Practice 3</title>
+<statement><p>Write the equation <m>y = 2x^2 + 12x + 13</m> in vertex form, and find the vertex of its graph.</p>
 </statement>
 <hint><p><ol label="1">
 	<li>Factor <m>2</m> from the variable terms.</li>
@@ -241,6 +314,16 @@ The vertex of the parabola is <m>(1,-4)</m>.</p></solution></example>
 	<li>Write the vertex form.</li>
 </ol></p></hint>
 <answer><p><m>y = 2(x + 3)^2 - 5</m>;   <m>(-3,-5)</m></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Why do we need to know a second point besides the vertex to find the equation of a parabola?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Graphing with the Vertex Form</title>
@@ -269,7 +352,8 @@ The vertex of the parabola is <m>(1,-4)</m>.</p></solution></example>
 	<sidebyside width="90%"><image source="images/fig-transform-parabola"><description>three transformations on the basic parabola</description></image>
 </sidebyside></solution></example>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>Practice 4</title>
+<statement><p><ol label="a">
 		<li>List the transformations of <m>y = x^2</m> needed to graph <m>g(x) = 5 - \dfrac{1}{2}(x + 2)^2</m>.</li>
 		<li>Use transformations to sketch the graph.</li>
 	</ol></p></statement>
@@ -327,7 +411,8 @@ We equate the two expressions for <m>y</m> and solve for <m>x</m>:
 		</me>
 The solutions are <m>15</m> and <m>80</m>, as we found from the graph.</p></solution></example>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>Practice 5</title>
+<statement><p><ol label="a">
 	<li>Solve the system algebraically:
 		<me>
 					\begin{aligned}[t]
@@ -341,6 +426,16 @@ The solutions are <m>15</m> and <m>80</m>, as we found from the graph.</p></solu
 	<li><p><m>(-2,9), (5,-12) </m></p></li>
 	<li><sidebyside width="70%"><image source="images/fig-in-ex-ans-6-4-5"><description>two parabolas</description></image></sidebyside></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain how to find the intersection points of two parabolas.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 
 <technology><title><!--<image source="images/icon-GC.jpg"  width="8%"><description>Graphing Calculator</description></image>-->Solving Systems with the Graphing Calculator</title>
 

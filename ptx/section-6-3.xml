@@ -4,7 +4,7 @@
 <section xml:id="Graphing-Parabolas"   xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Graphing Parabolas</title>
 
-<introduction>
+<subsection><title> Introduction </title>
 <p>The graph of a quadratic function <m>f(x) = ax^2 + bx + c</m> is called a <term>parabola</term><idx>parabola</idx>. Some parabolas are shown below.</p>
 	<sidebyside><image source="images/fig-parabola-diagram"><description>two parabolas with labeled features</description></image></sidebyside>
 
@@ -14,7 +14,28 @@
 	<li>The <m>y</m>-intercept is the point where the parabola intersects the <m>y</m>-axis. The graph of a quadratic function always has exactly one <m>y</m>-<term>intercept</term><idx>intercept</idx>.</li>
 	<li>However, the graph may cross the <m>x</m>-axis at one point, at two points, or not at all. Points where the parabola intersects the <m>x</m>-axis are called the <m>x</m>-<term>intercepts</term>. If there are two <m>x</m>-intercepts, they are equidistant from the axis of symmetry.</li>
 	<li>The values of the constants <m>a</m>, <m>b</m>, and <m>c</m> determine the location and orientation of the parabola. We will begin by considering each of these constants separately.</li>
-</ul></p></introduction>
+</ul></p>
+
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $axsym = RadioButtons(
+              ["The \(x\)-intercept",
+              "The \(y\)-intercept",
+              "The vertex",
+              "The origin"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Which point on a parabola always lies on the axis of symmetry?</p>
+        <p><var name="$axsym" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>The vertex</p>
+    </solution>
+</webwork></exercise>
+</subsection>
 
 <subsection><title>The Graph of <m>y = ax^2</m></title>
 
@@ -50,7 +71,28 @@
             <cell><m>-\dfrac{1}{2}</m></cell></row>
     </tabular><p>We sketch parabolas through each set of guidepoints, as shown at left.</p></stack></sidebyside></solution></example>
 
-<exercise><statement><p>Match each parabola in the figure at right with its equation. The basic parabola is shown in black.</p>
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $axsym = RadioButtons(
+              ["The \(y\)-intercept",
+              "The number of \(x\)-intercepts",
+              "The \(x\)-coordinate of the vertex",
+              "The width of the parabola"],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What does the value of <m>a</m> tell us about the graph of <m>y=ax^2+bx+c</m> ?</p>
+        <p><var name="$axsym" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>The width of the parabola</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 1</title>
+<statement><p>Match each parabola in the figure at right with its equation. The basic parabola is shown in black.</p>
 	<sidebyside widths="50% 25%" valigns="middle middle"><p><ol label="a">
 			<li><m>y = -\dfrac{3}{4}x^2</m></li>
 			<li><m>y = \dfrac{1}{4}x^2</m></li>
@@ -68,7 +110,7 @@
 
 <subsection><title>The Graph of <m>y= x^2 + c</m></title>
 
-<p>Next, we consider the effect of the constant term, <m>c</m>, on the graph. Adding a constant <m>c</m> to the formula for <m>y = f (x)</m> causes a vertical translation of the graph.</p>
+<p>Next, we consider the effect of the constant term, <m>c</m>, on the graph. Adding a constant <m>c</m> to the formula for <m>y = f(x)</m> causes a vertical translation of the graph.</p>
 
 <example xml:id="example-parabolas-vertically-shifted"><statement><p>Sketch graphs for the following quadratic functions.
 		<ol label="a" cols="2">
@@ -85,7 +127,28 @@
 	or <m>2</m> and <m>-2</m>. You can verify both graphs with your graphing calculator.</p></li>
 		</ol></p></solution></example>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $nox = RadioButtons(
+              ["\(y=x^2\)",
+              "\(y=x^2+4\)",
+              "\(y=x^2-4\)",
+              "\(y=x^2+x\)"],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Which of these is the equation of a parabola that has no <m>x</m>-intercepts?</p>
+        <p><var name="$nox" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>y=x^2+4</m></p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 2</title>
+<statement><p><ol label="a">
 		<li>Find an equation for the parabola shown below.</li>
 		<li>Give the <m>x</m>- and <m>y</m>-intercepts of the graph.</li>
 		</ol></p>
@@ -94,6 +157,16 @@
 	<li><p><m>y = x^2 - 5</m></p></li>
 	<li><p><m>(-\sqrt{5},0),(\sqrt{5},0),(0,-5) </m></p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Describe what the parameters <m>a</m> and <m>c</m> tell you about the graph of <m>y=ax^2+c</m>.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>The Graph of <m>y = ax^2 + bx</m></title>
@@ -119,7 +192,8 @@ To find the <m>y</m>-coordinate of the vertex, substitute <m>x = -2</m> into the
 	\end{aligned}</me><!--*****-->
 Thus, the vertex is the point <m>(-2,-8)</m>.</p>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>Practice 3</title>
+<statement><p><ol label="a">
 		<li>Find the <m>x</m>-intercepts and the vertex of the parabola <m>y = 6x - x^2</m>.</li>
 		<li>Verify your answers by graphing the function in the window
 				<me>\begin{aligned}[t]
@@ -178,6 +252,16 @@ This gives us a formula for the <m>x</m>-coordinate of the vertex.</p>
 		The <m>x</m>-intercepts of the graph are <m>(0, 0)</m> and <m>(-9, 0)</m>. The graph is shown below.</li>
 	</ol></p>
 		<sidebyside width="40%"><image source="images/fig-parabola-vertex2" ><description>downward opening parabola</description></image></sidebyside></solution></example>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain why the <m>x</m>-coordinate of the vertex is the average of the <m>x</m>-intercepts of the graph.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>The Graph of <m>y = ax^2 + bx + c</m></title>
@@ -211,6 +295,25 @@ The <m>x</m>-intercepts are the points <m>(-1, 0)</m> and <m>(-3, 0)</m>.</p>
 	<me>y = 2(\alert{0})2 + 8(\alert{0}) + 6 = 6</me>
 You can see that the <m>y</m>-intercept, <m>6</m>, is just the constant term of the quadratic equation. The completed graph is shown above.</p>
 
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $nox = RadioButtons(
+              ["\(a\)",
+              "\(b\)",
+              "\(c\)",
+              "None of these"],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>The <m>y</m>-intercept of <m>y=ax^2+bx+c</m> is the same as the value of which parameter?</p>
+        <p><var name="$nox" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>c</m></p>
+    </solution>
+</webwork></exercise>
 
 <example xml:id="example-parabola-vertex2"><statement><p>Find the vertex of the graph of <m>f(x) = -2x^2 + x + 1</m>.</p>
 </statement>
@@ -225,7 +328,8 @@ To find the <m>y</m>-coordinate of the vertex, we substitute <m>x = \alert{\dfra
 So the coordinates of the vertex are <m>\left(\dfrac{1}{4},\dfrac{9}{8}\right)</m>. Alternatively, we can use the calculator to evaluate <m>-2x^2 + x + 1</m> for <m>x = 0.25</m>. The calculator returns the <m>y</m>-value <m>1.125</m>. Thus, the vertex is the point <m>(0.25, 1.125)</m>, which is the decimal equivalent of <m>\left(\dfrac{1}{4},\dfrac{9}{8}\right)</m>.</p></solution>
 </example>
 
-<exercise><statement><p>Find the vertex of the graph of <m>f(x) = 3x^2 - 6x + 4</m>. Decide whether the vertex is a maximum point or a minimum point of the graph.</p></statement>
+<exercise><title>Practice 4</title>
+<statement><p>Find the vertex of the graph of <m>f(x) = 3x^2 - 6x + 4</m>. Decide whether the vertex is a maximum point or a minimum point of the graph.</p></statement>
 <answer><p><m>(1, 1)</m>, minimum</p></answer></exercise>
 </subsection>
 
@@ -281,7 +385,8 @@ The only difference between the two solutions is the sign between the terms. For
 		</ol>
 		(You can verify the conclusions above by solving each equation.)</p></solution></example>
 
-<exercise xml:id="exercise-discriminant"><statement><p>Use the discriminant to discover how many <m>x</m>-intercepts the graph of each function has.
+<exercise xml:id="exercise-discriminant"><title>Practice 5</title>
+<statement><p>Use the discriminant to discover how many <m>x</m>-intercepts the graph of each function has.
 <ol label="a" cols="2">
 	<li><m>y = x^2 + 5x + 7</m></li>
 	<li><m>y = -\dfrac{1}{2}x^2 + 4x - 8</m></li>
@@ -292,6 +397,16 @@ The only difference between the two solutions is the sign between the terms. For
 </ol></p></answer></exercise>
 
 <p>In <xref ref="exercise-discriminant" text="type-global"/>, you should check that the single <m>x</m>-intercept is also the vertex of the parabola.</p>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain what the discriminant tells us about a quadratic equation.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Sketching a Parabola</title>
@@ -320,10 +435,11 @@ The only difference between the two solutions is the sign between the terms. For
 	<li><p>The axis of symmetry is the vertical line <m>x = -1.5</m>, so the <m>y</m>-intercept lies <m>1.5</m> units to the right of the axis of symmetry. </p>
 	<p> There must be another point on the parabola with the same <m>y</m>-coordinate as the <m>y</m>-intercept but <m>1.5</m> units to the left of the axis of symmetry. The coordinates of this point are <m>(-3, 1)</m>.</p>
 	<p>Finally, plot the <m>x</m>-intercepts, the vertex, and the <m>y</m>-intercept and its symmetric point, and draw a parabola through them. The finished graph is shown below.</p>
-				<sidebyside width="45%"><image source="images/fig-parabola-with-5-labeled-points"><description>parabola</description></image></sidebyside></li>
-		</ol></p></solution></example>
+		<sidebyside width="45%"><image source="images/fig-parabola-with-5-labeled-points"><description>parabola</description></image></sidebyside></li>
+	</ol></p></solution></example>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>Practice 6</title>
+<statement><p><ol label="a">
 	<li>Find the intercepts and the vertex of the graph of <m>f(x) = x^2 - 5x + 4</m>.</li>
 	<li>Sketch the graph by hand.</li>
 	<li>Use your calculator to verify your graph.</li>
@@ -332,6 +448,16 @@ The only difference between the two solutions is the sign between the terms. For
 	<li><p><m>(0, 4)</m>; <m>(1, 0)</m>, <m>(4, 0)</m>; vertex <m>\left(\dfrac{5}{2},\dfrac{-9}{4} \right)</m></p></li>
 	<li><sidebyside width="25%"><image source="images/fig-in-ex-ans-6-3-6"><description>parabola</description></image></sidebyside></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Which points on a parabola should you find to help you sketch its graph? Describe how to find each of these points.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 <xi:include href="./summary-6-3.xml" /> <!-- summary  -->
 <xi:include href="./section-6-3-exercises.xml" /> <!-- exercises  -->

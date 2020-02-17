@@ -33,7 +33,28 @@ where <m>t</m> is the number of days you rent the car and <m>g</m> is the number
     You can buy <m>14.32</m> gallons of gas.</p></li>
 </ol></p></solution></example>
 
-<exercise><statement><p>The maximum height that the water stream from a fire hose can reach depends on the water pressure and the diameter of the nozzle, and is given by the function
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $twovar = RadioButtons(
+              ["It has one input and two outputs.",
+              "It has two inputs and one output.",
+              "It has two inputs and two outputs.",
+              "None of the above."],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Which is true about a function of two variables?</p>
+        <p><var name="$twovar" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>It has two inputs and one output.</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 1</title>
+<statement><p>The maximum height that the water stream from a fire hose can reach depends on the water pressure and the diameter of the nozzle, and is given by the function
     <me>H = f(P, n) = 26 + \dfrac{5}{8}P + 5n</me>
 where <m>P</m> is the nozzle pressure in psi, and <m>n</m> is measured in <m>\frac{1}{8}</m>-inch increments over the standard nozzle diameter of <m>\dfrac{3}{4}</m> inch.<ol label="a">
         <li><p>Evaluate <m>f(40, 2)</m> and explain what it means.</p></li>
@@ -129,7 +150,8 @@ where <m>P</m> is the nozzle pressure in psi, and <m>n</m> is measured in <m>\fr
     <li><p>In the <m>t = 30\degree</m>F column, we find the windchill factor of <m>1</m> in the <m>25</m>-mph row, so <m>s = 25</m>. The wind speed is <m>25</m> mph when the temperature is <m>30\degree</m>F and the windchill factor is <m>1</m>.</p></li>
 </ol></p></solution></example>
 
-<exercise><statement><p>A retirement plan requires employees to put aside a fixed amount of money each year until retirement. The amount accumulated, <m>A</m>, includes 8% annual interest on employee's annual contribution, <m>c</m>. <m>A</m> is a function of <m>c</m> and the number of years, <m>t</m>, that the employee makes contributions, so <m>A = f(c, t)</m>.</p>
+<exercise><title>Practice 2</title>
+<statement><p>A retirement plan requires employees to put aside a fixed amount of money each year until retirement. The amount accumulated, <m>A</m>, includes <m>8</m><percent/> annual interest on employee's annual contribution, <m>c</m>. <m>A</m> is a function of <m>c</m> and the number of years, <m>t</m>, that the employee makes contributions, so <m>A = f(c, t)</m>.</p>
 <sidebyside><tabular top="major" halign="center"  right="minor" left="minor" bottom="minor">
         <!--  -->
         <row>
@@ -272,6 +294,7 @@ where <m>P</m> is the nozzle pressure in psi, and <m>n</m> is measured in <m>\fr
     <li><p>Is it true that <m>f(2, 5) = f(5, 2)</m>?</p></li>
     <li><p>Consider the row corresponding to a width of <m>3</m> cm. How does the load depend on the depth?</p></li>
 </ol></p></statement>
+
 <solution><p><ol label="a">
     <li><p>In the row for <m>2</m> cm and the column for <m>5</m> cm, we find that <m>f (2, 5) = 500</m>. A beam of width <m>2</m> cm and depth <m>5</m> cm can support a maximum load of <m>500</m> kilograms.</p></li>
     <li><p>In the row for <m>5</m> cm and the column for <m>2</m> cm, we find that <m>f (5, 2) = 200</m>, so <m>f (2, 5) \ne f (5, 2)</m>.</p></li>
@@ -304,7 +327,8 @@ where <m>P</m> is the nozzle pressure in psi, and <m>n</m> is measured in <m>\fr
     </tabular>
 <image source="images/fig-load-vs-depth"><description>load vs depth</description></image></sidebyside></solution></example>
 
-<exercise xml:id="exercise-load"><statement><ol label="a">
+<exercise xml:id="exercise-load"><title>Practice 3</title>
+<statement><ol label="a">
     <li>For the table in <xref ref="example-load" text="type-global"/>, consider the column corresponding to a beam depth of <m>3</m> cm. Graph <m>L</m> as a function of <m>w</m> when the depth is constant at <m>d = 3</m>.</li>
     <li>Find a formula for <m>L</m> as a function of <m>w</m> for <m>d = 3</m>.</li>
 </ol></statement>
@@ -321,6 +345,26 @@ This relationship between variables is an example of <term>joint variation</term
 
 <xi:include href="./assemblage-joint-variation.xml" /> 
 
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $twovar = RadioButtons(
+              ["\(H=kst\)",
+              "\(L=m+kn\)",
+              "\(y=kr^2\)",
+              "\(Z=k(x+y)\)"],
+              0, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Which of the following functions represents joint variation, where <m>k</m> is a constant?</p>
+        <p><var name="$twovar" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>H=kst</m></p>
+    </solution>
+</webwork></exercise>
+
 <example xml:id="example-load2"><statement><p>Find a formula for load as a function of width and depth for the data in <xref ref="example-load" text="type-global"/>.</p></statement>
 <solution><p>The function we want has the form
     <me>L = f (w, d) = kwd^2</me>
@@ -330,7 +374,8 @@ so <m>k = 10</m>. The formula for load as a function of width and depth is
     <me>L = 10wd^2</me>
 You can check that this formula works for all the values in the table.</p></solution></example>
 
-<exercise><statement><p>The cost, <m>C</m>, of tiling a rectangular floor depends on the dimensions (length and width) of the floor, so <m>C = f (w, l)</m>. The table shows the costs in dollars for some dimensions.</p>
+<exercise><title>Practice 4</title>
+<statement><p>The cost, <m>C</m>, of tiling a rectangular floor depends on the dimensions (length and width) of the floor, so <m>C = f (w, l)</m>. The table shows the costs in dollars for some dimensions.</p>
 <sidebyside><tabular top="major" halign="center"  right="minor" left="minor" bottom="minor">
         <!--  -->
         <row>
@@ -404,6 +449,16 @@ You can check that this formula works for all the values in the table.</p></solu
     <li><p>Yes</p></li>
     <li><p><m>C = 16wl</m></p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain the difference between the symbols <m>f(ab)</m> and <m>f(a,b)</m>.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Graphs</title>
@@ -440,7 +495,28 @@ You can check that this formula works for all the values in the table.</p></solu
     The graphs are shown at right above. For any fixed value of its width, <m>L</m> varies directly with the square of depth.</p></li>
 </ol></p></solution></example>
 
-<exercise><statement><p>The period of a satellite orbiting the Earth varies directly with the radius of the orbit and inversely with the speed of the satellite.<ol label="a">
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $tworep = RadioButtons(
+              ["a table of values.",
+              "a graph in three dimensions.",
+              "several graphs in two dimensions.",
+              "all of the above."],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>We can represent a function of two variables by</p>
+        <p><var name="$tworep" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>all of the above.</p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 5</title>
+<statement><p>The period of a satellite orbiting the Earth varies directly with the radius of the orbit and inversely with the speed of the satellite.<ol label="a">
     <li><p>Write a formula for the period, <m>T</m>, as a function of orbital radius, <m>r</m>, and velocity, <m>v</m>.</p></li>
     <li><p>GPS satellites orbit at an altitude of <m>20,200</m> kilometers and a speed of <m>233</m> kilometers per second. The period of a GPS satellite is <m>11</m> hours and <m>58</m> minutes. Find the constant of variation in your formula for <m>T</m>. (The radius of the Earth is <m>6360</m> km.)</p></li>
     <li><p>Satellites in polar orbits are used to measure ozone concentrations in the atmosphere. They orbit at an altitude of <m>300</m> km and have a period of <m>90</m> minutes. What is the speed of a satellite in polar orbit?</p></li>

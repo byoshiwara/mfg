@@ -57,7 +57,8 @@ We graph the corresponding line
 Note that the <m>y</m>-intercept is <m>-4</m> and the slope is <m>\dfrac{4}{3}</m>. (See <xref ref="linear-functions" text="type-global"/> to review the slope-intercept method of graphing.) Finally, we shade the half-plane below the line. The completed graph is shown below.</p>
 <sidebyside  width="25%"><image source="images/fig-linear-inequality2"><description>linear inequality in two variables</description></image></sidebyside></solution></example>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>Practice 1</title>
+<statement><p><ol label="a">
 	<li><p>Find one <m>y</m>-value that satisfies the inequality <m>y - 3x \lt 6</m> for each of the <m>x</m>-values in the table.</p><sidebyside><tabular left="minor" right="minor" top="minor" bottom="minor" halign="center">
 					<row>
 						<cell><m>x</m></cell>
@@ -89,6 +90,26 @@ Note that the <m>y</m>-intercept is <m>-4</m> and the slope is <m>\dfrac{4}{3}</
 	<li><sidebyside width="60%"><image source="images/fig-in-ex-ans-8-4-1"><description>linear inequality in two variables</description></image></sidebyside></li>
 	<li><p>See graph.</p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $tort = RadioButtons(
+              ["Above",
+              "Below",
+              "To the left",
+              "To the right"],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>The solutions of <m>x \gt -4</m> all lie to which side of the boundary line?</p>
+        <p><var name="$tort" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>To the right</p>
+    </solution>
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Using a Test Point</title>
@@ -110,11 +131,32 @@ Because this is a true statement, <m>(0, 0)</m> is a solution of the inequality.
 	<me>3(\alert{5}) - 2(\blert{0}) \lt 6</me>
 which is a <em>false</em> statement. This tells us that <m>(5, 0)</m> is not a solution to the inequality, so the solutions must lie on the other side of the boundary line. Using (5, 0) as the test point gives us the same solutions we found in <xref ref="example-linear-inequality-test-point" text="type-global"/>.</p>
 
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $tort = RadioButtons(
+              ["\((0,0)\)",
+              "\((1,1)\)",
+              "\((2,3)\)",
+              "\((-1,-1)\)"],
+              0, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>Which point would not be a good test point for the inequality <m>y \le \dfrac{2x}{3}</m> ?</p>
+        <p><var name="$tort" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>(0,0)</m></p>
+    </solution>
+</webwork></exercise>
+
 <p>Here is a summary of our test point method for graphing inequalities.</p>
 
 <xi:include href="./assemblage-graph-inequality-using-test-point.xml" />
 
-<exercise><statement><p>Graph the solutions of the inequality <m>~~y \gt \dfrac{-3}{2}x</m><ol>
+<exercise><title>Practice 2</title>
+<statement><p>Graph the solutions of the inequality <m>~~y \gt \dfrac{-3}{2}x</m><ol>
 	<li><p>Graph the line <m>y = \dfrac{-3}{2}x</m>. (Use the slope-intercept method.)</p></li>
 	<li><p>Choose a test point. (Do not choose <m>(0, 0)</m>!)</p></li>
 	<li><p>Decide which side of the line to shade.</p></li>
@@ -136,7 +178,8 @@ Its graph is then a region in the plane.</p>
 Since this is a false statement, we shade the half-plane that does not contain the origin. We see in the figure below that the graph of the inequality contains all points whose <m>x</m>-coordinates are greater than or equal to <m>2</m>.</p>
 <sidebyside  width="25%"><image source="images/fig-planar-graph-x-greater-or-equal-2"><description>graph of x greater or equal to 2 in the plane</description></image></sidebyside></solution></example>
 
-<exercise><statement><p>Graph <m>~~-2 \le y \lt 3~~</m> in the plane.</p></statement>
+<exercise><title>Practice 3</title>
+<statement><p>Graph <m>~~-2 \le y \lt 3~~</m> in the plane.</p></statement>
 <answer><sidebyside width="20%"><image source="images/fig-in-ex-ans-8-4-3"><description>linear compound inequality in two variables</description></image></sidebyside></answer></exercise>
 </subsection>
 
@@ -216,7 +259,8 @@ Since this is a false statement, we shade the half-plane that does not contain t
 		<li><p>Laura can choose any combination of broccoli and zucchini represented by points in the shaded region. For example, the point <m>(3, 1)</m> is a solution to the system of inequalities, so Laura could choose to eat <m>3</m> servings of broccoli and <m>1</m> serving of zucchini.</p></li>
 		</ol></p></solution></example>
 
-<exercise><statement><p>Use the following steps to graph the solutions of the system
+<exercise><title>Practice 4</title>
+<statement><p>Use the following steps to graph the solutions of the system
 		<md>
 			<mrow>x + y \amp\le 12</mrow>
 			<mrow>3x - 4y \amp\le 8</mrow>
@@ -228,6 +272,16 @@ Since this is a false statement, we shade the half-plane that does not contain t
 		<li><p>Shade the intersection of the two solutions sets.</p></li>
 	</ol></p></statement>
 <answer><sidebyside width="30%"><image source="images/fig-in-ex-ans-8-4-4"><description>linear system of inequalities in two variables</description></image></sidebyside></answer></exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Why do we shade the intersection of the solution sets when solving a system of inequalities?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 
 <p>To describe the solutions of a system of inequalities, it is useful to locate the <term>vertices</term><idx>vertices</idx>, or corner points, of the boundary.</p>
 
@@ -278,7 +332,28 @@ Since this is a false statement, we shade the half-plane that does not contain t
 		</sidebyside>
 		<p>The vertices are the points <m>(0, 0)</m>, <m>(0, 3)</m>, <m>\left(\dfrac{10}{3},\dfrac{4}{3} \right)</m>, and <m>(2, 0)</m>.</p></solution></example>
 
-<exercise><statement><p><ol label="a">
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $fqud = RadioButtons(
+              ["\(x+y \gt 0\)",
+              "\(x-y \gt 0\)",
+              "\(xy \gt 0\)",
+              "\(x \gt 0, y \gt 0\)"],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>The first quadrant includes all the solutions of</p>
+        <p><var name="$fqud" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>x \gt 0, y \gt 0</m></p>
+    </solution>
+</webwork></exercise>
+
+<exercise><title>Practice 5</title>
+<statement><p><ol label="a">
 	<li><p>Graph the system of inequalities
 				<md>
 					<mrow>5x + 4y \amp \lt 40</mrow>
@@ -291,6 +366,26 @@ Since this is a false statement, we shade the half-plane that does not contain t
 	<li><sidebyside width="35%"><image source="images/fig-in-ex-ans-8-4-5"><description>system of linear inequalities in two variables</description></image></sidebyside></li>
 	<li><p><m>A(-1.\overline{3}, 2), B(3.5, 5.625), C(6, 2.5), D(6, 2)</m></p></li>
 </ol></p></answer></exercise>
+
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $tort = RadioButtons(
+              ["use a test point.)",
+              "use the vertex formula.",
+              "solve a system of equations.",
+              "find the \(x\)-intercepts."],
+              2, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>To find the vertices of the solution set for a system of inequalities, we</p>
+        <p><var name="$tort" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>solve a system of equations.</p>
+    </solution>
+</webwork></exercise>
 
 </subsection>
 <xi:include href="./summary-8-4.xml" /> <!-- summary  -->
