@@ -186,15 +186,35 @@ For the examples above, we find that the <m>y</m>-intercepts are
 <note><sidebyside widths="55% 32%"><p>For decreasing exponential functions, those with bases between <m>0</m> and <m>1</m>, the smaller the base, the more steeply the graph decreases. For example, compare the graphs of <m>p(x) = 0.8^x</m> and <m>q(x) = 0.5^x</m> shown in the figure at right.</p>
 <image source="images/fig-two-exponential-decay"><description>two exponential decay functions</description></image></sidebyside></note>
 
-<exercise><title>Practice 1</title>
-<statement><ol label="a">
-    <li>State the ranges of the functions <m>f</m> and <m>g</m> in <xref ref="example-two-exponential-growth" text="type-global"/> on the domain <m>[-2, 2]</m>.</li>
-    <li>State the ranges of the functions <m>p</m> and <m>q</m> shown in the Note above on the domain <m>[-2, 2]</m>. Round your answers to two decimal places.</li>
-</ol></statement>
-<answer><p><ol label="a">
-    <li><m>f: \left[\dfrac{1}{9}, 9\right];~~g: \left[\dfrac{1}{16}, 16\right]</m></li>
-    <li><m>p: [0.64, 1.56];~~q: [0.25, 4]</m></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+           Context("Inequalities");
+
+           $f= Compute("1/9 &lt;= x &lt;= 9");
+           $g= Compute("1/16 &lt;= x &lt;= 16");
+           $p= Compute("0.64 &lt;= x &lt;= 25/16");
+           $q= Compute("1/4 &lt;= x &lt;= 4");
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>State the ranges of the functions <m>f</m> and <m>g</m> in <xref ref="example-two-exponential-growth" text="type-global"/> on the domain <m>[-2, 2]</m>.</p>
+                <p><m>f: </m> <var name="$f" width="10"/></p>
+                <p><m>g: </m> <var name="$g" width="10"/></p></li>
+                <li><p>State the ranges of the functions <m>p</m> and <m>q</m> shown in the Note above on the domain <m>[-2, 2]</m>. Round your answers to two decimal places.</p>
+                <p><m>p: </m> <var name="$p" width="10"/></p>
+                <p><m>q: </m> <var name="$q" width="10"/></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p><m>f: \left[\dfrac{1}{9}, 9\right]</m>; <m>g: \left[\dfrac{1}{16}, 16\right]</m></p></li>
+                <li><p><m>p: [0.64, 1.56]</m>;  <m>q: [0.25, 4]</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Transformations of Exponential Functions</title>
@@ -255,14 +275,35 @@ We see that <m>g(x)</m> is the same function as <m>f(-x)</m>. Replacing <m>x</m>
 	<li><p>The graph of <m>y = f (-x)</m> is the reflection of the graph of <m>y = f (x)</m> about the <m>y</m>-axis.</p></li>
 </ol></p></assemblage>
 
-<exercise><title>Practice 2</title>
-<statement><p>Which of the functions below have the same graph? Explain why.
-	<ol label="a" cols="3">
-		<li><m>f (x) =\left(\dfrac{1}{4}\right)^x</m></li>
-		<li><m>g(x) = -4^x</m></li>
-		<li><m>h(x) = 4^{-x}</m></li>
-	</ol></p></statement>
-<answer><p>(a) and (c)</p></answer></exercise>
+<exercise>
+    <title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            $match = new_checkbox_multiple_choice();
+            $match -> qa (
+            "A question can go here, but PTX ignores this",
+            "\( f(x)= \left(\dfrac{1}{4} \right)^x \) $BR$BR",
+            "\( h(x)= 4^{-x} \) $BR",
+            );
+            $match -> extra(
+            "\( g(x)= -4^x \) $BR",
+            );
+            $match -> makeLast(
+            "\( f(x)= \left(\dfrac{1}{4} \right)^x \) $BR$BR",
+            "\( g(x)= -4^x \) $BR",
+            "\( h(x)= 4^{-x} \) $BR",
+                       "None of the above");
+            
+        </pg-code></setup>
+        <statement>
+            <p>Which of the functions below have the same graph? Explain why.</p>
+            <p><var name="$match" form="checkboxes"/> </p>
+        </statement>
+        <solution>
+            <p>(a) and (c) are the same function.</p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -383,14 +424,60 @@ We see that <m>g(x)</m> is the same function as <m>f(-x)</m>. Replacing <m>x</m>
     </solution>
 </webwork></exercise>
 
-<exercise xml:id="exercise-identify-power-and-exponential-functions"><title>Practice 3</title>
-<statement><p>Which of the following functions are exponential functions, and which are power functions?<ol label="a" cols="2">
-	<li><m>F(x) = 1.5^x</m></li>
-	<li><m>G(x) = 3x^{1.5}</m></li>
-	<li><m>H(x) = 3^{1.5x}</m></li>
-	<li><m> K(x) = (3x)^{1.5}</m></li>
-</ol></p></statement>
-<answer><p>Exponential:  (a) and (c); power: (b) and (d)</p></answer></exercise>
+<exercise xml:id="exercise-identify-power-and-exponential-functions">
+    <title>Practice 3</title>
+    <webwork>
+        <setup><pg-code>
+            $match = new_checkbox_multiple_choice();
+            $match -> qa (
+            "A question can go here, but PTX ignores this",
+            "\( F(x)= 1.5^x \) $BR",
+            "\( H(x)= 3^{1.5x} \) $BR",
+            );
+            $match -> extra(
+            "\( G(x)= 3x^{1.5} \) $BR",
+            "\( K(x)= (3x)^{1.5} \) $BR"
+            );
+            $match -> makeLast(
+            "\( F(x)= 1.5^x \) $BR",
+            "\( G(x)= 3x^{1.5} \) $BR",
+            "\( H(x)= 3^{1.5x} \) $BR",
+            "\( K(x)= (3x)^{1.5} \) $BR",
+             "None of the above");
+
+            $match2 = new_checkbox_multiple_choice();
+            $match2 -> qa (
+            "A question can go here, but PTX ignores this",
+            "\( G(x)= 3x^{1.5} \) $BR",
+            "\( K(x)= (3x)^{1.5} \) $BR"
+            );
+            $match2 -> extra(
+            "\( F(x)= 1.5^x \) $BR",
+            "\( H(x)= 3^{1.5x} \) $BR",
+            );
+            $match2 -> makeLast(
+            "\( F(x)= 1.5^x \) $BR",
+            "\( G(x)= 3x^{1.5} \) $BR",
+            "\( H(x)= 3^{1.5x} \) $BR",
+            "\( K(x)= (3x)^{1.5} \) $BR",
+            "None of the above");
+            
+        </pg-code></setup>
+        <statement>
+            <p>Which of the following functions are exponential functions, and which are power functions?<ol label="a" cols="2">
+                <li><m>F(x) = 1.5^x</m></li>
+                <li><m>G(x) = 3x^{1.5}</m></li>
+                <li><m>H(x) = 3^{1.5x}</m></li>
+                <li><m> K(x) = (3x)^{1.5}</m></li>
+            </ol></p>
+            <p>Exponential: <var name="$match" form="checkboxes"/> </p>
+            <p>Power: <var name="$match2" form="checkboxes"/> </p>
+        </statement>
+        <solution>
+            <p>Exponential:  (a) and (c); power: (b) and (d)</p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -464,12 +551,25 @@ which is true if and only if <m>x = 4</m>.</p>
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 4</title>
-<statement><p>Solve the equation <m>~~2^{x+2} = 128</m>.</p>
-</statement>
-<hint><p><m>\blert{\text{Write each side as a power of 2.}}</m></p>
-    <p><m>\blert{\text{Equate exponents.}}</m></p></hint>
-<answer><p><m>x=5</m></p></answer></exercise>
+<exercise>
+    <title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+            $answer=Compute("5");
+        </pg-code></setup>
+        <statement>
+            <p>Solve the equation <m>2^{x+2} = 128</m>.</p>
+            <p><m>x=</m><var name="$answer" width="2"/> </p>
+        </statement>
+        <hint>
+            <p><m>\blert{\text{Write each side as a power of 2.}}</m></p>
+            <p><m>\blert{\text{Equate exponents.}}</m></p>
+        </hint>
+        <solution>
+            <p><m>x=5</m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>Exponential equations arise frequently in the study of exponential growth.</p>
 
@@ -485,17 +585,36 @@ We set <m>P = \alert{10,240}</m> and solve for <m>t</m>:
 	\end{aligned}</me><!--*****-->
 We equate the exponents to get <m>10 = \dfrac{t}{5}</m>, or <m>t = 50</m>. The population will grow to <m>10,240</m> fleas in <m>50</m> days.</p></solution></example>
 
-<exercise><title>Practice 5</title>
-<statement><p>During an advertising campaign in a large city, the makers of Chip-O’s corn chips estimate that the number of people who have heard of Chip-O’s increases by a factor of <m>8</m> every 4 days.<ol label="a">
-	<li>If 100 people are given trial bags of Chip-O's to start the campaign, write a function, <m>N(t)</m>, for the number of people who have heard of Chip-O's after <m>t</m> days of advertising.</li>
-	<li>Use your calculator to graph the function <m>N(t)</m> on the domain <m>0 \le t \le 15</m>.</li>
-	<li>How many days should the makers run the campaign in order for Chip-O's to be familiar to <m>51,200</m> people? Use algebraic methods to find your answer and verify on your graph.</li>
-	</ol></p></statement>
-<answer><p><ol label="a">
-    <li><m>N(t)=100 \cdot 8^{t/4}</m></li>
-    <li><sidebyside width="40%"><image source="images/fig-4-2-ex5ans"><description>GC graph</description></image></sidebyside></li>
-    <li> 12 days</li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(t=>"Real");
+            $N = Formula("100 * 8**(t/4)");
+            $answer = Compute("12");
+        </pg-code></setup>
+        <statement>
+            <p>During an advertising campaign in a large city, the makers of Chip-O's corn chips estimate that the number of people who have heard of Chip-O's increases by a factor of <m>8</m> every 4 days.</p>
+            <p><ol label="a">
+            <li><p>If 100 people are given trial bags of Chip-O's to start the campaign, write a function, <m>N(t)</m>, for the number of people who have heard of Chip-O's after <m>t</m> days of advertising.</p>
+            <p><m>N(t)=</m><var name="$N" width="10"/> </p></li>
+            <li><p>Use your calculator to graph the function <m>N(t)</m> on the domain <m>0 \le t \le 15</m>.</p></li>
+            <li><p>How many days should the makers run the campaign in order for Chip-O's to be familiar to <m>51,200</m> people? Use algebraic methods to find your answer and verify on your graph.</p>
+            <p>Answer: <var name="$answer" width="2"/> days</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p><m>N(t)=100 \cdot 8^{t/4}</m></p></li>
+                <li><p>A graph is below.</p></li>
+                <li><p> 12 days</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="40%" margins="0% 60%"><image source="images/fig-4-2-ex5ans"><description>GC graph</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <exercise><title>QuickCheck 6</title>
 <webwork>
@@ -535,9 +654,26 @@ We equate the exponents to get <m>10 = \dfrac{t}{5}</m>, or <m>t = 50</m>. The p
 We enter 2 <c>^</c> 2.32 <c>ENTER</c> to get <m>4.993322196</m>. This number is not equal to <m>5</m>, but it is close, so we believe that <m>x = 2.32</m> is a reasonable approximation to the solution of the equation <m>2^x = 5</m>.</p></solution></example>
 </technology>
 
-<exercise><title>Practice 6</title>
-<statement><p>Use the graph of <m>y = 5^x</m> to find an approximate solution to <m>5^x = 285</m>, accurate to two decimal places.</p></statement>
-<answer><p><m>x \approx 3.51</m></p></answer></exercise>
+<exercise>
+    <title>Practice 6</title>
+    <webwork>
+        <setup><pg-code>
+            $exact = log(285)/log(5);
+            $answer = Compute("$exact")->with(
+              tolType => 'absolute',
+              tolerance => .005,
+            );
+
+        </pg-code></setup>
+        <statement>
+            <p>Use the graph of <m>y = 5^x</m> to find an approximate solution to <m>5^x = 285</m>, accurate to two decimal places.</p>
+            <p>Answer: <m>x\approx</m><var name="$answer" width="3"/> </p>
+        </statement>
+        <solution>
+            <p>The point on the graph where <m>y=285</m> has <m>x \approx 3.51</m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>

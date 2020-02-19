@@ -55,18 +55,38 @@ on the same screen. Use <c>WINDOW</c> settings to match the graph in <xref ref="
 	<sidebyside  width="35%"><image source="images/fig-GC-fireworks" ><description>GCgraph of fireworks height</description></image> </sidebyside>
 <p>Then use the intersect feature to find the <m>x</m>-coordinates of the points where the two graphs intersect (there are two of them). These points will have <m>y</m>-coordinates of <m>800</m>. The parabola is above the line, so <m>h \gt 800</m> when <m>t</m> is between these two <m>x</m>-values. To two decimal places, you can see that <m>h \gt 800</m> when <m>4.26 \lt t \lt 11.74</m>.</p>	</technology>
 
-<exercise><title>Practice 1</title>
-<statement><ol label="a">
-		<li><p>Graph the function <m>y = x^2 - 2x - 9</m> in the window
-				<me>
-					\begin{aligned}[t]
-					\text{Xmin} \amp = -0.4 \amp\amp \text{Xmax} = 9.4\\
-					\text{Ymin} \amp = -10 \amp\amp \text{Ymax} = 10
-					\end{aligned}
-				</me></p></li>
-		<li><p>Use the graph to solve the inequality <m>x^2 - 2x - 9 \ge 6</m>.</p></li>
-		</ol></statement>
-<answer><sidebyside width="20%"><image source="images/fig-in-ex-ans-6-5-1"><description>parabola for quadratic inequality</description></image></sidebyside><p><m>x\le -3</m> or <m>x\ge 5</m></p></answer></exercise>
+<exercise>
+	<title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Inequalities");
+            $answer= Compute(" x &lt;= -3 or x >= 5");
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Graph the function <m>y = x^2 - 2x - 9</m> in the window
+                <me>
+                    \begin{aligned}[t]
+                    \text{Xmin} \amp = -0.4 \amp\amp \text{Xmax} = 9.4\\
+                    \text{Ymin} \amp = -10 \amp\amp \text{Ymax} = 10
+                    \end{aligned}
+                </me></p></li>
+                <li><p>Use the graph to solve the inequality <m>x^2 - 2x - 9 \ge 6</m>.</p>
+                <p>Solution: <var name="$answer" width="20"/> </p></li>
+            </ol></p>
+            <instruction>You may use inequality symbols or enter your answer using interval notation. When using inequality symbols, enter "&lt;=" for <m>\le</m>, and enter ">=" for <m>\ge</m>. When using interval notation, use "inf" for <m>\infty</m> and use "U" (an upper case letter u) for the union symbol <m>\cup</m>.</instruction>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p>A graph is below.</p></li>
+                <li><p><m>x\le -3</m> or <m>x\ge 5</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside widths="23%" margins="0% 70%"><image source="images/fig-in-ex-ans-6-5-1"><description>parabola for quadratic inequality</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <p>In <xref ref="example-fireworks" text="type-global"/>, we solved the inequality <m>256t - 16t^2 \gt 800</m> by comparing points on the graph of <m>h = 256 - 16t^2</m> with points on the line <m>h = 800</m>. If one side of an inequality is zero, we can compare points on the graph with the line <m>y = 0</m>, which is the <m>x</m>-axis.</p>
 
@@ -112,15 +132,32 @@ This set is another type of compound inequality, and its graph consists of two p
 	<sidebyside width="60%"><image source="images/fig-numline-infinite-subintervals" ><description>number line with two infinite subintervals</description></image></sidebyside>
 <p>The left piece of the set is <m>x \lt -2</m>, and the right piece is <m>x \gt 2</m>. It would be incorrect to describe the solution set as <m>-2 \gt x \gt 2</m>, because this notation implies that <m>-2 \gt 2</m>. We must write the solution as two parts: <m>x \lt -2</m> or <m>x \gt 2</m>.</p></warning>
 
-<exercise><title>Practice 2</title>
-<statement><p>Use a graph of <m>y = 6 - x^2</m> to solve the inequalities.<ol label="a" cols="2">
-		<li><m>6 - x^2 \gt 0</m></li>
-		<li><m>6 - x^2 \le 0</m></li>
-	</ol></p></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>-\sqrt{6}\lt x \lt \sqrt{6} </m></p></li>
-	<li><p><m>x \le -\sqrt{6}~ </m> or <m>~x\ge \sqrt{6} </m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Inequalities")->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
+            $answer= Compute(" -sqrt(6) &lt; x &lt; sqrt(6)");
+            $answer2= Compute(" x &lt;= -sqrt(6) or x >= sqrt(6)");
+            
+        </pg-code></setup>
+        <statement>
+            <p>Use a graph of <m>y = 6 - x^2</m> to solve the inequalities.<ol label="a">
+                <li><p><m>6 - x^2 \gt 0</m></p>
+                <p>Solution: <var name="$answer" width="20"/> </p></li>
+                <li><p><m>6 - x^2 \le 0</m></p>
+                <p>Solution: <var name="$answer2" width="20"/> </p></li>
+            </ol></p>
+            <instruction>You may use inequality symbols or enter your answer using interval notation. When using inequality symbols, enter "&lt;=" for <m>\le</m>, and enter ">=" for <m>\ge</m>. When using interval notation, use "inf" for <m>\infty</m> and use "U" (an upper case letter u) for the union symbol <m>\cup</m>.</instruction>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>-\sqrt{6}\lt x \lt \sqrt{6} </m></p></li>
+                <li><p><m>x \le -\sqrt{6} </m> or <m>x\ge \sqrt{6} </m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
@@ -151,19 +188,53 @@ This set is another type of compound inequality, and its graph consists of two p
 <p>You can check that the <m>x</m>-intercepts of the graph are <m>-3</m> and <m>5</m>. The points shown in red on the graph lie below the <m>x</m>-axis and have <m>y \le 0</m>, so the <m>x</m>-coordinates of these points are the solutions of the inequality. All of these points have <m>x</m>-coordinates between <m>-3</m> and <m>5</m>. Thus, the solution is <m>-3\le x\le 5</m>, or in interval notation, <m>[-3, 5]</m>.</p>
     <image source="images/fig-quadratic-inequality"><description>parabola dividing the x-axis into three regions</description></image></sidebyside></solution></example>
 
-<exercise><title>Practice 3</title>
-<statement><p>Follow the steps below to solve the inequality <m>36 + 6x - x^2\le 20</m>.<ol label="a">
-		<li><p>Rewrite the inequality so that the right side is zero.</p></li>
-		<li><p>Graph the equation <m>y = 16 + 6x - x^2</m>.</p></li>
-		<li><p>Locate the points on the graph with <m>y</m>-coordinate less than zero, and mark the <m>x</m>-coordinates of the points on the <m>x</m>-axis.</p></li>
-		<li><p>Write the solution with interval notation.</p></li>
-	</ol></p></statement>
-<answer><p><ol label="a">
-	<li><p><m>16+6x-z^2\le 0</m></p></li>
-	<li><sidebyside width="25%"><image source="images/fig-in-ex-ans-6-5-3" ><description>parabola for quadrtic inequality</description></image></sidebyside></li>
-	<li><p>See graph</p></li>
-	<li><p><m>(-\infty,-2] \cup [8,\infty)</m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 3</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Interval");
+            Context()->{error}{msg}{"Unexpected character '&lt;'"}
+              = "Your answer should not contain inequality symbols. Give your answer in interval notation.";
+            Context()->{error}{msg}{"Unexpected character '>'"}
+              = "Your answer should not contain inequality symbols. Give your answer in interval notation.";
+            Context()->{error}{msg}{"'or' is not defined in this context"}
+              = "Use 'U' (upper case u) to indicate a union";
+
+
+            $f = Formula("16+6x-x^2");
+            $answer = Compute("(-inf,-2]U[8,inf)");
+            $my_evaluator = $answer -> cmp(
+             showHints=>1,
+             showEndpointHints => 1,
+             showEndTypeHints => 1,
+             partialCredit => 1,
+            ); 
+        </pg-code></setup>
+        <statement>
+            <p>Follow the steps below to solve the inequality <m>36 + 6x - x^2\le 20</m>.</p>
+            <p><ol label="a">
+                <li><p>Rewrite the inequality so that the right side is zero.</p>
+                <p><var name="$f" width="12"/><m>\le 0</m> </p></li>
+                <li><p>Graph the equation <m>y = 16 + 6x - x^2</m>.</p></li>
+                <li><p>Locate the points on the graph with <m>y</m>-coordinate less than zero, and mark the <m>x</m>-coordinates of the points on the <m>x</m>-axis.</p></li>
+                <li><p>Write the solution with interval notation.</p>
+                <p>Solution: <var name="$answer" width="20" evaluator="$my_evaluator"/> </p></li>
+            </ol></p>
+                   <instruction>When using interval notation, use "inf" for <m>\infty</m> and use "U" (an upper case letter u) for the union symbol <m>\cup</m>.</instruction>
+ </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p><m>16+6x-x^2\le 0</m></p></li>
+                <li><p>A graph is below.</p></li>
+                <li><p>See graph</p></li>
+                <li><p><m>(-\infty,-2] \cup [8,\infty)</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="25%" margins="0% 75%"><image source="images/fig-in-ex-ans-6-5-3" ><description>parabola for quadrtic inequality</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -242,31 +313,31 @@ All we really need to know is whether the corresponding parabola <m>y = ax^2 + b
 
 <warning><p>Many people think that the inequality signs in the solution should point in the same direction as the sign in the original problem, and hence would incorrectly write the solution to <xref ref="example-quadratic-inequality2" text="type-global"/> as <m>x \le -2</m> or <m>x \le 8</m>. However, you can see from the graph that this is incorrect. Remember that the graph of a quadratic equation is a parabola, not a straight line!</p></warning>
 
-<exercise><title>Practice 4</title>
-<statement><p>Solve <m>x^2 \lt 20</m>.</p></statement>
-<hint><p>
-<!--		<dl>
-			<li><title>Step 1 </title>
-				<p>Write the inequality in standard form.</p>
-			</li>
-			<li><title>Step 2 </title>
-				<p>Find the <m>x</m>-intercepts of the corresponding graph. Use extraction of roots.</p>
-			</li>
-			<li><title>Step 3</title>
-				<p>Make a rough sketch of the graph.</p>
-			</li>
-			<li><title>Step 4</title>
-				<p>Decide which intervals on the <m>x</m>-axis give the correct sign for <m>y</m>.</p>
-			</li>
-		</dl>
-	-->
-		<ol label="1">
-			<li>Write the inequality in standard form.</li>
-			<li>Find the <m>x</m>-intercepts of the corresponding graph. Use extraction of roots.</li>
-			<li>Make a rough sketch of the graph.</li>
-			<li>Decide which intervals on the <m>x</m>-axis give the correct sign for <m>y</m>.</li>
-		</ol></p></hint>
-<answer><p><m>-\sqrt{20} \lt x \lt \sqrt{20} </m></p></answer></exercise>
+<exercise>
+	<title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+           Context("Inequalities")->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
+            $answer= Compute(" -sqrt(20) &lt; x &lt; sqrt(20)");
+       </pg-code></setup>
+        <statement>
+            <p>Solve <m>x^2 \lt 20</m>.</p>
+            <p>Answer: <var name="$answer" width="20"/> </p>
+            <instruction>You may use inequality symbols or enter your answer using interval notation. When using inequality symbols, enter "&lt;=" for <m>\le</m>, and enter ">=" for <m>\ge</m>. When using interval notation, use "inf" for <m>\infty</m> and use "U" (an upper case letter u) for the union symbol <m>\cup</m>.</instruction>
+        </statement>
+        <hint>
+            <p><ol label="1">
+            <li><p>Write the inequality in standard form.</p></li>
+            <li><p>Find the <m>x</m>-intercepts of the corresponding graph. Use extraction of roots.</p></li>
+            <li><p>Make a rough sketch of the graph.</p></li>
+            <li><p>Decide which intervals on the <m>x</m>-axis give the correct sign for <m>y</m>.</p></li>
+        </ol></p>
+        </hint>
+        <solution>
+            <p><m>-\sqrt{20} \lt x \lt \sqrt{20} </m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>If we cannot find the <m>x</m>-intercepts of the graph by factoring or extraction of roots, we can use the quadratic formula.</p>
 
@@ -355,31 +426,32 @@ How many parkas should the company produce and sell each month if it must keep t
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 5</title>
-<statement><p>Solve the inequality <m>10 - 8x + x^2\gt 4</m>.</p></statement>
-<hint><p>
-<!--		<dl>
-			<li><title>Step 1 </title>
-				<p>Write the inequality in standard form.</p>
-			</li>
-			<li><title>Step 2 </title>
-				<p>Find the <m>x</m>-intercepts of the corresponding graph. Use the quadratic formula</p>
-			</li>
-			<li><title>Step 3</title>
-				<p>Make a rough sketch of the graph.</p>
-			</li>
-			<li><title>Step 4</title>
-				<p>Decide which intervals on the <m>x</m>-axis give the correct sign for <m>y</m>. Write your answer with interval notation.</p>
-			</li>
-		</dl>
-	-->
-		<ol label="1">
-			<li>Write the inequality in standard form.</li>
-			<li>Find the <m>x</m>-intercepts of the corresponding graph. Use extraction of roots.</li>
-			<li>Make a rough sketch of the graph.</li>
-			<li>Decide which intervals on the <m>x</m>-axis give the correct sign for <m>y</m>.</li>
-		</ol></p></hint>
-<answer><p><m>(-\infty, 4 - \sqrt{10}] \cup [4 + \sqrt{10},\infty)</m></p></answer></exercise>
+<exercise>
+	<title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+           Context("Inequalities")->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
+            $answer= Compute(" (-inf,4-sqrt(10)]U [4+sqrt(10),inf)");
+            
+        </pg-code></setup>
+        <statement>
+            <p>Solve the inequality <m>10 - 8x + x^2\gt 4</m>.</p>
+            <p>Answer: <var name="$answer" width="30"/> </p>
+            <instruction>You may use inequality symbols or enter your answer using interval notation. When using inequality symbols, enter "&lt;=" for <m>\le</m>, and enter ">=" for <m>\ge</m>. When using interval notation, use "inf" for <m>\infty</m> and use "U" (an upper case letter u) for the union symbol <m>\cup</m>.</instruction>
+        </statement>
+        <hint>
+            <p><ol label="1">
+            <li>Write the inequality in standard form.</li>
+            <li>Find the <m>x</m>-intercepts of the corresponding graph. Use extraction of roots.</li>
+            <li>Make a rough sketch of the graph.</li>
+            <li>Decide which intervals on the <m>x</m>-axis give the correct sign for <m>y</m>.</li>
+        </ol></p>
+        </hint>
+        <solution>
+            <p><m>(-\infty, 4 - \sqrt{10}] \cup [4 + \sqrt{10},\infty)</m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>

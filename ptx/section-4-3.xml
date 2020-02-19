@@ -52,15 +52,29 @@ In other words, we solve an exponential equation by computing a logarithm. You c
     <li><p><m>\log_5{\sqrt{5}} = \alert{\dfrac{1}{2}}~~ \text{ because }~~ 5^{\alert{1/2}} =\sqrt{5}</m></p></li>
 </ol></p></solution></example>
 
-<exercise><title>Practice 1</title>
-<statement><p>Find each logarithm.<ol label="a" cols="2">
-		<li><p><m>\log_{3}{81}</m></p></li>
-		<li><p><m>\log_{10}{\dfrac{1}{1000}}</m></p></li>
-	</ol></p></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>4</m></p></li>
-	<li><p><m>-3</m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->functions->disable("All");
+            $a = Compute("4");
+            $b = Compute("-3");
+        </pg-code></setup>
+        <statement>
+            <p>Find each logarithm.</p>
+            <p><ol label="a">
+                <li><p><m>\log_{3}{81}=</m><var name="$a" width="2"/></p></li>
+                <li><p><m>\log_{10}{\dfrac{1}{1000}}=</m><var name="$b" width="2"/></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>4</m></p></li>
+                <li><p><m>-3</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
@@ -111,15 +125,29 @@ For any base <m>b \gt 0, b\ne 1</m>,</p>
 		<li><p><m>\log_{3}{3^4} = 4</m></p></li>
 	</ol></p></statement></example>
 
-<exercise><title>Practice 2</title>
-<statement><p>Find each logarithm.<ol label="a" cols="2">
-		<li><p><m>\log_{n}{1}</m></p></li>
-		<li><p><m>\log_{n}{n^3}</m></p></li>
-	</ol></p></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>0</m></p></li>
-	<li><p><m>3</m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->functions->disable("All");
+            $a = Compute("0");
+            $b = Compute("3");
+        </pg-code></setup>
+        <statement>
+            <p>Find each logarithm.</p>
+            <p><ol label="a">
+                    <li><p><m>\log_{n}{1}=</m><var name="$a" width="2"/></p></li>
+                    <li><p><m>\log_{n}{n^3}=</m><var name="$b" width="2"/></p></li>
+            </ol></p>        
+        </statement>
+        <solution>
+           <p><ol label="a" cols="2">
+                <li><p><m>0</m></p></li>
+                <li><p><m>3</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
@@ -190,15 +218,43 @@ are equivalent statements. Rewriting an equation in logarithmic form is a basic 
 		<li><p>The base is <m>M</m> and the exponent is <m>v</m>. Thus, <m>\log_{M}{3K} = v</m>.</p></li>
 	</ol></p></solution></example>
 
-<exercise><title>Practice 3</title>
-<statement><p>Rewrite each equation in logarithmic form.<ol label="a" cols="2">
-		<li><p><m>8^{-1/3} = \dfrac{1}{2}</m></p></li>
-		<li><p><m>5^x = 46</m></p></li>
-	</ol></p></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>\log_8 \left(\dfrac{1}{2} \right)=\dfrac{-1}{3} </m></p></li>
-	<li><p><m>\log_{5} 46=x </m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 3</title>
+    <webwork>
+        <setup><pg-code>
+            Context(Fraction);
+            $ya = Compute("-1/3");
+            $ba = Compute("8");
+            $xa = Compute("1/2");
+            $yb = Formula("x");
+            $bb = Compute("5");
+            $xb = Compute("46");
+        </pg-code></setup>
+        <statement>
+            <p>Rewrite each equation in logarithmic form. </p>
+            <p><ol label="a" cols="2">
+                <li><p><m>8^{-1/3} = \dfrac{1}{2}</m></p>
+                <p>The given equation is equivalent to one of the form <m>\log_{b}m=n</m>, where</p>
+                <p><m>b=</m><var name="$ba" width="3"/></p>
+                <p><m>m=</m><var name="$xa" width="3"/>, and</p>
+                <p><m>n=</m><var name="$ya" width="3"/> </p>
+                </li>
+                <li><p><m>5^x = 46</m></p>
+                <p>The given equation is equivalent to one of the form <m>\log_{b}m=n</m>, where</p>
+                <p><m>b=</m><var name="$bb" width="3"/></p>
+                <p><m>m=</m><var name="$xb" width="3"/>, and</p>
+                <p><m>n=</m><var name="$yb" width="3"/> </p>
+                </li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>\log_8 \left(\dfrac{1}{2} \right)=\dfrac{-1}{3} </m></p></li>
+                <li><p><m>\log_{5} 46=x </m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -277,15 +333,42 @@ To the nearest hundredth, <m>\log_{3}{7} \approx 1.77</m>.</p>
 <sidebyside width="40%"><image source="images/fig-GC-approx-log"><description>GC intersection of expnential curve and horizontal line</description></image></sidebyside>
 </solution></example>
 
-<exercise><title>Practice 4</title>
-<statement><ol label="a">
-	<li><p>Rewrite the equation <m>3^x = 90</m> in logarithmic form.</p></li>
-	<li><p>Use a graph to approximate the solution to the equation in part (a). Round your answer to three decimal places.</p></li>
-	</ol></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>\log_8(90)=x </m></p></li>
-	<li><p><m>x\approx 4.096 </m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+            Context(Fraction);
+            $y = Formula("x");
+            $b = Compute("3");
+            $x = Compute("90");
+            $exact = log(90)/log(3);
+            $answer = Compute("$exact")->with(
+              tolType => 'absolute',
+              tolerance => .0005,
+            );
+
+            
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+            <li><p>Rewrite the equation <m>3^x = 90</m> in logarithmic form.</p>
+                <p>The given equation is equivalent to one of the form <m>\log_{b}m=n</m>, where</p>
+                <p><m>b=</m><var name="$b" width="3"/></p>
+                <p><m>m=</m><var name="$x" width="3"/>, and</p>
+                <p><m>n=</m><var name="$y" width="3"/> </p></li>
+            <li><p>Use a graph to approximate the solution to the equation in part (a). Round your answer to three decimal places.</p>
+            <p><m>x\approx</m><var name="$answer" width="5"/> </p>
+            </li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+            <li><p><m>\log_8(90)=x </m></p></li>
+            <li><p><m>x\approx 4.096 </m></p></li>
+        </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Base 10 Logarithms</title>
@@ -347,15 +430,32 @@ so our approximations are reasonable, although you can see that rounding a logar
 	
 <p> For this reason, <em>rounding logarithms to <m>4</m> decimal places is customary.</em></p></note>
 
-<exercise><title>Practice 5</title>
-<statement><ol label="a">
-		<li><p>Evaluate <m>\log{250}</m>, and round your answer to two decimal places. Check your answer using the conversion equations.</p></li>
-		<li><p>Evaluate <m>\log{250}</m>, and round your answer to four decimal places. Check your answer using the conversion equations.</p></li>
-	</ol></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>2.40</m></p></li>
-	<li><p><m>2.3979</m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->functions->disable("All");
+            Context()->{format}{number} = "%.2f";
+            $a = Compute("2.40");
+            Context()->{format}{number} = "%.4f";
+            $b = Compute("2.3979");
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Evaluate <m>\log{250}</m>, and round your answer to two decimal places. Check your answer using the conversion equations.</p>
+                <p><m>\log{250}\approx</m><var name="$a" width="3"/> to two decimal places </p></li>
+                <li><p>Evaluate <m>\log{250}</m>, and round your answer to four decimal places. Check your answer using the conversion equations.</p>
+                <p><m>\log{250}\approx</m><var name="$b" width="5"/> to four decimal places</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>2.40</m></p></li>
+                <li><p><m>2.3979</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -432,9 +532,26 @@ We can evaluate this expression on the calculator by entering</p>
 		</tabular></sidebyside>
 <p>But if we want to evaluate <m>\dfrac{\log{3.8}}{0.4}</m>, we must enclose <m>3.8</m> in parentheses, as shown in <xref ref="example-solve-exponential" text="type-global"/>. If we omit the parenthesis after <m>3.8</m>, the calculator will interpret the expression as <m>\log{\left(\dfrac{3.8}{0.4}\right)}</m>, which is not the expression we wanted.</p></warning>
 
-<exercise><title>Practice 6</title>
-<statement><p>Solve <m>~~12 - 30(10^{-0.2x} ) = 11.25</m></p></statement>
-<answer><p><m>8.01</m></p></answer></exercise>
+<exercise>
+    <title>Practice 6</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->flags->set(useBaseTenLog=>1); 
+            $x = Compute("-5*log(0.75/30)")->with(
+              tolType => 'absolute',
+              tolerance => .005,
+            );
+
+        </pg-code></setup>
+        <statement>
+            <p>Solve <m>12 - 30(10^{-0.2x} ) = 11.25</m></p>
+            <p><m>x=</m><var name="$x" width="12"/> </p>
+        </statement>
+        <solution>
+            <p><m>x=-5\log(0.025) \approx 8.01</m></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Application to Exponential Models</title>
@@ -463,19 +580,47 @@ To evaluate this expression, we key in</p>
 <p>to find <m>t \approx 7.525749892</m>. The tractor will be worth $15,000 in approximately <m>7\frac{1}{2}</m> years.</p>
 </solution></example>
 
-<exercise><title>Practice 7</title>
-<statement><p>The percentage of American homes with computers grew exponentially from 1994 to 1999. For <m>t = 0</m> in 1994, the growth law was 
-<me>P(t) = 25.85(10)^{0.052t}</me> 
-[Source: Los Angeles Times, August 20, 1999]<ol label="a">
-	<li><p>What percent of American homes had computers in 1994?</p></li>
-	<li><p>If the percentage of homes with computers continued to grow at the same rate, when did <m>90</m>% of American homes have a computer?</p></li>
-	<li><p>Do you think that the function <m>P(t)</m> will continue to model the percentage of American homes with computers? Why or why not?</p></li>
-</ol></p></statement>
-<answer><p><ol label="a">
-	<li><p><m>25.85\%</m></p></li>
-	<li><p><m>t\approx 10.4</m> (year 2004)</p></li>
-	<li><p>No, the percent of homes with computers cannot exceed <m>100\%</m>.</p></li>
-</ol></p></answer>
+<exercise>
+    <title>Practice 7</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(t=>"Real");
+            Context()->flags->set(useBaseTenLog=>1); 
+            $p0 = Compute("25.85");
+            $f = Formula("$p0*10**(0.052*t)");
+            $t = Compute("log(90/25.85)/0.052")->with(
+              tolType => 'absolute',
+              tolerance => .05,
+            );
+
+            $year = PopUp(
+            ["?","2004","2005"],
+            1,);
+            $YN = RadioButtons(
+            ["Yes: The percentage will continue increasing, faster and faster.",
+            "No: the percent of homes with computers cannot exceed 100%."],
+            1,);
+        </pg-code></setup>
+        <statement>
+            <p>The percentage of American homes with computers grew exponentially from 1994 to 1999. For <m>t = 0</m> in 1994, the growth law was 
+            <me>P(t) = <var name="$f"/></me> 
+            [Source: Los Angeles Times, August 20, 1999]<ol label="a">
+                <li><p>What percent of American homes had computers in 1994?</p>
+                <p>Answer: <var name="$p0" width="4"/>%</p></li>
+                <li><p>If the percentage of homes with computers continued to grow at the same rate, when did 90% of American homes have a computer?</p>
+                <p>Answer: <m>t\approx</m><var name="$t" width="3"/>, which was the year <var name="$year" form="popup"/>  </p></li>
+                <li><p>Do you think that the function <m>P(t)</m> will continue to model the percentage of American homes with computers? Why or why not?</p>
+                <p><var name="$YN" form="buttons"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p>25.85%</p></li>
+                <li><p><m>t\approx 10.4</m> (year 2004)</p></li>
+                <li><p>No, the percent of homes with computers cannot exceed <m>100\%</m>.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
 </exercise>
 
 <p>At this stage, it seems we will only be able to solve exponential equations in which the base is <m>10</m>. However, we will see in <xref ref="Properties-of-Logarithms" text="type-global"/> how the properties of logarithms enable us to solve exponential equations with any base.</p>

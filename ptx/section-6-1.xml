@@ -71,11 +71,25 @@ then it must be true that either <m>x - 5 = 0</m> or <m>2x + 1 = 0</m>. Thus, we
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 1</title>
-<statement><p>Graph the function
-		<me>f(x) = (x - 3)(2x + 3)</me>
-on a calculator, and use your graph to solve the equation <m>f(x) = 0</m>. (Use<m>\text{Xmin} = -9.4</m>, <m>\text{Xmax} = 9.4</m>.) Check your answer with the zero-factor principle.</p></statement>
-<answer><p><m>x=-\dfrac{3}{2} </m>, <m>~x=3</m></p></answer></exercise>
+<exercise>
+	<title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            Context(Fraction);
+            $a = List("-3/2, 3");
+        </pg-code></setup>
+        <statement>
+            <p>Graph the function
+                    <me>f(x) = (x - 3)(2x + 3)</me>
+            on a calculator, and use your graph to solve the equation <m>f(x) = 0</m>. (Use<m>\text{Xmin} = -9.4</m>, <m>\text{Xmax} = 9.4</m>.) </p>
+            <p>Solutions: <m>x=</m><var name="$a" width="10"/> [Separate different values with a comma.] </p>
+            <p>Check your answer with the zero-factor principle.</p>
+        </statement>
+        <solution>
+            <p><m>x=-\dfrac{3}{2} </m>, <m>x=3</m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -127,10 +141,23 @@ it is incorrect to set each factor equal to <m>15</m>! (There are many ways that
 
 <xi:include href="./assemblage-solve-quadratic-by-factoring.xml" />
 
-<exercise><title>Practice 2</title>
-<statement><p>Solve by factoring: <m>~~(t - 3)^2 = 3(9 - t)</m></p>
-</statement>
-<answer><p><m>x=-3</m>, <m>~x=6</m></p></answer></exercise>
+<exercise>
+	<title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            $a = -3;
+            $b = 6;
+            $answer = List("$a, $b");
+        </pg-code></setup>
+        <statement>
+            <p>Solve by factoring: <m>(t - 3)^2 = 3(9 - t)</m></p>
+            <p>Solutions: <m>t=</m><var name="$answer" width="10"/> [Separate different values with a comma.] </p>
+         </statement>
+        <solution>
+            <p>After rewriting the equation in standard form and then factoring, we find <m>t=-3</m>, <m>t=6</m>.</p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>We can use factoring to solve the equation from <xref ref="investigation-height-of-baseball" text="type-global"/>.</p>
 
@@ -187,22 +214,38 @@ This graph has the same <m>x</m>-values when <m>y = 0</m>. The factor of <m>4</m
 
 <p> The value of the constant factor <m>a</m> in the factored form of a quadratic function, <m>f(x) = a(x - r_1)(x - r_2)</m>, does not affect the location of the <m>x</m>-intercepts, because it does not affect the solutions of the equation <m>a(x - r_1)(x - r_2) = 0</m>.</p>     
 
-<exercise><title>Practice 3</title>
-<statement><ol label="a">
-	<li>Solve <m>f(t) = 4t - t^2 = 0</m> by factoring.</li>
-	<li>Solve <m>g(t) = 20t - 5t^2 = 0</m> by factoring.</li>
-	<li>Graph <m>y = f(t)</m> and <m>y = g(t)</m> together in the window
-		    <me>\begin{aligned}[t]
-	        \text{Xmin} \amp = -2 \amp\amp \text{Xmax} = 6\\
-	        \text{Ymin} \amp = -20 \amp\amp \text{Ymax} = 25
-	        \end{aligned}</me>
-	    and locate the horizontal intercepts of each graph.</li>
-	</ol></statement>
-<answer><p><ol label="a" cols="3">
-	<li><p><m>t=0</m>, <m>~t=4</m></p></li>
-	<li><p><m>t=0</m>,	<m>~t=4</m></p></li>
-	<li><p><m>(0,0) </m>, <m>~(4,0) </m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 3</title>
+    <webwork>
+        <setup><pg-code>
+            Context(Point);
+            $a = List("0,4");
+            $c = List("(0,0), (4,0)");
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+            <li><p>Solve <m>f(t) = 4t - t^2 = 0</m> by factoring.</p>
+            <p>Solutions: <m>t=</m><var name="$a" width="5"/> [Separate different values with a comma.] </p></li>
+            <li><p>Solve <m>g(t) = 20t - 5t^2 = 0</m> by factoring.</p>
+            <p>Solutions: <m>t=</m><var name="$a" width="5"/> [Separate different values with a comma.] </p></li>
+            <li><p>Graph <m>y = f(t)</m> and <m>y = g(t)</m> together in the window
+                    <me>\begin{aligned}[t]
+                    \text{Xmin} \amp = -2 \amp\amp \text{Xmax} = 6\\
+                    \text{Ymin} \amp = -20 \amp\amp \text{Ymax} = 25
+                    \end{aligned}</me>
+                and locate the horizontal intercepts of each graph.</p>
+            <p>Horizontal intercepts: <var name="$c" width="8"/> [Separate different ordered pairs with a comma.] </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="3">
+                <li><p><m>t=0</m>, <m>t=4</m></p></li>
+                <li><p><m>t=0</m>,  <m>t=4</m></p></li>
+                <li><p><m>(0,0) </m>, <m>(4,0) </m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -242,10 +285,24 @@ Solve the equation. Begin by simplifying the left side.
 		\end{aligned}</me><!--*****-->
 Because the width of the screen cannot be a negative number, we discard the solution <m>w = -12</m>. Thus, the width is <m>w = 9</m> inches, and the length is <m>w + 3 = 12</m> inches.</p></solution></example>
 
-<exercise><title>Practice 4</title>
-<statement><sidebyside widths="65% 25%" valigns="middle middle"><p>Francine is designing the layout for a botanical garden. The plan includes a square herb garden, with a path <m>5</m> feet wide through the center of the garden, as shown at right. To include all the species of herbs, the planted area must be <m>300</m> square feet. Find the dimensions of the herb garden.</p>
-<image source="images/fig-garden"><description>garden</description></image></sidebyside></statement>
-<answer><p><m>20</m> feet by <m>20</m> feet</p></answer></exercise>
+<exercise>
+	<title>Practice 4</title>
+    <introduction>
+        <sidebyside width="25%"><image source="images/fig-garden"><description>garden</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            $a = Compute("20");
+        </pg-code></setup>
+        <statement>
+            <p>Francine is designing the layout for a botanical garden. The plan includes a square herb garden, with a path 5 feet wide through the center of the garden, as shown above. To include all the species of herbs, the planted area must be 300 square feet. Find the dimensions of the herb garden.</p>
+            <p>Answer: <var name="$a" width="2"/> feet by  <var name="$a" width="2"/> feet</p>
+        </statement>
+        <solution>
+            <p>20 feet by 20 feet</p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
@@ -309,9 +366,28 @@ You can check that the solutions of this last equation are in fact <m>\dfrac{1}{
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 5</title>
-<statement><p>Find a quadratic equation with integer coefficients whose solutions are <m>\dfrac{2}{3}</m> and <m>-5</m>.</p></statement>
-<answer><p><m>3x^2 + 13x - 10 = 0</m></p></answer></exercise>
+<exercise>
+	<title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+            Context("LimitedPolynomial");
+            $n = 2;
+            $d = 3;
+            $r0 = "$n/$d";
+            $r1 = Compute("-5");
+            $b = -($d* $r1 + $n);
+            $c = $n *  $r1;
+            $f = Formula("$d*x**2 + $b x + $c ")->reduce;
+        </pg-code></setup>
+        <statement>
+            <p>Find a quadratic equation with integer coefficients whose solutions are <m>\dfrac{2}{3}</m> and <m>-5</m>. The coefficient of <m>x^2</m> should be the smallest positive integer coefficient that will work</p>
+            <p><var name="$f" width="10"/><m>=0</m> </p>
+        </statement>
+        <solution>
+            <p><m>3x^2 + 13x - 10 = 0</m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <note><p>A quadratic equation in one variable always has two solutions. However, in some cases, the solutions may be equal. For example, the equation
 	<m>x^2 - 2x + 1 = 0</m>
@@ -344,9 +420,34 @@ You can verify that the solutions of the original equation are <m>-1</m> and <m>
 
 <p>We say that the equation in <xref ref="example-quadratic-in-form" text="type-global"/>, <m>x^6 - 4x^3 - 5 = 0</m>, is <term>quadratic in</term><idx>quadratic in</idx> <m>x^3</m>. We chose the substitution <m>u = x^3</m> because <m>x^6 = u^2</m>.</p>
 
-<exercise xml:id="exercise-quadratic-in-form"><title>Practice 6</title>
-<statement><p>Use the substitution <m>u = x^2</m> to solve the equation <m>x^4 - 5x^2 + 6 = 0</m>.</p></statement>
-<answer><p><m>x=\pm\sqrt{2} </m>, <m>~x=\pm\sqrt{3} </m></p></answer></exercise>
+<exercise xml:id="exercise-quadratic-in-form">
+	<title>Practice 6</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
+            $r1 = Formula("sqrt(2)");
+            $r2 = Formula("-sqrt(2)");
+            $r3 = Formula("sqrt(3)");
+            $r4 = Formula("-sqrt(3)");
+            $answer = Formula("$r1, $r2, $r3, $r4");
+            $my_evaluator = $answer -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+        </pg-code></setup>
+        <statement>
+            <p>Use the substitution <m>u = x^2</m> to solve the equation <m>x^4 - 5x^2 + 6 = 0</m>.</p>
+            <p>Solutions: <m>x=</m><var name="$answer" width="25" evaluator="$my_evaluator"/></p>
+           <instructions>
+                <p>List all the values that are solutions. Use "sqrt(5)" to get <m>\sqrt{5}</m>, and use a comma to separate different solutions.</p>
+            </instructions>
+        </statement>
+        <solution>
+            <p><m>x=\pm\sqrt{2} </m>, <m>x=\pm\sqrt{3} </m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>Usually, you can choose the simpler variable term in the equation for the <m>u</m>-substitution. For example, in  <xref ref="exercise-quadratic-in-form" text="type-global"/> we chose <m>u = x^2</m> because <m>u^2 = \left(x^2\right)^2 = x^4</m>, which is the first term of the equation. Once you have chosen the <m>u</m>-substitution, you should check that the other variable term is then a multiple of <m>u^2</m>; otherwise, the equation is not quadratic in form.</p>
 
@@ -365,9 +466,34 @@ Finally, we replace <m>u</m> by <m>e^x</m> and solve for <m>x</m>.
 		\end{aligned}</me><!--*****-->
 You should verify that the solutions of the original equation are <m>\ln 3</m> and <m>\ln 4</m>.</p></solution></example>
 
-<exercise><title>Practice 7</title>
-<statement><p>Solve the equation <m>~~10^{2x} - 3 \cdot 10^x + 2 = 0~~</m>, and check the solutions.</p></statement>
-<answer><p><m>x=0</m>, <m>~x=\log 2</m></p></answer></exercise>
+<exercise>
+	<title>Practice 7</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->flags->set(useBaseTenLog=>1);
+            Context()->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
+            
+            $r1 = Compute("0");
+            $r2 = Formula("log(2)");
+            $answer = Formula("$r1, $r2");
+            $my_evaluator = $answer -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+        </pg-code></setup>
+        <statement>
+            <p>Solve the equation <m>10^{2x} - 3 \cdot 10^x + 2 = 0</m>, and check the solutions.</p>
+            <p>Solutions: <m>x=</m><var name="$answer" width="20" evaluator="$my_evaluator"/></p>
+            <instructions>
+                <p>List all the values that are solutions. Use a comma to separate different solutions.</p>
+            </instructions>
+        </statement>
+        <solution>
+            <p><m>x=0</m>, <m>x=\log 2</m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
