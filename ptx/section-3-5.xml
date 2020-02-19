@@ -53,17 +53,48 @@ where <m>t</m> is the number of days you rent the car and <m>g</m> is the number
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 1</title>
-<statement><p>The maximum height that the water stream from a fire hose can reach depends on the water pressure and the diameter of the nozzle, and is given by the function
-    <me>H = f(P, n) = 26 + \dfrac{5}{8}P + 5n</me>
-where <m>P</m> is the nozzle pressure in psi, and <m>n</m> is measured in <m>\frac{1}{8}</m>-inch increments over the standard nozzle diameter of <m>\dfrac{3}{4}</m> inch.<ol label="a">
-        <li><p>Evaluate <m>f(40, 2)</m> and explain what it means.</p></li>
-        <li><p>What nozzle pressure is needed to reach a height of <m>91</m> feet with a <m>1\dfrac{1}{8}</m>-inch nozzle?</p></li>
-    </ol></p></statement>
-<answer><p><ol label="a">
-    <li><p><m>f(40, 2) = 61</m>. With nozzle diameter <m>1</m> inch and nozzle pressure <m>40</m> psi, the water will reach <m>61</m> feet.</p></li>
-    <li><p><m>80</m> psi</p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(P=>"Real", n=>"Real");
+            $f = Formula("26+ 5/8 *P + 5*n");
+            $a = $f->eval(P=>40, n=>2);
+            $explain = RadioButtons(
+                    ["With  nozzle pressure of 40 psi and nozzle diameter of 2 in., the water will reach 61 feet.",
+                    "With  nozzle pressure of 40 psi and nozzle diameter of  \(\frac{1}{2}\) inch, the water will reach 61 feet.",
+                    "With  nozzle pressure of 40 psi and nozzle diameter of  \(\frac{3}{4}\) inch, the water will reach 61 feet.",
+                    "With  nozzle pressure of 40 psi and nozzle diameter of 1 inch, the water will reach 61 feet.",
+                    "With  nozzle pressure of 40 psi and nozzle diameter of  \(\frac{1}{2}\) inch, the water will reach 61 feet.",
+                    ], 3,
+                );
+
+            $b = Compute("80");
+            $unit = PopUp(
+            ["?","psi","in", "ft"],
+            1, 
+            );
+        </pg-code></setup>
+        <statement>
+            <p>The maximum height that the water stream from a fire hose can reach depends on the water pressure and the diameter of the nozzle, and is given by the function
+            <me>H = f(P, n) = 26 + \dfrac{5}{8}P + 5n</me>
+            where <m>P</m> is the nozzle pressure in psi, and <m>n</m> is measured in <m>\dfrac{1}{8}</m>-inch increments over the standard nozzle diameter of <m>\dfrac{3}{4}</m> inch.</p>
+            <p><ol label="a">
+                <li><p>Evaluate <m>f(40, 2)</m> and explain what it means.</p>
+                <p><m>f(40,2)=</m><var name="$a" width="2"/> </p>
+                <p><var name="$explain" form="buttons"/> </p></li>
+                <li><p>What nozzle pressure is needed to reach a height of <m>91</m> feet with a <m>1\dfrac{1}{8}</m>-inch nozzle?</p>
+                <p><var name="$b" width="2"/><var name="$unit" form="popup"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p><m>f(40, 2) = 61</m>. With nozzle diameter <m>1</m> inch and nozzle pressure <m>40</m> psi, the water will reach <m>61</m> feet.</p></li>
+                <li><p>The  <m>1\frac{1}{8}</m>-inch nozzle is three <m>\frac{1}{8}</m> increments over the standard nozzle diameter of <m>\frac{3}{4} </m> inch. We solve for <m>P</m> when <m>H=91</m> and <m>n=3</m>: <m>P=80</m> psi</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Tables of Values</title>
@@ -150,75 +181,108 @@ where <m>P</m> is the nozzle pressure in psi, and <m>n</m> is measured in <m>\fr
     <li><p>In the <m>t = 30\degree</m>F column, we find the windchill factor of <m>1</m> in the <m>25</m>-mph row, so <m>s = 25</m>. The wind speed is <m>25</m> mph when the temperature is <m>30\degree</m>F and the windchill factor is <m>1</m>.</p></li>
 </ol></p></solution></example>
 
-<exercise><title>Practice 2</title>
-<statement><p>A retirement plan requires employees to put aside a fixed amount of money each year until retirement. The amount accumulated, <m>A</m>, includes <m>8</m><percent/> annual interest on employee's annual contribution, <m>c</m>. <m>A</m> is a function of <m>c</m> and the number of years, <m>t</m>, that the employee makes contributions, so <m>A = f(c, t)</m>.</p>
-<sidebyside><tabular top="major" halign="center"  right="minor" left="minor" bottom="minor">
-        <!--  -->
-        <row>
-            <cell colspan="6" halign="center">Retirement Fund Balance</cell></row>
-        <row bottom="medium">
-            <cell></cell>
-            <cell colspan="5" halign="center">Number of years of contributions</cell></row>
-        <row> 
-            <cell>Annual contribution</cell>
-            <cell><m>10</m></cell>
-            <cell><m>20</m></cell>
-            <cell><m>30</m></cell>
-            <cell><m>40</m></cell>
-            <cell><m>50</m></cell></row>
-        <row> 
-            <cell><m>500</m></cell>
-            <cell><m>7243</m></cell>
-            <cell><m>22,881</m></cell>
-            <cell><m>56,642</m></cell>
-            <cell><m>129,528</m></cell>
-            <cell><m>286,885</m></cell></row>
-        <row> 
-            <cell><m>1000</m></cell>
-            <cell><m>14,487</m></cell>
-            <cell><m>45,762</m></cell>
-            <cell><m>113,283</m></cell>
-            <cell><m>259,057</m></cell>
-            <cell><m>573,770</m></cell></row>
-        <row> 
-            <cell><m>1500</m></cell>
-            <cell><m>21,730</m></cell>
-            <cell><m>68,643</m></cell>
-            <cell><m>169,925</m></cell>
-            <cell><m>388,585</m></cell>
-            <cell><m>860,655</m></cell></row>
-        <row> 
-            <cell><m>2000</m></cell>
-            <cell><m>28,973</m></cell>
-            <cell><m>91,524</m></cell>
-            <cell><m>226,566</m></cell>
-            <cell><m>518,113</m></cell>
-            <cell><m>1,147,540</m></cell></row>
-        <row> 
-            <cell><m>2500</m></cell>
-            <cell><m>43,460</m></cell>
-            <cell><m>137,286</m></cell>
-            <cell><m>339,850</m></cell>
-            <cell><m>777,170</m></cell>
-            <cell><m>1,721,310</m></cell></row>
-        <row> 
-            <cell><m>3000</m></cell>
-            <cell><m>50,703</m></cell>
-            <cell><m>160,167</m></cell>
-            <cell><m>396,491</m></cell>
-            <cell><m>906,698</m></cell>
-            <cell><m>2,008,196</m></cell></row>
-    </tabular></sidebyside>
-<p><ol label="a">
-    <li><p>How much will an employee accumulate if she contributes $500 a year for <m>40</m> years? Write your answer with function notation.</p></li>
-    <li><p>How much must she contribute each year in order to accumulate $573,770 after <m>50</m> years? Write your answer with function notation.</p></li>
-    <li><p>Find a value of <m>t</m> that solves the equation <m>137,286 = f(2500, t)</m>. What does this equation tell you about the retirement fund?</p></li>
-</ol></p></statement>
-<answer><p><ol label="a">
-    <li><p>$<m>129,528, ~~f(500, 40) = 129,528</m></p></li>
-    <li><p>$<m>1000, ~~ f(c, 50) = 573,770</m></p></li>
-    <li><p><m>20</m> years. If you contribute $<m>2500</m> per year for <m>20</m> years, you will accumulate $<m>137,286</m>.</p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            $c0 = Compute("500");
+            $t0 = Compute("40");
+            $a = Compute("129528");
+            $c1 = Compute("1000");
+            $t1 = Compute("50");
+            $b = Compute("573770");
+            $t2 = Compute("20");
+
+
+            $explain = RadioButtons(
+                    ["If you contribute 2500 dollars per year for 20 years, you will accumulate 137,286 dollars.",
+                    "If you contribute 137 dollars per year for 286 years, you will accumulate 20 dollars.",
+                     ], 0,
+                );
+
+        </pg-code></setup>
+        <statement>
+            <p>A retirement plan requires employees to put aside a fixed amount of money each year until retirement. The amount accumulated, <m>A</m>, includes 8% annual interest on employee's annual contribution, <m>c</m>. <m>A</m> is a function of <m>c</m> and the number of years, <m>t</m>, that the employee makes contributions, so <m>A = f(c, t)</m>.</p>
+    <sidebyside><tabular top="major" halign="center"  right="minor" left="minor" bottom="minor">
+            <!--  -->
+            <row>
+                <cell colspan="6" halign="center">Retirement Fund Balance</cell></row>
+            <row bottom="medium">
+                <cell></cell>
+                <cell colspan="5" halign="center">Number of years of contributions</cell></row>
+            <row> 
+                <cell><line>Annual</line><line>contribution</line></cell>
+                <cell><m>10</m></cell>
+                <cell><m>20</m></cell>
+                <cell><m>30</m></cell>
+                <cell><m>40</m></cell>
+                <cell><m>50</m></cell></row>
+            <row> 
+                <cell><m>500</m></cell>
+                <cell><m>7243</m></cell>
+                <cell><m>22,881</m></cell>
+                <cell><m>56,642</m></cell>
+                <cell><m>129,528</m></cell>
+                <cell><m>286,885</m></cell></row>
+            <row> 
+                <cell><m>1000</m></cell>
+                <cell><m>14,487</m></cell>
+                <cell><m>45,762</m></cell>
+                <cell><m>113,283</m></cell>
+                <cell><m>259,057</m></cell>
+                <cell><m>573,770</m></cell></row>
+            <row> 
+                <cell><m>1500</m></cell>
+                <cell><m>21,730</m></cell>
+                <cell><m>68,643</m></cell>
+                <cell><m>169,925</m></cell>
+                <cell><m>388,585</m></cell>
+                <cell><m>860,655</m></cell></row>
+            <row> 
+                <cell><m>2000</m></cell>
+                <cell><m>28,973</m></cell>
+                <cell><m>91,524</m></cell>
+                <cell><m>226,566</m></cell>
+                <cell><m>518,113</m></cell>
+                <cell><m>1,147,540</m></cell></row>
+            <row> 
+                <cell><m>2500</m></cell>
+                <cell><m>43,460</m></cell>
+                <cell><m>137,286</m></cell>
+                <cell><m>339,850</m></cell>
+                <cell><m>777,170</m></cell>
+                <cell><m>1,721,310</m></cell></row>
+            <row> 
+                <cell><m>3000</m></cell>
+                <cell><m>50,703</m></cell>
+                <cell><m>160,167</m></cell>
+                <cell><m>396,491</m></cell>
+                <cell><m>906,698</m></cell>
+                <cell><m>2,008,196</m></cell></row>
+            </tabular></sidebyside>
+            <p><ol label="a">
+                <li><p>How much will an employee accumulate if she contributes $500 a year for 40 years? (Do not enter any commas. For example, enter "10000" for 10,000.</p>  
+                <p>$<var name="$a" width="6"/></p> 
+                <p>Write your answer with function notation:</p>
+                <p><m>f\Big(</m><var name="$c0" width="2"/>,<var name="$t0" width="2"/><m>\Big)=</m><var name="$a" width="5"/> </p></li>
+                <li><p>How much must she contribute each year in order to accumulate $573,770 after 50 years? $<var name="$c1" width="6"/> </p> 
+                <p>Write your answer with function notation.</p>
+                <p><m>f\Big(</m><var name="$c1" width="3"/>,<var name="$t1" width="2"/><m>\Big)=</m><var name="$b" width="5"/> </p></li>
+                <li><p>Find a value of <m>t</m> that solves the equation <m>137,286 = f(2500, t)</m>.</p> 
+                <p><m>t=</m><var name="$t2" width="3"/> </p> 
+                <p>What does this equation tell you about the retirement fund?</p>
+                <p><var name="$explain" form="buttons"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p>$129,528, <m>f(500, 40) = 129,528</m></p></li>
+                <li><p>$1000, <m>f(c, 50) = 573,770</m></p></li>
+                <li><p>20 years. If you contribute $2500 per year for 20 years, you will accumulate $137,286.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Joint Variation</title><idx>joint variation</idx>
@@ -327,15 +391,95 @@ where <m>P</m> is the nozzle pressure in psi, and <m>n</m> is measured in <m>\fr
     </tabular>
 <image source="images/fig-load-vs-depth"><description>load vs depth</description></image></sidebyside></solution></example>
 
-<exercise xml:id="exercise-load"><title>Practice 3</title>
-<statement><ol label="a">
-    <li>For the table in <xref ref="example-load" text="type-global"/>, consider the column corresponding to a beam depth of <m>3</m> cm. Graph <m>L</m> as a function of <m>w</m> when the depth is constant at <m>d = 3</m>.</li>
-    <li>Find a formula for <m>L</m> as a function of <m>w</m> for <m>d = 3</m>.</li>
-</ol></statement>
-<answer><p><ol label="a" cols="2">
-    <li><sidebyside width="90%"><image source="images/fig-in-ex-ans-3-5-2"><description>line</description></image></sidebyside></li>
-    <li><p><m>L = 90w</m></p></li>
-</ol></p></answer></exercise>
+<exercise xml:id="exercise-load">
+    <title>Practice 3</title>
+    <introduction><sidebyside><tabular top="major" halign="center"  right="minor" left="minor" bottom="minor">
+        <!--  -->
+        <row>
+            <cell colspan="7" halign="center">Maximum Load (kilograms)</cell></row>
+        <row bottom="medium">
+            <cell></cell>
+            <cell colspan="6" halign="center">Depth (cm)</cell></row>
+        <row> 
+            <cell>Width (cm)</cell>
+            <cell><m>0</m></cell>
+            <cell><m>1</m></cell>
+            <cell><m>2</m></cell>
+            <cell><m>3</m></cell>
+            <cell><m>4</m></cell>
+            <cell><m>5</m></cell></row>
+        <row> 
+            <cell><m>0</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>0</m></cell></row>
+        <row> 
+            <cell><m>1</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>10</m></cell>
+            <cell><m>40</m></cell>
+            <cell><m>90</m></cell>
+            <cell><m>160</m></cell>
+            <cell><m>250</m></cell></row>
+        <row> 
+            <cell><m>2</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>20</m></cell>
+            <cell><m>80</m></cell>
+            <cell><m>180</m></cell>
+            <cell><m>320</m></cell>
+            <cell><m>500</m></cell></row>
+        <row> 
+            <cell><m>3</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>30</m></cell>
+            <cell><m>120</m></cell>
+            <cell><m>270</m></cell>
+            <cell><m>480</m></cell>
+            <cell><m>750</m></cell></row>
+        <row> 
+            <cell><m>4</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>40</m></cell>
+            <cell><m>160</m></cell>
+            <cell><m>360</m></cell>
+            <cell><m>640</m></cell>
+            <cell><m>1000</m></cell></row>
+        <row> 
+            <cell><m>5</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>50</m></cell>
+            <cell><m>200</m></cell>
+            <cell><m>450</m></cell>
+            <cell><m>800</m></cell>
+            <cell><m>1250</m></cell></row>
+    </tabular></sidebyside></introduction>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(w=>"Real");
+            $f = Formula("90*w");
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>For the table in the previous example, consider the column corresponding to a beam depth of <m>3</m> cm. Graph <m>L</m> as a function of <m>w</m> when the depth is constant at <m>d = 3</m>.</p></li>
+                <li><p>Find a formula for <m>L</m> as a function of <m>w</m> for <m>d = 3</m>.</p>
+                <p><m>L=</m><var name="$f" width="5"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p>A graph of the line is below.</p></li>
+                <li><p><m>L = 90w</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="45%" margins="0% 55%"><image source="images/fig-in-ex-ans-3-5-2"><description>line</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <p>In <xref ref="exercise-load" text="type-global"/>, you should find that the load varies directly with width when the depth is <m>3</m> centimeters. In fact, the load varies directly with width for any fixed depth.</p>
     
@@ -374,81 +518,100 @@ so <m>k = 10</m>. The formula for load as a function of width and depth is
     <me>L = 10wd^2</me>
 You can check that this formula works for all the values in the table.</p></solution></example>
 
-<exercise><title>Practice 4</title>
-<statement><p>The cost, <m>C</m>, of tiling a rectangular floor depends on the dimensions (length and width) of the floor, so <m>C = f (w, l)</m>. The table shows the costs in dollars for some dimensions.</p>
-<sidebyside><tabular top="major" halign="center"  right="minor" left="minor" bottom="minor">
-        <!--  -->
-        <row>
-            <cell colspan="7" halign="center">Cost of Tiling a Floor</cell></row>
-        <row bottom="medium">
-            <cell></cell>
-            <cell colspan="6" halign="center">Length (ft)</cell></row>
-        <row> 
-            <cell>Width (ft)</cell>
-            <cell><m>5</m></cell>
-            <cell><m>6</m></cell>
-            <cell><m>7</m></cell>
-            <cell><m>8</m></cell>
-            <cell><m>9</m></cell>
-            <cell><m>10</m></cell></row>
-        <row> 
-            <cell><m>5</m></cell>
-            <cell><m>400</m></cell>
-            <cell><m>480</m></cell>
-            <cell><m>560</m></cell>
-            <cell><m>640</m></cell>
-            <cell><m>720</m></cell>
-            <cell><m>800</m></cell></row>
-        <row> 
-            <cell><m>6</m></cell>
-            <cell><m>480</m></cell>
-            <cell><m>576</m></cell>
-            <cell><m>672</m></cell>
-            <cell><m>768</m></cell>
-            <cell><m>864</m></cell>
-            <cell><m>960</m></cell></row>
-        <row> 
-            <cell><m>7</m></cell>
-            <cell><m>560</m></cell>
-            <cell><m>672</m></cell>
-            <cell><m>784</m></cell>
-            <cell><m>896</m></cell>
-            <cell><m>1008</m></cell>
-            <cell><m>1120</m></cell></row>
-        <row> 
-            <cell><m>8</m></cell>
-            <cell><m>640</m></cell>
-            <cell><m>768</m></cell>
-            <cell><m>896</m></cell>
-            <cell><m>1024</m></cell>
-            <cell><m>1152</m></cell>
-            <cell><m>1280</m></cell></row>
-        <row> 
-            <cell><m>9</m></cell>
-            <cell><m>720</m></cell>
-            <cell><m>864</m></cell>
-            <cell><m>1008</m></cell>
-            <cell><m>1152</m></cell>
-            <cell><m>1296</m></cell>
-            <cell><m>1440</m></cell></row>
-        <row> 
-            <cell><m>10</m></cell>
-            <cell><m>800</m></cell>
-            <cell><m>960</m></cell>
-            <cell><m>1120</m></cell>
-            <cell><m>1280</m></cell>
-            <cell><m>1440</m></cell>
-            <cell><m>1600</m></cell></row>
-    </tabular></sidebyside><p><ol label="a">
-    <li><p>Consider the row corresponding to <m>6</m> feet in width. Does cost vary directly with length?</p></li>
-    <li><p>Consider the column corresponding to a length of <m>10</m> feet. Does the cost vary directly with width?</p></li>
-    <li><p>Given that the cost varies jointly with the length and width of the floor, find a formula for <m>C = f(w, l)</m>.</p></li>
-</ol></p></statement>
-<answer><p><ol label="a" cols="3">
-    <li><p>Yes</p></li>
-    <li><p>Yes</p></li>
-    <li><p><m>C = 16wl</m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(w=>"Real", l=>Real);
+            $f = Formula("16*w*l");
+
+            $YN = PopUp(
+            ["?","Yes","No"],
+            1, 
+            );
+        </pg-code></setup>
+        <statement>
+            <p>The cost, <m>C</m>, of tiling a rectangular floor depends on the dimensions (length and width) of the floor, so <m>C = f (w, l)</m>. The table shows the costs in dollars for some dimensions.</p>
+            <sidebyside><tabular top="major" halign="center"  right="minor" left="minor" bottom="minor">
+                <row>
+                    <cell colspan="7" halign="center">Cost of Tiling a Floor</cell></row>
+                <row bottom="medium">
+                    <cell></cell>
+                    <cell colspan="6" halign="center">Length (ft)</cell></row>
+                <row> 
+                    <cell>Width (ft)</cell>
+                    <cell><m>5</m></cell>
+                    <cell><m>6</m></cell>
+                    <cell><m>7</m></cell>
+                    <cell><m>8</m></cell>
+                    <cell><m>9</m></cell>
+                    <cell><m>10</m></cell></row>
+                <row> 
+                    <cell><m>5</m></cell>
+                    <cell><m>400</m></cell>
+                    <cell><m>480</m></cell>
+                    <cell><m>560</m></cell>
+                    <cell><m>640</m></cell>
+                    <cell><m>720</m></cell>
+                    <cell><m>800</m></cell></row>
+                <row> 
+                    <cell><m>6</m></cell>
+                    <cell><m>480</m></cell>
+                    <cell><m>576</m></cell>
+                    <cell><m>672</m></cell>
+                    <cell><m>768</m></cell>
+                    <cell><m>864</m></cell>
+                    <cell><m>960</m></cell></row>
+                <row> 
+                    <cell><m>7</m></cell>
+                    <cell><m>560</m></cell>
+                    <cell><m>672</m></cell>
+                    <cell><m>784</m></cell>
+                    <cell><m>896</m></cell>
+                    <cell><m>1008</m></cell>
+                    <cell><m>1120</m></cell></row>
+                <row> 
+                    <cell><m>8</m></cell>
+                    <cell><m>640</m></cell>
+                    <cell><m>768</m></cell>
+                    <cell><m>896</m></cell>
+                    <cell><m>1024</m></cell>
+                    <cell><m>1152</m></cell>
+                    <cell><m>1280</m></cell></row>
+                <row> 
+                    <cell><m>9</m></cell>
+                    <cell><m>720</m></cell>
+                    <cell><m>864</m></cell>
+                    <cell><m>1008</m></cell>
+                    <cell><m>1152</m></cell>
+                    <cell><m>1296</m></cell>
+                    <cell><m>1440</m></cell></row>
+                <row> 
+                    <cell><m>10</m></cell>
+                    <cell><m>800</m></cell>
+                    <cell><m>960</m></cell>
+                    <cell><m>1120</m></cell>
+                    <cell><m>1280</m></cell>
+                    <cell><m>1440</m></cell>
+                    <cell><m>1600</m></cell></row>
+                </tabular></sidebyside><p><ol label="a">
+                <li><p>Consider the row corresponding to <m>6</m> feet in width. Does cost vary directly with length?
+                <var name="$YN" form="popup"/></p></li>
+                <li><p>Consider the column corresponding to a length of <m>10</m> feet. Does the cost vary directly with width?
+                <var name="$YN" form="popup"/> </p></li>
+                <li><p>Given that the cost varies jointly with the length and width of the floor, find a formula for <m>C = f(w, l)</m>.</p>
+                <p><m>C=</m><var name="$f" width="5"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="3">
+                <li><p>Yes</p></li>
+                <li><p>Yes</p></li>
+                <li><p><m>C = 16wl</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -515,19 +678,56 @@ You can check that this formula works for all the values in the table.</p></solu
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 5</title>
-<statement><p>The period of a satellite orbiting the Earth varies directly with the radius of the orbit and inversely with the speed of the satellite.<ol label="a">
-    <li><p>Write a formula for the period, <m>T</m>, as a function of orbital radius, <m>r</m>, and velocity, <m>v</m>.</p></li>
-    <li><p>GPS satellites orbit at an altitude of <m>20,200</m> kilometers and a speed of <m>233</m> kilometers per second. The period of a GPS satellite is <m>11</m> hours and <m>58</m> minutes. Find the constant of variation in your formula for <m>T</m>. (The radius of the Earth is <m>6360</m> km.)</p></li>
-    <li><p>Satellites in polar orbits are used to measure ozone concentrations in the atmosphere. They orbit at an altitude of <m>300</m> km and have a period of <m>90</m> minutes. What is the speed of a satellite in polar orbit?</p></li>
-    <li><p>Graph <m>T</m> as a function of <m>v</m> for <m>r = 5000</m>, <m>r = 10,000</m>, <m>r = 20,000</m>, and <m>r = 30,000</m>.</p></li>
-    </ol></p></statement>
-<answer><p><ol label="a" cols="2">
-    <li><p><m>T=f(r,v)=\dfrac{kr}{v} </m></p></li>
-    <li><p><m>k\approx 6.3</m>. (Actually, <m>k=2\pi</m>.)</p></li>
-    <li><p><m>58</m> km/min</p></li>
-    <li><sidebyside width="80%"><image source="images/fig-in-ex-ans-3-5-5"><description>curves</description></image></sidebyside></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(r=>"Real", v=>"Real", k=>"Real");
+            $f = Formula("(k*r)/v");
+            $r = Compute("20200+6360");
+            $v = Compute("233");
+            $T = Compute("11*60+58");
+            $k = Compute("$T * $v / $r")->with(
+              tolType => 'absolute',
+              tolerance => .05,
+            );
+            $r2 = Compute("833+6360");
+            $T2 = Compute("101.2");
+            $v2 = Compute("$k*$r2/$T2")->with(
+              tolType => 'relative',
+              tolerance => .01,
+            );
+
+            $unit = PopUp(
+            ["?","km","min", "km/min"],
+            3, 
+            );
+        </pg-code></setup>
+        <statement>
+            <p>The period of a satellite orbiting the Earth varies directly with the radius of the orbit and inversely with the speed of the satellite.</p>
+            <p><ol label="a">
+            <li><p>Write a formula for the period, <m>T</m>, as a function of orbital radius, <m>r</m>, and velocity, <m>v</m>. Your formula should contain a constant of variation <m>k</m> (whose value we will determine later).</p>
+            <p><m>T=f(r,v)=</m><var name="$f" width="5"/> </p></li>
+            <li><p>GPS satellites orbit at an altitude of <m>20,200</m> kilometers and a speed of 233 kilometers per minute. The period of a GPS satellite is 11 hours and 58 minutes. Find the constant of variation in your formula for <m>T</m>. (The radius of the Earth is 6360 km.)</p>
+            <p><m>k\approx</m><var name="$k" width="2"/> </p></li>
+            <li><p>Satellites in polar orbits are used to measure ozone concentrations in the atmosphere.  One such satellite orbits at an altitude of 833 km and has a period of 101.2 minutes.  What is the speed of this satellite?</p>
+            <p>Speed: <var name="$v2" width="2"/><var name="$unit" form="popup"/> </p></li>
+            <li><p>Graph <m>T</m> as a function of <m>v</m> for <m>r = 5000</m>, <m>r = 10,000</m>, <m>r = 20,000</m>, and <m>r = 30,000</m>.</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>T=f(r,v)=\dfrac{kr}{v} </m></p></li>
+                <li><p>We first convert the period to minutes, then we substitute values into our formula and solve for <m>k</m> to find that <m>k\approx 6.3</m>. (Actually, <m>k=2\pi</m>.)</p></li>
+                <li><p><m>448</m> km/min</p></li>
+                <li><p>A graph is below.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="40%"><image source="images/fig-in-ex-ans-3-5-5"><description>curves</description></image></sidebyside>
+    </conclusion>
+</exercise>
 </subsection>
 
 <xi:include href="./summary-3-5.xml" /> <!-- summary  -->

@@ -98,19 +98,36 @@ Notice that in the resulting trinomial, the constant term is equal to <em>the sq
 	<li>In figure (c) we see that the missing corner piece has area <m>p^2 = 5^2 = 25</m>.</li></ul></p>
 <sidebyside  width="70%"> <image source="images/fig-completing-the-square" ><description>completing the square</description></image></sidebyside></note>
 
-<exercise><title>Practice 1</title>
-<statement><p>Complete the square by adding an appropriate constant; write the result as the square of a binomial.<ol label="a">
-		<li><m>x^2 - 18x{} + {}<fillin characters="6" />{}= (x{}<fillin characters="6" /> )^2</m></li>
-		<li><m>x^2 +9x{} + {}<fillin characters="6" />{}= (x{}<fillin characters="6" /> )^2</m></li>
-		</ol></p></statement>
-<hint><p>For part (a):
-	<m>p=\frac{1}{2}(-18)={}<fillin characters="6" />, p^2={}<fillin characters="6" /></m></p>
-	<p>For part (b): 
-	<m>p=\frac{1}{2}(9)={}<fillin characters="6" />, p^2={}<fillin characters="6" /></m></p></hint>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>x^2 - 18x + 81 = (x - 9)^2</m></p></li>
-	<li><p><m>x^2+9x+\dfrac{81}{4}=\left(x+\dfrac{9}{2}\right)^2 </m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Fraction");
+            $pa = Compute("-9");
+            $pa2= Compute("81");
+            $pb = Compute("9/2");
+            $pb2= Compute("81/4");
+        </pg-code></setup>
+        <statement>
+            <p>Complete the square by adding an appropriate constant; write the result as the square of a binomial.<ol label="a">
+        <li><p><m>x^2 - 18x{} + </m><var name="$pa2" width="2"/><m> = (x+</m><var name="$pa" width="2"/> <m> )^2</m></p></li>
+        <li><p><m>x^2 +9x{} + </m><var name="$pb2" width="2"/><m> = (x+</m><var name="$pb" width="2"/> <m> )^2</m></p></li>
+        </ol></p>
+        </statement>
+        <hint>
+            <p>For part (a):
+            <m>p=\frac{1}{2}(-18)={}</m>_____ , <m>p^2={}</m> ______</p>
+            <p>For part (b): 
+            <m>p=\frac{1}{2}(9)={}</m>_____ , <m>p^2={}</m> ______</p>
+        </hint>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>x^2 - 18x + 81 = (x - 9)^2</m></p></li>
+                <li><p><m>x^2+9x+\dfrac{81}{4}=\left(x+\dfrac{9}{2}\right)^2 </m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Solving Quadratic Equations by Completing the Square</title><idx>completing the square</idx>
@@ -187,27 +204,77 @@ and follow the steps to find the solutions.</p>
     </solution>
 </webwork></exercise>
 
-<exercise xml:id="exercise-completing-the-square2"><title>Practice 2</title>
-<statement><p><ol label="a">
-	<li><p>Follow the steps to solve by completing the square: <m>x^2 - 1 = 3x</m>.<ol label="1">
-		<li><p>Write the equation with the constant on the right.</p></li>
-		<li><p>Complete the square on the left:
-				<me>p = \frac{1}{2}(-3) ={}<fillin characters="6" />\text{, } ~~~{} p^2 = <fillin characters="6" /></me>
-			Add <m>p^2</m> to both sides.</p></li>
-		<li><p>Write the left side as a perfect square; simplify the right side.</p></li>
-		<li><p>Solve by extracting roots.</p></li>
-		</ol></p></li>
-	<li><p>Find approximations to two decimal places for the solutions.</p></li>
-	<li><p>Graph the parabola <m>y = x^2 - 3x - 1</m> in the window
-        <me>\begin{aligned}[t]
-        \text{Xmin} \amp = -4.7 \amp\amp \text{Xmax} = 4.7\\
-        \text{Ymin} \amp = -5 \amp\amp \text{Ymax} = 5
-        \end{aligned}</me></p></li>
-    </ol></p></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>x=\dfrac{3}{2}\pm\sqrt{\frac{13}{4}} </m></p></li>
-	<li><p><m>x\approx -0.30</m> or <m>x\approx 3.30</m></p></li>
-</ol></p></answer></exercise>
+<exercise xml:id="exercise-completing-the-square2">
+	<title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Fraction");
+            $p = Compute("-3/2");
+            $p2 = Compute("9/4");
+            Context()->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
+            $lhs = Formula("x**2-3x");
+            $rhs = Compute("1");
+            $lhs2 = Formula("x**2-3x+9/4");
+            $rhs2 = Compute("1+$p2");
+            $lin = Formula("x+$p")->reduce;
+            $rhs3 = Compute("13/4");
+            $r1 = Compute("3/2 + sqrt(13/4)");
+            $r2 = Compute("3/2 - sqrt(13/4)");
+            $answer = Formula("3/2 + sqrt(13/4), 3/2 - sqrt(13/4)");
+            $my_evaluator = $answer -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+            $answer2 = List("$r1, $r2");
+            $my_evaluator2 = $answer2 -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+              tolType => 'absolute',
+              tolerance => .0051,
+            ); 
+
+
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Follow the steps to solve by completing the square: <m>x^2 - 1 = 3x</m>.</p>
+                    <p><ol label="1">
+                        <li><p>Write the equation with the constant on the right.</p>
+                        <p><var name="$lhs" width="5"/><m>=</m><var name="$rhs" width="2"/></p></li>
+                        <li><p>Complete the square on the left:</p>
+                        <p><m>p = \dfrac{1}{2}(-3) ={}</m><var name="$p" width="4"/>, <m>p^2={}</m><var name="$p2" width="4"/> </p>
+                        <p>Add <m>p^2</m> to both sides.</p>
+                        <p><var name="$lhs2" width="9"/><m>=</m><var name="$rhs2" width="5"/></p>
+                        </li>
+                        <li><p>Write the left side as a perfect square; simplify the right side.</p>
+                        <p><m>\large(</m><var name="$lin" width="3"/><m>\large)^2=</m><var name="$rhs3" width="3"/></p>
+                        </li>
+                        <li><p>Solve by extracting roots.</p>
+                        <p>Solutions: <m>x=</m><var name="$answer" width="25" evaluator="$my_evaluator"/></p>
+                        <p>List all the values that are solutions. Use a comma to separate different solutions.</p>
+                        </li>
+                    </ol></p></li>
+            <li><p>Find approximations to two decimal places for the solutions.</p>
+                        <p>Solutions: <m>x=</m><var name="$answer2" width="8" evaluator="$my_evaluator2"/></p>
+                        <p>List all the values that are solutions. Use a comma to separate different solutions.</p>
+            </li>
+            <li><p>Graph the parabola <m>y = x^2 - 3x - 1</m> in the window
+                <me>\begin{aligned}[t]
+                \text{Xmin} \amp = -4.7 \amp\amp \text{Xmax} = 4.7\\
+                \text{Ymin} \amp = -5 \amp\amp \text{Ymax} = 5
+                \end{aligned}</me></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+    <li><p><m>x=\dfrac{3}{2}\pm\sqrt{\frac{13}{4}} </m></p></li>
+    <li><p><m>x\approx -0.30</m> or <m>x\approx 3.30</m></p></li>
+</ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -270,23 +337,61 @@ You can check that <m>(2x - 3)^2</m> is not equal to <m>2x^2 - 6x + 9</m>. We ha
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 3</title>
-<statement><p><ol label="a">
-	<li><p>Follow the steps to solve by completing the square: <me>-4x^2 - 36-65 = 0</me>.<ol label="1">
-		<li><p>Divide each term by <m>-4</m>. Write the equation with the constant on the right.</p></li>
-		<li><p>Complete the square on the left:
-			<me>p = \frac{1}{2}(9) ={}<fillin characters="6" />\text{, } ~~~{} p^2 = <fillin characters="6" /></me>
-			Add <m>p^2</m> to both sides.</p></li>
-		<li><p>Write the left side as a perfect square; simplify the right side.</p></li>
-		<li><p>Solve by extracting roots.</p></li>
-		</ol></p></li>
-	<li><p>Graph <m>y = -4x^2 - 36x - 65</m> in the window
-        <me>\begin{aligned}[t]
-        \text{Xmin} \amp = -9.4 \amp\amp \text{Xmax} = 0\\
-        \text{Ymin} \amp = -10 \amp\amp \text{Ymax} = 20
-        \end{aligned}</me></p></li>
-    </ol></p></statement>
-<answer><p><m>x=\dfrac{-13}{2} </m>, <m>~x=\dfrac{-5}{2} </m></p></answer></exercise>
+<exercise>
+	<title>Practice 3</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Fraction");
+            $p = Compute("9/2");
+            $p2 = Compute("81/4");
+            Context()->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
+            $lhs = Formula("x**2+9x");
+            $rhs = Formula("-65/4");
+
+            $lhs2 = Formula("x**2+9x+81/4");
+            $rhs2 = Formula("$rhs+$p2");
+            $lin = Formula("x+$p")->reduce;
+            $rhs3 = Formula("$rhs+$p2")->reduce;
+            $answer = Formula("-$p + sqrt($rhs3), -$p - sqrt($rhs3)")->reduce;
+            $my_evaluator = $answer -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+            
+        </pg-code></setup>
+        <statement>
+        <p><ol label="a">
+            <li><p>Follow the steps to solve by completing the square: 
+                <me>-4x^2- 36x-65 = 0</me>.</p>
+                    <p><ol label="1">
+                        <li><p>Divide each term by <m>-4</m>. Write the equation with the constant on the right.</p>
+                        <p><var name="$lhs" width="5"/><m>=</m><var name="$rhs" width="3"/> </p></li>
+                        <li><p>Complete the square on the left:</p>
+                        <p><m>p = \dfrac{1}{2}(9) ={}</m><var name="$p" width="4"/>, <m>p^2={}</m><var name="$p2" width="4"/> </p>
+                        <p>Add <m>p^2</m> to both sides.</p>
+                        <p><var name="$lhs2" width="9"/><m>=</m><var name="$rhs2" width="7"/></p>
+                        </li>
+                        <li><p>Write the left side as a perfect square; simplify the right side.</p>
+                        <p><m>\large(</m><var name="$lin" width="4"/><m>\large)^2=</m><var name="$rhs3" width="3"/></p>
+                        </li>
+                        <li><p>Solve by extracting roots.</p>
+                        <p>Solutions: <m>x=</m><var name="$answer" width="25" evaluator="$my_evaluator"/></p>
+                        <p>List all the values that are solutions. Use a comma to separate different solutions.</p>
+                        </li>
+                </ol></p></li>
+            <li><p>Graph <m>y = -4x^2 - 36x - 65</m> in the window
+                <me>\begin{aligned}[t]
+                \text{Xmin} \amp = -9.4 \amp\amp \text{Xmax} = 0\\
+                \text{Ymin} \amp = -10 \amp\amp \text{Ymax} = 20
+                \end{aligned}</me></p></li>
+            </ol></p>        
+        </statement>
+        <solution>
+            <p><m>x=\dfrac{-13}{2} </m>, <m> x=\dfrac{-5}{2} </m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>Here is a summary of the steps for solving quadratic equations by completing the square.</p>
 
@@ -355,10 +460,28 @@ Using a calculator, we find that the solutions are approximately <m>1.707</m> an
 and <m>0.293</m>, as shown below.</p>
 	<sidebyside  width="30%"><image source="images/fig-parabola-intercepts" ><description>parabola with irrational x-intercepts</description></image></sidebyside></solution></example>
 
-<exercise><title>Practice 4</title>
-<statement><p>Use the quadratic formula to solve <m>~~x^2 - 3x = 1</m>.</p>
-</statement>
-<answer><p><m>x=\dfrac{3\pm \sqrt{13}}{2} </m></p></answer></exercise>
+<exercise>
+	<title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
+            $answer=Formula("(3+sqrt(13))/2,(3-sqrt(13))/2");
+            $my_evaluator = $answer -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+        </pg-code></setup>
+        <statement>
+            <p>Use the quadratic formula to solve <m>x^2 - 3x = 1</m>.</p>
+            <p>Solutions: <m>x=</m><var name="$answer" width="25" evaluator="$my_evaluator"/></p>
+            <instructions><p>List all the values that are solutions. Use a comma to separate different solutions.</p></instructions>
+        </statement>
+        <solution>
+            <p><m>x=\dfrac{3\pm \sqrt{13}}{2} </m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>Note that the solutions to this equation are the same as the solutions we found in <xref ref="exercise-completing-the-square2" text="type-global"/>.</p>
 
@@ -422,11 +545,33 @@ Simplifying the last fraction, we find that <m>x \approx 72.35</m> or <m>x\appro
 	<li> If the width is <m>27.65</m> feet, the length is <m>300 - 3(27.65)</m>, or <m>217.05</m> feet.</li>
 	</ul></p></solution></example>
 
-<exercise><title>Practice 5</title>
-<statement><p>In <xref ref="investigation-height-of-baseball" text="type-global"/>, we considered the height of a baseball, given by the equation
-	<me>h = -16t^2 + 64t + 4</me>
-Find two times when the ball is at a height of <m>20</m> feet. Give your answers to two decimal places.</p></statement>
-<answer><p><m>0.27</m> sec, <m>3.73</m> sec</p></answer></exercise>
+<exercise>
+	<title>Practice 5</title>
+    <webwork>
+        <setup><pg-code> # t^2-4t=-1 
+            $r1 = Compute("2+sqrt(3)");
+            $r2 = Compute("2-sqrt(3)");
+            $answer = List("$r1,$r2");
+            $my_evaluator = $answer -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+              tolType => 'absolute',
+              tolerance => .0051,
+            ); 
+        </pg-code></setup>
+        <statement>
+            <p>In <xref ref="investigation-height-of-baseball" text="type-global"/>, we considered the height of a baseball, given by the equation
+                <me>h = -16t^2 + 64t + 4</me>
+            Find two times when the ball is at a height of <m>20</m> feet. Give your answers to two decimal places.</p>
+            <p>Answer: <var name="$answer" width="8" evaluator="$my_evaluator"/> sec</p>
+            <instructions><p>List all the times that are solutions. Use a comma to separate different times.</p></instructions>
+        </statement>
+        <solution>
+            <p><m>0.27</m> sec, <m>3.73</m> sec</p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>Sometimes it is useful to solve a quadratic equation for one variable in terms of the others.</p>
 
@@ -439,9 +584,23 @@ Expressions in <m>y</m> are treated as constants with respect to <m>x</m>, so th
 		\amp = \frac{y \pm\sqrt{y^2 - 4y + 8}}{2}
 		\end{aligned}</me><!--*****--></p></solution></example>
 
-<exercise xml:id="exercise-quadratic-in-two-variables"><title>Practice 6</title>
-<statement><p>Solve <m>~~2x^2 + kx + k^2 = 1~~</m> for <m>x</m> in terms of <m>k</m>.</p></statement>
-<answer><p><m>x=\dfrac{-k\pm\sqrt{8-7k^2}}{4} </m></p></answer></exercise>
+<exercise xml:id="exercise-quadratic-in-two-variables">
+	<title>Practice 6</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(k=>"Real");
+            $answer=Formula("(-k+sqrt(8-7k**2))/4, (-k-sqrt(8-7k**2))/4");
+        </pg-code></setup>
+        <statement>
+            <p>Solve <m>2x^2 + kx + k^2 = 1</m> for <m>x</m> in terms of <m>k</m>.</p>
+            <p>Solutions: <m>x=</m><var name="$answer" width="35"/></p>
+            <instructions><p>Use a comma to separate different solutions.</p></instructions>
+        </statement>
+        <solution>
+            <p><m>x=\dfrac{-k\pm\sqrt{8-7k^2}}{4} </m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>

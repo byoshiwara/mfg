@@ -89,18 +89,43 @@
 <solution><sidebyside width="30%"><image source="images/fig-translate-exponential"><description>translations of the exponential</description></image></sidebyside>
 <p> If <m>f(x) = e^x</m>, then <m>g(x) = f(x + 2)</m>, so the graph of <m>g</m> is shifted <m>2</m> units to the left of <m>y = e^x</m>. Also, <m>h(x) = f(x) + 2</m>, so the graph of <m>h</m> is shifted <m>2</m> units up from <m>y = e^x</m>. The graphs are shown above.</p></solution></example>
 
-<exercise><title>Practice 1</title>
-<statement><p>Use your calculator to evaluate the following powers.
-		<ol label="a" cols="3">
-			<li><m>e^2</m></li>
-			<li><m>e^{3.5}</m></li>
-			<li><m>e^{-0.5}</m></li>
-		</ol></p></statement>
-<answer><p><ol cols="3" label="a">
-	<li><p><m>e^2\approx 7.389</m></p></li>
-	<li><p><m>e^{3.5}\approx 33.115 </m></p></li>
-	<li><p><m>e^{-0.5}\approx 0.6065 </m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            $a = Compute("e**2")->with(
+              tolType => 'absolute',
+              tolerance => .00051,
+            );
+
+            $b = Compute("e**(3.5)")->with(
+              tolType => 'absolute',
+              tolerance => .00051,
+            );
+            $c = Compute("e**(-0.5)")->with(
+              tolType => 'absolute',
+              tolerance => .00051,
+            );
+            Context()->operators->undefine("^","**");
+
+        </pg-code></setup>
+        <statement>
+            <p>Use your calculator to evaluate the following powers.
+            <ol label="a">
+                <li><p><m>e^2\approx</m><var name="$a" width="5"/></p></li>
+                <li><p><m>e^{3.5}\approx</m><var name="$b" width="5"/></p></li>
+                <li><p><m>e^{-0.5}\approx</m><var name="$c" width="5"/></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol cols="3" label="a">
+                <li><p><m>e^2\approx 7.389</m></p></li>
+                <li><p><m>e^{3.5}\approx 33.115 </m></p></li>
+                <li><p><m>e^{-0.5}\approx 0.6065 </m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>The Natural Logarithmic Function</title>
@@ -187,16 +212,40 @@ In general, natural logs obey the same conversion formulas that work for logs to
 
 <warning><p>Observe that the natural log of a number greater than <m>1</m> is positive, while the logs of fractions between <m>0</m> and <m>1</m> are negative. In addition, <em>the natural logs of negative numbers and zero are undefined</em>.</p></warning>
 
-<exercise><title>Practice 2</title>
-<statement><p>Use your calculator to evaluate each logarithm. Round your answers to four decimal places.<ol label="a" cols="3">
-			<li><m>\ln 100</m></li>
-			<li><m>\ln 0.01</m></li>
-			<li><m>\ln e^3</m></li>
-		</ol></p></statement>
-<answer><p><ol label="a" cols="2">
-			<li><m>\ln 100\approx 4.6052</m></li>
-			<li><m>\ln 0.01\approx -4.6052</m></li>
-			<li><m>\ln e^3 =3</m></li></ol></p></answer></exercise>
+<exercise>
+	<title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            $a = Compute("ln(100)")->with(
+              tolType => 'absolute',
+              tolerance => .000051,
+            );
+
+            $b = Compute("ln(0.01)")->with(
+              tolType => 'absolute',
+              tolerance => .000051,
+            );
+            $c = Compute("ln(e**3)");
+            Context()->functions->disable("All");
+
+
+        </pg-code></setup>
+        <statement>
+            <p>Use your calculator to evaluate each logarithm. Round your answers to four decimal places.</p>
+            <p><ol label="a">
+                <li><p><m>\ln 100\approx</m><var name="$a" width="5"/></p></li>
+                <li><p><m>\ln 0.01\approx</m><var name="$b" width="5"/></p></li>
+                <li><p><m>\ln e^3\approx</m><var name="$c" width="5"/></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+            <li><m>\ln 100\approx 4.6052</m></li>
+            <li><m>\ln 0.01\approx -4.6052</m></li>
+            <li><m>\ln e^3 =3</m></li></ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -236,15 +285,31 @@ In general, natural logs obey the same conversion formulas that work for logs to
 		Then <m>e^{2 \ln(x+3)} = e^{\ln(x+3)^2} = (x + 3)^2</m>.</p></li>
 	</ol></p></solution></example>
 
-<exercise><title>Practice 3</title>
-<statement><p>Simplify each expression.<ol label="a" cols="2">
-			<li><m>e^{(\ln x)/2}</m></li>
-			<li><m>\ln\left(\dfrac{1}{e^{4x}}\right)</m></li>
-		</ol></p></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>\sqrt{x} </m></p></li>
-	<li><p><m>-4x</m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 3</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->functions->disable("All");
+            Context()->functions->enable("sqrt");
+            Context()->flags->set(limits=>[2,5]);
+            $a = Formula("sqrt(x)");
+            $b = Formula("-4*x");
+        </pg-code></setup>
+        <statement>
+            <p>Simplify each expression. Use "sqrt(x)" to get <m>\sqrt{x}</m>.</p>
+            <p><ol label="a" cols="2">
+                <li><p><m>e^{(\ln x)/2}=</m><var name="$a" width="6"/> </p></li>
+                <li><p><m>\ln\left(\dfrac{1}{e^{4x}}\right)=</m><var name="$b" width="6"/></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>\sqrt{x} </m></p></li>
+                <li><p><m>-4x</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Solving Equations</title>
@@ -262,16 +327,37 @@ In general, natural logs obey the same conversion formulas that work for logs to
 			<me>x = e^{3.5} \approx 33.1155</me></p></li>
 	</ol></p></solution></example>
 
-<exercise><title>Practice 5</title>
-<statement><p>Solve each equation. Round your answers to four decimal places.
-		<ol label="a" cols="2">
-			<li><m>\ln x =-0.2</m></li>
-			<li><m>e^x = 8</m></li>
-		</ol></p></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>0.8187 </m></p></li>
-	<li><p><m>2.0794</m></p></li>
-</ol></p></answer></exercise>
+<exercise><title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+            $a = Compute("e**(-0.2)")->with(
+              tolType => 'absolute',
+              tolerance => .000051,
+            );
+
+            $b = Compute("ln(8)")->with(
+              tolType => 'absolute',
+              tolerance => .000051,
+            );
+
+        </pg-code></setup>
+        <statement>
+            <p>Solve each equation. Round your answers to four decimal places.
+            <ol label="a">
+                <li><p><m>\ln x =-0.2</m></p>
+                <p><m>x\approx</m><var name="$a" width="6"/></p></li>
+                <li><p><m>e^x = 8</m></p>
+                <p><m>x\approx</m><var name="$b" width="6"/></p></li>
+            </ol></p>
+            </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>0.8187 </m></p></li>
+                <li><p><m>2.0794</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
@@ -314,12 +400,21 @@ by taking the natural logarithm of both sides. This gives us
 	\end{aligned}</me><!--*****-->
 because <m>\ln{e^a} = a</m> for any number <m>a</m>. We then proceed with the solution as before.</p></note>
 
-<exercise><title>Practice 5</title>
-<statement><p>Solve <me>80 -16e^{-0.2x} = 70.3</me></p></statement>
-<hint><p><m>\blert{\text{Subtract <m>80</m> from both sides and divide by}~ -16.}</m></p>
-	<p><m>\blert{\text{Take the natural log of both sides.}}</m></p>
-	<p><m>\blert{\text{Divide by}~ -0.2.}</m></p></hint>
-<answer><p><m>x = -5 \ln \left(\dfrac{9.6}{16} \right)\approx 2.5023</m></p></answer></exercise>
+<exercise>
+	<title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+            $a = Compute("-5*ln(9.7/16)");
+        </pg-code></setup>
+        <statement>
+            <p>Solve <me>80 -16e^{-0.2x} = 70.3</me></p>
+            <p><m>x=</m><var name="$a" width="15"/> </p>
+        </statement>
+        <solution>
+            <p><m>x = -5 \ln \left(\dfrac{9.7}{16} \right)\approx 2.5023</m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <example xml:id="example-solve-logistic"><statement><p>Solve <m>P = \dfrac{a}{1 + be^{-kt}}</m> for <m>t</m>.</p></statement>
 <solution><p>We multiply both sides of the equation by the denominator, <m>1 + be^{-kt}</m>, to get
@@ -338,12 +433,27 @@ because <m>\ln{e^a} = a</m> for any number <m>a</m>. We then proceed with the so
 	Finally, we divide both sides by <m>-k</m> to solve for <m>t</m>.
 		<me>t =\frac{-1}{k}\ln{\frac{a-P}{bP}}</me></p></solution></example>
 
-<exercise><title>Practice 6</title>
-<statement><p>Solve <m>N = Ae^{-kt}</m> for <m>k</m>.</p></statement>
-<hint><p><m>\blert{\text{Divide both sides by}~ A.}</m></p>
-	<p><m>\blert{\text{Take the natural log of both sides.}}</m></p>
-	<p><m>\blert{\text{Divide both sides by}~ -t.}</m></p></hint>
-<answer><p><m>k=\dfrac{-\ln(N/A) }{t} </m></p></answer></exercise>
+<exercise>
+	<title>Practice 6</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(N=>"Real", A=>"Real", t=>"Real");
+            $a = Formula("-ln(N/A)/t");
+        </pg-code></setup>
+        <statement>
+            <p>Solve <m>N = Ae^{-kt}</m> for <m>k</m>.</p>
+            <p><m>k=</m><var name="$a" width="15"/> </p>
+        </statement>
+        <hint>
+            <p><m>\blert{\text{Divide both sides by}~ A.}</m></p>
+            <p><m>\blert{\text{Take the natural log of both sides.}}</m></p>
+            <p><m>\blert{\text{Divide both sides by}~ -t.}</m></p>
+        </hint>
+        <solution>
+            <p><m>k=\dfrac{-\ln(N/A) }{t} </m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -394,16 +504,42 @@ By graphing both functions on your calculator, you can verify that <me>P(t) = 10
 			so <m>P(t) = 768,000 e^{0.062t}</m>.</p></li>
 	</ol></p></solution></example>
 
-<exercise><title>Practice 7</title>
-<statement><p>From 1994 to 1998, the number of personal computers connected to the Internet grew according to the formula <m>N(t) = 2.8e^{0.85t}</m>, where <m>t = 0</m> in 1994 and <m>N</m> is in millions. (Source: Los Angeles Times, September 6, 1999)<ol label="a">
-		<li>Evaluate <m>N(1)</m>. By what percent did the number of Internet users grow in one year?</li>
-		<li>Express the growth law in the form <m>N(t) = N_0 (1 + r)^t</m>. </li>
-		</ol></p></statement>
-<hint><p><m>e^k = 1 + r</m></p></hint>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>N(1)\approx 6.55</m>, <m>~134\%</m></p></li>
-	<li><p><m>N(t)\approx 2.8 (1.3396)^t </m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 7</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(t=>"Real");
+            $a = Compute("2.8*e**(0.85)")->with(
+              tolType => 'absolute',
+              tolerance => .0051,
+            );
+            $percent = Compute("(e**0.85-1)*100")->with(
+              tolType => 'absolute',
+              tolerance => .51,
+            );
+            $b = Formula("2.8*(1+$percent/100)**t");
+
+        </pg-code></setup>
+        <statement>
+            <p>From 1994 to 1998, the number of personal computers connected to the Internet grew according to the formula <m>N(t) = 2.8e^{0.85t}</m>, where <m>t = 0</m> in 1994 and <m>N</m> is in millions. (Source: Los Angeles Times, September 6, 1999)</p>
+            <p><ol label="a">
+            <li><p>Evaluate <m>N(1)=</m><var name="$a" width="3"/> . By what percent did the number of Internet users grow in one year?</p>
+            <p>About <var name="$percent" width="3"/>%</p></li>
+            <li><p>Express the growth law in the form <m>N(t) = N_0 (1 + r)^t</m>. </p>
+            <p><m>N(t)=</m><var name="$b" width="15"/> </p></li>
+            </ol></p>
+        </statement>
+        <hint>
+            <p><m>e^k = 1 + r</m></p>
+        </hint>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>N(1)\approx 6.55</m>, <m>~134\%</m></p></li>
+                <li><p><m>N(t)\approx 2.8 (2.3396)^t </m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>If <m>k</m> is negative, then <m>e^k</m> is a fraction less than <m>1</m>. For example, if <m>k = -2</m>,
 	<me>e^{-2} = \frac{1}{e^2} \approx \frac{1}{7.3891} \approx 0.1353</me>
@@ -442,59 +578,108 @@ Thus, for negative values of <m>k</m>, the function <m>P(t) = P_0 e^{kt}</m> des
 Replacing <m>b</m> with <m>e^k</m>, we find that the decay law is
 		<me>N(t) \approx 60e^{-0.2231t}</me></p></solution></example>
 
-<exercise><title>Practice 8</title>
-<statement><p>A scientist isolates <m>25</m> grams of krypton-91, which decays according to the formula
-	<me>N(t) = 25e^{-0.07t}</me>, 
-where <m>t</m> is in seconds.<ol label="a">
-		<li><p>Complete the table of values showing the amount of krypton-91 left at <m>10</m>-second intervals over the first minute.</p>
-		<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-			        <row bottom="minor">
-			            <cell halign="left"><m>t</m></cell>
-			            <cell><m>0</m></cell>
-			            <cell><m>10</m></cell>
-			            <cell><m>20</m></cell>
-			            <cell><m>30</m></cell>
-			            <cell><m>40</m></cell>
-			            <cell><m>50</m></cell>
-			            <cell><m>60</m></cell></row>
-			        <row>
-			            <cell halign="left"><m>N(t)</m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell></row>
-			    </tabular></sidebyside></li>
-		<li><p>Use the table to choose a suitable window and graph the function <m>N(t)</m>.</p></li>
-		<li><p>Write and solve an equation to answer the question: How long does it take for 60% of the krypton-91 to decay? </p></li>
-		</ol></p></statement>
-<hint><p>If <m>60\%</m> of the krypton-91 has decayed, <m>40\%</m> of the original <m>25</m> grams remains.</p></hint>
-<answer><p><ol label="a">
-	<li><sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-	        <row bottom="minor">
-	            <cell halign="left"><m>t</m></cell>
-	            <cell><m>0</m></cell>
-	            <cell><m>10</m></cell>
-	            <cell><m>20</m></cell>
-	            <cell><m>30</m></cell>
-	            <cell><m>40</m></cell>
-	            <cell><m>50</m></cell>
-	            <cell><m>60</m></cell></row>
-	        <row>
-	            <cell halign="left"><m>N(t)</m></cell>
-	            <cell><m>25</m></cell>
-	            <cell><m>12.41</m></cell>
-	            <cell><m>6.16</m></cell>
-	            <cell><m>3.06</m></cell>
-	            <cell><m>1.52</m></cell>
-	            <cell><m>0.75</m></cell>
-	            <cell><m>0.37</m></cell></row>
-	    </tabular></sidebyside></li>
-	<li><sidebyside width="35%"><image source="images/fig-in-ex-ans-5-3-8.jpg"><description>decay</description></image></sidebyside></li>
-	<li><p><m>25 e^{-0.07t} = 0.40(25)</m>; <m>~~t=\dfrac{\ln(0.4)}{-0.07}\approx 13.09 </m> seconds</p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 8</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(t=>"Real");
+            $f = Formula("25*e**(-0.07*t)");
+            foreach my $i (0..6){
+            $t = 10*$i;
+            $n[$i] = $f->eval(t=>$t)->with(
+              tolType => 'absolute',
+              tolerance => .0051,
+            );
+            }
+
+            $explain = RadioButtons(
+            ["\( 25e^{-0.07t}= 0.60   \)",
+            "\( 25e^{-0.07t}= 0.60 (25)   \)",
+            "\( 25e^{-0.07t}= 0.40   \)",
+            "\( 25e^{-0.07t}= 0.40 (25)   \)",
+            "None of the above"
+            ],
+            3,);
+            $t = Compute("ln(0.4)/(-0.07)")->with(
+              tolType => 'absolute',
+              tolerance => .0051,
+            );
+
+        </pg-code></setup>
+        <statement>
+            <p>A scientist isolates <m>25</m> grams of krypton-91, which decays according to the formula
+                <me>N(t) = 25e^{-0.07t}</me>, 
+            where <m>t</m> is in seconds.<ol label="a">
+                    <li><p>Complete the table of values showing the amount of krypton-91 left at <m>10</m>-second intervals over the first minute.</p>
+                    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                    <row bottom="minor">
+                        <cell halign="left"><m>t</m></cell>
+                        <cell><m>0</m></cell>
+                        <cell><m>10</m></cell>
+                        <cell><m>20</m></cell>
+                        <cell><m>30</m></cell></row>
+                    <row>
+                        <cell halign="left"><m>N(t)</m></cell>
+                        <cell><var name="$n[0]" width="3"/> </cell>
+                        <cell><var name="$n[1]" width="3"/></cell>
+                        <cell><var name="$n[2]" width="3"/></cell>
+                        <cell><var name="$n[3]" width="3"/></cell>
+                    </row>
+                </tabular></sidebyside>
+                    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                    <row bottom="minor">
+                        <cell halign="left"><m>t</m></cell>
+                        <cell><m>40</m></cell>
+                        <cell><m>50</m></cell>
+                        <cell><m>60</m></cell></row>
+                    <row>
+                        <cell halign="left"><m>N(t)</m></cell>
+                        <cell><var name="$n[4]" width="3"/></cell>
+                        <cell><var name="$n[5]" width="3"/></cell>
+                        <cell><var name="$n[6]" width="3"/></cell>
+                    </row>
+                </tabular></sidebyside></li>
+        <li><p>Use the table to choose a suitable window and graph the function <m>N(t)</m>.</p></li>
+        <li><p>Write and solve an equation to answer the question: How long does it take for 60% of the krypton-91 to decay? </p>
+        <p><var name="$explain" form="buttons"/> </p>
+        <p>Answer: <m>t=</m><var name="$t" width="12"/> seconds </p></li>
+        </ol></p>
+        </statement>
+        <hint>
+            <p>If <m>60\%</m> of the krypton-91 has decayed, <m>40\%</m> of the original <m>25</m> grams remains.</p>
+        </hint>
+        <solution>
+            <p><ol label="a">
+                <li><sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row bottom="minor">
+                    <cell halign="left"><m>t</m></cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>10</m></cell>
+                    <cell><m>20</m></cell>
+                    <cell><m>30</m></cell>
+                    <cell><m>40</m></cell>
+                    <cell><m>50</m></cell>
+                    <cell><m>60</m></cell></row>
+                <row>
+                    <cell halign="left"><m>N(t)</m></cell>
+                    <cell><m>25</m></cell>
+                    <cell><m>12.41</m></cell>
+                    <cell><m>6.16</m></cell>
+                    <cell><m>3.06</m></cell>
+                    <cell><m>1.52</m></cell>
+                    <cell><m>0.75</m></cell>
+                    <cell><m>0.37</m></cell>
+                </row>
+                </tabular></sidebyside></li>
+                <li><p>A graph is below.</p></li>
+                <li><p><m>25 e^{-0.07t} = 0.40(25)</m>; <m>t=\dfrac{\ln(0.4)}{-0.07}\approx 13.09 </m> seconds</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="35%"><image source="images/fig-in-ex-ans-5-3-8.jpg"><description>decay</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -569,10 +754,25 @@ where <m>P</m> is the principal invested.</p>
 		The account will be worth $<m>1000</m> after approximately <m>8.7</m> years.</li>
 	</ol></p></solution></example>
 
-<exercise><title>Practice 9</title>
-<statement><p>Zelda invested $<m>1000</m> in an account that pays <m>4.5\%</m> interest compounded continuously. How long will it be before the account is worth $<m>2000</m>?</p>
-</statement>
-<answer><p>About <m>15.4</m> years</p></answer></exercise>
+<exercise>
+	<title>Practice 9</title>
+    <webwork>
+        <setup><pg-code>
+            $answer = Compute("ln(2)/0.045")->with(
+              tolType => 'absolute',
+              tolerance => .051,
+            );
+
+        </pg-code></setup>
+        <statement>
+            <p>Zelda invested $1000 in an account that pays 4.5% interest compounded continuously. How long will it be before the account is worth $2000?</p>
+            <p>Answer: about <var name="$answer" width="3"/> years. </p>
+        </statement>
+        <solution>
+            <p>About 15.4 years</p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
