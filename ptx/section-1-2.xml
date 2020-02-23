@@ -477,17 +477,20 @@
  </example>  
 
 <exercise><title>Practice 4</title>
-    <webwork><setup>
-        <pg-code>
+    <webwork>
+        <setup><pg-code>
             Context("Fraction")->variables->add(r=>'Real');
             $V=Formula("4/3 * pi* r**3");
-        </pg-code>
-    </setup>
-    <statement>
-        <p>Write an equation that gives the volume, <m> V </m>, of a sphere as a function of its radius, <m>r</m>.</p>
-        <p><m> V= </m><var name="$V" width="8"/></p>
-        <instruction>Note: Use "pi" to enter the number <m> \pi </m>.</instruction>
-    </statement></webwork>    
+        </pg-code></setup>
+        <statement>
+            <p>Write an equation that gives the volume, <m>V</m>, of a sphere as a function of its radius, <m>r</m>.</p>
+            <p><m>V=</m><var name="$V" width="8"/></p>
+            <instruction>Note: Use "pi" to enter the number <m>\pi</m>.</instruction>
+        </statement>
+        <solution>
+            <p><m>V=\dfrac{4}{3}\pi r^3 </m></p>
+        </solution>
+    </webwork>    
 </exercise>
 
 <exercise><title>QuickCheck 3</title>
@@ -595,7 +598,7 @@ We see that</p>
 
 <exercise><title>Practice 5</title>
     <introduction><p>
-        Let <m> F </m> be the name of the function defined by the graph in <xref ref="example-sun-hours" text="type-global"/>, the number of hours of daylight in Peoria.
+        Let <m> F </m> be the name of the function defined by the graph in <xref ref="example-sun-hours" text="type-global"/>, the number of hours of daylight in Peoria <m>t</m> days after January 1.
     </p></introduction>
     <webwork>
         <setup>
@@ -943,11 +946,11 @@ We see that</p>
             <ol label="a">
             <li><p>If we increase the radius by <m> h </m> centimeters, what will the new volume be?</p>
             <p><var name="$V1" form="buttons"/></p></li>
-            <li><p>If <m> h = 2 </m>, how much did the volume increase?</p>
+            <li><p>If <m> h = 2 </m>, how much did the volume increase? Round your answer to hundredths.</p>
             <p>It increased by <var name="$deltaV" width="18"/> <m> \text{cm}^3 </m>. </p>
             </li>
         </ol></p>
-        <instruction>Note: You may use "pi" to enter the number <m> \pi </m>. You may also enter the computation needed--appropriate expressions that use addition, subtraction, multiplication, and division, etc. are allowed, as well as an accurate decimal approximation.</instruction>
+        <instruction>Note: Use "pi" to enter the number <m> \pi </m>.</instruction>
     </statement>
     <solution><p>
         <ol label="a">

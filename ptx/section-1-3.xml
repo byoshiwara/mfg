@@ -133,8 +133,11 @@ values of the two variables. </p>
             "from \( 2 \) to \( 4 \)$BR",
             "from \( -5 \) to \( -2 \)$BR",
             );
-            $intervals -> makeLast("None of the above");
-
+            $intervals -> makeLast( "from \( -5 \) to \( -4 \)$BR",
+            "from \( -5 \) to \( -2 \)$BR",
+            "from \( 2 \) to \( 4 \)$BR",
+            "from \( 1 \) to \( 3 \)$BR",
+            "None of the above");
         </pg-code></setup>
         <statement><p>
             <ol label="a">
@@ -145,7 +148,7 @@ values of the two variables. </p>
                 <p>Minimum: <var name="$min" width="3"/></p> 
                 <p>For what value of <m> t </m> does the function take on its minimum value?</p>
                 <p><m> t= </m><var name="$tmin" width="3"/></p></li>
-                <li><p>Select all the intervals listed below where <m> g </m> is decreasing?</p>
+                <li><p>Select all the intervals listed below where <m> g </m> is decreasing.</p>
                 <p><var name="$intervals" form="checkboxes"/></p>
                 </li>
             </ol>
@@ -287,11 +290,11 @@ and press <c>ZOOM</c> <m>6</m> for the standard window.  The graph is shown belo
                 <row>
                     <cell><m>f(x)</m></cell>
                     <cell><var name="$a0" width="2"/></cell>
-                    <cell><var name="$a1" width="2"/></cell>
-                    <cell><var name="$a2" width="3"/></cell>
+                    <cell><var name="$a1" width="1"/></cell>
+                    <cell><var name="$a2" width="2"/></cell>
                     <cell><var name="$a3" width="1"/></cell>
-                    <cell><var name="$a4" width="3"/></cell>
-                    <cell><var name="$a5" width="2"/></cell>
+                    <cell><var name="$a4" width="2"/></cell>
+                    <cell><var name="$a5" width="1"/></cell>
                     <cell><var name="$a6" width="1"/></cell></row>
                 </tabular></sidebyside></statement>
         <solution><sidebyside width="60%" margins="0% 40%">
@@ -457,7 +460,7 @@ at most one point.</p></assemblage>
     <li><m>x = 9</m> is a solution of the equation <m>150 = 285 - 15x</m>.</li>
 </ul></p></note>
 
-<exercise><title>Practice 5</title>
+<exercise xml:id="exercise-graph-to-solve-linear"><title>Practice 5</title>
     <introduction>
         <sidebyside width="30%"><image source="images/fig-graph-to-solve2"><description>function graph</description></image></sidebyside>
     </introduction>
@@ -521,7 +524,9 @@ at most one point.</p></assemblage>
 
 <exercise><title>Practice 6</title>
     <introduction>
-        <sidebyside width="30%"><image source="images/fig-graph-to-solve2"><description>function graph</description></image></sidebyside>
+        <sidebyside widths="50% 30%" margins="5% 5%" valigns="middle middle">
+            <p>Here is the graph from <xref ref="exercise-graph-to-solve-linear" text="type-global"/> (Practice 5).</p>
+            <image source="images/fig-graph-to-solve2"><description>function graph</description></image></sidebyside>
     </introduction>
     <webwork>
         <setup><pg-code>
@@ -530,7 +535,7 @@ at most one point.</p></assemblage>
             $answer= Compute("x >= -2.5");
         </pg-code></setup>
         <statement><p><ol label="a">
-        <li><p>Use the graph of <m> y = 30 - 8x </m> in  the previous Checkpoint to solve the inequality <me> 30 - 8x \le 50 </me></p>
+        <li><p>Use the graph of <m> y = 30 - 8x </m> above to solve the inequality <me> 30 - 8x \le 50 </me></p>
         <p>Answer: <var name="$answer" width="8"/> </p>
         <p>Note: Use "<m> \lt= </m>" for the <m> \le </m> symbol, and use "<m> \gt= </m>" for <m> \ge </m>.</p></li>
         <li>Solve the inequality algebraically.</li>
@@ -658,7 +663,7 @@ at most one point.</p></assemblage>
             <instruction>Note: Use interval notation or inequalities.</instruction>
         </statement>
         <solution>
-            <p><m> (-8, 4) </m></p>
+            <p><m> -8 \lt n \lt 4 </m></p>
         </solution>
     </webwork>
 </exercise>
