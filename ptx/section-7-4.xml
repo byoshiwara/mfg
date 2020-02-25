@@ -76,18 +76,46 @@
 
 <p>The vertical dashed line at <m>x=15</m> on the graph of <m>t=\dfrac{60}{15-x}</m> is a <term>vertical asymptote</term><idx>vertical asymptote</idx> for the graph. We first encountered asymptotes in <xref ref="basic-functions" text="type-global"/> when we studied the graph of <m>y=\dfrac{1}{x}</m>. Locating the vertical asymptotes of a rational function is an important part of determining the shape of the graph.</p>
 
-<exercise><title>Practice 1</title>
-<statement><p>Queueing theory is used to predict your waiting time in a line, or queue. For example, suppose the attendant at a toll booth can process <m>6</m> vehicles per minute. The average total time spent by a motorist negotiating the toll booth depends on the rate, <m>r</m>, at which vehicles arrive, according to the formula
-		<me>T=g(r)=\frac{12-r}{12(6-r)}</me><ol label="a">
-	<li><p>What is the average time spent at the toll booth if vehicles arrive at a rate of <m>3</m> vehicles per minute?</p></li>
-	<li><p>Graph the function on the domain <m>[0, 6]</m>.</p></li>
-	<li><p>What is the vertical asymptote of the graph? What does it tell you about the queue?</p></li>
-		</ol></p></statement>
-<answer><p><ol label="a" >
-	<li><p><m>0.25</m> min</p></li>
-	<li><sidebyside width="25%"><image source="images/fig-in-ex-ans-7-4-1"><description>rational function</description></image></sidebyside></li>
-	<li><p><m>r=6</m>. The wait time becomes infinite as the arrival rate approaches <m>6</m> vehicles per minute.</p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            Context("ImplicitPlane")->variables->are(r=>"Real", T=>"Real");
+            $a = Compute("0.25");
+            $equation = ImplicitPlane("r=6");
+            $explain = RadioButtons(
+            ["The wait time approaches 6 minutes as the arrival rate becomes infinite.",
+            "The wait time becomes infinite as the arrival rate approaches 6 vehicles per minute.",
+            "The wait time never reaches 6 minutes.",
+            ],
+            1,);
+
+        </pg-code></setup>
+        <statement>
+            <p>Queueing theory is used to predict your waiting time in a line, or queue. For example, suppose the attendant at a toll booth can process <m>6</m> vehicles per minute. The average total time spent by a motorist negotiating the toll booth depends on the rate, <m>r</m>, at which vehicles arrive, according to the formula
+            <me>T=g(r)=\frac{12-r}{12(6-r)}</me></p>
+            <p><ol label="a">
+                <li><p>What is the average time spent at the toll booth if vehicles arrive at a rate of <m>3</m> vehicles per minute?</p>
+                <p>Answer: <var name="$a" width="3"/> min. </p></li>
+                <li><p>Graph the function on the domain <m>[0, 6]</m>.</p></li>
+                <li><p>What is the vertical asymptote of the graph?</p>
+                <p>Equation of asymptote: <var name="$equation" width="5"/> </p> 
+                <p>What does it tell you about the queue?</p>
+                <p><var name="$explain" form="buttons"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" >
+    <li><p><m>0.25</m> min</p></li>
+    <li><p>A graph is below.</p></li>
+    <li><p><m>r=6</m>. The wait time becomes infinite as the arrival rate approaches <m>6</m> vehicles per minute.</p></li>
+</ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="25%"><image source="images/fig-in-ex-ans-7-4-1"><description>rational function</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <example><statement><p>EarthCare decides to sell T-shirts to raise money. The company makes an initial investment of $100 to pay for the design of the T-shirt and to set up the printing process. After that, the T-shirts cost $5 each for labor and materials.
 	<ol label="a">
@@ -134,20 +162,47 @@
 
 <p>The horizontal line <m>C = 5</m> on the graph of <m>C = \displaystyle{\frac{100 + 5x}{x}}</m> is a <term>horizontal asymptote</term><idx>horizontal asymptote</idx>. As <m>x</m> increases, the graph approaches the line <m>C = 5</m> but never actually meets it. The average price per T-shirt will always be slightly more than $5. Horizontal asymptotes are also important in sketching the graphs of rational functions.</p>
 
-<exercise><title>Practice 2</title>
-<statement><p>Delbert prepares a <m>20\%</m> glucose solution of by mixing <m>2</m> mL of glucose with <m>8</m> mL of water. If he adds <m>x</m> ml of glucose to the solution, its concentration is given by
-		<me>
-			C(x) = \frac{2 + x}{8+x}
-		</me><ol label="a">
-	<li><p>How many milliliters of glucose should Delbert add to increase the concentration to <m>50\%</m>?</p></li>
-	<li><p>Graph the function on the domain <m>[0, 100]</m>.</p></li>
-	<li><p>What is the horizontal asymptote of the graph? What does it tell you about the solution?</p></li>
-</ol></p></statement>
-<answer><p><ol label="a" >
-	<li><p><m>4</m> ml</p></li>
-	<li><sidebyside width="25%"><image source="images/fig-in-ex-ans-7-4-2"><description>rational function</description></image></sidebyside></li>
-	<li><p><m>C=1</m>. As Delbert adds more glucose to the mixture, its concentration increases toward <m>100\%</m>.</p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            Context("ImplicitPlane")->variables->are(C=>"Real", x=>"Real");
+            $a = Compute("4");
+            $equation = ImplicitPlane("C=1");
+            $explain = RadioButtons(
+            ["Delbert cannot add more than 100 mL glucose to the mixture.",
+            "If Delbert adds 1 mL of glucose to the mixture, its concentration becomes infinite.",
+            "As Delbert adds more glucose to the mixture, its concentration increases toward 100%.",
+            ],
+            2,);
+
+        </pg-code></setup>
+        <statement>
+            <p>Delbert prepares a 20% glucose solution of by mixing 2 mL of glucose with 8 mL of water. If he adds <m>x</m> ml of glucose to the solution, its concentration is given by
+        <me>
+            C(x) = \frac{2 + x}{8+x}
+        </me></p>
+        <p><ol label="a">
+                <li><p>How many milliliters of glucose should Delbert add to increase the concentration to 50%?</p>
+                <p>Answer: <var name="$a" width="2"/> ml</p></li>
+                <li><p>Graph the function on the domain <m>[0, 100]</m>.</p></li>
+                <li><p>What is the horizontal asymptote of the graph?</p><p>Equation of asymptote: <var name="$equation" width="5"/> Use <m>x</m> for the independent variable, and use <m>C</m> for the dependent variable.</p> 
+                <p>What does the horizontal asymptote tell you about the solution?</p>
+                <p><var name="$explain" form="buttons"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" >
+                <li><p><m>4</m> ml</p></li>
+                <li><p>A graph is below.</p></li>
+                <li><p><m>C=1</m>. As Delbert adds more glucose to the mixture, its concentration increases toward <m>100\%</m>.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="25%"><image source="images/fig-in-ex-ans-7-4-2"><description>rational function</description></image></sidebyside>
+    </conclusion>
+</exercise>
 </subsection>
 
 <subsection><title>Domain of a Rational Function</title>
@@ -192,15 +247,31 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
 
 <note><p>We only need to exclude the zeros of the <em>denominator</em> from the domain of a rational function. We do not exclude the zeros of the numerator. In fact, the zeros of the numerator include the zeros of the rational function itself, because a fraction is equal to <m>0</m> when its numerator is <m>0</m> but its denominator is not <m>0</m>.</p></note>
 
-<exercise><title>Practice 3</title>
-<statement><p><ol label="a">
-	<li><p>Find the domain of <m>F(x) = \displaystyle{\frac{x - 2}{x + 4}}</m>.</p></li>
-	<li><p>Find the zeros of <m>F(x)</m>.</p></li>
-</ol></p></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>x\ne -4</m></p></li>
-	<li><p><m>x=2</m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 3</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Inequalities");
+            $a = Compute("x &lt; -4 or x>-4");
+            $z = Compute("2");
+
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Find the domain of <m>F(x) = \displaystyle{\frac{x - 2}{x + 4}}</m>.</p>
+                <p><var name="$a" width="10"/>  You may use the inequality symbols (<m>\lt</m>, <m>\le</m>, <m>></m>, <m>\ge</m>)  or enter your answers using interval notation. When using interval notation, use "inf" for <m>\infty</m> and use "U" (an upper case letter u) for the union symbol <m>\cup</m>.</p></li>
+                <li><p>Find the zeros of <m>F(x)</m>.</p>
+                <p><var name="$z" width="4"/> Separate different zeros with a comma. </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>x\ne -4</m>, which is <m>(-\infty,-4) \cup (-4,\infty)</m></p></li>
+                <li><p><m>x=2</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Vertical Asymptotes</title>
@@ -247,9 +318,30 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
 
 <note><p>If <m>P(a)</m> and <m>Q(a)</m> are both zero, then the graph of the rational function <m>\displaystyle{\frac{P(x)}{Q(x)}}</m> may have a hole at <m>x=a</m> rather than an asymptote. (This possibility is considered in the homework exercises.)</p></note>
 
-<exercise><title>Practice 4</title>
-<statement><p>Find the vertical asymptotes of <m>G(x) = \displaystyle{\frac{4x^2}{x^2 - 4}}</m>.</p></statement>
-<answer><p><m>x=-2</m> and <m>x=2</m></p></answer></exercise>
+<exercise>
+	<title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+            Context("ImplicitPlane")->variables->are(x=>"Real", y=>"Real");
+            $eq1 = ImplicitPlane("x=-2");
+            $eq2 = ImplicitPlane("x=2");
+            $a = List("$eq1,$eq2");
+            $my_evaluator = $a -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+            
+        </pg-code></setup>
+        <statement>
+            <p>Find the vertical asymptotes of <m>G(x) = \displaystyle{\frac{4x^2}{x^2 - 4}}</m>.</p>
+            <p>Equations of vertical asymptotes: <var name="$a" width="10" /> Separate different equations with a comma.</p>
+        </statement>
+        <solution>
+            <p><m>x=-2</m> and <m>x=2</m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
@@ -279,29 +371,76 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
 <p> We can use the <term>Table</term> feature of a calculator to evaluate <m>g(x)</m> for several values of <m>x</m> on either side of the asymptote, as shown in figure (a). We plot the points found in this way; then connect the points on either side of the asymptote to obtain the graph shown in figure (b).</p>
 	<sidebyside  width="70%"><image source="images/fig-table-and-graph-of-rational-function2"><description>table and graph of rational funciton</description></image></sidebyside></solution></example>
 
-<exercise><title>Practice 5</title>
-<statement><p><ol label="a">
-	<li><p>Find the vertical asymptotes of <m>f(x) = \displaystyle{\frac{1}{x^2-4}}</m> . Locate any <m>x</m>-intercepts.</p></li>
-	<li><p>Evaluate the function at <m>x = -3</m>, <m>-1</m>, <m>1</m>, and <m>3</m>. Sketch a graph of the function.</p></li>
-</ol></p></statement>
-<answer><p><ol label="a">
-	<li><p><m>x=-2</m> and <m>x=2</m>, no <m>x</m>-intercepts</p></li>
-	<li><sidebyside><tabular left="minor" right="minor" top="minor" bottom="minor" halign="center">
-		<row>
-			<cell><m>x</m></cell>
-			<cell><m>-3</m></cell>
-			<cell><m>-1</m></cell>
-			<cell><m>1</m></cell>
-			<cell><m>3</m></cell></row>
-		<row>
-			<cell><m>y</m></cell>
-			<cell><m>\frac{1}{5} </m></cell>
-			<cell><m>\frac{-1}{3} </m></cell>
-			<cell><m>\frac{-1}{3} </m></cell>
-			<cell><m>\frac{1}{5} </m></cell></row>
-	</tabular></sidebyside>
-	<sidebyside width="25%"><image source="images/fig-in-ex-ans-7-4-5"><description>rational function</description></image></sidebyside></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Fraction")->flags->set( reduceConstants => 0, 
+            reduceConstantFunctions => 0,  );
+            $a1 = Formula("1/5");
+            $a2 = Formula("-1/3");
+
+            @choices = ("?","DNE", "undefined","none");
+            $popup = PopUp([@choices], $choices[0]);  # It doesn't matter which is used as the "correct answer".
+            Context($popup->context); 
+            $b = OneOf(@choices[1..3]);
+
+
+
+            Context("ImplicitPlane")->variables->are(x=>"Real", y=>"Real");
+            $eq1 = ImplicitPlane("x=-2");
+            $eq2 = ImplicitPlane("x=2");
+            $a = List("$eq1,$eq2");
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Find the vertical asymptotes of <m>f(x) = \displaystyle{\frac{1}{x^2-4}}</m> .</p>
+                <p>Equations of vertical asymptotes: <var name="$a" width="10" /> Separate different equations with a comma.</p>
+                <p>Locate any <m>x</m>-intercepts.</p>
+                <p><var name="$b" width="7"/> </p></li>
+                <li><p>Evaluate the function at <m>x = -3</m>, <m>-1</m>, <m>1</m>, and <m>3</m>.</p>
+                <sidebyside><tabular left="minor" right="minor" top="minor" bottom="minor" halign="center">
+                    <row>
+                        <cell><m>x</m></cell>
+                        <cell><m>-3</m></cell>
+                        <cell><m>-1</m></cell>
+                        <cell><m>1</m></cell>
+                        <cell><m>3</m></cell></row>
+                    <row>
+                        <cell><m>y</m></cell>
+                        <cell><var name="$a1" width="3"/> </cell>
+                        <cell><var name="$a2" width="3"/></cell>
+                        <cell><var name="$a2" width="3"/></cell>
+                        <cell><var name="$a1" width="3"/></cell></row>
+                </tabular></sidebyside>
+                <p>Sketch a graph of the function.</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p><m>x=-2</m> and <m>x=2</m>, no <m>x</m>-intercepts</p></li>
+                <li><sidebyside><tabular left="minor" right="minor" top="minor" bottom="minor" halign="center">
+                    <row>
+                        <cell><m>x</m></cell>
+                        <cell><m>-3</m></cell>
+                        <cell><m>-1</m></cell>
+                        <cell><m>1</m></cell>
+                        <cell><m>3</m></cell></row>
+                    <row>
+                        <cell><m>y</m></cell>
+                        <cell><m>\frac{1}{5} </m></cell>
+                        <cell><m>\frac{-1}{3} </m></cell>
+                        <cell><m>\frac{-1}{3} </m></cell>
+                        <cell><m>\frac{1}{5} </m></cell></row>
+                </tabular></sidebyside>
+                <p>A graph is below.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="28%"><image source="images/fig-in-ex-ans-7-4-5"><description>rational function</description></image></sidebyside>
+    </conclusion>
+</exercise>
 </subsection>
 
 <subsection><title>Horizontal Asymptotes</title>
@@ -349,10 +488,30 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
 <p> The <m>y</m>-intercept of the graph is the point <m>(0, 0)</m>. We can plot several points by evaluating the function at convenient <m>x</m>-values, and use the asymptote to help us sketch the graph, as shown below.</p>
 		<sidebyside   width="50%"><image source="images/fig-horizontal-asymptote-above-x-axis"><description>rational function with horizontal asymptote at y=2</description></image></sidebyside></solution></example>
 
-<exercise><title>Practice 6</title>
-<statement><p>Locate the horizontal and vertical asymptotes and sketch the graph of <m>k(x) = \displaystyle{\frac{x^2 - 1}{x^2 - 9}}</m>. Label the <m>x</m>- and <m>y</m>-intercepts with their coordinates.</p></statement>
-<answer><p><m>y= 1</m>; <m>x = -3</m>, <m>x = 3</m></p>
-<sidebyside width="25%"><image source="images/fig-in-ex-ans-7-4-6"><description>rational function</description></image></sidebyside></answer></exercise>
+<exercise>
+	<title>Practice 6</title>
+    <webwork>
+        <setup><pg-code>
+            Context("ImplicitPlane")->variables->are(x=>"Real", y=>"Real");
+            $eq1 = ImplicitPlane("x=-3");
+            $eq2 = ImplicitPlane("x=3");
+            $eq3 = ImplicitPlane("y=1");
+            $a = List("$eq3,$eq1,$eq2");
+            
+        </pg-code></setup>
+        <statement>
+            <p>Locate the horizontal and vertical asymptotes and sketch the graph of <m>k(x) = \displaystyle{\frac{x^2 - 1}{x^2 - 9}}</m>. Label the <m>x</m>- and <m>y</m>-intercepts with their coordinates.</p>
+            <p>Equations of asymptotes: <var name="$a" width="10" /> Use <m>x</m> for the independant variable and <m>y</m> for the dependant variable. Separate different equations with a comma.</p>
+        </statement>
+        <solution>
+            <p><m>y= 1</m>; <m>x = -3</m>, <m>x = 3</m></p>
+            <p>A graph is below</p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="25%"><image source="images/fig-in-ex-ans-7-4-6"><description>rational function</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -392,9 +551,22 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
 		</ol></p>
 	<p>(See Algebra Skills Refresher <xref ref="appendix-Working-with-Algebraic-Fractions" text="type-hybrid"/> to review adding fractions.)</p></solution></example>
 
-<exercise><title>Practice 7</title>
-<statement><p>Navid took his outboard motorboat 20 miles upstream to a fishing site, returning downstream later that day. His boat travels 10 miles per hour in still water. Write an expression for the time Navid spent traveling, as a function of the speed of the current.</p></statement>
-<answer><p><m>\dfrac{400}{100-x^2} </m> hrs</p></answer></exercise>
+<exercise>
+	<title>Practice 7</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->set(x=>{limits=>[-1,1]});
+            $f = Formula("400/(100-x^2)");
+        </pg-code></setup>
+        <statement>
+            <p>Navid took his outboard motorboat 20 miles upstream to a fishing site, returning downstream later that day. His boat travels 10 miles per hour in still water. Write an expression for the time Navid spent traveling, as a function of the speed of the current.</p>
+            <p><var name="$f" width="15"/> hrs </p>
+        </statement>
+        <solution>
+            <p><m>\dfrac{400}{100-x^2} </m> hrs</p>
+        </solution>
+    </webwork>
+</exercise>
 
 
 </subsection>

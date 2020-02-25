@@ -28,9 +28,29 @@ From here we can proceed as usual.
 			<mrow>8.\overline{3} \amp = x</mrow></md>
 The windspeed was <m>8.\overline{3}</m>, or <m>8\frac{1}{3}</m> miles per hour.</p></solution></example>
 
-<exercise><title>Practice 1</title>
-<statement><p>Solve <m>~~\displaystyle{\frac{x^2}{x+4}}=2</m></p></statement>
-<answer><p><m>x = -2, ~x = 4</m></p></answer></exercise>
+<exercise>
+	<title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            $r1 = Compute("-2");
+            $r2 = Compute("4");
+            $a = List("$r1, $r2");
+            $my_evaluator = $a -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+        </pg-code></setup>
+        <statement>
+            <p>Solve <m>\displaystyle{\frac{x^2}{x+4}}=2</m></p>
+            <p><m>x=</m><var name="$answer" width="10" evaluator="$my_evaluator"/></p>
+            <instructions>Separate different values with a comma.</instructions>
+        </statement>
+         <solution>
+            <p><m>x = -2, x = 4</m></p>
+        </solution>
+   </webwork>
+</exercise>
 
 <p>If the equation contains more than one fraction, we can clear all the denominators at once by multiplying both sides by the LCD of the fractions.</p>
 
@@ -64,9 +84,28 @@ Solving this equation, we find
 			<mrow>3 \amp = x</mrow></md>
 The speed of the current is <m>3</m> miles per hour.</p></solution></example>
 
-<exercise><title>Practice 2</title>
-<statement><p>Solve <m>~~\displaystyle{\frac{x}{6-x}=\frac{1}{2}}</m></p></statement>
-<answer><p><m>x=2</m></p></answer></exercise>
+<exercise>
+	<title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            $r1 = Compute("2");
+            $a = List("$r1");
+            $my_evaluator = $a -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+        </pg-code></setup>
+        <statement>
+            <p>Solve <m>\displaystyle{\frac{x}{6-x}=\frac{1}{2}}</m></p>
+            <p><m>x=</m><var name="$answer" width="10" evaluator="$my_evaluator"/></p>
+            <instructions>Separate different values with a comma.</instructions>
+        </statement>
+         <solution>
+           <p><m>x=2</m></p>
+        </solution>
+   </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -158,9 +197,30 @@ you will find that the graphs never intersect, which means that there is no solu
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 3</title>
-<statement><p>Solve <m>~~\displaystyle{\frac{9}{x^2+x-2}+\frac{1}{x^2-4}=\frac{4}{x-1}} </m></p></statement>
-<answer><p><m>x=\dfrac{-1}{2} </m></p></answer></exercise>
+<exercise>
+	<title>Practice 3</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Fraction")->flags->set( reduceConstants => 0, 
+            reduceConstantFunctions => 0,  );
+            $r1 = Formula("-1/2");
+            $a = Formula("$r1");
+            $my_evaluator = $a -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+        </pg-code></setup>
+        <statement>
+            <p>Solve <m>\displaystyle{\frac{9}{x^2+x-2}+\frac{1}{x^2-4}=\frac{4}{x-1}} </m></p>
+            <p><m>x=</m><var name="$answer" width="10" evaluator="$my_evaluator"/></p>
+            <instructions>Separate different values with a comma.</instructions>
+        </statement>
+        <solution>
+            <p><m>x=\dfrac{-1}{2} </m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -189,9 +249,21 @@ We cannot combine the two terms containing <m>v</m> because they are not like te
 			<mrow>\frac{qp}{1-p} \amp= v</mrow></md>
 	</p></solution></example>
 
-<exercise><title>Practice 4</title>
-<statement><p>Solve for <m>a</m>: <m>~~\displaystyle{\frac{2ab}{a+h}}=H </m></p></statement>
-<answer><p><m>a=\dfrac{bH}{2b-H}</m> </p></answer>
+<exercise>
+	<title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(a=>"Real", b=>"Real", H=>"Real");
+            $f = Formula("(b*H)/(2b-H)");
+        </pg-code></setup>
+        <statement>
+            <p>Solve for <m>a</m>: <m>\hphantom{00}\displaystyle{\frac{2ab}{a+b}}=H </m></p>
+            <p><m>a=</m><var name="$f" width="15"/> </p>
+        </statement>
+        <solution>
+            <p><m>a=\dfrac{bH}{2b-H}</m> </p>
+        </solution>
+    </webwork>
 </exercise>
 
 <exercise><title>Pause and Reflect</title>
