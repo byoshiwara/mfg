@@ -83,63 +83,101 @@ All cubic polynomials display this behavior when their lead coefficients (the co
 	<li> The domain of any polynomial function is the entire set of real numbers.</li>
 	</ul></p>
 
-<exercise><title>Practice 1</title>
-<statement><p><ol label="a">
-	<li><p>Complete the table of values below for <m>C(x) = -x^3 - 2x^2 + 4x + 4</m>.</p>
-		<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-			        <row bottom="minor">
-			            <cell><m>x</m></cell>
-			            <cell><m>-4</m></cell>
-			            <cell><m>-3</m></cell>
-			            <cell><m>-2</m></cell>
-			            <cell><m>-1</m></cell>
-			            <cell><m>0</m></cell>
-			            <cell><m>1</m></cell>
-			            <cell><m>2</m></cell>
-			            <cell><m>3</m></cell>
-			            <cell><m>4</m></cell></row>
-			        <row>
-			            <cell><m>y</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell></row>
-			    </tabular></sidebyside></li>
-		<li><p>Graph <m>y = C(x)</m> in the standard window. Compare the graph to the graphs in <xref ref="example-two-cubics" text="type-global"/>: What similarities do you notice? What differences?</p></li>
-		</ol></p></statement>
-<answer><p><ol label="a">
-	<li><sidebyside>
-		<tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-	        <row bottom="minor">
-	            <cell><m>x</m></cell>
-	            <cell><m>-4</m></cell>
-	            <cell><m>-3</m></cell>
-	            <cell><m>-2</m></cell>
-	            <cell><m>-1</m></cell>
-	            <cell><m>0</m></cell>
-	            <cell><m>1</m></cell>
-	            <cell><m>2</m></cell>
-	            <cell><m>3</m></cell>
-	            <cell><m>4</m></cell></row>
-	        <row>
-	            <cell><m>y</m></cell>
-	            <cell><m>20</m></cell>
-	            <cell><m>1</m></cell>
-	            <cell><m>-4</m></cell>
-	            <cell><m>-1</m></cell>
-	            <cell><m>4</m></cell>
-	            <cell><m>5</m></cell>
-	            <cell><m>-4</m></cell>
-	            <cell><m>-29</m></cell>
-	            <cell><m>-76</m></cell></row>
-	    </tabular></sidebyside></li>
-	<li><sidebyside width="35%"><image source="images/fig-in-ex-ans-7-2-1.jpg"><description>cubic</description></image></sidebyside> <p>Both graphs have three <m>x</m>-intercepts, but the function in  <xref ref="example-two-cubics" text="type-global"/> has long-term behavior like <m>y = x^3</m>, and this function has long-term behavior like <m>y = -x^3</m>. </p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            $C = Formula("-x^3-2x^2+4x+4");
+            foreach my $x(-4..4){
+            $i = $x+4;
+            $y[$i] = $C->eval(x=>$x);
+            }
+            $match = new_checkbox_multiple_choice();
+            $match -> qa (
+            "A question can go here, but PTX ignores this",
+            "Both non-basic cubic graphs have three \(x\)-intercepts and two turning points. $BR",
+            "The non-basic cubic function from the example has long-term behavior like \(y=x^3\), but this cubic function has long-term behavior like \(y=-x^3\). $BR",
+            );
+            $match -> makeLast(
+            "Both non-basic cubic graphs have three \(x\)-intercepts and two turning points. $BR",
+            "Both non-basic cubic graphs the same long-term behavior as \(y=x^3\). $BR",
+            "The non-basic cubic function from the example has three \(x\)-intercepts and two turning points, but this cubic function has only one turning point. $BR",
+            "The non-basic cubic function from the example has long-term behavior like \(y=x^3\), but this cubic function has long-term behavior like \(y=-x^3\). $BR",
+             );
+
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Complete the table of values below for <m>C(x) = -x^3 - 2x^2 + 4x + 4</m>.</p>
+                    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                        <row bottom="minor">
+                            <cell><m>x</m></cell>
+                            <cell><m>-4</m></cell>
+                            <cell><m>-3</m></cell>
+                            <cell><m>-2</m></cell>
+                            <cell><m>-1</m></cell>
+                            <cell><m>0</m></cell></row>
+                        <row>
+                            <cell><m>y</m></cell>
+                            <cell><var name="$y[0]" width="2" /></cell>
+                            <cell><var name="$y[1]" width="2" /></cell>
+                            <cell><var name="$y[2]" width="2" /></cell>
+                            <cell><var name="$y[3]" width="2" /></cell>
+                            <cell><var name="$y[4]" width="2" /></cell></row>
+                    </tabular></sidebyside>
+                    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                        <row bottom="minor">
+                            <cell><m>x</m></cell>
+                            <cell><m>1</m></cell>
+                            <cell><m>2</m></cell>
+                            <cell><m>3</m></cell>
+                            <cell><m>4</m></cell></row>
+                        <row>
+                            <cell><m>y</m></cell>
+                            <cell><var name="$y[5]" width="2" /></cell>
+                            <cell><var name="$y[6]" width="2" /></cell>
+                            <cell><var name="$y[7]" width="2" /></cell>
+                            <cell><var name="$y[8]" width="2" /></cell></row>
+                </tabular></sidebyside></li>
+            <li><p>Graph <m>y = C(x)</m> in the standard window. Compare the graph to the graphs in <xref ref="example-two-cubics" text="type-global"/>: What similarities do you notice? What differences?</p>
+            <p><var name="$match" form="checkboxes"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><sidebyside>
+                    <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                        <row bottom="minor">
+                            <cell><m>x</m></cell>
+                            <cell><m>-4</m></cell>
+                            <cell><m>-3</m></cell>
+                            <cell><m>-2</m></cell>
+                            <cell><m>-1</m></cell>
+                            <cell><m>0</m></cell>
+                            <cell><m>1</m></cell>
+                            <cell><m>2</m></cell>
+                            <cell><m>3</m></cell>
+                            <cell><m>4</m></cell></row>
+                        <row>
+                            <cell><m>y</m></cell>
+                            <cell><m>20</m></cell>
+                            <cell><m>1</m></cell>
+                            <cell><m>-4</m></cell>
+                            <cell><m>-1</m></cell>
+                            <cell><m>4</m></cell>
+                            <cell><m>5</m></cell>
+                            <cell><m>-4</m></cell>
+                            <cell><m>-29</m></cell>
+                            <cell><m>-76</m></cell></row>
+                    </tabular></sidebyside></li>
+                <li><p>A graph is below.</p><p>Both graphs have three <m>x</m>-intercepts, but the function in  <xref ref="example-two-cubics" text="type-global"/> has long-term behavior like <m>y = x^3</m>, and this function has long-term behavior like <m>y = -x^3</m>. </p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="35%"><image source="images/fig-in-ex-ans-7-2-1"><description>cubic</description></image></sidebyside> 
+    </conclusion>
+</exercise>
 </subsection>
 
 <subsection><title>Quartic Polynomials</title>
@@ -188,68 +226,106 @@ All cubic polynomials display this behavior when their lead coefficients (the co
 	
 <p>As in <xref ref="example-two-cubics" text="type-global"/>, both graphs have similar long-term behavior. The <m>y</m>-values decrease from <m>-\infty</m> toward zero as <m>x</m> increases from <m>-\infty</m>, and the <m>y</m>-values increase toward <m>+\infty</m> as <m>x</m> increases to <m>+\infty</m>. This long-term behavior is similar to that of the power function <m>y = x^4</m>. Its graph also starts at the upper left and extends to the upper right.</p></solution></example>
 
-<exercise><title>Practice 2</title>
-<statement><p><ol label="a">
-	<li><p>Complete the following table of values for <m>Q(x) = -x^4 - x^3 - 6x^2 + 2</m>.</p>
-		<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-			        <row bottom="minor">
-			            <cell><m>x</m></cell>
-			            <cell><m>-4</m></cell>
-			            <cell><m>-3</m></cell>
-			            <cell><m>-2</m></cell>
-			            <cell><m>-1</m></cell>
-			            <cell><m>0</m></cell>
-			            <cell><m>1</m></cell>
-			            <cell><m>2</m></cell>
-			            <cell><m>3</m></cell>
-			            <cell><m>4</m></cell></row>
-			        <row>
-			            <cell><m>y</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell>
-			            <cell><m>\hphantom{000}</m></cell></row>
-			    </tabular></sidebyside></li>
-	<li><p>Graph <m>y = Q(x)</m> in the window
-				<me>\begin{aligned}[t]
-				\text{Xmin} \amp = -5 \amp\amp \text{Xmax} = 5\\
-				\text{Ymin} \amp = -15 \amp\amp \text{Ymax} = 10
-				\end{aligned}</me>
-		Compare the graph to the graphs in <xref ref="example-two-quartics" text="type-global"/>: What similarities do you notice? What differences?</p></li>
-	</ol></p></statement>
-<answer><p><ol label="a">
-	<li><sidebyside>
-		<tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-	        <row bottom="minor">
-	            <cell><m>x</m></cell>
-	            <cell><m>-4</m></cell>
-	            <cell><m>-3</m></cell>
-	            <cell><m>-2</m></cell>
-	            <cell><m>-1</m></cell>
-	            <cell><m>0</m></cell>
-	            <cell><m>1</m></cell>
-	            <cell><m>2</m></cell>
-	            <cell><m>3</m></cell>
-	            <cell><m>4</m></cell></row>
-	        <row>
-	            <cell><m>y</m></cell>
-	            <cell><m>-286</m></cell>
-	            <cell><m>-106</m></cell>
-	            <cell><m>-30</m></cell>
-	            <cell><m>-4</m></cell>
-	            <cell><m>2</m></cell>
-	            <cell><m>-6</m></cell>
-	            <cell><m>-48</m></cell>
-	            <cell><m>-160</m></cell>
-	            <cell><m>-414</m></cell></row>
-	    </tabular></sidebyside></li>
-	<li><sidebyside width="35%"><image source="images/fig-in-ex-ans-7-2-2.jpg"><description>cubic</description></image></sidebyside> <p>The graphs all have long-term behavior like a fourth degree power function, <m>y = ax^4</m>. The long-term behavior of the graphs in <xref ref="example-two-quartics" text="type-global"/> is the same as that of <m>y = x^4</m>, but the graph here has long-term behavior like <m>y = -x^4</m>. </p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            $C = Formula("-x^4-x^3-6x^2+2");
+            foreach my $x(-4..4){
+            $i = $x+4;
+            $y[$i] = $C->eval(x=>$x);
+            }
+            $match = new_checkbox_multiple_choice();
+            $match -> qa (
+            "A question can go here, but PTX ignores this",
+            "The graphs all have long-term behavior like a fourth degree power function, \(y=ax^4\). $BR",
+            "The long-term behavior of the graphs in the example is the same as that of \( y=x^4\), but the graph here has long-term behavior like  \(y=-x^4\). $BR",
+            );
+            $match -> makeLast(
+            "The graphs all have four <m>x</m>-intercepts and three turning points. $BR",
+            "The graphs all have long-term behavior like a fourth degree power function, \(y=ax^4\). $BR",
+            "The long-term behavior of the graphs in the example is the same as that of \( y=x^4\), but the graph here has long-term behavior like  \(y=-x^4\). $BR",
+            "The long-term behavior of the graphs in the example is the same as that of \( y=x^4\), but the graph here has long-term behavior like  \(y=-x^3\). $BR",
+             );
+
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Complete the following table of values for <m>Q(x) = -x^4 - x^3 - 6x^2 + 2</m>.</p>
+                    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                        <row bottom="minor">
+                            <cell><m>x</m></cell>
+                            <cell><m>-4</m></cell>
+                            <cell><m>-3</m></cell>
+                            <cell><m>-2</m></cell>
+                            <cell><m>-1</m></cell>
+                            <cell><m>0</m></cell></row>
+                        <row>
+                            <cell><m>y</m></cell>
+                            <cell><var name="$y[0]" width="2" /></cell>
+                            <cell><var name="$y[1]" width="2" /></cell>
+                            <cell><var name="$y[2]" width="2" /></cell>
+                            <cell><var name="$y[3]" width="2" /></cell>
+                            <cell><var name="$y[4]" width="2" /></cell></row>
+                    </tabular></sidebyside>
+                    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                        <row bottom="minor">
+                            <cell><m>x</m></cell>
+                            <cell><m>1</m></cell>
+                            <cell><m>2</m></cell>
+                            <cell><m>3</m></cell>
+                            <cell><m>4</m></cell></row>
+                        <row>
+                            <cell><m>y</m></cell>
+                            <cell><var name="$y[5]" width="2" /></cell>
+                            <cell><var name="$y[6]" width="2" /></cell>
+                            <cell><var name="$y[7]" width="2" /></cell>
+                            <cell><var name="$y[8]" width="2" /></cell></row>
+                </tabular></sidebyside></li>
+            <li><p>Graph <m>y = Q(x)</m> in the window
+                <me>\begin{aligned}[t]
+                \text{Xmin} \amp = -5 \amp\amp \text{Xmax} = 5\\
+                \text{Ymin} \amp = -15 \amp\amp \text{Ymax} = 10
+                \end{aligned}</me>
+                Compare the graph to the graphs in <xref ref="example-two-quartics" text="type-global"/>: What similarities do you notice? What differences?</p>
+            <p><var name="$match" form="checkboxes"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><sidebyside>
+                    <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                        <row bottom="minor">
+                            <cell><m>x</m></cell>
+                            <cell><m>-4</m></cell>
+                            <cell><m>-3</m></cell>
+                            <cell><m>-2</m></cell>
+                            <cell><m>-1</m></cell>
+                            <cell><m>0</m></cell>
+                            <cell><m>1</m></cell>
+                            <cell><m>2</m></cell>
+                            <cell><m>3</m></cell>
+                            <cell><m>4</m></cell></row>
+                        <row>
+                            <cell><m>y</m></cell>
+                            <cell><m>-286</m></cell>
+                            <cell><m>-106</m></cell>
+                            <cell><m>-30</m></cell>
+                            <cell><m>-4</m></cell>
+                            <cell><m>2</m></cell>
+                            <cell><m>-6</m></cell>
+                            <cell><m>-46</m></cell>
+                            <cell><m>-160</m></cell>
+                            <cell><m>-414</m></cell></row>
+                    </tabular></sidebyside></li>
+                <li><p>The graphs all have long-term behavior like a fourth degree power function, <m>y = ax^4</m>. The long-term behavior of the graphs in <xref ref="example-two-quartics" text="type-global"/> is the same as that of <m>y = x^4</m>, but the graph here has long-term behavior like <m>y = -x^4</m>. </p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="35%"><image source="images/fig-in-ex-ans-7-2-2"><description>quartic</description></image></sidebyside>  
+    </conclusion>
+</exercise>
 
 <p>In <xref ref="example-two-cubics">Examples</xref> and <xref ref="example-two-quartics" text="global"/>, we have seen polynomials of degree 3 and degree 4, whose graphs are illustrated in the next box. In the Homework Problems, you will consider more graphs to help you verify the following observations.</p>
 
@@ -373,15 +449,35 @@ The zeros of <m>P</m> are <m>0</m>, <m>2</m>, and <m>-2</m>. Each zero of <m>P</
 			<sidebyside   width="80%"><image source="images/fig-cubic-with-2-zeros-and-quartic-with-2-zeros" ><description>a cubic with two zeros and a quartic with two zeros</description></image></sidebyside></li>
 		</ol></p></solution></example>
 
-<exercise><title>Practice 3</title>
-<statement><ol label="a">
-	<li><p>Find the real-valued zeros of <m>P(x) = -x^4 + x^3 + 2x^2</m> by factoring.</p></li>
-	<li><p>Sketch a rough graph of <m>y = P(x)</m> by hand.</p></li>
-</ol></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>-1, 0, 2</m></p></li>
-	<li><sidebyside width="50%"><image source="images/fig-in-ex-ans-7-2-3"><description>quartic</description></image></sidebyside></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 3</title>
+    <webwork>
+        <setup><pg-code>
+            $z = List("-1,0,2");
+            $my_evaluator = $z -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Find the real-valued zeros of <m>P(x) = -x^4 + x^3 + 2x^2</m> by factoring.</p>
+                <p><var name="$z" width="6" evaluator="$my_evaluator"/> Separate different zeros with a comma. </p></li>
+                <li><p>Sketch a rough graph of <m>y = P(x)</m> by hand.</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+    <li><p><m>-1, 0, 2</m></p></li>
+    <li><p>A graph is below.</p></li>
+</ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="25%" margins="0% 70%"><image source="images/fig-in-ex-ans-7-2-3"><description>quartic</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -423,9 +519,20 @@ The zeros of <m>P</m> are <m>0</m>, <m>2</m>, and <m>-2</m>. Each zero of <m>P</
 <m>f</m> has a zero of multiplicity three at <m>x = -2</m>, a zero of multiplicity one at <m>x = 1</m>, and a zero of multiplicity two at <m>x = 3</m>. The graph has an S-shaped curve at <m>x = -2</m>, crosses the <m>x</m>-axis at <m>x = 1</m>, touches the <m>x</m>-axis at <m>x = 3</m>, and then changes direction, as shown below.</p>
 	<sidebyside   width="35%"><image source="images/fig-sixth-degree-polynomial"><description>graph of sixth degree polynomial with zero of multiplicity 3, another of  multiplicity two. and a zero of multiplicity 1</description></image></sidebyside></solution></example>
 
-<exercise><title>Practice 4</title>
-<statement><p>Sketch a rough graph of <m>f(x) = (x + 3)(x - 1)^2</m> by hand. Label the <m>x</m>- and <m>y</m>-intercepts.</p></statement>
-<answer><sidebyside width="25%"><image source="images/fig-in-ex-ans-7-2-4"><description>cubic</description></image></sidebyside></answer></exercise>
+<exercise>
+	<title>Practice 4</title>
+    <webwork>
+        <statement>
+            <p>Sketch a rough graph of <m>f(x) = (x + 3)(x - 1)^2</m> by hand. Label the <m>x</m>- and <m>y</m>-intercepts.</p>
+        </statement>
+        <solution>
+            <p><m>f</m> has degree three with a positive coefficient of <m>x^3</m>, so its graph starts at the lower left and extends to the upper right. The graph crosses the <m>x</m>-axis at <m>x=-3</m>, touches the <m>x</m>-axis at the double zero <m>x=1</m> and then changes direction, as shown in the graph below.</p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="25%"><image source="images/fig-in-ex-ans-7-2-4"><description>cubic</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
