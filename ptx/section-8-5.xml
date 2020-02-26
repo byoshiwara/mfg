@@ -94,15 +94,46 @@ Our goal is to find values for <m>x</m> and <m>y</m> that satisfy the constraint
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 1</title>
-<statement><p><ol label="a">
-		<li><p>Determine which of the points <m>(0, 400)</m>, <m>(400, 200)</m>, <m>(500, 0)</m>, and <m>(500, 400)</m> represent feasible solutions for the TrailGear problem.</p></li>
-		<li><p>Find the values of the objective function <m>P = 8x + 10y</m> at the feasible solutions in part (a).</p></li>
-	</ol></p></statement>
-<answer><p><ol label="a">
-	<li><p><m>(0, 400)</m>, <m>(400, 200)</m>, and <m>(500, 0)</m></p></li>
-	<li><p>At <m>(0, 400)</m>, <m>P = 4000</m>; at <m>(400, 200)</m>, <m>P = 5200</m>; at <m>(500, 0)</m>, <m>P = 4000</m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+  <title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            Context()->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
+            Context()->variables->add(y=>"Real");
+            $P = Formula("8x+10y");
+            $A = Point(0,400);
+            $B = Point(400,200);
+            $C = Point(500,0);
+            $answer= Formula("$A,$B,$C");
+            $my_evaluator = $answer -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+            $P1 = $P->eval(x=>0, y=>400);
+            $P2 = $P->eval(x=>400, y=>200);
+            $P3 = $P->eval(x=>500, y=>0);
+            
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+        <li><p>Determine which of the points <m>(0, 400)</m>, <m>(400, 200)</m>, <m>(500, 0)</m>, and <m>(500, 400)</m> represent feasible solutions for the TrailGear problem.</p>
+        <p><var name="$answer" width="20" evaluator="$my_evaluator" />  Separate different ordered pairs with a comma. </p></li>
+        <li><p>Find the values of the objective function <m>P = 8x + 10y</m> at the feasible solutions in part (a).</p>
+        <p>At <m>(0,400), \quad P=</m><var name="$P1" width="3"/> </p>
+        <p>At <m>(400,200), \quad P=</m><var name="$P2" width="3"/> </p>
+        <p>At <m>(500,0), \quad P=</m><var name="$P3" width="3"/> </p>
+        </li>
+    </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p><m>(0, 400)</m>, <m>(400, 200)</m>, and <m>(500, 0)</m></p></li>
+                <li><p>At <m>(0, 400)</m>, <m>P = 4000</m>; at <m>(400, 200)</m>, <m>P = 5200</m>; at <m>(500, 0)</m>, <m>P = 4000</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -165,15 +196,33 @@ represents a combination of Weekenders and Sierra boots that will yield a profit
 	<li><p>The line <m>3x + 5y = 45</m> includes all points for which <m>C=45</m>. This line does not intersect the set of feasible solutions, as we see in the figure. Thus, there are no feasible solutions that result in an objective value of <m>45</m>.</p></li>
 </ol></p></solution></example>
 
-<exercise><title>Practice 2</title>
-<statement><p><ol label="a">
-	<li><p>Returning to the TrailGear problem of <xref ref="example-TrailGear" text="type-global"/>, find all feasible solutions for which the objective function <m>P = 8x + 10y</m> has a value of <m>5200</m>.</p></li>
-	<li><p>Find all feasible solutions that result in an objective value of <m>6000</m>.</p></li>
-</ol></p></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>(400, 200)</m></p></li>
-	<li><p>None</p></li>
-</ol></p></answer></exercise>
+<exercise>
+  <title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Point");
+            $a = Point(400,200);
+            @choices = ("?","DNE","None", "Undefined");
+            $popup = PopUp([@choices], $choices[0]);  # It doesn't matter which is used as the "correct answer".
+            Context($popup->context); 
+            $b = OneOf(@choices[1..3]);
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Returning to the TrailGear problem of <xref ref="example-TrailGear" text="type-global"/>, find all feasible solutions for which the objective function <m>P = 8x + 10y</m> has a value of <m>5200</m>.</p>
+                <p><var name="$a" width="7"/> </p></li>
+                <li><p>Find all feasible solutions that result in an objective value of <m>6000</m>.</p>
+                <p><var name="$b" width="7"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>(400, 200)</m></p></li>
+                <li><p>None</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>We are only allowed to choose points from the set of feasible solutions. Imagine the parallel lines representing different values of the objective function sweeping across the graph of the feasible solutions. The objective values increase as the lines sweep up across the graph.</p>
 <p> What is the last feasible solution the lines intersect before leaving the shaded region? If you study the preceding examples, perhaps you can see that the largest (and smallest) values of the objective function will occur at corner points of the set of feasible solutions. We have not proved this fact, but it is true.</p>
@@ -191,21 +240,58 @@ represents a combination of Weekenders and Sierra boots that will yield a profit
 		<me>P = 8(400) + 10(200) = 5200</me>
 so the maximum weekly profit is $<m>5200</m>.</p></solution></example>
 
-<exercise><title>Practice 3</title>
-<statement><p>The figure below shows the feasible solutions for a linear programming problem. The objective function is <m>R = x + 5y</m>.</p>
-	<sidebyside   width="25%"><image source="images/fig-feasible-solutions5"><description>system of inequalities defining the feasible solutions</description></image></sidebyside>
-<p><ol label="a">
-	<li><p>Sketch lines for objective values of <m>R=5</m>, <m>R=15</m>, <m>R = 25</m>, and <m>R=35</m>.</p></li>
-	<li><p>Evaluate the objective function at each vertex of the shaded region.</p></li>
-	<li><p>Which vertex corresponds to the maximum value of the objective function? What is the maximum value?</p></li>
-	<li><p>Which vertex corresponds to the minimum value of the objective function? What is the minimum value?</p></li>
-		</ol></p></statement>
-<answer><p><ol label="a">
-	<li><sidebyside width="30%"><image source="images/fig-in-ex-ans-8-5-3"><description>feasible solutions and objective function lines</description></image> </sidebyside></li>
-	<li><p>At <m>(2, 1)</m>, <m>R = 7</m>; at <m>(0, 5)</m>, <m>R = 25</m>; at <m>(7, 2)</m>, <m>R =17</m></p></li>
-	<li><p>The maximum value of <m>R</m> occurs at <m>(0, 5)</m>. The maximum value is <m>25</m>.</p></li>
-	<li><p>The minimum value of <m>R</m> occurs at <m>(2, 1)</m>. The minimum value is <m>7</m>.</p></li>
-</ol></p></answer></exercise>
+<exercise>
+  <title>Practice 3</title>
+    <introduction>
+        <sidebyside   width="28%"><image source="images/fig-feasible-solutions5"><description>system of inequalities defining the feasible solutions</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            Context()->variables->add(y=>"Real");
+            $R = Formula("x+5y");
+
+            $R1 = $R->eval(x=>2, y=>1);
+            $R2 = $R->eval(x=>0, y=>5);
+            $R3 = $R->eval(x=>7, y=>2);
+
+            $pop1=  PopUp(
+            ["?","(2,1)","(0,5)", "(7,2)"],
+            2, 
+            );
+            $pop2=  PopUp(
+            ["?","(2,1)","(0,5)", "(7,2)"],
+            1, 
+            );
+            
+        </pg-code></setup>
+        <statement>
+            <p>The figure above shows the feasible solutions for a linear programming problem. The objective function is <m>R = x + 5y</m>.</p>  
+            <p><ol label="a">
+                <li><p>Sketch lines for objective values of <m>R=5</m>, <m>R=15</m>, <m>R = 25</m>, and <m>R=35</m>.</p></li>
+                <li><p>Evaluate the objective function at each vertex of the shaded region.</p>
+                <p>At <m>(2,1), \quad P=</m><var name="$R1" width="3"/> </p>
+                <p>At <m>(0,5), \quad P=</m><var name="$R2" width="3"/> </p>
+                <p>At <m>(7,2), \quad P=</m><var name="$R3" width="3"/> </p>
+                </li>
+                <li><p>Which vertex corresponds to the maximum value of the objective function? <var name="$pop1" form="popup"/></p>
+                <p> What is the maximum value? <var name="$R2" width="3"/> </p></li>
+                <li><p>Which vertex corresponds to the minimum value of the objective function?  <var name="$pop2" form="popup"/></p>
+                <p> What is the minimum value? <var name="$R1" width="3"/></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p>A graph is below.</p></li>
+                <li><p>At <m>(2, 1)</m>, <m>R = 7</m>; at <m>(0, 5)</m>, <m>R = 25</m>; at <m>(7, 2)</m>, <m>R =17</m></p></li>
+                <li><p>The maximum value of <m>R</m> occurs at <m>(0, 5)</m>. The maximum value is <m>25</m>.</p></li>
+                <li><p>The minimum value of <m>R</m> occurs at <m>(2, 1)</m>. The minimum value is <m>7</m>.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="33%"><image source="images/fig-in-ex-ans-8-5-3"><description>feasible solutions and objective function lines</description></image> </sidebyside>
+    </conclusion>
+</exercise>
 
 <p>We can now formulate a strategy for solving problems by linear programming.</p>
 
@@ -358,9 +444,21 @@ How much should the Healthy Food Store purchase from each company in order to mi
 		<li><p>The Healthy Food Store should buy three packages from Company A and two packages from Company B. It will pay $<m>95</m> for its stock of granola and muesli.</p></li>
 	</ol></p></solution></example>
 
-<exercise><title>Practice 4</title>
-<statement><p>Find the minimum value of the objective function, <m>O = 5x + 3y</m>, subject to the constraints <m>x\ge 0</m>, <m>y\ge 0</m>, <m>x + y \ge 7</m>, and <m>5x + 2y \ge 20</m>.</p></statement>
-<answer><p><m>25</m></p></answer></exercise>
+<exercise>
+  <title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+            $a = Compute("25");
+        </pg-code></setup>
+        <statement>
+            <p>Find the maximum value of the objective function, <m>O = 5x + 3y</m>, subject to the constraints <m>x\ge 0</m>, <m>y\ge 0</m>, <m>x + y \ge 7</m>, and <m>5x + 2y \ge 20</m>.</p>
+            <p>Answer: <var name="$a" width="4"/> </p>
+        </statement>
+        <solution>
+            <p>The maximum value is <m>25</m> (which occurs at the vertex <m>(2,5)</m>).</p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
