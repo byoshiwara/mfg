@@ -88,17 +88,36 @@ and enter the two equations. We can see in the figure that the two lines interse
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 1</title>
-<statement><p><ol label="a">
-	<li><p>Solve the system of equations
-				<md><mrow>y \amp = -0.7x + 6.9</mrow>
-					<mrow>y \amp =1.2x - 6.4</mrow></md>
-	by graphing. Use the window
-				<md><mrow>\text{Xmin} \amp = -9.4 \amp\amp \text{Xmax} = 9.4</mrow>
-					<mrow>\text{Ymin} \amp = -10 \amp\amp \text{Ymax} = 10</mrow></md>
-				</p></li>
-		</ol></p></statement>
-<answer><p><m>(7, 2)</m></p></answer></exercise>
+<exercise>
+	<title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Point");
+            $a = Compute("(7,2)");
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+        <li><p>Solve the system of equations
+                    <md>
+                        <mrow>y \amp = -0.7x + 6.9</mrow>
+                        <mrow>y \amp =1.2x - 6.4</mrow>
+                    </md>
+            by graphing. Use the window
+                    <md>
+                        <mrow>\text{Xmin} \amp = -9.4 \amp\amp \text{Xmax} = 9.4</mrow>
+                        <mrow>\text{Ymin} \amp = -10 \amp\amp \text{Ymax} = 10</mrow>
+                    </md></p></li>
+            </ol></p>
+            <p>Answer: <var name="$a" width="6"/> </p>
+            <instructions>
+                Enter the solution as an ordered pair.
+            </instructions>
+        </statement>
+        <solution>
+            <p><m>(7, 2)</m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -131,15 +150,34 @@ and then press <c>ZOOM</c> <m>6</m>. (Don't forget the parentheses around the nu
 </p></solution></example>
 </technology>
 
-<exercise><title>Practice 2</title>
-<statement><p>Solve the system of equations
-		<md><mrow>y = 47x - 1930</mrow>
-			<mrow>y + 19x = 710</mrow></md>
-by graphing. Use the <em>intersect</em> feature in the window
-		<md><mrow>\text{Xmin} \amp = 0 \amp\amp \text{Xmax} = 94</mrow>
-			<mrow>\text{Ymin} \amp = -2000 \amp\amp \text{Ymax} = 1000</mrow></md>
-		</p></statement>
-<answer><p><m>(40,-50)</m></p></answer></exercise>
+<exercise>
+	<title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Point");
+            $a = Point("(40,-50)");
+        </pg-code></setup>
+        <statement>
+            <p>Solve the system of equations
+            <md>
+                <mrow>y = 47x - 1930</mrow>
+                <mrow>y + 19x = 710</mrow>
+            </md>
+            by graphing. Use the <em>intersect</em> feature in the window
+            <md>
+                <mrow>\text{Xmin} \amp = 0 \amp\amp \text{Xmax} = 94</mrow>
+                <mrow>\text{Ymin} \amp = -2000 \amp\amp \text{Ymax} = 1000</mrow>
+            </md></p>
+            <p>Answer: <var name="$a" width="6"/> </p>
+            <instructions>
+                Enter the solution as an ordered pair.
+            </instructions>
+        </statement>
+        <solution>
+            <p><m>(40,-50)</m></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Solving Systems Algebraically</title>
@@ -207,47 +245,82 @@ by graphing. Use the <em>intersect</em> feature in the window
 		<li><p>The speed of the current is <m>\dfrac{40}{3}</m>, or <m>13\dfrac{1}{3} </m> meters per minute, and Rani's speed in still water is <m>120</m> meters per minute.</p></li>
 		</ol></p></solution></example>
 
-<exercise><title>Practice 3</title>
-<statement><p>It took Leon <m>7</m> hours to fly the same distance that Marlene drove in <m>21</m> hours. Leon flies <m>120</m> miles per hour faster than Marlene drives. At what speed did each travel?</p><p><ol label= "a">
-	<li><p>Choose variables for the unknown quantities, and fill in the table.</p>
-			<sidebyside><tabular top="minor" left="minor" right="minor" bottom="minor"><col /><col halign="center"/><col halign="center"/><col halign="center"/>
-					<row><cell></cell>
-						<cell>Rate</cell>
-						<cell>Time</cell>
-						<cell>Distance</cell></row>
-					<row><cell>Leon</cell>
-						<cell><m></m></cell>
-						<cell><m></m></cell>
-						<cell><m></m></cell></row>
-					<row><cell>Marlene</cell>
-						<cell><m></m></cell>
-						<cell><m></m></cell>
-						<cell><m></m></cell></row>
-				</tabular></sidebyside></li>
-	<li><p>Write one equation about the Leon's and Marlene's speeds.</p></li>
-	<li><p>Write a second equation about distances.</p></li>
-	<li><p>Solve the system and answer the question in the problem.</p></li>
-		</ol></p></statement>
-<answer><p><ol label="a">
-	<li><sidebyside>
-		<tabular top="minor" left="minor" right="minor" bottom="minor"><col /><col halign="center"/><col halign="center"/><col halign="center"/>
-			<row><cell></cell>
-				<cell>Rate</cell>
-				<cell>Time</cell>
-				<cell>Distance</cell></row>
-			<row><cell>Leon</cell>
-				<cell><m>x</m></cell>
-				<cell><m>7</m></cell>
-				<cell><m>7x</m></cell></row>
-			<row><cell>Marlene</cell>
-				<cell><m>y</m></cell>
-				<cell><m>21</m></cell>
-				<cell><m>21y</m></cell></row>
-		</tabular></sidebyside></li>
-	<li><p><m>x=y+ 120</m> or <m>x - y =120</m></p></li>
-	<li><p><m>7x = 21y</m></p></li>
-	<li><p><m>(180, 60)</m>. Leon flies at <m>180</m> mph; Marlene drives at <m>60</m> mph.</p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 3</title>
+    <webwork>
+        <setup><pg-code>
+            Context("ImplicitPlane")->variables->add(y=>"Real");
+            $r1 = Formula("x");
+            $t1 = Compute("7");
+            $d1 = Formula("7x");
+            $r2 = Formula("y");
+            $t2 = Compute("21");
+            $d2 = Formula("21y");
+            $eq1 = ImplicitPlane("x=y+120");
+            $eq2 = ImplicitPlane("7x=21y");
+            $v1 = Compute("180");
+            $v2 = Compute("60");
+            $a = Point("($v1,$v2)");
+
+            
+        </pg-code></setup>
+        <statement>
+            <p>It took Leon <m>7</m> hours to fly the same distance that Marlene drove in <m>21</m> hours. Leon flies <m>120</m> miles per hour faster than Marlene drives. At what speed did each travel?</p>
+            <p><ol label= "a">
+                <li><p>Let <m>x</m> be Leon's speed (mph), let <m>y</m> be Marlene's speed (mph), and fill in the table.</p>
+                <sidebyside><tabular top="minor" left="minor" right="minor" bottom="minor"><col /><col halign="center"/><col halign="center"/><col halign="center"/>
+                    <row>
+                        <cell></cell>
+                        <cell>Rate</cell>
+                        <cell>Time</cell>
+                        <cell>Distance</cell></row>
+                    <row>
+                        <cell>Leon</cell>
+                        <cell><var name="$r1" width="2"/> </cell>
+                        <cell><var name="$t1" width="2"/></cell>
+                        <cell><var name="$d1" width="3"/></cell></row>
+                    <row>
+                        <cell>Marlene</cell>
+                        <cell><var name="$r2" width="2"/> </cell>
+                        <cell><var name="$t2" width="2"/></cell>
+                        <cell><var name="$d2" width="3"/></cell></row>
+                </tabular></sidebyside></li>
+                <li><p>Write one equation about the Leon's and Marlene's speeds.</p>
+                <p>Equation: <var name="$eq1" width="10"/> </p></li>
+                <li><p>Write a second equation about distances.</p>
+                <p>Equation: <var name="$eq2" width="10"/> </p></li>
+                <li><p>Solve the system and answer the question in the problem.</p>
+                <p><var name="$a" width="6"/>  Enter your solution as an ordered pair.</p>
+                <p>Leon traveled at a speed of <var name="$v1" width="2"/> mph, and Marlene traveled at a speed of <var name="$v2" width="2"/> mph.</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><sidebyside>
+                <tabular top="minor" left="minor" right="minor" bottom="minor"><col /><col halign="center"/><col halign="center"/><col halign="center"/>
+                    <row>
+                        <cell></cell>
+                        <cell>Rate</cell>
+                        <cell>Time</cell>
+                        <cell>Distance</cell></row>
+                    <row>
+                        <cell>Leon</cell>
+                        <cell><m>x</m></cell>
+                        <cell><m>7</m></cell>
+                        <cell><m>7x</m></cell></row>
+                    <row>
+                        <cell>Marlene</cell>
+                        <cell><m>y</m></cell>
+                        <cell><m>21</m></cell>
+                        <cell><m>21y</m></cell></row>
+                </tabular></sidebyside></li>
+                <li><p><m>x=y+ 120</m> or <m>x - y =120</m></p></li>
+                <li><p><m>7x = 21y</m></p></li>
+                <li><p><m>(180, 60)</m>. Leon flies at <m>180</m> mph; Marlene drives at <m>60</m> mph.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -285,12 +358,31 @@ by graphing. Use the <em>intersect</em> feature in the window
 
 <p>A system with no solutions, such as the system in <xref ref="example-inconsistent-system" text="type-global"/>, is called <term>inconsistent</term><idx>inconsistent</idx>. A <m>2\times 2</m> system of linear equations is inconsistent when the two equations correspond to parallel lines. This situation occurs when the lines have the same slope but different <m>y</m>-intercepts.</p>
 
-<exercise><title>Practice 4</title>
-<statement><p>Without graphing, show that the following system is inconsistent:
-		<md><mrow>3y = \frac{3}{2}x - 1</mrow>
-			<mrow>2x - 4y = 3</mrow></md>
-</p></statement>
-<answer><p>Both lines have slope <m>\frac{1}{2}</m>.</p></answer></exercise>
+<exercise>
+	<title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+            $explain = RadioButtons(
+            ["Both lines have slope \(\frac{1}{2}\).",
+            "Both lines have slope 2.",
+            "The two equations must be graphed to determine if the system is inconsistent.",
+            ],
+            0,);
+            
+        </pg-code></setup>
+        <statement>
+            <p>Without graphing, show that the following system is inconsistent:
+            <md>
+                <mrow>3y = \frac{3}{2}x - 1</mrow>
+                <mrow>2x - 4y = 3</mrow>
+            </md></p>
+            <p><var name="$explain" form="buttons"/> </p>
+        </statement>
+        <solution>
+            <p>Both lines have slope <m>\frac{1}{2}</m>.</p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>A linear system with infinitely many solutions is called <term>dependent</term><idx>dependent</idx>. A <m>2\times 2</m> system is dependent when the two equations actually describe the same line. This situation occurs when the two lines have the same slope <em>and</em> the same <m>y</m>-intercept.</p>
 
@@ -318,18 +410,39 @@ For the second equation,
 		<li><p><term>Consistent and independent system</term><idx>consistent and independent system</idx>. The graphs of the two lines intersect in exactly one point. The system has exactly one solution.</p></li>
 	</ol></p></assemblage>
 
-<exercise><title>Practice 5</title>
-<statement><p><ol label="a">
-		<li><p>Graph the system
-			<md><mrow>y = -3x + 6</mrow>
-				<mrow>6x + 2y = 15</mrow></md>
-by hand, using either the intercept method or the slope-intercept method.</p></li>
-		<li><p>Identify the system as dependent, inconsistent, or consistent and independent.</p></li>
-</ol></p></statement>
-<answer><p><ol label="a" cols="2">
-	<li><sidebyside width="60%"><image source="images/fig-in-ex-ans-8-1-5"><description>parallel lines</description></image></sidebyside></li>
-	<li><p>Inconsistent</p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+            $type =  PopUp(
+            ["?","dependent","inconsistent", "consistent and independent"],
+            2, 
+            );
+            
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Graph the system
+                    <md>
+                        <mrow>y = -3x + 6</mrow>
+                        <mrow>6x + 2y = 15</mrow>
+                    </md>
+                    by hand, using either the intercept method or the slope-intercept method.</p></li>
+                <li><p>Identify the system as dependent, inconsistent, or consistent and independent.</p>
+                <p><var name="$type" form="popup"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p>A graph is below.</p></li>
+                <li><p>Inconsistent: The graph consists of parallel lines.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="30%"><image source="images/fig-in-ex-ans-8-1-5"><description>parallel lines</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <p>It is not always easy to tell from the equations themselves whether there is one solution, no solution, or infinitely many solutions. However, the method of elimination will reveal which of the three cases applies.</p>
 
@@ -386,20 +499,41 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
     </solution>
 </webwork></exercise>
 
-<p><xref ref="exercise-dependent-system" text="type-global"/> illustrates a dependent system.</p>
+<p>The following <xref ref="exercise-dependent-system" text="type-global"/> illustrates a dependent system.</p>
 
-<exercise xml:id="exercise-dependent-system"><title>Practice 6</title>
-<statement><p><ol label="a">
-		<li><p>Use the method of elimination to solve the system
-				<md><mrow>3x - 4 \amp = y</mrow>
-					<mrow>2y + 8 \amp = 6x</mrow></md>
-		</p></li>
-		<li><p>Verify that both equations have the same graph.</p></li>
-		</ol></p></statement>
-<answer><p><ol label="a">
-	<li><p>Elimination results in <m>0x + 0y = 0</m>.</p></li>
-	<li><p>Both equations have slope-intercept form <m>y = 3x - 4</m>.</p></li>
-</ol></p></answer></exercise>
+<exercise xml:id="exercise-dependent-system">
+	<title>Practice 6</title>
+    <webwork>
+        <setup><pg-code>
+            $z = Compute("0");
+            $explain = RadioButtons(
+            ["Both equations have slope-intercept form \(y=3x-4\).",
+            "Both equations have slope-intercept form \(y=-4x+3\).",
+            "The two equations must be graphed to determine if the system is inconsistent.",
+            ],
+            0,);
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Use the method of elimination to solve the system
+                        <md>
+                            <mrow>3x - 4 \amp = y</mrow>
+                            <mrow>2y + 8 \amp = 6x</mrow>
+                        </md></p>
+                        <p>Elimination results in <var name="$z" width="1"/><m>x +{}</m><var name="$z" width="1"/><m>y =</m><var name="$z" width="1"/>.</p></li>
+                    <li><p>Verify that both equations have the same graph.</p>
+                    <p><var name="$explain" form="buttons"/> </p></li>
+                </ol>
+            </p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p>Elimination results in <m>0x + 0y = 0</m>.</p></li>
+                <li><p>Both equations have slope-intercept form <m>y = 3x - 4</m>.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -544,17 +678,45 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
 		<li><p>Francine needs <m>0.6</m> cup of oats and <m>0.4</m> cup of wheat.</p></li>
 		</ol></p></solution></example>
 
-<exercise><title>Practice 7</title>
-<statement><p>Etienne plans to open a coffee house, and he has $<m>7520</m> to spend on furniture. A table costs $<m>460</m>, and a chair costs $<m>120</m>. Etienne will buy four chairs for each table. How many tables can he buy?<ol label="a">
-		<li><p>Let <m>x</m> represent the number of tables Etienne should buy, and let <m>y</m> represent the number of chairs. Write an equation about the cost of the furniture.</p></li>
-		<li><p>Write a second equation about the number of tables and chairs.</p></li>
-		<li><p>Graph both equations, solve the system, and answer the question in the problem. (Find the intercepts of the graphs to help you choose a window.)</p></li>
-		</ol></p></statement>
-<answer><p><ol label="a">
-	<li><p><m>460x + 120y = 7520</m></p></li>
-	<li><p><m>y=4x</m></p></li>
-	<li><p><m>x = 8, y = 32</m>. Etienne should buy <m>8</m> tables and <m>4</m> chairs.</p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 7</title>
+    <webwork>
+        <setup><pg-code>
+            Context("ImplicitPlane")->variables->add(y=>"Real");
+            $eq1 = ImplicitPlane("460x+120y=7520");
+            $eq2 = ImplicitPlane("y=4x");
+            $v1 = Compute("8");
+            $v2 = Compute("32");
+#            $a = Point("($v1,$v2)");
+            $explain = RadioButtons(
+            ["Etienne should buy 16 tables and 4 chairs.",
+            "Etienne should buy 32 tables and 8 chairs.",
+            "Etienne should buy 8 tables and 32 chairs.",
+            "Etienne should buy 4 tables and 16 chairs.",
+            ],
+            2,);
+        </pg-code></setup>
+        <statement>
+            <p>Etienne plans to open a coffee house, and he has $<m>7520</m> to spend on furniture. A table costs $<m>460</m>, and a chair costs $<m>120</m>. Etienne will buy four chairs for each table. How many tables can he buy?</p>
+            <p><ol label="a">
+            <li><p>Let <m>x</m> represent the number of tables Etienne should buy, and let <m>y</m> represent the number of chairs. Write an equation about the cost of the furniture.</p>
+            <p><var name="$eq1" width="15"/> </p></li>
+            <li><p>Write a second equation about the number of tables and chairs.</p>
+            <p><var name="$eq2" width="15"/> </p></li>
+            <li><p>Graph both equations, solve the system, and answer the question in the problem. (Find the intercepts of the graphs to help you choose a window.)</p>
+            <p><m>x=</m><var name="$v1" width="2"/>, <m>y=</m><var name="$v2" width="2"/></p>
+            <p><var name="$explain" form="buttons"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p><m>460x + 120y = 7520</m></p></li>
+                <li><p><m>y=4x</m></p></li>
+                <li><p><m>x = 8, y = 32</m>. Etienne should buy <m>8</m> tables and <m>4</m> chairs.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>Being unable to read exact coordinates from a graph is not always a disadvantage. In many situations, fractional values of the unknowns are not acceptable.</p>
 
@@ -641,17 +803,44 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
 		<li><p>The exact solution to the system is <m>\left(\dfrac{500}{83},\dfrac{2000}{83}\right)</m>. But this solution is not of practical use, since the math department cannot purchase fractions of printers or terminals. The department can purchase <m>6</m> printers and <m>24</m> terminals (with some money left over).</p></li>
 		</ol></p></solution></example>
 
-<exercise><title>Practice 8</title>
-<statement><p>The manager for Books for Cooks plans to spend $<m>300</m> stocking a new diet cookbook. The paperback version costs her $<m>5</m>, and the hardback costs $<m>10</m>. She finds that she will sell three times as many paperbacks as hardbacks. How many of each should she buy?<ol label="a">
-	<li><p>Let <m>x</m> represent the number of hardbacks and <m>y</m> the number of paperbacks she should buy. Write an equation about the cost of the books.</p></li>
-	<li><p>Write a second equation about the number of each type of book.</p></li>
-	<li><p>Graph both equations and solve the system. (Find the intercepts of the graphs to help you choose a window.) Answer the question in the problem.</p></li>
-	</ol></p></statement>
-<answer><p><ol label="a">
-	<li><p><m>10x + 5y = 300</m></p></li>
-	<li><p><m>y=3x</m></p></li>
-	<li><p><m>x = 12, ~y = 36</m>. The manager should buy <m>12</m> hardbacks and <m>36</m> paperbacks.</p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 8</title>
+    <webwork>
+        <setup><pg-code>
+            Context("ImplicitPlane")->variables->add(y=>"Real");
+            $eq1 = ImplicitPlane("10x+5y=300");
+            $eq2 = ImplicitPlane("y=3x");
+            $x = Compute("12");
+            $y = Compute("36");
+            $explain = RadioButtons(
+            ["The manager should buy 12 hardbacks and 36 paperbacks.",
+            "The manager should buy 36 hardbacks and 12 paperbacks.",
+            "The manager should buy 27 hardbacks and 9 paperbacks.",
+            "The manager should buy 9 hardbacks and 27 paperbacks.",
+            ],
+            0,);
+        </pg-code></setup>
+        <statement>
+            <p>The manager for Books for Cooks plans to spend $300 stocking a new diet cookbook. The paperback version costs her $5, and the hardback costs $10. She finds that she will sell three times as many paperbacks as hardbacks. How many of each should she buy?</p>
+            <p><ol label="a">
+            <li><p>Let <m>x</m> represent the number of hardbacks and <m>y</m> the number of paperbacks she should buy. Write an equation about the cost of the books.</p>
+            <p><var name="$eq1" width="15"/> </p></li>
+            <li><p>Write a second equation about the number of each type of book.</p>
+            <p><var name="$eq2" width="15"/> </p></li>
+            <li><p>Graph both equations and solve the system. (Find the intercepts of the graphs to help you choose a window.) Answer the question in the problem.</p>
+            <p><m>x=</m><var name="$x" width="2"/>, <m>y=</m><var name="$y" width="2"/></p>
+            <p><var name="$explain" form="buttons"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p><m>10x + 5y = 300</m></p></li>
+                <li><p><m>y=3x</m></p></li>
+                <li><p><m>x = 12, y = 36</m>. The manager should buy <m>12</m> hardbacks and <m>36</m> paperbacks.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>An Application from Economics</title>
@@ -739,15 +928,32 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 9</title>
-<statement><p>Sanaz can afford to produce <m>35x</m> pairs of hand-painted sunglasses if she can sell them at <m>x</m> dollars per pair, and the market will buy <m>1700 - 15x</m> at <m>x</m> dollars a pair.<ol label="a">
-			<li><p>Write the supply and demand equations for the sunglasses.</p></li>
-			<li><p>Find the equilibrium price and the number of sunglasses Sanaz will produce and sell at that price.</p></li>
-		</ol></p></statement>
-<answer><p><ol label="a">
-	<li><p><m>S = 35x, ~D = 1700 - 15x</m></p></li>
-	<li><p>$<m>34</m>, <m>~1190</m> sunglasses</p></li>
-</ol></p></answer>
+<exercise>
+	<title>Practice 9</title>
+    <webwork>
+        <setup><pg-code>
+            $S = Formula("35x");
+            $D = Formula("1700-15x"); 
+            $p = Compute("34");
+            $n = Compute("1190");
+        </pg-code></setup>
+        <statement>
+            <p>Sanaz can afford to produce <m>35x</m> pairs of hand-painted sunglasses if she can sell them at <m>x</m> dollars per pair, and the market will buy <m>1700 - 15x</m> at <m>x</m> dollars a pair.<ol label="a">
+            <li><p>Write the supply and demand equations for the sunglasses.</p>
+            <p>Supply equation: <m>S=</m><var name="$S" width="8"/> </p>
+            <p>Demand equation: <m>D=</m><var name="$D" width="8"/></p></li>
+            <li><p>Find the equilibrium price and the number of sunglasses Sanaz will produce and sell at that price.</p>
+            <p>Equilibrium price: $<var name="$p" width="5"/></p>
+            <p>At the equilibrium price, Sanaz will see <var name="$n" width="5"/> sunglasses</p></li>
+        </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p><m>S = 35x, ~D = 1700 - 15x</m></p></li>
+                <li><p>$34; 1190 sunglasses</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
 </exercise>
 
 </subsection>
