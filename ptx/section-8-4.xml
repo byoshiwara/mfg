@@ -57,39 +57,76 @@ We graph the corresponding line
 Note that the <m>y</m>-intercept is <m>-4</m> and the slope is <m>\dfrac{4}{3}</m>. (See <xref ref="linear-functions" text="type-global"/> to review the slope-intercept method of graphing.) Finally, we shade the half-plane below the line. The completed graph is shown below.</p>
 <sidebyside  width="25%"><image source="images/fig-linear-inequality2"><description>linear inequality in two variables</description></image></sidebyside></solution></example>
 
-<exercise><title>Practice 1</title>
-<statement><p><ol label="a">
-	<li><p>Find one <m>y</m>-value that satisfies the inequality <m>y - 3x \lt 6</m> for each of the <m>x</m>-values in the table.</p><sidebyside><tabular left="minor" right="minor" top="minor" bottom="minor" halign="center">
-					<row>
-						<cell><m>x</m></cell>
-						<cell><m>1</m></cell>
-						<cell><m>0</m></cell>
-						<cell><m>-2</m></cell></row>
-					<row>
-						<cell><m>y</m></cell>
-						<cell><m>\hphantom{blank}</m></cell>
-						<cell><m>\hphantom{blank}</m></cell>
-						<cell><m>\hphantom{blank}</m></cell></row>
-				</tabular></sidebyside></li>
-	<li><p>Graph the line <m>y - 3x = 6</m>. Then plot your solutions from part (a) on the same grid.</p></li>
-	<li><p>Graph the solutions of the inequality <m>y - 3x \lt 6</m>.</p></li>
-</ol></p></statement>
-<answer><p><ol label="a" cols="2">
-	<li><sidebyside><tabular left="minor" right="minor" top="minor" bottom="minor" halign="center">
-		<row>
-			<cell><m>x</m></cell>
-			<cell><m>1</m></cell>
-			<cell><m>0</m></cell>
-			<cell><m>-2</m></cell></row>
-		<row>
-			<cell><m>y</m></cell>
-			<cell><m>\alert{5} </m></cell>
-			<cell><m>\alert{0}</m></cell>
-			<cell><m>\alert{-3}</m></cell></row>
-	</tabular></sidebyside><p>(Many answers are possible.) </p></li>
-	<li><sidebyside width="60%"><image source="images/fig-in-ex-ans-8-4-1"><description>linear inequality in two variables</description></image></sidebyside></li>
-	<li><p>See graph.</p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            $x1 = Compute("1");
+            $y1 = Compute("5");
+
+            sub mychecker {
+               my $x = shift;
+               return sub {
+               my ($correct,$student,$ansHash) = @_;  
+               return ($student &lt; (6+3*$x) ? 1 : 0);  
+             };
+             }
+
+            $my_evaluator = $y1 -> cmp(checker=>
+            mychecker($x1) );
+
+            $x0 = Compute("0");
+            $y0 = Compute("0");
+            $my_eval2 = $y0 -> cmp(checker=>
+            mychecker($x0) );
+
+            $xn2 = Compute("-2");
+            $yn2 = Compute("-3");
+            $my_eval3 = $yn2 -> cmp(checker=>
+            mychecker($xn2) );
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Find one <m>y</m>-value that satisfies the inequality <m>y - 3x \lt 6</m> for each of the <m>x</m>-values in the table.</p><sidebyside><tabular left="minor" right="minor" top="minor" bottom="minor" halign="center">
+                    <row>
+                        <cell><m>x</m></cell>
+                        <cell><m>1</m></cell>
+                        <cell><m>0</m></cell>
+                        <cell><m>-2</m></cell></row>
+                    <row>
+                        <cell><m>y</m></cell>
+                        <cell><var name="$y1" width="2"  evaluator="$my_evaluator"/> </cell>
+                        <cell><var name="$y0" width="2"  evaluator="$my_eval2"/></cell>
+                        <cell><var name="$yn2" width="2"  evaluator="$my_eval3"/></cell></row>
+                </tabular></sidebyside></li>
+                <li><p>Graph the line <m>y - 3x = 6</m>. Then plot your solutions from part (a) on the same grid.</p></li>
+                <li><p>Graph the solutions of the inequality <m>y - 3x \lt 6</m>.</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+            <li><sidebyside><tabular left="minor" right="minor" top="minor" bottom="minor" halign="center">
+                <row>
+                    <cell><m>x</m></cell>
+                    <cell><m>1</m></cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>-2</m></cell></row>
+                <row>
+                    <cell><m>y</m></cell>
+                    <cell><m>\alert{5} </m></cell>
+                    <cell><m>\alert{0}</m></cell>
+                    <cell><m>\alert{-3}</m></cell></row>
+                </tabular></sidebyside>
+                <p>(Many answers are possible.) </p></li>
+                <li><p>A graph is below.</p></li>
+                <li><p>See graph.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="30%"><image source="images/fig-in-ex-ans-8-4-1"><description>linear inequality in two variables</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
@@ -155,14 +192,36 @@ which is a <em>false</em> statement. This tells us that <m>(5, 0)</m> is not a s
 
 <xi:include href="./assemblage-graph-inequality-using-test-point.xml" />
 
-<exercise><title>Practice 2</title>
-<statement><p>Graph the solutions of the inequality <m>~~y \gt \dfrac{-3}{2}x</m><ol>
-	<li><p>Graph the line <m>y = \dfrac{-3}{2}x</m>. (Use the slope-intercept method.)</p></li>
-	<li><p>Choose a test point. (Do not choose <m>(0, 0)</m>!)</p></li>
-	<li><p>Decide which side of the line to shade.</p></li>
-	<li><p>Should the boundary line be dashed or solid?</p></li>
-</ol></p></statement>
-<answer><sidebyside width="25%"><image source="images/fig-in-ex-ans-8-4-2"><description>linear inequality in two variables</description></image></sidebyside></answer></exercise>
+<exercise>
+	<title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            $where =  PopUp(
+            ["?","Above the line","Below the line"],
+            1, 
+            );
+            $which =  PopUp(
+            ["?","Dashed","Solid"],
+            1, 
+            );
+            
+        </pg-code></setup>
+        <statement>
+            <p>Graph the solutions of the inequality <m> y \gt \dfrac{-3}{2}x</m><ol>
+                <li><p>Graph the line <m>y = \dfrac{-3}{2}x</m>. (Use the slope-intercept method.)</p></li>
+                <li><p>Choose a test point. (Do not choose <m>(0, 0)</m>!)</p></li>
+                <li><p>Decide which side of the line to shade. <var name="$where" form="popup"/> </p></li>
+                <li><p>Should the boundary line be dashed or solid? <var name="$which" form="popup"/></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p>A graph is below.</p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="28%"><image source="images/fig-in-ex-ans-8-4-2"><description>linear inequality in two variables</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <p>Recall that the equation of a vertical line has the form
 	<me>x=k</me>
@@ -178,9 +237,10 @@ Its graph is then a region in the plane.</p>
 Since this is a false statement, we shade the half-plane that does not contain the origin. We see in the figure below that the graph of the inequality contains all points whose <m>x</m>-coordinates are greater than or equal to <m>2</m>.</p>
 <sidebyside  width="25%"><image source="images/fig-planar-graph-x-greater-or-equal-2"><description>graph of x greater or equal to 2 in the plane</description></image></sidebyside></solution></example>
 
-<exercise><title>Practice 3</title>
+<exercise>
+	<title>Practice 3</title>
 <statement><p>Graph <m>~~-2 \le y \lt 3~~</m> in the plane.</p></statement>
-<answer><sidebyside width="20%"><image source="images/fig-in-ex-ans-8-4-3"><description>linear compound inequality in two variables</description></image></sidebyside></answer></exercise>
+<answer><sidebyside width="25%"><image source="images/fig-in-ex-ans-8-4-3"><description>linear compound inequality in two variables</description></image></sidebyside></answer></exercise>
 </subsection>
 
 <subsection><title>Systems of Inequalities</title>
@@ -255,11 +315,12 @@ Since this is a false statement, we shade the half-plane that does not contain t
 		It makes no sense to consider negative values of <m>x</m> or of <m>y</m>, since Laura cannot eat a negative number of servings. Thus, we have two more inequalities to satisfy:
 				<me>x \ge 0 ~~~\text{ and }~~~y \ge 0</me></p></li>
 		<li><p>We graph all three inequalities on the same axes. The inequalities <m>x\ge 0</m> and <m>y \ge 0</m> restrict the solutions to lie in the first quadrant. The solutions common to all three inequalities are shown below.</p>
-<sidebyside  width="30%"><image source="images/fig-system-of-inequalities2"><description>system of three inequalities</description></image></sidebyside></li>
+<sidebyside  width="33%"><image source="images/fig-system-of-inequalities2"><description>system of three inequalities</description></image></sidebyside></li>
 		<li><p>Laura can choose any combination of broccoli and zucchini represented by points in the shaded region. For example, the point <m>(3, 1)</m> is a solution to the system of inequalities, so Laura could choose to eat <m>3</m> servings of broccoli and <m>1</m> serving of zucchini.</p></li>
 		</ol></p></solution></example>
 
-<exercise><title>Practice 4</title>
+<exercise>
+	<title>Practice 4</title>
 <statement><p>Use the following steps to graph the solutions of the system
 		<md>
 			<mrow>x + y \amp\le 12</mrow>
@@ -352,20 +413,47 @@ Since this is a false statement, we shade the half-plane that does not contain t
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 5</title>
-<statement><p><ol label="a">
-	<li><p>Graph the system of inequalities
-				<md>
-					<mrow>5x + 4y \amp \lt 40</mrow>
-					<mrow>-3x + 4y \amp \lt 12</mrow>
-					<mrow>x \lt 6, ~~~~y \amp\gt 2</mrow>
-				</md>
-		b. Find the coordinates of the vertices of the solution set.</p></li>
-	</ol></p></statement>
-<answer><p><ol label="a">
-	<li><sidebyside width="35%"><image source="images/fig-in-ex-ans-8-4-5"><description>system of linear inequalities in two variables</description></image></sidebyside></li>
-	<li><p><m>A(-1.\overline{3}, 2), B(3.5, 5.625), C(6, 2.5), D(6, 2)</m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Point")->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
+            $A = Point(-4/3,2);
+            $B = Point(7/2,45/8);
+            $C = Point(6,5/2);
+            $D = Point(6,2);
+            $answer = Formula("$A,$B,$C,$D");
+            $my_evaluator = $answer -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+        <li><p>Graph the system of inequalities
+                <md>
+                    <mrow>5x + 4y \amp \lt 40</mrow>
+                    <mrow>-3x + 4y \amp \lt 12</mrow>
+                    <mrow>x \lt 6, \hphantom{00} y \amp\gt 2</mrow>
+                </md>
+            </p></li>
+        <li><p>Find the coordinates of the vertices of the solution set.</p>
+       <p><var name="$answer" width="30" evaluator="$my_evaluator"/> Separate different ordered pairs with a comma. </p></li>
+    </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p>See graph below.</p></li>
+                <li><p><m>A(-1.\overline{3}, 2), B(3.5, 5.625), C(6, 2.5), D(6, 2)</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="40%"><image source="images/fig-in-ex-ans-8-4-5"><description>system of linear inequalities in two variables</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <exercise><title>QuickCheck 4</title>
 <webwork>

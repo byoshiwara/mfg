@@ -69,14 +69,35 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
 
 <p>The technique used in <xref ref="example-back-substitution" text="type-global"/> is called <term>back-substitution</term><idx>back-substitution</idx>. It works in the special case where one of the equations involves exactly one variable, and a second equation involves that same variable and just one other variable. A <m>3\times 3</m> linear system with these properties is said to be in <term>triangular form</term><idx>triangular form</idx>. If we can transform a system into triangular form, we can use back-substitution to complete the solution.</p>
 
-<exercise><title>Practice 1</title>
-<statement><p>Use back-substitution to solve the system
-		<md alignment="alignat">
-		    <mrow> 2x +{}  2y \amp {}+{} \amp z \amp {}={} \amp 10</mrow>
-		    <mrow>          y  \amp {}-{} \amp  4z \amp {}={} \amp 9</mrow>
-		    <mrow>        \amp {}{} \amp 3z \amp {}={} \amp -6</mrow>
-		 </md></p></statement>
-<answer><p><m>(5, 1, -2)</m></p></answer></exercise>
+<exercise>
+	<title>Practice 1</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Point");
+            $p = Compute("(5,1,-2)");
+        </pg-code></setup>
+        <statement>
+            <p>Use back-substitution to solve the system
+<!--            <md alignment="alignat">
+                <mrow> 2x +{}  2y \amp {}+{} \amp z \amp {}={} \amp 10</mrow>
+                <mrow>          y  \amp {}-{} \amp  4z \amp {}={} \amp 9</mrow>
+                <mrow>        \amp {}{} \amp 3z \amp {}={} \amp -6</mrow>
+             </md> -->
+            <me>
+                \begin{alignedat}{5}
+                    2x +{}  2y \amp {}+{} \amp z \amp {}={} \amp 10\\
+                 y  \amp {}-{} \amp  4z \amp {}={} \amp 9\\
+                 \amp {}{} \amp 3z \amp {}={} \amp -6
+                 \end{alignedat}
+             </me></p>
+             <p>Solution: <var name="$p" width="8"/> </p>
+             <instructions>Enter you solution as an ordered triple.</instructions>
+        </statement>
+        <solution>
+            <p><m>(5, 1, -2)</m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
@@ -614,21 +635,49 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
 		We use back-substitution to find the solution. You can verify that the ordered triple <m>(1, -1, 2)</m> satisfies all three of the original equations of the system.</p></li>
 		</ol></p></solution></example>
 
-<exercise><title>Practice 2</title>
-<statement><p>Use Gaussian reduction to solve the system
-	<md alignment="alignat">
-		<mrow>x\amp{}-{}\amp 2y \amp {}+{} \amp z \amp {}={} \amp -1\amp\hphantom{blankblank} (1)</mrow>
-		<mrow>\frac{2}{3}x \amp {}+{} \amp \frac{1}{3}y \amp {}-{} \amp z \amp {}={} \amp 1\amp\hphantom{blankblank} (2)</mrow>
-		<mrow>3x \amp {}+{} \amp 3y \amp {}-{} \amp 2z \amp {}={} \amp 10 \amp\hphantom{blankblank} (3)</mrow>
-	</md>
-	Follow the steps suggested below:<ol label="1">
-			<li><p>Clear the fractions from Equation (2).</p></li>
-			<li><p>Eliminate <m>z</m> from Equations (1) and (2).</p></li>
-			<li><p>Eliminate <m>z</m> from Equations (1) and (3).</p></li>
-			<li><p>Eliminate <m>x</m> from your new <m>2\times 2</m> system.</p></li>
-			<li><p>Form a triangular system and solve by back-substitution.</p></li>
-		</ol></p></statement>
-<answer><p><m>(2, 2, 1)</m></p></answer></exercise>
+<exercise>
+	<title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            Context("ImplicitPlane")->variables->add(y=>"Real",z=>"Real");
+            $eq1 = ImplicitPlane("2x+y-3z=3");
+            $eq2 = ImplicitPlane("5x-5y=0");
+            $eq3 = ImplicitPlane("5x-y=8");
+            $eq4 = ImplicitPlane("4y=8");
+            $x = Compute("2");
+            $y = Compute("2");
+            $z = Compute("1");
+            $p = Point("($x,$y,$z)");
+       </pg-code></setup>
+        <statement>
+            <p>Use Gaussian reduction to solve the system
+<!--            <md alignment="alignat">
+                <mrow>x\amp{}-{}\amp 2y \amp {}+{} \amp z \amp {}={} \amp -1\amp\hphantom{blankblank} (1)</mrow>
+                <mrow>\frac{2}{3}x \amp {}+{} \amp \frac{1}{3}y \amp {}-{} \amp z \amp {}={} \amp 1\amp\hphantom{blankblank} (2)</mrow>
+                <mrow>3x \amp {}+{} \amp 3y \amp {}-{} \amp 2z \amp {}={} \amp 10 \amp\hphantom{blankblank} (3)</mrow>
+            </md> -->
+            <me>
+                \begin{alignedat}{5}
+                    x\amp{}-{}\amp 2y \amp {}+{} \amp z \amp {}={} \amp -1\amp\hphantom{blankblank} (1)\\
+                 \frac{2}{3}x \amp {}+{} \amp \frac{1}{3}y \amp {}-{} \amp z \amp {}={} \amp 1\amp\hphantom{blankblank} (2)\\
+                3x \amp {}+{} \amp 3y \amp {}-{} \amp 2z \amp {}={} \amp 10 \amp\hphantom{blankblank} (3)
+                \end{alignedat}
+            </me>
+            Follow the steps suggested below:</p>
+                <p><ol label="1">
+                <li><p>Clear the fractions from Equation (2). <var name="$eq1" width="10"/> </p></li>
+                <li><p>Eliminate <m>z</m> from Equations (1) and (2). <var name="$eq2" width="6"/></p></li>
+                <li><p>Eliminate <m>z</m> from Equations (1) and (3). <var name="$eq3" width="6"/></p></li>
+                <li><p>Eliminate <m>x</m> from your new <m>2\times 2</m> system. <var name="$eq4" width="6"/></p></li>
+                <li><p>Form a triangular system and solve by back-substitution.</p>
+                <p>Solution: <var name="$p" width="5"/> Give your answer as an ordered triple. </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><m>(2, 2, 1)</m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -697,14 +746,36 @@ then the system is dependent and has infinitely many solutions.</p>
 		</md> -->
 	<p>Since the resulting equation has no solution, the system is <em>inconsistent</em>.</p></solution></example>
 
-<exercise><title>Practice 3</title>
-<statement><p>Decide whether the system is inconsistent, dependent, or consistent and independent.
-		<md alignment="alignat">
-			<mrow>x\amp {}+{}\amp 3y\amp {}-{}\amp z\amp =\amp 4 </mrow>
-			<mrow>-2x\amp {}-{}\amp 6y\amp {}+{}\amp 2z\amp =\amp 1 </mrow>
-			<mrow>x\amp {}+{}\amp 2y\amp {}-{}\amp z\amp =\amp 3 </mrow>
-		</md></p></statement>
-<answer><p>Inconsistent</p></answer></exercise>
+<exercise>
+	<title>Practice 3</title>
+    <webwork>
+        <setup><pg-code>
+            $type =  PopUp(
+            ["?","inconsistent", "dependent", "consistent and independent"],
+            1, 
+            );
+        </pg-code></setup>
+        <statement>
+            <p>Decide whether the system is inconsistent, dependent, or consistent and independent.
+<!--        <md alignment="alignat">
+            <mrow>x\amp {}+{}\amp 3y\amp {}-{}\amp z\amp =\amp 4 </mrow>
+            <mrow>-2x\amp {}-{}\amp 6y\amp {}+{}\amp 2z\amp =\amp 1 </mrow>
+            <mrow>x\amp {}+{}\amp 2y\amp {}-{}\amp z\amp =\amp 3 </mrow>
+        </md> -->
+        <me>\begin{alignedat}{5}
+            x\amp {}+{}\amp 3y\amp {}-{}\amp z\amp =\amp 4 \\
+            -2x\amp {}-{}\amp 6y\amp {}+{}\amp 2z\amp =\amp 1\\
+            x\amp {}+{}\amp 2y\amp {}-{}\amp z\amp =\amp 3 
+            \end{alignedat}
+        </me>
+        </p>
+        <p><var name="$type" form="popup"/> </p>
+        </statement>
+        <solution>
+            <p>Inconsistent</p>
+        </solution>
+    </webwork>
+</exercise>
 
 <example><statement><p>Solve the system
 		<md alignment="alignat">
@@ -761,14 +832,30 @@ then the system is dependent and has infinitely many solutions.</p>
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 4</title>
-<statement><p>Decide whether the system is inconsistent, dependent, or consistent and independent.
-		<md>
-			<mrow>a - c \amp = 2</mrow>
-			<mrow>2a + b \amp = 5</mrow>
-			<mrow>a + b + c \amp = 3</mrow>
-		</md></p></statement>
-<answer><p>Dependent</p></answer></exercise>
+<exercise>
+	<title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+            $type =  PopUp(
+            ["?","inconsistent", "dependent", "consistent and independent"],
+            2, 
+            );
+        </pg-code></setup>
+        <statement>
+            <p>Decide whether the system is inconsistent, dependent, or consistent and independent.
+        <me>\begin{alignedat}{5}
+            a - c \amp = 2\\
+            2a + b \amp = 5\\
+            a + b + c \amp = 3
+            \end{alignedat}
+        </me>        </p>
+        <p><var name="$type" form="popup"/> </p>
+        </statement>
+        <solution>
+            <p>Dependent</p>
+        </solution>
+    </webwork>
+</exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
@@ -1036,182 +1123,126 @@ then the system is dependent and has infinitely many solutions.</p>
 			<li><p>The angles measure <m>52\degree</m>, <m>28\degree</m>, and <m>100\degree</m>.</p></li>
 		</ol></p></solution></example>
 
-<exercise><title>Practice 5</title>
-<statement><p>A manufacturer of office supplies makes three types of file cabinet: two-drawer, four-drawer, and horizontal. The manufacturing process is divided into three phases: assembly, painting, and finishing. 
-		<ul>
-			<li>A two-drawer cabinet requires 3 hours to assemble, 1 hour to paint, and 1 hour to finish.</li>
-			<li> The four-drawer model takes 5 hours to assemble, 90 minutes to paint, and 2 hours to finish.</li>
-			<li> The horizontal cabinet takes 4 hours to assemble, 1 hour to paint, and 3 hours to finish.</li>
-			</ul> 
-The manufacturer employs enough workers for 500 hours of assembly time, 150 hours of painting, and 230 hours of finishing per week. How many of each type of file cabinet should he make in order to use all the hours available?
-<!--		<dl>
-			<li><title>Step 1:</title><p>
-				Represent the number of each model of file cabinet by a different variable.
-				<table><tabular halign="left">
-					<row>
-						<cell>Number of two-drawer cabinets:</cell>
-						<cell><m>x</m></cell>
-					</row>
-					<row>
-						<cell>Number of four-drawer cabinets:</cell>
-						<cell><m>y</m></cell>
-					</row>
-					<row>
-						<cell>Number of horizontal cabinets:</cell>
-						<cell><m>z</m></cell>
-					</row>
-				</tabular></table>
-			</p></li>
-			<li><title>Step 2:</title><p>
-				Organize the information into a table. (Convert all times to hours.)
-				<table><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-			        <row bottom="minor">
-			            <cell><m></m></cell>
-			            <cell>2-Drawer</cell>
-			            <cell>4-Drawer</cell>
-			            <cell>Horizontal</cell>
-			            <cell>Total available</cell>
-			        </row>
-			        <row>
-			            <cell>Assembly</cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			        </row>
-			        <row>
-			            <cell>Painting</cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			        </row>
-			        <row>
-			            <cell>Finishing</cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			        </row>
-			    </tabular></table>
-				Write three equations describing the time constraints in each of the three manufacturing phases. For example, the assembly phase requires <m>3x</m> hours for the two-drawer cabinets, <m>5y</m> hours for the four-drawer cabinets, and <m>4z</m> hours for the horizontal cabinets, and the sum of these times should be the time available, <m>500</m> hours.
-				<table><tabular>
-					<row>
-						<cell>
-							Assembly time:
-						</cell>
-						<cell><fillin characters="25" /></cell>
-						<cell><m>(1)</m></cell>
-					</row>
-					<row>
-						<cell>
-							Painting time:
-						</cell>
-						<cell><fillin characters="25" /></cell>
-						<cell><m>(2)</m></cell>
-					</row>
-						<row>
-						<cell>
-							Finishing time:
-						</cell>
-						<cell><fillin characters="25" /></cell>
-						<cell><m>(3)</m></cell>
-					</row>
-			</tabular></table>
-			</p></li>
-			<li><title>Step 3:</title><p>
-				Solve the system. Follow the steps suggested below.
-				<ol label="1">
-					<li><p>
-						Clear the fractions from the second equation.
-					</p></li>
-					<li><p>
-						Subtract Equation (1) from <m>3</m> times Equation (3) to obtain a new Equation (4).
-					</p></li>
-					<li><p>
-						Subtract Equation (2) from twice Equation (3) to obtain a new Equation (5).
-					</p></li>
-					<li><p>
-						Equations (4) and (5) form a <m>2\times 2</m> system in <m>y</m> and <m>z</m>. Subtract Equation (5) from Equation (4) to obtain a new Equation (6).
-					</p></li>
-					<li><p>
-						Form a triangular system with Equations (3), (4), and (6). Use back-substitution to complete the solution.
-					</p></li>
-				</ol>
-			</p></li>
-			<li><title>Step 4:</title><p>
-				You should have found the following solution: The manufacturer should make <m>60</m> two-drawer cabinets, <m>40</m> four-drawer cabinets, and <m>30</m> horizontal cabinets.
-			</p></li>
-		</dl> -->
-	<ol label="1">
-		<li><p>Represent the number of each model of file cabinet by a different variable.</p>
-				<sidebyside><tabular halign="left">
-					<row>
-						<cell>Number of two-drawer cabinets:</cell>
-						<cell><m>x</m></cell></row>
-					<row>
-						<cell>Number of four-drawer cabinets:</cell>
-						<cell><m>y</m></cell></row>
-					<row>
-						<cell>Number of horizontal cabinets:</cell>
-						<cell><m>z</m></cell></row>
-				</tabular></sidebyside></li>
-		<li><p>Organize the information into a table. (Convert all times to hours.)</p>
-				<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-			        <row bottom="minor">
-			            <cell><m></m></cell>
-			            <cell>2-Drawer</cell>
-			            <cell>4-Drawer</cell>
-			            <cell>Horizontal</cell>
-			            <cell>Total available</cell></row>
-			        <row>
-			            <cell>Assembly</cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell></row>
-			        <row>
-			            <cell>Painting</cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell></row>
-			        <row>
-			            <cell>Finishing</cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell>
-			            <cell><m></m></cell></row>
-			    </tabular></sidebyside>
-		<p>Write three equations describing the time constraints in each of the three manufacturing phases. For example, the assembly phase requires <m>3x</m> hours for the two-drawer cabinets, <m>5y</m> hours for the four-drawer cabinets, and <m>4z</m> hours for the horizontal cabinets, and the sum of these times should be the time available, <m>500</m> hours.</p>
-				<sidebyside><tabular>
-					<row><cell>Assembly time:</cell>
-						<cell><fillin characters="25" /></cell>
-						<cell><m>(1)</m></cell></row>
-					<row><cell>Painting time:</cell>
-						<cell><fillin characters="25" /></cell>
-						<cell><m>(2)</m></cell></row>
-					<row><cell>Finishing time:</cell>
-						<cell><fillin characters="25" /></cell>
-						<cell><m>(3)</m></cell></row>
-			</tabular></sidebyside></li>
-		<li><p>Solve the system. Follow the steps suggested below.
-				<ol label="i">
-					<li><p>Clear the fractions from the second equation.</p></li>
-					<li><p>Subtract Equation (1) from <m>3</m> times Equation (3) to obtain a new Equation (4).</p></li>
-					<li><p>Subtract Equation (2) from twice Equation (3) to obtain a new Equation (5).</p></li>
-					<li><p>Equations (4) and (5) form a <m>2\times 2</m> system in <m>y</m> and <m>z</m>. Subtract Equation (5) from Equation (4) to obtain a new Equation (6).</p></li>
-					<li><p>Form a triangular system with Equations (3), (4), and (6). Use back-substitution to complete the solution.</p></li>
-				</ol></p></li>
-		<li><p>You should have found the following solution: The manufacturer should make <m>60</m> two-drawer cabinets, <m>40</m> four-drawer cabinets, and <m>30</m> horizontal cabinets.</p></li>
-		</ol></p></statement>
-<answer><p><m>
-	\begin{alignedat}{5}
-    3x\amp{}+{}\amp 5y\amp{}+{}\amp 4z\amp{}={}500\\
-	x \amp{}+{}\amp 1.5y\amp{}+{}\amp z\amp{}={}150\\
-	x \amp{}+{}\amp 2y\amp {}+{}\amp 3z\amp{}={}230
-	\end{alignedat}
-</m></p><p><m>x = 60, ~y = 40, ~z = 30</m></p></answer>
+<exercise>
+	<title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+
+            Context("ImplicitPlane")->variables->add(y=>"Real",z=>"Real");
+            Context()->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
+            $a11 = Formula("3x");
+            $a12 = Formula("5y");
+            $a13 = Formula("4z");
+            $a14 = Compute("500");
+
+            $a21 = Formula("x");
+            $a22 = Formula("3/2 *y");
+            $a23 = Formula("z");
+            $a24 = Compute("150");
+            
+            $a31 = Formula("x");
+            $a32 = Formula("2y");
+            $a33 = Formula("3z");
+            $a34 = Compute("230");
+
+            $eq1 = ImplicitPlane("3x+5y+4z=500");
+            $eq2 = ImplicitPlane("x+3/2*y+z=150");
+            $eq3 = ImplicitPlane("x+2y+3z=230");
+
+            $eq2a = ImplicitPlane("2x+3y+2z=300");
+            $eq4 = ImplicitPlane("y+5z=190");
+            $eq5 = ImplicitPlane("y+4z=160");
+            $eq6 = ImplicitPlane("z=30");
+
+            $p = Point("(60,40,30)");
+        </pg-code></setup>
+        <statement>
+            <p>A manufacturer of office supplies makes three types of file cabinet: two-drawer, four-drawer, and horizontal. The manufacturing process is divided into three phases: assembly, painting, and finishing. 
+            <ul>
+                <li>A two-drawer cabinet requires 3 hours to assemble, 1 hour to paint, and 1 hour to finish.</li>
+                <li> The four-drawer model takes 5 hours to assemble, 90 minutes to paint, and 2 hours to finish.</li>
+                <li> The horizontal cabinet takes 4 hours to assemble, 1 hour to paint, and 3 hours to finish.</li>
+            </ul> 
+            The manufacturer employs enough workers for 500 hours of assembly time, 150 hours of painting, and 230 hours of finishing per week. How many of each type of file cabinet should he make in order to use all the hours available?
+    <ol label="1">
+        <li><p>Represent the number of each model of file cabinet by a different variable.</p>
+                <sidebyside><tabular halign="left">
+                    <row>
+                        <cell>Number of two-drawer cabinets:</cell>
+                        <cell><m>x</m></cell></row>
+                    <row>
+                        <cell>Number of four-drawer cabinets:</cell>
+                        <cell><m>y</m></cell></row>
+                    <row>
+                        <cell>Number of horizontal cabinets:</cell>
+                        <cell><m>z</m></cell></row>
+                </tabular></sidebyside></li>
+        <li><p>Organize the information into a table. (Convert all times to hours.)</p>
+                <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                    <row bottom="minor">
+                        <cell><m></m></cell>
+                        <cell>2-Drawer</cell>
+                        <cell>4-Drawer</cell>
+                        <cell>Horizontal</cell>
+                        <cell>Total available</cell></row>
+                    <row>
+                        <cell>Assembly</cell>
+                        <cell><var name="$a11" width="3"/></cell>
+                        <cell><var name="$a12" width="3"/></cell>
+                        <cell><var name="$a13" width="3"/></cell>
+                        <cell><var name="$a14" width="3"/></cell></row>
+                    <row>
+                        <cell>Painting</cell>
+                        <cell><var name="$a21" width="3"/></cell>
+                        <cell><var name="$a22" width="3"/></cell>
+                        <cell><var name="$a23" width="3"/></cell>
+                        <cell><var name="$a24" width="3"/></cell></row>
+                    <row>
+                        <cell>Finishing</cell>
+                        <cell><var name="$a31" width="3"/></cell>
+                        <cell><var name="$a32" width="3"/></cell>
+                        <cell><var name="$a33" width="3"/></cell>
+                        <cell><var name="$a34" width="3"/></cell></row>
+                </tabular></sidebyside>
+        <p>Write three equations describing the time constraints in each of the three manufacturing phases. For example, the assembly phase requires <m>3x</m> hours for the two-drawer cabinets, <m>5y</m> hours for the four-drawer cabinets, and <m>4z</m> hours for the horizontal cabinets, and the sum of these times should be the time available, <m>500</m> hours.</p>
+                <sidebyside><tabular>
+                    <row><cell>Assembly time:</cell>
+                        <cell><var name="$eq1" width="13"/></cell>
+                        <cell><m>(1)</m></cell></row>
+                    <row><cell>Painting time:</cell>
+                        <cell><var name="$eq2" width="13"/></cell>
+                        <cell><m>(2)</m></cell></row>
+                    <row><cell>Finishing time:</cell>
+                        <cell><var name="$eq3" width="13"/></cell>
+                        <cell><m>(3)</m></cell></row>
+            </tabular></sidebyside></li>
+        <li><p>Solve the system. Follow the steps suggested below.
+                <ol label="i">
+                    <li><p>Clear the fractions from the second equation.</p>
+                    <p><var name="$eq2a" width="13"/>  (2)</p></li>
+                    <li><p>Subtract Equation (1) from <m>3</m> times Equation (3) to obtain a new Equation (4).</p>
+                    <p><var name="$eq4" width="10"/>  (4)</p></li>
+                    <li><p>Subtract Equation (2) from twice Equation (3) to obtain a new Equation (5).</p>
+                    <p><var name="$eq5" width="10"/> (5)</p></li>
+                    <li><p>Equations (4) and (5) form a <m>2\times 2</m> system in <m>y</m> and <m>z</m>. Subtract Equation (5) from Equation (4) to obtain a new Equation (6).</p>
+                    <p><var name="$eq6" width="13"/> (6)</p></li>
+                    <li><p>Form a triangular system with Equations (3), (4), and (6). Use back-substitution to complete the solution.</p>
+                    <p><var name="$p" width="8"/> Enter the solution as an ordered triple.</p></li>
+                </ol></p></li>
+        <li><p>You should have found the following solution: The manufacturer should make <m>60</m> two-drawer cabinets, <m>40</m> four-drawer cabinets, and <m>30</m> horizontal cabinets.</p></li>
+        </ol></p>
+        </statement>
+        <solution>
+            <p><m>
+                \begin{alignedat}{5}
+                3x\amp{}+{}\amp 5y\amp{}+{}\amp 4z\amp{}={}500\\
+                x \amp{}+{}\amp 1.5y\amp{}+{}\amp z\amp{}={}150\\
+                x \amp{}+{}\amp 2y\amp {}+{}\amp 3z\amp{}={}230
+                \end{alignedat}
+            </m></p>
+            <p><m>x = 60</m>, <m>y = 40</m>, <m>z = 30</m></p>
+        </solution>
+    </webwork>
 </exercise>
 
 
