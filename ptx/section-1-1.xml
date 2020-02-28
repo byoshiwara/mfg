@@ -604,7 +604,54 @@
 </subsection>
 
 <exercise><title>QuickCheck 4</title>
-</exercise>
+<introduction>
+    <sidebyside width="40%">
+        <image xml:id="fig-1-1-QC-4">
+        <description>triangle</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.8]
+        \draw[cyan] (0,0) grid (5,5);
+        \draw[black,thick,->,>=stealth'] (0,0)--(5.8,0);
+        \draw[black,thick,->,>=stealth'] (0,0)--(0,5.6);
+
+        \draw[black, thick] (1,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$5$};
+        \draw[black, thick] (2,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$20$};
+        \draw[black, thick] (3,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$30$};
+        \draw[black, thick] (4,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$50$};
+        \draw[black, thick] (5,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$100$};
+
+
+        \draw[black, thick] (0.14,1) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$20$};
+        \draw[black, thick] (0.14,2) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$25$};
+        \draw[black, thick] (0.14,3) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$30$};
+        \draw[black, thick] (0.14,4) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$35$};
+        \draw[black, thick] (0.14,5) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$40$};
+        \end{tikzpicture}]]>
+    </latex-image>
+    </image>
+    </sidebyside>
+</introduction>
+<webwork>
+    <setup><pg-code>       
+            $badgrid = RadioButtons(
+              ["uneven ticks on \(x\)",
+              "\(y\) starts at 20",
+              "axes not labeled",
+              "all of the above"],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What is wrong with the grid above?</p>
+        <p><var name="$badgrid" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>All</p>
+    </solution>
+</webwork></exercise>
 
 <subsection><title>Linear Equations</title>
     <p>All the models in the preceding examples have equations with a similar form:  
