@@ -533,67 +533,34 @@
         Context("Numeric")->variables->add(y=>'Real');
       </pg-code>
     </setup>
-    <statement>
-      <p>
-        <ol label="a">
-          <li>
-            <p>
+    <statement><p><ol label="a">
+          <li><p>
               Solve the equation <m>2y-1575=45x</m> for <m>y</m> in terms of <m>x</m>.</p>
-              <p><m>y=</m><var name="$fun" width="10" />
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Graph the equation with a graphing utility. Use the window
-            </p>
+              <p><m>y=</m><var name="$fun" width="10" /></p></li>
+          <li><p>
+              Graph the equation with a graphing utility. Use the window</p>
         <sidebyside>
             <tabular>
-                <row>
-                    <cell>Xmin<m>=-50</m></cell>
+                <row><cell>Xmin<m>=-50</m></cell>
                     <cell></cell>
                     <cell>Xmax<m>=50</m></cell>
                     <cell></cell>
-                    <cell>Xscl<m>=5</m></cell>
-                </row>
-                <row>
-                    <cell>Ymin<m>=-500</m></cell>
+                    <cell>Xscl<m>=5</m></cell></row>
+                <row><cell>Ymin<m>=-500</m></cell>
                     <cell></cell>
                     <cell>Ymax<m>=1000</m></cell>
                     <cell></cell>
-                    <cell>Yscl<m>=100</m></cell>
-                </row>
-            </tabular>
-        </sidebyside>
-          </li>
-
-          <li>
-            <p>
-              Sketch the graph on paper. Use the window settings to choose appropriate scales for the axes
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-    <solution>
-      <p>
-        <ol label="a.">
-          <li>
-            <p>
+                    <cell>Yscl<m>=100</m></cell></row>
+            </tabular></sidebyside></li>
+          <li><p>Sketch the graph on paper. Use the window settings to choose appropriate scales for the axes.</p></li>
+        </ol></p></statement>
+    <solution><p><ol label="a.">
+          <li><p>
               <!--<m>y=<var name="$fun"/></m>.-->
-              <m>y=(1575+45x)/2 </m>
-            </p>
-          </li>
-
-          <li>
-               <p>The calculator graph is shown below.</p>
-          </li>
-          <li>
-              <p>The graph is shown below</p>
-          </li>
-        </ol>
-      </p>
-    </solution>
+              <m>y=(1575+45x)/2 </m></p></li>
+          <li><p>The calculator graph is shown below.</p></li>
+          <li><p>The graph is shown below.</p></li>
+        </ol></p></solution>
   </webwork>
   <conclusion>
     <p>b. </p>
@@ -638,10 +605,10 @@
 <webwork>
     <setup><pg-code>       
             $badgrid = RadioButtons(
-              ["uneven ticks on \(x\)",
-              "\(y\) starts at 20",
-              "axes not labeled",
-              "all of the above"],
+              ["The grid lines on the \(x\)-axis are not evenly spaced.",
+              "The scale on the \(y\)-axis does not start at 0.",
+              "The axes are not labeled with the variables.",
+              "All of the above."],
               3, 
             );            
         </pg-code></setup>
@@ -650,7 +617,7 @@
         <p><var name="$badgrid" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>All</p>
+        <p>All of the above.</p>
     </solution>
 </webwork></exercise>
 
