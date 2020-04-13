@@ -128,8 +128,7 @@ The positive constant <m>k</m> in the equation <m>y = kx</m> is just the slope o
     <introduction>
         <sidebyside  width="65%"><image source="images/fig-three-lines"><description>graphs of three lines</description></image></sidebyside>
     </introduction>
-    <webwork>
-        <setup><pg-code>
+    <webwork><pg-code>
             $explain = new_checkbox_multiple_choice();
             $explain -> qa (
             "A question can go here, but PTX ignores this",
@@ -141,7 +140,7 @@ The positive constant <m>k</m> in the equation <m>y = kx</m> is just the slope o
             "(c): The graph is a straight line that decreases. $BR",
             "None of the above");
 
-        </pg-code></setup>
+        </pg-code>
         <statement>
             <p>Which of the graphs below could represent direct variation? Explain why.</p>
             <p><var name="$explain" form="checkboxes"/> </p>
@@ -222,10 +221,8 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
     </solution>
 </webwork></exercise>
 
-<exercise>
-    <title>Practice 2</title>
-    <webwork>
-        <setup><pg-code>
+<exercise><title>Practice 2</title>
+    <webwork><pg-code>
             $explain = new_checkbox_multiple_choice();
             $explain -> qa (
             "A question can go here, but PTX ignores this",
@@ -234,9 +231,8 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
             $explain -> makeLast(
             "(a): If we multiply \(x\) by \(c\), \(y\) is also multiplied by \(c\). $BR",
             "(b): If we increase \(x\), we also increase \(y\). $BR",
-            "None of the above");
-            
-        </pg-code></setup>
+            "None of the above");      
+        </pg-code>
         <statement>
             <p>Which tables could represent direct variation? Explain why. (Hint: What happens to <m>y</m> if you multiply <m>x</m> by a constant?)<ol label="a">
                 <li>
@@ -330,10 +326,8 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
     </solution>
 </webwork></exercise>
 
-<exercise>
-    <title>Practice 3</title>
-    <webwork>
-        <setup><pg-code>
+<exercise><title>Practice 3</title>
+    <webwork><pg-code>
             Context()->variables->add(V=>"Real",w=>"Real");
             $m = 1.75;
             $f1 = Formula("V");
@@ -352,7 +346,7 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
                   );
               }
             );            
-        </pg-code></setup>
+        </pg-code>
         <statement>
             <p>The volume of a bag of rice, in cups, is directly proportional to the weight of the bag. A 2-pound bag contains 3.5 cups of rice.<ol label="a">
                 <li><p>Express the volume, <m>V</m>, of a bag of rice as a function of its weight, <m>w</m>.</p>
@@ -500,14 +494,13 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
 
 <exercise>
     <title>Practice 5</title>
-    <webwork>
-        <setup><pg-code>
+    <webwork><pg-code>
             $YesNo =  RadioButtons(
                     ["Yes, \(\dfrac{B}{r^3}\) is constant.",
                     "No, \(B\) is not \(r^3\)."],
                     0
                 );
-        </pg-code></setup>
+        </pg-code>
         <statement>
             <p>Does <m>B</m> vary directly with the cube of <m>r</m>? Explain your decision.</p>
             <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
