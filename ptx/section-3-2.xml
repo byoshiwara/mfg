@@ -47,7 +47,7 @@
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $negex = RadioButtons(
               ["\(-2x^4\)",
               "\(\dfrac{1}{2x^4}\)",
@@ -55,7 +55,7 @@
               "\(\dfrac{2}{x^4}\)"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which of these is equivalent to <m>2x^{-4}</m>?</p>
         <p><var name="$negex" form="buttons"/></p>      
@@ -68,14 +68,14 @@
 <exercise >
     <title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Fraction");
             LimitedPowers::OnlyPositiveIntegers();
             $a = Compute("1/5**4");
             Context("RationalFunction");
             $f = Formula("5/x**4");
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Write each expression without using negative exponents.<ol label="a" cols="2">
                 <li><p><m>5^{-4}=</m><var name="$a" width="10"/> </p></li>
@@ -122,13 +122,13 @@ where <m>w</m> is your weight in kilograms and <m>h</m> is your height in meters
               "parserRoot.pl"
             ) ;
         </pg-macros>
-        <setup><pg-code>
+         <pg-code>
             parser::Root->Enable;
             Context()->operators->undefine("^","**");
             Context()->functions->disable("All");
             Context()->functions->enable("sqrt");
             $a = Compute("root(3,2/15)");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve the equation <m>0.2x^{-3} = 1.5</m></p>
             <p><m>x=</m><var name="$a" width="12"/> </p>
@@ -149,8 +149,8 @@ where <m>w</m> is your weight in kilograms and <m>h</m> is your height in meters
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain why <m>\dfrac{1}{a^{-n}}=a^n</m>, if <m>a \not= 0.</m></p>
         <p><var form="essay"/></p>      
@@ -192,7 +192,7 @@ Their graphs are shown below. Note that the domains of power functions with nega
 <exercise>
     <title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context(Fraction);
             $a = Compute("1/4");
             $b = Compute("2/5");
@@ -203,7 +203,7 @@ Their graphs are shown below. Note that the domains of power functions with nega
             
 #           Context()->operators->redefine("/");
   
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Write each function as a power function in the form <m>y = kx ^p</m>.</p> 
             <p>For this exercise, enter rational numbers in decimal form. For example, enter "0.5" rather than "1/2".</p>
@@ -225,7 +225,7 @@ Their graphs are shown below. Note that the domains of power functions with nega
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $powfn = RadioButtons(
               ["They can describe direct or inverse variation.",
               "They involve a power of the output variable.",
@@ -233,7 +233,7 @@ Their graphs are shown below. Note that the domains of power functions with nega
               "They include all linear and quadratic functions."],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which statement is true about power functions?</p>
         <p><var name="$powfn" form="buttons"/></p>      
@@ -284,7 +284,7 @@ Their graphs are shown below. Note that the domains of power functions with nega
 <exercise>
     <title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $k = 0.8 ;
             $p = 0.01;
             $d = Compute("sqrt($k/$p)")->with(
@@ -292,7 +292,7 @@ Their graphs are shown below. Note that the domains of power functions with nega
               tolerance => .1,
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Cell phone towers typically transmit signals at 10 watts of power. The signal strength varies inversely with the square of distance from the tower, and 1 kilometer away the signal strength is 0.8 picowatt. (A picowatt is <m>10^{-12}</m> watt.) Cell phones can receive a signal as small as 0.01 picowatt. How far can you be from the nearest tower and still hope to have cell phone reception?</p>
             <p>About <var name="$d" width="2"/> km </p>
@@ -305,8 +305,8 @@ Their graphs are shown below. Note that the domains of power functions with nega
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>What is an inverse square law?  Give an example.</p>
         <p><var form="essay"/></p>      
@@ -328,10 +328,10 @@ Their graphs are shown below. Note that the domains of power functions with nega
 <exercise>
     <title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context(LimitedPolynomial);
             $f = Formula("x^8/16");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Simplify <m>\left(\dfrac{2}{x^2} \right)^{-4}=</m><var name="$f" width="10"/> </p>
         </statement>
@@ -361,12 +361,12 @@ Their graphs are shown below. Note that the domains of power functions with nega
 <exercise>
     <title>Practice 6</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context(LimitedPolynomial)->variables->add(b=>"Real");
             $f = Formula("b^8/9");
             $g = Formula("12x^6");
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Write each expression without using negative exponents.<ol label="a">
                 <li><p><m>\left(\dfrac{3}{b^4}\right)^{-2}=</m><var name="$f" width="10"/> </p></li>
@@ -398,7 +398,7 @@ which is consistent with our previous version of the rule,
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $exquo = RadioButtons(
               ["\(\dfrac{1}{m^3}\)",
               "\(-m^4\)",
@@ -406,7 +406,7 @@ which is consistent with our previous version of the rule,
               "\(m^{-4}\)"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which of these is equivalent to <m>\dfrac{m^2}{m^6}</m>?</p>
         <p><var name="$exquo" form="buttons"/></p>      
@@ -443,7 +443,7 @@ which is consistent with our previous version of the rule,
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $lawex = RadioButtons(
               ["\((x+y)^n=x^n+y^n\)",
               "\((\dfrac{x}{y})^n=\dfrac{x^n}{y^n}\)",
@@ -451,7 +451,7 @@ which is consistent with our previous version of the rule,
               "\(x^n x^m=x^{n+m}\)"],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which of the following is not one of the laws of exponents?</p>
         <p><var name="$lawex" form="buttons"/></p>      
@@ -464,12 +464,12 @@ which is consistent with our previous version of the rule,
 <exercise>
     <title>Practice 7</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("RationalFunction")->variables->add(a=>"Real", r=>"Real");
             $f = Formula("-8/a^2");
             $g = Formula("1/(3r^2)");
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Simplify by applying the laws of exponents. Write without negative exponents.<ol label="a">
         <li><p><m>\left(2a^{-4}\right) \left(-4a^2\right)=</m><var name="$f" width="10"/> </p></li>
@@ -506,8 +506,8 @@ but <em>we cannot add or subtract terms with different exponents</em>. Thus, for
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Give a numerical example to show why we cannot add or subtract terms with the same variable but different exponents.</p>
         <p><var form="essay"/></p>      

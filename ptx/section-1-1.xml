@@ -88,7 +88,7 @@
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $Whichaxis = RadioButtons(
               ["The linear axis",
               "The horizontal axis",
@@ -96,7 +96,7 @@
               "Both axes"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>When you graph the data given in a table, on which axis do you show the variable in the first row of the table?</p>
         <p><var name="$Whichaxis" form="buttons"/></p>      
@@ -140,7 +140,7 @@
           "niceTables.pl"
         ) ;
     </pg-macros>
-    <setup>
+     
       <pg-code>
     $diff = 5;   
     $t0 = 0;      
@@ -166,7 +166,7 @@
     $equation = ImplicitPlane("h = $growthRate*t + $h0");
 
         </pg-code>
-        </setup>
+         
     <statement>
     <p>
     Frank plants a dozen corn seedlings, each 6 inches tall. With plenty of water and sunlight they will grow approximately 2 inches per day.   Complete the table of values for the height, <m>h</m>, of the seedlings after <m>t</m> days.
@@ -238,7 +238,7 @@
           "AnswerFormatHelp.pl",
         ) ;
     </pg-macros>
-    <setup>
+     
       <pg-code>
         #$diff = random(2,5,1);   
         $diff = 5;    #---COMMENT OUT THIS LINE FOR RANDOMIZATION
@@ -266,7 +266,7 @@
         $time = NumberWithUnits(
         "$time0 day");
     </pg-code>
-    </setup>
+     
     <statement>
         <p>Use your equation from Practice 1 to answer the questions.  Illustrate each answer on the graph.</p>
         <p><ol>
@@ -293,8 +293,8 @@
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>What is the difference between an expression and an equation?</p>
         <p><var form="essay"/></p>      
@@ -352,7 +352,7 @@
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $Whichvar = RadioButtons(
               ["\(C\)",
               "\(H\)",
@@ -360,7 +360,7 @@
               "The smaller one"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>If <m>C</m> is expressed in terms of <m>H</m>, which variable goes on the horizontal axis?</p>
         <p><var name="$Whichvar" form="buttons"/></p>      
@@ -375,7 +375,7 @@
 <exercise xml:id="exercise-Silver-Lake">
     <title>Practice 3</title>
   <webwork>
-    <setup>
+     
       <pg-code>
             # Part (a) set-up
 
@@ -399,7 +399,7 @@
 
             $equation = ImplicitPlane("C = $C0 + $growthRate*t");
         </pg-code>
-        </setup>
+         
     <statement>
         <p>
         Silver Lake has been polluted by industrial waste products. The concentration of toxic chemicals in the water is currently 285 parts per million (ppm). Environmental officials would like to reduce the concentration by 15 ppm each year.
@@ -475,7 +475,7 @@
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $ineq = RadioButtons(
               ["It is greater than 3",
               "It is less than 3",
@@ -483,7 +483,7 @@
               "It is less than -10"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>If <m>x \gt 5</m>, what is true about <m>-2x</m>?</p>
         <p><var name="$ineq" form="buttons"/></p>      
@@ -527,12 +527,12 @@
 <exercise>
     <title>Practice 4</title>
   <webwork>
-    <setup>
+     
       <pg-code>
         $fun=Formula("(1575+45*x)/2");
         Context("Numeric")->variables->add(y=>'Real');
       </pg-code>
-    </setup>
+     
     <statement><p><ol label="a">
           <li><p>
               Solve the equation <m>2y-1575=45x</m> for <m>y</m> in terms of <m>x</m>.</p>
@@ -603,7 +603,7 @@
     </sidebyside>
 </introduction>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $badgrid = RadioButtons(
               ["The grid lines on the \(x\)-axis are not evenly spaced.",
               "The scale on the \(y\)-axis does not start at 0.",
@@ -611,7 +611,7 @@
               "All of the above."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What is wrong with the grid above?</p>
         <p><var name="$badgrid" form="buttons"/></p>      
@@ -673,7 +673,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
 <exercise xml:id="exercise-crops">
     <title>Practice 5</title>
     <webwork>
-    <setup>
+     
       <pg-code>
         $fun=Formula("(9000-25*x)/18");
         @x=(50, 100, 150, 200);
@@ -689,7 +689,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
     $equation = ImplicitPlane("25x+18y=9000");
    
       </pg-code>
-    </setup>
+     
     <statement>
         <p>In central Nebraska, each acre of corn requires 25 acre-inches of water per year, and each acre of winter wheat requires 18 acre-inches of water. (An acre-inch is the amount of water needed to cover one acre of land to a depth of one inch.) A farmer can count on 9000 acre-inches of water for the coming year. (Source: Institute of Agriculture and Natural Resources, University of Nebraska)</p>
  
@@ -756,8 +756,8 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Write down two different equation forms for linear models.  Which do you think is easier to use?</p>
         <p><var form="essay"/></p>      
@@ -777,7 +777,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
 
 <exercise><title>QuickCheck 5</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $ycoord = RadioButtons(
               ["\((x,y)\)",
               "\(Y\)",
@@ -785,7 +785,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
               "0"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What is the <m>y</m>-coordinate of any point on the <m>x</m>-axis?</p>
         <p><var name="$ycoord" form="buttons"/></p>      
@@ -827,7 +827,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
 
 <exercise><title>QuickCheck 6</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $ints = RadioButtons(
               ["\((10,6)\) is not on the \(x\)-axis.",
               "An intercept must have a 0 coordinate.",
@@ -835,7 +835,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
               "All of the above"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Delbert says that the intercepts of the line <m>3x+5y=30</m> are <m>(10,6)</m>. What is wrong with his answer?</p>
         <p><var name="$ints" form="buttons"/></p>      
@@ -851,7 +851,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
             <p>Find the intercepts of the graph in <xref ref="example-advertising" text="type-global"/>, about the advertising budget for Albert's Appliances: <m>150x + 50y = 3000</m>.</p>
          </introduction>
     <webwork>
-        <setup>
+         
             <pg-code>
                 $xi = RadioButtons(
                     ["the cost of the TV ads.",
@@ -874,7 +874,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
                 $xint = Point($x0,0);
                 $yint = Point(0,$y0);
             </pg-code>
-        </setup>
+         
         <statement>
             <p><ol label="a">
                 <li><p>Enter each intercept as an ordered pair.</p>
@@ -904,8 +904,8 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain how the words <term>intercept</term> and <term>intersect</term> are related, and how they are different.</p>
         <p><var form="essay"/></p>      
@@ -947,7 +947,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
 
 <exercise><title>QuickCheck 7</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $samept = RadioButtons(
               ["No",
               "Yes",
@@ -955,7 +955,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
               "They are always the same point."],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Is it possible for the <m>x</m>-intercept and the <m>y</m>-intercept of a line to be the same point?</p>
         <p><var name="$samept" form="buttons"/></p>      
@@ -969,7 +969,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
 
 <exercise><title>QuickCheck 8</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $Points = RadioButtons(
               ["Two",
               "Three",
@@ -977,7 +977,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
               "It depends on the equation"],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>How many points do you need to graph a linear equation?</p>
         <p><var name="$Points" form="buttons"/></p>      
@@ -1008,7 +1008,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
         <p>In <xref ref="exercise-crops" text="type-global"/> you wrote an equation about crops in Nebraska.</p>
      </introduction>
     <webwork>
-        <setup>
+         
             <pg-code>
                 $xi = RadioButtons(
                     ["the total water usage of corn.",
@@ -1031,7 +1031,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
                 $xint = Point($x0,0);
                 $yint = Point(0,$y0);
             </pg-code>
-        </setup>
+         
         <statement>
             <p><ol label="a">
                 <li><p> Find the intercepts of the graph.</p>
@@ -1070,8 +1070,8 @@ other, are called <term>functions</term><idx>functions</idx>. We will study vari
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>What was the most difficult part of this section to understand? Write a question whose answer would help you understand it.</p>
         <p><var form="essay"/></p>      

@@ -64,7 +64,7 @@
 
 <exercise><title>Practice 1</title>
 <webwork>
-    <setup>
+     
         <pg-code>
              $YNgrade = PopUp(
               ["?","Yes","No"],
@@ -83,7 +83,7 @@
               0, # index of correct answer; could also just be the correct answer
             );
         </pg-code>
-    </setup>
+     
 
     <statement>
         <ol label="a">
@@ -112,7 +112,7 @@
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $twoout = RadioButtons(
               ["The variables are related by a formula.",
               "The values of the input and output variables must be different.",
@@ -120,7 +120,7 @@
               "There cannot be two input values for a single output value."],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What distinguishes a function from other variable relationships?</p>
         <p><var name="$twoout" form="buttons"/></p>      
@@ -264,7 +264,7 @@
 <exercise><title>Practice 2</title>
 <introduction><p>Decide whether each table describes <m>y</m> as a function of <m>x</m>. Explain your choice.</p></introduction>
 <webwork>
-    <setup>
+     
         <pg-code>
             $YN1 = PopUp(
               ["?","Yes","No"],
@@ -284,7 +284,7 @@
               0, # index of correct answer; could also just be the correct answer
             );
         </pg-code>
-    </setup>
+     
 
     <statement><p>
         <ol label="a">
@@ -352,7 +352,7 @@
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $table = RadioButtons(
               ["The output values are all the same.",
               "The input values are not evely spaced.",
@@ -360,7 +360,7 @@
               "Two different output values have the same input value."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>How would you know if a table of values does not come from a function?</p>
         <p><var name="$table" form="buttons"/></p>      
@@ -398,7 +398,7 @@
 <introduction><p>The graph shows the elevation in feet, <m>a</m>, of the Los Angeles Marathon course at a distance <m>d</m> miles into the race. (Source: <em>Los Angeles Times</em>, March 3, 2005)</p>
     <sidebyside   width="90%"><image source="images/fig-LA-marathon" ><description>LA marathon elevation</description></image></sidebyside></introduction>
 <webwork>
-    <setup>
+     
         <pg-code>
             $input = RadioButtons(
               ["The input variable is \( d \), and the output variable is \( a \).","The input variable is \( a \), and the output variable is \( d \)."],
@@ -438,7 +438,7 @@
             );            
 
         </pg-code>
-    </setup>
+     
 
     <statement>
     <p><ol label="a">
@@ -478,10 +478,10 @@
 
 <exercise><title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Fraction")->variables->add(r=>'Real');
             $V=Formula("4/3 * pi* r**3");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Write an equation that gives the volume, <m>V</m>, of a sphere as a function of its radius, <m>r</m>.</p>
             <p><m>V=</m><var name="$V" width="8"/></p>
@@ -495,7 +495,7 @@
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $threeways = RadioButtons(
               ["By inputs, outputs, or evaluation",
               "By tables, equations, or graphs",
@@ -503,7 +503,7 @@
               "By numbers, letters, or diagrams"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Name three ways to describe a function.</p>
         <p><var name="$threeways" form="buttons"/></p>      
@@ -535,8 +535,8 @@
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Write one question you still have about functions.</p>
         <p><var form="essay"/></p>      
@@ -601,7 +601,7 @@ We see that</p>
         Let <m> F </m> be the name of the function defined by the graph in <xref ref="example-sun-hours" text="type-global"/>, the number of hours of daylight in Peoria <m>t</m> days after January 1.
     </p></introduction>
     <webwork>
-        <setup>
+         
             <pg-code>
             $function = RadioButtons(
               [ "\( F=H(t) \)", "\( H=F(t) \)","\( t=F(H) \)","\( H=t(F) \)"],
@@ -613,7 +613,7 @@ We see that</p>
             );
                 
             </pg-code>
-        </setup>
+         
         <statement><p><ol>
             <li><p>Use function notation to state that <m> H </m> is a function of <m> t </m>.</p>
             <p><var name="$function" form="buttons"/></p></li>
@@ -631,7 +631,7 @@ We see that</p>
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $deffun = RadioButtons(
               ["\(L=w(p)\)",
               "\(w=L(p)\)",
@@ -639,7 +639,7 @@ We see that</p>
               "\(L=p(w)\)"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Use function notation to write the statement "<m>L</m> defines <m>w</m> as a function of <m>p</m>."</p>
         <p><var name="$deffun" form="buttons"/></p>      
@@ -679,13 +679,13 @@ We see that</p>
      <p>Thus, a letter weighing 1 ounce costs $0.47 to mail, a letter weighing 3 ounces costs $0.89, and a letter weighing 6.75 ounces costs $1.73.</p></solution></example>
 
 <exercise><title>Practice 6</title>
-    <webwork><setup>
+    <webwork> 
         <pg-code>
             $r0=146;
             $r1=127;
             $a0=40;
         </pg-code>
-    </setup>
+     
     <statement>
 <p>
     When you exercise, your heart rate should increase until it reaches your target heart rate. The table shows target heart rate, <m> r = f(a) </m>, as a function of age.</p>
@@ -737,7 +737,7 @@ We see that</p>
 
 <exercise><title>QuickCheck 5</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $inout = RadioButtons(
               ["\(f\) is the output and \(n\) is the input",
               "\(a\) is the input and \(f\) is the output",
@@ -745,7 +745,7 @@ We see that</p>
               "\(f(a)\) is the input and \(n\) is the output"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>If <m>n=f(a)</m>, what are the input and output variables?</p>
         <p><var name="$inout" form="buttons"/></p>      
@@ -772,7 +772,7 @@ We see that</p>
     </solution></example>
 
 <exercise xml:id="exercise-function-notation"><title>Practice 7</title>
-    <webwork><setup>
+    <webwork> 
         <pg-code>
             $func = Formula("5-x**3");
             $x[0] = -2;
@@ -787,7 +787,7 @@ We see that</p>
             while ($i &lt; 4);
 
         </pg-code>
-    </setup>
+     
     <statement><p>
     Complete the table displaying ordered pairs for the function <m>f(x) = 5 - x^3</m>. Evaluate the function to find the corresponding <m>f(x)</m>-value for each value of <m>x</m>.</p>
     <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -871,7 +871,7 @@ We see that</p>
 </example>
 
 <exercise><title>Practice 8</title>
-    <webwork><setup>
+    <webwork> 
         <pg-code>
             $meaning = PopUp(
                 ["?","the volume (in cm) of a sphere whose radius is 10 cu. cm","the radius (in cm) of a sphere whose volume is 10 cm","the volume (in sq. cm) of a sphere whose radius is 10 cm","the volume (in cu. cm) of a sphere whose radius is 10 cm"],
@@ -881,7 +881,7 @@ We see that</p>
             $V=Formula("4/3 * pi* r**3");
             $V0 = $V->eval(r=>10);
         </pg-code>
-    </setup>
+     
     <statement>
         <p>The volume of a sphere of radius <m> r </m> centimeters is given by
         <me> V = V(r) = \frac{4}{3}\pi r^3 </me>
@@ -897,8 +897,8 @@ We see that</p>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Do linear equations <m>y=mx+b</m> and quadratic equations <m>y=ax^2+bx+c</m> define functions? Why or why not?</p>
         <p><var form="essay"/></p>      
@@ -925,7 +925,7 @@ We see that</p>
         </ol></p></solution></example>
 
 <exercise><title>Practice 9</title>
-    <webwork><setup>
+    <webwork> 
         <pg-code>
             $V1 = RadioButtons(
                 ["\( V(10)+h=\frac{4}{3}\pi(10^3)+h \) cu. cm", "\( V(10)+h=\frac{4}{3}\pi(10^{3+h}) \) cu. cm", "\( V(10+h)=\frac{4}{3}\pi\cdot 10^3+h \) cu. cm","\( V(10+h)=\frac{4}{3}\pi(10+h)^3 \) cu. cm"],
@@ -940,7 +940,7 @@ We see that</p>
               tolerance => 0.05,
             );
         </pg-code>
-    </setup>
+     
     <statement>
         <p>A spherical balloon has a radius of 10 centimeters.
             <ol label="a">
@@ -994,7 +994,7 @@ To compute <m>f(a) + f(3)</m>, we must first compute <m>f(a)</m> and <m>f(3)</m>
 
 <exercise><title>QuickCheck 6</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $fnot = RadioButtons(
               ["\(f(x)+f(y)\)",
               "\(f(x+y)^2\)",
@@ -1002,7 +1002,7 @@ To compute <m>f(a) + f(3)</m>, we must first compute <m>f(a)</m> and <m>f(3)</m>
               "\((x+y)^2\)"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Define the function <m>f(x)=x^2</m>. Which of these is equal to <m>f(x+y)</m>?</p>
         <p><var name="$fnot" form="buttons"/></p>      
@@ -1013,7 +1013,7 @@ To compute <m>f(a) + f(3)</m>, we must first compute <m>f(a)</m> and <m>f(3)</m>
 </webwork></exercise>
 
 <exercise><title>Practice 10</title>
-    <webwork><setup>
+    <webwork> 
         <pg-code>
             Context()->variables->add(h=>'Real',a=>'Real');
             $func=Formula("x**3 - 1");
@@ -1023,7 +1023,7 @@ To compute <m>f(a) + f(3)</m>, we must first compute <m>f(a)</m> and <m>f(3)</m>
             $f5 = $func->eval(x=>5);
             $func2=Formula("2(x**3 - 1)+3");
         </pg-code>
-    </setup>
+     
     <statement><p>
     Let <m> f(x) = x^3 - 1 </m> and evaluate each expression.
     <ol label="a">
@@ -1044,8 +1044,8 @@ To compute <m>f(a) + f(3)</m>, we must first compute <m>f(a)</m> and <m>f(3)</m>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain why <m>f(a+b)</m> is not the same as <m>f(a)+f(b)</m> for most functions.</p>
         <p><var form="essay"/></p>      

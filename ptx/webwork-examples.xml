@@ -89,7 +89,7 @@ But to get math mode within the <pg-code></pg-code/>, use \(...\) or \[,,,\]
     <introduction><p>THE INTRODUCTION IS OPTIONAL. But it can be useful when you want to show an image that you will not be generating with WeBWorK code, as here:</p>
     <p>Use the vertical line test to determine which of the graphs below represent functions.</p>
     <sidebyside ><image source="images/fig-vertical-line-test3" ><description>vertical line test</description></image></sidebyside></introduction>
-    <webwork><setup><pg-code>
+    <webwork> <pg-code>
             $functions = new_checkbox_multiple_choice();
             $functions -> qa (
             "A question can go here, but PTX ignores this",
@@ -104,7 +104,7 @@ But to get math mode within the <pg-code></pg-code/>, use \(...\) or \[,,,\]
             "(b)$BR",
             "(c)$BR",
             "None of the above");
-            </pg-code></setup>
+            </pg-code> 
         <statement><p>
             <var name="$functions" form="checkboxes"/>
         </p></statement>
@@ -120,7 +120,7 @@ But to get math mode within the <pg-code></pg-code/>, use \(...\) or \[,,,\]
 <exercise>
 <title>Is it a function?</title>
 <webwork>
-    <setup><pg-code>
+     <pg-code>
              $YNgrade = PopUp(
               ["?","Yes","No"],
               2, # index of correct answer; could also just be the correct answer
@@ -140,7 +140,7 @@ But to get math mode within the <pg-code></pg-code/>, use \(...\) or \[,,,\]
               ["The number of calories is proportional to the number of fluid ounces.","Two servings with the same calories will have different fluid ounces.","Two servings with the same flid ounces will have different calories."],
               0, # index of correct answer; could also just be the correct answer
             );
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <ol label="a">
         <li><p>As part of a project to improve the success rate of freshmen, the counseling department studied the grades earned by a group of students in English and algebra. Do you think that a student's grade in algebra is a function of his or her grade in English? <var name="$YNgrade" form="popup"/></p>
@@ -162,7 +162,7 @@ But to get math mode within the <pg-code></pg-code/>, use \(...\) or \[,,,\]
 
 <exercise>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $functions = new_checkbox_multiple_choice();
             $functions -> qa (
             "A question can go here, but PTX ignores this",
@@ -179,7 +179,7 @@ But to get math mode within the <pg-code></pg-code/>, use \(...\) or \[,,,\]
             "One in each quadrant $BR",
             "It depends on the equation $BR"
             );
-        </pg-code></setup>
+        </pg-code> 
         <statement><p>How many points do you need to graph a linear equation?</p>
             <p><var name="$functions" form="checkboxes"/>
         </p></statement>
@@ -195,7 +195,7 @@ But to get math mode within the <pg-code></pg-code/>, use \(...\) or \[,,,\]
 <exercise>
 <title>CQ</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $Points = RadioButtons(
               ["Two",
               "Three",
@@ -203,7 +203,7 @@ But to get math mode within the <pg-code></pg-code/>, use \(...\) or \[,,,\]
               "It depends on the equation"],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>How many points do you need to graph a linear equation?</p>
         <p><var name="$Points" form="buttons"/></p>      

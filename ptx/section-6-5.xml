@@ -26,7 +26,7 @@ and read "<m>t</m> greater than <m>4.25</m> but less than <m>11.75</m>."</p></no
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $nosol = RadioButtons(
               ["\((-1,1)\)",
               "\((-\infty,-1) \cup (1,\infty)\)",
@@ -34,7 +34,7 @@ and read "<m>t</m> greater than <m>4.25</m> but less than <m>11.75</m>."</p></no
               "No solution"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What are the solutions of the inequality <m>x^2+1 \lt 0</m> ?</p>
         <p><var name="$nosol" form="buttons"/></p>      
@@ -58,10 +58,10 @@ on the same screen. Use <c>WINDOW</c> settings to match the graph in <xref ref="
 <exercise>
 	<title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Inequalities");
             $answer= Compute(" x &lt;= -3 or x >= 5");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Graph the function <m>y = x^2 - 2x - 9</m> in the window
@@ -135,12 +135,12 @@ This set is another type of compound inequality, and its graph consists of two p
 <exercise>
 	<title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Inequalities")->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
             $answer= Compute(" -sqrt(6) &lt; x &lt; sqrt(6)");
             $answer2= Compute(" x &lt;= -sqrt(6) or x >= sqrt(6)");
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Use a graph of <m>y = 6 - x^2</m> to solve the inequalities.<ol label="a">
                 <li><p><m>6 - x^2 \gt 0</m></p>
@@ -161,7 +161,7 @@ This set is another type of compound inequality, and its graph consists of two p
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $inpts = RadioButtons(
               ["The \(x\)-intercepts",
               "The \(y\)-intercept",
@@ -169,7 +169,7 @@ This set is another type of compound inequality, and its graph consists of two p
               "All of these"],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which points on the parabola <m>y=ax^2+bx+c</m> do we need to know to solve the inequality <m>ax^2+bx+c \gt 0</m> ?</p>
         <p><var name="$inpts" form="buttons"/></p>      
@@ -191,7 +191,7 @@ This set is another type of compound inequality, and its graph consists of two p
 <exercise>
 	<title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Interval");
             Context()->{error}{msg}{"Unexpected character '&lt;'"}
               = "Your answer should not contain inequality symbols. Give your answer in interval notation.";
@@ -209,7 +209,7 @@ This set is another type of compound inequality, and its graph consists of two p
              showEndTypeHints => 1,
              partialCredit => 1,
             ); 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Follow the steps below to solve the inequality <m>36 + 6x - x^2\le 20</m>.</p>
             <p><ol label="a">
@@ -232,14 +232,14 @@ This set is another type of compound inequality, and its graph consists of two p
         </solution>
     </webwork>
     <conclusion>
-        <sidebyside width="25%" margins="0% 75%"><image source="images/fig-in-ex-ans-6-5-3" ><description>parabola for quadrtic inequality</description></image></sidebyside>
+        <sidebyside width="25%" margins="0% 75%"><image source="images/fig-in-ex-ans-6-5-3" ><description>parabola for quadratic inequality</description></image></sidebyside>
     </conclusion>
 </exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain why you cannot write the solutions to <m>x^2-4 \gt 0</m> as a single inequality.</p>
         <p><var form="essay"/></p>      
@@ -293,7 +293,7 @@ All we really need to know is whether the corresponding parabola <m>y = ax^2 + b
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $inout = RadioButtons(
               ["To decide whether to use \(\gt\) or \(\lt\) in the solution.",
               "To decide whether the solutions lie between the \(x\)-intercepts or outside them.",
@@ -301,7 +301,7 @@ All we really need to know is whether the corresponding parabola <m>y = ax^2 + b
               "To help us find the \(x\)-intercepts."],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Why do we need to know whether tha parabola in QuickCheck 2 opens up or down?</p>
         <p><var name="$inout" form="buttons"/></p>      
@@ -316,10 +316,10 @@ All we really need to know is whether the corresponding parabola <m>y = ax^2 + b
 <exercise>
 	<title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
            Context("Inequalities")->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
             $answer= Compute(" -sqrt(20) &lt; x &lt; sqrt(20)");
-       </pg-code></setup>
+       </pg-code> 
         <statement>
             <p>Solve <m>x^2 \lt 20</m>.</p>
             <p>Answer: <var name="$answer" width="20"/> </p>
@@ -408,7 +408,7 @@ How many parkas should the company produce and sell each month if it must keep t
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $sqbr = RadioButtons(
               ["The point with \(x\)-coordinate 3 and \(y\)-coordinate 3.",
               "\(x=3\) or \(x=-3\)",
@@ -416,7 +416,7 @@ How many parkas should the company produce and sell each month if it must keep t
               "All real numbers between \(-3\) and \(3\), including the endpoints."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What does the notation <m>[-3,3]</m> mean?</p>
         <p><var name="$sqbr" form="buttons"/></p>      
@@ -429,11 +429,11 @@ How many parkas should the company produce and sell each month if it must keep t
 <exercise>
 	<title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
            Context("Inequalities")->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
             $answer= Compute(" (-inf,4-sqrt(10)]U [4+sqrt(10),inf)");
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve the inequality <m>10 - 8x + x^2\gt 4</m>.</p>
             <p>Answer: <var name="$answer" width="30"/> </p>
@@ -455,8 +455,8 @@ How many parkas should the company produce and sell each month if it must keep t
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain how to use a graph to solve <m>x^2+4x-77 \le 0</m>.</p>
         <p><var form="essay"/></p>      

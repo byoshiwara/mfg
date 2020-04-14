@@ -18,7 +18,7 @@
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $axsym = RadioButtons(
               ["The \(x\)-intercept",
               "The \(y\)-intercept",
@@ -26,7 +26,7 @@
               "The origin"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which point on a parabola always lies on the axis of symmetry?</p>
         <p><var name="$axsym" form="buttons"/></p>      
@@ -73,7 +73,7 @@
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $axsym = RadioButtons(
               ["The \(y\)-intercept",
               "The number of \(x\)-intercepts",
@@ -81,7 +81,7 @@
               "The width of the parabola"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What does the value of <m>a</m> tell us about the graph of <m>y=ax^2+bx+c</m> ?</p>
         <p><var name="$axsym" form="buttons"/></p>      
@@ -99,7 +99,7 @@
         </sidebyside>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $Popa = PopUp(
             ["?","I","II", "III", "IV"],
             3, 
@@ -117,7 +117,7 @@
             4, 
             );
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Match each parabola in the figure above with its equation. The basic parabola is shown in black.</p>
             <p><ol label="a">
@@ -160,7 +160,7 @@
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $nox = RadioButtons(
               ["\(y=x^2\)",
               "\(y=x^2+4\)",
@@ -168,7 +168,7 @@
               "\(y=x^2+x\)"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which of these is the equation of a parabola that has no <m>x</m>-intercepts?</p>
         <p><var name="$nox" form="buttons"/></p>      
@@ -184,7 +184,7 @@
         <sidebyside width="25%"><image source="images/fig-vertically-shifted-parabola" ><description>vertically shifted parabola</description></image></sidebyside>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $f = Formula("x^2-5");
             Context("Point")->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
             $x1 = Formula("(sqrt(5),0)");
@@ -203,10 +203,10 @@
              partialCredit => 1,
             ); 
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
-                <li><p>Find an equation for the parabola shown below.</p>
+                <li><p>Find an equation for the parabola shown above.</p>
                 <p><m>y=</m><var name="$f" width="8"/> </p></li>
                 <li><p>Give the <m>x</m>- and <m>y</m>-intercepts of the graph.</p>
                 <p><m>x</m>-intercepts: <var name="$xintercepts" width="18" evaluator="$my_evaluator"/> Note: Use a comma to separate different points.</p>
@@ -224,8 +224,8 @@
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Describe what the parameters <m>a</m> and <m>c</m> tell you about the graph of <m>y=ax^2+c</m>.</p>
         <p><var form="essay"/></p>      
@@ -259,7 +259,7 @@ Thus, the vertex is the point <m>(-2,-8)</m>.</p>
 <exercise>
 	<title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Point")->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
             $xintercepts=List("(0,0),(6,0)");
             $my_evaluator = $xintercepts -> cmp(
@@ -269,7 +269,7 @@ Thus, the vertex is the point <m>(-2,-8)</m>.</p>
             ); 
             $v = Point("(3,9)");
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
             <li><p>Find the <m>x</m>-intercepts and the vertex of the parabola <m>y = 6x - x^2</m>.</p>
@@ -340,8 +340,8 @@ This gives us a formula for the <m>x</m>-coordinate of the vertex.</p>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain why the <m>x</m>-coordinate of the vertex is the average of the <m>x</m>-intercepts of the graph.</p>
         <p><var form="essay"/></p>      
@@ -382,7 +382,7 @@ You can see that the <m>y</m>-intercept, <m>6</m>, is just the constant term of 
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $nox = RadioButtons(
               ["\(a\)",
               "\(b\)",
@@ -390,7 +390,7 @@ You can see that the <m>y</m>-intercept, <m>6</m>, is just the constant term of 
               "None of these"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>The <m>y</m>-intercept of <m>y=ax^2+bx+c</m> is the same as the value of which parameter?</p>
         <p><var name="$nox" form="buttons"/></p>      
@@ -416,13 +416,13 @@ So the coordinates of the vertex are <m>\left(\dfrac{1}{4},\dfrac{9}{8}\right)</
 <exercise>
 	<title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Point");
             $answer= Point("(1,1)");
             $maxmin = PopUp(
             ["?","maximum","minimum"],
             2, );
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Find the vertex of the graph of <m>f(x) = 3x^2 - 6x + 4</m>.</p>
             <p><var name="$answer" width="5"/> </p>
@@ -490,7 +490,7 @@ The only difference between the two solutions is the sign between the terms. For
 <exercise xml:id="exercise-discriminant">
 	<title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $counta = PopUp(
             ["?","None","1", "2", "Other"],
             "None", );
@@ -498,7 +498,7 @@ The only difference between the two solutions is the sign between the terms. For
             ["?","None","1", "2", "Other"],
             "1", );
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Use the discriminant to discover how many <m>x</m>-intercepts the graph of each function has.</p>
             <p><ol label="a" cols="2">
@@ -513,8 +513,8 @@ The only difference between the two solutions is the sign between the terms. For
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain what the discriminant tells us about a quadratic equation.</p>
         <p><var form="essay"/></p>      
@@ -554,7 +554,7 @@ The only difference between the two solutions is the sign between the terms. For
 <exercise>
 	<title>Practice 6</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Point")->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
             $intercepts=List("(0,4),(1,0), (4,0)");
             $my_evaluator = $intercepts -> cmp(
@@ -564,7 +564,7 @@ The only difference between the two solutions is the sign between the terms. For
             ); 
             $v = Formula("(5/2,-9/4)");
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Find the intercepts and the vertex of the graph of <m>f(x) = x^2 - 5x + 4</m>.</p>
@@ -589,8 +589,8 @@ The only difference between the two solutions is the sign between the terms. For
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Which points on a parabola should you find to help you sketch its graph? Describe how to find each of these points.</p>
         <p><var form="essay"/></p>      

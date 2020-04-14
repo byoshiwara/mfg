@@ -28,7 +28,7 @@
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $tabexp = RadioButtons(
               ["During each equal time interval, the output increases by the same amount.",
               "During each equal time interval, the output increases by the same factor.",
@@ -36,7 +36,7 @@
               "During each equal time interval, the output increases towards an asymptote."],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>How can you tell from a table of values that a function describes exponential growth?</p>
         <p><var name="$tabexp" form="buttons"/></p>      
@@ -70,7 +70,7 @@
 <exercise>
     <title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(t=>"Real");
             $P = Formula("24*3**t");
             $t0 = 6;
@@ -78,7 +78,7 @@
             $t1 = 3/4;
             $P1 = $P->eval(t=>$t1);
             $P1 = round($P1);
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>A population of 24 fruit flies triples every month. 
             <ol label="a">
@@ -100,7 +100,7 @@
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $orop = RadioButtons(
               ["Yes, we can simplify the product.",
               "Yes, it is exponential growth.",
@@ -108,7 +108,7 @@
               "No, it should be \(9^t\)."],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Is <m>5 \cdot 4^t</m> equivalent to <m>20^t</m>?</p>
         <p><var name="$orop" form="buttons"/></p>      
@@ -134,7 +134,7 @@ The initial value of the function is <m>P_0 = 60</m>, and the growth factor is <
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $gf = RadioButtons(
               ["\(\frac{3}{4}\)",
               "\(\sqrt[3]{4}\)",
@@ -142,7 +142,7 @@ The initial value of the function is <m>P_0 = 60</m>, and the growth factor is <
               "\(3^{\frac{1}{4}}\)"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>A population triples every four years. What is its growth factor?</p>
         <p><var name="$gf" form="buttons"/></p>      
@@ -165,7 +165,7 @@ so the growth factor for species A is <m>\alert{2^{1/2}}</m>, or approximately <
 <exercise>
     <title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context(Fraction)->variables->add(t=>"Real");
             $a = Compute("2**(1/5)");
             $t1 = 1;
@@ -173,7 +173,7 @@ so the growth factor for species A is <m>\alert{2^{1/2}}</m>, or approximately <
             $f = Formula("5078*2**(t/5)");
             $n1 = $f->eval(t=>$t1);
             $n2 = $f->eval(t=>$t2);
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>In 1999, analysts expected the number of Internet service providers to double in five years.
             <ol label="a">
@@ -282,7 +282,7 @@ where
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $gfp = RadioButtons(
               ["4.5",
               "0.45",
@@ -290,7 +290,7 @@ where
               "1.045"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>A population grows by 4.5% per year. What is its annual growth factor?</p>
         <p><var name="$gfp" form="buttons"/></p>      
@@ -361,7 +361,7 @@ Thus, the annual growth factor for the price of butter is <m>1.2544</m>, and the
 <exercise>
     <title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(t=>"Real");
 #            $year0 = Compute("1998"); #not a multiple of 5
 #            $c0 = Compute("10069");
@@ -414,7 +414,7 @@ Thus, the annual growth factor for the price of butter is <m>1.2544</m>, and the
             "$f for t in &lt;0, $xmax> using color:red and weight:2");
             ($gr->fn)[0]->steps(200);
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>In <var name="$year0"/>, the average annual cost of attending a public college was $<var name="$c0"/>, and costs were climbing by <var name="$r"/>% per year.</p>
             <p><ol label="a">
@@ -494,8 +494,8 @@ Thus, the annual growth factor for the price of butter is <m>1.2544</m>, and the
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Describe carefully the meanings of <m>b</m> and <m>r</m> in the formulas for exponential growth.</p>
         <p><var form="essay"/></p>      
@@ -629,7 +629,7 @@ Thus, the annual growth factor for the price of butter is <m>1.2544</m>, and the
 
 <exercise><title>QuickCheck 5</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $dfp = RadioButtons(
               ["-0.12",
               "-1.12",
@@ -637,7 +637,7 @@ Thus, the annual growth factor for the price of butter is <m>1.2544</m>, and the
               "1.88"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>A population decreases by 12% per year. What is its annual decay factor?</p>
         <p><var name="$dfp" form="buttons"/></p>      
@@ -670,7 +670,7 @@ Thus, the annual growth factor for the price of butter is <m>1.2544</m>, and the
 <exercise>
     <title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(t=>"Real");
             $year0 = Compute("2012");
             $b = Compute("0.82");
@@ -685,7 +685,7 @@ Thus, the annual growth factor for the price of butter is <m>1.2544</m>, and the
             );
             $br[$i]= round($b[$i]);
             };        
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>The number of butterflies visiting a nature station is declining by 18% per year. In <var name="$year0"/>, <var name="$b0"/> butterflies visited the nature station.</p>
             <p><ol label="a">
@@ -767,7 +767,7 @@ models exponential growth and decay.</p>
 
 <exercise><title>QuickCheck 6</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $dfn = RadioButtons(
               ["\(P_0\) is negative",
               "\(b\) is negative",
@@ -775,7 +775,7 @@ models exponential growth and decay.</p>
               "\(0 \lt P_0 \lt 1\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>The function <m>P(t)=P_0 b^t</m> is decreasing if</p>
         <p><var name="$dfn" form="buttons"/></p>      
@@ -843,7 +843,7 @@ whose graphs are shown below.</p>
 
 <exercise><title>QuickCheck 7</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $cu = RadioButtons(
               ["increasing",
               "concave up",
@@ -851,7 +851,7 @@ whose graphs are shown below.</p>
               "concave down"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>The graph of <m>P(t)=P_0 b^t</m>, where <m>P_0 \gt 0</m> and <m>b \gt 0</m>, is always</p>
         <p><var name="$cu" form="buttons"/></p>      
@@ -919,7 +919,7 @@ whose graphs are shown below.</p>
 <exercise>
     <title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $p0 = 20000;
             $p1 = 17000;
             $delta = $p1 - $p0;
@@ -933,7 +933,7 @@ whose graphs are shown below.</p>
               tolerance => 1,
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>A new car begins to depreciate in value as soon as you drive it off the lot. Some models depreciate linearly, and others depreciate exponentially. Suppose you buy a new car for $20,000, and <m>1</m> year later its value has decreased to $17,000.</p>
             <p><ol label="a">
@@ -957,8 +957,8 @@ whose graphs are shown below.</p>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain the difference between constant slope and constant growth factor.</p>
         <p><var form="essay"/></p>      

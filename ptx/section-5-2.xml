@@ -27,7 +27,7 @@ We have shown that the two functions <m>f(x) = x^3</m> and <m>g(x) = \sqrt[3]{x}
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $domlog = RadioButtons(
               ["all real numbers.",
               "all multiples of 3.",
@@ -35,7 +35,7 @@ We have shown that the two functions <m>f(x) = x^3</m> and <m>g(x) = \sqrt[3]{x}
               "all positive numbers."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>The domain of the function <m>g(x)=\log_3 x</m> is</p>
         <p><var name="$domlog" form="buttons"/></p>      
@@ -74,11 +74,11 @@ A similar equation holds for any value of <m>x</m> and for any base <m>b \gt 0</
 <exercise>
     <title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->functions->disable("All");
             $a = Compute("6");
             $b = Formula("x+1");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Simplify each expression.<ol label="a">
                 <li><p><m>\log_{10}{10^6}=</m><var name="$a" width="2"/> </p></li>
@@ -117,12 +117,12 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 <exercise>
     <title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->functions->disable("All");
             
             $a = Compute("64");
             $b = Formula("x**2+1");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Simplify each expression.<ol label="a">
                     <li><p><m>4^{\log_4 {64}}=</m><var name="$a" width="2"/> </p></li>
@@ -194,7 +194,7 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $intlog = RadioButtons(
               ["\((0,1)\)",
               "\((1,0)\)",
@@ -202,7 +202,7 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
               "There is none."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What is the <m>y</m>-intercept of the graph of <m>y=\log_5 x</m> ?</p>
         <p><var name="$intlog" form="buttons"/></p>      
@@ -262,14 +262,14 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 <exercise>
     <title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Fraction");
             $a = Compute("-1");
             $b = Compute("0");
             $c = Compute("1/2");
             $d = Compute("1");
             $e = Compute("2");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Make a table of values and graph the function <m>h(x) = \log_4 x</m>.</p>
             <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -324,8 +324,8 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Why does the function <m>f(x)=\log x</m> grow so slowly?</p>
         <p><var form="essay"/></p>      
@@ -360,12 +360,12 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 <exercise>
     <title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context(Inequalities);
             $fi = Formula("10**(x/2)-1");
             $domf = Compute("(-1,inf)");
             $ranf = Compute("(-inf,inf)");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Find the inverse function for <m>f(x) = 2 \log(x + 1)</m>.</p>
@@ -396,8 +396,8 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Compare the graphs of <m>f(x)=\log \dfrac{1}{x}</m> and <m>g(x)=-\log x</m>, and explain.</p>
         <p><var form="essay"/></p>      
@@ -423,7 +423,7 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $lognev = RadioButtons(
               ["The log of a number is never negative.",
               "We cannot take the log of a negative number.",
@@ -431,7 +431,7 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
               "The log of 0 is 1."],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which statement is true?</p>
         <p><var name="$lognev" form="buttons"/></p>      
@@ -444,7 +444,7 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 <exercise>
     <title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->flags->set(useBaseTenLog=>1);
             Context()->variables->add(t=>"Real", Df=>"Real", D0=>"Real");
             $f = Formula("log(2)*t/(3log(Df/D0))");
@@ -456,7 +456,7 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
               tolerance => .51,
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>The formula <m>T = \dfrac{\log 2 \cdot t_i}{3 \log(D_f /D_0)}</m> is used by X-ray technicians to calculate the doubling time of a malignant tumor. <m>D_0</m> is the diameter of the tumor when first detected, <m>D_f</m> is its diameter at the next reading, and <m>t_i</m> is the time interval between readings, in days. Calculate the doubling time of the following tumor: its diameter when first detected was 1 cm, and 7 days later its diameter was 1.05 cm.</p>
             <p><var name="$answer" width="2"/> days </p>
@@ -496,10 +496,10 @@ Thus, we can rewrite a logarithmic equation in exponential form.</p>
 <exercise>
     <title>Practice 6</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $b = Compute("4");
             $x = Compute("41");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve for the unknown value in each equation.<ol label="a">
                 <li><p><m>\log_b 2 = \dfrac{1}{2}</m></p>
@@ -536,9 +536,9 @@ Thus, we can rewrite a logarithmic equation in exponential form.</p>
 <exercise>
     <title>Practice 7</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $a = Compute("10**(5.25)");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Imagine the graph of <m>f(x) = \log_{10}{x}</m>. How far must you travel along the <m>x</m>-axis until the <m>y</m>-coordinate reaches a height of 5.25?</p>
             <p>Answer: Until <m>x=</m><var name="$a" width="15"/> </p>
@@ -574,7 +574,7 @@ from which
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $logeq = RadioButtons(
               ["\(\log (2x-1)=2\)",
               "\(\log x = 2 - \log (x-1)\)",
@@ -582,7 +582,7 @@ from which
               "\(x+x-1=2^x\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which of these is the first step in solving the equation <m>\log x + \log (x-1)=2</m> ?</p>
         <p><var name="$logeq" form="buttons"/></p>      
@@ -595,9 +595,9 @@ from which
 <exercise>
     <title>Practice 8</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $a = Compute("4");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve <m>\log_2 x + \log_{2}{(x - 2)} = 3</m>.</p>
             <p><m>x=</m><var name="$a" width="2"/>  [Separate multiple solutions with commas when appropriate.]</p>
@@ -616,8 +616,8 @@ from which
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>What is an extraneous solution?</p>
         <p><var form="essay"/></p>      

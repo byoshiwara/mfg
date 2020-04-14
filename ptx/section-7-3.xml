@@ -23,7 +23,7 @@ Because <m>\sqrt{-4}</m> is not a real number, the equation <m>x^2 - 2x + 2 = 0<
 <exercise>
 	<title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Complex");
             $z = Compute("(6+sqrt(-16))/2, (6-sqrt(-16))/2");
             $my_evaluator = $z -> cmp(
@@ -31,7 +31,7 @@ Because <m>\sqrt{-4}</m> is not a real number, the equation <m>x^2 - 2x + 2 = 0<
              showLengthHints => 1,
              partialCredit => 1,
             ); 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve the equation <m>x^2 - 6x + 13 = 0</m> by using the quadratic formula.</p>
             <p><m>x=</m><var name="$z" width="26" evaluator="$my_evaluator"/> </p>
@@ -60,7 +60,7 @@ Because <m>\sqrt{-4}</m> is not a real number, the equation <m>x^2 - 2x + 2 = 0<
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $imun = RadioButtons(
               ["\(-1\)",
               "\((-1)^2\)",
@@ -68,7 +68,7 @@ Because <m>\sqrt{-4}</m> is not a real number, the equation <m>x^2 - 2x + 2 = 0<
               "\(\sqrt{-1}\)"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What is the imaginary unit?</p>
         <p><var name="$imun" form="buttons"/></p>      
@@ -111,7 +111,7 @@ or <m>\sqrt{-4}=2i</m>. Any number that is the product of <m>i</m> and a real nu
 <exercise>
 	<title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Complex")->functions->disable("sqrt");
             Context()->functions->enable("sqrt");
             Context()->{error}{msg}{"Can't take sqrt of -18"}
@@ -122,7 +122,7 @@ or <m>\sqrt{-4}=2i</m>. Any number that is the product of <m>i</m> and a real nu
             $a = Compute("3i*sqrt(2)");
             $b = Compute("-6i*sqrt(5)");
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Write each radical as an imaginary number. Enter "sqrt(2)" for <m>\sqrt{2}</m>.</p>
             <p><ol label="a" cols="2">
@@ -171,7 +171,7 @@ In a complex number <m>a+bi</m>, <m>a</m> is called the <term>real part</term><i
 <exercise>
 	<title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Complex")->functions->disable("sqrt");
             Context()->functions->enable("sqrt");
             Context()->{error}{msg}{"Can't take sqrt of -9"}
@@ -184,7 +184,7 @@ In a complex number <m>a+bi</m>, <m>a</m> is called the <term>real part</term><i
              partialCredit => 1,
             ); 
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Use extraction of roots to solve <m>(2x + 1)^2 + 9 = 0</m>. Write your answers as complex numbers.</p>
             <p><m>x=</m><var name="$z" width="15" evaluator="$my_evaluator"/> </p>
@@ -203,7 +203,7 @@ In a complex number <m>a+bi</m>, <m>a</m> is called the <term>real part</term><i
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $cono = RadioButtons(
               ["A complex number has a real part and an imaginary part.",
               "We can perform all four arithmetic operations on complex numbers.",
@@ -211,7 +211,7 @@ In a complex number <m>a+bi</m>, <m>a</m> is called the <term>real part</term><i
               "Complex numbers cannot be combined with real numbers."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which statement about complex numbers is false?</p>
         <p><var name="$cono" form="buttons"/></p>      
@@ -241,10 +241,10 @@ In a complex number <m>a+bi</m>, <m>a</m> is called the <term>real part</term><i
 <exercise>
 	<title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("LimitedComplex-cartesian-strict");
             $a = Compute("4i");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Subtract: <m>(-3 + 2i ) - (-3 - 2i )=</m><var name="$a" width="4"/> </p>
         </statement>
@@ -280,11 +280,11 @@ Finally, we combine the real parts and imaginary parts to obtain
 <exercise>
 	<title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("LimitedComplex-cartesian-strict");
             $a = Compute("13");
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Multiply <m>(-3 + 2i )(-3 - 2i )=</m><var name="$a" width="4"/> </p>
         </statement>
@@ -309,8 +309,8 @@ We can avoid possible errors by writing square roots of negative numbers as imag
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>How is multiplying complex numbers similar to multiplying binomials?</p>
         <p><var form="essay"/></p>      
@@ -345,11 +345,11 @@ The quotient is <m>-3 - 2i</m>.</p></solution></example>
 <exercise>
 	<title>Practice 6</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Complex")->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
             $a = Formula("3-8/3*i");
             Context("LimitedComplex-cartesian-strict");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Divide <m>\displaystyle{\frac{8+9i}{3i}}=</m><var name="$a" width="6"/></p>
         </statement>
@@ -365,7 +365,7 @@ We use this fact to find the quotient of complex numbers. If the divisor has bot
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $conj = RadioButtons(
               ["\(a-bi\)",
               "\(a^2+b^2\)",
@@ -373,7 +373,7 @@ We use this fact to find the quotient of complex numbers. If the divisor has bot
               "\(ai+b\)"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What is the product of <m>z=a+bi</m> with its complex conjugate?</p>
         <p><var name="$conj" form="buttons"/></p>      
@@ -398,11 +398,11 @@ We use this fact to find the quotient of complex numbers. If the divisor has bot
 <exercise>
 	<title>Practice 7</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("LimitedComplex-cartesian-strict");
             $a = Compute("1-3i");
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Write the quotient <m>\displaystyle{\frac{4 - 2i}{1 + i}}</m> in the form <m>a + bi</m>.</p>
             <p>Answer: <var name="$a" width="6"/></p>
@@ -415,8 +415,8 @@ We use this fact to find the quotient of complex numbers. If the divisor has bot
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain how to divide one complex number by another.</p>
         <p><var form="essay"/></p>      
@@ -441,10 +441,10 @@ Thus, <m>f(1 + i ) = 0</m>, so <m>1 + i</m> is a solution of <m>x^2 - 2x + 2 = 0
 <exercise>
 	<title>Practice 8</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Complex");
             $a = Compute("0");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>If <m>f(x) = x^2 - 6x + 13</m>, evaluate <m>f(3 + 2i )=</m><var name="$a" width="4"/> </p>
         </statement>
@@ -488,12 +488,12 @@ Thus, if we know that <m>z</m> is a complex solution of a quadratic equation, we
 <exercise>
 	<title>Practice 9</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $a = Compute("25");
             $f = Formula("x^2+6x+25");
 
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
             <li><p>Let <m>z = -3 + 4i</m>. Compute <m>z\overline{z}=</m><var name="$a" width="3"/> </p></li>
@@ -532,7 +532,7 @@ so <m>x^4+4=(-4)+4=0</m>.</p>
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $conj = RadioButtons(
               ["\(5+3i\)",
               "\(9+25\)",
@@ -540,7 +540,7 @@ so <m>x^4+4=(-4)+4=0</m>.</p>
               "\(5-3i\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>If <m>z=3+5i</m> is a solution to a polynomial equation, then so is:</p>
         <p><var name="$conj" form="buttons"/></p>      
@@ -566,7 +566,7 @@ Finally, we multiply these two partial products to find the polynomial we seek,
 <exercise>
 	<title>Practice 10</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Complex")->variables->add(x=>"Real");
             $z = Compute("1, -1, 4i, -4i");
             $my_evaluator = $z -> cmp(
@@ -624,7 +624,7 @@ $multians = MultiAnswer($fac1,$fac2,$fac3,$fac4)->with(
   }
 
 );
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
             <li><p>Find the zeros of the polynomial <m>f(x) = x^4 + 15x^2 - 16</m>.</p>
@@ -645,8 +645,8 @@ $multians = MultiAnswer($fac1,$fac2,$fac3,$fac4)->with(
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>What can you say about the graph of a quadratic function whose zeros are complex numbers?</p>
         <p><var form="essay"/></p>      
@@ -676,7 +676,7 @@ $multians = MultiAnswer($fac1,$fac2,$fac3,$fac4)->with(
 <exercise>
 	<title>Practice 11</title>
     <webwork>
-        <setup><pg-code></pg-code></setup>
+         <pg-code></pg-code> 
         <statement>
             <p>Plot the following numbers as points on the complex plane.
         <ul cols="2">

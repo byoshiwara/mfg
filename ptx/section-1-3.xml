@@ -31,7 +31,7 @@ values of the two variables. </p>
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $gpt = RadioButtons(
               ["\(8+17=g\)",
               "\(g+8=17\)",
@@ -39,7 +39,7 @@ values of the two variables. </p>
               "\(8=\dfrac{17}{g}\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Write an equation that says that the point <m>(8,17)</m> lies on the graph of <m>g</m>.</p>
         <p><var name="$gpt" form="buttons"/></p>      
@@ -55,7 +55,7 @@ values of the two variables. </p>
        <sidebyside width="70%"><image source="images/fig-Lake-Huron" ><description>graph of Lake Huron water level</description></image></sidebyside>
     </introduction>
     <webwork>
-        <setup>
+         
             <pg-code>
                 $coord = RadioButtons(
                     ["\(L(1997) = 176.98\); the average water level was 176.98 meters in 1997.", "\(L(176.98) = 176.98\); the average water level was 176.98 meters in 1997."],
@@ -66,7 +66,7 @@ values of the two variables. </p>
                   1, # index of correct answer; could also just be the correct answer
                 );
             </pg-code>
-        </setup>
+         
         <statement>
           <p>
             <ol label="a">
@@ -113,7 +113,7 @@ values of the two variables. </p>
         <p>Refer to the graph of the function <m>g</m> shown in <xref ref="example-function-graph" text="type-global"/>.</p><sidebyside width="35%"><image source="images/fig-function"><description>graph of a function</description></image></sidebyside>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $yint = 3;
             $zeros = List("-2,2,4");
             $my_evaluator = $zeros -> cmp(
@@ -138,7 +138,7 @@ values of the two variables. </p>
             "from \( 2 \) to \( 4 \)$BR",
             "from \( 1 \) to \( 3 \)$BR",
             "None of the above");
-        </pg-code></setup>
+        </pg-code> 
         <statement><p>
             <ol label="a">
                 <li><p><m> g(0)= </m><var name="$yint" width="3"/> </p></li>
@@ -165,7 +165,7 @@ values of the two variables. </p>
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $fofx = RadioButtons(
               ["It is not possible for the function \(y=f(x)\) to take on the same \(y\)-value at two different \(x\)-values.",
               "The maximum value of \(y=f(x)\) may occur at two different \(x\)-values.",
@@ -173,7 +173,7 @@ values of the two variables. </p>
               "\(f(x)=0\) at the \(y\)-intercept of \(f(x)\)."],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which of the following is true?</p>
         <p><var name="$fofx" form="buttons"/></p>      
@@ -237,7 +237,7 @@ values of the two variables. </p>
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $fof3 = RadioButtons(
               ["Find 3 on the \(x\)-axis, move vertically to the point, then horizontally to the \(y\)-axis.",
               "Find 3 on the \(y\)-axis, move horizontally to the point, then vertically to the \(x\)-axis.",
@@ -245,7 +245,7 @@ values of the two variables. </p>
               "Substitue 3 for \(y\) into the formula for the function."],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>How do we find the value of <m>f(3)</m> from a graph of <m>f</m>?</p>
         <p><var name="$fof3" form="buttons"/></p>      
@@ -263,7 +263,7 @@ and press <c>ZOOM</c> <m>6</m> for the standard window.  The graph is shown belo
 
 <exercise><title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Fraction")->variables->add(r=>'Real');
             $func = Formula("x**3-2");
             $a0 = $func->eval(x=>-2);
@@ -275,7 +275,7 @@ and press <c>ZOOM</c> <m>6</m> for the standard window.  The graph is shown belo
             $a4 = Fraction($a4);
             $a5 = $func->eval(x=>1);
             $a6 = $func->eval(x=>2);
-        </pg-code></setup>
+        </pg-code> 
         <statement><p>Let <m>f(x) = <var name="$func"/></m></p>
         <p>Complete the table of values and sketch a graph of the function.</p> <sidebyside>
                 <tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
@@ -325,8 +325,8 @@ and press <c>ZOOM</c> <m>6</m> for the standard window.  The graph is shown belo
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>How is graphing a function different from graphing an equation?</p>
         <p><var form="essay"/></p>      
@@ -360,7 +360,7 @@ at most one point.</p></assemblage>
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $ver = RadioButtons(
               ["If the graph is a vertical line.",
               "If the graph is increasing.",
@@ -368,7 +368,7 @@ at most one point.</p></assemblage>
               "If the graph is a function."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What does the vertical line test tell us?</p>
         <p><var name="$ver" form="buttons"/></p>      
@@ -382,7 +382,7 @@ at most one point.</p></assemblage>
     <introduction><p>Use the vertical line test to determine which of the graphs below represent functions.</p>
     <sidebyside ><image source="images/fig-vertical-line-test3" ><description>vertical line test</description></image></sidebyside></introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $functions = new_checkbox_multiple_choice();
             $functions -> qa (
             "A question can go here, but PTX ignores this",
@@ -397,7 +397,7 @@ at most one point.</p></assemblage>
             "(b)$BR",
             "(c)$BR",
             "None of the above");
-        </pg-code></setup>
+        </pg-code> 
         <statement><p>
             <var name="$functions" form="checkboxes"/>
         </p></statement>
@@ -435,7 +435,7 @@ at most one point.</p></assemblage>
 
 <exercise><title>QuickCheck 5</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $fof8 = RadioButtons(
               ["\((8,2)\)",
               "\((2,8)\)",
@@ -443,7 +443,7 @@ at most one point.</p></assemblage>
               "All points between 2 and 8."],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>If <m>f(8)=2</m>, what point lies on the graph of <m>f</m>?</p>
         <p><var name="$fof8" form="buttons"/></p>      
@@ -465,9 +465,9 @@ at most one point.</p></assemblage>
         <sidebyside width="30%"><image source="images/fig-graph-to-solve2"><description>function graph</description></image></sidebyside>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $answer=-2.5;
-        </pg-code></setup>
+        </pg-code> 
         <statement><p><ol label="a">
         <li><p>Use the graph of <m>y = 30 - 8x</m> shown above to solve the equation <me>30 - 8x = 50</me></p>
         <p><m>x=</m><var name="$answer" width="3"/> </p></li>
@@ -504,7 +504,7 @@ at most one point.</p></assemblage>
 
 <exercise><title>QuickCheck 6</title>  
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $ineq = RadioButtons(
               ["\(x \gt -15\)",
               "\(x \lt -15\)",
@@ -512,7 +512,7 @@ at most one point.</p></assemblage>
               "\(x \lt 18\)"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>You are using a graph of <m>f(x)=48-3.5x</m> to solve the inequality <m>48-3.5x \gt -15</m>.  You find that <m>f(18)=-15</m>. Your answer is:</p>
         <p><var name="$ineq" form="buttons"/></p>      
@@ -529,11 +529,11 @@ at most one point.</p></assemblage>
             <image source="images/fig-graph-to-solve2"><description>function graph</description></image></sidebyside>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Inequalities");
 
             $answer= Compute("x >= -2.5");
-        </pg-code></setup>
+        </pg-code> 
         <statement><p><ol label="a">
         <li><p>Use the graph of <m> y = 30 - 8x </m> above to solve the inequality <me> 30 - 8x \le 50 </me></p>
         <p>Answer: <var name="$answer" width="8"/> </p>
@@ -577,14 +577,14 @@ at most one point.</p></assemblage>
         <sidebyside width="35%"><image source="images/fig-graph-to-solve-quadratic"><description>graph of cubic</description></image></sidebyside>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $answer=List("-8,4");
             $my_evaluator = $answer -> cmp(
              showHints=>1,
              showLengthHints => 1,
              partialCredit => 1,
             ); 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Use the graph of <m> y = \frac{1}{2}n^2 + 2n - 10 </m> shown above  to solve
             <me> \frac{1}{2}n^2 + 2n - 10 = 6 </me>
@@ -602,7 +602,7 @@ at most one point.</p></assemblage>
 
 <exercise><title>QuickCheck 7</title>  
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $dec = RadioButtons(
               ["If its \(x\)-values increase from left to right.",
               "If its \(y\)-values decrease when its \(x\)-values decrease.",
@@ -610,7 +610,7 @@ at most one point.</p></assemblage>
               "If the graph lies below the \(x\)-axis."],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>When is a function called decreasing?</p>
         <p><var name="$dec" form="buttons"/></p>      
@@ -649,10 +649,10 @@ at most one point.</p></assemblage>
         <sidebyside width="35%"><image source="images/fig-graph-to-solve-quadratic"><description>graph of cubic</description></image></sidebyside>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Inequalities")->variables->add(n=>"Real");
             $answer= Compute("-8 &lt; n &lt; 4");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Use the graph above from <xref ref="exercise-graph-to-solve-quadratic" text="type-global" /> to solve the inequality
             <md>
@@ -670,8 +670,8 @@ at most one point.</p></assemblage>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain how to use the graph of <m>y=x+\sqrt{x}</m> to solve the equation <m>x+\sqrt{x}=56</m>.</p>
         <p><var form="essay"/></p>      

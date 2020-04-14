@@ -25,7 +25,7 @@ Of course, we will also require that <m>x\ge 0</m> and <m>y\ge 0</m>. These four
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $obfn = RadioButtons(
               ["\(2x+5y \le 50\)",
               "\(M=2x+5y\)",
@@ -33,7 +33,7 @@ Of course, we will also require that <m>x\ge 0</m> and <m>y\ge 0</m>. These four
               "\(2x+5y=50\)"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which of these could be an objective function?</p>
         <p><var name="$obfn" form="buttons"/></p>      
@@ -76,7 +76,7 @@ Our goal is to find values for <m>x</m> and <m>y</m> that satisfy the constraint
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $feas = RadioButtons(
               ["The vertices of the solution set",
               "The values of the objective function",
@@ -84,7 +84,7 @@ Our goal is to find values for <m>x</m> and <m>y</m> that satisfy the constraint
               "The boundary lines of the inequalities"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What is the set of feasible solutions?</p>
         <p><var name="$feas" form="buttons"/></p>      
@@ -97,7 +97,7 @@ Our goal is to find values for <m>x</m> and <m>y</m> that satisfy the constraint
 <exercise>
   <title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
             Context()->variables->add(y=>"Real");
             $P = Formula("8x+10y");
@@ -114,7 +114,7 @@ Our goal is to find values for <m>x</m> and <m>y</m> that satisfy the constraint
             $P2 = $P->eval(x=>400, y=>200);
             $P3 = $P->eval(x=>500, y=>0);
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
         <li><p>Determine which of the points <m>(0, 400)</m>, <m>(400, 200)</m>, <m>(500, 0)</m>, and <m>(500, 400)</m> represent feasible solutions for the TrailGear problem.</p>
@@ -137,8 +137,8 @@ Our goal is to find values for <m>x</m> and <m>y</m> that satisfy the constraint
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain how to find the set of feasible solutions.</p>
         <p><var form="essay"/></p>      
@@ -161,7 +161,7 @@ represents a combination of Weekenders and Sierra boots that will yield a profit
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $opso = RadioButtons(
               ["The largest or smallest feasible solution",
               "The largest or smallest value of the objective function in the set of feasible solutions",
@@ -169,7 +169,7 @@ represents a combination of Weekenders and Sierra boots that will yield a profit
               "The largest or smallest constrained \(y\)-value"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What is an optimal solution?</p>
         <p><var name="$opso" form="buttons"/></p>      
@@ -199,14 +199,14 @@ represents a combination of Weekenders and Sierra boots that will yield a profit
 <exercise>
   <title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Point");
             $a = Point(400,200);
             @choices = ("?","DNE","None", "Undefined");
             $popup = PopUp([@choices], $choices[0]);  # It doesn't matter which is used as the "correct answer".
             Context($popup->context); 
             $b = OneOf(@choices[1..3]);
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Returning to the TrailGear problem of <xref ref="example-TrailGear" text="type-global"/>, find all feasible solutions for which the objective function <m>P = 8x + 10y</m> has a value of <m>5200</m>.</p>
@@ -246,7 +246,7 @@ so the maximum weekly profit is $<m>5200</m>.</p></solution></example>
         <sidebyside   width="28%"><image source="images/fig-feasible-solutions5"><description>system of inequalities defining the feasible solutions</description></image></sidebyside>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(y=>"Real");
             $R = Formula("x+5y");
 
@@ -263,7 +263,7 @@ so the maximum weekly profit is $<m>5200</m>.</p></solution></example>
             1, 
             );
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>The figure above shows the feasible solutions for a linear programming problem. The objective function is <m>R = x + 5y</m>.</p>  
             <p><ol label="a">
@@ -299,7 +299,7 @@ so the maximum weekly profit is $<m>5200</m>.</p></solution></example>
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $linpro = RadioButtons(
               ["find the vertices of a region.",
               "solve a system of inequalities.",
@@ -307,7 +307,7 @@ so the maximum weekly profit is $<m>5200</m>.</p></solution></example>
               "find an optimal solution subject to a set of constraints."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Linear programming is used to</p>
         <p><var name="$linpro" form="buttons"/></p>      
@@ -447,9 +447,9 @@ How much should the Healthy Food Store purchase from each company in order to mi
 <exercise>
   <title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $a = Compute("25");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Find the maximum value of the objective function, <m>O = 5x + 3y</m>, subject to the constraints <m>x\ge 0</m>, <m>y\ge 0</m>, <m>x + y \ge 7</m>, and <m>5x + 2y \ge 20</m>.</p>
             <p>Answer: <var name="$a" width="4"/> </p>
@@ -462,8 +462,8 @@ How much should the Healthy Food Store purchase from each company in order to mi
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>What fact helps us find the optimal solution?</p>
         <p><var form="essay"/></p>      

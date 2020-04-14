@@ -99,10 +99,10 @@
 <exercise>
     <title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $a = Compute("-1");
             $b = Compute("0");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Suppose <m>g</m> is the inverse function for <m>f</m>, and suppose we know the following function values for f :
                     <me>f (-1) = 0, ~ f (0) = 1, ~ f (1) = 2</me>
@@ -118,7 +118,7 @@
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $invpt = RadioButtons(
               ["\((-3,4)\)",
               "\((-4,3)\)",
@@ -126,7 +126,7 @@
               "\((\dfrac{1}{3}, -\dfrac{1}{4})\)"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>If the point <m>(3,-4)</m> lies on the graph of <m>f</m>, what point lies on the graph of its inverse function?</p>
         <p><var name="$invpt" form="buttons"/></p>      
@@ -205,7 +205,7 @@
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $invsub = RadioButtons(
               ["\(h=m+2\)",
               "\(h=2-m\)",
@@ -213,7 +213,7 @@
               "\(h=\dfrac{1}{m-2}\)"],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which of these is the inverse of the function <m>h=m-2</m> ?</p>
         <p><var name="$invsub" form="buttons"/></p>      
@@ -226,7 +226,7 @@
 <exercise>
     <title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("ImplicitPlane");
             Context()->variables->add(y=>"Real");
             $a = 600;
@@ -250,7 +250,7 @@
             "If Carol swims for \(g(10)\) hrs, she must cycle for 10 hrs."],
             0,);
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Carol can burn 600 calories per hour bicycling and 400 calories per hour swimming. She would like to lose 5 pounds, which is equivalent to 16,000 calories.</p>
             <p><ol label="a">
@@ -301,7 +301,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $invtwo = RadioButtons(
               ["\(\dfrac{1}{2}\)",
               "\(\dfrac{1}{5}\)",
@@ -309,7 +309,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
               "\(-5\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>If <m>f(5)=2</m>, what is <m>f^{-1}(2)</m> equal to?</p>
         <p><var name="$invtwo" form="buttons"/></p>      
@@ -327,7 +327,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
 <exercise>
     <title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $a = Compute("-2");
             $b1 = Compute("-2");
             $b2 = Compute("1");
@@ -336,7 +336,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
             ["?","is the same.","is not the same."],
             2, 
             );
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>If <m>z = f (w) = \dfrac{1}{w + 3}</m>, find <m>f^{-1}(1)</m>.</p>
@@ -380,7 +380,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
         <p>Use the graph of <m>h</m> in <xref ref="example-Celsius-and-Fahrenheit" text="type-global"/>.</p>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $a = Compute("14");
             $YN = PopUp(
             ["?","Yes","No"],
@@ -399,7 +399,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
             "\( h^{-1}(32)= 0 \) $BR",
             "\( h^{-1}(0)= 32 \) $BR",
             "None of the above");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
             <li><p>Find <m>h^{-1}(-10)</m>.</p>
@@ -421,8 +421,8 @@ are equivalent; they convey the same information. This fact is a restatement of 
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>If the function <m>f</m> tells you how much money is in your account after <m>t</m> years, what does the function <m>f^{-1}</m> tell you?</p>
         <p><var form="essay"/></p>      
@@ -500,7 +500,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
 <exercise>
     <title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(T=>"Real");
             $fi = Formula("8/pi^2 * T^2");
             $explain = RadioButtons(
@@ -508,7 +508,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
             "\( f^{-1} \) gives the period of the pendulum as a function of its length.",
             "\( f^{-1} \) gives the reciprocal of the period of the pendulum."],
             0,);
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>The formula <m>T = f(L) = 2\pi \sqrt{\dfrac{L}{32}}</m> gives the period in seconds, <m>T</m>, of a pendulum as a function of its length in feet, <m>L</m>.</p>
             <p><ol label="a">
@@ -562,7 +562,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
         <sidebyside width="90%"><image source="images/fig-invertible-or-not2"><description>graphs for vertical line test</description></image></sidebyside>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $match = new_checkbox_multiple_choice();
             $match -> qa (
             "A question can go here, but PTX ignores this",
@@ -576,7 +576,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
             "(d) $BR",
             "None of the above");
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Which of the functions whose graphs are shown above have inverses that are also functions?</p>
             <p><var name="$match" form="checkboxes"/> </p>  
@@ -599,8 +599,8 @@ are equivalent; they convey the same information. This fact is a restatement of 
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>What does the term one-to-one mean?  Give an example.</p>
         <p><var form="essay"/></p>      
@@ -624,7 +624,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $inout = RadioButtons(
               ["makes the output negative.",
               "makes the input negative.",
@@ -632,7 +632,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
               "takes the reciprocal of the output."],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>An inverse function</p>
         <p><var name="$inout" form="buttons"/></p>      
@@ -664,7 +664,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
 <exercise xml:id="exercise-inverse-of-inverse">
     <title>Practice 7</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(y=>"Real");
             $f = Formula("2/(x-1)");
             $fi = Formula("1+2/y");
@@ -673,7 +673,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
             $y2 = Compute("-2");
             $x2 = $fi->eval(y=>$y2);
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Find a formula for the inverse of the function <m>f(x)=\dfrac{2}{x - 1}</m> Use <m>y</m> as in input variable for <m>f^{-1} </m>.</p>
@@ -719,7 +719,7 @@ The graphs are shown below.</p>
 
 <exercise><title>QuickCheck 5</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $invsym = RadioButtons(
               ["the \(x\)-axis.",
               "the \(y\)-axis.",
@@ -727,7 +727,7 @@ The graphs are shown below.</p>
               "the line \(y=x\)."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>The graphs of <m>f</m> and <m>f^{-1}</m> are symmetric about</p>
         <p><var name="$invsym" form="buttons"/></p>      
@@ -751,7 +751,7 @@ The graphs are shown below.</p>
 <answer><sidebyside width="30%"><image source="images/fig-in-ex-ans-5-1-8"><description>cubic and inverse</description></image></sidebyside></answer>
 <!--
     <webwork>
-    <setup><pg-code></pg-code></setup>
+     <pg-code></pg-code> 
     <statement>
         <p>Graph the function <m>f (x) = x^3 + 2</m> and its inverse <m>f^{-1}(x) = \sqrt[3]{x - 2}</m> on the same set of axes, along with the line <m>y = x</m>.</p>
     </statement>
@@ -768,8 +768,8 @@ The graphs are shown below.</p>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain the difference between the meaning of the notation <m>p^{-1}</m> if <m>p</m> is a function or if <m>p</m> is a variable.</p>
         <p><var form="essay"/></p>      
@@ -814,7 +814,7 @@ This relationship between the domain and range of a function and its inverse hol
 <exercise>
     <title>Practice 9</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(y=>"Real");
             $f = Formula("2/(x-1)");
             $fi = Formula("1+2/x");
@@ -856,7 +856,7 @@ This relationship between the domain and range of a function and its inverse hol
             add_functions($gr,
             "$fi for x in &lt;0.1, $xmax> using color:blue and weight:2");
             ($gr->fn)[0]->steps(200);
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Graph the function <m>f(x) = \dfrac{2}{x -1}</m> and its inverse function, <m>f^{-1}</m> (which you found in <xref ref="exercise-inverse-of-inverse" text="type-global"/>), on the same set of axes, along with the line <m>y = x</m>.</p></li>

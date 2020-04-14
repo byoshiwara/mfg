@@ -16,7 +16,7 @@
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $absdist = RadioButtons(
               ["change its sign.",
               "subtract it from 0.",
@@ -24,7 +24,7 @@
               "square it."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>To find the absolute value of a number, we can</p>
         <p><var name="$absdist" form="buttons"/></p>      
@@ -52,7 +52,7 @@
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $dist5 = RadioButtons(
               ["\(x\) is 3 units bigger than 5.",
               "the distance between \(x\) and 5 is 3 units.",
@@ -60,7 +60,7 @@
               "the distance between \(x\) and 3 is 5 units."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>The notation <m>|x-3|=5</m> means</p>
         <p><var name="$dist5" form="buttons"/></p>      
@@ -73,12 +73,12 @@
 <exercise xml:id="exercise-write-abs">
     <title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $f = Formula("abs(x+3)");
             $a = 5;
             $g = Formula("abs(x-4)");
             $b = 6;
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>
                 Write each statement using absolute value notation; then illustrate the solutions on a number line.
@@ -183,7 +183,7 @@ which tells us that the distance between <m>x</m> and <m>2</m> is <m>3</m> units
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $absq = RadioButtons(
               ["The graph of \(y=|2x-8|\) has no negative inputs.",
               "The equation \(|2x-8|=-4\) has two solutions.",
@@ -191,7 +191,7 @@ which tells us that the distance between <m>x</m> and <m>2</m> is <m>3</m> units
               "The graph of \(y=|2x-8|\) is a straight line."],
               2,           
               );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which statement is true?</p>
         <p><var name="$absq" form="buttons"/></p>      
@@ -234,7 +234,7 @@ which tells us that the distance between <m>x</m> and <m>2</m> is <m>3</m> units
 <exercise xml:id="exercise-GC-solve-abs-equation">
     <title>Practice 2</title>
   <webwork>
-    <setup>
+     
       <pg-code>
         $fun=Formula("abs(2*x+7)");
         $fake=Formula("abs(2*x-7)");
@@ -288,7 +288,7 @@ which tells us that the distance between <m>x</m> and <m>2</m> is <m>3</m> units
          partialCredit => 1,
         ); 
       </pg-code>
-    </setup>
+     
     <statement>
       <p>
         <ol label="a">
@@ -374,14 +374,14 @@ Solving these two equations gives us the same solutions we found in <xref ref="e
 <exercise>
     <title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $answers = List("-9,2");
             $my_evaluator = $answers -> cmp(
              showHints=>1,
              showLengthHints => 1,
              partialCredit => 1,
             ); 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve  <m>|2x + 7| = 11</m> algebraically.</p>
             <p><m>x=</m><var name="$answers" width="8" evaluator="$my_evaluator" /> </p>
@@ -395,8 +395,8 @@ Solving these two equations gives us the same solutions we found in <xref ref="e
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain how the equation <m>|ax+b|=c</m> can have two solutions, one solution, or no solutions.</p>
         <p><var form="essay"/></p>      
@@ -427,7 +427,7 @@ Solving these two equations gives us the same solutions we found in <xref ref="e
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $absgr = RadioButtons(
               ["either \(x-3 \gt 5\) or \(x-3 \gt -5\).",
               "\(5 \gt x-3 \gt -5\).",           
@@ -435,7 +435,7 @@ Solving these two equations gives us the same solutions we found in <xref ref="e
               "\(-5 \gt x-3 \lt 5\)."],
               2, 
               );   
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>If <m>|x-3| \gt 5</m>, then</p>
         <p><var name="$absgr" form="buttons"/></p>      
@@ -459,13 +459,13 @@ Because the inequality symbol is <m>\lt</m>, the solutions of the inequality are
 <exercise>
     <title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
            Context("Inequalities");
 
            $answer= Compute("-9 &lt; x &lt; 2");
            $answer2= Compute("x &lt; -9 or x &gt; 2");
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Solve the inequality <m>|2x + 7| \lt 11</m></p>
@@ -544,7 +544,7 @@ Because the inequality symbol is <m>\lt</m>, the solutions of the inequality are
          <sidebyside width="45%"><image source="images/fig-abs-highway-distance"><description>graph of distance from mall</description></image></sidebyside>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $func = Formula("abs(x-15)");
             $a = 5;
             $b = 10;
@@ -552,7 +552,7 @@ Because the inequality symbol is <m>\lt</m>, the solutions of the inequality are
            Context("Inequalities");
            $near= Compute("10 &lt; x &lt; 20");
            $far= Compute("x &lt;= 5 or x &gt;= 25");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Use the graph above from the previous example  to determine how far Marlene has driven when she is within 5 miles of the mall. Write and solve an absolute value inequality to verify your answer.</p>
@@ -619,7 +619,7 @@ Note that the solution of this inequality is <m>5.95 \le m \le 6.05</m>.</p>
 
 <exercise><title>QuickCheck 5</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $absf = RadioButtons(
               ["The equation \( |3x+12|=0 \) has one solution.",
               "The statement \( |T-0.1| \lt 0.05 \) describes an error tolerance of 0.05 units.",           
@@ -627,7 +627,7 @@ Note that the solution of this inequality is <m>5.95 \le m \le 6.05</m>.</p>
               "The solutions of \( |3x+12| \gt 6 \) form a closed interval."],
               0, 
               );   
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which statement is false?</p>
         <p><var name="$absf" form="buttons"/></p>      
@@ -640,7 +640,7 @@ Note that the solution of this inequality is <m>5.95 \le m \le 6.05</m>.</p>
 <exercise>
     <title>Practice 6</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(T=>"Real");
             $f = Formula("abs(T-10.5)");
             $a = 1.5;
@@ -649,7 +649,7 @@ Note that the solution of this inequality is <m>5.95 \le m \le 6.05</m>.</p>
 
            Context("Inequalities")->variables->add(T=>"Real");
            $near= Compute("$c &lt;= x &lt;= $d");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>The temperature, <m>T</m>, in a laboratory must remain between <m>9^{\circ}\text{C}</m> and <m>12^{\circ}\text{C}</m>.<ol label="a">
                 <li><p>Write the error tolerance as an absolute value inequality.</p>
@@ -671,8 +671,8 @@ Note that the solution of this inequality is <m>5.95 \le m \le 6.05</m>.</p>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>What is error tolerance used for, and why do we need it?</p>
         <p><var form="essay"/></p>      

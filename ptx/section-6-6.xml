@@ -167,14 +167,14 @@
 <exercise>
 	<title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("ImplicitPlane")->variables->add(a=>"Real",b=>"Real", c=>"Real");
             $eq4 = ImplicitPlane("3*a -2*b =  -7");
             $eq5 = ImplicitPlane("7*a -3*b =  -8");
             $a = Compute("1");
             $b = Compute("5");
             $c = Compute("-3");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Follow the steps to solve the system
         <me>
@@ -312,7 +312,7 @@ The parabola and the three points are shown below.</p>
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $elim = RadioButtons(
               ["\(a\)",
               "\(b\)",
@@ -320,7 +320,7 @@ The parabola and the three points are shown below.</p>
               "\(x\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>When we solve a system to fit a parabola through three points, which variable should we eliminate first?</p>
         <p><var name="$elim" form="buttons"/></p>      
@@ -333,12 +333,12 @@ The parabola and the three points are shown below.</p>
 <exercise>
 	<title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
            Context("LimitedPolynomial")->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
            Context()->flags->set(singlePowers=>1);
             $answer= Formula(" -1/5*x^2+4x+80");
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
             <li><p>Find the equation of a parabola
@@ -412,10 +412,10 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
 <exercise>
 	<title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->are(n=>"Real");
             $f = Formula("-0.02*n**2 + 1.3*n");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Sara plans to start a side business selling eggs. She finds that the total number of eggs produced each day depends on the number of hens confined in the henhouse, as shown in the table. Use the first three data points to find a quadratic model <m>E = an^2 + bn + c</m>.</p> 
             <p><m>E=</m><var name="$f" width="20"/> </p>
@@ -451,8 +451,8 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain how to fit a parabola through three points.</p>
         <p><var form="essay"/></p>      
@@ -498,7 +498,7 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $morpt = RadioButtons(
               ["One",
               "Two",
@@ -506,7 +506,7 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
               "None"],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>If you know the vertex of a parabola, how many more points do you need to find its equation?</p>
         <p><var name="$morpt" form="buttons"/></p>      
@@ -522,7 +522,7 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
         <sidebyside  width="35%"><image source="images/fig-water-fountain"><description>water fountain with parabolic water stream</description></image></sidebyside>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
             $f = Formula(" -5/4*(x-2)^2+8");
             $d = Formula("2+4*sqrt(2/5)")->with(
@@ -530,7 +530,7 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
               tolerance => .05,
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Francine is designing a synchronized fountain display for a hotel in Las Vegas. For each fountain, water emerges in a parabolic arc from a nozzle <m>3</m> feet above the ground. Francine would like the vertex of the arc to be <m>8</m> feet high and <m>2</m> feet horizontally from the nozzle.</p>
             <p><ol label="a">
@@ -571,7 +571,7 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
 <exercise>
 	<title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $Pop = PopUp(
             ["?","linear","quadratic"],
             2, 
@@ -582,7 +582,7 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
             );
 
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>To test the effects of radiation, a researcher irradiated male mice with various dosages and bred them with unexposed female mice. The table below shows the fraction of fertilized eggs that survived, as a function of the radiation dosage. (Source: Strickberger, Monroe W., 1976)</p>
             <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -625,7 +625,7 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $qureg = RadioButtons(
               ["One",
               "Two",
@@ -633,7 +633,7 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
               "None"],
               3, 
             );             
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>How many data points must a quadratic regression graph pass through?</p>
         <p><var name="$qureg" form="buttons"/></p>      
@@ -695,7 +695,7 @@ From either the graph of the regression equation or from the table (see figure b
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $limpar = RadioButtons(
               ["A parabola is a good model for any non-linear curve.",
               "We will get the same equation by fitting a parabola through any three points of a data set.",
@@ -703,7 +703,7 @@ From either the graph of the regression equation or from the table (see figure b
               "When we use quadratic regression, the lowest (or highest) point of a data set will be the vertex of the parabola."],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which statement is true?</p>
         <p><var name="$limpar" form="buttons"/></p>      
@@ -716,7 +716,7 @@ From either the graph of the regression equation or from the table (see figure b
 <exercise>
 	<title>Practice 6</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Point")->variables->set(x=>{limits=>[2,3]});
             $f = Formula("-15*x**2+109.95714285714*x-0.071428571429")->with(
               tolType => 'relative',
@@ -726,7 +726,7 @@ From either the graph of the regression equation or from the table (see figure b
               tolType => 'relative',
               tolerance => .01,
             );            
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>A speeding motorist slams on the brakes when she sees an accident directly ahead of her. The distance she has traveled <m>t</m> seconds after braking is shown in the table.</p>
             <sidebyside><tabular  top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -769,8 +769,8 @@ From either the graph of the regression equation or from the table (see figure b
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Why is it a bad idea to clculate a regression equation without first plotting the data?</p>
         <p><var form="essay"/></p>      

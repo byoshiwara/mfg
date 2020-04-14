@@ -24,7 +24,7 @@
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $dtor = RadioButtons(
               ["One",
               "Two",
@@ -32,7 +32,7 @@
               "Infinitely many"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>In a function, how many domain elements can be paired with one range element?</p>
         <p><var name="$dtor" form="buttons"/></p>      
@@ -76,14 +76,14 @@ Imagine a rectangle whose length and width are determined by those segments, as 
         <sidebyside width="30%"><image source="images/fig-domain-and-range-from-graph3"><description>graph of function</description></image></sidebyside>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Inequalities")->variables->add(y=>"Real");
             $domain=Compute("-4 &lt;=x &lt;=2");
             $range = Compute("-6 &lt;= y &lt;= 10.1")->with(
               tolType => 'absolute',
               tolerance => .11,
             );
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
             <li><p>Draw the smallest viewing window possible around the graph shown below.</p></li>
@@ -152,11 +152,11 @@ Imagine a rectangle whose length and width are determined by those segments, as 
 <exercise>
     <title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Inequalities")->variables->add(y=>"Real");
             $range = Compute("-12 &lt;= y &lt;= 23");
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Graph the function <m>g(x) = x^3 - 4</m> on the domain <m>[-2, 3]</m> and give its range.</p>
             <p>Range: <var name="$range" width="15"/> </p>
@@ -193,7 +193,7 @@ Imagine a rectangle whose length and width are determined by those segments, as 
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $domconc = RadioButtons(
               ["\(y=x^2\)",
               "\(y=x^3\)",
@@ -201,7 +201,7 @@ Imagine a rectangle whose length and width are determined by those segments, as 
               "\(y=|x|\)"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which function changes concavity on its domain?</p>
         <p><var name="$domconc" form="buttons"/></p>      
@@ -254,7 +254,7 @@ Imagine a rectangle whose length and width are determined by those segments, as 
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $allr = RadioButtons(
               ["\(y=x^2\)",
               "\(y=x^3\)",
@@ -262,7 +262,7 @@ Imagine a rectangle whose length and width are determined by those segments, as 
               "\(y=|x|\)"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which function includes all real numbers in its range?</p>
         <p><var name="$allr" form="buttons"/></p>      
@@ -285,12 +285,12 @@ Imagine a rectangle whose length and width are determined by those segments, as 
         </me></p>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Inequalities")->variables->add(w=>"Real", B=>"Real");
             $domain = Compute("[0,120]");
             $range = Compute("[30,130]U(200,410]");
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>If the utilities commission imposes a cap on monthly water consumption at <m>120</m> HCF, find the domain and range of the function <m>B(w)</m>.</p>
             <p>Domain: <var name="$domain" width="15"/> </p>
@@ -304,8 +304,8 @@ Imagine a rectangle whose length and width are determined by those segments, as 
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Do the largest and smallest values in the domain of a function result in the largest and smallest values of the range?  Give an example.</p>
         <p><var form="essay"/></p>      
@@ -323,7 +323,7 @@ Imagine a rectangle whose length and width are determined by those segments, as 
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $allr = RadioButtons(
               ["\([-2,2]\)",
               "\([-8,8]\)",
@@ -331,7 +331,7 @@ Imagine a rectangle whose length and width are determined by those segments, as 
               "\([4,-4]\)"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>The domain of the function <m>f(x)</m> is <m>[-4,4]</m>. What is the domain of the function <m>g(x)=\dfrac{1}{2}f(x)</m>?</p>
         <p><var name="$allr" form="buttons"/></p>      
@@ -348,12 +348,12 @@ Imagine a rectangle whose length and width are determined by those segments, as 
 <exercise>
     <title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Inequalities")->variables->add(y=>"Real");
             $domain = Compute("x > 4 or 4>x");
             $range = Compute("y > 0");
              
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Find the domain of the function <m>h(x) = \dfrac{1}{(x - 4)^2}</m>.</p>
@@ -391,7 +391,7 @@ Imagine a rectangle whose length and width are determined by those segments, as 
 
 <exercise><title>QuickCheck 5</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $allr = RadioButtons(
               ["absolute value and square roots",
               "square roots and cube roots",
@@ -399,7 +399,7 @@ Imagine a rectangle whose length and width are determined by those segments, as 
               "absolute value and division by zero"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which operations must we examine when finding the domain of a function?</p>
         <p><var name="$allr" form="buttons"/></p>      
@@ -411,8 +411,8 @@ Imagine a rectangle whose length and width are determined by those segments, as 
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>State the domain and range of each function:  <m>f(x)=4,~ g(x)=4x,~ h(x)=4x^2</m></p>
         <p><var form="essay"/></p>      
@@ -446,13 +446,13 @@ Imagine a rectangle whose length and width are determined by those segments, as 
         <p>(See  <xref ref="geometry" text="type-global"/> for the formula for the volume of a box.)</p>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $f = Formula("x*(24-2*x)*(18-2*x)");
 
             Context("Inequalities")->variables->add(V=>"Real");
             $domain = Compute("0 &lt; x &lt; 9");
             $range = Compute("0 &lt; V &lt; 655 ");
-        </pg-code></setup>
+        </pg-code> 
         <statement><p>The children in Francine's art class are going to make cardboard boxes. Each child is given a sheet of cardboard that measures 18 inches by 24 inches. To make a box, the child will cut out a square from each corner and turn up the edges, as shown below.</p>
         <p><ol label="a">
             <li><p>Write a formula <m>V = f (x)</m> for the volume of the box in terms of <m>x</m>, the side of the cut-out square. </p>
