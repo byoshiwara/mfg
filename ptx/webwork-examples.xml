@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<pretext>
+    <docinfo>
+        <brandlogo url="https://byoshiwara.github.io/mfg/" source="images/cover.png" /> 
+
+   <macros>
+        \newcommand\degree[0]{^{\circ}}
+        \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+        \newcommand{\alert}[1]{\boldsymbol{\color{magenta}{#1}}}
+        \newcommand{\blert}[1]{\boldsymbol{\color{blue}{#1}}}
+        \newcommand{\bluetext}[1]{\color{skyblue}{#1}} <!-- comments in aligned equations -->
+        \delimitershortfall-1sp
+        \newcommand\abs[1]{\left|#1\right|}
+    </macros>
+
+        <cross-references text="type-hybrid" />
+        <!--
+        -->
+        <latex-image-preamble>
+        \usepackage{tikz}
+        \usetikzlibrary{calc}
+        \usetikzlibrary{arrows}
+        \usetikzlibrary{decorations.pathreplacing}
+        \usetikzlibrary{patterns}
+\usetikzlibrary{calc,intersections,through,backgrounds}
+            
+       </latex-image-preamble>
+
+        <initialism>Scratch</initialism>
+
+        <feedback>
+            <url>not-implemented.html</url>
+             <!-- <text>My Button Text</text>  -->
+        </feedback>
+
+
+        <rename element="warning">Caution</rename>
+
+
+    </docinfo>
+
+    <article xml:id="scratch" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Testing Snippets</title>
+        <subtitle>Just checking ptx coding</subtitle>
+
+        <frontmatter xml:id="frontmatter">
+
+            <titlepage>
+
+               <!-- There can be several authors here -->
+                <author>
+                    <personname>Kathy Yoshiwara</personname>
+                    <!-- department here is one line, so unstructured -->
+                    <department>Department of Retirement</department>
+                    <!-- institution uses two lines, so structured as such -->
+                    <institution>
+                        <line>Leisure U</line>
+                        <line>Atascadero, CA</line>
+                    </institution>
+                    <email>byoshiwara@gmail.com</email>
+                </author>
+
+                <!-- Can set date manually or use the "today" element -->
+                <date><today /></date>
+
+            </titlepage>
+
+            <abstract>
+                <p>This is a template for writing WeBWorK MC exercise within <pretext />. </p>
+            </abstract>
+
+
+        </frontmatter>
+
+        <section>
+            <title>MFG Concept questions</title>
+
+            <!--
+            start of test code
+            -->
+
+<!-- 
+Math mode is normal PreTeXt syntax: <m>...</m> etc. most of the time, e.g. when you are within the <statement></statment> or <solution></solution> or <introduction></introduction> or <conclusion></conclusion>
+But to get math mode within the <pg-code></pg-code/>, use \(...\) or \[,,,\]
+-->
+
+<exercise><title>Vertical line test</title>
+    <introduction><p>THE INTRODUCTION IS OPTIONAL. But it can be useful when you want to show an image that you will not be generating with WeBWorK code, as here:</p>
+    <p>Use the vertical line test to determine which of the graphs below represent functions.</p>
+    <sidebyside ><image source="images/fig-vertical-line-test3" ><description>vertical line test</description></image></sidebyside></introduction>
+    <webwork><setup><pg-code>
+            $functions = new_checkbox_multiple_choice();
+            $functions -> qa (
+            "A question can go here, but PTX ignores this",
+            "(b)$BR",
+            );
+            $functions -> extra(
+            "(a)$BR",
+            "(c)$BR",
+            );
+            $functions -> makeLast(
+            "(a)$BR",
+            "(b)$BR",
+            "(c)$BR",
+            "None of the above");
+            </pg-code></setup>
+        <statement><p>
+            <var name="$functions" form="checkboxes"/>
+        </p></statement>
+        <solution>
+            <p>Only (b) is a function.</p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <p>THE CONCLUSION IS OPTIONAL, but it can be useful if you want to display an image that is not produced with WEBWorK code.</p>
+    </conclusion>
+</exercise>
+
+<exercise>
+<title>Is it a function?</title>
+<webwork>
+    <setup><pg-code>
+             $YNgrade = PopUp(
+              ["?","Yes","No"],
+              2, # index of correct answer; could also just be the correct answer
+            );
+
+# If you want math in a choice, use \( ... \) not <m>...  </m>
+
+            $WHYgrade = RadioButtons(
+              ["Each value of \(x\) has exactly one value of \(y\) associated with it.","Two students with the same grade English can have different grades in algebra.","Two students with the same grade math will also have the same grade in English.","Two students with the same grade math can have different grades in English."],
+              1, # index of correct answer; could also just be the correct answer
+            );
+             $YNcalories = PopUp(
+              ["?","Yes","No"],
+              1, # index of correct answer; could also just be the correct answer
+            );
+            $WHYcalories = RadioButtons(
+              ["The number of calories is proportional to the number of fluid ounces.","Two servings with the same calories will have different fluid ounces.","Two servings with the same flid ounces will have different calories."],
+              0, # index of correct answer; could also just be the correct answer
+            );
+        </pg-code></setup>
+    <statement>
+        <ol label="a">
+        <li><p>As part of a project to improve the success rate of freshmen, the counseling department studied the grades earned by a group of students in English and algebra. Do you think that a student's grade in algebra is a function of his or her grade in English? <var name="$YNgrade" form="popup"/></p>
+        <p>Explain why or why not.</p>
+        <p><var name="$WHYgrade" form="buttons"/></p></li>
+        <li><p>Phatburger features a soda bar, where you can serve your own soft drinks in any size. Do you think that the number of calories in a serving of Zap Kola is a function of the number of fluid ounces? <var name="$YNcalories" form="popup"/></p>
+        <p>Explain why or why not.</p>
+        <p><var name="$WHYcalories" form="buttons"/></p></li>
+        </ol>
+    </statement>
+    <solution>
+        <p><ol label="a">
+            <li><p>No, students with the same grade in English can have different grades in algebra.</p></li>
+            <li><p>Yes, the number of calories is proportional to the number of fluid ounces.</p></li>
+        </ol></p>
+    </solution>
+</webwork>
+</exercise>
+
+<exercise>
+    <webwork>
+        <setup><pg-code>
+            $functions = new_checkbox_multiple_choice();
+            $functions -> qa (
+            "A question can go here, but PTX ignores this",
+            "Two $BR",
+            );
+            $functions -> extra(
+            "Three $BR",
+            "One in each quadrant $BR",
+            "It depends on the equation $BR"
+            );
+            $functions -> makeLast(
+            "Two $BR",
+            "Three $BR",
+            "One in each quadrant $BR",
+            "It depends on the equation $BR"
+            );
+        </pg-code></setup>
+        <statement><p>How many points do you need to graph a linear equation?</p>
+            <p><var name="$functions" form="checkboxes"/>
+        </p></statement>
+        <solution>
+            <p>(a)</p>
+        </solution>
+    </webwork>
+</exercise>
+
+# If you want math in a choice, use \( ... \) not <m>...  </m>
+
+
+<exercise>
+<title>CQ</title>
+<webwork>
+    <setup><pg-code>       
+            $Points = RadioButtons(
+              ["Two",
+              "Three",
+              "One in each quadrant",
+              "It depends on the equation"],
+              0, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>How many points do you need to graph a linear equation?</p>
+        <p><var name="$Points" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Two</p>
+    </solution>
+</webwork>
+</exercise>
+
+
+<!-- End of test code -->
+
+
+</section>
+</article>
+</pretext>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- <mathbook><book> -->
 
-<section xml:id="linear-functions"   xmlns:xi="http://www.w3.org/2001/XInclude">
-<title>Linear Functions</title>
+<section xml:id="linear-functions"   xmlns:xi="http://www.w3.org/2001/XInclude"><title>Linear Functions</title>
 
-<subsection><title>Slope-Intercept Form</title>   
+<subsection><title>Slope-Intercept Form</title>
+
 <p>As we saw in <xref ref="LinMod" text="type-global" />, many linear models <m>y = f (x)</m> have equations of the form
     <me>\blert{f(x) = (\text{starting value}) + (\text{rate of change}) \cdot x}</me>
 The starting value, or the value of <m>y</m> at <m>x = 0</m>, is the <m>y</m>-intercept of the graph, and the rate of change is the slope of the graph. Thus, we can write the equation of a line as
@@ -74,38 +74,100 @@ where the constant term, <m>b</m>, is the <m>y</m>-intercept of the line, and <m
 
      For each graph, the coefficient of <m>x</m> is a scale factor that tells us how many units <m>y</m> changes for <m>1</m> unit increase in <m>x</m>. But that is exactly what the slope tells us about a line.</p>
 
-<example xml:id="example-internet-providers"><statement>
-    <sidebyside widths="50% 35%"><p>Francine is choosing an Internet service provider. She paid $30 for a modem, and she is considering three companies for service:<ul>
+<example xml:id="example-internet-providers"><statement><sidebyside widths="50% 35%">
+    <p>Francine is choosing an Internet service provider. She paid $30 for a modem, and she is considering three companies for service:<ul>
         <li> Juno charges $14.95 per month,</li>
         <li> ISP.com charges $12.95 per month,</li> 
         <li> and peoplepc charges $15.95 per month.</li> 
     </ul>Match the graphs in the figure to Francine’s Internet cost with each company.</p><image source="images/fig-internet-providers"><description>internet provider costs</description></image></sidebyside></statement>
+
 <solution><p>Francine pays the same initial amount, $30 for the modem, under each plan. The monthly fee is the rate of change of her total cost, in dollars per month. We can write a formula for her cost under each plan. 
     <me>\text{Juno:   } f(x) = 30 + 14.95x</me>
     <me>\text{ISP.com:   } g(x) = 30 + 12.95x</me>
     <me>\text{peoplepc:   } h(x) = 30 + 15.95x</me>
 The graphs of these three functions all have the same <m>y</m>-intercept, but their slopes are determined by the monthly fees. The steepest graph, III, is the one with the largest monthly fee, peoplepc, and ISP.com, which has the lowest monthly fee, has the least steep graph, I.</p>    </solution></example>
 
-<exercise><statement><p>Delbert decides to use DSL for his Internet service. <ul>
-    <li>Earthlink charges a $99 activation fee and $39.95 per month,</li>
-    <li> DigitalRain charges $50 for activation and $34.95 per month,</li>
-    <li> and FreeAmerica charges $149 for activation and $34.95 per month.</li>
-</ul>
-<ol label="a">
-    <li><p>Write a formula for Delbert's Internet costs under each plan.</p>    </li>
-    <li><p>Match Delbert's Internet cost under each company with its graph shown below.</p> </li>
-</ol></p>
-<sidebyside width="40%"><image source="images/fig-dsl-price"><description>dsl costs</description></image></sidebyside>
-</statement>
-<answer><p><ol label="a">
+<exercise>
+    <title>Practice 1</title>
+    <introduction>
+        <p>Delbert decides to use DSL for his Internet service.
+            Earthlink charges a $99 activation fee and $39.95 per month,DigitalRain charges $50 for activation and $34.95 per month, and FreeAmerica charges $149 for activation and $34.95 per month.</p>
+            <sidebyside width="40%"><image source="images/fig-dsl-price"><description>dsl costs</description></image></sidebyside>
+    </introduction>
+    <webwork>
+        <setup><pg-code>
+            $Earthlink = Formula("99+39.95*x");
+            $DigitalRain = Formula("50+34.95*x");
+            $FreeAmerica = Formula("149+34.95*x");
+            $Line1 = PopUp(
+              ["?","Earthlink","DigitalRain", "FreeAmerica"],
+              2, # index of correct answer; could also just be the correct answer
+            );
+            $Line2 = PopUp(
+              ["?","Earthlink","DigitalRain", "FreeAmerica"],
+              1, # index of correct answer; could also just be the correct answer
+            );
+            $Line3 = PopUp(
+              ["?","Earthlink","DigitalRain", "FreeAmerica"],
+              3, # index of correct answer; could also just be the correct answer
+            );
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Write a formula for Delbert's Internet costs under each plan.</p>    
+                <p>Earthlink: <m>f(x)=</m><var name="$Earthlink" width="10"/> </p>
+                <p>DigitalRain: <m>g(x)=</m><var name="$DigitalRain" width="10"/> </p>
+                <p>FreeAmerica: <m>h(x)=</m><var name="$FreeAmerica" width="10"/> </p>
+                </li>
+                <li><p>Match Delbert's Internet cost under each company with its graph shown above.</p> 
+                <p>Line I: <var name="$Line1" form="popup"/> </p>
+                <p>Line II: <var name="$Line2" form="popup"/> </p>
+                <p>Line III: <var name="$Line3" form="popup"/> </p>
+                </li>
+            </ol></p>
+        </statement>
+        <solution><p><ol label="a">
     <li><p>Earthlink: <m>f(x)=99 + 39.95x</m>; DigitalRain: <m>g(x)=50 + 34.95x</m>; FreeAmerica: <m>h(x)=149 + 34.95x</m></p></li>
     <li><p>DigitalRain: I; Earthlink: II; FreeAmerica: III</p></li>
-</ol></p></answer></exercise>
+</ol></p></solution>
+    </webwork>
+</exercise>
+
+<exercise><title>QuickCheck 1</title>
+<webwork>
+    <setup><pg-code>       
+            $mb = RadioButtons(
+              ["\(m\) is the slope; \(b\) is the \(x\)-intercept",
+              "\(m\) is the slope; \(b\) is the \(y\)-intercept",
+              "\((m,b)\) is a point on the line",
+              "\(m\) is the \(x\)-intercept; \(b\) is the \(y\)-intercept"],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What do the coefficients in the slope-intercept form tell you about a line?</p>
+        <p><var name="$mb" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>m</m> is the slope; <m>b</m> is the <m>y</m>-intercept</p>
+    </solution>
+</webwork></exercise>
 
 <note><p>
     In the equation <m>f (x) = b + mx</m>, we call <m>m</m> and <m>b</m> <term>parameters</term><idx>parameters</idx>. Their values are fixed for any particular linear equation; for example, in the equation <m>y = 3+2x</m>, <m>b=3</m> and <m>m=2</m>, and the variables are <m>x</m> and <m>y</m>. By changing the values of <m>m</m> and <m>b</m>, we can write the equation for any line except a vertical line. The collection of all linear functions <m>f(x) = b + mx</m> is called a <term>two-parameter</term><idx>two-parameter</idx> family of functions.</p></note>
 
-<sidebyside  width="80%"><image source="images/fig-slope-vs-intercept"><description>lines </description></image></sidebyside></subsection>
+<sidebyside  width="80%"><image source="images/fig-slope-vs-intercept"><description>lines </description></image></sidebyside>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain why the initial value for a linear model is often given by the <m>y</m>-intercept.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
+</subsection>
 
 <subsection><title>Slope-Intercept Method of Graphing</title>
 
@@ -139,18 +201,56 @@ point on the line as a check. If we use <m>m = \dfrac{\Delta y}{\Delta x}= \dfra
 </ol></p>
 <sidebyside  width="40%"><image source="images/fig-slope-intercept0" ><description>slope-intercept method</description></image></sidebyside></assemblage>
 
-<exercise><statement><p><ol label="a">
-        <li><p>Write the equation <m>2y + 3x + 4 = 0</m> in slope-intercept form.</p></li>
-        <li><p>Use the slope-intercept method to graph the line.</p></li>
-    </ol></p></statement>
-<answer><p><ol label="a">
-        <li><p><m>y=-2-\dfrac{3}{2}x </m></p></li>
-        <li><sidebyside width="30%" margins="0% 70%"><image source="images/fig-in-ex-ans-1-5-2"><description>line</description></image></sidebyside></li>
-    </ol></p></answer></exercise>
+<exercise>
+    <title>Practice 2</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Fraction");
+            $func = Formula("-2-3/2 x");
+        </pg-code></setup>
+        <statement>
+            <p><ol label="a">
+                <li><p>Write the equation <m>2y + 3x + 4 = 0</m> in slope-intercept form.</p>
+                <p><m>y=</m><var name="$func" width="8"/> </p></li>
+                <li><p>Use the slope-intercept method to graph the line.</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p>Solve the given equation for <m>y</m> to get: <m>y=-2-\dfrac{3}{2}x </m></p></li>
+                <li><p>A graph is shown below.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="30%" margins="0% 70%"><image source="images/fig-in-ex-ans-1-5-2"><description>line</description></image></sidebyside>
+    </conclusion>
+</exercise>
+
+<exercise><title>QuickCheck 2</title>
+<webwork>
+    <setup><pg-code>       
+            $si = RadioButtons(
+              ["Solve for \(y\) to get the slope-intercept form.",
+              "Find the intercepts and use them to compute the slope.",
+              "Graph the line and compute \(\dfrac{\Delta y}{\Delta x}\).",
+              "Find values of \(x\) and \(y\) that make the equation true."],
+              0, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What is the easiest way to find the slope of the line <m>18x-42y=60</m>?</p>
+        <p><var name="$si" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Solve for <m>y</m> to get the slope-intercept form.</p>
+    </solution>
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Finding a Linear Equation from a Graph</title>
-    <p>We can also use the slope-intercept form to find the equation of a line from its graph. First, we note the value of the <m>y</m>-intercept from the graph, and then we calculate the slope using two convenient points.</p>
+
+<p>We can also use the slope-intercept form to find the equation of a line from its graph. First, we note the value of the <m>y</m>-intercept from the graph, and then we calculate the slope using two convenient points.</p>
 
 <example xml:id="example-lin-equation-from-graph"><statement><sidebyside widths="60% 30%">
     <p>Find an equation for the line shown at right.</p><image source="images/fig-lin-equation-from-graph"><description>graph of line</description></image></sidebyside></statement>
@@ -162,13 +262,40 @@ point on the line as a check. If we use <m>m = \dfrac{\Delta y}{\Delta x}= \dfra
         The slope-intercept form of the equation, with <m>m = 140</m> and <m>b = 3200</m>, is 
         <me>y = 3200 + 140x</me></p></solution></example>
 
-<exercise><statement>
-    <sidebyside widths="60% 30%"><stack><p>Find an equation for the line shown at right.</p>
-    <p><m>b  = </m></p>
-    <p><m>m  = </m></p>
-    <p><m>y  = </m></p></stack>
-    <image source="images/fig-lin-equation-from-graph2" ><description>graph of line</description></image></sidebyside></statement>
-<answer><p><m>b = 80, ~m =\dfrac{-5}{2}, ~y = 80 - \dfrac{5}{2}x</m></p></answer></exercise>
+<exercise>
+    <title>Practice 3</title>
+    <introduction>
+        <sidebyside widths="60% 30%" valigns="middle middle" margins="0% 9%"><p>Find an equation for the line shown at right.</p>
+        <image source="images/fig-lin-equation-from-graph2" ><description>graph of line</description></image></sidebyside>
+    </introduction>
+    <webwork>
+    <setup><pg-code>
+        Context("Fraction");
+        Context()->noreduce('(-x)+y'); #-x+y does not become y-x
+        $m = Fraction("-5/2");
+        $b = 80;
+        $func = Formula("$m x + $b");
+    </pg-code></setup>
+    <statement>
+        <p><m>b  = </m><var name="$b" width="3"/> </p>
+        <p><m>m  = </m><var name="$m" width="3"/></p>
+        <p><m>y  = </m><var name="$func" width="8"/></p>
+     </statement>
+     <solution>
+         <p>We can read the <m>y</m>-intercept from the graph, so <m>b = 80</m>. Another point is <m>(20,30)</m>, and from those two points we can compute the slope  <m>m =\dfrac{-5}{2}</m>. So the slope-intercept form for the equation of the line is  <m>y = 80 - \dfrac{5}{2}x</m></p>
+     </solution>
+     </webwork>
+</exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>How can you find the equation of a line from its graph?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Point-Slope Form</title>
@@ -178,15 +305,15 @@ point on the line as a check. If we use <m>m = \dfrac{\Delta y}{\Delta x}= \dfra
 <p>For example, we can graph the line of slope <m>\dfrac{-3}{4}</m> that passes through the point <m>(1, -4)</m>. 
 We first plot the given point, <m>(1, -4)</m>, as shown in the figure below.</p>
 
-    <sidebyside widths="60% 35%"><p> Then we use the slope to find another point on the line. The slope is
+<sidebyside widths="60% 35%"><p> Then we use the slope to find another point on the line. The slope is
         <me>m =\frac{-3}{4}= \frac{\Delta y}{\Delta x}</me>
-    so we move down <m>3</m> units and then <m>4</m> units to the right, starting from <m>(1, -4)</m>. This brings us to the point <m>(5, -7)</m>. We can then draw the line through these two points.</p>
+so we move down <m>3</m> units and then <m>4</m> units to the right, starting from <m>(1, -4)</m>. This brings us to the point <m>(5, -7)</m>. We can then draw the line through these two points.</p>
     <image source="images/fig-point-slope"><description>point slope</description></image></sidebyside>
 
-    <p>We can also find an equation for the line, as shown in <xref ref="example-point-slope" text="type-global" />.</p>
+<p>We can also find an equation for the line, as shown in <xref ref="example-point-slope" text="type-global" />.</p>
 
-<example xml:id="example-point-slope"><statement>
-    <p>Find an equation for the line that passes through <m>(1, -4)</m> and has slope <m>\dfrac{-3}{4}</m>.</p></statement>
+<example xml:id="example-point-slope">
+<statement><p>Find an equation for the line that passes through <m>(1, -4)</m> and has slope <m>\dfrac{-3}{4}</m>.</p></statement>
 <solution><p>We will use the formula for slope,
     <me>m = \frac{y_2 - y_1}{x_2 - x_1}</me>
     We substitute <m>\dfrac{-3}{4}</m> for the slope, <m>m</m>, and <m>(1, -4)</m> for <m>(x_1, y_1)</m>. For the second point, <m>(x_2, y_2)</m>, we use the variable point <m>(x, y)</m>. Substituting these values into the slope formula gives us
@@ -201,6 +328,26 @@ We first plot the given point, <m>(1, -4)</m>, as shown in the figure below.</p>
     \end{aligned}</me><!--*****-->
     The equation of the line is  <m>y=\dfrac{-13}{4}-\dfrac{3}{4}x</m>
 </p></solution></example>
+
+<exercise><title>QuickCheck 3</title>
+<webwork>
+    <setup><pg-code>       
+            $sw = RadioButtons(
+              ["The number will be too big.",
+              "The line will be decreasing.",
+              "That is the slope of the perpendicular line.",
+              "It will have the wrong sign."],
+              3, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What will be wrong with your answer if you accidentally compute the slope as <m>m=\dfrac{y_2-y_1}{x_1-x_2}</m>?</p>
+        <p><var name="$sw" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>It will have the wrong sign.</p>
+    </solution>
+</webwork></exercise>
 
 <p>When we use the slope formula in this way to find the equation of a line, we substitute a variable point <m>(x, y)</m> for the second point. This version of the formula, 
     <me>m = \frac{y - y_1}{x - x_1}</me>
@@ -218,12 +365,30 @@ is called the <term>point-slope form</term><idx>point-slope form</idx> for a lin
     <me>y= y_1 + m(x- x_1)</me></p>
 </assemblage>
 
-<exercise><statement><p>Use the point-slope form to find the equation of the line that passes through the point <m>(-3, 5)</m> and has slope <m>-1.4</m>.
-        <!--*****--><me>\begin{aligned}[t]
-        y \amp= y_1 + m(x - x_1) \amp\amp\blert{\text{Substitute }-1.4\text{ for }m\text{ and }(-3, 5)\text{ for }(x_1, y_1).}\\
-          \amp\amp\amp\blert{\text{Simplify: Apply the distributive law.}}
-        \end{aligned}</me><!--*****--></p></statement>
-<answer><p><m>y = 0.8 - 1.4x</m></p></answer></exercise>
+<exercise>
+    <title>Practice 4</title>
+    <webwork>
+        <setup><pg-code>
+            $m=-1.4;
+            $y1 = 5;
+            $x1 = -3;
+            $b = $y1 - $m * $x1;
+            $func = Formula("$b + $m*x")->reduce;
+        </pg-code></setup>
+        <statement>
+            <p>Use the point-slope form to find the equation of the line that passes through the point <m>(-3, 5)</m> and has slope <m>-1.4</m>.
+                    <me>\begin{aligned}[t]
+                    y \amp= y_1 + m(x - x_1) \amp\amp\blert{{\small\text{Substitute }-1.4\text{ for }m\text{ and }(-3, 5)\text{ for }(x_1, y_1).}}\\
+                      \amp\amp\amp\blert{{\small\text{Simplify: Apply the distributive law.}}}
+                    \end{aligned}</me>
+                </p>
+                <p><m>y=</m><var name="$func" width="12"/> </p> 
+        </statement>
+        <solution>
+            <p><m>y = <var name="$func"/> </m></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>The point-slope form is useful for modeling linear functions when we don't know the initial value but do know some other point on the line.</p>
 
@@ -269,16 +434,68 @@ is called the <term>point-slope form</term><idx>point-slope form</idx> for a lin
             \end{aligned}</me></p></li>
     </ol></p></solution></example>
 
-<exercise><statement><p>A healthy weight for a young woman of average height, 64 inches, is 120 pounds. To calculate a healthy weight for a woman taller than 64 inches, add 5 pounds for each inch of height over 64.
-    <ol label="a">
-        <li><p>Write a linear equation in point-slope form for the healthy weight, <m>W</m>, for a woman of height, <m>H</m>, in inches.</p></li>
-        <li><p>Write the equation in slope-intercept form.</p></li>
-    </ol></p></statement>
-<answer><p><ol label="a">
-        <li><p><m>W = 120 + 5(H - 64)</m></p></li>
-        <li><p><m>W = -200 + 5H</m></p></li>
-    </ol></p></answer></exercise>
+<exercise>
+    <title>Practice 5</title>
+    <webwork>
+        <setup><pg-code>
+            Context("Numeric")->variables->add(H=>'Real', W=>'Real');
+            $m = 5;
+            $x1 = 64;
+            $y1 = 120;
+            $func= Formula("$y1 + $m*(H-$x1)");
+            $b = $y1 - $m*$x1;
+            $func2 = Formula("$b +$m*H ");
 
+        </pg-code></setup>
+        <statement>
+            <p>A healthy weight for a young woman of average height, 64 inches, is 120 pounds. To calculate a healthy weight for a woman taller than 64 inches, add 5 pounds for each inch of height over 64.
+            <ol label="a">
+                <li><p>Write a linear equation in point-slope form for the healthy weight, <m>W</m>, for a woman of height, <m>H</m>, in inches.</p>
+                <p><m>W=</m><var name="$func" width="12"/> </p></li>
+                <li><p>Write the equation in slope-intercept form.</p>
+                <p><m>W=</m><var name="$func2" width="8"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p><m>W = 120 + 5(H - 64)</m></p></li>
+                <li><p><m>W = <var name="$func2"/> </m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
+
+<exercise><title>QuickCheck 4</title>
+<webwork>
+    <setup><pg-code>       
+            $zb = RadioButtons(
+              ["\(x=0\)",
+              "\(y=mx+b\)",
+              "\(y=b\)",
+              "\(ax+by=0\)"],
+              1, 
+            );            
+        </pg-code></setup>
+    <statement>
+        <p>What do you get when you substitute the point <m>(0,b)</m> into the point-slope formula?</p>
+        <p><var name="$zb" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>y=mx+b</m></p>
+    </solution>
+</webwork></exercise>
+
+<exercise>
+<title>Pause and Reflect</title>
+<webwork>
+    <setup><pg-code>                      
+        </pg-code></setup>
+    <statement>
+        <p>Explain the difference between the slope-intercept form and the point-slope form for a linear equation.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork>
+</exercise>
 </subsection>
 
 
