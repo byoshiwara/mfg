@@ -873,9 +873,9 @@ We see that</p>
 <exercise><title>Practice 8</title>
     <webwork> 
         <pg-code>
-            $meaning = PopUp(
-                ["?","the volume (in cm) of a sphere whose radius is 10 cu. cm","the radius (in cm) of a sphere whose volume is 10 cm","the volume (in sq. cm) of a sphere whose radius is 10 cm","the volume (in cu. cm) of a sphere whose radius is 10 cm"],
-              4, # index of correct answer; could also just be the correct answer
+            $meaning = RadioButtons(
+                ["the volume (in cm) of a sphere whose radius is 10 cu. cm","the radius (in cm) of a sphere whose volume is 10 cm","the volume (in sq. cm) of a sphere whose radius is 10 cm","the volume (in cu. cm) of a sphere whose radius is 10 cm"],
+              3, # index of correct answer; could also just be the correct answer
             );
             Context("Fraction")->variables->add(r=>'Real');
             $V=Formula("4/3 * pi* r**3");
@@ -883,11 +883,17 @@ We see that</p>
         </pg-code>
      
     <statement>
-        <p>The volume of a sphere of radius <m> r </m> centimeters is given by
-        <me> V = V(r) = \frac{4}{3}\pi r^3 </me>
-        Evaluate <m> V(10) </m> and explain what it means.</p>
-        <p><m> V(10)= </m><var name="$V0" width="12"/>, which represents <var name="$meaning" form="popup"/></p>
+        <p>
+            The volume of a sphere of radius <m> r </m> centimeters is given by
+            <me> V = V(r) = \frac{4}{3}\pi r^3 </me>
+            Evaluate <m> V(10) </m> and explain what it means.
+        </p>
         <instruction>Note: You may use "pi" to enter the number <m>\pi</m>.</instruction>
+        <p>
+            <m> V(10)= </m><var name="$V0" width="12"/>, which represents 
+        </p>
+        <p>
+            <var name="$meaning" form="buttons"/></p>
     </statement>
     <solution>
         <p><m> V(10) = 4000\pi/3\approx 4188.79 \text{ cm}^3 </m> is the volume of a sphere whose radius is 10 cm.</p>
