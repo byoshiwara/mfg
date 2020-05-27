@@ -22,10 +22,30 @@ Writing such an expression is sometimes called "using <term>sigma notation</term
 <solution><p>The general term of the sequence is <m>k^2-2</m>, and the first term is <m>-1</m>, which we find by letting <m>k=1</m> in the formula for the general term.  Thus,
 <me>\sum_{k=1}^{20} (k^2-2)</me></p></solution></example>
 
-<exercise><statement><p>Use sigma notation to represent the sum of the first 20 terms of the sequence
-    <me>5, 8, 11, \cdots, 3k+2, \cdots</me>.</p></statement>
-
-<answer><m>\sum_{k=1}^{20} (3k+2)</m></answer></exercise>
+<exercise><title>Practice 1</title>
+<webwork>
+    <pg-code>
+        Context()->variables->add(k=>"Real");
+        $b = Compute("20");
+        $f = Formula("3*k+2");
+    </pg-code>
+    <statement>
+        <p>
+            Use sigma notation to represent the sum of the first 20 terms of the sequence
+            <md>
+                <mrow>5, 8, 11, \ldots, 3k+2, \ldots</mrow>
+            </md>
+        </p>
+        <p>
+            <me>
+                \sum_{k=1}^{b} a_k =5+ 8+11+\cdots+ (3k+2)+\cdots
+            </me>
+            where <m>b=</m><var name="$b" width="2"/> and <m>a_k=</m><var name="$f" width="5"/> 
+        </p>
+    </statement>
+    <solution><m>\displaystyle\sum_{k=1}^{20} (3k+2)</m></solution>
+</webwork>
+</exercise>
 
 <p>The <term>expanded form</term> of a series written in sigma notation is obtained by writing out all the terms of the series.  For example,
 <me>\sum_{m=4}^{8} \dfrac{3}{m} = \dfrac{3}{4} + \dfrac{3}{5} + \dfrac{3}{6} + \dfrac{3}{7} + \dfrac{3}{8}</me></p>
@@ -49,13 +69,35 @@ Writing such an expression is sometimes called "using <term>sigma notation</term
     we confirm that the first term of the series is <m>a_1=1</m> and the common ratio is <m>r=2</m>. The series has 10 terms, from <m>k=0</m> to <m>k=9</m>, so <m>n=10</m>. Finally, we substitute these values into the formula for geometric series to obtain  
         <me> \sum_{k=0}^{9} 2^k = \dfrac{1(1-2^{10})}{1-2} = 1023</me></p></li></ol></p></solution></example>
 
- <exercise><statement><p>Compute the value of each series.</p><p><ol label = "a">
-    <li><m>\displaystyle{\sum_{k=1}^{50} (3k+2)}</m></li>
-    <li><m>\displaystyle{\sum_{n=1}^{8} 10^n}</m></li></ol></p></statement>
-
- <answer><p><ol label = "a">
+<exercise><title>Practice 2</title>
+<webwork>
+    <pg-code>
+        $a = Compute("3925");
+        $b = Compute("111111110");
+    </pg-code>
+    <statement>
+        <p>
+            Compute the value of each series.
+            <ol label = "a">
+                <li>
+                    <p>
+                        <m>\displaystyle{\sum_{k=1}^{50} (3k+2)}=</m><var name="$a" width="5"/>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>\displaystyle{\sum_{n=1}^{8} 10^n}=</m><var name="$b" width="10"/>
+                    </p>
+                </li>
+            </ol>
+        </p>
+        <instruction>Do not use any commas. For example, use "10000" rather than "10,000".</instruction>
+    </statement>
+    <solution><p><ol label = "a">
     <li>3925</li>
-    <li>111,111,110</li></ol></p></answer></exercise>
+    <li>111,111,110</li></ol></p></solution>
+</webwork>
+</exercise>
 
 <p>If the series is not arithmetic or geometric, we don't have a formula for the sum, so we must compute the sum directly.</p>
 
@@ -75,47 +117,75 @@ Writing such an expression is sometimes called "using <term>sigma notation</term
                     \amp = 800(5) = 4000\\                
                 \end{aligned}</me><!--*****--></p></li></ol></p></solution></example>           
 
-<exercise><statement><p>Compute the value of each series.</p><p><ol label = "a">
-    <li><m>\displaystyle{\sum_{k=0}^{20} \dfrac{1}{3}}</m></li>
-    <li><m>\displaystyle{\sum_{k=0}^{4} \dfrac{k}{k+1}}</m></li></ol></p></statement>
-
-<answer><p><ol label = "a">
+<exercise><title>Practice 3</title>
+<webwork>
+    <pg-code>
+        $a = Compute("7");
+        $b = Compute("23/12");
+    </pg-code>
+    <statement>
+        <p>
+            Compute the value of each series.
+            <ol label = "a">
+                <li>
+                    <p>
+                        <m>\displaystyle{\sum_{k=0}^{20} \dfrac{1}{3}}=</m><var name="$a" width="5"/>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>\displaystyle{\sum_{k=0}^{3} \dfrac{k}{k+1}}=</m><var name="$b" width="5"/>
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+    <solution><p><ol label = "a">
     <li>7</li>
-    <li>\dfrac{23}{12}</li></ol></p></answer></exercise>    
+    <li><m>\dfrac{23}{12}</m></li></ol></p></solution>
+</webwork>
+</exercise>  
 
   </subsection>
 
 <subsection><title>Infinite Series</title>
 
 <p>A series with infinitely many terms is called an <term>infinite series</term>. Is it possible to add infinitely many terms and arrive at a finite sum?  In some cases, if the terms added are small enough, the answer is yes.</p>  
-<p>Consider the infinite geometric series
+<p>
+    Consider the infinite geometric series
     <me>\dfrac{1}{2}+\dfrac{1}{4}+\dfrac{1}{8}+\dfrac{1}{16}+\cdots</me>
-The <m>n^{\text{th}}</m> <term>partial sum</term> of the series is the sum of its first <m>n</m> terms, and is denoted by <m>S_n</m>.  Thus,
-    <!--*****--><me>\begin{aligned}[t]
-                S_1\amp = \dfrac{1}{2}\\
-                S_2 \amp = \dfrac{1}{2}+\dfrac{1}{4} = \dfrac{3}{4}\\
-                S_3 \amp = \dfrac{1}{2}+\dfrac{1}{4}+\dfrac{1}{8} = \dfrac{7}{8}\\ 
-                S_4 \amp = \dfrac{1}{2}+\dfrac{1}{4}+\dfrac{1}{8}+\dfrac{1}{16} = \dfrac{15}{16}\\                
-                \end{aligned}</me><!--*****-->
-
-Notice that for each partial sum, the new term added gets smaller and smaller: <m>\dfrac{1}{2},~\dfrac{1}{4},~\dfrac{1}{8},~\dfrac{1}{16},</m> and so on.  You can also see that as <m>n</m> increases and we add more and more terms of the series, the partial sums are getting closer to 1.  In fact, as <m>n</m> becomes very large, <m>S_n</m>  gets very close to 1.  It seems reasonable that the sum of all the terms of the series is 1.</p>
+    The <m>n^{\text{th}}</m> <term>partial sum</term> of the series is the sum of its first <m>n</m> terms, and is denoted by <m>S_n</m>.  Thus,
+    <md>
+        <mrow>S_1\amp = \dfrac{1}{2}</mrow>
+        <mrow>S_2 \amp = \dfrac{1}{2}+\dfrac{1}{4} = \dfrac{3}{4}</mrow>
+        <mrow>S_3 \amp = \dfrac{1}{2}+\dfrac{1}{4}+\dfrac{1}{8} = \dfrac{7}{8}</mrow>
+        <mrow>S_4 \amp = \dfrac{1}{2}+\dfrac{1}{4}+\dfrac{1}{8}+\dfrac{1}{16} = \dfrac{15}{16}</mrow>
+    </md>
+    Notice that for each partial sum, the new term added gets smaller and smaller: <m>\dfrac{1}{2</m>}, <m>\dfrac{1}{4}</m>, <m>\dfrac{1}{8}</m>, <m>\dfrac{1}{16},</m> and so on.  You can also see that as <m>n</m> increases and we add more and more terms of the series, the partial sums are getting closer to 1.  In fact, as <m>n</m> becomes very large, <m>S_n</m>  gets very close to 1.  It seems reasonable that the sum of all the terms of the series is 1.
+</p>
 
 <note><p>Will the partial sums ever be greater than 1?  No, because each new term <m>a_n</m> added is half the difference between  <m>S_n</m> and 1.</p></note>
 
-<p>We can make this conjecture more plausible by examining the formula for the <m>n^{\text{th}}</m> partial sum of a geometric series,
-    <!--*****--><me>\begin{aligned}[t]
-                S_n\amp = \dfrac{a_{n+1} - a_1}{r-1}\\
-                    \amp = \dfrac{ar^n - a}{r-1} = \dfrac{a - ar^n}{1-r}~~~~~~~~~~~~~(r \not= 1)\\                
-                \end{aligned}</me><!--*****-->
-
-Look at the second term of the numerator, <m>ar^n</m>. This term is the only part of the formula that depends on <m>n</m>.  What happens to <m>ar^n</m> as <m>n</m> increases?  Consider two examples: </p>
+<p>
+    We can make this conjecture more plausible by examining the formula for the <m>n^{\text{th}}</m> partial sum of a geometric series,
+    <md>
+        <mrow>S_n\amp = \dfrac{a_{n+1} - a_1}{r-1}</mrow>
+        <mrow>\amp = \dfrac{ar^n - a}{r-1} = \dfrac{a - ar^n}{1-r} \amp\amp (r \not= 1)</mrow>
+    </md>
+    Look at the second term of the numerator, <m>ar^n</m>. This term is the only part of the formula that depends on <m>n</m>.  What happens to <m>ar^n</m> as <m>n</m> increases?  Consider two examples: 
+</p>
 <p><ul>
-<li>If <m>r = \dfrac{1}{2}</m>, then
-    <me>r^2 = (\dfrac{1}{2})^2 = \dfrac{1}{4},~~~ r^3 = (\dfrac{1}{2})^3 = \dfrac{1}{8},~~~ r^4 = (\dfrac{1}{2})^4 = \dfrac{1}{16},</me>
-and so on, with <m>(\dfrac{1}{2})^n</m> becoming smaller and smaller for larger values of <m>n</m>. Each time we multiply by another factor of <m>r=\dfrac{1}{2}</m>, the product gets smaller, because <m>\dfrac{1}{2} \lt 1</m>.</li>
-<li>On the other hand, if <m>r \gt 1</m>, multiplying by <m>r</m> makes the product larger.  If <m>r = \dfrac{3}{2}</m> for example, then
-    <me>r^2 = (\dfrac{3}{2})^2 = \dfrac{9}{4},~~~ r^3 = (\dfrac{3}{2})^3 = \dfrac{27}{8},~~~ r^4 = (\dfrac{3}{2})^4 = \dfrac{81}{16},</me>
-and so on.  In this case the powers of <m>r</m> are increasing.</li></ul></p>
+    <li><p>
+        If <m>r = \dfrac{1}{2}</m>, then
+        <me>r^2 = \left(\dfrac{1}{2}\right)^2 = \dfrac{1}{4},\qquad r^3 = \left(\dfrac{1}{2}\right)^3 = \dfrac{1}{8},\qquad r^4 = \left(\dfrac{1}{2}\right)^4 = \dfrac{1}{16},</me>
+        and so on, with <m>\left(\dfrac{1}{2}\right)^n</m> becoming smaller and smaller for larger values of <m>n</m>. Each time we multiply by another factor of <m>r=\dfrac{1}{2}</m>, the product gets smaller, because <m>\dfrac{1}{2} \lt 1</m>.
+    </p></li>
+    <li><p>
+        On the other hand, if <m>r \gt 1</m>, multiplying by <m>r</m> makes the product larger.  If <m>r = \dfrac{3}{2}</m> for example, then
+        <me>r^2 = \left(\dfrac{3}{2}\right)^2 = \dfrac{9}{4},\qquad r^3 = \left(\dfrac{3}{2}\right)^3 = \dfrac{27}{8},\qquad r^4 = \left(\dfrac{3}{2}\right)^4 = \dfrac{81}{16},</me>
+        and so on.  In this case the powers of <m>r</m> are increasing.
+    </p></li>
+</ul></p>
 
 <p>In general, we have the following result.</p>
 
@@ -194,14 +264,37 @@ and so on. The results, rounded to hundredths, are shown in the table.</p>
 
 <p>This is a geometric series with <m>a=3</m> and <m>r = \dfrac{4}{3}</m>. The infinite series does not have a sum because <m>\abs{r} \gt 1</m>.</p></li></ol></p></solution></example>
 
-<exercise><statement><p>Find the sum, if it exists, or state that the series does not have a sum.</p>
-<p><ol label="a" cols = "2">
-    <li><m>~~\displaystyle{\sum_{j=0}^{\infty} 13(\dfrac{7}{6})^j}~~</m></li>
-    <li><m>~~\displaystyle{\sum_{m=0}^{\infty} 5.9(0.9)^m}~~</m></li></ol></p></statement>
-
-<answer><p><ol label="a" cols = "2">
-<li>No sum</li>
-<li>59</li></ol></p></answer></exercise>
+<exercise><title>Practice 4</title>
+<webwork>
+    <pg-code>
+        @choices = ("?","no sum", "dne", "diverges");
+        $popup = PopUp([@choices], $choices[0]);  # It doesn't matter which is used as the "correct answer".
+        Context($popup->context); 
+        $a = OneOf(@choices[1..3]);
+        $b = Compute("59");
+    </pg-code>
+    <statement>
+        <p>
+            Find the sum, if it exists. If the series does not have a sum, enter "no sum".
+            <ol label = "a">
+                <li>
+                    <p>
+                        <m>\displaystyle{\sum_{j=0}^{\infty} 13\left(\dfrac{7}{6}\right)^j}=</m><var name="$a" width="6"/>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>\displaystyle{\sum_{m=0}^{\infty} 5.9(0.9)^m}=</m><var name="$b" width="6"/>
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+    <solution><p><ol label = "a">
+    <li>No sum</li>
+    <li>59</li></ol></p></solution>
+</webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Repeating Decimals</title>
@@ -233,9 +326,19 @@ This is an infinite geometric series with first term <m>\dfrac{7}{100}</m> and c
 Finally, we add <m>\dfrac{7}{90}</m> and <m>\dfrac{3}{10}</m> to find
     <me>0.3\overline{7} = \dfrac{3}{10}+\dfrac{7}{90} = \dfrac{34}{90}</me></p></solution></example>
 
-<exercise><statement><p> Find a common fraction equivalent to <m>0.\overline{8}</m>.</p></statement>
-
-<answer><p><m>\dfrac{8}{9}</m></p></answer></exercise>
+<exercise><title>Practice 5</title>
+<webwork>
+    <pg-code>
+        $answer = Compute("8/9");
+    </pg-code>
+    <statement>
+        <p> 
+            Find a common fraction equivalent to <m>0.\overline{8}</m>: <var name="$answer" width="4"/>
+        </p>
+    </statement>
+    <solution><p><m>\dfrac{8}{9}</m></p></solution>
+</webwork>
+</exercise>
 
 </subsection>
 

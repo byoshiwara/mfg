@@ -11,9 +11,49 @@
 For each value of <m>x</m>, this equation assigns the value <m>\alert{4}</m> to <m>y</m>.  Thus, any ordered pair of the form <m>(x,4)</m> is a solution of the equation.  For example, 
 	<me>(-1,\alert{4}),~~(2, \alert{4}),~~\text{and}~~(4, \alert{4})</me>
 are all solutions of the equation.  If we draw a straight line through these points, we obtain the <term>horizontal</term> line shown at left below.</p>
-    <sidebyside valigns="middle middle" widths="35% 35%">
-        <image source="images/fig-10-1-hor.png"><description>horizontal line</description></image>
-        <image source="images/fig-10-1-vert.png"><description>vertical line</description></image></sidebyside>
+<sidebyside widths="37% 37%" >
+    <image xml:id="fig-horizontal-line">
+        <description>horizontal line</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.6]
+        \draw[cyan] (-5,-5) grid (5,5);
+        \draw[black,thick, ->, >=stealth'] (-5,0)--(5.3,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-5)--(0,5.3) node[above]{$y$};
+        \foreach \x in  {-5,5} {
+         \draw[black] (\x,.15) --++(0,-.3)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+         \draw[black] (.15,\x) --++(-.3,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \filldraw[red] (-1,4) circle (.15);
+        \filldraw[red] (2,4) circle (.15);
+        \filldraw[red] (4,4) circle (.15);
+        \draw[red,very thick,<->,>=stealth'] (-5,4)--++(10,0);
+        \node[color=red,above, fill=white, inner sep=1] at (-2.8,4.2){$y=4$};
+        \end{tikzpicture}]]>
+        </latex-image>
+        </image>
+    <image xml:id="fig-vertical-line">
+        <description>vertical line</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.6]
+        \draw[cyan] (-5,-5) grid (5,5);
+        \draw[black,thick, ->, >=stealth'] (-5,0)--(5.3,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-5)--(0,5.3) node[above]{$y$};
+        \foreach \x in  {-5,5} {
+         \draw[black] (\x,.15) --++(0,-.3)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+         \draw[black] (.15,\x) --++(-.3,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \draw[red,very thick,<->,>=stealth'] (3,-5)--++(0,10);
+        \node[color=red,left,rotate=90, fill=white, inner sep=1] at (2.6,3){$x=3$};
+        \end{tikzpicture}]]>
+        </latex-image>
+        </image>
+</sidebyside>
 
 <p>The other special case of a linear equation is of the type <m>x=3</m>, or   
     <me>x+0y=3</me>
@@ -28,11 +68,53 @@ Here, only one value is permissible for <m>x</m>, namely <m>\alert{3}</m>, while
     <li>Graph <m>y=2</m></li>
     <li>Graph <m>x=-3</m></li></ol></p></statement>
 <solution><p><ol label="a" cols="2">
-    <li><image source="images/fig-10-1-exm1a.png"><description>horizontal line</description></image></li>
-    <li><image source="images/fig-10-1-exm1b.png"><description>vertical line</description></image></li>
+    <li><sidebyside width="70%" margins="0% 5%">
+         <image xml:id="fig-y-eq2">
+        <description>horizontal line</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=1]
+        \draw[cyan] (-3,-1) grid (2,4);
+        \draw[black,thick, ->, >=stealth'] (-3,0)--++(5.3,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-1)--++(0,5.3) node[above]{$y$};
+        \foreach \x in  {-2,-1,1,2} {
+         \draw[black] (\x,.15) --++(0,-.3)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \foreach \x in  {-1,1,2,3,4} {
+         \draw[black] (.15,\x) --++(-.3,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \draw[red,very thick,<->,>=stealth'] (-3,2)--++(5,0);
+        \end{tikzpicture}]]>
+        </latex-image>
+    </image>
+    </sidebyside></li>
+    <li><sidebyside width="70%" margins="0% 5%">
+         <image xml:id="fig-x-neg3">
+        <description>horizontal line</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.95]
+        \draw[cyan] (-4,-1) grid (1,4);
+        \draw[black,thick, ->, >=stealth'] (-4,0)--++(5.3,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-1)--++(0,5.3) node[above]{$y$};
+        \foreach \x in  {-4,-3,-2,-1,1} {
+         \draw[black] (\x,.15) --++(0,-.3)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \foreach \x in  {-1,1,2,3,4} {
+         \draw[black] (.15,\x) --++(-.3,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \draw[red,very thick,<->,>=stealth'] (-3,-1)--++(0,5);
+        \end{tikzpicture}]]>
+        </latex-image>
+    </image>
+    </sidebyside></li>
 </ol></p></solution></example>
 
-<p>Now let's compute the slopes of the two lines in Example 1.  Choose two points on the graph of <m>y=2</m>,  say <m>(-5,2)</m> and <m>(4,2)</m>.  Use these points to compute the slope.
+<p>Now let's compute the slopes of the two lines in the Example above.  Choose two points on the graph of <m>y=2</m>,  say <m>(-5,2)</m> and <m>(4,2)</m>.  Use these points to compute the slope.
 
         <me>\begin{aligned}
                 m \amp = \dfrac{y_2-y_1}{x_2-x_1} = \dfrac{2-2}{4-(-5)}\\
@@ -55,14 +137,39 @@ which is undefined. The slope of any vertical line is undefined because the expr
     <li>The slope of a vertical line is undefined.</li>
 </ul></p></assemblage>
 
-<exercise><statement><p><ol label="a">
-        <li>What is the slope of any line parallel to the <m>x</m>-axis?</li>
-        <li>What is the slope of any line parallel to the <m>y</m>-axis?</li>
-    </ol></p></statement>
-<answer><p><ol label="a" cols="2">
-        <li><m>0</m></li>
-        <li>undefined</li>
-    </ol></p></answer></exercise>
+<exercise><title>Practice 1</title>
+<webwork>
+    <pg-code>       
+        $horizontal = PopUp(
+          ["?"," 0 ", "Undefined"],
+         1, 
+        );
+        $vertical = PopUp(
+          ["?"," 0 ", "Undefined"],
+          2, 
+        );
+    </pg-code>
+    <statement>
+        <p>
+             <ol label="a">
+                <li><p>
+                    What is the slope of any line parallel to the <m>x</m>-axis? <var name="$horizontal" form="popup"/>
+                </p></li>
+                <li><p>
+                    What is the slope of any line parallel to the <m>y</m>-axis? <var name="$vertical" form="popup"/>
+                </p></li>
+            </ol>
+        </p>
+    </statement>
+    <solution><p>
+        <ol label="a">
+            <li>0</li>
+            <li>undefined</li>
+        </ol>
+        </p>
+    </solution>
+</webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Parallel and Perpendicular Lines</title>
@@ -74,21 +181,38 @@ which is undefined. The slope of any vertical line is undefined because the expr
                 y \amp = \dfrac{2}{3} x+2  
                 \end{aligned}</me>                   
 shown at right. The lines have the same slope, <m>\dfrac{2}{3}</m>,  but different <m>y</m>-intercepts. Because slope measures the steepness or inclination of a line, lines with the same slope are parallel.</p>
-<image source="images/fig-10-1-par.png"><description>parallel lines</description></image></sidebyside>
+<image xml:id="fig-parallel-lines">
+        <description>parallel lines</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.35]
+        \draw[cyan] (-10,-10) grid (10,10);
+        \draw[black,thick, ->, >=stealth'] (-10,0)--(10.8,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-10)--(0,10.8) node[above]{$y$};
+        \foreach \x in  {-5,5,-10,10} {
+         \draw[black] (\x,.15) --++(0,-.3)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+         \draw[black] (.15,\x) --++(-.3,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \draw[red,very thick,<->,>=stealth'] (-9,-10)--(10,8/3) node[below left,  yshift=-1.5cm, fill=white, inner sep=1]{$y=\frac{2}{3}x-4$};
+        \draw[blue,very thick,<->,>=stealth'] (-10,-14/3)--(10,26/3) node[left, xshift=-.8cm,  fill=white, inner sep=1]{$y=\frac{2}{3}x+2$};
+        \end{tikzpicture}]]>
+    </latex-image>
+    </image></sidebyside>
+
 
 <assemblage><p>Two lines with slopes <m>m_1</m> and <m>m_2</m>  are parallel if and only if
         <me>m_1=m_2</me></p></assemblage>    
      
 <example><statement><p>Are the graphs of the equations <m>~3x+6y=6~</m> and <m>~y=\dfrac{-1}{2}+5~</m> parallel?</p></statement>
 <solution><p>The lines are parallel if their slopes are equal. We can find the slope of the first line by putting its equation into slope-intercept form. We solve for <m>y</m>:
-
-        <me>\begin{aligned}
-                3x+6y \amp = 6  \amp\amp \blert{\text{Subtract 3x from both sides.}}\\
-                    6y \amp = -3x+6  \amp\amp \blert{\text{Divide both sides by 6.}}\\ 
-                    y \amp = \dfrac{-3x}{6}+\dfrac{6}{6}  \amp\amp \blert{\text{Simplify.}}\\
-                    y \amp = \dfrac{-1}{2}x+1
-                \end{aligned}</me>
-
+    <md>
+        <mrow>3x+6y \amp = 6  \amp\amp \blert{\text{Subtract 3x from both sides.}}</mrow>
+        <mrow>6y \amp = -3x+6  \amp\amp \blert{\text{Divide both sides by 6.}}</mrow>
+        <mrow>y \amp = \dfrac{-3x}{6}+\dfrac{6}{6}  \amp\amp \blert{\text{Simplify.}}</mrow>
+        <mrow>y \amp = \dfrac{-1}{2}x+1</mrow>
+    </md>
 The slope of the first line is <m>m_1=\dfrac{-1}{2}</m>.  The equation of the second line is already in slope-intercept form, and its slope is <m>m_2=\dfrac{-1}{2}</m>. Thus, <m>m_1=m_2</m>, so the lines are parallel.</p></solution></example>
 
 <p>Now consider the graphs of the equations</p>
@@ -98,7 +222,26 @@ The slope of the first line is <m>m_1=\dfrac{-1}{2}</m>.  The equation of the se
                 y \amp = \dfrac{-3}{2} x+3  
                 \end{aligned}</me>      
 shown at right. The lines appear to be perpendicular. The relationship between the slopes of perpendicular lines is not as easy to see as the relationship for parallel lines. However, for this example, <m>m_1=\dfrac{2}{3}</m> and <m>m_2=\dfrac{-3}{2}</m>. </p>    
-<image source="images/fig-10-1-perp.png"><description>perpendicular lines</description></image></sidebyside>
+<image xml:id="fig-perpendicular-lines">
+        <description>perpendicular lines</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.35]
+        \draw[cyan] (-10,-10) grid (10,10);
+        \draw[black,thick, ->, >=stealth'] (-10,0)--(10.8,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-10)--(0,10.8) node[above]{$y$};
+        \foreach \x in  {-5,5,-10,10} {
+         \draw[black] (\x,.15) --++(0,-.3)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+         \draw[black] (.15,\x) --++(-.3,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \draw[red,very thick,<->,>=stealth'] (-10,-26/3)--(10,14/3) node[above left,  yshift=.2cm, fill=white, inner sep=1]{$y=\frac{2}{3}x-2$};
+        \draw[blue,very thick,<->,>=stealth'] (26/3,-10)--(-14/3,10) node[below left, xshift=.4cm,yshift=-1cm, fill=white, inner sep=1]{$y=\frac{-3}{2}x+3$};
+        \end{tikzpicture}]]>
+        </latex-image>
+    </image>
+</sidebyside>
 
 <p>Note that 
 <me>m_2=\dfrac{-3}{2}=\dfrac{-1}{\dfrac{2}{3}}=\dfrac{-1}{m_1}</me>
@@ -110,90 +253,312 @@ This relationship holds for any two perpendicular lines with slopes <m>m_1</m> a
 
 <p>We say that <m>m_2</m> is the <term>negative reciprocal</term> of <m>m_1</m>.</p>
 
-<exercise><statement><p>Are the graphs of <m>~3x-5y=5~</m> and  <m>~2y=\dfrac{10}{3}x+3~</m> perpendicular?</p>
-
-<p><m>\blert{\text{Put each equation into slope-intercept form by solving for}~y.}</m>
-<m>\blert{\text{Read the slope of each line from its equation.}~~~~~~~~~~~~}</m>
-<m>\blert{\text{Compute the negative reciprocal of}~m_1.}</m></p>
-</statement>
-<solution><p><m>m_1=\dfrac{3}{5},~m_2=\dfrac{5}{3}</m>; no</p></solution></exercise>
+<exercise><title>Practice 2</title>
+<webwork>
+    <pg-code>
+        $no = PopUp(
+          ["?","Yes", "No"],
+         2, 
+        );
+    </pg-code>
+    <statement>
+        <p>
+            Are the graphs of <m>~3x-5y=5~</m> and  <m>~2y=\dfrac{10}{3}x+3~</m> perpendicular? <var name="$no" form="popup"/>
+        </p>
+        <p><m>
+            \begin{aligned}[t]
+            \amp\blert{\text{Put each equation into slope-intercept form}}\\
+            \amp\blert{\text{ by solving for }y.}\\
+            \amp\blert{\text{Read the slope of each line from its equation.}}\\
+            \amp\blert{\text{Compute the negative reciprocal of } m_1.}
+            \end{aligned}</m>
+        </p>
+    </statement>
+    <solution><p><m>m_1=\dfrac{3}{5},~m_2=\dfrac{5}{3}</m>; no</p></solution>
+</webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Applications to Geometry</title>
 
 <p>These relationships for the slopes of parallel and perpendicular lines can help us solve numerous geometric problems.</p>
 
-<example><statement><p>Show that the triangle with vertices <m>A(0,8),~B(6,2),</m> and <m>C(-4,4)</m> shown below is a right triangle.</p>
-<image source="images/fig-10-1-exm3.png" width="55%"><description>right triangle</description></image></statement>
+<example>
+    <statement>
+        <p>
+            Show that the triangle with vertices <m>A (0, 8)</m>, <m>B (6, 2)</m>, and <m>C (-4, 4)</m> is a right triangle.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            We will show that two of the sides of the right triangle are perpendicular. The line segment <m>\overline{AB}</m> has slope
+        </p>
+        <sidebyside widths="50% 45%" margins="0% 0%" valigns="middle middle">
+            <p>
+                <md><mrow>
+                    m_1=\frac{2-8}{6-0}=\frac{-6}{6}=-1
+                </mrow></md>
+                and the segment <m>\overline{AC} ~ </m> has slope
+                <md><mrow>
+                    m_2=\frac{4-8}{-4-0}=\frac{-4}{-4}=1
+                </mrow></md>
+                Because
+                <md><mrow>
+                   \dfrac{-1}{m_1} = \dfrac{-1}{-1}=1= m_2
+                </mrow></md>                
+            </p>
+            <image xml:id="fig-example-right-triangle">
+                <description>right triangle</description>
+                <latex-image>
+                <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                <![CDATA[\tikzset{%
+                }
+                \begin{tikzpicture} [scale=.6]
+                \draw[cyan] (-5,-2) grid (7,10);
+                \draw[black,thick, ->, >=stealth'] (-5,0)--(7.6,0) node[right]{$x$};
+                \draw[black,thick, ->, >=stealth'] (0,-2)--(0,10.6) node[above]{$y$};
+                \foreach \x in  {-4,-2,2,4,6} {
+                 \draw[black] (\x,.1) --++(0,-.2)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+                }
+                \foreach \x in  {-2,2,4,...,10} {
+                 \draw[black] (.1,\x) --++(-.2,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+                }
+                \draw[red,very thick] (0,8) node[anchor=south west]{$A$} -- (6,2) node[anchor=south west]{$B$} -- (-4,4) node[anchor=south east]{$C$} -- cycle;
+                \end{tikzpicture}]]>
+            </latex-image>
+            </image>
+        </sidebyside>
+        <p>
+            the sides <m>\overline{AB}</m> and <m>\overline{AC}</m> perpendicular, and therefore the triangle is a right triangle.
+        </p>
+    </solution>
+</example>
 
-<solution><p>We will show that two of the sides of the triangle are perpendicular. The line segment <m>\overline{AB}</m> has slope 
-    <me>m_1=\dfrac{2-8}{6-0}=\dfrac{-6}{6}=-1</me>
-and the line segment <m>\overline{AC}</m> has slope  
-    <me>m_2=\dfrac{4-8}{-4-0}=\dfrac{-4}{-4}=1</me>
-Because
-    <me>\dfrac{-1}{m_1}=\dfrac{-1}{-1}=1=m_2</me>
-the sides <m>\overline{AB}</m> and <m>\overline{AC}</m> are perpendicular, and the triangle is a right triangle.</p></solution></example>
+<exercise><title>Practice 3</title>
+<webwork>
+    <pg-code>
+        $m1 = Compute("2/7");
+        $m2 = Compute("5/2");
+        $equal = PopUp(
+          ["?","equal", "different"],
+         1, 
+        );
+        $parallel = PopUp(
+          ["?","parallel", "perpendicular"],
+         1, 
+        );
+    </pg-code>
+    <statement>
+        <p><ol label="a">
+            <li>
+                <p>Sketch the quadrilateral with vertices <m>A(-3,7), B(4,9), C(2,4),</m> and <m>D(-5,2)</m>.</p>
+            </li>
+            <li>
+                <p>Show that the figure in part (a) is a parallelogram.</p>
+                <p>
+                    (Hint: Show that <m>\overline{AB} </m> is parallel to <m>\overline{CD} </m>, and that <m>\overline{BC} </m> is parallel to <m>\overline{AD} </m>.)
+                </p>
+                <p>
+                    The slope of <m>\overline{AB} </m> is <var name="$m1" width="4"/>, and the slope of <m>\overline{CD}</m> is <var name="$m1" width="4"/>. These slopes are <var name="$equal" form="popup"/>, so the sides are <var name="$parallel" form="popup"/>.
+                </p>
+                <p>
+                    The slope of <m>\overline{BC} </m> is <var name="$m2" width="4"/>, and the slope of <m>\overline{AD}</m> is <var name="$m2" width="4"/>. These slopes are <var name="$equal" form="popup"/>, so the sides are <var name="$parallel" form="popup"/>.
+                </p>
+            </li>
+        </ol></p>
+    </statement>
+    <solution>
+        <p>
+            <m>m_{\overline{AB}}=\dfrac{2}{7}=m_{\overline{CD}}</m>; <m>~m_{\overline{BC}}=\dfrac{5}{2}=m_{\overline{AD}}</m>
+        </p>
+    </solution>
+</webwork>
+<conclusion>
+    <sidebyside width="50%" margins="0% 5%">
+        <image xml:id="fig-parallelogram">
+        <description>parallelogram</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.6]
+        \draw[cyan] (-6,-2) grid (5,10);
+        \draw[black,thick, ->, >=stealth'] (-6,0)--(5.6,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-2)--(0,10.6) node[above]{$y$};
+        \foreach \x in  {-4,-2,2,4,-6} {
+         \draw[black] (\x,.1) --++(0,-.2)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \foreach \x in  {-2,2,4,...,10} {
+         \draw[black] (.1,\x) --++(-.2,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \draw[red,very thick] (-3,7) node[anchor=south east]{$A$} -- (4,9) node[anchor=south west]{$B$} -- (2,4) node[anchor=north west]{$C$} -- (-5,2) node[anchor=north east]{$D$} -- cycle;
+        \end{tikzpicture}]]>
+        </latex-image>
+        </image>
+    </sidebyside>
+</conclusion>
+</exercise>
 
-<exercise><statement><p><ol label="a">
-        <li>Sketch the quadrilateral with vertices <m>A(-3,7), B(4,9), C(2,4),</m> and <m>D(-5,2)</m>.</li>
-        <li>Show that the figure in part (a) is a parallelogram.</li>
-    </ol></p></statement>
-<answer><p><m>m_{\overline{AB}}=\dfrac{2}{7}=m_{\overline{CD}}~</m>; <m>~m_{\overline{BC}}=\dfrac{5}{2}=m_{\overline{AD}}</m></p></answer></exercise>
+<p>
+    Consider the graph of <m>4x-2y=6</m> shown below.
+</p>
+<sidebyside widths="50% 45%" valigns="bottom bottom">
+    <stack><p> Can we find the equation of the line that is parallel to this line, but passes through the point <m>(1,4)</m>?  If we can find the slope of the desired line, we can use the slope-intercept formula to find its equation.</p>
+    <p> Now because the line we want is parallel to the given line, they must have the same slope.  To find the slope of the given line, we write its equation in slope-intercept form:</p></stack>
+    <image xml:id="fig-parallel-lines2">
+        <description>parallel lines</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.6]
+        \draw[cyan] (-6,-6) grid (6,6);
+        \draw[black,thick, ->, >=stealth'] (-6,0)--(6.6,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-6)--(0,6.6) node[above]{$y$};
+        \foreach \x in  {-5,5} {
+         \draw[black] (\x,.1) --++(0,-.2)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \foreach \x in  {-5,5} {
+         \draw[black] (.1,\x) --++(-.2,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \draw[red,very thick, <->, >=stealth'] (-3/2,-6) -- (9/2,6) node[below, yshift=-2.5cm, fill=white, inner sep=2]{$4x-2y=6$};
+        \draw[blue, dashed,very thick, <->, >=stealth'] (-4,-6) -- (2,6);
+        \filldraw[blue] (1,4) circle (.15) node[right,xshift=5, fill=white, inner sep=1] {$(1,4)$};        \end{tikzpicture}]]>
+        </latex-image>
+    </image>
+</sidebyside>
 
-<p>Consider the graph of <m>4x-2y=6</m> shown below.</p>
- <sidebyside widths="50% 45%" valigns="bottom bottom"><paragraphs><p> Can we find the equation of the line that is parallel to this line, but passes through the point <m>(1,4)</m>?  If we can find the slope of the desired line, we can use the slope-intercept formula to find its equation.</p>
-<p> Now because the line we want is parallel to the given line, they must have the same slope.  To find the slope of the given line, we write its equation in slope-intercept form:</p></paragraphs>
+<p>
+    <md>
+        <mrow>4x-2y \amp = 6  \amp\amp \blert{\text{Subtract 4x from both sides.}}</mrow>
+        <mrow>-2y \amp = -4x+6  \amp\amp \blert{\text{Divide both sides by -2.}}</mrow>
+        <mrow>y \amp = \dfrac{-4x}{-2}+\dfrac{6}{-2}  \amp\amp \blert{\text{Simplify.}}</mrow>
+        <mrow>y \amp = 2x-3</mrow>
+    </md>
+    The slope of the given line is <m>~m_1=2</m>.  Because the unknown line is parallel to this line, its slope is also 2.  Now we know the slope of the desired line, <m>~m=2</m>,  and one point on the line, <m>(1,4)</m>. Substituting these values into the point-slope formula will give us the equation.
+    <md>
+        <mrow>y-y_1 \amp = m(x-x_1)</mrow>
+        <mrow>y-\alert{4} \amp = \alert{2}(x-\alert{1})  \amp\amp \blert{\text{Apply the distributive law.}}</mrow>
+        <mrow>y-4 \amp = 2x-2  \amp\amp \blert{\text{Add 4 to both sides.}}</mrow>
+        <mrow>y \amp = 2x-2</mrow>
+    </md>
+</p>
 
-<image source="images/fig-10-1-app.png"><description>parallel lines</description></image></sidebyside>
+<example>
+    <statement>
+        <p>Find an equation for the line that passes through the point <m>(1,4)</m> and is perpendicular to the line <m>4x-2y=6</m>.</p>
+    </statement>
+    <solution>
+        <sidebyside widths="45% 50%" valigns="middle middle">
+            <p>We follow the same strategy as in the discussion above:  First find the slope of the desired line, then use the point-slope formula to write its equation. The line we want is perpendicular to the given line, so its slope is the negative reciprocal of <m>m_1=2</m>, the slope of the given line.  Thus
+            <md>
+                <mrow>m_2=\dfrac{-1}{m_1}=\dfrac{-1}{2}</mrow>
+            </md>
+            </p>
+            <image xml:id="fig-example-perpendicular-lines">
+                <description>perpendicular lines</description>
+                <latex-image>
+                <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                <![CDATA[\tikzset{%
+                }
+                \begin{tikzpicture} [scale=.6]
+                \draw[cyan] (-4,-6) grid (9,6);
+                \draw[black,thick, ->, >=stealth'] (-4,0)--(9.6,0) node[right]{$x$};
+                \draw[black,thick, ->, >=stealth'] (0,-6)--(0,6.6) node[above]{$y$};
+                \foreach \x in  {5} {
+                 \draw[black] (\x,.1) --++(0,-.2)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+                }
+                \foreach \x in  {-5,5} {
+                 \draw[black] (.1,\x) --++(-.2,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+                }
+                \draw[red,very thick, <->, >=stealth'] (-3/2,-6) -- (9/2,6) node[below right, xshift=-2mm, yshift=-.5cm, fill=white, inner sep=2]{$4x-2y=6$};
+                \draw[blue, dashed,very thick, <->, >=stealth'] (-3,6) -- (9,0);
+                \filldraw[blue] (1,4) circle (.15) node[below,yshift=-3mm, fill=white, inner sep=1] {$(1,4)$};
+                \node[text=blue, fill=white, inner sep=2] at (6,-2) {$ y=\frac{-1}{2} + \frac{9}{2}$};
+                \draw [gray,->, >=stealth'] (6,-1.4) to [out=70,in=250] (7.5,.45);        \end{tikzpicture}]]>
+                </latex-image>
+                </image>
+            </sidebyside>
+        <p>
+            Now we use the point-slope formula with <m>m_1=\dfrac{-1}{2}</m> and <m>(x_1,y_1)=(1,4)</m>.
+            <md>
+                <mrow>y-y_1 \amp = m(x-x_1)</mrow>
+                <mrow> y-4 \amp = \dfrac{-1}{2}(x-1)  \amp\amp \blert{\text{Apply the distributive law.}}</mrow>
+                <mrow>y-4 \amp = \dfrac{-1}{2}x+\dfrac{1}{2}  \amp\amp \blert{\text{Add 4 to both sides.}}</mrow>
+                <mrow>y \amp = \dfrac{-1}{2}x+\dfrac{9}{2}  \amp\amp \blert{\dfrac{1}{2}+4=\dfrac{1}{2}+\dfrac{8}{2}=\dfrac{9}{2}}</mrow>
+            </md>
+        </p>
+        <p>The given line and the perpendicular line are shown above.</p>
+    </solution>
+</example>
 
-<p><me>\begin{aligned}
-                4x-2y \amp = 6  \amp\amp \blert{\text{Subtract 4x from both sides.}}\\
-                    -2y \amp = -4x+6  \amp\amp \blert{\text{Divide both sides by -2.}}\\ 
-                    y \amp = \dfrac{-4x}{-2}+\dfrac{6}{-2}  \amp\amp \blert{\text{Simplify.}}\\
-                    y \amp = 2x-3
-                \end{aligned}</me>
-
-The slope of the given line is <m>~m_1=2</m>.  Because the unknown line is parallel to this line, its slope is also 2.  Now we know the slope of the desired line, <m>~m=2</m>,  and one point on the line, <m>(1,4)</m>. Substituting these values into the point-slope formula will give us the equation.
-
-    <me>\begin{aligned}
-                y-y_1 \amp = m(x-x_1)\\
-                y-\alert{4} \amp = \alert{2}(x-\alert{1})  \amp\amp \blert{\text{Apply the distributive law.}}\\ 
-                y-4 \amp = 2x-2  \amp\amp \blert{\text{Add 4 to both sides.}}\\
-                    y \amp = 2x-2
-                \end{aligned}</me></p>
-
-<example><statement><p>Find an equation for the line that passes through the point <m>(1,4)</m> and is 
-perpendicular to the line <m>4x-2y=6</m>.</p></statement>
-
-<solution><sidebyside widths="45% 50%" valigns="middle middle"><p>We follow the same strategy as in the discussion above:  First find the slope of the desired line, then use the point-slope formula to write its equation. The line we want is perpendicular to the given line, so its slope is the negative reciprocal of <m>m_1=2</m>, the slope of the given line.  Thus
-    <me>m_2=\dfrac{-1}{m_1}=\dfrac{-1}{2}</me>   </p>
-<image source="images/fig-10-1-exm4.png"><description>perpendicular lines</description></image></sidebyside>
-<p>Now we use the point-slope formula with <m>m_1=\dfrac{-1}{2}</m> and <m>(x_1,y_1)=(1,4)</m>.
-    <me>\begin{aligned}
-                y-y_1 \amp = m(x-x_1)\\
-                y-4 \amp = \dfrac{-1}{2}(x-1)  \amp\amp \blert{\text{Apply the distributive law.}}\\ 
-                y-4 \amp = \dfrac{-1}{2}x+\dfrac{1}{2}  \amp\amp \blert{\text{Add 4 to both sides.}}\\
-                    y \amp = \dfrac{-1}{2}x+\dfrac{9}{2}  \amp\amp \blert{\dfrac{1}{2}+4=\dfrac{1}{2}+\dfrac{8}{2}=\dfrac{9}{2}}
-                \end{aligned}</me></p>
-<p>The given line and the perpendicular line are shown above.</p></solution></example>
-
-<exercise><statement><p>Find an equation for the altitude of the triangle shown.</p>
-
-<sidebyside widths="50% 40%" valigns="middle middle"><stack><p><m>\blert{\text{The altitude of the triangle is perpendicular}}</m>
- <m>\blert{\text{to its base. Find the slope of the base.}}</m>
-    <me>\blert{m_1=}</me>                                        
-<m>\blert{\text{Find the slope of the altitude.}}</m>
-    <me>\blert{m_2=}</me>
-<m>\blert{\text{Use the point-slope formula to find the }}</m>
-<m>\blert{\text{equation of the altitude. Use}~m_2~ \text{for the slope}}</m>
-<m>\blert{\text{and the vertex of the triangle for}~(x_1,y_1).}</m>
-    <me>\blert{y-y_1 = m(x-x_1)}</me></p></stack>
-<image source="images/fig-10-1-ex4.png"><description>triangle</description></image></sidebyside></statement>                                          
-<answer><m>y=\dfrac{-5}{2}x+\dfrac{17}{2}</m></answer></exercise>
+<exercise><title>Practice 4</title>
+<introduction>
+    <sidebyside width="45%"><image xml:id="fig-altitude-of-triangle">
+        <description>triangle</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.6]
+        \draw[cyan] (0,0) grid (8,8);
+        \draw[black,thick, ->, >=stealth'] (0,0)--(8.6,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,0)--(0,8.6) node[above]{$y$};
+        \foreach \x in  {5} {
+         \draw[black] (\x,.1) --++(0,-.2)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+         \draw[black] (.1,\x) --++(-.2,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \draw[red,very thick] (1,6) -- (2,1) -- (7,3) --cycle;
+        \draw[black,thick] (1,6) -- (89/29,{2*89/(29*5)+1/5});        \end{tikzpicture}]]>
+        </latex-image>
+    </image>
+</sidebyside>
+</introduction>
+<webwork>
+    <pg-code>
+        Context("ImplicitPlane");
+        Context()->variables->add(y=>"Real");
+        $m1 = Compute("2/5");
+        $m2 = Compute("-5/2");
+        $equation = ImplicitPlane("5x+2y=17");
+    </pg-code>
+    <statement>
+        <p>
+            Find an equation for the altitude of the triangle shown above.
+        </p>
+        <p>
+            <m>\blert{\text{The altitude of the triangle is perpendicular to its base.}}</m>
+        </p>
+        <p>
+            <m>\blert{\text{ Find the slope of the base.}}</m>
+            <m>\blert{m_1=}</m>
+            <var name="$m1" width="5" />
+        </p>
+        <p>
+            <m>\blert{\text{Find the slope of the altitude.}}</m>
+            <m>\blert{m_2=}</m>
+            <var name="$m2" width="5" />
+        </p>
+        <p>
+            <m>\blert{\text{Use the point-slope formula to find the equation of the altitude. }}</m>
+            <m>\blert{\text{Use } m_2 \text{ for the slope}}</m>
+            <m>\blert{\text{and } (x_1,y_1) \text{ for the vertex of the triangle}.}</m>
+            <md>
+                <mrow>\blert{y-y_1 = m(x-x_1)}</mrow>
+            </md>
+            Equation: <var name="$equation" width="25" />
+        </p>
+    </statement>
+    <solution>
+        <p>
+            <m>m_1=\dfrac{2}{5}</m>, <m>m_2=\dfrac{-5}{2}</m>, <m>y=\dfrac{-5}{2}x+\dfrac{17}{2}</m>
+        </p></solution>
+</webwork>
+</exercise>
 
 </subsection>
 
-<xi:include href="./summary-10-1.xml" /> <!-- summary  -->
+<!-- <xi:include href="./summary-10-1.xml" />  summary  -->
 <xi:include href="./section-10-1-exercises.xml" /> <!-- exercises  -->
 
 </section> 

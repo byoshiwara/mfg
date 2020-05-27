@@ -10,57 +10,173 @@
     <title>Homework 10.4</title>
 
 <exercisegroup cols="2">
-    <introduction><p>For Problems 1-10,</p><p><ol label="a">
+    <introduction><p>For Problems 1<ndash/>14,</p><p><ol label="a">
         <li>Graph the ellipse,</li>
         <li>Give the exact coordinates of any four points on the ellipse.</li></ol></p></introduction>
 
-     <exercise number="1"><statement><m>\dfrac{(x-3)^2}{16} + \dfrac{(y-4)^2}{9} = 1</m></statement>
+      <exercise number="1"><statement><m>\dfrac{(x-3)^2}{16} + \dfrac{(y-4)^2}{9} = 1</m></statement>
         <answer><p><ol label="a">
-        <li><sidebyside width="70%"><image source="images/fig-10-4-HP1ans.png"><description>ellipse</description></image></sidebyside></li>
+        <li><sidebyside width="70%"><image source="images/fig-ellipse-4and3-at-3-4"><description>ellipse</description></image></sidebyside></li>
         <li><m>(-1,4),~(7,4),~(3,1),~(3,7)</m></li></ol></p></answer></exercise>
 
     <exercise number="2"><statement><m>\dfrac{(x-2)^2}{4} + \dfrac{(y-5)^2}{25} = 1</m></statement></exercise>
 
     <exercise number="3"><statement><m>\dfrac{(x+2)^2}{6} + \dfrac{(y-5)^2}{12} = 1</m></statement>
            <answer><p><ol label="a">
-        <li><sidebyside width="40%"><image source="images/fig-10-4-HP3ans.png"><description>ellipse</description></image></sidebyside></li>
+        <li><sidebyside width="70%"><image source="images/fig-ellipse-sqrt6-and-sqrt12-at-neg2-5"><description>ellipse</description></image></sidebyside></li>
         <li><m>(-2-\sqrt{6},5),~(-2+\sqrt{6},5),~(-2,5-2\sqrt{3}),~(-2,5+2\sqrt{3})</m></li></ol></p></answer></exercise>
 
     <exercise number="4"><statement><m>\dfrac{(x-5)^2}{15} + \dfrac{(y+3)^2}{8} = 1</m></statement></exercise>       
 
     <exercise number="5"><statement><m>\dfrac{x^2}{16} + \dfrac{(y+4)^2}{6} = 1</m></statement>
-            <answer><m>-4, -3, -2, -1</m>  </answer></exercise>
+            <answer><p><ol label="a">
+        <li><sidebyside width="70%"><image xml:id="fig-ellipse-4and-sqrt6-at-0-neg4">
+        <description>translated ellipse</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.6]
+        \draw[cyan] (-5,-8) grid (5,2);
+        \draw[black,thick,->,>=stealth'] (-5,0)--(5.4,0) node[right] {$x$};
+        \draw[black,thick,->,>=stealth'] (0,-8)--(0,2.5) node[above] {$y$};
+        \foreach \x   in  {-5,5}
+         \draw[black, thick] (\x,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$\x$};
+         \draw[black, thick] (0.14,-5) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$-5$};
+
+        \coordinate (C) at (0,-4);
+        \def\a{4};
+        \def\b{sqrt(6)};
+        \draw[red!80!black,ultra thick] (C) ellipse ({\a}  and {\b} );
+
+        \filldraw[blue] (C) circle (.08) node[above right, text=black, scale=.9] {$(0,-4)$};
+        \end{tikzpicture}]]>
+        </latex-image>
+        </image>
+    </sidebyside></li>
+        <li><p><m>(-4,-4)</m>, <m>(4,-4)</m>, <m>(0,\sqrt{6}-4)</m>, <m>(0,-\sqrt{6}-4)</m></p></li></ol></p></answer></exercise>
 
     <exercise number="6"><statement><m>\dfrac{(x-5)^2}{15} + \dfrac{y^2}{25} = 1</m></statement></exercise>        
 
     <exercise number="7"><statement><m>9x^2+4y^2-16y=20</m></statement>
         <answer><p><ol label="a">
-        <li><sidebyside width="70%"><image source="images/fig-10-4-HP7ans.png"><description>ellipse</description></image></sidebyside></li>
+        <li><sidebyside width="70%"><image xml:id="fig-ellipse-2and3-at-0-2">
+        <description>translated ellipse</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.6]
+        \draw[cyan] (-5,-3) grid (5,7);
+        \draw[black,thick,->,>=stealth'] (-5,0)--(5.4,0) node[right] {$x$};
+        \draw[black,thick,->,>=stealth'] (0,-3)--(0,7.5) node[above] {$y$};
+        \foreach \x   in  {-5,5}
+         \draw[black, thick] (\x,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1] {$\x$};
+         \draw[black, thick] (0.14,5) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1] {$5$};
+
+        \coordinate (C) at (0,2);
+        \def\a{2};
+        \def\b{3};
+        \draw[red!80!black,ultra thick] (C) ellipse ({\a}  and {\b} );
+
+        \filldraw[blue] (C) circle (.08) node[above right, text=black, scale=.9] {$(0,2)$};
+        \end{tikzpicture}]]>
+        </latex-image>
+        </image>
+    </sidebyside></li>
         <li><m>(-2,2),~(2,2),~(0,-1),~(0,5)</m></li></ol></p></answer></exercise>
 
     <exercise number="8"><statement><m>x^2+16y^2+6x=7</m></statement></exercise>
 
     <exercise number="9"><statement><m>9x^2+16y^2-18x+96y+9=0</m></statement>
         <answer><p><ol label="a">
-        <li><sidebyside width="50%"><image source="images/fig-10-4-HP9ans.png"><description>ellipse</description></image></sidebyside></li>
+        <li><sidebyside width="70%"><image xml:id="fig-ellipse-4and3-at-1-neg3">
+        <description>translated ellipse</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.6]
+        \draw[cyan] (-4,-7) grid (6,3);
+        \draw[black,thick,->,>=stealth'] (-4,0)--(6.4,0) node[right] {$x$};
+        \draw[black,thick,->,>=stealth'] (0,-7)--(0,3.5) node[above] {$y$};
+        \foreach \x   in  {5}
+         \draw[black, thick] (\x,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1] {$\x$};
+         \draw[black, thick] (0.14,-5) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1] {$-5$};
+        \coordinate (C) at (1,-3);
+        \def\a{4};
+        \def\b{3};
+        \draw[red!80!black,ultra thick] (C) ellipse ({\a}  and {\b} );
+        \filldraw[blue] (C) circle (.08) node[text=black,below right, xshift=2, yshift=-2, fill=white, inner sep=2] {$(1,-3)$};
+        \end{tikzpicture}]]>
+        </latex-image>
+        </image>
+    </sidebyside></li>
         <li><m>(-3,-3),~(5,-3),~(1,0),~(1,-6)</m></li></ol></p></answer></exercise>
 
     <exercise number="10"><statement><m>x^2+4y^2+4x-16y+4=0</m></statement></exercise>    
 
     <exercise number="11"><statement><m>6x^2+5y^2-12x+20y-4=0</m></statement>
-        <answer> <m>2, 1.5, 1.\overline{3}, 1.25</m> </answer></exercise>
+        <answer><p><ol label="a">
+        <li><sidebyside width="70%"><image xml:id="fig-ellipse-sqrt5-and-sqrt6-at-1-neg2">
+        <description>translated ellipse</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.6]
+        \draw[cyan] (-4,-7) grid (6,3);
+        \draw[black,thick,->,>=stealth'] (-4,0)--(6.4,0) node[right] {$x$};
+        \draw[black,thick,->,>=stealth'] (0,-7)--(0,3.5) node[above] {$y$};
+        \foreach \x   in  {5}
+         \draw[black, thick] (\x,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1] {$\x$};
+         \draw[black, thick] (0.14,-5) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1] {$-5$};
+        \coordinate (C) at (1,-2);
+        \def\a{sqrt(5)};
+        \def\b{sqrt(6)};
+        \draw[red!80!black,ultra thick] (C) ellipse ({\a}  and {\b} );
+        \filldraw[blue] (C) circle (.08) node[text=black,above,  yshift=2, fill=white, inner sep=2] {$(1,-2)$};
+        \end{tikzpicture}]]>
+        </latex-image>
+        </image>
+    </sidebyside></li>
+        <li><m>(1-\sqrt{5},-2)</m>, <m>(1+\sqrt{5},-2)</m>, <m>(1,-2-\sqrt{6})</m>, <m>(1,-2+\sqrt{6})</m></li></ol></p></answer></exercise>
 
     <exercise number="12"><statement><m>5x^2+8y^2-20x+16y-12=0</m></statement></exercise>    
 
     <exercise number="13"><statement><m>8x^2+y^2-48x+4y+68=0</m></statement>
         <answer><p><ol label="a">
-        <li><sidebyside width="40%"><image source="images/fig-10-4-HP13ans.png"><description>ellipse</description></image></sidebyside></li>
+        <li><sidebyside width="70%"><image xml:id="fig-ellipse-1and-sqrt8-at-3-neg2">
+        <description>translated ellipse</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.6]
+        \draw[cyan] (-4,-7) grid (6,3);
+        \draw[black,thick,->,>=stealth'] (-4,0)--(6.4,0) node[right] {$x$};
+        \draw[black,thick,->,>=stealth'] (0,-7)--(0,3.5) node[above] {$y$};
+        \foreach \x   in  {5}
+         \draw[black, thick] (\x,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1] {$\x$};
+         \draw[black, thick] (0.14,-5) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1] {$-5$};
+        \coordinate (C) at (3,-2);
+        \def\a{1};
+        \def\b{sqrt(8)};
+        \draw[red!80!black,ultra thick] (C) ellipse ({\a}  and {\b} );
+        \filldraw[blue] (C) circle (.08);
+        \node[text=black, fill=white, inner sep=2] at (-1,-3.5) {$(3,-2)$};
+        \draw[blue, ->,>=stealth'] (.2,-3.3) -- (2.7,-2.1);
+        \end{tikzpicture}]]>
+        </latex-image>
+        </image>
+    </sidebyside></li>
         <li><m>(2,-2),~(4,-2),~(3,-2-\sqrt{8}),~(3,-2+\sqrt{8})</m></li></ol></p></answer></exercise>
 
-    <exercise number="14"><statement><m>x^2+10y^2+4x+20y+4=0</m></statement></exercise>
+    <exercise number="14"><statement><m>x^2+10y^2+4x+20y+4=0</m></statement>
+</exercise>
 </exercisegroup>
 
-<exercisegroup><introduction><p>For Problems 15-20, write an equation for the ellipse with the properties given.
+<exercisegroup><introduction><p>For Problems 15<ndash/>20, write an equation for the ellipse with the properties given.
 </p></introduction>
 
     <exercise number="15"><statement><p>Center at <m>(1,6),~a=3,~b=2</m></p></statement>
@@ -79,52 +195,84 @@
     <exercise number="20"><statement><p>Vertices at <m>(-3,-5) \text{ and } (9,-5),</m> covertices at <m>(3,0) \text{ and } (3,-10)</m></p></statement></exercise>
 </exercisegroup>
 
-<exercisegroup cols="2"><introduction><p>For Problems 21-32,</p><p><ol label="a">
+<exercisegroup cols="2"><introduction><p>For Problems 21<ndash/>32,</p><p><ol label="a">
     <li>Graph the hyperbola.</li>
     <li>Give the exact coordinates of any four points on the hyperbola.</li></ol></p></introduction>
 
 <exercise number="21"><statement><m>\dfrac{(x-4)^2}{9} - \dfrac{(y+2)^2}{16} = 1</m></statement>
     <answer><p><ol label="a">
-        <li><sidebyside width="50%"><image source="images/fig-10-4-HP21ans.png"><description>ellipse</description></image></sidebyside></li>
+        <li><sidebyside width="70%"><image source="images/fig-hyperbola-left-right-at-4-neg2"><description>ellipse</description></image></sidebyside></li>
         <li><m>(7,-2),~(1,-2),~(4+\sqrt{2},2),~(4-\sqrt{2},2)</m></li></ol></p></answer></exercise>
 
 <exercise number="22"><statement><m>\dfrac{y+4)^2}{25} - \dfrac{(x-3)^2}{4} = 1</m></statement></exercise>
 
 <exercise number="23"><statement><m>\dfrac{x^2}{4} - \dfrac{(y-3)^2}{8} = 1</m></statement>
     <answer><p><ol label="a">
-        <li><sidebyside width="50%"><image source="images/fig-10-4-HP23ans.png"><description>ellipse</description></image></sidebyside></li>
-        <li><m>\sqrt{6},1),~(\sqrt{6},5),~(-\sqrt{6},1),~(-\sqrt{6},5)</m></li></ol></p></answer></exercise>
+        <li><sidebyside width="70%"><image source="images/fig-hyperbola-left-right-at-0-3"><description>ellipse</description></image></sidebyside></li>
+        <li><m>(\sqrt{6},1),~(\sqrt{6},5),~(-\sqrt{6},1),~(-\sqrt{6},5)</m></li></ol></p></answer></exercise>
 
 <exercise number="24"><statement><m>\dfrac{y^2}{9} - \dfrac{(x+4)^2}{12} = 1</m></statement></exercise>
 
 <exercise number="25"><statement><m>\dfrac{(y+2)^2}{6} - \dfrac{(x+2)^2}{10} = 1</m></statement>
-    <answer><m>8.944</m>  </answer></exercise>
+    <p><ol label="a">
+        <li><sidebyside width="70%"><image xml:id="fig-hyperbola-up-down-at-neg2-neg2">
+        <description>translated hyperbola opening up and down</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.6]
+        \pgfkeys{/pgf/declare function={asinh(\x) = ln(\x + sqrt(\x^2+1));}}\draw[cyan] (-7,-7) grid (3,3);
+        \draw[black,thick,->,>=stealth'] (-7,0)--(3.4,0) node[right] {$x$};
+        \draw[black,thick,->,>=stealth'] (0,-7)--(0,3.5) node[above] {$y$};
+
+        \coordinate (C) at (-2,-2);
+        \def\a{sqrt(10)};
+        \def\b{sqrt(6)};
+        \draw[samples=65,domain=-7:3,smooth,variable=\x,black,dashed] plot ({\x},{-2+ \b / \a * (\x+2))});
+        \draw[samples=65,domain=-7:3,smooth,variable=\x,black,dashed] plot ({\x},{-2- \b / \a * (\x+2))});
+
+        \foreach \x   in  {-6, -4, -2, 2}
+        { \draw[black, thick] (\x,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$\x$};
+         \draw[black, thick] (0.14,\x) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$\x$};}
+
+        \draw [domain=-asinh(5 / \a):asinh(5 / \a),variable=\t, smooth, samples=75, red, thick] plot ({\a*sinh(\t) -2}, {\b* cosh(\t) -2} );
+        \draw [domain=-asinh(5 / \a):asinh(5 / \a),variable=\t, smooth, samples=75, red, thick] plot ({\a*sinh(\t) -2}, {-\b* cosh(\t) -2} );
+
+        \filldraw[black] (C) circle (.08) node[ left, xshift=-8, fill=white, inner sep = 1, scale=.9] {$(-2,-2)$};
+        \end{tikzpicture}]]>
+        </latex-image>
+        </image>
+    </sidebyside></li>
+        <li><m>(-2, \sqrt{6}-2)</m>, <m>(\-2, -\sqrt{6}-2)</m>, <m>(-2-\sqrt{5},1)</m>, <m>(-2+\sqrt{5},1)</m></li></ol></p></exercise>
 
 <exercise number="26"><statement><m>\dfrac{(x-4)^2}{5} - \dfrac{(y-4)^2}{8} = 1</m></statement></exercise>
 
 <exercise number="27"><statement><m>16y^2-4x^2+32x-128=0</m></statement>
     <answer><p><ol label="a">
-        <li><sidebyside width="70%"><image source="images/fig-10-4-HP27ans.png"><description>ellipse</description></image></sidebyside></li>
-            <li><m>(4,2),~(4,-2),~(0,2\sqrt{2}),~(0,-2\sqrt{2})</m></li></ol></p></answer></exercise>
+        <li><sidebyside width="70%"><image source="images/fig-hyperbola-up-down-at-4-0"><description>ellipse</description></image></sidebyside></li>
+            <li><m>(4,2)</m>, <m>(4,-2)</m>, <m>(0,2\sqrt{2})</m>, <m>(0,-2\sqrt{2})</m></li></ol></p>
+    </answer>
+</exercise>
 
 <exercise number="28"><statement><m>9x^2-4y^2-36x-24y-36=0</m></statement></exercise>
 
 <exercise number="29"><statement><m>4x^2-6y^2-32x-24y+16=0</m></statement>
     <answer><p><ol label="a">
-        <li><sidebyside width="40%"><image source="images/fig-10-4-HP29ans.png"><description>ellipse</description></image></sidebyside></li>
+        <li><sidebyside width="70%"><image source="images/fig-hyperbola-left-right-at-4-neg2-slope-2-over-sqrt3"><description>ellipse</description></image></sidebyside></li>
         <li><m>(4+\sqrt{6},-2),~(4-\sqrt{6},-2),~(4+2\sqrt{3},0),~(4-2\sqrt{3},0)</m></li></ol></p></answer></exercise>
 
 <exercise number="30"><statement><m>9y^2-8x^2+72y+16x+64=0</m></statement></exercise>
 
 <exercise number="31"><statement><m>12x^2-3y^2+24y-84=0</m></statement>
     <answer><p><ol label="a">
-        <li><sidebyside width="50%"><image source="images/fig-10-4-HP31ans.png"><description>ellipse</description></image></sidebyside></li>
-        <li><m>(\sqrt{3},4),~(-\sqrt{3},4),~(2\sqrt{3},-2),~(-2\sqrt{3},-2)</m></li></ol></p></answer></exercise>
+        <li><sidebyside width="70%"><image source="images/fig-hyperbola-left-right-at-0-4"><description>ellipse</description></image></sidebyside></li>
+        <li><m>(\sqrt{3},4)</m>, <m>(-\sqrt{3},4)</m>, <m>(2\sqrt{3},-2)</m>, <m>(-2\sqrt{3},-2)</m></li></ol></p></answer></exercise>
 
 <exercise number="32"><statement><m>10y^2-5x^2+30x-95=0</m></statement></exercise>
 </exercisegroup>
 
-<exercisegroup><introduction><p>For Problems 33-36, write an equation for the hyperbola with the properties given.</p>
+<exercisegroup><introduction><p>For Problems 33<ndash/>36, write an equation for the hyperbola with the properties given.</p>
 </introduction>
 
 <exercise number="33"><statement><p>Center at <m>(-1,5),~a=8,~b=6,</m> opening up and down</p></statement>
@@ -140,48 +288,73 @@
 </statement></exercise>
 </exercisegroup>
 
-<exercisegroup cols="2"><introduction><p>For Problems 37-46,</p><p><ol label="a">
+<exercisegroup cols="2"><introduction><p>For Problems 37<ndash/>46,</p><p><ol label="a">
     <li>Graph the parabola.</li>
     <li>Give the exact coordinates of any four points on the parabola.</li></ol>
 </p></introduction>
 
 <exercise number="37"><statement><m>x=\dfrac{(y+3)^2}{2}</m></statement>
     <answer><p><ol label="a">
-        <li><sidebyside width="40%"><image source="images/fig-10-4-HP37ans.png"><description>ellipse</description></image></sidebyside></li>
+        <li><sidebyside width="70%" margins="0% 5%"><image source="images/fig-parabola-right-at-0-neg3"><description>ellipse</description></image></sidebyside></li>
         <li><m>(1,-3+\sqrt{2}),~(1,-3-\sqrt{2}),~(2,-5),~(2,-1)</m></li></ol></p></answer></exercise>
 
 <exercise number="38"><statement><m>y=\dfrac{(x-2)^2}{-3}</m></statement></exercise>
 
 <exercise number="39"><statement><m>-6(y+4)=(x-3)^2</m></statement>
     <answer><p><ol label="a">
-        <li><sidebyside width="30%"><image source="images/fig-10-4-HP39ans.png"><description>ellipse</description></image></sidebyside></li>
+        <li><sidebyside width="70%" margins="0% 5%"><image source="images/fig-parabola-down-at-3-neg4"><description>ellipse</description></image></sidebyside></li>
         <li><m>(3+\sqrt{6},-5),~(3-\sqrt{6},-5),~(3+2\sqrt{3},-6),~(3-2\sqrt{3},-6)</m></li></ol></p></answer></exercise>
 
 <exercise number="40"><statement><m>4(x-5)=(y+1)^2</m></statement></exercise>
 
 <exercise number="41"><statement><m>(y-4)^2+3=x</m></statement>
     <answer><p><ol label = "a">
-        <li><m>14,000; 11,900; 10,115; 8597.75</m></li>
-        <li><m>v_1 = 14,000; v_{n+1} = 0.85v_n</m></li></ol></p>  </answer></exercise>
+        <li><sidebyside width="70%" margins="0% 5%"><image xml:id="fig-parabola-right-at-3-4">
+        <description>translated hyperbola opening up and down</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.6]
+        \draw[cyan] (-1,-1) grid (9,9);
+        \draw[black,thick,->,>=stealth'] (-1,0)--(9.4,0) node[right] {$x$};
+        \draw[black,thick,->,>=stealth'] (0,-1)--(0,9.5) node[above] {$y$};
+
+        \coordinate (C) at (3,4);
+        \def\a{sqrt(10)};
+        \def\b{sqrt(6)};
+
+        \foreach \x   in  {6, 4, 8, 2}
+        { \draw[black, thick] (\x,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$\x$};
+         \draw[black, thick] (0.14,\x) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$\x$};}
+
+        \draw [domain=4-sqrt(6):4+sqrt(6),variable=\t, smooth, samples=75, red, thick] plot ({ (\t - 4)^2 + 3}, {\t} );
+
+        \filldraw[black] (C) circle (.08) node[ left, xshift=-8, fill=white, inner sep = 1, scale=.9] {$(3,4)$};
+        \end{tikzpicture}]]>
+        </latex-image>
+        </image>
+        </sidebyside></li>
+        <li><m>(3,4)</m>, <m>(4,5)</m>, <m>(4,3)</m>, (7,2)</li></ol></p>  </answer></exercise>
 
 <exercise number="42"><statement><m>(x+3)^2+2=y</m></statement></exercise>
 
 <exercise number="43"><statement><m>y^2-4y+8x+6=0</m></statement>
     <answer><p><ol label="a">
-        <li><sidebyside width="40%"><image source="images/fig-10-4-HP43ans.png"><description>ellipse</description></image></sidebyside></li>
-        <li><m>(-1,2+\sqrt{6}),~(-1,2-\sqrt{6}),~(-2,2+\sqrt{14}),~(-2,2-\sqrt{14})</m></li></ol></p></answer></exercise>
+        <li><sidebyside width="70%" margins="0% 5%"><image source="images/fig-parabola-left-at-neg-fourth-2"><description>ellipse</description></image></sidebyside></li>
+        <li><m>(-1,2+\sqrt{6})</m>, <m>(-1,2-\sqrt{6})</m>, <m>(-2,2+\sqrt{14})</m>, <m>(-2,2-\sqrt{14})</m></li></ol></p></answer></exercise>
 
 <exercise number="44"><statement><m>4x^2-4x=8y-5</m></statement></exercise>             
 
 <exercise number="45"><statement><m>9y^2=6y+12x-1</m></statement>
     <answer><p><ol label="a">
-        <li><sidebyside width="30%"><image source="images/fig-10-4-HP45ans.png"><description>ellipse</description></image></sidebyside></li>
-        <li><m>(3,\dfrac{7}{3}),~(3,\dfrac{-5}{3}),~(6,\dfrac{1+6\sqrt{2}}{3}),~(6,\dfrac{1-6\sqrt{2}}{3})</m></li></ol></p></answer></exercise>
+        <li><sidebyside width="70%" margins="0% 5%"><image source="images/fig-parabola-right-at-0-third"><description>ellipse</description></image></sidebyside></li>
+        <li><m>\left(3,\dfrac{7}{3}\right)</m>, <m>\left(3,\dfrac{-5}{3}\right)</m>, <m>\left(6,\dfrac{1+6\sqrt{2}}{3}\right)</m>, <m>\left(6,\dfrac{1-6\sqrt{2}}{3}\right)</m></li></ol></p></answer></exercise>
 
 <exercise number="46"><statement><m>9y^2+12y-12x=0</m></statement></exercise>
 </exercisegroup>
 
-<exercisegroup cols="2"><introduction><p>For Problems 47-58, name the graph of the equation and describe its main features.</p></introduction>
+<exercisegroup cols="2"><introduction><p>For Problems 47<ndash/>58, name the graph of the equation and describe its main features.</p></introduction>
     
 <exercise number="47"><statement><m>y^2=6-4x^2</m></statement>
    <answer><p>Ellipse; center <m>(0,0)</m>, major axis vertical, <m>a^2=\dfrac{3}{2},~b^2=6</m></p> </answer></exercise>
@@ -215,7 +388,7 @@
 <exercise number="58"><statement><m>y^2-4x^2+2y-x=0</m></statement></exercise>
 </exercisegroup>
 
-<exercisegroup cols="2"><introduction><p>For Problems 59-64, the graph is a degenerate conic.</p><p><ol label="a">
+<exercisegroup cols="2"><introduction><p>For Problems 59<ndash/>64, the graph is a degenerate conic.</p><p><ol label="a">
     <li>Write the equation in standard form.</li>
     <li>Describe the graph.</li></ol></p></introduction>
 
