@@ -1,38 +1,117 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- <mathbook><book> -->
 
-<section xml:id="Properties-of-Lines"   xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="Distance-and-Midpoint"   xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>Distance and Midpoint</title>
                 
 <subsection><title>Computing Distances in the Coordinate Plane</title>   
                    
-<p>Many airplanes carry an inertial navigational system (INS), which computes the airplane's current position relative to its starting point. Suppose that Francine left Oldfield Airport in her light plane and is now 253 miles east and 124 miles north of the airport. She knows that Preston Airport is 187 miles east and 201 miles south of Oldfield Airport.  Which airport is closer to Francine's present location?</p>
-<p>We can sketch the situation on the <m>xy</m>-plane. If we place Oldfield Airport at the origin, then Francine is located at the point <m>F(253,124)</m>, and Preston Airport is at <m>P(187-201)</m>, as shown in Figure a.</p>
-<image source="images/fig-10-2-airport.png" width="80%"><description>grid</description></image>
+<p>
+    Many airplanes carry an inertial navigational system (INS), which computes the airplane's current position relative to its starting point. Suppose that Francine left Oldfield Airport in her light plane and is now 253 miles east and 124 miles north of the airport. She knows that Preston Airport is 187 miles east and 201 miles south of Oldfield Airport.  Which airport is closer to Francine's present location?
+</p>
+<p>
+    We can sketch the situation on the <m>xy</m>-plane. If we place Oldfield Airport at the origin, then Francine is located at the point <m>F(253,124)</m>, and Preston Airport is at <m>P(187-201)</m>, as shown in Figure a.
+</p>
+<sidebyside widths="45% 45%" margins="0% 0%">
+    <image xml:id="fig-Francine-airport">
+        <description>two points in plane</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=1.5]
+        \draw[cyan] (0,-2.5) grid[step=1/2] (3,2.5);
+        \draw[black,thick, ->, >=stealth'] (0,0)--(3.3,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-2.5)--(0,2.8) node[above]{$y$};
+        \foreach \x [evaluate=\x as \xi using int(100*\x)] in  {2} {
+         \draw[black] (\x,.08) --++(0,-.16)  node[below, yshift=-2, fill=white, inner sep=1]   {$\xi$};
+        }
+        \foreach \x [evaluate=\x as \xi using int(100*\x)] in  {-2,2} {
+         \draw[black] (.08,\x) --++(-.16,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\xi$};
+        }
+        \node at(-.2,0) {$O$};
+        \filldraw[red] (2.53,1.24) circle (.05) node[above right, xshift=2, text=black, fill=white, inner sep=2] {$F(253,124)$};
+        \filldraw[red] (1.87,-2.01) circle (.05) node[below right, yshift=-2, text=black, fill=white, inner sep=2] {$P(187,-201)$};
+        \node at (1.6,-2.8) {(a)};        \end{tikzpicture}]]>
+        </latex-image>
+    </image>
+    <image xml:id="fig-Francine-airport-triangle">
+        <description>triangle in plane</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=1.5]
+        \draw[cyan] (0,-2.5) grid[step=1/2] (3,2.5);
+        \draw[black] (2.53,0) rectangle ++(-.2,.2);
+        \draw[black,thick, ->, >=stealth'] (0,0)--(3.3,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-2.5)--(0,2.8) node[above]{$y$};
+        \foreach \x [evaluate=\x as \xi using int(100*\x)] in  {2,2.53} {
+         \draw[black] (\x,.08) --++(0,-.16)  node[below, yshift=-2, fill=white, inner sep=1]   {$\xi$};
+        }
+        \foreach \x [evaluate=\x as \xi using int(100*\x)] in  {-2,1.24,2} {
+         \draw[black] (.08,\x) --++(-.16,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\xi$};
+        }
+        \node at(-.2,0) {$O$};
+        \filldraw[red] (2.53,1.24) circle (.05) node[above right, xshift=2, text=black, fill=white, inner sep=2] {$F(253,124)$};
+        \filldraw[red] (1.87,-2.01) circle (.05) node[below right, yshift=-2, text=black, fill=white, inner sep=2] {$P(187,-201)$};
+        \draw[red,thick] (0,0)--(2.53,1.24) -- (2.53,0)--cycle;
+        \node at (1.6,-2.8) {(b)};
+        \end{tikzpicture}]]>
+        </latex-image>
+    </image>
+</sidebyside>
+<p>
+    The <term>distance</term> <m>OF</m> from Francine to Oldfield Airport is the hypotenuse of a right triangle whose base is 253 miles and whose height is 124 miles. (See Figure b.) If we apply the Pythagorean theorem to this triangle, we find
+    <md>
+        <mrow>(OF)^2 \amp = 253^2+124^2</mrow>
+        <mrow>\amp = 79,835</mrow>
+        <mrow>OF  \amp = \sqrt{79,835} \approx 281.7</mrow>
+    </md>
+    Francine is approximately 282 miles from Oldfield Airport.
+</p> 
 
-<p>The <term>distance</term> <m>OF</m> from Francine to Oldfield Airport is the hypotenuse of a right triangle whose base is 253 miles and whose height is 124 miles. (See Figure b.) If we apply the Pythagorean theorem to this triangle, we find
-	<me>\begin{aligned}
-                (OF)^2 \amp = 253^2+124^2\\
-                		\amp = 79,835\\
-                 	OF	\amp = \sqrt{79,835} \approx 281.7                
-                \end{aligned}</me>
-
-Francine is approximately 282 miles from Oldfield Airport.</p>  
-
-<sidebyside widths="55% 45%"><p>The distance <m>FP</m> from Francine to Preston Airport is the hypotenuse of another right triangle, as shown at right.  To find the base of this triangle we compute the difference in the <m>x</m>-coordinates of points <m>P</m> and <m>F</m>:
-	<me>253-187=66</me>
-so the base is 66 miles long. To find the height of the triangle we compute the difference in the <m>y</m>-coordinates: 
-	<me>124-(-201)=325</me></p>
-<image source="images/fig-10-2-airport2.png" width="80%"><description>grid</description></image></sidebyside>
-
-<p>so the height is 325 miles.  Applying the Pythagorean theorem again gives us 
-	<me>\begin{aligned}
-                (FP)^2 \amp = 66^2+325^2\\
-                		\amp = 109,981\\
-                 	OF	\amp = \sqrt{109,981} \approx 331.6                
-                \end{aligned}</me>
-
-Francine is about 332 miles from Preston Airport. At the moment, she is closer to Oldfield Airport.</p>
+<sidebyside widths="55% 45%">
+    <p>
+        The distance <m>FP</m> from Francine to Preston Airport is the hypotenuse of another right triangle, as shown at right.  To find the base of this triangle we compute the difference in the <m>x</m>-coordinates of points <m>P</m> and <m>F</m>:
+        <md><mrow>253-187=66</mrow></md>
+        so the base is 66 miles long. To find the height of the triangle we compute the difference in the <m>y</m>-coordinates: 
+        <md><mrow>124-(-201)=325</mrow></md>
+    </p>
+    <image xml:id="fig-Francine-airport-triangle2">
+        <description>triangle</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=1.5]
+        \draw[black] (2.53,-2.01) rectangle ++(-.2,.2);
+        \draw[cyan] (0,-2.5) grid[step=1/2] (3,2.5);
+        \draw[black,thick, ->, >=stealth'] (0,0)--(3.3,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-2.5)--(0,2.8) node[above]{$y$};
+        \foreach \x [evaluate=\x as \xi using int(100*\x)] in  {2} {
+         \draw[black] (\x,.08) --++(0,-.16)  node[below, yshift=-2, fill=white, inner sep=1]   {$\xi$};
+        }
+        \foreach \x [evaluate=\x as \xi using int(100*\x)] in  {-2,2} {
+         \draw[black] (.08,\x) --++(-.16,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\xi$};
+        }
+        \node at(-.2,0) {$O$};
+        \filldraw[red] (2.53,1.24) circle (.05) node[above right, xshift=2, text=black, fill=white, inner sep=2] {$F(253,124)$};
+        \filldraw[red] (1.87,-2.01) circle (.05) node[below left, yshift=-2, text=black, fill=white, inner sep=2] {$P(187,-201)$};
+        \draw[red,thick] (1.87,-2.01)--(2.53,1.24) -- (2.53,-2.01)--cycle;
+        \end{tikzpicture}]]>
+        </latex-image>
+    </image>
+</sidebyside>
+<p>
+    so the height is 325 miles. Applying the Pythagorean theorem again gives us 
+    <md>
+        <mrow>(FP)^2 \amp = 66^2+325^2</mrow>
+        <mrow>\amp = 109,981</mrow>
+        <mrow>OF  \amp = \sqrt{109,981} \approx 331.6</mrow>
+    </md>
+    Francine is about 332 miles from Preston Airport. At the moment, she is closer to Oldfield Airport.
+</p>
 </subsection>
 
 <subsection><title>The Distance Formula</title>
@@ -41,46 +120,153 @@ Francine is about 332 miles from Preston Airport. At the moment, she is closer t
 	<li>Draw a horizontal line through <m>P_1</m> and a vertical line through <m>P_2</m>.</li> 
 	<li>These lines meet at a point <m>P_3</m>, as shown below. (Two possibilities are shown.)</li>  
 	<li>The <m>x</m>-coordinate of <m>P_3</m> is the same as the <m>x</m>-coordinate of <m>P_2</m>, and the <m>y</m>-coordinate of <m>P_3</m> is the same as the <m>y</m>-coordinate of <m>P_1</m>.</li>
-	<li>Thus, the coordinates of <m>P_3</m> are <m>(x_2,y_1)</m>.</li></ul></p>
-<image source="images/fig-10-2-distance.png" width="70%"><description>triangles</description></image>	
-
+	<li>Thus, the coordinates of <m>P_3</m> are <m>(x_2,y_1)</m>.</li></ul>
+</p>
+<sidebyside  width="75%">
+    <image source="images/fig-distance-formula"><description>distance between two points in the plane</description></image>
+</sidebyside>
 <p>	The distance between <m>P_1</m> and <m>P_3</m> is <m>\abs{x_2-x_1}</m>, and the distance between <m>P_2</m> and <m>P_3</m> is <m>\abs{y_2-y_1}</m>. These two numbers are the lengths of the legs of the right triangle.  The length of the hypotenuse is the distance between <m>P_1</m> and <m>P_2</m>, which we'll call <m>d</m>. By the Pythagorean theorem,
 	<me>d^2=(x_2-x_1)^2+(y_2-y_1)^2</me>
 Taking the (positive) square root of each side of this equation gives us the <term>distance formula</term>.</p>
 
 <assemblage><title>Distance Formula</title>
-<p>The <term>distance</term> <m>d</m> between points <m>P_1(x_1,y_1)</m> and <m>P_2(x_2,y_2)</m> is
-		<me>\blert{d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}}</me></p></assemblage>
+<p>
+    The <term>distance</term> <m>d</m> between points <m>P_1(x_1,y_1)</m> and <m>P_2(x_2,y_2)</m> is
+    <md><mrow>\blert{d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}}</mrow></md>
+</p></assemblage>
 
-<example><statement><p>Find the distance between <m>(2,-1)</m> and <m>(4,3)</m>.</p></statement>
+<example>
+    <statement>
+        <p>Find the distance between <m>(2,-1)</m> and <m>(4,3)</m>.</p>
+    </statement>
+    <solution>
+        <p>
+            Substitute <m>(2,-1)</m> for <m>(x_1,y_1)</m> and <m>(4,3)</m> for <m>(x_2,y_2)</m> in the distance formula to obtain
+            <md>
+                <mrow>d \amp = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}</mrow>
+                <mrow>\amp = \sqrt{(4-2)^2+[3-(-1)]^2}</mrow>
+                <mrow>\amp = \sqrt{4+16} =\sqrt{20} \approx 4.47 </mrow>
+            </md>
+        </p>
+    </solution>
+</example>
 
-<solution><p>Substitute <m>(2,-1)</m> for <m>(x_1,y_1)</m> and <m>(4,3)</m> for <m>(x_2,y_2)</m> in the distance formula to obtain
-	<me>\begin{aligned}
-                d \amp = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\\
-                	\amp = \sqrt{(4-2)^2+[3-(-1)]^2}\\
-                 	\amp = \sqrt{4+16} =\sqrt{20} \approx 4.47                
-                \end{aligned}</me></p></solution></example>
+<note>
+    <p>
+        In the Example above we obtain the same answer if we use <m>(4,3)</m> for <m>P_1</m> and <m>(2,-1)</m> for <m>P_2</m>:
+        <md>
+            <mrow>d \amp = \sqrt{(2-4)^2+[(-1)-3]^2}</mrow>
+            <mrow>\amp = \sqrt{4+16} =\sqrt{20}</mrow>
+        </md>
+    </p>
+</note>
 
-<note><p>In Example 1 we obtain the same answer if we use <m>(4,3)</m> for <m>P_1</m> and <m>(2,-1)</m> for <m>P_2</m>:
-	<me>\begin{aligned}
-                d \amp = \sqrt{(2-4)^2+[(-1)-3]^2}\\
-                 	\amp = \sqrt{4+16} =\sqrt{20}                
-                \end{aligned}</me></p></note>
-
-<exercise><statement><p><ol label="a">
-	<li>Find the distance between the points <m>(-5,3)</m> and <m>(3,-9)</m>.</li>
-	<li>Plot the points, and illustrate how the Pythagorean theorem is used in calculating the distance.</li>
-</ol></p></statement>
-<answer><p><ol label="a">
-	<li><m>\sqrt{208}</m></li>
-	<li><image source="images/fig-10-2-ex1bans.png" width="70%" valign="middle"><description>triangle</description></image></li>
-</ol></p></answer></exercise>
+<exercise><title>Practice 1</title>
+<webwork>
+    <pg-code>
+        $d = Compute("sqrt(208)");
+    </pg-code>
+    <statement>
+        <p><ol label="a">
+            <li>
+                <p>
+                    Find the distance between the points <m>(-5,3)</m> and <m>(3,-9)</m>: <var name="$d" width="10"/>
+                </p>
+                <instruction>
+                    Enter "sqrt(2)" to get <m>\sqrt{2}</m>.
+                </instruction>
+            </li>
+            <li>
+                <p>
+                    Plot the points, and illustrate how the Pythagorean theorem is used in calculating the distance.
+                </p>
+            </li>
+        </ol></p>
+    </statement>
+    <solution>
+        <p><ol label="a">
+            <li><m>\sqrt{208}</m></li>
+            <li>A graph is below.</li>
+        </ol></p>
+    </solution>
+</webwork>
+<conclusion><sidebyside width="40%">
+    <image xml:id="fig-ex-distance-formula">
+        <description>distance formula</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.45]
+        \draw[lightgray] (-8,-10) grid (5,5);
+        \draw[black,thick, ->, >=stealth'] (-8,0)--(5.6,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-10)--(0,5.6) node[above]{$y$};
+        \foreach \x in  {5,-5} {
+         \draw[black] (\x,.1) --++(0,-.2)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+         \draw[black] (.1,\x) --++(-.2,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \draw[red, thick] (-5,3)--(3,-9) node[midway, right, xshift=3, yshift=5, fill=white, inner sep=1] {$d$};
+        \draw[blue,ultra thick, dashed] (-5,3)--(-5,-9) node[left, midway, xshift=-2, fill=white, inner sep=1]{$8$};
+        \draw[blue,ultra thick, dashed] (-5,-9)--(3,-9) node[below, midway, yshift=-2, fill=white, inner sep=1]{$12$};
+        \filldraw[blue] (-5,3) circle (.2) node[above left, yshift=3, fill=white, inner sep=1, text=black] {$(-5,3)$};
+        \filldraw[blue] (3,-9) circle (.2) node[below right, yshift=-3, fill=white, inner sep=1, text=black] {$(3,-9)$};
+        \node[fill=white, inner sep=1,text=red] at (0.5,1.5) {$8^2+12^2=d^2$};
+        \end{tikzpicture}]]>
+        </latex-image>
+    </image>
+</sidebyside></conclusion>
+</exercise>
 </subsection>
 
 <subsection><title>Finding the Midpoint</title>
 <p>Suppose that Francine flies from her present position at <m>(253,124)</m> towards Preston Airport at <m>(187,-201)</m>. What are her coordinates when she is halfway to Preston?</p>
-
-<image source="images/fig-10-2-midpoint.png" width="80%" valign="middle"><description>triangle</description></image>
+<sidebyside widths="45% 45%" margins="0% 0%">
+    <image xml:id="fig-Francine-airport-rectangle">
+        <description>rectangle in plane</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=1.5]
+        \draw[cyan] (0,-2.5) grid[step=1/2] (3,2.5);
+        \draw[black,thick, ->, >=stealth'] (0,0)--(3.3,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-2.5)--(0,2.8) node[above]{$y$};
+        \foreach \x [evaluate=\x as \xi using int(100*\x)] in  {2} {
+         \draw[black] (\x,.08) --++(0,-.16)  node[below, yshift=-2, fill=white, inner sep=1]   {$\xi$};
+        }
+        \foreach \x [evaluate=\x as \xi using int(100*\x)] in  {-2,2} {
+         \draw[black] (.08,\x) --++(-.16,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\xi$};
+        }
+        \node at(-.2,0) {$O$};
+        \filldraw[red] (2.53,1.24) circle (.05) node[above right, xshift=2, text=black, fill=white, inner sep=2] {$F(253,124)$};
+        \filldraw[red] (1.87,-2.01) circle (.05) node[below left, yshift=-2, text=black, fill=white, inner sep=2] {$P(187,-201)$};
+        \draw[red,very thick] (1.87,1.24) node[text=black, fill=white, inner sep=2,anchor=south east]{$(187,124$} -- (1.87,-2.01)  -- (2.53,-2.01) node[text=black, fill=white, inner sep=2,anchor=north west]{$(253,-201)$} -- (2.53,1.24)--cycle;
+        \node at (1.6,-2.8) {(a)};
+        \end{tikzpicture}]]>
+        </latex-image>
+    </image>
+    <image xml:id="fig-Francine-airport-midpoint">
+        <description>midpoint of segment</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=1.5]
+        \draw[cyan] (0,-2.5) grid[step=1/2] (3,2.5);
+        \draw[black,thick, ->, >=stealth'] (0,0)--(3.3,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-2.5)--(0,2.8) node[above]{$y$};
+        \foreach \x [evaluate=\x as \xi using int(100*\x)] in  {-2,2} {
+         \draw[black] (.08,\x) --++(-.16,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\xi$};
+        }
+        \node at(-.2,0) {$O$};
+        \filldraw[red] (2.53,1.24) circle (.05) node[above right, xshift=2, text=black, fill=white, inner sep=2] {$F(253,124)$};
+        \filldraw[red] (1.87,-2.01) circle (.05) node[below left, yshift=-2, text=black, fill=white, inner sep=2] {$P(187,-201)$};
+        \filldraw[red] (2.2,-.385) circle (.05) node[below right, yshift=-2, text=black, fill=white, inner sep=2] {$(220,-38.5)$};
+        \node at (1.6,-2.8) {(b)};
+        \end{tikzpicture}]]>
+        </latex-image>
+    </image>
+</sidebyside>
 
 <p>When she is halfway to Preston, Francine will be at the center of the rectangle shown in Figure a. The <m>x</m>-coordinate of the center is the average of the <m>x</m>-coordinates at the left and right sides, or   
 	<me>x_m=\dfrac{187+253}{2}=220</me>
@@ -93,8 +279,14 @@ Francine will be 220 miles east and 38.5 miles south of Oldfield when she is hal
 <p>If we know the coordinates of two points, we can calculate the coordinates of the point halfway between them using the <term>midpoint</term> formula. Each coordinate of the midpoint is the average of the corresponding coordinates of the two points.</p>
 
 <assemblage><title>Midpoint Formula</title>
-<p>The <term>midpoint</term> of the line segment joining the points <m>P_1(x_1,y_1)</m> and <m>P_2(x_2,y_2)</m>   is the point <m>M(\overline{x},\overline{y})</m>, where
-	<me>\blert{\overline{x}=\dfrac{x_1+x_2}{2}}~~~~\text{and}~~~~\blert{\overline{y}=\dfrac{y_1+y_2}{2}}</me></p>
+<p>
+    The <term>midpoint</term><idx>midpoint</idx> of the line segment joining the points <m>P_1(x_1,y_1)</m> and <m>P_2(x_2,y_2)</m>   is the point <m>M(\overline{x},\overline{y})</m>, where
+    <md>
+        <mrow>
+            \amp\blert{\overline{x}=\dfrac{x_1+x_2}{2}}\amp\amp\text{and}\amp\blert{\overline{y}=\dfrac{y_1+y_2}{2}}
+        </mrow>
+    </md>
+</p>
 </assemblage>
 
 <example><statement><p>Find the midpoint of the line segment joining the points <m>(-2,1)</m> and <m>(4,3)</m>.</p></statement>
@@ -104,60 +296,159 @@ Francine will be 220 miles east and 38.5 miles south of Oldfield when she is hal
 		<mrow>\overline{y}=\dfrac{y_1+y_2}{2}=\dfrac{1+3}{2}=2</mrow></md>
 The midpoint of the segment is the point <m>(\overline{x},\overline{y})=(1,2)</m>.</p></solution></example>
 
-<exercise><statement><p><ol label="a">
-	<li>Find the midpoint of the line joining the points <m>(-5,3)</m> and <m>(3,-9)</m>.</li>
-	<li>Plot the points and draw a rectangle with the points as opposite vertices. Illustrate that the midpoint is the center of the rectangle.</li>
-</ol></p></statement>
-
-<answer><p><ol label="a">
-	<li><m>(-1,-3)</m></li>
-	<li><image source="images/fig-10-2-ex2bans.png" width="70%" valign="middle"><description>rectangle</description></image></li>
-</ol></p></answer></exercise>
+<exercise><title>Practice 2</title>
+<webwork>
+    <pg-code>
+        Context("Point");
+        $answer = Point("(-1,-3)");
+    </pg-code>
+    <statement><p>
+        <ol label="a">
+            <li>
+                <p>
+                    Find the midpoint of the line joining the points <m>(-5,3)</m> and <m>(3,-9)</m>: <var name="$answer" width="6"/>
+                </p>
+            </li>
+            <li>
+                <p>
+                    Plot the points and draw a rectangle with the points as opposite vertices. Illustrate that the midpoint is the center of the rectangle.
+                </p>
+            </li>
+        </ol></p>
+    </statement>
+    <solution><p><ol label="a">
+        <li><m>(-1,-3)</m></li>
+        <li>A figure is below.</li>
+    </ol></p></solution>
+</webwork>
+<conclusion>
+</conclusion>
+</exercise>
 </subsection>
 
 <subsection><title>Circles</title>
-<p>A <term>circle</term> is the set of all points in a plane that lie at a given distance, called the <term>radius</term>, from a fixed point called the <term>center</term>. We can use the distance formula to find an equation for a circle.</p> 
-<sidebyside widths="60% 35%"><p>First consider the circle at right, whose center is the origin, <m>(0,0)</m>.The distance from the origin to any point <m>P(x,y)</m> on the circle is <m>r</m>. Therefore, 
-	<me>\sqrt{(x-0)^2+(y-0)^2}=r</me>
-or, squaring both sides,
-	<me>(x-0)^2+(y-0)^2=r^2</me></p>
- 
-<image source="images/fig-10-2-circle1.png"><description>circle</description></image></sidebyside>
+<p>
+    A <term>circle</term><idx>circle</idx> is the set of all points in a plane that lie at a given distance, called the <term>radius</term><idx>radius</idx>, from a fixed point called the <term>center</term><idx>center</idx>. We can use the distance formula to find an equation for a circle.
+</p> 
+<sidebyside widths="60% 35%" margins="0% 0%">
+    <p>
+        First consider the circle at right, whose center is the origin, <m>(0,0)</m>.The distance from the origin to any point <m>P(x,y)</m> on the circle is <m>r</m>. Therefore,
+        <md><mrow>\sqrt{(x-0)^2+(y-0)^2}=r</mrow></md>
+        or, squaring both sides,
+        <md><mrow>(x-0)^2+(y-0)^2=r^2</mrow></md>
+    </p>
+    <image xml:id="fig-circle-at-origin">
+        <description>circle centered at origin</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.35]
+        \draw[black,thick,->,>=stealth'] (-8,0)--(8.6,0) node[right] {$x$};
+        \draw[black,thick,->,>=stealth'] (0,-8)--(0,8.6) node[above] {$y$};
+        \draw[magenta!80!black,ultra thick] (0,0) circle (5 cm );
+        \draw[magenta!80!black,ultra thick] (3,4)--(0,0) node[below right, midway, text=black] {$r$};
+        \filldraw[magenta!80!black] (3,4) circle (.2) node[above right, text=black] {$P(x,y)$};
+        \filldraw[magenta!80!black] (0,0) circle (.2) node[below left, text=black]  {$(0,0)$};
+        \node at (6.5,-4.5){$x^2+y^2 = r^2$};
+        \end{tikzpicture}]]>
+        </latex-image>
+    </image>
+</sidebyside>
 
-<p>Thus, the equation for a circle of radius <m>r</m> centered at the origin is
- 	<me>\blert{x^2+y^2=r^2}</me></p>
+<p>
+    Thus, the equation for a circle of radius <m>r</m> centered at the origin is
+    <md><mrow>\blert{x^2+y^2=r^2}</mrow></md>
+</p>
 
-<sidebyside widths="55% 35%"><p>Now consider the circle at right, whose center is the point <m>(h,k)</m>.  Every point <m>P(x,y)</m> on the circle lies a distance <m>r</m> from <m>(h,k)</m>, so the equation of the circle is given by the following formula.</p>
-
-<image source="images/fig-10-2-circle2.png"><description>circle</description></image></sidebyside>
+<sidebyside widths="55% 35%" margins="0% 0%">
+    <p>
+        Now consider the circle at right, whose center is the point <m>(h,k)</m>.  Every point <m>P(x,y)</m> on the circle lies a distance <m>r</m> from <m>(h,k)</m>, so the equation of the circle is given by the following formula.
+    </p>
+    <image xml:id="fig-circle-at-h-k">
+        <description>circle centered at (h,k)</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.35]
+        \draw[black,thick,->,>=stealth'] (-3,0)--(13.6,0) node[right] {$x$};
+        \draw[black,thick,->,>=stealth'] (0,-4)--(0,10.6) node[above] {$y$};
+        \draw[gray,dashed,thick,->,>=stealth'] (-3,3)--(13.6,3);
+        \draw[gray,dashed,thick,->,>=stealth'] (6,-3)--(6,10.6);
+        \draw[magenta!80!black,ultra thick] (6,3) circle (5 cm );
+        \draw[magenta!80!black,ultra thick] (9,7)--(6,3) node[below right, midway, text=black] {$r$};
+        \filldraw[magenta!80!black] (9,7) circle (.2) node[above right, text=black] {$P(x,y)$};
+        \filldraw[magenta!80!black] (6,3) circle (.2) node[below left, text=black]  {$(h,k)$};
+        \node at (6.5,-3.5){$(x-h)^2+(y-k)^2 = r^2$};
+        \end{tikzpicture}]]>
+        </latex-image>
+    </image>
+</sidebyside>
 
 <assemblage><title>Standard Form for a Circle</title>
-<p>The equation for a <term>circle</term> of radius <m>r</m> centered at the point <m>(k,k)</m> is
-	<me>\blert{(x-h)^2+(y-k)^2=r^2}</me></p></assemblage>
+<p>
+    The equation for a <term>circle</term> of radius <m>r</m> centered at the point <m>(k,k)</m> is
+    <me>\blert{(x-h)^2+(y-k)^2=r^2}</me>
+</p></assemblage>
 
 <p>This equation is the standard form for a circle of radius <m>r</m> with center at <m>(h,k)</m>. It is easy to graph a circle if its equation is given in standard form.</p>
 
 <example><statement><p>Graph the circles.</p><p><ol label="a" cols="2">
-	<li><m>(x-2)^2+(y+3)^2=16</m></li>
-	<li><m>x^2+(y-4)^2=7</m></li></ol></p></statement>
-
+    <li><m>(x-2)^2+(y+3)^2=16</m></li>
+    <li><m>x^2+(y-4)^2=7</m></li></ol></p>
+</statement>
 <solution><p><ol label="a">
-	<li><p>The graph of <m>(x-2)^2+(y+3)^2=16</m> is a circle with radius 4 and center at <m>(2,-3)</m>. To sketch the graph, we first locate the center of the circle. (The center is not part of the graph of the circle.) From the center, we move a distance of 4 units (the radius of the circle) in each of four directions:  up, down, left, and right. This locates four points that lie on the circle: <m>(2,1),~(2,-7),~(-2,-3),</m> and <m>(6,-3)</m>.  We sketch the circle through these four points.</p> 
-
-	<image source="images/fig-10-2-exm3.png"><description>circles</description></image></li>
-
-	<li><p>The graph of <m>x^2+(y-4)^2=7</m> is a circle with radius <m>\sqrt{7}</m> and center at <m>(0,4)</m>.  From the center, we move approximately <m>\sqrt{7}</m>, or 2.6 units in each of the four coordinate directions to obtain the points <m>(0,6.6)~(0,1.4)~(-2.6,4),</m> and <m>(2.6,4)</m>. We sketch the circle through these four points.</p></li>
+    <li><p>The graph of <m>(x-2)^2+(y+3)^2=16</m> is a circle with radius 4 and center at <m>(2,-3)</m>. To sketch the graph, we first locate the center of the circle. (The center is not part of the graph of the circle.) From the center, we move a distance of 4 units (the radius of the circle) in each of four directions:  up, down, left, and right. This locates four points that lie on the circle: <m>(2,1),~(2,-7),~(-2,-3),</m> and <m>(6,-3)</m>.  We sketch the circle through these four points.</p>
+    <sidebyside><image source="images/fig-circles2"><description>circles</description></image></sidebyside>
+    </li>
+    <li><p>The graph of <m>x^2+(y-4)^2=7</m> is a circle with radius <m>\sqrt{7}</m> and center at <m>(0,4)</m>.  From the center, we move approximately <m>\sqrt{7}</m>, or 2.6 units in each of the four coordinate directions to obtain the points <m>(0,6.6)~(0,1.4)~(-2.6,4),</m> and <m>(2.6,4)</m>. We sketch the circle through these four points.</p></li>
 </ol></p></solution></example>
 
-<exercise><statement><p><ol label="a">
-	<li><p>State the center and radius of the circle
-		<me>(x-3)^2+(y+2)^2=16</me></p></li>
-	<li>Graph the circle.</li></ol></p></statement>
-
-<answer><p><ol label="a">
-	<li><p>center <m>(-3,-2)</m>, radius 4</p></li>
-	<li><image source="images/fig-10-2-ex3ans.png" width="30%"><description>circles</description></image></li>
-</ol></p></answer></exercise>
+<exercise><title>Practice 3</title>
+<webwork>
+    <pg-code>
+        Context("Point");
+        $center = Point("(-3,-2)");
+        $r = Compute("4");
+    </pg-code>
+    <statement><p><ol label="a">
+        <li>
+            <p>
+                State the center and radius of the circle
+                <me>(x+3)^2+(y+2)^2=16</me>
+            </p>
+            <p>center: <var name="$center"  width="6"/>, radius: <var name="$r" width="2"/> </p>
+        </li>
+        <li>Graph the circle.</li>
+    </ol></p></statement>
+    <solution><p><ol label="a">
+    <li><p>center <m>(-3,-2)</m>, radius 4</p></li>
+    <li>A graph is below.</li>
+</ol></p></solution>
+</webwork>
+<conclusion><sidebyside width="40%">
+    <image xml:id="fig-ex-circle">
+        <description>circle</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.5]
+        \draw[lightgray] (-8,-8) grid (3,3);
+        \draw[black,thick, ->, >=stealth'] (-8,0)--(3.6,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-8)--(0,3.6) node[above]{$y$};
+        \foreach \x in  {2,-5} {
+         \draw[black] (\x,.1) --++(0,-.2)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+         \draw[black] (.1,\x) --++(-.2,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \draw[red, thick] (-3,-2) circle (4cm);
+        \filldraw (-3,-2) circle (.15) node[below, yshift=-2, fill=white, inner sep=1]{$(-3,-2)$};
+        \end{tikzpicture}]]>
+        </latex-image>
+    </image>
+</sidebyside></conclusion>
+</exercise>
 </subsection>
 
 <subsection><title>General Form for Circles</title>
@@ -173,19 +464,58 @@ This is a quadratic equation in two variables. Such an equation describes a circ
 	<me>x^2+y^2+ax+by+c=0</me>
 can be converted to standard form by completing the square in both variables.  Once this is done, the center and radius of the circle can be determined directly from the equation.</p>
 
-<example><statement><p>Write the equation of the circle
-	<me>x^2+y^2+8x-2y+6=0</me>
-in standard form, and graph the equation.</p></statement>
-
-<solution><p>We prepare to complete the square in both variables by writing the equation as
-	<me>(x^2+8x+<fillin characters="6"/>)+(y^2-2y+<fillin characters="6"/>)=-6</me>
-We complete the square in <m>x</m> by adding 16 to each side of the equation, and complete thesquare in <m>y</m> by adding 1 to each side, to get
-	<me>(x^2+8x+\alert{16})+(y^2-2y+\alert{1})=-6+\alert{16}+\alert{1}</me>
-from which we obtain the standard form,
-	<me>(x+4)^2+(y-1)^2=11</me>
-Thus, the circle has its center at <m>(-4,1)</m>, and its radius is <m>\sqrt{11}</m>, or approximately 3.3.  The graph is shown below.
-
-<image source="images/fig-10-2-exm4.png" width="50%"><description>circle</description></image></p></solution>
+<example>
+    <statement>
+        <p>
+            Write the equation of the circle
+            <md><mrow>x^2+y^2+8x-2y+6=0</mrow></md>
+            in standard form, and graph the equation.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            We prepare to complete the square in both variables by writing the equation as
+            <md><mrow>
+                (x^2+8x+<fillin characters="6"/>)+(y^2-2y+<fillin characters="6"/>)=-6
+            </mrow></md>
+            We complete the square in <m>x</m> by adding 16 to each side of the equation, and complete the square in <m>y</m> by adding 1 to each side, to get
+            <md><mrow>
+                (x^2+8x+\alert{16})+(y^2-2y+\alert{1})=-6+\alert{16}+\alert{1}
+            </mrow></md>
+        </p>
+        <sidebyside widths="55% 40%" margins="0% 0%" aligns="middle middle">
+            <p>
+            from which we obtain the standard form,
+            <md><mrow>
+                (x+4)^2+(y-1)^2=11
+            </mrow></md>
+            Thus, the circle has its center at <m>(-4,1)</m>, and its radius is <m>\sqrt{11}</m>, or approximately 3.3.  The graph is shown at right.
+        </p>
+             <image xml:id="fig-example-circle">
+            <description>circle</description>
+            <latex-image>
+            <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+            <![CDATA[\tikzset{%
+            }
+            \begin{tikzpicture} [scale=.6]
+            \draw[lightgray] (-9,-3) grid (1,6);
+            \draw[black,thick, ->, >=stealth'] (-9,0)--(1.6,0) node[right]{$x$};
+            \draw[black,thick, ->, >=stealth'] (0,-3)--(0,6.6) node[above]{$y$};
+            \foreach \x in  {-5} {
+             \draw[black] (\x,.1) --++(0,-.2)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+            }
+            \foreach \x in  {5} {
+             \draw[black] (.1,\x) --++(-.2,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+            }
+            \draw[red, thick] (-4,1) circle ({sqrt(11)});
+            \draw[blue,thick, dashed](-4,1)--({-4-sqrt(7)},3) node[above right, midway]{$r=\sqrt{11}$};
+            \filldraw (-4,1) circle (.15) node[right, xshift=3, fill=white, inner sep=1]{$(-4,1)$};
+            \filldraw[red] ({-4-sqrt(7)},3) circle (.15) node[above left, yshift=3, fill=white, inner sep=1]{$P(x,y)$};
+            \end{tikzpicture}]]>
+            </latex-image>
+        </image>
+        </sidebyside>
+    </solution>
 </example>
 
 <exercise><statement><p>Write the equation of the circle
@@ -215,4 +545,6 @@ to obtain
 	<me>(x-4)^2+(y-2)^2=18</me></p></solution></example>
 
 </subsection>
+<!-- <xi:include href="./summary-10-2.xml" /> summary  -->
+<xi:include href="./section-10-2-exercises.xml" /> <!-- exercises  -->
 </section>

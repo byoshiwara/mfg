@@ -60,23 +60,24 @@
             <mrow>C\amp=5+3(\alert{1})=8</mrow></md>
     A 1-hour bike ride costs $8.  We record the results in a table, as shown here:</p>
     <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-                    <row bottom="minor">
-                        <cell>Length of rental (hours)</cell>
-                        <cell>Cost of rental (dollars)</cell>
-                        <cell></cell>
-                        <cell><m>(t,C)</m></cell></row>
-                    <row> <cell><m>1</m></cell>
-                        <cell><m>8</m></cell>
-                        <cell><m>C=5+3(\alert{1})</m></cell>
-                        <cell><m>(1,8)</m></cell></row>
-                    <row> <cell><m>2</m></cell>
-                        <cell><m>11</m></cell>
-                        <cell><m>C=5+3(\alert{2})</m></cell>
-                        <cell><m>(2,11)</m></cell></row>
-                    <row> <cell><m>3</m></cell>
-                        <cell><m>14</m></cell>
-                        <cell><m>C=5+3(\alert{3})</m></cell>
-                        <cell><m>(3,14)</m></cell></row>
+            <col/><col/><col bottom="none" top="none" /><col />
+            <row>
+                <cell><line>Length of rental</line><line>(hours)</line></cell>
+                <cell><line>Cost of rental</line><line>(dollars)</line></cell>
+                <cell bottom="none" top="none" ></cell>
+                <cell><m>(t,C)</m></cell></row>
+            <row> <cell><m>1</m></cell>
+                <cell><m>8</m></cell>
+                <cell bottom="none" top="none"><m>\quad C=5+3(\alert{1})\quad</m></cell>
+                <cell><m>(1,8)</m></cell></row>
+            <row> <cell><m>2</m></cell>
+                <cell><m>11</m></cell>
+                <cell bottom="none" top="none"><m>C=5+3(\alert{2})</m></cell>
+                <cell><m>(2,11)</m></cell></row>
+            <row> <cell><m>3</m></cell>
+                <cell><m>14</m></cell>
+                <cell bottom="none" top="none"><m>C=5+3(\alert{3})</m></cell>
+                <cell><m>(3,14)</m></cell></row>
                 </tabular></sidebyside></li>
     <li><sidebyside widths="55% 28%"><p>Each pair of values represents a point on the graph.  The first value gives the horizontal coordinate of the point, and the second value gives the vertical coordinate.  The points lie on a straight line, as shown in the figure.  The line extends infinitely in only one direction, because negative values of <m>t</m> do not make sense here.</p>
             <image source="images/fig-Annelise-1"><description>graph</description></image></sidebyside></li>
@@ -87,7 +88,7 @@
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $Whichaxis = RadioButtons(
               ["The linear axis",
               "The horizontal axis",
@@ -95,7 +96,7 @@
               "Both axes"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>When you graph the data given in a table, on which axis do you show the variable in the first row of the table?</p>
         <p><var name="$Whichaxis" form="buttons"/></p>      
@@ -111,7 +112,6 @@
         <li><p>How much will it cost Annelise to rent a bicycle for 6 hours?</p></li>
         <li><p>How long can Annelise bicycle for $18.50?</p></li>
     </ol></p></statement>
-
 <solution><p><ol label="a">
     <li><p>We substitute <m>t=\alert{6}</m> into the expression for <m>C</m> to find <me>C=5+3(\alert{6})=23</me>A 6-hour bike ride will cost $23.  The point <m>P</m> on the graph in the figure represents the cost of a 6-hour bike ride.  The value on the <m>C</m>-axis at the same height as point <m>P</m> is 23, so a 6-hour bike ride costs $23.</p></li>
     <li><sidebyside widths="60% 35%"><p>We substitute <m>C=\alert{18.50}</m> into the equation and solve for <m>t</m>.
@@ -129,14 +129,6 @@
 
 <exercise  xml:id="exercise-Frank-plants">
     <title>Practice 1</title>
-    <introduction>
-    <sidebyside widths="55% 25%" valigns="middle middle">
-    <p>
-    Frank plants a dozen corn seedlings, each 6 inches tall. With plenty of water and sunlight they will grow approximately 2 inches per day.   Complete the table of values for the height, <m>h</m>, of the seedlings after <m>t</m> days.
-  </p>
-  <image source="images/fig-Example2"><description> grid </description></image>
-  </sidebyside>
-  </introduction>
   <webwork>
     <pg-macros>
         loadMacros(
@@ -148,7 +140,7 @@
           "niceTables.pl"
         ) ;
     </pg-macros>
-    <setup>
+     
       <pg-code>
     $diff = 5;   
     $t0 = 0;      
@@ -173,54 +165,12 @@
 
     $equation = ImplicitPlane("h = $growthRate*t + $h0");
 
-    # Part (c) set-up
-    Context("Numeric");
-    $displayEq = "\(h = $growthRate t + $h0\)";   
-
-    $refreshCachedImages=1;
-
-    $xmin = -5;
-    $ymin = -8;
-    $xmax = 45;
-    $ymax = 88;
-    #---------Define the function----------
-    $fun = "$growthRate*x + $h0";
-
-    $color = list_random("blue", "red", "green");
-    $color =  "red";
-
-    #---------Define the graph
-    $graph = init_graph($xmin,$ymin,$xmax,$ymax,'axes'=>[0,0],grid=>[10,12],size=>[240,360]);
-    $graph  -> lb('reset'); #remove default label and tick marks
-
-    $i = 0;           # Number the axes
-    do {
-      $xtick = $i;
-      $labelx[$i] = new Label($xtick,0, "$xtick",'black','center');
-      if ($xtick!=0) {$graph->lb($labelx[$i]); }
-      $i =$i+10;
-    } while  ($i &lt; $xmax);
-
-    $i = 0;
-    do {
-      $ytick = $i;
-      $labely[$i] = new Label(-.4,$ytick, "$ytick",'black','right', middle);
-      if ($ytick!=0) {$graph->lb($labely[$i]); } 
-      $i = $i + 40;
-    } while ($i &lt; $ymax);
-
-    add_functions($graph,"$fun for x in &lt;0,$xmax&gt; using color=$color and weight=2" );
-
-    $labelx =  new Label($xmax-1,1,"t",'black','center','bottom');
-    $labelx->font(GD::Font->Giant);
-    $graph -> lb($labelx);
-    $labely =  new Label(1,$ymax-3,"h",'black','left','middle');
-    $labely->font(GD::Font->Giant);
-    $graph -> lb($labely);
-
         </pg-code>
-        </setup>
+         
     <statement>
+    <p>
+    Frank plants a dozen corn seedlings, each 6 inches tall. With plenty of water and sunlight they will grow approximately 2 inches per day.   Complete the table of values for the height, <m>h</m>, of the seedlings after <m>t</m> days.
+    </p>
     <p>Complete the table of values for the height, <m>h</m> of the seedlings after <m>t</m> days.</p>
     <p>
     <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -243,11 +193,6 @@
                 </tabular>
     </p>
     </statement>
-    <solution> 
-        <p>The height of the seedlings begins at 6 inches, so <m>h=6</m> when <m>t=0</m>.</p>
-        <p>Because the seedlings grow 2 inches per day, they grow by <m>2\times 5 =10</m> inches in each 5 day increment. We add 10 inches to the height for every 5 more days of growth.</p>
-        <p>(Another possible strategy is given in the solution to the next part.)</p>
-    </solution>
     <statement>
         <ol label="a">
             <li>
@@ -263,22 +208,16 @@
     <solution> 
         <ol label="a">
             <li>
-                <p>The height after <m>t</m> days will be the initial height plus (<m>t</m> days) <m>\times</m> (2 inches per day).</p>
                 <p><m>h=6+2t</m></p>
-                <p>(Notice that we could now evaluate the expression <m>6+2t</m> for each of the values of <m>t</m> in the table in order to find the corresponding values of <m>h</m>.)</p>
             </li>
             <li>
                 <p>The graph of seedling height vs time is shown below.</p>
-                <sidebyside widths="40%">
-                    <image pg-name="$graph"><description>graph of corn seedlings height vs time</description></image>
-                </sidebyside>
             </li>       
     </ol>
     </solution>
 
   </webwork>
   <conclusion>
-    <p>The graph of seedling height vs time is shown below.</p>
     <sidebyside width="25%" margins="0% 75%">
         <image source="images/fig-in-ex-ans-1-1-1"><description>graph of seedlings height vs time</description></image>
     </sidebyside>
@@ -287,10 +226,10 @@
 
 <exercise>
     <title>Practice 2</title>
-    <introduction>
+<!--    <introduction>
     <p>
  Use your equation from <xref ref="exercise-Frank-plants" text="type-global"/> to answer the questions.  Illustrate each answer on the graph. </p> 
-   </introduction>
+   </introduction>-->
   <webwork>
     <pg-macros>
         loadMacros(
@@ -299,7 +238,7 @@
           "AnswerFormatHelp.pl",
         ) ;
     </pg-macros>
-    <setup>
+     
       <pg-code>
         #$diff = random(2,5,1);   
         $diff = 5;    #---COMMENT OUT THIS LINE FOR RANDOMIZATION
@@ -327,36 +266,35 @@
         $time = NumberWithUnits(
         "$time0 day");
     </pg-code>
-    </setup>
+     
     <statement>
-        <p>How tall is the corn after <var name="$Tweek"/> weeks?</p>
-        <p>Answer (including units): <var  name="$height" width="8"/></p>
-        <instruction>(Note: to answer "2 feet", enter "2 ft", but to answer 12 inches, use "12 in".)
-        </instruction>
-        <p>How long will it be before the corn is <var name="$Hft"/> feet tall?</p>
-        <p>Answer (including units): <var  name="$time" width="8"/></p>
-        <instruction>
-         (To answer "7 days" enter "7 day".
-         WeBWorK recognizes "hr" for hour or hours, "min" for minute or minutes, and "s" for second or seconds.)
-        </instruction>
+        <p>Use your equation from Practice 1 to answer the questions.  Illustrate each answer on the graph.</p>
+        <p><ol>
+            <li><p>How tall is the corn after <var name="$Tweek"/> weeks? Use "ft" for feet or "in" for inches.</p>
+        <p>Answer (including units): <var  name="$height" width="8"/></p></li>
+        <li><p>How long will it be before the corn is <var name="$Hft"/> feet tall? Use "day" for days.</p>
+        <p>Answer (including units): <var  name="$time" width="8"/></p></li>
+        </ol></p>       
     </statement>
     <solution> 
-        <p><var name="$Tweek"/> weeks is <var name="$Tdays"/> days, so we evaluate <m><var name="$f"/></m> for <m>t=<var name="$Tdays"/></m> to get <m><var name="$h0"/>+2\cdot<var name="$Tdays"/>=<var name="$H"/></m> inches.</p>        
-        <p><var name="$Hft"/> ft is <var name="$Hinches"/> in, so we solve <m><var name="$displayEq"/></m> when <m>h=<var name="$Hinches"/></m></p>
-        <p><md>
-            <mrow><var name="$Hinches"/>\amp =<var name="$h0"/> +<var name="$growthRate"/>t</mrow>
-            <mrow><var name="$Hdiff"/>\amp =<var name="$growthRate"/> t</mrow>
-            <mrow><var name="$time0"/>\amp =t</mrow>
-        </md></p> 
-        <p>It will take <var name="$time0"/> days before the corn is <var name="$Hft"/> feet tall.</p>
+        <p><ol>
+            <li><p>48 inches tall</p></li>
+            <li><p>33 days</p></li>
+        </ol></p>
+        <p>A graphs is below.</p> 
     </solution>
   </webwork>
+  <conclusion>
+    <sidebyside width="25%" margins="0% 75%">
+        <image source="images/fig-in-ex-ans-1-1-2"><description>graph of seedlings height vs time</description></image>
+    </sidebyside>
+  </conclusion>
 </exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>What is the difference between an expression and an equation?</p>
         <p><var form="essay"/></p>      
@@ -414,7 +352,7 @@
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $Whichvar = RadioButtons(
               ["\(C\)",
               "\(H\)",
@@ -422,7 +360,7 @@
               "The smaller one"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>If <m>C</m> is expressed in terms of <m>H</m>, which variable goes on the horizontal axis?</p>
         <p><var name="$Whichvar" form="buttons"/></p>      
@@ -436,16 +374,8 @@
 
 <exercise xml:id="exercise-Silver-Lake">
     <title>Practice 3</title>
-    <introduction>
-    <p>
-    Silver Lake has been polluted by industrial waste products. The concentration of toxic chemicals in the water is currently 285 parts per million (ppm). Environmental officials would like to reduce the concentration by 15 ppm each year.
-    </p>
-    <sidebyside width="40%">
-        <image source="images/fig-Exercise3"><description>graph of seedlings height vs time</description></image>
-    </sidebyside>
-  </introduction>
   <webwork>
-    <setup>
+     
       <pg-code>
             # Part (a) set-up
 
@@ -468,58 +398,13 @@
             Context()->variables->add(t=>"Real",C=>"Real");
 
             $equation = ImplicitPlane("C = $C0 + $growthRate*t");
-<!--
-
-            # Graph
-            Context("Numeric");
-            $displayEq = "C = $C0 +$growthRate t";   
-
-            $refreshCachedImages=1;
-
-            $xmin = -5;
-            $ymin = -30;
-            $xmax = 22;
-            $ymax = 330;
-            $fun = "$growthRate*x + $C0";
-
-            $color = "red";
-
-#$graph1 = init_graph($xmin,$ymin,$xmax,$ymax,axes=>[0,0]);
-$graph1 = init_graph(-2,-30,22,330,axes=>[0,0], grid=>[12,12],size=>[360,360]);
-$graph1  -> lb('reset'); #remove default label and tick marks
-# specify the grid manually
-$graph1->v_grid("gray",10,20);
-$graph1->h_grid("gray",60,120,180,240,300);
-
-
-$i = 0;           # Number the axes
-do {
-  $xtick = $i*10;
-  $labelx[$i] = new Label($xtick,0, "$xtick",'black','center','below');
-  if ($xtick!=0) {$graph1->lb($labelx[$i]); }
-  $i =$i+1;
-} while  ($xtick &lt;= $xmax);
-
-$i = 0;
-do {
-  $ytick = $i*60;
-  $labely[$i] = new Label(-1.6,$ytick, "$ytick",'black','middle');
-  if ($ytick!=0) {$graph1->lb($labely[$i]); } 
-  $i = $i + 1;
-} while ($i &lt; $ymax);
-
-add_functions($graph1,"$fun for x in &lt;0,19&gt; using color=$color and weight=2" );
-
-$labelx =  new Label($xmax-0.6,-1,"t",'black','center','above');
-$labelx->font(GD::Font->Giant);
-$graph1 -> lb($labelx);
-$labely =  new Label(0.8,$ymax-8,"C",'black','center','middle');
-$labely->font(GD::Font->Giant);
-$graph1 -> lb($labely); -->
         </pg-code>
-        </setup>
+         
     <statement>
-    <p><ol label="a">
+        <p>
+        Silver Lake has been polluted by industrial waste products. The concentration of toxic chemicals in the water is currently 285 parts per million (ppm). Environmental officials would like to reduce the concentration by 15 ppm each year.
+        </p>
+        <p><ol label="a">
         <li><p>Complete the table of values showing the desired concentration, <m>C</m>, of toxic chemicals <m>t</m> years from now. For each <m>t</m>-value, calculate the corresponding value for <m>C</m>.  Write your answers as ordered pairs.</p>
         <sidebyside>
                 <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -556,7 +441,7 @@ $graph1 -> lb($labely); -->
             </tabular>
         </sidebyside></li>
         <li>
-            <p>To choose scales for the axes, notice that the value of <m>C</m> starts at 285 and decreases from there. We'll scale the vertical axis up to 300, and use 10 tick marks at intervals of 30. Graph the ordered pairs on the grid, and connect them with a straight line. Extend the graph until it reaches the horizontal axis, but no farther. Points with negative <m>C</m>-coordinates have no meaning for the problem.</p>
+            <p>To choose scales for the axes, notice that the value of <m>C</m> starts at 285 and decreases from there. We'll scale the vertical axis up to 300, and use 10 tick marks at intervals of 30. Graph the ordered pairs on the grid, and connect them with a straight line.</p>
         </li>
         <li>
             <p>Write an equation for the concentration, <m>C</m>,  of toxic chemicals <m>t</m> years from now.</p>
@@ -578,24 +463,19 @@ $graph1 -> lb($labely); -->
                 <row>
                     <cell><m>(15,60)</m></cell></row>
             </tabular></sidebyside></li>
-            <li><p>Plot the points in the table and draw a line segment that meets the axes and passes through those points.</p>
-            <p>A plot is below.</p>
-<!--            <sidebyside widths="40%">
-                <image pg-name="$graph1"><description>graph of toxic chemical concentration vs time</description></image>
-            </sidebyside> -->
+            <li><p>The graph is shown below.</p>
             </li>
-            <li> <p>Looking at the computations shown in the table, we see that the concentration began at 285 and decreased by <m>15\times t</m> after <m>t</m> years. So
-            <me>C=285-15t</me></p></li></ol></p>
+            <li><p><m>C=285-15t</m></p></li></ol></p>
     </solution>
   </webwork>
-  <conclusion><sidebyside width="25%"><image source="images/fig-in-ex-ans-1-1-3"><description>decreasing graph</description></image></sidebyside></conclusion> 
+  <conclusion><sidebyside width="30%"><image source="images/fig-in-ex-ans-1-1-3"><description>decreasing graph</description></image></sidebyside></conclusion> 
 </exercise>
 
 <note><p>In the previous Exercise, we extend the graph until it reaches the horizontal axis, but no farther.  Points with negative <m>C</m>-coordinates have no meaning for the problem.</p></note>  
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $ineq = RadioButtons(
               ["It is greater than 3",
               "It is less than 3",
@@ -603,7 +483,7 @@ $graph1 -> lb($labely); -->
               "It is less than -10"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>If <m>x \gt 5</m>, what is true about <m>-2x</m>?</p>
         <p><var name="$ineq" form="buttons"/></p>      
@@ -647,92 +527,99 @@ $graph1 -> lb($labely); -->
 <exercise>
     <title>Practice 4</title>
   <webwork>
-    <setup>
+     
       <pg-code>
         $fun=Formula("(1575+45*x)/2");
         Context("Numeric")->variables->add(y=>'Real');
-        $gr = init_graph(-50,-500,50,1000,axes=>[0,0],grid=>[10,15],size=>[240,240]);
-        $gr->lb('reset');
-        for my $j (-20,20,40) {
-          $gr->lb( new Label($j, 0, $j,'black','center','top','large'));
-        }
-        for my $j (500,1000) {
-          $gr->lb( new Label(0, $j, $j,'black','right','middle','large'));
-        }
-        add_functions($gr, "$fun for x in &lt;-50,50>  using color:red and weight:2");
       </pg-code>
-    </setup>
-    <statement>
-      <p>
-        <ol label="a">
-          <li>
-            <p>
+     
+    <statement><p><ol label="a">
+          <li><p>
               Solve the equation <m>2y-1575=45x</m> for <m>y</m> in terms of <m>x</m>.</p>
-              <p><m>y=</m><var name="$fun" width="10" />
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Graph the equation with a graphing utility. Use the window
-            </p>
+              <p><m>y=</m><var name="$fun" width="10" /></p></li>
+          <li><p>
+              Graph the equation with a graphing utility. Use the window</p>
         <sidebyside>
             <tabular>
-                <row>
-                    <cell>Xmin<m>=-50</m></cell>
+                <row><cell>Xmin<m>=-50</m></cell>
                     <cell></cell>
                     <cell>Xmax<m>=50</m></cell>
                     <cell></cell>
-                    <cell>Xscl<m>=5</m></cell>
-                </row>
-                <row>
-                    <cell>Ymin<m>=-500</m></cell>
+                    <cell>Xscl<m>=5</m></cell></row>
+                <row><cell>Ymin<m>=-500</m></cell>
                     <cell></cell>
                     <cell>Ymax<m>=1000</m></cell>
                     <cell></cell>
-                    <cell>Yscl<m>=100</m></cell>
-                </row>
-            </tabular>
-        </sidebyside>
-          </li>
-
-          <li>
-            <p>
-              Sketch the graph on paper. Use the window settings to choose appropriate scales for the axes
-            </p>
-          </li>
-        </ol>
-      </p>
-    </statement>
-    <solution>
-      <p>
-        <ol label="a.">
-          <li>
-            <p>
-              <m>y=<var name="$fun"/></m>.
-            </p>
-          </li>
-
-          <li>
-              <sidebyside widths="40%">
-                <image pg-name="$gr" />
-              </sidebyside>
-          </li>
-          <li>
-              <p>A graph is below.</p>
-          </li>
-        </ol>
-      </p>
-    </solution>
+                    <cell>Yscl<m>=100</m></cell></row>
+            </tabular></sidebyside></li>
+          <li><p>Sketch the graph on paper. Use the window settings to choose appropriate scales for the axes.</p></li>
+        </ol></p></statement>
+    <solution><p><ol label="a.">
+          <li><p>
+              <!--<m>y=<var name="$fun"/></m>.-->
+              <m>y=(1575+45x)/2 </m></p></li>
+          <li><p>The calculator graph is shown below.</p></li>
+          <li><p>The graph is shown below.</p></li>
+        </ol></p></solution>
   </webwork>
   <conclusion>
-      <sidebyside width="25%"><image source="images/fig-in-ex-ans-1-1-4c"><description>graph</description></image></sidebyside>
+    <p>b. </p>
+      <sidebyside width="30%" margins="5% 60%"><image source="images/fig-in-ex-ans-1-1-4b"><description>calculator graph</description></image></sidebyside>
+      <p>c. </p>
+      <sidebyside width="25%" margins="5% 65%"><image source="images/fig-in-ex-ans-1-1-4c"><description>graph</description></image></sidebyside>
   </conclusion>
 </exercise>
 </subsection>
 
 <exercise><title>QuickCheck 4</title>
-</exercise>
+<introduction>
+    <sidebyside width="40%">
+        <image xml:id="fig-1-1-QC-4">
+        <description>bad grid</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.8]
+        \draw[cyan] (0,0) grid (5,5);
+        \draw[black,thick,->,>=stealth'] (0,0)--(5.8,0);
+        \draw[black,thick,->,>=stealth'] (0,0)--(0,5.6);
+
+        \draw[black, thick] (1,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$5$};
+        \draw[black, thick] (2,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$20$};
+        \draw[black, thick] (3,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$30$};
+        \draw[black, thick] (4,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$50$};
+        \draw[black, thick] (5,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$100$};
+
+
+        \draw[black, thick] (0.14,1) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$20$};
+        \draw[black, thick] (0.14,2) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$25$};
+        \draw[black, thick] (0.14,3) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$30$};
+        \draw[black, thick] (0.14,4) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$35$};
+        \draw[black, thick] (0.14,5) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$40$};
+        \end{tikzpicture}]]>
+    </latex-image>
+    </image>
+    </sidebyside>
+</introduction>
+<webwork>
+     <pg-code>       
+            $badgrid = RadioButtons(
+              ["The grid lines on the \(x\)-axis are not evenly spaced.",
+              "The scale on the \(y\)-axis does not start at 0.",
+              "The axes are not labeled with the variables.",
+              "All of the above."],
+              3, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>What is wrong with the grid above?</p>
+        <p><var name="$badgrid" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>All of the above.</p>
+    </solution>
+</webwork></exercise>
 
 <subsection><title>Linear Equations</title>
     <p>All the models in the preceding examples have equations with a similar form:  
@@ -786,7 +673,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
 <exercise xml:id="exercise-crops">
     <title>Practice 5</title>
     <webwork>
-    <setup>
+     
       <pg-code>
         $fun=Formula("(9000-25*x)/18");
         @x=(50, 100, 150, 200);
@@ -802,7 +689,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
     $equation = ImplicitPlane("25x+18y=9000");
    
       </pg-code>
-    </setup>
+     
     <statement>
         <p>In central Nebraska, each acre of corn requires 25 acre-inches of water per year, and each acre of winter wheat requires 18 acre-inches of water. (An acre-inch is the amount of water needed to cover one acre of land to a depth of one inch.) A farmer can count on 9000 acre-inches of water for the coming year. (Source: Institute of Agriculture and Natural Resources, University of Nebraska)</p>
  
@@ -817,7 +704,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
 
           <li>
             <p>
-              Complete the table
+              Complete the table. Round your answers to tenths.
             </p>
         <sidebyside>
                 <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -837,7 +724,6 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
                 </row>
                 </tabular>
         </sidebyside>
-            <instruction>Give your answers in the table to the nearest tenth.</instruction>
           </li>
         </ol>
       </p>
@@ -846,8 +732,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
       <p>
         <ol label="a.">
             <li>
-            <p>
-              The total water needed is <m>25\times</m>(acres of corn) <m>18\times</m>(acres of wheat), and the amount of water available is 9000: <m>25x+18y=9000</m>
+            <p><m>25x+18y=9000</m>
             </p>
             </li>
             <li><sidebyside width="45%" margins="0% 55%"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -871,8 +756,8 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Write down two different equation forms for linear models.  Which do you think is easier to use?</p>
         <p><var form="essay"/></p>      
@@ -892,7 +777,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
 
 <exercise><title>QuickCheck 5</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $ycoord = RadioButtons(
               ["\((x,y)\)",
               "\(Y\)",
@@ -900,7 +785,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
               "0"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What is the <m>y</m>-coordinate of any point on the <m>x</m>-axis?</p>
         <p><var name="$ycoord" form="buttons"/></p>      
@@ -942,7 +827,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
 
 <exercise><title>QuickCheck 6</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $ints = RadioButtons(
               ["\((10,6)\) is not on the \(x\)-axis.",
               "An intercept must have a 0 coordinate.",
@@ -950,7 +835,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
               "All of the above"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Delbert says that the intercepts of the line <m>3x+5y=30</m> are <m>(10,6)</m>. What is wrong with his answer?</p>
         <p><var name="$ints" form="buttons"/></p>      
@@ -966,15 +851,21 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
             <p>Find the intercepts of the graph in <xref ref="example-advertising" text="type-global"/>, about the advertising budget for Albert's Appliances: <m>150x + 50y = 3000</m>.</p>
          </introduction>
     <webwork>
-        <setup>
+         
             <pg-code>
                 $xi = RadioButtons(
-                    ["Gives the cost of a tv ad.","Gives the number of tv ads the manager can buy if she buys no radio ads.","Gives the cost of a radio ad.","Gives the number of radio ads the manager can buy if she buys no tv ads."],
-                    "Gives the number of tv ads the manager can buy if she buys no radio ads."
+                    ["the cost of the TV ads.",
+                    "the best number of TV ads.",
+                    "the most TV ads she can buy for the money.",
+                    "the average number of TV ads."],
+                    2
                 );
                 $yi = RadioButtons(
-                    ["Gives the cost of a tv ad.","Gives the number of tv ads the manager can buy if she buys no radio ads.","Gives the cost of a radio ad.","Gives the number of radio ads the manager can buy if she buys no tv ads."],
-                    "Gives the number of radio ads the manager can buy if she buys no tv ads."
+                    ["the cost of the radio ads.",
+                    "the number of radio ads she bought",
+                    "the number of radio ads if no TV ads are bought.",
+                    "the average cost per ad."],
+                    2
                 );
 
                 Context("Point");
@@ -983,18 +874,18 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
                 $xint = Point($x0,0);
                 $yint = Point(0,$y0);
             </pg-code>
-        </setup>
+         
         <statement>
             <p><ol label="a">
-                <li><p>Enter each intercept as an ordered pair, such as <m>(0,1)</m> or <m>(3,0)</m>.</p>
+                <li><p>Enter each intercept as an ordered pair.</p>
                 <p>The <m>x</m>-intercept is <var name="$xint"  width="4"/>.  </p>
                 <p>The <m>y</m>-intercept is <var name="$yint"  width="4"/>.  
                 </p></li>
             <li>
                 <p>What do the intercepts tell us about the problem?</p>
-            <p><m>x</m>-intercept:</p>
+            <p>The <m>x</m>-intercept tells us:</p>
             <p><var name="$xi" form="buttons"/> </p>
-            <p><m>y</m>-intercept:</p> 
+            <p>The <m>y</m>-intercept tells us:</p> 
             <p><var name="$yi" form="buttons"/> </p></li>
             </ol></p>
 
@@ -1013,8 +904,8 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain how the words <term>intercept</term> and <term>intersect</term> are related, and how they are different.</p>
         <p><var form="essay"/></p>      
@@ -1056,7 +947,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
 
 <exercise><title>QuickCheck 7</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $samept = RadioButtons(
               ["No",
               "Yes",
@@ -1064,7 +955,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
               "They are always the same point."],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Is it possible for the <m>x</m>-intercept and the <m>y</m>-intercept of a line to be the same point?</p>
         <p><var name="$samept" form="buttons"/></p>      
@@ -1078,7 +969,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
 
 <exercise><title>QuickCheck 8</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $Points = RadioButtons(
               ["Two",
               "Three",
@@ -1086,7 +977,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
               "It depends on the equation"],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>How many points do you need to graph a linear equation?</p>
         <p><var name="$Points" form="buttons"/></p>      
@@ -1117,15 +1008,21 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
         <p>In <xref ref="exercise-crops" text="type-global"/> you wrote an equation about crops in Nebraska.</p>
      </introduction>
     <webwork>
-        <setup>
+         
             <pg-code>
                 $xi = RadioButtons(
-                    ["water usage of corn","acres of corn the farmer can plant if the farmer plants no wheat","water usage of wheat","acres of wheat the farmer can plant if the farmer plants no corn"],
-                    "acres of corn the farmer can plant if the farmer plants no wheat"
+                    ["the total water usage of corn.",
+                    "the cost of the corn if no wheat is planted.",
+                    "the optimal number of acres of corn.",
+                    "the total acres if all corn is planted."],
+                    3
                 );
                 $yi = RadioButtons(
-                    ["water usage of corn","acres of corn the farmer can plant if the farmer plants no wheat","water usage of wheat","acres of wheat the farmer can plant if the farmer plants no corn"],
-                    "acres of wheat the farmer can plant if the farmer plants no corn"
+                    ["the largest possible number of acres of wheat.",
+                    "the amount of water used by the wheat.",
+                    "the total cost of the wheat.",
+                    "how many acres are left after the wheat is planted."],
+                    0
                 );
 
                 Context("Point");
@@ -1134,21 +1031,21 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
                 $xint = Point($x0,0);
                 $yint = Point(0,$y0);
             </pg-code>
-        </setup>
+         
         <statement>
             <p><ol label="a">
                 <li><p> Find the intercepts of the graph.</p>
-                <p>Note: Enter each intercept as an ordered pair, such as <m>(0,1)</m> or <m>(3,0)</m>.</p>
+                <p>Note: Enter each intercept as an ordered pair.</p>
                 <p>The <m>x</m>-intercept is <var name="$xint"  width="6"/>.  </p>
                 <p>The <m>y</m>-intercept is <var name="$yint"  width="6"/>.  
                 </p>
                 </li>
                 <li><p>Use the intercepts to help you choose appropriate scales for the axes, and then graph the equation.</p></li>
                 <li><p>What do the intercepts tell us about the problem?</p>
-                <p><m>x</m>-intercept:</p> 
-                <p><var name="$xi" form="buttons"/> .</p>
-                <p><m>y</m>-intercept:</p> 
-                <p><var name="$yi" form="buttons"/> .</p></li>
+            <p>The <m>x</m>-intercept tells us:</p>
+            <p><var name="$xi" form="buttons"/> </p>
+            <p>The <m>y</m>-intercept tells us:</p> 
+            <p><var name="$yi" form="buttons"/> </p></li>
             </ol></p>                
 
         </statement>
@@ -1173,8 +1070,8 @@ other, are called <term>functions</term><idx>functions</idx>. We will study vari
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>What was the most difficult part of this section to understand? Write a question whose answer would help you understand it.</p>
         <p><var form="essay"/></p>      

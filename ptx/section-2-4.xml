@@ -22,8 +22,78 @@
     <li><p>The graph begins like the graph in part (b). The last section of the graph represents the bus ride. It has a constant slope because the bus is moving at a constant speed. Because the bus (probably) moves faster than Forrest walks, the slope of this segment is greater than the slope for the walking section. The graph is shown in figure (c).</p></li>
 </ol></p></solution></example>
 
-<exercise><statement><p>Erin walks from her home to a convenience store, where she buys some cat food, and then walks back home. Sketch a possible graph of her distance from home as a function of time.</p></statement>
-<answer><sidebyside width="30%"><image source="images/fig-in-ex-ans-2-4-1"><description>piecewise graph</description></image></sidebyside></answer></exercise>
+<exercise>
+    <title>Practice 1</title>
+  <webwork>
+     
+      <pg-code>
+        $refreshCachedImages = 1;
+        $fun=Formula("1.5-abs(x-11.5)");
+        $fake=Formula("6*x");
+        $fake2=Formula("120-6*x");
+        $fake3=Formula("120-x^2/4");
+
+        foreach my $i (0..3) {
+        $gr[$i] = init_graph(-.1,-.1,3.1,3.1, axes=>[0,0], grid=>[1,1], size=>[240,240]);
+        $gr[$i]->lb('reset');
+        }
+
+        $gr[0]->moveTo(0,0);
+        $gr[0]->lineTo(1,1,'red',2);
+        $gr[0]->lineTo(2,1,'red',2);
+        $gr[0]->lineTo(3,0,'red',2);
+        $gr[0]->lb( new Label(1.5,1.5,"(B)", $j,'black','center','top','large'));
+
+        $gr[1]->moveTo(0,0);
+        $gr[1]->lineTo(1,1,'red',2);
+        $gr[1]->lineTo(1,2,'red',2);
+        $gr[1]->lineTo(0,3,'red',2);
+        $gr[1]->lb( new Label(1.5,1.5,"(A)",$j,'black','center','top','large')); 
+
+        $gr[2]->moveTo(0,0);
+        $gr[2]->lineTo(2.5,2.5,'red',2);
+        $gr[2]->lineTo(2.5,0,'red',2);
+        $gr[2]->lb( new Label(1.2,1.8,"(D)", $j,'black','center','top','large'));
+
+        $gr[3]->moveTo(0,0);
+        $gr[3]->lineTo(2.5,2.5,'red',2);
+        $gr[3]->lineTo(0,2.5,'red',2);
+        $gr[3]->lb( new Label(1.8,1.5,"(C)", $j,'black','center','top','large'));
+
+
+        $mc = RadioButtons(
+                    [ "(A)", "(B)", "(C)","(D)",
+                    "none of the above"],
+                    1
+                );
+      </pg-code>
+     
+    <statement>
+            <p>Erin walks from her home to a convenience store, where she buys some cat food, and then walks back home. Sketch a possible graph of her distance from home as a function of time.</p>
+            <sidebyside widths="35% 35%" margins="5% 5%">
+                <image pg-name="$gr[1]"/>
+                <image pg-name="$gr[0]"/>
+            </sidebyside>
+            <sidebyside widths="35% 35%" margins="5% 5%">
+                <image pg-name="$gr[3]"/>
+                <image pg-name="$gr[2]"/>
+            </sidebyside>
+            <p>The graph of Erin's distance from home is</p>
+            <p><var name="$mc" form="buttons"/> </p>
+    </statement>
+    <solution>
+        <sidebyside widths="40%">
+                <image pg-name="$gr[0]"/>
+            </sidebyside>
+            <p>
+              A graph is also shown below..
+            </p>
+    </solution>
+  </webwork>
+    <conclusion>
+        <sidebyside width="35%" margins="0% 65%"><image source="images/fig-in-ex-ans-2-4-1"><description>piecewise graph</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <p>The graphs in <xref ref="example-home-to-school" text="type-global"/> are piecewise linear, because Forrest traveled at a constant rate in each segment. In addition to choosing a graph that is increasing, decreasing, or constant to model a process, we can consider graphs that bend upward or downward. The bend is called the <term>concavity</term><idx>concavity</idx> of the graph.</p>
 
@@ -85,9 +155,83 @@
         <sidebyside  width="40%"><image source="images/fig-concave-down" ><description>cocave down graph</description></image></sidebyside></li>
     </ol></p></solution></example>
 
-<exercise><statement><p>Francine bought a cup of cocoa at the cafeteria. The cocoa cooled off rapidly at first, and then gradually approached room temperature. Which graph more accurately reflects the temperature of the cocoa as a function of time? Explain why. Is the graph you chose concave up or concave down?</p>
-    <sidebyside  width="45%"><image source="images/fig-concavity2"><description>decreasing graphs of opposite concavity</description></image></sidebyside></statement>
-<answer><p>(a): The graph has a steep negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa. The graph becomes closer to a horizontal line, corresponding to the cocoa approaching room temperature. The graph is concave up.</p></answer></exercise>
+<p>A graph that bends upward is called <term>concave up</term>, and one that bends down is <term>concave down</term>.</p>
+
+<exercise><title>QuickCheck 1</title>
+<webwork>
+     <pg-code>       
+            $decslo = RadioButtons(
+              ["increasing.",
+              "decreasing.",
+              "concave up.",
+              "concave down."],
+              3, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>A graph whose slopes decrease for increasing <m>x</m> is called</p>
+        <p><var name="$decslo" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>concave down.</p>
+    </solution>
+</webwork></exercise>
+
+<exercise>
+    <title>Practice 2</title>
+    <introduction>
+        <sidebyside  width="45%"><image source="images/fig-concavity2"><description>decreasing graphs of opposite concavity</description></image></sidebyside>
+    </introduction>
+    <webwork>
+         <pg-code>
+            $ab = PopUp(
+            ["?","(a)","(b)"],
+            1, 
+            );
+            $explain = new_checkbox_multiple_choice();
+            $explain -> qa (
+            "A question can go here, but PTX ignores this",
+            "The graph has a steep negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa. $BR",
+            "The graph becomes closer to a horizontal line, corresponding to the cocoa approaching room temperature.$BR",
+            );
+            $explain -> extra(
+            "The graph has a slight negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa.$BR",
+            "The graph becomes grows steeper and steeper, corresponding to the cocoa approaching room temperature.$BR",
+            );
+            $explain -> makeLast(
+            "The graph has a steep negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa. $BR",
+            "The graph becomes closer to a horizontal line, corresponding to the cocoa approaching room temperature.$BR",
+            "The graph has a slight negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa.$BR",
+            "The graph becomes grows steeper and steeper, corresponding to the cocoa approaching room temperature.$BR",
+                       "None of the above");
+            $concavity = PopUp(
+            ["?","Concave up","Concave down"],
+            1, 
+            );
+        </pg-code> 
+        <statement>
+            <p>Francine bought a cup of cocoa at the cafeteria. The cocoa cooled off rapidly at first, and then gradually approached room temperature. Which graph more accurately reflects the temperature of the cocoa as a function of time? 
+            <var name="$ab" form="popup"/> </p>
+            <p>Explain why. (Select all that apply.)</p>
+            <p><var name="$explain" form="checkboxes"/> </p>
+            <p>Is the graph you chose concave up or concave down? <var name="$concavity" form="popup"/> </p>
+    
+        </statement>
+        <solution>
+            <p>(a): The graph has a steep negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa. The graph becomes closer to a horizontal line, corresponding to the cocoa approaching room temperature. The graph is concave up.</p>
+        </solution>
+    </webwork>
+</exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+     <pg-code>                      
+        </pg-code> 
+    <statement>
+        <p>How can you tell from a table of values whether a function is concave up or concave down?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Using the Basic Functions as Models</title>
@@ -115,8 +259,9 @@
         <li>Plot the data to obtain a graph. Which of the basic functions does your graph most resemble?</li>
         <li>Find a value of <m>k</m> so that <m>s = kf(T)</m> fits the data.</li>
         <li>On a summer night when the temperature is <m>20\degree</m> Celsius, you see a flash of lightning, and <m>6</m> seconds later you hear the thunderclap. Use your function to estimate your distance from the thunderstorm.</li>
-    </ol></p>
-</statement><solution><p><ol label="a">
+    </ol></p></statement>
+
+<solution><p><ol label="a">
         <li><p>The graph of the data is shown below. The shape of the graph reminds us of the square root function, <m>y = \sqrt{x}</m>.</p><sidebyside width="50%"><image source="images/fig-speed-sound" ><description>speed of sound</description></image></sidebyside></li>
         <li>We are looking for a value of <m>k</m> so that the function <m>f(T) = k \sqrt{T}</m> fits the data. We substitute one of the data points into the formula and solve for <m>k</m>. If we choose the point <m>(100, 200.6)</m>, we obtain 
             <me>200.6 = k \sqrt{100 }</me>
@@ -136,46 +281,118 @@
                 The thunderstorm is <m>2060</m> meters, or about <m>1.3</m> miles, away.
             </p></li></ol></p></solution></example>
 
-<exercise><statement><p>The ultraviolet index (UVI) is issued by the National Weather Service as a forecast of the amount of ultraviolet radiation expected to reach Earth around noon on a given day. The data show how much exposure to the sun people can take before risking sunburn.</p>
-    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-        <row bottom="minor">
-            <cell>UVI</cell>
-            <cell><m>2</m></cell>
-            <cell><m>3</m></cell>
-            <cell><m>4</m></cell>
-            <cell><m>5</m></cell>
-            <cell><m>6</m></cell>
-            <cell><m>8</m></cell>
-            <cell><m>10</m></cell>
-            <cell><m>12</m></cell></row>
-        <row>
-             <cell><line>Minutes to burn</line><line>(more sensitive)</line></cell>
-            <cell><m>30</m></cell>
-            <cell><m>20</m></cell>
-            <cell><m>15</m></cell>
-            <cell><m>12</m></cell>
-            <cell><m>10</m></cell>
-            <cell><m>7.5</m></cell>
-            <cell><m>6</m></cell>
-            <cell><m>5</m></cell></row>
-        <row>
-             <cell><line>Minutes to burn</line><line>(more sensitive)</line></cell>
-            <cell><m>150</m></cell>
-            <cell><m>100</m></cell>
-            <cell><m>75</m></cell>
-            <cell><m>60</m></cell>
-            <cell><m>50</m></cell>
-            <cell><m>37.5</m></cell>
-            <cell><m>30</m></cell>
-            <cell><m>25</m></cell></row>
-    </tabular></sidebyside><p><ol label="a">
-        <li><p>Plot <m>m</m>, the minutes to burn, against <m>u</m>, the UVI, to obtain two graphs, one for people who are more sensitive to sunburn, and another for people less sensitive to sunburn. Which of the basic functions do your graphs most resemble?</p></li>
-        <li><p>For each graph, find a value of <m>k</m> so that <m>m = k f(u)</m> fits the data.</p></li>
-    </ol></p></statement>
-<answer><p><ol label="a">
-    <li><sidebyside width="25%"><image source="images/fig-in-ex-ans-2-4-3"><description>two concave up decreasing curves</description></image></sidebyside><p>The graphs resemble <m>f (x) = \dfrac{1}{x}</m>. </p></li>
+<exercise><title>QuickCheck 2</title>
+<webwork>
+     <pg-code>       
+            $cond = RadioButtons(
+              ["\(y=x^3\)",
+              "\(y=\dfrac{1}{x}\)",
+              "\(y=\sqrt{3}{x}\)",
+              "\(y=\sqrt{x}\)"],
+              3, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>Which graph is concave down wherever it is defined?</p>
+        <p><var name="$cond" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>y=\sqrt{x}</m></p>
+    </solution>
+</webwork></exercise>
+
+<exercise>
+    <title>Practice 3</title>
+    <webwork>
+         <pg-code>
+            $basic = RadioButtons(
+                    ["\(y= x^2 \)",
+                    "\(y= x^3 \)",
+                    "\(y= \sqrt{x} \)",
+                    "\(y= \sqrt[3]{x} \)",
+                    "\(y= \frac{1}{x} \)",
+                    "\(y= \frac{1}{x^2} \)",
+                    "\(y= x \)",
+                    "\(y= \left| x\right|\)"],
+                    4,
+                );
+            $more = Compute("60");
+            $less = Compute("300");
+        </pg-code> 
+        <statement>
+            <p>The ultraviolet index (UVI) is issued by the National Weather Service as a forecast of the amount of ultraviolet radiation expected to reach Earth around noon on a given day. The data show how much exposure to the sun people can take before risking sunburn.</p>
+            <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row bottom="minor">
+                    <cell>UVI</cell>
+                    <cell><m>2</m></cell>
+                    <cell><m>3</m></cell>
+                    <cell><m>4</m></cell>
+                    <cell><m>5</m></cell>
+                    <cell><m>6</m></cell>
+                    <cell><m>8</m></cell>
+                    <cell><m>10</m></cell>
+                    <cell><m>12</m></cell></row>
+                <row>
+                     <cell><line>Minutes to burn</line><line>(more sensitive)</line></cell>
+                    <cell><m>30</m></cell>
+                    <cell><m>20</m></cell>
+                    <cell><m>15</m></cell>
+                    <cell><m>12</m></cell>
+                    <cell><m>10</m></cell>
+                    <cell><m>7.5</m></cell>
+                    <cell><m>6</m></cell>
+                    <cell><m>5</m></cell></row>
+                <row>
+                     <cell><line>Minutes to burn</line><line>(more sensitive)</line></cell>
+                    <cell><m>150</m></cell>
+                    <cell><m>100</m></cell>
+                    <cell><m>75</m></cell>
+                    <cell><m>60</m></cell>
+                    <cell><m>50</m></cell>
+                    <cell><m>37.5</m></cell>
+                    <cell><m>30</m></cell>
+                    <cell><m>25</m></cell></row>
+            </tabular></sidebyside>
+            <p><ol label="a">
+                <li><p>Plot <m>m</m>, the minutes to burn, against <m>u</m>, the UVI, to obtain two graphs, one for people who are more sensitive to sunburn, and another for people less sensitive to sunburn. Which of the basic functions do your graphs most resemble?</p>
+                <p><var name="$basic" form="buttons"/> </p></li>
+                <li><p>For each graph, find a value of <m>k</m> so that <m>m = k f(u)</m> fits the data.</p>
+                <p>More sensitive: <m>k=</m><var name="$more" width="4"/> </p>
+                <p>Less sensitive: <m>k=</m><var name="$less" width="4"/> </p>
+                </li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+    <li><p>The graphs are shown below. They resemble <m>f (x) = \dfrac{1}{x}</m>. </p></li>
     <li><p>More sensitive: <m>k = 60</m>, Less sensitive: <m>k = 300</m> </p></li>
-</ol></p></answer></exercise>
+</ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="25%" margins="0% 75%"><image source="images/fig-in-ex-ans-2-4-3"><description>two concave up decreasing curves</description></image></sidebyside>
+    </conclusion>
+</exercise>
+
+<exercise><title>QuickCheck 3</title>
+<webwork>
+     <pg-code>       
+            $model = RadioButtons(
+              ["plot the data.",
+              "look at the variables.",
+              "choose scales for the axes.",
+              "calculate the slope."],
+              0, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>To decide which basic function might model a set of data, we can</p>
+        <p><var name="$model" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>plot the data.</p>
+    </solution>
+</webwork></exercise>
 
 <p>At this point, a word of caution is in order. There is more to choosing a model than finding a curve that fits the data. A model based purely on the data is called an <term>empirical model</term><idx>empirical model</idx>. However, many functions have similar shapes over small intervals of their input variables, and there may be several candidates that model the data. Such a model simply describes the general shape of the data set; the parameters of the model do not necessarily correspond to any actual process.</p>
 
@@ -185,6 +402,16 @@
 
 <p>"Some programs . . . automatically fit data to hundreds or thousands of equations and then present you with the equation(s) that fit the data best. Using such a program is appealing because it frees you from the need to choose an equation. The problem is that the program has no understanding of the scientific context of your experiment. The equations that fit the data best are unlikely to correspond to scientifically meaningful models. You will not be able to interpret the best-fit values of the variables, and the results are unlikely to be useful for data analysis."</p>
     <p> (Source: <em>Fitting Models to Biological Data Using Linear and Nonlinear Regression</em>, Motulsky &amp; Christopoulos, GraphPad Software, 2003)</p>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+     <pg-code>                      
+        </pg-code> 
+    <statement>
+        <p>Explain the difference between an empirical model and a mechanistic model.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>    
 </subsection>
 
 <subsection><title>Modeling with Piecewise Functions</title>
@@ -269,20 +496,78 @@
             <sidebyside width="35%"><image source="images/fig-income-tax"  ><description>income tax graph</description></image></sidebyside></li>
         </ol></p></solution></example>
 
-<exercise xml:id="exercise-water-bill"><statement><p>As part of a water conservation program, the utilities commission in Arid, New Mexico, establishes a two-tier system of monthly billing for residential water usage: The commission charges a $30 service fee plus $2 per hundred cubic feet (HCF) of water if you use 50 HCF or less, and a $50 service fee plus $3 per HCF of water if you use over 50 HCF (1 HCF of water is about 750 gallons).<ol label="a">
-        <li><p>Write a piecewise formula for the water bill, <m>B(w)</m>, as a function of the amount of water used, <m>w</m>, in HCF.</p></li>
-        <li><p>Graph the function <m>B</m>.</p></li>
-    </ol></p></statement>
-<answer><p><ol label="a">
-    <li><p><m>
-                B(w) =
-                \begin{cases}
-                30 + 2w \amp  0 \le w \le 50\\
-                50 + 3w \amp w \gt 50\\
-                \end{cases}
-            </m></p></li>
-    <li><sidebyside width="40%"><image source="images/fig-in-ex-ans-2-4-4"><description>broken piecewise graph</description></image></sidebyside></li>
-</ol></p></answer></exercise>
+<exercise><title>QuickCheck 4</title>
+<webwork>
+     <pg-code>       
+            $model = RadioButtons(
+              ["must have no breaks in its graph.",
+              "can have more than one output at some inputs.",
+              "cannot have concavity.",
+              "none of the above"],
+              3, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>A piecewise function</p>
+        <p><var name="$model" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>none of the above</p>
+    </solution>
+</webwork></exercise>
+
+<exercise xml:id="exercise-water-bill">
+    <title>Practice 4</title>
+    <webwork>
+         <pg-code>
+            Context()->variables->add(w=>'Real');
+            $f = Formula("30+2w");
+            $g = Formula("50+3w");
+        </pg-code> 
+        <statement>
+            <p>As part of a water conservation program, the utilities commission in Arid, New Mexico, establishes a two-tier system of monthly billing for residential water usage: The commission charges a $30 service fee plus $2 per hundred cubic feet (HCF) of water if you use 50 HCF or less, and a $50 service fee plus $3 per HCF of water if you use over 50 HCF (1 HCF of water is about 750 gallons).</p>
+            <p><ol label="a">
+                <li><p>Write a piecewise formula for the water bill, <m>B(w)</m>, as a function of the amount of water used, <m>w</m>, in HCF.</p>
+                <p><m>
+                    B(w) =
+                    \begin{cases}
+                    f(w) \amp  0 \le w \le 50\\
+                    g(w) \amp w \gt 50\\
+                    \end{cases}
+                </m></p>
+                <p>where <m>f(w)=</m><var name="$f" width="6"/></p>
+                <p>and <m>g(w)=</m><var name="$g" width="5"/></p>
+                </li>
+                <li><p>Graph the function <m>B</m>.</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p><m>
+                            B(w) =
+                            \begin{cases}
+                            30 + 2w \amp  0 \le w \le 50\\
+                            50 + 3w \amp w \gt 50\\
+                            \end{cases}
+                        </m></p></li>
+                <li><p>A graph is below.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="40%" margins="0% 60%"><image source="images/fig-in-ex-ans-2-4-4"><description>broken piecewise graph</description></image></sidebyside>
+    </conclusion>
+</exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+     <pg-code>                      
+        </pg-code> 
+    <statement>
+        <p>Explain how slope and concavity are related.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 
 </subsection>
 <xi:include href="./summary-2-4.xml" /> <!-- summary  -->

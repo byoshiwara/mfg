@@ -12,7 +12,7 @@
     where <m>A, B</m>, and <m>C</m> cannot all be zero (because in that case the equation would not be second degree).</p>
     <p>The graphs of such equations are curves called <term>conic sections</term> because they are formed by the intersection of a plane and a cone, as shown below.  Except for a few special cases called <term>degenerate conics</term>, which we will describe later, the conic sections fall into four categories called <term>circles, ellipses, hyperbolas,</term> and <term>parabolas.</term></p>
 
-    <sidebyside width="75%"><image source="images/fig-10-1-conics.png"><description>conic sections</description></image></sidebyside>
+    <sidebyside width="75%"><image source="images/conics"><description>conic sections</description></image></sidebyside>
 </introduction>
                 
 <subsection><title>Circles and Ellipses</title>   
@@ -28,10 +28,36 @@
 
     <p> If the denominators of the <m>x</m>-squared and <m>y</m>-squared terms are different (but positive), the graph is called an <term>ellipse</term>.  For example, the graph of
         <me>\dfrac{x^2}{9} + \dfrac{y^2}{4} = 1</me>
-    is shown below.
-        <sidebyside width="45%"><image source="images/fig-10-1-ellipsex.png"><description>conic sections</description></image></sidebyside>  
-
-    When <m>y=0</m>, we have <m>\dfrac{x^2}{9} = 1</m>, so the <m>x</m>-intercepts are <m>(3,0)</m> and <m>(-3,0)</m>. When <m>x=0</m>, we have <m>\dfrac{y^2}{4} = 1</m>,  so the <m>y</m>-intercepts are <m>(0,2)</m> and <m>(0,-2)</m>.</p>
+    is shown below.</p>
+    <sidebyside width="40%">
+        <image xml:id="fig-ellipse">
+        <description>central ellipse</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.5]
+        \draw[cyan] (-6,-6) grid (6,6);
+        \draw[black,thick,->,>=stealth'] (-6,0)--(6.6,0) node[right] {$x$};
+        \draw[black,thick,->,>=stealth'] (0,-6)--(0,6.6) node[above] {$y$};
+        \foreach \x   in  {-5,5} {
+         \draw[black, thick] (\x,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1, scale=.9] {$\x$};
+         \draw[black, thick] (0.14,\x) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$\x$};
+         };
+        \draw[magenta!80!black,ultra thick] (0,0) ellipse (3 and 2 );
+        \filldraw[magenta!80!black] (3,0) circle (.15) node[anchor= south west, xshift=2, yshift=2, fill=white, text=black, inner sep=2]{$(3,0)$};
+        \filldraw[magenta!80!black] (-3,0) circle (.15) node[anchor= south east, xshift=-2, yshift=2, fill=white, text=black, inner sep=2]{$(-3,0)$};
+        \draw[magenta!80!black,ultra thick] (0,0) ellipse (3 and 2 );
+        \filldraw[magenta!80!black] (0,2) circle (.15) node[anchor= south west, yshift=2, xshift=2, fill=white, text=black, inner sep=2]{$(0,2)$};
+        \filldraw[magenta!80!black] (0,-2) circle (.15) node[anchor= north west, yshift=-2, xshift=2, fill=white, text=black, inner sep=2]{$(0,-2)$};
+        \node[fill=white, inner sep=2] at (-3.5,4) {$\displaystyle\frac{x^2}{9}+\frac{y^2}{4}=1$};
+        \end{tikzpicture}]]>
+        </latex-image>
+        </image>
+    </sidebyside>    
+<p>
+    When <m>y=0</m>, we have <m>\dfrac{x^2}{9} = 1</m>, so the <m>x</m>-intercepts are <m>(3,0)</m> and <m>(-3,0)</m>. When <m>x=0</m>, we have <m>\dfrac{y^2}{4} = 1</m>,  so the <m>y</m>-intercepts are <m>(0,2)</m> and <m>(0,-2)</m>.
+</p>
     
     <p>In general, we define an ellipse as follows.</p>
 
@@ -40,7 +66,7 @@
 
     <p> We can visualize the definition in the following way.  Drive two nails into a board to represent the two foci.  Attach the two ends of a piece of string to the two nails, and stretch the string taut with a pencil.  Trace around the two nails, keeping the string taut, as illustrated below.  Because the sum of the distances from each point to the two foci is the length of the string, which is constant, the figure described will be an ellipse.</p>
 
-        <sidebyside width="55%"><image source="images/fig-10-1-ellipseboard.png"><description>draw ellipse</description></image></sidebyside>
+        <sidebyside width="55%"><image source="images/fig-draw-ellipse"><description>draw ellipse</description></image></sidebyside>
 
     <p> Ellipses appear in a variety of applications.  The orbits of the planets about the sun and of satellites about the earth are ellipses.  The arches in some bridges are elliptical in shape, and whispering domes, such as the ceiling of the Mormon Tabernacle in Salt Lake City, are made from ellipses.</p>
     <p>Using the distance formula and the definition above, we can show that the equation of an ellipse centered at the origin has the following form.</p>
@@ -56,7 +82,64 @@
         <li>The vertical segment with length <m>2b</m> is called the <term>minor axis</term>.</li>
         <li>The endpoints of the major axis are called the <term>vertices</term> of the ellipse, and the endpoints of the minor axis are the <term>covertices</term>.</li></ul></p>
 
-        <sidebyside width="75%"><image source="images/fig-10-1-ellipsefeatures.png"><description>hor and vert ellipses</description></image></sidebyside>
+    <sidebyside widths="42% 42%" margins="0% 0%">
+        <image xml:id="fig-ellipse-wide">
+            <description>ellipse with horizontal major axis</description>
+            <latex-image>
+            <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+            <![CDATA[\tikzset{%
+            }
+            \begin{tikzpicture} [scale=.7]
+            \draw[black,thick, ->, >=stealth'] (-5,0)--(5,0) node[right]{$x$};
+            \draw[black,thick, ->, >=stealth'] (0,-5)--(0,5) node[above]{$y$};
+            \draw[red, thick] (0,0) ellipse (3 and 2);
+            \draw[green, very thick] (0,-2) -- (0,2);
+            \draw[blue, ultra thick](-3,0)--(3,0);
+            \filldraw[black] ({-sqrt(5)},0) circle (.1) node[above, text=black]{$F_1$};
+            \filldraw[red] ({-3},0) circle (.1) node[above left, text=black]{$(-a,0)$};
+            \filldraw[red] (3,0) circle (.1) node[above right, text=black]{$(a,0)$};
+            \filldraw[red] (0,2) circle (.1) node[above left, text=black]{$(0,b)$};
+            \filldraw[red] (0,-2) circle (.1) node[below right, text=black]{$(0,-b)$};
+            \filldraw[black] ({sqrt(5)},0) circle (.1) node[above, text=black]{$F_2$};
+            \draw [blue!70!black, decorate, decoration={brace,amplitude=10pt}] (3,0)--(-3,0);
+            \draw [blue!70!black,->, >=stealth'] (-1.6,-2.6) to [out=20,in=240] (-.1,-.65);
+            \node[text=blue!70!black] at (-3.2,-2.6){Major axis};
+            \node at (2.8,-3.7) {\Large${\frac{x^2}{a^2}+\frac{y^2}{b^2}={} }$\normalsize 1};
+            \node at (2.8, -4.8) {$a > b$};
+            \draw [green!70!black, decorate, decoration={brace,amplitude=10pt}] (0,2)--(0,-2);
+            \draw [green!70!black,<-, >=stealth'] (.65,0.1) to [out=40,in=200] (1.5,2.2) node[right]{Minor axis};
+            \end{tikzpicture}]]>
+        </latex-image>
+        </image>
+        <image xml:id="fig-ellipse-tall">
+            <description>ellipse with vertical major axis</description>
+            <latex-image>
+            <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+            <![CDATA[\tikzset{%
+            }
+            \begin{tikzpicture} [scale=.7]
+            \draw[black,thick, ->, >=stealth'] (-5,0)--(5,0) node[right]{$x$};
+            \draw[black,thick, ->, >=stealth'] (0,-5)--(0,5) node[above]{$y$};
+            \draw[red, thick] (0,0) ellipse (2 and 3);
+            \draw[blue, ultra thick] (0,-3) -- (0,3);
+            \draw[green, ultra thick](-2,0)--(2,0);
+            \filldraw[black] (0,{sqrt(5)}) circle (.1) node[left, text=black]{$F_1$};
+            \filldraw[red] (-2,0) circle (.1) node[above left, text=black]{$(-a,0)$};
+            \filldraw[red] (2,0) circle (.1) node[above right, text=black]{$(a,0)$};
+            \filldraw[red] (0,3) circle (.1) node[above left, text=black]{$(0,b)$};
+            \filldraw[red] (0,-3) circle (.1) node[below right, text=black]{$(0,-b)$};
+            \filldraw[black] (0,{-sqrt(5)}) circle (.1) node[left, text=black]{$F_2$};
+            \draw [green!70!black, decorate, decoration={brace,amplitude=10pt}] (2,0)--(-2,0);
+            \draw [green!70!black,->, >=stealth'] (-1.8,-2) to [out=20,in=240] (-.1,-.65);
+            \node[text=green!50!black] at (-3.35,-2){Minor axis};
+            \node at (3.7,-1.7) {\Large${\frac{x^2}{a^2}+\frac{y^2}{b^2}={} }$\normalsize 1};
+            \node at (3.7, -2.8) {$a < b$};
+            \draw [blue!80!black, decorate, decoration={brace,amplitude=10pt}] (0,3)--(0,-3);
+            \draw [blue!80!black,<-, >=stealth'] (.65,0.1) to [out=40,in=200] (1.5,3.2) node[right]{Major axis};
+            \end{tikzpicture}]]>
+        </latex-image>
+        </image>
+    </sidebyside>
 
     <p>When <m>a \lt b</m>, the foci are on the <m>y</m>-axis, as shown at right above. So the <m>y</m>-intercepts of the ellipse are the endpoints of the major axis, which then has length <m>2b</m>. In this case the minor axis is horizontal and has length <m>2a</m>.</p>
 
@@ -80,76 +163,356 @@
     
     <p>To sketch the ellipse, we first locate the vertices and covertices, then draw a smooth curve through the points. </p>
 
-    <sidebyside width="45%"><image source="images/fig-10-1-exm1.png"><description>ellipse</description></image></sidebyside>
-</solution></example>
+    <sidebyside width="45%"><image xml:id="fig-example-tall-ellipse">
+        <description>ellipse with vertical major axis</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.6]
+        \draw[cyan] (-6,-6) grid (6,6);
+        \draw[black,thick, ->, >=stealth'] (-6,0)--(6.5,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-6)--(0,6.5) node[above]{$y$};
+        \foreach \x in  {-5,5} {
+         \draw[black] (\x,.15) --++(0,-.3)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+         \draw[black] (.15,\x) --++(-.3,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \draw[red, thick] (0,0) ellipse ({sqrt(8)} and 5);
+        \filldraw[black] (0,{sqrt(17)}) circle (.1) node[right, text=black]{$F_1$};
+        \filldraw[black] (0,{-sqrt(17)}) circle (.1) node[right, text=black]{$F_2$};
+        \filldraw[red] ({-sqrt(8)},0) circle (.1);
+        \filldraw[red] ({sqrt(8)},0);
+        \filldraw[red] (0,5) circle (.1);
+        \filldraw[red] (0,-5) circle (.1);
+        \node[fill=white, inner sep=2] at (-3.75,5.1) {\Large${\frac{x^2}{8}+\frac{y^2}{25}={} }$\normalsize 1};
+        \draw [green!60!black, decorate, decoration={brace,amplitude=6pt}] (0,.1)--({sqrt(8)},.1) node[above, yshift=.3cm, midway, fill=white, inner sep=2]{$\sqrt{8}$};
+        \end{tikzpicture}]]>
+        </latex-image>
+        </image>
+    </sidebyside>
+    </solution>
+</example>
 
-<exercise><statement><p>Graph <m>~~\dfrac{x^2}{16} + \dfrac{y^2}{9} = 1</m></p></statement>
-<answer><p><sidebyside width="45%"><image source="images/fig-10-1-exans1.png"><description>ellipse</description></image></sidebyside></p></answer></exercise>
+<exercise><title>Practice 1</title>
+<webwork>
+    <pg-code>
+        Context(Point);
+        $answer = List("(-4,0), (4,0), (0,-3), (0,3)");
+        $my_evaluator = $answer -> cmp(
+         showHints=>1,
+         showLengthHints => 1,
+         partialCredit => 1,
+        ); 
+    </pg-code>
+    <statement>
+        <p><ol label="a">
+            <li>
+                <p>
+                    Find the vertices and covertices of the graph of <m>\dfrac{x^2}{16}+\dfrac{y^2}{9}=1 </m>. Separate different ordered pairs with a comma. 
+                </p>
+                <p>
+                    <var name="$answer" width="20"  evaluator="$my_evaluator"/> 
+                </p>
+            </li>
+            <li><p>
+                Graph the ellipse.
+            </p></li>
+        </ol></p>
+    </statement>
+    <solution><p><ol label="a">
+        <li><p>
+            <m>(4,0) </m>, <m>(-4,0) </m>, <m>(0,3) </m>, <m>(0,-3) </m>
+        </p></li>
+        <li><p>A graph is below.</p></li>
+    </ol></p></solution>
+</webwork>
+<conclusion>
+    <sidebyside width="35%" margins="0% 0%">
+        <image xml:id="fig-ex-fat-ellipse">
+        <description>ellipse with horizontal major axis</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.6]
+        \draw[cyan] (-5,-5) grid (5,5);
+        \draw[black,thick, ->, >=stealth'] (-5,0)--(5.5,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-5)--(0,5.5) node[above]{$y$};
+        \foreach \x in  {-5,5} {
+         \draw[black] (\x,.15) --++(0,-.3)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+         \draw[black] (.15,\x) --++(-.3,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+        }
+        \draw[red, thick] (0,0) ellipse (4 and 3);
+        \filldraw[red] (-4,0) circle (.1) node[above left, yshift=4, fill=white, inner sep=1]{$(-4,0)$};
+        \filldraw[red] (4,0) circle (.1) node[above right, yshift=4, fill=white, inner sep=1]{$(4,0)$};
+        \filldraw[red] (0,3) circle (.1) node[above right, xshift=1, yshift=4, fill=white, inner sep=1]{$(0,3)$};
+        \filldraw[red] (0,-3) circle (.1) node[below right, xshift=1, yshift=-4, fill=white, inner sep=1]{$(0,-3)$};
+        \node[fill=white, inner sep=2] at (-3.4,4.6) {\Large${\frac{x^2}{16}+\frac{y^2}{9}={} }$\normalsize 1};
+        \end{tikzpicture}]]>
+    </latex-image>
+    </image>
+    </sidebyside>
+</conclusion>
+</exercise>
 
 <p>The equation of any central ellipse may be written as
     <me>Ax^2 + By^2 = C</me>
 where <m>A, B</m> and <m>C</m> have the same sign. The features of the graph are easier to identify if we first convert the equation to standard form.</p>
 
-<example><statement><p>Graph <m>~~4x^2 + y^2 = 12</m></p></statement>
+<example>
+    <statement><p>Graph <m>~~4x^2 + y^2 = 12</m></p></statement>
+    <solution>
+        <p>
+            To convert the equation to standard form, we  divide through by the constant term, 12, and obtain
+            <md><mrow>\dfrac{x^2}{3} + \dfrac{y^2}{12} = 1</mrow></md>
+            Because <m>a^2=3</m> and <m>b^2=12</m>,  the vertices are <m>(0, \pm\sqrt{12})=(0, \pm2\sqrt{3})</m> and the covertices are 
+            <m>(\pm\sqrt{3}, 0)</m>.
+        </p>
+        <sidebyside>
+            <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">              
+                <row bottom="minor">
+                    <cell><m>x</m></cell>
+                    <cell><m>y</m></cell></row>
+                <row> 
+                    <cell><m>0</m></cell>
+                    <cell><m>\pm 2\sqrt{3}</m></cell></row>
+                <row>    
+                    <cell><m>\pm \sqrt{3}</m></cell>
+                    <cell><m>0</m></cell></row>
+            </tabular>
+        </sidebyside>
+        <p>
+            We plot points at approximately <m>(0, \pm 3.4)</m> and <m>(\pm 1.7, 0)</m>, then draw a central ellipse through the points.
+        </p>
+        <sidebyside width="45%">
+            <image xml:id="fig-example-4xsq-plus-ysq-eq12">
+            <description>ellipse with vertical major axis</description>
+            <latex-image>
+            <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+            <![CDATA[\tikzset{%
+            }
+            \begin{tikzpicture} [scale=.7]
+            \draw[cyan] (-5,-5) grid (5,5);
+            \draw[black,thick, ->, >=stealth'] (-5,0)--(5.5,0) node[right]{$x$};
+            \draw[black,thick, ->, >=stealth'] (0,-5)--(0,5.5) node[above]{$y$};
+            \foreach \x in  {-5,5} {
+             \draw[black] (\x,.15) --++(0,-.3)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+             \draw[black] (.15,\x) --++(-.3,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+            }
+            \draw[red, thick] (0,0) ellipse ({sqrt(3)} and {sqrt(12)});
+            \filldraw[red] ({-sqrt(3)},0) circle (.1) node[above left, xshift=-3, yshift=4, fill=white, inner sep=1]{$(-\sqrt{3},0)$};
+            \filldraw[red] ({sqrt(3)},0) circle (.1) node[above right, xshift=3, yshift=4, fill=white, inner sep=1]{$(\sqrt{3},0)$};
+            \filldraw[red] (0,{sqrt(12)}) circle (.1) node[above right, xshift=1, yshift=4, fill=white, inner sep=1]{$(0,2\sqrt{3})$};
+            \filldraw[red] (0,{-sqrt(12)}) circle (.1) node[below right, xshift=1, yshift=-4, fill=white, inner sep=1]{$(0,-2\sqrt{3})$};
+            \node[fill=white, inner sep=2] at (-2.9,3.6) {$4x^2+y^2=12$};
+            \end{tikzpicture}]]>
+            </latex-image>
+            </image>
+        </sidebyside>
+    </solution>
+</example>
 
-<solution><p>To convert the equation to standard form, we  divide through by the constant term, 12, and obtain
-    <me>\dfrac{x^2}{3} + \dfrac{y^2}{12} = 1</me>
-Because <m>a^2=3</m> and <m>b^2=12</m>,  the vertices are <m>(0, \pm\sqrt{12})=(0, \pm2\sqrt{3})</m> and the covertices are 
-<m>(\pm\sqrt{3}, 0)</m>.
+<exercise><title>Practice 2</title>
+<webwork>
+    <pg-code>
+        $refreshCachedImages = 1;
+      $xfunc[0] = sub { my $t = shift();
+        return 4/3*cos($t); };
+      $yfunc[0] = sub { my $t = shift();
+        return sqrt(2)*sin($t); };
+      $xfunc[1] = sub { my $t = shift();
+        return sqrt(2)*cos($t); };
+      $yfunc[1] = sub { my $t = shift();
+        return 4/3*sin($t); };
+      $xfunc[2] = sub { my $t = shift();
+        return 3*cos($t); };
+      $yfunc[2] = sub { my $t = shift();
+        return sqrt(8)*sin($t); };
+      $xfunc[3] = sub { my $t = shift();
+        return 3/4*cos($t); };
+      $yfunc[3] = sub { my $t = shift();
+        return sqrt(1/2)*sin($t); };
 
-    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">              
-                    <row bottom="minor">
-                        <cell><m>x</m></cell>
-                        <cell><m>y</m></cell></row>
-                    <row> 
-                        <cell><m>0</m></cell>
-                        <cell><m>\pm 2\sqrt{3}</m></cell></row>
-                    <row>    
-                        <cell><m>\pm \sqrt{3}</m></cell>
-                        <cell><m>0</m></cell></row>
-                    </tabular></sidebyside>
+       foreach my $i (0..3) {
+        $gr[$i] = init_graph(-3,-3,3,3, axes=>[0,0], grid=>[6,6], size=>[240,240]);
+          $fn[$i] = new Fun( $xfunc[$i], $yfunc[$i], $gr[$i] );
+          $fn[$i]->domain(0,6.2832);
+        }
 
-We plot points at approximately <m>(0, \pm 3.4)</m> and <m>(\pm 1.7, 0)</m>, then draw a central ellipse through the points.</p>
+       foreach my $i (0..3) {
+       $gr[$i] -> lb('reset');
+        $gr[$i] -> lb(new Label (-0.2,2,2,'black','center','middle'));
+        $gr[$i] -> lb(new Label (-0.2,-2,-2,'black','center','middle'));
+        $gr[$i] -> lb(new Label (2,-0.2,2,'black','center','middle'));
+        $gr[$i] -> lb(new Label (-2,-0.2,-2,'black','center','middle'));
+        }
+        $gr[0] -> lb(new Label (-2.5,2.5,"(A)",'black','center','middle'));
+        $gr[1] -> lb(new Label (-2.5,2.5,"(B)",'black','center','middle'));
+        $gr[2] -> lb(new Label (-2.5,2.5,"(C)",'black','center','middle'));
+        $gr[3] -> lb(new Label (-2.5,2.5,"(D)",'black','center','middle'));
 
-<sidebyside width="45%"><image source="images/fig-10-1-exm2.png"><description>ellipse</description></image></sidebyside>
-</solution></example>
-
-<exercise> <statement><p>Graph <m>~~9x^2 + 8y^2 = 16</m></p></statement>
-    
-<answer>
-    <sidebyside width="35%"><image source="images/fig-10-1-exans2.png"><description>ellipse</description></image></sidebyside>
-    </answer></exercise>
+        $mc = RadioButtons(
+                    [ "(A)", "(B)", "(C)","(D)"],
+                    0
+                );
+      </pg-code>     
+    <statement>
+            <p>Graph <m>9x^2+8y^2=16</m></p>
+            <sidebyside widths="35% 35%" margins="5% 5%">
+                <image pg-name="$gr[0]"/>
+                <image pg-name="$gr[1]"/>
+            </sidebyside>
+            <sidebyside widths="35% 35%" margins="5% 5%">
+                <image pg-name="$gr[2]"/>
+                <image pg-name="$gr[3]"/>
+            </sidebyside>
+            <p>Which of the above is the best match for the graph)?</p>
+            <p><var name="$mc" form="buttons"/> </p>
+     </statement>
+    <solution>
+        <sidebyside widths="40%">
+                <image pg-name="$gr[0]"/>
+            </sidebyside>
+            <p>
+              A graph is also shown below.
+            </p>
+    </solution>
+</webwork>
+    <conclusion>
+        <sidebyside width="35%" margins="0% 65%">
+            <image xml:id="fig-ex-4xsq-plus-ysq-eq-12">
+            <description>ellipse</description>
+            <latex-image>
+            <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+            <![CDATA[\tikzset{%
+            }
+            \begin{tikzpicture} [scale=.7]
+            \draw[cyan] (-3,-3) grid (3,3);
+            \draw[black,thick, ->, >=stealth'] (-3,0)--(3.5,0) node[right]{$x$};
+            \draw[black,thick, ->, >=stealth'] (0,-3)--(0,3.5) node[above]{$y$};
+            \foreach \x in  {-2,2} {
+             \draw[black] (\x,.15) --++(0,-.3)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+             \draw[black] (.15,\x) --++(-.3,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+            }
+            \draw[red, thick] (0,0) ellipse (4/3 and {sqrt(2)});
+            \filldraw[red] ({-4/3},0) circle (.1) node[above left, xshift=-1, yshift=6, fill=white, inner sep=1]{$\left(\frac{-4}{3},0\right)$};
+            \filldraw[red] ({4/(3)},0) circle (.1) node[above right, xshift=3, yshift=4, fill=white, inner sep=1]{$\left(\frac{4}{3},0\right)$};
+            \filldraw[red] (0,{sqrt(2)}) circle (.1) node[above right, xshift=3, yshift=2, fill=white, inner sep=1]{$(0,\sqrt{2})$};
+            \filldraw[red] (0,{-sqrt(2)}) circle (.1) node[below right, xshift=2, yshift=-3, fill=white, inner sep=1]{$(0,-\sqrt{2})$};
+            \end{tikzpicture}]]>
+            </latex-image>
+            </image>
+        </sidebyside>
+    </conclusion>
+</exercise>
 
 <p> We can find coordinates of other points on an ellipse by substituting a value for one variable and solving for the other variable.</p>
     
-<example><statement><p><ol label="a">
-    <li>Find the exact coordinates of any points with <m>y</m>-coordinate 2 on the ellipse <m>4x^2+y^2=12</m>. Plot and label those points on the ellipse.</li>
-<li>Solve the equation <m>4x^2+y^2=12</m> when <m>y=-4</m>. What do the solutions tell you about the graph of the ellipse?</li></ol></p></statement>
+<example>
+    <statement>
+        <p><ol label="a">
+            <li><p>
+                Find the exact coordinates of any points with <m>y</m>-coordinate 2 on the ellipse <m>4x^2 + y^2 = 12</m>. Plot and label those points on the ellipse.
+            </p></li>
+            <li><p>
+                Solve the equation <m>4x^2 + y^2 = 12</m> when <m>y = -4</m>. What do the solutions tell you about the graph of the ellipse?
+            </p></li>
+        </ol></p>
+    </statement>
+    <solution>
+        <p><ol label="a">
+            <li>
+                <sidebyside widths="60% 35%" margins="0% 0%" valigns="middle middle">
+                    <p>We substitute <m>y = \alert{2}</m> into the equation and solve for <m>x</m>.
+                    <md>
+                        <mrow>
+                            4x^2+(\alert{2})^2\amp = 12
+                        </mrow>
+                        <mrow>
+                            4x^2\amp = 8
+                        </mrow>
+                        <mrow>
+                            x^2\amp = 2
+                        </mrow>
+                        <mrow>
+                            x\amp= \pm \sqrt{2}
+                        </mrow>
+                    </md></p>
+                    <image xml:id="fig-example-exact-values-ellipse">
+                        <description>ellipse with vertical major axis</description>
+                        <latex-image>
+                        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                        <![CDATA[\tikzset{%
+                        }
+                        \begin{tikzpicture} [scale=.6]
+                        \draw[cyan] (-4,-4) grid (4,4);
+                        \draw[black,thick, ->, >=stealth'] (-4,0)--(4.5,0) node[right]{$x$};
+                        \draw[black,thick, ->, >=stealth'] (0,-4)--(0,4.5) node[above]{$y$};
+                        \foreach \x in  {-4,4} {
+                         \draw[black] (\x,.15) --++(0,-.3)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+                         \draw[black] (.15,\x) --++(-.3,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+                        }
+                        \draw[red, thick] (0,0) ellipse ({sqrt(3)} and {sqrt(12)});
+                        \filldraw[red] ({-sqrt(2)},2) circle (.1) node[above left, xshift=-1, yshift=6, fill=white, inner sep=1]{$\left(-\sqrt{2},0\right)$};
+                        \filldraw[red] ({sqrt(2)},2) circle (.1) node[above right, xshift=3, yshift=4, fill=white, inner sep=1]{$\left(\sqrt{2},0\right)$};
+                        \end{tikzpicture}]]>
+                    </latex-image>
+                    </image>
+                </sidebyside>
+                <p>
+                    There are two points with <m>y=2</m>, namely <m>\left(\sqrt{2},2\right) </m> and <m>\left(-\sqrt{2},2\right) </m>
+                </p>
+            </li>
+            <li><p>
+                We substitute <m>y = \alert{-4}</m> into the equation and solve for <m>x</m>.
+                <md>
+                    <mrow>
+                        4x^2+(\alert{-4})^2\amp = 12
+                    </mrow>
+                    <mrow>
+                        4x^2\amp = -4
+                    </mrow>
+                    <mrow>
+                        x^2\amp = -1
+                    </mrow>
+                </md>
+                Because there are no real solutions, there are no points on the ellipse with <m> = -4</m>.
+            </p></li>
+        </ol></p>
+    </solution>
+</example>
 
-<solution><p><ol label="a">
-    <li>We substitute <m>y=2</m> in the equation and solve for <m>x</m>.
-            \begin{align*}
-                4x^2 + (2)^2 \amp = 12\\
-                4x^2 \amp = 8\\
-                x^2 \amp = 2\\ 
-                x \amp = \pm \sqrt{2}\\                
-                \end{align*}
-        There are two points with <m>y=2</m>, namely <m>(\sqrt{2}, 2)</m> and <m>(-\sqrt{2}, 2)</m>, as shown below.
-
-    <sidebyside width="45%"><image source="images/fig-10-1-exm3ans.png"><description>ellipse</description></image></sidebyside>
-    </li>
-    <li>We substitute <m>y=-4</m> and solve for <m>x</m>.
-            \begin{align*}
-                4x^2 + (-4)^2 \amp = 12\\
-                4x^2 \amp = -4\\
-                x^2 \amp = -1\\ 
-                x \amp = \pm i\\                
-                \end{align*}
-        There are no real solutions because there are no points on the ellipse with <m>y=-4</m>.</li></ol></p></solution></example>
-
-<exercise> <statement><p>Find the exact coordinates of all points with <m>y</m>-coordinate <m>-1</m> on the ellipse <m>~~9x^2+8y^2=16</m>.</p></statement>
-    
-<answer><m>(\dfrac{2\sqrt{2}}{3}, -1), ~(\dfrac{-2\sqrt{2}}{3}, -1)</m></answer></exercise>   
+<exercise><title>Practice 3</title>
+<webwork>
+    <pg-code>
+        Context(Point)->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,  );
+        $answer = Formula("(2*sqrt(2)/3,-1), (-2*sqrt(2)/3,-1)");
+        $my_evaluator = $answer -> cmp(
+         showHints=>1,
+         showLengthHints => 1,
+         partialCredit => 1,
+        ); 
+    </pg-code>
+    <statement>
+        <p>
+            Find the exact coordinates of all points with <m>y</m>-coordinate <m>-1</m> on the ellipse <m>9x^2 + 8y^2 = 16</m>. 
+        </p>
+        <instructions>
+            <p>
+                Enter "sqrt(2)"  for <m>\sqrt{2}</m>, and separate different points with a comma. 
+            </p>
+        </instructions>
+        <p>
+            <var name="$answer" width="27"  evaluator="$my_evaluator"/> 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            <m>\left(\dfrac{2\sqrt{2}}{3}, -1 \right) </m>, <m>\left(\dfrac{-2\sqrt{2}}{3}, -1 \right) </m>
+        </p>
+    </solution>
+</webwork>
+</exercise> 
 
 </subsection>
 
@@ -172,17 +535,86 @@ We plot points at approximately <m>(0, \pm 3.4)</m> and <m>(\pm 1.7, 0)</m>, the
     <li>The segment of length <m>2b</m> is called the <term>conjugate axis</term>.</li>
     <li>The endpoints of the transverse axis are the <term>vertices</term> of the hyperbola.</li></ul></p>
 
-<sidebyside width="45%"><image source="images/fig-10-1-hyperbx.png"><description>hyperbola</description></image></sidebyside>
+<sidebyside width="60%">
+    <image xml:id="fig-hyperbola-left-right">
+        <description>hyperbola with horizontal transverse axis</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=1.1]
+        \draw[black,thick, ->, >=stealth'] (-4.5,0)--(4.5,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-4.5)--(0,4.5) node[above]{$y$};
+        \def\a{1};
+        \def\b{1};
+        \draw[samples=65,domain={-2:2},smooth,variable=\x,red,very thick, <->,>=stealth'] plot ( {cosh(\x)}, {sinh(\x)});
+        \draw[samples=65,domain={-2:2},smooth,variable=\x,red,very thick, <->,>=stealth'] plot ( {-cosh(\x)}, {sinh(\x)});
+        \draw[blue,very thick] ({-\a},0)--(\a,0);
+        \draw [blue, decorate, decoration={brace,amplitude=8}] ({\b},0)--({-\b},0);
+        \node[align=center] at (-1,-2.5){Transverse\\axis};
+        \draw [blue,->, >=stealth'] (-.9,-2.) to [out=90,in=235] (-.3,-.2);
+        \filldraw[red] (\a,0) circle (.05) node[above left, text=red]  {$(a,0)$};
+        \filldraw[red] (-\a,0) circle (.05) node[left, xshift=-1.cm,  yshift=-1.cm, text=red]  {$(-a,0)$};
+        \draw [red,->, >=stealth'] (-1.8,-.8) to [out=10,in=205] (-1.1,-.1);
+        \filldraw[green!80!black] (0,\b) circle (.05) node[right, text=green!30!black]{$(0,b)$};
+        \filldraw[green!80!black] (0,{-\b}) circle (.05) node[right, text=green!30!black]{$(0,-b)$};
+        \filldraw[gray] (0,0) circle (.05);
+        \filldraw[black] ({-sqrt(2)},0) circle (.05) node[above] {$F_2$};
+        \filldraw[black] ({sqrt(2)},0) circle (.05) node[above] {$F_1$};
+        \draw [green!70!black, decorate, decoration={brace,amplitude=8}] (0,{-\b})--(0,\b);
+        \node[align=center] at (-1,2.5){Conjugate\\axis};
+        \draw [green!80!black,->, >=stealth'] (-1,2.1) to [out=270,in=125] (-.3,.2);
+        \draw[blue,very thick] ({-\a},0)--(\a,0);
+        \draw [blue, decorate, decoration={brace,amplitude=8}] ({\b},0)--({-\b},0);
+        \node[align=center] at (-1,-2.5){Transverse\\axis};
+        \draw [blue,->, >=stealth'] (-.9,-2.) to [out=90,in=235] (-.3,-.2);
+        \node at (1.8,-3.7) {\Large${\frac{x^2}{a^2}-\frac{y^2}{b^2}={} }$\normalsize 1};
+        \end{tikzpicture}]]>
+    </latex-image>
+    </image>
+</sidebyside>
 
 
 <p>A hyperbola centered at the origin with foci on the <m>y</m>-axis has the following equation.</p>
 
-<assemblage><title>Standard Equarion for a Hyperbola</title>
+<assemblage><title>Standard Equation for a Hyperbola</title>
     <p><me>\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1</me></p></assemblage>
 
  <p>In this case the graph has <m>y</m>-intercepts at <m>b</m> and <m>-b</m>, but no <m>x</m>-intercepts, because the two branches open up and down. Here the <m>y</m>-intercepts are the vertices, so the transverse axis is vertical and has length <m>2b</m>.  The conjugate axis has length <m>2a</m>. A typical example is shown below.</p>     
     
-<sidebyside width="45%"><image source="images/fig-10-1-hyperby.png"><description>hyperbola</description></image></sidebyside>
+<sidebyside width="60%">
+<image xml:id="fig-hyperbola-up-down">
+        <description>hyperbola with vertical transverse axis</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=1.1]
+        \draw[black,thick, ->, >=stealth'] (-4.5,0)--(4.5,0) node[right]{$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-4.5)--(0,4.5) node[above]{$y$};
+        \def\a{1};
+        \def\b{1};
+        \draw[samples=65,domain={-2:2},smooth,variable=\x,red,very thick, <->,>=stealth'] plot ( {sinh(\x)}, {cosh(\x)});
+        \draw[samples=65,domain={-2:2},smooth,variable=\x,red,very thick, <->,>=stealth'] plot ( {sinh(\x)}, {-cosh(\x)});
+        \draw[blue,very thick] (0,{-\b})--(0,\b);
+        \draw [blue, decorate, decoration={brace,amplitude=8}] (0,{-\b})--(0,{\b});
+        \node[align=center] at (-2.5,1.5){Transverse\\axis};
+        \draw [blue,->, >=stealth'] (-2,1.2) to [out=350,in=115] (-.3,.2);
+        \filldraw[green!80!black] (\a,0) circle (.05) node[above ] {$(a,0)$};
+        \filldraw[green!80!black] (-\a,0) circle (.05) node[above]  {$(-a,0)$};
+        \draw[green!80!black,very thick] ({-\a},0)--(\a,0);
+        \draw [green!80!black, decorate, decoration={brace,amplitude=8}] ({\b},0)--({-\b},0);
+        \node[align=center] at (2.8,-.9){Conjugate\\axis};
+        \draw [green!80!black,->, >=stealth'] (1.9,-.5) to [out=150,in=335] (.3,-.2);
+        \filldraw[red] (0,\b) circle (.05) node[below right, text=red]  {$(0,b)$};
+        \filldraw[red] (0,-\b) circle (.05) node[above right]  {$(0,-b)$};
+        \filldraw[black] (0,{-sqrt(2)}) circle (.05) node[right] {$F_2$};
+        \filldraw[black] (0,{sqrt(2)}) circle (.05) node[right] {$F_1$};
+        \node at (-3.2,-1.2) {\Large${\frac{y^2}{b^2} - \frac{x^2}{a^2}={} }$\normalsize 1};
+        \end{tikzpicture}]]>
+    </latex-image>
+    </image>
+</sidebyside>
 
 </subsection>
 
@@ -190,25 +622,175 @@ We plot points at approximately <m>(0, \pm 3.4)</m> and <m>(\pm 1.7, 0)</m>, the
 
 <p>The branches of the hyperbola approach two straight lines that intersect at its center.  These lines are <term>asymptotes</term> of the graph, and they are useful as guidelines for sketching the hyperbola.  We can draw the asymptotes by first forming the "central rectangle," whose sides pass through the vertices and covertices.  The asymptotes are the diagonals of this rectangle.</p>
 
-<example><statement><p>Graph <m>~~\dfrac{y^2}{9} - \dfrac{x^2}{4} = 1</m></p></statement>
-    
-<solution><p>The graph is a hyperbola with center at the origin. The branches of the hyperbola open upward and downward, so the vertices lie on the <m>y</m>-axis. Also, <m>a^2=4</m> and <m>b^2=9</m>, so <m>a=2</m> and <m>b=3</m>. The vertices of the hyperbola are <m>(0,3)</m> and <m>(0,-3)</m>. There are no <m>x</m>-intercepts.</p>
-<p>We construct the central rectangle with dimensions <m>2a=4</m> and <m>2b=6</m>, as shown below. Then we draw the asymptotes through the diagonals of the rectangle. (Note that the asymptotes have slopes <m>\pm \dfrac{3}{2}</m>.) Finally, we sketch the branches of the hyperbola through the vertices and approaching the asymptotes to obtain the graph shown.</p>
+<example>
+    <statement>
+        <p>
+            Graph <m> \dfrac{y^2}{9} - \dfrac{x^2}{4} = 1</m>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            The graph is a hyperbola with center at the origin. The branches of the hyperbola open upward and downward, so the vertices lie on the <m>y</m>-axis. Also, <m>a^2=4</m> and <m>b^2=9</m>, so <m>a=2</m> and <m>b=3</m>. The vertices of the hyperbola are <m>(0,3)</m> and <m>(0,-3)</m>. There are no <m>x</m>-intercepts.
+        </p>
+        <sidebyside widths="48% 48%" margins="0% 0%" valigns="middle middle">
+            <p>
+                 We construct the central rectangle with dimensions <m>2a=4</m> and <m>2b=6</m>, as shown below. Then we draw the asymptotes through the diagonals of the rectangle. (Note that the asymptotes have slopes <m>\pm \dfrac{3}{2}</m>.) Finally, we sketch the branches of the hyperbola through the vertices and approaching the asymptotes to obtain the graph shown.
+            </p>
+            <image xml:id="fig-example-hyperbola-up">
+                <description>hyperbola opening up and down</description>
+                <latex-image>
+                <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                <![CDATA[\tikzset{%
+                }
+                \begin{tikzpicture} [scale=.6]
+                \filldraw[cyan!30!white, opacity=.50] (-2,-3) rectangle (2,3);
+                \draw[black,thick, ->, >=stealth'] (-6,0)--(6,0) node[right]{$x$};
+                \draw[black,thick, ->, >=stealth'] (0,-6)--(0,6) node[above]{$y$};
+                \foreach \x in {-5,5} {
+                 \draw[black] (.1,\x) --++(-.2,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+                 \draw[black] (\x,.1) --++(0,-.2)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+                 }
+                \def\a{2};
+                \def\b{3};
+                \draw[darkgray, dashed] (-4,6)--(4,-6);
+                \draw[darkgray, dashed] (4,6)--(-4,-6);
+                \draw[samples=65,domain={-1.35:1.35},smooth,variable=\x,red,very thick, <->,>=stealth'] plot ( {\a*sinh(\x)}, {\b*cosh(\x)});
+                \draw[samples=65,domain={-1.35:1.35},smooth,variable=\x,red,very thick, <->,>=stealth'] plot ( {\a*sinh(\x)}, {-\b*cosh(\x)});
+                \draw [blue, decorate, decoration={brace,amplitude=8}] (0,0)--(0,{\b});
+                \node at (-3.5,2.5){$b=3$};
+                \draw [blue,->, >=stealth'] (-2.6,2.4) to [out=0,in=165] (-.55,1.55);
+                \draw [green!80!black, decorate, decoration={brace,amplitude=8}] ({\a},0)--(0,0);
+                \node at (3.7,-1.9){$a=2$};
+                \draw [green!80!black,->, >=stealth'] (2.6,-1.8) to [out=170,in=295] (1.1,-.5);
+                \node at (4.5,1.9) {\Large${\frac{y^2}{9} - \frac{x^2}{4}={} }$\normalsize 1};
+                \end{tikzpicture}]]>
+            </latex-image>
+            </image>
+        </sidebyside>
+    </solution>
+</example>
 
-<sidebyside width="45%"><image source="images/fig-10-1-exm4ans.png"><description>hyperbola</description></image></sidebyside>
-    
-</solution></example>
+<exercise><title>Practice 1</title>
+<webwork>
+    <pg-code>
+        $refreshCachedImages = 1;
+  $xfunc[0] = sub { my $t = shift();
+    return 3*cosh($t); };
+  $yfunc[0] = sub { my $t = shift();
+    return 4*sinh($t); };
+  $xfunc[1] = sub { my $t = shift();
+    return 4*cosh($t); };
+  $yfunc[1] = sub { my $t = shift();
+    return 3*sinh($t); };
+  $xfunc[2] = sub { my $t = shift();
+    return 4*sinh($t); };
+  $yfunc[2] = sub { my $t = shift();
+    return 3*cosh($t); };
+  $xfunc[3] = sub { my $t = shift();
+    return 3*sinh($t); };
+  $yfunc[3] = sub { my $t = shift();
+    return 4*cosh($t); };
+  $xfunc[4] = sub { my $t = shift();
+    return -3*cosh($t); };
+  $yfunc[4] = sub { my $t = shift();
+    return 4*sinh($t); };
+  $xfunc[5] = sub { my $t = shift();
+    return -4*cosh($t); };
+  $yfunc[5] = sub { my $t = shift();
+    return 3*sinh($t); };
+  $xfunc[6] = sub { my $t = shift();
+    return 4*sinh($t); };
+  $yfunc[6] = sub { my $t = shift();
+    return -3*cosh($t); };
+  $xfunc[7] = sub { my $t = shift();
+    return 3*sinh($t); };
+  $yfunc[7] = sub { my $t = shift();
+    return -4*cosh($t); };
 
-<exercise> <statement><p>Follow the steps to graph <m>~~\dfrac{x^2}{9} - \dfrac{y^2}{16} = 1</m></p>
-    <p>Find <m>a</m> and <m>b</m>, and plot the vertices.</p>
-    <p>Sketch the central rectangle.</p>
-    <p>Draw the asymptotes.</p>
-    <p>Sketch the hyperbola.</p>
-</statement>
+   foreach my $i (0..3) {
+    $gr[$i] = init_graph(-10,-10,10,10, axes=>[0,0], grid=>[20,20], size=>[240,240]);
+  $fn[$i] = new Fun( $xfunc[$i], $yfunc[$i], $gr[$i] );
+  $fn[$i]->domain(-3,3);
+  $fn[$i+4] = new Fun( $xfunc[$i+4], $yfunc[$i+4], $gr[$i] );
+  $fn[$i+4]->domain(-3,3);
+    }
+
+   foreach my $i (0..3) {
+   $gr[$i] -> lb('reset');
+    $gr[$i] -> lb(new Label (-0.8,5,5,'black','center','middle'));
+    $gr[$i] -> lb(new Label (-0.8,-5,-5,'black','center','middle'));
+    $gr[$i] -> lb(new Label (5,-0.8,5,'black','center','middle'));
+    $gr[$i] -> lb(new Label (-5,-0.8,-5,'black','center','middle'));
+    }
+    $gr[0] -> lb(new Label (-8.5,9,"(B)",'black','center','middle'));
+    $gr[1] -> lb(new Label (-8.5,9,"(A)",'black','center','middle'));
+    $gr[2] -> lb(new Label (-8.5,9,"(C)",'black','center','middle'));
+    $gr[3] -> lb(new Label (-8.5,9,"(D)",'black','center','middle'));
+
+    $mc = RadioButtons(
+        [ "(A)", "(B)", "(C)","(D)"],
+        1
+    );
+      </pg-code>     
+    <statement>
+        <p>
+            Follow the steps to graph <m>\dfrac{x^2}{9} - \dfrac{y^2}{16} = 1</m>
+            <md>
+                <mrow>\amp\blert{\text{Find } a \text{ and } b\text{, and plot the vertices}.} </mrow>
+                <mrow>\amp\blert{\text{Sketch the central rectangle.}} </mrow>
+                <mrow>\amp\blert{\text{Draw the asymptotes.}} </mrow>
+                <mrow>\amp\blert{\text{Sketch the hyperbola.}} </mrow>
+            </md>
+        </p>
+        <sidebyside widths="35% 35%" margins="5% 5%">
+            <image pg-name="$gr[1]"/>
+            <image pg-name="$gr[0]"/>
+        </sidebyside>
+        <sidebyside widths="35% 35%" margins="5% 5%">
+            <image pg-name="$gr[2]"/>
+            <image pg-name="$gr[3]"/>
+        </sidebyside>
+        <p>Which of the above is the best match for the graph)?</p>
+        <p>
+            <var name="$mc" form="buttons"/> 
+        </p>
+     </statement>
+    <solution>
+        <sidebyside widths="40%">
+            <image pg-name="$gr[0]"/>
+        </sidebyside>
+    </solution>
+</webwork>
+    <conclusion>
+        <sidebyside width="40%" margins="0% 65%">
+            <image xml:id="fig-ex-hyperbola-vertical-axis">
+            <description>hyperbola opening left and right</description>
+            <latex-image>
+            <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+            <![CDATA[\tikzset{%
+            }
+             \begin{tikzpicture} [scale=.6]
+            \draw[cyan] (-8,-8) grid (8,8);
+            \draw[black,thick, ->, >=stealth'] (-8,0)--(8,0) node[right]{$x$};
+            \draw[black,thick, ->, >=stealth'] (0,-8)--(0,8) node[above]{$y$};
+            \foreach \x in {-8,-6,-4,-2,2,4,6,8} {
+             \draw[black] (.1,\x) --++(-.2,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+             \draw[black] (\x,.1) --++(0,-.2)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+             }
+            \def\a{3};
+            \def\b{4};
+            \draw[blue,very thick] (-\a,-\b) rectangle (\a,\b);
+            \draw[gray, dashed] (-6,8)--(6,-8);
+            \draw[gray, dashed] (6,8)--(-6,-8);
+            \draw[samples=65,domain={-1.45:1.45},smooth,variable=\x,red,very thick, <->,>=stealth'] plot ( {\a*cosh(\x)}, {\b*sinh(\x)});
+            \draw[samples=65,domain={-1.45:1.45},smooth,variable=\x,red,very thick, <->,>=stealth'] plot ( {-\a*cosh(\x)}, {\b*sinh(\x)});
+            \end{tikzpicture}]]>
+            </latex-image>
+            </image>
+        </sidebyside>
+    </conclusion>
+</exercise>
     
-<answer>
-    <sidebyside width="35%"><image source="images/fig-10-1-exans4.png"><description>hyperbola</description></image></sidebyside>
-    </answer></exercise>
 
  <note><p>In the examples above, note that the slopes of the asymptotes are <m>\pm \dfrac{b}{a}</m>.</p></note>
 
@@ -218,47 +800,208 @@ We plot points at approximately <m>(0, \pm 3.4)</m> and <m>(\pm 1.7, 0)</m>, the
     <me>2x^2-3y^2=6 ~~~~~~\text{and} ~~~~~~ -4x^2+y^2=3</me>
     are equations of hyperbolas.  As with ellipses, it is best to rewrite the equation in standard form in order to graph it.</p>
 
- <example><statement><p>Write the equation <m>~~4y^2-x^2=16~~</m> in standard form and describe the important features of its graph.</p></statement>
+<example>
+    <statement>
+        <p>
+            Write the equation <m>4y^2-x^2=16</m> in standard form and describe the important features of its graph.
+        </p>
+    </statement>
+    <solution>
+        <sidebyside widths="53% 45%" margins="0% 0%" valigns="middle middle">
+            
+        <p>
+            We first divide each side by 16 to obtain
+            <md><mrow>
+                \frac{y^2}{4} - \dfrac{x^2}{16} = 1\quad\text{ or } \quad \frac{y^2}{2^2} - \dfrac{x^2}{4^2} = 1
+            </mrow></md>
+            The graph is a central hyperbola with <m>y</m>-intercepts <m>2</m> and <m>-2</m>, as shown in the figure. The slopes of the asymptotes are given by
+            <md><mrow>
+                \pm \frac{b}{a}=\pm \frac{2}{4}=\pm \frac{1}{2}
+            </mrow></md>
+            so the equations of the asymptotes are 
+            <md><mrow>
+                y= \dfrac{1}{2} x\quad \text{ and } y= \frac{-1}{2} x
+            </mrow></md>
+        </p>
+            <image xml:id="fig-example-hyperbola-up-wide">
+                <description>hyperbola opening up and down</description>
+                <latex-image>
+                <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                <![CDATA[\tikzset{%
+                }
+                \begin{tikzpicture} [scale=.5]
+                \draw[black,thick, ->, >=stealth'] (-7,0)--(7,0) node[right]{$x$};
+                \draw[black,thick, ->, >=stealth'] (0,-7)--(0,7) node[above]{$y$};
+                \foreach \x in {-5,5} {
+                 \draw[black] (.1,\x) --++(-.2,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+                 \draw[black] (\x,.1) --++(0,-.2)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+                 }
+                \def\a{4};
+                \def\b{2};
+                \filldraw[cyan!30!white, opacity=.50] (-\a,-\b) rectangle (\a,\b);
+                \draw[gray, dashed] (-7,{-7*\b/\a})--(7,{7*\b/\a});
+                \draw[gray, dashed] (-7,{7*\b/\a})--(7,{-7*\b/\a});
+                \draw[samples=65,domain={-1.3:1.3},smooth,variable=\x,red,very thick, <->,>=stealth'] plot ( {\a*sinh(\x)}, {\b*cosh(\x)});
+                \draw[samples=65,domain={-1.3:1.3},smooth,variable=\x,red,very thick, <->,>=stealth'] plot ( {\a*sinh(\x)}, {-\b*cosh(\x)});
+                \node at (3.3,4.9) {$4y^2-x^2=16$};
+                \end{tikzpicture}]]>
+            </latex-image>
+            </image>
+        </sidebyside>
+    </solution>
+</example>
 
-<solution><p>We first divide each side by 16 to obtain
-    <me> \dfrac{y^2}{4} - \dfrac{x^2}{16} = 1 ~~~~~~\text{or} ~~~~~~ \dfrac{y^2}{2^2} - \dfrac{x^2}{4^2} = 1</me>
-The graph is a central hyperbola with <m>y</m>-intercepts <m>2</m> and <m>-2</m>.  The slopes of the asymptotes are given by
-    <me>\pm \dfrac{b}{a}=\pm \dfrac{2}{4}=\pm \dfrac{1}{2} </me>
-so the equations of the asymptotes are <m>y= \dfrac{1}{2} x</m> and <m>y= \dfrac{-1}{2} x</m>.</p>
-
-  <sidebyside width="45%"><image source="images/fig-10-1-exm5ans.png"><description>hyperbola</description></image></sidebyside>  
-    
-</solution></example>
-
-<exercise><statement><p><ol label = "a">
-    <li>Write the equation <m>4x^2 = y^2 + 25</m> in standard form.</li>
-    <li>Find the vertices of the graph and the equations of the asymptotes.</li></ol></p></statement>
-    
-<answer><p><ol label = "a">
-    <li><m>\dfrac{x^2}{(\dfrac{5}{2})^2} - \dfrac{y^2}{5^2}=1</m></li>
-    <li><m>(\dfrac{5}{2}, 0), ~(\dfrac{-5}{2}, 0), ~~y=2x, ~y=-2x</m></li></ol></p></answer></exercise>
+<exercise><title>Practice 2</title>
+<webwork>
+    <pg-code>
+        Context(Point)->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,  );
+        Context()->variables->add(y=>"Real");
+        $f = Formula("x^2/(5/2)^2 + y^2/5^2");
+        $vertices = Formula("(-5/2,0), (5/2,0)");
+        $my_evaluator = $vertices -> cmp(
+         showHints=>1,
+         showLengthHints => 1,
+         partialCredit => 1,
+        ); 
+        $l1 = Formula("2x");
+        $l2 = Formula("-2x");
+            $multians = MultiAnswer($l1,$l2)->with(
+              singleResult => 1,
+              checker => sub {
+                  my ( $correct, $student, $self ) = @_;
+                  my ( $f1stu, $f2stu ) = @{$student};
+                  my ( $f1, $f2 ) = @{$correct};
+                  return ( ($f1 == $f1stu &amp;&amp; $f2 == $f2stu) ||
+                       ($f1 == $f2stu &amp;&amp; $f2 == $f1stu)  
+                  );
+              }
+            );            
+    </pg-code>
+    <statement>
+        <p><ol label = "a">
+            <li
+>                <p>
+                    Write the equation <m>4x^2 = y^2 + 25</m> in standard form.
+                </p>
+                <p><var name="$f" width="20"/><m>=1</m> </p>
+            </li>
+            <li>
+                <p>
+                    Find the vertices of the graph and the equations of the asymptotes.
+                </p>
+                <p>
+                    Vertices: <var name="$vertices" width="25"  evaluator="$my_evaluator"/> Separate different vertices with a comma.
+                </p>
+                <p>
+                    Equations of asymptotes: <m>y=</m><var name="$multians" width="2"/> and <m>y=</m><var name="$multians" width="2"/>
+                </p>
+            </li>
+        </ol></p>
+    </statement>
+    <solution>
+        <p><ol label = "a">
+            <li>
+                <p>
+                    <m>\dfrac{x^2}{\left(\dfrac{5}{2}\right)^2} - \dfrac{y^2}{5^2}=1</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>\left(\dfrac{5}{2}, 0\right)</m>, <m>\left(\dfrac{-5}{2}, 0\right)</m>
+                </p> 
+                <p>
+                   <m>y=2x</m>, <m>y=-2x</m> 
+                </p></li>
+        </ol></p>
+    </solution>
+</webwork>
+</exercise>
 
 <p>We can find exact coordinates of points on a hyperbola by substituting a value for one variable and solving for the other variable.</p>
     
-<example><statement><p>Find the exact coordinates of any points with <m>x</m>-coordinate <m>x=2</m> on the hyperbola with equation <m>4x^2-y^2=16</m>. Plot and label those points on the hyperbola.</p></statement>
+<example>
+    <statement>
+        <p
+            >Find the exact coordinates of any points with <m>x</m>-coordinate <m>x=2</m> on the hyperbola with equation <m>4x^2-y^2=16</m>. Plot and label those points on the hyperbola.
+        </p>
+    </statement>
+    <solution>
+        <sidebyside widths="53% 45%" margins="0% 0%" valigns="middle middle">
+            <p>
+                We substitute  in the given equation.
+                <md>
+                    <mrow>4y^2 - (2)^2 \amp = 16</mrow>
+                    <mrow>4y^2 \amp = 20</mrow>
+                    <mrow>y^2 \amp = 5</mrow>
+                    <mrow>y \amp = \pm \sqrt{5}</mrow>
+                </md>
+                There are two points with <m>x=2</m>, namely <m>\left(2, \sqrt{5}\right)</m> and <m>\left(2, -\sqrt{5}\right)</m>, as shown in the figure.
+            </p>
+            <image xml:id="fig-example-hyperbola-coordinates">
+                <description>hyperbola opens up and down</description>
+                <latex-image>
+                <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                <![CDATA[\tikzset{%
+                }
+                \begin{tikzpicture} [scale=.5]
+                \draw[black,thick, ->, >=stealth'] (-7,0)--(7,0) node[right]{$x$};
+                \draw[black,thick, ->, >=stealth'] (0,-7)--(0,7) node[above]{$y$};
+                \foreach \x in {-5,5} {
+                 \draw[black] (.1,\x) --++(-.2,0)  node[left, xshift=-2, fill=white, inner sep=1]   {$\x$};
+                 \draw[black] (\x,.1) --++(0,-.2)  node[below, yshift=-2, fill=white, inner sep=1]   {$\x$};
+                 }
+                \def\a{4};
+                \def\b{2};
+                \draw[gray, dashed] (-7,{-7*\b/\a})--(7,{7*\b/\a});
+                \draw[gray, dashed] (-7,{7*\b/\a})--(7,{-7*\b/\a});
+                \draw[samples=65,domain={-1.3:1.3},smooth,variable=\x,red,very thick, <->,>=stealth'] plot ( {\a*sinh(\x)}, {\b*cosh(\x)});
+                \draw[samples=65,domain={-1.3:1.3},smooth,variable=\x,red,very thick, <->,>=stealth'] plot ( {\a*sinh(\x)}, {-\b*cosh(\x)});
+                \filldraw[red] (2,{sqrt(5)}) circle (.15) node[above, yshift=.2cm, fill=white, inner sep=1]{$ \left(2,\sqrt{5}\right)$};
+                \filldraw[red] (2,{-sqrt(5)}) circle (.15) node[below, yshift=-.2cm, fill=white, inner sep=1]{$ \left(2,-\sqrt{5}\right)$};
+                \end{tikzpicture}]]>
+            </latex-image>
+            </image>
+        </sidebyside> 
+    </solution>
+</example>
 
-<solution><p>We substitute  in the given equation.
-    \begin{align*}
-                4y^2 - (2)^2 \amp = 16\\
-                4y^2 \amp = 20\\
-                y^2 \amp = 5\\ 
-                y \amp = \pm \sqrt{5}\\                
-                \end{align*}
-    There are two points with <m>x=2</m>, namely <m>(2, \sqrt{5})</m> and <m>(2, -\sqrt{5})</m>, as shown in the figure.</p>
-
-  <sidebyside width="45%"><image source="images/fig-10-1-exm6ans.png"><description>hyperbola</description></image></sidebyside>  
-    
-</solution></example>
-
-<exercise><statement><p>Solve the equation <m>4y^2-x^2=16</m> when <m>y=1</m>.  What is the significance of the solutions to the graph of the hyperbola?</p></statement>
-    
-<answer><p>There are no solutions when <m>y=1</m> because there are no points on the hyperbola with <m>y=1</m>.</p>
-</answer></exercise>
+<exercise><title>Practice 3</title>
+<webwork>
+    <pg-code>
+        @choices = ("?","DNE", "undefined", "does not exist", "none");
+        $popup = PopUp([@choices], $choices[0]);  # It doesn't matter which is used as the "correct answer".
+        Context($popup->context); 
+        $answer = OneOf(@choices[1..4]);
+        $mc = RadioButtons(
+            [ "The line \(y=1\) is one of the asymptotes.", 
+            "There are no points on the graph with \(y\)-coordinate 1.", 
+            "This is a degenerate conic.",
+            "The hyperbola opens left and right."],
+            1
+        );
+    </pg-code>
+    <statement>
+        <p>
+            Solve the equation <m>4y^2 − x^2 = 16</m> when <m>y = 1</m>.
+        </p>
+        <p>
+            <m>x=</m><var name="$answer" width="8"/>
+        </p>
+        <instruction>Separate different values with a comma, or enter DNE if there are no real solutions.</instruction>
+        <p>
+             What does this tell you about the graph of the hyperbola?
+        </p>
+        <p>
+            <var name="$mc" form="buttons"/>
+        </p>
+    </statement>
+    <solution>
+        <p>
+            There are no real solutions when <m>y = 1</m>, so there are no points on the graph with <m>y</m>-coordinate 1.
+        </p>
+    </solution>
+</webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Parabolas</title>
@@ -270,25 +1013,29 @@ These parabolas opened either up or down and had vertical axes of symmetry. Howe
 <assemblage><title>Parabola</title>
 <p>A <term>parabola</term> is the set of points in the plane whose distances from a fixed line <m>l</m> and a fixed point <m>F</m> are equal.</p></assemblage>
 
-<p> The fixed line in the definition is called the <term>directrix</term>, and the fixed point is the <term>focus</term>. The <term>axis</term> of a parabola is the line running through the focus of the parabola and perpendicular to the directrix.</p> 
+<p>The fixed line in the definition is called the <term>directrix</term>, and the fixed point is the <term>focus</term>. The <term>axis</term> of a parabola is the line running through the focus of the parabola and perpendicular to the directrix.</p> 
 
-<sidebyside width="80%"><image source="images/fig-10-1-parabs.png"><description>parabolas</description></image></sidebyside>
+<sidebyside width="90%"><image source="images/fig-parabola-focus-directrix"><description>parabolas</description></image></sidebyside>
 
-<p> Parabolas have many applications in optics and communications.  Parabolic mirrors are used in telescopes because light waves received reflect off the surface and form an image at the focus of the parabola.  For similar reasons radio antennae and television dish receivers are parabolic in shape.  The parabolic mirrors in searchlights and automobile headlights reflect light from the focus into beams of parallel rays.</p>
-<p>We first consider parabolas with vertex at the origin, as shown below.</p>
+<p>Parabolas have many applications in optics and communications.  Parabolic mirrors are used in telescopes because light waves received reflect off the surface and form an image at the focus of the parabola.  For similar reasons radio antennae and television dish receivers are parabolic in shape.  The parabolic mirrors in searchlights and automobile headlights reflect light from the focus into beams of parallel rays.</p><p>We first consider parabolas with vertex at the origin, as shown below.</p>
 
-<sidebyside width="80%"><image source="images/fig-10-1-centparabs.png"><description>central parabolas</description></image></sidebyside>
+<sidebyside width="90%"><image source="images/fig-4-parabolas"><description>central parabolas</description></image></sidebyside>
 
 <p>Using the distance formula and the definition above, it can be shown that parabolas that open upward and those that open downward have equations of the forms
-    <me>y=\dfrac{x^2}{4p} ~~~~~~ \text{and} ~~~~~~ y=\dfrac{-x^2}{4p}</me>
+    <md>
+        <mrow>y\amp=\dfrac{x^2}{4p}\amp\amp\text{ and } \amp y\amp=\dfrac{-x^2}{4p}</mrow>
+    </md>
 respectively, where <m>p</m> is the distance between the vertex of the parabola and its focus,or the distance between the vertex and the directrix.</p>  
 <p> Parabolas that open to the right and those that open to the left have equations of the forms
-    <me>x=\dfrac{y^2}{4p} ~~~~~~ \text{and} ~~~~~~ x=\dfrac{-y^2}{4p}</me>
-respectively.</p>
+    <md>
+        <mrow>x\amp=\dfrac{y^2}{4p}\amp\amp\text{ and } \amp x\amp=\dfrac{-y^2}{4p}</mrow>
+    </md>
+    respectively.
+</p>
 
-<p> A line drawn through the focus and parallel to the directrix will intersect the parabola at two points.  These points are <m>2p</m> units from the directrix, so they must also be <m>2p</m> units from the focus.  (Recall that by definition the points of a parabola are equidistant from the focus and the directrix.)</p>  
+<p>A line drawn through the focus and parallel to the directrix will intersect the parabola at two points.  These points are <m>2p</m> units from the directrix, so they must also be <m>2p</m> units from the focus.  (Recall that by definition the points of a parabola are equidistant from the focus and the directrix.)</p>  
 
-<sidebyside width="45%"><image source="images/fig-10-1-guidepts.png"><description>parabolas</description></image></sidebyside>
+<sidebyside width="45%"><image source="images/fig-parabola-guidepoints"><description>parabolas</description></image></sidebyside>
 
 <p>By locating these two "guide points" and the vertex, we can make a reasonable sketch of the parabola, as illustrated in the next example.</p>
 
@@ -297,13 +1044,85 @@ respectively.</p>
 <solution><p>The parabola has its vertex at the origin and opens to the left, so its axis is the <m>x</m>-axis. Also, <m>6=4p</m>, so <m>p=\dfrac{3}{2}</m>, and the focus is the point <m>(-\dfrac{3}{2}, 0)</m>. The directrix is the vertical line <m>x=\dfrac{3}{2}</m></p>.
 <p>To graph the parabola, we draw a line segment of length <m>4p=6</m> perpendicular to the axis and centered at the focus.  Because <m>2p=3</m>, the endpoints of the segment are <m>(-\dfrac{3}{2}, 3)</m> and <m>(-\dfrac{3}{2}, -3)</m>.  We sketch the parabola through the vertex and the two guide points to obtain the graph shown below.</p>
 
-  <sidebyside width="45%"><image source="images/fig-10-1-exm7ans.png"><description>parabola</description></image></sidebyside>  
+  <sidebyside width="45%"><image source="images/fig-example-parabola-guidepoints"><description>parabola</description></image></sidebyside>  
     
 </solution></example>
 
-<exercise><statement><p>Graph <m>~~y^2-8x=0</m></p></statement>
-    
-<answer><p><sidebyside width="35%"><image source="images/fig-10-1-exans7.png"><description>parabola</description></image></sidebyside>  </p></answer></exercise>
+<exercise><title>Practice 4</title>
+<webwork>
+    <pg-code>
+ Context("Numeric")->variables->are(t=>"Real");
+      $xfunc[0] = sub { my $t = shift();
+        return .125*$t*$t; };
+      $yfunc[0] = sub { my $t = shift();
+        return $t; };
+      $xfunc[1] = sub { my $t = shift();
+        return -.125*$t*$t; };
+      $yfunc[1] = sub { my $t = shift();
+        return $t; };
+      $xfunc[2] = sub { my $t = shift();
+        return $t; };
+      $yfunc[2] = sub { my $t = shift();
+        return .125*$t*$t; };
+      $xfunc[3] = sub { my $t = shift();
+        return $t; };
+      $yfunc[3] = sub { my $t = shift();
+        return -.125*$t*$t; };
+
+       foreach my $i (0..3) {
+        $gr[$i] = init_graph(-10,-10,10,10, axes=>[0,0], grid=>[20,20], size=>[240,240]);
+      $fn[$i] = new Fun( $xfunc[$i], $yfunc[$i], $gr[$i] );
+      $fn[$i]->domain(-10,10);
+      $fn[$i]->steps(100);
+        }
+
+       foreach my $i (0..3) {
+       $gr[$i] -> lb('reset');
+        $gr[$i] -> lb(new Label (-0.8,5,5,'black','center','middle'));
+        $gr[$i] -> lb(new Label (-0.8,-5,-5,'black','center','middle'));
+        $gr[$i] -> lb(new Label (5,-0.8,5,'black','center','middle'));
+        $gr[$i] -> lb(new Label (-5,-0.8,-5,'black','center','middle'));
+        }
+        $gr[0] -> lb(new Label (-8.5,9,"(C)",'black','center','middle'));
+        $gr[1] -> lb(new Label (-8.5,9,"(B)",'black','center','middle'));
+        $gr[2] -> lb(new Label (-8.5,9,"(A)",'black','center','middle'));
+        $gr[3] -> lb(new Label (-8.5,9,"(D)",'black','center','middle'));
+
+        $mc = RadioButtons(
+                    [ "(A)", "(B)", "(C)","(D)"],
+                    2
+                );
+      </pg-code>     
+    <statement>
+        <p>Graph <m>y^2-8x=0</m></p>
+        <sidebyside widths="35% 35%" margins="5% 5%">
+            <image pg-name="$gr[2]"/>
+            <image pg-name="$gr[1]"/>
+        </sidebyside>
+        <sidebyside widths="35% 35%" margins="5% 5%">
+            <image pg-name="$gr[0]"/>
+            <image pg-name="$gr[3]"/>
+        </sidebyside>
+        <p>Which of the above is the best match for the graph)?</p>
+        <p><var name="$mc" form="buttons"/> </p>
+     </statement>
+    <solution>
+        <sidebyside widths="40%">
+            <image pg-name="$gr[0]"/>
+        </sidebyside>
+        <p>
+          A graph is also shown below.
+        </p>
+    </solution>
+</webwork>
+    <conclusion>
+        <sidebyside width="35%" margins="0% 65%">
+            <image source="images/fig-ex-horizontal-parabola">
+            <description>parabola opening to right</description>
+            </image>
+        </sidebyside>
+    </conclusion>
+</exercise>
 
 <example><statement><p>Write each equation in standard form and describe its graph.</p>
 <p><ol label="a" cols="2">
@@ -327,21 +1146,65 @@ respectively.</p>
     The graph is a circle with radius <m>\sqrt{3}</m>.</li>
  </ol></p></solution></example>
 
- <exercise><statement><p>Write each equation in standard form and describe its graph.</p>
-<p><ol label="a" cols="2">
-    <li><m>x^2=6y^2+8</m></li>
-    <li><m>x^2=\dfrac{4-y^2}{2}</m></li></ol></p></statement>
+<exercise><title>Practice 5</title>
+<webwork>
+    <pg-code>
+        Context()->variables->add(y=>"Real");
+        $f = Formula("x^2/(sqrt(8))^2 - y^2/(2/sqrt(3))^2");
+        $a = RadioButtons([ 
+            "a hyperbola that opens up and down", 
+            "a hyperbola that opens left up and right", 
+            "an ellipse with major axis on the \(x\) axis",
+            "an ellipse with major axis on the \(y\) axis"],
+             1
+             );
+        $g = Formula("x^2/(sqrt(2))^2 + y^2/(2^2)");
+        $b = RadioButtons([ 
+            "a hyperbola that opens up and down", 
+            "a hyperbola that opens left up and right", 
+            "an ellipse with major axis on the \(x\) axis",
+            "an ellipse with major axis on the \(y\) axis"],
+             3
+             );
 
-<answer><p><ol label="a"> 
-    <li><p><m>\dfrac{x^2}{(\sqrt{8})^2} - \dfrac{y^2}{(\dfrac{2}{\sqrt{3}})^2}=1</m></p>   
-    <p>The graph is a hyperbola that opens left and right.</p></li>   
-    <li><p><m>\dfrac{x^2}{(\sqrt{2})^2} + \dfrac{y^2}{2^2}=1</m></p>   
-    <p>The graph is an ellipse with major axis on the <m>y</m>-axis because <m>2 \gt \sqrt{2}</m>.</p></li></ol></p></answer></exercise>
+    </pg-code>
+    <statement>
+        <p>
+            Write each equation in standard form and describe its graph.
+            <ol label = "a">
+            <li>
+                <p>
+                    <m>x^2=6y^2+8</m>
+                </p>
+                <p><var name="$f" width="20"/><m>=1</m> </p>
+                <p>The graph is</p>
+                <p><var name="$a" form="buttons"/> </p>
+            </li>
+            <li>
+                <p>
+                    <m>x^2=\dfrac{4-y^2}{2}</m>
+                </p>
+                <p><var name="$g" width="20"/><m>=1</m> </p>
+                <p>The graph is</p>
+                <p><var name="$b" form="buttons"/> </p>
+            </li>
+        </ol></p>
+    </statement>
+    <solution>
+        <p><ol label="a"> 
+            <li><p><m>\dfrac{x^2}{(\sqrt{8})^2} - \dfrac{y^2}{\left(\dfrac{2}{\sqrt{3}}\right)^2}=1</m></p>   
+            <p>The graph is a hyperbola that opens left and right.</p></li>   
+            <li><p><m>\dfrac{x^2}{(\sqrt{2})^2} + \dfrac{y^2}{2^2}=1</m></p>   
+            <p>The graph is an ellipse with major axis on the <m>y</m>-axis because <m>2 \gt \sqrt{2}</m>.</p></li>
+        </ol></p>
+    </solution>
+</webwork>
+</exercise>
 
 </subsection>
 
-<!-- <xi:include href="./summary-10-1.xml" /> summary  
-<xi:include href="./section-10-1-exercises.xml" /> exercises  -->
+<xi:include href="./summary-10-3.xml" />   
+<xi:include href="./section-10-3-exercises.xml" />
 
 </section> 
 <!-- </book>  </mathbook> -->

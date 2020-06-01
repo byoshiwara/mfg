@@ -4,20 +4,21 @@
 <section xml:id="QuadraticSystems"   xmlns:xi="http://www.w3.org/2001/XInclude">
 
 <title>Quadratic Systems</title>
-    <introduction>
+
+<subsection><title>Introduction</title>
     <p>Earlier we considered systems of quadratic equations involving two parabolas.  Those systems can have one, two, or no solutions, depending on the graphs of the two equations.  Systems involving other conics may have up to four solutions.</p>
    
 <example><statement><p>Find the intersection points of the graphs of
-        \begin{align*}
-                x^2+y^2\amp = 5\\
-                xy \amp = 2\\           
-                \end{align*}
+    <md>
+        <mrow>x^2+y^2\amp = 5</mrow>
+        <mrow>xy \amp = 2</mrow>
+    </md>
 </p></statement>
     
 <solution><p>We will use substitution to solve the system. First we solve the "easier" of the two equations (the second equation) for <m>y</m> to obtain
     <me>y=\dfrac{2}{x}</me>
 We substitute <m>\alert{\dfrac{2}{x}}</m> for <m>y</m> in the first equation to find
-    <me>x^2 + (\alert{\dfrac{2}{x}})^2 = 5 ~~~~\text{or} ~~~~~ x^2 + \dfrac{4}{x^2}=5</me>
+    <me>x^2 + \left(\alert{\dfrac{2}{x}}\right)^2 = 5 ~~~~\text{or} ~~~~~ x^2 + \dfrac{4}{x^2}=5</me>
 This equation has only one variable, <m>x</m>, and we solve it by first clearing fractions. We multiply both sides by <m>x^2</m>, and then subtract <m>5x^2</m> to obtain
     <me>x^4-5x^2+4=0</me>
 Then we factor the left side to get
@@ -28,18 +29,40 @@ We solve each of these equations to find
     <me>x=1,~~ x=-1, ~~ x=2, ~~ \text{or} ~~ x=-2</me>
 Finally, we substitute each of these values into <m>y=\dfrac{2}{x}</m> to find the  <m>y</m>-components of each solution. The intersection points of the two graphs are <m>(1,2),~ (-1,-2), ~ (2,1)</m> and <m>(-2,-1)</m>. The graph of the system is shown below.</p>        
  
-   <sidebyside width="40%"><image source="images/fig-10-5-exm1ans.png"><description>conics</description></image></sidebyside>
+   <sidebyside width="40%"><image source="images/fig-example-circle-hyperbola"><description>conics</description></image></sidebyside>
 </solution></example>
 
-<exercise><statement><p>Find the intersection points of the graphs of
-    \begin{align*}
-                x^2-y^2\amp = 35\\
-                xy \amp = 6\\           
-                \end{align*}
-</p></statement>
+<exercise>
+    <title>Practice 1</title>
+    <webwork>
+         <pg-code>
+            Context("Point");
+            $answer=List("(6,1),(-6,-1)");
+            $my_evaluator = $answer -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
 
-<answer><m>(6,1),~ (-6,-1)</m></answer></exercise>
-</introduction>
+        </pg-code> 
+        <statement>
+            <p>Find the intersection points of the graphs of
+                <md>
+                    <mrow>x^2-y^2 \amp= 35</mrow>
+                    <mrow>xy \amp= 6</mrow>
+                </md>
+            </p>
+            <p>
+                Solution: <var name="$answer" width="12" evaluator="$my_evaluator" /> Note: list solutions as ordered pairs, and use a comma to different solutions.
+            </p> 
+        </statement>
+        <solution>
+            <p><m>(6,1)</m>, <m>(-6,-1) </m></p>
+        </solution>
+    </webwork>
+</exercise>
+
+</subsection>
 
 <subsection><title>Solving Systems by Elimination</title>
 
@@ -47,82 +70,117 @@ Finally, we substitute each of these values into <m>y=\dfrac{2}{x}</m> to find t
         <me>ax^2+by^2=c</me>
 elimination of variables is more efficient.</p>
 
-<example><statement><p>Find the solutions to the following system of the equations.
-        \begin{align*}
-                x^2-2y^2\amp = 1\\
-                \dfrac{x^2}{15}+\dfrac{y^2}{10} \amp = 1\\           
-                \end{align*}
-Verify the solutions on a graph.</p></statement>
+<example><statement>
+    <p>
+        Find the solutions to the following system of the equations.
+        <md><mrow>x^2 - 2y^2 \amp=1</mrow>
+            <mrow>\frac{x^2}{15}+\frac{y^2}{10}\amp=1 </mrow>
+        </md>
+        Verify the solutions on a graph.
+    </p></statement>
 
 <solution><p>We multiply the first equation by 3 and the second by 60 to obtain the new system
-        \begin{align*}
-                3x^2-6y^2\amp = 3\\
-                4x^2+6y^2 \amp = 60\\           
-                \end{align*}
+    <md>
+        <mrow>3x^2 − 6y^2 = 3</mrow>
+        <mrow>4x^2 + 6y^2 = 60</mrow>
+    </md>
     Adding these two equations, we have 
-        \begin{align*}
-                7x^2\amp = 63\\
-                x^2 \amp = 9\\
-                x \amp = \pm 3\\           
-                \end{align*}  
+        <md>
+            <mrow>7x^2 \amp= 63</mrow>
+            <mrow>x^2\amp=9</mrow>
+        </md>  
     We substitute these values for into any of the equations involving <m>y</m> and solve, to find the solutions <m>(3,2), ~ (3,-2),~ (-3,2)</m> and <m>(-3,-2)</m>.</p>
     <p>The two original equations describe a hyperbola and an ellipse. We can obtain graphs on a graphing utility by solving each equation for <m>y</m> to get 
-            \begin{align*}
-                y\amp = \pm\sqrt{\dfrac{x^2-1}{2}}\\
-                y \amp = \pm\sqrt{10(1-\dfrac{x^2}{15}}\\          
-                \end{align*} 
+            <md><mrow>y=\pm\sqrt{\frac{x^2-1}{2}} \quad\text{ and }\quad y=\pm\sqrt{10\left(1-\frac{x^2}{15} \right)}</mrow></md>
     We enter these equations to obtain the graph shown below. The solutions of the system are the intersection points of the graphs.</p>
                         
-<sidebyside width="40%"><image source="images/fig-10-5-exm2ans.png"><description>conics</description></image></sidebyside>
+<sidebyside width="40%"><image source="images/fig-gc-hyperbola-ellipse"><description>conics</description></image></sidebyside>
 
 </solution></example>
 
-<exercise> <statement><p>Find the intersection points of the graphs of
-        \begin{align*}
-                x^2-y^2\amp = 5\\
-                x^2 + y^2 \amp = 13\\           
-                \end{align*}</p></statement>
-    
-<answer><m>(2,3),~ (-2,3),~ (2,-3),~ (-2,-3)</m></answer></exercise>
+<exercise><title>Practice 2</title>
+    <webwork><pg-code>
+            Context("Point");
+            $answer=List("(2,3), (-2,3), (2,-3),(-2,-3)");
+            $my_evaluator = $answer -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+
+        </pg-code> 
+    <statement><p>Find the intersection points of the graphs of
+                <md><mrow>y^2-x^2 \amp= 5</mrow>
+                    <mrow>x^2+y^2 \amp= 13</mrow></md></p>
+            <p>Solution: <var name="$answer" width="20" evaluator="$my_evaluator" /> Note: list solutions as ordered pairs, and use a comma to different solutions.</p> 
+    </statement>
+        <solution> <p><m>(2,3)</m>, <m>(-2,3)</m>, <m>(2,-3) </m>, <m>(-2,-3)</m> </p>
+        </solution>
+</webwork></exercise>
 
 <p>For some quadratic systems, we can use a combination of elimination of variables and substitution.</p>
 
 <example><statement><p>Find the intersection of the circles given by the equations.
-        \begin{align*}
-                x^2 - 4x + y^2 + 2y\amp = 20\\
-                x^2 - 12x + y^2 + 10y \amp = -12\\           
-                \end{align*}</p></statement>
+    <md><mrow>x^2-4x+y^2+2y\amp=20</mrow>
+        <mrow>x^2-12x+y^2+10y\amp= -12</mrow></md></p></statement>
 
-<solution><p>We subtract the second equation from the first to obtain  
-            <me>8x-8y=32</me>
-    Solving for <m>x</m> we have
-            <me>x=y+4</me>        
-     We substitute <m>\alert{y+4}</m> for <m>x</m> into either of the original equations.  We'll use the first equation.
-            \begin{align*}
-                (\alert{y+4})^2 - 4(\alert{y+4}) + y^2 + 2y\amp = 20\\
-                (y^2+8y+16)- 4y-16 +y^2 + 2y \amp = 20\\
-                2y^2+6y-20 \amp = 0\\
-                y^2+3y-10 \amp = 0\\
-                (y+5)(y-2) \amp = 0\\           
-                \end{align*}
+<solution> <sidebyside widths="60% 38%" margins="0% 0%" valigns="middle middle">
+<p>We subtract the second equation from the first equation to obtain
+                <md><mrow>8x - 8y = 32</mrow></md>
+Solving for <m>x</m>, we have
+                <md><mrow>x = y + 4</mrow></md></p>
+    <image xml:id="fig-example-2circles"><description>two circles</description><latex-image>
+                <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                <![CDATA[\tikzset{%
+                }
+                \begin{tikzpicture} [scale=.6] 
+                \draw[lightgray] (-2,-7) grid (8,3);
+                \draw[black,thick,->,>=stealth'] (-2,0)--(8.8,0) node[right]{$x$};
+                \draw[black,thick,->,>=stealth'] (0,-7)--(0,3.8) node[above]{$y$};
+                \foreach \x [evaluate=\x as \xi using int(2*\x)] in {2,4,6} {
+                  \draw[black,thick] (\x,.15)--++(0,-.3) node[below, fill=white, inner sep=1, yshift=-2]{$\xi$};
+                  }
+                \foreach \x [evaluate=\x as \xi using int(2*\x)] in {2,-2,-4,-6} {
+                  \draw[black,thick] (.15,\x)--++(-.3,0) node[left, fill=white, inner sep=1, xshift=-2]{$\xi$};
+                }
+                \draw[red, very thick] (1,-1/2) circle (5/2);
+                \draw[blue, very thick] (3,-5/2) circle (7/2);
+                \filldraw[black] (-1/2,-5/2) circle (.15);
+                \filldraw[black] (3,1) circle (.15);
+                \end{tikzpicture}]]>
+                </latex-image></image></sidebyside>
+<p>Next, we substitute <m>\alert{y + 4}</m> for <m>x</m> into either of the original equations. We use the first equation to find
+        <md><mrow>(\alert{y+4})^2-4(\alert{y+4})+y^2+2y\amp= 20 \amp\amp \blert{\text{Remove parentheses.}}</mrow>
+            <mrow>(y^2+8y+16)-16+y^2+2y\amp=20 \amp\amp \blert{\text{Collect like terms.}}</mrow>
+            <mrow>2y^2+6y-20\amp=0 \amp\amp \blert{\text{Divide both sides by 2.}}</mrow>
+            <mrow>y^2+3y-10\amp= 0 \amp\amp \blert{\text{Factor the left side.}}</mrow>
+            <mrow>(y+5)(y-2)\amp= 0</mrow></md>
+Thus, <m>y = -5</m> or <m>y = 2</m>. From the equation <m>x = y + 4</m>, we find that when <m>y = -5</m>, <m>x =-1</m>, and when <m>y = 2</m>, <m>x = 6</m>. Thus the two circles intersect at <m>(-1, -5)</m> and <m>(6, 2)</m>, as shown in the figure above.</p></solution></example>
 
-    Thus <m>y=-5</m> or <m>y=2</m>. From our first new equation we find that when <m>y=-5,~ x=-1</m>, and when <m>y=2,~ x=6</m>. Thus the two circles intersect at <m>(-1,-5)</m> and <m>(6,2)</m>, as shown below.</p>
-
-<sidebyside width="45%"><image source="images/fig-10-5-exm3ans.png"><description>conics</description></image></sidebyside>
-</solution></example>
-
-<exercise> <statement><p>Find the intersection points of the graphs of
-        \begin{align*}
-                x^2-8x + y^2 + 2y\amp = 23\\
-                x^2 -12x + y^2 - 6y \amp = -25\\           
-                \end{align*}</p></statement>
-    
-<answer><m>(2,5),~ (10,1)</m></answer></exercise>   
+<exercise><title>Practice 3</title>
+    <webwork><pg-code>
+            Context("Point");
+            $answer=List("(2,5), (10,1)");
+            $my_evaluator = $answer -> cmp(
+             showHints=>1,
+             showLengthHints => 1,
+             partialCredit => 1,
+            ); 
+        </pg-code> 
+    <statement><p>Find the intersection points of the graphs of
+                <md><mrow>x^2 -8x+y^2+2y \amp= 23</mrow>
+                    <mrow>x^2-12x+y^2 -6y\amp= -25</mrow></md></p>
+            <p>Solution: <var name="$answer" width="20" evaluator="$my_evaluator" /> Note: list solutions as ordered pairs, and use a comma to different solutions.</p> 
+    </statement>
+        <solution><p><m>(2,5)</m>, <m>(10,1)</m> </p>
+        </solution>
+</webwork></exercise>
+   
 </subsection>
 
 
-<!-- <xi:include href="./summary-10-5.xml" /> summary  
-<xi:include href="./section-10-5-exercises.xml" /> exercises  -->
+<xi:include href="./summary-10-5.xml" />  
+<xi:include href="./section-10-5-exercises.xml" /> 
 
 </section> 
 <!-- </book>  </mathbook> -->
