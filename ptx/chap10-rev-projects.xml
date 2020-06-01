@@ -20,7 +20,25 @@
 
     <li>The signal says that Satellite A was located at <m>(100, 0)</m> at the time of transmission.  On the grid below, use a compass to sketch a graph showing your possible positions relative to Satellite A.
 
-    <sidebyside width="100%"><image source="images/fig-10-proj.png"><description>grid</description></image></sidebyside></li>   
+    <sidebyside width="100%"><image xml:id="fig-gps-grid">
+        <description>grid</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.45]
+        \draw[cyan] (-12,-12) grid (20,15);
+        \draw[black,thick,->,>=stealth'] (-12,0)--(20.8,0) node[right] {$x$};
+        \draw[black,thick,->,>=stealth'] (0,-12)--(0,15.8) node[above] {$y$};
+        \foreach \x [evaluate=\x as \xi using int(10*\x)]  in  {-10,-5,5,10,15} {
+         \draw[black, thick] (\x,0.14) --++(0,-.28) node[below, yshift=-2, fill=white, inner sep=1] {$\xi$};
+         \draw[black, thick] (0.14,\x) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1] {$\xi$};
+        }
+        \draw[red!80!black,ultra thick] (0,0) circle (10 );
+        \end{tikzpicture}]]>
+        </latex-image>
+        </image>
+    </sidebyside></li>   
 
     <li>Find an equation for the graph you sketched in part 2.</li>
 
@@ -44,7 +62,7 @@
 <p>The Global Positioning System (GPS) is very accurate, but it depends on perfectly synchronized clocks. An older navigational system, called LORAN (Long Range Navigation), is still used by sailors to locate their position at sea.  The system works by finding the intersection of two hyperbolas.</p>
 <p> Radio transmitters at known positions broadcast signals simultaneously, and the navigator notes the difference in the arrival times of the two signals. (This difference is calculated using only the navigator's clock, and does not depend on the time when the signals were transmitted.) From the time difference the navigator computes the difference in the distances to the two transmitters, using the speed of radio waves.</p>
 
-<sidebyside width="40%"><image source="images/fig-10-proj2.png"><description>hyperbolas</description></image></sidebyside> 
+<sidebyside width="40%"><image source="images/fig-LORAN"><description>hyperbolas</description></image></sidebyside> 
 
 <p>We know that a hyperbola is the set of all points in the plane for which the difference of the distances from two fixed points is a constant.  Thus, the navigator's position lies on a hyperbola with the two transmitters as the foci, as shown above.  A third transmitter signal compared with either of the first two determines a second hyperbola.  The navigator's position must be at the intersection of the two hyperbolas.</p>
 
@@ -55,7 +73,7 @@
                 \end{aligned}</me><!--*****-->
 A graph of the hyperbolas is shown below.</p> 
 
-<sidebyside width="80%"><image source="images/fig-10-proj3.png"><description>hyperbolas</description></image></sidebyside>
+<sidebyside width="85%"><image source="images/fig-LORAN2"><description>hyperbolas</description></image></sidebyside>
 
 <p><ol label="1">
     <li>Identify which hyperbola is the graph of each equation.  On which branch of each hyperbola is your ship located?</li>
