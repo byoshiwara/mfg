@@ -7,14 +7,14 @@
 <subsection><title>Summation Notation</title>
 
 <p>There is a convenient notation for representing a series. For example, consider the sum of the first fifteen terms of the sequence
-<me>4, 7, 10, \cdots, 3n+1, \cdots</me>
-To find the terms of the series we replace <m>n</m> in the general term <m>3n+1</m> by the numbers 1 through 15.  So, instead of writing out all the terms, we might express the sum as
-<me>\text{The sum, as}~ n~ \text{runs from 1 to 15, of}~ 3n+1</me>
+    <me>4, 7, 10, \cdots, 3n+1, \cdots</me>
+To find the terms of the series we replace <m>n</m> in the general term <m>3n+1</m> by the numbers 1 through 15. So, instead of writing out all the terms, we might express the sum as
+    <me>\text{The sum, as}~ n~ \text{runs from 1 to 15, of}~ 3n+1</me>
 We use the Greek letter <m>\Sigma</m> (called "sigma") to stand for "the sum," and we show the first and last values of <m>n</m> below and above the summation symbol <m>\Sigma</m>, like this:
-<me>\sum_{n=1}^{15} 3n+1</me>
+    <me>\sum_{n=1}^{15} 3n+1</me>
 Writing such an expression is sometimes called "using <term>sigma notation</term>."  The letter <m>n</m> is called the <term>index of summation</term>; it is like a variable because it represents numerical values.  </p> 
 
-<note><p>Any letter can be used for the index of summation; <m>i,~j,</m> and <m>k</m> are other common choices.  Of course, the letter used for the index of summation does not affect the sum.</p></note>  
+<note><p>Any letter can be used for the index of summation; <m>i,~j,</m> and <m>k</m> are other common choices. Of course, the letter used for the index of summation does not affect the sum.</p></note>  
 
 <example><statement><p>Use sigma notation to represent the sum of the first 20 terms of the sequence
 <me>-1, 2, 7, \cdots, k^2-2, \cdots</me></p></statement>
@@ -47,8 +47,16 @@ Writing such an expression is sometimes called "using <term>sigma notation</term
 </webwork>
 </exercise>
 
+<exercise><title>QuickCheck 1</title>
+<statement><p>What does the notation <m>\sum_{j=1}^{8} \dfrac{1}{j}</m> mean?<ol label="a">
+    <li>List 8 terms of the sequence <m>a_j=\dfrac{1}{j}</m>.</li>
+    <li>Add the numbers from 1 to 8 and take the reciprocal of the sum.</li>
+    <li>Add the reciprocals of the numbers from 1 to 8.</li>
+    <li>Add the first and eighth term of the sequence described.</li></ol></p></statement>
+<answer><p>Add the reciprocals of the numbers from 1 to 8.</p></answer></exercise>
+
 <p>The <term>expanded form</term> of a series written in sigma notation is obtained by writing out all the terms of the series.  For example,
-<me>\sum_{m=4}^{8} \dfrac{3}{m} = \dfrac{3}{4} + \dfrac{3}{5} + \dfrac{3}{6} + \dfrac{3}{7} + \dfrac{3}{8}</me></p>
+    <me>\sum_{m=4}^{8} \dfrac{3}{m} = \dfrac{3}{4} + \dfrac{3}{5} + \dfrac{3}{6} + \dfrac{3}{7} + \dfrac{3}{8}</me></p>
 
 <note><p>Notice that the series above has five terms, which is one more than the difference of the upper and lower limits of summation, <m>8 - 4</m>.</p></note> 
 
@@ -59,7 +67,7 @@ Writing such an expression is sometimes called "using <term>sigma notation</term
     <li><m>\displaystyle{\sum_{k=0}^{9} 2^k}</m></li></ol></p></statement>
 
 <solution><p><ol label = "a">
-    <li><p>Because the general term <m>90-5i</m> is linear, this is an arithmetic series.  By writing out the first few terms of the series,
+    <li><p>Because the general term <m>90-5i</m> is linear, this is an arithmetic series. By writing out the first few terms of the series,
         <me>85+80+75+70+\cdots</me>
     we can verify that the first term of the series is <m>a_1=85</m> and the common difference is <m>d=-5</m>.  We also need to know the last term of the series, so we substitute <n>n=13</n> in the general term to find <m>a_{13} = 90-5(13) = 25</m>
     Thus,
@@ -146,6 +154,15 @@ Writing such an expression is sometimes called "using <term>sigma notation</term
 </webwork>
 </exercise>  
 
+<exercise><title>QuickCheck 2</title>
+<statement><p>Which of these series is neither arithmetic nor geometric?<ol label="a">
+    <li><m>\sum_{k=5}^{15} (\dfrac{1}{2}k-4)</m>.</li>
+    <li><m>\sum_{m=1}^{50} 0.8^m</m></li>
+    <li><m>\sum_{n=2}^{12} (n^3+2)</m></li>
+    <li><m>\sum_{p=1}^{5} 5(1.5)^{2p}</m></li></ol></p></statement>
+<answer><p><m>\sum_{n=2}^{12} (n^3+2)</m></p></answer></exercise>    
+
+
   </subsection>
 
 <subsection><title>Infinite Series</title>
@@ -161,7 +178,7 @@ Writing such an expression is sometimes called "using <term>sigma notation</term
         <mrow>S_3 \amp = \dfrac{1}{2}+\dfrac{1}{4}+\dfrac{1}{8} = \dfrac{7}{8}</mrow>
         <mrow>S_4 \amp = \dfrac{1}{2}+\dfrac{1}{4}+\dfrac{1}{8}+\dfrac{1}{16} = \dfrac{15}{16}</mrow>
     </md>
-    Notice that for each partial sum, the new term added gets smaller and smaller: <m>\dfrac{1}{2</m>}, <m>\dfrac{1}{4}</m>, <m>\dfrac{1}{8}</m>, <m>\dfrac{1}{16},</m> and so on.  You can also see that as <m>n</m> increases and we add more and more terms of the series, the partial sums are getting closer to 1.  In fact, as <m>n</m> becomes very large, <m>S_n</m>  gets very close to 1.  It seems reasonable that the sum of all the terms of the series is 1.
+    Notice that for each partial sum, the new term added gets smaller and smaller: <m>\dfrac{1}{2}</m>, <m>\dfrac{1}{4}</m>, <m>\dfrac{1}{8}</m>, <m>\dfrac{1}{16},</m> and so on.  You can also see that as <m>n</m> increases and we add more and more terms of the series, the partial sums are getting closer to 1.  In fact, as <m>n</m> becomes very large, <m>S_n</m>  gets very close to 1.  It seems reasonable that the sum of all the terms of the series is 1.
 </p>
 
 <note><p>Will the partial sums ever be greater than 1?  No, because each new term <m>a_n</m> added is half the difference between  <m>S_n</m> and 1.</p></note>
@@ -195,7 +212,7 @@ Writing such an expression is sometimes called "using <term>sigma notation</term
 
 <p>Now let's return to the formula for <m>S_n</m> and write it in the form
     <me>S_n = \dfrac{a}{1-r} (1-r^n)</me>
-where we have factored <m>a</m> from the numerator.  If <m>\abs{r} \lt 1</m>, then <m>r^n</m> approaches 0, and the factor <m>1-r^n</m>  gets closer and closer to 1 as <m>n</m> grows larger.  Consequently, if we compute <m>S_n</m> for larger and larger values of <m>n</m>, the sum approaches the value
+where we have factored <m>a</m> from the numerator.  There are two cases to consider. If <m>\abs{r} \lt 1</m>, then <m>r^n</m> approaches 0, and the factor <m>1-r^n</m>  gets closer and closer to 1 as <m>n</m> grows larger.  Consequently, if we compute <m>S_n</m> for larger and larger values of <m>n</m>, the sum approaches the value
     <me>\dfrac{a}{1-r}</me>
 This analysis motivates us to define the sum of an infinite geometric series as follows.</p>
  
@@ -203,9 +220,17 @@ This analysis motivates us to define the sum of an infinite geometric series as 
  <p>The sum of an infinite geometric series <m>~~\displaystyle{\sum_{k=0}^{\infty} ar^{k-1}}~~</m> is
  <me>S_{\infty} = \dfrac{a}{1-r}~~~~~~\text{if}~~~~-1 \lt r \lt 1</me></p></assemblage> 
               
-<p>If <m>\abs{r} \gt 1</m>,  as in the infinite series
+<p>In the second case, if <m>\abs{r} \gt 1</m>,  as in the infinite series
     <me>3 + 6 + 12 + \cdots</me>
 where  <m>r = 2</m>, the terms become larger as <m>n</m> increases, and the sum of the series is not a finite number.  In this case the series does not have a sum.</p>
+
+<exercise><title>QuickCheck 3</title>
+<statement><p>Under what circumstances does the series <m>\sum_{k=0}^{\infty} ar^k</m>have a finite sum? <ol label="a">
+    <li>If <m>a \lt 1</m></li>
+    <li>If <m>\abs{r} \lt 1</m></li>
+    <li>If <m>a \lt r</m></li>
+    <li>If <m>ar \lt 1</m></li></ol></p></statement>
+<answer><p>If <m>\abs{r} \lt 1</m></p></answer></exercise>
 
 <example><statement><p>Make a table showing the first five partial sums of each series. Then use the formula to find the sum, if it exists.</p><p><ol label = "a" cols = "2">
     <li><m>~~\displaystyle{\sum_{j=0}^{\infty} 30(0.8)^j}~~</m></li>
@@ -236,14 +261,14 @@ where  <m>r = 2</m>, the terms become larger as <m>n</m> increases, and the sum 
                         <cell><m>80.68</m></cell></row>
                     </tabular></sidebyside>
 
-<p>This is an infinite geometric series with <m>a=30</m> and <m>r=0.8</m>. The series has a sum because <m>\abs{r} \lt 1</m>.  Thus,
-    <me>S_{\infty}=\dfrac{a}{1-r} = \dfrac{30}{1-0.8} = 150</me></p></li>
-<li><p>We evaluate the general term <m>3(\dfrac{4}{3})^m</m> for <m>m=1, 2, \cdots, 5</m> and compute the partial sums. For example,
+    <p>This is an infinite geometric series with <m>a=30</m> and <m>r=0.8</m>. The series has a sum because <m>\abs{r} \lt 1</m>.  Thus,
+        <me>S_{\infty}=\dfrac{a}{1-r} = \dfrac{30}{1-0.8} = 150</me></p></li>
+    <li><p>We evaluate the general term <m>3(\dfrac{4}{3})^m</m> for <m>m=1, 2, \cdots, 5</m> and compute the partial sums. For example,
     <!--*****--><me>\begin{aligned}[t]
                 S_1\amp = 3(\dfrac{4}{3})^1 = 4\\
                 S_2\amp = 3(\dfrac{4}{3})^1 + 3(\dfrac{4}{3})^2 = \dfrac{28}{3}\\                
                 \end{aligned}</me><!--*****-->
-and so on. The results, rounded to hundredths, are shown in the table.</p>
+    and so on. The results, rounded to hundredths, are shown in the table.</p>
 
  <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">              
                     <row bottom="minor">
@@ -311,7 +336,6 @@ The first term of this series is <m>0.21</m>, or <m>\dfrac{21}{100}</m>, and its
                 \amp = \dfrac{\dfrac{21}{100}}{\dfrac{99}{100}} = \dfrac{21}{99} = \dfrac{7}{33}\\                
                 \end{aligned}</me><!--*****-->
 Thus, the decimal number <m>0.2121\overline{21}</m> is equal to the fraction <m>\dfrac{7}{33}</m>. </p>
-
 
 <example><statement><p>Find a common fraction equivalent to  <m>0.3\overline{7}</m>.</p></statement>
 
