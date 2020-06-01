@@ -47,8 +47,41 @@ Thus, <m>a = 0.5</m> and <m>b = 3</m>, so the function is <m>f (x) = 0.5(3^ x )<
 
 <xi:include href="./assemblage-exponential-through-2-points.xml" />
 
-<exercise><statement><p>Use the ratio method to find an exponential function whose graph includes the points <m>(1, 20)</m> and <m>(3, 125)</m>.</p></statement>
-<answer><p><m>f (x) = 8(2.5)^x</m></p></answer></exercise>
+<exercise>
+	<title>Practice 1</title>
+    <webwork>
+         <pg-code>
+            $f = Formula("8* 2.5**x");
+        </pg-code> 
+        <statement>
+            <p>Use the ratio method to find an exponential function whose graph includes the points <m>(1, 20)</m> and <m>(3, 125)</m>.</p>
+            <p><m>f(x)=</m><var name="$f" width="10"/> </p>
+        </statement>
+        <solution>
+            <p><m>f (x) = 8(2.5)^x</m></p>
+        </solution>
+    </webwork>
+</exercise>
+
+<exercise><title>QuickCheck 1</title>
+<webwork>
+     <pg-code>       
+            $syst = RadioButtons(
+              ["Calculate the slope.",
+              "Subtract one equation from the other.",
+              "Divide one equation by the other.",
+              "Take the log of both sides."],
+              2, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>You have written a system of equations to fit an exponential function through two points. What is the next step?</p>
+        <p><var name="$syst" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>Divide one equation by the other.</p>
+    </solution>
+</webwork></exercise>
 
 <p>We can use the ratio method to find an exponential growth or decay model if we know two function values.</p>
 
@@ -72,16 +105,39 @@ Now we can solve this last equation for <m>b</m> to get <m>b = \sqrt[3]{2.25}\ap
 	\end{aligned}</me><!--*****-->
 Thus, <m>C(t) = 108.75(1.31)^t</m> , and the annual inflation rate was <m>31</m>%.</p></solution></example>
 
-<exercise><statement><p>The number of earthquakes that occur worldwide is a decreasing exponential function of their magnitude on the Richter scale. Between 2000 and 2005, there were <m>7480</m> earthquakes of magnitude <m>5</m> and <m>793</m> earthquakes of magnitude <m>6</m>. (Source: National Earthquake Information Center, U.S. Geological Survey)
-	<ol label="a">
-		<li>Find a formula for the number of earthquakes, <m>N(m)</m>, in terms of their magnitude.</li>
-		<li>It is difficult to keep an accurate count of small earthquakes. Use your formula to estimate the number of magnitude <m>1</m> earthquakes that occurred between 2000 and 2005. How many earthquakes of magnitude <m>8</m> occurred?</li>
-	</ol></p></statement>
+<exercise>
+	<title>Practice 2</title>
+    <webwork>
+         <pg-code>
+            Context()->variables->add(m=>"Real");
+            $b = Compute("793/7480");
+            $a = Compute("7480/$b**5");
+            $N = Formula("$a*$b**m");
+            $one = $N->eval(m=>1);
+            $eight = $N->eval(m=>8)->with(
+              tolType => 'absolute',
+              tolerance => .51,
+            );
 
-<answer><p><ol label="a">
-	<li><p><m>N(m) = 558,526,329(0.106)^m</m></p></li>
-	<li><p><m>59,212,751</m>; <m>~9</m></p></li>
-</ol></p></answer></exercise>
+        </pg-code> 
+        <statement>
+            <p>The number of earthquakes that occur worldwide is a decreasing exponential function of their magnitude on the Richter scale. Between 2000 and 2005, there were 7480 earthquakes of magnitude 5 and 793 earthquakes of magnitude 6. (Source: National Earthquake Information Center, U.S. Geological Survey)</p>
+            <p><ol label="a">
+                <li><p>Find a formula for the number of earthquakes, <m>N(m)</m>, in terms of their magnitude.</p>
+                <p><m>N(m)=</m><var name="$N" width="20"/> </p>
+                <p>Do not use any commas: For example, instead of "10,000" enter simply "10000".</p></li>
+                <li><p>It is difficult to keep an accurate count of small earthquakes. Use your formula to estimate the number of magnitude 1 earthquakes that occurred between 2000 and 2005. <var name="$one" width="8"/> </p> 
+                <p>How many earthquakes of magnitude 8 occurred?  <var name="$eight" width="2"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p><m>N(m) = 558,526,329(0.106)^m</m></p></li>
+                <li><p><m>59,212,751</m>; <m>~9</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Doubling Time</title><idx>doubling time</idx>
@@ -119,17 +175,57 @@ Thus, <m>C(t) = 108.75(1.31)^t</m> , and the annual inflation rate was <m>31</m>
 
 <p>In <xref ref="example-doubling-time" text="type-global"/>, it took the population <m>35</m> years to double. Notice that the calculations in parts (a) and (b) are identical after the first step. In fact, we can start at any point, and it will take the population <m>35</m> years to double. We say that <m>35</m> years is the <term>doubling time</term> for this population. In the Homework problems, you will show that any increasing exponential function has a constant doubling time.</p>
 
-<exercise><statement><p>In 2005, the population of Uganda was <m>26.9</m> million people and was growing by <m>3.2</m>% per year.
-	<ol label="a">
-		<li>Write a formula for the population of Uganda as a function of years since 2005.</li>
-		<li>How long will it take the population of Uganda to double?</li>
-		<li>Use your formula from part (a) to verify the doubling time for three doubling periods.</li>
-	</ol></p></statement>
-<answer><p><ol label="a">
-	<li><p><m>P(t) = 26.9(1.032)^t</m> million</p></li>
-	<li><p><m>22</m> years</p></li>
-	<li><p><m>P(0) = 26.9</m>; <m>~P(22)\approx 53.8</m>, <m>~P(44)\approx 107.6</m>, <m>~P(66)\approx 215.1</m></p></li>
-</ol></p></answer></exercise>
+<exercise><title>QuickCheck 2</title>
+<webwork>
+     <pg-code>       
+            $dubt = RadioButtons(
+              ["The doubling time of a population depends on its initial value.",
+              "An increasing exponential function has a constant doubling time.",
+              "The doubling time is twice the percent growth rate.",
+              "The doubling time is half the percent growth rate."],
+              1, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>Which statement is true?</p>
+        <p><var name="$dubt" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>An increasing exponential function has a constant doubling time.</p>
+    </solution>
+</webwork></exercise>
+
+<exercise>
+	<title>Practice 3</title>
+    <webwork>
+         <pg-code>
+            Context()->variables->add(t=>"Real");
+            $f = Formula("26.9*1.032**t");
+            $dt = Compute("log(2)/log(1.032)")->with(
+              tolType => 'absolute',
+              tolerance => .5,
+            );
+
+        </pg-code> 
+        <statement>
+            <p>In 2005, the population of Uganda was 26.9 million people and was growing by 3.2% per year.</p>
+            <p><ol label="a">
+                <li><p>Write a formula for the population of Uganda as a function of years since 2005.</p>
+                <p><m>P(t)=</m><var name="$f" width="12"/> million</p></li>
+                <li><p>How long will it take the population of Uganda to double?</p>
+                <p><var name="$dt" width="2"/> years</p></li>
+                <li><p>Use your formula from part (a) to verify the doubling time for three doubling periods.</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p><m>P(t) = 26.9(1.032)^t</m> million</p></li>
+                <li><p><m>22</m> years</p></li>
+                <li><p><m>P(0) = 26.9</m>; <m>P(22)\approx 53.8</m>, i.e.,  <m>P(22)\approx 2\cdot P(0)</m>; <m>P(44)\approx 107.6</m>, i.e.,  <m>P(44)\approx 2\cdot P(22)</m>; <m>P(66)\approx 215.1</m>, i.e.,  <m>P(66)\approx 2\cdot P(44)</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>If we know the doubling time for a population, we can immediately write down its growth law. Because the population of Egypt doubles in 35 years, we can write
 	<me>P(t) = 74 \cdot  2^{t/35}</me>
@@ -139,6 +235,26 @@ In this form, the growth factor for the population is <m>2^{1/35}</m>, and you c
 <p>If <m>D</m> is the doubling time for an exponential function <m>P(t)</m>, then
 	<me>P(t) = P_0 2^{t/D}</me></p>
 </assemblage>
+
+<exercise><title>QuickCheck 3</title>
+<webwork>
+     <pg-code>       
+            $dubfm = RadioButtons(
+              ["\(P(t)\) is twice the initial value.",
+              "After 2 years, \(P(t)=D\).",
+              "After \(D\) years, \(P(t)=2P_0\).",
+              "\(P(t)\) grows by a factor of \(D\)."],
+              2, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>The formula <m>P(t)=P_0 2^{t/D}</m> tells us that:</p>
+        <p><var name="$dubfm" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>After <m>D</m> years, <m>P(t)=2P_0</m>.</p>
+    </solution>
+</webwork></exercise>
 
 <p>So, from knowing the doubling time, we can easily find the growth rate of a population.</p>
 
@@ -155,8 +271,35 @@ In this form, the growth factor for the population is <m>2^{1/35}</m>, and you c
 	<li>We write <m>2^{t/115.87}</m> in the form <m>\left(2^{1/115.87}\right)^t</m> to see that the growth factor is <m>b = 2^{1/115.87}</m>, or <m>1.006</m>. For exponential growth, <m>b = 1 + r</m>, so <m>r = 0.006</m>, or <m>0.6</m>%.</li>
 	</ol></p></solution></example>
 
-<exercise><statement><p>At its current rate of growth, the population of Mexico will double in <m>36.8</m> years. What is its annual percent rate of growth?</p></statement>
-<answer><p><m>1.9\%</m></p></answer></exercise>
+<exercise>
+	<title>Practice 4</title>
+    <webwork>
+         <pg-code>
+            $r = Compute("100*(2**(1/36.8)-1)")->with(
+              tolType => 'absolute',
+              tolerance => .051,
+            );
+
+        </pg-code> 
+        <statement>
+            <p>At its current rate of growth, the population of Mexico will double in 36.8 years. What is its annual percent rate of growth?</p>
+            <p>Answer: <var name="$r" width="3"/>% </p>
+        </statement>
+        <solution>
+            <p>1.9%</p>
+        </solution>
+    </webwork>
+</exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+     <pg-code>                      
+        </pg-code> 
+    <statement>
+        <p>How can you find the growth factor for an exponential function when you know its doubling time?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Half-Life</title>
@@ -202,15 +345,56 @@ In this form, the growth factor for the population is <m>2^{1/35}</m>, and you c
     </tabular></sidebyside></li>
 </ol></p></solution></example>
 
-<exercise><statement><p>Alcohol is eliminated from the body at a rate of <m>15</m>% per hour.
-	<ol label="a">
-		<li>Write a decay formula for the amount of alcohol remaining in the body.</li>
-		<li>What is the half-life of alcohol in the body?</li>
-	</ol></p></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>A(t) = A_0(0.85)^t</m></p></li>
-	<li><p><m>4.3</m> hours</p></li>
-</ol></p></answer></exercise>
+<exercise><title>QuickCheck 4</title>
+<webwork>
+     <pg-code>       
+            $ddt = RadioButtons(
+              ["30 pounds of DDT dissolve in one year.",
+              "100 pounds of DDT dissolve in 30 years.",
+              "After 30 years, 100 pounds of DDT is reduced to 25 pounds.",
+              "Each half-pound of DDT takes 15 years to dissolve."],
+              2, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>The half-life of DDT is 15 years. This means that:</p>
+        <p><var name="$ddt" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>After 30 years, 100 pounds of DDT is reduced to 25 pounds.</p>
+    </solution>
+</webwork></exercise>
+
+<exercise>
+	<title>Practice 5</title>
+    <webwork>
+         <pg-code>
+            Context()->variables->add(A0 => ["Real",TeX=>"A_0"], t=>"Real");
+            $f = Formula("A0 * 0.85**t");
+            $hl = Compute("log(1/2)/log(0.85)")->with(
+              tolType => 'absolute',
+              tolerance => .05,
+            );
+
+            
+        </pg-code> 
+        <statement>
+            <p>Alcohol is eliminated from the body at a rate of 15% per hour.</p>
+            <p><ol label="a">
+                <li><p>Write a decay formula for the amount of alcohol remaining in the body, using <m>A_0</m> for the initial amount of alcohol.  [Note: Enter "A" to get <m>A_0</m>.].</p>
+                <p><m>A(t)=</m><var name="$f" width="15"/> </p></li>
+                <li><p>What is the half-life of alcohol in the body?</p>
+                <p><var name="$hl" width="3"/> hours</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>A(t) = A_0(0.85)^t</m></p></li>
+                <li><p><m>4.3</m> hours</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>Just as we can write an exponential growth law in terms of its doubling time, we can use the half-life to write a formula for exponential decay. For example, the  half-life of ibuprofen is <m>2.2</m> hours, so every <m>2.2</m> hours the amount remaining is reduced by a factor of <m>0.5</m>. After <m>t</m> hours a <m>200</m>-mg dose will be reduced to
 	<me>Q(t) = 200(0.5)^{t/2.2}</me>
@@ -237,8 +421,35 @@ In this form, the growth factor for the population is <m>2^{1/35}</m>, and you c
 		Thus, <m>1 - r = 0.8768</m>, so <m>r = 0.1232</m>, or <m>12.32</m>%.</li>
 </ol></p></solution></example>
 
-<exercise><statement><p>Cesium-137, with a half-life of <m>30</m> years, is one of the most dangerous by-products of nuclear fission. What is the annual decay rate for cesium-137?</p></statement>
-<answer><p><m>2.28\%</m></p></answer></exercise>
+<exercise>
+	<title>Practice 6</title>
+    <webwork>
+         <pg-code>
+            $r = Compute("100*(1-(1/2**(1/30)))")->with(
+              tolType => 'absolute',
+              tolerance => .005,
+            );
+
+        </pg-code> 
+        <statement>
+            <p>Cesium-137, with a half-life of 30 years, is one of the most dangerous by-products of nuclear fission. What is the annual decay rate for cesium-137?</p>
+            <p>Answer: <var name="$r" width="3"/>% </p>
+        </statement>
+        <solution>
+            <p><m>2.28\%</m></p>
+        </solution>
+    </webwork>
+</exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+     <pg-code>                      
+        </pg-code> 
+    <statement>
+        <p>How can you use the half-life to sketch a graph of an exponential function?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Annuities and Amortization</title>
@@ -276,8 +487,26 @@ In this form, the growth factor for the population is <m>2^{1/35}</m>, and you c
 	Greta must contribute for over <m>22</m> years in order to accumulate $<m>100,000</m>.</li>
 </ol></p></solution></example>
 
-<exercise><statement><p>Rufus is saving for a new car. He puts $<m>2500</m> a year into an account that pays <m>4</m>% interest compounded annually. How many years will it take him to accumulate $<m>20,000</m>? (Round up to the next whole year.)</p></statement>
-<answer><p><m>8</m> years</p></answer></exercise>
+<exercise>
+	<title>Practice 7</title>
+    <webwork>
+         <pg-code>
+            $P = 2500;
+            $r = 0.04;
+            $n = 1;
+            $FV = 20000;
+            $t = Compute("log($FV*$r/($P*$n)+1)/($n*log(1+$r/$n)) ");
+            $answer = ceil($t);
+        </pg-code> 
+        <statement>
+            <p>Rufus is saving for a new car. He puts $2500 a year into an account that pays 4% interest compounded annually. How many years will it take him to accumulate $20,000? (Round up to the next whole year.)</p>
+            <p>Answer: <var name="$answer" width="2"/> years</p>
+        </statement>
+        <solution>
+            <p>8 years</p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>In <xref ref="example-future-value" text="type-global"/>, we knew the monthly deposits into the annuity and calculated how much the sum of all the deposits (plus interest) would be in the future. Now imagine that you have just retired and you want to begin drawing monthly payments from your retirement fund. The total amount accumulated in your fund is now its <term>present value</term>, and that amount must cover your future withdrawal payments.</p>
 
@@ -295,8 +524,29 @@ Delbert's Aunt Welthy should deposit $<m>21,719.63</m>.</p></solution></example>
 
 <p>Payments on a loan, such as a home mortgage, are also an annuity, but in this case the monthly payments do not collect interest; instead, we must pay interest on the present value of the loan. Repaying a loan (plus interest) by making a sequence of equal payments is called <term>amortizing</term><idx>amortize</idx> the loan.</p>
 
-<exercise><statement><p>Use the formula for the present value of an annuity to calculate your monthly mortgage payment on a home loan of $<m>250,000</m> amortized over <m>30</m> years at <m>6</m>% interest compounded monthly.</p></statement>
-<answer><p><m>\$1498.88</m></p></answer>
+<exercise>
+	<title>Practice 8</title>
+    <webwork>
+         <pg-code>
+            Context()->{format}{number} = "%.2f";   
+            $PV = 250000;
+            $r = 0.06;
+            $n = 12;
+            $t = 30;
+            $P = Compute("$PV *$r/( $n*(1-(1+$r/$n)**(-$n*$t)) )")->with(
+              tolType => 'absolute',
+              tolerance => .0051,
+            );
+
+        </pg-code> 
+        <statement>
+            <p>Use the formula for the present value of an annuity to calculate your monthly mortgage payment on a home loan of $250,000 amortized over 30 years at 6% interest compounded monthly.</p>
+            <p>$<var name="$P" width="8"/> </p>
+        </statement>
+        <solution>
+            <p><m>\$1498.88</m></p>
+        </solution>
+    </webwork>
 </exercise>
 
 </subsection>

@@ -164,36 +164,57 @@
 	</tabular></sidebyside>
 		<p>Solving this last equation gives us <m>b = 2</m>. Then we substitute <m>b = 2</m> into either of Equations (4) or (5) to find <m>a = -3</m>. Finally, we substitute both values into one of the three original equations to find <m>c = 4</m>. The solution of the system is <m>a = -3</m>, <m>b = 2</m>, <m>c = 4</m>.</p></solution></example>
 
-<exercise><statement><p>Follow the steps to solve the system
-		<me>
-		\begin{alignedat}{9}
-		a \amp {}+{} \amp b \amp {}+{} \amp c \amp {}={} \amp 3\amp\hphantom{blankblank} \amp(1)\\
-		4a \amp {}-{} \amp b \amp {}+{} \amp c \amp {}={} \amp -4\amp\amp(2) \\
-		-3a \amp {}+{} \amp 2b \amp {}+{} \amp c \amp {}={} \amp 4\amp\amp(3) 
-		\end{alignedat}
-		</me>
-<!--		<dl>
-			<li><title>Step 1: </title>
-				<p>Eliminate <m>c</m> from Equations (1) and (2) to obtain a new Equation (4).</p>
-			</li>
-			<li><title>Step 2: </title>
-				<p>Eliminate <m>c</m> from Equations (2) and (3) to obtain a new Equation (5).</p>
-			</li>
-			<li><title>Step 3: </title>
-				<p>Solve the system of Equations (4) and (5).</p>
-			</li>
-			<li><title>Step 4: </title>
-				<p>Substitute the values of <m>a</m> and <m>b</m> into one of the original equations to find <m>c</m>.</p>
-			</li>
-		</dl>
-	-->
-	<ol label="1">
-		<li>Eliminate <m>c</m> from Equations (1) and (2) to obtain a new Equation (4).</li>
-		<li>Eliminate <m>c</m> from Equations (2) and (3) to obtain a new Equation (5).</li>
-		<li>Solve the system of Equations (4) and (5).</li>
-		<li>Substitute the values of <m>a</m> and <m>b</m> into one of the original equations to find <m>c</m>.</li>
-		</ol></p></statement>
-<answer><p><m>a = 1, b = 5, c = -3</m></p></answer></exercise>
+<exercise>
+	<title>Practice 1</title>
+    <webwork>
+         <pg-code>
+            Context("ImplicitPlane")->variables->add(a=>"Real",b=>"Real", c=>"Real");
+            $eq4 = ImplicitPlane("3*a -2*b =  -7");
+            $eq5 = ImplicitPlane("7*a -3*b =  -8");
+            $a = Compute("1");
+            $b = Compute("5");
+            $c = Compute("-3");
+        </pg-code> 
+        <statement>
+            <p>Follow the steps to solve the system
+        <me>
+        \begin{alignedat}{9}
+        a \amp {}+{} \amp b \amp {}+{} \amp c \amp {}={} \amp 3\amp\hphantom{blankblank} \amp(1)\\
+        4a \amp {}-{} \amp b \amp {}+{} \amp c \amp {}={} \amp -4\amp\amp(2) \\
+        -3a \amp {}+{} \amp 2b \amp {}+{} \amp c \amp {}={} \amp 4\amp\amp(3) 
+        \end{alignedat}
+        </me>
+<!--        <dl>
+            <li><title>Step 1: </title>
+                <p>Eliminate <m>c</m> from Equations (1) and (2) to obtain a new Equation (4).</p>
+            </li>
+            <li><title>Step 2: </title>
+                <p>Eliminate <m>c</m> from Equations (2) and (3) to obtain a new Equation (5).</p>
+            </li>
+            <li><title>Step 3: </title>
+                <p>Solve the system of Equations (4) and (5).</p>
+            </li>
+            <li><title>Step 4: </title>
+                <p>Substitute the values of <m>a</m> and <m>b</m> into one of the original equations to find <m>c</m>.</p>
+            </li>
+        </dl>
+    -->
+    <ol label="1">
+        <li><p>Eliminate <m>c</m> from Equations (1) and (2) to obtain a new Equation (4).</p>
+        <p><var name="$eq4" width="20"/> </p></li>
+        <li><p>Eliminate <m>c</m> from Equations (2) and (3) to obtain a new Equation (5).</p>
+        <p><var name="$eq5" width="20"/> </p></li>
+        <li><p>Solve the system of Equations (4) and (5).</p>
+        <p><m>a=</m><var name="$a" width="2"/>,  <m>b=</m><var name="$b" width="2"/></p></li>
+        <li><p>Substitute the values of <m>a</m> and <m>b</m> into one of the original equations to find <m>c</m>.</p>
+        <p><m>c=</m><var name="$c" width="2"/></p></li>
+        </ol></p>
+        </statement>
+        <solution>
+            <p><m>a = 1, b = 5, c = -3</m></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Finding a Quadratic Function through Three Points</title>
@@ -289,16 +310,55 @@ Thus, the equation of the parabola is
 The parabola and the three points are shown below.</p>
 	<sidebyside width="25%"><image source="images/fig-parabola-through-3-specified-points" ><description>parabola through-3 specified points</description></image></sidebyside></solution></example>
 
-<exercise><statement><p><ol label="a">
-	<li><p>Find the equation of a parabola
-				<me>y = ax^2 + bx + c</me>
-	that passes through the points <m>(0, 80)</m>, <m>(15, 95)</m>, and <m>(25, 55)</m>.</p></li>
-	<li><p>Plot the data points and sketch the parabola.</p></li>
-	</ol></p>	</statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>y = \frac{-1}{5} x^2 + 4x + 80</m></p></li>
-	<li><sidebyside width="50%"><image source="images/fig-in-ex-ans-6-6-2"><description>parabola</description></image></sidebyside></li>
-</ol></p></answer></exercise>
+<exercise><title>QuickCheck 1</title>
+<webwork>
+     <pg-code>       
+            $elim = RadioButtons(
+              ["\(a\)",
+              "\(b\)",
+              "\(c\)",
+              "\(x\)"],
+              2, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>When we solve a system to fit a parabola through three points, which variable should we eliminate first?</p>
+        <p><var name="$elim" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>c</m></p>
+    </solution>
+</webwork></exercise>
+
+<exercise>
+	<title>Practice 2</title>
+    <webwork>
+         <pg-code>
+           Context("LimitedPolynomial")->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
+           Context()->flags->set(singlePowers=>1);
+            $answer= Formula(" -1/5*x^2+4x+80");
+            
+        </pg-code> 
+        <statement>
+            <p><ol label="a">
+            <li><p>Find the equation of a parabola
+                        <me>y = ax^2 + bx + c</me>
+            that passes through the points <m>(0, 80)</m>, <m>(15, 95)</m>, and <m>(25, 55)</m>.</p>
+            <p><m>y=</m><var name="$answer" width="15"/> </p></li>
+            <li><p>Plot the data points and sketch the parabola.</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>y = \frac{-1}{5} x^2 + 4x + 80</m></p></li>
+                <li><p>A graph is below.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="25%" margins="0% 70%"><image source="images/fig-in-ex-ans-6-6-2"><description>parabola</description></image></sidebyside>
+    </conclusion>
+</exercise>
 	
 <p>The simplest way to fit a parabola to a set of data points is to pick three of the points and find the equation of the parabola that passes through those three points.</p>
 
@@ -349,27 +409,55 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
 		<me>C = 0.006v^2 - 0.5v + 16.2</me> The graph of this function, along with the data points, is shown at right.</p>
 	<image source="images/fig-parabola-fitting-scatterplot"><description>parabola fitting nonlinear scatterplot</description></image></sidebyside></solution></example>
 
-<exercise><statement><p>Sara plans to start a side business selling eggs. She finds that the total number of eggs produced each day depends on the number of hens confined in the henhouse, as shown in the table. Use the first three data points to find a quadratic model <m>E = an^2 + bn + c</m>. Plot the data and sketch the curve on the same axes.</p>
-	<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-			<row>
-				<cell>Number of hens, <m>n</m> </cell>
-				<cell><m>15</m></cell>
-				<cell><m>20</m></cell>
-				<cell><m>25</m></cell>
-				<cell><m>30</m></cell>
-				<cell><m>36</m></cell>
-				<cell><m>39</m></cell></row>
-			<row>
-				<cell>Number of eggs, <m>E</m> </cell>
-				<cell><m>15</m></cell>
-				<cell><m>18</m></cell>
-				<cell><m>20</m></cell>
-				<cell><m>21</m></cell>
-				<cell><m>21</m></cell>
-				<cell><m>20</m></cell></row>			
-		</tabular></sidebyside></statement>
-<answer><p><m>E = -0.02n^2 + 1.3n</m></p>
-<sidebyside width="30%"><image source="images/fig-in-ex-ans-6-6-3"><description>parabola fit to points</description></image></sidebyside></answer></exercise>
+<exercise>
+	<title>Practice 3</title>
+    <webwork>
+         <pg-code>
+            Context()->variables->are(n=>"Real");
+            $f = Formula("-0.02*n**2 + 1.3*n");
+        </pg-code> 
+        <statement>
+            <p>Sara plans to start a side business selling eggs. She finds that the total number of eggs produced each day depends on the number of hens confined in the henhouse, as shown in the table. Use the first three data points to find a quadratic model <m>E = an^2 + bn + c</m>.</p> 
+            <p><m>E=</m><var name="$f" width="20"/> </p>
+            <p>Plot the data and sketch the curve on the same axes.</p>
+            <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row>
+                    <cell>Number of hens, <m>n</m> </cell>
+                    <cell><m>15</m></cell>
+                    <cell><m>20</m></cell>
+                    <cell><m>25</m></cell>
+                    <cell><m>30</m></cell>
+                    <cell><m>36</m></cell>
+                    <cell><m>39</m></cell></row>
+                <row>
+                    <cell>Number of eggs, <m>E</m> </cell>
+                    <cell><m>15</m></cell>
+                    <cell><m>18</m></cell>
+                    <cell><m>20</m></cell>
+                    <cell><m>21</m></cell>
+                    <cell><m>21</m></cell>
+                    <cell><m>20</m></cell></row>            
+            </tabular></sidebyside>
+        </statement>
+        <solution>
+            <p><m>E = -0.02n^2 + 1.3n</m></p>
+            <p>A graph is below.</p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="35%" margins="0% 60%"><image source="images/fig-in-ex-ans-6-6-3"><description>parabola fit to points</description></image></sidebyside>
+    </conclusion>
+</exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+     <pg-code>                      
+        </pg-code> 
+    <statement>
+        <p>Explain how to fit a parabola through three points.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Finding an Equation in Vertex Form</title>
@@ -408,15 +496,60 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
 	Andre's shot will score.</p></li>
 	</ol></p></solution></example>
 
-<exercise><statement><p>Francine is designing a synchronized fountain display for a hotel in Las Vegas. For each fountain, water emerges in a parabolic arc from a nozzle <m>3</m> feet above the ground. Francine would like the vertex of the arc to be <m>8</m> feet high and <m>2</m> feet horizontally from the nozzle.<ol label="a">
-		<li><p>Choose a coordinate system for the diagram below and write a function for the path of the water.</p>
-		<sidebyside  width="35%"><image source="images/fig-water-fountain"><description>water fountain with parabolic water stream</description></image></sidebyside></li>
-		<li><p>How far from the base of the nozzle will the stream of water hit the ground?</p></li>
-	</ol></p></statement>
-<answer><p><ol label="a">
-	<li><p>With the origin on the ground directly below the nozzle, <m>y = \frac{-5}{4} x^2 + 5x + 3</m>.</p></li>
-	<li><p>Approximately <m>4.53</m> feet</p></li>
-</ol></p></answer></exercise>
+<exercise><title>QuickCheck 2</title>
+<webwork>
+     <pg-code>       
+            $morpt = RadioButtons(
+              ["One",
+              "Two",
+              "Three",
+              "None"],
+              0, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>If you know the vertex of a parabola, how many more points do you need to find its equation?</p>
+        <p><var name="$morpt" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>One</p>
+    </solution>
+</webwork></exercise>
+
+<exercise>
+	<title>Practice 4</title>
+    <introduction>
+        <sidebyside  width="35%"><image source="images/fig-water-fountain"><description>water fountain with parabolic water stream</description></image></sidebyside>
+    </introduction>
+    <webwork>
+         <pg-code>
+            Context()->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
+            $f = Formula(" -5/4*(x-2)^2+8");
+            $d = Formula("2+4*sqrt(2/5)")->with(
+              tolType => 'absolute',
+              tolerance => .05,
+            );
+
+        </pg-code> 
+        <statement>
+            <p>Francine is designing a synchronized fountain display for a hotel in Las Vegas. For each fountain, water emerges in a parabolic arc from a nozzle <m>3</m> feet above the ground. Francine would like the vertex of the arc to be <m>8</m> feet high and <m>2</m> feet horizontally from the nozzle.</p>
+            <p><ol label="a">
+                <li><p>Choose a coordinate system for the diagram below and write a function for the path of the water.</p>
+                <p>With the origin on the ground directly below the nozzle,</p>
+                <p><m>y=</m><var name="$f" width="15"/> Use <m>x</m> to represent the horizontal distance from the origin.</p>
+                </li>
+                <li><p>How far from the base of the nozzle will the stream of water hit the ground?</p>
+                <p>Answer: <var name="$d" width="13"/> feet </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p>With the origin on the ground directly below the nozzle, <m>y = \frac{-5}{4} x^2 + 5x + 3</m>.</p></li>
+                <li><p>Approximately <m>4.53</m> feet</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <technology><title><!--<image source="images/icon-GC.jpg"  width="8%"><description>Graphing Calculator</description></image>-->Using a Calculator for Quadratic Regression</title>
 
@@ -435,35 +568,80 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
 			<sidebyside width="70%"><image source="images/fig-GC-quadratic-regression2" ><description>GC plot and GC table quadratic regression output</description></image></sidebyside></li>
 	</ol></p></solution></example>
 
-<exercise><statement><p>To test the effects of radiation, a researcher irradiated male mice with various dosages and bred them with unexposed female mice. The table below shows the fraction of fertilized eggs that survived, as a function of the radiation dosage. (Source: Strickberger, Monroe W., 1976)</p>
-		<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-	        <row bottom="minor">
-	            <cell>Radiation (rems)</cell>
-	            <cell><m>100</m></cell>
-	            <cell><m>300</m></cell>
-	            <cell><m>500</m></cell>
-	            <cell><m>700</m></cell>
-	            <cell><m>900</m></cell>
-	            <cell><m>1100</m></cell>
-	            <cell><m>1500</m></cell></row>
-	        <row bottom="minor">
-	            <cell><line>Relative survival</line><line>of eggs</line></cell>
-	            <cell><m>0.94</m></cell>
-	            <cell><m>0.700</m></cell>
-	            <cell><m>0.544</m></cell>
-	            <cell><m>0.424</m></cell>
-	            <cell><m>0.366</m></cell>
-	            <cell><m>0.277</m></cell>
-	            <cell><m>0.195</m></cell></row>
-	    </tabular></sidebyside><p><ol label="a">
-		<li><p>Enter the data into your calculator and create a scatterplot. Does the graph appear to be linear? Does it appear to be quadratic?</p></li>
-		<li><p>Fit a quadratic regression equation to the data and graph the equation on the scatterplot.</p></li>
-		</ol></p></statement>
-<answer><p><ol label="a">
-	<li><p>The graph appears to be quadratic.</p></li>
-	<li><p><m>y = 3.65x^2 - 0.001x + 1.02</m></p>
-	<sidebyside width="40%"><image source="images/fig-in-ex-ans-6-6-5"><description>parabola fit to points</description></image></sidebyside></li>
-</ol></p></answer></exercise>
+<exercise>
+	<title>Practice 5</title>
+    <webwork>
+         <pg-code>
+            $Pop = PopUp(
+            ["?","linear","quadratic"],
+            2, 
+            );
+            $f = Formula("3.650137741*10**(-7)x**2-0.001*x+1.02")->with(
+              tolType => 'relative',
+              tolerance => .01,
+            );
+
+            
+        </pg-code> 
+        <statement>
+            <p>To test the effects of radiation, a researcher irradiated male mice with various dosages and bred them with unexposed female mice. The table below shows the fraction of fertilized eggs that survived, as a function of the radiation dosage. (Source: Strickberger, Monroe W., 1976)</p>
+            <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+            <row bottom="minor">
+                <cell>Radiation (rems)</cell>
+                <cell><m>100</m></cell>
+                <cell><m>300</m></cell>
+                <cell><m>500</m></cell>
+                <cell><m>700</m></cell>
+                <cell><m>900</m></cell>
+                <cell><m>1100</m></cell>
+                <cell><m>1500</m></cell></row>
+            <row bottom="minor">
+                <cell><line>Relative survival</line><line>of eggs</line></cell>
+                <cell><m>0.94</m></cell>
+                <cell><m>0.700</m></cell>
+                <cell><m>0.544</m></cell>
+                <cell><m>0.424</m></cell>
+                <cell><m>0.366</m></cell>
+                <cell><m>0.277</m></cell>
+                <cell><m>0.195</m></cell></row>
+            </tabular></sidebyside><p><ol label="a">
+            <li><p>Enter the data into your calculator and create a scatterplot. Does the graph appear to be linear? Does it appear to be quadratic? <var name="$Pop" form="popup"/> </p></li>
+            <li><p>Fit a quadratic regression equation to the data and graph the equation on the scatterplot.</p>
+            <p><m>y=</m><var name="$f" width="25"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p>The graph appears to be quadratic.</p></li>
+                <li><p><m>y = 3.65\times 10^{-7}x^2 - 0.001x + 1.02</m></p>
+                </li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="40%" margins="0% 60$"><image source="images/fig-in-ex-ans-6-6-5"><description>parabola fit to points</description></image></sidebyside>
+    </conclusion>
+</exercise>
+
+<exercise><title>QuickCheck 3</title>
+<webwork>
+     <pg-code>       
+            $qureg = RadioButtons(
+              ["One",
+              "Two",
+              "Three",
+              "None"],
+              3, 
+            );             
+        </pg-code> 
+    <statement>
+        <p>How many data points must a quadratic regression graph pass through?</p>
+        <p><var name="$qureg" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>None</p>
+    </solution>
+</webwork></exercise>
 
 <warning><p>We must be careful that our data set gives a complete picture of the situation we want to model. A regression equation may fit a particular collection of data and still be a poor model if the rest of the data diverge from the regression graph.</p>
 <sidebyside widths="30% 50%" valigns="middle middle">
@@ -512,35 +690,92 @@ From either the graph of the regression equation or from the table (see figure b
 <image source="images/fig-quadratic-fit-of-periodic"><description>parabola fit on part of a periodic wave</description></image> 
 <p>The graph of the height is shown at left, along with the graph of our quadratic regression equation. You can see that the regression equation fits the actual curve only on a small interval.</p>
 </sidebyside>
+
 <p>Your calculator can always compute a regression equation, but that equation is not necessarily appropriate for your data. Choosing a reasonable type of regression equation for a particular data set requires knowledge of different kinds of models and the physical or natural laws that govern the situation at hand.</p>
 
-<exercise><statement><p>A speeding motorist slams on the brakes when she sees an accident directly ahead of her. The distance she has traveled <m>t</m> seconds after braking is shown in the table.</p>
-		<sidebyside><tabular  top="major" halign="center" right="minor" left="minor" bottom="minor">
-			<row>
-				<cell>Time (seconds)</cell>
-				<cell><m>0</m></cell>
-				<cell><m>0.5</m></cell>
-				<cell><m>1.0</m></cell>
-				<cell><m>1.5</m></cell>
-				<cell><m>2.0</m></cell>
-				<cell><m>2.5</m></cell></row>
-			<row>
-				<cell>Distance (feet)</cell>
-				<cell><m>0</m></cell>
-				<cell><m>51</m></cell>
-				<cell><m>95</m></cell>
-				<cell><m>131</m></cell>
-				<cell><m>160</m></cell>
-				<cell><m>181</m></cell></row>
-		</tabular></sidebyside><p><ol label="a">
-		<li><p>Enter the data into your calculator and create a scatterplot. Fit a quadratic regression equation to the data and graph the equation on the scatterplot.</p></li>
-		<li><p>Use your regression equation to find the vertex of the parabola. What do the coordinates represent in terms of the problem?</p></li>
-	</ol></p></statement>
-<answer><p><ol label="a">
-	<li><p><m>y = -15x^2 + 110x - 0.07</m></p>
-	<sidebyside width="40%"><image source="images/fig-in-ex-ans-6-6-6.jpg"><description>parabola fit to points</description></image></sidebyside></li>
-	<li><p><m>(3.67, 201)</m>: The car came to a stop in <m>3.67</m> seconds, after sliding <m>201</m> feet.</p></li>
-</ol></p></answer></exercise>
+<exercise><title>QuickCheck 4</title>
+<webwork>
+     <pg-code>       
+            $limpar = RadioButtons(
+              ["A parabola is a good model for any non-linear curve.",
+              "We will get the same equation by fitting a parabola through any three points of a data set.",
+              "We can use elimination to fit a parabola through three points.",
+              "When we use quadratic regression, the lowest (or highest) point of a data set will be the vertex of the parabola."],
+              2, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>Which statement is true?</p>
+        <p><var name="$limpar" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>We can use elimination to fit a parabola through three points.</p>
+    </solution>
+</webwork></exercise>
+
+<exercise>
+	<title>Practice 6</title>
+    <webwork>
+         <pg-code>
+            Context("Point")->variables->set(x=>{limits=>[2,3]});
+            $f = Formula("-15*x**2+109.95714285714*x-0.071428571429")->with(
+              tolType => 'relative',
+              tolerance => .02,
+            );
+            $v = Point("(3.665238095,201.43812585)")->with(
+              tolType => 'relative',
+              tolerance => .01,
+            );            
+        </pg-code> 
+        <statement>
+            <p>A speeding motorist slams on the brakes when she sees an accident directly ahead of her. The distance she has traveled <m>t</m> seconds after braking is shown in the table.</p>
+            <sidebyside><tabular  top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row>
+                    <cell>Time (seconds)</cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>0.5</m></cell>
+                    <cell><m>1.0</m></cell>
+                    <cell><m>1.5</m></cell>
+                    <cell><m>2.0</m></cell>
+                    <cell><m>2.5</m></cell></row>
+                <row>
+                    <cell>Distance (feet)</cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>51</m></cell>
+                    <cell><m>95</m></cell>
+                    <cell><m>131</m></cell>
+                    <cell><m>160</m></cell>
+                    <cell><m>181</m></cell></row>
+            </tabular></sidebyside>
+            <p><ol label="a">
+                <li><p>Enter the data into your calculator and create a scatterplot. Fit a quadratic regression equation to the data and graph the equation on the scatterplot.</p>
+                <p>Regression equation: <m>y=</m><var name="$f" width="15"/>  Use <m>x</m> for the time in seconds.</p></li>
+                <li><p>Use your regression equation to find the vertex of the parabola: <var name="$v" width="12"/> </p>
+                <p> What do the coordinates represent in terms of the problem?</p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p>A graph is below. </p><p><m>y = -15x^2 + 110x - 0.07</m></p>
+                </li>
+                <li><p><m>(3.67, 201)</m>: The car came to a stop in <m>3.67</m> seconds, after sliding <m>201</m> feet.</p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="40%" margins="0% 50%"><image source="images/fig-in-ex-ans-6-6-6.jpg"><description>parabola fit to points</description></image></sidebyside>
+    </conclusion>
+</exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+     <pg-code>                      
+        </pg-code> 
+    <statement>
+        <p>Why is it a bad idea to clculate a regression equation without first plotting the data?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 
 </subsection>
 <xi:include href="./summary-6-6.xml" /> <!-- summary  -->

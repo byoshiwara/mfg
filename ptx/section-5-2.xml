@@ -25,6 +25,26 @@ We have shown that the two functions <m>f(x) = x^3</m> and <m>g(x) = \sqrt[3]{x}
 	<p>The <term>logarithmic function</term><idx>logarithmic function</idx> base <m>b</m>, <m>g(x) = \log_b x</m>, is the inverse of the exponential function of the same base, <m>f(x) = b^x</m>.</p>
 </assemblage>
 
+<exercise><title>QuickCheck 1</title>
+<webwork>
+     <pg-code>       
+            $domlog = RadioButtons(
+              ["all real numbers.",
+              "all multiples of 3.",
+              "all non-negative numbers.",
+              "all positive numbers."],
+              3, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>The domain of the function <m>g(x)=\log_3 x</m> is</p>
+        <p><var name="$domlog" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>all positive numbers.</p>
+    </solution>
+</webwork></exercise>
+
 <p>For example, the function <m>g(x) = \log_2 x</m> is the inverse of <m>f(x) = 2^x</m>. Each function undoes the effect of the other. So, if we start with <m>x = 3</m>, apply <m>f</m>, and then apply <m>g</m> to the result, we return to the original number, 3.
 	<me>x=\alert{3}\mathrel{\mathop{\rightarrow}^{\blert{\text{Apply the}}}_{\blert{\text{exponential function}}}}
 		 f(\alert{3})=2^{\alert{3}}=8		
@@ -40,6 +60,7 @@ A similar equation holds for any value of <m>x</m> and for any base <m>b \gt 0</
 		<li><m>\log_{4}{4^6}</m></li>
 		<li><m>\log_{8}{8^{2a+3}}</m></li>
 	</ol></p></statement>
+
 <solution><p><ol label="a">
 	<li><p>In this expression, we start with <m>6</m>, apply the exponential function with base <m>4</m>, and then take a logarithm base <m>4</m>. Because the logarithm is the inverse of the exponential function, we return to the original number, <m>6</m>.
 		<me>x=\alert{6}\mathrel{\mathop{\rightarrow}^{\blert{\text{Apply the}}}_{\blert{\text{exponential function}}}}
@@ -50,14 +71,28 @@ A similar equation holds for any value of <m>x</m> and for any base <m>b \gt 0</
 	<li><p>The input of the exponential function is the expression <m>2a + 3</m>. Because the bases of the log and the exponential function are both <m>8</m>, they are inverse functions, and applying them in succession returns us to the original input. Thus, <m>\log_{8}{8^{2a+3}} = 2a + 3</m>.</p></li>
 	</ol></p></solution></example>
 
-<exercise><statement><p>Simplify each expression.<ol label="a">
-		<li><m>\log_{10}{10^6}</m></li>
-		<li><m>\log_{w}{w^{x+1}},~~</m> for <m>~~~~w \gt 0, ~~w\ne 1</m></li>
-	</ol></p></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>6</m></p></li>
-	<li><p><m>x+1</m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 1</title>
+    <webwork>
+         <pg-code>
+            Context()->functions->disable("All");
+            $a = Compute("6");
+            $b = Formula("x+1");
+        </pg-code> 
+        <statement>
+            <p>Simplify each expression.<ol label="a">
+                <li><p><m>\log_{10}{10^6}=</m><var name="$a" width="2"/> </p></li>
+                <li><p><m>\log_{w}{w^{x+1}}=</m><var name="$b" width="2"/> , for <m>w \gt 0, ~ w\ne 1</m></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>6</m></p></li>
+                <li><p><m>x+1</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>We can also apply the two functions in the opposite order. For example,
 	<me>2^{\log_2 \alert{8} }= \alert{8}</me>
@@ -79,14 +114,29 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 		<li>The log function, <m>\log_{Q}{x}</m>, and the exponential function, <m>Q^x</m>, are inverse functions, so <me>Q^{\log_{Q}{25}} = 25</me></li>
 	</ol></p></solution></example>
 
-<exercise><statement><p>Simplify each expression.<ol label="a" cols="2">
-			<li><m>4^{\log_4 {64}}</m></li>
-			<li><m>2^{\log_{2}{(x^2+1)}}</m></li>
-	</ol></p></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>64</m></p></li>
-	<li><p><m>x^2+1</m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 2</title>
+    <webwork>
+         <pg-code>
+            Context()->functions->disable("All");
+            
+            $a = Compute("64");
+            $b = Formula("x**2+1");
+        </pg-code> 
+        <statement>
+            <p>Simplify each expression.<ol label="a">
+                    <li><p><m>4^{\log_4 {64}}=</m><var name="$a" width="2"/> </p></li>
+                    <li><p><m>2^{\log_{2}{(x^2+1)}}=</m><var name="$b" width="4"/></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>64</m></p></li>
+                <li><p><m>x^2+1</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <p>We summarize these relationships as follows.</p>
 
@@ -138,8 +188,29 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
             <cell><m>4</m></cell>
             <cell><m>2</m></cell></row>
    </tabular>
-	<image source="images/fig-log-and-exp-on-same-grid"><description>graph of log and exponential base 2</description></image>
-</sidebyside>
+	<image source="images/fig-log-and-exp-on-same-grid"><description>graph of log and exponential base 2</description></image></sidebyside>
+
+<p>The same procedure works for graphing log functions with any base:  If we want to find values for the function <m>y=\log_b x</m>, we can find the values for the exponential function <m>y=b^x</m>, and then interchange the <m>x</m> and <m>y</m> values in each ordered pair.</p>
+
+<exercise><title>QuickCheck 2</title>
+<webwork>
+     <pg-code>       
+            $intlog = RadioButtons(
+              ["\((0,1)\)",
+              "\((1,0)\)",
+              "\((0,5)\)",
+              "There is none."],
+              3, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>What is the <m>y</m>-intercept of the graph of <m>y=\log_5 x</m> ?</p>
+        <p><var name="$intlog" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>There is none.</p>
+    </solution>
+</webwork></exercise>
 
 <example xml:id="example-log10-and-exp"><statement><p>Graph the function <m>f(x)=10^x</m> and its inverse <m>g(x)=\log_{10}{x}</m> on the same axes.</p></statement>
 <solution><p>We start by making a table of values for the function <m>f(x)=10^x</m>. We can make a table of values for the inverse function, <m>g(x) = \log_{10}{x}</m>, by interchanging the components of each ordered pair in the table for <m>f</m>.</p>
@@ -188,19 +259,87 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 </sidebyside><p>We plot each set of points and connect them with smooth curves to obtain the graphs shown above.</p>
 </solution></example>
 
-<exercise><statement><p>Make a table of values and graph the function <m>h(x) = \log_4 x</m>.</p>
-</statement>
-<answer><sidebyside width="30%"><image source="images/fig-in-ex-ans-5-2-3"><description>log</description></image></sidebyside></answer></exercise>
+<exercise>
+    <title>Practice 3</title>
+    <webwork>
+         <pg-code>
+            Context("Fraction");
+            $a = Compute("-1");
+            $b = Compute("0");
+            $c = Compute("1/2");
+            $d = Compute("1");
+            $e = Compute("2");
+        </pg-code> 
+        <statement>
+            <p>Make a table of values and graph the function <m>h(x) = \log_4 x</m>.</p>
+            <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+            <row>
+                <cell><m>x</m></cell>
+                <cell><m>\frac{1}{4} </m></cell>
+                <cell><m>1</m></cell>
+                <cell><m>2</m></cell>
+                <cell><m>4</m></cell>
+                <cell><m>16</m></cell>
+            </row>
+            <row>
+                <cell><m>\log_4 x</m></cell>
+                <cell><var name="$a" width="2"/></cell>
+                <cell><var name="$b" width="2"/></cell>
+                <cell><var name="$c" width="2"/></cell>
+                <cell><var name="$d" width="2"/></cell>
+                <cell><var name="$e" width="2"/></cell>
+            </row>
+            </tabular></sidebyside>
+        </statement>
+        <solution>
+            <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+            <row>
+                <cell><m>x</m></cell>
+                <cell><m>\frac{1}{4} </m></cell>
+                <cell><m>1</m></cell>
+                <cell><m>2</m></cell>
+                <cell><m>4</m></cell>
+                <cell><m>16</m></cell>
+            </row>
+            <row>
+                <cell><m>\log_4 x</m></cell>
+                <cell><m><var name="$a"/></m></cell>
+                <cell><m><var name="$b"/></m></cell>
+                <cell><m><var name="$c"/></m></cell>
+                <cell><m><var name="$d"/></m></cell>
+                <cell><m><var name="$e"/></m></cell>
+            </row>
+                </tabular></sidebyside>
+            <p>A graph is below.</p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="30%"><image source="images/fig-in-ex-ans-5-2-3"><description>log</description></image></sidebyside>
+    </conclusion>
+</exercise>
 
 <p>While an exponential growth function increases very rapidly for positive values, its inverse, the logarithmic function, grows extremely slowly, as you can see in <xref ref="example-log10-and-exp"/>. In addition, the logarithmic function <m>y = \log_b x</m> for any base <m>b \gt 0, b \ne 1</m>, has the following properties.</p>
 
 <xi:include href="./assemblage-logarithmic-functions-base-b.xml" />
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+     <pg-code>                      
+        </pg-code> 
+    <statement>
+        <p>Why does the function <m>f(x)=\log x</m> grow so slowly?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
+
+<p>Because the domain of a logarithmic function includes only the positive real numbers, the logarithm of a negative number or zero is undefined.</p>
 
 <example xml:id="example-invert-translated-exponential"><statement><p><ol label="a">
 		<li>Find the inverse of the function <m>f(x) = 2^{x-3} - 4</m>.</li>
 		<li>Graph <m>f</m> and <m>f^{-1}</m> on the same grid.</li>
 		<li>State the domain and range of <m>f</m> and of <m>f^{-1}</m>.</li>
 	</ol></p></statement>
+
 <solution><p><ol label="a">
 		<li><p>We write the function as <m>y = 2^{x-3} - 4</m>, and solve for <m>x</m> in terms of <m>y</m>. First, we isolate the power:
 			<!--*****--><me>\begin{aligned}[t]
@@ -218,20 +357,52 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 			\end{aligned}</me><!--*****--></p></li>
 	</ol></p></solution></example>
 
-<exercise><statement><ol label="a">
-		<li>Find the inverse function for <m>f(x) = 2 \log(x + 1)</m>.</li>
-		<li>Graph <m>f</m> and <m>f^{-1}</m> in the window
-			<me>\begin{aligned}[t]
-	        \text{Xmin} \amp = -6 \amp\amp \text{Xmax} = 6\\
-	        \text{Ymin} \amp = -4 \amp\amp \text{Ymax} = 4
-	        \end{aligned}</me></li>
-	    <li>State the domain and range of <m>f</m> and <m>f^{-1}</m>.</li>
-	</ol></statement>
-<answer><p><ol label="a">
-	<li><p><m>f^{-1}(x) = 10^{x/2} - 1 </m></p></li>
-	<li><sidebyside width="30%"><image source="images/fig-in-ex-ans-5-2-4.jpg"><description>log and inverse</description></image></sidebyside></li>
-	<li><p>Domain of <m>f</m>:  <m>(-1,\infty)</m>, Range of <m>f</m>: all real numbers, Domain of <m>f^{-1}</m>: all real numbers, Range of <m>f^{-1}</m>:  <m>(-1, \infty)</m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 4</title>
+    <webwork>
+         <pg-code>
+            Context(Inequalities);
+            $fi = Formula("10**(x/2)-1");
+            $domf = Compute("(-1,inf)");
+            $ranf = Compute("(-inf,inf)");
+        </pg-code> 
+        <statement>
+            <p><ol label="a">
+                <li><p>Find the inverse function for <m>f(x) = 2 \log(x + 1)</m>.</p>
+                <p><m>f^{-1}(x)= </m><var name="$fi" width="10"/> </p></li>
+                <li><p>Graph <m>f</m> and <m>f^{-1}</m> in the window
+                    <me>\begin{aligned}[t]
+                    \text{Xmin} \amp = -6 \amp\amp \text{Xmax} = 6\\
+                    \text{Ymin} \amp = -4 \amp\amp \text{Ymax} = 4
+                    \end{aligned}</me></p></li>
+                <li><p>State the domain and range of <m>f</m> and <m>f^{-1}</m>. Use "inf" for <m>\infty</m>.</p>
+                <p>Domain of <m>f</m>: <var name="$domf" width="10"/>; Range of <m>f</m>: <var name="$ranf" width="10"/> </p>
+                <p>Domain of <m>f^{-1}</m>: <var name="$ranf" width="10"/>; Range of <m>f^{-1} </m>: <var name="$domf" width="10"/></p>
+                </li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a">
+                <li><p><m>f^{-1}(x) = 10^{x/2} - 1 </m></p></li>
+                <li><p>A graph is below.</p></li>
+                <li><p>Domain of <m>f</m>:  <m>(-1,\infty)</m>; Range of <m>f</m>: all real numbers; Domain of <m>f^{-1}</m>: all real numbers; Range of <m>f^{-1}</m>:  <m>(-1, \infty)</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+    <conclusion>
+        <sidebyside width="30%"><image source="images/fig-in-ex-ans-5-2-4.jpg"><description>log and inverse</description></image></sidebyside>
+    </conclusion>
+</exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+     <pg-code>                      
+        </pg-code> 
+    <statement>
+        <p>Compare the graphs of <m>f(x)=\log \dfrac{1}{x}</m> and <m>g(x)=-\log x</m>, and explain.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 </subsection>
 
 <subsection><title>Evaluating Logarithmic Functions</title>
@@ -250,8 +421,51 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 		<li><m>2 f(16) + 1 = 2(\log_{10}{16}) + 1\approx2(1.204) + 1 = 3.408</m></li>
 	</ol></p></solution></example>
 
-<exercise><statement><p>The formula <m>T = \dfrac{\log 2 \cdot t_i}{3 \log(D_f /D_0)}</m> is used by X-ray technicians to calculate the doubling time of a malignant tumor. <m>D_0</m> is the diameter of the tumor when first detected, <m>D_f</m> is its diameter at the next reading, and <m>t_i</m> is the time interval between readings, in days. Calculate the doubling time of the following tumor: its diameter when first detected was <m>1</m> cm, and <m>7</m> days later its diameter was <m>1.05</m> cm.</p></statement>
-<answer><p><m>33</m> days</p></answer></exercise>
+<exercise><title>QuickCheck 3</title>
+<webwork>
+     <pg-code>       
+            $lognev = RadioButtons(
+              ["The log of a number is never negative.",
+              "We cannot take the log of a negative number.",
+              "The log of a fraction is called a common log.",
+              "The log of 0 is 1."],
+              1, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>Which statement is true?</p>
+        <p><var name="$lognev" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p>We cannot take the log of a negative number.</p>
+    </solution>
+</webwork></exercise>
+
+<exercise>
+    <title>Practice 5</title>
+    <webwork>
+         <pg-code>
+            Context()->flags->set(useBaseTenLog=>1);
+            Context()->variables->add(t=>"Real", Df=>"Real", D0=>"Real");
+            $f = Formula("log(2)*t/(3log(Df/D0))");
+            $t = Compute("7");
+            $D0 = Compute("1");
+            $Df = Compute("1.05");
+            $answer = $f->eval(t=>$t, Df=>$Df, D0=>$D0)->with(
+              tolType => 'absolute',
+              tolerance => .51,
+            );
+
+        </pg-code> 
+        <statement>
+            <p>The formula <m>T = \dfrac{\log 2 \cdot t_i}{3 \log(D_f /D_0)}</m> is used by X-ray technicians to calculate the doubling time of a malignant tumor. <m>D_0</m> is the diameter of the tumor when first detected, <m>D_f</m> is its diameter at the next reading, and <m>t_i</m> is the time interval between readings, in days. Calculate the doubling time of the following tumor: its diameter when first detected was 1 cm, and 7 days later its diameter was 1.05 cm.</p>
+            <p><var name="$answer" width="2"/> days </p>
+        </statement>
+        <solution>
+            <p>33 days</p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Logarithmic Equations</title>
@@ -266,6 +480,7 @@ Thus, we can rewrite a logarithmic equation in exponential form.</p>
 		<li><m>2(\log_3 x) - 1 = 4</m></li>
 		<li><m>\log_{10}{(2x + 100)} = 3</m></li>
 	</ol></p></statement>
+
 <solution><p><ol label="a">
 		<li><p>We isolate the logarithm, then rewrite the equation in exponential form:
 			<!--*****--><me>\begin{aligned}[t]
@@ -278,14 +493,29 @@ Thus, we can rewrite a logarithmic equation in exponential form.</p>
 			Now we can solve for <m>x</m> to find <m>2x = 900</m>, or <m>x = 450</m>.</p></li>
 	</ol></p></solution></example>
 
-<exercise><statement><p>Solve for the unknown value in each equation.<ol label="a" cols="2">
-		<li><m>\log_b 2 = \dfrac{1}{2}</m></li>
-		<li><m>\log_{3}{(2x - 1)} = 4</m></li>
-	</ol></p></statement>
-<answer><p><ol label="a" cols="2">
-	<li><p><m>b=4</m></p></li>
-	<li><p><m>x=41</m></p></li>
-</ol></p></answer></exercise>
+<exercise>
+    <title>Practice 6</title>
+    <webwork>
+         <pg-code>
+            $b = Compute("4");
+            $x = Compute("41");
+        </pg-code> 
+        <statement>
+            <p>Solve for the unknown value in each equation.<ol label="a">
+                <li><p><m>\log_b 2 = \dfrac{1}{2}</m></p>
+                <p><m>b=</m><var name="$b" width="2"/> </p></li>
+                <li><p><m>\log_{3}{(2x - 1)} = 4</m></p>
+                <p><m>x=</m><var name="$x" width="2"/> </p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol label="a" cols="2">
+                <li><p><m>b=4</m></p></li>
+                <li><p><m>x=41</m></p></li>
+            </ol></p>
+        </solution>
+    </webwork>
+</exercise>
 
 <example xml:id="example-common-log-equation"><statement><p>If <m>f(x) = \log_{10}{x}</m>, find <m>x</m> so that <m>f(x)=-3.2</m>.</p></statement>
 <solution><p>We must solve the equation <m>\log_{10}{x} = -3.2</m>. Rewriting the equation in exponential form yields
@@ -303,15 +533,30 @@ Thus, we can rewrite a logarithmic equation in exponential form.</p>
 	which gives the same answer as before.</p>
 </note>
 
-<exercise><statement><p>Imagine the graph of <m>f(x) = \log_{10}{x}</m>. How far must you travel along the <m>x</m>-axis until the <m>y</m>-coordinate reaches a height of <m>5.25</m>?</p></statement>
-<answer><p><m>x = 177,827.941</m></p></answer></exercise>
+<exercise>
+    <title>Practice 7</title>
+    <webwork>
+         <pg-code>
+            $a = Compute("10**(5.25)");
+        </pg-code> 
+        <statement>
+            <p>Imagine the graph of <m>f(x) = \log_{10}{x}</m>. How far must you travel along the <m>x</m>-axis until the <m>y</m>-coordinate reaches a height of 5.25?</p>
+            <p>Answer: Until <m>x=</m><var name="$a" width="15"/> </p>
+            <instruction>Do not enter commas, that is, enter "10000" rather than "10,000".</instruction>
+        </statement>
+        <solution>
+            <p><m>x = 177,827.941</m></p>
+        </solution>
+    </webwork>
+</exercise>
 </subsection>
 
 <subsection><title>Using the Properties of Logarithms</title>
 
 <p>The properties of logarithms are useful in solving both exponential and logarithmic equations. To solve logarithmic equations, we first combine any expressions involving logs into a single logarithm.</p>
 
-<example xml:id="example-solve-log-equation"><statement><p>Solve <m>~~\log_{10}{(x + 1)} + \log_{10}{(x - 2)}= 1</m>.</p></statement><solution><p>We use Property (1) of logarithms to rewrite the left-hand side as a single logarithm:
+<example xml:id="example-solve-log-equation"><statement><p>Solve <m>~~\log_{10}{(x + 1)} + \log_{10}{(x - 2)}= 1</m>.</p></statement>
+<solution><p>We use Property (1) of logarithms to rewrite the left-hand side as a single logarithm:
 	<me>\log_{10}{(x + 1)(x - 2)} = 1</me>
 Once the left-hand side is expressed as a single logarithm, we can rewrite the equation in exponential form as
 	<me>(x + 1)(x - 2) = 10^1</me>
@@ -327,13 +572,57 @@ from which
 
 <xi:include href="./assemblage-steps-for-solving-logarithmic-equations.xml" />
 
-<exercise><statement><p>Solve <m>~~\log_2 x + \log_{2}{(x - 2)} = 3</m>.</p></statement>
-<hint>
-	<p>Rewrite the left side as a single logarithm.</p>
-	<p>Rewrite the equation in exponential form.</p>
-	<p>Solve for <m>x</m>.</p>
-	<p>Check for extraneous solutions.</p></hint>
-<answer><p><m>x=4</m></p></answer></exercise>
+<exercise><title>QuickCheck 4</title>
+<webwork>
+     <pg-code>       
+            $logeq = RadioButtons(
+              ["\(\log (2x-1)=2\)",
+              "\(\log x = 2 - \log (x-1)\)",
+              "\(\log x(x-1)=2\)",
+              "\(x+x-1=2^x\)"],
+              2, 
+            );            
+        </pg-code> 
+    <statement>
+        <p>Which of these is the first step in solving the equation <m>\log x + \log (x-1)=2</m> ?</p>
+        <p><var name="$logeq" form="buttons"/></p>      
+    </statement>
+    <solution>
+        <p><m>\log x(x-1)=2</m></p>
+    </solution>
+</webwork></exercise>
+
+<exercise>
+    <title>Practice 8</title>
+    <webwork>
+         <pg-code>
+            $a = Compute("4");
+        </pg-code> 
+        <statement>
+            <p>Solve <m>\log_2 x + \log_{2}{(x - 2)} = 3</m>.</p>
+            <p><m>x=</m><var name="$a" width="2"/>  [Separate multiple solutions with commas when appropriate.]</p>
+        </statement>
+        <hint>
+            <p>Rewrite the left side as a single logarithm.</p>
+            <p>Rewrite the equation in exponential form.</p>
+            <p>Solve for <m>x</m>.</p>
+            <p>Check for extraneous solutions.</p>
+        </hint>
+        <solution>
+            <p><m>x=4</m></p>
+        </solution>
+    </webwork>
+</exercise>
+
+<exercise><title>Pause and Reflect</title>
+<webwork>
+     <pg-code>                      
+        </pg-code> 
+    <statement>
+        <p>What is an extraneous solution?</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
 
 </subsection>
 <xi:include href="./summary-5-2.xml" /> <!-- summary  -->
