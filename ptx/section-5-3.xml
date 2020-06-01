@@ -64,7 +64,7 @@ The number <m>e</m> is essential for many advanced topics, and it is often calle
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $esq = RadioButtons(
               ["\(3\)",
               "\(5\)",
@@ -72,7 +72,7 @@ The number <m>e</m> is essential for many advanced topics, and it is often calle
               "\(9\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>The value of <m>e^2</m> is closest to</p>
         <p><var name="$esq" form="buttons"/></p>      
@@ -90,8 +90,10 @@ The number <m>e</m> is essential for many advanced topics, and it is often calle
 <solution><sidebyside width="30%"><image source="images/fig-translate-exponential"><description>translations of the exponential</description></image></sidebyside>
 <p> The graph of <m>g</m> is shifted <m>2</m> units to the left of <m>y = e^x</m>. The graph of <m>h</m> is shifted <m>2</m> units up from <m>y = e^x</m>. The graphs are shown above.</p></solution></example>
 
-<exercise><title>Practice 1</title>
-    <webwork><pg-code>
+<exercise>
+	<title>Practice 1</title>
+    <webwork>
+         <pg-code>
             $a = Compute("e**2")->with(
               tolType => 'absolute',
               tolerance => .00051,
@@ -107,8 +109,9 @@ The number <m>e</m> is essential for many advanced topics, and it is often calle
             );
             Context()->operators->undefine("^","**");
 
-        </pg-code>
-    <statement><p>Use your calculator to evaluate the following powers.
+        </pg-code> 
+        <statement>
+            <p>Use your calculator to evaluate the following powers.
             <ol label="a">
                 <li><p><m>e^2\approx</m><var name="$a" width="5"/></p></li>
                 <li><p><m>e^{3.5}\approx</m><var name="$b" width="5"/></p></li>
@@ -142,7 +145,7 @@ In general, natural logs obey the same conversion formulas that work for logs to
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $loge = RadioButtons(
               ["\(e^k=x\)",
               "\(\ln e=x\)",
@@ -150,7 +153,7 @@ In general, natural logs obey the same conversion formulas that work for logs to
               "\(k^x=e\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p> Which of the following is equivalent to <m>e^x=k</m> ?</p>
         <p><var name="$loge" form="buttons"/></p>      
@@ -212,7 +215,7 @@ In general, natural logs obey the same conversion formulas that work for logs to
 <exercise>
 	<title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $a = Compute("ln(100)")->with(
               tolType => 'absolute',
               tolerance => .000051,
@@ -226,7 +229,7 @@ In general, natural logs obey the same conversion formulas that work for logs to
             Context()->functions->disable("All");
 
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Use your calculator to evaluate each logarithm. Round your answers to four decimal places.</p>
             <p><ol label="a">
@@ -246,8 +249,8 @@ In general, natural logs obey the same conversion formulas that work for logs to
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain why <m>\ln\dfrac{1}{e^3} = -3</m>.</p>
         <p><var form="essay"/></p>      
@@ -285,13 +288,13 @@ In general, natural logs obey the same conversion formulas that work for logs to
 <exercise>
 	<title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->functions->disable("All");
             Context()->functions->enable("sqrt");
             Context()->flags->set(limits=>[2,5]);
             $a = Formula("sqrt(x)");
             $b = Formula("-4*x");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Simplify each expression. Use "sqrt(x)" to get <m>\sqrt{x}</m>.</p>
             <p><ol label="a" cols="2">
@@ -326,7 +329,7 @@ In general, natural logs obey the same conversion formulas that work for logs to
 
 <exercise><title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $a = Compute("e**(-0.2)")->with(
               tolType => 'absolute',
               tolerance => .000051,
@@ -337,7 +340,7 @@ In general, natural logs obey the same conversion formulas that work for logs to
               tolerance => .000051,
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve each equation. Round your answers to four decimal places.
             <ol label="a">
@@ -358,7 +361,7 @@ In general, natural logs obey the same conversion formulas that work for logs to
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $button = RadioButtons(
               ["8 is larger than 6.5.",
               "\(k\) is a constant.",
@@ -366,7 +369,7 @@ In general, natural logs obey the same conversion formulas that work for logs to
               "Because \(e\) is an irrational number."],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p> Why is the equation <m>e^x=6.5</m> easier to solve than <m>8^x=6.5</m> ?</p>
         <p><var name="$button" form="buttons"/></p>      
@@ -400,9 +403,9 @@ because <m>\ln{e^a} = a</m> for any number <m>a</m>. We then proceed with the so
 <exercise>
 	<title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $a = Compute("-5*ln(9.7/16)");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve <me>80 -16e^{-0.2x} = 70.3</me></p>
             <p><m>x=</m><var name="$a" width="15"/> </p>
@@ -433,10 +436,10 @@ because <m>\ln{e^a} = a</m> for any number <m>a</m>. We then proceed with the so
 <exercise>
 	<title>Practice 6</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(N=>"Real", A=>"Real", t=>"Real");
             $a = Formula("-ln(N/A)/t");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve <m>N = Ae^{-kt}</m> for <m>k</m>.</p>
             <p><m>k=</m><var name="$a" width="15"/> </p>
@@ -454,8 +457,8 @@ because <m>\ln{e^a} = a</m> for any number <m>a</m>. We then proceed with the so
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Delbert says that he will begin solving the equation <m>100e^{0.6t}=40</m> by computing <m>e^{0.6t}</m>. Is this a good strategy? Why or why not?</p>
         <p><var form="essay"/></p>      
@@ -504,7 +507,7 @@ By graphing both functions on your calculator, you can verify that <me>P(t) = 10
 <exercise>
 	<title>Practice 7</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(t=>"Real");
             $a = Compute("2.8*e**(0.85)")->with(
               tolType => 'absolute',
@@ -516,7 +519,7 @@ By graphing both functions on your calculator, you can verify that <me>P(t) = 10
             );
             $b = Formula("2.8*(1+$percent/100)**t");
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>From 1994 to 1998, the number of personal computers connected to the Internet grew according to the formula <m>N(t) = 2.8e^{0.85t}</m>, where <m>t = 0</m> in 1994 and <m>N</m> is in millions. (Source: Los Angeles Times, September 6, 1999)</p>
             <p><ol label="a">
@@ -546,7 +549,7 @@ Thus, for negative values of <m>k</m>, the function <m>P(t) = P_0 e^{kt}</m> des
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $lnfrac = RadioButtons(
               ["positive.",
               "negative.",
@@ -554,7 +557,7 @@ Thus, for negative values of <m>k</m>, the function <m>P(t) = P_0 e^{kt}</m> des
               "between \(e^0\) and \(e^1\)."],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p> The natural log of a fraction between 0 and 1 is</p>
         <p><var name="$lnfrac" form="buttons"/></p>      
@@ -578,7 +581,7 @@ Replacing <m>b</m> with <m>e^k</m>, we find that the decay law is
 <exercise>
 	<title>Practice 8</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(t=>"Real");
             $f = Formula("25*e**(-0.07*t)");
             foreach my $i (0..6){
@@ -602,7 +605,7 @@ Replacing <m>b</m> with <m>e^k</m>, we find that the decay law is
               tolerance => .0051,
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>A scientist isolates <m>25</m> grams of krypton-91, which decays according to the formula
                 <me>N(t) = 25e^{-0.07t}</me>, 
@@ -674,14 +677,14 @@ Replacing <m>b</m> with <m>e^k</m>, we find that the decay law is
         </solution>
     </webwork>
     <conclusion>
-        <sidebyside width="35%"><image source="images/fig-in-ex-ans-5-3-8.jpg"><description>decay</description></image></sidebyside>
+        <sidebyside width="35%"><image source="images/fig-krypton-91-decay"><description>decay</description></image></sidebyside>
     </conclusion>
 </exercise>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain how to rewrite <m>P(t)=P_0 b^t</m> with the natural base.</p>
         <p><var form="essay"/></p>      
@@ -754,13 +757,13 @@ where <m>P</m> is the principal invested.</p>
 <exercise>
 	<title>Practice 9</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $answer = Compute("ln(2)/0.045")->with(
               tolType => 'absolute',
               tolerance => .051,
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Zelda invested $1000 in an account that pays 4.5% interest compounded continuously. How long will it be before the account is worth $2000?</p>
             <p>Answer: about <var name="$answer" width="3"/> years. </p>
@@ -773,8 +776,8 @@ where <m>P</m> is the principal invested.</p>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain why solving exponential equations in base <m>e</m> is no harder than solving exponential equations in base 10.</p>
         <p><var form="essay"/></p>      

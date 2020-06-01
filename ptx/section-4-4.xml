@@ -44,7 +44,7 @@
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $logsum = RadioButtons(
               ["\(\log (8+y)=\log 8+\log y\)",
               "\(\log (8y)=\log 8+\log y\)",
@@ -52,7 +52,7 @@
               "\(\log (\dfrac{8}{y})=\dfrac{\log 8}{\log y}\)"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which statement is true?</p>
         <p><var name="$logsum" form="buttons"/></p>      
@@ -79,12 +79,12 @@ Thus, <m>~~\log_{b}\sqrt{xy} = \frac{1}{2}(\log_{b}{x} + \log_{b}{y})</m>.</p></
 <exercise>
   <title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(y=>"Real");
             $x = Formula("x");
             $y = Formula("y");
             $a = Compute("-2");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Simplify <m>\log_{b}\dfrac{x}{y^2}</m>.</p>
             <p>Answer: <m>\log_b</m><var name="$x" width="1"/><m>+</m><var name="$a" width="1"/><m>\cdot\log_b</m><var name="$y" width="1"/> </p>
@@ -116,9 +116,9 @@ Then, using Property (3), we replace the coefficient <m>3</m> by an exponent <m>
 <exercise>
   <title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $f = Formula("x**2 * (x+3)**4");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Express <m>2\log_b x + 4\log_{b}{(x + 3)}</m> as a single logarithm with a coefficient of <m>1</m>.</p>
             <p>Answer: <m>\log_b</m><var name="$f" width="12"/> </p>
@@ -131,7 +131,7 @@ Then, using Property (3), we replace the coefficient <m>3</m> by an exponent <m>
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $logfrac = RadioButtons(
               ["\(3\log_2 (H-T)\)",
               "\(\log_2 (H^3-T)\)",
@@ -139,7 +139,7 @@ Then, using Property (3), we replace the coefficient <m>3</m> by an exponent <m>
               "\(\log_2 (\dfrac{H}{T})^3\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which expression is equivalent to <m>3\log_2 H-\log_2 T</m>?</p>
         <p><var name="$logfrac" form="buttons"/></p>      
@@ -168,7 +168,7 @@ On your calculator, enter the sequence</p>
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $exeq = RadioButtons(
               ["Divide both sides by 4.",
               "Take log base 10 of both sides.",
@@ -176,7 +176,7 @@ On your calculator, enter the sequence</p>
               "This equation has no solution."],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>How can we solve <m>4^x=60</m>?</p>
         <p><var name="$exeq" form="buttons"/></p>      
@@ -209,10 +209,10 @@ Remember that the order of operations tells us to compute the power <m>6^{0.03x}
 <exercise>
   <title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->flags->set(useBaseTenLog=>1); 
             $answer = Compute("log(77/5)/(2.5*log(1.2))");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve <m>5(1.2)^{2.5x} = 77</m></p>
             <p><m>x=</m><var name="$answer" width="12"/> </p>
@@ -231,8 +231,8 @@ Remember that the order of operations tells us to compute the power <m>6^{0.03x}
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain why the distributive law does not apply to the expression <m>\log (a+b)</m>.</p>
         <p><var form="essay"/></p>      
@@ -268,7 +268,7 @@ The population of Silicon City will reach <m>75,000</m> about <m>27</m> years af
 <exercise>
   <title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(V0 => ["Real",TeX=>"V_0"], t=>"Real");
             $f = Formula("V0 *1.027**t");
             $t = Compute("log(2)/log(1.027)")->with(
@@ -277,7 +277,7 @@ The population of Silicon City will reach <m>75,000</m> about <m>27</m> years af
             );
 
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Traffic on U.S. highways is growing by 2.7% per year. (Source: <em>Time</em>, Jan. 25, 1999)<ol label="a">
             <li><p>Write a formula for the volume, <m>V</m>, of traffic as a function of time, using <m>V_0</m> for the current volume.  [Note: Enter "V0" to get <m>V_0</m>.]</p>
@@ -298,8 +298,8 @@ The population of Silicon City will reach <m>75,000</m> about <m>27</m> years af
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>How does Property (3) of logarithms help us solve exponential equations?</p>
         <p><var form="essay"/></p>      
@@ -346,7 +346,7 @@ The population of Silicon City will reach <m>75,000</m> about <m>27</m> years af
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $compint = RadioButtons(
               ["\(P(1+4r)^t\)",
               "\(P(1+4r)^{4t}\)",
@@ -354,7 +354,7 @@ The population of Silicon City will reach <m>75,000</m> about <m>27</m> years af
               "\(P(1+\dfrac{r}{4})^{\frac{t}{4}}\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which formula gives the anount when interest is compounded quarterly?</p>
         <p><var name="$compint" form="buttons"/></p>      
@@ -369,13 +369,13 @@ The population of Silicon City will reach <m>75,000</m> about <m>27</m> years af
 <exercise>
   <title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
            $answer = Compute("1000*(1+0.04/365)**(365*5)")->with(
               tolType => 'absolute',
               tolerance => .005,
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Calculate the amount in Rashad's account after 5 years if the interest is compounded daily. (See <xref ref="example-compound-interest" text="type-global"/>. There are 365 days in a year.)</p>
             <p>Answer: $<var name="$answer" width="6"/> </p>
@@ -405,11 +405,11 @@ Finally, we divide both sides by <m>k \log b</m> to solve for <m>t</m>.
 <exercise>
   <title>Practice 6</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->flags->set(limits=>[2,5]);
             Context()->variables->are(A=>"Real", P=>"Real", r=>"Real");
             $f = Formula("log(A/P)/log(1+r)");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve <m>A = P(1 + r )^t</m> for <m>t</m>.</p>
             <p><m>t=</m><var name="$f" width="15"/> </p>

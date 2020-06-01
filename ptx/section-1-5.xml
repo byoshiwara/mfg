@@ -92,11 +92,11 @@ The graphs of these three functions all have the same <m>y</m>-intercept, but th
     <title>Practice 1</title>
     <introduction>
         <p>Delbert decides to use DSL for his Internet service.
-            Earthlink charges a $99 activation fee and $39.95 per month,DigitalRain charges $50 for activation and $34.95 per month, and FreeAmerica charges $149 for activation and $34.95 per month.</p>
+            Earthlink charges a $99 activation fee and $39.95 per month, DigitalRain charges $50 for activation and $34.95 per month, and FreeAmerica charges $149 for activation and $34.95 per month.</p>
             <sidebyside width="40%"><image source="images/fig-dsl-price"><description>dsl costs</description></image></sidebyside>
     </introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $Earthlink = Formula("99+39.95*x");
             $DigitalRain = Formula("50+34.95*x");
             $FreeAmerica = Formula("149+34.95*x");
@@ -112,7 +112,7 @@ The graphs of these three functions all have the same <m>y</m>-intercept, but th
               ["?","Earthlink","DigitalRain", "FreeAmerica"],
               3, # index of correct answer; could also just be the correct answer
             );
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Write a formula for Delbert's Internet costs under each plan.</p>    
@@ -136,7 +136,7 @@ The graphs of these three functions all have the same <m>y</m>-intercept, but th
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $mb = RadioButtons(
               ["\(m\) is the slope; \(b\) is the \(x\)-intercept",
               "\(m\) is the slope; \(b\) is the \(y\)-intercept",
@@ -144,7 +144,7 @@ The graphs of these three functions all have the same <m>y</m>-intercept, but th
               "\(m\) is the \(x\)-intercept; \(b\) is the \(y\)-intercept"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What do the coefficients in the slope-intercept form tell you about a line?</p>
         <p><var name="$mb" form="buttons"/></p>      
@@ -161,8 +161,8 @@ The graphs of these three functions all have the same <m>y</m>-intercept, but th
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain why the initial value for a linear model is often given by the <m>y</m>-intercept.</p>
         <p><var form="essay"/></p>      
@@ -205,10 +205,10 @@ point on the line as a check. If we use <m>m = \dfrac{\Delta y}{\Delta x}= \dfra
 <exercise>
     <title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Fraction");
             $func = Formula("-2-3/2 x");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Write the equation <m>2y + 3x + 4 = 0</m> in slope-intercept form.</p>
@@ -230,7 +230,7 @@ point on the line as a check. If we use <m>m = \dfrac{\Delta y}{\Delta x}= \dfra
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $si = RadioButtons(
               ["Solve for \(y\) to get the slope-intercept form.",
               "Find the intercepts and use them to compute the slope.",
@@ -238,7 +238,7 @@ point on the line as a check. If we use <m>m = \dfrac{\Delta y}{\Delta x}= \dfra
               "Find values of \(x\) and \(y\) that make the equation true."],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What is the easiest way to find the slope of the line <m>18x-42y=60</m>?</p>
         <p><var name="$si" form="buttons"/></p>      
@@ -270,13 +270,13 @@ point on the line as a check. If we use <m>m = \dfrac{\Delta y}{\Delta x}= \dfra
         <image source="images/fig-lin-equation-from-graph2" ><description>graph of line</description></image></sidebyside>
     </introduction>
     <webwork>
-    <setup><pg-code>
+     <pg-code>
         Context("Fraction");
         Context()->noreduce('(-x)+y'); #-x+y does not become y-x
         $m = Fraction("-5/2");
         $b = 80;
         $func = Formula("$m x + $b");
-    </pg-code></setup>
+    </pg-code> 
     <statement>
         <p><m>b  = </m><var name="$b" width="3"/> </p>
         <p><m>m  = </m><var name="$m" width="3"/></p>
@@ -290,8 +290,8 @@ point on the line as a check. If we use <m>m = \dfrac{\Delta y}{\Delta x}= \dfra
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>How can you find the equation of a line from its graph?</p>
         <p><var form="essay"/></p>      
@@ -332,7 +332,7 @@ so we move down <m>3</m> units and then <m>4</m> units to the right, starting fr
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $sw = RadioButtons(
               ["The number will be too big.",
               "The line will be decreasing.",
@@ -340,7 +340,7 @@ so we move down <m>3</m> units and then <m>4</m> units to the right, starting fr
               "It will have the wrong sign."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What will be wrong with your answer if you accidentally compute the slope as <m>m=\dfrac{y_2-y_1}{x_1-x_2}</m>?</p>
         <p><var name="$sw" form="buttons"/></p>      
@@ -369,13 +369,13 @@ is called the <term>point-slope form</term><idx>point-slope form</idx> for a lin
 <exercise>
     <title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $m=-1.4;
             $y1 = 5;
             $x1 = -3;
             $b = $y1 - $m * $x1;
             $func = Formula("$b + $m*x")->reduce;
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Use the point-slope form to find the equation of the line that passes through the point <m>(-3, 5)</m> and has slope <m>-1.4</m>.
                     <me>\begin{aligned}[t]
@@ -438,7 +438,7 @@ is called the <term>point-slope form</term><idx>point-slope form</idx> for a lin
 <exercise>
     <title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Numeric")->variables->add(H=>'Real', W=>'Real');
             $m = 5;
             $x1 = 64;
@@ -447,7 +447,7 @@ is called the <term>point-slope form</term><idx>point-slope form</idx> for a lin
             $b = $y1 - $m*$x1;
             $func2 = Formula("$b +$m*H ");
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>A healthy weight for a young woman of average height, 64 inches, is 120 pounds. To calculate a healthy weight for a woman taller than 64 inches, add 5 pounds for each inch of height over 64.
             <ol label="a">
@@ -468,7 +468,7 @@ is called the <term>point-slope form</term><idx>point-slope form</idx> for a lin
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $zb = RadioButtons(
               ["\(x=0\)",
               "\(y=mx+b\)",
@@ -476,7 +476,7 @@ is called the <term>point-slope form</term><idx>point-slope form</idx> for a lin
               "\(ax+by=0\)"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What do you get when you substitute the point <m>(0,b)</m> into the point-slope formula?</p>
         <p><var name="$zb" form="buttons"/></p>      
@@ -489,8 +489,8 @@ is called the <term>point-slope form</term><idx>point-slope form</idx> for a lin
 <exercise>
 <title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain the difference between the slope-intercept form and the point-slope form for a linear equation.</p>
         <p><var form="essay"/></p>      

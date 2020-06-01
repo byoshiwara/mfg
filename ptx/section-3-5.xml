@@ -35,7 +35,7 @@ where <m>t</m> is the number of days you rent the car and <m>g</m> is the number
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $twovar = RadioButtons(
               ["It has one input and two outputs.",
               "It has two inputs and one output.",
@@ -43,7 +43,7 @@ where <m>t</m> is the number of days you rent the car and <m>g</m> is the number
               "None of the above."],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which is true about a function of two variables?</p>
         <p><var name="$twovar" form="buttons"/></p>      
@@ -56,7 +56,7 @@ where <m>t</m> is the number of days you rent the car and <m>g</m> is the number
 <exercise>
     <title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(P=>"Real", n=>"Real");
             $f = Formula("26+ 5/8 *P + 5*n");
             $a = $f->eval(P=>40, n=>2);
@@ -74,7 +74,7 @@ where <m>t</m> is the number of days you rent the car and <m>g</m> is the number
             ["?","psi","in", "ft"],
             1, 
             );
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>The maximum height that the water stream from a fire hose can reach depends on the water pressure and the diameter of the nozzle, and is given by the function
             <me>H = f(P, n) = 26 + \dfrac{5}{8}P + 5n</me>
@@ -184,7 +184,7 @@ where <m>t</m> is the number of days you rent the car and <m>g</m> is the number
 <exercise>
     <title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $c0 = Compute("500");
             $t0 = Compute("40");
             $a = Compute("129528");
@@ -200,7 +200,7 @@ where <m>t</m> is the number of days you rent the car and <m>g</m> is the number
                      ], 0,
                 );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>A retirement plan requires employees to put aside a fixed amount of money each year until retirement. The amount accumulated, <m>A</m>, includes 8% annual interest on employee's annual contribution, <m>c</m>. <m>A</m> is a function of <m>c</m> and the number of years, <m>t</m>, that the employee makes contributions, so <m>A = f(c, t)</m>.</p>
     <sidebyside><tabular top="major" halign="center"  right="minor" left="minor" bottom="minor">
@@ -458,10 +458,10 @@ where <m>t</m> is the number of days you rent the car and <m>g</m> is the number
             <cell><m>1250</m></cell></row>
     </tabular></sidebyside></introduction>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(w=>"Real");
             $f = Formula("90*w");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>For the table in the previous example, consider the column corresponding to a beam depth of <m>3</m> cm. Graph <m>L</m> as a function of <m>w</m> when the depth is constant at <m>d = 3</m>.</p></li>
@@ -491,7 +491,7 @@ This relationship between variables is an example of <term>joint variation</term
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $twovar = RadioButtons(
               ["\(H=kst\)",
               "\(L=m+kn\)",
@@ -499,7 +499,7 @@ This relationship between variables is an example of <term>joint variation</term
               "\(Z=k(x+y)\)"],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which of the following functions represents joint variation, where <m>k</m> is a constant?</p>
         <p><var name="$twovar" form="buttons"/></p>      
@@ -521,7 +521,7 @@ You can check that this formula works for all the values in the table.</p></solu
 <exercise>
     <title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(w=>"Real", l=>Real);
             $f = Formula("16*w*l");
 
@@ -529,7 +529,7 @@ You can check that this formula works for all the values in the table.</p></solu
             ["?","Yes","No"],
             1, 
             );
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>The cost, <m>C</m>, of tiling a rectangular floor depends on the dimensions (length and width) of the floor, so <m>C = f (w, l)</m>. The table shows the costs in dollars for some dimensions.</p>
             <sidebyside><tabular top="major" halign="center"  right="minor" left="minor" bottom="minor">
@@ -615,8 +615,8 @@ You can check that this formula works for all the values in the table.</p></solu
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain the difference between the symbols <m>f(ab)</m> and <m>f(a,b)</m>.</p>
         <p><var form="essay"/></p>      
@@ -660,7 +660,7 @@ You can check that this formula works for all the values in the table.</p></solu
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $tworep = RadioButtons(
               ["a table of values.",
               "a graph in three dimensions.",
@@ -668,7 +668,7 @@ You can check that this formula works for all the values in the table.</p></solu
               "all of the above."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>We can represent a function of two variables by</p>
         <p><var name="$tworep" form="buttons"/></p>      
@@ -681,7 +681,7 @@ You can check that this formula works for all the values in the table.</p></solu
 <exercise>
     <title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(r=>"Real", v=>"Real", k=>"Real");
             $f = Formula("(k*r)/v");
             $r = Compute("20200+6360");
@@ -702,7 +702,7 @@ You can check that this formula works for all the values in the table.</p></solu
             ["?","km","min", "km/min"],
             3, 
             );
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>The period of a satellite orbiting the Earth varies directly with the radius of the orbit and inversely with the speed of the satellite.</p>
             <p><ol label="a">

@@ -22,8 +22,12 @@
     <li><p>The graph begins like the graph in part (b). The last section of the graph represents the bus ride. It has a constant slope because the bus is moving at a constant speed. Because the bus (probably) moves faster than Forrest walks, the slope of this segment is greater than the slope for the walking section. The graph is shown in figure (c).</p></li>
 </ol></p></solution></example>
 
-<exercise><title>Practice 1</title>
-  <webwork><pg-code>
+<exercise>
+    <title>Practice 1</title>
+  <webwork>
+     
+      <pg-code>
+        $refreshCachedImages = 1;
         $fun=Formula("1.5-abs(x-11.5)");
         $fake=Formula("6*x");
         $fake2=Formula("120-6*x");
@@ -62,7 +66,9 @@
                     1
                 );
       </pg-code>
-    <statement><p>Erin walks from her home to a convenience store, where she buys some cat food, and then walks back home. Sketch a possible graph of her distance from home as a function of time.</p>
+     
+    <statement>
+            <p>Erin walks from her home to a convenience store, where she buys some cat food, and then walks back home. Sketch a possible graph of her distance from home as a function of time.</p>
             <sidebyside widths="35% 35%" margins="5% 5%">
                 <image pg-name="$gr[1]"/>
                 <image pg-name="$gr[0]"/>
@@ -150,7 +156,7 @@
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $decslo = RadioButtons(
               ["increasing.",
               "decreasing.",
@@ -158,7 +164,7 @@
               "concave down."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>A graph whose slopes decrease for increasing <m>x</m> is called</p>
         <p><var name="$decslo" form="buttons"/></p>      
@@ -172,7 +178,8 @@
     <introduction>
         <sidebyside  width="45%"><image source="images/fig-concavity2"><description>decreasing graphs of opposite concavity</description></image></sidebyside>
     </introduction>
-    <webwork><pg-code>
+    <webwork>
+         <pg-code>
             $ab = PopUp(
             ["?","(a)","(b)"],
             1, 
@@ -197,8 +204,9 @@
             ["?","Concave up","Concave down"],
             1, 
             );
-        </pg-code>
-    <statement><p>Francine bought a cup of cocoa at the cafeteria. The cocoa cooled off rapidly at first, and then gradually approached room temperature. Which graph more accurately reflects the temperature of the cocoa as a function of time? 
+        </pg-code> 
+        <statement>
+            <p>Francine bought a cup of cocoa at the cafeteria. The cocoa cooled off rapidly at first, and then gradually approached room temperature. Which graph more accurately reflects the temperature of the cocoa as a function of time? 
             <var name="$ab" form="popup"/> </p>
             <p>Explain why. (Select all that apply.)</p>
             <p><var name="$explain" form="checkboxes"/> </p>
@@ -212,8 +220,8 @@
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>How can you tell from a table of values whether a function is concave up or concave down?</p>
         <p><var form="essay"/></p>      
@@ -270,7 +278,7 @@
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $cond = RadioButtons(
               ["\(y=x^3\)",
               "\(y=\dfrac{1}{x}\)",
@@ -278,7 +286,7 @@
               "\(y=\sqrt{x}\)"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which graph is concave down wherever it is defined?</p>
         <p><var name="$cond" form="buttons"/></p>      
@@ -291,7 +299,7 @@
 <exercise>
     <title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $basic = RadioButtons(
                     ["\(y= x^2 \)",
                     "\(y= x^3 \)",
@@ -305,7 +313,7 @@
                 );
             $more = Compute("60");
             $less = Compute("300");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>The ultraviolet index (UVI) is issued by the National Weather Service as a forecast of the amount of ultraviolet radiation expected to reach Earth around noon on a given day. The data show how much exposure to the sun people can take before risking sunburn.</p>
             <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -363,7 +371,7 @@
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $model = RadioButtons(
               ["plot the data.",
               "look at the variables.",
@@ -371,7 +379,7 @@
               "calculate the slope."],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>To decide which basic function might model a set of data, we can</p>
         <p><var name="$model" form="buttons"/></p>      
@@ -392,8 +400,8 @@
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain the difference between an empirical model and a mechanistic model.</p>
         <p><var form="essay"/></p>      
@@ -485,7 +493,7 @@
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $model = RadioButtons(
               ["must have no breaks in its graph.",
               "can have more than one output at some inputs.",
@@ -493,7 +501,7 @@
               "none of the above"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>A piecewise function</p>
         <p><var name="$model" form="buttons"/></p>      
@@ -506,11 +514,11 @@
 <exercise xml:id="exercise-water-bill">
     <title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(w=>'Real');
             $f = Formula("30+2w");
             $g = Formula("50+3w");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>As part of a water conservation program, the utilities commission in Arid, New Mexico, establishes a two-tier system of monthly billing for residential water usage: The commission charges a $30 service fee plus $2 per hundred cubic feet (HCF) of water if you use 50 HCF or less, and a $50 service fee plus $3 per HCF of water if you use over 50 HCF (1 HCF of water is about 750 gallons).</p>
             <p><ol label="a">
@@ -548,8 +556,8 @@
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain how slope and concavity are related.</p>
         <p><var form="essay"/></p>      

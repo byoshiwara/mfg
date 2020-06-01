@@ -33,7 +33,7 @@ Both equations are true, so we conclude that the average weight of a blue jay is
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $both = RadioButtons(
               ["Their \(x\)-intercepts",
               "Their \(y\)-intercepts",
@@ -41,7 +41,7 @@ Both equations are true, so we conclude that the average weight of a blue jay is
               "None of the points"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which points on the graphs satisfy both equations in a system?</p>
         <p><var name="$both" form="buttons"/></p>      
@@ -70,7 +70,7 @@ and enter the two equations. We can see in the figure that the two lines interse
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $sysol = RadioButtons(
               ["Add the equations together.",
               "Show that it makes one of the equations true.",
@@ -78,7 +78,7 @@ and enter the two equations. We can see in the figure that the two lines interse
               "Subtract the equations."],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>How can you verify that a given point is the solution of a system?</p>
         <p><var name="$sysol" form="buttons"/></p>      
@@ -91,10 +91,10 @@ and enter the two equations. We can see in the figure that the two lines interse
 <exercise>
 	<title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Point");
             $a = Compute("(7,2)");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
         <li><p>Solve the system of equations
@@ -121,8 +121,8 @@ and enter the two equations. We can see in the figure that the two lines interse
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>What do the points on the graph of an equation represent?</p>
         <p><var form="essay"/></p>      
@@ -153,10 +153,10 @@ and then press <c>ZOOM</c> <m>6</m>. (Don't forget the parentheses around the nu
 <exercise>
 	<title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Point");
             $a = Point("(40,-50)");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve the system of equations
             <md>
@@ -248,7 +248,7 @@ and then press <c>ZOOM</c> <m>6</m>. (Don't forget the parentheses around the nu
 <exercise>
 	<title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("ImplicitPlane")->variables->add(y=>"Real");
             $r1 = Formula("x");
             $t1 = Compute("7");
@@ -263,7 +263,7 @@ and then press <c>ZOOM</c> <m>6</m>. (Don't forget the parentheses around the nu
             $a = Point("($v1,$v2)");
 
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>It took Leon <m>7</m> hours to fly the same distance that Marlene drove in <m>21</m> hours. Leon flies <m>120</m> miles per hour faster than Marlene drives. At what speed did each travel?</p>
             <p><ol label= "a">
@@ -324,8 +324,8 @@ and then press <c>ZOOM</c> <m>6</m>. (Don't forget the parentheses around the nu
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>When is the substitution method easier to use than the elimination method. Why?</p>
         <p><var form="essay"/></p>      
@@ -361,7 +361,7 @@ and then press <c>ZOOM</c> <m>6</m>. (Don't forget the parentheses around the nu
 <exercise>
 	<title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $explain = RadioButtons(
             ["Both lines have slope \(\frac{1}{2}\).",
             "Both lines have slope 2.",
@@ -369,7 +369,7 @@ and then press <c>ZOOM</c> <m>6</m>. (Don't forget the parentheses around the nu
             ],
             0,);
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Without graphing, show that the following system is inconsistent:
             <md>
@@ -413,13 +413,13 @@ For the second equation,
 <exercise>
 	<title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $type =  PopUp(
             ["?","dependent","inconsistent", "consistent and independent"],
             2, 
             );
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Graph the system
@@ -481,7 +481,7 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $incon = RadioButtons(
               ["are parallel.",
               "are perpendicular.",
@@ -489,7 +489,7 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
               "have the same graph."],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>If a system is inconsistent, the two lines:</p>
         <p><var name="$incon" form="buttons"/></p>      
@@ -504,7 +504,7 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
 <exercise xml:id="exercise-dependent-system">
 	<title>Practice 6</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $z = Compute("0");
             $explain = RadioButtons(
             ["Both equations have slope-intercept form \(y=3x-4\).",
@@ -512,7 +512,7 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
             "The two equations must be graphed to determine if the system is inconsistent.",
             ],
             0,);
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Use the method of elimination to solve the system
@@ -537,8 +537,8 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain how to use linear combinations to identify inconsistent and dependent systems.</p>
         <p><var form="essay"/></p>      
@@ -681,7 +681,7 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
 <exercise>
 	<title>Practice 7</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("ImplicitPlane")->variables->add(y=>"Real");
             $eq1 = ImplicitPlane("460x+120y=7520");
             $eq2 = ImplicitPlane("y=4x");
@@ -695,7 +695,7 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
             "Etienne should buy 4 tables and 16 chairs.",
             ],
             2,);
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Etienne plans to open a coffee house, and he has $<m>7520</m> to spend on furniture. A table costs $<m>460</m>, and a chair costs $<m>120</m>. Etienne will buy four chairs for each table. How many tables can he buy?</p>
             <p><ol label="a">
@@ -806,7 +806,7 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
 <exercise>
 	<title>Practice 8</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("ImplicitPlane")->variables->add(y=>"Real");
             $eq1 = ImplicitPlane("10x+5y=300");
             $eq2 = ImplicitPlane("y=3x");
@@ -819,7 +819,7 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
             "The manager should buy 9 hardbacks and 27 paperbacks.",
             ],
             0,);
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>The manager for Books for Cooks plans to spend $300 stocking a new diet cookbook. The paperback version costs her $5, and the hardback costs $10. She finds that she will sell three times as many paperbacks as hardbacks. How many of each should she buy?</p>
             <p><ol label="a">
@@ -910,7 +910,7 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $eqpr = RadioButtons(
               ["A fair and balanced price",
               "The price that yields maximum profit",
@@ -918,7 +918,7 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
               "The price at which revenue equals costs"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What is an equilibrium price?</p>
         <p><var name="$eqpr" form="buttons"/></p>      
@@ -931,12 +931,12 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
 <exercise>
 	<title>Practice 9</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $S = Formula("35x");
             $D = Formula("1700-15x"); 
             $p = Compute("34");
             $n = Compute("1190");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Sanaz can afford to produce <m>35x</m> pairs of hand-painted sunglasses if she can sell them at <m>x</m> dollars per pair, and the market will buy <m>1700 - 15x</m> at <m>x</m> dollars a pair.<ol label="a">
             <li><p>Write the supply and demand equations for the sunglasses.</p>

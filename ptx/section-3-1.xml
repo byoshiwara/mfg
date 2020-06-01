@@ -73,7 +73,7 @@
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $dirvar = RadioButtons(
               ["If it has a constant slope",
               "If it includes the point \((0,0)\)",
@@ -81,7 +81,7 @@
               "If each output is double the previous one"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>When does a table represent direct variation?</p>
         <p><var name="$dirvar" form="buttons"/></p>      
@@ -128,7 +128,8 @@ The positive constant <m>k</m> in the equation <m>y = kx</m> is just the slope o
     <introduction>
         <sidebyside  width="65%"><image source="images/fig-three-lines"><description>graphs of three lines</description></image></sidebyside>
     </introduction>
-    <webwork><pg-code>
+    <webwork>
+         <pg-code>
             $explain = new_checkbox_multiple_choice();
             $explain -> qa (
             "A question can go here, but PTX ignores this",
@@ -140,7 +141,7 @@ The positive constant <m>k</m> in the equation <m>y = kx</m> is just the slope o
             "(c): The graph is a straight line that decreases. $BR",
             "None of the above");
 
-        </pg-code>
+        </pg-code> 
         <statement>
             <p>Which of the graphs below could represent direct variation? Explain why.</p>
             <p><var name="$explain" form="checkboxes"/> </p>
@@ -153,7 +154,7 @@ The positive constant <m>k</m> in the equation <m>y = kx</m> is just the slope o
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $convar = RadioButtons(
               ["The \(y\)-intercept of the graph",
               "The slope of the graph",
@@ -161,7 +162,7 @@ The positive constant <m>k</m> in the equation <m>y = kx</m> is just the slope o
               "The size of the input values"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>If \(y\) varies directly with \(x\), what does the constant of variation tell us?</p>
         <p><var name="$convar" form="buttons"/></p>      
@@ -203,7 +204,7 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $scpr = RadioButtons(
               ["The output is found by scaling the input.",
               "The output can be regarded as a scale.",
@@ -211,7 +212,7 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
               "If we multiply the input by \(p\), the output will also be multiplied by \(p\)."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What does the scaling property of direct variation tell us?</p>
         <p><var name="$scpr" form="buttons"/></p>      
@@ -221,8 +222,10 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 2</title>
-    <webwork><pg-code>
+<exercise>
+    <title>Practice 2</title>
+    <webwork>
+         <pg-code>
             $explain = new_checkbox_multiple_choice();
             $explain -> qa (
             "A question can go here, but PTX ignores this",
@@ -231,8 +234,8 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
             $explain -> makeLast(
             "(a): If we multiply \(x\) by \(c\), \(y\) is also multiplied by \(c\). $BR",
             "(b): If we increase \(x\), we also increase \(y\). $BR",
-            "None of the above");      
-        </pg-code>
+            "None of the above");           
+        </pg-code> 
         <statement>
             <p>Which tables could represent direct variation? Explain why. (Hint: What happens to <m>y</m> if you multiply <m>x</m> by a constant?)<ol label="a">
                 <li>
@@ -308,7 +311,7 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $exdir = RadioButtons(
               ["Yes, it is linear.",
               "Yes, the scale factor is 0.3.",
@@ -316,7 +319,7 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
               "No, its slope is less than 1."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Is the function <m>f(x)=0.3x+5</m> an example of direct variation?</p>
         <p><var name="$exdir" form="buttons"/></p>      
@@ -326,8 +329,10 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 3</title>
-    <webwork><pg-code>
+<exercise>
+    <title>Practice 3</title>
+    <webwork>
+         <pg-code>
             Context()->variables->add(V=>"Real",w=>"Real");
             $m = 1.75;
             $f1 = Formula("V");
@@ -346,7 +351,7 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
                   );
               }
             );            
-        </pg-code>
+        </pg-code> 
         <statement>
             <p>The volume of a bag of rice, in cups, is directly proportional to the weight of the bag. A 2-pound bag contains 3.5 cups of rice.<ol label="a">
                 <li><p>Express the volume, <m>V</m>, of a bag of rice as a function of its weight, <m>w</m>.</p>
@@ -388,7 +393,7 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
 <exercise>
     <title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Fraction")->variables->add(V=>"Real",r=>"Real");
             $f1 = Formula("V");
             $f2 = Formula("4/3 * pi * r^3");
@@ -405,7 +410,7 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
               }
             );            
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>The volume of a sphere varies directly with the <em>cube</em> of its radius. A balloon of radius 5 centimeters has volume <m>\dfrac{500\pi}{3}</m> cubic centimeters, or about 524 cubic centimeters. Find a formula for the volume, <m>V</m>, of a sphere as a function of its radius, <m>r</m>.</p>
             <p><var name="$multians" width="2"/><m>=</m><var name="$multians" width="10"/> </p>
@@ -474,7 +479,7 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
 
 <exercise><title>QuickCheck 5</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $powvar = RadioButtons(
               ["Plot the points.",
               "Check whether \(y^n\) is a constant.",
@@ -482,7 +487,7 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
               "Check whether \(y^n/x^n\) is a constant."],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>How can you test whether a table for <m>y=f(x)</m> represents direct variation with a power?</p>
         <p><var name="$powvar" form="buttons"/></p>      
@@ -494,13 +499,14 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
 
 <exercise>
     <title>Practice 5</title>
-    <webwork><pg-code>
+    <webwork>
+         <pg-code>
             $YesNo =  RadioButtons(
                     ["Yes, \(\dfrac{B}{r^3}\) is constant.",
                     "No, \(B\) is not \(r^3\)."],
                     0
                 );
-        </pg-code>
+        </pg-code> 
         <statement>
             <p>Does <m>B</m> vary directly with the cube of <m>r</m>? Explain your decision.</p>
             <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -552,7 +558,7 @@ The weight of the new model is <m>2^3 = 8</m> times the weight of the original m
 <exercise>
     <title>Practice 6</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $explain = new_checkbox_multiple_choice();
             $explain -> qa (
             "A question can go here, but PTX ignores this",
@@ -574,13 +580,26 @@ The weight of the new model is <m>2^3 = 8</m> times the weight of the original m
             "\(4\pi r^2 = 4A_\text{old} \) $BR"
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
-            <p>Use the formula for the area of a circle to show that doubling the diameter of a pizza quadruples its area. Check all the relevant statements.</p>
+            <p>
+                Use the formula for the area of a circle to show that doubling the diameter of a pizza quadruples its area. 
+            </p>
+            <p>
+                Check all the relevant statements.
+            </p>
             <p><var name="$explain" form="checkboxes"/> </p>
         </statement>
         <solution>
-            <p>(b): The graph is a straight line through the origin.</p>
+            <p><m>A= \pi r^2</m></p>
+            <p>Doubling the diameter means doubling the radius.</p>
+            <p><m>
+                \begin{aligned}[t]
+                    A_\text{new} \amp = \pi (2r)^2 \\
+                    \amp = 4\pi r^2 \\
+                    \amp= 4A_\text{old}
+                \end{aligned}
+            </m></p>
         </solution>
     </webwork>
 </exercise>
@@ -676,7 +695,7 @@ where <m>k</m> is a positive constant.</p></assemblage>
 
 <exercise><title>QuickCheck 6</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $invvar = RadioButtons(
               ["Check whether \(xy\) is a constant.",
               "Check whether the function is decreasing.",
@@ -684,7 +703,7 @@ where <m>k</m> is a positive constant.</p></assemblage>
               "Check whether \(y/x\) is a constant."],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>How can you test whether a table for <m>y=f(x)</m> represents inverse variation?</p>
         <p><var name="$invvar" form="buttons"/></p>      
@@ -715,7 +734,7 @@ Your new weight will be <m>\dfrac{1}{4}</m> of your old weight. By a similar cal
 <exercise xml:id="exercise-rusty-bolt">
     <title>Practice 7</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $explain =  RadioButtons(
                     ["\( F_\text{new}=\frac{1}{2}F_\text{old}  \)",
                     "\( F_\text{new}=2F_\text{old}  \)",
@@ -725,7 +744,7 @@ Your new weight will be <m>\dfrac{1}{4}</m> of your old weight. By a similar cal
                     3
                 );
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>The amount of force, <m>F</m>, (in pounds) needed to loosen a rusty bolt with a wrench is inversely proportional to the length, <m>l</m>, of the wrench. Thus,
                 <me>F = \frac{k}{l}</me>
@@ -765,8 +784,9 @@ Your new weight will be <m>\dfrac{1}{4}</m> of your old weight. By a similar cal
 <exercise>
     <title>Practice 8</title>
   <webwork>
-    <setup>
+     
       <pg-code>
+        $refreshCachedImages = 1;
         $fun=Formula("120/x");
         $fake=Formula("6*x");
         $fake2=Formula("120-6*x");
@@ -823,7 +843,7 @@ Your new weight will be <m>\dfrac{1}{4}</m> of your old weight. By a similar cal
             
 
       </pg-code>
-    </setup>
+     
     <statement>
             <p>Delbert's officemates want to buy a $120 gold watch for a colleague who is retiring. The cost per person is inversely proportional to the number of people who contribute.</p>
             <p><ol label="a">
@@ -868,8 +888,8 @@ Your new weight will be <m>\dfrac{1}{4}</m> of your old weight. By a similar cal
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>What distinguishes inverse variation from other decreasing functions?  Mention properties of the graph and the formula.</p>
         <p><var form="essay"/></p>      

@@ -55,11 +55,11 @@ In other words, we solve an exponential equation by computing a logarithm. You c
 <exercise>
     <title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->functions->disable("All");
             $a = Compute("4");
             $b = Compute("-3");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Find each logarithm.</p>
             <p><ol label="a">
@@ -78,7 +78,7 @@ In other words, we solve an exponential equation by computing a logarithm. You c
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $logexp = RadioButtons(
               ["an exponent.",
               "a coefficient.",
@@ -86,7 +86,7 @@ In other words, we solve an exponential equation by computing a logarithm. You c
               "a radical."],
               0, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>A logarithm is the same as</p>
         <p><var name="$logexp" form="buttons"/></p>      
@@ -128,11 +128,11 @@ For any base <m>b \gt 0, b\ne 1</m>,</p>
 <exercise>
     <title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->functions->disable("All");
             $a = Compute("0");
             $b = Compute("3");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Find each logarithm.</p>
             <p><ol label="a">
@@ -151,7 +151,7 @@ For any base <m>b \gt 0, b\ne 1</m>,</p>
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $logb = RadioButtons(
               ["\(\dfrac{b}{b}=1\)",
               "\(\sqrt[b]{b}=1\)",
@@ -159,7 +159,7 @@ For any base <m>b \gt 0, b\ne 1</m>,</p>
               "\(1^b=1\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p><m>\log_b b=1</m> becuase</p>
         <p><var name="$logb" form="buttons"/></p>      
@@ -186,7 +186,7 @@ are equivalent statements. Rewriting an equation in logarithmic form is a basic 
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $findex = RadioButtons(
               ["\(x^5=31\)",
               "\(\sqrt[5]{31}=x\)",
@@ -194,7 +194,7 @@ are equivalent statements. Rewriting an equation in logarithmic form is a basic 
               "\(5^x=31\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>To find <m>\log_5 31</m> means to find an exponent <m>x</m> that satisfies the equation</p>
         <p><var name="$findex" form="buttons"/></p>      
@@ -221,7 +221,7 @@ are equivalent statements. Rewriting an equation in logarithmic form is a basic 
 <exercise>
     <title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context(Fraction);
             $ya = Compute("-1/3");
             $ba = Compute("8");
@@ -229,7 +229,7 @@ are equivalent statements. Rewriting an equation in logarithmic form is a basic 
             $yb = Formula("x");
             $bb = Compute("5");
             $xb = Compute("46");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Rewrite each equation in logarithmic form. </p>
             <p><ol label="a" cols="2">
@@ -258,8 +258,8 @@ are equivalent statements. Rewriting an equation in logarithmic form is a basic 
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>If <m>\log_2 x</m> is negative, what can you say about <m>x</m>?</p>
         <p><var form="essay"/></p>      
@@ -336,7 +336,7 @@ To the nearest hundredth, <m>\log_{3}{7} \approx 1.77</m>.</p>
 <exercise>
     <title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context(Fraction);
             $y = Formula("x");
             $b = Compute("3");
@@ -348,7 +348,7 @@ To the nearest hundredth, <m>\log_{3}{7} \approx 1.77</m>.</p>
             );
 
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
             <li><p>Rewrite the equation <m>3^x = 90</m> in logarithmic form.</p>
@@ -379,7 +379,7 @@ Base <m>10</m> logarithms are called <term>common logarithms</term><idx>common l
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $findex = RadioButtons(
               ["\(x=25\)",
               "\(x\) is between 20 and 30",
@@ -387,7 +387,7 @@ Base <m>10</m> logarithms are called <term>common logarithms</term><idx>common l
               "\(x=\dfrac{1}{2.5}=0.4\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>If <m>\log x = 2.5</m>, what can you say about <m>x</m>?</p>
         <p><var name="$findex" form="buttons"/></p>      
@@ -433,13 +433,13 @@ so our approximations are reasonable, although you can see that rounding a logar
 <exercise>
     <title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->functions->disable("All");
             Context()->{format}{number} = "%.2f";
             $a = Compute("2.40");
             Context()->{format}{number} = "%.4f";
             $b = Compute("2.3979");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Evaluate <m>\log{250}</m>, and round your answer to two decimal places. Check your answer using the conversion equations.</p>
@@ -459,8 +459,8 @@ so our approximations are reasonable, although you can see that rounding a logar
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain how to estimate <m>\log_{10} x</m> between two integers.</p>
         <p><var form="essay"/></p>      
@@ -501,7 +501,7 @@ We can evaluate this expression on the calculator by entering</p>
 
 <exercise><title>QuickCheck 5</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $stepone = RadioButtons(
               ["Multiply 5 times 10.",
               "Take the log of both sides.",
@@ -509,7 +509,7 @@ We can evaluate this expression on the calculator by entering</p>
               "Divide both sides by 5."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>What is the first step in solving the equation <m>5(10)^x=12</m>?</p>
         <p><var name="$stepone" form="buttons"/></p>      
@@ -535,14 +535,14 @@ We can evaluate this expression on the calculator by entering</p>
 <exercise>
     <title>Practice 6</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->flags->set(useBaseTenLog=>1); 
             $x = Compute("-5*log(0.75/30)")->with(
               tolType => 'absolute',
               tolerance => .005,
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve <m>12 - 30(10^{-0.2x} ) = 11.25</m></p>
             <p><m>x=</m><var name="$x" width="12"/> </p>
@@ -583,7 +583,7 @@ To evaluate this expression, we key in</p>
 <exercise>
     <title>Practice 7</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(t=>"Real");
             Context()->flags->set(useBaseTenLog=>1); 
             $p0 = Compute("25.85");
@@ -600,7 +600,7 @@ To evaluate this expression, we key in</p>
             ["Yes: The percentage will continue increasing, faster and faster.",
             "No: the percent of homes with computers cannot exceed 100%."],
             1,);
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>The percentage of American homes with computers grew exponentially from 1994 to 1999. For <m>t = 0</m> in 1994, the growth law was 
             <me>P(t) = <var name="$f"/></me> 
@@ -627,8 +627,8 @@ To evaluate this expression, we key in</p>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>The population of rabbits on an island grows according to <m>P(t)=6(10)^{0.3t}</m>. Explain the difference between the two problems: (1) given <m>P</m> find <m>t</m>, and (2) given <m>t</m> find <m>P</m>.</p>
         <p><var form="essay"/></p>      

@@ -11,7 +11,7 @@
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $ratfn = RadioButtons(
               ["\(y=\dfrac{1}{x+2}\)",
               "\(y=3x+5\)",
@@ -19,7 +19,7 @@
               "\(y=\dfrac{2x^3+3x-7}{x^4-x^2}\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which of the following is not a rational function?</p>
         <p><var name="$ratfn" form="buttons"/></p>      
@@ -79,7 +79,7 @@
 <exercise>
 	<title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("ImplicitPlane")->variables->are(r=>"Real", T=>"Real");
             $a = Compute("0.25");
             $equation = ImplicitPlane("r=6");
@@ -90,7 +90,7 @@
             ],
             1,);
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Queueing theory is used to predict your waiting time in a line, or queue. For example, suppose the attendant at a toll booth can process <m>6</m> vehicles per minute. The average total time spent by a motorist negotiating the toll booth depends on the rate, <m>r</m>, at which vehicles arrive, according to the formula
             <me>T=g(r)=\frac{12-r}{12(6-r)}</me></p>
@@ -165,7 +165,7 @@
 <exercise>
 	<title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("ImplicitPlane")->variables->are(C=>"Real", x=>"Real");
             $a = Compute("4");
             $equation = ImplicitPlane("C=1");
@@ -176,7 +176,7 @@
             ],
             2,);
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Delbert prepares a 20% glucose solution of by mixing 2 mL of glucose with 8 mL of water. If he adds <m>x</m> ml of glucose to the solution, its concentration is given by
         <me>
@@ -227,7 +227,7 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $eqz = RadioButtons(
               ["can be reduced to \(\dfrac{1}{4}\).",
               "is undefined at \(x=1\) and \(x=-1\).",
@@ -235,7 +235,7 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
               "is equal to zero at \(x=1\) and \(x=-1\)."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>The fraction <m>\dfrac{x^2-1}{x^2-4}</m></p>
         <p><var name="$eqz" form="buttons"/></p>      
@@ -250,12 +250,12 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
 <exercise>
 	<title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Inequalities");
             $a = Compute("x &lt; -4 or x>-4");
             $z = Compute("2");
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Find the domain of <m>F(x) = \displaystyle{\frac{x - 2}{x + 4}}</m>.</p>
@@ -321,7 +321,7 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
 <exercise>
 	<title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("ImplicitPlane")->variables->are(x=>"Real", y=>"Real");
             $eq1 = ImplicitPlane("x=-2");
             $eq2 = ImplicitPlane("x=2");
@@ -332,7 +332,7 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
              partialCredit => 1,
             ); 
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Find the vertical asymptotes of <m>G(x) = \displaystyle{\frac{4x^2}{x^2 - 4}}</m>.</p>
             <p>Equations of vertical asymptotes: <var name="$a" width="10" /> Separate different equations with a comma.</p>
@@ -345,7 +345,7 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $hole = RadioButtons(
               ["\(f(a)=0\).",
               "\(f(a)=1\).",
@@ -353,7 +353,7 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
               "there is a hole in the graph at\(x=a\)."],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>If the numerator and denominator of a rational function are both equal to zero at <m>x=a</m>, then</p>
         <p><var name="$hole" form="buttons"/></p>      
@@ -374,7 +374,7 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
 <exercise>
 	<title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Fraction")->flags->set( reduceConstants => 0, 
             reduceConstantFunctions => 0,  );
             $a1 = Formula("1/5");
@@ -391,7 +391,7 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
             $eq1 = ImplicitPlane("x=-2");
             $eq2 = ImplicitPlane("x=2");
             $a = List("$eq1,$eq2");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p><ol label="a">
                 <li><p>Find the vertical asymptotes of <m>f(x) = \displaystyle{\frac{1}{x^2-4}}</m> .</p>
@@ -463,7 +463,7 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $hasy = RadioButtons(
               ["\(y=\dfrac{2x+1}{x^2+1}\)",
               "\(y=\dfrac{2x^2-4}{x-2}\)",
@@ -471,7 +471,7 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
               "\(y=\dfrac{2x^2+4}{x+2}\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which of these functions has a horizontal asymptote at <m>y=2</m> ?</p>
         <p><var name="$hasy" form="buttons"/></p>      
@@ -491,14 +491,14 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
 <exercise>
 	<title>Practice 6</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("ImplicitPlane")->variables->are(x=>"Real", y=>"Real");
             $eq1 = ImplicitPlane("x=-3");
             $eq2 = ImplicitPlane("x=3");
             $eq3 = ImplicitPlane("y=1");
             $a = List("$eq3,$eq1,$eq2");
             
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Locate the horizontal and vertical asymptotes and sketch the graph of <m>k(x) = \displaystyle{\frac{x^2 - 1}{x^2 - 9}}</m>. Label the <m>x</m>- and <m>y</m>-intercepts with their coordinates.</p>
             <p>Equations of asymptotes: <var name="$a" width="10" /> Use <m>x</m> for the independant variable and <m>y</m> for the dependant variable. Separate different equations with a comma.</p>
@@ -515,8 +515,8 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain how to reduce an algebraic fraction, and describe some mistakes to avoid.</p>
         <p><var form="essay"/></p>      
@@ -554,10 +554,10 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
 <exercise>
 	<title>Practice 7</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->set(x=>{limits=>[-1,1]});
             $f = Formula("400/(100-x^2)");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Navid took his outboard motorboat 20 miles upstream to a fishing site, returning downstream later that day. His boat travels 10 miles per hour in still water. Write an expression for the time Navid spent traveling, as a function of the speed of the current.</p>
             <p><var name="$f" width="15"/> hrs </p>

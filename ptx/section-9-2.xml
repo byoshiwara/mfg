@@ -39,12 +39,71 @@ and in general
 
         The first four terms are  6, 9, 12, and 15.</p></solution></example>
 
-<exercise><statement><p>Find the first four terms of an arithmetic sequence with first term <m>100</m> and common difference <m>-30</m>.</p></statement>
-    <answer><p>100, 70, 40, 10</p></answer></exercise>
+<exercise><title>Practice 1</title>
+<webwork>
+    <pg-code>
+        $answer = List(100, 70, 40, 10)->cmp(ordered=>1);
+    </pg-code>
+    <statement>
+        <p>
+            Find the first four terms of an arithmetic sequence with first term <m>100</m> and common difference <m>-30</m>.
+        </p>
+        <p>Answer: <var name="$answer" width="15"/> (List the terms in order; separate terms with a comma.</p>
+    </statement>
+    <solution><p>100, 70, 40, 10</p></solution>
+</webwork>
+</exercise>
+
 
 <p>An arithmetic sequence defines a linear function of <m>n</m>.  In the figure below, compare the graph of the linear function  <m>f(x) = 2x + 3</m>,  whose domain is the set of all real numbers, and the graph of the arithmetic sequence <m>a_n = 2n + 3</m>,  whose domain is the set of positive integers.</p>
 
-<sidebyside width="70%"><image source="images/fig-9-2-1.png"><description>graphs</description></image></sidebyside>  
+<sidebyside widths="30% 30%" margins="13% 13%" valigns="bottom bottom"><image xml:id="fig-y-eq-2x-plus3">
+    <description>line 2x plus 3</description>
+    <latex-image>
+    <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+    <![CDATA[\tikzset{%
+    }
+    \begin{tikzpicture} [scale=.5]
+    \draw[cyan] (-3,-2) grid (6,12);
+    \draw[black,thick,->,>=stealth'] (-3,0)--(6.6,0) node[right] {$x$};
+    \draw[black,thick,->,>=stealth'] (0,-2)--(0,12.6) node[above] {$f(x)$};
+    \foreach \x   in  {5} {
+     \draw[black, thick] (\x,0.15) --++(0,-.3) node[below, yshift=-2, fill=white, inner sep=1] {$\x$};
+    };
+    \foreach \x   in  {5,10} {
+     \draw[black, thick] (0.14,\x) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$\x$};
+    };
+    \draw[red, very thick,  <->, >=stealth'] (-5/2,-2)--(9/2,12);
+    \node[fill=white, inner sep=2] at (3.5,3){$f(x)=2x+3$};
+    \node at (1.5,-3) {(a)};
+    \end{tikzpicture}]]>
+    </latex-image>
+</image>
+<image xml:id="fig-an-eq-2n-plus3">
+    <description>sequence 2n plus 3</description>
+    <latex-image>
+    <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+    <![CDATA[\tikzset{%
+    }
+    \begin{tikzpicture} [scale=.5]
+    \draw[cyan] (-3,-2) grid (6,12);
+    \draw[black,thick,->,>=stealth'] (-3,0)--(6.6,0) node[right] {$n$};
+    \draw[black,thick,->,>=stealth'] (0,-2)--(0,12.6) node[above] {$a_n$};
+    \foreach \x   in  {5} {
+     \draw[black, thick] (\x,0.15) --++(0,-.3) node[below, yshift=-2, fill=white, inner sep=1] {$\x$};
+    };
+    \foreach \x   in  {5,10} {
+     \draw[black, thick] (0.14,\x) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$\x$};
+    };
+    \foreach \x   in  {1,2,3,4} {
+      \filldraw[red] (\x, {2*\x+3}) circle (.15);
+    }
+    \node[fill=white, inner sep=2] at (3.5,3){$a_n=2n+3$};
+    \node at (1.5,-3) {(b)};
+    \end{tikzpicture}]]>
+    </latex-image>
+    </image>
+</sidebyside>  
 
 <note><p>Notice that the common difference, 2, of the sequence corresponds to the slope of the linear function.</p></note>
 
@@ -81,7 +140,7 @@ and in general
 <p>We can use this formula to find a particular term of an arithmetic sequence if we know the first term and the common difference.</p>
 
        
-<example><statement><p>Find the fourteenth term of the arithmetic sequence <m>-6,~-1,~4,~\cdots</m></p></statement>
+<example><statement><p>Find the fourteenth term of the arithmetic sequence <m>-6,~{-1},~4,~\cdots</m></p></statement>
     
 <solution><p>First, we find the common difference by subtracting any term from its successor:
 <me>d = -1 - (-6) = 5</me>
@@ -89,10 +148,20 @@ Then we use the formula with <m>n = 14</m> :
 <me>a_{14}= -6 + (14-1)(5)= 59</me>
 </p></solution></example> 
 
-<exercise><statement><p>Find the 100th term of the arithmetic sequence  <m>1, 3, 5, 7, \cdots</m>.</p>
-</statement>
-
-<answer><m>199</m></answer></exercise>
+<exercise><title>Practice 2</title>
+<webwork>
+    <pg-code>
+        $answer = Compute("199");
+    </pg-code>
+    <statement>
+        <p>
+            Find the 100th term of the arithmetic sequence  <m>1, 3, 5, 7, \cdots</m>.
+        </p>
+        <p>Answer: <var name="$answer" width="3"/> </p>
+    </statement>
+    <solution><m>199</m></solution>
+</webwork>
+</exercise> 
 
 <example><statement><p>You deposit $8000 in an account that pays 5%  simple annual interest.</p>
 <p><ol label = "a">  
@@ -106,25 +175,40 @@ Then we use the formula with <m>n = 14</m> :
     <me>b_{20} = 8400 + (19)400 = 16,000</me>
     After 20 years there will be $16,000 in the account.</li></ol></p></solution></example>
 
- <exercise><statement><p>Find the first four terms of a geometric sequence  whose first term is 1000 and whose common ratio is 1.06.</p></statement>
+ <exercise><title>Practice 3</title>
+<webwork>
+    <pg-code>
+        $f = Formula("1000*1.06^(x)");
+        foreach my $i(0..3) {
+        $c[$i]= $f->eval(x=>$i);
+        }
+        $answer = List($c[0],$c[1],$c[2],$c[3])->cmp(tolType => 'relative',  tolerance => .0001, ordered=>1);
+    </pg-code>
+    <statement>
+        <p>
+            Find the first four terms of a geometric sequence  whose first term is 1000 and whose common ratio is 1.06.
+        </p>
+        <p>Answer: <var name="$answer" width="25"/> (List the terms in order; separate terms with a comma.</p>
+    </statement>
+    <solution>1000, 1060, 1123.6,  1191.016</solution>
+</webwork>
+</exercise>
 
- <answer>1000, 1060, 1123.6,  1191.016</answer></exercise>
     
  </subsection>
 
 <subsection><title>Geometric Sequences</title>
  <p>A national junior chess tournament starts with 1024 invited contestants. At the end of each round, the winners move on to the next level. Thus, after each round there are half as many contestants as before, and the number of remaining contestants is a function of the number of rounds completed. Because the number of rounds <m>n</m> is a positive integer, the function is a sequence.</p>
 
- <p>If <m>C_n</m> represents the number of contestants after <m>n</m> rounds of competition, then
-
- <!--*****--><me>\begin{aligned}[t]
-                C_1 \amp = 1024 (\dfrac{1}{2}) = 512\\
-                C_2 \amp = 512 (\dfrac{1}{2}) = 1024 (\dfrac{1}{2})^2 = 256\\
-                C_3 \amp = 256 (\dfrac{1}{2}) = 1024 (\dfrac{1}{2})^3 = 128\\ 
-                \end{aligned}</me><!--*****-->
-
-In general
-<me>C_n = 1024 (\dfrac{1}{2})^n </me></p>
+ <p>
+    If <m>C_n</m> represents the number of contestants after <m>n</m> rounds of competition, then
+    <md>
+        <mrow>C_1 \amp = 1024 \left(\dfrac{1}{2}\right) = 512</mrow>
+        <mrow>C_2 \amp = 512 \left(\dfrac{1}{2}\right) = 1024 \left(\dfrac{1}{2}\right)^2 = 256</mrow>
+        <mrow> C_3 \amp = 256 \left(\dfrac{1}{2}\right) = 1024 \left(\dfrac{1}{2}\right)^3 = 128\</mrow>
+    </md>
+    In general
+    <md><mrow>C_n = 1024 \left(\dfrac{1}{2}\right)^n </mrow></md></p>
 
 <p>Each term of the sequence defined above can be obtained from the previous one by multiplying by <m>\dfrac{1}{2}</m>.  A sequence in which each term can be obtained from the previous term by multiplying by a fixed amount is called a <term>geometric sequence</term>.</p>
 <p>The fixed amount we multiply each term by is the ratio of two successive terms and is called the <term>common ratio</term>.  In the example above the common ratio is <m>\dfrac{1}{2}</m>. If we denote the first term of a geometric sequence by <m>a</m> and the common ratio by <m>r</m>, then the sequence can be defined recursively by
@@ -137,23 +221,81 @@ In general
 <example><statement><p>Find the first four terms of a geometric sequence whose first term is 64 and whose common ratio is <m>\dfrac{5}{4}</m>.</p></statement>
 
 <solution><p>The first term is 64, so we have <m>a_1=64</m>. To find each subsequent term, we multipy the previous term by <m>\dfrac{5}{4}</m>.
-
-<!--*****--><me>\begin{aligned}[t]
-                a_2 \amp = (\dfrac{5}{4})a_1 = (\dfrac{5}{4})(64) = 80\\
-                a_3 \amp = (\dfrac{5}{4})a_2 = (\dfrac{5}{4})(80) = 100\\
-                a_4 \amp = (\dfrac{5}{4})a_3 = (\dfrac{5}{4})(100) = 125\\ 
-                \end{aligned}</me><!--*****-->
-
+<md>
+    <mrow>a_2 \amp = \left(\dfrac{5}{4}\right)a_1 = \left(\dfrac{5}{4}\right)(64) = 80</mrow>
+    <mrow>a_3 \amp = \left(\dfrac{5}{4}\right)a_2 = \left(\dfrac{5}{4}\right)(80) = 100</mrow>
+    <mrow>a_4 \amp = \left(\dfrac{5}{4}\right)a_3 = \left(\dfrac{5}{4}\right)(100) = 125</mrow>
+</md>
 The first four terms are  64, 80, 100, and 125.</p></solution></example>
 
-<exercise><statement><p>Find the first four terms of a geometric sequence  whose first term is 5 and whose common ratio is 2.
-</p></statement>
-
-<answer><p>5, 10, 20, 40</p></answer></exercise>
+<exercise><title>Practice 4</title>
+<webwork>
+    <pg-code>
+        $f = Formula("5*2^(x)");
+        foreach my $i(0..3) {
+        $c[$i]= $f->eval(x=>$i);
+        }
+        $answer = List($c[0],$c[1],$c[2],$c[3])->cmp(ordered=>1);
+    </pg-code>
+    <statement>
+        <p>
+            Find the first four terms of a geometric sequence  whose first term is 5 and whose common ratio is 2.
+        </p>
+        <p>Answer: <var name="$answer" width="25"/> (List the terms in order; separate terms with a comma.</p>
+    </statement>
+    <solution>5, 10, 20, 40</solution>
+</webwork>
+</exercise>
 
 <p>A geometric sequence defines an exponential function of <m>n</m>. In the figure below, compare the graphs of the exponential function <m>f(x) = 100(2)^{x-1}</m>, whose domain is the set of real numbers, and the geometric sequence <m>a_n = 100(2)^{n-1}</m>, whose domain is the set of positive integers.</p>
 
-<sidebyside width="70%"><image source="images/fig-9-2-2.png"><description>graphs</description></image></sidebyside>
+<sidebyside widths="35% 35%" margins="10% 10%" valigns="bottom bottom"><image xml:id="fig-y-eq-100-times2-to-t-minus1">
+    <description>exponential function</description>
+    <latex-image>
+    <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+    <![CDATA[\tikzset{%
+    }
+    \begin{tikzpicture} [scale=.5]
+    \draw[cyan] (-3,-2) grid (9,17);
+    \draw[black,thick,->,>=stealth'] (-3,0)--(9.6,0) node[right] {$x$};
+    \draw[black,thick,->,>=stealth'] (0,-2)--(0,17.6) node[above] {$f(x)$};
+    \foreach \x   in  {5} {
+     \draw[black, thick] (\x,0.15) --++(0,-.3) node[below, yshift=-2, fill=white, inner sep=1] {$\x$};
+    };
+    \foreach \x  [evaluate=\x as \xi using int(100*\x)]  in  {5,10,15} {
+     \draw[black, thick] (0.14,\x) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$\xi$};
+    };
+    \draw[samples=65,domain=-3:{ln(17)/ln(2)+1},smooth,variable=\x,red,very thick, <->, >=stealth'] plot ({\x},{2^(\x-1)});
+    \node[fill=white, inner sep=2] at (5.5,2){$f(x)=100(2)^{x-1}$};
+    \node at (3.5,-3) {(a)};
+    \end{tikzpicture}]]>
+    </latex-image>
+</image>
+<image xml:id="fig-an-eq-100-times2-to-n-minus1">
+    <description>geometric sequence</description>
+    <latex-image>
+    <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+    <![CDATA[\tikzset{%
+    }
+    \begin{tikzpicture} [scale=.5]
+    \draw[cyan] (-3,-2) grid (9,17);
+    \draw[black,thick,->,>=stealth'] (-3,0)--(9.6,0) node[right] {$n$};
+    \draw[black,thick,->,>=stealth'] (0,-2)--(0,17.6) node[above] {$a_n$};
+    \foreach \x   in  {5} {
+     \draw[black, thick] (\x,0.15) --++(0,-.3) node[below, yshift=-2, fill=white, inner sep=1] {$\x$};
+    };
+    \foreach \x  [evaluate=\x as \xi using int(100*\x)]  in  {5,10,15} {
+     \draw[black, thick] (0.14,\x) --++(-.28,0) node[left, xshift=-2, fill=white, inner sep=1, scale=.9] {$\xi$};
+    };
+    \foreach \x  in  {1,2,3,4,5} {
+      \filldraw[red] (\x, {2^(\x-1)}) circle (.15);
+    }
+    \node[fill=white, inner sep=2] at (6.5,3){$a_n=100(2)^{n-1}$};
+    \node at (3.5,-3) {(b)};
+    \end{tikzpicture}]]>
+    </latex-image>
+    </image>
+</sidebyside> 
 
 <note><p>Notice that the common ratio of the geometric sequence corresponds to the base of the exponential function.</p></note>
 
@@ -184,16 +326,53 @@ The first four terms are  64, 80, 100, and 125.</p></solution></example>
     <li>This sequence is geometric.  Each term is obtained from the previous term by 
         multiplying by <m>\dfrac{1}{3}</m>.</li></ol></p></solution></example>
 
-<exercise><statement><p> Identify each of the following sequences as arithmetic, geometric, or neither.</p>
-<p><ol label = "a">
-    <li><m>1, ~4, ~9, ~16, ~\cdots</m></li>
-    <li><m>2, ~6, ~18, ~54, ~\cdots</m></li>
-    <li><m>\dfrac{1}{3},~\dfrac{1}{2},~\dfrac{2}{3},~\dfrac{5}{6},~\cdots</m></li></ol></p></statement>
-
-<answer><p><ol label = "a">
+<exercise><title>Practice 5</title>
+<webwork>
+    <pg-code>
+        $arith = PopUp(
+        [ "?", 
+        "arithmetic", 
+        "geometric",
+        "neither"],
+        1
+        );
+        $geom = PopUp(
+        [ "?", 
+        "arithmetic", 
+        "geometric",
+        "neither"],
+        2
+        );
+        $neither = PopUp(
+        [ "?", 
+        "arithmetic", 
+        "geometric",
+        "neither"],
+        3
+        );
+    </pg-code>
+    <statement>
+        <p>
+            Identify each of the following sequences as arithmetic, geometric, or neither.
+            <ol label = "a">
+                <li>
+                    <p><m>1, ~4, ~9, ~16, ~\cdots</m> <var name="$neither" form="popup"/> </p>
+                </li>
+                <li>
+                    <p><m>2, ~6, ~18, ~54, ~\cdots</m> <var name="$geom" form="popup"/></p>
+                </li>
+                <li>
+                    <p><m>\dfrac{1}{3},~\dfrac{1}{2},~\dfrac{2}{3},~\dfrac{5}{6},~\cdots</m> <var name="$arith" form="popup"/></p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+    <solution><p><ol label = "a">
     <li>Neither</li>
     <li>Geometric</li>
-    <li>Arithmetic</li></ol></p></answer></exercise>
+    <li>Arithmetic</li></ol></p></solution>
+</webwork>
+</exercise>
 
 </subsection>
 
@@ -223,9 +402,20 @@ The first four terms are  64, 80, 100, and 125.</p></solution></example>
 Then we use the formula with  <m>a = -24, ~r = \dfrac{-1}{2}</m>, and <m>n = 9</m>.
 <me>a_9 = -24(\dfrac{-1}{2})^8 = \dfrac{-3}{32}</me></p></solution></example>
 
-<exercise><statement><p> Find the 12th term of the arithmetic sequence <m>\dfrac{3}{32},~\dfrac{3}{16},~dfrac{3}{8},~ \dfrac{3}{4},~\cdots</m></p></statement>
-
-<answer><p>192</p></answer></exercise>
+<exercise><title>Practice 6</title>
+<webwork>
+    <pg-code>
+        $answer = Compute("192");
+    </pg-code>
+    <statement>
+        <p>
+            Find the 12th term of the arithmetic sequence <m>\quad\dfrac{3}{32}</m>, <m>\dfrac{3}{16}</m>, <m>\dfrac{3}{8}</m>, <m> \dfrac{3}{4}, \ldots</m>
+        </p>
+        <p>Answer: <var name="$answer" width="3"/> </p>
+    </statement>
+    <solution><p>192</p></solution>
+</webwork>
+</exercise>
 
 <example><statement><p>You deposit $8000 in an account that pays 5% annual interest compounded annually.</p>  
 <p><ol label = "a">
@@ -247,9 +437,22 @@ Then we use the formula with  <m>a = -24, ~r = \dfrac{-1}{2}</m>, and <m>n = 9</
    <li><m>a_n = a + (n-1)d</m></li>
    <li><m>a_n = ar^{n-1}</m></li></ol></p></answer></exercise>
 
-<exercise><statement><p>Find a recursive definition for the sequence in the previous example.</p></statement>
-
-<answer><m>c_1=8400,~~c_{n+1}=1.05c_n</m></answer></exercise>
+<exercise><title>Practice 7</title>
+<webwork>
+    <pg-code>
+        Context()->variables->add(cn =>['Real',TeX=>"c_n"]);
+        $c1 = Compute("8400");
+        $f = Formula("1.05*cn");
+    </pg-code>
+    <statement>
+        <p>
+            Find a recursive definition for the sequence in the previous example.
+        </p>
+        <p><m>c_1=</m><var name="$c1" width="4"/>, <m>c_{n+1}=</m><var name="$f" width="6"/> [Note: Enter "cn" to get <m>c_n</m>.]</p>
+    </statement>
+<solution><p><m>c_1 = 8400</m>, <m>c_{n+1} = 1.05c_n</m></p></solution>
+</webwork>
+</exercise>
 
 <example><statement><p>Find a nonrecursive definition for each sequence.</p>
     <p><ol label = "a">
@@ -262,20 +465,37 @@ Then we use the formula with  <m>a = -24, ~r = \dfrac{-1}{2}</m>, and <m>n = 9</
     <li><p>The first four terms of this sequence are 2, 6, 18, and 54. Because each new term is found by multiplying the previous term by 3, we see that this is a geometric sequence with a common ratio of 3. This means that the sequence has the form     
     <me>b_n = 3\cdot 2^{n-1}</me></p></li></ol></p></solution></example>
 
-<exercise><statement><p>Find a nonrecursive definition for each sequence.</p>
-<p><ol label = "a">
-    <li><m>c_1 = 100,~~ c_{k+1} = 1.03 c_k</m></li>
-    <li><m>d_1 = 2,~~ d_k = d_{k-1} - 5</m></li></ol></p></statement>
-
-<answer><p><ol label = "a">
-    <li><m>c_k = 1.03c_{k-1}</m></li>
-    <li><m>d_k = 7-5k</m></li></ol></p></answer></exercise>   
-
-
-
-    The formula for the <m>nth term of an arithmetic sequence is <fillin characters="6"/>. 
-
-    <li><m>a_n = a + (n-1)d</m></li>
+<exercise><title>Practice 8</title>
+<webwork>
+    <pg-code>
+        Context()->variables->add(k=>"Real");
+        $f = Formula("100*1.03^(k-1)");
+        $g = Formula("7-5*k");
+    </pg-code>
+    <statement><p>Find a nonrecursive definition for each sequence.</p>
+    <p><ol label = "a">
+        <li>
+            <p>
+                <m>c_1 = 100</m>, <m>\quad c_{k+1} = 1.03 c_k</m>
+            </p>
+            <p>
+                <m>c_k=</m> <var name="$f" width="10"/>
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>d_1 = 2</m>, <m>\quad d_k = d_{k-1} - 5</m>
+            </p>
+            <p>
+                <m>d_k=</m> <var name="$g" width="10"/>
+            </p>
+        </li></ol></p>
+    </statement>
+    <solution><p><ol label = "a">
+    <li><m>c_k = 100\cdot 1.03^{k-1}</m></li>
+    <li><m>d_k = 7-5k</m></li></ol></p></solution>
+</webwork>
+</exercise>     
 
 </subsection>
 

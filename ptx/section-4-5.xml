@@ -50,9 +50,9 @@ Thus, <m>a = 0.5</m> and <m>b = 3</m>, so the function is <m>f (x) = 0.5(3^ x )<
 <exercise>
 	<title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $f = Formula("8* 2.5**x");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Use the ratio method to find an exponential function whose graph includes the points <m>(1, 20)</m> and <m>(3, 125)</m>.</p>
             <p><m>f(x)=</m><var name="$f" width="10"/> </p>
@@ -65,7 +65,7 @@ Thus, <m>a = 0.5</m> and <m>b = 3</m>, so the function is <m>f (x) = 0.5(3^ x )<
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $syst = RadioButtons(
               ["Calculate the slope.",
               "Subtract one equation from the other.",
@@ -73,7 +73,7 @@ Thus, <m>a = 0.5</m> and <m>b = 3</m>, so the function is <m>f (x) = 0.5(3^ x )<
               "Take the log of both sides."],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>You have written a system of equations to fit an exponential function through two points. What is the next step?</p>
         <p><var name="$syst" form="buttons"/></p>      
@@ -108,7 +108,7 @@ Thus, <m>C(t) = 108.75(1.31)^t</m> , and the annual inflation rate was <m>31</m>
 <exercise>
 	<title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(m=>"Real");
             $b = Compute("793/7480");
             $a = Compute("7480/$b**5");
@@ -119,7 +119,7 @@ Thus, <m>C(t) = 108.75(1.31)^t</m> , and the annual inflation rate was <m>31</m>
               tolerance => .51,
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>The number of earthquakes that occur worldwide is a decreasing exponential function of their magnitude on the Richter scale. Between 2000 and 2005, there were 7480 earthquakes of magnitude 5 and 793 earthquakes of magnitude 6. (Source: National Earthquake Information Center, U.S. Geological Survey)</p>
             <p><ol label="a">
@@ -177,7 +177,7 @@ Thus, <m>C(t) = 108.75(1.31)^t</m> , and the annual inflation rate was <m>31</m>
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $dubt = RadioButtons(
               ["The doubling time of a population depends on its initial value.",
               "An increasing exponential function has a constant doubling time.",
@@ -185,7 +185,7 @@ Thus, <m>C(t) = 108.75(1.31)^t</m> , and the annual inflation rate was <m>31</m>
               "The doubling time is half the percent growth rate."],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which statement is true?</p>
         <p><var name="$dubt" form="buttons"/></p>      
@@ -198,7 +198,7 @@ Thus, <m>C(t) = 108.75(1.31)^t</m> , and the annual inflation rate was <m>31</m>
 <exercise>
 	<title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(t=>"Real");
             $f = Formula("26.9*1.032**t");
             $dt = Compute("log(2)/log(1.032)")->with(
@@ -206,7 +206,7 @@ Thus, <m>C(t) = 108.75(1.31)^t</m> , and the annual inflation rate was <m>31</m>
               tolerance => .5,
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>In 2005, the population of Uganda was 26.9 million people and was growing by 3.2% per year.</p>
             <p><ol label="a">
@@ -238,7 +238,7 @@ In this form, the growth factor for the population is <m>2^{1/35}</m>, and you c
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $dubfm = RadioButtons(
               ["\(P(t)\) is twice the initial value.",
               "After 2 years, \(P(t)=D\).",
@@ -246,7 +246,7 @@ In this form, the growth factor for the population is <m>2^{1/35}</m>, and you c
               "\(P(t)\) grows by a factor of \(D\)."],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>The formula <m>P(t)=P_0 2^{t/D}</m> tells us that:</p>
         <p><var name="$dubfm" form="buttons"/></p>      
@@ -274,13 +274,13 @@ In this form, the growth factor for the population is <m>2^{1/35}</m>, and you c
 <exercise>
 	<title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $r = Compute("100*(2**(1/36.8)-1)")->with(
               tolType => 'absolute',
               tolerance => .051,
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>At its current rate of growth, the population of Mexico will double in 36.8 years. What is its annual percent rate of growth?</p>
             <p>Answer: <var name="$r" width="3"/>% </p>
@@ -293,8 +293,8 @@ In this form, the growth factor for the population is <m>2^{1/35}</m>, and you c
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>How can you find the growth factor for an exponential function when you know its doubling time?</p>
         <p><var form="essay"/></p>      
@@ -347,7 +347,7 @@ In this form, the growth factor for the population is <m>2^{1/35}</m>, and you c
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $ddt = RadioButtons(
               ["30 pounds of DDT dissolve in one year.",
               "100 pounds of DDT dissolve in 30 years.",
@@ -355,7 +355,7 @@ In this form, the growth factor for the population is <m>2^{1/35}</m>, and you c
               "Each half-pound of DDT takes 15 years to dissolve."],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>The half-life of DDT is 15 years. This means that:</p>
         <p><var name="$ddt" form="buttons"/></p>      
@@ -367,16 +367,20 @@ In this form, the growth factor for the population is <m>2^{1/35}</m>, and you c
 
 <exercise>
 	<title>Practice 5</title>
-    <webwork><pg-code>
+    <webwork>
+         <pg-code>
             Context()->variables->add(A0 => ["Real",TeX=>"A_0"], t=>"Real");
             $f = Formula("A0 * 0.85**t");
             $hl = Compute("log(1/2)/log(0.85)")->with(
               tolType => 'absolute',
               tolerance => .05,
-            );         
-        </pg-code>
-    <statement><p>Alcohol is eliminated from the body at a rate of 15% per hour.</p><p><ol label="a">
-            <li><p>Write a decay formula for the amount of alcohol remaining in the body, using <m>A_0</m> for the initial amount of alcohol.  [Note: Enter "A" to get <m>A_0</m>.].</p>
+            );
+           
+        </pg-code> 
+        <statement>
+            <p>Alcohol is eliminated from the body at a rate of 15% per hour.</p>
+            <p><ol label="a">
+                <li><p>Write a decay formula for the amount of alcohol remaining in the body, using <m>A_0</m> for the initial amount of alcohol.  [Note: Enter "A" to get <m>A_0</m>.].</p>
                 <p><m>A(t)=</m><var name="$f" width="15"/> </p></li>
             <li><p>What is the half-life of alcohol in the body?</p>
                 <p><var name="$hl" width="3"/> hours</p></li></ol></p>
@@ -416,13 +420,13 @@ In this form, the growth factor for the population is <m>2^{1/35}</m>, and you c
 <exercise>
 	<title>Practice 6</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $r = Compute("100*(1-(1/2**(1/30)))")->with(
               tolType => 'absolute',
               tolerance => .005,
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Cesium-137, with a half-life of 30 years, is one of the most dangerous by-products of nuclear fission. What is the annual decay rate for cesium-137?</p>
             <p>Answer: <var name="$r" width="3"/>% </p>
@@ -435,8 +439,8 @@ In this form, the growth factor for the population is <m>2^{1/35}</m>, and you c
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>How can you use the half-life to sketch a graph of an exponential function?</p>
         <p><var form="essay"/></p>      
@@ -482,14 +486,14 @@ In this form, the growth factor for the population is <m>2^{1/35}</m>, and you c
 <exercise>
 	<title>Practice 7</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $P = 2500;
             $r = 0.04;
             $n = 1;
             $FV = 20000;
             $t = Compute("log($FV*$r/($P*$n)+1)/($n*log(1+$r/$n)) ");
             $answer = ceil($t);
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Rufus is saving for a new car. He puts $2500 a year into an account that pays 4% interest compounded annually. How many years will it take him to accumulate $20,000? (Round up to the next whole year.)</p>
             <p>Answer: <var name="$answer" width="2"/> years</p>
@@ -519,7 +523,7 @@ Delbert's Aunt Welthy should deposit $<m>21,719.63</m>.</p></solution></example>
 <exercise>
 	<title>Practice 8</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->{format}{number} = "%.2f";   
             $PV = 250000;
             $r = 0.06;
@@ -530,7 +534,7 @@ Delbert's Aunt Welthy should deposit $<m>21,719.63</m>.</p></solution></example>
               tolerance => .0051,
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Use the formula for the present value of an annuity to calculate your monthly mortgage payment on a home loan of $250,000 amortized over 30 years at 6% interest compounded monthly.</p>
             <p>$<var name="$P" width="8"/> </p>

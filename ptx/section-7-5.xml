@@ -31,7 +31,7 @@ The windspeed was <m>8.\overline{3}</m>, or <m>8\frac{1}{3}</m> miles per hour.<
 <exercise>
 	<title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $r1 = Compute("-2");
             $r2 = Compute("4");
             $a = List("$r1, $r2");
@@ -40,7 +40,7 @@ The windspeed was <m>8.\overline{3}</m>, or <m>8\frac{1}{3}</m> miles per hour.<
              showLengthHints => 1,
              partialCredit => 1,
             ); 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve <m>\displaystyle{\frac{x^2}{x+4}}=2</m></p>
             <p><m>x=</m><var name="$answer" width="10" evaluator="$my_evaluator"/></p>
@@ -87,7 +87,7 @@ The speed of the current is <m>3</m> miles per hour.</p></solution></example>
 <exercise>
 	<title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $r1 = Compute("2");
             $a = List("$r1");
             $my_evaluator = $a -> cmp(
@@ -95,7 +95,7 @@ The speed of the current is <m>3</m> miles per hour.</p></solution></example>
              showLengthHints => 1,
              partialCredit => 1,
             ); 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve <m>\displaystyle{\frac{x}{6-x}=\frac{1}{2}}</m></p>
             <p><m>x=</m><var name="$answer" width="10" evaluator="$my_evaluator"/></p>
@@ -109,8 +109,8 @@ The speed of the current is <m>3</m> miles per hour.</p></solution></example>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>If the variable in an equation appears in the denominator of a fraction, what should you do to solve the equation?</p>
         <p><var form="essay"/></p>      
@@ -179,7 +179,7 @@ you will find that the graphs never intersect, which means that there is no solu
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $clear = RadioButtons(
               ["\(x+2x+1=\dfrac{1}{2}\)",
               "\(2x+1+x=2\)",
@@ -187,7 +187,7 @@ you will find that the graphs never intersect, which means that there is no solu
               "\(\dfrac{2x+1}{x(2x+1)}+\dfrac{x}{x(2x+1)} = 2\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Which of these is the correct first step to solve <m>\dfrac{1}{x}+\dfrac{1}{2x+1} = 2</m> ?</p>
         <p><var name="$clear" form="buttons"/></p>      
@@ -200,7 +200,7 @@ you will find that the graphs never intersect, which means that there is no solu
 <exercise>
 	<title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context("Fraction")->flags->set( reduceConstants => 0, 
             reduceConstantFunctions => 0,  );
             $r1 = Formula("-1/2");
@@ -210,7 +210,7 @@ you will find that the graphs never intersect, which means that there is no solu
              showLengthHints => 1,
              partialCredit => 1,
             ); 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve <m>\displaystyle{\frac{9}{x^2+x-2}+\frac{1}{x^2-4}=\frac{4}{x-1}} </m></p>
             <p><m>x=</m><var name="$answer" width="10" evaluator="$my_evaluator"/></p>
@@ -224,8 +224,8 @@ you will find that the graphs never intersect, which means that there is no solu
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>What are extraneous solutions, and when might they occur?</p>
         <p><var form="essay"/></p>      
@@ -252,10 +252,10 @@ We cannot combine the two terms containing <m>v</m> because they are not like te
 <exercise>
 	<title>Practice 4</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(a=>"Real", b=>"Real", H=>"Real");
             $f = Formula("(b*H)/(2b-H)");
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>Solve for <m>a</m>: <m>\hphantom{00}\displaystyle{\frac{2ab}{a+b}}=H </m></p>
             <p><m>a=</m><var name="$f" width="15"/> </p>
@@ -268,8 +268,8 @@ We cannot combine the two terms containing <m>v</m> because they are not like te
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>When you are solving a formula for <m>h</m>, what should you do if two terms contain <m>h</m> as a factor?</p>
         <p><var form="essay"/></p>      

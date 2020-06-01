@@ -28,7 +28,7 @@
 
 <exercise><title>QuickCheck 1</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $tabexp = RadioButtons(
               ["During each equal time interval, the output increases by the same amount.",
               "During each equal time interval, the output increases by the same factor.",
@@ -36,7 +36,7 @@
               "During each equal time interval, the output increases towards an asymptote."],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>How can you tell from a table of values that a function describes exponential growth?</p>
         <p><var name="$tabexp" form="buttons"/></p>      
@@ -70,7 +70,7 @@
 <exercise>
     <title>Practice 1</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context()->variables->add(t=>"Real");
             $P = Formula("24*3**t");
             $t0 = 6;
@@ -78,7 +78,7 @@
             $t1 = 3/4;
             $P1 = $P->eval(t=>$t1);
             $P1 = round($P1);
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>A population of 24 fruit flies triples every month. 
             <ol label="a">
@@ -100,7 +100,7 @@
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $orop = RadioButtons(
               ["Yes, we can simplify the product.",
               "Yes, it is exponential growth.",
@@ -108,7 +108,7 @@
               "No, it should be \(9^t\)."],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>Is <m>5 \cdot 4^t</m> equivalent to <m>20^t</m>?</p>
         <p><var name="$orop" form="buttons"/></p>      
@@ -134,7 +134,7 @@ The initial value of the function is <m>P_0 = 60</m>, and the growth factor is <
 
 <exercise><title>QuickCheck 3</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $gf = RadioButtons(
               ["\(\frac{3}{4}\)",
               "\(\sqrt[3]{4}\)",
@@ -142,7 +142,7 @@ The initial value of the function is <m>P_0 = 60</m>, and the growth factor is <
               "\(3^{\frac{1}{4}}\)"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>A population triples every four years. What is its growth factor?</p>
         <p><var name="$gf" form="buttons"/></p>      
@@ -165,7 +165,7 @@ so the growth factor for species A is <m>\alert{2^{1/2}}</m>, or approximately <
 <exercise>
     <title>Practice 2</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             Context(Fraction)->variables->add(t=>"Real");
             $a = Compute("2**(1/5)");
             $t1 = 1;
@@ -173,7 +173,7 @@ so the growth factor for species A is <m>\alert{2^{1/2}}</m>, or approximately <
             $f = Formula("5078*2**(t/5)");
             $n1 = $f->eval(t=>$t1);
             $n2 = $f->eval(t=>$t2);
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>In 1999, analysts expected the number of Internet service providers to double in five years.
             <ol label="a">
@@ -282,7 +282,7 @@ where
 
 <exercise><title>QuickCheck 4</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $gfp = RadioButtons(
               ["4.5",
               "0.45",
@@ -290,7 +290,7 @@ where
               "1.045"],
               3, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>A population grows by 4.5% per year. What is its annual growth factor?</p>
         <p><var name="$gfp" form="buttons"/></p>      
@@ -361,7 +361,8 @@ Thus, the annual growth factor for the price of butter is <m>1.2544</m>, and the
 <exercise>
     <title>Practice 3</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
+        $refreshCachedImages = 1;
             Context()->variables->add(t=>"Real");
 #            $year0 = Compute("1998"); #not a multiple of 5
 #            $c0 = Compute("10069");
@@ -414,7 +415,7 @@ Thus, the annual growth factor for the price of butter is <m>1.2544</m>, and the
             "$f for t in &lt;0, $xmax> using color:red and weight:2");
             ($gr->fn)[0]->steps(200);
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>In <var name="$year0"/>, the average annual cost of attending a public college was $<var name="$c0"/>, and costs were climbing by <var name="$r"/>% per year.</p>
             <p><ol label="a">
@@ -494,8 +495,8 @@ Thus, the annual growth factor for the price of butter is <m>1.2544</m>, and the
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Describe carefully the meanings of <m>b</m> and <m>r</m> in the formulas for exponential growth.</p>
         <p><var form="essay"/></p>      
@@ -629,7 +630,7 @@ Thus, the annual growth factor for the price of butter is <m>1.2544</m>, and the
 
 <exercise><title>QuickCheck 5</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $dfp = RadioButtons(
               ["-0.12",
               "-1.12",
@@ -637,7 +638,7 @@ Thus, the annual growth factor for the price of butter is <m>1.2544</m>, and the
               "1.88"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>A population decreases by 12% per year. What is its annual decay factor?</p>
         <p><var name="$dfp" form="buttons"/></p>      
@@ -667,85 +668,127 @@ Thus, the annual growth factor for the price of butter is <m>1.2544</m>, and the
     To the nearest dollar, the equipment is worth $4961.</p></li>
 </ol></p></solution></example>
 
-<exercise>
-    <title>Practice 4</title>
-    <webwork>
-        <setup><pg-code>
-            Context()->variables->add(t=>"Real");
-            $year0 = Compute("2012");
-            $b = Compute("0.82");
-            $b0 = Compute("3600");
-            $f = Formula("$b0* $b**t");
+<exercise><title>Practice 4</title>
+<introduction>
+    <sidebyside width="40%" margins="0% 10%">
+        <image xml:id="fig-ex-7-1-4">
+            <description>grid</description>
+            <latex-image>
+            <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+            <![CDATA[\tikzset{%
+            }
+            \begin{tikzpicture} [scale=.5] 
+            \draw[cyan] (0,0) grid (10,8);
+            \draw[black,thick,->,>=stealth'] (0,0)--(10.6,0) node[above]{$t$};
+            \draw[black,thick,->,>=stealth'] (0,0)--(0,8.6) node[left, yshift=1mm]{$B$};
+            \foreach \x in {2,4,...,10} {
+              \draw[black,thick] (\x,.15)--++(0,-.3) node[below, fill=white, inner sep=1, yshift=-2]{$\x$};
+            }
+            \foreach \x [evaluate=\x as \xi using int(500*\x)] in {2,4,...,8} {
+              \draw[black,thick] (.15,\x)--++(-.3,0) node[left, fill=white, inner sep=1, xshift=-2]{$\xi$};
+            }
+            \end{tikzpicture}]]>
+            </latex-image>
+        </image>
+    </sidebyside>
+</introduction>
+<webwork>
+     <pg-code>
+        Context()->variables->add(t=>"Real");
+        $year0 = Compute("2012");
+        $b = Compute("0.82");
+        $b0 = Compute("3600");
+        $f = Formula("$b0* $b**t");
 
-            foreach my $i (0..5) {
-            $t = 2*$i;
-            $b[$i] = $f->eval(t=>$t)->with(
-              tolType => 'absolute',
-              tolerance => 1,
-            );
-            $br[$i]= round($b[$i]);
-            };        
-        </pg-code></setup>
-        <statement>
-            <p>The number of butterflies visiting a nature station is declining by 18% per year. In <var name="$year0"/>, <var name="$b0"/> butterflies visited the nature station.</p>
-            <p><ol label="a">
-                <li><p>What is the decay factor in the annual butterfly count?</p>
-                <p>Answer: <var name="$b" width="3"/> </p></li>
-                <li><p>Write a formula for <m>B(t)</m>, the number of butterflies <m>t</m> years after <var name="$year0"/>.</p>
-                <p><m>B(t)=</m><var name="$f" width="12"/> </p></li>
-                <li><p>Complete the table and sketch a graph of <m>B(t)</m>.</p>
-                <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-                    <row bottom="minor">
-                        <cell><m>t</m></cell>
-                        <cell><m>0</m></cell>
-                        <cell><m>2</m></cell>
-                        <cell><m>4</m></cell>
-                        <cell><m>6</m></cell>
-                        <cell><m>8</m></cell>
-                        <cell><m>10</m></cell></row>
-                    <row>
-                        <cell><m>B(t)</m></cell>
-                        <cell><var name="$b[0]" width="3"/></cell>
-                        <cell><var name="$b[1]" width="3"/></cell>
-                        <cell><var name="$b[2]" width="3"/></cell>
-                        <cell><var name="$b[3]" width="3"/></cell>
-                        <cell><var name="$b[4]" width="3"/></cell>
-                        <cell><var name="$b[5]" width="3"/></cell></row>
-                </tabular></sidebyside></li>
-            </ol></p>
-        </statement>
-        <solution>
-            <p><ol label="a">
-                <li><p><m>0.82</m></p></li>
-                <li><p><m>B(t) = 3600\cdot 0.82^t</m></p></li>
-                <li><sidebyside>
-                <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-                    <row bottom="minor">
-                        <cell><m>t</m></cell>
-                        <cell><m>0</m></cell>
-                        <cell><m>2</m></cell>
-                        <cell><m>4</m></cell>
-                        <cell><m>6</m></cell>
-                        <cell><m>8</m></cell>
-                        <cell><m>10</m></cell></row>
-                    <row>
-                        <cell><m>B(t)</m></cell>
-                            <cell><var name="$br[0]"/></cell>
-                            <cell><var name="$br[1]"/></cell>
-                            <cell><var name="$br[2]"/></cell>
-                            <cell><var name="$br[3]"/></cell>
-                            <cell><var name="$br[4]"/></cell>
-                            <cell><var name="$br[5]"/></cell></row>
-                </tabular></sidebyside>
-                <p>A graph is below.</p>
-               </li>
-            </ol></p>
-        </solution>
-    </webwork>
-    <conclusion>
-         <sidebyside width="30%" margins="0% 70%"><image source="images/fig-in-ex-ans-4-1-4"><description>exponential decay</description></image>
-                </sidebyside>
-    </conclusion>
+        foreach my $i (0..5) {
+        $t = 2*$i;
+        $b[$i] = $f->eval(t=>$t)->with(
+          tolType => 'absolute',
+          tolerance => 1,
+        );
+        $br[$i]= round($b[$i]);
+        };        
+    </pg-code> 
+    <statement>
+        <p>The number of butterflies visiting a nature station is declining by 18% per year. In <var name="$year0"/>, <var name="$b0"/> butterflies visited the nature station.</p>
+        <p><ol label="a">
+            <li><p>What is the decay factor in the annual butterfly count?</p>
+            <p>Answer: <var name="$b" width="3"/> </p></li>
+            <li><p>Write a formula for <m>B(t)</m>, the number of butterflies <m>t</m> years after <var name="$year0"/>.</p>
+            <p><m>B(t)=</m><var name="$f" width="12"/> </p></li>
+            <li><p>Complete the table and sketch a graph of <m>B(t)</m>. A suggested grid is above.</p>
+            <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row bottom="minor">
+                    <cell><m>t</m></cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>2</m></cell>
+                    <cell><m>4</m></cell>
+                    <cell><m>6</m></cell>
+                    <cell><m>8</m></cell>
+                    <cell><m>10</m></cell></row>
+                <row>
+                    <cell><m>B(t)</m></cell>
+                    <cell><var name="$b[0]" width="2"/></cell>
+                    <cell><var name="$b[1]" width="2"/></cell>
+                    <cell><var name="$b[2]" width="2"/></cell>
+                    <cell><var name="$b[3]" width="2"/></cell>
+                    <cell><var name="$b[4]" width="2"/></cell>
+                    <cell><var name="$b[5]" width="2"/></cell></row>
+            </tabular></sidebyside></li>
+        </ol></p>
+    </statement>
+    <solution>
+        <p><ol label="a">
+            <li><p><m>0.82</m></p></li>
+            <li><p><m>B(t) = 3600\cdot 0.82^t</m></p></li>
+            <li><sidebyside>
+            <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row bottom="minor">
+                    <cell><m>t</m></cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>2</m></cell>
+                    <cell><m>4</m></cell>
+                    <cell><m>6</m></cell>
+                    <cell><m>8</m></cell>
+                    <cell><m>10</m></cell></row>
+                <row>
+                    <cell><m>B(t)</m></cell>
+                        <cell><var name="$br[0]"/></cell>
+                        <cell><var name="$br[1]"/></cell>
+                        <cell><var name="$br[2]"/></cell>
+                        <cell><var name="$br[3]"/></cell>
+                        <cell><var name="$br[4]"/></cell>
+                        <cell><var name="$br[5]"/></cell></row>
+            </tabular></sidebyside>
+            <p>A graph is below.</p>
+           </li>
+        </ol></p>
+    </solution>
+</webwork>
+<conclusion>
+     <sidebyside width="40%" margins="0% 10%">
+        <image xml:id="fig-ex-7-1-4ans">
+            <description>grid</description>
+            <latex-image>
+            <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+            <![CDATA[\tikzset{%
+            }
+            \begin{tikzpicture} [scale=.5] 
+            \draw[cyan] (0,0) grid (10,8);
+            \draw[black,thick,->,>=stealth'] (0,0)--(10.6,0) node[above]{$t$};
+            \draw[black,thick,->,>=stealth'] (0,0)--(0,8.6) node[left, yshift=1mm]{$B$};
+            \foreach \x in {2,4,...,10} {
+              \draw[black,thick] (\x,.15)--++(0,-.3) node[below, fill=white, inner sep=1, yshift=-2]{$\x$};
+            }
+            \foreach \x [evaluate=\x as \xi using int(500*\x)] in {2,4,...,8} {
+              \draw[black,thick] (.15,\x)--++(-.3,0) node[left, fill=white, inner sep=1, xshift=-2]{$\xi$};
+            }
+            \draw[samples=65,domain={0:10},smooth,variable=\x,red,very thick, ->,>=stealth'] plot (\x, {7.2*0.82^(2*\x)});
+            \end{tikzpicture}]]>
+            </latex-image>
+        </image>
+    </sidebyside>
+</conclusion>
 </exercise>
 
 <p>We summarize our observations about exponential growth and decay functions as follows.</p>
@@ -767,7 +810,7 @@ models exponential growth and decay.</p>
 
 <exercise><title>QuickCheck 6</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $dfn = RadioButtons(
               ["\(P_0\) is negative",
               "\(b\) is negative",
@@ -775,7 +818,7 @@ models exponential growth and decay.</p>
               "\(0 \lt P_0 \lt 1\)"],
               2, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>The function <m>P(t)=P_0 b^t</m> is decreasing if</p>
         <p><var name="$dfn" form="buttons"/></p>      
@@ -843,7 +886,7 @@ whose graphs are shown below.</p>
 
 <exercise><title>QuickCheck 7</title>
 <webwork>
-    <setup><pg-code>       
+     <pg-code>       
             $cu = RadioButtons(
               ["increasing",
               "concave up",
@@ -851,7 +894,7 @@ whose graphs are shown below.</p>
               "concave down"],
               1, 
             );            
-        </pg-code></setup>
+        </pg-code> 
     <statement>
         <p>The graph of <m>P(t)=P_0 b^t</m>, where <m>P_0 \gt 0</m> and <m>b \gt 0</m>, is always</p>
         <p><var name="$cu" form="buttons"/></p>      
@@ -919,7 +962,7 @@ whose graphs are shown below.</p>
 <exercise>
     <title>Practice 5</title>
     <webwork>
-        <setup><pg-code>
+         <pg-code>
             $p0 = 20000;
             $p1 = 17000;
             $delta = $p1 - $p0;
@@ -933,7 +976,7 @@ whose graphs are shown below.</p>
               tolerance => 1,
             );
 
-        </pg-code></setup>
+        </pg-code> 
         <statement>
             <p>A new car begins to depreciate in value as soon as you drive it off the lot. Some models depreciate linearly, and others depreciate exponentially. Suppose you buy a new car for $20,000, and <m>1</m> year later its value has decreased to $17,000.</p>
             <p><ol label="a">
@@ -957,8 +1000,8 @@ whose graphs are shown below.</p>
 
 <exercise><title>Pause and Reflect</title>
 <webwork>
-    <setup><pg-code>                      
-        </pg-code></setup>
+     <pg-code>                      
+        </pg-code> 
     <statement>
         <p>Explain the difference between constant slope and constant growth factor.</p>
         <p><var form="essay"/></p>      

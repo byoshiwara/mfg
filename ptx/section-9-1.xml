@@ -60,18 +60,45 @@ When we list them in this way, the output values are called the <term>terms</ter
 
 <p> In Example 1, <m>a_n=2n+28</m> is a formula in terms of <m>n</m> for the number of seats in the <m>n^{th}</m> row of the theater.  The expression <m>2n+28</m> is called the <term>general term</term> for the sequence.</p>
 
-<exercise><statement>
+<exercise><title>Practice 1</title>
+<webwork>
+    <pg-code>
+         Context()->variables->add(A0 =>['Real',TeX=>"A_0"], A1 =>['Real',TeX=>"A_1"], A2 =>['Real',TeX=>"A_2"], A3 =>['Real',TeX=>"A_3"], A4 =>['Real',TeX=>"A_4"], A5 =>['Real',TeX=>"A_5"]);
+Context()->{format}{number} = "%.2f";    # format numbers using 2-place decimals (e.g., for currency values).
+         $a = Formula("A2");
+         $aa = Compute("1149.90");
+         $b = Formula("A4");
+         $bb = Formula("A3+85.75");
+         $c = Formula("A5");
+         $cc = Compute("1.07*A4");
+
+    </pg-code>
+    <statement>
     <p>Let <m>A_n</m> be the number of dollars in a bank account at the end of its <m>n^{th}</m>year.  Write an equation using subscript notation for each of the following statements.</p>
     <p><ol label="a">
-        <li><p>The account had $1149.90 at the end of the second year.</p></li>
-        <li><p>At the end of year 4 the account had $85.75 more than at the end of year 3.</p></li>
-        <li><p>At the end of year 5 the account had 1.07 times as much as at the end of year 4.</p></li>
+        <li>
+            <p>The account had $1149.90 at the end of the second year.</p>
+            <p><var name="$a" width="2"/><m>=</m><var name="$aa" width="6"/> 
+            [Note: Enter "A1" to get <m>A_1</m>.]</p>
+        </li>
+        <li>
+            <p>At the end of year 4 the account had $85.75 more than at the end of year 3.</p>
+            <p><var name="$b" width="2"/><m>=</m><var name="$bb" width="8"/> </p>
+        </li>
+        <li>
+            <p>At the end of year 5 the account had 1.07 times as much as at the end of year 4.</p>
+            <p><var name="$c" width="2"/><m>=</m><var name="$cc" width="8"/> </p>
+        </li>
         </ol></p></statement>
-    <answer><p><ol label="a">
-        <li><m>A_2=1149.90</m></li>
-        <li><m>A_4=85.75+A_3</m></li>
-        <li><m>A_5=1.07A_4</m></li>
-    </ol></p></answer></exercise>
+    <solution><p>
+        <ol label="a">
+            <li><m>A_2=1149.90</m></li>
+            <li><m>A_4=85.75+A_3</m></li>
+            <li><m>A_5=1.07A_4</m></li>
+        </ol>
+    </p></solution>
+</webwork>
+</exercise>
          
 <example><statement>
     <p>Find the first four terms in each sequence with the given general term.</p>
@@ -96,6 +123,7 @@ When we list them in this way, the output values are called the <term>terms</ter
         <p>The first four terms are -2, 4, -8, and 16.</p></li>
     </ol></p></solution></example> 
 
+
 <exercise><title>QuickCheck 1</title>
 <statement><p>How is a sequence different from an ordinary function?<ol label="a">
     <li>Its outputs are integers.</li>
@@ -104,10 +132,19 @@ When we list them in this way, the output values are called the <term>terms</ter
     <li>The outputs must be positive.</li></ol></p></statement>
 <answer><p>Its inputs are integers.</p></answer></exercise>
 
-<exercise><statement><p>Find the first four terms in the sequence with the general term <m>b_n=(n+1)^2-n^2</m>.</p>
-</statement>
+<exercise><title>Practice 2</title>
+<webwork>
+    <pg-code>
+        $answer = List(3,5,7,9)->cmp(ordered=>1);
+    </pg-code>
+    <statement>
+        <p>Find the first four terms in the sequence with the general term <m>b_n=(n+1)^2-n^2</m>.</p>
+        <p>Answer: <var name="$answer" width="8"/> (List the terms in order; separate terms with a comma.</p>
+    </statement>
+    <solution><p>3, 5, 7, 9</p></solution>
+</webwork>
+</exercise>
 
-<answer><p>3,~5,~7,~9</p></answer></exercise>
  </subsection>
 
 <subsection><title>Applications of Sequences</title>
@@ -142,9 +179,22 @@ The annual balances form the sequence  8400,  8820,  9261,  and 9724.05, as show
                         <cell>9724.05</cell></row>            
                     </tabular></sidebyside></solution></example>
 
-<exercise><statement><p>You just finished your last cup of coffee and have 100 mg of caffeine in your system.  For each hour that passes, the amount of caffeine in your system decreases by 14%.  How much caffeine is in your system at the start of each of the next 4 hours?</p></statement>
-
-<answer><p>100 mg, 86 mg, 74 mg, 63.6 mg approximately</p></answer></exercise>
+<exercise><title>Practice 3</title>
+<webwork>
+    <pg-code>
+        $f = Formula("100*0.86^(x)");
+        foreach my $i(0..3) {
+        $c[$i]= $f->eval(x=>$i);
+        }
+        $answer = List($c[0],$c[1],$c[2],$c[3])->cmp(tolType => 'absolute',  tolerance => .05, ordered=>1);
+    </pg-code>
+    <statement>
+        <p>You just finished your last cup of coffee and have 100 mg of caffeine in your system.  For each hour that passes, the amount of caffeine in your system decreases by 14%.  How much caffeine is in your system at the start of each of the next 4 hours?</p>
+        <p>Answer: <var name="$answer" width="15"/> mg (List the terms in order; separate terms with a comma.</p>
+    </statement>
+    <solution><p>100 mg, 86 mg, 74 mg, 63.6 mg approximately</p></solution>
+</webwork>
+</exercise>
 
 <exercise><title>QuickCheck 2</title>
 <statement><p>The terms of a sequence<ol label="a">
@@ -179,17 +229,59 @@ In fact, the balance at the end of each succeeding year is found by adding $400 
                         <cell>9600</cell></row>            
                     </tabular></sidebyside></solution></example>
 
-<exercise><statement><p>The financing agreement on your $12,000 car requires you to pay $1200 now and $208.87 a month for 5 years.  What is the total amount you have paid after each of the first 4 payments?</p></statement>
-
-<answer><p>$1200, $1408.87, $1617.74, $1826.61</p></answer></exercise>
+<exercise><title>Practice 3</title>
+<webwork>
+    <pg-code>
+        $f = Formula("1200 +208.87*x");
+        foreach my $i(0..3) {
+        $c[$i]= $f->eval(x=>$i);
+        }
+        $answer = List($c[0],$c[1],$c[2],$c[3])->cmp(tolType => 'absolute',  tolerance => .05, ordered=>1);
+    </pg-code>
+    <statement>
+        <p>The financing agreement on your $12,000 car requires you to pay $1200 now and $208.87 a month for 5 years.  What is the total amount you have paid after each of the first 4 payments?</p>
+        <p>Answer: $<var name="$answer" width="28"/>  (List the terms in order; separate terms with a comma.</p>
+    </statement>
+    <solution><p>$1200, $1408.87, $1617.74, $1826.61</p></solution>
+</webwork>
+</exercise>
 
 <example><statement><p>A regular polygon is a geometric figure in which all the sides are equal in length.  For example, an equilateral triangle and a square are regular polygons.  All the interior angles in a regular polygon are equal also.  Find the general term <m>a_n</m> for the sequence that gives the size of an interior angle in a regular polygon of <m>n</m> sides.</p>
-<sidebyside width="80%"><image source="images/fig-9-1-ex5.png"><description>polygons</description></image></sidebyside>
+<sidebyside width="80%">
+    <image xml:id="fig-regular-polygons">
+        <description>regular polygons</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.9]
+        \node [draw, magenta!80!black,very thick, minimum size=3cm,regular polygon, regular polygon sides=3] at (0,-.35){};
+        \node at (.2,-1.6) {$a_3=60^\circ$};
+        \node [draw, magenta!80!black,very thick, minimum size=3cm, regular polygon, regular polygon sides=4] at (4,0) {};
+        \node at (4.2,-1.6) {$a_4=90^\circ$};
+        \node [draw, magenta!80!black, very thick, minimum size=3cm, regular polygon, regular polygon sides=7] at (9,0.3 ){};
+        \node at (6.6,-1.6) {$\cdots$};
+        \node at (9.2,-1.6) {$a_n=?^\circ$};
+        \end{tikzpicture}]]>
+        </latex-image>
+    </image>
+</sidebyside>
 </statement>
 
 <solution><p>This sequence starts with <m>a_3</m> because we cannot have a polygon with fewer than three sides.  We already know the values of <m>a_3</m> and <m>a_4</m>:  each angle in an equilateral triangle is <m>60\degree</m>, and each angle in a square is <m>90\degree</m>.  We would like to find a formula for the size of the angles in any regular polygon.</p>
 <p> If we can find the sum of all the angles in a regular polygon, we can divide by <m>n</m> to find the size of each. (You can check that this idea works for the equilateral triangle and the square.)  To find the sum of the angles, notice that any polygon can be partitioned into triangles, as shown below.</p>
-<sidebyside width="30%"><image source="images/fig-9-1-ex5a.png"><description>polygons</description></image></sidebyside>
+<sidebyside width="30%"><image xml:id="fig-regular-ngon">
+        <description>regular polygons</description>
+        <latex-image>
+        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale=.9]
+        \node[draw, magenta!80!black, very thick, minimum size=3cm,regular polygon,regular polygon sides=8] (a) {};
+        \draw (a.corner 6)--(a.corner 8)--(a.corner 5)--(a.corner 1)--(a.corner 4)--(a.corner 2);
+        \end{tikzpicture}]]>
+        </latex-image>
+    </image></sidebyside>
 <p> By sketching some examples, convince yourself that every polygon of <m>n</m> sides (for <m>n \ge 3</m>) can be partitioned into <m>n-2</m> triangles.  Because the angles in every triangle add up to <m>180\degree</m>, the sum of the angles in an <m>n</m>-sided polygon is <m>(n-2)</m> times <m>180\degree</m>. To find the size of just one of the angles, we divide the sum by <m>n</m>. This gives us the general term of the sequence:
 <me>a_n = \dfrac{(n-2)180}{n}</me></p></solution></example>
 </subsection>
@@ -248,8 +340,22 @@ is a recursive sequence.  Its first four terms are
 The sequence is determined by the recursive definition
 <me>a_1 = 8400,~~~~a_n = 1.05 a_{n-1}</me></p></solution></example>
 
-<exercise><statement><p> Find a recursive definition for the sequence in the coffee exercise if you do not drink any more coffee for <m>n</m> hours.</p></statement>
-<answer><p><m>C_1 = 100, C_{n+1} = 0.86 C_n</m></p></answer></exercise>
+<exercise><title>Practice 4</title>
+<webwork>
+    <pg-code>
+        Context()->variables->add(Cn =>['Real',TeX=>"C_n"]);
+        $c1 = Compute("100");
+        $f = Formula("0.86*Cn");
+    </pg-code>
+    <statement>
+        <p>
+            Find a recursive definition for the sequence in the coffee exercise if you do not drink any more coffee for <m>n</m> hours.
+        </p>
+        <p><m>C_1=</m><var name="$c1" width="3"/>, <m>C_{n+1}=</m><var name="$f" width="6"/> [Note: Enter "Cn" to get <m>C_n</m>.]</p>
+    </statement>
+<solution><p><m>C_1 = 100</m>, <m>C_{n+1} = 0.86 C_n</m></p></solution>
+</webwork>
+</exercise>
 
 <example><statement><p>You deposit $8000 in a savings account that pays 5% simple annual interest.  Find a recursive definition for the sequence of account balances if the money is kept in the account for <m>n</m> years.</p></statement>
 
