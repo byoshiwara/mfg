@@ -48,12 +48,24 @@ Writing such an expression is sometimes called "using <term>sigma notation</term
 </exercise>
 
 <exercise><title>QuickCheck 1</title>
-<statement><p>What does the notation <m>\sum_{j=1}^{8} \dfrac{1}{j}</m> mean?<ol label="a">
-    <li>List 8 terms of the sequence <m>a_j=\dfrac{1}{j}</m>.</li>
-    <li>Add the numbers from 1 to 8 and take the reciprocal of the sum.</li>
-    <li>Add the reciprocals of the numbers from 1 to 8.</li>
-    <li>Add the first and eighth term of the sequence described.</li></ol></p></statement>
-<answer><p>Add the reciprocals of the numbers from 1 to 8.</p></answer></exercise>
+<webwork>
+    <pg-code>
+        $answer = RadioButtons(
+            [ "List 8 terms of the sequence \(a_j=\displaystyle\frac{1}{j}\).", 
+            "Add the numbers from 1 to 8 and take the reciprocal of the sum.", 
+            "Add the reciprocals of the numbers from 1 to 8.",
+            "Add the first and eighth term of the sequence described."
+            ],
+            2
+        );
+    </pg-code>
+    <statement>
+        <p>What does the notation <m>\displaystyle{\sum_{j=1}^{8} \frac{1}{j}}</m> mean?</p>
+        <p><var name="$answer" form="buttons"/> </p>
+    </statement>
+    <solution><p>Add the reciprocals of the numbers from 1 to 8.</p></solution>
+</webwork>
+</exercise>
 
 <p>The <term>expanded form</term> of a series written in sigma notation is obtained by writing out all the terms of the series.  For example,
     <me>\sum_{m=4}^{8} \dfrac{3}{m} = \dfrac{3}{4} + \dfrac{3}{5} + \dfrac{3}{6} + \dfrac{3}{7} + \dfrac{3}{8}</me></p>
@@ -155,12 +167,24 @@ Writing such an expression is sometimes called "using <term>sigma notation</term
 </exercise>  
 
 <exercise><title>QuickCheck 2</title>
-<statement><p>Which of these series is neither arithmetic nor geometric?<ol label="a">
-    <li><m>\sum_{k=5}^{15} (\dfrac{1}{2}k-4)</m>.</li>
-    <li><m>\sum_{m=1}^{50} 0.8^m</m></li>
-    <li><m>\sum_{n=2}^{12} (n^3+2)</m></li>
-    <li><m>\sum_{p=1}^{5} 5(1.5)^{2p}</m></li></ol></p></statement>
-<answer><p><m>\sum_{n=2}^{12} (n^3+2)</m></p></answer></exercise>    
+<webwork>
+    <pg-code>
+        $answer = RadioButtons(
+            [ "\(\displaystyle\sum_{k=5}^{15} \left(\frac{1}{2}k-4\right)\)", 
+            "\(\displaystyle\sum_{m=1}^{50} 0.8^m\)", 
+            "\(\displaystyle\sum_{n=2}^{12} (n^3+2)\)",
+            "\(\displaystyle\sum_{p=1}^{5} 5(1.5)^{2p}\)"
+            ],
+            2
+        );
+    </pg-code>
+    <statement>
+        <p>Which of these series is neither arithmetic nor geometric?</p>
+        <p><var name="$answer" form="buttons"/> </p>
+    </statement>
+    <solution><p><m>\displaystyle\sum_{n=2}^{12} (n^3+2)</m></p></solution>
+</webwork>
+</exercise>    
 
 
   </subsection>
@@ -225,12 +249,24 @@ This analysis motivates us to define the sum of an infinite geometric series as 
 where  <m>r = 2</m>, the terms become larger as <m>n</m> increases, and the sum of the series is not a finite number.  In this case the series does not have a sum.</p>
 
 <exercise><title>QuickCheck 3</title>
-<statement><p>Under what circumstances does the series <m>\sum_{k=0}^{\infty} ar^k</m>have a finite sum? <ol label="a">
-    <li>If <m>a \lt 1</m></li>
-    <li>If <m>\abs{r} \lt 1</m></li>
-    <li>If <m>a \lt r</m></li>
-    <li>If <m>ar \lt 1</m></li></ol></p></statement>
-<answer><p>If <m>\abs{r} \lt 1</m></p></answer></exercise>
+<webwork>
+    <pg-code>
+        $answer = RadioButtons(
+            [ "If \(a \lt 1\)", 
+            "If \(a \lt 1\)", 
+            "If \(| r | \lt 1\)",
+            "If \(ar \lt r\)"
+            ],
+            2
+        );
+    </pg-code>
+    <statement>
+        <p>Under what circumstances does the series <m>\displaystyle\sum_{k=0}^{\infty} ar^k </m> have a finite sum?</p>
+        <p><var name="$answer" form="buttons"/> </p>
+    </statement>
+    <solution><p>If <m>\abs{r} \lt 1</m></p></solution>
+</webwork>
+</exercise>
 
 <example><statement><p>Make a table showing the first five partial sums of each series. Then use the formula to find the sum, if it exists.</p><p><ol label = "a" cols = "2">
     <li><m>~~\displaystyle{\sum_{j=0}^{\infty} 30(0.8)^j}~~</m></li>

@@ -125,12 +125,24 @@ Context()->{format}{number} = "%.2f";    # format numbers using 2-place decimals
 
 
 <exercise><title>QuickCheck 1</title>
-<statement><p>How is a sequence different from an ordinary function?<ol label="a">
-    <li>Its outputs are integers.</li>
-    <li>Its inputs are integers.</li>
-    <li>There is a formula for its outputs.</li>
-    <li>The outputs must be positive.</li></ol></p></statement>
-<answer><p>Its inputs are integers.</p></answer></exercise>
+<webwork>
+    <pg-code>
+        $answer = RadioButtons(
+            [ "Its outputs are integers.", 
+            "Its inputs are integers.", 
+            "There is a formula for its outputs.",
+            "The outputs must be positive."
+            ],
+            1
+        );
+    </pg-code>
+    <statement>
+        <p>How is a sequence different from an ordinary function?</p>
+        <p><var name="$answer" form="buttons"/> </p>
+    </statement>
+    <solution><p><var name="$answer"/></p></solution>
+</webwork>
+</exercise>
 
 <exercise><title>Practice 2</title>
 <webwork>
@@ -197,12 +209,24 @@ The annual balances form the sequence  8400,  8820,  9261,  and 9724.05, as show
 </exercise>
 
 <exercise><title>QuickCheck 2</title>
-<statement><p>The terms of a sequence<ol label="a">
-    <li>describe its formula.</li>
-    <li>are its boundary values.</li>
-    <li>are its outputs.</li>
-    <li>are either increasing or decreasing.</li></ol></p></statement>
-<answer><p>are its outputs.</p></answer></exercise>
+<webwork>
+    <pg-code>
+        $answer = RadioButtons(
+            [ "describe its formula.", 
+            "are its boundary values.", 
+            "are its outputs.",
+            "are either increasing or decreasing."
+            ],
+            2
+        );
+    </pg-code>
+    <statement>
+        <p>The terms of a sequence</p>
+        <p><var name="$answer" form="buttons"/> </p>
+    </statement>
+    <solution><p><var name="$answer"/></p></solution>
+</webwork>
+</exercise>
 
 <example><statement><p>You deposit $8000 in a savings account that pays 5% simple annual interest.  (The interest is earned only on the initial $8000 and not compounded.)  How much money will be in the account at the end of each of the next 4 years?</p></statement>
 
@@ -229,7 +253,7 @@ In fact, the balance at the end of each succeeding year is found by adding $400 
                         <cell>9600</cell></row>            
                     </tabular></sidebyside></solution></example>
 
-<exercise><title>Practice 3</title>
+<exercise><title>Practice 4</title>
 <webwork>
     <pg-code>
         $f = Formula("1200 +208.87*x");
@@ -340,7 +364,7 @@ is a recursive sequence.  Its first four terms are
 The sequence is determined by the recursive definition
 <me>a_1 = 8400,~~~~a_n = 1.05 a_{n-1}</me></p></solution></example>
 
-<exercise><title>Practice 4</title>
+<exercise><title>Practice 5</title>
 <webwork>
     <pg-code>
         Context()->variables->add(Cn =>['Real',TeX=>"C_n"]);
@@ -365,12 +389,24 @@ The sequence is determined by the recursive definition
 <me>b_1 = 8400,~~~b_n = b_{n-1} + 400</me></p></solution></example>
 
 <exercise><title>QuickCheck 3</title>
-<statement><p>If each output of a sequence is defined in terms of earlier outputs, we say the sequence is<ol label="a">
-    <li>general.</li>
-    <li>discrete.</li>
-    <li>ordered.</li>
-    <li>recursive.</li></ol></p></statement>
-<answer><p>recursive.</p></answer></exercise>
+<webwork>
+    <pg-code>
+        $answer = RadioButtons(
+            [ "general.", 
+            "discrete.", 
+            "ordered.",
+            "recursive."
+            ],
+            3
+        );
+    </pg-code>
+    <statement>
+        <p>If each output of a sequence is defined in terms of earlier outputs, we say the sequence is</p>
+        <p><var name="$answer" form="buttons"/> </p>
+    </statement>
+    <solution><p><var name="$answer"/></p></solution>
+</webwork>
+</exercise>
 
 <example><statement><p>Karen joins a savings plan in which she deposits $200 per month and receives 12% annual interest compounded monthly.</p>
 <p><ol label = "a">
