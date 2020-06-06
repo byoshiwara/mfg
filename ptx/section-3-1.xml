@@ -555,40 +555,31 @@ where the constant <m>k</m> depends on the material of the model. If we double t
 	</me>
 The weight of the new model is <m>2^3 = 8</m> times the weight of the original model.</p></solution></example>
 
-<exercise>
-    <title>Practice 6</title>
-    <webwork>
-         <pg-code>
-            $explain = new_checkbox_multiple_choice();
-            $explain -> qa (
-            "A question can go here, but PTX ignores this",
-            "\(A= \pi r^2 \) $BR",
-            "Doubling the diameter means doubling the radius. $BR",
-            "\(A_\text{new} = \pi (2r)^2  \) $BR",
-            "\(\pi (2r)^2 = 4\pi r^2  \) $BR",
-            "\(4\pi r^2 = 4A_\text{old} \) $BR"
-            );
-            $explain -> makeLast(
-            "\(V = \frac{4}{3} \pi r^3\) $BR",
-            "\(A= \pi r^2 \) $BR",
-            "\(C= \pi d \) $BR",
-            "Doubling the diameter means doubling the radius. $BR",
-            "Doubling the diameter means squaring the radius. $BR",
-            "\(A_\text{new} = \pi (2r)^2  \) $BR",
-            "\(\pi (2r)^2 = 2\pi r^2  \) $BR",
-            "\(\pi (2r)^2 = 4\pi r^2  \) $BR",
-            "\(4\pi r^2 = 4A_\text{old} \) $BR"
-            );
-
-        </pg-code> 
+<exercise><title>Practice 6</title>
+    <webwork><pg-code>
+            Context()->variables->add(r=>"Real");
+            $area = Formula("pi * r^2");
+            $twor = Formula("2r");
+            $anew = Formula("pi * (2r)^2");
+            $four = Compute("4");
+        </pg-code>
         <statement>
             <p>
                 Use the formula for the area of a circle to show that doubling the diameter of a pizza quadruples its area. 
             </p>
             <p>
-                Check all the relevant statements.
+                The formula for the area of a circle of radius <m>r</m> is <m>A=</m><var name="$area" width="5"/>
             </p>
-            <p><var name="$explain" form="checkboxes"/> </p>
+            <instruction>Enter "pi" to get <m>\pi</m>.</instruction>
+            <p>
+                If we double the diameter, the new radius is <var name="$twor" width="5"/> 
+            </p>
+            <p>
+                Substitute this expression into the area formula to get the area of the new circle  <m>A_\text{new}=</m><var name="$anew" width="6"/> 
+            </p>
+            <p>
+                So <m>A_\text{new}</m> is <var name="$four" width="2"/> times the original area.
+            </p>
         </statement>
         <solution>
             <p><m>A= \pi r^2</m></p>
