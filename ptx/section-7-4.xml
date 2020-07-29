@@ -25,7 +25,7 @@
         <p><var name="$ratfn" form="buttons"/></p>      
     </statement>
     <solution>
-        <p><m>y=\dfrac{\sqrt{x^2-4}}{x^2+4}</m></p>
+        <p><m>y=\dfrac{\sqrt{x^2-4}}{x^2+4}</m> is not a rational function because the numerator is not a polynomial.</p>
     </solution>
 </webwork></exercise>
 
@@ -84,9 +84,9 @@
             $a = Compute("0.25");
             $equation = ImplicitPlane("r=6");
             $explain = RadioButtons(
-            ["The wait time approaches 6 minutes as the arrival rate becomes infinite.",
-            "The wait time becomes infinite as the arrival rate approaches 6 vehicles per minute.",
-            "The wait time never reaches 6 minutes.",
+            ["A) The wait time approaches 6 minutes as the arrival rate becomes infinite.",
+            "B) The wait time becomes infinite as the arrival rate approaches 6 vehicles per minute.",
+            "C) The wait time never reaches 6 minutes.",
             ],
             1,);
 
@@ -113,7 +113,8 @@
         </solution>
     </webwork>
     <conclusion>
-        <sidebyside width="25%"><image source="images/fig-in-ex-ans-7-4-1"><description>rational function</description></image></sidebyside>
+        <p>Graph for part (b):</p>
+        <sidebyside width="25%" margins="0% 5%"><image source="images/fig-in-ex-ans-7-4-1"><description>rational function</description></image></sidebyside>
     </conclusion>
 </exercise>
 
@@ -170,9 +171,9 @@
             $a = Compute("4");
             $equation = ImplicitPlane("C=1");
             $explain = RadioButtons(
-            ["Delbert cannot add more than 100 mL glucose to the mixture.",
-            "If Delbert adds 1 mL of glucose to the mixture, its concentration becomes infinite.",
-            "As Delbert adds more glucose to the mixture, its concentration increases toward 100%.",
+            ["A) Delbert cannot add more than 100 mL glucose to the mixture.",
+            "B) If Delbert adds 1 mL of glucose to the mixture, its concentration becomes infinite.",
+            "C) As Delbert adds more glucose to the mixture, its concentration increases toward 100%.",
             ],
             2,);
 
@@ -200,7 +201,8 @@
         </solution>
     </webwork>
     <conclusion>
-        <sidebyside width="25%"><image source="images/fig-in-ex-ans-7-4-2"><description>rational function</description></image></sidebyside>
+        <p>Graph for part (b):</p>
+        <sidebyside width="25%" margins="0% 0%"><image source="images/fig-in-ex-ans-7-4-2"><description>rational function</description></image></sidebyside>
     </conclusion>
 </exercise>
 </subsection>
@@ -241,7 +243,7 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
         <p><var name="$eqz" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>is equal to zero at <m>x=1</m> and <m>x=-1</m>.</p>
+        <p>is equal to zero at <m>x=1</m> and <m>x=-1</m> because the numerator (and not the denominator) is zero there.</p>
     </solution>
 </webwork></exercise>
 
@@ -350,7 +352,7 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
               ["\(f(a)=0\).",
               "\(f(a)=1\).",
               "there is a vertical asymptote at \(x=a\).",
-              "there is a hole in the graph at\(x=a\)."],
+              "there is a hole in the graph at \(x=a\)."],
               3, 
             );            
         </pg-code> 
@@ -438,7 +440,8 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
         </solution>
     </webwork>
     <conclusion>
-        <sidebyside width="28%"><image source="images/fig-in-ex-ans-7-4-5"><description>rational function</description></image></sidebyside>
+        <p>Graph for part (b):</p>
+        <sidebyside width="28%" margins="0% 5%"><image source="images/fig-in-ex-ans-7-4-5"><description>rational function</description></image></sidebyside>
     </conclusion>
 </exercise>
 </subsection>
@@ -477,7 +480,7 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
         <p><var name="$hasy" form="buttons"/></p>      
     </statement>
     <solution>
-        <p><m>y=\dfrac{2x^2+4}{x^2+1}</m></p>
+        <p><m>y=\dfrac{2x^2+4}{x^2+1}</m> has a horizontal asymptote at <m>y=2</m> because numerator and denominator have the same degree, and the ratio of the lead coefficients is 2.</p>
     </solution>
 </webwork></exercise>
 
@@ -509,7 +512,7 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
         </solution>
     </webwork>
     <conclusion>
-        <sidebyside width="25%"><image source="images/fig-in-ex-ans-7-4-6"><description>rational function</description></image></sidebyside>
+        <sidebyside width="25%" margins="0% 5%"><image source="images/fig-in-ex-ans-7-4-6"><description>rational function</description></image></sidebyside>
     </conclusion>
 </exercise>
 
@@ -552,18 +555,21 @@ Because we cannot divide by zero, a rational function <m>f(x) = \displaystyle{\f
 	<p>(See Algebra Skills Refresher <xref ref="appendix-Working-with-Algebraic-Fractions" text="type-hybrid"/> to review adding fractions.)</p></solution></example>
 
 <exercise>
-	<title>Practice 7</title>
+  <title>Practice 7</title>
     <webwork>
          <pg-code>
             Context()->variables->set(x=>{limits=>[-1,1]});
             $f = Formula("400/(100-x^2)");
         </pg-code> 
         <statement>
-            <p>Navid took his outboard motorboat 20 miles upstream to a fishing site, returning downstream later that day. His boat travels 10 miles per hour in still water. Write an expression for the time Navid spent traveling, as a function of the speed of the current.</p>
+            <p>Navid took his outboard motorboat 20 miles upstream to a fishing site, returning downstream later that day. His boat travels 10 miles per hour in still water. Write an expression for the time Navid spent traveling, as a function of the speed of the current. Let <m>x</m> represent the speed of the current in miles per hour.</p>
             <p><var name="$f" width="15"/> hrs </p>
         </statement>
+        <hint>
+          <p>Add the time for the upstream trip to the time of the downstream trip.</p>
+        </hint>
         <solution>
-            <p><m>\dfrac{400}{100-x^2} </m> hrs</p>
+            <p><m>\dfrac{20}{10-x} + \dfrac{20}{10+x} =\dfrac{400}{100-x^2} </m> hrs</p>
         </solution>
     </webwork>
 </exercise>

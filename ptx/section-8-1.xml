@@ -72,10 +72,10 @@ and enter the two equations. We can see in the figure that the two lines interse
 <webwork>
      <pg-code>       
             $sysol = RadioButtons(
-              ["Add the equations together.",
-              "Show that it makes one of the equations true.",
-              "Show that it makes both equations true.",
-              "Subtract the equations."],
+              ["A) Add the equations together.",
+              "B) Show that it makes one of the equations true.",
+              "C) Show that it makes both equations true.",
+              "D) Subtract the equations."],
               2, 
             );            
         </pg-code> 
@@ -84,7 +84,7 @@ and enter the two equations. We can see in the figure that the two lines interse
         <p><var name="$sysol" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>Show that it makes both equations true.</p>
+        <p>We show that a point makes both equations true to verify that it is the solution of a system of two equations.</p>
     </solution>
 </webwork></exercise>
 
@@ -114,7 +114,7 @@ and enter the two equations. We can see in the figure that the two lines interse
             </instructions>
         </statement>
         <solution>
-            <p><m>(7, 2)</m></p>
+            <p><m>(7, 2)</m> is the intersection point.</p>
         </solution>
     </webwork>
 </exercise>
@@ -174,7 +174,7 @@ and then press <kbd>ZOOM</kbd> <m>6</m>. (Don't forget the parentheses around th
             </instructions>
         </statement>
         <solution>
-            <p><m>(40,-50)</m></p>
+            <p><m>(40,-50)</m> is the intersection point.</p>
         </solution>
     </webwork>
 </exercise>
@@ -440,7 +440,8 @@ For the second equation,
         </solution>
     </webwork>
     <conclusion>
-        <sidebyside width="30%"><image source="images/fig-in-ex-ans-8-1-5"><description>parallel lines</description></image></sidebyside>
+        <p>Graph for part (a)</p>
+        <sidebyside width="30%" margins="0% 5%"><image source="images/fig-in-ex-ans-8-1-5"><description>parallel lines</description></image></sidebyside>
     </conclusion>
 </exercise>
 
@@ -495,7 +496,7 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
         <p><var name="$incon" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>are parallel.</p>
+        <p>If a system is inconsistent, the two lines are parallel.</p>
     </solution>
 </webwork></exercise>
 
@@ -552,90 +553,6 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
 
 <example><statement><p>A cup of rolled oats provides 11 grams of protein. A cup of rolled wheat flakes provides 8.5 grams of protein. Francine wants to combine oats and wheat to make a cereal with 10 grams of protein per cup. How much of each grain will she need in one cup of her mixture?</p></statement>
 <solution><p>
-		<!--
-		<dl>
-			<li><title>Step 1:</title>
-			<p>
-				<tabular>
-					<row>
-						<cell>
-							Fraction of a cup of oats needed:
-						</cell>
-						<cell><m>x</m></cell>
-					</row>
-					<row>
-						<cell>
-							Fraction of a cup of wheat needed:
-						</cell>
-						<cell><m>y</m></cell>
-					</row>
-				</tabular>
-			</p></li>
-			<li><title>Step 2:</title><p>
-				Because we have two variables, we must find two equations that describe the problem. It may be helpful to organize the information into a table.
-				<tabular top="minor" bottom="minor" left="minor" right="minor"><col /><col halign="center"/><col halign="center"/><col halign="center"/><col halign="center"/>
-					<row>
-						<cell></cell>
-						<cell>Cups</cell>
-						<cell><line>Grams of protein</line><line>per cup</line></cell>
-						<cell>Grams of protein</cell>
-					</row>
-					<row>
-						<cell>Oats</cell>
-						<cell><m>x</m></cell>
-						<cell><m>11</m></cell>
-						<cell><m>11x</m></cell>
-					</row>
-					<row>
-						<cell>Wheat</cell>
-						<cell><m>y</m></cell>
-						<cell><m>8.5</m></cell>
-						<cell><m>8.5y</m></cell>
-					</row>
-					<row>
-						<cell>Mixture</cell>
-						<cell><m>1</m></cell>
-						<cell><mdash/></cell>
-						<cell><m>10</m></cell>
-					</row>
-				</tabular>
-				The wheat and oats together will make one cup of mixture, so the first equation is 
-				<me>
-					x + y = 1
-				</me>
-				The <m>10</m> grams of protein must come form the protein in the oats plus the protein in the wheat. This gives us a second equation:
-				<me>
-					11x + 8.5y = 10
-				</me>
-				We now have a system of equations.
-			</p></li>
-			<li><title>Step 3: </title><p>
-				We will solve the system by graphing. First, solve each equation for <m>y</m> in terms of <m>x</m> to get
-				<md>
-					<mrow>
-						y \amp= -x + 1
-					</mrow>
-					<mrow>
-						y \amp = (10 - 11x)/8.5
-					</mrow>
-				</md>
-				Although we could simplify the second equation, the calculator can graph both equations as they are. We know that <m>x</m> and <m>y</m> represent fractions of one cup, so we set the window (as shown in <xref ref="fig-GC-2x2-system3" text="type-global"/>) with 
-				<md>
-					<mrow>
-						\text{Xmin} \amp = 0 \amp\amp \text{Xmax} = 0.94
-					</mrow>
-					<mrow>
-						\text{Ymin} \amp = 0 \amp\amp \text{Ymax} = 1
-					</mrow>
-				</md>
-				<figure xml:id="fig-GC-2x2-system3"><caption></caption><image source="images/fig-GC-2x2-system3"  width="50%"><description>GC graph of 2x2 system</description></image> </figure>
-				The lines intersect at <m>(0.6, 0.4)</m>, which we can verify by substituting these values into the original two equations of our system.
-			</p></li>
-			<li><title>Step 4:</title><p>
-				Francine needs <m>0.6</m> cup of oats and <m>0.4</m> cup of wheat.
-			</p></li>
-		</dl>
-	-->
 		<ol label="1">
 		<li><sidebyside><tabular>
 					<row><cell>Fraction of a cup of oats needed:</cell>
@@ -689,10 +606,10 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
             $v2 = Compute("32");
 #            $a = Point("($v1,$v2)");
             $explain = RadioButtons(
-            ["Etienne should buy 16 tables and 4 chairs.",
-            "Etienne should buy 32 tables and 8 chairs.",
-            "Etienne should buy 8 tables and 32 chairs.",
-            "Etienne should buy 4 tables and 16 chairs.",
+            ["A) Etienne should buy 16 tables and 4 chairs.",
+            "B) Etienne should buy 32 tables and 8 chairs.",
+            "C) Etienne should buy 8 tables and 32 chairs.",
+            "D) Etienne should buy 4 tables and 16 chairs.",
             ],
             2,);
         </pg-code> 
@@ -712,7 +629,7 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
             <p><ol label="a">
                 <li><p><m>460x + 120y = 7520</m></p></li>
                 <li><p><m>y=4x</m></p></li>
-                <li><p><m>x = 8, y = 32</m>. Etienne should buy <m>8</m> tables and <m>4</m> chairs.</p></li>
+                <li><p><m>x = 8, y = 32</m>. Etienne should buy 8 tables and 32 chairs.</p></li>
             </ol></p>
         </solution>
     </webwork>
@@ -722,60 +639,6 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
 
 <example><statement><p>The mathematics department has $<m>40,000</m> to set up a new computer lab. The department will need one printer for every four terminals it purchases. If a printer costs $<m>560</m> and a terminal costs $<m>1520</m>, how many of each should the department buy?</p></statement>
 <solution><p>
-<!--		<dl>
-			<li><title>Step 1:</title><p>
-				<tabular>
-					<row>
-						<cell>Number of printers:</cell>
-						<cell><m>p</m></cell>
-					</row>
-					<row>
-						<cell>Number of terminals</cell>
-						<cell><m>t</m></cell>
-					</row>
-				</tabular>
-			</p></li>
-			<li><title>Step 2:</title><p>
-				Since the math department needs four times as many terminals as printers,
-				<me>t=4p</me>
-				The total cost of the printers will be <m>560p</m> dollars, and the total cost of the terminals will be <m>1520t</m> dollars, so we have
-				<me>560p + 1520t = 40,000</me>
-			</p></li>
-			<li><title>Step 3:</title><p>
-				We solve the second equation for <m>t</m> to get
-				<me>t=(40,000 - 560p)/1520</me>
-				Now we graph the equations
-				<md>
-					<mrow>
-						Y_1 \amp =4X
-					</mrow>
-					<mrow>
-						Y_2 \amp =(40000 - 560X)/1520
-					</mrow>
-				</md>
-				on the same set of axes. The second graph is not visible in the standard graphing window, but with a little experimentation we can find an appropriate window setting. The WINDOW values used for Figure 8.8 are
-				<md>
-					<mrow>
-						\text{Xmin} \amp = 0 \amp\amp \text{Xmax} = 9.4
-					</mrow>
-					<mrow>
-						\text{Ymin} \amp = 0 \amp\amp \text{Ymax} = 30
-					</mrow>
-				</md>
-				The lines intersect at approximately <m>(6, 24)</m>. These values satisfy the first equation, but not the second.
-				<md>
-					<mrow>
-						560(\alert{6})+1520(\blert{24})\amp\stackrel{?}{=}40,000 
-					</mrow>
-					<mrow>
-						39,840 \amp\ne 40,000
-					</mrow>
-				</md>
-			</p></li>
-			<li><title>Step 4:</title><p>
-				The exact solution to the system is <m>\left(\frac{500}{83},\frac{2000}{83}\right)</m>. But this solution is not of practical use, since the math department cannot purchase fractions of printers or terminals. The department can purchase <m>6</m> printers and <m>24</m> terminals (with some money left over).
-			</p></li>
-		</dl> -->
 	<ol label="1">
 		<li><sidebyside><tabular>
 				<row><cell>Number of printers:</cell>
@@ -813,10 +676,10 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
             $x = Compute("12");
             $y = Compute("36");
             $explain = RadioButtons(
-            ["The manager should buy 12 hardbacks and 36 paperbacks.",
-            "The manager should buy 36 hardbacks and 12 paperbacks.",
-            "The manager should buy 27 hardbacks and 9 paperbacks.",
-            "The manager should buy 9 hardbacks and 27 paperbacks.",
+            ["A) The manager should buy 12 hardbacks and 36 paperbacks.",
+            "B) The manager should buy 36 hardbacks and 12 paperbacks.",
+            "C) The manager should buy 27 hardbacks and 9 paperbacks.",
+            "D) The manager should buy 9 hardbacks and 27 paperbacks.",
             ],
             0,);
         </pg-code> 
@@ -851,43 +714,6 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
 
 <example><statement><p>A woolens mill can produce <m>400x</m> yards of fine suit fabric if it can charge <m>x</m> dollars per yard. The mill's clients in the garment industry will buy <m>6000 - 100x</m> yards of wool fabric at a price of <m>x</m> dollars per yard. Find the equilibrium price and the amount of fabric that will change hands at that price.</p></statement>
 <solution><p>
-<!--		<dl>
-			<li><title>Step 1:</title><p>
-				<tabular>
-					<row>
-						<cell>
-							Price per yard:
-						</cell>
-						<cell><m>x</m></cell>
-					</row>
-					<row>
-						<cell>Number of yards:</cell>
-						<cell><m>y</m></cell>
-					</row>
-				</tabular>
-			</p></li>
-			<li><title>Step 2:</title><p>
-				The supply equation tells us how many yards of fabric the mill will produce for a price of <m>x</m> dollars per yard.
-				<me>y=400x</me>
-				The demand equation tells us how many yards of fabric the garment industry will buy at a price of <m>x</m> dollars per yard.
-				<me>y = 6000 - 100x</me>
-			</p></li>
-			<li><title>Step 3:</title><p>
-				We graph the two equations on the same set of axes, as shown in Figure 8.9. We set the window values to
-				<md>
-					<mrow>
-						\text{Xmin} \amp = 0 \amp\amp \text{Xmax} = 94
-					</mrow>
-					<mrow>
-						\text{Ymin} \amp = 0 \amp\amp \text{Ymax} = 6200
-					</mrow>
-				</md>
-				and use the <kbd>TRACE</kbd> or the <em>intersect</em> command to locate the solution. The graphs intersect at the point <m>(12, 4800)</m>.
-			</p></li>
-			<li><title>Step 4:</title><p>
-				The equilibrium price is <m>\$12</m> per yard, and the mill will sell <m>4800</m> yards of fabric at that price.
-			</p></li>
-		</dl> -->
 	<ol label="1">
 		<li><sidebyside><tabular>
 					<row><cell>Price per yard:</cell>
@@ -912,10 +738,10 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
 <webwork>
      <pg-code>       
             $eqpr = RadioButtons(
-              ["A fair and balanced price",
-              "The price that yields maximum profit",
-              "The price at which supply equals demand",
-              "The price at which revenue equals costs"],
+              ["A) A fair and balanced price",
+              "B) The price that yields maximum profit",
+              "C) The price at which supply equals demand",
+              "D) The price at which revenue equals costs"],
               2, 
             );            
         </pg-code> 
@@ -944,13 +770,13 @@ lines have slope <m>\dfrac{-2}{3}</m>, but they have different
             <p>Demand equation: <m>D=</m><var name="$D" width="8"/></p></li>
             <li><p>Find the equilibrium price and the number of sunglasses Sanaz will produce and sell at that price.</p>
             <p>Equilibrium price: $<var name="$p" width="5"/></p>
-            <p>At the equilibrium price, Sanaz will see <var name="$n" width="5"/> sunglasses</p></li>
+            <p>At the equilibrium price, Sanaz will sell <var name="$n" width="5"/> sunglasses</p></li>
         </ol></p>
         </statement>
         <solution>
             <p><ol label="a">
-                <li><p><m>S = 35x, ~D = 1700 - 15x</m></p></li>
-                <li><p>$34; 1190 sunglasses</p></li>
+                <li><p>The Supply equation is <m>S = 35x</m>, the Demand equation is <m>D = 1700 - 15x</m>.</p></li>
+                <li><p>The equilibrium price is $34, and at that price, Sanaz will sell 1190 sunglasses</p></li>
             </ol></p>
         </solution>
     </webwork>

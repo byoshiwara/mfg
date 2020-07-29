@@ -64,8 +64,8 @@ Because their rate of growth is larger, the Hybrid A seedlings grow faster.
         <p><var name="$delta" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>Pounds per quart</p>
-    </solution>
+        <p>The units of <m>\dfrac{\Delta y}{\Delta x}</m> are pounds per quart</p>
+    </solution> -->
 </webwork></exercise>
 
 <p>In <xref ref="exercise-gas-mileage" text="type-global" />, the ratio <m>\dfrac{\text{miles}}{\text{gallon}}</m> measures the rate at which each car uses gasoline. By computing the mileage for each car for the same amount of gas, we have a basis for comparison. We can use this same idea, finding a common basis for comparison, to measure the steepness of an incline.</p>
@@ -144,7 +144,7 @@ For example, as we travel along the line representing Stony Point trail, we move
         </pg-code> 
         <statement><p>Compute the slope of the line through the indicated points on the graph above. On both axes, one square represents one unit. </p>
         <p><m>\dfrac{\text{change in }y\text{-coordinate}}{\text{change in }x\text{-coordinate}}= </m><var name="$slope" width="3" /></p></statement>
-        <solution><p><m>\dfrac{1}{4} </m></p></solution>
+        <solution><p><m>\dfrac{2}{8}=\dfrac{1}{4} </m></p></solution>
     </webwork>
 </exercise>
 
@@ -210,6 +210,7 @@ and the slope of the side is
         <statement><p>The square base is 55 meters on each side, and the top platform is 19.5 meters on each side. Calculate the slope of the sides of the pyramid. Which pyramid is steeper, Kukulcan or the Great Pyramid (whose slope, rounded to two decimals, is 1.28)?</p>
         <p>Answer: <var name="$Answer" form="popup"/></p>
         </statement>
+        <hint><p>The horizontal change <m>\Delta x</m> is half the difference between the sides of the base and of the top platform.</p></hint>
         <solution><p>The horizontal change <m>\Delta x</m> is half the difference between the sides of the base and of the top platform: <m>\Delta x=\frac{1}{2}(55-19.5)= <var name="$Delx"/></m>, so the slope is <m>m=\dfrac{\Delta y}{\Delta x}= \dfrac{24}{<var name="$Delx"/>} \approx <var name="$m"/></m>, which is greater than 1.28. Kukulcan is steeper.</p></solution>
     </webwork>
 </exercise>
@@ -282,7 +283,7 @@ and the slope of the side is
         <li><p>The slope is <m>m=\dfrac{\Delta y}{\Delta x}= \dfrac{-2-4}{1-4}=\dfrac{-6}{-3} = <var name="$m"/></m></p></li>
         </ol></p></solution>
     </webwork>
-    <conclusion><p>Here is a graph of the line.</p>
+    <conclusion><p>The graph for part (a):</p>
     <sidebyside width="28%"><image source="images/fig-in-ex-ans-1-4-5"><description>line</description></image></sidebyside></conclusion>
 </exercise>
 
@@ -308,7 +309,7 @@ and the slope of the side is
         <p><var name="$pn" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>Its slope is negative.</p>
+        <p>The graph is decreasing when its slope is negative.</p>
     </solution>
 </webwork></exercise>
 
@@ -369,7 +370,10 @@ stands for
             $m = NumberWithUnits(
             "($y1-$y0)/($x1-$x0) ft/min");
             $meaning = RadioButtons(
-                ["The steepness of the ski lift.","The increase in altitude per minute.","The time to rise a foot in altitude.","The cost of using the ski lift."],
+                ["A) The steepness of the ski lift.",
+                "B) The increase in altitude per minute.",
+                "C) The time to rise a foot in altitude.",
+                "D) The cost of using the ski lift."],
                 1
             );
         </pg-code> 
@@ -383,7 +387,7 @@ stands for
         </statement>
         <solution><p><ol label="a">
         <li><p><m>m=\dfrac{\Delta y}{\Delta x}= \dfrac{<var name="$y1"/> \text{ ft}-<var name="$y0"/>\text{ ft}}{<var name="$x1"/>\text{ min}-<var name="$x0"/>\text{ min}}= <var name="$m"/></m></p></li>
-        <li><p>Altitude increases by <m>150</m> feet per minute.</p></li>
+        <li><p>The skier's altitude increases by <m>150</m> feet per minute.</p></li>
     </ol></p></solution>
     </webwork>
 </exercise>
@@ -458,7 +462,7 @@ This value for the slope, <m>-3</m>, is the same value we found above.</p></solu
         <li><p>A graph is shown below.</p></li>
         </ol></p></solution>
     </webwork>
-    <conclusion><sidebyside  width="25%" margins="0% 75%"><image source="images/fig-in-ex-ans-1-4-7"><description>line</description></image></sidebyside></conclusion>
+    <conclusion><p>A graph for part (b):</p><sidebyside  width="25%" margins="0% 75%"><image source="images/fig-in-ex-ans-1-4-7"><description>line</description></image></sidebyside></conclusion>
 </exercise>
 
 <exercise><title>QuickCheck 5</title>
@@ -473,11 +477,11 @@ This value for the slope, <m>-3</m>, is the same value we found above.</p></solu
             );            
         </pg-code> 
     <statement>
-        <p>Comment on the following calculation: The intercepts of a line are <m>(0,3)</m> and <m>(5,0)</m>, so the slope of the line is <m>\dfrac{3}{5}</m>.</p>
+        <p>Comment on the following calculation: The intercepts of a line are <m>(0,3)</m> and <m>(5,0)</m>, so the slope of the line is <m>\dfrac{5}{3}</m>.</p>
         <p><var name="$com" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>It is false because <m>\Delta x</m> and <m>\Delta y</m> have opposite signs.</p>
+        <p>It is false because <m>\Delta x</m> and <m>\Delta y</m> have opposite signs. (The slope of the line is <m>\dfrac{-5}{3}</m>.)</p>
     </solution>
 </webwork></exercise>
 
