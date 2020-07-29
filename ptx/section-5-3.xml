@@ -94,16 +94,16 @@ The number <m>e</m> is essential for many advanced topics, and it is often calle
 	<title>Practice 1</title>
     <webwork>
          <pg-code>
-            $a = Compute("e**2")->with(
+            $a = Formula("e**2")->with(
               tolType => 'absolute',
               tolerance => .00051,
             );
 
-            $b = Compute("e**(3.5)")->with(
+            $b = Formula("e**(3.5)")->with(
               tolType => 'absolute',
               tolerance => .00051,
             );
-            $c = Compute("e**(-0.5)")->with(
+            $c = Formula("e**(-0.5)")->with(
               tolType => 'absolute',
               tolerance => .00051,
             );
@@ -213,22 +213,20 @@ In general, natural logs obey the same conversion formulas that work for logs to
 <warning><p>Observe that the natural log of a number greater than <m>1</m> is positive, while the logs of fractions between <m>0</m> and <m>1</m> are negative. In addition, <em>the natural logs of negative numbers and zero are undefined</em>.</p></warning>
 
 <exercise>
-	<title>Practice 2</title>
+  <title>Practice 2</title>
     <webwork>
          <pg-code>
-            $a = Compute("ln(100)")->with(
+            $a = Formula("ln(100)")->with(
               tolType => 'absolute',
               tolerance => .000051,
             );
 
-            $b = Compute("ln(0.01)")->with(
+            $b = Formula("ln(0.01)")->with(
               tolType => 'absolute',
               tolerance => .000051,
             );
-            $c = Compute("ln(e**3)");
+            $c = Compute("3");
             Context()->functions->disable("All");
-
-
         </pg-code> 
         <statement>
             <p>Use your calculator to evaluate each logarithm. Round your answers to four decimal places.</p>
@@ -579,7 +577,7 @@ Replacing <m>b</m> with <m>e^k</m>, we find that the decay law is
 		<me>N(t) \approx 60e^{-0.2231t}</me></p></solution></example>
 
 <exercise>
-	<title>Practice 8</title>
+  <title>Practice 8</title>
     <webwork>
          <pg-code>
             Context()->variables->add(t=>"Real");
@@ -677,7 +675,8 @@ Replacing <m>b</m> with <m>e^k</m>, we find that the decay law is
         </solution>
     </webwork>
     <conclusion>
-        <sidebyside width="35%"><image source="images/fig-krypton-91-decay"><description>decay</description></image></sidebyside>
+      <p>Graph for part (b):</p>
+        <sidebyside width="35%" margins="0% 5%"><image source="images/fig-krypton-91-decay"><description>decay</description></image></sidebyside>
     </conclusion>
 </exercise>
 

@@ -87,7 +87,7 @@
         <p><var name="$dirvar" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>If the ratio output/input is constant</p>
+        <p>A table can represent direct variation if the ratio output/input is constant</p>
     </solution>
 </webwork></exercise>
 
@@ -130,21 +130,17 @@ The positive constant <m>k</m> in the equation <m>y = kx</m> is just the slope o
     </introduction>
     <webwork>
          <pg-code>
-            $explain = new_checkbox_multiple_choice();
-            $explain -> qa (
-            "A question can go here, but PTX ignores this",
-            "(b): The graph is a straight line through the origin. $BR",
-            );
-            $explain -> makeLast(
-            "(a): The graph is a straight line that increases. $BR",
-            "(b): The graph is a straight line through the origin. $BR",
-            "(c): The graph is a straight line that decreases. $BR",
-            "None of the above");
-
+            $explain = RadioButtons(
+              ["(a) The graph is a straight line that increases.",
+              "(b) The graph is a straight line through the origin.",
+              "(c) The graph is a straight line that decreases.",
+              "None of the above"],
+              1, 
+            );            
         </pg-code> 
         <statement>
-            <p>Which of the graphs below could represent direct variation? Explain why.</p>
-            <p><var name="$explain" form="checkboxes"/> </p>
+            <p>Which of the graphs above could represent direct variation? Explain why.</p>
+            <p><var name="$explain" form="buttons"/> </p>
         </statement>
         <solution>
             <p>(b): The graph is a straight line through the origin.</p>
@@ -168,7 +164,7 @@ The positive constant <m>k</m> in the equation <m>y = kx</m> is just the slope o
         <p><var name="$convar" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>The slope of the graph</p>
+        <p>If \(y\) varies directly with \(x\), the constant of variation is the slope of the graph</p>
     </solution>
 </webwork></exercise>
 
@@ -226,15 +222,12 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
     <title>Practice 2</title>
     <webwork>
          <pg-code>
-            $explain = new_checkbox_multiple_choice();
-            $explain -> qa (
-            "A question can go here, but PTX ignores this",
-            "(a): If we multiply \(x\) by \(c\), \(y\) is also multiplied by \(c\). $BR",
-            );
-            $explain -> makeLast(
-            "(a): If we multiply \(x\) by \(c\), \(y\) is also multiplied by \(c\). $BR",
-            "(b): If we increase \(x\), we also increase \(y\). $BR",
-            "None of the above");           
+            $explain = RadioButtons(
+              ["(a) If we multiply \(x\) by \(c\), \(y\) is also multiplied by \(c\).",
+              "(b) If we increase \(x\), we also increase \(y\).",
+              "None of the above"],
+              0, 
+            );            
         </pg-code> 
         <statement>
             <p>Which tables could represent direct variation? Explain why. (Hint: What happens to <m>y</m> if you multiply <m>x</m> by a constant?)<ol label="a">
@@ -276,7 +269,7 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
                         <cell><m>10</m></cell></row>
                 </tabular></sidebyside></li>
             </ol></p>
-            <p><var name="$explain" form="checkboxes"/> </p>
+            <p><var name="$explain" form="buttons"/> </p>
         </statement>
         <solution>
             <p>(a): If we multiply <m>x</m> by <m>c</m>, <m>y</m> is also multiplied by <m>c</m>.</p>
@@ -313,11 +306,11 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
 <webwork>
      <pg-code>       
             $exdir = RadioButtons(
-              ["Yes, it is linear.",
-              "Yes, the scale factor is 0.3.",
-              "No, the graph does not pass through the origin.",
-              "No, its slope is less than 1."],
-              3, 
+              ["(A) Yes, it is linear.",
+              "(B) Yes, the scale factor is 0.3.",
+              "(C) No, the graph does not pass through the origin.",
+              "(D) No, its slope is less than 1."],
+              2, 
             );            
         </pg-code> 
     <statement>
@@ -419,7 +412,7 @@ You can check that multiplying the original interest of $<m>56</m> by a factor o
             </instruction>
         </statement>
         <solution>
-            <p><m>V=\dfrac{4}{3}\pi r^3</m></p>
+            <p><m>V=kr^3</m>, and solving for <m>k</m> we find that <m>k=\dfrac{4}{3}\pi</m>, so <m>V=\dfrac{4}{3}\pi r^3</m></p>
         </solution>
     </webwork>
 </exercise>
