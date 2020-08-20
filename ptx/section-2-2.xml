@@ -44,7 +44,7 @@
         <p><var name="$absneg" form="buttons"/></p>      
     </statement>
     <solution>
-        <p><m> x </m> must be zero or negative.</p>
+        <p><m> x </m> must be zero or negative if <m> \left| x \right| =-x </m>.</p>
     </solution>
 </webwork></exercise>
     
@@ -379,7 +379,7 @@
 <p>Part IV Absolute Value</p>
 <sidebyside widths="60% 40%" valigns="middle middle"><p><ol>
     <li>Complete the table for the two functions <m>f (x) = x</m> and <m>g(x) = \abs{x}</m>. Then sketch each function on graph paper, using the table values to help you scale the axes.</li>
-    <li>Verify both graphs with your graphing calculator. Your calculator uses the notation <m>abs (x)</m> instead of <m>\abs{x}</m> for the absolute value of <m>x</m>. First, position the cursor after <m>Y_1 =</m> in the graphing window. Now access the absolute value function by pressing <c>2nd</c> <m>0</m> for <em>CATALOG</em>; then <c>ENTER</c> for <em>abs(</em>. Don’t forget to press <m>X</m> if you want to graph <m>y = \abs{x}</m>.</li>
+    <li>Verify both graphs with your graphing calculator. Your calculator uses the notation <m>abs (x)</m> instead of <m>\abs{x}</m> for the absolute value of <m>x</m>. First, position the cursor after <m>Y_1 =</m> in the graphing window. Now access the absolute value function by pressing <kbd>2nd</kbd> <m>0</m> for <em>CATALOG</em>; then <kbd>ENTER</kbd> for <em>abs(</em>. Don’t forget to press <m>X</m> if you want to graph <m>y = \abs{x}</m>.</li>
     <li>State the intervals on which each graph is increasing.</li>
     <li>Write a few sentences comparing the two graphs.</li>
 </ol></p>
@@ -534,7 +534,7 @@
         <p><var name="$absineq" form="buttons"/></p>      
     </statement>
     <solution>
-        <p><m> \left| a-b \right| \ge \left| a \right| - \left| b \right| </m></p>
+        <p><m> \left| a-b \right| \ge \left| a \right| - \left| b \right| </m> for all <m>a</m> and <m>b</m>.</p>
     </solution>
 </webwork></exercise>
 </subsection>
@@ -593,9 +593,9 @@
 <webwork>
      <pg-code>       
             $pcws = RadioButtons(
-              ["\(0\)",
-              "\(-1\)",
-              "\(-2\)",
+              [" \(0\)",
+              " \(-1\)",
+              " \(-2\)",
               "undefined"],
               0, 
             );            
@@ -605,7 +605,7 @@
         <p><var name="$pcws" form="buttons"/></p>      
     </statement>
     <solution>
-        <p><m>0</m></p>
+        <p><m>g(-1)=0</m></p>
     </solution>
 </webwork></exercise>
 
@@ -667,6 +667,13 @@
             <p><var name="$explain" form="buttons"/> </p></li>
         </ol></p>
         </statement>
+        <solution>
+            <p><ol label="a">
+            <li><p>No, the graphs of  <m>g(x) =\left|x-3\right|</m> and <m>h(x) =\left|x\right| + \left|-3\right|</m> are not the same. </p></li>
+            <li><p>Because <m>\left|x + k\right| \ne \left|x\right| + \left|k\right|</m> when <m>x</m> and <m>k</m> have opposite signs.
+            </p></li>
+        </ol></p>
+        </solution>
     </webwork>
 </exercise>
 

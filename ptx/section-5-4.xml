@@ -119,22 +119,25 @@ When we plot <m>2.48</m> for the horse, we are really plotting the power of <m>1
     </solution>
 </webwork></exercise>
 
-<exercise>
-    <title>Practice 1</title>
+<exercise><title>Practice 1</title>
     <introduction>
         <sidebyside width="90%"><image source="images/fig-read-logscale"><description>points on logscale</description></image></sidebyside>
     </introduction>
-    <webwork>
-         <pg-code>
+    <webwork><pg-code>
             $l[0] = Compute("-4");
             $l[1] = Compute("-2.5");
             $l[2] = Compute("1.5");
             $l[3] = Compute("4.25");
             foreach my $i (0..3) {
-            $x[$i] = Compute("10**$l[$i]");
+            $x[$i] = Formula("10**$l[$i]")->with(
+              tolType => 'relative',
+              tolerance => .001,
+            )
+;
             }
-        </pg-code> 
-        <statement><p>Complete the table by estimating the logarithm of each point plotted on the log scale above. Then give a decimal value for each point.</p>
+            Context()->operators->undefine("^","**");
+        </pg-code>
+    <statement><p>Complete the table by estimating the logarithm of each point plotted on the log scale above. Then use a calculator to give a decimal value for each point.</p>
         <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row>
             <cell><m>\log x</m></cell>
@@ -150,9 +153,7 @@ When we plot <m>2.48</m> for the horse, we are really plotting the power of <m>1
             <cell><var name="$x[3]" width="5"/></cell>
         </row></tabular></sidebyside>
     </statement>
-    <solution>
-        <sidebyside>
-        <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+    <solution><sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row>
             <cell><m>\log x</m></cell>
             <cell><m>-4</m></cell>
@@ -167,18 +168,17 @@ When we plot <m>2.48</m> for the horse, we are really plotting the power of <m>1
             <cell><m>17,782.8</m></cell></row>
     </tabular></sidebyside>
     </solution>
-    </webwork>
-</exercise>
+</webwork></exercise>
 </subsection>
 
 <exercise><title>QuickCheck 2</title>
 <webwork>
      <pg-code>       
             $use = RadioButtons(
-              ["To find the logarithm of a number.",
-              "To plot data that covers a wide range of values.",
-              "To highlight the curvature in the graph of an exponential function.",
-              "To convert logarithms to base 10."],
+              ["A) To find the logarithm of a number.",
+              "B) To plot data that covers a wide range of values.",
+              "C) To highlight the curvature in the graph of an exponential function.",
+              "D) To convert logarithms to base 10."],
               1, 
             );            
         </pg-code> 
@@ -294,10 +294,10 @@ and so on. Moving up by equal increments on a log scale does not add equal amoun
 <webwork>
      <pg-code>       
             $use = RadioButtons(
-              ["We use log scales to graph a variable that has a wide range of values.",
-              "On a log scale, we actually plot exponents.",
-              "Values less than one appear as negative numbers on a log scale.",
-              "Equal increments on a log scale correspond to equal differences in value."],
+              ["A) We use log scales to graph a variable that has a wide range of values.",
+              "B) On a log scale, we actually plot exponents.",
+              "C) Values less than one appear as negative numbers on a log scale.",
+              "D) Equal increments on a log scale correspond to equal differences in value."],
               3, 
             );            
         </pg-code> 
@@ -306,7 +306,7 @@ and so on. Moving up by equal increments on a log scale does not add equal amoun
         <p><var name="$use" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>Equal increments on a log scale correspond to equal differences in value.</p>
+        <p>"Equal increments on a log scale correspond to equal differences in value" is a false statement.</p>
     </solution>
 </webwork></exercise>
 
@@ -579,7 +579,7 @@ Values for pH fall between <m>0</m> and <m>14</m>, with <m>7</m> indicating a ne
             <p>Answer: <var name="$a" width="12"/> </p>
         </statement>
         <solution>
-            <p><m>5.01\times 10^{-9}</m></p>
+            <p><m>10^{-8.3}\approx 5.01\times 10^{-9}</m></p>
         </solution>
     </webwork>
 </exercise>
@@ -740,7 +740,7 @@ Thunder is <m>10^9</m>, or one billion times more intense than a whisper. It wou
             <p>Answer: <var name="$a" width="3"/> </p>
         </statement>
         <solution>
-            <p><m>3.16</m></p>
+            <p><m>10^{.5}\approx 3.16</m></p>
         </solution>
     </webwork>
 </exercise>
@@ -785,7 +785,7 @@ Thunder is <m>10^9</m>, or one billion times more intense than a whisper. It wou
             <p>Answer: <var name="$a" width="5"/> </p>
         </statement>
         <solution>
-            <p><m>316.2</m></p>
+            <p><m>10^{2.5}\approx 316.2</m></p>
         </solution>
     </webwork>
 </exercise>

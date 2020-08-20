@@ -49,7 +49,7 @@ we need only find the <m>x</m>-coordinates of these points. From the graph, the 
  
  <p>The exact solutions are thus <m>\sqrt{6}</m> and <m>-\sqrt{6}</m>. We can also find decimal <em>approximations</em> for the solutions using a calculator. Rounded to two decimal places, the approximate solutions are <m>2.45</m> and <m>-2.45</m>.</p>
 
- <exercise><title>QuickCheck 1</title>
+<exercise><title>QuickCheck 1</title>
 <webwork>
      <pg-code>       
             $quadtrue = RadioButtons(
@@ -127,7 +127,7 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
         <p>Which solutions are approximations?</p>
         <p><var name="$approx" form="buttons"/></p>      
     </statement>
-    <solution>
+   <solution>
         <p><m>x=\pm 6.32455532</m></p>
     </solution>
 </webwork></exercise>
@@ -265,8 +265,8 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
     <webwork>
          <pg-code>
             $x0 = Compute("(-3 + sqrt(19))/5");
-            $x1 = Formula("(-3 - sqrt(19))/5");
-            $exact = List("$x0,$x1");
+            $x1 = Compute("(-3 - sqrt(19))/5");
+            $exact = Compute("(-3 + sqrt(19))/5,(-3 - sqrt(19))/5");
             $approx = List("$x0,$x1")->with(
               tolType => 'absolute',
               tolerance => .0051,
@@ -308,7 +308,7 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
         <p><var name="$cannot" form="buttons"/></p>      
     </statement>
     <solution>
-        <p><m>2x^2+3x=8</m></p>
+        <p>The equation <m>2x^2+3x=8</m> cannot be solved by extraction of roots.</p>
     </solution>
 </webwork></exercise>
 </subsection>
@@ -346,10 +346,10 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
 <webwork>
      <pg-code>       
             $first = RadioButtons(
-              ["Expand \((x+1)^2\)",
-              "Get zero on one side",
-              "Divide both sides by 2",
-              "Take the square root of both sides"],
+              ["Expand \((x+1)^2\).",
+              "Get zero on one side.",
+              "Divide both sides by 2.",
+              "Take the square root of both sides."],
               2, 
             );            
         </pg-code> 
@@ -358,7 +358,7 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
         <p><var name="$first" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>Divide both sides by 2</p>
+        <p>To solve <m>2(x+1)^2=17</m> by extraction of roots, we first divide both sides by 2.</p>
     </solution>
 </webwork></exercise>
 
@@ -382,7 +382,7 @@ by isolating <m>x^2</m> on one side of the equation and then taking the square r
             <p><m>r\approx</m><var name="$r" width="3"/>% </p>
         </statement>
         <solution>
-            <p><m>r\approx 2.96\%</m></p>
+            <p><m>r=\sqrt{\dfrac{25.44}{24}}-1</m>, or as a percent, <m>r\approx 2.96\%</m></p>
         </solution>
     </webwork>
 </exercise>
@@ -421,7 +421,7 @@ by taking the cube root of both sides, because cubing and taking cube roots are 
         <p><var name="$sqneg" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>He should have put parentheses around <m>-6</m>.</p>
+        <p>To square <m>-6</m>, Delbert should have put parentheses around <m>-6</m>.</p>
     </solution>
 </webwork></exercise>
 
@@ -457,7 +457,7 @@ by taking the reciprocal of both sides to get
         <p><var name="$recip" form="buttons"/></p>      
     </statement>
     <solution>
-        <p><m>\sqrt{x}</m></p>
+        <p>The reciprocal of <m>\dfrac{1}{\sqrt{x}}</m> is <m>\sqrt{x}</m>.</p>
     </solution>
 </webwork></exercise>  
 
@@ -505,7 +505,7 @@ in the window
     \end{aligned}</me>
 The point where the two graphs intersect locates the solution of the equation. If we trace along the graph of <m>Y_1</m>, the closest we can get to the intersection point is <m>(2.8, 3.75)</m>, as shown in figure (a). We get a better approximation using the <em>intersect</em> feature.</p>
     <sidebyside  width="80%"><image source="images/fig-GC-nonlinear"><description>GC displays</description></image></sidebyside>
-<p>Use the arrow keys to position the Trace bug as close to the intersection point as you can. Then press <c>2nd</c> <c>TRACE</c> to see the Calculate menu. Press <m>5</m> for intersect; then respond to each of the calculator's questions, <em>First curve?</em>, <em>Second curve?</em>, and <em>Guess?</em> by pressing <c>ENTER</c>. The calculator will then display the intersection point, <m>x = 2.75</m>, <m>y = 4</m>, as shown in figure (b). The solution of the original equation is <m>x = 2.75</m>.</p></solution>
+<p>Use the arrow keys to position the Trace bug as close to the intersection point as you can. Then press <kbd>2nd</kbd> <kbd>TRACE</kbd> to see the Calculate menu. Press <m>5</m> for intersect; then respond to each of the calculator's questions, <em>First curve?</em>, <em>Second curve?</em>, and <em>Guess?</em> by pressing <kbd>ENTER</kbd>. The calculator will then display the intersection point, <m>x = 2.75</m>, <m>y = 4</m>, as shown in figure (b). The solution of the original equation is <m>x = 2.75</m>.</p></solution>
 </example>
 </technology>
 
@@ -530,8 +530,8 @@ The point where the two graphs intersect locates the solution of the equation. I
             <p><var name="$answer" width="10" evaluator="$my_evaluator"/> </p>
         </statement>
         <solution>
-            <p><m>x=\pm 2.449</m></p>
-        </solution>
+            <p><m>x=\pm\sqrt{6}\approx 2.449</m></p>
+        </solution> 
     </webwork>
 </exercise>
 

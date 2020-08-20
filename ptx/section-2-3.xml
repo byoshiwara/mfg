@@ -153,7 +153,7 @@ The figure below shows the graphs of <m>f(x) = x^2 + 4</m>, <m>g(x) = x^2 - 4</m
         <p><var name="$vertas" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>Nothing.</p>
+        <p>Nothing: a vertical asymptote does not change when a graph undergoes a vertical translation.</p>
     </solution>
 </webwork></exercise>
 
@@ -164,8 +164,7 @@ The figure below shows the graphs of <m>f(x) = x^2 + 4</m>, <m>g(x) = x^2 - 4</m
             $explain = RadioButtons(
                     ["Translate  \(y=\left|x\right|\) one unit right.","Translate  \(y=\left|x\right|\) one unit left.","Translate  \(y=\left|x\right|\) one unit up.","Translate  \(y=\left|x\right|\) one unit down."],
                     2,
-                );
-            
+                );            
         </pg-code> 
         <statement>
             <p>
@@ -184,6 +183,7 @@ The figure below shows the graphs of <m>f(x) = x^2 + 4</m>, <m>g(x) = x^2 - 4</m
         </solution>
     </webwork>
     <conclusion>
+        <p>A graph for part (a) is below.</p>
         <sidebyside width="25%" margins="0% 75%"><image source="images/fig-in-ex-ans-2-3-1"><description>shifted absolute value</description></image></sidebyside>
     </conclusion>
 </exercise>
@@ -332,7 +332,7 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
         <p><var name="$horint" form="buttons"/></p>      
     </statement>
     <solution>
-        <p><m>(-3,2)</m></p>
+        <p><m>(-3,2)</m> lies on the graph of <m>y=f(x+3)</m>.</p>
     </solution>
 </webwork></exercise>
 
@@ -359,6 +359,7 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
         </solution>
     </webwork>
     <conclusion>
+        <p>A graph for part (a) is shown below.</p>
         <sidebyside width="25%" margins="0% 50%"><image source="images/fig-in-ex-ans-2-3-3"><description>shifted absolute value</description></image></sidebyside>
     </conclusion>
 </exercise>
@@ -386,7 +387,10 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
             parserFunction("f(t)" => "80*t*e**(-t/2.5)");
             $g = Formula("f(t-3)");
             $explain = RadioButtons(
-                    ["Francine drank her coffee 3 hours after Delbert drank his.","Delbert drank his coffee 3 hours after Francine drank hers.","Francine drank 3 time as much coffee as Delbert drank.","Francine drank 3 more cups of coffee than Delbert drank."],
+                    ["A) Francine drank her coffee 3 hours after Delbert drank his.",
+                    "B) Delbert drank his coffee 3 hours after Francine drank hers.",
+                    "C) Francine drank 3 time as much coffee as Delbert drank.",
+                    "D) Francine drank 3 more cups of coffee than Delbert drank."],
                     0,
                 );
         </pg-code> 
@@ -429,6 +433,7 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
         </solution>
     </webwork>
     <conclusion>
+        <p>A graph for part (a):</p>
         <sidebyside width="25%" margins="0% 50%"><image source="images/fig-in-ex-ans-2-3-5"><description>shifted absolute value</description></image></sidebyside>
     </conclusion>
 </exercise>
@@ -560,10 +565,10 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
 <webwork>
      <pg-code>       
             $symx = RadioButtons(
-              ["\(y=-3F(x)\)",
-              "\(y=F(x)-3\)",
-              "\(y=F(x-3)\)",
-              "(a) and (b)"],
+              ["(a) \(y=-3F(x)\)",
+              "(b) \(y=F(x)-3\)",
+              "(c) \(y=F(x-3)\)",
+              "Both (a) and (b)"],
               3, 
             );            
         </pg-code> 
@@ -572,7 +577,7 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
         <p><var name="$symx" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>(a) and (b)</p>
+        <p>Both (a) <m>y=-3F(x)</m> and (b) <m>y=F(x)-3</m></p>
     </solution>
 </webwork></exercise>
 
@@ -605,11 +610,12 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
         <solution>
             <p><ol label="a" cols="2">
                 <li><p>A graph is shown below.</p></li>
-                <li><p>Stretch <m>y =\left|x\right|</m> vertically by a factor of 2.</p></li>
+                <li><p>Stretch <m>y =\left|x\right|</m> vertically by a factor of 2 to obtain the graph of <m>f</m>.</p></li>
             </ol></p>
         </solution>
     </webwork>
     <conclusion>
+        <p>A graph for part (a):</p>
         <sidebyside width="20%" margins="0% 80%"><image source="images/fig-in-ex-ans-2-3-6"><description>shifted absolute value</description></image></sidebyside>
     </conclusion>
 </exercise>
@@ -630,7 +636,7 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
         <p><var name="$shape" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>All of these</p>
+        <p>The graph of a function keep the same shape under all of these transformations.</p>
     </solution>
 </webwork></exercise>
 
@@ -654,7 +660,10 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
             );
 
             $explain = RadioButtons(
-                    ["2 hours more in Helsinki as in Rome.","3 hours more in Helsinki as in Rome.","twice as much in Helsinki as in Rome.","half as much in Helsinki as in Rome."],
+                    ["A) 2 hours more in Helsinki as in Rome.",
+                    "B) 3 hours more in Helsinki as in Rome.",
+                    "C) twice as much in Helsinki as in Rome.",
+                    "D) half as much in Helsinki as in Rome."],
                     2,
                 );
         </pg-code> 

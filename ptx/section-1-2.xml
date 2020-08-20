@@ -70,7 +70,10 @@
               2, # index of correct answer; could also just be the correct answer
             );
             $WHYgrade = RadioButtons(
-              ["Each value of \( x \) has exactly one value of \( y \) associated with it.","Two students with the same grade English can have different grades in algebra.","Two students with the same grade math will also have the same grade in English.","Two students with the same grade math can have different grades in English."],
+              ["A) Each value of \( x \) has exactly one value of \( y \) associated with it.",
+              "B) Two students with the same grade English can have different grades in algebra.",
+              "C) Two students with the same grade math will also have the same grade in English.",
+              "D) Two students with the same grade math can have different grades in English."],
               1, # index of correct answer; could also just be the correct answer
             );
              $YNcalories = PopUp(
@@ -78,12 +81,12 @@
               1, # index of correct answer; could also just be the correct answer
             );
             $WHYcalories = RadioButtons(
-              ["The number of calories is proportional to the number of fluid ounces.","Two servings with the same calories will have different fluid ounces.","Two servings with the same flid ounces will have different calories."],
+              ["A) The number of calories is proportional to the number of fluid ounces.",
+              "B) Two servings with the same calories will have different fluid ounces.",
+              "C) Two servings with the same flid ounces will have different calories."],
               0, # index of correct answer; could also just be the correct answer
             );
         </pg-code>
-     
-
     <statement>
         <ol label="a">
         <li><p>As part of a project to improve the success rate of freshmen, the counseling department studied the grades earned by a group of students in English and algebra. Do you think that a student's grade in algebra is a function of his or her grade in English? <var name="$YNgrade" form="popup"/></p>
@@ -105,7 +108,6 @@
             </p></li>
         </ol></p>
     </solution>
-
 </webwork>
 </exercise>
 
@@ -113,10 +115,10 @@
 <webwork>
      <pg-code>       
             $twoout = RadioButtons(
-              ["The variables are related by a formula.",
-              "The values of the input and output variables must be different.",
-              "There cannot be two output values for a single input value.",
-              "There cannot be two input values for a single output value."],
+              ["A) The variables are related by a formula.",
+              "B) The values of the input and output variables must be different.",
+              "C) There cannot be two output values for a single input value.",
+              "D) There cannot be two input values for a single output value."],
               2, 
             );            
         </pg-code> 
@@ -272,17 +274,19 @@
               2, # index of correct answer; could also just be the correct answer
             );
             $WHY1 = RadioButtons(
-              ["Each value of \(x\) has exactly one value of \(y\) associated with it.","For example, \(x=3.5\) corresponds both to \(y=2.5\) and also to \(y=4.0\)"],
+              ["Each value of \(x\) has exactly one value of \(y\) associated with it.",
+              "For example, \(x=3.5\) corresponds both to \(y=2.5\) and also to \(y=4.0\)"],
               1, # index of correct answer; could also just be the correct answer
             );
 
             $YN2 = PopUp(
               ["?","Yes","No"],
-              1, # index of correct answer; could also just be the correct answer
+              1, 
             );
             $WHY2 = RadioButtons(
-              ["Each value of \(x\) has exactly one value of \(y\) associated with it.","For example, \(y=3\) corresponds both to \(x=-2\) and also to \(x=2\)"],
-              0, # index of correct answer; could also just be the correct answer
+              ["Each value of \(x\) has exactly one value of \(y\) associated with it.",
+              "For example, \(y=3\) corresponds both to \(x=-2\) and also to \(x=2\)"],
+              0, 
             );
         </pg-code>
     <statement><p><ol label="a">
@@ -346,10 +350,10 @@
 <webwork>
      <pg-code>       
             $table = RadioButtons(
-              ["The output values are all the same.",
-              "The input values are not evely spaced.",
-              "Two different input values have the same output value.",
-              "Two different output values have the same input value."],
+              ["A) The output values are all the same.",
+              "B) The input values are not evely spaced.",
+              "C) Two different input values have the same output value.",
+              "D) Two different output values have the same input value."],
               3, 
             );            
         </pg-code> 
@@ -478,10 +482,10 @@
 <webwork>
      <pg-code>       
             $threeways = RadioButtons(
-              ["By inputs, outputs, or evaluation",
-              "By tables, equations, or graphs",
-              "By the intercepts, the slope, or the vertex",
-              "By numbers, letters, or diagrams"],
+              ["A) By inputs, outputs, or evaluation",
+              "B) By tables, equations, or graphs",
+              "C) By the intercepts, the slope, or the vertex",
+              "D) By numbers, letters, or diagrams"],
               1, 
             );            
         </pg-code> 
@@ -498,19 +502,19 @@
     <p>We can use a graphing calculator to make a table of values for a function defined by an equation. For the function in <xref ref="example-falling-book" text="type-global"/>, 
     <me>h = 1776 - 16t^2</me>
     we follow the steps: <ul>
-        <li>Enter the equation: Press the <c>Y=</c> key, clear out any other equations, and define <m>Y_1 = 1776 - 16X^2.</m></li>
-        <li>Choose the <m>x</m>-values for the table. Press <c>2nd</c><c>WINDOW</c> to access the <m>TblSet</m> (Table Setup) menu and set it to look like the figure at left below.</li></ul></p> 
+        <li>Enter the equation: Press the <kbd>Y=</kbd> key, clear out any other equations, and define <m>Y_1 = 1776 - 16X^2.</m></li>
+        <li>Choose the <m>x</m>-values for the table. Press <kbd>2nd</kbd><kbd>WINDOW</kbd> to access the <m>TblSet</m> (Table Setup) menu and set it to look like the figure at left below.</li></ul></p> 
         
     <p>This setting will give us an initial x-value of 0 <m>(TblStart = 0)</m> and an increment of one unit in the <m>x</m>-values, <m>(\Delta Tbl = 1)</m>. It also fills in values of both variables automatically.</p> 
 
     <p><ul>
-        <li>Press <c>2nd</c> <c>GRAPH</c> to see the table of values, as shown in the figure at right below. From this table, we can check the heights we found in <xref ref="example-falling-book" text="type-global"/>.</li></ul></p>
+        <li>Press <kbd>2nd</kbd> <kbd>GRAPH</kbd> to see the table of values, as shown in the figure at right below. From this table, we can check the heights we found in <xref ref="example-falling-book" text="type-global"/>.</li></ul></p>
         
     <sidebyside widths="30% 30%">
         <image source="images/fig-TblSetup"><description>Tbl Setup</description></image>
         <image source="images/fig-GC-table"   width="70%"><description>table</description></image></sidebyside>
 
-    <p>Now try making a table of values with <m>TblStart = 0</m> and <m>\Delta Tbl = 0.5</m>. Use the  <!-- <m>\boxed{\uparrow}</m>  --><m>\boxed{\uparrow}</m> and <m>\boxed{\downarrow}</m> <!--<c>↓</c>--> arrow keys to scroll up and down the table.</p>
+    <p>Now try making a table of values with <m>TblStart = 0</m> and <m>\Delta Tbl = 0.5</m>. Use the   <kbd name="up"/> and  <kbd name="down"/> arrow keys to scroll up and down the table.</p>
 </technology>
 
 <exercise><title>Pause and Reflect</title>
@@ -575,31 +579,46 @@ We see that</p>
 </assemblage>
 
 <exercise><title>QuickCheck 4</title>
+<webwork>
+    <pg-code>
+        $true = PopUp(
+          ["?","True", "False"],
+         1, 
+        );
+        $false = PopUp(
+          ["?","True", "False"],
+         2, 
+        );
+    </pg-code>
     <statement><p>True or False.  <ol label="a">
-        <li>The notation <m>f(t)</m> indicates the product of <m>f</m> and <m>t</m>.</li>
-        <li>If <m>y=f(x)</m>, then <m>f(x)</m> gives the value of the input variable.</li>
-        <li>If <m>Q</m> is a function of <m>M</m>, we may write <m>M=f(Q)</m>.</li>
-        <li>In the equation <m>d=g(n)</m> the letters <m>d,~g,</m> and <m>n</m> are variables.</li>
+        <li>The notation <m>f(t)</m> indicates the product of <m>f</m> and <m>t</m>. <var name="$false" form="popup"/></li>
+        <li>If <m>y=f(x)</m>, then <m>f(x)</m> gives the value of the input variable. <var name="$false" form="popup"/></li>
+        <li>If <m>Q</m> is a function of <m>M</m>, we may write <m>M=f(Q)</m>. <var name="$false" form="popup"/></li>
+        <li>In the equation <m>d=g(n)</m> the letters <m>d,~g,</m> and <m>n</m> are variables. <var name="$false" form="popup"/></li>
     </ol></p></statement>
-    <answer><p><ol label="a">
+    <solution><p><ol label="a">
         <li>False</li>
         <li>False</li>
         <li>False</li>
-        <li>False</li></ol></p></answer></exercise>
+        <li>False</li></ol></p>
+    </solution>
+</webwork>
+</exercise>
 
 <exercise><title>Practice 5</title>
     <introduction><p>
         Let <m> F </m> be the name of the function defined by the graph in <xref ref="example-sun-hours" text="type-global"/>, the number of hours of daylight in Peoria <m>t</m> days after January 1.
     </p></introduction>
-    <webwork>
-         
+    <webwork>         
             <pg-code>
             $function = RadioButtons(
               [ "\( F=H(t) \)", "\( H=F(t) \)","\( t=F(H) \)","\( H=t(F) \)"],
               1, # index of correct answer; could also just be the correct answer
             );
             $meaning = RadioButtons(
-              ["The sun is 9.7 degrees above the horizon in Peoria on January 15.", "The sun is above the horizon in Peoria for 15 hours on January 10.","The sun is above the horizon in Peoria for 9.7 hours on January 16."],
+              ["A) The sun is 9.7 degrees above the horizon in Peoria on January 15.", 
+              "B) The sun is above the horizon in Peoria for 15 hours on January 10.",
+              "C) The sun is above the horizon in Peoria for 9.7 hours on January 16."],
               2, # index of correct answer; could also just be the correct answer
             );               
             </pg-code>
@@ -828,21 +847,21 @@ We see that</p>
 </exercise>
 
 <technology>
-    <title><!--<image source="images/icon-GC.jpg"  width="8%"><description>Graphing Calculator</description></image>-->Evaluating a Function</title>
+    <title>Evaluating a Function</title>
     <p>We can use the table feature on a graphing calculator to evaluate functions. Consider the function of <xref ref="exercise-function-notation" text="type-global"/>, <m>f(x) = 5 - x^3</m>.</p> 
     <p><ul>
-        <li><p>Press <c>Y=</c>, clear any old functions, and enter</p>
+        <li><p>Press <kbd>Y=</kbd>, clear any old functions, and enter</p>
             <p><m>\qquad Y_1=5-X</m> ^ <m> 3</m>  </p></li>
-        <li>Press <c>TblSet</c> (<c>2nd</c> <c>WINDOW</c>) and choose <m>Ask</m> after <m>Indpnt</m>, as shown in the figure at left below, and press <c>ENTER</c>. This setting allows you to enter any <m>x</m>-values you like.</li> 
-        <li>Press <c>TABLE</c> (using <c>2nd</c> <c>GRAPH</c>).</li>
-        <li>To follow <xref ref="exercise-function-notation" text="type-global"/>, key in <c>(-)</c> 2 <c>ENTER</c> for the <m>x</m>-value, and the calculator will fill in the <m>y</m>-value. Continue by entering 0, 1, 3, or any other <m>x</m>-values you choose.</li></ul></p>
+        <li>Press <kbd>TblSet</kbd> (<kbd>2nd</kbd> <kbd>WINDOW</kbd>) and choose <m>Ask</m> after <m>Indpnt</m>, as shown in the figure at left below, and press <kbd>ENTER</kbd>. This setting allows you to enter any <m>x</m>-values you like.</li> 
+        <li>Press <kbd>TABLE</kbd> (using <kbd>2nd</kbd> <kbd>GRAPH</kbd>).</li>
+        <li>To follow <xref ref="exercise-function-notation" text="type-global"/>, key in <kbd>(-)</kbd> 2 <kbd>ENTER</kbd> for the <m>x</m>-value, and the calculator will fill in the <m>y</m>-value. Continue by entering 0, 1, 3, or any other <m>x</m>-values you choose.</li></ul></p>
     <p> One such table is shown in the figure at right below.</p>
     
     <sidebyside widths="30% 30%">
         <image source="images/fig-TblSetup2"><description>Tbl Setup</description></image>
         <image source="images/fig-GC-table2"><description>table</description></image></sidebyside>
 
-    <p>If you would like to evaluate a new function, you do not have to return to the <c>Y=</c> screen. Use the <m>\boxed{\rightarrow}</m> and <m>\boxed{\uparrow}</m>  <!--<m>\boxed{\rightarrow}</m>  and <m>\boxed{\uparrow}</m>  --> arrow keys to highlight <m>Y_1</m> at the top of the second column. The definition of <m>Y_1</m> will appear at the bottom of the display, as shown above. You can key in a new definition here, and the second column will be updated automatically to show the <m>y</m>-values of the new function.</p>
+    <p>If you would like to evaluate a new function, you do not have to return to the <kbd>Y=</kbd> screen. Use the <kbd name="right"/> and  <kbd name="up"/> arrow keys to highlight <m>Y_1</m> at the top of the second column. The definition of <m>Y_1</m> will appear at the bottom of the display, as shown above. You can key in a new definition here, and the second column will be updated automatically to show the <m>y</m>-values of the new function.</p>
 </technology>
 
 <p>To simplify the notation, we sometimes use the same letter for the output variable and for the name of the function. In the next example, <m>C</m> is used in this way.</p>
@@ -860,7 +879,10 @@ We see that</p>
     <webwork> 
         <pg-code>
             $meaning = RadioButtons(
-                ["the volume (in cm) of a sphere whose radius is 10 cu. cm","the radius (in cm) of a sphere whose volume is 10 cm","the volume (in sq. cm) of a sphere whose radius is 10 cm","the volume (in cu. cm) of a sphere whose radius is 10 cm"],
+                ["A) the volume (in cm) of a sphere whose radius is 10 cu. cm",
+                "B) the radius (in cm) of a sphere whose volume is 10 cm",
+                "C) the volume (in sq. cm) of a sphere whose radius is 10 cm",
+                "D) the volume (in cu. cm) of a sphere whose radius is 10 cm"],
               3, # index of correct answer; could also just be the correct answer
             );
             Context("Fraction")->variables->add(r=>'Real');
@@ -1024,7 +1046,7 @@ To compute <m>f(a) + f(3)</m>, we must first compute <m>f(a)</m> and <m>f(3)</m>
         <li><p><m> 2 f(x) + 3 </m><var name="$func2" width="7"/></p></li>
     </ol></p>
     </statement>
-    <solution><p>
+     <solution><p>
     <ol label="a" cols="3">
         <li><p><m> 33 </m></p></li>
         <li><p><m> 124 </m></p></li>

@@ -124,7 +124,8 @@ Note that the <m>y</m>-intercept is <m>-4</m> and the slope is <m>\dfrac{4}{3}</
         </solution>
     </webwork>
     <conclusion>
-        <sidebyside width="30%"><image source="images/fig-in-ex-ans-8-4-1"><description>linear inequality in two variables</description></image></sidebyside>
+        <p>Graph for (b) and (c):</p>
+        <sidebyside width="30%" margins="0% 5%"><image source="images/fig-in-ex-ans-8-4-1"><description>linear inequality in two variables</description></image></sidebyside>
     </conclusion>
 </exercise>
 
@@ -184,7 +185,7 @@ which is a <em>false</em> statement. This tells us that <m>(5, 0)</m> is not a s
         <p><var name="$tort" form="buttons"/></p>      
     </statement>
     <solution>
-        <p><m>(0,0)</m></p>
+        <p><m>(0,0)</m> would not be a good test point because it lies on the boundary line.</p>
     </solution>
 </webwork></exercise>
 
@@ -193,7 +194,7 @@ which is a <em>false</em> statement. This tells us that <m>(5, 0)</m> is not a s
 <xi:include href="./assemblage-graph-inequality-using-test-point.xml" />
 
 <exercise>
-	<title>Practice 2</title>
+  <title>Practice 2</title>
     <webwork>
          <pg-code>
             $where =  PopUp(
@@ -215,11 +216,18 @@ which is a <em>false</em> statement. This tells us that <m>(5, 0)</m> is not a s
             </ol></p>
         </statement>
         <solution>
-            <p>A graph is below.</p>
+            <p><ol>
+                <li><p>A graph is below.</p></li>
+                <li><p>Choose any point not on the boundary line <m>y = \dfrac{-3}{2}x</m>.</p></li>
+                <li><p>Shade above the boundary line.</p></li>
+                <li><p>Use a dashed boundary line because the inequality is strict.</p></li>
+            </ol></p>
+            
         </solution>
     </webwork>
     <conclusion>
-        <sidebyside width="28%"><image source="images/fig-in-ex-ans-8-4-2"><description>linear inequality in two variables</description></image></sidebyside>
+        <p>Graph of inequality:</p>
+        <sidebyside width="28%" margins="0% 5%"><image source="images/fig-in-ex-ans-8-4-2"><description>linear inequality in two variables</description></image></sidebyside>
     </conclusion>
 </exercise>
 
@@ -414,7 +422,7 @@ Since this is a false statement, we shade the half-plane that does not contain t
 </webwork></exercise>
 
 <exercise>
-	<title>Practice 5</title>
+  <title>Practice 5</title>
     <webwork>
          <pg-code>
             Context("Point")->flags->set( reduceConstants => 0, reduceConstantFunctions => 0,   );
@@ -422,7 +430,8 @@ Since this is a false statement, we shade the half-plane that does not contain t
             $B = Point(7/2,45/8);
             $C = Point(6,5/2);
             $D = Point(6,2);
-            $answer = Formula("$A,$B,$C,$D");
+#            $answer = Formula("$A,$B,$C,$D");
+            $answer = Formula("(-4/3,2),(7/2,45/8),(6,5/2),(6,2)");
             $my_evaluator = $answer -> cmp(
              showHints=>1,
              showLengthHints => 1,
@@ -446,7 +455,7 @@ Since this is a false statement, we shade the half-plane that does not contain t
         <solution>
             <p><ol label="a">
                 <li><p>See graph below.</p></li>
-                <li><p><m>A(-1.\overline{3}, 2), B(3.5, 5.625), C(6, 2.5), D(6, 2)</m></p></li>
+                <li><p><m>A\left(\dfrac{-4}{3}, 2\right), B\left(\dfrac{7}{2}, \dfrac{45}{8}\right), C\left(6, \dfrac{5}{2}\right), D(6, 2)</m></p></li>
             </ol></p>
         </solution>
     </webwork>

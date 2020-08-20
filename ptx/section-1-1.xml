@@ -130,17 +130,6 @@
 <exercise  xml:id="exercise-Frank-plants">
     <title>Practice 1</title>
   <webwork>
-    <pg-macros>
-        loadMacros(
-          "PGstandard.pl",
-          "MathObjects.pl",
-          "parserImplicitPlane.pl",
-          "PGgraphmacros.pl",
-          "scaffold.pl",
-          "niceTables.pl"
-        ) ;
-    </pg-macros>
-     
       <pg-code>
     $diff = 5;   
     $t0 = 0;      
@@ -155,11 +144,6 @@
     $h2 = $h1 + $diff*$growthRate;
     $h3 = $h2 + $diff*$growthRate;
     $h4 = $h3 + $diff*$growthRate;
-
-
-    #--------------------------------
-    # Part (b) set-up
-
     Context("ImplicitPlane");
     Context()->variables->add(t=>"Real",h=>"Real");
 
@@ -173,7 +157,7 @@
     </p>
     <p>Complete the table of values for the height, <m>h</m> of the seedlings after <m>t</m> days.</p>
     <p>
-    <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
                 <row bottom="minor">
                     <cell><m>t</m></cell>
                     <cell><m>0</m></cell>
@@ -190,7 +174,7 @@
                     <cell><var name="$h3" width="2"/></cell>
                     <cell><var name="$h4" width="2"/></cell>
                 </row>
-                </tabular>
+                </tabular></sidebyside>
     </p>
     </statement>
     <statement>
@@ -205,7 +189,28 @@
             </li>
         </ol>
     </statement>
-    <solution> 
+    <solution>
+        <sidebyside>
+                <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row bottom="minor">
+                    <cell><m>t</m></cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>5</m></cell>
+                    <cell><m>10</m></cell>
+                    <cell><m>15</m></cell>
+                    <cell><m>20</m></cell>
+                </row>
+                <row> 
+                    <cell><m>h</m></cell>
+                    <cell><var name="$h0"/></cell>
+                    <cell><var name="$h1"/></cell>
+                    <cell><var name="$h2"/></cell>
+                    <cell><var name="$h3"/></cell>
+                    <cell><var name="$h4"/></cell>
+                </row>
+                </tabular>
+
+        </sidebyside>
         <ol label="a">
             <li>
                 <p><m>h=6+2t</m></p>
@@ -215,9 +220,9 @@
             </li>       
     </ol>
     </solution>
-
   </webwork>
   <conclusion>
+    <p>The graph of seedling height vs time for part (b) is shown below.</p>
     <sidebyside width="25%" margins="0% 75%">
         <image source="images/fig-in-ex-ans-1-1-1"><description>graph of seedlings height vs time</description></image>
     </sidebyside>
@@ -281,10 +286,11 @@
             <li><p>48 inches tall</p></li>
             <li><p>33 days</p></li>
         </ol></p>
-        <p>A graphs is below.</p> 
+        <p>A graph is below.</p> 
     </solution>
   </webwork>
   <conclusion>
+    <p>The graph below illustrates the answers.</p>
     <sidebyside width="25%" margins="0% 75%">
         <image source="images/fig-in-ex-ans-1-1-2"><description>graph of seedlings height vs time</description></image>
     </sidebyside>
@@ -468,7 +474,7 @@
             <li><p><m>C=285-15t</m></p></li></ol></p>
     </solution>
   </webwork>
-  <conclusion><sidebyside width="30%"><image source="images/fig-in-ex-ans-1-1-3"><description>decreasing graph</description></image></sidebyside></conclusion> 
+  <conclusion><p>The graph for part(b):</p><sidebyside width="30%"><image source="images/fig-in-ex-ans-1-1-3"><description>decreasing graph</description></image></sidebyside></conclusion> 
 </exercise>
 
 <note><p>In the previous Exercise, we extend the graph until it reaches the horizontal axis, but no farther.  Points with negative <m>C</m>-coordinates have no meaning for the problem.</p></note>  
@@ -489,7 +495,7 @@
         <p><var name="$ineq" form="buttons"/></p>      
     </statement>
     <solution>
-        <p>It is less than <m>-10</m>.</p>
+        <p><m>-2x</m> is less than <m>-10</m>.</p>
     </solution>
 </webwork></exercise>
 
@@ -497,9 +503,9 @@
     <title><!--<image source="images/icon-GC.jpg"  width="8%"><description>Graphing Calculator</description></image>--> Graphing an Equation</title>
     <p>We can use a graphing utililty to graph an equation. On most utilities, we follow three steps.</p>
     <p>To Graph an Equation:</p><p><ol>
-        <li><p>Press <c>Y=</c> and enter the equation you wish to graph.</p></li>
-        <li><p>Press <c>WINDOW</c> and select a suitable graphing window.</p></li>
-        <li><p>Press <c>GRAPH</c></p></li></ol></p>
+        <li><p>Press <kbd>Y=</kbd> and enter the equation you wish to graph.</p></li>
+        <li><p>Press <kbd>WINDOW</kbd> and select a suitable graphing window.</p></li>
+        <li><p>Press <kbd>GRAPH</kbd></p></li></ol></p>
   </technology>
 
 <example xml:id="graphing-calculator">
@@ -508,9 +514,9 @@
     <me>P = 92,000 + 4700t</me> 
     for the median price of a house <m>t</m> years after 1990. Graph this equation with technology.</p></statement>
     
-<solution><p>To begin, we press <c>Y=</c> and enter
+<solution><p>To begin, we press <kbd>Y=</kbd> and enter
              <me>Y1 = 92,000 + 4700X</me></p>
-        <p>For this graph, we’ll use the grid in <xref ref="example-home-price" text="type-global"/> for our window settings, so we press <c>WINDOW</c> and enter</p>
+        <p>For this graph, we’ll use the grid in <xref ref="example-home-price" text="type-global"/> for our window settings, so we press <kbd>WINDOW</kbd> and enter</p>
         <sidebyside><tabular>
                 <row>
                     <cell>Xmin<m>=0</m></cell>
@@ -521,7 +527,7 @@
                     <cell></cell>
                     <cell>Ymax<m>=140,000</m></cell></row>
             </tabular></sidebyside><p>
-        Finally, we press <c>GRAPH</c>. The graph is shown in the figure.</p>
+        Finally, we press <kbd>GRAPH</kbd>. The graph is shown in the figure.</p>
         <sidebyside width="40%"><image source="images/fig-GC-house-price"><description>grid</description></image></sidebyside></solution></example>
 
 <exercise>
@@ -556,14 +562,13 @@
         </ol></p></statement>
     <solution><p><ol label="a.">
           <li><p>
-              <!--<m>y=<var name="$fun"/></m>.-->
               <m>y=(1575+45x)/2 </m></p></li>
           <li><p>The calculator graph is shown below.</p></li>
           <li><p>The graph is shown below.</p></li>
         </ol></p></solution>
   </webwork>
   <conclusion>
-    <p>b. </p>
+    <p>The graph for (b): </p>
       <sidebyside width="30%" margins="5% 60%"><image source="images/fig-in-ex-ans-1-1-4b"><description>calculator graph</description></image></sidebyside>
       <p>c. </p>
       <sidebyside width="25%" margins="5% 65%"><image source="images/fig-in-ex-ans-1-1-4c"><description>graph</description></image></sidebyside>
@@ -616,9 +621,9 @@
         <p>What is wrong with the grid above?</p>
         <p><var name="$badgrid" form="buttons"/></p>      
     </statement>
-    <solution>
+<!--     <solution>
         <p>All of the above.</p>
-    </solution>
+    </solution> -->
 </webwork></exercise>
 
 <subsection><title>Linear Equations</title>
@@ -728,7 +733,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
         </ol>
       </p>
     </statement>
-    <solution>
+   <solution>
       <p>
         <ol label="a.">
             <li>
@@ -840,7 +845,7 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
         <p>Delbert says that the intercepts of the line <m>3x+5y=30</m> are <m>(10,6)</m>. What is wrong with his answer?</p>
         <p><var name="$ints" form="buttons"/></p>      
     </statement>
-    <solution>
+   <solution>
         <p>All of the above</p>
     </solution>
 </webwork></exercise>
@@ -854,17 +859,17 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
          
             <pg-code>
                 $xi = RadioButtons(
-                    ["the cost of the TV ads.",
-                    "the best number of TV ads.",
-                    "the most TV ads she can buy for the money.",
-                    "the average number of TV ads."],
+                    ["A) the cost of the TV ads.",
+                    "B) the best number of TV ads.",
+                    "C) the most TV ads she can buy for the money.",
+                    "D) the average number of TV ads."],
                     2
                 );
                 $yi = RadioButtons(
-                    ["the cost of the radio ads.",
-                    "the number of radio ads she bought",
-                    "the number of radio ads if no TV ads are bought.",
-                    "the average cost per ad."],
+                    ["A) the cost of the radio ads.",
+                    "B) the number of radio ads she bought",
+                    "C) the number of radio ads if no TV ads are bought.",
+                    "D) the average cost per ad."],
                     2
                 );
 
@@ -898,7 +903,6 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
                 <li><p>The <m>x</m>-intercept has <m>y=0</m>, that is, it corresponds to when there are zero radio ads. The <m>y</m>-intercept has <m>x=0</m>, that is, it corresponds to when there are zero tv ads.</p></li>
             </ol></p>
         </solution>
-
     </webwork>
 </exercise>
 
@@ -1011,17 +1015,17 @@ This form of a linear equation, <m> Ax+By=C </m>, is called the <term>general fo
          
             <pg-code>
                 $xi = RadioButtons(
-                    ["the total water usage of corn.",
-                    "the cost of the corn if no wheat is planted.",
-                    "the optimal number of acres of corn.",
-                    "the total acres if all corn is planted."],
+                    ["A) the total water usage of corn.",
+                    "B) the cost of the corn if no wheat is planted.",
+                    "C) the optimal number of acres of corn.",
+                    "D) the total acres if all corn is planted."],
                     3
                 );
                 $yi = RadioButtons(
-                    ["the largest possible number of acres of wheat.",
-                    "the amount of water used by the wheat.",
-                    "the total cost of the wheat.",
-                    "how many acres are left after the wheat is planted."],
+                    ["A) the largest possible number of acres of wheat.",
+                    "B) the amount of water used by the wheat.",
+                    "C) the total cost of the wheat.",
+                    "D) how many acres are left after the wheat is planted."],
                     0
                 );
 

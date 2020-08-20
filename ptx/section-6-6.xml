@@ -54,15 +54,6 @@
 				<cell><m>\hphantom{blank}</m></cell>
 				<cell><m>(4)</m></cell></row>
 		</tabular></sidebyside>
-<!--
-		<me>
-		\begin{alignedat}{9}
-		3a \amp {}+{} \amp 2b \amp {}+{} \amp c \amp {}={} \amp -1\amp\hphantom{blankblank} \amp(1)\\
-		\underline{-a} \amp \underline{{}+{}} \amp \underline{2b} \amp \underline{{}-{}} \amp \underline{c} \amp \underline{{}={}} \amp \underline{3}\amp\amp-1\text{ times Equation }(2) \\
-		2a \amp {}+{} \amp 4b \amp {}{} \amp  \amp {}={} \amp 2\amp\amp(4) 
-		\end{alignedat}
-		</me>
--->
 		<p>Next, we add <m>-1</m> times Equation (2) to Equation (3) to get a second equation in two variables:</p>
 	<sidebyside><tabular halign="right">
 			<row>
@@ -96,28 +87,6 @@
 				<cell><m>\hphantom{blank}</m></cell>
 				<cell><m>(5)</m></cell></row>
 		</tabular></sidebyside>
-<!--
-		<md alignment="alignat">
-			<mrow>
-				2a \amp {}+{} \amp 3b \amp {}+{} \amp c \amp {}={} \amp 4\amp\hphantom{blankblank}\amp(3)
-			</mrow>
-			<mrow>
-				\underline{-a} \amp \underline{{}+{}} \amp \underline{2b} \amp \underline{{}-{}} \amp \underline{c} \amp \underline{{}={}} \amp \underline{3}\amp\amp-1\text{ times Equation }(2)
-			</mrow>
-			<mrule left="75pt" right="25pt" />
-			<mrow>
-				a \amp {}+{} \amp 5b \amp {}{} \amp  \amp {}={} \amp 7\amp\amp(5) 
-			</mrow>
-		</md>
-
-		<me>
-		\begin{alignedat}{9}
-		2a \amp {}+{} \amp 3b \amp {}+{} \amp c \amp {}={} \amp 4\amp\hphantom{blankblank}\amp(3) \\
-		\underline{-a} \amp \underline{{}+{}} \amp \underline{2b} \amp \underline{{}-{}} \amp \underline{c} \amp \underline{{}={}} \amp \underline{3}\amp\amp-1\text{ times Equation }(2) \\
-		a \amp {}+{} \amp 5b \amp {}{} \amp  \amp {}={} \amp 7\amp\amp(5) 
-		\end{alignedat}
-		</me>
-	-->
 		<p>By combining Equations (4) and (5), we have a <m>2 \times 2</m> linear system, which we can solve as usual.
 		<me>
 		\begin{alignedat}{9}
@@ -126,16 +95,6 @@
 		\end{alignedat}
 		</me>
 		To eliminate <m>a</m>, we add <m>-2</m> times Equation (5) to Equation (4):
-<!--
-		<me>
-
-		\begin{alignedat}{9}
-		2a \amp {}+{} \amp 4b  \amp {}={} \amp 2\amp\hphantom{blankblank}\amp(4) \\
-		\underline{-2a} \amp \underline{{}-{}} \amp \underline{10b}  \amp \underline{{}={}} \amp \underline{-14}\amp\amp-2\text{ times Equation }(5) \\
-		 \amp {}{} -\amp 6b  \amp {}={} \amp -12	
-		\end{alignedat}
-		</me>
-	-->
 	</p><sidebyside><tabular halign="right">
 		<row>
 			<cell><m>2a</m></cell>
@@ -184,21 +143,6 @@
         -3a \amp {}+{} \amp 2b \amp {}+{} \amp c \amp {}={} \amp 4\amp\amp(3) 
         \end{alignedat}
         </me>
-<!--        <dl>
-            <li><title>Step 1: </title>
-                <p>Eliminate <m>c</m> from Equations (1) and (2) to obtain a new Equation (4).</p>
-            </li>
-            <li><title>Step 2: </title>
-                <p>Eliminate <m>c</m> from Equations (2) and (3) to obtain a new Equation (5).</p>
-            </li>
-            <li><title>Step 3: </title>
-                <p>Solve the system of Equations (4) and (5).</p>
-            </li>
-            <li><title>Step 4: </title>
-                <p>Substitute the values of <m>a</m> and <m>b</m> into one of the original equations to find <m>c</m>.</p>
-            </li>
-        </dl>
-    -->
     <ol label="1">
         <li><p>Eliminate <m>c</m> from Equations (1) and (2) to obtain a new Equation (4).</p>
         <p><var name="$eq4" width="20"/> </p></li>
@@ -211,7 +155,12 @@
         </ol></p>
         </statement>
         <solution>
-            <p><m>a = 1, b = 5, c = -3</m></p>
+        	<p><ol label="1">
+		        <li><p><m>3a-2b=-7</m></p></li>
+		        <li><p><m>7a-3b=-8</m></p></li>
+		        <li><p><m>a=1</m>,  <m>b=5</m></p></li>
+		        <li><p><m>c=-3</m></p></li>
+	    	</ol></p>
         </solution>
     </webwork>
 </exercise>
@@ -560,10 +509,10 @@ Eliminating <m>b</m> from Equations (4) and (5) gives us
 		<li><p>How many of the given data points actually lie on the graph of the quadratic approximation?</p></li>
 		</ol></p></statement>
 <solution><p><ol label="a">
-	<li><p>We press <c>STAT</c> <c>ENTER</c> and enter the data under columns <m>L_1</m> and <m>L_2</m>, as shown below. Next, we calculate the quadratic regression equation and store it in <m>Y_1</m> by pressing <c>STAT</c> <m>\boxed{\rightarrow}</m>  <m>5</m> <c>VARS</c> <m>\boxed{\rightarrow}</m>  <m>1</m> <m>1</m> <c>ENTER</c>.</p>
+	<li><p>We press <kbd>STAT</kbd> <kbd>ENTER</kbd> and enter the data under columns <m>L_1</m> and <m>L_2</m>, as shown below. Next, we calculate the quadratic regression equation and store it in <m>Y_1</m> by pressing <kbd>STAT</kbd>  <kbd name="right"/>  <m>5</m> <kbd>VARS</kbd>  <kbd name="right"/>  <m>1</m> <m>1</m> <kbd>ENTER</kbd>.</p>
 	<p> The regression equation has the form <m>y = ax^2 + bx + c</m>, where <m>a = 0.0057</m>, <m>b = -0.47</m>, and <m>c = 15.56</m>. Notice that <m>a</m>, <m>b</m>, and <m>c</m> are all close to the values we computed in <xref ref="example-quadratic-fit" text="type-global"/>.</p>
 			<sidebyside width="70%"><image source="images/fig-GC-quadratic-regression" ><description>GC lists and GC quadratic regression output</description></image></sidebyside></li>
-	<li><p>Next, we will graph the data and the regression equation. We press <c>Y=</c> and select <em>Plot1</em>, then press <c>ZOOM</c> <m>9</m> to see the graph shown below. The parabola seems to pass close to all the data points.</p> 
+	<li><p>Next, we will graph the data and the regression equation. We press <kbd>Y=</kbd> and select <em>Plot1</em>, then press <kbd>ZOOM</kbd> <m>9</m> to see the graph shown below. The parabola seems to pass close to all the data points.</p> 
 	<p> However, try using either the <em>value</em> feature or a table to find the <m>y</m>-coordinates of points on the regression curve. By comparing these <m>y</m>-coordinates with our original data points, we find that none of the given data points lies precisely on the parabola. </p>
 			<sidebyside width="70%"><image source="images/fig-GC-quadratic-regression2" ><description>GC plot and GC table quadratic regression output</description></image></sidebyside></li>
 	</ol></p></solution></example>
@@ -696,10 +645,10 @@ From either the graph of the regression equation or from the table (see figure b
 <webwork>
      <pg-code>       
             $limpar = RadioButtons(
-              ["A parabola is a good model for any non-linear curve.",
-              "We will get the same equation by fitting a parabola through any three points of a data set.",
-              "We can use elimination to fit a parabola through three points.",
-              "When we use quadratic regression, the lowest (or highest) point of a data set will be the vertex of the parabola."],
+              ["A) A parabola is a good model for any non-linear curve.",
+              "B) We will get the same equation by fitting a parabola through any three points of a data set.",
+              "C) We can use elimination to fit a parabola through three points.",
+              "D) When we use quadratic regression, the lowest (or highest) point of a data set will be the vertex of the parabola."],
               2, 
             );            
         </pg-code> 
@@ -762,6 +711,7 @@ From either the graph of the regression equation or from the table (see figure b
         </solution>
     </webwork>
     <conclusion>
+    	<p>A graph for part (a):</p>
         <sidebyside width="40%" margins="0% 50%"><image source="images/fig-in-ex-ans-6-6-6.jpg"><description>parabola fit to points</description></image></sidebyside>
     </conclusion>
 </exercise>

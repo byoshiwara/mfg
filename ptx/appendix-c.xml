@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<appendix xml:id="appendix-c"   xmlns:xi="http://www.w3.org/2001/XInclude">
+<title>Using a GeoGebra Calculator App</title>
+<introduction>
+    <p>
+        When we open the GeoGebra Graphing Calculator, we see both the "Graphics View" (the region where the graphs are displayed) and the "Algebra View" (the region where we input expressions).
+    </p>
+    <sidebyside widths="35% 60%" valigns="middle middle">
+        <stack>
+            <image source="images/GGB-portrait.png">
+                <description>GeoGebra app in portrait orientation</description>
+            </image>
+            <p>GeoGebra app in portrait orientation</p></stack>
+         <stack>
+            <image source="images/GGB-landscape.png">
+                <description>GeoGebra app in landscape orientation</description>
+            </image>
+            <p>GeoGebra app in landscape orientation</p>
+        </stack>
+   </sidebyside>
+<p>
+    We use the input box next to the large "plus" symbol to enter expressions we wish to evaluate. 
+    <ul>
+        <li>
+            When using the app on a computer, we can type with the physical keyboard or use the app's virtual keyboard. (If the virtual keyboard is not initially displayed, click on the keyboard icon in the lower left corner of the Algebra pane.)
+        </li>
+        <li>
+            When using the app on a small screen, tap in the input box and the virtual keyboard will be visible.
+        </li>
+    </ul>
+</p>
+<sidebyside>
+         <figure xml:id="fig-GGB-keyboard">
+            <image source="images/GGB-keyboard-annotated">
+                <description>GeoGebra calculator keyboard</description>
+            </image>
+            <caption>GeoGebra calculator keyboard</caption>
+        </figure>
+</sidebyside>
+</introduction>
+<section xml:id="GGB-getting-started"><title>Getting Started</title>
+
+
+<subsection><title>On and Off</title>
+<p>
+    If you are reading this textbook in a web browser using a computer with sufficiently wide monitor, you should see button labeled "Calc" just above the text on the page. Clicking on that button will launch a Geogebra calculator applet in the right margin of the book. If the calculator overlaps the text, click on the "Contents" tab above the navigation panel to hide that panel and provide more space for the text. Click again on the "Calc" button to close the calculator app. (And clicking again on the "Contents" tab will re-open the navigation panel.)
+</p>
+
+</subsection>
+<subsection><title>Numbers and Operations</title>
+
+<example>
+    <p>
+        Compute <m>5 - 8</m>. 
+    </p>
+    <p>
+        Enter <m>\qquad 5~</m><kbd name="minus"/><m>~8</m>
+    </p>
+    <p>
+        and even before we press <kbd name="enter"/>, GeoGebra shows the result <m>-3</m> below the input box.
+    </p>
+    <p>
+        If we do press <kbd name="enter"/>, GeoGebra shows 
+    </p>
+    <p>
+        <m>\qquad 
+            \begin{aligned}[t]
+            \amp a = 5-8 \\
+            \amp\rightarrow -3
+            \end{aligned}
+        </m>
+    </p>
+    <p>
+        in an output history region above the input box. There is a scroll bar to the right of the output history and the input box.
+    </p>
+</example>
+<example>
+    <p>
+        Compute <m>-5 + 8</m>.
+    </p>
+    <p>
+        Enter <m>\qquad <kbd name="minus"/>~5~</m><kbd name="plus"/><m>~8</m>
+    </p>
+    <p>
+        to see the result <m>3</m>
+    </p>
+</example>
+
+<p>
+    We press <kbd name="enter"/> to tell the calculator to store the computation. We can use the scroll bar to see the input box or the output history of previous computations.
+</p>
+<p>
+    The calculator has a key for the value of <m>\pi</m>.
+</p>
+<example>
+    <p>
+        Compute <m>2\pi</m>.
+    </p>
+    <p>
+        Enter <m>\qquad 2</m> <kbd name="times"/> <m>\boxed{\pi\vphantom{1}} \quad</m> or <m>\quad 2~ \boxed{\pi\vphantom{1}}</m>
+    </p>
+    <p>
+        to get the approximation <m>6.2831853071796</m>
+    </p>
+</example>
+</subsection>
+<subsection><title>Delete and Undo</title>
+<p>
+    Press the backspace key (shown in the <xref ref="fig-GGB-keyboard" type="custom">keyboard image</xref>) to delete the character before the cursor or any highlighted characters.
+</p>
+<p>
+    To remove an item from the output history, tap the kebab menu icon (three vertically stacked dots) to the right of the item, then tap "Delete".
+</p>
+<p>
+    To remove the most recent item in the output history, tap the <em>Undo</em> icon in the Graphics View. (The icon looks like an arched arrow pointing left.)
+</p>
+</subsection>
+</section>
+
+<section xml:id="GGB-Entering-Expressions"><title>Entering Expressions</title>
+<subsection><title>Parentheses</title>
+<p>
+    <term>Order of Operations</term>: The calculator follows the standard order of operations.
+</p>
+<example>
+    <p>
+        Compute <m>2+3\cdot 4</m>.
+    </p>
+    <sidebyside widths="60% 35%">
+    <p>
+        Enter <m>\qquad 2</m><kbd> + </kbd> <m>3</m>  <kbd name="times"/> <m>4</m> <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>14</m>
+    </p>        
+    </sidebyside>
+</example>
+<example>
+    <p>
+        Compute <m>(2+3)\cdot4</m>.
+    </p>
+    <sidebyside widths="60% 35%" margins="0% 0%">
+    <p>
+        Enter <m>\qquad </m><kbd> ( </kbd> <m>2</m> <kbd> + </kbd> <m>3</m> <kbd> ) </kbd>  <kbd name="times"/> <m>4</m> <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>20</m>
+    </p>        
+    </sidebyside>
+</example>
+</subsection>
+<subsection><title>Fractions</title>
+
+<example>
+    <p>
+        Compute <m>\dfrac{1+3}{2}</m>.
+    </p>
+    <sidebyside widths="60% 35%" margins="0% 0%">
+    <p>
+        Enter <m>\qquad </m><kbd> ( </kbd> <m>1  </m> <kbd> + </kbd> <m>3</m> <kbd> ) </kbd>  <kbd name="obelus"/> <m>2</m> <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>2</m>
+    </p>        
+    </sidebyside>
+</example>    
+
+<warning>
+    <p>
+        GeoGebra displays "built-up" fractions like <m>\dfrac{1}{2} </m>. Once we enter the numerator and select the <kbd name="obelus"/> key, the cursor is in the denominator and will stay there until we use an arrow key on the keyboard to move the cursor outside the fraction, or until we press <kbd name="enter"/>. The arrow keys on the virtual keyboard are shown in the <xref ref="fig-GGB-keyboard" type="custom">keyboard image</xref>.
+    </p>
+</warning>
+
+<example xml:id="example-approximate">
+    <p>
+        Compute <m>\dfrac{1}{2\cdot 3} </m>.
+    </p>
+    <sidebyside widths="60% 35%" margins="0% 0%">
+    <p>
+        Enter <m>\qquad 1 </m>  <kbd name="obelus"/> <m>2</m>  <kbd name="times"/> <m>3</m> <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>\dfrac{1}{6} </m>
+    </p>        
+    </sidebyside>
+    <p>
+        In the output history, there is an approximation icon that looks like the "<m>\approx</m>" symbol in a blue square. To get a decimal approximation of the fraction, click on that icon.
+    </p>
+    <p>
+        Ans. <m>0.1666666666667</m>
+    </p>
+</example>
+
+<example>
+    <p>
+        Compute <m>\dfrac{1}{2}\cdot 3 </m>.
+    </p>
+    <sidebyside widths="60% 35%" margins="0% 0%">
+    <p>
+        Enter <m>\qquad 1 </m>  <kbd name="obelus"/> <m>2</m> <kbd name="right"/> <kbd name="times"/> <m>3</m> <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>\dfrac{3}{2} </m>
+    </p>        
+    </sidebyside>
+</example>
+
+
+</subsection>
+
+<subsection><title>Exponents and Powers</title>
+<p>
+    The key for exponents and the key for squaring are shown in the <xref ref="fig-GGB-keyboard" type="custom">keyboard image</xref>.
+</p>
+
+<example>
+    <p>
+        Evaluate <m>57^{2}</m>. 
+    </p>
+    <stack><p>
+        Enter <m>\quad 57</m>, then the squaring key, then <kbd name="enter"/>
+    </p>
+    <p>OR</p>
+    <p>
+        Enter <m>\quad 57</m>, then the exponent key, then <m>2~</m> <kbd name="enter"/>
+    </p></stack>
+    <p>
+        Ans. <m>3249</m>
+    </p>        
+</example>  
+
+
+<example>
+    <p>
+        Evaluate <m>2^{10}</m>. 
+    </p>
+    <sidebyside widths="60% 35%" margins="0% 0%">
+    <p>
+        Enter <m>\quad 2</m>, and then the exponent key, 10 <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>1024</m>
+    </p>        
+    </sidebyside>
+</example>  
+
+<warning>
+    <p>
+        GeoGebra nicely displays powers such as <m>10^7 </m>, with the exponent raised like a superscript. Once we enter the base and select the exponent key, the cursor is in the exponent and will stay there until we use the arrow keys to move the cursor outside the power, or until we press <kbd name="enter"/>. The arrow keys on the virtual keyboard are shown in the <xref ref="fig-GGB-keyboard" type="custom">keyboard image</xref>.
+    </p>
+</warning>
+
+<example>
+    <p>
+        Evaluate <m>8^{2/3}</m>. 
+    </p>
+    <p>
+        Enter <m>\quad 8</m>, then the exponent key, then <m>2</m>  <kbd name="obelus"/> <m>3 </m> <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>4</m>
+    </p>        
+</example> 
+
+<example>
+    <p>
+        Evaluate <m>\dfrac{8^2}{3}</m>. 
+    </p>
+    <p>
+        Enter <m>\quad 8</m>, then the exponent key, then <m>2</m>  <kbd name="right"/> <kbd name="obelus"/> <m>3 </m> <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>\dfrac{64}{3} </m>
+    </p>        
+</example> 
+
+</subsection>
+
+<subsection><title>Square Roots</title>
+<p>
+    The key for square roots is shown in the <xref ref="fig-GGB-keyboard" type="custom">keyboard image</xref>.
+</p>
+<example>
+    <p>
+        Evaluate <m>\sqrt{2} </m>. 
+    </p>
+    <sidebyside widths="60% 35%" margins="0% 0%">
+    <p>
+        Select the square root key, then enter <m>~ 2</m> <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>1.414213562</m>
+    </p>        
+    </sidebyside>
+</example> 
+
+<warning>
+    <p>
+        GeoGebra nicely displays square roots such as <m>\sqrt{9+16} </m>, with the radicand inside the square root "house". Once we select the square root key, the cursor is in under the radical and will stay there until we use the arrow keys to move the cursor outside, or until we press <kbd name="enter"/>. The arrow keys on the virtual keyboard are shown in the <xref ref="fig-GGB-keyboard" type="custom">keyboard image</xref>.
+    </p>
+</warning>
+
+<example>
+    <p>
+        Evaluate <m>\sqrt{9+16} </m>. 
+    </p>
+    <p>
+        Select the square root key, then enter <m>~9~</m> <kbd name="plus"/> <m>~16~</m> <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>5</m>
+    </p>        
+</example> 
+
+<example>
+    <p>
+        Evaluate <m>\sqrt{9}+16 </m>. 
+    </p>
+    <p>
+        Select the square root key, then enter <m>~9~</m> <kbd name="right"/> <kbd name="plus"/> <m>~16~</m> <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>19</m>
+    </p>        
+</example> 
+</subsection>
+<subsection><title>Other Roots</title>
+<p>
+    If we click on the "f(x)" on the keyboard in the Algebra View, we see other built-in keys.
+</p>
+<sidebyside width="90%">
+ <figure xml:id="fig-GGB-fx-keyboard">
+    <image source="images/GGB-fx-keyboard-annotated">
+        <description>GeoGebra calculator f(x) keyboard</description>
+    </image>
+    <caption>GeoGebra calculator f(x) keyboard</caption>
+</figure>
+</sidebyside>
+
+<example>
+    <p>
+        Compute <m>\sqrt[3]{1728} </m>. 
+    </p>
+    <p>
+        Choose the f(x) keyboard, select the nth root key, go back to the standard 123 keyboard, then enter <m>~3~</m> <kbd name="right"/> <m>~1728~</m> <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>12</m>
+    </p>        
+</example> 
+
+<example>
+    <p>
+        Compute <m>\sqrt[10]{2\cdot 512} </m>. 
+    </p>
+    <p>
+        Choose the f(x) keyboard, select the nth root key, go back to the standard 123 keyboard, then enter <m>~10~</m> <kbd name="right"/> <m>~2~</m> <kbd name="times"/> <m>~512~</m> <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>2</m>
+    </p>        
+</example> 
+
+</subsection>
+
+
+<subsection><title>Absolute Value</title>
+<p>
+    GeoGebra nicely displays the vertical bars of the standard absolute value notation, such as in the expression <m>\abs{21\cdot 54 - 81} </m>. Once we select the absolute value key, the cursor is in between the vertical bars and will stay there until we use the arrow keys to move the cursor outside, or until we press <kbd name="enter"/>. The arrow keys on the virtual keyboard are shown in the <xref ref="fig-GGB-keyboard" type="custom">keyboard image</xref>.
+</p>
+
+<example>
+    <p>
+        Evaluate <m>\dfrac{\abs{21\cdot 54 - 81}}{-9} </m>. 
+    </p>
+    <p>
+        Select the absolute value key, then enter <m>~21~</m> <kbd name="times"/> <m>~54~</m> <kbd name="minus"/> <m>~81~</m> <kbd name="right"/>  <kbd name="obelus"/> <m>~{-9}~</m> <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>-117</m>
+    </p>        
+</example> 
+</subsection>
+
+<subsection><title>Scientific Notation</title>
+<p>
+    The GeoGebra calculator does not display scientific notation by default. The calculator can display scientific notation in the Grahics View by using a ScientificText command.
+</p>
+
+<example>
+    <p>
+        Compute <m>123,456,789^2 </m>. 
+    </p>
+    <sidebyside widths="45% 40%" margins="0% 0%">
+    <p>
+        Enter <m>123456789 </m>  <kbd name="squared"/> <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>15241578750190522</m>
+    </p>        
+    </sidebyside>
+    <p>
+        We will enter ScientificText in the input box. 
+        <ul>
+            <li>
+                <p>On the computer, typing the first three letters (sci) is enough for the full command to appear as an option.</p>
+            </li>
+            <li>
+                <p>On a phone app, we tap on the overflow menu (three horizontal dots) on the top right of the virtual keyboard (see <xref ref="fig-GGB-keyboard" type="custom">keyboard image</xref>), tap in the Search in All Commands field, then start to input ScientificText until the full command appears as an option.</p>
+             </li>
+        </ul> 
+        We click on ScientificText, and the cursor is appropriately positioned, ready for us to enter an expression. We can either repeat the calculation we entered above, or, more efficiently, select the last answer key <kbd>ans</kbd> and <kbd name="enter"/>.
+    </p>
+    <p>
+        The result <m>1.52415787501905 \times 10^{16}</m>, appears on the grid in the Graphics View. We can drag the text within the Graphics View, change its color, and/or delete it.
+    </p>
+    <p>
+        We could also type in the entire command scientifictext using the ABC keyboard, then use the 123 keyboard to enter the parentheses and numbers.
+    </p>   
+ </example>
+
+</subsection>
+
+
+
+
+
+<subsection><title>Editing an Entry</title>
+<introduction>
+<p>
+    We can edit an expression without starting again. The backspace key will remove the character to the left of the cursor. We can move the cursor within an input line using the arrow keys or by clicking in the appropriate place.
+</p>
+</introduction><p>
+    We can recall any previous entry by finding it in the output history (scrolling up if necessary), tapping on the kebab menu icon (three vertical dots), and selecting Duplicate. The command will be copied into the current input box, which we can edit before pressing <kbd name="enter"/>.
+</p>
+<note xml:id="note-no-menu"><title>If the menu does not appear</title>
+<p>
+    Sometimes when using the GeoGebra app embedded in this textbook, the menu does not appear when we tap on the kebab menu icon. This may occur when we are at a place in the section far from the top of the webpage. Try scrolling within the webpage to the top, and tap on the kebab menu icon again.
+</p>
+</note>
+
+<p>
+    If we just want to use the most recent result in the current command, we use the <kbd>ans</kbd> key.
+</p>
+<example>
+    <p>
+        Evaluate <m>5^2 + 12^2</m> and then take the square root of the sum.
+    </p>
+    <p>
+        Enter <m>5</m>, then the square key, then <kbd name="plus"/> <m>12</m>, the square key again, then <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>169</m>
+    </p>
+    <p>
+        Now select the square root key, then <kbd>ans</kbd> <kbd name="enter"/>
+    </p>
+    <p>
+        Ans. <m>13</m>
+    </p>
+</example>
+</subsection>
+</section>
+
+
+<section xml:id="GGB-Graphing-an-Equation"><title>Graphing an Equation</title><introduction>
+<p>
+    We can graph equations in the variables <m>x</m> and <m>y</m>. The variable keys are located on the top row of the app 123 keyboard. There are two steps to graphing an equation:
+    <ol label="1">
+        <li><p>
+            Entering the equation
+        </p></li>
+        <li><p>
+            Setting the graphing window
+        </p></li>
+    </ol>
+</p></introduction>
+<subsection><title>A Basic Graph with intercepts</title>
+<example xml:id="example-GGB-basic-graph">
+    <sidebyside widths="50% 45%" margins="0% 0%" valigns="middle middle">
+        <stack>
+            <p>
+                Graph the equation <m>x+y=2</m>.
+            </p>
+            <p>
+                In the Algebra View, Press <m>x</m> <kbd name="plus"/> <m>y</m> <kbd>=</kbd> <m>2</m> <kbd name="enter"/>.
+            </p>
+            <p>
+                The output history shows
+                <me>\text{eq1}: x+y=2</me>
+                and the Graphics View shows the line passing through the points <m>(0,2)</m> and <m>(2,0)</m>. If we click on either of these two points, GeoGebra will show a label and the coordinates.
+            </p>
+        </stack>
+        <image source="images/GGB-x-plus-y-equals2.png">
+            <description>x+y=2 on Geogebra calculator</description>
+        </image>
+    </sidebyside>
+</example>
+<assemblage><title>Special Points on a Graph</title>
+   <p>
+       GeoGebra automatically highlights "Special Points" with  heavy dots on the graph of an equation. GeoGebra will show a label and the coordinates of any Special Point when we clicking on it.
+   </p>
+   <p>
+       In particular, any intercepts of a graph are Special Points.
+   </p>
+</assemblage>
+<p>
+    The size and appearance of the displayed graph will vary with the display size and orientation of device we use. We can hide the Algebra View to increase the size of the Graphics View by clicking on the arrow key at the right edge of the border between the Algebra View and the Graphics View. Clicking again on the arrow key brings back the Algebra View.
+</p>
+</subsection>
+
+<subsection><title>Translate and Zoom</title>
+<p>
+    We can adjust "graphing window", called the "Graphics View" in GeoGebra, without entering numerical values.
+</p>
+<example>
+    <p>
+        Continuing from <xref ref="example-GGB-basic-graph" text="type-hybrid"/>, drag within the Graphics View so that you can see the point on the graph where <m>y=15</m>. Then zoom out until you can see both that point and the origin.
+    </p>
+    <sidebyside widths="55% 40%" margins="0% 0%" valigns="middle middle">
+        <stack>
+            <p>
+                Solution: If we click on the arrow key at the right edge of the border between the Algebra View and the Graphics View, the Algebra View disappears to enlarge the Graphing View. But the point on the line where <m>y=15</m> is still not visible.
+            </p>
+            <p>
+                We can tap or click on the Graphics View and drag down and to the right until we can see the point <m>(-13,15)</m>.
+            </p>
+            <p>
+                But the origin is no longer visible. We need to zoom out.
+            </p>
+            <p>
+                <ul>
+                    <li>
+                        To Zoom out on a touch screen or touch pad, we "pinch in". 
+                    </li>
+                    <li>
+                        To Zoom using a mouse, click on the Graphics View, then hold the <kbd>Shift</kbd> key and rotate the mouse wheel forward. 
+                    </li>
+                </ul>                
+            </p>
+        </stack>
+        <image source="images/GGB-translated.png">
+            <description>x+y=2 translated</description>
+        </image>
+    </sidebyside>
+</example>
+
+<note xml:id="note-no-algebra-view"><title>Retrieving the Algebra View</title>
+    <p>
+    To access the Algebra View again, click again on the arrow at the right edge of what had previously been the border between the Graphics View and Algebra View.
+</p>
+</note>
+
+</subsection>
+
+<subsection><title>Graphing a Function, Making a Table, and Zooming One Axis</title>
+<p>
+    To graph an equation of the form <m>y=(\text{expression in }x)</m>, we only need enter the expression in <m>x</m>.
+</p>
+<example>
+    <p>
+        Graph the equation <m>y=x^2-5</m> for <m>x</m>-values between <m>-5</m> and <m>5</m>.
+    </p>
+    <sidebyside widths="50% 45%" margins="0% 0%" valigns="middle middle">
+        <stack>
+            <p>
+                Clear the output history: In the Algebra View (see the <xref ref="note-no-algebra-view" text="custom">Note </xref> above if the Algebra View is closed), tap the kebab menu icon (three vertical dots) in any existing history line, and select Delete. (If the menu does not apppear, you may wish to review the <xref ref="note-no-menu" text="custom">Note </xref> from the previous section.) 
+            </p>
+            <p>
+                In the input box, enter <m>x</m>, then tap the squaring key, <kbd name="minus"/> <m>5</m> <kbd name="enter"/>. 
+            </p>
+            <p>
+                The output history shows
+                <me>f(x)=x^2-5</me>
+                and the Graphics View shows the parabola.
+            </p>
+            <p>
+                Tap the kebab menu icon (three vertical dots) in the output history line, and select Table of values. 
+            </p>
+        </stack>
+        <image source="images/GGB-select-table.png">
+            <description>Function options on Geogebra calculator</description>
+        </image>
+    </sidebyside>
+    <p>
+        Set the Start value for <m>x</m> to <m>-5</m>. Set the End value for <m>x</m> to <m>5</m>. Set the Step value to <m>1</m>, then click <kbd>OK</kbd>
+    </p>
+    <p>
+        Click on the arrow key at the right edge of the border between the Algebra View and the Graphics View to hide the Algebra View and enlarge the Graphing View. Tap on any of the dark dots on the graph to see its coordinates.
+    </p>
+    <sidebyside widths="50% 45%" margins="0% 0%" valigns="middle middle">
+        <stack>
+        <p>
+            We zoom out just enough so that both <m>x=-6</m> and <m>x=6</m> are both visible on the <m>x</m>-axis. Now we zoom out just the <m>y</m>-axis (until <m>y=20</m> is visible) as follows.
+            <ul>
+                <li>
+                    On a touch screen, we pinch vertically on the <m>y</m>-axis.
+                </li>
+                <li>
+                    On a computer, we move the cursor above the <m>y</m>-axis until the cursor looks like a hand. Then holding down the <kbd>Shift</kbd> key, we click (the cursor changes again to an arrow pointing up to a horizontal segment), and drag down. 
+                </li>
+            </ul>
+        </p>
+        <p>
+            The points <m>(-5,0)</m> and <m>(5,0)</m> are now visible in the Graphics View.
+        </p>
+        </stack>
+        <image source="images/GGB-zoom-y-axis.png">
+            <description>y-axis zoomed on Geogebra calculator</description>
+        </image>
+    </sidebyside>
+</example>
+
+<p>
+    We can also zoom on just the <m>x</m>-axis.
+    <ul>
+        <li>
+            On a touch screen, we pinch horizontally on the <m>x</m>-axis.
+        </li>
+        <li>
+            On a computer, we move the cursor above the <m>x</m>-axis until the cursor looks like a hand. Then holding down the <kbd>Shift</kbd> key, we click (the cursor changes again to an arrow pointing right to a vertical segment), and drag left or right. 
+        </li>
+    </ul>
+</p>
+
+</subsection>
+</section>
+
+<section xml:id="GGB-more-graphing"><title>More graphing</title>
+<subsection><title>Finding a Suitable Graphing Window</title>
+<p>
+    Sometimes the graph of an equation is not visible in the Standard view. The simplest way to modify the graphing window so that at least a part of the graph is visible is to use the Zoom fit option.
+</p>
+<example xml:id="example-zoom-fit">
+    <sidebyside widths="55% 40%" margins="0% 0%" valigns="middle middle">
+        <stack>
+            <p>
+                Graph the equation <m>x+y=200</m>
+            </p>
+            <p>
+                Clear out the output history of any previous graphs, then enter into the input box
+                <me>x + y = 200</me>
+            </p>
+            <p>
+                The graph is not visible in the standard window, so we will try the Zoom fit command. Right-click on the Graphics View and choose Zoom to fit.
+            </p>
+        </stack>
+        <image source="images/GGB-graphics-menu.png">
+            <description>Graphics menu on Geogebra calculator</description>
+        </image>
+    </sidebyside>
+    <sidebyside widths="40% 55%" margins="0% 0%" valigns="middle middle">
+        <image source="images/GGB-app-graphics-menu.png">
+            <description>Graphics menu Geogebra calculator</description>
+        </image>
+        <stack>
+            <p>
+                But if you use the GeoGebra calculator app on a mobile device, tap the options icon that resembles a gear, located in the upper right corner of the Graphics View, and a slightly different menu apears. 
+            </p>
+            <p>
+                There are icons for both a Standard View and a Zoom to fit.
+            </p>
+        </stack>
+    </sidebyside>
+    <p>
+        Once you can see part of the graph, you can further adjust the Graphics View by dragging and/or zooming.
+    </p>
+</example>
+</subsection>
+
+
+<subsection><title>Multiple Graphs and the Intersect Feature</title>
+<p>
+    We can display more than one graph at a time. We simply enter multiple equations, pressing <kbd name="enter"/> after each equation to put it into the calculator output history.
+</p>
+<p>
+    The points where two graphs meet are Special Points, and GeoGebra will give a label and coordinates when we click on an intersection point.
+</p>
+<p>
+    To turn off a graph without deleting its equation, we tap in the colored disk to the left of the equation in the output history. We tap the disk again to turn the graph back on.
+</p>
+
+<example>
+    <p>
+        Find all the intersection points between the graphs of <m>y=x+6</m> and <m>y=x^2</m>.
+    </p>
+    <sidebyside widths="55% 40%" margins="0% 0%" valigns="middle middle">
+        <stack>
+            <p>
+                We enter <m>~ x +6 ~</m> <kbd name="enter"/> to graph the first equation, then <m>~ x~</m>, the squaring key, <kbd name="enter"/> to graph the second equation.
+            </p>
+            <p>
+                We can minimize the Algebra View and then click on each intersection point to see its coordinates. The two intersection points are <m>(-2,4)</m> and <m>(3,9)</m>.
+            </p>
+        </stack>
+        <image source="images/GGB-intersect.png">
+            <description>Intersection of line and parabola</description>
+        </image>
+    </sidebyside>
+</example>
+
+</subsection>
+
+</section>
+
+<section xml:id="GGB-Regression"><title>Regression</title><introduction>
+<sidebyside width="80%">
+ <figure xml:id="fig-GGB-ABC-keyboard">
+    <image source="images/GGB-ABC-keyboard-annotated">
+        <description>GeoGebra calculator ABC keyboard</description>
+    </image>
+    <caption>GeoGebra calculator ABC keyboard</caption>
+</figure>
+</sidebyside>
+</introduction>
+
+<subsection xml:id="GGBscatterplot"><title>Making a Scatterplot and Finding the Regression Line</title>
+<p>
+    We use GeoGebra's FitLine command to produce a regression line.
+</p>
+<example>
+    <p>
+        Make a scatterplot for the points <m>(10,12)</m>, <m>(11,14)</m>, <m>(12,14)</m>, <m>(12,16)</m>, <m>(14,20)</m>. Then find the equation of the lease-squares regression line and plot it on top of the scatterplot.
+    </p>
+    <sidebyside widths="53% 42%" margins="0% 0%" valigns="middle middle">
+        <stack>
+            <p>
+                We enter each of the five ordered pairs. The output history will show each labeled with a capital letter, such as <m>A=(10,12)</m>.
+            </p>
+            <p>
+                We do a Zoom to fit: right-click on the Graphics View (or click on the gear icon) and select Zoom to fit.
+            </p>
+            <p>
+                We next enter the FitLine command: 
+                <me>\text{fitline}(\{A,B,C,D,E\}) </me>
+                using the ABC keyboard shown above for the letters, the 123 keyboard (<xref ref="fig-GGB-keyboard" type="custom">keyboard image</xref>) for the parentheses, and the f(x) keyboard (<xref ref="fig-GGB-fx-keyboard" type="custom">keyboard image</xref>) for the list curly braces {}.
+            </p>
+            <p>
+                <em>Important: </em> We must enter capital letters for the names of the points--GeoGebra is case-sensitive regarding labels.
+            </p>
+        </stack>
+        <image source="images/GGB-FitLine.png">
+            <description>Scatterplot and best fit line</description>
+        </image>
+    </sidebyside>
+</example>
+</subsection>
+
+</section>
+<section xml:id="GGB-troubleshooting"><title>Troubleshooting the GeoGebra App</title>
+<figure><caption>Common issues and solutions</caption>
+    <tabular top="major" bottom="minor" left="minor" right="minor">
+        <col halign="left" width="50%"/><col halign="left" width="50%"/>
+        <row>
+            <cell>Issue</cell>
+            <cell>Solution</cell>
+        </row>
+        <row>
+            <cell>
+                <p>No menu appears after clicking on the kebab menu icon (while using the GeoGebra app embedded in this textbook)</p>
+            </cell>
+            <cell>
+                <p>Scroll within the book to the top of the webpage. Click again on the kebab menu icon.</p>
+            </cell>
+        </row>
+        <row>
+            <cell>
+                <p>The app has only a graphing window and no input box. (No Algebra View)</p>
+            </cell>
+            <cell>
+                <p>Click on the up arrow at the right edge of the blue border on the bottom of the app. (In landscape mode, the border is on the left and the arrow points to the right.)</p>
+            </cell>
+        </row>
+        <row>
+            <cell>
+                <p>The graph does not appear even though the equation for the graph is in the history.</p>
+            </cell>
+            <cell>
+                <p>Check that the circle next to the equation in the output history is filled with a color<mdash/>if it is not, click on the circle. If the graph is still not visible, adjust the Graphics View as in <xref ref="example-zoom-fit" text="type-hybrid"/></p>
+            </cell>
+        </row>
+        <row>
+            <cell>
+                <p>The calculator does not give the decimal form of a fraction.</p>
+            </cell>
+            <cell>
+                <p>Tap the approximation key as described in <xref ref="example-approximate" text="type-hybrid"/></p>
+            </cell>
+        </row>
+        
+    </tabular>
+</figure>
+
+</section>
+
+</appendix>
+
+
+<!-- </book>  </mathbook> -->
