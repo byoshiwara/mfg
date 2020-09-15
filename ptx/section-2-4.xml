@@ -185,22 +185,14 @@
             ["?","(a)","(b)"],
             1, 
             );
-            $explain = new_checkbox_multiple_choice();
-            $explain -> qa (
-            "A question can go here, but PTX ignores this",
-            "The graph has a steep negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa. $BR",
-            "The graph becomes closer to a horizontal line, corresponding to the cocoa approaching room temperature.$BR",
-            );
-            $explain -> extra(
-            "The graph has a slight negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa.$BR",
-            "The graph becomes grows steeper and steeper, corresponding to the cocoa approaching room temperature.$BR",
-            );
-            $explain -> makeLast(
-            "The graph has a steep negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa. $BR",
-            "The graph becomes closer to a horizontal line, corresponding to the cocoa approaching room temperature.$BR",
-            "The graph has a slight negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa.$BR",
-            "The graph becomes grows steeper and steeper, corresponding to the cocoa approaching room temperature.$BR",
-                       "None of the above");
+            $Yes = PopUp(
+              ["?","Yes","No"],
+              1, 
+            );        
+            $No = PopUp(
+              ["?","Yes","No"],
+              2, 
+            );            
             $concavity = PopUp(
             ["?","Concave up","Concave down"],
             1, 
@@ -210,11 +202,24 @@
             <p>Francine bought a cup of cocoa at the cafeteria. The cocoa cooled off rapidly at first, and then gradually approached room temperature. Which graph more accurately reflects the temperature of the cocoa as a function of time? 
             <var name="$ab" form="popup"/> </p>
             <p>Explain why. (Select all that apply.)</p>
-            <p><var name="$explain" form="checkboxes"/> </p>
+            <p><ul>
+                <li><p>
+                    The graph has a steep negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa. <var name="$Yes" form="popup"/>
+                </p></li>
+                <li><p>
+                    The graph becomes closer to a horizontal line, corresponding to the cocoa approaching room temperature.<var name="$Yes" form="popup"/>
+                </p></li>
+                <li><p>
+                    The graph has a slight negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa. <var name="$No" form="popup"/>
+                </p></li>
+                <li><p>
+                    The graph becomes grows steeper and steeper, corresponding to the cocoa approaching room temperature. <var name="$No" form="popup"/>
+                </p></li>
+            </ul></p>
             <p>Is the graph you chose concave up or concave down? <var name="$concavity" form="popup"/> </p>
             </statement>
         <solution>
-            <p>(a): The graph has a steep negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa. The graph becomes closer to a horizontal line, corresponding to the cocoa approaching room temperature. The graph is concave up.</p>
+            <p>Graph (a): The graph has a steep negative slope at first, corresponding to an initial rapid drop in the temperature of the cocoa. The graph becomes closer to a horizontal line, corresponding to the cocoa approaching room temperature. The graph is concave up.</p>
         </solution>
     </webwork>
 </exercise>

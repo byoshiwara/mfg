@@ -79,7 +79,7 @@ is a sequence. The sum of those five terms is the series
 <p>Consider the sum of the first 12 terms of the sequence with general term <m>a_n = 4n+1</m>. That is,
 <me>S_{12} = 5 + 9 + 13 + \cdots + 41 + 45 + 49</me>
 In mathematics, as in other fields, making discoveries often depends on looking at familiar objects in a new way.</p>
-<p><ol lable = "1">
+<p><ol label= "1">
     <li><p>Let's write the terms of the series in the opposite order:
         <me>S_{12} = 49 + 45 + 41 + \cdots + 13 + 9 + 5</me></p></li>
     <li><p>Now add these two equations term by term, to find
@@ -123,7 +123,7 @@ Next we use the formula for <m>S_n</m> with <m>n = 15,~a_1 = 1,</m> and <m>a_{15
         </p>
         <instruction>Do not enter a comma. For example, use "10000" rather than "10,000".</instruction>
    </statement>
-    <solution>15,050</solution>
+    <solution><p>15,050</p></solution>
 </webwork>
 </exercise>
 
@@ -146,7 +146,7 @@ Arlene's total earnings for the 18 months will be $19,755.</p></solution></examp
         </p>
         <p>$<var name="$answer" width="5"/> </p>
     </statement>
-    <solution>$1665</solution>
+    <solution><p>$1665</p></solution>
 </webwork>
 </exercise>
     
@@ -206,12 +206,12 @@ Arlene's total earnings for the 18 months will be $19,755.</p></solution></examp
 
 <solution><p>The sequence is geometric with <m>a_1 = 5</m>. We find  by dividing <m>\dfrac{10}{3}</m> by 5.
 <me>\dfrac{10}{3} \div 5 = \dfrac{2}{3}</me>
-Thus, the general term of the series is <m>a_n = 5(\dfrac{2}{3})^{n-1}</m>. We use the formula for a geometric series with <m>n=5</m>,
+Thus, the general term of the series is <m>a_n = 5\left(\dfrac{2}{3}\right)^{n-1}</m>. We use the formula for a geometric series with <m>n=5</m>,
 <me>S_5 = \dfrac{a_6 - a_1}{r-1}</me>
-We substitute <m>a_1 = 5,~a_6 = 5(\dfrac{2}{3})^5</m>, and <m>r=\dfrac{2}{3}</m>. Thus
+We substitute <m>a_1 = 5,~a_6 = 5\left(\dfrac{2}{3}\right)^5</m>, and <m>r=\dfrac{2}{3}</m>. Thus
 <!--*****--><me>\begin{aligned}[t]
-                S_5 \amp = \dfrac{5(\dfrac{2}{3})^5 - 5}{\dfrac{2}{3}-1} = \dfrac{5(\dfrac{32}{243} - 1)}{-\dfrac{1}{3}}\\
-                 \amp = 5(\dfrac{32-243}{243})(\dfrac{-3}{1}) \approx 13.02\\ 
+                S_5 \amp = \dfrac{5\left(\dfrac{2}{3}\right)^5 - 5}{\dfrac{2}{3}-1} = \dfrac{5\left(\dfrac{32}{243} - 1\right)}{-\dfrac{1}{3}}\\
+                 \amp = 5\left(\dfrac{32-243}{243}\right)\left(\dfrac{-3}{1}\right) \approx 13.02\\ 
                 \end{aligned}</me><!--*****-->
 </p></solution></example>
 
@@ -243,20 +243,27 @@ Payam will earn $408,114.77 over the next six years.</p></solution></example>
 
 <exercise><title>Practice 5</title>
     <webwork><pg-code>
-            $explain = new_checkbox_multiple_choice();
-            $explain -> qa (
-            "A question can go here, but PTX ignores this",
-            "\(S_n = \dfrac{a_{n+1} - a_1}{r-1}\) $BR",
-            "\(\dfrac{a_{n+1} - a_1}{r-1}=\dfrac{ a_1 r^{n} - a_1}{r-1}\) $BR",
-            "\(\dfrac{ a_1 r^{n} - a_1}{r-1} =\dfrac{ a_1( r^{n} - 1)}{r-1} \)  $BR"
-            );
-            $explain -> makeLast(
-            "\(S_n = \dfrac{a_{n+1} - a_1}{r-1}\) $BR",
-            "\(S_n = \dfrac{n}{2}(a_{1} + a_n)\) $BR",
-            "\(\dfrac{a_{n+1} - a_1}{r-1}=\dfrac{ a_1 r^{n+2} - a_1}{r-1}\) $BR",
-            "\(\dfrac{a_{n+1} - a_1}{r-1}=\dfrac{ a_1 r^{n} - a_1}{r-1}\) $BR",
-            "\(\dfrac{ a_1 r^{n} - a_1}{r-1} =\dfrac{ a_1( r^{n} - 1)}{r-1} \)  $BR"
-            );
+            $f1 = RadioButtons(
+              ["\(S_n = \dfrac{a_{n+1} - a_1}{r-1}\)",
+              "\(S_n = \dfrac{n}{2}(a_{1} + a_n)\)",
+              "\(S_n = a_1 r^n \)",
+              "\(S_n = a + (n-1)r \)"],
+              0, 
+            );            
+             $f2 = RadioButtons(
+              ["\(a_{n+1} = a_{1} + nr \)",
+              "\(a_{n+1} = a_{1} + (n-1)r \)",
+              "\(a_{n+1} = a_1 r^n \)",
+              "\(a_{n+1} = a_1 r^{n-1} \)"],
+              2, 
+            );            
+             $f3 = RadioButtons(
+              ["\(a_{1} + nr -a_1 = a_{1} (r^n-1) \)",
+              "\(a_{1} + (n-1)r - a_1 = a_{1} (r^n-1) \)",
+              "\(a_1 r^n -a_1 = a_{1} (r^n-1) \)",
+              "\(a_1 r^{n-1} - a_1 = a_{1} (r^n-1) \)"],
+              2, 
+            );            
         </pg-code>
         <statement>
             <p>
@@ -266,7 +273,20 @@ Payam will earn $408,114.77 over the next six years.</p></solution></example>
             <p>
                 Check all the relevant statements.
             </p>
-            <p><var name="$explain" form="checkboxes"/> </p>
+            <p><ol label="a">
+                <li><p>
+                    The sum <m>S_n</m> of the first <m>n</m> terms of a geometric series is</p>
+                    <p><var name="$f1" form="buttons"/> 
+                </p></li>
+                <li><p>
+                    We can write <m>a_{n+1}</m> as </p>
+                    <p><var name="$f2" form="buttons"/> 
+                </p></li>
+                <li><p>
+                    So the numerator from part (a) can be rewritten as </p>
+                    <p><var name="$f3" form="buttons"/> 
+                </p></li>
+            </ol></p>
         </statement>
         <solution>
             <p><m>S_n = \dfrac{a_{n+1} - a_1}{r-1} = \dfrac{a_1r^n - a_1}{r-1} = \dfrac{a_1(r^n - 1)}{r-1}</m></p>
@@ -280,4 +300,3 @@ Payam will earn $408,114.77 over the next six years.</p></solution></example>
 <xi:include href="./section-9-3-exercises.xml" /> 
 
 </section> 
-<!-- </book>  </mathbook> -->
