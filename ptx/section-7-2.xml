@@ -92,19 +92,14 @@ All cubic polynomials display this behavior when their lead coefficients (the co
             $i = $x+4;
             $y[$i] = $C->eval(x=>$x);
             }
-            $match = new_checkbox_multiple_choice();
-            $match -> qa (
-            "A question can go here, but PTX ignores this",
-            "Both non-basic cubic graphs have three \(x\)-intercepts and two turning points. $BR",
-            "The non-basic cubic function from the example has long-term behavior like \(y=x^3\), but this cubic function has long-term behavior like \(y=-x^3\). $BR",
-            );
-            $match -> makeLast(
-            "Both non-basic cubic graphs have three \(x\)-intercepts and two turning points. $BR",
-            "Both non-basic cubic graphs the same long-term behavior as \(y=x^3\). $BR",
-            "The non-basic cubic function from the example has three \(x\)-intercepts and two turning points, but this cubic function has only one turning point. $BR",
-            "The non-basic cubic function from the example has long-term behavior like \(y=x^3\), but this cubic function has long-term behavior like \(y=-x^3\). $BR",
-             );
-
+            $True = PopUp(
+              ["?","True","False"],
+              1, 
+            );        
+            $False = PopUp(
+              ["?","True","False"],
+              2, 
+            );            
         </pg-code> 
         <statement>
             <p><ol label="a">
@@ -140,7 +135,20 @@ All cubic polynomials display this behavior when their lead coefficients (the co
                             <cell><var name="$y[8]" width="2" /></cell></row>
                 </tabular></sidebyside></li>
             <li><p>Graph <m>y = C(x)</m> in the standard window. Compare the graph to the graphs in the Example above: What similarities do you notice? What differences?</p>
-            <p><var name="$match" form="checkboxes"/> </p></li>
+            <p><ul>
+                <li><p>
+                    Both non-basic cubic graphs have three <m>x</m>-intercepts and two turning points. <var name="$True" form="popup"/>
+                </p></li>
+                <li><p>
+                    Both non-basic cubic graphs have the same long-term behavior as <m>y=x^3</m>. <var name="$False" form="popup"/>
+                </p></li>
+                <li><p>
+                    The non-basic cubic function from the example has three \(x\)-intercepts and two turning points, but this cubic function has only one turning point. <var name="$False" form="popup"/>
+                </p></li>
+                <li><p>
+                    The non-basic cubic function from the example has long-term behavior like <m>y=x^3</m>, but his cubic function has long-term behavior like <m>y=-x^3</m>. <var name="$True" form="popup"/>
+                </p></li>
+            </ul></p></li>
             </ol></p>
         </statement>
         <solution>
@@ -236,19 +244,14 @@ All cubic polynomials display this behavior when their lead coefficients (the co
             $i = $x+4;
             $y[$i] = $C->eval(x=>$x);
             }
-            $match = new_checkbox_multiple_choice();
-            $match -> qa (
-            "A question can go here, but PTX ignores this",
-            "The graphs all have long-term behavior like a fourth degree power function, \(y=ax^4\). $BR",
-            "The long-term behavior of the graphs in the example is the same as that of \( y=x^4\), but the graph here has long-term behavior like  \(y=-x^4\). $BR",
-            );
-            $match -> makeLast(
-            "The graphs all have four <m>x</m>-intercepts and three turning points. $BR",
-            "The graphs all have long-term behavior like a fourth degree power function, \(y=ax^4\). $BR",
-            "The long-term behavior of the graphs in the example is the same as that of \( y=x^4\), but the graph here has long-term behavior like  \(y=-x^4\). $BR",
-            "The long-term behavior of the graphs in the example is the same as that of \( y=x^4\), but the graph here has long-term behavior like  \(y=-x^3\). $BR",
-             );
-
+            $True = PopUp(
+              ["?","True","False"],
+              1, 
+            );        
+            $False = PopUp(
+              ["?","True","False"],
+              2, 
+            );            
         </pg-code> 
         <statement>
             <p><ol label="a">
@@ -289,7 +292,20 @@ All cubic polynomials display this behavior when their lead coefficients (the co
                 \text{Ymin} \amp = -15 \amp\amp \text{Ymax} = 10
                 \end{aligned}</me>
                 Compare the graph to the graphs in the previous Example: What similarities do you notice? What differences?</p>
-            <p><var name="$match" form="checkboxes"/> </p></li>
+            <p><ul>
+                <li><p>
+                    The graphs all have four <m>x</m>-intercepts and three turning points. <var name="$False" form="popup"/>
+                </p></li>
+                <li><p>
+                    The graphs all have long-term behavior like a fourth degree power function, <m>y=ax^4</m>. <var name="$True" form="popup"/>
+                </p></li>
+                <li><p>
+                    The long-term behavior of the graphs in the example is the same as that of <m> y=x^4</m>, but the graph here has long-term behavior like  <m>y=-x^4</m>. <var name="$True" form="popup"/>
+                </p></li>
+                <li><p>
+                    The long-term behavior of the graphs in the example is the same as that of <m>y=x^4</m>, but the graph here has long-term behavior like  <m>y=-x^3</m>. <var name="$False" form="popup"/>
+                </p></li>
+            </ul></p></li>
             </ol></p>
         </statement>
         <solution>

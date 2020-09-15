@@ -123,21 +123,14 @@ values of the two variables. </p>
             ); 
             $min = -3;
             $tmin = -4;
-            $intervals = new_checkbox_multiple_choice();
-            $intervals -> qa (
-            "A question can go here, but PTX ignores this",
-            "from \( -5 \) to \( -4 \)$BR",
-            "from \( 1 \) to \( 3 \)$BR",
-            );
-            $intervals -> extra(
-            "from \( 2 \) to \( 4 \)$BR",
-            "from \( -5 \) to \( -2 \)$BR",
-            );
-            $intervals -> makeLast( "from \( -5 \) to \( -4 \)$BR",
-            "from \( -5 \) to \( -2 \)$BR",
-            "from \( 2 \) to \( 4 \)$BR",
-            "from \( 1 \) to \( 3 \)$BR",
-            "None of the above");
+            $Yes = PopUp(
+              ["?","Yes","No"],
+              1, 
+            );        
+            $No = PopUp(
+              ["?","Yes","No"],
+              2, 
+            );            
         </pg-code> 
         <statement><p>
             <ol label="a">
@@ -149,7 +142,10 @@ values of the two variables. </p>
                 <p>For what value of <m> t </m> does the function take on its minimum value?</p>
                 <p><m> t= </m><var name="$tmin" width="3"/></p></li>
                 <li><p>Select all the intervals listed below where <m> g </m> is decreasing.</p>
-                <p><var name="$intervals" form="checkboxes"/></p>
+                <p>From <m>-5</m> to <m>-4</m>? <var name="$Yes" form="popup"/></p>
+                <p>From <m>-5</m> to <m>-2</m>? <var name="$No" form="popup"/></p>
+                <p>From 2 to 4? <var name="$No" form="popup"/></p>
+                <p>From 1 to 3? <var name="$Yes" form="popup"/></p>
                 </li>
             </ol>
         </p></statement>
@@ -385,23 +381,16 @@ at most one point.</p></assemblage>
     <sidebyside ><image source="images/fig-vertical-line-test3" ><description>vertical line test</description></image></sidebyside></introduction>
     <webwork>
          <pg-code>
-            $functions = new_checkbox_multiple_choice();
-            $functions -> qa (
-            "A question can go here, but PTX ignores this",
-            "(b)$BR",
-            );
-            $functions -> extra(
-            "(a)$BR",
-            "(c)$BR",
-            );
-            $functions -> makeLast(
-            "(a)$BR",
-            "(b)$BR",
-            "(c)$BR",
-            "None of the above");
+            $choice = RadioButtons(
+              ["(a)",
+              "(b)",
+              "(c)",
+              "None of the above"],
+              1, 
+            );            
         </pg-code> 
         <statement><p>
-            <var name="$functions" form="checkboxes"/>
+            <var name="$choice" form="buttons"/>
         </p></statement>
         <solution><p>Only (b) is a function.</p></solution>
     </webwork>

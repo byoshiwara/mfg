@@ -319,7 +319,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
     </solution>
 </webwork></exercise>
 
-<assemblage><title>Inverse Functions</title><idx>inverse functions</idx>
+<assemblage><title>Inverse Functions</title><idx>inverse function</idx>
 	<p>Suppose the inverse of <m>f</m> is a function, denoted by <m>f^{-1}</m>. Then
 		<me>f^{-1}(y) = x~~~~ \text{ if and only if }~~~~f(x) = y</me></p>
 </assemblage>
@@ -387,18 +387,14 @@ are equivalent; they convey the same information. This fact is a restatement of 
             2, 
             );
 
-            $match = new_checkbox_multiple_choice();
-            $match -> qa (
-            "A question can go here, but PTX ignores this",
-            "\( h(32)= 0 \) $BR",
-            "\( h^{-1}(0)= 32 \) $BR",
-            );
-            $match -> makeLast(
-            "\( h(32)= 0 \) $BR",
-            "\( h(0)= 32 \) $BR",
-            "\( h^{-1}(32)= 0 \) $BR",
-            "\( h^{-1}(0)= 32 \) $BR",
-            "None of the above");
+            $Yes = PopUp(
+              ["?","Yes","No"],
+              1, 
+            );        
+            $No = PopUp(
+              ["?","Yes","No"],
+              2, 
+            );            
         </pg-code> 
         <statement>
             <p><ol label="a">
@@ -406,7 +402,20 @@ are equivalent; they convey the same information. This fact is a restatement of 
             <p><m>h^{-1}(-10)=</m><var name="$a" width="2"/> </p></li>
             <li><p>Does <m>h^{-1}(-10) = -h^{-1}(10)</m>? <var name="$YN" form="popup"/> </p></li>
             <li><p>Select two equations, one using <m>h</m> and one using <m>h^{-1}</m>, stating the Fahrenheit temperature when the Celsius temperature is <m>0^\circ</m>.</p>
-            <p><var name="$match" form="checkboxes"/> </p></li>
+            <p><ul>
+                <li><p>
+                    <m>h(32)=0</m> <var name="$Yes" form="popup"/>
+                </p></li>
+                <li><p>
+                    <m>h(0)=32</m> <var name="$No" form="popup"/>
+                </p></li>
+                <li><p>
+                    <m>h^{-1}(32)=0</m> <var name="$No" form="popup"/>
+                </p></li>
+                <li><p>
+                    <m>h^{-1}(0)=32</m> <var name="$Yes" form="popup"/>
+                </p></li>
+            </ul></p></li>
             </ol></p>
         </statement>
         <solution>
@@ -563,23 +572,31 @@ are equivalent; they convey the same information. This fact is a restatement of 
     </introduction>
     <webwork>
          <pg-code>
-            $match = new_checkbox_multiple_choice();
-            $match -> qa (
-            "A question can go here, but PTX ignores this",
-            "(a) $BR",
-            "(d) $BR",
-            );
-            $match -> makeLast(
-            "(a) $BR",
-            "(b) $BR",
-            "(c) $BR",
-            "(d) $BR",
-            "None of the above");
-            
+            $Yes = PopUp(
+              ["?","Yes","No"],
+              1, 
+            );        
+            $No = PopUp(
+              ["?","Yes","No"],
+              2, 
+            );            
         </pg-code> 
         <statement>
             <p>Which of the functions whose graphs are shown above have inverses that are also functions?</p>
-            <p><var name="$match" form="checkboxes"/> </p>  
+            <p><ol label="(a)">
+                <li><p>
+                      <var name="$Yes" form="popup"/>
+                </p></li>
+                <li><p>
+                     <var name="$No" form="popup"/>
+                </p></li>
+                <li><p>
+                     <var name="$No" form="popup"/>
+                </p></li>
+                <li><p>
+                     <var name="$Yes" form="popup"/>
+                </p></li>
+            </ol> </p>  
         </statement>
         <solution>
             <p>(a) and (d)</p>

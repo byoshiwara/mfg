@@ -279,28 +279,31 @@ We see that <m>g(x)</m> is the same function as <m>f(-x)</m>. Replacing <m>x</m>
     <title>Practice 2</title>
     <webwork>
          <pg-code>
-            $match = new_checkbox_multiple_choice();
-            $match -> qa (
-            "A question can go here, but PTX ignores this",
-            "\( f(x)= \left(\dfrac{1}{4} \right)^x \) $BR$BR",
-            "\( h(x)= 4^{-x} \) $BR",
-            );
-            $match -> extra(
-            "\( g(x)= -4^x \) $BR",
-            );
-            $match -> makeLast(
-            "\( f(x)= \left(\dfrac{1}{4} \right)^x \) $BR$BR",
-            "\( g(x)= -4^x \) $BR",
-            "\( h(x)= 4^{-x} \) $BR",
-                       "None of the above");
-            
+            $pair = RadioButtons(
+              ["(a) and (b)",
+              "(a) and (c)",
+              "(b) and (c)",
+              "None of the above"],
+              1, 
+            );            
         </pg-code> 
         <statement>
             <p>Which of the functions below have the same graph? Explain why.</p>
-            <p><var name="$match" form="checkboxes"/> </p>
+            <p><var name="$pair" form="buttons"/> </p>
+            <p><ol label="a">
+                <li><p>
+                    <m>f(x)= \left(\dfrac{1}{4} \right)^x </m>
+                </p></li>
+                <li><p>
+                    <m>g(x)= -4^x</m>
+                </p></li>
+                <li><p>
+                    <m>h(x)= 4^{-x}</m>
+                </p></li>
+            </ol></p>
         </statement>
         <solution>
-            <p>(A) and (C) are the same function.</p>
+            <p>(a) and (c) are the same function.</p>
         </solution>
     </webwork>
 </exercise>
@@ -318,7 +321,7 @@ We see that <m>g(x)</m> is the same function as <m>f(-x)</m>. Replacing <m>x</m>
 
 <subsection><title>Comparing Exponential and Power Functions</title>
 
-<p>Exponential functions<idx>exponential functions</idx> are not the same as the power functions <idx>power functions</idx> we studied in <xref ref="chap3" text="type-global"/>. Although both involve expressions with exponents, it is the location of the variable that makes the difference.</p>
+<p>Exponential functions<idx>exponential function</idx> are not the same as the power functions <idx>power function</idx> we studied in <xref ref="chap3" text="type-global"/>. Although both involve expressions with exponents, it is the location of the variable that makes the difference.</p>
 
 <assemblage><title>Power Functions vs Exponential Functions</title>
 <sidebyside>
@@ -428,53 +431,30 @@ We see that <m>g(x)</m> is the same function as <m>f(-x)</m>. Replacing <m>x</m>
     <title>Practice 3</title>
     <webwork>
          <pg-code>
-            $match = new_checkbox_multiple_choice();
-            $match -> qa (
-            "A question can go here, but PTX ignores this",
-            "\( F(x)= 1.5^x \) $BR",
-            "\( H(x)= 3^{1.5x} \) $BR",
+            $exponential = PopUp(
+            ["?","exponential","power","neither"],
+            1, 
             );
-            $match -> extra(
-            "\( G(x)= 3x^{1.5} \) $BR",
-            "\( K(x)= (3x)^{1.5} \) $BR"
+            $power = PopUp(
+            ["?","exponential","power","neither"],
+            2, 
             );
-            $match -> makeLast(
-            "\( F(x)= 1.5^x \) $BR",
-            "\( G(x)= 3x^{1.5} \) $BR",
-            "\( H(x)= 3^{1.5x} \) $BR",
-            "\( K(x)= (3x)^{1.5} \) $BR",
-             "None of the above");
-
-            $match2 = new_checkbox_multiple_choice();
-            $match2 -> qa (
-            "A question can go here, but PTX ignores this",
-            "\( G(x)= 3x^{1.5} \) $BR",
-            "\( K(x)= (3x)^{1.5} \) $BR"
+            $neither = PopUp(
+            ["?","exponential","power","neither"],
+            3, 
             );
-            $match2 -> extra(
-            "\( F(x)= 1.5^x \) $BR",
-            "\( H(x)= 3^{1.5x} \) $BR",
-            );
-            $match2 -> makeLast(
-            "\( F(x)= 1.5^x \) $BR",
-            "\( G(x)= 3x^{1.5} \) $BR",
-            "\( H(x)= 3^{1.5x} \) $BR",
-            "\( K(x)= (3x)^{1.5} \) $BR",
-            "None of the above");
             
         </pg-code> 
         <statement>
             <p>Which of the following functions are exponential functions, and which are power functions?<ol label="a" cols="2">
-                <li><m>F(x) = 1.5^x</m></li>
-                <li><m>G(x) = 3x^{1.5}</m></li>
-                <li><m>H(x) = 3^{1.5x}</m></li>
-                <li><m> K(x) = (3x)^{1.5}</m></li>
+                <li><p><m>F(x) = 1.5^x</m>  <var name="$exponential" form="popup"/></p></li>
+                <li><p><m>G(x) = 3x^{1.5}</m>  <var name="$power" form="popup"/></p></li>
+                <li><p><m>H(x) = 3^{1.5x}</m>  <var name="$exponential" form="popup"/></p></li>
+                <li><p><m> K(x) = (3x)^{1.5}</m>  <var name="$power" form="popup"/></p></li>
             </ol></p>
-            <p>Exponential: <var name="$match" form="checkboxes"/> </p>
-            <p>Power: <var name="$match2" form="checkboxes"/> </p>
         </statement>
         <solution>
-            <p>Exponential:  (A) and (C); power: (B) and (D)</p>
+            <p>Exponential:  (a) and (c); power: (b) and (d)</p>
         </solution>
     </webwork>
 </exercise>
