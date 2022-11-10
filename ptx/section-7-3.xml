@@ -93,11 +93,11 @@ or <m>\sqrt{-4}=2i</m>. Any number that is the product of <m>i</m> and a real nu
 <p>Examples of imaginary numbers are
 	<me>3i\text{, }~~~\frac{7}{8}i\text{, } ~~~-38i\text{, }~~~\text{ and }~~~ i\sqrt{5} </me></p>
 
-<example><statement><p>Write each radical as an imaginary number.<ol label="a" cols="2">
+<example><statement><p>Write each radical as an imaginary number.<ol marker="a" cols="2">
 			<li><m>\sqrt{-25}</m></li>
 			<li><m>2\sqrt{-3}</m></li>
 		</ol></p></statement>
-<solution><p><ol label="a" cols="2">
+<solution><p><ol marker="a" cols="2">
 			<li><m>\begin{aligned}[t]\\
 						\sqrt{-25}\amp=\sqrt{-1}\sqrt{25}\\
 						\amp=i\sqrt{25}=5i
@@ -125,13 +125,13 @@ or <m>\sqrt{-4}=2i</m>. Any number that is the product of <m>i</m> and a real nu
         </pg-code> 
         <statement>
             <p>Write each radical as an imaginary number. Use <m>i</m> for the imaginary unit, and enter "sqrt(2)" for <m>\sqrt{2}</m>.</p>
-            <p><ol label="a" cols="2">
+            <p><ol marker="a" cols="2">
             <li><p><m>\sqrt{-18}=</m><var name="$a" width="8"/> </p></li>
             <li><p><m>-6\sqrt{-5}</m><var name="$b" width="8"/></p></li>
         </ol></p>
         </statement>
         <solution>
-            <p><ol label="a" cols="2">
+            <p><ol marker="a" cols="2">
                 <li><p><m>3i\sqrt{2} </m></p></li>
                 <li><p><m>-6i\sqrt{5} </m></p></li>
             </ol></p>
@@ -302,7 +302,7 @@ Finally, we combine the real parts and imaginary parts to obtain
 <warning><p>One property of real numbers that is not true of complex numbers is <m>\sqrt{ab}=\sqrt{a}\cdot\sqrt{b}</m>. This identity fails when <m>a</m> and <m>b</m> are both negative. For example, if <m>a = b = -2</m>, we have
 		<me>\sqrt{ab}=\sqrt{(-2)(-2)}=\sqrt{4}=2</me>
 but
-		<me>\sqrt{a}\cdot\sqrt{b}=\sqrt{-2}\cdot\sqrt{-2}=\sqrt{-1\cdot2}\cdot\sqrt{-1\cdot2} = i\sqrt{2}\cdot i\sqrt{2}=i^2(i\sqrt{2})^2=-2</me>
+		<me>\sqrt{a}\cdot\sqrt{b}=\sqrt{-2}\cdot\sqrt{-2}=\sqrt{-1\cdot2}\cdot\sqrt{-1\cdot2} = i\sqrt{2}\cdot i\sqrt{2}=i^2(\sqrt{2})^2=-2</me>
 so in this case
 		<me>\sqrt{ab}\ne\sqrt{a}\cdot\sqrt{b}</me>
 We can avoid possible errors by writing square roots of negative numbers as imaginary numbers.</p></warning>
@@ -464,11 +464,11 @@ Thus, if we know that <m>z</m> is a complex solution of a quadratic equation, we
 		<mrow>x^2-(z+ \overline{z}) +z\overline{z}\amp = 0</mrow>
 	</md></p>
 
-<example><statement><p><ol label="a">
+<example><statement><p><ol marker="a">
 			<li>Let <m>z = 7 - 5i</m>. Compute <m>z\overline{z}</m>.</li>
 			<li>Find a quadratic equation with one solution being <m>z = 7 - 5i</m>.</li>
 		</ol></p></statement>
-<solution><p><ol label="a">
+<solution><p><ol marker="a">
 		<li><p>The conjugate of <m>z = 7 - 5i</m> is <m>\overline{z} = 7 + 5i</m>, so
 			<md>
 				<mrow>z\overline{z} \amp= (7 - 5i )(7 + 5i )</mrow>
@@ -478,7 +478,7 @@ Thus, if we know that <m>z</m> is a complex solution of a quadratic equation, we
 				</md></p></li>
 		<li><p>The other solution of the equation is <m>\overline{z} = 7 + 5i</m>, and the equation is <m>(x-z)(x - \overline{z}) = 0</m>. We expand the product to find
 				<md>
-					<mrow>(x - z)(x - z) \amp = x^2 - (z + z)x + z\overline{z}</mrow>
+					<mrow>(x - z)(x - \overline{z}) \amp = x^2 - (z + \overline{z})x + z\overline{z}</mrow>
 					<mrow>\amp = x^2 - (7 - 5i + 7 + 5i )x + 74</mrow>
 					<mrow>\amp = x^2 - 14x + 74</mrow>
 				</md>
@@ -495,7 +495,7 @@ Thus, if we know that <m>z</m> is a complex solution of a quadratic equation, we
 
         </pg-code> 
         <statement>
-            <p><ol label="a">
+            <p><ol marker="a">
             <li><p>Let <m>z = -3 + 4i</m>. Compute <m>z\overline{z}=</m><var name="$a" width="3"/> </p></li>
             <li><p>Find a quadratic equation with one solution being <m>z = -3 + 4i</m>.</p>
             <p>Answer: <var name="$f" width="12"/><m>=0</m></p></li>
@@ -503,7 +503,7 @@ Thus, if we know that <m>z</m> is a complex solution of a quadratic equation, we
         <instruction>Use <m>x</m> as the variable. The coefficient of <m>x^2</m> should be 1.</instruction>
         </statement>
         <solution>
-            <p><ol label="a" cols="2">
+            <p><ol marker="a" cols="2">
                 <li><p><m>25</m></p></li>
                 <li><p><m>x^2 + 6x + 25 = 0</m></p></li>
             </ol></p>
@@ -626,7 +626,7 @@ $multians = MultiAnswer($fac1,$fac2,$fac3,$fac4)->with(
 );
         </pg-code> 
         <statement>
-            <p><ol label="a">
+            <p><ol marker="a">
             <li><p>Find the zeros of the polynomial <m>f(x) = x^4 + 15x^2 - 16</m>.</p>
            <p><var name="$z" width="10" evaluator="$my_evaluator"/>  Separate different solutions with a comma. </p></li>
             <li><p>Write the polynomial in factored form.</p>
@@ -635,7 +635,7 @@ $multians = MultiAnswer($fac1,$fac2,$fac3,$fac4)->with(
         </ol></p>
         </statement>
         <solution>
-            <p><ol label="a" >
+            <p><ol marker="a" >
                 <li><p><m>\pm 1, ~\pm 4i</m></p></li>
                 <li><p><m>(x - 1)(x + 1)(x - 4i )(x + 4i )</m></p></li>
             </ol></p>

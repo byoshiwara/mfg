@@ -57,7 +57,7 @@
 
 <note><p>What distinguishes functions from other variable relationships? The definition of a function calls for a <em>unique value</em>—that is, <em>exactly one value</em> of the output variable corresponding to each value of the input variable. This property makes functions useful in applications because they can often be used to make predictions.</p></note>
 
-<example  xml:id="example-functions"><p><ol label="a">
+<example  xml:id="example-functions"><p><ol marker="a">
     <li><p>The distance, <m>d</m>, traveled by a car in 2 hours is a function of its speed, <m>r</m>. If we know the speed of the car, we can determine the distance it travels by the formula <m>d = r \cdot 2</m>.</p></li>
     <li><p>The cost of a fill-up with unleaded gasoline is a function of the number of gallons purchased. The gas pump represents the function by displaying the corresponding values of the input variable (number of gallons) and the output variable (cost).</p></li>
     <li><p>Score on the Scholastic Aptitude Test (SAT) is not a function of score on an IQ test, because two people with the same score on an IQ test may score differently on the SAT; that is, a person’s score on the SAT is not uniquely determined by his or her score on an IQ test.</p></li></ol></p></example>
@@ -88,7 +88,7 @@
             );
         </pg-code>
     <statement>
-        <p><ol label="a">
+        <p><ol marker="a">
         <li><p>As part of a project to improve the success rate of freshmen, the counseling department studied the grades earned by a group of students in English and algebra. Do you think that a student's grade in algebra is a function of his or her grade in English? <var name="$YNgrade" form="popup"/></p>
         <p>Explain why or why not.</p>
         <p><var name="$WHYgrade" form="buttons"/></p></li>
@@ -99,7 +99,7 @@
     </statement>
 
     <solution>
-        <p><ol label="a">
+        <p><ol marker="a">
             <li><p>
                 No, students with the same grade in English can have different grades in algebra.
             </p></li>
@@ -137,7 +137,7 @@
 <subsection><title>Functions Defined by Tables</title>
 <p>When we use a table to describe a function, the first variable in the table (the left column of a vertical table or the top row of a horizontal table) is the input variable, and the second variable is the output. We say that the output variable <em>is a function of</em> the input.</p>
 
-<example xml:id="example-table-functions"><statement><p><ol label="a">
+<example xml:id="example-table-functions"><statement><p><ol marker="a">
     <li><p>The table below shows data on sales compiled over several years by the accounting office for Eau Claire Auto Parts, a division of Major Motors. In this example, the year is the input variable, and total sales is the output. We say that total sales, <m>S</m>, <em>is a function of</em> <m>t</m>.</p>
         <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
@@ -159,9 +159,9 @@
             <cell>2004</cell>
             <cell>$904,000</cell></row>
         </tabular></sidebyside></li>
-        <li><p>The table below gives the cost of sending printed material by first-class mail in 2016. </p>
+        <li><p>The table below gives the cost of sending printed material by first-class mail starting July 10, 2022. <!-- in 2016. --> </p>
         <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-        <row bottom="minor">
+<!--        <row bottom="minor">
             <cell>Weight in ounces <m>(w)</m></cell>
             <cell>Postage <m>(P)</m></cell></row>
         <row>
@@ -184,10 +184,34 @@
             <cell>$1.52</cell></row>
         <row> 
             <cell><m>6 \lt w \le 7 </m></cell>
-            <cell>$1.73</cell></row>
+            <cell>$1.73</cell></row> -->
+        <row bottom="minor">
+            <cell>Weight in ounces <m>(w)</m></cell>
+            <cell>Postage <m>(P)</m></cell></row>
+        <row>
+            <cell><m>0 \lt w \le 1 </m></cell>
+            <cell>$0.60</cell></row>
+        <row> 
+            <cell><m>1 \lt w \le 2 </m></cell>
+            <cell>$0.84</cell></row>
+        <row> 
+            <cell><m>2 \lt w \le 3 </m></cell>
+            <cell>$1.08</cell></row>
+        <row> 
+            <cell><m>3 \lt w \le 4 </m></cell>
+            <cell>$1.32</cell></row>
+        <row> 
+            <cell><m>4 \lt w \le 5 </m></cell>
+            <cell>$1.56</cell></row>
+        <row> 
+            <cell><m>5 \lt w \le 6 </m></cell>
+            <cell>$1.80</cell></row>
+        <row> 
+            <cell><m>6 \lt w \le 7 </m></cell>
+            <cell>$2.04</cell></row>
     </tabular></sidebyside>
 
-    <p>If we know the weight of the article being shipped, we can find the postage from the table. For instance, a catalog weighing 4.5 ounces would require $1.31 in postage. In this example, <m>w</m> is the input variable and <m>p</m> is the output variable. We say that <m>p</m> <em>is a function of</em> <m>w</m>.</p></li>
+    <p>If we know the weight of the article being shipped, we can find the postage from the table. For instance, a catalog weighing 4.5 ounces would require <!-- $1. --> $1.56 in postage. In this example, <m>w</m> is the input variable and <m>p</m> is the output variable. We say that <m>p</m> <em>is a function of</em> <m>w</m>.</p></li>
 
     <li><p>The table below records the age and cholesterol count for 20 patients tested in a hospital survey.</p>
         <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -262,7 +286,7 @@
     <p>According to these data, cholesterol count is <em>not</em> a function of age, because several patients who are the same age have different cholesterol levels. For example, three different patients are 51 years old but have cholesterol counts of 227, 209, and 216, respectively. Thus, we cannot determine a <em>unique</em> value of the output variable (cholesterol count) from the value of the input variable (age). Other factors besides age must influence a person’s cholesterol count.</p></li>
     </ol></p></statement></example>
 
-<note><p>Note that several differnt inputs for a function can have the same output.  For example, the inputs 4.5 and 4.25 in part (b) of the Example above have output $1.31. However, a single input cannot have more than one output, as illustrated in part (c) of the Example.</p></note>
+<note><p>Note that several different inputs for a function can have the same output.  For example, the inputs 4.5 and 4.25 in part (b) of the Example above have output $1.31. However, a single input cannot have more than one output, as illustrated in part (c) of the Example.</p></note>
 
 <exercise><title>Practice 2</title>
 <introduction><p>Decide whether each table describes <m>y</m> as a function of <m>x</m>. Explain your choice.</p></introduction>
@@ -289,7 +313,7 @@
               0, 
             );
         </pg-code>
-    <statement><p><ol label="a">
+    <statement><p><ol marker="a">
         <li><sidebyside width="63%" margins="0% 37%">
             <tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
             <cell><m>x</m></cell>
@@ -338,7 +362,7 @@
         </ol></p>
     </statement>
 
-    <solution><p><ol label="a">
+    <solution><p><ol marker="a">
         <li><p>No, for example, <m>x=3.5</m> corresponds both to <m>y=2.5</m> and also to <m>y=4</m>.</p></li>
         <li><p>Yes, each value of <m>x</m> has exactly one value of <m>y</m> associated with it.</p></li>
         </ol></p>
@@ -373,7 +397,7 @@
 <example xml:id="example-sun-hours"><statement>
     <p>The graph  shows the number of hours, <m>H</m>, that the sun is above the horizon in Peoria, Illinois, on day <m>t</m>, where <m>t = 0</m> on January 1.</p>
     <sidebyside widths="50% 40%" valigns="middle middle" margins="0% 5%">        
-        <p><ol label="a">
+        <p><ol marker="a">
             <li><p>Which variable is the input, and which is the output?</p></li>
             <li><p>How many hours of sunlight are there in Peoria on day 150?</p></li>
             <li><p>On which days are there 12 hours of sunlight?</p></li>
@@ -382,7 +406,7 @@
         <image source="images/fig-sun-hours" ><description>Peoria sunlight hours</description></image>
     </sidebyside></statement>
  
-<solution><p><ol label="a">
+<solution><p><ol marker="a">
     <li><p>The input variable, <m>t</m>, appears on the horizontal axis. The number of daylight hours, <m>H</m>, is a function of the date. The output variable appears on the vertical axis.</p></li>
     <li><p>The point on the curve where <m>t = 150</m> has <m>H \approx 14.1</m>, so Peoria gets about 14.1 hours of daylight when <m>t = 150</m>, which is at the end of May.</p></li>
     <li><p><m>H = 12</m> at the two points where <m>t \approx 85</m> (in late March) and <m>t \approx 270</m> (late September).</p></li>
@@ -430,7 +454,7 @@
               tolerance => 10,
             );            
         </pg-code>
-    <statement><p><ol label="a">
+    <statement><p><ol marker="a">
         <li><p>Which variable is the input, and which is the output?</p>
         <p><var name="$input" form="buttons"/></p></li>
         <li><p>What is the elevation at mile 20?</p>
@@ -444,7 +468,7 @@
     </ol></p>
     </statement>
 
-    <solution><p><ol label="a">
+    <solution><p><ol marker="a">
         <li><p>The input variable is <m> d </m>, and the output variable is <m> a </m>.</p></li>
         <li><p>Approximately 210 feet</p></li>
         <li><p>Approximately where <m> d\approx 5 </m>, <m> d\approx 11 </m>, <m> d\approx 12 </m>, <m> d\approx 16 </m>, <m> d\approx 17.5 </m>, and <m> d\approx 18 </m></p></li>
@@ -590,13 +614,13 @@ We see that</p>
          2, 
         );
     </pg-code>
-    <statement><p>True or False.  <ol label="a">
+    <statement><p>True or False.  <ol marker="a">
         <li>The notation <m>f(t)</m> indicates the product of <m>f</m> and <m>t</m>. <var name="$false" form="popup"/></li>
         <li>If <m>y=f(x)</m>, then <m>f(x)</m> gives the value of the input variable. <var name="$false" form="popup"/></li>
         <li>If <m>Q</m> is a function of <m>M</m>, we may write <m>M=f(Q)</m>. <var name="$false" form="popup"/></li>
         <li>In the equation <m>d=g(n)</m> the letters <m>d,~g,</m> and <m>n</m> are variables. <var name="$false" form="popup"/></li>
     </ol></p></statement>
-    <solution><p><ol label="a">
+    <solution><p><ol marker="a">
         <li>False</li>
         <li>False</li>
         <li>False</li>
@@ -628,7 +652,7 @@ We see that</p>
             <li><p>What does the statement <m>F(15) = 9.7</m> mean in the context of the problem?</p>
             <p><var name="$meaning" form="buttons"/></p></li>
         </ol></p></statement>
-        <solution><p><ol label="a">
+        <solution><p><ol marker="a">
             <li><p><m>H = F(t)</m></p></li>
             <li><p>The sun is above the horizon in Peoria for 9.7 hours on January 16.</p></li></ol></p>
         </solution>
@@ -722,7 +746,7 @@ We see that</p>
         <cell>116</cell>
         <cell>112</cell></row>
     </tabular></sidebyside> 
-    <p><ol label="a">
+    <p><ol marker="a">
         <li><p>Find <m> f(25) </m> and <m> f(50) </m>.</p>
         <p><m> f(25)= </m><var name="$r0" width="3"/></p>
         <p><m> f(50)= </m><var name="$r1" width="3"/></p>
@@ -732,7 +756,7 @@ We see that</p>
         </li></ol></p>
     </statement>
     <solution>
-        <p><ol label="a">
+        <p><ol marker="a">
             <li><p><m> f (25) = 146 </m>,  <m> f(50) = 127 </m></p></li>
             <li><p><m> a = 40 </m></p></li>
         </ol></p>
@@ -764,12 +788,12 @@ We see that</p>
 
 <example xml:id="example-evaluate-function"><statement>
     <p>The function <m>H</m> is defined by <m>H=f(s) = \dfrac{\sqrt{s+3}}{s}</m>. Evaluate the function at the following values.
-    <ol label = "a">
+    <ol marker= "a">
         <li><p><m>s=6</m></p></li>
         <li><p><m>s=-1</m></p></li></ol></p>
     </statement>
 <solution><p>
-    <ol label = "a">
+    <ol marker= "a">
         <li><p><m>f(\alert{6})=\dfrac{\sqrt{\alert{6}+3}}{\alert{6}}=
             \dfrac{\sqrt{9}}{6}=\dfrac{3}{6}=\dfrac{1}{2}</m>. Thus, <m>f(6)=\dfrac{1}{2}</m>.</p></li>
         <li><p><m>f(\alert{-1})=\dfrac{\sqrt{\alert{-1}+3}}{\alert{-1}}=
@@ -795,7 +819,7 @@ We see that</p>
      
     <statement><p>
     Complete the table displaying ordered pairs for the function <m>f(x) = 5 - x^3</m>. Evaluate the function to find the corresponding <m>f(x)</m>-value for each value of <m>x</m>.</p>
-    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+    <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <col halign="center"  />
         <col halign="center" />
         <col halign="left" top="none" right="none"/>
@@ -819,10 +843,9 @@ We see that</p>
                 <cell><m>3</m></cell>
                 <cell><var name="$y[3]" width="3"/></cell>
                 <cell bottom="none"><m>f(\alert{3})=5-\alert{3}^3=</m></cell></row>
-        </tabular></sidebyside>
+        </tabular>
     </statement>
     <solution>
-        <sidebyside>
     <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <col halign="center"  />
         <col halign="center" />
@@ -841,7 +864,7 @@ We see that</p>
             <row> 
                 <cell><m>3</m></cell>
                 <cell><m>-22</m></cell></row>
-        </tabular></sidebyside>
+        </tabular>
     </solution>
 </webwork>    
 </exercise>
@@ -927,12 +950,12 @@ We see that</p>
     <p>TrailGear manufactures backpacks at a cost of
         <me>C(x) = 3000 + 20x</me>
     for <m>x</m> backpacks. The company finds that the monthly demand for backpacks increases by 50% during the summer. The backpacks are produced at several small co-ops in different states.
-    <ol label="a">
+    <ol marker="a">
         <li>If each co-op usually produces <m>b</m> backpacks per month, how many should it produce during the summer months?</li>
         <li>What costs for producing backpacks should the company expect during the summer?</li>
     </ol></p></statement>
 <solution><p>
-    <ol label="a">
+    <ol marker="a">
         <li>An increase of 50% means an additional 50% of the current production level, <m>b</m>. Therefore, a co-op that produced <m>b</m> backpacks per month during the winter should increase production to <m>b + 0.5b</m>, or <m>1.5b</m> backpacks per month in the summer.</li>
         <li>The cost of producing <m>1.5b</m> backpacks will be
             <me>C(\alert{1.5b}) = 3000 + 20(\alert{1.5b}) = 3000 + 30b</me></li>
@@ -957,7 +980,7 @@ We see that</p>
      
     <statement>
         <p>A spherical balloon has a radius of 10 centimeters.
-            <ol label="a">
+            <ol marker="a">
             <li><p>If we increase the radius by <m> h </m> centimeters, what will the new volume be?</p>
             <p><var name="$V1" form="buttons"/></p></li>
             <li><p>If <m> h = 2 </m>, how much did the volume increase? Round your answer to hundredths.</p>
@@ -967,7 +990,7 @@ We see that</p>
         <instruction>Note: Use "pi" to enter the number <m> \pi </m>.</instruction>
     </statement>
     <solution><p>
-        <ol label="a">
+        <ol marker="a">
             <li><p><m> V(10 + h) = \dfrac{4}{3}\pi(10 + h)^3 \text{ cm}^3 </m></p></li>
             <li><p>From <m> V(10) </m> to <m> V(12) </m> is an increase of about <m> 3049.44 \text{ cm}^3 </m></p></li>
         </ol></p>
@@ -976,11 +999,11 @@ We see that</p>
 </exercise>
 
 <example xml:id="example-evaluate-quadratic"><statement>
-    <p>Evaluate the function <m>f(x)=4x^2 - x + 5</m> for the following expressions.<ol label="a" cols = "2">
+    <p>Evaluate the function <m>f(x)=4x^2 - x + 5</m> for the following expressions.<ol marker="a" cols = "2">
         <li><m>x = 2h</m></li>
         <li><m>x = a + 3</m></li>
     </ol></p></statement>
-    <solution><p><ol label="a">
+    <solution><p><ol marker="a">
         <li><p><nbsp/></p><p><m>\begin{aligned}[t]
                 f(\alert{2h}) \amp= 4(\alert{2h})^2-(\alert{2h}) + 5\\
                 \amp= 4(4h^2)-2h+5\\
@@ -1040,14 +1063,14 @@ To compute <m>f(a) + f(3)</m>, we must first compute <m>f(a)</m> and <m>f(3)</m>
      
     <statement><p>
     Let <m> f(x) = x^3 - 1 </m> and evaluate each expression.
-    <ol label="a">
+    <ol marker="a">
         <li><p><m> f(2) + f(3)= </m><var name="$fsum" width="7"/></p></li>
         <li><p><m> f(2 + 3)= </m><var name="$f5" width="7"/></p></li>
         <li><p><m> 2 f(x) + 3 </m><var name="$func2" width="7"/></p></li>
     </ol></p>
     </statement>
      <solution><p>
-    <ol label="a" cols="3">
+    <ol marker="a" cols="3">
         <li><p><m> 33 </m></p></li>
         <li><p><m> 124 </m></p></li>
         <li><p><m> 2x^3 + 1 </m></p></li>

@@ -141,11 +141,11 @@
 
 <p>If a function is given by a table of values, we can interchange the columns (or rows) of the table to obtain the inverse function. Swapping the columns works because we are really interchanging the input and output variables. If a function is defined by an equation, we can find a formula for its inverse function in the same way: Interchange the roles of the variables in the equation so that the old output variable becomes the new input variable.</p>
 
-<example xml:id="example-inverse-formula"><statement><p><ol label="a">
+<example xml:id="example-inverse-formula"><statement><p><ol marker="a">
 	<li>The function <m>H = f (t) = 6 + 2t</m> gives the height of corn seedlings, in inches, <m>t</m> days after they are planted. Find a formula for the inverse function and explain its meaning in this context.</li>
 	<li>Make a table of values for <m>f (t)</m> and a table for its inverse function.</li>
 	</ol></p></statement>
-<solution><p><ol label="a">
+<solution><p><ol marker="a">
 	<li><p>Write the equation for <m>f</m> in the form
 			<me>H = 6 + 2t</me>
 	In this equation, <m>t</m> is the input and <m>H</m> is the output. We interchange the roles of the variables by solving for <m>t</m> to obtain
@@ -207,21 +207,21 @@
 <webwork>
      <pg-code>       
             $invsub = RadioButtons(
-              ["\(h=m+2\)",
-              "\(h=2-m\)",
-              "\(h=\dfrac{1}{m}-2\)",
-              "\(h=\dfrac{1}{m-2}\)"],
+              ["\(m=\dfrac{h+2}{3}\)",
+              "\(m=2h-3\)",
+              "\(m=\dfrac{h-3}{2}\)",
+              "\(m=\dfrac{1}{3h-2}\)"],
               0, 
             );            
         </pg-code> 
     <statement>
-        <p>Which of these is the inverse of the function <m>h=m-2</m> ?</p>
+        <p>Which of these is the inverse of the function <m>h=3m-2</m> ?</p>
         <p><var name="$invsub" form="buttons"/></p>      
     </statement>
     <solution>
-        <p><m>h=m+2</m></p>
+        <p><m>m=\dfrac{h+2}{3}</m></p>
     </solution>
-</webwork></exercise>	
+</webwork></exercise>   
 
 <exercise>
     <title>Practice 2</title>
@@ -253,7 +253,7 @@
         </pg-code> 
         <statement>
             <p>Carol can burn 600 calories per hour bicycling and 400 calories per hour swimming. She would like to lose 5 pounds, which is equivalent to 16,000 calories.</p>
-            <p><ol label="a">
+            <p><ol marker="a">
             <li><p>Write an equation relating the number of hours of cycling, <m>x</m>, and the number of hours swimming, <m>y</m>, that Carol must spend to lose 5 pounds. [Do not use commas: For example, enter "10000" rather than "10,000".</p>
             <p>Answer: <var name="$equation" width="15"/> </p></li>
             <li><p>Write <m>y</m> as a function of <m>x</m>, <m>y = f (x)</m>.</p>
@@ -267,7 +267,7 @@
             </ol></p>
         </statement>
         <solution>
-            <p><ol label="a">
+            <p><ol marker="a">
                 <li><p><m>600x + 400y = 16,000</m></p></li>
                 <li><p><m>y = f (x) = 40 - 1.5x</m>; <m>f (10) = 25</m>; If Carol cycles for 10 hrs, she must swim for 25 hrs.</p></li>
                 <li><p><m>x = g(y) = 26\frac{2}{3} - \frac{2}{3} y</m>; <m>g(10) = 20</m>; If Carol swims for <m>10</m> hrs, she must cycle for <m>20</m> hrs.</p></li>
@@ -338,7 +338,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
             );
         </pg-code> 
         <statement>
-            <p><ol label="a">
+            <p><ol marker="a">
                 <li><p>If <m>z = f (w) = \dfrac{1}{w + 3}</m>, find <m>f^{-1}(1)</m>.</p>
                 <p><m>f^{-1}(1)=</m><var name="$a" width="2"/> </p></li>
                 <li><p>Write two equations about the value of <m>f^{-1}(1)</m>, one using <m>f^{-1}</m> and one using <m>f</m>.</p>
@@ -348,7 +348,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
             </ol></p>
         </statement>
         <solution>
-            <p><ol label="a">
+            <p><ol marker="a">
                 <li><p><m>-2</m></p></li>
                 <li><p><m>f^{-1}(1) = -2</m>, <m>f (-2) = 1</m></p></li>
                 <li><p><m>f^{-1}(1) = -2</m>, but <m>\dfrac{1}{f (1)}= 4</m></p></li>
@@ -397,7 +397,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
             );            
         </pg-code> 
         <statement>
-            <p><ol label="a">
+            <p><ol marker="a">
             <li><p>Find <m>h^{-1}(-10)</m>.</p>
             <p><m>h^{-1}(-10)=</m><var name="$a" width="2"/> </p></li>
             <li><p>Does <m>h^{-1}(-10) = -h^{-1}(10)</m>? <var name="$YN" form="popup"/> </p></li>
@@ -419,7 +419,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
             </ol></p>
         </statement>
         <solution>
-            <p><ol label="a" cols="2">
+            <p><ol marker="a" cols="2">
                 <li><p><m>14</m>: On the graph of <m>h</m>, when <m>C=-10</m>, <m>F=14</m>.</p></li>
                 <li><p>No</p></li>
                 <li><p><m>h(32) = 0</m>, <m>h^{-1}(0) = 32</m></p></li>
@@ -486,12 +486,12 @@ are equivalent; they convey the same information. This fact is a restatement of 
 </sidebyside>
 
 <example xml:id="example-cubic-pheasant"><statement><p>The Park Service introduced a flock of <m>12</m> endangered pheasant into a wildlife preserve. After <m>t</m> years, the population of the flock was given by
-	<me>P = f (t) = 12 + 2t^3</me><ol label="a">
+	<me>P = f (t) = 12 + 2t^3</me><ol marker="a">
 		<li>Graph the function on the domain <m>[0, 5]</m>.</li>
 		<li>Find a formula for the inverse function, <m>t = f^{-1}(P)</m>. What is the meaning of the inverse function in this context?</li>
 		<li>Sketch a graph of the inverse function.</li>
 	</ol></p></statement>
-<solution><p><ol label="a">
+<solution><p><ol marker="a">
 	<li><sidebyside widths="50% 25%" valigns="middle middle" margins="0% 20%">
 	<p>The graph of <m>f</m> is shown at right, with <m>t</m> on the horizontal axis and <m>P</m> on the vertical axis.</p>
 		<image source="images/fig-cubic-pheasant"><description>graph of pheasant population</description></image></sidebyside></li>
@@ -520,7 +520,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
         </pg-code> 
         <statement>
             <p>The formula <m>T = f(L) = 2\pi \sqrt{\dfrac{L}{32}}</m> gives the period in seconds, <m>T</m>, of a pendulum as a function of its length in feet, <m>L</m>.</p>
-            <p><ol label="a">
+            <p><ol marker="a">
             <li><p>Graph the function on the domain <m>[0, 5]</m>.</p></li>
             <li><p>Find a formula for the inverse function, <m>L = f^{-1}(T )</m>. [Enter "pi" to get <m>\pi</m>.]</p> 
             <p><m>L=f^{-1}(T)= </m><var name="$fi" width="12"/> </p>
@@ -531,7 +531,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
             </ol></p>
         </statement>
         <solution>
-            <p><ol label="a" cols="2">
+            <p><ol marker="a" cols="2">
                 <li><p>A graph is below for both parts (a) and (c).</p></li>
                 <li><p><m>L = f^{-1}(T ) =\dfrac{8}{\pi^2} T^2.~~~~~~</m> <m>~f^{-1}</m> gives the length of a pendulum as a function of its period.</p></li>
                 <li><p>See graph for part(a) below.</p></li>
@@ -583,7 +583,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
         </pg-code> 
         <statement>
             <p>Which of the functions whose graphs are shown above have inverses that are also functions?</p>
-            <p><ol label="(a)">
+            <p><ol marker="(a)">
                 <li><p>
                       <var name="$Yes" form="popup"/>
                 </p></li>
@@ -661,11 +661,11 @@ are equivalent; they convey the same information. This fact is a restatement of 
 
 <p><xref ref="example-inverse-of-inverse" text="type-global"/> illustrates the fact that if <m>f^{-1}</m> is the inverse function for <m>f</m>, then <m>f</m> is also the inverse function for <m>f^{-1}</m>.</p>
 
-<example xml:id="example-inverse-of-inverse"><statement><p>Consider the function <m>f(x) = x^3 + 2</m> and its inverse, <m>f^{-1}(y) = \sqrt[3]{y - 2}</m>.<ol label="a">
+<example xml:id="example-inverse-of-inverse"><statement><p>Consider the function <m>f(x) = x^3 + 2</m> and its inverse, <m>f^{-1}(y) = \sqrt[3]{y - 2}</m>.<ol marker="a">
 	<li>Show that the inverse function undoes the effect of <m>f</m> on <m>x = 2</m>.</li>
 	<li>Show that <m>f</m> undoes the effect of the inverse function on <m>y = -25</m>.</li>
 	</ol></p></statement>
-<solution><p><ol label="a">
+<solution><p><ol marker="a">
 	<li>We first evaluate the function <m>f</m> for <m>x = 2</m>:
 		<me>f(\alert{2}) = \alert{2}^3 + 2 = \blert{10}</me>
 	Then we evaluate the inverse function <m>f^{-1}</m> at <m>y = 10</m>:
@@ -692,7 +692,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
 
         </pg-code> 
         <statement>
-            <p><ol label="a">
+            <p><ol marker="a">
                 <li><p>Find a formula for the inverse of the function <m>f(x)=\dfrac{2}{x - 1}</m> Use <m>y</m> as in input variable for <m>f^{-1} </m>.</p>
                 <p><m>f^{-1}(y)= </m><var name="$fi" width="12"/> </p></li>
                 <li><p>Show that <m>f^{-1}</m> undoes the effect of <m>f</m> on <m>x = <var name="$x1"/> </m>.</p>
@@ -702,7 +702,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
             </ol></p>
         </statement>
         <solution>
-            <p><ol label="a" cols="2">
+            <p><ol marker="a" cols="2">
                 <li><p><m>f^{-1}(y) = 1 + \dfrac{2}{y}</m></p></li>
                 <li><p><m>f(3)=1 </m>, and <m>f^{-1}(1)=3 </m></p></li>
                 <li><p><m>f^{-1}(-2)=0 </m> and <m>f(0)=-2 </m></p></li>
@@ -805,7 +805,7 @@ This relationship between the domain and range of a function and its inverse hol
 
 <xi:include href="./assemblage-domain-and-range-of-the-inverse-function.xml" />
 
-<example xml:id="example-GC-graph-inverse"><statement><p><ol label="a">
+<example xml:id="example-GC-graph-inverse"><statement><p><ol marker="a">
 	<li>Graph the function <m>y = f (x) = \dfrac{1}{x +3}</m> in the window
 		<me>\begin{aligned}[t]
         \text{Xmin} \amp = -6 \amp\amp \text{Xmax} = 3.4\\
@@ -815,7 +815,7 @@ This relationship between the domain and range of a function and its inverse hol
     <li>State the domain and range of <m>f</m>, and of <m>f^{-1}</m>.</li>
     </ol></p></statement>
 
-<solution><p><ol label="a">
+<solution><p><ol marker="a">
 	<li><p>The graph of <m>f</m> is shown below. It looks like the graph of <m>y = \dfrac{1}{x}</m>, shifted <m>3</m> units to the left.</p></li>
 	<li><p>To find the inverse function, we solve for <m>x</m>. Take the reciprocal of both sides of the equation.
 			<!--*****--><me>\begin{aligned}[t]
@@ -876,7 +876,7 @@ This relationship between the domain and range of a function and its inverse hol
             ($gr->fn)[0]->steps(200);
         </pg-code> 
         <statement>
-            <p><ol label="a">
+            <p><ol marker="a">
                 <li><p>Graph the function <m>f(x) = \dfrac{2}{x -1}</m> and its inverse function, <m>f^{-1}</m> (which you found above in Practice 7, on the same set of axes, along with the line <m>y = x</m>.</p></li>
                 <li><p>State the domain and range of <m>f</m>, and of <m>f^{-1}</m>.</p>
                 <p>The domain of <m>f</m> includes all real numbers except <var name="$x0" width="2"/>, and the range of <m>f</m> includes all real number except <var name="$y0" width="2"/> </p>
@@ -884,7 +884,7 @@ This relationship between the domain and range of a function and its inverse hol
             </ol></p>
         </statement>
         <solution>
-            <p><ol label="a">
+            <p><ol marker="a">
                 <li><p>A graph is below.</p>
                 <sidebyside widths="50%"><image pg-name="$gr"/></sidebyside></li>
                 <li><p>Domain of <m>f</m>:  all real numbers except <m>1</m>, Range of <m>f</m>: all real numbers except <m>0</m>, Domain of <m>f^{-1}</m>: all real numbers except <m>0</m>, Range of <m> f^{-1}</m>: all real numbers except <m>1</m></p></li>

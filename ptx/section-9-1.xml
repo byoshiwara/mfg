@@ -42,7 +42,7 @@ When we list them in this way, the output values are called the <term>terms</ter
 
 <example><statement>
     <p>Let <m>a_n</m> be the number of seats in the <m>n^{th}</m> row of a theater.  Write an equation using subscript notation for each of the following statements.</p>
-    <p><ol label="a">
+    <p><ol marker="a">
         <li><p>The first row has 30 seats.</p></li>
         <li><p>The twentieth row has 68 seats.</p></li>
         <li><p>Row 18 has twice as many seats as row 2.</p></li>
@@ -50,7 +50,7 @@ When we list them in this way, the output values are called the <term>terms</ter
         <li><p>Row <m>n+1</m> has 2 more seats than the previous row.</p></li></ol></p></statement>
 
     <solution>
-    <p><ol label="a">
+    <p><ol marker="a">
         <li><p><m>a_1</m> represents the number of seats in row 1, so <m>a_1=30</m>.</p></li>
         <li><p><m>a_{20}</m> represents the number of seats in row 20, so <m>a_{20}=68</m>.</p></li>
         <li><p><m>a_{18}=2a_2</m></p></li>
@@ -75,7 +75,7 @@ Context()->{format}{number} = "%.2f";    # format numbers using 2-place decimals
     </pg-code>
     <statement>
     <p>Let <m>A_n</m> be the number of dollars in a bank account at the end of its <m>n^{th}</m>year.  Write an equation using subscript notation for each of the following statements.</p>
-    <p><ol label="a">
+    <p><ol marker="a">
         <li>
             <p>The account had $1149.90 at the end of the second year.</p>
             <p><var name="$a" width="2"/><m>=</m><var name="$aa" width="6"/> 
@@ -91,7 +91,7 @@ Context()->{format}{number} = "%.2f";    # format numbers using 2-place decimals
         </li>
         </ol></p></statement>
     <solution><p>
-        <ol label="a">
+        <ol marker="a">
             <li><m>A_2=1149.90</m></li>
             <li><m>A_4=85.75+A_3</m></li>
             <li><m>A_5=1.07A_4</m></li>
@@ -102,13 +102,13 @@ Context()->{format}{number} = "%.2f";    # format numbers using 2-place decimals
          
 <example><statement>
     <p>Find the first four terms in each sequence with the given general term.</p>
-    <p><ol label="a">
+    <p><ol marker="a" cols="2">
         <li><m>a_n=\dfrac{n(n+1)}{2}</m></li>
         <li><m>a_n=(-1)^n 2^n</m></li>
     </ol></p></statement>
     
 <solution><p>We evaluate each general term for successive values of <m>n</m>.</p>
-<p><ol label="a">        
+<p><ol marker="a">        
     <li><p><ul>
         <li><m>a_1=\dfrac{1(1+1)}{2}=1</m></li>
         <li><m>a_2=\dfrac{2(2+1)}{2}=3</m></li>
@@ -120,7 +120,7 @@ Context()->{format}{number} = "%.2f";    # format numbers using 2-place decimals
         <li><m>a_2=(-1)^2 2^2=4</m></li>
         <li><m>a_3=(-1)^3 2^3=-8</m></li>   
         <li><m>a_4=(-1)^4 2^4=16</m></li></ul></p>
-        <p>The first four terms are -2, 4, -8, and 16.</p></li>
+        <p>The first four terms are <m>-2, </m> <m>4, </m>  <m>-8, </m> and <m>16</m>.</p></li>
     </ol></p></solution></example> 
 
 
@@ -191,7 +191,7 @@ The annual balances form the sequence  8400,  8820,  9261,  and 9724.05, as show
                         <cell>9724.05</cell></row>            
                     </tabular></sidebyside></solution></example>
 
-<exercise><title>Practice 3</title>
+<exercise xml:id="Exercise-coffee"><title>Practice 3</title>
 <webwork>
     <pg-code>
         $f = Formula("100*0.86^(x)");
@@ -240,17 +240,17 @@ In fact, the balance at the end of each succeeding year is found by adding $400 
                         <cell><m>n</m></cell>
                         <cell><m>b_n</m></cell></row>
                     <row> 
-                        <cell>1</cell>
-                        <cell>8400</cell></row>
+                        <cell><m>1</m></cell>
+                        <cell><m>8400</m></cell></row>
                     <row> 
-                        <cell>2</cell>
-                        <cell>8800</cell></row>
+                        <cell><m>2</m></cell>
+                        <cell><m>8800</m></cell></row>
                     <row> 
-                        <cell>3</cell>
-                        <cell>9200</cell></row>
+                        <cell><m>3</m></cell>
+                        <cell><m>9200</m></cell></row>
                     <row> 
-                        <cell>4</cell>
-                        <cell>9600</cell></row>            
+                        <cell><m>4</m></cell>
+                        <cell><m>9600</m></cell></row>            
                     </tabular></sidebyside></solution></example>
 
 <exercise><title>Practice 4</title>
@@ -373,7 +373,7 @@ The sequence is determined by the recursive definition
     </pg-code>
     <statement>
         <p>
-            Find a recursive definition for the sequence in the coffee exercise if you do not drink any more coffee for <m>n</m> hours.
+            Find a recursive definition for the sequence in <xref ref="Exercise-coffee" text="custom">CheckPoint 9.8</xref> above if you do not drink any more coffee for <m>n</m> hours.
         </p>
         <p><m>C_1=</m><var name="$c1" width="3"/>, <m>C_{n+1}=</m><var name="$f" width="6"/> [Note: Enter "Cn" to get <m>C_n</m>.]</p>
     </statement>
@@ -409,11 +409,11 @@ The sequence is determined by the recursive definition
 </exercise>
 
 <example><statement><p>Karen joins a savings plan in which she deposits $200 per month and receives 12% annual interest compounded monthly.</p>
-<p><ol label = "a">
+<p><ol marker= "a">
     <li>Find a recursively defined sequence that gives the amount of money in Karen's account <m>n</m> months later.</li>
     <li>Find the first four terms of the sequence.</li></ol></p></statement>
 
-<solution><p><ol label = "a">
+<solution><p><ol marker= "a">
     <li>In the first month Karen deposits $200, so <m>a_1 = 200</m>. Each month thereafter Karen receives 1% interest (one-twelfth of 12% annual interest) on the previous month's balance, and then adds $200 to the total. For example, before she makes her deposit in the second month the account has
     <me>200 + 0.01 (200) = 1.01(200)~\text{dollars}</me>
     She then adds $200 to this amount for a total of

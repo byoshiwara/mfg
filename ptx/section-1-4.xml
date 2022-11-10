@@ -48,6 +48,7 @@ Because their rate of growth is larger, the Hybrid A seedlings grow faster.
     </webwork>
 </exercise>
 
+<!-- 
 <exercise><title>QuickCheck 1</title>
 <webwork>
      <pg-code>       
@@ -66,7 +67,26 @@ Because their rate of growth is larger, the Hybrid A seedlings grow faster.
     <solution>
         <p>The units of <m>\dfrac{\Delta y}{\Delta x}</m> are pounds per quart</p>
     </solution>
-</webwork></exercise>
+</webwork></exercise> -->
+
+<exercise><title>QuickCheck 1</title>
+<webwork>
+     <pg-code>       
+            $gas = 67.5/12;
+            $water = 41.6/5;
+            $Answer = PopUp(
+              ["?","gasoline","water"],
+              2, # index of correct answer; could also just be the correct answer
+            );
+
+        </pg-code> 
+        <statement><p>The weight of <m>12</m> gallons of gasoline is <m>67.5</m> pounds, and the weight of <m>5</m> gallons of water is <m>41.6</m> pounds. Compute the ratio <m>\dfrac{\text{pounds}}{\text{gallon}}</m> for each liquid. </p>
+        <p>gasoline: <var name="$gas" width="5"/> <m>\dfrac{\text{pounds}}{\text{gallon}}</m></p>
+        <p>water: <var name="$water" width="5"/> <m>\dfrac{\text{pounds}}{\text{gallon}}</m></p>
+        <p>Which liquid weighs more per gallon<var name="$Answer" form="popup"/></p>
+        </statement>
+        <solution><p>gasoline: <m>\dfrac{67.5}{12}= <var name="$gas"/></m> pounds per gallon, water: <m>\dfrac{41.6}{5}=<var name="$water"/></m> pounds per gallon. Water weighs more per gallon.</p></solution>
+</webwork></exercise>   
 
 <p>In <xref ref="exercise-gas-mileage" text="type-global" />, the ratio <m>\dfrac{\text{miles}}{\text{gallon}}</m> measures the rate at which each car uses gasoline. By computing the mileage for each car for the same amount of gas, we have a basis for comparison. We can use this same idea, finding a common basis for comparison, to measure the steepness of an incline.</p>
 </subsection>
@@ -236,7 +256,7 @@ and the slope of the side is
      <pg-code>                      
         </pg-code> 
     <statement>
-        <p>Suppose  represents your distance from home, in miles.  Compare the meanings of the two statements <m>x=30</m> and <m>\Delta x=30</m>.</p>
+        <p>Suppose <m>x</m> represents your distance from home, in miles.  Compare the meanings of the two statements <m>x=30</m> and <m>\Delta x=30</m>.</p>
         <p><var form="essay"/></p>      
     </statement>    
 </webwork></exercise>
@@ -265,7 +285,7 @@ and the slope of the side is
         $m = -$y/$x;
         </pg-code> 
         <statement>
-            <p><ol label="a">
+            <p><ol marker="a">
             <li><p>Graph the line <m>4x - 2y = 8</m> by finding the <m>x</m>- and <m>y</m>-intercepts</p>
             <p><m>x</m>-intercept: <var name="$xi" width="5"/> </p>
             <p><m>y</m>-intercept: <var name="$yi" width="5"/></p>
@@ -276,7 +296,7 @@ and the slope of the side is
             <p><m>m=</m><var name="$m" width="2"/></p></li>
             </ol></p>
         </statement>
-        <solution><p><ol label="a">
+        <solution><p><ol marker="a">
         <li><p>A graph of the line is shown below this exercise.</p></li>
         <li><p>The <m>x</m>-intercept is <m><var name="$xi"/></m> and the <m>y</m>-intercept is <m><var name="$yi"/></m>.</p> 
         <p>The slope is <m>m=\dfrac{\Delta y}{\Delta x}= \dfrac{-<var  name="$y"/>}{<var name="$x"/>} = <var name="$m"/></m></p></li>
@@ -337,12 +357,12 @@ stands for
 <p>Depending on the variables involved, this rate might be interpreted as a rate of growth or a rate of speed. A negative slope might represent a rate of decrease or a rate of consumption. The slope of a graph can give us valuable information about the variables.</p>
 
 <example xml:id="example-truck-speed"><statement>
-    <sidebyside widths="50% 25%" valigns="middle middle"><p>The graph at right shows the distance in miles traveled by a big-rig truck driver after <m>t</m> hours on the road. <ol label="a">
+    <sidebyside widths="50% 25%" valigns="middle middle"><p>The graph at right shows the distance in miles traveled by a big-rig truck driver after <m>t</m> hours on the road. <ol marker="a">
             <li>Compute the slope of the graph.</li>
             <li>What does the slope tell us about the problem?</li>
         </ol></p>
     <image source="images/fig-truck-speed"><description>truck</description></image></sidebyside></statement>
-<solution><p><ol label="a">
+<solution><p><ol marker="a">
         <li><p>Choose any two points on the line, say <m>G(2, 100)</m> and <m>H(4, 200)</m>, as shown. As we move from <m>G</m> to <m>H</m>, we find
             <me>m = \frac{\Delta D}{\Delta t}=\frac{100}{2}=50</me>
         The slope of the line is 50.</p></li>
@@ -378,14 +398,14 @@ stands for
             );
         </pg-code> 
         <statement>
-            <p><ol label="a">
+            <p><ol marker="a">
         <li><p>Choose two points and compute the slope (including units). (Note: Use "ft" for feet and use "min" for minutes.)</p>
         <p><m>m=</m><var name="$m" width="12"/> </p></li>
         <li><p>What does the slope tell us about the problem?</p>
         <p><var name="$meaning" form="buttons"/> </p></li>
         </ol></p>
         </statement>
-        <solution><p><ol label="a">
+        <solution><p><ol marker="a">
         <li><p><m>m=\dfrac{\Delta y}{\Delta x}= \dfrac{<var name="$y1"/> \text{ ft}-<var name="$y0"/>\text{ ft}}{<var name="$x1"/>\text{ min}-<var name="$x0"/>\text{ min}}= <var name="$m"/></m></p></li>
         <li><p>The skier's altitude increases by <m>150</m> feet per minute.</p></li>
     </ol></p></solution>
@@ -451,13 +471,13 @@ This value for the slope, <m>-3</m>, is the same value we found above.</p></solu
             $m = Fraction("($y1-$y0)/($x1-$x0)");
         </pg-code> 
         <statement><p>
-            <ol label="a">
+            <ol marker="a">
                 <li><p>Find the slope of the line passing through the points <m>(2, -3)</m> and <m>( -2, -1)</m>.</p>
                 <p><m>m=</m><var name="$m" width="3"/> </p></li>
                 <li><p>Sketch a graph of the line by hand.</p></li>
             </ol>
         </p></statement>
-        <solution><p><ol label="a" cols="2">
+        <solution><p><ol marker="a" cols="2">
         <li><p><m>m=\dfrac{\Delta y}{\Delta x}= \dfrac{<var name="$y1"/> -<var name="$y0"/>}{<var name="$x1"/>-<var name="$x0"/>}= <var name="$m"/></m></p></li>
         <li><p>A graph is shown below.</p></li>
         </ol></p></solution>
@@ -494,12 +514,12 @@ This value for the slope, <m>-3</m>, is the same value we found above.</p></solu
 
 <example xml:id="slopes-on-parabola"><statement><sidebyside widths="50% 33%"><p>The figure shows a graph of 
         <me>f (x) = x^2 - 6x</me>
-        <ol label="a">
+        <ol marker="a">
             <li>Compute the slope of the line segment joining the points at <m>x = 1</m> and <m>x = 4</m>.</li>
             <li>Compute the slope of the line segment joining the points at <m>x = 2</m> and <m>x = 5</m>.</li>
         </ol></p>
     <image source="images/fig-slopes-on-parabola"><description>slopes on parabola</description></image></sidebyside></statement>
-<solution><p><ol label="a">
+<solution><p><ol marker="a">
         <li>We set <m>x_1 = \alert{1}</m> and <m>x_2 = \alert{4}</m> and find the function values at each point. 
             <me>f (x_1) = f (\alert{1}) = \alert{1}^2 - 6(\alert{1}) = -5</me>
             <me>f (x_2) = f (\alert{4}) = \alert{4}^2 - 6(\alert{4}) = -8</me>
@@ -536,7 +556,7 @@ This value for the slope, <m>-3</m>, is the same value we found above.</p></solu
             $answer = Formula("(f(b)-f(a))/(b-a)");
         </pg-code> 
         <statement>
-        <p><ol label="a">
+        <p><ol marker="a">
             <li><p>Find <m>f (3)</m> and <m>f (5)</m>.</p> 
             <p><m>f(3)=</m><var name="$y0" width="3"/>  </p>
             <p><m>f(5)=</m><var name="$y1" width="3"/>  </p>
@@ -550,7 +570,7 @@ This value for the slope, <m>-3</m>, is the same value we found above.</p></solu
             </li>
         </ol></p>
         </statement>
-        <solution><p><ol label="a">
+        <solution><p><ol marker="a">
             <li><p><m>f (3) = 2, ~f (5) = 8</m></p> </li>
             <li><p><m>3</m></p></li>
             <li><p><m>\dfrac{f(b)-f(a)}{b-a} </m></p></li>

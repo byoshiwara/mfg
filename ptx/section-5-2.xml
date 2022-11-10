@@ -56,12 +56,12 @@ We can write both calculations together as
 A similar equation holds for any value of <m>x</m> and for any base <m>b \gt 0</m>. In other words, applying first the exponential function and then the log function returns the original input value, so that
 	<me>\blert{\log_{b}{b^x} = x}</me></p>
 
-<example xml:id="example-log-of-exp"><statement><p>Simplify each expression.<ol label="a" cols="2">
+<example xml:id="example-log-of-exp"><statement><p>Simplify each expression.<ol marker="a" cols="2">
 		<li><m>\log_{4}{4^6}</m></li>
 		<li><m>\log_{8}{8^{2a+3}}</m></li>
 	</ol></p></statement>
 
-<solution><p><ol label="a">
+<solution><p><ol marker="a">
 	<li><p>In this expression, we start with <m>6</m>, apply the exponential function with base <m>4</m>, and then take a logarithm base <m>4</m>. Because the logarithm is the inverse of the exponential function, we return to the original number, <m>6</m>.
 		<me>x=\alert{6}\mathrel{\mathop{\rightarrow}^{\blert{\text{Apply the}}}_{\blert{\text{exponential function}}}}
 				 4^{\alert{6}}		
@@ -80,13 +80,13 @@ A similar equation holds for any value of <m>x</m> and for any base <m>b \gt 0</
             $b = Formula("x+1");
         </pg-code> 
         <statement>
-            <p>Simplify each expression.<ol label="a">
+            <p>Simplify each expression.<ol marker="a">
                 <li><p><m>\log_{10}{10^6}=</m><var name="$a" width="2"/> </p></li>
                 <li><p><m>\log_{w}{w^{x+1}}=</m><var name="$b" width="2"/> , for <m>w \gt 0, ~ w\ne 1</m></p></li>
             </ol></p>
         </statement>
         <solution>
-            <p><ol label="a" cols="2">
+            <p><ol marker="a" cols="2">
                 <li><p><m>6</m></p></li>
                 <li><p><m>x+1</m></p></li>
             </ol></p>
@@ -99,17 +99,17 @@ A similar equation holds for any value of <m>x</m> and for any base <m>b \gt 0</
 To see that this equation is true, we simplify the exponent first. We start with <m>8</m>, and apply the log base <m>2</m> function. Because <m>\log_2 8 = 3</m>, we have
 	<me>\alert{8}\mathrel{\mathop{\rightarrow}^{\blert{\text{Apply the}}}_{\blert{\text{log function}}}}
 		 \log_{2}{\alert{8}}=3		
-		\mathrel{\mathop{\rightarrow}^{\blert{\text{Apply the}}}_{\blert{\text{exponential function}}}}
-		 2^{\log_2 \alert{8} }= 
+		\mathrel{\mathop{\rightarrow}^{\blert{\text{Apply the}}}_{\blert{\text{exponential function}}}} =
+		 2^{\log_2 \alert{8} } = 2^3 = 
 		\mathrel{\mathop{\alert{8}}^{\blert{\text{Original}}}_{\blert{\text{number}}}}</me>
 Of course, a similar equation holds for any positive value of <m>x</m> and any base <m>b \gt 0, b\ne 1</m>:
 	<me>\blert{b^{\log_b x} = x}</me></p>
 
-<example xml:id="example-exp-of-log"><statement><p>Simplify each expression.<ol label="a">
+<example xml:id="example-exp-of-log"><statement><p>Simplify each expression.<ol marker="a">
 		<li><m>10^{\log_{10}{1000}}</m></li>
 		<li><m>Q^{\log_{Q}{25}}\text{, for } Q \gt 0, Q\ne 1</m></li>
 		</ol></p></statement>
-<solution><p><ol label="a">
+<solution><p><ol marker="a">
 		<li>In this expression, we start with <m>1000</m>, take the logarithm base <m>10</m>, and then apply the exponential function base <m>10</m> to the result. We return to the original input, so <me>10^{\log_{10}{1000}} = 1000</me></li>
 		<li>The log function, <m>\log_{Q}{x}</m>, and the exponential function, <m>Q^x</m>, are inverse functions, so <me>Q^{\log_{Q}{25}} = 25</me></li>
 	</ol></p></solution></example>
@@ -124,13 +124,13 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
             $b = Formula("x**2+1");
         </pg-code> 
         <statement>
-            <p>Simplify each expression.<ol label="a">
+            <p>Simplify each expression.<ol marker="a">
                     <li><p><m>4^{\log_4 {64}}=</m><var name="$a" width="2"/> </p></li>
                     <li><p><m>2^{\log_{2}{(x^2+1)}}=</m><var name="$b" width="4"/></p></li>
             </ol></p>
         </statement>
         <solution>
-            <p><ol label="a" cols="2">
+            <p><ol marker="a" cols="2">
                 <li><p><m>64</m></p></li>
                 <li><p><m>x^2+1</m></p></li>
             </ol></p>
@@ -334,13 +334,13 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 
 <p>Because the domain of a logarithmic function includes only the positive real numbers, the logarithm of a negative number or zero is undefined.</p>
 
-<example xml:id="example-invert-translated-exponential"><statement><p><ol label="a">
+<example xml:id="example-invert-translated-exponential"><statement><p><ol marker="a">
 		<li>Find the inverse of the function <m>f(x) = 2^{x-3} - 4</m>.</li>
 		<li>Graph <m>f</m> and <m>f^{-1}</m> on the same grid.</li>
 		<li>State the domain and range of <m>f</m> and of <m>f^{-1}</m>.</li>
 	</ol></p></statement>
 
-<solution><p><ol label="a">
+<solution><p><ol marker="a">
 		<li><p>We write the function as <m>y = 2^{x-3} - 4</m>, and solve for <m>x</m> in terms of <m>y</m>. First, we isolate the power:
 			<!--*****--><me>\begin{aligned}[t]
 			y + 4 \amp= 2^{x-3}\amp\amp \blert{\text{Take logs base 2.}}\\
@@ -367,7 +367,7 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
             $ranf = Compute("(-inf,inf)");
         </pg-code> 
         <statement>
-            <p><ol label="a">
+            <p><ol marker="a">
                 <li><p>Find the inverse function for <m>f(x) = 2 \log(x + 1)</m>.</p>
                 <p><m>f^{-1}(x)= </m><var name="$fi" width="10"/> </p></li>
                 <li><p>Graph <m>f</m> and <m>f^{-1}</m> in the window
@@ -382,7 +382,7 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
             </ol></p>
         </statement>
         <solution>
-            <p><ol label="a">
+            <p><ol marker="a">
                 <li><p><m>f^{-1}(x) = 10^{x/2} - 1 </m></p></li>
                 <li><p>A graph is below.</p></li>
                 <li><p>Domain of <m>f</m>:  <m>(-1,\infty)</m>; Range of <m>f</m>: all real numbers; Domain of <m>f^{-1}</m>: all real numbers; Range of <m>f^{-1}</m>:  <m>(-1, \infty)</m></p></li>
@@ -410,12 +410,12 @@ Of course, a similar equation holds for any positive value of <m>x</m> and any b
 <p>We can use the <kbd>LOG</kbd> key on a calculator to evaluate the function <m>f(x) = \log_{10}{x}</m>.</p>
 
 <example xml:id="example-GC-evaluate-logs"><statement><p>Let <m>f(x) = \log_{10}{x}</m>. Evaluate the following expressions.
-	<ol label="a" cols="3">
+	<ol marker="a" cols="3">
 		<li><m>f(35)</m></li>
 		<li><m>f(-8)</m></li>
 		<li><m>2 f(16) + 1</m></li>
 	</ol></p></statement>
-<solution><p><ol label="a">
+<solution><p><ol marker="a">
 		<li><m>f (35) = \log_{10}{35}\approx 1.544</m></li>
 		<li>Because <m>-8</m> is not in the domain of <m>f</m>, <m>f(-8)</m>, or <m>\log_{10}{(-8)}</m>, is undefined.</li>
 		<li><m>2 f(16) + 1 = 2(\log_{10}{16}) + 1\approx2(1.204) + 1 = 3.408</m></li>
@@ -472,12 +472,12 @@ is a log equation. To solve a log equation, remember that logarithms and exponen
         <me>\blert{y = \log_{b}{x}} ~~~~\text{ if and only if }~~~~ \blert{x = b^y}</me>
 Thus, we can rewrite a logarithmic equation in exponential form.</p>
 
-<example xml:id="example-log-equations"><statement><p>Solve for <m>x</m>.<ol label="a" cols="2">
+<example xml:id="example-log-equations"><statement><p>Solve for <m>x</m>.<ol marker="a" cols="2">
 		<li><m>2(\log_3 x) - 1 = 4</m></li>
 		<li><m>\log_{10}{(2x + 100)} = 3</m></li>
 	</ol></p></statement>
 
-<solution><p><ol label="a">
+<solution><p><ol marker="a">
 		<li><p>We isolate the logarithm, then rewrite the equation in exponential form:
 			<!--*****--><me>\begin{aligned}[t]
 			2(\log_3 x) \amp = 5\amp\amp \blert{\text{Divide both sides by 5.}}\\
@@ -497,7 +497,7 @@ Thus, we can rewrite a logarithmic equation in exponential form.</p>
             $x = Compute("41");
         </pg-code> 
         <statement>
-            <p>Solve for the unknown value in each equation.<ol label="a">
+            <p>Solve for the unknown value in each equation.<ol marker="a">
                 <li><p><m>\log_b 2 = \dfrac{1}{2}</m></p>
                 <p><m>b=</m><var name="$b" width="2"/> </p></li>
                 <li><p><m>\log_{3}{(2x - 1)} = 4</m></p>
@@ -505,7 +505,7 @@ Thus, we can rewrite a logarithmic equation in exponential form.</p>
             </ol></p>
         </statement>
         <solution>
-            <p><ol label="a" cols="2">
+            <p><ol marker="a" cols="2">
                 <li><p><m>b=4</m></p></li>
                 <li><p><m>x=41</m></p></li>
             </ol></p>
@@ -629,7 +629,7 @@ from which
 
 <statement><p>We learned in <xref ref="Properties-of-Logarithms" text="type-global"/> that the amount, <m>A</m> (principal plus interest), accumulated in an account with interest compounded <m>n</m> times annually is
 	<me>A=P\left(1+\dfrac{r}{n} \right)^{nt} </me>
-where <m>P</m> is the principal invested, <m>r</m> is the interest rate, and <m>t</m> is the time period, in years.<ol label="1">
+where <m>P</m> is the principal invested, <m>r</m> is the interest rate, and <m>t</m> is the time period, in years.<ol marker="1">
 	<li><p>Suppose you keep <m>\$1000</m> in an account that pays <m>8\%</m> interest. How much is the amount <m>A</m> after <m>1</m> year if the interest is compounded twice a year? Four times a year?
 			<md>
 				<mrow>n = \alert{2}: A = 1000\left(1 + \frac{0.08}{\alert{2}} \right)^{\alert{2}(1)}= </mrow>
@@ -668,8 +668,8 @@ where <m>P</m> is the principal invested, <m>r</m> is the interest rate, and <m>
 				</tabular>
 			<image source="images/fig-investigation-9"><description>grid</description></image></sidebyside></li>
 		<li><p>Plot the values in the table from <m>n = 1</m> to <m>n = 12</m>, and connect them with a smooth curve. Describe the curve: What is happening to the value of <m>A</m>?</p></li>
-		<li><p>In part (2), as you increased the value of <m>n</m>, the other parameters in the formula stayed the same. In other words, <m>A</m> is a function of <m>n</m>, given by <m>A = 1000 (1 + \dfrac{0.08}{n} )^n</m>. Use your calculator to graph A on successively larger domains:
-			<ol label="a">
+		<li><p>In part (2), as you increased the value of <m>n</m>, the other parameters in the formula stayed the same. In other words, <m>A</m> is a function of <m>n</m>, given by <m>A = 1000 \left(1 + \dfrac{0.08}{n} \right)^n</m>. Use your calculator to graph A on successively larger domains:
+			<ol marker="a">
 				<li><p><m>
 					\text{Xmin} = 0, \text{Xmax} = 12; \text{Ymin} = 1080, \text{Ymax} = 1084
 				</m></p></li>
@@ -684,7 +684,7 @@ where <m>P</m> is the principal invested, <m>r</m> is the interest rate, and <m>
 		<li><p>As <m>n</m> increases, the values of <m>A</m> approach a limiting value. Although <m>A</m> continues to increase, it does so by smaller and smaller increments and will never exceed <m>\$1083.29</m>. When the number of compounding periods increases without bound, we call the limiting result <term>continuous compounding</term><idx>continuous compounding</idx>.</p></li>
 		<li><p>Is there an easier way to compute <m>A</m> under continues compounding? Yes! Compute <m>1000e^{0.08}</m> on your calculator. (Press <kbd>2nd</kbd>  <kbd>LN</kbd> to enter <m>e^x</m>.) Compare the value to your answer in part (5) for the limiting value. The number <m>e</m> is called the <term>natural base</term><idx>natural base</idx>. We'll compute its value shortly.</p></li>
 		<li><p>Repeat your calculations for two other interest rates, <m>15\%</m> and (an extremely unrealistic) <m>100\%</m>, again for an investment of <m>\$1000</m> for <m>1</m> year. In each case, compare the limiting value of <m>A</m>, and compare to the value of <m>1000e^r</m>.
-			<ol label="a" cols="2"><li><sidebyside>
+			<ol marker="a" cols="2"><li><sidebyside>
 				<tabular left="minor" right="minor" top="minor" bottom="minor" halign="center"><col halign="right"/><col/>
 					<row>
 						<cell  halign="center" colspan="2"><m>r=0.15</m></cell></row>

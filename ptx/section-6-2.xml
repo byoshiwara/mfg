@@ -16,7 +16,7 @@ where the left side of the equation includes the square of a binomial, or a <ter
 <p>Consider the following squares of binomials.</p>
 
 <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
-    <row bottom="major">
+    <row bottom="major">fig10
         <cell>Square of binomial <m>(x+p)^2</m></cell>
         <cell><m>p</m></cell>
         <cell><m>2p</m></cell>
@@ -78,11 +78,11 @@ We substitute these values for <m>p^2</m> and <m>p</m> into the equation to find
 	<me>x^2 - 16x + \alert{64} = (x \alert{-8})^2</me>
 Notice that in the resulting trinomial, the constant term is equal to <em>the square of one-half the coefficient of</em> <m>x</m>. In other words, we can find the constant term by taking one-half the coefficient of <m>x</m> and then squaring the result. Adding a constant term obtained in this way is called <term>completing the square</term><idx>completing the square</idx>.</p>
 
-<example xml:id="example-completing-the-square"><statement><p>Complete the square by adding an appropriate constant; write the result as the square of a binomial.<ol label="a" cols="2">
+<example xml:id="example-completing-the-square"><statement><p>Complete the square by adding an appropriate constant; write the result as the square of a binomial.<ol marker="a" cols="2">
 			<li><m>x^2 - 12x + {}<fillin characters="6" /></m></li>
 			<li><m>x^2 + 5x + {}<fillin characters="6" /></m></li>
 		</ol></p></statement>
-<solution><p><ol label="a">
+<solution><p><ol marker="a">
     <li><p>One-half of <m>-12</m> is <m>-6</m>, so the constant term is <m>(-6)^2</m>, or <m>36</m>. We add <m>36</m> to obtain
     <md>
         <mrow>x^2 - 12x \alert{{}+{}36}=(x - 6)^2\amp\amp\amp  {\large\blert{\underset{p^2\, = \,(-6)^2 \,=\, 36\hphantom{0}}{\stackrel {p\, = \,\frac{1}{2}(-12) \,=\, -6}{}}}}</mrow></md></p></li>
@@ -109,7 +109,7 @@ Notice that in the resulting trinomial, the constant term is equal to <em>the sq
             $pb2= Compute("81/4");
         </pg-code> 
         <statement>
-            <p>Complete the square by adding an appropriate constant; write the result as the square of a binomial.<ol label="a">
+            <p>Complete the square by adding an appropriate constant; write the result as the square of a binomial.<ol marker="a">
         <li><p><m>x^2 - 18x{} + </m><var name="$pa2" width="2"/><m> = (x+</m><var name="$pa" width="2"/> <m> )^2</m></p></li>
         <li><p><m>x^2 +9x{} + </m><var name="$pb2" width="2"/><m> = (x+</m><var name="$pb" width="2"/> <m> )^2</m></p></li>
         </ol></p>
@@ -121,7 +121,7 @@ Notice that in the resulting trinomial, the constant term is equal to <em>the sq
             <m>p=\frac{1}{2}(9)={}</m>_____ , <m>p^2={}</m> ______</p>
         </hint>
         <solution>
-            <p><ol label="a" cols="2">
+            <p><ol marker="a" cols="2">
                 <li><p><m>x^2 - 18x + 81 = (x - 9)^2</m></p></li>
                 <li><p><m>x^2+9x+\dfrac{81}{4}=\left(x+\dfrac{9}{2}\right)^2 </m></p></li>
             </ol></p>
@@ -165,23 +165,44 @@ and follow the steps to find the solutions.</p>
 
 <example xml:id="example-completing-the-square2"><statement><p>Solve <m>x^2 - 4x - 3 = 0</m> by completing the square.</p>
 </statement>
-<solution><p><ol label="1">
-	<li><p>First, write the equation with the constant term on the right side.
-		<me>x^2 - 4x{}~<fillin characters="6" />{}=3</me></p></li>
-	<li>Now complete the square on the left side. The coefficient of <m>x</m> is <m>-4</m>, so
-		<me>p = \frac{1}{2}(-4) = -2 ~~~\text{ and } ~~~ p^2 = (-2)^2 = 4</me>
-	We add <m>4</m> to both sides of our equation:
-		<me>x^2 - 4x  \alert{{}+4}=3\alert{{}+4}</me></li>
-	<li><p>Write the left side as the square of a binomial, and combine terms on the right side:
-		<me>(x - 2)^2 =7</me></p></li>
-	<li><p>Finally, use extraction of roots to obtain
-		<!--*****--><me>\begin{aligned}[t]
-		x - 2 \amp =\sqrt{7} \amp\text{or}\amp\amp x - 2 \amp= -\sqrt{7}\amp \blert{\text{Solve each equation.}}\\
-		x \amp =2+\sqrt{7} \amp\text{or}\amp\amp x \amp=2 -\sqrt{7}
-		\end{aligned}</me><!--*****-->
-	The solutions are <m>2+\sqrt{7}\approx 4.646</m> and <m>2-\sqrt{7}\approx -0.646</m>.
-	The graph of <m>y = x^2 - 4x - 3</m> is shown below.</p>
-		<sidebyside  width="25%"><image source="images/fig-parabola-with-symmetry-line2" ><description>parabola showing x-intercepts and line of symmetry</description></image></sidebyside></li>
+<solution><p><ol marker="1">
+    <li><p>First, write the equation with the constant term on the right side.
+        <me>x^2 - 4x{} ~ <fillin characters="6" /> {}=3</me></p></li>
+    <li>Now complete the square on the left side. The coefficient of <m>x</m> is <m>-4</m>, so
+        <me>p = \frac{1}{2}(-4) = -2 ~~~\text{ and } ~~~ p^2 = (-2)^2 = 4</me>
+    We add <m>4</m> to both sides of our equation:
+        <me>x^2 - 4x  \alert{{}+4}=3\alert{{}+4}</me></li>
+    <li><p>Write the left side as the square of a binomial, and combine terms on the right side:
+        <me>(x - 2)^2 =7</me></p></li>
+    <li><p>Finally, use extraction of roots to obtain</p>
+        <p><md>
+        <mrow>x - 2  \amp =\sqrt{7}  \amp\text{or} \amp\amp x - 2  \amp= -\sqrt{7} \amp \blert{\text{Solve each equation.}}</mrow>
+        <mrow>x  \amp =2+\sqrt{7}  \amp\text{or} \amp\amp x  \amp=2 -\sqrt{7}</mrow>
+        </md></p>
+    <p>The solutions are <m>2+\sqrt{7}\approx 4.646</m> and <m>2-\sqrt{7}\approx -0.646</m>.
+    The graph of <m>y = x^2 - 4x - 3</m> is shown below.</p>
+        <sidebyside  width="35%">
+        <image xml:id="fig-parabola-with-symmetry-line2">
+        <description>parabola showing x-intercepts and line of symmetry</description>
+        <latex-image>
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale = .45]
+            \draw[cyan] (-3,-8) grid (7,6);
+            \draw[black,thick,->,>=stealth'] (-3,0)--(7.4,0) node[right]{$x$};
+            \draw[black,thick,->,>=stealth'] (0,-8)--(0, 6.4) node[above]{$y$};
+            \foreach \y in {-8,-6, ..., -2, 2,4,6} {
+            \draw[black] (.1,\y) --++ (-.2,0) node[left]{$\y$};
+            }
+            \draw[black,densely dashed, thick] (2,-8)--(2,6);
+            \foreach \x in {-2,2,4,6} {
+            \draw[black] (\x,.1) --++ (0,-.2) node[below, yshift=-2, fill=white, inner sep=1]{$\x$};
+            }
+            \draw[domain={-sqrt(13)+2}:{sqrt(13)+2},smooth, samples=17,variable=\x,red,very thick,<->,>=stealth'] plot (\x,{(\x)^2-4*\x-3)});
+            \node[below] at (2,-8) {\color{red}$y=x^2-4x-3$};
+        \end{tikzpicture}]]>
+        </latex-image>
+        </image></sidebyside></li>
 </ol></p></solution></example>
 
 <exercise><title>QuickCheck 2</title>
@@ -238,9 +259,9 @@ and follow the steps to find the solutions.</p>
 
         </pg-code> 
         <statement>
-            <p><ol label="a">
+            <p><ol marker="a">
                 <li><p>Follow the steps to solve by completing the square: <m>x^2 - 1 = 3x</m>.</p>
-                    <p><ol label="1">
+                    <p><ol marker="1">
                         <li><p>Write the equation with the constant on the right.</p>
                         <p><var name="$lhs" width="5"/><m>=</m><var name="$rhs" width="2"/></p></li>
                         <li><p>Complete the square on the left:</p>
@@ -268,12 +289,37 @@ and follow the steps to find the solutions.</p>
             </ol></p>
         </statement>
         <solution>
-            <p><ol label="a" cols="2">
+            <p><ol marker="a" cols="2">
     <li><p><m>x=\dfrac{3}{2}\pm\sqrt{\frac{13}{4}} </m></p></li>
     <li><p><m>x\approx -0.30</m> or <m>x\approx 3.30</m></p></li>
 </ol></p>
         </solution>
     </webwork>
+<commentary audience="instructor"><title>Graph for part (c)</title>
+    <conclusion>
+        <sidebyside  width="30%">
+        <image xml:id="fig-parabola-x-squared-minus-3x-minus1">
+        <description>parabola x-squared minus 3x minus 1</description>
+        <latex-image>
+        <![CDATA[\tikzset{%
+        }
+        \begin{tikzpicture} [scale = .45]
+            \draw[cyan] (-4,-5) grid (4,5);
+            \draw[black,thick,->,>=stealth'] (-4.7,0)--(4.7,0) node[right]{$x$};
+            \draw[black,thick,->,>=stealth'] (0,-5)--(0, 5.7) node[above]{$y$};
+            \foreach \y in {-4,-2, 2,4} {
+            \draw[black] (.1,\y) --++ (-.2,0) node[left]{$\y$};
+            }
+            \foreach \x in {-4,-2,2,4} {
+            \draw[black] (\x,.1) --++ (0,-.2) node[below, yshift=-2, fill=white, inner sep=1]{$\x$};
+            }
+            \draw[domain={-sqrt(8.25)+1.5}:{sqrt(8.25)+1.5},smooth, samples=17,variable=\x,red,very thick,<->,>=stealth'] plot (\x,{(\x)^2-3*\x-1)});
+            \node[below] at (1.5,-5) {\color{red}$y=x^2-3x-1$};
+        \end{tikzpicture}]]>
+        </latex-image>
+        </image></sidebyside>
+    </conclusion>
+</commentary>
 </exercise>
 
 <exercise><title>Pause and Reflect</title>
@@ -292,29 +338,29 @@ and follow the steps to find the solutions.</p>
 <p>Our method for completing the square works only if the coefficient of <m>x^2</m> is <m>1</m>. If we want to solve a quadratic equation whose lead coefficient is not <m>1</m>, we first divide each term of the equation by the lead coefficient.</p>
 
 <example xml:id="example-general-quadratic"><statement><p>Solve <m>~~2x^2 - 6x - 5 = 0</m>.</p></statement>
-<solution><p><ol label="1">
-	<li><p>Because the coefficient of <m>x^2</m> is <m>2</m>, we must divide each term of the equation by <m>2</m>.
-		<me>x^2 - 3x - \frac{5}{2}= 0</me>
-		Now we proceed as before. Rewrite the equation with the constant on the right side.
-		<me>x^2 - 3x ~<fillin characters="6" /> = \frac{5}{2}</me></p></li>
-	<li><p>Complete the square:
-		<me>p = \frac{1}{2}(-3) = \frac{-3}{2} ~~~\text{ and } ~~~ p^2 = \left(\frac{-3}{2}\right)^2 = \frac{9}{4}</me>
-		Add <m>\frac{9}{4}</m> to both sides of our equation:
-		<me>x^2 - 3x  \alert{{}+\frac{9}{4}}=\frac{5}{2}\alert{{}+\frac{9}{4}}</me></p></li>
-	<li><p>Rewrite the left side as the square of a binomial and simplify the right side to get
-		<me>\left(x - \frac{3}{2}\right)^2 =\frac{19}{4}</me></p></li>
-	<li><p>Finally, extract roots and solve each equation for <m>x</m>.
-		<me>x - \frac{3}{2}  =\sqrt{\frac{19}{4}} ~~~\text{ or }~~~ x - \frac{3}{2} = -\sqrt{\frac{19}{4}} </me>
-		The solutions are <m>\dfrac{3}{2}+\sqrt{\dfrac{19}{4}}</m> and <m>\dfrac{3}{2}-\sqrt{\dfrac{19}{4}}</m>.</p>
-		<p> Using a calculator, we can find decimal approximations for the solutions: <m>3.679</m> and <m>-0.679</m>.</p></li>
+<solution><p><ol marker="1">
+    <li><p>Because the coefficient of <m>x^2</m> is <m>2</m>, we must divide each term of the equation by <m>2</m>.
+        <me>x^2 - 3x - \frac{5}{2}= 0</me>
+        Now we proceed as before. Rewrite the equation with the constant on the right side.
+        <me>x^2 - 3x ~<fillin characters="6" /> = \frac{5}{2}</me></p></li>
+    <li><p>Complete the square:
+        <me>p = \frac{1}{2}(-3) = \frac{-3}{2} ~~~\text{ and } ~~~ p^2 = \left(\frac{-3}{2}\right)^2 = \frac{9}{4}</me>
+        Add <m>\frac{9}{4}</m> to both sides of our equation:
+        <me>x^2 - 3x  \alert{{}+\frac{9}{4}}=\frac{5}{2}\alert{{}+\frac{9}{4}}</me></p></li>
+    <li><p>Rewrite the left side as the square of a binomial and simplify the right side to get
+        <me>\left(x - \frac{3}{2}\right)^2 =\frac{19}{4}</me></p></li>
+    <li><p>Finally, extract roots and solve each equation for <m>x</m>.
+        <me>x - \frac{3}{2}  =\sqrt{\frac{19}{4}} ~~~\text{ or }~~~ x - \frac{3}{2} = -\sqrt{\frac{19}{4}} </me>
+        The solutions are <m>\dfrac{3}{2}+\sqrt{\dfrac{19}{4}}</m> and <m>\dfrac{3}{2}-\sqrt{\dfrac{19}{4}}</m>.</p>
+        <p> Using a calculator, we can find decimal approximations for the solutions: <m>3.679</m> and <m>-0.679</m>.</p></li>
 </ol></p></solution></example>
 
-<warning><p>In <xref ref="example-completing-the-square2" text="type-global"/>, it is essential that we first divide each term of the equation by <m>2</m>, the coefficient of <m>x^2</m>. The following attempt at a solution is <em>incorrect</em>.
-		<!--*****--><me>\begin{aligned}[t]
-		2x^2 - 6x \amp= 5\\
-		2x^2 - 6x + 9 \amp= 5 + 9\\
-		(2x - 3)^2 \amp= 14 ~~~ \rightarrow ~~~ \blert{\text{ Incorrect!}}
-		\end{aligned}</me><!--*****-->
+<warning><p>In <xref ref="example-general-quadratic" text="custom">the Example above</xref>, it is essential that we first divide each term of the equation by <m>2, </m> the coefficient of <m>x^2</m>. The following attempt at a solution is <em>incorrect</em>.
+        <md>
+        <mrow>2x^2 - 6x \amp= 5</mrow>
+        <mrow>2x^2 - 6x + 9 \amp= 5 + 9</mrow>
+        <mrow>(2x - 3)^2 \amp= 14 ~~~ \rightarrow ~~~ \blert{\text{ Incorrect!}}</mrow>
+        </md>
 You can check that <m>(2x - 3)^2</m> is not equal to <m>2x^2 - 6x + 9</m>. We have not written the left side of the equation as a perfect square, so the solutions we obtain by extracting roots will not be correct.</p></warning>
 
 <exercise><title>QuickCheck 3</title>
@@ -359,12 +405,12 @@ You can check that <m>(2x - 3)^2</m> is not equal to <m>2x^2 - 6x + 9</m>. We ha
              partialCredit => 1,
             ); 
             
-        </pg-code> 
+        </pg-code> fig10
         <statement>
-        <p><ol label="a">
+        <p><ol marker="a">
             <li><p>Follow the steps to solve by completing the square: 
                 <me>-4x^2- 36x-65 = 0</me>.</p>
-                    <p><ol label="1">
+                    <p><ol marker="1">
                         <li><p>Divide each term by <m>-4</m>. Write the equation with the constant on the right.</p>
                         <p><var name="$lhs" width="5"/><m>=</m><var name="$rhs" width="3"/> </p></li>
                         <li><p>Complete the square on the left:</p>
@@ -437,7 +483,7 @@ and obtain a formula for the solutions of any quadratic equation.</p>
     </solution>
 </webwork></exercise>
 
-<p>This formula expresses the solutions of a quadratic equation in terms of its coefficients. (The proof of the formula is considered in the Homework problems.) The symbol <m>\pm</m>, read plus or minus, is used to combine the two equations
+<p>This formula expresses the solutions of a quadratic equation in terms of its coefficients. (The proof of the formula is considered in the Homework problems.) The symbol <m>\pm</m>, read "plus or minus," is used to combine the two equations
 	<me>x =\dfrac{-b + \sqrt{b^2 - 4ac}}{2a} ~~~~ \text{and} ~~~~x =\dfrac{-b - \sqrt{b^2 - 4ac}}{2a}</me> 
 into a single equation.</p>
 
@@ -451,11 +497,11 @@ into a single equation.</p>
 <solution><p>Write the equation in standard form as
 		<me>2x^2 - 4x + 1 = 0</me>
 Substitute <m>\alert{2}</m> for <m>a</m>, <m>\alert{-4}</m> for <m>b</m>, and <m>\alert{1}</m> for <m>c</m> into the quadratic formula, then simplify.
-		<!--*****--><me>\begin{aligned}[t]
-		x \amp =\frac{-(\alert{-4})\pm \sqrt{(\alert{-4})^2 - 4(\alert{2})(\alert{1})}}{2(\alert{2})} \\
-		\amp = \frac{4 \pm \sqrt{8}}{4}
-		\end{aligned}</me><!--*****-->
-Using a calculator, we find that the solutions are approximately <m>1.707</m> and <m>0.293</m>.</p>
+		<md>
+		<mrow>x \amp =\frac{-(\alert{-4})\pm \sqrt{(\alert{-4})^2 - 4(\alert{2})(\alert{1})}}{2(\alert{2})} </mrow>
+		<mrow>\amp = \frac{4 \pm \sqrt{8}}{4}= \frac{4 \pm 2\sqrt{2}}{4}= \frac{2 \pm \sqrt{2}}{2}</mrow>
+		</md>
+(See <xref ref="appendix-Working-with-Radicals" text="custom" >Appendix A.8 Working with Radicals</xref>, to review simplifying radicals.) Using a calculator, we find that the solutions are approximately <m>1.707</m> and <m>0.293</m>.</p>
 		<p> We can also verify that the <m>x</m>-intercepts of the graph of <m>y = 2x^2 - 4x + 1</m> are approximately <m>1.707</m>
 and <m>0.293</m>, as shown below.</p>
 	<sidebyside  width="30%"><image source="images/fig-parabola-intercepts" ><description>parabola with irrational x-intercepts</description></image></sidebyside></solution></example>
@@ -490,7 +536,7 @@ and <m>0.293</m>, as shown below.</p>
      <pg-code>                      
         </pg-code> 
     <statement>
-        <p>How can you decide which of the three methods for solving a quadratic equation you should use?</p>
+        <p>How can you decide which of the four methods for solving a quadratic equation you should use?</p>
         <p><var form="essay"/></p>      
     </statement>    
 </webwork></exercise>

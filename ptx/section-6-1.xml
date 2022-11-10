@@ -28,11 +28,11 @@ This equation cannot be solved by extraction of roots, because there are two ter
 	<me>(x - 5)(2x + 1) = 0</me>
 then it must be true that either <m>x - 5 = 0</m> or <m>2x + 1 = 0</m>. Thus, we can use the zero-factor principle to solve equations.</p>
 
-<example xml:id="example-ZFP"><statement><p><ol label="a">
+<example xml:id="example-ZFP"><statement><p><ol marker="a">
 	<li>Solve the equation <m>(x - 6)(x + 2) = 0</m>.</li>
 	<li>Find the <m>x</m>-intercepts of the graph of <m>f(x) = x^2 - 4x - 12</m>.</li>
 	</ol></p></statement>
-<solution><p><ol label="a">
+<solution><p><ol marker="a">
 	<li><p>We apply the zero-factor principle to the product <m>(x - 6)(x + 2)</m>.
 		<!--*****--><me>\begin{aligned}[t]
 		(x - 6)(x+ 2) \amp = 0 \amp\amp \blert{\text{Set each factor equal to zero.}}\\
@@ -57,13 +57,13 @@ then it must be true that either <m>x - 5 = 0</m> or <m>2x + 1 = 0</m>. Thus, we
             $xint = RadioButtons(
               ["\(\dfrac{7}{2}\) and \(-2\)",
               "\(-\dfrac{7}{2}\) and \(2\)",
-              "\(3, \dfrac{7}{2}\) and \(-2\)",
-              "\(3, -\dfrac{7}{2}\) and \(2\)"],
+              "\(\dfrac{2}{7}\) and \(-2\)",
+              "\(-\dfrac{2}{7}\) and \(2\)"],
               0, 
             );            
         </pg-code> 
     <statement>
-        <p>What are the <m>x</m>-intercepts of the graph of <m>y=3(2x-7)(x+2)</m> ?</p>
+        <p>What are the <m>x</m>-intercepts of the graph of <m>y=(2x-7)(x+2)</m> ?</p>
         <p><var name="$xint" form="buttons"/></p>      
     </statement>
     <solution>
@@ -81,7 +81,7 @@ then it must be true that either <m>x - 5 = 0</m> or <m>2x + 1 = 0</m>. Thus, we
         <statement>
             <p>Graph the function
                     <me>f(x) = (x - 3)(2x + 3)</me>
-            on a calculator, and use your graph to solve the equation <m>f(x) = 0</m>. (Use<m>\text{Xmin} = -9.4</m>, <m>\text{Xmax} = 9.4</m>.) </p>
+            on a calculator, and use your graph to solve the equation <m>f(x) = 0</m>. (Use <m>\text{Xmin} = -9.4</m>, <m>\text{Xmax} = 9.4</m>.) </p>
             <p>Solutions: <m>x=</m><var name="$a" width="10"/> [Separate different values with a comma.] </p>
             <p>Check your answer with the zero-factor principle.</p>
         </statement>
@@ -116,7 +116,7 @@ then it must be true that either <m>x - 5 = 0</m> or <m>2x + 1 = 0</m>. Thus, we
 	is in <term>factored form</term><idx>factored form</idx>.</li>
 	</ol></p></assemblage>
 
-<p>Once we have written the equation in standard form, we factor the left side and set each variable factor equal to zero separately.</p>
+<p>Once we have written the equation in standard form, we factor the left side and set each variable factor equal to zero separately. (See <xref ref="appendix-Factoring-Quadratic-Trinomials" text="custom">Appendix A.8 Factoring Quadratic Trinomials</xref> to review factoring.) </p>
 
 <example xml:id="example-quadratic-via-factoring"><statement><p>Solve <m>~~3x(x + 1) = 2x + 2</m></p></statement>
 <solution><p>First, we write the equation in standard form.
@@ -223,7 +223,7 @@ This graph has the same <m>x</m>-values when <m>y = 0</m>. The factor of <m>4</m
             $c = List("(0,0), (4,0)");
         </pg-code> 
         <statement>
-            <p><ol label="a">
+            <p><ol marker="a">
             <li><p>Solve <m>f(t) = 4t - t^2 = 0</m> by factoring.</p>
             <p>Solutions: <m>t=</m><var name="$a" width="5"/> [Separate different values with a comma.] </p></li>
             <li><p>Solve <m>g(t) = 20t - 5t^2 = 0</m> by factoring.</p>
@@ -238,7 +238,7 @@ This graph has the same <m>x</m>-values when <m>y = 0</m>. The factor of <m>4</m
             </ol></p>
         </statement>
         <solution>
-            <p><ol label="a" cols="3">
+            <p><ol marker="a" cols="3">
                 <li><p><m>t=0</m>, <m>t=4</m></p></li>
                 <li><p><m>t=0</m>,  <m>t=4</m></p></li>
                 <li><p><m>(0,0) </m>, <m>(4,0) </m></p></li>
@@ -380,7 +380,7 @@ You can check that the solutions of this last equation are in fact <m>\dfrac{1}{
             $f = Formula("$d*x**2 + $b x + $c ")->reduce;
         </pg-code> 
         <statement>
-            <p>Find a quadratic equation with integer coefficients whose solutions are <m>\dfrac{2}{3}</m> and <m>-5</m>. The coefficient of <m>x^2</m> should be the smallest positive integer coefficient that will work</p>
+            <p>Find a quadratic equation with integer coefficients whose solutions are <m>\dfrac{2}{3}</m> and <m>-5</m>. Use the smallest possible positive coefficient for <m>x^2</m>.</p>
             <p><var name="$f" width="10"/><m>=0</m> </p>
         </statement>
         <solution>
