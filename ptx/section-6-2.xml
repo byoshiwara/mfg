@@ -226,9 +226,9 @@ and follow the steps to find the solutions.</p>
 </webwork></exercise>
 
 <exercise xml:id="exercise-completing-the-square2">
-	<title>Practice 2</title>
+    <title>Practice 2</title>
     <webwork>
-         <pg-code>
+            <pg-code>
             Context("Fraction");
             $p = Compute("-3/2");
             $p2 = Compute("9/4");
@@ -243,17 +243,17 @@ and follow the steps to find the solutions.</p>
             $r2 = Compute("3/2 - sqrt(13/4)");
             $answer = Formula("3/2 + sqrt(13/4), 3/2 - sqrt(13/4)");
             $my_evaluator = $answer -> cmp(
-             showHints=>1,
-             showLengthHints => 1,
-             partialCredit => 1,
+                showHints=>1,
+                showLengthHints => 1,
+                partialCredit => 1,
             ); 
             $answer2 = List("$r1, $r2");
             $my_evaluator2 = $answer2 -> cmp(
-             showHints=>1,
-             showLengthHints => 1,
-             partialCredit => 1,
-              tolType => 'absolute',
-              tolerance => .0051,
+                showHints=>1,
+                showLengthHints => 1,
+                partialCredit => 1,
+                tolType => 'absolute',
+                tolerance => .0051,
             ); 
 
 
@@ -295,9 +295,9 @@ and follow the steps to find the solutions.</p>
 </ol></p>
         </solution>
     </webwork>
-<commentary audience="instructor"><title>Graph for part (c)</title>
-    <conclusion>
-        <sidebyside  width="30%">
+
+    <conclusion component="instructor"><title>Graph for part (c)</title>
+        <sidebyside  width="35%">
         <image xml:id="fig-parabola-x-squared-minus-3x-minus1">
         <description>parabola x-squared minus 3x minus 1</description>
         <latex-image>
@@ -319,7 +319,6 @@ and follow the steps to find the solutions.</p>
         </latex-image>
         </image></sidebyside>
     </conclusion>
-</commentary>
 </exercise>
 
 <exercise><title>Pause and Reflect</title>
