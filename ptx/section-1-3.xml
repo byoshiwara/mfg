@@ -7,29 +7,27 @@
 
 <p>The Dow-Jones Industrial Average (DJIA) gives the average of the stock prices of 30 major companies. The graph below shows the DJIA as a function of time during the stock market correction of October 1987. The DJIA is thus <m>f(t)</m>, recorded at noon on day <m>t</m> of October.</p>
 
-<sidebyside width="60%"><image source="images/fig-DJIA"><description>DJIA</description></image></sidebyside>
+<image width="60%" source="images/fig-DJIA"><description>DJIA</description></image>
 
 <p>The values of the input variable, time, are displayed on the horizontal axis, and the values of the output variable, DJIA, are displayed on the vertical axis. There is no formula that gives the DJIA for a particular day; but it is still a function, defined by its graph. The value of <m>f(t)</m> is specified by the vertical coordinate of the point with the given <m>t</m>-coordinate.</p>
 
 <example xml:id="example-DJIA"><statement><p>
-    <ol marker="a">
+    <ol marker="a.">
         <li>The coordinates of point <m>P</m> on the DJIA graph are <m>(15, 2412)</m>. What do the coordinates tell you about the function <m>f</m>?</li>
         <li>If the DJIA was 1726 at noon on October 20, what can you say about the graph of <m>f</m>?</li>
     </ol></p></statement>
-<solution><p>
-    <ol marker="a">
+<solution><p><ol marker="a.">
         <li>The coordinates of point <m>P</m> tell us that <m>f(15) = 2412</m>, so the DJIA was 2412 at noon on October 15.</li>
         <li>We can say that <m>f(20) = 1726</m>, so the point <m>(20, 1726)</m> lies on the graph of <m>f</m>. This point is labeled <m>Q</m> in the figure above.</li>
     </ol></p></solution>
 </example>
 
-<p>Thus, the coordinates of each point on the graph of the function represent a pair of corresponding
-values of the two variables. </p>
+<p>Thus, the coordinates of each point on the graph of the function represent a pair of corresponding values of the two variables. </p>
 
 <assemblage><title>Graph of a Function</title>
 <p>The point <m>(a, b)</m> lies on the graph of the function <m>f</m> if and only if <m>f(a)=b</m>.</p></assemblage>
 
-<exercise><title>QuickCheck 1</title>
+<exercise component="webwork"><title>QuickCheck 1</title>
 <webwork>
      <pg-code>       
             $gpt = RadioButtons(
@@ -49,13 +47,21 @@ values of the two variables. </p>
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 1</title>
+<exercise component="main"><title>QuickCheck 1</title>
+<statement><p>Which equation says that the point <m>(8,17)</m> lies on the graph of <m>g</m>?</p>
+<p><ol marker="a." cols="2">
+    <li><m>8+17=g</m></li>
+    <li><m>g+8=17</m></li>
+    <li><m>g(8)=17</m></li>
+    <li><m>8=\dfrac{17}{g}</m></li>
+</ol></p></statement></exercise>
+
+<exercise component="webwork"><title>Practice 1</title>
     <introduction>
         <p>The water level in Lake Huron alters unpredictably over time. The graph below gives the average water level, <m>L(t)</m>, in meters in the year <m>t</m> over a 20-year period. (Source: The Canadian Hydrographic Service)</p>
-       <sidebyside width="70%"><image source="images/fig-Lake-Huron" ><description>graph of Lake Huron water level</description></image></sidebyside>
+       <image width="70%" source="images/fig-Lake-Huron" ><description>graph of Lake Huron water level</description></image>
     </introduction>
     <webwork>
-         
             <pg-code>
                 $coord = RadioButtons(
                     ["\(L(1997) = 176.98\); the average water level was 176.98 meters in 1997.", "\(L(176.98) = 176.98\); the average water level was 176.98 meters in 1997."],
@@ -66,10 +72,7 @@ values of the two variables. </p>
                   1, # index of correct answer; could also just be the correct answer
                 );
             </pg-code>
-         
-        <statement>
-          <p>
-            <ol marker="a">
+        <statement><p><ol marker="a.">
            <li><p>The coordinates of point <m>H</m> on the graph are <m>(1997, 176.98)</m>. What do the coordinates tell you about the function <m>L</m>?</p>
             <p>
                 <var name="$coord" form="buttons"/>
@@ -78,39 +81,53 @@ values of the two variables. </p>
             <p>
                 <var name="$point" form="buttons"/>
             </p></li>
-       </ol></p>  
-        </statement>
-        <solution><p>
-    <ol marker="a">
+       </ol></p>  </statement>
+<solution><p>
+    <ol marker="a.">
         <li><p><m>L(1997) = 176.98</m>; the average water level was <m>176.98</m> meters in <m>1997</m>.</p></li>
         <li><p><m>L(2004) = 176.11</m>. The point <m>(2004, 176.11)</m> lies on the graph of <m>L</m>.</p></li>
     </ol></p></solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
+
+<exercise component="main"><title>Practice 1</title>
+<statement><p>The water level in Lake Huron alters unpredictably over time. The graph below gives the average water level, <m>L(t)</m>, in meters in the year <m>t</m> over a 20-year period. (Source: The Canadian Hydrographic Service)</p>
+       <image width="70%" source="images/fig-Lake-Huron" ><description>graph of Lake Huron water level</description></image>
+<p><ol marker="a.">
+        <li><p>The coordinates of point <m>H</m> on the graph are <m>(1997, 176.98)</m>. What do the coordinates tell you about the function <m>L</m>?</p></li>
+        <li><p>The average water level in <m>2004</m> was <m>176.11</m> meters. Write this fact in function notation. What can you say about the graph of <m>L</m>?</p></li>
+</ol></p>  </statement>
+
+<solution><p>
+    <ol marker="a.">
+        <li><p><m>L(1997) = 176.98</m>; the average water level was <m>176.98</m> meters in <m>1997</m>.</p></li>
+        <li><p><m>L(2004) = 176.11</m>. The point <m>(2004, 176.11)</m> lies on the graph of <m>L</m>.</p></li>
+    </ol></p></solution></exercise>
 
 <p>Here is another way of describing how a graph depicts a function.</p>
 
 <assemblage><title>Functions and Coordinates</title>
 <p>Each point on the graph of the function <m>f</m> has coordinates <m>(x, f(x))</m> for some value of <m>x</m>.</p></assemblage>
 
-<example xml:id="example-function-graph"><statement><p>The figure shows the graph of a function <m>g</m>.</p><sidebyside width="30%"><image source="images/fig-function"><description>graph of a function</description></image></sidebyside><p>
-    <ol marker="a">
+<example xml:id="example-function-graph"><statement><p>The figure shows the graph of a function <m>g</m>.</p>
+    <image width="35%" source="images/fig-function"><description>graph of a function</description></image>
+<p><ol marker="a.">
         <li>Find <m>g(-2)</m> and <m>g(5)</m>.</li>
         <li>For what value(s) of <m>t</m> is <m>g(t) = -2</m>?</li>
         <li>What is the largest, or maximum, value of <m>g(t)</m>? For what value of <m>t</m> does the function take on its maximum value?</li>
         <li>On what intervals is <m>g</m> increasing?</li>
     </ol></p></statement>
 
-<solution><p><ol marker="a">
+<solution><p><ol marker="a.">
         <li>To find <m>g(-2)</m>, we look for the point with <m>t</m>-coordinate <m>-2</m>. The point <m>(-2, 0)</m> lies on the graph of <m>g</m>, so <m>g(-2) = 0</m>. Similarly, the point <m>(5, 1)</m> lies on the graph, so <m>g(5) = 1</m>.</li>
         <li>We look for points on the graph with <m>y</m>-coordinate <m>-2</m>. Because the points <m>(-5, -2)</m>, <m>(-3, -2)</m>, and <m>(3, -2)</m> lie on the graph, we know that <m>g(-5) = -2</m>, <m>g(-3) = -2</m>, and <m>g(3) = -2</m>. Thus, the <m>t</m>-values we want are <m>-5</m>, <m>-3</m>, and <m>3</m>.</li>
         <li>The highest point on the graph is <m>(1, 4)</m>, so the largest <m>y</m>-value is <m>4</m>. Thus, the maximum value of <m>g(t)</m> is <m>4</m>, and it occurs when <m>t = 1</m>.</li>
         <li>A graph is increasing if the <m>y</m>-values get larger as we read from left to right. The graph of <m>g</m> is increasing for <m>t</m>-values between <m>-4</m> and <m>1</m>, and between <m>3</m> and <m>5</m>. Thus, <m>g</m> is increasing on the intervals <m>(-4, 1)</m> and <m>(3, 5)</m>.</li>
     </ol></p></solution></example>
 
-<exercise><title>Practice 2</title>
+<exercise component="webwork"><title>Practice 2</title>
     <introduction>
-        <p>Refer to the graph of the function <m>g</m> shown in <xref ref="example-function-graph" text="type-global"/>.</p><sidebyside width="35%"><image source="images/fig-function"><description>graph of a function</description></image></sidebyside>
+        <p>Refer to the graph of the function <m>g</m> shown in <xref ref="example-function-graph" text="type-global"/>.</p>
+        <image width="35%" source="images/fig-function"><description>graph of a function</description></image>
     </introduction>
     <webwork>
          <pg-code>
@@ -132,8 +149,7 @@ values of the two variables. </p>
               2, 
             );            
         </pg-code> 
-        <statement><p>
-            <ol marker="a">
+        <statement><p><ol marker="a.">
                 <li><p><m> g(0)= </m><var name="$yint" width="3"/> </p></li>
                 <li><p> List the value(s) of <m> t </m> for which <m> g(t) = 0 </m>. Separate different values with commas.</p>
                 <p><var name="$zeros" width="10" evaluator="$my_evaluator"/>  </p></li>
@@ -159,7 +175,23 @@ values of the two variables. </p>
     </webwork>
 </exercise>
 
-<exercise><title>QuickCheck 2</title>
+<exercise component="main"><title>Practice 2</title>
+<statement><p>Refer to the graph of the function <m>g</m> shown in <xref ref="example-function-graph" text="type-global"/>.</p>
+    <p><ol marker="a.">
+        <li><p>Find <m> ~g(0)</m>.</p></li>
+        <li><p>For what value(s) of <m> t </m> is <m>~ g(t) = 0 </m>? </p></li>
+        <li><p>What is the smallest, or minimum, value of <m> g(t) </m>? For what value of <m> t </m> does the function take on its minimum value?</p></li>
+        <li><p>On what intervals is <m> g </m> is decreasing?</p></li>
+    </ol></p></statement>
+
+<solution><p><ol marker="a." cols="2">
+            <li><p><m>3</m></p></li>
+            <li><p><m> -2, 2, 4 </m></p></li>
+            <li><p><m> -3 </m>; <m> t = -4 </m></p></li>
+            <li><p><m> (-5, -4) </m> and <m> (1, 3) </m></p></li>
+        </ol></p></solution></exercise>
+
+<exercise component="webwork"><title>QuickCheck 2</title>
 <webwork>
      <pg-code>       
             $fofx = RadioButtons(
@@ -179,10 +211,19 @@ values of the two variables. </p>
     </solution>
 </webwork></exercise>
 
+<exercise component="main"><title>QuickCheck 2</title>
+<statement><p>Which of the following statements is true?</p>
+    <p><ol marker="a.">
+        <li><p>It is not possible for the function <m>y=f(x)</m> to take on the same <m>y</m>-value at two different <m>x</m>-values.</p></li>
+        <li><p>The maximum value of <m>y=f(x)</m> may occur at two different <m>x</m>-values.</p></li>
+        <li><p>The maximum value of the function <m>y=f(x)</m> is the largest <m>x</m>-value that appears on the graph.</p></li>
+        <li><p><m>f(x)=0</m> at the <m>y</m>-intercept of <m>f(x)</m>.</p></li>
+    </ol></p></statement></exercise>
+
 <technology>
     <title>Finding Coordinates with a Graphing Utility</title>
     <p>We can use the <kbd>TRACE</kbd> feature to find the coordinates of points on a graph. For example, graph the equation <m>y = -2.6x - 5.4</m> in the window</p>
-        <sidebyside><tabular>
+        <tabular>
                 <row>
                     <cell>Xmin<m>=-5</m></cell>
                     <cell></cell>
@@ -191,10 +232,11 @@ values of the two variables. </p>
                     <cell>Ymin<m>=-20</m></cell>
                     <cell></cell>
                     <cell>Ymax<m>=15</m></cell></row>
-            </tabular></sidebyside>
-    <sidebyside width="36%"><image source="images/fig-GC-trace"><description>GC trace</description></image></sidebyside>
+            </tabular>
+    <image width="36%" source="images/fig-GC-trace"><description>GC trace</description></image>
     <p>Press <kbd>TRACE</kbd>, and a “bug” begins flashing on the display. The coordinates of the bug appear at the bottom of the display, as shown in the figure. Use the left and right arrows to move the bug along the graph. You can check that the coordinates of the point <m>(2, -10.6)</m> do satisfy the equation <m>y = -2.6x - 5.4</m>.</p>
-    <p>The points identified by the Trace bug depend on the window settings. If we want to find the <m>y</m>-coordinate for a particular <m>x</m>-value, we enter the <m>x</m>-coordinate of the desired point and press <kbd>ENTER</kbd>.</p></technology>
+    <p>The points identified by the Trace bug depend on the window settings. If we want to find the <m>y</m>-coordinate for a particular <m>x</m>-value, we enter the <m>x</m>-coordinate of the desired point and press <kbd>ENTER</kbd>.</p>
+</technology>
 </subsection>
 
 <subsection><title>Constructing the Graph of a Function</title>
@@ -210,7 +252,8 @@ values of the two variables. </p>
     <me>f(\alert{2}) =\sqrt{\alert{2} + 4}=\sqrt{6}\approx 2.45</me>
     <me>f(\alert{5}) =\sqrt{\alert{5} + 4}=\sqrt{9}=3</me>
     The results are shown in the table.</p>
-    <sidebyside widths="50% 38%" margins="0% 12%" valigns="middle middle"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
+    <sidebyside widths="50% 40%" margins="0% 10%" valigns="middle middle">
+<tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
         <cell><m>x</m></cell>
         <cell><m>f(x)</m></cell></row>
     <row>
@@ -231,9 +274,7 @@ values of the two variables. </p>
   </tabular><image source="images/fig-sq-root"><description>square root graph</description></image></sidebyside>
     <p>Points on the graph have coordinates <m>(x, f(x))</m>, so the vertical coordinate of each point is given by the value of <m>f(x)</m>.  We plot the points and connect them with a smooth curve, as shown in the figure.  Notice that no points on the graph have <m>x</m>-coordinates less than <m>-4</m>.</p></solution></example>
 
-
-
-<exercise><title>QuickCheck 3</title>
+<exercise component="webwork"><title>QuickCheck 3</title>
 <webwork>
      <pg-code>       
             $fof3 = RadioButtons(
@@ -253,13 +294,22 @@ values of the two variables. </p>
     </solution>
 </webwork></exercise>
 
+<exercise component="main"><title>QuickCheck 3</title>
+<statement><p>How do we find the value of <m>f(3)</m> from a graph of <m>f</m>?</p>
+    <p><ol marker="a.">
+        <li><p>Find 3 on the <m>x</m>-axis, move vertically to the point, then horizontally to the <m>y</m>-axis.</p></li>
+        <li><p>Find 3 on the <m>y</m>-axis, move horizontally to the point, then vertically to the <m>x</m>-axis.</p></li>
+        <li><p>Substitue 3 for <m>x</m> into the formula for the function.</p></li>
+        <li><p>Substitue 3 for <m>y</m> into the formula for the function.</p></li>
+    </ol></p></statement></exercise>
+
 <technology><title>Using Technology to Graph a Function</title>
 <p>We can also use a graphing utility to obtain a table and graph for the function in <xref ref="example-graph-square-root" text="type-global"/>. We graph a function just as we graphed an equation. For this function, we enter <m>Y_1 = \sqrt{\,}(X+4)</m>
 and press <kbd>ZOOM</kbd> <m>6</m> for the standard window.  The graph is shown below.</p>
-<sidebyside  width="30%"><image source="images/fig-GC-sq-root"><description>GC square root graph</description></image></sidebyside>
+<image width="30%" source="images/fig-GC-sq-root"><description>GC square root graph</description></image>
 </technology>
 
-<exercise><title>Practice 3</title>
+<exercise component="webwork"><title>Practice 3</title>
     <webwork>
          <pg-code>
             Context("Fraction")->variables->add(r=>'Real');
@@ -318,10 +368,57 @@ and press <kbd>ZOOM</kbd> <m>6</m> for the standard window.  The graph is shown 
             <p>The graph is shown below.</p>
         </solution>          
     </webwork>
-    <conclusion><sidebyside width="25%" margins="0% 75%"><image source="images/fig-in-ex-ans-1-3-3"><description>cubic</description></image></sidebyside></conclusion>
+    <conclusion><image width="25%" margins="0% 75%" source="images/fig-in-ex-ans-1-3-3"><description>cubic</description></image></conclusion>
 </exercise>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="main"><title>Practice 3</title>
+<statement><p>Let <m>f(x) = x^3 - 2</m></p>
+        <p>Complete the table of values and sketch a graph of the function.</p>
+                <tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
+                    <cell><m>x</m></cell>
+                    <cell><m>-2</m></cell>
+                    <cell><m>-1</m></cell>
+                    <cell><m>-\frac{1}{2}</m></cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>\frac{1}{2}</m></cell>
+                    <cell><m>1</m></cell>
+                    <cell><m>2</m></cell></row>
+                <row>
+                    <cell><m>f(x)</m></cell>
+                    <cell><var name="$a0" width="2"/></cell>
+                    <cell><var name="$a1" width="1"/></cell>
+                    <cell><var name="$a2" width="2"/></cell>
+                    <cell><var name="$a3" width="1"/></cell>
+                    <cell><var name="$a4" width="2"/></cell>
+                    <cell><var name="$a5" width="1"/></cell>
+                    <cell><var name="$a6" width="1"/></cell></row>
+                </tabular></statement>
+<solution><p>We evaluate the function at each value of <m>x</m>. For example,
+        <me>f(\alert{-2}) = (\alert{-2})^3 - 2 = -8 - 2 = -10</me>
+    You can verify the completed table and the graph with your technology tools.</p>
+        <sidebyside widths="65%, 25%" valigns="middle middle"><tabular top="major" halign="center" right="minor" left="minor" bottom="minor"> <row bottom="minor">
+                    <cell><m>x</m></cell>
+                    <cell><m>-2</m></cell>
+                    <cell><m>-1</m></cell>
+                    <cell><m>-\frac{1}{2}</m></cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>\frac{1}{2}</m></cell>
+                    <cell><m>1</m></cell>
+                    <cell><m>2</m></cell></row>
+                <row>
+                    <cell><m>f(x)</m></cell>
+                    <cell><m>-10 </m></cell>
+                    <cell><m>-3 </m></cell>
+                    <cell><m>\frac{-17}{8}</m></cell>
+                    <cell><m>-2</m></cell>
+                    <cell><m>\frac{-15}{8} </m></cell>
+                    <cell><m>-1</m></cell>
+                    <cell><m>6</m></cell></row>
+                </tabular>
+    <image source="images/fig-in-ex-ans-1-3-3"><description>cubic</description></image></sidebyside>
+</solution></exercise>
+
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -330,33 +427,40 @@ and press <kbd>ZOOM</kbd> <m>6</m> for the standard window.  The graph is shown 
         <p><var form="essay"/></p>      
     </statement>    
 </webwork></exercise>
+
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>How is graphing a function different from graphing an equation?</p></statement>  
+</exercise>
+
 </subsection>
 
 <subsection><title>The Vertical Line Test</title>
 
 <p>In a function, two different outputs cannot be related to the same input. This restriction means that two different ordered pairs cannot have the same first coordinate. What does it mean for the graph of the function?</p>
+
 <p>Consider the graph shown in figure (a) below. Every vertical line intersects the graph in at most one point, so there is only one point on the graph for each <m>x</m>-value. This graph represents a function.</p>
 
-<sidebyside width="65%"><image source="images/fig-vertical-line-test"><description>vertical line test</description></image></sidebyside>
+<image width="65%" source="images/fig-vertical-line-test"><description>vertical line test</description></image>
 
 <p> In figure (b), however, the line <m>x = 2</m> intersects the graph at two points, <m>(2, 1)</m> and <m>(2, 4)</m>. Two different <m>y</m>-values, <m>1</m> and <m>4</m>, are related to the same <m>x</m>-value, <m>2</m>. This graph cannot be the graph of a function.</p>
 
 <p>We summarize these observations as follows.</p>
 
 <assemblage><title>The Vertical Line Test</title>
-<p>A graph represents a function if and only if every vertical line intersects the graph in
-at most one point.</p></assemblage>
+<p>A graph represents a function if and only if every vertical line intersects the graph in at most one point.</p>
+</assemblage>
 
 <example xml:id="example-vertical-line-test"><statement>
     <p>Use the vertical line test to decide which of the graphs in the figure represent functions.</p>
-    <sidebyside  width="80%"><image source="images/fig-vertical-line-test2"><description>vertical line test</description></image></sidebyside></statement>
+    <image width="90%" source="images/fig-vertical-line-test2"><description>vertical line test</description></image></statement>
+
 <solution><p><ul>
         <li><p>Graph (a) represents a function, because it passes the vertical line test.</p></li>
         <li><p> Graph (b) is not the graph of a function, because the vertical line at (for example) <m>x = 1</m> intersects the graph at two points.</p></li>
         <li><p> For graph (c), notice the break in the curve at <m>x = 2</m>: The solid dot at <m>(2, 1)</m> is the only point on the graph with <m>x = 2</m>; the open circle at <m>(2, 3)</m> indicates that <m>(2, 3)</m> is not a point on the graph. Thus, graph (c) is a function, with <m>f(2) = 1</m>.</p></li>
     </ul></p></solution></example>
 
-<exercise><title>QuickCheck 4</title>
+<exercise component="webwork"><title>QuickCheck 4</title>
 <webwork>
      <pg-code>       
             $ver = RadioButtons(
@@ -376,9 +480,18 @@ at most one point.</p></assemblage>
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 4</title>
+<exercise component="main"><title>QuickCheck 4</title>
+<statement> <p>What does the vertical line test tell us?</p>
+    <p><ol marker="a.">
+        <li><p>If the graph is a vertical line.</p></li>
+        <li><p>If the graph is increasing.</p></li>
+        <li><p>If the graph is decreasing.</p></li>
+        <li><p>If the graph is a function.</p></li>
+    </ol></p></statement></exercise>
+
+<exercise component="webwork"><title>Practice 4</title>
     <introduction><p>Use the vertical line test to determine which of the graphs below represent functions.</p>
-    <sidebyside ><image source="images/fig-vertical-line-test3" ><description>vertical line test</description></image></sidebyside></introduction>
+    <image source="images/fig-vertical-line-test3" ><description>vertical line test</description></image></introduction>
     <webwork>
          <pg-code>
             $choice = RadioButtons(
@@ -396,35 +509,40 @@ at most one point.</p></assemblage>
     </webwork>
 </exercise>
 
+<exercise component="main"><title>QuickCheck 4</title>
+<statement><p>Use the vertical line test to determine which of the graphs below represent functions.</p>
+    <image source="images/fig-vertical-line-test3" ><description>vertical line test</description></image></statement>
+
+<solution><p>Only (b) is a function.</p></solution></exercise>
+
 </subsection>
 
 <subsection><title>Graphical Solution of Equations and Inequalities</title>
 
-    <p>The graph of an equation in two variables is just a picture of its solutions. When we read the coordinates of a point on the graph, we are reading a pair of <m>x</m>- and <m>y</m>-values that make the equation true. </p>
+<p>The graph of an equation in two variables is just a picture of its solutions. When we read the coordinates of a point on the graph, we are reading a pair of <m>x</m>- and <m>y</m>-values that make the equation true. </p>
 
     <sidebyside widths="65% 27%" valigns="middle middle" margins="0% 0%"><stack>
-        <p>For example, the point <m>(2, 7)</m> lies on the graph of <m>y = 2x + 3</m> shown at right, so we know that the ordered pair <m>(2, 7)</m> is a solution of the equation <m>y = 2x + 3</m>. You can verify algebraically that <m>x = \alert{2}</m> and <m>y = \alert{7}</m> satisfy the equation: 
-    <me>\text{Does }~\alert{7} = 2 (\alert{2}) + 3\text{?} ~~~~~~~~ \blert{\text{Yes}}</me>
+    <p>For example, the point <m>(2, 7)</m> lies on the graph of <m>y = 2x + 3</m> shown at right, so we know that the ordered pair <m>(2, 7)</m> is a solution of the equation <m>y = 2x + 3</m>. You can verify algebraically that <m>x = \alert{2}</m> and <m>y = \alert{7}</m> satisfy the equation: 
+        <me>\text{Does }~\alert{7} = 2 (\alert{2}) + 3\text{?} ~~~~~~~~ \blert{\text{Yes}}</me>
     </p></stack>
     <image source="images/fig-function-graph"><description>function graph</description></image></sidebyside>
 
     <p>We can also say that <m>x = 2</m> is a solution of the one-variable equation <m>2x + 3 = 7</m>. In fact, we can use the graph of <m>y = 2x + 3</m> to solve the equation <m>2x + 3 = k</m> for any value of <m>k</m>. Thus, we can use graphs to find solutions to equations in one variable.</p>
 
-<example xml:id="example-graph-to-solve"><statement>
-    <p>Use the graph of <m>y = 285 - 15x</m> to solve the equation <m>150 = 285 - 15x</m>.</p>
+<example xml:id="example-graph-to-solve"><statement><p>Use the graph of <m>y = 285 - 15x</m> to solve the equation <m>150 = 285 - 15x</m>.</p></statement>
 
-</statement><solution>
-    <sidebyside widths="60% 30%" margins="0% 5%">    
+<solution><sidebyside widths="60% 35%" margins="0% 5%" valigns="middle middle">    
     <stack><p>We begin by locating the point <m>P</m> on the graph for which <m>y = 150</m>, as shown in the figure.</p>
     <p> Next we find the <m>x</m>-coordinate of point <m>P</m> by drawing an imaginary line from <m>P</m> straight down to the <m>x</m>-axis. The <m>x</m>-coordinate of <m>P</m> is <m>x = 9</m>.</p>
     <p> Thus, <m>P</m> is the point <m>(9,150)</m>, and <m>x = 9</m> when <m>y = 150</m>. The solution of the equation <m>150 = 285 - 15x</m> is <m>x = 9</m>.</p></stack>
-    <image source="images/fig-graph-to-solve"><description>function graph</description></image></sidebyside> 
-    <p>You can verify the solution algebraically by substituting <m>x = \alert{9}</m> into the equation:</p> 
-    <p>Does <m>150 = 285 - 15(\alert{9})</m>? </p><p>
+    <image source="images/fig-graph-to-solve"><description>function graph</description></image></sidebyside>
+
+<p>You can verify the solution algebraically by substituting <m>x = \alert{9}</m> into the equation:</p> 
+<p>Does <m>150 = 285 - 15(\alert{9})</m>? </p><p>
     <me>285 - 15(\alert{9}) = 285 - 135 = 150. ~~~~~~\blert{\text{Yes}}</me>
 </p></solution></example>
 
-<exercise><title>QuickCheck 5</title>
+<exercise component="webwork"><title>QuickCheck 5</title>
 <webwork>
      <pg-code>       
             $fof8 = RadioButtons(
@@ -444,6 +562,10 @@ at most one point.</p></assemblage>
     </solution>
 </webwork></exercise>
 
+<exercise component="main"><title>QuickCheck 5</title>
+<statement><p>If <m>f(8)=2</m>, what point lies on the graph of <m>f</m>?</p></statement>
+</exercise>
+
 <note><p>The relationship between an equation and its graph is an important one. For the previous example, make sure you understand that the following three statements are equivalent:
 <ul>
     <li>The point <m>(9, 150)</m> lies on the graph of <m>y = 285 - 15x</m>.</li>
@@ -451,21 +573,21 @@ at most one point.</p></assemblage>
     <li><m>x = 9</m> is a solution of the equation <m>150 = 285 - 15x</m>.</li>
 </ul></p></note>
 
-<exercise xml:id="exercise-graph-to-solve-linear"><title>Practice 5</title>
+<exercise component="webwork" xml:id="exercise-graph-to-solve-linearw"><title>Practice 5</title>
     <introduction>
-        <sidebyside width="30%"><image source="images/fig-graph-to-solve2"><description>function graph</description></image></sidebyside>
+        <image width="30%" source="images/fig-graph-to-solve2"><description>function graph</description></image>
     </introduction>
     <webwork>
          <pg-code>
             $answer=-2.5;
         </pg-code> 
-        <statement><p><ol marker="a">
+    <statement><p><ol marker="a">
         <li><p>Use the graph of <m>y = 30 - 8x</m> shown above to solve the equation <me>30 - 8x = 50</me></p>
         <p><m>x=</m><var name="$answer" width="3"/> </p></li>
         <li><p>Verify your solution algebraically.</p></li>
     </ol></p></statement>
     <solution><p><ol marker="a">
-        <li><p>The point on the line where the <m>y</m>-coordinate is 50 is the point <m>(-2.5,50)</m>, so <m>x=-2.5</m> is the solution.</p></li>
+        <li><p>The point on the graph where the <m>y</m>-coordinate is 50 is the point <m>(-2.5,50)</m>, so <m>x=-2.5</m> is the solution.</p></li>
         <li><p>We verify that we have an identity when we substitute <m>x=-2.5</m> into the equation <m>30 - 8x = 50</m>.</p>
         <p><md>
             <mrow>30-8(\alert{-2.5}) \amp \stackrel{\text{?}}{=} 50</mrow>
@@ -484,24 +606,41 @@ at most one point.</p></assemblage>
     </conclusion>
 </exercise>
 
+<exercise component="main" xml:id="exercise-graph-to-solve-linear"><title>Practice 5</title>
+<statement><image width="40%" source="images/fig-graph-to-solve2"><description>function graph</description></image>
+    <p><ol marker="a.">
+        <li><p>Use the graph of <m>y = 30 - 8x</m> shown above to solve the equation <me>30 - 8x = 50</me></p></li>
+        <li><p>Verify your solution algebraically.</p></li>
+    </ol></p></statement>
+    
+<solution><p><ol marker="a.">
+        <li><p>The point on the line where the <m>y</m>-coordinate is <m>50</m> is the point <m>(-2.5,50)</m>, so <m>x=-2.5</m> is the solution.</p></li>
+        <li><p>We verify that we have an identity when we substitute <m>x=-2.5</m> into the equation <m>30 - 8x = 50</m>.
+        <md>
+            <mrow>30-8(\alert{-2.5}) \amp \stackrel{\text{?}}{=} 50</mrow>
+            <mrow>30 - (-20) \amp = 50 \amp \blert{\text{Yes!}}</mrow>
+        </md></p></li>
+    </ol></p></solution></exercise>
+
 <p>In a similar fashion, we can solve inequalities with a graph.</p>
 
-<sidebyside widths="58% 28%" valigns="middle middle" margins="0% 5%"><stack><p> Consider again the graph of <m>y = 2x + 3</m>, shown at right. We saw that <m>x = 2</m> is the solution of the equation <m>2x + 3 = 7</m>. When we use <m>x = 2</m> as the input for the function <m>f(x) = 2x + 3</m>, the output is <m>y = 7</m>. Which input values for <m>x</m> produce output values greater than <m>7</m>?</p>
+<sidebyside widths="58% 32%" valigns="middle middle" margins="0% 4%"><stack><p> Consider again the graph of <m>y = 2x + 3</m>, shown at right. We saw that <m>x = 2</m> is the solution of the equation <m>2x + 3 = 7</m>. When we use <m>x = 2</m> as the input for the function <m>f(x) = 2x + 3</m>, the output is <m>y = 7</m>. Which input values for <m>x</m> produce output values greater than <m>7</m>?</p>
+
 <p>You can see that <m>x</m>-values greater than <m>2</m> produce <m>y</m>-values greater than <m>7</m>, because points on the graph with <m>x</m>-values greater than <m>2</m> have <m>y</m>-values greater than <m>7</m>. Thus, the solutions of the inequality <m>2x + 3 \gt 7</m> are <m>x\gt 2</m>. You can verify this result by solving the inequality algebraically.</p></stack>
 
 <image source="images/fig-graph-to-solve3"><description>function graph</description></image></sidebyside>
 
 <example xml:id="example-graph-to-solve2"><statement>
-    <p>Use the graph of <m>y = 285 - 15x</m> to solve the inequality <me>285 - 15x \gt 150</me></p></statement>
-<solution><p>
-    We begin by locating the point <m>P</m> on the graph for which <m>y = 150</m>. Its <m>x</m>-coordinate is <m>x = 9</m>. Now, because <m>y = 285 - 15x</m> for points on the graph, the inequality
-        <me>285-15x \gt 150</me>
-    is equivalent to <m>y \gt 150</m>.</p>
-    <sidebyside  width="35%"><image source="images/fig-graph-to-solve-inequality"><description>function graph</description></image></sidebyside>     
-    <p>So we are looking for points on the graph with <m>y</m>-coordinate greater than <m>150</m>. These points are shown in red on the graph. The <m>x</m>-coordinates of these points are the <m>x</m>-values that satisfy the inequality. From the graph, we see that the solutions are <m>x \lt 9</m>.</p>
-</solution></example>
+    <p>Use the graph of <m>~y = 285 - 15x~</m> to solve the inequality <me>285 - 15x \gt 150</me></p></statement>
 
-<exercise><title>QuickCheck 6</title>  
+<solution><p>We begin by locating the point <m>P</m> on the graph for which <m>y = 150</m>. Its <m>x</m>-coordinate is <m>x = 9</m>. Now, because <m>~y = 285 - 15x~</m> for points on the graph, the inequality
+        <me>285-15x \gt 150</me>
+is equivalent to <m>~y \gt 150</m>.</p>
+    <image width="45%" source="images/fig-graph-to-solve-inequality"><description>function graph</description></image>
+    
+<p>So we are looking for points on the graph with <m>y</m>-coordinate greater than <m>150</m>. These points are shown in red on the graph. The <m>x</m>-coordinates of these points are the <m>x</m>-values that satisfy the inequality. From the graph, we see that the solutions are <m>~x \lt 9</m>.</p></solution></example>
+
+<exercise component="webwork"><title>QuickCheck 6</title>  
 <webwork>
      <pg-code>       
             $ineq = RadioButtons(
@@ -521,9 +660,12 @@ at most one point.</p></assemblage>
     </solution>
 </webwork></exercise>
 
-<exercise><title>Practice 6</title>
+<exercise component="main"><title>QuickCheck 6</title>
+<statement><p>You are using a graph of <m>~f(x)=48-3.5x~</m> to solve the inequality <m>~48-3.5x \gt -15~</m>. You find that <m>~f(18)=-15</m>. What is the solution to the inequality?</p> </statement></exercise>
+
+<exercise component="webwork"><title>Practice 6</title>
     <introduction>
-        <sidebyside widths="50% 30%" margins="5% 5%" valigns="middle middle">
+        <sidebyside widths="45% 45%" margins="5% 5%" valigns="middle middle">
             <p>Here is the graph from <xref ref="exercise-graph-to-solve-linear" text="type-global"/> (Practice 5).</p>
             <image source="images/fig-graph-to-solve2"><description>function graph</description></image></sidebyside>
     </introduction>
@@ -552,16 +694,36 @@ at most one point.</p></assemblage>
     </webwork>
 </exercise>
 
+<exercise component="main"><title>Practice 6</title>
+<statement><sidebyside widths="45% 40%" margins="5% 5%" valigns="middle middle">
+    <p>Here is the graph from <xref ref="exercise-graph-to-solve-linear" text="type-global"/> (Practice 5).</p>
+        <image source="images/fig-graph-to-solve2"><description>function graph</description></image></sidebyside>
+    <p><ol marker="a.">
+        <li><p>Use the graph of <m> ~ y = 30 - 8x~ </m> above to solve the inequality <me> 30 - 8x \le 50 </me></p></li>
+        <li>Solve the inequality algebraically.</li>
+    </ol></p></statement>
+    
+<solution><p><ol marker="a.">
+        <li><p>As we found in the previous Checkpoint, the point on <m>y=30-8x</m> where <m> y=50 </m> occurs when <m> x=-2.5 </m>. The <m> y </m>-coordinates are smaller as we move to the right on the graph, that is, for the points where <m> x\ge -2.5 </m>.</p></li>
+        <li><p><md>
+            <mrow> 30-8x \amp \le 50 \amp\amp\blert{{\small \text{Subtract 30 from both sides.}}} </mrow>
+            <mrow> -8x \amp \le 20 \amp\amp \blert{{\small \text{Divide by } {-8} \text{ and reverse inequality.}}} </mrow>
+            <mrow>x \amp \ge -2.5</mrow>
+        </md></p></li>
+    </ol></p></solution>
+</exercise>
+
 <p>We can also use this graphical technique to solve nonlinear equations and inequalities.</p>
 
 <example xml:id="example-graph-to-solve-cubic"><statement>
-    <p>Use a graph of <m>f(x) = -2x^3 + x^2 + 16x</m> to solve the equation 
+    <p>Use a graph of <m>~f(x) = -2x^3 + x^2 + 16x~</m> to solve the equation 
     <me>-2x^3 + x^2 + 16x = 15</me></p></statement>
 
 <solution>
-    <p>If we sketch in the horizontal line <m>y = 15</m>, we can see that there are three points on the graph of <m>f</m> that have <m>y</m>-coordinate <m>15</m>, as shown below. The <m>x</m>-coordinates of these points are the solutions of the equation. </p>
-        <sidebyside width="35%"><image source="images/fig-graph-to-solve-cubic"><description>graph of cubic</description></image></sidebyside>
-    <p>From the graph, we see that the solutions are <m>x = -3</m>, <m>x = 1</m>, and approximately <m>x = 2.5</m>. We can verify each solution algebraically.</p> 
+<p>If we sketch in the horizontal line <m>y = 15</m>, we can see that there are three points on the graph of <m>f</m> that have <m>y</m>-coordinate <m>15</m>, as shown below. The <m>x</m>-coordinates of these points are the solutions of the equation. </p>
+        <image width="45%" source="images/fig-graph-to-solve-cubic"><description>graph of cubic</description></image>
+    
+<p>From the graph, we see that the solutions are <m>x = -3</m>, <m>x = 1</m>, and approximately <m>x = 2.5</m>. We can verify each solution algebraically.</p> 
     <p>For example, if <m>x = \alert{-3}</m>, we have 
     <!--*****--><me>\begin{aligned}[t]
         f(\alert{-3})\amp= -2(\alert{-3})3 + (\alert{-3})^2 + 16(\alert{-3})\\
@@ -571,9 +733,9 @@ at most one point.</p></assemblage>
     so <m>-3</m> is a solution.  Similarly, you can check that <m>x = 1</m> and <m>x = 2.5</m> are solutions.</p>
 </solution></example>
 
-<exercise xml:id="exercise-graph-to-solve-quadratic"><title>Practice 7</title>
+<exercise component="webwork" xml:id="exercise-graph-to-solve-quadraticw"><title>Practice 7</title>
     <introduction>
-        <sidebyside width="35%"><image source="images/fig-graph-to-solve-quadratic"><description>graph of parabola</description></image></sidebyside>
+        <image width="35%" source="images/fig-graph-to-solve-quadratic"><description>graph of parabola</description></image>
     </introduction>
     <webwork>
          <pg-code>
@@ -599,7 +761,19 @@ at most one point.</p></assemblage>
     </webwork>
 </exercise>
 
-<exercise><title>QuickCheck 7</title>  
+<exercise component="main" xml:id="exercise-graph-to-solve-quadratic"><title>Practice 7</title>
+<statement><image width="40%" source="images/fig-graph-to-solve-quadratic"><description>graph of parabola</description></image>
+<p>Use the graph of <m>~ y = \frac{1}{2}n^2 + 2n - 10 ~</m> shown above  to solve
+            <me> \frac{1}{2}n^2 + 2n - 10 = 6 </me>
+    and verify your solutions algebraically.</p></statement>
+        
+<solution><p>We look for points on the graph that have <m>y</m>-coordinate <m>6</m>. The <m>n</m>-coordinates of those two points are the solutions, <m>n = -8</m> and <m>n = 4</m>. To verify the solutions we evaluate the function at <m>n = -8</m> and <m>n = 4</m> to find
+    <md><mrow>\frac{1}{2}(\alert{-8})^2 + 2\alert{-8} - 10 \amp = 32 - 16 - 10 = 6 </mrow>
+    <mrow>\frac{1}{2}(\alert{4})^2 + 2\alert{4} - 10 \amp = 8 + 8 - 10 = 6 </mrow></md>
+</p></solution>
+</exercise>
+
+<exercise component="webwork"><title>QuickCheck 7</title>  
 <webwork>
      <pg-code>       
             $dec = RadioButtons(
@@ -619,9 +793,17 @@ at most one point.</p></assemblage>
     </solution>
 </webwork></exercise>
 
+<exercise component="main"><title>QuickCheck 7</title>
+<statement><p>When is a function called decreasing?</p>
+<p><ol marker="a.">
+    <li><p>If its <m>x</m>-values increase from left to right.</p></li>
+    <li><p>If its <m>y</m>-values decrease when its <m>x</m>-values decrease.</p></li>
+    <li><p>If its <m>y</m>-values decrease when its <m>x</m>-values increase.</p></li>
+    <li><p>If the graph lies below the \<m>x</m>-axis.</p></li>
+</ol></p></statement></exercise>
+
 <technology><title><!--<image source="images/icon-GC.jpg"  width="8%"><description>Graphing Calculator</description></image>-->Using the Trace Feature</title>
     <p>You can use the Trace feature on a graphing utility to approximate solutions to equations. Graph the function <m>f(x)</m> in <xref ref="example-graph-to-solve-cubic" text="type-global"/>  in the window</p>
-    <sidebyside>
             <tabular>
                 <row>
                     <cell>Xmin<m>=-4</m></cell>
@@ -631,7 +813,7 @@ at most one point.</p></assemblage>
                     <cell>Ymin<m>=-20</m></cell>
                     <cell></cell>
                     <cell>Ymax<m>=40</m></cell></row>
-            </tabular></sidebyside>
+            </tabular>
     <p>and trace along the curve to the point <m>(2.4680851, 15.512401)</m>. We are close to a solution, because the <m>y</m>-value is close to <m>15</m>. Try entering <m>x</m>-values close to <m>2.4680851</m>, for instance, <m>x = 2.4</m> and <m>x = 2.5</m>, to find a better approximation for the solution.</p>  
 </technology>
 
@@ -640,13 +822,13 @@ at most one point.</p></assemblage>
     <me>-2x^3 + x^2 + 16x \ge 15</me></p></statement>
 
 <solution><p>We first locate all points on the graph that have <m>y</m>-coordinates greater than or equal to <m>15</m>. The <m>x</m>-coordinates of these points are the solutions of the inequality.</p>
-<p> The figure below shows the points in red, and their <m>x</m>-coordinates as intervals on the <m>x</m>-axis. The solutions are <m>x \le -3</m> and <m>1\le x \le 2.5</m>, or in interval notation, <m>(-\infty, -3] \cup [1, 2.5]</m>. (See <xref ref="Interval-notation" text="custom">Appendix A.2</xref> to review interval notation.)</p>
-<sidebyside width="35%"><image source="images/fig-graph-to-solve-cubic2"><description>graph of cubic</description></image></sidebyside></solution></example>
+<p> The figure below shows those points in red, and their <m>x</m>-coordinates as intervals on the <m>x</m>-axis. The solutions are <m>x \le -3</m> and <m>1\le x \le 2.5</m>, or in interval notation, <m>(-\infty, -3] \cup [1, 2.5]</m>. (See <xref ref="Interval-notation" text="custom">Appendix A.2</xref> to review interval notation.)</p>
+    <image width="45%" source="images/fig-graph-to-solve-cubic2"><description>graph of cubic</description></image>
+</solution></example>
 
-<exercise>
-    <title>Practice 8</title>
+<exercise component="webwork"><title>Practice 8</title>
     <introduction>
-        <sidebyside width="35%"><image source="images/fig-graph-to-solve-quadratic"><description>graph of cubic</description></image></sidebyside>
+        <image width="35%" source="images/fig-graph-to-solve-quadratic"><description>graph of cubic</description></image>
     </introduction>
     <webwork>
          <pg-code>
@@ -655,10 +837,7 @@ at most one point.</p></assemblage>
         </pg-code> 
         <statement>
             <p>Use the graph above from Practice 7 above to solve the inequality
-            <md>
-                <mrow> \frac{1}{2}n^2 + 2n - 10 \lt 6 </mrow>
-            </md>
-            </p>
+            <me> \frac{1}{2}n^2 + 2n - 10 \lt 6 </me></p>
             <p>Answer: <var name="$answer" width="12"/> </p>
             <instruction>Note: Use interval notation or inequalities.</instruction>
         </statement>
@@ -668,7 +847,14 @@ at most one point.</p></assemblage>
     </webwork>
 </exercise>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="main"><title>Practice 8</title>
+<statement><p>Use the graph above from Practice 7 above to solve the inequality
+            <me> \frac{1}{2}n^2 + 2n - 10 \lt 6 </me></p>
+</statement>
+<solution><p>In Practice 6 we found that <m> \frac{1}{2}n^2 + 2n - 10 = 6 </m> when <m>n=-8</m> and <m>n=4</m>. Looking at the graph, we see that points with <m>y</m>-coordinates less than 6 make up the lower portion of the parabola. They have <m>x</m>-coordinates between <m>n=-8</m> and <m>n=4</m>. Thus, the solutions are <m>~ -8 \lt n \lt 4 </m>, or in interval notation, <m>~(-8,4)</m></p>
+</solution></exercise>
+
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -677,6 +863,13 @@ at most one point.</p></assemblage>
         <p><var form="essay"/></p>      
     </statement>    
 </webwork></exercise>
+
+<exercise component="main"><title>Pause and Reflect</title>
+<statement>
+        <p>Explain how to use the graph of <m>y=x+\sqrt{x}</m> to solve the equation <m>x+\sqrt{x}=56</m>.</p>
+</statement></exercise>
+
+
 </subsection>
 
 <xi:include href="./summary-1-3.xml" /> <!-- summary  -->

@@ -7,7 +7,7 @@
 <subsection><title>Introduction</title>
 <p>When you buy a house, your monthly mortgage payment is a function of the size of the loan. The table shows mortgage payments on <m>30</m>-year loans of various sizes at <m>6</m>% interest.</p>
 
-<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor"><col halign="left"/><col/><col/><col/><col/><col/>
+<tabular top="major" halign="center" right="minor" left="minor" bottom="minor"><col halign="left"/><col/><col/><col/><col/><col/>
     <row bottom="minor">
         <cell>Loan amount, <m>L</m></cell>
         <cell><m>150,000</m></cell>
@@ -22,13 +22,13 @@
         <cell><m>1199.10</m></cell>
         <cell><m>1348.99</m></cell>
         <cell><m>1498.88</m></cell></row>
-</tabular></sidebyside>
+</tabular>
 
-<p>For the function <m>M = f (L)</m>, the input value is the amount of the loan, and the output is the mortgage payment.</p>
+<p>For the function <m>M = f(L)</m>, the input value is the amount of the loan, and the output is the mortgage payment.</p>
 	
 <p> However, when you are shopping for a house, you may think of the mortgage payment as the input variable: If you can afford a certain monthly mortgage payment, how large a loan can you finance? Now the mortgage payment is the input value, and the loan amount is the output. By interchanging the inputs and outputs, we define a new function, <m>L = g(M)</m>, shown below.</p>
 
-<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor"><col halign="left"/><col/><col/><col/><col/><col/>
+<tabular top="major" halign="center" right="minor" left="minor" bottom="minor"><col halign="left"/><col/><col/><col/><col/><col/>
     <row>
         <cell>Mortgage payment, <m>M</m></cell>
         <cell><m>899.33</m></cell>
@@ -43,7 +43,7 @@
         <cell><m>200,000</m></cell>
         <cell><m>225,000</m></cell>
         <cell><m>250,000</m></cell></row>
-</tabular></sidebyside>
+</tabular>
 
 <p>This new function gives the same information as the original function, <m>f</m>, but from a different point of view. We call the function <m>g</m> the <term>inverse function</term><idx>inverse function</idx> for <m>f</m>.</p>
 <p> The elements of the <em>range</em> of <m>f</m> are used as the input values for <m>g</m>, and the output values of <m>g</m> are the corresponding domain elements of <m>f</m>. For example, from the tables you can verify that <m>f (200,000) = 1199.10</m>, and <m>g(1199.10) = 200,000</m>. In fact, this property defines the inverse function.</p>
@@ -54,9 +54,10 @@
 </assemblage>
 
 <example xml:id="example-inverse-functions"><statement><p>Suppose <m>g</m> is the inverse function for <m>f</m>, and we know the following function values for <m>f</m>:
-	<me>f (-3) = 5, ~~ f (2) = 1, ~~ f (5) = 0</me>
-	Find <m>g(5)</m> and <m>g(0)</m>.</p></statement>
-<solution><p>We know that <m>g(5) = -3</m> because <m>f (-3) = 5</m>, and <m>g(0) = 5</m> because <m>f (5) = 0</m>. Tables may be helpful in visualizing the two functions, as shown below.</p>
+	<me>f(-3) = 5, ~~ f(2) = 1, ~~ f(5) = 0</me>
+Find <m>g(5)</m> and <m>g(0)</m>.</p></statement>
+
+<solution><p>We know that <m>g(5) = -3</m> because <m>f(-3) = 5</m>, and <m>g(0) = 5</m> because <m>f(5) = 0</m>. Tables may be helpful in visualizing the two functions, as shown below.</p>
 
 <sidebyside widths="19% 45% 19%" margins="7%" valigns="middle middle middle">
 <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -96,8 +97,7 @@
 <p>For the function <m>f</m>, the input variable is <m>x</m> and the output variable is <m>y</m>. For the inverse function <m>g</m>, the roles of the variables are interchanged: <m>y</m> is now the input and <m>x</m> is the output.
 </p></solution></example>
 
-<exercise>
-    <title>Practice 1</title>
+<exercise component="webwork"><title>Practice 1</title>
     <webwork>
          <pg-code>
             $a = Compute("-1");
@@ -113,10 +113,16 @@
         <solution>
             <p><m>g(0) = -1</m>; <m> g(1) = 0</m></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
-<exercise><title>QuickCheck 1</title>
+<exercise component="main"><title>Practice 1</title>
+<statement><p>Suppose <m>g</m> is the inverse function for <m>f</m>, and suppose we know the following function values for f :
+                    <me>f(-1) = 0, ~ f(0) = 1, ~ f(1) = 2</me>
+            Find <m>g(0)</m> and <m>g(1)</m>.</p></statement>
+
+<solution><p><m>g(0) = -1</m>; <m>~ g(1) = 0</m></p></solution></exercise>
+
+<exercise component="webwork"><title>QuickCheck 1</title>
 <webwork>
      <pg-code>       
             $invpt = RadioButtons(
@@ -135,17 +141,27 @@
         <p><m>(-4,3)</m></p>
     </solution>
 </webwork></exercise>
+
+<exercise component="main"><title>QuickCheck 1</title>
+<statement><p>If the point <m>(3,-4)</m> lies on the graph of <m>f</m>, what point lies on the graph of its inverse function?</p>
+    <p><ol marker="a." cols="2">
+        <li><m>(-3,4)</m></li>
+        <li><m>(-4,3)</m></li>
+        <li><m>(4,-3)</m></li>
+        <li><m>\left(\dfrac{1}{3}, -\dfrac{1}{4}\right)</m></li>
+    </ol></p></statement></exercise>
 </subsection>
 
 <subsection><title>Finding a Formula for the Inverse Function</title>
 
 <p>If a function is given by a table of values, we can interchange the columns (or rows) of the table to obtain the inverse function. Swapping the columns works because we are really interchanging the input and output variables. If a function is defined by an equation, we can find a formula for its inverse function in the same way: Interchange the roles of the variables in the equation so that the old output variable becomes the new input variable.</p>
 
-<example xml:id="example-inverse-formula"><statement><p><ol marker="a">
-	<li>The function <m>H = f (t) = 6 + 2t</m> gives the height of corn seedlings, in inches, <m>t</m> days after they are planted. Find a formula for the inverse function and explain its meaning in this context.</li>
-	<li>Make a table of values for <m>f (t)</m> and a table for its inverse function.</li>
-	</ol></p></statement>
-<solution><p><ol marker="a">
+<example xml:id="example-inverse-formula"><statement><p><ol marker="a.">
+	<li>The function <m>H = f(t) = 6 + 2t</m> gives the height of corn seedlings, in inches, <m>t</m> days after they are planted. Find a formula for the inverse function and explain its meaning in this context.</li>
+	<li>Make a table of values for <m>f(t)</m> and a table for its inverse function.</li>
+</ol></p></statement>
+
+<solution><p><ol marker="a.">
 	<li><p>Write the equation for <m>f</m> in the form
 			<me>H = 6 + 2t</me>
 	In this equation, <m>t</m> is the input and <m>H</m> is the output. We interchange the roles of the variables by solving for <m>t</m> to obtain
@@ -153,7 +169,7 @@
 	In this equation, <m>H</m> is the input and <m>t</m> is the output. The formula for the inverse function is 
 		<me>t=g(H) = \dfrac{H - 6}{2}</me> 
 	The function <m>g</m> gives the number of days it will take the corn seedlings to grow to a height of <m>H</m> inches.</p></li>
-	<li><p>To make a table for <m>f</m>, we choose values for <m>t</m> and evaluate <m>f (t) = 6 + 2t</m> at those <m>t</m>-values, as shown at left below.</p>
+	<li><p>To make a table for <m>f</m>, we choose values for <m>t</m> and evaluate <m>f(t) = 6 + 2t</m> at those <m>t</m>-values, as shown at left below.</p>
 			
 		<sidebyside margins="10% 20%">
 		<tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
@@ -194,16 +210,15 @@
 			        <row>
 			            <cell><m>12</m></cell>
 			            <cell><m>3</m></cell></row>
-			    </tabular>
-			</sidebyside>
+			    </tabular></sidebyside>
 		
-		<p>To make a table for <m>g</m>, we could choose values for <m>H</m> and evaluate <m>\dfrac{H-6}{2}</m>, but because <m>g</m> is the inverse function for <m>f</m>, we can simply interchange the columns in our table for <m>f</m>, as shown at right above.</p>
-		<p> You can check that the values in the second table do satisfy the formula for the inverse function, <m>g(H)=\dfrac{H-6}{2}</m>. </p></li>
+    <p>To make a table for <m>g</m>, we could choose values for <m>H</m> and evaluate <m>~\dfrac{H-6}{2}</m>, but because <m>g</m> is the inverse function for <m>f</m>, we can simply interchange the columns in our table for <m>f</m>, as shown at right above.</p>
+    <p> You can check that the values in the second table do satisfy the formula for the inverse function, <m>~g(H)=\dfrac{H-6}{2}</m>. </p></li>
 	</ol></p></solution></example>
 
 <note><p>Note once again that the two tables show the same relationship between <m>t</m> and <m>H</m>, but the roles of input and output have been interchanged. The function <m>f</m> tells us the height of the seedlings after <m>t</m> days, and <m>g</m> tells us how long it will take the seedlings to grow to height <m>H</m>.</p></note>
 
-<exercise><title>QuickCheck 2</title>
+<exercise component="webwork"><title>QuickCheck 2</title>
 <webwork>
      <pg-code>       
             $invsub = RadioButtons(
@@ -221,10 +236,18 @@
     <solution>
         <p><m>m=\dfrac{h+2}{3}</m></p>
     </solution>
-</webwork></exercise>   
+</webwork></exercise> 
 
-<exercise>
-    <title>Practice 2</title>
+<exercise component="main"><title>QuickCheck 2</title>
+<statement><p>Which of these is the inverse of the function <m>~h=3m-2</m>?</p>
+  <p><ol marker="a." cols="2">
+        <li><m>m=\dfrac{h+2}{3}</m></li>
+        <li><m>m=2h-3</m></li>
+        <li><m>m=\dfrac{h-3}{2}</m></li>
+        <li><m>m=\dfrac{1}{3h-2}</m></li>
+    </ol></p></statement></exercise>    
+
+<exercise component="webwork"><title>Practice 2</title>
     <webwork>
          <pg-code>
             Context("ImplicitPlane");
@@ -273,23 +296,38 @@
                 <li><p><m>x = g(y) = 26\frac{2}{3} - \frac{2}{3} y</m>; <m>g(10) = 20</m>; If Carol swims for <m>10</m> hrs, she must cycle for <m>20</m> hrs.</p></li>
             </ol></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
+
+<exercise component="main"><title>Practice 2</title>
+<statement><p>Carol can burn 600 calories per hour bicycling and 400 calories per hour swimming. She would like to lose 5 pounds, which is equivalent to 16,000 calories.</p>
+    <p><ol marker="a.">
+        <li><p>Write an equation relating the number of hours of cycling, <m>x</m>, and the number of hours swimming, <m>y</m>, that Carol must spend to lose 5 pounds.</p></li>
+        <li><p>Write <m>y</m> as a function of <m>x</m>, <m>~y = f(x)</m>. What does <m>f(10)</m> tell you?</p></li>
+        <li><p>Find the inverse function, <m>~x = g(y)</m>. What does <m>g(10)</m> tell you?</p></li>
+    </ol></p></statement>
+        
+<solution><p><ol marker="a.">
+        <li><p><m>600x + 400y = 16,000</m></p></li>
+        <li><p><m>y = f (x) = 40 - 1.5x</m>; <m>f (10) = 25</m>; If Carol cycles for 10 hrs, she must swim for 25 hrs.</p></li>
+        <li><p><m>x = g(y) = 26\frac{2}{3} - \frac{2}{3} y</m>; <m>g(10) = 20</m>; If Carol swims for <m>10</m> hrs, she must cycle for <m>20</m> hrs.</p></li>
+    </ol></p></solution></exercise>
 </subsection>
 
-<subsection><title>Inverse Function Notation</title><idx>inverse function notation</idx>
+<subsection xml:id="Inverse-Notation"><title>Inverse Function Notation</title><idx>inverse function notation</idx>
 
-<p>If the inverse of a function <m>f</m> is also a function, we denote the inverse by the symbol <m>f^{-1}</m>, read "<m>f</m> inverse." This notation makes it clear that the two functions are related in a special way. For example, the function <m>f (t) = 6 + 2t</m> in <xref ref="example-inverse-formula" text="type-global"/> has inverse function <m>f^{-1}(H) = \dfrac{H -6}{2}</m>.</p>
+<p>If the inverse of a function <m>f</m> is also a function, we denote the inverse by the symbol <m>f^{-1}</m>, read "<m>f</m> inverse." This notation makes it clear that the two functions are related in a special way. For example, the function <m>~f(t) = 6 + 2t</m> in <xref ref="example-inverse-formula" text="type-global"/> has inverse function <m>~f^{-1}(H) = \dfrac{H -6}{2}</m>.</p>
 
-<example xml:id="example-inverse-function-notation"><statement><p>If <m>~~y = f (x) = x^3 + 2,~~</m> find <m>~~f^{-1}(10)</m>.</p>
+<example xml:id="example-inverse-function-notation"><statement><p>If <m>~~y = f(x) = x^3 + 2,~~</m> find <m>~~f^{-1}(10)</m>.</p>
 </statement>
+
 <solution><p>We first find the inverse function for <m>y = x^3 + 2</m> by solving for <m>x</m>:
 	<!--*****--><me>\begin{aligned}[t]
-	x^3 \amp = y - 2 \amp\amp \blert{\text{Substract 2 from both sides.}} \\
-	x \amp = \sqrt[3]{y - 2}\amp\amp \blert{\text{Take cube roots.}}
-	\end{aligned}</me><!--*****-->
+	                   x^3 \amp = y - 2 \amp\amp \blert{\text{Substract 2 from both sides.}} \\
+	                   x \amp = \sqrt[3]{y - 2}\amp\amp \blert{\text{Take cube roots.}}
+	                   \end{aligned}</me><!--*****-->
 The inverse function is <m>x = f^{-1}(y) = \sqrt[3]{y - 2}</m>. Now we evaluate the inverse function at <m>y = 10</m>:
-	<me>f^{-1}(10) = \sqrt[3]{10 - 2} = 2</me></p></solution></example>
+	<me>f^{-1}(10) = \sqrt[3]{10 - 2} = 2</me></p>
+</solution></example>
 
 <warning><p>Although the same symbol, <m>^{-1}</m>, is used for both reciprocals and inverse functions, the two notions are <em>not</em> equivalent. That is, the inverse of a given function is usually not the same as the reciprocal of that function. In <xref ref="example-inverse-formula" text="type-global"/>, note that <m>f^{-1}(y)</m> is not the same as the reciprocal of <m>f (y)</m>, because
 	<me>\frac{1}{f(y)}= \frac{1}{y^3+ 2} ~~\text{ but }~~ f^{-1}(y)= \sqrt[3]{y - 2}</me>
@@ -299,7 +337,7 @@ To avoid confusion, we use the notation <m>\dfrac{1}{f}</m> to refer to the reci
 	<me>f^{-1}(10) = 2 ~~\text{ and } ~~ f(2) = 10</me>
 are equivalent; they convey the same information. This fact is a restatement of our earlier observation about inverse functions, this time using inverse function notation.</p></note>
 
-<exercise><title>QuickCheck 3</title>
+<exercise component="webwork"><title>QuickCheck 3</title>
 <webwork>
      <pg-code>       
             $invtwo = RadioButtons(
@@ -319,13 +357,21 @@ are equivalent; they convey the same information. This fact is a restatement of 
     </solution>
 </webwork></exercise>
 
+<exercise component="main"><title>QuickCheck 3</title>
+<statement><p>If <m>f(5)=2</m>, what is <m>f^{-1}(2)</m> equal to?</p>
+<p><ol marker="a." cols="2">
+        <li><m>\dfrac{1}{2}</m></li>
+        <li><m>\dfrac{1}{5}</m></li>
+        <li><m>5</m></li>
+        <li><m>-5</m></li>
+    </ol></p></statement></exercise> 
+
 <assemblage><title>Inverse Functions</title><idx>inverse function</idx>
 	<p>Suppose the inverse of <m>f</m> is a function, denoted by <m>f^{-1}</m>. Then
 		<me>f^{-1}(y) = x~~~~ \text{ if and only if }~~~~f(x) = y</me></p>
 </assemblage>
 
-<exercise>
-    <title>Practice 3</title>
+<exercise component="webwork"><title>Practice 3</title>
     <webwork>
          <pg-code>
             $a = Compute("-2");
@@ -354,19 +400,32 @@ are equivalent; they convey the same information. This fact is a restatement of 
                 <li><p><m>f^{-1}(1) = -2</m>, but <m>\dfrac{1}{f (1)}= 4</m></p></li>
             </ol></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
-<p>We can use a graph of a function <m>y = f (x)</m> to find values of the inverse function <m>x = f^{-1}(y)</m>. The figure below shows the graph of <m>f(x) = x^3 + 2</m>.</p> 
+<exercise component="main"><title>Practice 3</title>
+<statement><p><ol marker="a.">
+        <li><p>If <m>z = f(w) = \dfrac{1}{w + 3}</m>, find <m>f^{-1}(1)</m>.</p></li>
+        <li><p>Write two equations about the value of <m>f^{-1}(1)</m>, one using <m>f^{-1}</m> and one using <m>f</m>.</p></li>
+        <li><p>Show that <m>f^{-1}(1)</m> is not equal to <m>\dfrac{1}{f(1)}</m>.</p></li>
+    </ol></p></statement>
+        
+<solution><p><ol marker="a.">
+        <li><p><m>-2</m></p></li>
+        <li><p><m>f^{-1}(1) = -2</m>, <m>f (-2) = 1</m></p></li>
+        <li><p><m>f^{-1}(1) = -2</m>, but <m>\dfrac{1}{f (1)}= 4</m></p></li>
+    </ol></p></solution></exercise>
+
+<p>We can use a graph of a function <m>y = f(x)</m> to find values of the inverse function <m>x = f^{-1}(y)</m>. The figure below shows the graph of <m>f(x) = x^3 + 2</m>.</p> 
 
 <sidebyside widths="65% 25%"><stack>
 <p>You already know how to evaluate a function from its graph: We start with the horizontal axis. For instance, to evaluate <m>f(-2)</m>, we find <m>-2</m> on the <m>x</m>-axis, move vertically to the point on the graph with <m>x = -2</m>, in this case <m>(-2, -6)</m>, and read the <m>y</m>-coordinate of the point. We see that <m>f(-2) = -6</m>.</p>
+
 <p>To evaluate the inverse function, we start with the vertical axis. For example, to find <m>f^{-1}(10)</m>, we find <m>10</m> on the vertical axis and move horizontally to the point on the graph with <m>y = 10</m>. In this case, the point is <m>(2, 10)</m>, so <m>f^{-1}(10) = 2</m>.</p></stack>
-<image source="images/fig-read-f-inverse-from-f"><description>reading values of f-inverse from graph of f</description></image>
+    <image source="images/fig-read-f-inverse-from-f"><description>reading values of f-inverse from graph of f</description></image>
 </sidebyside>
 
 <example xml:id="example-Celsius-and-Fahrenheit"><statement><p>The function <m>C = h(F)</m> gives Celsius temperature as a function of Fahrenheit temperature. The graph of the function is shown below. Use the graph to evaluate <m>h(68)</m> and <m>h^{-1}(10)</m>, and then explain their meaning in this context.</p>
-	<sidebyside width="60%"><image source="images/fig-Celsius-and-Fahrenheit"><description>graph of Celsius vs Fahrenheit</description></image></sidebyside></statement>
+	<image width="70%" source="images/fig-Celsius-and-Fahrenheit"><description>graph of Celsius vs Fahrenheit</description></image></statement>
 
 <solution><p>To evaluate <m>h(68)</m>, we find the input <m>F = 68</m> on the horizontal axis, then find the point on the graph with <m>F = 68</m> and read its vertical coordinate. We see that the point <m>(68, 20)</m> lies on the graph, so <m>h(68) = 20</m>. When the Fahrenheit temperature is <m>68\degree</m>, the Celsius temperature is <m>20\degree</m>. </p>
 
@@ -374,8 +433,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
 	
 <p> To use the graph of <m>h</m> to find values of <m>h^{-1}</m>, we start with the vertical axis and find the point on the graph with <m>C = 10</m>. This point is <m>(50, 10)</m>, so <m>F = 50</m> when <m>C = 10</m>, or <m>h^{-1}(10) = 50</m>. When the Celsius temperature is <m>10\degree</m>, the Fahrenheit temperature is <m>50\degree</m>.</p></solution></example>
 
-<exercise>
-    <title>Practice 4</title>
+<exercise component="webwork"><title>Practice 4</title>
     <introduction>
         <p>Use the graph of <m>h</m> in <xref ref="example-Celsius-and-Fahrenheit" text="type-global"/>.</p>
     </introduction>
@@ -425,10 +483,22 @@ are equivalent; they convey the same information. This fact is a restatement of 
                 <li><p><m>h(32) = 0</m>, <m>h^{-1}(0) = 32</m></p></li>
             </ol></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="main"><title>Practice 4</title>
+<statement><p><ol marker="a.">
+        <li><p>Use the graph of <m>h</m> in <xref ref="example-Celsius-and-Fahrenheit" text="type-global"/> to find <m>h^{-1}(-10)</m>.</p></li>
+        <li><p>Does <m>h^{-1}(-10) = -h^{-1}(10)</m>?</p></li>
+        <li><p>Write two equations, one using <m>h</m> and one using <m>h^{-1}</m>, stating the Fahrenheit temperature when the Celsius temperature is <m>0^\circ</m>.</p></li>
+    </ol></p></statement>
+
+<solution><p><ol marker="a.">
+        <li><p><m>14</m>: On the graph of <m>h</m>, when <m>C=-10</m>, <m>F=14</m>.</p></li>
+        <li><p>No</p></li>
+        <li><p><m>h(32) = 0</m>, <m>h^{-1}(0) = 32</m></p></li>
+    </ol></p></solution></exercise>
+
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -437,15 +507,17 @@ are equivalent; they convey the same information. This fact is a restatement of 
         <p><var form="essay"/></p>      
     </statement>    
 </webwork></exercise>
+
+<exercise component="maink"><title>Pause and Reflect</title>
+<statement><p>If the function <m>f</m> tells you how much money is in your account after <m>t</m> years, what does the function <m>f^{-1}</m> tell you?</p></statement></exercise>
 </subsection>
 
 <subsection><title>Graph of the Inverse Function</title>
 
-<sidebyside widths="55% 32%"><stack>
+<sidebyside widths="55% 38%" valigns="middle middle"><stack>
 <p>In <xref ref="example-Celsius-and-Fahrenheit" text="type-global"/>, we used a graph of <m>h</m> to read values of <m>h^{-1}</m>. But we can also plot the graph of <m>h^{-1}</m> itself. Because <m>C</m> is the input variable for <m>h^{-1}</m>, we plot <m>C</m> on the horizontal axis and <m>F</m> on the vertical axis. To find some points on the graph of <m>h^{-1}</m>, we interchange the coordinates of points on the graph of <m>h</m>. The graph of <m>h^{-1}</m> is shown at right.</p>
 
-<tabular halign="center" right="minor" left="minor" bottom="minor"><col top="major" /><col top="major" /><col /><col top="major" />
-        <col top="major" />
+<tabular halign="center" right="minor" left="minor" bottom="minor"><col top="major" /><col top="major" /><col /><col top="major" /><col top="major" />
         <row bottom="minor">
             <cell colspan="2" halign="center"><m>C=h(F)</m></cell>
             <cell bottom="none"></cell>
@@ -486,28 +558,29 @@ are equivalent; they convey the same information. This fact is a restatement of 
 </sidebyside>
 
 <example xml:id="example-cubic-pheasant"><statement><p>The Park Service introduced a flock of <m>12</m> endangered pheasant into a wildlife preserve. After <m>t</m> years, the population of the flock was given by
-	<me>P = f (t) = 12 + 2t^3</me><ol marker="a">
+	<me>P = f(t) = 12 + 2t^3</me></p>
+    <p><ol marker="a.">
 		<li>Graph the function on the domain <m>[0, 5]</m>.</li>
 		<li>Find a formula for the inverse function, <m>t = f^{-1}(P)</m>. What is the meaning of the inverse function in this context?</li>
 		<li>Sketch a graph of the inverse function.</li>
 	</ol></p></statement>
-<solution><p><ol marker="a">
-	<li><sidebyside widths="50% 25%" valigns="middle middle" margins="0% 20%">
+
+<solution><p><ol marker="a.">
+	<li><sidebyside widths="50% 35%" valigns="middle middle" margins="0% 10%">
 	<p>The graph of <m>f</m> is shown at right, with <m>t</m> on the horizontal axis and <m>P</m> on the vertical axis.</p>
 		<image source="images/fig-cubic-pheasant"><description>graph of pheasant population</description></image></sidebyside></li>
-	<li>We solve <m>P = 12 + 2t^3</m> for <m>t</m> in terms of <m>P</m>.
+	<li>We solve <m>~P = 12 + 2t^3</m> for <m>t</m> in terms of <m>P</m>.
 		<!--*****--><me>\begin{aligned}[t]
-		2t^3 \amp = P - 12\amp\amp \blert{\text{Substract 12 from both sides.}}\\
-		t^3 \amp = \frac{P - 12}{2}\amp\amp \blert{\text{Divide both sides by 2.}}\\
-		t \amp = \sqrt[3]{\frac{P - 12}{2}}\amp\amp \blert{\text{Take cube roots.}}
-		\end{aligned}</me><!--*****-->
-	The inverse function is <m>t = f^{-1}(P) =\sqrt[3]{\dfrac{P - 12}{2}}</m>. It tells us the number of years it takes for the pheasant population to grow to size <m>P</m>.</li>
+		                  2t^3 \amp = P - 12\amp\amp \blert{\text{Substract 12 from both sides.}}\\
+		                  t^3 \amp = \frac{P - 12}{2}\amp\amp \blert{\text{Divide both sides by 2.}}\\
+		                  t \amp = \sqrt[3]{\frac{P - 12}{2}}\amp\amp \blert{\text{Take cube roots.}}
+		                  \end{aligned}</me><!--*****-->
+	The inverse function is <m>~t = f^{-1}(P) =\sqrt[3]{\dfrac{P - 12}{2}}</m>. It tells us the number of years it takes for the pheasant population to grow to size <m>P</m>.</li>
 	<li><p>The graph of <m>f^{-1}</m> is shown below, with <m>P</m> on the horizontal axis and <m>t</m> on the vertical axis.</p>
-	<sidebyside   width="45%"><image source="images/fig-cubic-pheasant-inv"><description>graph of time to achieve pheasant population</description></image></sidebyside></li>
+	<image width="50%" source="images/fig-cubic-pheasant-inv"><description>graph of time to achieve pheasant population</description></image></li>
 </ol></p></solution></example>
 
-<exercise>
-    <title>Practice 5</title>
+<exercise component="webwork"><title>Practice 5</title>
     <webwork>
          <pg-code>
             Context()->variables->add(T=>"Real");
@@ -539,17 +612,30 @@ are equivalent; they convey the same information. This fact is a restatement of 
         </solution>
     </webwork>
     <conclusion>
-        <sidebyside width="35%" margins="0% 5%"><image source="images/fig-in-ex-ans-5-1-5.jpg"><description>both inverse and reciprocal</description></image></sidebyside>
-    </conclusion>
-</exercise>
+        <image width="35%" source="images/fig-in-ex-ans-5-1-5.jpg"><description>both inverse and reciprocal</description></image>
+    </conclusion></exercise>
+
+<exercise component="main"><title>Practice 5</title>
+<statement><p>The formula <m>~T = f(L) = 2\pi \sqrt{\dfrac{L}{32}}</m> gives the period in seconds, <m>T</m>, of a pendulum as a function of its length in feet, <m>L</m>.</p>
+    <p><ol marker="a.">
+        <li><p>Graph the function on the domain <m>[0, 5]</m>.</p></li>
+        <li><p>Find a formula for the inverse function, <m>L = f^{-1}(T )</m>. What is the meaning of the inverse function in this context?</p></li>
+        <li><p>Sketch a graph of the inverse function.</p></li>
+    </ol></p></statement>
+        
+<solution><p><ol marker="a." cols="2">
+        <li><image width="75%" source="images/fig-in-ex-ans-5-1-5.jpg"><description>both inverse and reciprocal</description></image></li>
+        <li><p><m>~L = f^{-1}(T ) =\dfrac{8}{\pi^2} T^2.~~~~~~</m> <m>~f^{-1}</m> gives the length of a pendulum as a function of its period.</p></li>
+        <li><p>See graph for part(a).</p></li>
+    </ol></p></solution></exercise>
 </subsection>
 
 <subsection><title>When Is the Inverse a Function?</title>
 
 <p>We can always find the inverse of a function simply by interchanging the input and output variables. In the preceding examples, interchanging the variables created a new function. However, the inverse of a function does not always turn out to be a function itself.</p>
 
-<p> For example, to find the inverse of <m>y = f (x) = x^2</m>, we solve for <m>x</m> to get <m>x = \pm\sqrt{y}</m>. When we regard <m>y</m> as the input and <m>x</m> as the output, the relationship does not describe a function. The graphs of <m>f</m> and its inverse are shown below. (Note that for the graph of the inverse, we plot <m>y</m> on the horizontal axis and <m>x</m> on the vertical axis.) Because the graph of the inverse does not pass the vertical line test, it is not a function.</p>
-	<sidebyside width="60%"><image source="images/fig-graphs-of-f-and-inverse" ><description>graphs of x-squared and its inverse</description></image></sidebyside>
+<p> For example, to find the inverse of <m>y = f(x) = x^2</m>, we solve for <m>x</m> to get <m>x = \pm\sqrt{y}</m>. When we regard <m>y</m> as the input and <m>x</m> as the output, the relationship does not describe a function. The graphs of <m>f</m> and its inverse are shown below. (Note that for the graph of the inverse, we plot <m>y</m> on the horizontal axis and <m>x</m> on the vertical axis.) Because the graph of the inverse does not pass the vertical line test, it is not a function.</p>
+	<image width="75%" source="images/fig-graphs-of-f-and-inverse" ><description>graphs of x-squared and its inverse</description></image>
 
 <p>For many applications, it is important to know whether or not the inverse of <m>f</m> is a function. This can be determined from the graph of <m>f</m>. When we interchange the roles of the input and output variables, horizontal lines of the form <m>y = k</m> become vertical lines.</p>
 
@@ -562,13 +648,13 @@ are equivalent; they convey the same information. This fact is a restatement of 
 <p>Notice that the graph of <m>f(x) = x^2</m> does not pass the horizontal line test, so we would not expect its inverse to be a function.</p>
 
 <example xml:id="example-invertible-or-not"><statement><p>Which of the functions shown below have inverses that are also functions?</p>
-	<sidebyside  width="80%"><image source="images/fig-invertible-or-not"><description>graphs for vertical line test</description></image></sidebyside></statement>
+	<image width="100%" source="images/fig-invertible-or-not"><description>graphs for vertical line test</description></image></statement>
+
 <solution><p>In each case, we apply the horizontal line test to determine whether the inverse is a function. Because no horizontal line intersects their graphs more than once, the functions pictured in figures (a) and (c) have inverses that are also functions. The functions in figures (b) and (d) do not have inverses that are functions.</p></solution></example>
 
-<exercise>
-    <title>Practice 6</title>
+<exercise component="webwork"><title>Practice 6</title>
     <introduction>
-        <sidebyside width="90%"><image source="images/fig-invertible-or-not2"><description>graphs for vertical line test</description></image></sidebyside>
+        <image width="90%" source="images/fig-invertible-or-not2"><description>graphs for vertical line test</description></image>
     </introduction>
     <webwork>
          <pg-code>
@@ -581,7 +667,9 @@ are equivalent; they convey the same information. This fact is a restatement of 
               2, 
             );            
         </pg-code> 
-        <statement>
+        
+    
+<statement>
             <p>Which of the functions whose graphs are shown above have inverses that are also functions?</p>
             <p><ol marker="(a)">
                 <li><p>
@@ -601,8 +689,14 @@ are equivalent; they convey the same information. This fact is a restatement of 
         <solution>
             <p>(a) and (d)</p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
+
+<exercise component="main"><title>Practice 6</title>
+<statement><p>Which of the functions whose graphs are shown below have inverses that are also functions?</p>
+    <image width="100%" source="images/fig-invertible-or-not2"><description>graphs for vertical line test</description></image>
+</statement>
+        
+<solution><p>(a) and (d)</p></solution></exercise>
 
 <p>A function that passes the horizontal line test is called <term>one-to-one</term><idx>one-to-one</idx>, because each input has only one output and each output has only one input. A one-to-one function passes the horizontal line test as well as the vertical line test. With this terminology, we can state the following theorem.</p>
 
@@ -611,10 +705,10 @@ are equivalent; they convey the same information. This fact is a restatement of 
 </assemblage>
 
 <warning><p>A function may have an inverse function even if we cannot find its formula. The function <m>f (x) = x^5 + x + 1</m> shown in figure (a) is one-to-one, so it has an inverse function. We can even graph the inverse function, as shown in figure (b), by interchanging the coordinates of points on the graph of <m>f</m>. </p> 
-	<sidebyside width="60%"><image source="images/fig-5-8"><description>graphs of f and f-inverse</description></image></sidebyside>
+	<image width="80%" source="images/fig-5-8"><description>graphs of f and f-inverse</description></image>
 <p>However, we cannot find a formula for the inverse function because we cannot solve the equation <m>y = x^5 + x + 1</m> for <m>x</m> in terms of <m>y</m>.</p></warning>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -622,7 +716,10 @@ are equivalent; they convey the same information. This fact is a restatement of 
         <p>What does the term one-to-one mean?  Give an example.</p>
         <p><var form="essay"/></p>      
     </statement>    
-</webwork></exercise>	
+</webwork></exercise>
+
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>What does the term one-to-one mean?  Give an example.</p></statement></exercise>
 </subsection>
 
 <subsection><title>Mathematical Properties of the Inverse Function</title>
@@ -631,15 +728,15 @@ are equivalent; they convey the same information. This fact is a restatement of 
 
 <p> If we apply the function <m>f</m> to a given input value and then apply the function <m>f^{-1}</m> to the output from <m>f</m>, the end result will be the original input value. For example, if we choose <m>t = \alert{5}</m> as an input value, we find that
 	<!--*****--><me>\begin{aligned}[t]
-	f(\alert{5})\amp= 6 + 2(\alert{5}) 
-	= \blert{16}\amp\amp \blert{\text{ Multiply by 2, then add 6.}}\\
-	\text{and } f^{-1}(\blert{16}) \amp = \frac{\blert{16} - 6}{2}
-	= \alert{5}\amp\amp \blert{\text{Subtract 6, then divide by 2.}}
-	\end{aligned}</me><!--*****--></p>
-<sidebyside  width="50%"><image source="images/fig-function-and-inverse-diagram"  width="50%"><description>function and inverse diagram</description></image></sidebyside>
+	                   f(\alert{5})\amp= 6 + 2(\alert{5}) 
+	                   = \blert{16}\amp\amp \blert{\text{ Multiply by 2, then add 6.}}\\
+	                   \text{and } f^{-1}(\blert{16}) \amp = \frac{\blert{16} - 6}{2}
+	                   = \alert{5}\amp\amp \blert{\text{Subtract 6, then divide by 2.}}
+	                   \end{aligned}</me><!--*****--></p>
+    <image width="60%" source="images/fig-function-and-inverse-diagram"><description>function and inverse diagram</description></image>
 <p>We return to the original input value, <m>5</m>, as illustrated above.</p>
 
-<exercise><title>QuickCheck 4</title>
+<exercise component="webwork"><title>QuickCheck 4</title>
 <webwork>
      <pg-code>       
             $inout = RadioButtons(
@@ -659,13 +756,24 @@ are equivalent; they convey the same information. This fact is a restatement of 
     </solution>
 </webwork></exercise>
 
+<exercise component="main"><title>QuickCheck 4</title>
+<statement><p>An inverse function</p>
+<p><ol marker="a.">
+    <li><p>makes the output negative.</p></li>
+    <li><p>makes the input negative.</p></li>
+    <li><p>interchanges the input and output.</p></li>
+    <li><p>takes the reciprocal of the output.</p></li>
+</ol></p></statement></exercise>
+
 <p><xref ref="example-inverse-of-inverse" text="type-global"/> illustrates the fact that if <m>f^{-1}</m> is the inverse function for <m>f</m>, then <m>f</m> is also the inverse function for <m>f^{-1}</m>.</p>
 
-<example xml:id="example-inverse-of-inverse"><statement><p>Consider the function <m>f(x) = x^3 + 2</m> and its inverse, <m>f^{-1}(y) = \sqrt[3]{y - 2}</m>.<ol marker="a">
-	<li>Show that the inverse function undoes the effect of <m>f</m> on <m>x = 2</m>.</li>
-	<li>Show that <m>f</m> undoes the effect of the inverse function on <m>y = -25</m>.</li>
-	</ol></p></statement>
-<solution><p><ol marker="a">
+<example xml:id="example-inverse-of-inverse"><statement><p>Consider the function <m>~f(x) = x^3 + 2</m> and its inverse, <m>f^{-1}(y) = \sqrt[3]{y - 2}</m>.</p>
+    <p><ol marker="a.">
+	   <li>Show that the inverse function undoes the effect of <m>f</m> on <m>x = 2</m>.</li>
+	   <li>Show that <m>f</m> undoes the effect of the inverse function on <m>y = -25</m>.</li>
+    </ol></p></statement>
+
+<solution><p><ol marker="a.">
 	<li>We first evaluate the function <m>f</m> for <m>x = 2</m>:
 		<me>f(\alert{2}) = \alert{2}^3 + 2 = \blert{10}</me>
 	Then we evaluate the inverse function <m>f^{-1}</m> at <m>y = 10</m>:
@@ -678,8 +786,7 @@ are equivalent; they convey the same information. This fact is a restatement of 
 	We started and ended with <m>-25</m>.</li>
 </ol></p></solution></example>
 
-<exercise xml:id="exercise-inverse-of-inverse">
-    <title>Practice 7</title>
+<exercise component="webwork" xml:id="exercise-inverse-of-inversew"><title>Practice 7</title>
     <webwork>
          <pg-code>
             Context()->variables->add(y=>"Real");
@@ -689,7 +796,6 @@ are equivalent; they convey the same information. This fact is a restatement of 
             $y1 = $f->eval(x=>$x1);
             $y2 = Compute("-2");
             $x2 = $fi->eval(y=>$y2);
-
         </pg-code> 
         <statement>
             <p><ol marker="a">
@@ -708,8 +814,20 @@ are equivalent; they convey the same information. This fact is a restatement of 
                 <li><p><m>f^{-1}(-2)=0 </m> and <m>f(0)=-2 </m></p></li>
             </ol></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
+
+<exercise component="main" xml:id="exercise-inverse-of-inverse"><title>Practice 7</title>
+    <statement><p><ol marker="a.">
+        <li><p>Find a formula for the inverse of the function <m>~f(x)=\dfrac{2}{x - 1}</m>. </p></li>
+        <li><p>Show that <m>f^{-1}</m> undoes the effect of <m>f</m> on <m>x = 3</m>.</p></li>
+        <li><p>Show that <m>f</m> undoes the effect of <m>f^{-1}</m> on <m>y = -2</m>.</p></li>
+    </ol></p></statement>
+        
+<solution> <p><ol marker="a.">
+        <li><p><m>f^{-1}(y) = 1 + \dfrac{2}{y}</m></p></li>
+        <li><p><m>f(3)=1 </m>, and <m>f^{-1}(1)=3 </m></p></li>
+        <li><p><m>f^{-1}(-2)=0 </m> and <m>f(0)=-2 </m></p></li>
+    </ol></p></solution></exercise>
 
 <xi:include href="./assemblage-functions-and-inverse-functions.xml" />
 </subsection>
@@ -721,20 +839,20 @@ are equivalent; they convey the same information. This fact is a restatement of 
 <p>However, we can also study inverse functions purely as mathematical objects. There is a relationship between the graph of a function and the graph of its inverse that is easier to see if we plot them both on the same set of axes.</p>
 <p> A graph does not change if we change the names of the variables, so we can let <m>x</m> represent the input for both functions, and let <m>y</m> represent the output. Consider the function <m>C = h(F)</m> from <xref ref="example-Celsius-and-Fahrenheit" text="type-global"/>, and its inverse function, <m>F = h^{-1}(C)</m>. The formulas for these functions are
 	<!--*****--><me>\begin{aligned}[t]
-	C \amp = h(F) = \frac{5}{9}(F - 32)\\
-	F \amp = h^{-1}(C) = 32 + \frac{9}{5}C
-	\end{aligned}</me><!--*****-->
+	               C \amp = h(F) = \frac{5}{9}(F - 32)\\
+	               F \amp = h^{-1}(C) = 32 + \frac{9}{5}C
+	               \end{aligned}</me><!--*****-->
 But their graphs are the same if we write them as
 	<!--*****--><me>\begin{aligned}[t]
-	y \amp = h(x) =\frac{5}{9}(x - 32)\\
-	y \amp= h^{-1}(x) = 32 + \frac{9}{5}x
-	\end{aligned}</me><!--*****-->
+	               y \amp = h(x) =\frac{5}{9}(x - 32)\\
+	               y \amp= h^{-1}(x) = 32 + \frac{9}{5}x
+	               \end{aligned}</me><!--*****-->
 The graphs are shown below.</p>
-	<sidebyside  width="45%"><image source="images/fig-temperature-inverses" ><description>graphs of both function and inverse</description></image></sidebyside>
+	<image width="60%" source="images/fig-temperature-inverses" ><description>graphs of function and inverse</description></image>
 
 <p>Now, for every point <m>(a, b)</m> on the graph of <m>f</m>, the point <m>(b, a)</m> is on the graph of the inverse function. Observe that the points <m>(a, b)</m> and <m>(b, a)</m> are always located symmetrically across the line <m>y=x</m>. The graphs are <term>symmetric about the line <m>y=x</m></term>, which means that if  we were to place a mirror along the line <m>y=x</m>, each graph would be the reflection of the other.</p>
 
-<exercise><title>QuickCheck 5</title>
+<exercise component="webwork"><title>QuickCheck 5</title>
 <webwork>
      <pg-code>       
             $invsym = RadioButtons(
@@ -754,18 +872,28 @@ The graphs are shown below.</p>
     </solution>
 </webwork></exercise>
 
+<exercise component="main"><title>QuickCheck 5</title>
+<statement><p>The graphs of <m>f</m> and <m>f^{-1}</m> are symmetric about</p>
+<p><ol marker="a." cols="2">
+    <li><p>the <m>x</m>-axis</p></li>
+    <li><p>the <m>y</m>-axis</p></li>
+    <li><p>the asymptote.</p></li>
+    <li><p>the line <m>y=x</m>.</p></li>
+</ol></p></statement></exercise>
+
 <example xml:id="example-graph-inverse"><statement><p>Graph the function <m>f (x) = 2\sqrt{x + 4}</m> on the domain <m>[-4, 12]</m>. Graph its inverse function <m>f^{-1}</m> on the same grid.</p></statement>
 
 <solution><p>The graph of <m>f</m> has the same shape as the graph of <m>y = \sqrt{x}</m>, shifted <m>4</m> units to the left and stretched vertically by a factor of <m>2</m>. The figure at left below shows the graph of <m>f</m>, along with a table of values. By interchanging the rows of the table, we obtain points on the graph of the inverse function, shown at right.</p>
-	<sidebyside  width="85%"><image source="images/fig-graphs-and-tables-of-inverses" ><description>graphs and tables of a function and its inverse function</description></image></sidebyside>
+	<image width="100%" source="images/fig-graphs-and-tables-of-inverses" ><description>graphs and tables of a function and its inverse function</description></image>
 
-<sidebyside widths="45% 40%" valigns="middle middle"><p>If we use <m>x</m> as the input variable for both functions, and <m>y</m> as the output, we can graph <m>f</m> and <m>f^{-1}</m> on the same grid, as shown at right. The two graphs are symmetric about the line <m>y = x</m>.</p>
-	<image source="images/fig-inverses-on-same-grid"><description>function and inverse on the same grid</description></image></sidebyside></solution></example>
+<sidebyside widths="45% 50%" valigns="middle middle"><p>If we use <m>x</m> as the input variable for both functions, and <m>y</m> as the output, we can graph <m>f</m> and <m>f^{-1}</m> on the same grid, as shown at right. The two graphs are symmetric about the line <m>y = x</m>.</p>
+	<image source="images/fig-inverses-on-same-grid"><description>function and inverse on the same grid</description></image></sidebyside>
+</solution></example>
 
-<exercise>
-    <title>Practice 8</title>
+<exercise component="webwork"><title>Practice 8</title>
 <statement><p>Graph the function <m>f (x) = x^3 + 2</m> and its inverse <m>f^{-1}(x) = \sqrt[3]{x - 2}</m> on the same set of axes, along with the line <m>y = x</m>.</p></statement>
-<answer><sidebyside width="30%"><image source="images/fig-in-ex-ans-5-1-8"><description>cubic and inverse</description></image></sidebyside></answer>
+
+<solution><image width="50%" source="images/fig-in-ex-ans-5-1-8"><description>cubic and inverse</description></image></solution>
 <!--
     <webwork>
      <pg-code></pg-code> 
@@ -783,7 +911,12 @@ The graphs are shown below.</p>
 -->
 </exercise>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="main"><title>Practice 8</title>
+<statement><p>Graph the function <m>~f(x) = x^3 + 2</m> and its inverse <m>~f^{-1}(x) = \sqrt[3]{x - 2}</m> on the same set of axes, along with the line <m>y = x</m>.</p></statement>
+
+<solution><image width="40%" source="images/fig-in-ex-ans-5-1-8"><description>cubic and inverse</description></image></solution></exercise>
+
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -792,44 +925,46 @@ The graphs are shown below.</p>
         <p><var form="essay"/></p>      
     </statement>    
 </webwork></exercise>
+
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>Explain the difference between the meaning of the notation <m>p^{-1}</m> if <m>p</m> is a function or if <m>p</m> is a variable.</p></statement></exercise>
 </subsection>
 
 <subsection><title>Domain and Range</title>
 
 <p>When we interchange the input and output variables to obtain the inverse function, we interchange the domain and range of the function. For the functions graphed in <xref ref="example-graph-inverse" text="type-global"/>, you can see that
 	<!--*****--><me>\begin{aligned}[t]
-	\text{Domain} (f) \amp=[-4, 12] \amp\text{and}\amp\amp  \text{Domain} ( f^{-1}) \amp= [0, 8]\\
-	\text{Range} ( f ) \amp = [0, 8] \amp\amp\amp \text{Range} ( f -1) \amp = [-4, 12]
-	\end{aligned}</me><!--*****-->
+	               \text{Domain} (f) \amp=[-4, 12] \amp\text{and}\amp\amp  \text{Domain} ( f^{-1}) \amp= [0, 8]\\
+	               \text{Range} ( f ) \amp = [0, 8] \amp\amp\amp \text{Range} ( f -1) \amp = [-4, 12]
+	               \end{aligned}</me><!--*****-->
 This relationship between the domain and range of a function and its inverse holds in general.</p>
 
 <xi:include href="./assemblage-domain-and-range-of-the-inverse-function.xml" />
 
-<example xml:id="example-GC-graph-inverse"><statement><p><ol marker="a">
+<example xml:id="example-GC-graph-inverse"><statement><p><ol marker="a.">
 	<li>Graph the function <m>y = f (x) = \dfrac{1}{x +3}</m> in the window
 		<me>\begin{aligned}[t]
-        \text{Xmin} \amp = -6 \amp\amp \text{Xmax} = 3.4\\
-        \text{Ymin} \amp = -6 \amp\amp \text{Ymax} = 3
-        \end{aligned}</me></li>
+            \text{Xmin} \amp = -6 \amp\amp \text{Xmax} = 3.4\\
+            \text{Ymin} \amp = -6 \amp\amp \text{Ymax} = 3
+            \end{aligned}</me></li>
     <li>Graph the inverse function in the same window, along with the line <m>y = x</m>.</li>
     <li>State the domain and range of <m>f</m>, and of <m>f^{-1}</m>.</li>
     </ol></p></statement>
 
-<solution><p><ol marker="a">
+<solution><p><ol marker="a.">
 	<li><p>The graph of <m>f</m> is shown below. It looks like the graph of <m>y = \dfrac{1}{x}</m>, shifted <m>3</m> units to the left.</p></li>
 	<li><p>To find the inverse function, we solve for <m>x</m>. Take the reciprocal of both sides of the equation.
 			<!--*****--><me>\begin{aligned}[t]
-			\dfrac{1}{y} \amp= x + 3\amp\amp \blert{\text{Subtract 3 from both sides.}}\\
-			x \amp = \dfrac{1}{y}- 3
-			\end{aligned}</me><!--*****-->
+			                 \dfrac{1}{y} \amp= x + 3\amp\amp \blert{\text{Subtract 3 from both sides.}}\\
+			                 x \amp = \dfrac{1}{y}- 3
+			                 \end{aligned}</me><!--*****-->
 	The inverse function is <m>x = f^{-1}(y) = \dfrac{1}{y}- 3</m>, or, using <m>x</m> for the input variable, <m>f^{-1}(x) = \dfrac{1}{x}- 3</m>. The graph of <m>f^{-1}</m> looks like the graph of <m>y = \dfrac{1}{x}</m>, shifted down <m>3</m> units, as shown below.</p>
-	<sidebyside   width="40%"><image source="images/fig-GC-graph-inverse"><description>GC graph of function and inverse</description></image></sidebyside></li>
+	   <image width="60%" source="images/fig-GC-graph-inverse"><description>GC graph of function and inverse</description></image></li>
 	<li><p>Because <m>f</m> is undefined at <m>x = -3</m>, the domain of <m>f</m> is all real numbers except <m>-3</m>. The graph has a horizontal asymptote at <m>y = 0</m>, so the range is all real numbers except <m>0</m>.</p>
 	<p> The inverse function <m>f^{-1}(x) = \dfrac{1}{x}- 3</m> is undefined at <m>x = 0</m>, so its domain is all real numbers except <m>0</m>. The graph of <m>f^{-1}</m> has a horizontal asymptote at <m>y = -3</m>, so its range is all real numbers except <m>-3</m>.</p></li>
 	</ol></p></solution></example>
 
-<exercise>
-    <title>Practice 9</title>
+<exercise component="webwork"><title>Practice 9</title>
     <webwork>
          <pg-code>
         $refreshCachedImages = 1;
@@ -893,11 +1028,21 @@ This relationship between the domain and range of a function and its inverse hol
     </webwork>
     <conclusion>
         <p>Another graph of <m>f</m> and <m>f^{-1}</m></p>
-        <sidebyside width="35%" margins="0% 5%"><image source="images/fig-in-ex-ans-5-1-9"><description>function and invese</description></image></sidebyside>
-    </conclusion>
-</exercise>
+        <image width="35%" source="images/fig-in-ex-ans-5-1-9"><description>function and invese</description></image>
+    </conclusion></exercise>
 
+<exercise component="main"><title>Practice 9</title>
+<statement><p><ol marker="a.">
+        <li><p>Graph the function <m>~f(x) = \dfrac{2}{x -1}</m> and its inverse function, <m>f^{-1}</m> (which you found above in Practice 7, on the same set of axes, along with the line <m>y = x</m>.</p></li>
+        <li><p>State the domain and range of <m>f</m>, and of <m>f^{-1}</m>.</p></li>
+    </ol></p></statement>
+
+<solution><p><ol marker="a.">
+        <li><image width="45%" source="images/fig-in-ex-ans-5-1-9"><description>function and invese</description></image></li>
+        <li><p>Domain of <m>f</m>:  all real numbers except <m>1</m>, Range of <m>f</m>: all real numbers except <m>0</m>, Domain of <m>f^{-1}</m>: all real numbers except <m>0</m>, Range of <m> f^{-1}</m>: all real numbers except <m>1</m></p></li>
+    </ol></p></solution></exercise>
 </subsection>
+
 <xi:include href="./summary-5-1.xml" /> <!-- summary  -->
 <xi:include href="./section-5-1-exercises.xml" /> <!-- exercises  -->
 </section> 

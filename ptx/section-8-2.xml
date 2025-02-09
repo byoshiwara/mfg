@@ -21,10 +21,11 @@ is an ordered triple of numbers that satisfies the equation. For example, <m>(0,
 As with the two-variable case, a single linear equation in three variables has infinitely many solutions.</p>
 
 <p>An ordered triple <m>(x, y, z)</m> can be represented geometrically as a point in space using a three-dimensional Cartesian coordinate system, as shown below. In this coordinate system, the graph of a linear equation in three variables is a plane, and the fact that there are infinitely many solutions to the equation tells us that that there are infinitely many points in the corresponding plane.</p>
-<sidebyside  width="50%"><image source="images/fig-3D-point"><description>point in 3D space</description></image></sidebyside>
+	<image width="70%" source="images/fig-3D-point"><description>point in 3D space</description></image>
 
 <p>A solution to a <em>system</em> of three linear equations in three variables is an ordered triple that satisfies each equation in the system. That triple represents a point that must lie on all three graphs. The figure below shows the different ways in which three planes may intersect in space.</p>
-<sidebyside  width="80%"><image source="images/fig-8-cases-for-3-planes"><description>8 cases of how 3 planes can intersect</description></image></sidebyside>
+	<image width="90%" source="images/fig-8-cases-for-3-planes"><description>8 cases of how 3 planes can intersect</description></image>
+
 <p><ul>
 	<li>In figure (a), the three planes intersect in a single point, so the corresponding system of three equations has a unique solution.</li>
 	<li> In figures (b), (c), and (d), the intersection is either a line or an entire plane, so the corresponding system has infinitely many solutions. Such a system is called <term>dependent</term><idx>dependent</idx>.</li>
@@ -33,7 +34,7 @@ As with the two-variable case, a single linear equation in three variables has i
 
 <p>It is impractical to solve <m>3\times 3</m> systems by graphing. Even when technology for producing three-dimensional graphs is available, we cannot read coordinates on such graphs with any confidence. Thus, we will restrict our attention to algebraic methods of solving such systems.</p>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -42,6 +43,9 @@ As with the two-variable case, a single linear equation in three variables has i
         <p><var form="essay"/></p>      
     </statement>    
 </webwork></exercise>
+
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>What is a solution to a 3x3 linear system?</p></statement></exercise>
 </subsection>
 
 <subsection><title>Back-Substitution</title>
@@ -56,6 +60,7 @@ As with the two-variable case, a single linear equation in three variables has i
 		    <mrow>          -2y  \amp {}-{} \amp  4z \amp {}={} \amp -2</mrow>
 		    <mrow>        \amp {}{} \amp 3z \amp {}={} \amp -3</mrow>
 		 </md></p></statement>
+
 <solution><p>The third equation involves only the variable <m>z</m>, so we solve that equation to find <m>z = -1</m>. Then we substitute <m>-1</m> for <m>z</m> in the second equation and solve for <m>y</m>.
 		<md><mrow>-2y - 4(\alert{-1}) \amp = -2</mrow>
 			<mrow>-2y + 4 \amp= -2</mrow>
@@ -69,8 +74,7 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
 
 <p>The technique used in <xref ref="example-back-substitution" text="type-global"/> is called <term>back-substitution</term><idx>back-substitution</idx>. It works in the special case where one of the equations involves exactly one variable, and a second equation involves that same variable and just one other variable. A <m>3\times 3</m> linear system with these properties is said to be in <term>triangular form</term><idx>triangular form</idx>. If we can transform a system into triangular form, we can use back-substitution to complete the solution.</p>
 
-<exercise>
-	<title>Practice 1</title>
+<exercise component="webwork"><title>Practice 1</title>
     <webwork>
          <pg-code>
             Context("Point");
@@ -96,10 +100,18 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
         <solution>
             <p><m>(5, 1, -2)</m></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
-<exercise><title>QuickCheck 1</title>
+<exercise component="main"><title>Practice 1</title>
+<statement><p>Use back-substitution to solve the system
+            <me>\begin{alignedat}{5}
+                    2x +{}  2y \amp {}+{} \amp z \amp {}={} \amp 10\\
+                 y  \amp {}-{} \amp  4z \amp {}={} \amp 9\\
+                 \amp {}{} \amp 3z \amp {}={} \amp -6
+                 \end{alignedat}</me></p></statement>
+<solution><p><m>(5, 1, -2)</m></p></solution></exercise>
+
+<exercise component="webwork"><title>QuickCheck 1</title>
 <webwork>
      <pg-code>       
             $trsy = RadioButtons(
@@ -118,6 +130,15 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
         <p>A triangular system</p>
     </solution>
 </webwork></exercise>
+
+<exercise component="main"><title>QuickCheck 1</title>
+<statement><p>What sort of system can be solved by back-substitution?</p>
+<p><ol marker="a." cols="2">
+        <li><p>Any linear system</p></li>
+        <li><p>A triangular system</p></li>
+        <li><p>A dependent system</p></li>
+        <li><p>A complex system</p></li>
+    </ol></p></statement></exercise>
 </subsection>
 
 <subsection><title>Gaussian Reduction</title>
@@ -128,10 +149,10 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
 	    <mrow>2x \amp {}-{} \amp  y \amp {}+{} \amp  z \amp {}={} \amp  3\amp\hphantom{blankblank} (2)</mrow>
 	    <mrow>3x \amp {}+{} \amp 2y \amp {}+{} \amp  z \amp {}={} \amp 10\amp\hphantom{blankblank} (3)</mrow>
 	</md>
-	<ol marker="1">
+	<ol marker="1.">
 		<li><p>This system is already in standard form. We can choose any one of the three variables to eliminate first. For this example, we will eliminate <m>x</m>.</p></li>
 		<li><p>Choose two of the equations, say (1) and (2), and use a linear combination: We multiply Equation (1) by <m>-2</m> and add the result to Equation (2) to produce Equation (4).</p>
-			<sidebyside><tabular halign="right">
+			<tabular halign="right">
 				<row>
 					<cell><m>-2x</m></cell>
 					<cell><m>-</m></cell>
@@ -162,9 +183,9 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
 					<cell><m>11</m></cell>
 					<cell><m></m></cell>
 					<cell><m>(4)</m></cell></row>
-			</tabular></sidebyside></li>
+			</tabular></li>
 	<li><p>Now we have an equation involving only two variables. But we need two equations in two unknowns to find the solution. So we choose a different pair of equations, say (1) and (3), and eliminate <m>x</m> again. We multiply Equation (1) by <m>-3</m> and add the result to Equation (3) to obtain Equation (5).</p>
-			<sidebyside><tabular halign="right">
+			<tabular halign="right">
 				<row>
 					<cell><m>-3x</m></cell>
 					<cell><m>-</m></cell>
@@ -195,14 +216,13 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
 					<cell><m>22</m></cell>
 					<cell><m></m></cell>
 					<cell><m>(5)</m></cell></row>
-			</tabular></sidebyside></li>
+			</tabular></li>
 	<li><p>We now form a <m>2\times 2</m> system with our new Equations (4) and (5).
 			<md alignment="alignat">
 				<mrow>-5y\amp + \amp 7z \amp = 11 \hphantom{blankblank} (4)</mrow>
-				<mrow>-4y\amp + \amp 10z \amp = 22 \hphantom{blankblank} (5)</mrow>
-			</md>
+				<mrow>-4y\amp + \amp 10z \amp = 22 \hphantom{blankblank} (5)</mrow></md>
 	We eliminate either <m>y</m> or <m>z</m> to obtain an equation in a single variable. If we choose to eliminate <m>y</m>, we add <m>4</m> times Equation (4) to <m>-5</m> times Equation (5) to obtain Equation (6).</p>
-			<sidebyside><tabular halign="right">
+			<tabular halign="right">
 				<row>
 					<cell><m>-20y</m></cell>
 					<cell><m>+</m></cell>
@@ -227,30 +247,25 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
 					<cell><m>-66</m></cell>
 					<cell><m></m></cell>
 					<cell><m>(6)</m></cell></row>
-			</tabular></sidebyside></li>
+			</tabular></li>
 	<li><p>Now we can start solving for the variables. To keep things organized, we form a triangular system: Choose one of the original equations (in three variables), one of the equations from our <m>2\times 2</m> system, and our final equation in one variable. We choose Equations (1), (4), and (6).
 		<md alignment="alignat">
 		    <mrow> x \amp {}+{} \amp 2y \amp {}-{} \amp 3z \amp {}={} \amp -4\amp\hphantom{blankblank} (1)</mrow>
 			<mrow>\amp \amp-5y \amp{}+{}\amp 7z \amp = \amp 11 \amp\hphantom{blankblank} (4)	</mrow>
-		    <mrow>\amp \amp     \amp\amp {-22z} \amp {}={} \amp -66\amp\hphantom{blankblank} (6)	</mrow>
-		 </md></p>
+		    <mrow>\amp \amp     \amp\amp {-22z} \amp {}={} \amp -66\amp\hphantom{blankblank} (6)	</mrow></md></p>
 	<p>This new system is in triangular form, and it has the same solutions as the original system. We complete the solution by back-substitution. Solve Equation (6) to find <m>z=3</m>. Substituting <m>\alert{3}</m> for <m>z</m> in Equation (4), we find
-		<md>
-		 	<mrow>-5y + 7(\alert{3}) \amp = 11</mrow>
+		<md><mrow>-5y + 7(\alert{3}) \amp = 11</mrow>
 		 	<mrow>-5y + 21 \amp = 11</mrow>
 		 	<mrow>-5y \amp = -10</mrow>
-		 	<mrow>y \amp = 2</mrow>
-		</md></p>
+		 	<mrow>y \amp = 2</mrow></md></p>
 	<p>Finally, we substitute <m>\alert{3}</m> for <m>z</m> and <m>\blert{2}</m> for <m>y</m> into Equation (1) to find
-		<md>
-			<mrow>x + 2(\blert{2}) - 3(\alert{3}) \amp = -4</mrow>
+		<md><mrow>x + 2(\blert{2}) - 3(\alert{3}) \amp = -4</mrow>
 			<mrow>x + 4 - 9 \amp = -4</mrow>
-			<mrow>x\amp =1</mrow>
-		</md>
+			<mrow>x\amp =1</mrow></md>
 		The solution to the system is the ordered triple <m>(1, 2, 3)</m>. You can verify that this triple satisfies all three of the original equations.</p></li>
 	</ol></p>
 
-<exercise><title>QuickCheck 2</title>
+<exercise component="webwork"><title>QuickCheck 2</title>
 <webwork>
      <pg-code>       
             $elsm = RadioButtons(
@@ -270,18 +285,35 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
     </solution>
 </webwork></exercise>
 
+<exercise component="main"><title>QuickCheck 2</title>
+<statement><p>After we eliminate one variable from a pair of equations, what is the next step?</p>
+<p><ol marker="a.">
+        <li><p>Eliminate a different variable from the same pair of equations.</p></li>
+        <li><p>Eliminate the same variable from a different pair of equations.</p></li>
+        <li><p>Eliminate a different variable from a different pair of equations.</p></li>
+        <li><p>Substitute into the third equation.</p></li>
+    </ol></p></statement></exercise>
+
 <p>The method described above for putting a linear system into triangular form is called <term>Gaussian reduction</term><idx>Gaussian reduction</idx>, after the German mathematician Carl Gauss. We summarize our method for solving a <m>3\times 3</m> linear system as follows.</p>
 
-<xi:include href="./assemblage-steps-for-solving-3-by-3.xml" />
-
+<assemblage><title>Steps for Solving a <m>3\times 3</m> Linear System</title>
+    <p><ol marker="1.">
+		<li><p>Clear each equation of fractions and put it in standard form.</p></li>
+		<li><p>Choose two of the equations and eliminate one of the variables by forming a linear combination.</p></li>
+		<li><p>Choose a different pair of equations and eliminate the <em>same</em> variable.</p></li>
+		<li><p>Form a <m>2\times 2</m> system with the equations found in steps (2) and (3). Eliminate one of the variables from this <m>2\times 2</m> system by using a linear combination.</p></li>
+		<li><p>Form a triangular system by choosing among the previous equations. Use back-substitution to solve the triangular system.</p></li>
+	</ol></p></assemblage>
+	
 <example><statement><p>Solve the system
 	<md alignment="alignat">
 		<mrow>x\amp{}+{}\amp 2y \amp {}-{} \amp z \amp {}={} \amp -3\amp\hphantom{blankblank} (1)</mrow>
 		<mrow>\frac{1}{3}x \amp {}-{} \amp  y \amp {}+{} \amp\frac{1}{3}  z \amp {}={} \amp 2\amp\hphantom{blankblank} (2)</mrow>
 		<mrow>x \amp {}+{} \amp\frac{1}{2} y \amp {}+{} \amp  z \amp {}={} \amp\frac{5}{2} \amp\hphantom{blankblank} (3)</mrow>
 		</md></p></statement>
+
 <solution><p>Follow the steps outlined above.
-	<ol marker="1">
+	<ol marker="1.">
 		<li><p>We multiply each side of Equation (2) by <m>3</m>, and each side of Equation (3) by <m>2</m>, to obtain the equivalent system		
 				<md alignment="alignat">
 				    <mrow>x\amp{}+{}\amp 2y \amp {}-{} \amp z \amp {}={} \amp -3\amp\hphantom{blankblank} (1)</mrow>
@@ -289,7 +321,7 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
 				    <mrow>2x \amp {}+{} \amp y \amp {}+{} \amp  2z \amp {}={} \amp5 \amp\hphantom{blankblank} (3\text{a})</mrow>
 				</md></p></li>
 		<li><p>We eliminate <m>z</m> from Equations (1) and (2a) by adding them together.</p>
-			<sidebyside><tabular halign="right">
+			<tabular halign="right">
 				<row>
 					<cell><m>x</m></cell>
 					<cell><m>+</m></cell>
@@ -320,9 +352,9 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
 					<cell><m>3</m></cell>
 					<cell><m></m></cell>
 					<cell><m>(4)</m></cell></row>
-			</tabular></sidebyside></li>
+			</tabular></li>
 		<li><p>We eliminate <m>z</m> from Equations (1) and (3a): We multiply Equation (1) by <m>2</m> and add the result to Equation (3a).</p>
-			<sidebyside><tabular halign="right">
+			<tabular halign="right">
 				<row>
 					<cell><m>2x</m></cell>
 					<cell><m>+</m></cell>
@@ -353,7 +385,7 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
 					<cell><m>-1</m></cell>
 					<cell><m></m></cell>
 					<cell><m>(5)</m></cell></row>
-			</tabular></sidebyside></li>
+			</tabular></li>
 		<li><p>We form the <m>2\times 2</m> system consisting of Equations (4) and (5).
 				<md alignment="alignat">
 					<mrow>2x\amp {}-{}\amp y\amp =\amp 3\amp\hphantom{blankblank} (4)</mrow>
@@ -363,13 +395,11 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
 				<md alignment="alignat">
 				    <mrow> x \amp {}+{} \amp 2y \amp {}-{} \amp z \amp {}={} \amp -3\amp\hphantom{blankblank} (1)</mrow>
 					<mrow>2x \amp{}-{}\amp y \amp \amp  \amp = \amp 3 \amp\hphantom{blankblank} (4)	</mrow>
-				    <mrow>\amp \amp 7y  \amp\amp  \amp {}={} \amp -7\amp\hphantom{blankblank} (6)	</mrow>
-				 </md>
+				    <mrow>\amp \amp 7y  \amp\amp  \amp {}={} \amp -7\amp\hphantom{blankblank} (6)	</mrow></md>
 		We use back-substitution to find the solution. You can verify that the ordered triple <m>(1, -1, 2)</m> satisfies all three of the original equations of the system.</p></li>
-		</ol></p></solution></example>
+	</ol></p></solution></example>
 
-<exercise>
-  <title>Practice 2</title>
+<exercise component="webwork"><title>Practice 2</title>
     <webwork>
          <pg-code>
             Context("ImplicitPlane")->variables->add(y=>"Real",z=>"Real");
@@ -415,10 +445,32 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
                 <li><p><m>(2, 2, 1)</m></p></li>
             </ol></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="main"><title>Practice 2</title>
+<statement><p>Use Gaussian reduction to solve the system
+            <me>\begin{alignedat}{5}
+                    x\amp{}-{}\amp 2y \amp {}+{} \amp z \amp {}={} \amp -1\amp\hphantom{blankblank} (1)\\
+                 \frac{2}{3}x \amp {}+{} \amp \frac{1}{3}y \amp {}-{} \amp z \amp {}={} \amp 1\amp\hphantom{blankblank} (2)\\
+                3x \amp {}+{} \amp 3y \amp {}-{} \amp 2z \amp {}={} \amp 10 \amp\hphantom{blankblank} (3)
+                \end{alignedat}</me>
+            Follow the steps suggested below:</p>
+            <p><ol marker="1.">
+                <li><p>Clear the fractions from Equation (2). </p></li>
+                <li><p>Eliminate <m>z</m> from Equations (1) and (2).</p></li>
+                <li><p>Eliminate <m>z</m> from Equations (1) and (3).</p></li>
+                <li><p>Eliminate <m>x</m> from your new <m>2\times 2</m> system.</p></li>
+                <li><p>Form a triangular system and solve by back-substitution.</p></li>
+            </ol></p></statement>
+<solution><p><ol marker="1.">
+                <li><p><m>2x+y-3z=3</m></p></li>
+                <li><p><m>5x-5y=0</m></p></li>
+                <li><p><m>5x-y=8</m></p></li>
+                <li><p><m>4y=8</m></p></li>
+                <li><p><m>(2, 2, 1)</m></p></li>
+            </ol></p></solution></exercise>
+
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -427,14 +479,18 @@ The solution is the ordered triple <m>(-1, 3, -1)</m>. You should verify that th
         <p><var form="essay"/></p>      
     </statement>    
 </webwork></exercise>
+
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>What should you do if one of the original equations in a 3x3 system is "missing" one of the variables?</p></statement>
+</exercise>
 </subsection>
 
 <subsection><title>Inconsistent and Dependent Systems</title>
 
 <p>The results in <xref ref="Systems-of-Linear-Equations-in-Two-Variables" text="type-global"/> for identifying dependent and inconsistent systems can be extended to <m>3\times 3</m> linear systems. If at any step in forming linear combinations we obtain an equation of the form
-	<me>0x + 0y + 0z = k, \hphantom{blank}(k\ne 0)</me>
+		<me>0x + 0y + 0z = k, \hphantom{blank}(k\ne 0)</me>
 then the system is inconsistent and has no solution. If we obtain an equation of the form
-	<me>0x + 0y + 0z = 0</me>
+		<me>0x + 0y + 0z = 0</me>
 then the system is dependent and has infinitely many solutions.</p>
 
 <example><statement><p>Solve the system
@@ -443,8 +499,9 @@ then the system is dependent and has infinitely many solutions.</p>
 			<mrow>6x\amp {}+{}\amp 2y\amp {}-{}\amp 4z\amp =\amp 5\amp\hphantom{blank} \amp(2)</mrow>
 			<mrow>-2x\amp {}-{}\amp y\amp {}+{}\amp 3z\amp =\amp -1\amp\hphantom{blank} \amp(3)</mrow>
 		</md></p></statement>
+
 <solution><p>To eliminate <m>y</m> from Equations (1) and (2), we multiply Equation (1) by <m>-2</m> and add the result to Equation (2).</p>
-		<sidebyside><tabular halign="right">
+		<tabular halign="right">
 			<row>
 				<cell><m>-6x</m></cell>
 				<cell><m>-</m></cell>
@@ -469,7 +526,7 @@ then the system is dependent and has infinitely many solutions.</p>
 				<cell><m>0z</m></cell>
 				<cell><m>=</m></cell>
 				<cell><m>3</m></cell></row>
-		</tabular></sidebyside>
+		</tabular>
 
 <!--		<md alignment="alignat">
 			<mrow>
@@ -485,8 +542,7 @@ then the system is dependent and has infinitely many solutions.</p>
 		</md> -->
 	<p>Since the resulting equation has no solution, the system is <em>inconsistent</em>.</p></solution></example>
 
-<exercise>
-	<title>Practice 3</title>
+<exercise component="webwork"><title>Practice 3</title>
     <webwork>
          <pg-code>
             $type =  PopUp(
@@ -513,8 +569,16 @@ then the system is dependent and has infinitely many solutions.</p>
         <solution>
             <p>Inconsistent</p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
+
+<exercise component="main"><title>Practice 3</title>
+<statement><p>Decide whether the system is inconsistent, dependent, or consistent and independent.
+        <me>\begin{alignedat}{5}
+            x\amp {}+{}\amp 3y\amp {}-{}\amp z\amp =\amp 4 \\
+            -2x\amp {}-{}\amp 6y\amp {}+{}\amp 2z\amp =\amp 1\\
+            x\amp {}+{}\amp 2y\amp {}-{}\amp z\amp =\amp 3 
+            \end{alignedat}</me></p></statement>
+<solution><p>Inconsistent</p></solution></exercise>
 
 <example><statement><p>Solve the system
 		<md alignment="alignat">
@@ -522,8 +586,9 @@ then the system is dependent and has infinitely many solutions.</p>
 			<mrow>2x\amp {}+{}\amp y\amp {}-{}\amp 4z\amp =\amp 6\amp\hphantom{blank} \amp(2)</mrow>
 			<mrow>2x\amp {}-{}\amp 6y\amp {}+{}\amp 2z\amp =\amp 4\amp\hphantom{blank} \amp(3)</mrow>
 		</md></p></statement>
+
 <solution><p>To eliminate <m>x</m> from Equations (1) and (3), we multiply Equation (1) by 2 and add Equation (3).</p>
-		<sidebyside><tabular halign="right">
+		<tabular halign="right">
 			<row>
 				<cell><m>-2x</m></cell>
 				<cell><m>+</m></cell>
@@ -548,10 +613,10 @@ then the system is dependent and has infinitely many solutions.</p>
 				<cell><m>0z</m></cell>
 				<cell><m>=</m></cell>
 				<cell><m>0</m></cell></row>
-		</tabular></sidebyside>
+		</tabular>
 	<p>Since the resulting equation vanishes, the system is dependent and has infinitely many solutions.</p></solution></example>
 
-<exercise><title>QuickCheck 3</title>
+<exercise component="webwork"><title>QuickCheck 3</title>
 <webwork>
      <pg-code>       
             $nosol = RadioButtons(
@@ -571,8 +636,16 @@ then the system is dependent and has infinitely many solutions.</p>
     </solution>
 </webwork></exercise>
 
-<exercise>
-	<title>Practice 4</title>
+<exercise component="main"><title>QuickCheck 3</title>
+<statement><p>What does it mean if you obtain an equation of the form <m>0x+0y+0z=k</m>, <m>k \not= 0</m>?</p>
+<p><ol marker="a.">
+        <li><p>The system has no solution.</p></li>
+        <li><p>The system is dependent.</p></li>
+        <li><p>The solution is <m>(0,0,0)</m>. </p></li>
+        <li><p>The system is triangular.</p></li>
+    </ol></p></statement></exercise>
+
+<exercise component="webwork"><title>Practice 4</title>
     <webwork>
          <pg-code>
             $type =  PopUp(
@@ -593,10 +666,18 @@ then the system is dependent and has infinitely many solutions.</p>
         <solution>
             <p>Dependent</p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="main"><title>Practice 4</title>
+<statement> <p>Decide whether the system is inconsistent, dependent, or consistent and independent.
+        <me>\begin{alignedat}{5}
+            a - c \amp = 2\\
+            2a + b \amp = 5\\
+            a + b + c \amp = 3
+            \end{alignedat}</me></p></statement>
+<solution><p>Dependent</p></solution></exercise>
+
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -608,6 +689,12 @@ then the system is dependent and has infinitely many solutions.</p>
         <p><var form="essay"/></p>      
     </statement>    
 </webwork></exercise>
+
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>Explain how you know immediately that the following system is dependent:
+            <md><mrow>x+y+z=3</mrow>
+                <mrow>2x+2y+2z=6</mrow>
+                <mrow>-x-y-z=-3</mrow></md></p></statement></exercise>
 </subsection>
 
 <subsection><title>Applications</title>
@@ -616,7 +703,7 @@ then the system is dependent and has infinitely many solutions.</p>
 
 <example><statement><p>One angle of a triangle measures <m>4\degree</m> less than twice the second angle, and the third angle is <m>20\degree</m> greater than the sum of the first two. Find the measure of each angle.</p></statement>
 <solution><p>
-	<ol marker="1">
+	<ol marker="1.">
 		<li><p>We represent the measure of each angle by a separate variable.
 				<md>
 					<mrow>\amp\text{First angle: }\amp\amp x</mrow>
@@ -638,7 +725,7 @@ then the system is dependent and has infinitely many solutions.</p>
 							<mrow>x\amp {}+{}\amp y\amp {}+{}\amp z\amp =\amp 180\amp\hphantom{blank} \amp(3)</mrow>
 						</md>		</p>
 				<p>ii-iii. Since Equation (1) has no <m>z</m>-term, it will be most efficient to eliminate the variable <m>z</m> from Equations (2) and (3). We add these two equations.</p>
-		<sidebyside><tabular halign="right">
+		<tabular halign="right">
 			<row>
 				<cell><m>x</m></cell>
 				<cell><m>+</m></cell>
@@ -669,9 +756,9 @@ then the system is dependent and has infinitely many solutions.</p>
 				<cell><m>160</m></cell>
 				<cell></cell>
 				<cell><m>(4)</m></cell></row>
-		</tabular></sidebyside>
-				
-			<p>iv. We form a <m>2\times 2</m> system from Equations (1) and (4). We add the two equations to eliminate the variable <m>y</m>, yielding</p><sidebyside><tabular halign="right">
+		</tabular>				
+			<p>iv. We form a <m>2\times 2</m> system from Equations (1) and (4). We add the two equations to eliminate the variable <m>y</m>, yielding</p>
+			<tabular halign="right">
 			<row>
 				<cell><m>x</m></cell>
 				<cell><m>-</m></cell>
@@ -696,28 +783,22 @@ then the system is dependent and has infinitely many solutions.</p>
 				<cell><m>156</m></cell>
 				<cell></cell>
 				<cell><m>(5)</m></cell></row>
-		</tabular></sidebyside>				
+		</tabular>				
 			<p>v. We form a triangular system using Equations (3), (1), and (5). We use back-substitution to complete the solution.
 					<md alignment="alignat">
 						<mrow>x\amp {}+{}\amp y\amp {}+{}\amp z\amp =\amp 180\hphantom{blankblank} \amp(2)</mrow>
 						<mrow>x\amp {}-{}\amp 2y\amp \amp\amp =\amp -4\hphantom{blankblank} \amp(1)</mrow>
-						<mrow>3x\amp\amp\amp\amp\amp = \amp156\hphantom{blankblank} \amp(5)</mrow>
-					</md>
+						<mrow>3x\amp\amp\amp\amp\amp = \amp156\hphantom{blankblank} \amp(5)</mrow></md>
 			We divide both sides of Equation (5) by <m>3</m> to find <m>x = 52</m>. We substitute <m>52</m> for <m>x</m> in Equation (1) and solve for <m>y</m> to find
-					<md>
-						<mrow>\alert{52} - 2y \amp = -4</mrow>
-						<mrow>y \amp= 28</mrow>
-					</md>
+					<md><mrow>\alert{52} - 2y \amp = -4</mrow>
+						<mrow>y \amp= 28</mrow></md>
 			We substitute <m>52</m> for <m>x</m> and <m>28</m> for <m>y</m> in Equation (3) to find
-					<md>
-						<mrow>\alert{52} + \blert{28} + z \amp= 180</mrow>
-						<mrow>z\amp=100</mrow>
-					</md></p></li>
+					<md><mrow>\alert{52} + \blert{28} + z \amp= 180</mrow>
+						<mrow>z\amp=100</mrow></md></p></li>
 			<li><p>The angles measure <m>52\degree</m>, <m>28\degree</m>, and <m>100\degree</m>.</p></li>
 		</ol></p></solution></example>
 
-<exercise>
-  <title>Practice 5</title>
+<exercise component="webwork"><title>Practice 5</title>
     <webwork>
          <pg-code>
 
@@ -809,8 +890,7 @@ then the system is dependent and has infinitely many solutions.</p>
                     <row><cell>Finishing time:</cell>
                         <cell><var name="$eq3" width="13"/></cell>
                         <cell><m>(3)</m></cell></row>
-                </tabular>
-              </li>
+                </tabular></li>
               <li><p>Solve the system. Follow the steps suggested below.
                 <ol marker="i">
                     <li><p>Clear the fractions from the second equation.</p>
@@ -825,11 +905,9 @@ then the system is dependent and has infinitely many solutions.</p>
                     <p><var name="$p" width="8"/> Enter the solution as an ordered triple.</p></li>
                 </ol></p></li>
         <li><p>You should have found the following solution: The manufacturer should make <m>60</m> two-drawer cabinets, <m>40</m> four-drawer cabinets, and <m>30</m> horizontal cabinets.</p></li>
-        </ol></p>
-        </statement>
+    </ol></p></statement>
 
         <solution>
-
             <tabular>
                 <row><cell>Assembly time:</cell>
                     <cell><m><var name="$eq1"/></m></cell>
@@ -848,11 +926,87 @@ then the system is dependent and has infinitely many solutions.</p>
             <p><m><var name="$eq6"/> \quad (6)</m></p>
             <p><m>x = 60</m>, <m>y = 40</m>, <m>z = 30</m>, so the solution is <m>(60,40,30)</m>.</p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
+<exercise component="main"><title>Practice 5</title>
+<statement><p>A manufacturer of office supplies makes three types of file cabinet: two-drawer, four-drawer, and horizontal. The manufacturing process is divided into three phases: assembly, painting, and finishing. 
+            <ul>
+                <li>A two-drawer cabinet requires 3 hours to assemble, 1 hour to paint, and 1 hour to finish.</li>
+                <li> The four-drawer model takes 5 hours to assemble, 90 minutes to paint, and 2 hours to finish.</li>
+                <li> The horizontal cabinet takes 4 hours to assemble, 1 hour to paint, and 3 hours to finish.</li>
+            </ul> 
+The manufacturer employs enough workers for 500 hours of assembly time, 150 hours of painting, and 230 hours of finishing per week. How many of each type of file cabinet should he make in order to use all the hours available?</p>
+        <p><ol marker="1.">
+                <li><p>Represent the number of each model of file cabinet by a different variable.</p>
+                <tabular halign="left">
+                    <row>
+                        <cell>Number of two-drawer cabinets:</cell>
+                        <cell><m>x</m></cell></row>
+                    <row>
+                        <cell>Number of four-drawer cabinets:</cell>
+                        <cell><m>y</m></cell></row>
+                    <row>
+                        <cell>Number of horizontal cabinets:</cell>
+                        <cell><m>z</m></cell></row>
+                  </tabular></li>
+                <li><p>Organize the information into a table. (Convert all times to hours.)</p>
+                  <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                    <row bottom="minor">
+                        <cell><m></m></cell>
+                        <cell>2-Drawer</cell>
+                        <cell>4-Drawer</cell>
+                        <cell>Horizontal</cell>
+                        <cell>Total available</cell></row>
+                    <row>
+                        <cell>Assembly</cell>
+                        <cell><var name="$a11" width="3"/></cell>
+                        <cell><var name="$a12" width="3"/></cell>
+                        <cell><var name="$a13" width="3"/></cell>
+                        <cell><var name="$a14" width="3"/></cell></row>
+                    <row>
+                        <cell>Painting</cell>
+                        <cell><var name="$a21" width="3"/></cell>
+                        <cell><var name="$a22" width="3"/></cell>
+                        <cell><var name="$a23" width="3"/></cell>
+                        <cell><var name="$a24" width="3"/></cell></row>
+                    <row>
+                        <cell>Finishing</cell>
+                        <cell><var name="$a31" width="3"/></cell>
+                        <cell><var name="$a32" width="3"/></cell>
+                        <cell><var name="$a33" width="3"/></cell>
+                        <cell><var name="$a34" width="3"/></cell></row>
+                </tabular>
+                <p>Write three equations describing the time constraints in each of the three manufacturing phases. For example, the assembly phase requires <m>3x</m> hours for the two-drawer cabinets, <m>5y</m> hours for the four-drawer cabinets, and <m>4z</m> hours for the horizontal cabinets, and the sum of these times should be the time available, <m>500</m> hours.</p>
+                <tabular>
+                    <row><cell>Assembly time:</cell>
+                        <cell><m>\hphantom{00000000000000000000}</m></cell>
+                        <cell><m>(1)</m></cell></row>
+                    <row><cell>Painting time:</cell>
+                        <cell><m>\hphantom{00000000000000000000}</m></cell>
+                        <cell><m>(2)</m></cell></row>
+                    <row><cell>Finishing time:</cell>
+                        <cell><m>\hphantom{00000000000000000000}</m></cell>
+                        <cell><m>(3)</m></cell></row>
+                </tabular></li>
+              <li><p>Solve the system. Follow the steps suggested below.
+                <ol marker="i.">
+                    <li><p>Clear the fractions from the second equation.</p></li>
+                    <li><p>Subtract Equation (1) from <m>3</m> times Equation (3) to obtain a new Equation (4).</p></li>
+                    <li><p>Subtract Equation (2) from twice Equation (3) to obtain a new Equation (5).</p>></li>
+                    <li><p>Equations (4) and (5) form a <m>2\times 2</m> system in <m>y</m> and <m>z</m>. Subtract Equation (5) from Equation (4) to obtain a new Equation (6).</p></li>
+                    <li><p>Form a triangular system with Equations (3), (4), and (6). Use back-substitution to complete the solution.</p></li>
+                </ol></p></li>
+        <li><p>You should have found the following solution: The manufacturer should make <m>60</m> two-drawer cabinets, <m>40</m> four-drawer cabinets, and <m>30</m> horizontal cabinets.</p></li>
+    </ol></p></statement>
 
+<solution><p><md>
+					<mrow>3x + 5y + 4z = 500</mrow>
+					<mrow>x + 1.5y + z = 150</mrow>
+					<mrow>x + 2y + 3z = 230</mrow>
+				</md></p>           
+    <p><m>x = 60</m>, <m>y = 40</m>, <m>z = 30</m>, so the solution is <m>(60,40,30)</m>.</p></solution></exercise>
 </subsection>
+
 <xi:include href="./summary-8-2.xml" /> <!-- summary  -->
 <xi:include href="./section-8-2-exercises.xml" /> <!-- exercises  -->
 </section> <!-- </book>  </mathbook> -->

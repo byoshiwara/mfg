@@ -12,7 +12,7 @@ for different values of the constants <m>k</m>, <m>h</m>, and <m>a</m>. Such var
 <subsection><title>Vertical Translations</title><p> 
 
 The figure below shows the graphs of <m>f(x) = x^2 + 4</m>, <m>g(x) = x^2 - 4</m>, and the basic parabola, <m>y = x^2</m>. By comparing tables of values, we can see exactly how the graphs of <m>f</m> and <m>g</m> are related to the basic parabola.</p>
-<sidebyside widths="35% 50%" valigns="middle middle"> 
+<sidebyside widths="40% 50%" valigns="middle middle"> 
 <image source="images/fig-parabolas"><description>parabolas</description></image>
     
 <stack> 
@@ -77,14 +77,15 @@ The figure below shows the graphs of <m>f(x) = x^2 + 4</m>, <m>g(x) = x^2 - 4</m
 
 <example xml:id="example-translations"><statement>
     <p>Graph the following functions.
-        <ol marker="a">
+        <ol marker="a." cols="2">
             <li><m>g(x) = \abs{x} + 3</m></li>
             <li><m>h(x) = \dfrac{1}{x}- 2</m></li>
         </ol></p></statement>
-<solution><p><ol marker="a">
+
+<solution><p><ol marker="a.">
     <li><p>The table shows that the <m>y</m>-values for <m>g(x)</m> are each three units greater than the corresponding <m>y</m>-values for the absolute value function. The graph of <m>g(x) = \abs{x} + 3</m> is a translation of the basic graph of <m>y = \abs{x}</m>, shifted upward three units, as shown below.</p>
-        <sidebyside widths="25% 50%" valigns="middle middle">
-        <image source="images/fig-translate-abs"><description>translate absolute value</description></image>
+        <sidebyside widths="35% 50%" valigns="middle middle">
+            <image source="images/fig-translate-abs"><description>translate absolute value</description></image>
         <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
             <cell><m>x</m></cell>
@@ -110,8 +111,8 @@ The figure below shows the graphs of <m>f(x) = x^2 + 4</m>, <m>g(x) = x^2 - 4</m
         </tabular></sidebyside></li>
         
     <li><p>The table shows that the <m>y</m>-values for <m>h(x)</m> are each two units smaller than the corresponding <m>y</m>-values for <m>y = \dfrac{1}{x}</m>. The graph of <m>h(x) = \dfrac{1}{x} - 2</m> is a translation of the basic graph of <m>y = \dfrac{1}{x}</m>, shifted downward two units, as shown below.</p> <p></p>
-        <sidebyside widths="25% 50%" valigns="middle middle">
-        <image source="images/fig-translate-reciprocal"><description>translate reciprocal</description></image>
+        <sidebyside widths="35% 40%" margins="0% 20%" valigns="middle middle">
+            <image source="images/fig-translate-reciprocal"><description>translate reciprocal</description></image>
         <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
             <cell><m>x</m></cell>
@@ -137,7 +138,7 @@ The figure below shows the graphs of <m>f(x) = x^2 + 4</m>, <m>g(x) = x^2 - 4</m
         </tabular></sidebyside></li>
     </ol></p></solution></example>
 
-<exercise><title>QuickCheck 1</title>
+<exercise component="webwork"><title>QuickCheck 1</title>
 <webwork>
      <pg-code>       
             $vertas = RadioButtons(
@@ -157,8 +158,16 @@ The figure below shows the graphs of <m>f(x) = x^2 + 4</m>, <m>g(x) = x^2 - 4</m
     </solution>
 </webwork></exercise>
 
-<exercise>
-    <title>Practice 1</title>
+<exercise component="main"><title>QuickCheck 1</title>
+<statement><p>The graph of <m>y=g(x)</m> has a vertical asymptote at <m>x=-4</m>. What happens to the asymptote under a vertical translation?</p>
+    <p><ol marker="a." cols="2">
+        <li><p>Nothing.</p></li>
+        <li><p>It is compressed vertically.</p></li>
+        <li><p>It is translated vertically.</p></li>
+        <li><p>It is eliminated.</p></li>
+    </ol></p></statement></exercise>
+
+<exercise component="webwork"><title>Practice 1</title>
     <webwork>
          <pg-code>
             $explain = RadioButtons(
@@ -166,9 +175,8 @@ The figure below shows the graphs of <m>f(x) = x^2 + 4</m>, <m>g(x) = x^2 - 4</m
                     2,
                 );            
         </pg-code> 
-        <statement>
-            <p>
-        <ol marker="a">
+    <statement>
+        <p><ol marker="a">
             <li><p>Graph the function <m>f (x) = \left|x\right| + 1</m>.</p></li>
             <li><p>How is the graph of <m>f</m> different from the graph of <m>y = \left|x\right|</m>?</p>
             <p>To get the graph of <m>f</m>, </p>
@@ -184,23 +192,33 @@ The figure below shows the graphs of <m>f(x) = x^2 + 4</m>, <m>g(x) = x^2 - 4</m
     </webwork>
     <conclusion>
         <p>A graph for part (a) is below.</p>
-        <sidebyside width="25%" margins="0% 75%"><image source="images/fig-in-ex-ans-2-3-1"><description>shifted absolute value</description></image></sidebyside>
+        <image width="25%" source="images/fig-in-ex-ans-2-3-1"><description>shifted absolute value</description></image>
     </conclusion>
 </exercise>
 
-<example xml:id="example-electrical"><statement><sidebyside widths= "50% 40%">
-    <p>The function <m>E = f (h)</m> graphed at right gives the amount of electrical power, in megawatts, drawn by a community from its local power plant as a function of time during a 24-hour period in 2002. Sketch a graph of <m>y = f (h) + 300</m> and interpret its meaning.</p>
-    <image source="images/fig-electrical"><description>electrical power</description></image></sidebyside></statement>
-<solution>
-    <sidebyside widths= "55% 40%"><p>
-    The graph of <m>y = f (h) + 300</m> is a vertical translation of the graph of <m>f</m>, as shown at right. At each hour of the day, or for each value of <m>h</m>, the <m>y</m>-coordinate is 300 greater than on the graph of <m>f</m>. So at each hour, the community is drawing 300 megawatts more power than in 2002.</p>
-        <image source="images/fig-translate-electrical"><description>electrical power</description></image></sidebyside>
+<exercise component="main"><title>Practice 1</title>
+<statement><p><ol marker="a.">
+            <li><p>Graph the function <m>f (x) = \left|x\right| + 1</m>.</p></li>
+            <li><p>How is the graph of <m>f</m> different from the graph of <m>y = \left|x\right|</m>?</p></li>
+        </ol></p></statement>
+        
+<solution><p><ol marker="a." cols="2">
+        <li><image width="70%" source="images/fig-in-ex-ans-2-3-1"><description>shifted absolute value</description></image></li>
+        <li><p>The graph of <m>y =\left|x\right|</m> is translated one unit up.</p></li>
+    </ol></p></solution></exercise>
+
+<example xml:id="example-electrical"><statement>
+    <p>The function <m>E = f (h)</m> graphed below gives the amount of electrical power, in megawatts, drawn by a community from its local power plant as a function of time during a 24-hour period in 2002. Sketch a graph of <m>y = f (h) + 300</m> and interpret its meaning.</p>
+        <image width="55%" source="images/fig-electrical"><description>electrical power</description></image>
+</statement>
+
+<solution><p>The graph of <m>y = f (h) + 300</m> is a vertical translation of the graph of <m>f</m>, as shown below. At each hour of the day, or for each value of <m>h</m>, the <m>y</m>-coordinate is 300 greater than on the graph of <m>f</m>. So at each hour, the community is drawing 300 megawatts more power than in 2002.</p> 
+        <image width="55%" source="images/fig-translate-electrical"><description>electrical power</description></image>
 </solution></example>
 
-<exercise>
-    <title>Practice 2</title>
+<exercise component="webwork"><title>Practice 2</title>
     <introduction>
-        <sidebyside  width="80%"><image source="images/fig-swamp-cooler" ><description>swamp cooler graphs</description></image></sidebyside>
+        <image width="80%" source="images/fig-swamp-cooler" ><description>swamp cooler graphs</description></image>
     </introduction>
     <webwork>
          <pg-code>
@@ -226,6 +244,13 @@ The figure below shows the graphs of <m>f(x) = x^2 + 4</m>, <m>g(x) = x^2 - 4</m
         </solution>
     </webwork>
 </exercise>
+
+<exercise component="main"><title>Practice 2</title>
+<statement><p>An evaporative cooler, or swamp cooler, is an energy-efficient type of air conditioner used in dry climates. A typical swamp cooler can reduce the temperature inside a house by 15 degrees.</p>
+<p> Figure (a) shows the graph of <m>T = f (t)</m>, the temperature inside Kate's house <m>t</m> hours after she turns on the swamp cooler. Write a formula in terms of <m>f(t)</m> for the function <m>g(t)</m> shown in figure (b), and give a possible explanation of its meaning.</p>
+    <image width="100%" source="images/fig-swamp-cooler" ><description>swamp cooler graphs</description></image></statement>
+        
+<solution><p><m>g(t) = f (t) + 10</m>. The outside temperature was <m>10^{\circ}</m> hotter.</p></solution></exercise>
 </subsection>
 
 <subsection><title>Horizontal Translations</title>  
@@ -234,14 +259,14 @@ The figure below shows the graphs of <m>f(x) = x^2 + 4</m>, <m>g(x) = x^2 - 4</m
     <me>f (x) = (x + 2)^2~~~~\text{and}  ~~~~g(x) = (x - 2)^2</me> 
 shown below. Compared with the graph of the basic function <m>y = x^2</m>, the graph of <m>f (x) = (x + 2)^2</m> is shifted two units to the <em>left</em>, as shown by the arrows.</p> 
 
-<sidebyside  width="35%"><image source="images/fig-translate-parabs" ><description>graphs</description></image></sidebyside>
+    <image width="50%" source="images/fig-translate-parabs" ><description>graphs</description></image>
 
 <p>You can see why this happens by studying the function values in the table. </p>
 <p>Locate a particular <m>y</m>-value for <m>y = x^2</m>, say, <m>y = 4</m>. You must move two units to the left in the table to find the same <m>y</m>-value for <m>f (x)</m>, as shown by the arrow. In fact, each <m>y</m>-value for <m>f (x)</m> occurs two units to the left when compared to the same <m>y</m>-value for <m>y = x^2</m>.</p>
 
-    <sidebyside  width="70%"><image source="images/fig-table-translate-left"><description>table for left translation</description></image></sidebyside>
+        <image width="80%" source="images/fig-table-translate-left"><description>table for left translation</description></image>
 
-    <sidebyside  width="70%"><image source="images/fig-table-translate-right" ><description>table for right translation</description></image></sidebyside>
+    <image width="80%" source="images/fig-table-translate-right" ><description>table for right translation</description></image>
 
     <p>Similarly, the graph of <m>g(x) = (x - 2)^2</m> is shifted two units to the <em>right</em> compared to the graph of <m>y = x^2</m>. In the table for <m>g</m>, each <m>y</m>-value for <m>g(x)</m> occurs two units to the right of the same <m>y</m>-value for <m>y = x^2</m>. In general, we have the following principle.</p>
 
@@ -255,13 +280,14 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
 <note><p>At first, the direction of a horizontal translation may seem counterintuitive.  Look again at the tables above to help you see how the shift occurs.</p></note>
 
 <example xml:id="example-horizontal-translations"><statement><p>Graph the following functions.
-        <ol marker="a" cols="2">
+        <ol marker="a." cols="2">
             <li><m>g(x) =\sqrt{x + 1}</m></li>
             <li><m>h(x) = \dfrac{1}{(x - 3)^2}</m></li>
         </ol></p></statement>
-<solution><p><ol marker="a">
+
+<solution><p><ol marker="a.">
     <li><p>Consider the table of values for the function.</p>
-            <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+            <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
                 <row bottom="minor">
                     <cell><m>x</m></cell>
                     <cell><m>-1</m></cell>
@@ -283,11 +309,12 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
                     <cell><m>1.414</m></cell>
                     <cell><m>1.732</m></cell>
                     <cell><m>2</m></cell></row>
-            </tabular></sidebyside>
-            <sidebyside widths="60% 30%"><p> The table shows that each <m>y</m>-value for <m>g(x)</m> occurs one unit to the left of the same <m>y</m>-value for the graph of <m>y=\sqrt{x}</m>. Consequently, each point on the graph of <m>y = g(x)</m> is shifted one unit to the left of <m>y =\sqrt{x}</m>, as shown at right.</p><image source="images/fig-shift-sqrt"><description>horizontal shift of square root</description></image></sidebyside></li>
+            </tabular>
+    <p> The table shows that each <m>y</m>-value for <m>g(x)</m> occurs one unit to the left of the same <m>y</m>-value for the graph of <m>y=\sqrt{x}</m>. Consequently, each point on the graph of <m>y = g(x)</m> is shifted one unit to the left of <m>y =\sqrt{x}</m>, as shown below.</p>
+        <image width="40%" source="images/fig-shift-sqrt"><description>horizontal shift of square root</description></image></li>
 
-            <li><p>Consider the table of values for the function.</p>
-            <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+    <li><p>Consider the table of values for the function.</p>
+            <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
                 <row bottom="minor">
                     <cell><m>x</m></cell>
                     <cell><m>-1</m></cell>
@@ -312,11 +339,12 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
                     <cell><m>1</m></cell>
                     <cell>undefined</cell>
                     <cell><m>1</m></cell></row>
-            </tabular></sidebyside>
-            <sidebyside widths="55% 40%"><p>The table shows that each <m>y</m>-value for <m>h(x)</m> occurs three units to the right of the same <m>y</m>-value for the graph of <m>y =\dfrac{1}{x^2}</m>. Consequently, each point on the graph of <m>y = h(x)</m> is shifted three units to the right of <m>y =\dfrac{1}{x^2}</m>, as shown at right.</p><image source="images/fig-shift-inv-sq"><description>horizontal shift of inverse square</description></image></sidebyside></li>
+            </tabular>
+    <p>The table shows that each <m>y</m>-value for <m>h(x)</m> occurs three units to the right of the same <m>y</m>-value for the graph of <m>y =\dfrac{1}{x^2}</m>. Consequently, each point on the graph of <m>y = h(x)</m> is shifted three units to the right of <m>y =\dfrac{1}{x^2}</m>, as shown below.</p>
+        <image width="70%" source="images/fig-shift-inv-sq"><description>horizontal shift of inverse square</description></image></li>
         </ol></p></solution></example>
 
-<exercise><title>QuickCheck 2</title>
+<exercise component="webwork"><title>QuickCheck 2</title>
 <webwork>
      <pg-code>       
             $horint = RadioButtons(
@@ -336,8 +364,16 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
     </solution>
 </webwork></exercise>
 
-<exercise>
-    <title>Practice 3</title>
+<exercise component="main"><title>QuickCheck 2</title>
+<statement><p>The <m>y</m>-intercept of the graph of <m>y=f(x)</m> is <m>(0,2)</m>. What point lies on the graph of <m>y=f(x+3)</m>?</p>
+    <p><ol marker="a." cols="2">
+        <li><m>(0,5)</m></li>
+        <li><m>(3,2)</m></li>
+        <li><m>(-3,2)</m></li>
+        <li><m>(3,5)</m></li>
+    </ol></p></statement></exercise>
+
+<exercise component="webwork"><title>Practice 3</title>
     <webwork>
          <pg-code>
             $explain = RadioButtons(
@@ -360,26 +396,35 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
     </webwork>
     <conclusion>
         <p>A graph for part (a) is shown below.</p>
-        <sidebyside width="25%" margins="0% 50%"><image source="images/fig-in-ex-ans-2-3-3"><description>shifted absolute value</description></image></sidebyside>
+        <image width="25%"  source="images/fig-in-ex-ans-2-3-3"><description>shifted absolute value</description></image>
     </conclusion>
 </exercise>
 
-<example xml:id="example-shift-bell-curve"><statement><sidebyside widths= "50% 40%" valigns="middle middle">
-    <p>The function <m>N = f(p)</m> graphed at right gives the number of people who have a given eye pressure level <m>p</m> from a sample of 100 people with healthy eyes, and the function <m>g</m> gives the number of people with pressure level <m>p</m> in a sample of 100 glaucoma patients.</p>
-    <image source="images/fig-shift-bell-curve"><description>shift of a bell-shaped curve</description></image></sidebyside>
-    <p><ol marker="a">
+<exercise component="main"><title>Practice 3</title>
+<statement><p><ol marker="a.">
+            <li><p>Graph the function <m>f(x) = \left|x +1\right|</m>.</p></li>
+            <li><p>How is the graph of <m>f</m> different from the graph of <m>y=\left|x\right|</m>?</p></li>
+            </ol></p></statement>
+<solution><p><ol marker="a." cols="2">
+        <li><image width="60%"  source="images/fig-in-ex-ans-2-3-3"><description>shifted absolute value</description></image></li>
+        <li><p>The graph of <m>y =\left|x\right|</m> is translated one unit left.</p></li>
+    </ol></p></solution></exercise>
+
+<example xml:id="example-shift-bell-curve"><statement><p>The function <m>N = f(p)</m> graphed below gives the number of people who have a given eye pressure level <m>p</m> from a sample of 100 people with healthy eyes, and the function <m>g</m> gives the number of people with pressure level <m>p</m> in a sample of 100 glaucoma patients.</p>
+    <image width= "50%" source="images/fig-shift-bell-curve"><description>shift of a bell-shaped curve</description></image>
+<p><ol marker="a.">
         <li>Write a formula for <m>g</m> as a transformation of <m>f</m>.</li>
         <li>For what pressure readings could a doctor be fairly certain that a patient has glaucoma?</li>
     </ol></p></statement>
-<solution><p><ol marker="a">
-    <li>The graph of <m>g</m> is translated <m>10</m> units to the right of <m>f</m>, so <m>g(p) = f (p - 10)</m>.</li>
-    <li>Pressure readings above <m>40</m> are a strong indication of glaucoma. Readings between <m>10</m> and <m>40</m> cannot conclusively distinguish healthy eyes from those with glaucoma.</li>
-        </ol></p></solution></example>
 
-<exercise>
-    <title>Practice 4</title>
+<solution><p><ol marker="a.">
+    <li>The graph of <m>g</m> is translated <m>10</m> units to the right of <m>f</m>, so <m>g(p) = f(p - 10)</m>.</li>
+    <li>Pressure readings above <m>40</m> are a strong indication of glaucoma. Readings between <m>10</m> and <m>40</m> cannot conclusively distinguish healthy eyes from those with glaucoma.</li>
+</ol></p></solution></example>
+
+<exercise component="webwork"><title>Practice 4</title>
     <introduction>
-        <sidebyside  width="50%"><image source="images/fig-shift-surge-curve" ><description>shift of caffeine surge curve</description></image></sidebyside>
+    <image  width="50%" source="images/fig-shift-surge-curve" ><description>shift of caffeine surge curve</description></image>
     </introduction>
     <webwork>
          <pg-code>
@@ -405,13 +450,23 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
     </webwork>
 </exercise>
 
-<example xml:id="example-translate-cubic"><statement><p>Graph <m>~~f(x) = (x + 4)^3 + 2</m></p></statement>
-<solution><p>We identify the basic graph from the structure of the formula for <m>f (x)</m>. In this case, the basic graph is <m>y = x^3</m>, so we begin by locating a few points on that graph, say, <m>(0,0),~(1,1),</m> and <m>(-1,-1).</m> </p> 
-<p>We'll perform the translations separately, following the order of operations. First, we sketch a graph of <m>y = (x + 4)^3</m> by shifting each point on the basic graph four units to the left. We then move each point up two units to obtain the graph of <m>f(x) = (x + 4)^3 + 2</m>. All three graphs are shown below.</p>
-    <sidebyside  width="40%"><image source="images/fig-translate-cubic"><description>translations of cubic curve</description></image></sidebyside></solution></example>
+<exercise component="main"><title>Practice 4</title>
+<statement><p>The function <m>C = f (t)</m> shown below gives the caffeine level in Delbert's bloodstream at time <m>t</m> hours after he drinks a cup of coffee, and <m>g(t)</m> gives the caffeine level in Francine's bloodstream. Write a formula for <m>g(t)</m> in terms of <m>f(t)</m>, and explain what it tells you about Delbert and Francine.</p>
+    <image  width="65%" source="images/fig-shift-surge-curve" ><description>shift of caffeine surge curve</description></image>
+</statement>
+           
+<solution><p><m>g(t) = f(t - 3)</m>. Francine drank her coffee <m>3</m> hours after Delbert drank his.</p></solution>
+</exercise>
 
-<exercise>
-    <title>Practice 5</title>
+<example xml:id="example-translate-cubic"><statement><p>Graph <m>~~f(x) = (x + 4)^3 + 2</m></p></statement>
+
+<solution><p>We identify the basic graph from the structure of the formula for <m>f (x)</m>. In this case, the basic graph is <m>y = x^3</m>, so we begin by locating a few points on that graph, say, <m>(0,0),~(1,1),</m> and <m>(-1,-1).</m> </p> 
+
+<p>We'll perform the translations separately, following the order of operations. First, we sketch a graph of <m>y = (x + 4)^3</m> by shifting each point on the basic graph four units to the left. We then move each point up two units to obtain the graph of <m>f(x) = (x + 4)^3 + 2</m>. All three graphs are shown below.</p>
+    <image width="60%" source="images/fig-translate-cubic"><description>translations of cubic curve</description></image>
+</solution></example>
+
+<exercise component="webwork"><title>Practice 5</title>
     <webwork>
          <pg-code>
                 $explain = RadioButtons(
@@ -434,11 +489,23 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
     </webwork>
     <conclusion>
         <p>A graph for part (a):</p>
-        <sidebyside width="25%" margins="0% 50%"><image source="images/fig-in-ex-ans-2-3-5"><description>shifted absolute value</description></image></sidebyside>
+        <image width="25%"  source="images/fig-in-ex-ans-2-3-5"><description>shifted absolute value</description></image>
     </conclusion>
 </exercise>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="main"><title>Practice 5</title>
+<statement><p><ol marker="a.">
+        <li><p>Graph the function <m>f(x) = \left|x - 2\right| - 1</m>.</p></li>
+        <li><p>How is the graph of <m>f</m> different from the graph of <m>y=\left|x\right|</m>?</p></li>
+    </ol></p></statement>
+        
+<solution><p><ol marker="a." cols="2">
+        <li><image width="65%" source="images/fig-in-ex-ans-2-3-5"><description>shifted absolute value</description></image></li>
+        <li><p>It is translated one unit down and two units right from the graph of <m>y =\left|x\right|</m> .</p></li>
+    </ol></p></solution>
+</exercise>
+
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -447,6 +514,9 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
         <p><var form="essay"/></p>      
     </statement>    
 </webwork></exercise>
+
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>Horizontal translations are less intuitive than vertical translations. What explanation helps you understand them? </p></statement></exercise>
 </subsection>
 
 <subsection><title>Scale Factors</title>
@@ -456,8 +526,8 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
         f(x)= 2x^2, \text{ } ~~~g(x)= \frac{1}{2}x^2,~~ \text{ and } ~~~h(x) = -x^2
     </me>
     shown below, and compare each to the graph of <m>y = x^2</m>.</p>
-<sidebyside widths="30% 50%" valigns="middle middle">
-<image source="images/fig-2x-sq"><description>2 x-sq and basic parabola</description></image>
+<sidebyside widths="45% 50%" valigns="middle middle">
+    <image source="images/fig-2x-sq"><description>2 x-sq and basic parabola</description></image>
 <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
     <row bottom="minor">
         <cell><m>x</m></cell>
@@ -487,8 +557,8 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
 
 <p>Compared to the graph of <m>y = x^2</m>, the graph of <m>f (x) = 2x^2</m> is expanded, or stretched, vertically by a factor of <m>2</m>. The <m>y</m>-coordinate of each point on the graph has been doubled, as you can see in the table of values, so each point on the graph of <m>f</m> is twice as far from the <m>x</m>-axis as its counterpart on the basic graph <m>y = x^2</m>.</p>
 
-<sidebyside widths="30% 50%" valigns="middle middle">
-<image source="images/fig-half-x-sq"><description>half x-sq and basic parabola</description></image>
+<sidebyside widths="45% 50%" valigns="middle middle">
+    <image source="images/fig-half-x-sq"><description>half x-sq and basic parabola</description></image>
 <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
     <row bottom="minor">
         <cell><m>x</m></cell>
@@ -518,8 +588,8 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
 
 <p>The graph of <m>g(x) = \dfrac{1}{2}x^2</m> is compressed vertically by a factor of <m>\dfrac{1}{2}</m>; each point is half as far from the <m>x</m>-axis as its counterpart on the graph of <m>y = x^2</m>.</p>
 
-<sidebyside widths="30% 50%" valigns="middle middle">
-<image source="images/fig-neg-x-sq"><description>negative x-sq and basic parabola</description></image>
+<sidebyside widths="45% 50%" valigns="middle middle">
+    <image source="images/fig-neg-x-sq"><description>negative x-sq and basic parabola</description></image>
 <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
     <row bottom="minor">
         <cell><m>x</m></cell>
@@ -561,7 +631,7 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
 
 <p>The constant <m>a</m> is called the <term>scale factor</term> for the graph.</p>
 
-<exercise><title>QuickCheck 3</title>
+<exercise component="webwork"><title>QuickCheck 3</title>
 <webwork>
      <pg-code>       
             $symx = RadioButtons(
@@ -573,7 +643,7 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
             );            
         </pg-code> 
     <statement>
-        <p>The graph of <m>y=F(x)</m> is symmetric about the <m>y</m>-axis. Which of the following graphs is also symmetric about the <m>y</m>-axis??</p>
+        <p>The graph of <m>y=F(x)</m> is symmetric about the <m>y</m>-axis. Which of the following graphs is also symmetric about the <m>y</m>-axis?</p>
         <p><var name="$symx" form="buttons"/></p>      
     </statement>
     <solution>
@@ -581,19 +651,29 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
     </solution>
 </webwork></exercise>
 
-<example xml:id="example-scale"><statement><p>Graph the following functions.<ol marker="a" cols = "2">
-            <li><m>g(x) = 3\sqrt[3]{x}</m></li>
-            <li><m>h(x) =\dfrac{-1}{2}\abs{x}</m></li>
-        </ol></p></statement>
-<solution><p><ol marker="a">
-    <li><p>The graph of <m>g(x) = 3\sqrt[3]{x}</m> is a vertical expansion of the basic graph <m>y = \sqrt[3]{x}</m> by a factor of <m>3</m>, as shown below . Each point on the basic graph has its <m>y</m>-coordinate tripled.</p>
-    <sidebyside  width="35%"><image source="images/fig-scale-cube-root" ><description>scale cube root</description></image></sidebyside></li>
-    <li><p>The graph of <m>h(x) = \dfrac{-1}{2}\abs{x}</m> is a vertical compression of the basic graph <m>y = \abs{x}</m> by a factor of <m>\dfrac{1}{2}</m>, combined with a reflection about the <m>x</m>-axis. You may find it helpful to graph the function in two steps, as shown below.</p>
-            <sidebyside  width="40%"><image source="images/fig-scale-abs"><description>scale absolute value</description></image></sidebyside></li>
-        </ol></p></solution></example>
+<exercise component="main"><title>QuickCheck 3</title>
+<statement><p>The graph of <m>y=F(x)</m> is symmetric about the <m>y</m>-axis. Which of the following graphs is also symmetric about the <m>y</m>-axis?</p>
+    <p><ol marker="a." cols="2">
+        <li><m>y = -3F(x)</m></li>
+        <li><m>y = F(x) - 3</m></li>
+        <li><m>y = F(x-3)</m></li>
+        <li><p>Both (a) and (b)</p></li>
+    </ol></p></statement></exercise>
 
-<exercise>
-    <title>Practice 6</title>
+<example xml:id="example-scale"><statement><p>Graph the following functions.</p>
+    <p><ol marker="a." cols = "2">
+            <li><m>~g(x) = 3\sqrt[3]{x}</m></li>
+            <li><m>~h(x) =\dfrac{-1}{2}\abs{x}</m></li>
+        </ol></p></statement>
+
+<solution><p><ol marker="a.">
+    <li><p>The graph of <m>g(x) = 3\sqrt[3]{x}</m> is a vertical expansion of the basic graph <m>y = \sqrt[3]{x}</m> by a factor of <m>3</m>, as shown below . Each point on the basic graph has its <m>y</m>-coordinate tripled.</p>
+        <image width="45%" source="images/fig-scale-cube-root" ><description>scale cube root</description></image></li>
+    <li><p>The graph of <m>h(x) = \dfrac{-1}{2}\abs{x}</m> is a vertical compression of the basic graph <m>y = \abs{x}</m> by a factor of <m>\dfrac{1}{2}</m>, combined with a reflection about the <m>x</m>-axis. You may find it helpful to graph the function in two steps, as shown below.</p>
+            <image width="50%" source="images/fig-scale-abs"><description>scale absolute value</description></image></li>
+</ol></p></solution></example>
+
+<exercise component="webwork"><title>Practice 6</title>
     <webwork>
          <pg-code>
             $explain = RadioButtons(
@@ -616,11 +696,21 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
     </webwork>
     <conclusion>
         <p>A graph for part (a):</p>
-        <sidebyside width="20%" margins="0% 80%"><image source="images/fig-in-ex-ans-2-3-6"><description>shifted absolute value</description></image></sidebyside>
+        <image width="20%"  source="images/fig-in-ex-ans-2-3-6"><description>shifted absolute value</description></image>
     </conclusion>
 </exercise>
 
-<exercise><title>QuickCheck 4</title>
+<exercise component="main"><title>Practice 6</title>
+<statement><p><ol marker="a.">
+            <li><p>Graph the function <m>f (x) = 2\left|x\right|</m>.</p></li>
+            <li><p>How is the graph of <m>f</m> different from the graph of <m>y =\left|x\right|</m>?</p></li>
+    </ol></p></statement>
+<solution><p><ol marker="a." cols="2">
+        <li><image width="55%"  source="images/fig-in-ex-ans-2-3-6"><description>shifted absolute value</description></image></li>
+         <li><p>Stretch <m>y =\left|x\right|</m> vertically by a factor of 2 to obtain the graph of <m>f</m>.</p></li>
+    </ol></p></solution></exercise>
+
+<exercise component="webwork"><title>QuickCheck 4</title>
 <webwork>
      <pg-code>       
             $shape = RadioButtons(
@@ -640,15 +730,25 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
     </solution>
 </webwork></exercise>
 
-<example xml:id="example-alcohol-level"><statement><p>The function <m>A = f(t)</m> graphed below gives a person's blood alcohol level <m>t</m> hours after drinking a martini. Sketch a graph of <m>g(t) = 2f(t)</m> and explain what it tells you.</p>
-    <sidebyside width="40%" ><image source="images/fig-surge-alcohol" ><description>alcohol level after alcohol</description></image></sidebyside></statement>
-<solution><p>To sketch a graph of <m>g</m>, we stretch the graph of <m>f</m> vertically by a factor of <m>2</m>, as shown below. At each time <m>t</m>, the person’s blood alcohol level is twice the value given by <m>f</m>. The function <m>g</m> could represent a person's blood alcohol level <m>t</m> hours after drinking two martinis.</p>
-    <sidebyside width="40%" ><image source="images/fig-surge-alcohol2"><description>alcohol level after more alcohol</description></image></sidebyside></solution></example>
+<exercise component="main"><title>QuickCheck 4</title>
+<statement><p>Under which transformations does the graph of a function keep the same shape?</p>
+<p><ol marker="a." cols="2">
+        <li><p>Vertical translation</p></li>
+        <li><p>Horizontal translation</p></li>
+        <li><p>Reflection</p></li>
+        <li><p>All of these</p></li>
+    </ol></p></statement></exercise>
 
-<exercise xml:id="daylight-hours">
-    <title>Practice 7</title>
+<example xml:id="example-alcohol-level"><statement><p>The function <m>A = f(t)</m> graphed below gives a person's blood alcohol level <m>t</m> hours after drinking a martini. Sketch a graph of <m>g(t) = 2f(t)</m> and explain what it tells you.</p>
+    <image width="50%" source="images/fig-surge-alcohol" ><description>alcohol level after alcohol</description></image></statement>
+
+<solution><p>To sketch a graph of <m>g</m>, we stretch the graph of <m>f</m> vertically by a factor of <m>2</m>, as shown below. At each time <m>t</m>, the person’s blood alcohol level is twice the value given by <m>f</m>. The function <m>g</m> could represent a person's blood alcohol level <m>t</m> hours after drinking two martinis.</p>
+    <image width="50%" source="images/fig-surge-alcohol2"><description>alcohol level after more alcohol</description></image></solution></example>
+
+<exercise component="webwork" xml:id="daylight-hoursw"><title>Practice 7</title>
     <introduction>
-        <sidebyside width="70%" ><image source="images/fig-daylight-hours"><description>daylight hours at two latitudes</description></image></sidebyside>
+
+        <image width="70%" source="images/fig-daylight-hours"><description>daylight hours at two latitudes</description></image>
     </introduction>
     <webwork>
          <pg-code>
@@ -682,7 +782,16 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
     </webwork>
 </exercise>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="main" xml:id="daylight-hours"><title>Practice 7</title>
+<statement><p>If the Earth were not tilted on its axis, there would be 12 daylight hours every day all over the planet. But in fact, the length of a day in a particular location depends on the latitude and the time of year.</p> 
+    <image width="80%" source="images/fig-daylight-hours"><description>daylight hours at two latitudes</description></image>
+
+<p>The graph above shows <m>H = f(t)</m>, the length of a day in Helsinki, Finland, <m>t</m> days after January 1, and <m>R = g(t)</m>, the length of a day in Rome. Each is expressed as the number of hours greater or less than 12. Write a formula for <m>f</m> in terms of <m>g</m>. What does this formula tell you?</p></statement>
+        
+<solution><p><m>f(t)\approx 2g(t)</m>. On any given day, the number of daylight hours  varies from <m>12</m> hours about twice as much in Helsinki as it does in Rome.</p></solution>
+</exercise>
+
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -692,7 +801,11 @@ shown below. Compared with the graph of the basic function <m>y = x^2</m>, the g
     </statement>    
 </webwork></exercise>
 
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>In this section we did not consider reflections about the <m>y</m>-axis. Can you think of a way to alter the formula for <m>y=f(x)</m> to reflect the graph about the <m>y</m>-axis? Which of the eight basic graphs would not be affected by such a reflection?</p></statement>   
+</exercise>
 </subsection>
+
 <xi:include href="./summary-2-3.xml" /> <!-- summary  -->
 <xi:include href="./section-2-3-exercises.xml" /> <!-- exercises  -->
 

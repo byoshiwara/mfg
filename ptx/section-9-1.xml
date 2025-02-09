@@ -8,7 +8,7 @@
 <p> Consider the following function:  Gwynn would like to compete in a triathlon, but she needs to improve her swimming.  She begins a training schedule in which she swims 20 laps a day for the first week and increases that number by 6 laps each week.  The table below gives the first few values of the function.
 </p>
 
-<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">              
+<tabular top="major" halign="center" right="minor" left="minor" bottom="minor">              
                     <row bottom="minor">
                         <cell>Week</cell>
                         <cell><m>1</m></cell>
@@ -31,26 +31,25 @@
                         <cell><m>56</m></cell>
                         <cell><m>62</m></cell>
                         <cell><m>f(n)</m></cell></row>
-                    </tabular></sidebyside>
+                    </tabular>
 
 <p> The function  makes sense only for input values that are positive integers.  We would not ask how many laps Gwynn swims in week 4.63, or in week <m>-6</m>.</p>
-<p>  A function whose inputs are a set of successive positive integers is called a <term>sequence</term>.  Most people think of a sequence as a list of objects in which the order is important, and we often present a mathematical sequence in just that way.  The information in the table above can be displayed more simply by listing only the output values, in order:
-<me>20,~~26,~~32,~~38,~~44,~~50,~~56,~~62</me>
+<p> A function whose inputs are a set of successive positive integers is called a <term>sequence</term>.  Most people think of a sequence as a list of objects in which the order is important, and we often present a mathematical sequence in just that way.  The information in the table above can be displayed more simply by listing only the output values, in order:
+        <me>20,~~26,~~32,~~38,~~44,~~50,~~56,~~62</me>
 When we list them in this way, the output values are called the <term>terms</term> of the sequence.  The input values are indicated implicitly by the position of the term.  For example, the third term of the sequence, 32, is the value of <m>f(3)</m>.</p>
 
 <note><p>We often use the notation <m>a_n</m> instead of <m>f(n)</m> to refer to the terms of a sequence. Thus, <m>a_1 = f(1),~~a_2=f(2),</m> and so on.</p></note>
 
 <example><statement>
     <p>Let <m>a_n</m> be the number of seats in the <m>n^{th}</m> row of a theater.  Write an equation using subscript notation for each of the following statements.</p>
-    <p><ol marker="a">
+    <p><ol marker="a.">
         <li><p>The first row has 30 seats.</p></li>
         <li><p>The twentieth row has 68 seats.</p></li>
         <li><p>Row 18 has twice as many seats as row 2.</p></li>
         <li><p>Row <m>n</m> has <m>2n+28</m> seats.</p></li>
         <li><p>Row <m>n+1</m> has 2 more seats than the previous row.</p></li></ol></p></statement>
 
-    <solution>
-    <p><ol marker="a">
+<solution><p><ol marker="a.">
         <li><p><m>a_1</m> represents the number of seats in row 1, so <m>a_1=30</m>.</p></li>
         <li><p><m>a_{20}</m> represents the number of seats in row 20, so <m>a_{20}=68</m>.</p></li>
         <li><p><m>a_{18}=2a_2</m></p></li>
@@ -60,7 +59,7 @@ When we list them in this way, the output values are called the <term>terms</ter
 
 <p> In Example 1, <m>a_n=2n+28</m> is a formula in terms of <m>n</m> for the number of seats in the <m>n^{th}</m> row of the theater.  The expression <m>2n+28</m> is called the <term>general term</term> for the sequence.</p>
 
-<exercise><title>Practice 1</title>
+<exercise component="webwork"><title>Practice 1</title>
 <webwork>
     <pg-code>
          Context()->variables->add(A0 =>['Real',TeX=>"A_0"], A1 =>['Real',TeX=>"A_1"], A2 =>['Real',TeX=>"A_2"], A3 =>['Real',TeX=>"A_3"], A4 =>['Real',TeX=>"A_4"], A5 =>['Real',TeX=>"A_5"]);
@@ -73,7 +72,7 @@ Context()->{format}{number} = "%.2f";    # format numbers using 2-place decimals
          $cc = Compute("1.07*A4");
 
     </pg-code>
-    <statement>
+<statement>
     <p>Let <m>A_n</m> be the number of dollars in a bank account at the end of its <m>n^{th}</m>year.  Write an equation using subscript notation for each of the following statements.</p>
     <p><ol marker="a">
         <li>
@@ -97,18 +96,31 @@ Context()->{format}{number} = "%.2f";    # format numbers using 2-place decimals
             <li><m>A_5=1.07A_4</m></li>
         </ol>
     </p></solution>
-</webwork>
-</exercise>
+</webwork></exercise>
+
+<exercise component="main"><title>Practice 1</title>
+<statement><p>Let <m>A_n</m> be the number of dollars in a bank account at the end of its <m>n^{th}</m>year. Write an equation using subscript notation for each of the following statements.</p>
+    <p><ol marker="a.">
+        <li><p>The account had $1149.90 at the end of the second year.</p></li>
+        <li><p>At the end of year 4 the account had $85.75 more than at the end of year 3.</p></li>
+        <li><p>At the end of year 5 the account had 1.07 times as much as at the end of year 4.</p></li>
+    </ol></p></statement>
+    
+<solution><p><ol marker="a.">
+            <li><m>A_2=1149.90</m></li>
+            <li><m>A_4=85.75+A_3</m></li>
+            <li><m>A_5=1.07A_4</m></li>
+    </ol></p></solution></exercise>
          
 <example><statement>
     <p>Find the first four terms in each sequence with the given general term.</p>
-    <p><ol marker="a" cols="2">
+    <p><ol marker="a." cols="2">
         <li><m>a_n=\dfrac{n(n+1)}{2}</m></li>
         <li><m>a_n=(-1)^n 2^n</m></li>
     </ol></p></statement>
     
 <solution><p>We evaluate each general term for successive values of <m>n</m>.</p>
-<p><ol marker="a">        
+<p><ol marker="a.">        
     <li><p><ul>
         <li><m>a_1=\dfrac{1(1+1)}{2}=1</m></li>
         <li><m>a_2=\dfrac{2(2+1)}{2}=3</m></li>
@@ -123,8 +135,7 @@ Context()->{format}{number} = "%.2f";    # format numbers using 2-place decimals
         <p>The first four terms are <m>-2, </m> <m>4, </m>  <m>-8, </m> and <m>16</m>.</p></li>
     </ol></p></solution></example> 
 
-
-<exercise><title>QuickCheck 1</title>
+<exercise component="webwork"><title>QuickCheck 1</title>
 <webwork>
     <pg-code>
         $answer = RadioButtons(
@@ -141,10 +152,18 @@ Context()->{format}{number} = "%.2f";    # format numbers using 2-place decimals
         <p><var name="$answer" form="buttons"/> </p>
     </statement>
     <solution><p><var name="$answer"/></p></solution>
-</webwork>
-</exercise>
+</webwork></exercise>
 
-<exercise><title>Practice 2</title>
+<exercise component="main"><title>QuickCheck 1</title>
+<statement><p>How is a sequence different from an ordinary function?</p>
+<p><ol marker="a.">
+    <li><p>Its outputs are integers.</p></li>
+    <li><p>Its inputs are integers.</p></li>
+    <li><p>There is a formula for its outputs.</p></li>
+    <li><p>The outputs must be positive..</p></li>
+</ol></p></statement></exercise>
+
+<exercise component="webwork"><title>Practice 2</title>
 <webwork>
     <pg-code>
         $answer = List(3,5,7,9)->cmp(ordered=>1);
@@ -154,9 +173,11 @@ Context()->{format}{number} = "%.2f";    # format numbers using 2-place decimals
         <p>Answer: <var name="$answer" width="8"/> (List the terms in order; separate terms with a comma.</p>
     </statement>
     <solution><p>3, 5, 7, 9</p></solution>
-</webwork>
-</exercise>
+</webwork></exercise>
 
+<exercise component="main"><title>Practice 2</title>
+<statement><p>Find the first four terms in the sequence with the general term <m>b_n=(n+1)^2-n^2</m>.</p></statement>
+<solution><p>3, 5, 7, 9</p></solution></exercise>
  </subsection>
 
 <subsection><title>Applications of Sequences</title>
@@ -167,13 +188,13 @@ Context()->{format}{number} = "%.2f";    # format numbers using 2-place decimals
 
 <solution><p>During the first year the account will earn 5% of $8000, or <m>0.05 (8000) = 400</m> dollars. Thus, at the end of the first year the account will contain the original $8000 plus the $400 interest for a total of $8400.</p>
 <p>At the end of the second year the account will have the $8400 from the previous year, plus 5% of $8400, or <m>0.05(8400) = 420</m> dollars in interest.  We can write this sum as
-<me>8400 + 8400(0.05) = 8400 (1 + 0.05) = 8400(1.05)~~  \text{dollars.}</me>
+        <me>8400 + 8400(0.05) = 8400 (1 + 0.05) = 8400(1.05)~~  \text{dollars.}</me>
 Thus, at the end of the second year there will be  <m>$8400(1.05) = $8820</m> in the account.</p>
 <p>In fact, each new balance is found by multiplying the previous balance by 1.05. The balances at the ends of the third and fourth years are
-<me>\$8820(1.05) = \$9261~~~~\text{and}~~~~\$9261(1.05) = \$9724.05</me>
+        <me>\$8820(1.05) = \$9261~~~~\text{and}~~~~\$9261(1.05) = \$9724.05</me>
 The annual balances form the sequence  8400,  8820,  9261,  and 9724.05, as shown below.</p> 
 
-<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">              
+<tabular top="major" halign="center" right="minor" left="minor" bottom="minor">              
                     <row bottom="minor">
                         <cell><m>n</m></cell>
                         <cell><m>a_n</m></cell></row>
@@ -189,9 +210,9 @@ The annual balances form the sequence  8400,  8820,  9261,  and 9724.05, as show
                     <row> 
                         <cell>4</cell>
                         <cell>9724.05</cell></row>            
-                    </tabular></sidebyside></solution></example>
+                    </tabular></solution></example>
 
-<exercise xml:id="Exercise-coffee"><title>Practice 3</title>
+<exercise component="webwork" xml:id="Exercise-coffeew"><title>Practice 3</title>
 <webwork>
     <pg-code>
         $f = Formula("100*0.86^(x)");
@@ -205,10 +226,14 @@ The annual balances form the sequence  8400,  8820,  9261,  and 9724.05, as show
         <p>Answer: <var name="$answer" width="15"/> mg (List the terms in order; separate terms with a comma.</p>
     </statement>
     <solution><p>100 mg, 86 mg, 74 mg, 63.6 mg approximately</p></solution>
-</webwork>
-</exercise>
+</webwork></exercise>
 
-<exercise><title>QuickCheck 2</title>
+<exercise component="main" xml:id="Exercise-coffee"><title>Practice 3</title>
+<statement><p>You just finished your last cup of coffee and have 100 mg of caffeine in your system.  For each hour that passes, the amount of caffeine in your system decreases by 14%.  How much caffeine is in your system at the start of each of the next 4 hours?</p>
+</statement>
+<solution><p>100 mg, 86 mg, 74 mg, 63.6 mg approximately</p></solution></exercise>
+
+<exercise component="webwork"><title>QuickCheck 2</title>
 <webwork>
     <pg-code>
         $answer = RadioButtons(
@@ -225,17 +250,25 @@ The annual balances form the sequence  8400,  8820,  9261,  and 9724.05, as show
         <p><var name="$answer" form="buttons"/> </p>
     </statement>
     <solution><p><var name="$answer"/></p></solution>
-</webwork>
-</exercise>
+</webwork></exercise>
+
+<exercise component="main"><title>QuickCheck 2</title>
+<statement><p>The terms of a sequence</p>
+<p><ol marker="a.">
+        <li><p>describe its formula.</p></li>
+        <li><p>are its boundary values.</p></li>
+        <li><p>are its outputs.</p></li>
+        <li><p>are either increasing or decreasing.</p></li>
+    </ol></p></statement></exercise>
 
 <example><statement><p>You deposit $8000 in a savings account that pays 5% simple annual interest.  (The interest is earned only on the initial $8000 and not compounded.)  How much money will be in the account at the end of each of the next 4 years?</p></statement>
 
-<solution><p>The account earns 5% of $8000 or <m>0.05(8000) = 400</m> dollars during the first year. At the end of the first year the account will contain the original $8000 plus $400 interest for a total of $8400.
-During the second year interest will be earned only on the initial $8000 deposited, for another 400 dollars.  So at the end of the second year the account will have the $8400 from the previous year plus $400 interest, for a total of 
-<me>8400 + 400 = 8800 ~\text{dollars}</me>
-In fact, the balance at the end of each succeeding year is found by adding $400 simple interest to the previous balance.  The annual balances form the sequence  8400,  8800,  9200, and 9600, as shown below.</p>
+<solution><p>The account earns 5% of $8000 or <m>0.05(8000) = 400</m> dollars during the first year. At the end of the first year the account will contain the original $8000 plus $400 interest for a total of $8400.</p>
+<p>During the second year interest will be earned only on the initial $8000 deposited, for another 400 dollars.  So at the end of the second year the account will have the $8400 from the previous year plus $400 interest, for a total of 
+        <me>8400 + 400 = 8800 ~\text{dollars}</me></p>
+<p>In fact, the balance at the end of each succeeding year is found by adding $400 simple interest to the previous balance.  The annual balances form the sequence  8400,  8800,  9200, and 9600, as shown below.</p>
 
-<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">              
+<tabular top="major" halign="center" right="minor" left="minor" bottom="minor">              
                     <row bottom="minor">
                         <cell><m>n</m></cell>
                         <cell><m>b_n</m></cell></row>
@@ -251,9 +284,10 @@ In fact, the balance at the end of each succeeding year is found by adding $400 
                     <row> 
                         <cell><m>4</m></cell>
                         <cell><m>9600</m></cell></row>            
-                    </tabular></sidebyside></solution></example>
+                    </tabular>
+</solution></example>
 
-<exercise><title>Practice 4</title>
+<exercise component="webwork"><title>Practice 4</title>
 <webwork>
     <pg-code>
         $f = Formula("1200 +208.87*x");
@@ -267,14 +301,14 @@ In fact, the balance at the end of each succeeding year is found by adding $400 
         <p>Answer: $<var name="$answer" width="28"/>  (List the terms in order; separate terms with a comma.</p>
     </statement>
     <solution><p>$1200, $1408.87, $1617.74, $1826.61</p></solution>
-</webwork>
-</exercise>
+</webwork></exercise>
 
-<example><statement><p>A regular polygon is a geometric figure in which all the sides are equal in length.  For example, an equilateral triangle and a square are regular polygons.  All the interior angles in a regular polygon are equal also.  Find the general term <m>a_n</m> for the sequence that gives the size of an interior angle in a regular polygon of <m>n</m> sides.</p>
-<sidebyside width="80%">
-    <image xml:id="fig-regular-polygons">
-        <description>regular polygons</description>
-        <latex-image>
+<exercise component="main"><title>Practice 4</title>
+<statement><p>The financing agreement on your $12,000 car requires you to pay $1200 now and $208.87 a month for 5 years. What is the total amount you have paid after each of the first 4 payments?</p></statement>
+<solution><p>$1200, $1408.87, $1617.74, $1826.61</p></solution></exercise>
+
+<example><statement><p>A regular polygon is a geometric figure in which all the sides are equal in length. For example, an equilateral triangle and a square are regular polygons.  All the interior angles in a regular polygon are equal also. Find the general term <m>a_n</m> for the sequence that gives the size of an interior angle in a regular polygon of <m>n</m> sides.</p>
+    <image width="80%" xml:id="fig-regular-polygons"><description>regular polygons</description><latex-image>
         <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
         <![CDATA[\tikzset{%
         }
@@ -287,16 +321,12 @@ In fact, the balance at the end of each succeeding year is found by adding $400 
         \node at (6.6,-1.6) {$\cdots$};
         \node at (9.2,-1.6) {$a_n=?^\circ$};
         \end{tikzpicture}]]>
-        </latex-image>
-    </image>
-</sidebyside>
+        </latex-image></image>
 </statement>
 
 <solution><p>This sequence starts with <m>a_3</m> because we cannot have a polygon with fewer than three sides.  We already know the values of <m>a_3</m> and <m>a_4</m>:  each angle in an equilateral triangle is <m>60\degree</m>, and each angle in a square is <m>90\degree</m>.  We would like to find a formula for the size of the angles in any regular polygon.</p>
-<p> If we can find the sum of all the angles in a regular polygon, we can divide by <m>n</m> to find the size of each. (You can check that this idea works for the equilateral triangle and the square.)  To find the sum of the angles, notice that any polygon can be partitioned into triangles, as shown below.</p>
-<sidebyside width="30%"><image xml:id="fig-regular-ngon">
-        <description>regular polygons</description>
-        <latex-image>
+<p> If we can find the sum of all the angles in a regular polygon, we can divide by <m>n</m> to find the size of each. (You can check that this idea works for the equilateral triangle and the square.) To find the sum of the angles, notice that any polygon can be partitioned into triangles, as shown below.</p>
+    <image width="30%" xml:id="fig-regular-ngon"><description>regular polygons</description><latex-image>
         <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
         <![CDATA[\tikzset{%
         }
@@ -304,41 +334,35 @@ In fact, the balance at the end of each succeeding year is found by adding $400 
         \node[draw, magenta!80!black, very thick, minimum size=3cm,regular polygon,regular polygon sides=8] (a) {};
         \draw (a.corner 6)--(a.corner 8)--(a.corner 5)--(a.corner 1)--(a.corner 4)--(a.corner 2);
         \end{tikzpicture}]]>
-        </latex-image>
-    </image></sidebyside>
-<p> By sketching some examples, convince yourself that every polygon of <m>n</m> sides (for <m>n \ge 3</m>) can be partitioned into <m>n-2</m> triangles.  Because the angles in every triangle add up to <m>180\degree</m>, the sum of the angles in an <m>n</m>-sided polygon is <m>(n-2)</m> times <m>180\degree</m>. To find the size of just one of the angles, we divide the sum by <m>n</m>. This gives us the general term of the sequence:
-<me>a_n = \dfrac{(n-2)180}{n}</me></p></solution></example>
+        </latex-image></image>
+<p>By sketching some examples, convince yourself that every polygon of <m>n</m> sides (for <m>n \ge 3</m>) can be partitioned into <m>n-2</m> triangles.  Because the angles in every triangle add up to <m>180\degree</m>, the sum of the angles in an <m>n</m>-sided polygon is <m>(n-2)</m> times <m>180\degree</m>. To find the size of just one of the angles, we divide the sum by <m>n</m>. This gives us the general term of the sequence:
+        <me>a_n = \dfrac{(n-2)180}{n}</me></p></solution></example>
 </subsection>
 
 <subsection><title>Recursively Defined Sequences</title>
 <p> A sequence is defined <term>recursively</term> if each term of the sequence is defined in terms of its predecessors.  For example, the sequence defined by
-<me>a_1=2,~~~~a_{n+1} = 3a_n - 2</me>
+        <me>a_1=2,~~~~a_{n+1} = 3a_n - 2</me>
 is a recursive sequence.  Its first four terms are
-
 <!--*****--><me>\begin{aligned}[t]
                 a_1 \amp = 2\\
                 a_2 \amp = 3a_1 - 2 = 3(2)-2 = 4\\
                 a_3 \amp = 3a_2 - 2 = 3(4)-2 = 10\\ 
                 a_4 \amp = 3a_3 - 2 = 3(10)-2 = 28\\                
-                \end{aligned}</me><!--*****-->
-
-</p>
+                \end{aligned}</me><!--*****--></p>
 
 <example><statement><p>Make a table showing the first five terms of the recursive sequence
-    <me>a_1 = -1,~~~~~~a_{n+1} = (a_n)^2-4</me></p></statement>
+        <me>a_1 = -1,~~~~~~a_{n+1} = (a_n)^2-4</me></p></statement>
 
-    <solution><p>The first term is given.  We find each new term by using the recursive formula:
-
+<solution><p>The first term is given.  We find each new term by using the recursive formula:
         <!--*****--><me>\begin{aligned}[t]
                 a_2 \amp = (a_1)^2-4 = (-1)^2 - 4 = -3\\
                 a_3 \amp = (a_2)^2-4 = (-3)^2 - 4 = 5\\
                 a_4 \amp = (a_3)^2-4 = 5^2 - 4 = 21\\ 
                 a_5 \amp = (a_4)^2-4 = {21}^2-4 = 437\\                
                 \end{aligned}</me><!--*****-->
-
         The first five terms are  1, 3, 5, 21, and 437,  as shown in the table.</p>
 
-<sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">              
+<tabular top="major" halign="center" right="minor" left="minor" bottom="minor">              
                     <row bottom="minor">
                         <cell><m>n</m></cell>
                         <cell><m>1</m></cell>
@@ -353,18 +377,18 @@ is a recursive sequence.  Its first four terms are
                         <cell><m>5</m></cell>
                         <cell><m>21</m></cell>
                         <cell><m>437</m></cell></row>
-                    </tabular></sidebyside></solution></example>
+                    </tabular></solution></example>
 
 <p> The definition of a recursive sequence must include a starting point, usually the first term of the sequence, and a formula for calculating the next term of the sequence in terms of the previous term (or terms).</p>
                     
 <example><statement><p> You deposit $8000 in a savings account that pays 5% interest compounded annually. Find a recursive definition for the sequence of account balances if the money is kept in the account for <m>n</m> years.</p></statement>
 
 <solution><p>If we use the letter <m>a</m> for that sequence, we have <m>a_1 = 8400</m>. Each successive term was obtained by multiplying the previous term by 1.05, which means that
-<me>a_n = 1.05 a_{n-1}</me>  
+        <me>a_n = 1.05 a_{n-1}</me>  
 The sequence is determined by the recursive definition
-<me>a_1 = 8400,~~~~a_n = 1.05 a_{n-1}</me></p></solution></example>
+        <me>a_1 = 8400,~~~~a_n = 1.05 a_{n-1}</me></p></solution></example>
 
-<exercise><title>Practice 5</title>
+<exercise component="webwork"><title>Practice 5</title>
 <webwork>
     <pg-code>
         Context()->variables->add(Cn =>['Real',TeX=>"C_n"]);
@@ -378,17 +402,21 @@ The sequence is determined by the recursive definition
         <p><m>C_1=</m><var name="$c1" width="3"/>, <m>C_{n+1}=</m><var name="$f" width="6"/> [Note: Enter "Cn" to get <m>C_n</m>.]</p>
     </statement>
 <solution><p><m>C_1 = 100</m>, <m>C_{n+1} = 0.86 C_n</m></p></solution>
-</webwork>
-</exercise>
+</webwork></exercise>
+
+<exercise component="main"><title>Practice 5</title>
+<statement><p>Find a recursive definition for the sequence in <xref ref="Exercise-coffee" text="custom">CheckPoint 9.8</xref> above if you do not drink any more coffee for <m>n</m> hours.</p> </statement>
+
+<solution><p><m>C_1 = 100</m>, <m>C_{n+1} = 0.86 C_n</m></p></solution></exercise>
 
 <example><statement><p>You deposit $8000 in a savings account that pays 5% simple annual interest.  Find a recursive definition for the sequence of account balances if the money is kept in the account for <m>n</m> years.</p></statement>
 
 <solution><p>If we use the letter <m>b</m> for that sequence, we have  <m>b_1 = 8400</m>.  Each successive term was obtained by adding 400 to the previous term, which means that 
-<me>b_n = b_{n-1} + 400</me>
+        <me>b_n = b_{n-1} + 400</me>
 The sequence is determined by the recursive definition
-<me>b_1 = 8400,~~~b_n = b_{n-1} + 400</me></p></solution></example>
+        <me>b_1 = 8400,~~~b_n = b_{n-1} + 400</me></p></solution></example>
 
-<exercise><title>QuickCheck 3</title>
+<exercise component="webwork"><title>QuickCheck 3</title>
 <webwork>
     <pg-code>
         $answer = RadioButtons(
@@ -405,25 +433,33 @@ The sequence is determined by the recursive definition
         <p><var name="$answer" form="buttons"/> </p>
     </statement>
     <solution><p><var name="$answer"/></p></solution>
-</webwork>
-</exercise>
+</webwork></exercise>
+
+<exercise component="main"><title>QuickCheck 3</title>
+<statement><p>If each output of a sequence is defined in terms of earlier outputs, we say the sequence is</p>
+<p><ol marker="a." cols="2">
+        <li><p>general.</p></li>
+        <li><p>discrete.</p></li>
+        <li><p>ordered.</p></li>
+        <li><p>recursive.</p></li>
+    </ol></p></statement></exercise>
 
 <example><statement><p>Karen joins a savings plan in which she deposits $200 per month and receives 12% annual interest compounded monthly.</p>
-<p><ol marker= "a">
+<p><ol marker= "a.">
     <li>Find a recursively defined sequence that gives the amount of money in Karen's account <m>n</m> months later.</li>
     <li>Find the first four terms of the sequence.</li></ol></p></statement>
 
-<solution><p><ol marker= "a">
+<solution><p><ol marker= "a.">
     <li>In the first month Karen deposits $200, so <m>a_1 = 200</m>. Each month thereafter Karen receives 1% interest (one-twelfth of 12% annual interest) on the previous month's balance, and then adds $200 to the total. For example, before she makes her deposit in the second month the account has
-    <me>200 + 0.01 (200) = 1.01(200)~\text{dollars}</me>
+            <me>200 + 0.01 (200) = 1.01(200)~\text{dollars}</me>
     She then adds $200 to this amount for a total of
-    <me>a_2 = 1.01(200) + 200 ~\text{dollars}</me>
+            <me>a_2 = 1.01(200) + 200 ~\text{dollars}</me>
     In general, after the <m>n^{th}</m> deposit Karen's account contains <m>a_n</m> dollars. In the next month she earns 1% interest on that balance, giving her
-    <me>a_n + 1.01 a_n = 1.01 a_n ~\text{dollars}</me>
+            <me>a_n + 1.01 a_n = 1.01 a_n ~\text{dollars}</me>
     Then she deposits another $200 for a total of
-    <me>a_{n+1} = 1.01 a_n + 200 ~\text{dollars}</me>
+            <me>a_{n+1} = 1.01 a_n + 200 ~\text{dollars}</me>
     Thus, the recursive sequence is defined by
-    <me>a_1 = 200, ~~~ a_{n+1} = 1.01 a_n + 200 ~\text{dollars}</me></li>
+            <me>a_1 = 200, ~~~ a_{n+1} = 1.01 a_n + 200 ~\text{dollars}</me></li>
     <li>We evaluate the general formula found in part (a) for  <m>n = 1, 2, 3, 4:</m> 
 
     <!--*****--><me>\begin{aligned}[t]
@@ -437,7 +473,6 @@ The sequence is determined by the recursive definition
                 \end{aligned}</me><!--*****--> 
             </li></ol>
 </p></solution></example>
-
 </subsection>
 
 <xi:include href="./summary-9-1.xml" />

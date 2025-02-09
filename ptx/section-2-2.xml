@@ -11,7 +11,7 @@
 <subsection><title>Absolute Value</title>
 
 <p>The absolute value is used to discuss problems involving distance. For example, consider the number line shown below. Starting at the origin, we travel in opposite directions to reach the two numbers <m>6</m> and <m>-6</m>, but the <em>distance</em> we travel in each case is the same.</p> 
-<sidebyside width="50%"><image source="images/fig-abs-six"><description>absolute value</description></image></sidebyside>
+    <image width="60%" source="images/fig-abs-six"><description>absolute value</description></image>
 
 <p>The distance from a number <m>c</m> to the origin is called the <term>absolute value</term><idx>absolute value</idx> of <m>c</m>, denoted by <m>\abs{c}</m>. Because distance is never negative, the absolute value of a number is always positive (or zero). Thus, <m>\abs{6}= 6</m> and <m>\abs{-6} = 6</m>. In general, we define the absolute value of a number <m>x</m> as follows.</p>
 
@@ -28,7 +28,7 @@
 <note><p>This definition says that the absolute value of a positive number (or zero) is the same as the number. To find the absolute value of a negative number, we take the opposite of the number, which results in a positive number. For instance,
     <me>\abs{-6} = -(-6) = 6</me></p></note>
 
-<exercise><title>QuickCheck 1</title>
+<exercise component="webwork"><title>QuickCheck 1</title>
 <webwork>
      <pg-code>       
             $absneg = RadioButtons(
@@ -47,22 +47,30 @@
         <p><m> x </m> must be zero or negative if <m> \left| x \right| =-x </m>.</p>
     </solution>
 </webwork></exercise>
+
+<exercise component="main"><title>QuickCheck 1</title>
+<statement><p>If <m> \left| x \right| =-x </m>, what can you say about <m> x </m>?</p>
+    <p><ol marker="a.">
+        <li><p> <m>x</m> must be zero.</p></li>
+        <li><p> <m>x</m> must be negative.</p></li>
+        <li><p> <m>x</m> must be zero or negative.</p></li>
+        <li><p>This cannot happen for any value of <m>x</m>.</p></li>
+    </ol></p></statement></exercise>
     
 <p>Absolute value bars act like grouping devices in the order of operations: You should complete any operations that appear inside absolute value bars before you compute the absolute value.</p>
 
-<example xml:id="example-abs"><statement><p>Simplify each expression.<ol marker="a" cols ="2">
+<example xml:id="example-abs"><statement><p>Simplify each expression.<ol marker="a." cols ="2">
         <li><p><m>\abs{3 - 8}</m></p></li>
         <li><p><m>\abs{3} - \abs{8}</m></p></li>
     </ol></p></statement>
-<solution><p><ol marker="a">
+<solution><p><ol marker="a.">
         <li><p>We simplify the expression inside the absolute value bars first.
             <me>\abs{3 - 8} = \abs{-5} = 5</me></p></li>
         <li><p>We simplify each absolute value; then subtract.
             <me>\abs{3} - \abs{8} = 3 - 8 = -5</me></p></li>
     </ol></p></solution></example>
 
-<exercise>
-    <title>Practice 1</title>
+<exercise component="webwork"><title>Practice 1</title>
     <webwork>
          <pg-code>
             Context("LimitedNumeric");
@@ -82,8 +90,18 @@
                 <li><p><m>-28</m></p></li>
             </ol></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
+
+<exercise component="main"><title>Practice 1</title>
+<statement><p>Simplify each expression.</p>
+            <p><ol marker="a." cols = "2">
+                <li><p><m>12 - 3 \left|-6\right|</m></p></li>
+                <li><p><m>-7 - 3\left|2 - 9\right|</m></p></li>
+            </ol></p></statement>
+<solution><p><ol marker="a." cols="2">
+                <li><p><m>-6</m></p></li>
+                <li><p><m>-28</m></p></li>
+            </ol></p></solution></exercise>
 </subsection>
 
 <subsection><title>Examples of Models</title>
@@ -92,28 +110,28 @@
 <sidebyside widths="45% 45%"><p>The contractor for a new hotel is estimating the cost of the marble tile for a circular lobby. The cost is a function of the <em>square</em> of the diameter of the lobby.</p>
 <p>The number of board-feet that can be cut from a Ponderosa pine is a function of the <em>cube</em> of the circumference of the tree at a standard height.</p></sidebyside>
 
-<sidebyside widths="26% 26%">
+<sidebyside widths="30% 30%">
     <image source="images/fig-quadratic-model"><description>parabola</description></image>
     <image source="images/fig-cubic-model"><description>cubic</description></image></sidebyside>
 
 <sidebyside widths="45% 45%"><p>The manager of an appliance store must decide how many coffee-makers to order every quarter. The optimal order size is a function of the <em>square root</em> of the annual demand for coffeemakers.</p>
 <p>Investors are deciding whether to support a windmill farm. The wind speed needed to generate a given amount of power is a function of the <em>cube root</em> of the power.</p></sidebyside>
 
-<sidebyside widths="26% 26%">
+<sidebyside widths="30% 32%">
     <image source="images/fig-sqrt-model"><description>square root</description></image>
     <image source="images/fig-cube-root-model"><description>cube root</description></image></sidebyside>
 
 <sidebyside widths="45% 45%"><p>The frequency of the note produced by a violin string is a function of the <em>reciprocal</em> of the length of the string.</p>
 <p>The loudness, or intensity, of the music at a concert is a function of the <em>reciprocal of the square</em> of your distance from the speakers.</p></sidebyside>
 
-<sidebyside widths="26% 26%">
+<sidebyside widths="30% 30%">
     <image source="images/fig-inverse-model"><description>inverse</description></image>
-    <image source="images/fig-inverse-square-model"  width="60%"><description>cube root</description></image></sidebyside>
+    <image source="images/fig-inverse-square-model"><description>cube root</description></image></sidebyside>
 
 <sidebyside widths="45% 45%"><p>The annual return on an investment is a linear function of the interest rate.</p>
 <p>You are flying from Los Angeles to New York. Your distance from the Mississippi River is an <em>absolute value</em> function of time.</p></sidebyside>
 
-<sidebyside widths="26% 26%">
+<sidebyside widths="30% 30%">
     <image source="images/fig-linear-model"><description>linear</description></image>
     <image source="images/fig-abs-model"><description>absolute value</description></image></sidebyside>
 
@@ -443,7 +461,7 @@
 <sidebyside><image source="images/fig-basic-d-f"><description>cube root, reciprocal, inverse square</description></image></sidebyside>
 <sidebyside  width="60%"><image source="images/fig-basic-g-h"><description>line, absolute value</description></image></sidebyside>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -452,6 +470,9 @@
         <p><var form="essay"/></p>      
     </statement>    
 </webwork></exercise>
+
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>Which of the eight basic functions are undefined at <m>x=0</m>? Which are undefined for negative <m>x</m>? Which are always positive?</p></statement>   </exercise>
 </subsection>
 
 <subsection><title>Some Properties of Absolute Value</title>
@@ -487,8 +508,7 @@
 
 <note><p>Note that <em>verifying</em> a statement for one or two values of the variables does not <em>prove</em> the statement is true for <em>all</em> values of the variables. However, working with examples can help us understand the meaning and significance of mathematical properties.</p></note>
 
-<exercise>
-    <title>Practice 2</title>
+<exercise component="webwork"><title>Practice 2</title>
     <webwork>
          <pg-code>
             $YN = PopUp(
@@ -514,11 +534,27 @@
                 <li><p><m>\left|-3\right|\left|-5\right|=15=\left|(-3)\cdot (-5)\right|</m></p></li>
                 <li><p><m>\left|3\right|\left|-5\right|=15=\left|3(-5)\right|</m></p></li>
             </ul></p>
-        </solution>
-    </webwork>
+        </solution></webwork>
 </exercise>
 
-<exercise><title>QuickCheck 2</title>
+<exercise component="main"><title>Practice 2</title>
+<statement><p>Verify the multiplicative property of absolute value for the three cases in the previous example.</p>
+            <p><ul>
+                <li><p>Case <m>a = 3</m> and <m>b = 5</m></p>
+                <p>Does <m>\left|3\right| \left|5\right| = \left|3\cdot 5\right|</m>?</p></li>
+                <li><p>Case <m>a = -3</m> and <m>b = -5</m></p>
+                <p>Does <m>\left|-3\right|\left|-5\right| = \left|(-3)\cdot (-5)\right|</m>?</p></li>
+                <li><p>Case <m>a = 3</m> and <m>b = -5</m></p>
+                <p>Does <m>\left|3\right|\left|-5\right| = \left|3(-5)\right|</m>?</p></li>
+            </ul></p>        
+        </statement>
+<solution><p><ul>
+                <li><p><m>\left|3\right| \left|5\right|=15=\left|3\cdot 5\right|</m></p></li>
+                <li><p><m>\left|-3\right|\left|-5\right|=15=\left|(-3)\cdot (-5)\right|</m></p></li>
+                <li><p><m>\left|3\right|\left|-5\right|=15=\left|3(-5)\right|</m></p></li>
+        </ul></p></solution></exercise>
+
+<exercise component="webwork"><title>QuickCheck 2</title>
 <webwork>
      <pg-code>       
             $absineq = RadioButtons(
@@ -537,6 +573,15 @@
         <p><m> \left| a-b \right| \ge \left| a \right| - \left| b \right| </m> for all <m>a</m> and <m>b</m>.</p>
     </solution>
 </webwork></exercise>
+
+<exercise component="main"><title>QuickCheck 2</title>
+<statement><p>Which of these is true for all <m>a</m> and <m>b</m>?</p>
+    <p><ol marker="a." cols="2">
+        <li><p><m>\left| a-b \right| \le \left| a \right| - \left| b \right|</m></p></li>
+        <li><p><m>\left| a-b \right| \ge \left| a \right| - \left| b \right|</m></p></li>
+        <li><p><m>\left| a-b \right| \ge \left| a \right| + \left| b \right|</m></p></li>
+        <li><p><m>\left| a+b \right| \ge \left| a \right| + \left| b \right|</m></p></li>
+    </ol></p></statement></exercise>
 </subsection>
 
 <subsection><title>Functions Defined Piecewise</title>
@@ -551,17 +596,20 @@
             3  \amp \text{if } x\gt 1
             \end{cases}
         </me></p></statement>
+
 <solution><p>Think of the plane as divided into two regions by the vertical line <m>x = 1</m>, as shown below. In the left-hand region (<m>x \le 1</m>), we graph the line <m>y = x + 1</m>. (The fastest way to graph the line is to plot its intercepts, <m>(-1, 0)</m> and <m>(0, 1)</m>.) </p> 
     <sidebyside widths="55% 40%">
-    <stack><p>Notice that the value <m>x = 1</m> is included in the first region, so <m>f (1) = 1 + 1 = 2</m>, and the point <m>(1, 2)</m> is included on the graph. We indicate this with a solid dot at the point <m>(1, 2)</m>.</p> 
+    <stack><p>Notice that the value <m>x = 1</m> is included in the first region, so 
+        <me>f (1) = 1 + 1 = 2</me>, 
+    and the point <m>(1, 2)</m> is included on the graph. We indicate this with a solid dot at the point <m>(1, 2)</m>.</p> 
 
-    <p>In the right-hand region (<m>x \gt 1</m>), we graph the horizontal line <m>y = 3</m>. The value <m>x = 1</m> is not included in the second region, so the point <m>(1, 3)</m> is not part of the graph. We indicate this with an open circle at the point <m>(1, 3)</m>.</p>
+    <p>In the right-hand region (<m>x \gt 1</m>), we graph the horizontal line <m>y = 3</m>.</p> 
     </stack>
     <image source="images/fig-piecewise"><description>piecewise function</description></image></sidebyside>
+    <p>The value <m>x = 1</m> is not included in the second region, so the point <m>(1, 3)</m> is not part of the graph. We indicate this with an open circle at the point <m>(1, 3)</m>.</p>
 </solution></example>
 
-<exercise xml:id="practice-piecewise-linear">
-    <title>Practice 3</title>
+<exercise component="webwork" xml:id="practice-piecewise-linearw"><title>Practice 3</title>
 <statement><p>Graph the piecewise defined function
     <me>
         g(x) =\begin{cases}
@@ -569,7 +617,8 @@
         x^3 \amp \text{ if } x \gt -1
         \end{cases}
     </me></p></statement>
-<answer><image source="images/fig-in-ex-ans-2-2-3" width="25%"><description>piercewise defined function</description></image></answer>
+<solution><image source="images/fig-in-ex-ans-2-2-3" width="25%"><description>piercewise defined function</description></image>
+</solution>
 <!--
     <webwork>
          <pg-code></pg-code> 
@@ -589,7 +638,18 @@
 -->
 </exercise>
 
-<exercise><title>QuickCheck 3</title>
+<exercise component="main" xml:id="practice-piecewise-linear"><title>Practice 3</title>
+<statement><p>Graph the piecewise defined function
+    <me>
+        g(x) =\begin{cases}
+        -1 - x \amp \text { if } x \le -1\\
+        x^3 \amp \text{ if } x \gt -1
+        \end{cases}
+    </me></p></statement>
+<solution><image source="images/fig-in-ex-ans-2-2-3" width="30%"><description>piercewise defined function</description></image>
+</solution></exercise>
+
+<exercise component="webwork"><title>QuickCheck 3</title>
 <webwork>
      <pg-code>       
             $pcws = RadioButtons(
@@ -609,6 +669,15 @@
     </solution>
 </webwork></exercise>
 
+<exercise component="main"><title>QuickCheck 3</title>
+<statement><p>In <xref ref="practice-piecewise-linear" text="custom">Practice 3</xref>, what is the value of <m>g(-1)</m>?</p>
+    <p><ol marker="a." cols="2">
+        <li><p><m>0</m></p></li>
+        <li><p><m>-1</m></p></li>
+        <li><p><m>-2</m></p></li>
+        <li><p>undefined</p></li>
+    </ol></p></statement></exercise>
+
 <p>The absolute value function <m>f (x) = \abs{x}</m> is an example of a function that is defined piecewise.
     <me>
         f (x) =\abs{x} =
@@ -620,12 +689,12 @@
     To sketch the absolute value function, we graph the line <m>y = x</m> in the first quadrant and the line <m>y = -x</m> in the second quadrant.</p>
 
 <example xml:id="example-piecewise-def"><statement><p>
-<ol marker="a">
+<ol marker="a.">
     <li><p>Write a piecewise definition for <m>g(x) = \abs{x - 3}</m>.</p></li>
     <li><p>Sketch a graph of <m>g(x) = \abs{x - 3}</m>.</p></li>
-</ol></p>
-</statement>
-<solution><p><ol marker="a">
+</ol></p></statement>
+
+<solution><p><ol marker="a.">
     <li><p>In the definition for <m>\abs{x}</m>, we replace <m>x</m> by <m>x - 3</m> to get
             <me>
                 g(x) =\abs{x-3} =
@@ -644,10 +713,10 @@
             </me></p></li>
     <li><p>In the first region, <m>x \ge 3</m>, we graph the line <m>y = x - 3</m>. Because <m>x = 3</m> is included in this region, the endpoint of this portion of the graph, <m>(3, 0)</m>, is included, too.</p>
     <p> In the second region, <m>x \lt 3</m>, we graph the line <m>y = -x + 3</m>. Note that the two pieces of the graph meet at the point <m>(0, 3)</m>, as shown below.</p>
-        <sidebyside width="45%"><image source="images/fig-piecewise2"><description>piecewise function</description></image></sidebyside></li></ol></p></solution></example>
+        <image width="65%" source="images/fig-piecewise2"><description>piecewise function</description></image></li>
+    </ol></p></solution></example>
 
-<exercise>
-    <title>Practice 4</title>
+<exercise component="webwork"><title>Practice 4</title>
     <webwork>
          <pg-code>
             $YN = PopUp(
@@ -674,10 +743,20 @@
             </p></li>
         </ol></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="main"><title>Practice 4</title>
+<statement><p><ol marker="a.">
+        <li><p>Use your calculator to graph <m>g(x) =\left|x-3\right|</m> and <m>h(x) =\left|x\right| + \left|-3\right|</m>. Are the graphs the same? </p></li>
+        <li><p>Explain why the functions <m>f (x) =\left|x + k\right|</m> and <m>g(x) =\left|x\right| + \left|k\right|</m> are not the same if <m>k\ne 0</m>. </p></li>
+    </ol></p></statement>
+
+<solution><p><ol marker="a.">
+        <li><p>No, the graphs of  <m>g(x) =\left|x-3\right|</m> and <m>h(x) =\left|x\right| + \left|-3\right|</m> are not the same. </p></li>
+        <li><p>Because <m>\left|x + k\right| \ne \left|x\right| + \left|k\right|</m> when <m>x</m> and <m>k</m> have opposite signs.</p></li>
+    </ol></p></solution></exercise>
+
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -687,7 +766,10 @@
     </statement>    
 </webwork></exercise>
 
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>What relationship do you see between the graphs of <m>f(x)=x^3</m> and <m>g(x)=\sqrt[3]{x}</m>?  Between the graphs of <m>f(x)=x^2</m> and <m>g(x)=\sqrt{x}</m>?</p></statement></exercise>
 </subsection>
+
 <xi:include href="./summary-2-2.xml" /> <!-- summary  -->
 <xi:include href="./section-2-2-exercises.xml" /> <!-- exercises  -->
 

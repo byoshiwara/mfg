@@ -4,19 +4,72 @@
 <section xml:id="The-Natural-Base"   xmlns:xi="http://www.w3.org/2001/XInclude">
 <title>The Natural Base</title><idx><em>e</em></idx>
 
-<introduction><p>There is another base for logarithms and exponential functions that is often used in applications. This base is an irrational number called <m>e</m>, where
+<introduction><p>We have looked at logarithms with various bases, and in particular we studied the common or base 10 logarithms, which often appear in applications. There is another base for logarithms and exponential functions that is often used in applications. This base is an irrational number called <m>e</m>, where
 	<me>\blert{e \approx 2.71828182845}</me>
-The number <m>e</m> is essential for many advanced topics, and it is often called the <term>natural base</term>.<idx>natural base</idx></p></introduction>
+The number <m>e</m> is essential for many advanced topics, and it is often called the <term>natural base</term>.<idx>natural base</idx> It may seem strange to use an irrational number as the base for exponential functions, but just as the irrational number <m>\pi</m> arises naturally in geometry, so does <m>e</m> arise in calculus and its applications. At the end of this section we'll look at a specific case of how base <m>e</m> occurs, and how its use is connected to the ideas and techniques of calculus.</p></introduction>
 
 <subsection><title>The Natural Exponential Function</title>
 
-<p>The <term>natural exponential function</term><idx>natural exponential function</idx> is the function <m>f(x) = e^x</m>. Values for <m>e^x</m> can be obtained with a calculator using the <m>\boxed{e^x}</m> key ( <kbd>2nd</kbd> <kbd>LN</kbd> on most calculators). For example, you can evaluate <m>e^1</m> by pressing</p>
+<p>The <term>natural exponential function</term><idx>natural exponential function</idx> is the function 
+    <me>f(x) = e^x</me> 
+Values for <m>e^x</m> can be obtained with a calculator using the <m>\boxed{e^x}</m> key ( <kbd>2nd</kbd> <kbd>LN</kbd> on most calculators). For example, you can evaluate <m>e^1</m> by pressing</p>
 <p><kbd>2nd</kbd> <kbd>LN</kbd> <m>1</m></p>
-<p>to confirm the value of <m>e</m> given above.</p>
+<p>to confirm the value of <m>e</m> given above. (We'll explain why we use the <kbd>2nd</kbd> <kbd>LN</kbd> key a little later.)</p>
 
-<p>Because <m>e</m> is a number between <m>2</m> and <m>3</m>, the graph of <m>f(x) = e^x</m> lies between the graphs of <m>y = 2^x</m> and <m>y = 3^x</m>. Compare the tables of values and the graphs of the three functions below. You can verify the table and graphs on your calculator.</p>
+<p>Try a few more calculations to become familiar with base <m>e</m>.</p>
 
-<sidebyside widths="50% 30%" valigns="middle middle">
+<exercise component="webwork"><title>Practice 1</title>
+    <webwork>
+         <pg-code>
+            $a = Formula("e**2")->with(
+              tolType => 'absolute',
+              tolerance => .00051,
+            );
+
+            $b = Formula("e**(3.5)")->with(
+              tolType => 'absolute',
+              tolerance => .00051,
+            );
+            $c = Formula("e**(-0.5)")->with(
+              tolType => 'absolute',
+              tolerance => .00051,
+            );
+            Context()->operators->undefine("^","**");
+
+        </pg-code> 
+        <statement>
+            <p>Use your calculator to evaluate the following powers.
+            <ol marker="a">
+                <li><p><m>e^2\approx</m><var name="$a" width="5"/></p></li>
+                <li><p><m>e^{3.5}\approx</m><var name="$b" width="5"/></p></li>
+                <li><p><m>e^{-0.5}\approx</m><var name="$c" width="5"/></p></li>
+            </ol></p>
+    </statement>
+    <solution>
+            <p><ol cols="3" marker="a">
+                <li><p><m>e^2\approx 7.389</m></p></li>
+                <li><p><m>e^{3.5}\approx 33.115 </m></p></li>
+                <li><p><m>e^{-0.5}\approx 0.6065 </m></p></li>
+            </ol></p>
+        </solution>
+</webwork></exercise>
+
+<exercise component="main"><title>Practice 1</title>
+<statement><p>Use your calculator to evaluate the following powers. Round to four decimal places.
+        <ol marker="a." cols="3">
+            <li><p><m>e^2</m></p></li>
+            <li><p><m>e^{3.5}</m></p></li>
+            <li><p><m>e^{-0.5}</m></p></li>
+        </ol></p></statement>
+<solution><p><ol cols="3" marker="a.">
+                <li><p><m>e^2\approx 7.3891</m></p></li>
+                <li><p><m>e^{3.5}\approx 33.1155 </m></p></li>
+                <li><p><m>e^{-0.5}\approx 0.6065 </m></p></li>
+            </ol></p></solution></exercise>
+
+<p>What about the graph of this new exponential function? Because <m>e</m> is a number between <m>2</m> and <m>3</m>, the graph of <m>f(x) = e^x</m> lies between the graphs of <m>y = 2^x</m> and <m>y = 3^x</m>. Compare the tables of values and the graphs of the three functions below. For example, note that for <m>x=2</m>, the value of <m>e^2 = 7.389</m> is between <m>2^2 = 4</m> and <m>3^2 = 9</m>. You can verify the table and graphs on your calculator.</p>
+
+<sidebyside widths="50% 45%" valigns="middle middle">
 <tabular top="major" left="minor" right="minor" bottom="minor" halign="center">
 	<row bottom="major">
 		<cell><m>x</m></cell>
@@ -62,7 +115,7 @@ The number <m>e</m> is essential for many advanced topics, and it is often calle
 <image source="images/fig-3-exponentials"><description>graph of 3 exponential functions</description></image>
 </sidebyside>
 
-<exercise><title>QuickCheck 1</title>
+<exercise component="webwork"><title>QuickCheck 1</title>
 <webwork>
      <pg-code>       
             $esq = RadioButtons(
@@ -82,55 +135,66 @@ The number <m>e</m> is essential for many advanced topics, and it is often calle
     </solution>
 </webwork></exercise>
 
+<exercise component="main"><title>QuickCheck 1</title>
+<statement><p><ol marker="a.">
+    <li><p>The value of <m>e^2</m> is closest to which of these?</p>
+    <p><ol marker="i." cols="4">
+        <li><m>3</m></li>
+        <li><m>5</m></li>
+        <li><m>7</m></li>
+        <li><m>9</m></li>
+    </ol></p></li>
+<li><p>The value of <m>e^{-1}</m> is closest to which of these?</p>
+    <p><ol marker="i." cols="4">
+        <li><m>-3</m></li>
+        <li><m>\dfrac{1}{2}</m></li>
+        <li><m>\dfrac{1}{3}</m></li>
+        <li><m>2</m></li>
+    </ol></p></li>
+</ol></p></statement></exercise>
+
+<p>Variations on the natural exponential function occur in many disciplines. For example, the graph in the figure below is called a "bell curve." It is the graph of the <term>normal distribution</term> in statistics. </p>
+
+<image width="70%" source="images/height.png"><description>male height</description></image>
+
+<example><statement><p>The normal distribution above shows the heights of men in the US. The average or mean height for men is 70 inches, and the formula for the graph is
+        <me>f(x) = 0.13~ e^{-(x-70)^2/18}</me>
+The probability that a given man has a height between two values is the area under the curve between those values. Evaluate the function for <m>x=70</m> and for <m>x=67</m>.</p></statement>
+
+<solution><p>To evaluate the function we follow the order of operations. For <m>x=70</m> we have
+    <md><mrow>f(70) \amp = 0.13~ e^{-(70-70)^2/18} \amp \amp \blert{\text{Simplify the exponent first.}}</mrow>
+        <mrow> \amp = 0.13~ e^0 = 0.13</mrow></md></p>
+<p>For <m>x=67</m> we have
+    <md><mrow>f(67) \amp = 0.13~ e^{-(67-70)^2/18} \amp \amp \blert{-(67-70)^2/18 = -0.5} </mrow>
+        <mrow> \amp = 0.13~ e^{-0.5} = 0.079</mrow></md></p></solution></example>
+
+<p>This next graph is an example of a <term>logistic function</term>, which models population growth with an upper bound.</p>
+
+    <image width="70%" source="images/covid.png"><description>graph of covid</description></image>
+
+<exercise component="main"><title>Practice 2</title>
+<statement><p>The logistic function shown above models the spread of Covid in China during the 2020 epidemic. It gives the number of infections <m>N(t)</m>, in thousands, reported <m>t</m> days after January 21, 2020. The equation for this model is
+    <me>N(t) = \dfrac{83.5}{1+267~ e^{-0.214t}}</me>
+According to the model, how many cases of Covid were reported on February 20 (day <m>t=30</m>)?</p></statement>
+
+<solution><p>58,194 cases</p></solution></exercise>
+
 <example xml:id="example-translate-exponential"><statement><p>Use technology to graph each function. How does each graph differ from the graph of <m>y = e^x</m>?<ol marker="a" cols="2">
 			<li><m>g(x) = e^{x+2}</m></li>
 			<li><m>h(x) = e^x + 2</m></li>
 		</ol></p></statement>
 
-<solution><sidebyside width="30%"><image source="images/fig-translate-exponential"><description>translations of the exponential</description></image></sidebyside>
+<solution><image width="50%" source="images/fig-translate-exponential"><description>translations of the exponential</description></image>
 <p> The graph of <m>g</m> is shifted <m>2</m> units to the left of <m>y = e^x</m>. The graph of <m>h</m> is shifted <m>2</m> units up from <m>y = e^x</m>. The graphs are shown above.</p></solution></example>
-
-<exercise>
-	<title>Practice 1</title>
-    <webwork>
-         <pg-code>
-            $a = Formula("e**2")->with(
-              tolType => 'absolute',
-              tolerance => .00051,
-            );
-
-            $b = Formula("e**(3.5)")->with(
-              tolType => 'absolute',
-              tolerance => .00051,
-            );
-            $c = Formula("e**(-0.5)")->with(
-              tolType => 'absolute',
-              tolerance => .00051,
-            );
-            Context()->operators->undefine("^","**");
-
-        </pg-code> 
-        <statement>
-            <p>Use your calculator to evaluate the following powers.
-            <ol marker="a">
-                <li><p><m>e^2\approx</m><var name="$a" width="5"/></p></li>
-                <li><p><m>e^{3.5}\approx</m><var name="$b" width="5"/></p></li>
-                <li><p><m>e^{-0.5}\approx</m><var name="$c" width="5"/></p></li>
-            </ol></p>
-    </statement>
-    <solution>
-            <p><ol cols="3" marker="a">
-                <li><p><m>e^2\approx 7.389</m></p></li>
-                <li><p><m>e^{3.5}\approx 33.115 </m></p></li>
-                <li><p><m>e^{-0.5}\approx 0.6065 </m></p></li>
-            </ol></p>
-        </solution>
-</webwork></exercise>
 </subsection>
 
 <subsection><title>The Natural Logarithmic Function</title>
 
-<p>The base <m>e</m> logarithm of a number <m>x</m>, or <m>\log_ e x</m>, is called the <term>natural logarithm</term><idx>natural logarithm</idx> of <m>x</m> and is denoted by <m>\ln x</m>.</p><assemblage><title>The Natural Logarithm</title><idx>natural logarithm</idx>
+<p>Recall that each exponential function with base <m>b</m> has an inverse function, the logarithmic function with the same base. For example, the function <m>~y=\log_2{(x)}~</m> is the inverse of the function <m>~y=2^x</m>. It gives the exponent needed on 2 to give <m>x</m>, so that, for instance, <m>~\log_2{(16)} = 4~</m>, because <m>~2^4 = 16</m>.</p>
+
+<p>The base <m>e</m> logarithm of a number <m>x</m>, or <m>\log_ e x</m>, is called the <term>natural logarithm</term><idx>natural logarithm</idx> of <m>x</m> and is denoted by <m>\ln x</m>. (Why <q>ln</q> and not <q>nl</q>? The natural logarithm is denoted by <q>ln</q> because it stands for <q>logarithmus naturalis,</q> which is the Latin for <q>natural logarithm.</q>) Here is its official definition.</p>
+
+<assemblage><title>The Natural Logarithm</title><idx>natural logarithm</idx>
 	<p>The natural logarithm is the logarithm base <m>e</m>.
 		<me>\ln x = \log_{e}{x}, ~~~~ x\gt 0</me></p>
 </assemblage>
@@ -138,12 +202,137 @@ The number <m>e</m> is essential for many advanced topics, and it is often calle
 <p>The natural logarithm of <m>x</m> is the exponent to which <m>e</m> must be raised to produce <m>x</m>. For example, the natural logarithm of <m>10</m>, or <m>\ln 10</m>, is the solution of the equation
 	<me>e^y = 10</me>
 You can verify on your calculator that
-	<me>e^{\alert{2.3}} ~~ \approx 10 \text{ or } ~~ \ln 10 \approx \alert{2.3}</me>
-In general, natural logs obey the same conversion formulas that work for logs to other bases.</p>
+	<me>e^{\alert{2.3}} ~~ \approx 10 \text{ or } ~~ \ln 10 \approx \alert{2.3}</me></p>
 
-<xi:include href="./assemblage-conversion-formulas-for-natural-logs.xml" />
+<p>As is the case with exponential and log functions with other bases, the <term>natural log function</term><idx>natural log function</idx>, <m>y= \ln {(x)}</m>, and the natural exponential function, <m>f(x) = e^x</m>, <q>undo</q> each other, so they are inverse functions. (This is why many calculators use <kbd>2nd</kbd> <kbd>LN</kbd> to indicate <m>e^x</m>.) </p>
 
-<exercise><title>QuickCheck 2</title>
+<exercise component="webwork"><title>Practice 3</title>
+    <webwork><pg-code>
+            $a = Compute("ln(100)")->with(
+              tolType => 'absolute',
+              tolerance => .000051,
+            );
+
+            $b = Compute("ln(0.01)")->with(
+              tolType => 'absolute',
+              tolerance => .000051,
+            );
+            $c = Compute("ln(e**3)");
+            Context()->functions->disable("All");
+        </pg-code>
+        <statement>
+            <p>Use your calculator to evaluate each logarithm. Round your answers to four decimal places.</p>
+            <p><ol marker="a.">
+                <li><p><m>\ln 100\approx</m><var name="$a" width="5"/></p></li>
+                <li><p><m>\ln 0.01\approx</m><var name="$b" width="5"/></p></li>
+                <li><p><m>\ln e^3\approx</m><var name="$c" width="5"/></p></li>
+            </ol></p>
+        </statement>
+        <solution>
+            <p><ol marker="a." cols="2">
+            <li><m>\ln 100\approx 4.6052</m></li>
+            <li><m>\ln 0.01\approx -4.6052</m></li>
+            <li><m>\ln e^3 =3</m></li></ol></p>
+        </solution>
+</webwork></exercise>
+
+<exercise component="main"><title>Practice 3</title>
+<statement><p>Use your calculator to evaluate each logarithm. Round your answers to four decimal places.</p>
+        <p><ol marker="a." cols="2">
+                <li><m>\ln {(10)}</m></li>
+                <li><m>\ln {(0.1)}</m></li>
+                <li><m>\ln {(100)}</m></li>
+                <li><m>\ln {(0.01)}</m></li>
+        </ol></p></statement>
+
+<solution><p><ol marker="a." cols="2">
+            <li><m>\ln {(10)}\approx 2.3026</m></li>
+            <li><m>\ln {(0.1)}\approx -2.3026</m></li>
+            <li><m>\ln {(100)}\approx 4.6052</m></li>
+            <li><m>\ln {(0.01)}\approx -4.6052</m></li>           
+    </ol></p></solution></exercise>
+
+<p>As usual, we can gain a better understanding of a new function by looking at its graph.</p>
+
+<example xml:id="example-ln-and-exponential"><statement>
+    <p><ol marker="a.">
+        <li><p>Graph <m>~f(x) = e^x~</m> and <m>~g(x) = \ln {(x)}~</m> on the same grid. </p></li>
+        <li><p>Give the domain and range of the natural log function.</p></li>
+    </ol></p></statement>
+
+<solution><p>Earlier we made a table of values to graph the fuction <m>f(x) = e^x</m>, and we can make a table of values for <m>g(x) = \ln {(x)}</m> by interchanging the columns in that table. Plotting the points gives us the graph below. </p>
+        <sidebyside widths="35% 65%" valigns="middle middle">
+            <tabular top="major" left="minor" right="minor" bottom="minor" halign="center">
+                <row bottom="major">
+                    <cell><m>x</m></cell>
+                    <cell><m>y=\ln {(x)}</m></cell></row>
+                <row>
+                    <cell><m>0.050</m></cell>
+                    <cell><m>-3</m></cell></row>
+                <row>
+                    <cell><m>0.135</m></cell>
+                    <cell><m>-2</m></cell></row>
+                <row>
+                    <cell><m>0.368</m></cell>
+                    <cell><m>-1</m></cell></row>
+                <row>
+                    <cell><m>1</m></cell>
+                    <cell><m>0</m></cell></row>
+                <row>
+                    <cell><m>2.718</m></cell>
+                    <cell><m>1</m></cell></row>
+                <row>
+                    <cell><m>7.389</m></cell>
+                    <cell><m>2</m></cell></row>
+                <row>
+                    <cell><m>20.086</m></cell>
+                    <cell><m>3</m></cell></row>
+                </tabular>
+        <!--<image source="images/fig-ln-and-exponential"><description>graphs of ln and natural exponential</description></image>-->
+        <image  xml:id="fig-natural-log-and-exponential"><description>graphs of ln and natural exponential</description><latex-image>
+        <![CDATA[
+        \begin{tikzpicture} [scale=.45]
+        \draw[lightgray] (-4,-4) grid (10,10);
+        \draw[black,thick, ->, >=stealth'] (-4,0)--(10.6,0) node[right] {$x$};
+        \draw[black,thick, ->, >=stealth'] (0,-4)--(0,10.6) node[above] {$y$};
+        \foreach \x  in  {5,10} {
+         \draw[black] (\x,.1) --++(0,-.2)  node[below, yshift=-1, fill=white,inner sep=1]   {$\x$};
+        }
+        \foreach \x  in  {5,10} {
+         \draw[black] (.1,\x) --++(-.2,0)  node[left, xshift=-2, fill=white,inner sep=2]   {$\x$};
+        }
+        \draw[darkgray,thick, dashed,<->,>=stealth'] (-4,-4)--(10,10) node[below, yshift=-6mm, fill=white, inner sep=2]{$y=x$};
+        \draw[samples=65,domain={-4:ln(10)},smooth,variable=\x,blue, thick, <->, >=stealth'] plot ({(\x)},{e^(\x)}) node[above] {$y=e^x$};
+        \draw[samples=65,domain={e^(-4):10},smooth,variable=\x,red, thick, <->, >=stealth'] plot ({(\x)},{ln(\x)}) node[below, xshift=7, yshift=-4, fill=white, inner sep=2] {$y=\ln(x)$};
+        \end{tikzpicture}]]>
+        </latex-image></image></sidebyside>
+    <p>You can see that the graph of <m>g(x) = \ln {(x)}</m> is the reflection of the graph of <m>f(x) = e^x</m> about the line <m>y=x</m>. In particular, notice that while the graph of <m>f(x) = e^x</m> has no points with negative <m>y</m>-values, the graph of <m>g(x) = \ln {(x)}</m> has no points with negative <m>x</m>-values. Thus, the domain of the natural log function is the same as the range of <m>y = e^x</m>, or all positive numbers. The range of <m>y = \ln x</m> is the same as the domain of <m>y = e^x</m>, or all real numbers.</p></solution></example>
+
+<p>From the graph of <m>g(x) = \ln {(x)}</m> you can make the following observations.</p> 
+<p><ul>
+    <li>The natural log function has only positive numbers as input values.</li> 
+    <li>The natural logs of negative numbers and zero are undefined.</li> 
+    <li>The natural log of a number greater than 1 is positive, while the logs of numbers between 0 and 1 are negative.</li>
+</ul></p>
+</subsection>
+
+<subsection><title>Properties of the Natural Logarithm</title>
+
+<p>Natural logs obey the same conversion formulas that work for logs to other bases.</p>
+
+<assemblage><title>Conversion Formulas for Natural Logs</title>
+    <p><me>\blert{y = \ln x} ~~\text{ if and only if } ~~ \blert{e^y = x}</me></p>    
+</assemblage>
+
+<p>The conversion formulas are just another way of saying the the the natural log function, <m>g(x) = \ln x</m>, and the natural exponential function, <m>f(x) = e^x</m>, are inverse functions.</p> 
+
+<p>In particular,
+    <!--*****--><me>\begin{aligned}[t]
+    \ln e \amp = 1 \text{ because } e^1 = e \\
+    \ln 1 \amp = 0  \text{ because } e^0 = 1 \\
+    \end{aligned}</me><!--*****--></p>
+
+<exercise component="webwork"><title>QuickCheck 2</title>
 <webwork>
      <pg-code>       
             $loge = RadioButtons(
@@ -163,104 +352,25 @@ In general, natural logs obey the same conversion formulas that work for logs to
     </solution>
 </webwork></exercise>
 
-<p>In particular,
-	<!--*****--><me>\begin{aligned}[t]
-	\ln e \amp = 1 \text{ because } e^1 = e \\
-	\ln 1 \amp = 0  \text{ because } e^0 = 1 \\
-	\end{aligned}</me><!--*****--></p>
-
-<p>The conversion formulas tell us that the <term>natural log function</term><idx>natural log function</idx>, <m>g(x) = \ln x</m>, is the inverse function for the natural exponential function, <m>f(x) = e^x</m>.</p>
-
-<example xml:id="example-ln-and-exponential"><statement><p><ol marker="a">
-		<li>Graph <m>f(x) = e^x</m> and <m>f^{-1}(x) = \ln x</m> on the same grid.</li>
-		<li>Give the domain and range of the natural log function.</li>
-	</ol></p></statement>
-
-<solution><p><ol marker="a">
-	<li><p>We can make a table of values for <m>f^{-1}(x) = \ln x</m> by interchanging the columns in the table for <m>f(x) = e^x</m>. Plotting the points gives us the graph below.</p>
-		<p></p><sidebyside widths="50% 35%" valigns="middle middle">
-			<tabular top="major" left="minor" right="minor" bottom="minor" halign="center">
-				<row bottom="major">
-					<cell><m>x</m></cell>
-					<cell><m>y=\ln x</m></cell></row>
-				<row>
-					<cell><m>0.050</m></cell>
-					<cell><m>-3</m></cell></row>
-				<row>
-					<cell><m>0.135</m></cell>
-					<cell><m>-2</m></cell></row>
-				<row>
-					<cell><m>0.368</m></cell>
-					<cell><m>-1</m></cell></row>
-				<row>
-					<cell><m>1</m></cell>
-					<cell><m>0</m></cell></row>
-				<row>
-					<cell><m>2.718</m></cell>
-					<cell><m>1</m></cell></row>
-				<row>
-					<cell><m>7.389</m></cell>
-					<cell><m>2</m></cell></row>
-				<row>
-					<cell><m>20.086</m></cell>
-					<cell><m>3</m></cell></row>
-				</tabular>
-		<image source="images/fig-ln-and-exponential"><description>graphs of ln and natural exponential</description></image>
-		</sidebyside></li>
-		<li>The domain of the natural log function is the same as the range of <m>y = e^x</m>, or all positive numbers. The range of <m>y = \ln x</m> is the same as the domain of <m>y = e^x</m>, or all real numbers. These results are confirmed by the graph of <m>y = \ln x</m>.</li>
-	</ol></p></solution></example>
-
-<warning><p>Observe that the natural log of a number greater than <m>1</m> is positive, while the logs of fractions between <m>0</m> and <m>1</m> are negative. In addition, <em>the natural logs of negative numbers and zero are undefined</em>.</p></warning>
-
-<exercise>
-  <title>Practice 2</title>
-    <webwork>
-         <pg-code>
-            $a = Formula("ln(100)")->with(
-              tolType => 'absolute',
-              tolerance => .000051,
-            );
-
-            $b = Formula("ln(0.01)")->with(
-              tolType => 'absolute',
-              tolerance => .000051,
-            );
-            $c = Compute("3");
-            Context()->functions->disable("All");
-        </pg-code> 
-        <statement>
-            <p>Use your calculator to evaluate each logarithm. Round your answers to four decimal places.</p>
-            <p><ol marker="a">
-                <li><p><m>\ln 100\approx</m><var name="$a" width="5"/></p></li>
-                <li><p><m>\ln 0.01\approx</m><var name="$b" width="5"/></p></li>
-                <li><p><m>\ln e^3\approx</m><var name="$c" width="5"/></p></li>
-            </ol></p>
-        </statement>
-        <solution>
-            <p><ol marker="a" cols="2">
-            <li><m>\ln 100\approx 4.6052</m></li>
-            <li><m>\ln 0.01\approx -4.6052</m></li>
-            <li><m>\ln e^3 =3</m></li></ol></p>
-        </solution>
-    </webwork>
-</exercise>
-
-<exercise><title>Pause and Reflect</title>
-<webwork>
-     <pg-code>                      
-        </pg-code> 
-    <statement>
-        <p>Explain why <m>\ln\dfrac{1}{e^3} = -3</m>.</p>
-        <p><var form="essay"/></p>      
-    </statement>    
-</webwork></exercise>
-</subsection>
-
-<subsection><title>Properties of the Natural Logarithm</title>
+<exercise component="main"><title>QuickCheck 2</title>
+<statement><p> Which of the following is equivalent to <m>e^x=k</m> ?</p>
+    <p><ol marker="a." cols="2">
+        <li><m>e^k=x</m></li>
+        <li><m>\ln{(e)} = x</m></li>
+        <li><m>\ln{(k)} = x</m></li>
+        <li><m>k^x = e</m></li>
+    </ol></p></statement></exercise>
 
 <p>We use natural logarithms in the same way that we use logs to other bases. The properties of logarithms that we studied in <xref ref="Properties-of-Logarithms" text="type-global"/> also apply to logarithms base <m>e</m>.</p>
 
-<xi:include href="./assemblage-properties-of-natural-logs.xml" />
+<assemblage><title>Properties of Natural Logarithms</title>
+    <p>If <m>x, y \gt 0</m>, then   
+    <ol marker="1.">
+        <li><m>\ln{(xy)} = \ln{x} + \ln{y}</m></li>
+        <li><m>\ln\dfrac{x}{y} = \ln x - \ln y</m></li>
+        <li><m>\ln{x^k} = k \ln x </m></li>
+    </ol></p>    
+</assemblage>
 
 <p>Because the functions <m>y = e^x</m> and <m>y = \ln x</m> are inverse functions, the following properties are also true.</p>
 
@@ -271,11 +381,12 @@ In general, natural logs obey the same conversion formulas that work for logs to
 </assemblage>
 
 <example xml:id="example-simplify-ln-and-exp"><statement><p>Simplify each expression.
-		<ol marker="a" cols="2">
+	<ol marker="a." cols="2">
 			<li><m>\ln e^{0.3x}</m></li>
 			<li><m>e^{2 \ln(x+3)}</m></li>
-		</ol></p></statement>
-<solution><p><ol marker="a">
+	</ol></p></statement>
+
+<solution><p><ol marker="a.">
 		<li><p>The natural log is the log base <m>e</m>, and hence the inverse of <m>e^x</m>. Therefore,
 			<me>\ln {e^{0.3x}} = 0.3x</me></p></li>
 		<li><p>First, we simplify the exponent using the third property of logs to get
@@ -283,8 +394,7 @@ In general, natural logs obey the same conversion formulas that work for logs to
 		Then <m>e^{2 \ln(x+3)} = e^{\ln(x+3)^2} = (x + 3)^2</m>.</p></li>
 	</ol></p></solution></example>
 
-<exercise>
-	<title>Practice 3</title>
+<exercise component="webwork"><title>Practice 4</title>
     <webwork>
          <pg-code>
             Context()->functions->disable("All");
@@ -306,8 +416,32 @@ In general, natural logs obey the same conversion formulas that work for logs to
                 <li><p><m>-4x</m></p></li>
             </ol></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
+
+<exercise component="main"><title>Practice 4</title>
+<statement><p>Simplify each expression.</p>
+    <p><ol marker="a." cols="2">
+            <li><p><m>e^{(\ln {(x)}/2)}</m></p></li>
+            <li><p><m>\ln{\left(\dfrac{1}{e^{4x}}\right)}</m></p></li>
+    </ol></p></statement>
+
+<solution><p><ol marker="a." cols="2">
+                <li><p><m>\sqrt{x}~</m> or <m>~x^{1/2}</m></p></li>
+                <li><p><m>-4x</m></p></li>
+        </ol></p></solution></exercise>
+
+<exercise component="webwork"><title>Pause and Reflect</title>
+<webwork>
+     <pg-code>                      
+        </pg-code> 
+    <statement>
+        <p>Explain why <m>\ln\dfrac{1}{e^3} = -3</m>.</p>
+        <p><var form="essay"/></p>      
+    </statement>    
+</webwork></exercise>
+
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>Explain why <m>\ln\dfrac{1}{e^3} = -3</m>.</p></statement></exercise>
 </subsection>
 
 <subsection><title>Solving Equations</title>
@@ -325,7 +459,7 @@ In general, natural logs obey the same conversion formulas that work for logs to
 			<me>x = e^{3.5} \approx 33.1155</me></p></li>
 	</ol></p></solution></example>
 
-<exercise><title>Practice 4</title>
+<exercise component="webwork"><title>Practice 5</title>
     <webwork>
          <pg-code>
             $a = Compute("e**(-0.2)")->with(
@@ -337,7 +471,6 @@ In general, natural logs obey the same conversion formulas that work for logs to
               tolType => 'absolute',
               tolerance => .000051,
             );
-
         </pg-code> 
         <statement>
             <p>Solve each equation. Round your answers to four decimal places.
@@ -354,10 +487,21 @@ In general, natural logs obey the same conversion formulas that work for logs to
                 <li><p><m>2.0794</m></p></li>
             </ol></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
-<exercise><title>QuickCheck 3</title>
+<exercise component="main"><title>Practice 5</title>
+<statement><p>Solve each equation. Round your answers to four decimal places.</p>
+         <p><ol marker="a." cols="2">
+            <li><p><m>\ln {(x)} =-0.2</m></p></li>
+            <li><p><m>e^x = 8</m></p></li>
+    </ol></p></statement>
+
+<solution><p><ol marker="a." cols="2">
+                <li><p><m>0.8187 </m></p></li>
+                <li><p><m>2.0794</m></p></li>
+    </ol></p></solution></exercise>
+
+<exercise component="webwork"><title>QuickCheck 3</title>
 <webwork>
      <pg-code>       
             $button = RadioButtons(
@@ -377,29 +521,38 @@ In general, natural logs obey the same conversion formulas that work for logs to
     </solution>
 </webwork></exercise>
 
+<exercise component="main"><title>QuickCheck 3</title>
+<statement><p> Which statement below explains why the equation <m>e^x=6.5</m> is easier to solve than <m>8^x=6.5</m> ?</p>
+        <p><ol marker="a.">
+            <li><p>8 is larger than 6.5.</p></li> 
+            <li><p><m>k</m> is a constant.</p></li>
+            <li><p>There is a button for log base <m>e</m> on the calculator, but not a button for log base 8.</p></li>
+            <li><p>Because <m>e</m> is an irrational number.</p></li>
+        </ol></p> </statement></exercise>
+
 <p>To solve more complicated exponential equations, we isolate the power on one side of the equation before converting to logarithmic form.</p>
 
-<example xml:id="example-solve-natural-exponential"><statement><p>Solve <m>140 = 20 e^{0.4x}</m>.</p></statement>
-<solution><p>First, we divide each side by <m>20</m> to obtain
-		<me>7 = e^{0.4x}</me>
-	Then we convert the equation to logarithmic form.
-		<!--*****--><me>\begin{aligned}[t]
-		0.4x \amp = \ln 7 \amp\amp \blert{\text{Divide both sides by 0.4.}}\\
-		x \amp= \frac{\ln 7}{0.4}
-		\end{aligned}</me><!--*****-->
-	Rounded to four decimal places, <m>x \approx 4.8648</m>.</p></solution></example>
+<example xml:id="example-solve-natural-exponential"><statement><p>Solve <m>~200 = 60 + 20 e^{0.4x}</m></p></statement>
+
+<solution><p>First, we isolate the power.
+        <md><mrow>200 \amp = 60 + 20 e^{0.4x} \amp \amp \blert{\text{Subtract 60 from both sides.}}</mrow>
+            <mrow>140 \amp = 20 e^{0.4x} \amp \amp \blert{\text{Divide both sides by 20.}}</mrow>
+            <mrow>7 \amp = e^{0.4x}</mrow></md>
+    Then we convert the equation to logarithmic form.
+        <md><mrow>0.4x \amp = \ln {(7)} \amp\amp \blert{\text{Divide both sides by 0.4.}}</mrow>
+            <mrow>x \amp= \frac{\ln {(7)}}{0.4}</mrow></md>
+    Rounded to four decimal places, <m>x \approx 4.8648</m>.</p></solution></example>
 
 <note><p>We can also solve the equation in <xref ref="example-solve-natural-exponential" text="type-global"/>,
 	<me>7 = e^{0.4x}</me>
 by taking the natural logarithm of both sides. This gives us
 	<!--*****--><me>\begin{aligned}[t]
-	\ln 7 \amp = \ln e^{0.4x}\amp\amp \blert{\text{Simplify the right side.}} \\
-	\ln 7 \amp = 0.4x
-	\end{aligned}</me><!--*****-->
+	               \ln 7 \amp = \ln e^{0.4x}\amp\amp \blert{\text{Simplify the right side.}} \\
+	               \ln 7 \amp = 0.4x
+	               \end{aligned}</me><!--*****-->
 because <m>\ln{e^a} = a</m> for any number <m>a</m>. We then proceed with the solution as before.</p></note>
 
-<exercise>
-	<title>Practice 5</title>
+<exercise component="webwork"><title>Practice 6</title>
     <webwork>
          <pg-code>
             $a = Compute("-5*ln(9.7/16)");
@@ -411,28 +564,30 @@ because <m>\ln{e^a} = a</m> for any number <m>a</m>. We then proceed with the so
         <solution>
             <p><m>x = -5 \ln \left(\dfrac{9.7}{16} \right)\approx 2.5023</m></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
-<example xml:id="example-solve-logistic"><statement><p>Solve <m>P = \dfrac{a}{1 + be^{-kt}}</m> for <m>t</m>.</p></statement>
-<solution><p>We multiply both sides of the equation by the denominator, <m>1 + be^{-kt}</m>, to get
-		<me>P(1 + be^{-kt} ) = a</me>
-	Then we isolate the power, <m>e^{-kt}</m>, as follows:
-		<!--*****--><me>\begin{aligned}[t]
-		1 + be^{-kt} \amp = \frac{a}{P}\amp\amp \blert{\text{Subtract 1 from both sides.}}\\
-		be^{-kt} \amp = \frac{a}{P}- 1 \amp\amp \blert{\text{Rewrite the right side. }}\\
-		be^{-kt} \amp = \frac{a - P}{P}\amp\amp \blert{\text{Divide both sides by }b.}\\
-		e^{-kt} \amp= \frac{a - P}{bP}
-		\end{aligned}</me><!--*****-->
-	Next, we take the natural logarithm of both sides to get
-		<me>\ln {e^{-kt}} = \ln{\frac{a - P}{bP}}</me>
-	and recall that <m>\ln {e^x} = x</m> to simplify the left side.
-		<me>-kt = \ln{\frac{a - P}{bP}}</me>
-	Finally, we divide both sides by <m>-k</m> to solve for <m>t</m>.
-		<me>t =\frac{-1}{k}\ln{\frac{a-P}{bP}}</me></p></solution></example>
+<exercise component="main"><title>Practice 6</title>
+<statement><p>Solve <me>~80 -16e^{-0.2x} = 70.3</me></p></statement>
 
-<exercise>
-	<title>Practice 6</title>
+<solution><p>Isolate the power, take the natural log of both sides, and solve as usual to find <m>x = -5 \ln \left(\dfrac{9.7}{16} \right)\approx 2.5023</m></p></solution></exercise>
+
+<example xml:id="example-solve-logistic"><statement><p>The logistic function 
+    <me>P = \dfrac{20}{1 + 5e^{-0.4t}}</me> 
+has its upper bound at <m>~P=20</m>. Find the value of <m>t</m> for which <m>~P=10</m>.</p></statement>
+
+<solution><p>We must solve the equation <m>~10 = \dfrac{20}{1 + 5e^{-0.4t}}~</m> for <m>t</m>. To begin, we multiply both sides of the equation by the denominator, <m>1 + 5e^{-0.4t}</m>, to get
+    <me>1 + 5e^{-0.4t} = \dfrac{20}{10} = 2</me> 
+Then we isolate the power, <m>e^{-kt}</m>, as follows:
+    <md><mrow>1 + 5e^{-0.4t} \amp = 2 \amp \amp \blert{\text{Subtract 1 from both sides, then divide by 5.}}</mrow>
+        <mrow>e^{-0.4kt} \amp = 0.2 </mrow> </md>          
+Next, we take the natural logarithm of both sides to get
+        <me>\ln {(e^{-0.4t})} = \ln{(0.2)}</me>
+and recall that <m>\ln {(e^x)} = x</m> to simplify the left side.
+        <me>-0.4t = \ln{(0.2)}</me>
+Finally, we divide both sides by <m>-0.4</m> to solve for <m>t</m>.
+        <me>t =\frac{-\ln{(0.2)}}{0.4} \approx 4.02</me></p></solution></example>
+
+<exercise component="webwork"><title>Practice 7</title>
     <webwork>
          <pg-code>
             Context()->variables->add(N=>"Real", A=>"Real", t=>"Real");
@@ -450,10 +605,17 @@ because <m>\ln{e^a} = a</m> for any number <m>a</m>. We then proceed with the so
         <solution>
             <p><m>k=\dfrac{-\ln(N/A) }{t} </m></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="main"><title>Practice 7</title>
+<statement><p>Solve <m>N = Ae^{-kt}</m> for <m>k</m>.</p>
+            <!--<p>Hint: <m>\blert{\text{Divide both sides by}~ A.}</m></p>
+            <p><m>\blert{\text{Take the natural log of both sides.}}</m></p>
+            <p><m>\blert{\text{Divide both sides by}~ -t.}</m></p>-->
+        </statement>
+<solution><p><m>k=\dfrac{-\ln{(N/A)} }{t} </m></p></solution></exercise>
+
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -462,6 +624,9 @@ because <m>\ln{e^a} = a</m> for any number <m>a</m>. We then proceed with the so
         <p><var form="essay"/></p>      
     </statement>    
 </webwork></exercise>
+
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>Delbert says that he will begin solving the equation <m>100e^{0.6t}=40</m> by computing <m>e^{0.6t}</m>. Is this a good strategy? Why or why not?</p></statement></exercise>
 </subsection>
 
 <subsection><title>Exponential Growth and Decay</title>
@@ -481,20 +646,46 @@ where we have substituted <m>e^k</m> for the growth factor <m>b</m>, so that
 	\end{aligned}</me><!--*****-->
 We can find the value of <m>k</m> by solving the equation <m>b = e^k</m> for <m>k</m>, to get <m>k = \ln b</m>.</p>
 
-<p>For instance, in <xref ref="example-bacteria" text="type-global"/> in <xref ref="Exponential-Growth-and-Decay" text="type-global"/> we found that a colony of bacteria grew according to the formula
+<p>For instance, consider a colony of bacteria grows according to the formula
 	<me>P(t) = 100 \cdot \alert{3^t}</me>
 We can express this function in the form <m>P(t) = 100 \cdot \alert{e^{kt}}</m> if we set
 	<me>3 = e^k ~ \text{ or } ~ k = \ln 3 \approx 1.0986</me>
 Thus, the growth law for the colony of bacteria can be written
-	<me>P(t) \approx 100 \cdot e^{1.0986t}</me>
-By graphing both functions on your calculator, you can verify that <me>P(t) = 100 \cdot 3t~~~\text{and}~~~P(t) = 100 \cdot e^{1.0986t}</me> are just two ways of writing the same function.</p>
+	<me>P(t) \approx 100 \cdot e^{1.0986t}</me></p>
+    
+    <sidebyside widths="45% 35%" margins="0% 10%">
+
+<p>By graphing both functions on your calculator, you can verify that 
+    <md><mrow>P(t) = 100 \cdot 3^t</mrow>
+        <mrow>~~~\text{and}~~~</mrow>
+        <mrow>P(t) = 100 \cdot e^{1.0986t}</mrow></md>
+ are just two ways of writing the same function.</p>
+<image xml:id="fig-100-10-to-t"><description>P(t) equals 100 3 to the t</description><latex-image>
+    <![CDATA[
+    \begin{tikzpicture} [scale=.45]
+    \draw[lightgray] (-2,0) grid (6,10);
+    \draw[black,thick, ->, >=stealth'] (-2,0)--(6.6,0) node[right] {$t$};
+    \draw[black,thick, ->, >=stealth'] (0,0)--(0,10.6) node[above] {$y$};
+    \foreach \x  in  {5} {
+     \draw[black] (\x,.1) --++(0,-.2)  node[below, yshift=-1, fill=white,inner sep=1]   {$\x$};
+    }
+    \foreach \x  in  {5,10} {
+    \def\y {\x 0,000};
+     \draw[black] (.1,\x) --++(-.2,0)  node[left, xshift=-2, fill=white,inner sep=2]   {$\y$};
+    }
+    \draw[samples=65,domain={-2:ln(500)/ln(3)},smooth,variable=\x,blue, thick, <->, >=stealth'] plot ({(\x)},{3^(\x)/50}) node[above] {$P(t)$};
+   \end{tikzpicture}]]>
+    </latex-image></image></sidebyside>
+
+<p>Sometimes exponential growth is given as a percentage, so for example we might say <q>prices rose by 5% annually.</q> In this case the growth factor is <m>~b=1+r~</m>, where <m>r</m> is the percentage rate in decimal form. For a percent decrease, <m>~b=1-r~</m>.</p> 
 
 <example xml:id="example-population-growth-e"><statement><p>From 1990 to 2000, the population of Clark County, Nevada, grew by <m>6.4\%</m> per year.
-<ol marker="a">
+<ol marker="a.">
 	<li>What was the growth factor for the population of Clark County from 1990 to 2000? If the population of Clark County was <m>768,000</m> in 1990, write a formula for the population <m>t</m> years later.</li>
 	<li>Write a growth formula for Clark County using base <m>e</m>.</li>
-		</ol></p></statement>
-<solution><p><ol marker="a">
+</ol></p></statement>
+
+<solution><p><ol marker="a.">
 		<li><p>The growth factor was <m>b = 1 + r = 1.064</m>. The population <m>t</m> years later was
 			<me>P(t) = 768,000 (1.064)^t</me></p></li>
 		<li><p>We use the formula <m>P(t) = P_0 \cdot e^{kt}</m>, where <m>e^k = 1.064</m>. Solving for <m>k</m>, we find
@@ -502,8 +693,7 @@ By graphing both functions on your calculator, you can verify that <me>P(t) = 10
 			so <m>P(t) = 768,000 e^{0.062t}</m>.</p></li>
 	</ol></p></solution></example>
 
-<exercise>
-	<title>Practice 7</title>
+<exercise component="webwork"><title>Practice 8</title>
     <webwork>
          <pg-code>
             Context()->variables->add(t=>"Real");
@@ -536,16 +726,29 @@ By graphing both functions on your calculator, you can verify that <me>P(t) = 10
                 <li><p><m>N(t)\approx 2.8 (2.3396)^t </m></p></li>
             </ol></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
-<p>If <m>k</m> is negative, then <m>e^k</m> is a fraction less than <m>1</m>. For example, if <m>k = -2</m>,
+<exercise component="main"><title>Practice 8</title>
+<statement><p>From 1994 to 1998, the number of personal computers connected to the Internet grew according to the formula 
+    <me>N(t) = 2.8e^{0.85t}</me> 
+where <m>t = 0</m> in 1994 and <m>N</m> is in millions. (Source: Los Angeles Times, September 6, 1999)</p>
+    <p><ol marker="a.">
+        <li><p>Evaluate <m>N(1)</m>. By what percent did the number of Internet users grow in one year?</p></li>
+        <li><p>Express the growth law in the form <m>~N(t) = N_0 (1 + r)^t</m>. (Hint: <m>e^k = 1 + r</m>.)</p></li>
+    </ol></p></statement>
+
+<solution><p><ol marker="a." cols="2">
+        <li><p><m>N(1)\approx 6.55</m>, <m>~134\%</m></p></li>
+        <li><p><m>N(t)\approx 2.8 (2.3396)^t </m></p></li>
+    </ol></p></solution></exercise>
+
+<p>Now, what about exponential decay, where the the decay factor <m>b</m> is a number less than 1? If <m>k</m> is negative, then <m>e^k</m> is a number less than <m>1</m>. For example, if <m>k = -2</m>,
 	<me>e^{-2} = \frac{1}{e^2} \approx \frac{1}{7.3891} \approx 0.1353</me>
 Thus, for negative values of <m>k</m>, the function <m>P(t) = P_0 e^{kt}</m> describes exponential decay.</p>
 
 <xi:include href="./assemblage-exponential-growth-and-decay.xml" />
 
-<exercise><title>QuickCheck 4</title>
+<exercise component="webwork"><title>QuickCheck 4</title>
 <webwork>
      <pg-code>       
             $lnfrac = RadioButtons(
@@ -565,6 +768,15 @@ Thus, for negative values of <m>k</m>, the function <m>P(t) = P_0 e^{kt}</m> des
     </solution>
 </webwork></exercise>
 
+<exercise component="main"><title>QuickCheck 4</title>
+<statement><p> The natural log of a number between 0 and 1 is</p>
+    <p><ol marker="a.">
+            <li><p>positive.</p></li> 
+            <li><p>negative.</p></li>
+            <li><p>undefined.</p></li>
+            <li><p>between <m>e^0</m> and <m>e^1</m>.</p></li>
+        </ol></p> </statement></exercise>   
+
 <example xml:id="example-write-decay-with-e"><statement><p>Express the decay law <m>N(t) = 60 (0.8)^t</m> in the form <m>N(t) = N_0 e^{kt}</m>.</p></statement>
 
 <solution><p>For this decay law, <m>N_0 = 60</m> and <m>b = 0.8</m>. We would like to find a value for <m>k</m> so that <m>e^k = b = 0.8</m>, that is, we must solve the equation
@@ -576,8 +788,7 @@ Thus, for negative values of <m>k</m>, the function <m>P(t) = P_0 e^{kt}</m> des
 Replacing <m>b</m> with <m>e^k</m>, we find that the decay law is
 		<me>N(t) \approx 60e^{-0.2231t}</me></p></solution></example>
 
-<exercise>
-  <title>Practice 8</title>
+<exercise component="webwork"><title>Practice 9</title>
     <webwork>
          <pg-code>
             Context()->variables->add(t=>"Real");
@@ -677,10 +888,80 @@ Replacing <m>b</m> with <m>e^k</m>, we find that the decay law is
     <conclusion>
       <p>Graph for part (b):</p>
         <sidebyside width="35%" margins="0% 5%"><image source="images/fig-krypton-91-decay"><description>decay</description></image></sidebyside>
-    </conclusion>
-</exercise>
+    </conclusion></exercise>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="main"><title>Practice 9</title>
+<statement><p>A scientist isolates <m>25</m> grams of krypton-91, which decays according to the formula
+                <me>N(t) = 25e^{-0.07t}</me>, 
+        where <m>t</m> is in seconds.</p>
+    <p><ol marker="a.">
+        <li><p>Complete the table of values showing the amount of krypton-91 left at <m>10</m>-second intervals over the first minute.</p>
+                <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                    <row bottom="minor">
+                        <cell halign="left"><m>t</m></cell>
+                        <cell><m>0</m></cell>
+                        <cell><m>10</m></cell>
+                        <cell><m>20</m></cell>
+                        <cell><m>30</m></cell>
+                        <cell><m>40</m></cell>
+                        <cell><m>50</m></cell>
+                        <cell><m>60</m></cell></row>
+                    <row>
+                        <cell halign="left"><m>N(t)</m></cell>
+                        <cell><m>\hphantom{000}</m></cell>
+                        <cell><m>\hphantom{000}</m></cell>
+                        <cell><m>\hphantom{000}</m></cell>
+                        <cell><m>\hphantom{000}</m></cell>
+                        <cell><m>\hphantom{000}</m></cell>
+                        <cell><m>\hphantom{000}</m></cell>
+                        <cell><m>\hphantom{000}</m></cell></row>
+                </tabular></li>
+        <li><p>Use the table to choose a suitable window and graph the function <m>N(t)</m>.</p></li>
+        <li><p>Write and solve an equation to answer the question: How long does it take for 60% of the krypton-91 to decay?</p> 
+            <p>Hint: If <m>60\%</m> of the krypton-91 has decayed, <m>40\%</m> of the original <m>25</m> grams remains.</p></li>
+        </ol></p></statement>
+    
+<solution><p><ol marker="a.">
+                <li><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <row bottom="minor">
+                    <cell halign="left"><m>t</m></cell>
+                    <cell><m>0</m></cell>
+                    <cell><m>10</m></cell>
+                    <cell><m>20</m></cell>
+                    <cell><m>30</m></cell>
+                    <cell><m>40</m></cell>
+                    <cell><m>50</m></cell>
+                    <cell><m>60</m></cell></row>
+                <row>
+                    <cell halign="left"><m>N(t)</m></cell>
+                    <cell><m>25</m></cell>
+                    <cell><m>12.41</m></cell>
+                    <cell><m>6.16</m></cell>
+                    <cell><m>3.06</m></cell>
+                    <cell><m>1.52</m></cell>
+                    <cell><m>0.75</m></cell>
+                    <cell><m>0.37</m></cell></row>
+                </tabular></li>
+        <li><!--<image width="35%" source="images/fig-krypton-91-decay"><description>decay</description></image>-->
+        <image xml:id="fig-krypton-decay" width="55%"><description>exponential decay</description><latex-image>
+        <![CDATA[
+        \begin{tikzpicture} [xscale=.09,yscale=.16] 
+        \draw[cyan,xstep=10,ystep=5] (0,0) grid (60,25);
+        \draw[black,thick,->,>=stealth'] (0,0)--(64,0) node[above]{$t$};
+        \draw[black,thick,->,>=stealth'] (0,0)--(0,27) node[above]{$N(t)$};
+        \foreach \x in {10,20,...,60} {
+          \draw[black,thick] (\x,.15)--++(0,-.3) node[below]{$\x$};
+        }
+        \foreach \x in {5,10,...,25} {
+          \draw[black,thick] (.15,\x)--++(-.3,0) node[left]{$\x$};
+        }
+        \draw[samples=65,domain={0:60},smooth,variable=\x,red,very thick, ->,>=stealth'] plot (\x, {25*e^(-.07*\x)});
+        \end{tikzpicture}]]>
+        </latex-image></image></li>
+        <li><p><m>25 e^{-0.07t} = 0.40(25)</m>; <m>~~t=\dfrac{\ln(0.4)}{-0.07}\approx 13.09 </m> seconds</p></li>
+    </ol></p></solution></exercise>
+
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -689,16 +970,19 @@ Replacing <m>b</m> with <m>e^k</m>, we find that the decay law is
         <p><var form="essay"/></p>      
     </statement>    
 </webwork></exercise>
+
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>Explain how to rewrite <m>P(t)=P_0 b^t</m> with the natural base.</p></statement></exercise>
 </subsection>
 
 <subsection><title>Continuous Compounding</title>
 
-<p>Some savings institutions offer accounts on which the interest is <term>compounded continuously</term><idx>compounded continuously</idx>. The amount accumulated in such an account after <m>t</m> years at interest rate <m>r</m> is given by the function
-	<me>\blert{A(t) = Pe^{rt}}</me>
-where <m>P</m> is the principal invested.</p>
+<p>In <xref ref="CompAnn" text="custom"> Section 4.4.4 </xref> we looked at a formula for savings accounts on which the interest is compounded <m>n</m> times per year, and we saw that the amount <m>A(t)</m> on such an account increased when <m>n</m> increased. But there is a limit or upper bound to the amount, no matter how large the value of <m>n</m>. At this upper bound we say that the interest is <term>compounded continuously</term><idx>compounded continuously</idx>, and the amount is given by the function
+    <me>A(t) = Pe^{rt}</me>
+where <m>P</m> is the principal invested and <m>r</m> is the interest rate.</p>
 
-<example xml:id="example-continuous-compounding"><statement><p>Suppose you invest $<m>500</m> in an account that pays <m>8\%</m> interest compounded continuously. You leave the money in the account without making any additional deposits or withdrawals.
-	<ol marker="a">
+<example xml:id="example-continuous-compounding"><statement><p>Suppose you invest $<m>500</m> in an account that pays <m>8\%</m> interest compounded continuously. You leave the money in the account without making any additional deposits or withdrawals.</p>
+	<p><ol marker="a.">
 		<li>Write a formula that gives the value of your account <m>A(t)</m> after <m>t</m> years.</li>
 		<li>Make a table of values showing <m>A(t)</m> for the first <m>5</m> years.</li>
 		<li>Graph the function <m>A(t)</m>.</li>
@@ -706,11 +990,11 @@ where <m>P</m> is the principal invested.</p>
 		<li>How long will it be before the account is worth $<m>1000</m>?</li>
 	</ol></p></statement>
 
-<solution><p><ol marker="a">
+<solution><p><ol marker="a.">
 		<li>We substitute <m>500</m> for <m>P</m>, and <m>0.08</m> for <m>r</m> to find
 			<me>A(t) = 500e^{0.08t}</me></li>
 		<li><p>We evaluate the formula for <m>A(t)</m> to obtain a table.</p>
-			<sidebyside widths="30% 40%" valigns="middle middle">
+			<sidebyside widths="30% 50%" valigns="middle middle">
 			<tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
 				<row>
 		            <cell><m>t</m></cell>
@@ -738,23 +1022,22 @@ where <m>P</m> is the principal invested.</p>
 		<li>The graph of <m>A(t)</m> is shown above.</li>
 		<li>We evaluate <m>A(t)</m> for <m>t = 10</m>.
 			<!--*****--><me>\begin{aligned}[t]
-			A(10) \amp= 500 e^{0.08(10)}\\
-			\amp = 500 e^{0.8}\\
-			\amp \approx 500(2.2255) = 1112.77
-			\end{aligned}</me><!--*****-->
+			                 A(10) \amp= 500 e^{0.08(10)}\\
+			                 \amp = 500 e^{0.8}\\
+			                 \amp \approx 500(2.2255) = 1112.77
+			                 \end{aligned}</me><!--*****-->
 		The account will be worth $<m>1112.77</m> after <m>10</m> years.</li>
 		<li>We substitute <m>1000</m> for <m>A(t)</m> and solve the equation.
 			<!--*****--><me>\begin{aligned}[t]
-			1000 \amp= 500 e^{0.08t}\amp\amp \blert{\text{Divide both sides by 500.}}\\
-			2 \amp = e^{0.08t}\amp\amp \blert{\text{Take natural log of both sides.}}\\
-			\ln 2 \amp= \ln e^{0.08t} = 0.08t\amp\amp \blert{\text{Divide both sides by 0.08.}}\\
-			t \amp= \frac{\ln 2}{0.08}\approx 8.6643
-			\end{aligned}</me><!--*****--> 
+			                 1000 \amp= 500 e^{0.08t}\amp\amp \blert{\text{Divide both sides by 500.}}\\
+			                 2 \amp = e^{0.08t}\amp\amp \blert{\text{Take natural log of both sides.}}\\
+			                 \ln 2 \amp= \ln e^{0.08t} = 0.08t\amp\amp \blert{\text{Divide both sides by 0.08.}}\\
+			                 t \amp= \frac{\ln 2}{0.08}\approx 8.6643
+			                 \end{aligned}</me><!--*****--> 
 		The account will be worth $<m>1000</m> after approximately <m>8.7</m> years.</li>
 	</ol></p></solution></example>
 
-<exercise>
-	<title>Practice 9</title>
+<exercise component="webwork"><title>Practice 10</title>
     <webwork>
          <pg-code>
             $answer = Compute("ln(2)/0.045")->with(
@@ -770,10 +1053,14 @@ where <m>P</m> is the principal invested.</p>
         <solution>
             <p>About 15.4 years</p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="main"><title>Practice 10</title>
+<statement><p>Zelda invested $1000 in an account that pays 4.5% interest compounded continuously. How long will it be before the account is worth $2000?</p></statement>
+
+<solution><p>About 15.4 years</p></solution></exercise>
+
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -782,6 +1069,9 @@ where <m>P</m> is the principal invested.</p>
         <p><var form="essay"/></p>      
     </statement>    
 </webwork></exercise>
+
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>Explain why solving exponential equations in base <m>e</m> is no harder than solving exponential equations in base 10.</p></statement></exercise>
 </subsection>
 
 <xi:include href="./summary-5-3.xml" /> <!-- summary  -->

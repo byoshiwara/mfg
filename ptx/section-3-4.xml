@@ -12,16 +12,16 @@
     <me>(x^{1/2})^3 = x^{(1/2)^3} = x^{3/2}</me>
 In other words, we can compute <m>x^{3/2}</m> by first taking the square root of <m>x</m> and then cubing the result. For example,
     <!--*****--><me>\begin{aligned}[t]
-        100^{3/2} \amp = (\alert{100^{1/2}})^3 \amp\amp \blert{\text{Take the square root of 100.}}\\
-        \amp= \alert{10^3} = 1000  \amp\amp \blert{\text{Cube the result.}}
-    \end{aligned}</me><!--*****-->
+                    100^{3/2} \amp = (\alert{100^{1/2}})^3 \amp\amp \blert{\text{Take the square root of 100.}}\\
+                    \amp= \alert{10^3} = 1000  \amp\amp \blert{\text{Cube the result.}}
+                    \end{aligned}</me><!--*****-->
 We will define fractional powers only when the base is a positive number.</p>
 
 <assemblage><title>Rational Exponents</title>
 <p><me>a^{m/n} = (a^{1/n})^m = (a^m)^{1/n},~~~~a \gt 0\text,~~ n \ne 0</me></p>
 </assemblage>
 
-<exercise><title>QuickCheck 1</title>
+<exercise component="webwork"><title>QuickCheck 1</title>
 <webwork>
      <pg-code>       
             $mnex = RadioButtons(
@@ -41,13 +41,21 @@ We will define fractional powers only when the base is a positive number.</p>
     </solution>
 </webwork></exercise>
 
+<exercise component="main"><title>QuickCheck 1</title>
+<statement><p><m>x^{3/4}</m> means</p>
+    <p><ol marker="a.">
+        <li><p>the fourth root of <m>x</m> cubed</p></li>
+        <li><p>the cube root of <m>x</m> to the fourth</p></li>
+        <li><p>the 3/4 root of <m>x</m></p></li>
+        <li><p>the cube root of the fourth root of <m>x</m></p></li>
+    </ol></p></statement></exercise>
+
 <p>To compute <m>a^{m/n}</m>, we can compute the <m>n</m>th root first, or the <m>m</m>th power, whichever is easier. For example,
       <me>8^{2/3} = \left(8^2\right)^{1/3} = 64^{1/3} = 4</me>
 or
-  <me>8^{2/3} = \left(8^{1/3}\right)^2 = 2^2 = 4</me>
-</p>
+    <me>8^{2/3} = \left(8^{1/3}\right)^2 = 2^2 = 4</me></p>
 
-<example xml:id="example-rational-exponent"><statement><p><ol marker="a" cols="2">
+<example xml:id="example-rational-exponent"><statement><p><ol marker="a." cols="2">
         <li><!--*****--><me>\begin{aligned}[t]
             81^{3/4} \amp = \left(81^{1/4}\right)^3 \\
             \amp = 3^3 = 27
@@ -68,13 +76,11 @@ or
     </ol></p></statement></example>
 
 <note><p>You can verify all the calculations in <xref ref="example-rational-exponent" text="type-global"/> on your calculator. For example, to evaluate <m>81^{3/4}</m>, key in</p>
-<p>81 <kbd>^</kbd> ( 3 <kbd>÷</kbd> 4 ) <kbd>ENTER</kbd></p>
+        <p>81 <kbd>^</kbd> ( 3 <kbd>÷</kbd> 4 ) <kbd>ENTER</kbd></p>
 <p>or simply</p>
-<p>81 <kbd>^</kbd> 0.75 <kbd>ENTER</kbd>
-</p></note>
+        <p>81 <kbd>^</kbd> 0.75 <kbd>ENTER</kbd></p></note>
 
-<exercise>
-    <title>Practice 1</title>
+<exercise component="webwork"><title>Practice 1</title>
     <webwork>
          <pg-code>
             Context(Fraction)->operators->undefine("^","**");
@@ -95,10 +101,20 @@ or
                 <li><p><m>-243</m></p></li>
             </ol></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="main"><title>Practice 1</title>
+<statement><p>Evaluate each power.<ol marker="a." cols="2">
+                <li><p><m> 32^{-3/5}</m></p></li>
+                <li><p><m> -81^{1.25}</m></p></li>
+    </ol></p></statement>
+        
+<solution><p><ol cols="2" marker="a.">
+                <li><p><m>\dfrac{1}{8} </m></p></li>
+                <li><p><m>-243</m></p></li>
+    </ol></p></solution></exercise>
+
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -107,20 +123,24 @@ or
         <p><var form="essay"/></p>      
     </statement>    
 </webwork></exercise>
+
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>Explain how to evaluate <m>f(x)=x^{-3/4}</m> for <m>x=625</m> by hand.</p></statement></exercise>
 </subsection>
 
 <subsection><title>Power Functions</title><idx>power function</idx>
 
 <p>The graphs of power functions <m>y = x^{m/n}</m>, where <m>m/n</m> is positive, are all increasing for <m>x\ge 0</m>. If <m>m/n \gt 1</m>, the graph is concave up. If <m>0 \lt m/n \lt 1</m>, the graph is concave down. Some examples are shown below.</p>
-<sidebyside width="40%"><image source="images/fig-power-functions" ><description>power functions</description></image></sidebyside>
+    <image width="50%" source="images/fig-power-functions" ><description>power functions</description></image>
 
 <p>Perhaps the single most useful piece of information a scientist can have about an animal is its metabolic rate. The metabolic rate is the amount of energy the animal uses per unit of time for its usual activities, including locomotion, growth, and reproduction. The basal metabolic rate, or BMR, sometimes called the resting metabolic rate, is the minimum amount of energy the animal can expend in order to survive.</p>
 
 <example xml:id="example-Kleiber-rule"><statement><p>A revised form of Kleiber's rule states that the basal metabolic rate for many groups of animals is given by 
     <me>B(m) = 70m^{0.75}</me>
-where <m>m</m> is the mass of the animal in kilograms and the BMR is measured in kilocalories per day.<ol marker="a">
+where <m>m</m> is the mass of the animal in kilograms and the BMR is measured in kilocalories per day.</p>
+<p><ol marker="a.">
     <li><p>Calculate the BMR for various animals whose masses are given in the table.</p>
-    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+        <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
             <cell>Animal</cell>
             <cell>Bat</cell>
@@ -129,8 +149,7 @@ where <m>m</m> is the mass of the animal in kilograms and the BMR is measured in
             <cell>Lynx</cell>
             <cell>Human</cell>
             <cell>Moose</cell>
-            <cell>Rhinoceros</cell>
-        </row>
+            <cell>Rhinoceros</cell></row>
         <row>
             <cell>Weight (kg)</cell>
             <cell><m>0.1</m></cell>
@@ -149,15 +168,16 @@ where <m>m</m> is the mass of the animal in kilograms and the BMR is measured in
             <cell><m></m></cell>
             <cell><m></m></cell>
             <cell><m></m></cell></row>
-    </tabular></sidebyside></li>
+    </tabular></li>
     <li><p>Sketch a graph of Kleiber’s rule for <m>0 \lt m \le 400</m>.</p></li>
     <li><p>Do larger species eat more or less, relative to their body mass, than smaller ones?</p></li>
 </ol></p></statement>
-<solution><p><ol marker="a">
+
+<solution><p><ol marker="a.">
     <li><p>We evaluate the function for the values of <m>m</m> given. For example, to calculate the BMR of a bat, we compute
-    <me>B(0.1) = 70(0.1)^{0.75} = 12.4</me>
+                <me>B(0.1) = 70(0.1)^{0.75} = 12.4</me>
     A bat expends, and hence must consume, at least <m>12</m> kilocalories per day. We evaluate the function to complete the rest of the table.</p>
-    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+    <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
             <cell>Animal</cell>
             <cell>Bat</cell>
@@ -185,14 +205,13 @@ where <m>m</m> is the mass of the animal in kilograms and the BMR is measured in
             <cell><m>1694</m></cell>
             <cell><m>5785</m></cell>
             <cell><m>31,853</m></cell></row>
-    </tabular></sidebyside></li>
+    </tabular></li>
     <li><p>We plot the data from the table to obtain the graph below.</p>
-    <sidebyside width="45%"><image source="images/fig-bat-to-rhino" ><description>BMR vs mass</description></image></sidebyside></li>
+        <image width="50%" source="images/fig-bat-to-rhino" ><description>BMR vs mass</description></image></li>
     <li><p>If energy consumption were proportional to body weight, the graph would be a straight line. But because the exponent in Kleiber’s rule, <m>\dfrac{3}{4}</m>, is less than <m>1</m>, the graph is concave down, or bends downward. Therefore, larger species eat less than smaller ones, relative to their body weight. </p></li>
 </ol></p></solution></example>
 
-<exercise>
-    <title>Practice 2</title>
+<exercise component="webwork"><title>Practice 2</title>
     <webwork>
          <pg-code>
             $f = Formula("x**(-3/4)");
@@ -244,15 +263,13 @@ where <m>m</m> is the mass of the animal in kilograms and the BMR is measured in
                         <cell><var name="$y[6]" width="4"/></cell>
                         <cell><var name="$y[7]" width="4"/></cell>
                     </row>
-                </tabular>               
-                </li>
+                </tabular></li>
                 <li><p>Sketch the graph of the function.</p></li>
             </ol></p>
         </statement>
         <solution>
             <p><ol marker="a">
-                <li>
-                    <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                <li><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
                     <row bottom="minor">
                         <cell><m>x</m></cell>
                         <cell><m>0.1</m></cell>
@@ -281,18 +298,82 @@ where <m>m</m> is the mass of the animal in kilograms and the BMR is measured in
                         <cell><m>0.299</m></cell>
                         <cell><m>0.210</m></cell>
                         <cell><m>0.178</m></cell></row>
-                    </tabular>
-                </li>
+                    </tabular></li>
                 <li><p>A graph is below.</p></li>
             </ol></p>
         </solution>
     </webwork>
     <conclusion>
-        <sidebyside width="35%" margins="0% 5%"><image source="images/fig-in-ex-ans-3-4-2"><description>power function</description></image></sidebyside>
-    </conclusion>
-</exercise>
+        <image width="35%" source="images/fig-in-ex-ans-3-4-2"><description>power function</description></image>
+    </conclusion></exercise>
 
-<exercise><title>QuickCheck 2</title>
+<exercise component="main"><title>Practice 2</title>
+<statement><p><ol marker="a.">
+        <li><p>Complete the table of values for the function <m>f(x) = x^{-3/4}</m>.</p>
+                <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                    <row bottom="minor">
+                        <cell><m>x</m></cell>
+                        <cell><m>0.1</m></cell>
+                        <cell><m>0.2</m></cell>
+                        <cell><m>0.5</m></cell>
+                        <cell><m>1</m></cell></row>
+                    <row>
+                        <cell><m>f(x)</m></cell>
+                        <cell><var name="$y[0]" width="4"/></cell>
+                        <cell><var name="$y[1]" width="4"/></cell>
+                        <cell><var name="$y[2]" width="4"/></cell>
+                        <cell><var name="$y[3]" width="4"/></cell></row>
+                </tabular>
+                <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                    <row bottom="minor">
+                        <cell><m>x</m></cell>
+                        <cell><m>2</m></cell>
+                        <cell><m>5</m></cell>
+                        <cell><m>8</m></cell>
+                        <cell><m>10</m></cell></row>
+                    <row>
+                        <cell><m>f(x)</m></cell>
+                        <cell><var name="$y[4]" width="4"/></cell>
+                        <cell><var name="$y[5]" width="4"/></cell>
+                        <cell><var name="$y[6]" width="4"/></cell>
+                        <cell><var name="$y[7]" width="4"/></cell></row>
+                </tabular></li>
+        <li><p>Sketch the graph of the function.</p></li>
+    </ol></p></statement>
+
+<solution><p><ol marker="a.">
+        <li><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                    <row bottom="minor">
+                        <cell><m>x</m></cell>
+                        <cell><m>0.1</m></cell>
+                        <cell><m>0.2</m></cell>
+                        <cell><m>0.5</m></cell>
+                        <cell><m>1</m></cell></row>
+                    <row>
+                        <cell><m>f (x)</m></cell>
+                        <cell><m>5.623</m></cell>
+                        <cell><m>3.344</m></cell>
+                        <cell><m>1.682</m></cell>
+                        <cell><m>1</m></cell></row>
+                    </tabular>
+            <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+                    <row bottom="minor">
+                        <cell><m>x</m></cell>
+                        <cell><m>2</m></cell>
+                        <cell><m>5</m></cell>
+                        <cell><m>8</m></cell>
+                        <cell><m>10</m></cell></row>
+                    <row>
+                        <cell><m>f (x)</m></cell>
+                        <cell><m>0.595</m></cell>
+                        <cell><m>0.299</m></cell>
+                        <cell><m>0.210</m></cell>
+                        <cell><m>0.178</m></cell></row>
+                    </tabular></li>
+        <li><image width="45%" source="images/fig-in-ex-ans-3-4-2"><description>power function</description></image></li>
+    </ol></p></solution></exercise>
+
+<exercise component="webwork"><title>QuickCheck 2</title>
 <webwork>
      <pg-code>       
             $conab = RadioButtons(
@@ -311,15 +392,24 @@ where <m>m</m> is the mass of the animal in kilograms and the BMR is measured in
         <p>The graph is concave up if <m>\dfrac{a}{b} \gt 1</m>, and concave down if <m>\dfrac{a}{b} \lt 1</m>.</p>
     </solution>
 </webwork></exercise>
+
+<exercise component="main"><title>QuickCheck 2</title>
+<statement><p>Describe the concavity of the graph of <m>f(x)=x^{a/b}</m>, where <m>\dfrac{a}{b} \gt 0</m>.</p>
+<p><ol marker="a.">
+        <li><p>It is concave up.</p></li>
+        <li><p>It is concave down.</p></li>
+        <li><p>It is concave up if <m>\dfrac{a}{b} \gt 1</m>, and concave down if <m>\dfrac{a}{b} \lt 1</m>.</p></li>
+        <li><p>It is concave up if <m>\dfrac{a}{b} \lt 1</m>, and concave down if <m>\dfrac{a}{b} \gt 1</m>.</p></li>
+    </ol></p></statement></exercise>
 </subsection>
 
 <subsection><title>More about Scaling</title>
 
 <p>In <xref ref="example-Kleiber-rule" text="type-global"/> we saw that large animals eat less than smaller ones, relative to their body weight. This is because the scaling exponent in Kleiber's rule is less than <m>1</m>. For example, let <m>s</m> represent the mass of a squirrel. The mass of a moose is then <m>600s</m>, and its metabolic rate is
     <!--*****--><me>\begin{aligned}[t]
-    B(600s) \amp = 70(600s)^{0.75} \\
-    \amp = 600^{0.75} \cdot 70s^{0.75} = 121B(s)
-    \end{aligned}</me><!--*****-->
+                    B(600s) \amp = 70(600s)^{0.75} \\
+                    \amp = 600^{0.75} \cdot 70s^{0.75} = 121B(s)
+                    \end{aligned}</me><!--*****-->
 or <m>121</m> times the metabolic rate of the squirrel. Metabolic rate scales as <m>k^{0.75}</m>, compared to the mass of the animal.</p>
 
 <p>In a famous experiment in the 1960s, an elephant was given LSD. The dose was determined from a previous experiment in which a <m>2.6</m>-kg cat was given <m>0.26</m> gram of LSD. Because the elephant weighed <m>2970</m> kg, the experimenters used a direct proportion to calculate the dose for the elephant:
@@ -327,10 +417,10 @@ or <m>121</m> times the metabolic rate of the squirrel. Metabolic rate scales as
 and arrived at the figure <m>297</m> g of LSD. Unfortunately, the elephant did not survive the experiment.</p>
 
 <example xml:id="example-Kleiber-elephant-LSD-dose"><statement><p>Use Kleiber's rule and the dosage for a cat to estimate the corresponding dose for an elephant.</p></statement>
+
 <solution><p>If the experimenters had taken into account the scaling exponent of <m>0.75</m> in metabolic rate, they would have used a smaller dose. Because the elephant weighs <m>\dfrac{2970}{2.6}</m> , or about <m>1142</m> times as much as the cat, the dose would be <m>1142^{0.75} = 196</m> times the dosage for a cat, or about <m>51</m> grams.</p></solution></example>
 
-<exercise>
-    <title>Practice 3</title>
+<exercise component="webwork"><title>Practice 3</title>
     <webwork>
          <pg-code>
             $mHuman = 70;
@@ -348,8 +438,12 @@ and arrived at the figure <m>297</m> g of LSD. Unfortunately, the elephant did n
         <solution>
             <p>About <m>3.3</m> mg</p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
+
+<exercise component="maink"><title>Practice 3</title>
+<statement><p>A human being weighs about <m>70</m> kg, and <m>0.2</m> mg of LSD is enough to induce severe psychotic symptoms. Use these data and Kleiber's rule to predict what dosage would produce a similar effect in an elephant.</p></statement>
+        
+<solution><p><m>\left(\dfrac{2970}{70}\right)^{0.75} (0.2) \approx 3.3</m> mg</p></solution></exercise>
 </subsection>
 
 <subsection><title>Radical Notation</title><idx>radical notation</idx>
@@ -357,19 +451,16 @@ and arrived at the figure <m>297</m> g of LSD. Unfortunately, the elephant did n
 <p>Because <m>a^{1/n} = \sqrt[n]{a}</m>, we can write any power with a fractional exponent in radical form as follows.</p>
 
 <assemblage><title>Rational Exponents and Radicals</title><p>
-    <me>
-        a^{m/n} = \sqrt[n]{a^m} =\left( \sqrt[n]{a}\right)^m
-    </me></p>
+    <me>a^{m/n} = \sqrt[n]{a^m} =\left( \sqrt[n]{a}\right)^m</me></p>
 </assemblage>
 
-<example xml:id="example-rational-exponent-to-radicals"><statement><p><ol marker="a">
+<example xml:id="example-rational-exponent-to-radicals"><statement><p><ol marker="a.">
         <li><p><m>125^{4/3} = \sqrt[3]{125^4} \text{ or } \left(\sqrt[3]{125}\right)^4</m></p></li>
         <li><p><m>x^{0.4} = x^{2/5} = \sqrt[5]{x^2}</m></p></li>
         <li><p><m>6w^{-3/4} = \dfrac{6}{\sqrt[4]{w^3}}</m></p></li>
     </ol></p></statement></example>
 
-<exercise>
-    <title>Practice 4</title>
+<exercise component="webwork"><title>Practice 4</title>
     <webwork>
          <pg-code>
             $A =  RadioButtons(
@@ -403,10 +494,20 @@ and arrived at the figure <m>297</m> g of LSD. Unfortunately, the elephant did n
                 <li><p><m> 3m^{-5/3}=\dfrac{3}{\sqrt[3]{m^5} } </m></p></li>
             </ol></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
-<exercise><title>QuickCheck 3</title>
+<exercise component="main"><title>Practice 4</title>
+<statement><p>Write each expression in radical notation.<ol marker="a." cols="2">
+                <li><p><m>5t^{1.25}</m></p></li>
+                <li><p><m> 3m^{-5/3}</m></p></li>
+        </ol></p></statement>
+        
+<solution><p><ol cols="2" marker="a.">
+                <li><p><m>5t^{1.25}=5\sqrt[4]{t^5} </m></p></li>
+                <li><p><m> 3m^{-5/3}=\dfrac{3}{\sqrt[3]{m^5} } </m></p></li>
+        </ol></p></solution></exercise>
+
+<exercise component="webwork"><title>QuickCheck 3</title>
 <webwork>
      <pg-code>       
             $decex = RadioButtons(
@@ -426,17 +527,25 @@ and arrived at the figure <m>297</m> g of LSD. Unfortunately, the elephant did n
     </solution>
 </webwork></exercise>
 
+<exercise component="main"><title>QuickCheck 3</title>
+<statement><p>The notation <m>a^{0.6}</m> means</p>
+<p><ol marker="a." cols="2">
+        <li><m>\sqrt[6]{a}</m></li>
+        <li><m>\dfrac{1}{a^6}</m></li>
+        <li><m>a^{1/6}</m></li>
+        <li><m>a^{3/5}</m></li>
+    </ol></p></statement></exercise>
+
 <p> Usually, we will want to convert from radical notation to fractional exponents, since exponential notation is easier to use.</p>
 
-<example xml:id="example-radical-to-exponential"><statement><p><ol marker="a" cols="2">
+<example xml:id="example-radical-to-exponential"><statement><p><ol marker="a." cols="2">
     <li><p><m>\sqrt{x^5} = x^{5/2}</m></p></li>
     <li><p><m> 5 \sqrt[4]{p^3} = 5p^{3/4}</m></p></li>
     <li><p><m> \dfrac{3}{\sqrt[5]{t^2}}= 3t^{-2/5}</m></p></li>
     <li><p><m> \sqrt[3]{2y^2} = \left(2y^2\right)^{1/3} = 2^{1/3} y^{2/3}</m></p></li>
 </ol></p></statement></example>
 
-<exercise>
-    <title>Practice 5</title>
+<exercise component="webwork"><title>Practice 5</title>
     <webwork>
          <pg-code>
             Context(Fraction)->variables->add(w=>"Real", v=>"Real", s=>"Real");
@@ -448,7 +557,7 @@ and arrived at the figure <m>297</m> g of LSD. Unfortunately, the elephant did n
             <p>Convert to exponential notation.</p>
             <p><ol marker="a">
                 <li><p><m>\sqrt[3]{6w^2}=</m><var name="$a" width="12"/></p></li>
-                <li><p><m>  \sqrt[4]{\dfrac{v^3}{s^5}}=</m><var name="$b" width="12"/></p></li>
+                <li><p><m>\sqrt[4]{\dfrac{v^3}{s^5}}=</m><var name="$b" width="12"/></p></li>
             </ol></p>
         </statement>
         <solution>
@@ -457,42 +566,49 @@ and arrived at the figure <m>297</m> g of LSD. Unfortunately, the elephant did n
             <li><p><m>v^{3/4} s^{-5/4} </m></p></li>
         </ol></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
+
+<exercise component="main"><title>Practice 5</title>
+<statement><p>Convert to exponential notation.</p>
+        <p><ol marker="a." cols="2">
+                <li><p><m>\sqrt[3]{6w^2}</m></p></li>
+                <li><p><m>\sqrt[4]{\dfrac{v^3}{s^5}}</m></p></li>
+        </ol></p></statement>
+        
+<solution><p><ol cols="2" marker="a.">
+            <li><p><m>6^{1/3} w^{2/3} </m></p></li>
+            <li><p><m>v^{3/4} s^{-5/4} </m></p></li>
+    </ol></p></solution></exercise>
+
 </subsection>
 
 <subsection><title>Operations with Rational Exponents</title>
 
 <p>Powers with rational exponents—positive, negative, or zero—obey the laws of exponents, which we discussed in <xref ref="Variation" text="type-global"/>. You may want to review those laws before studying the following examples.</p>
 
-<example xml:id="example-operations-with-rational-exponents"><statement><p><ol marker="a">
+<example xml:id="example-operations-with-rational-exponents"><statement><p><ol marker="a.">
     <li><p><!--*****--><me>\begin{aligned}[t]
-        \frac{7^{0.75}}{7^{0.5}}\amp= 7^{0.75-0.5} = 7^{0.25}
-         \amp\amp \blert{\text{Apply the second law of exponents.}}
-         \end{aligned}</me><!--*****-->
-    </p></li>
+                            \frac{7^{0.75}}{7^{0.5}}\amp= 7^{0.75-0.5} = 7^{0.25}
+                            \amp\amp \blert{\text{Apply the second law of exponents.}}
+                            \end{aligned}</me><!--*****--></p></li>
     <li><p><!--*****--><me>\begin{aligned}[t]
-        v \cdot v^{-2/3}\amp= v^{1+(-2/3)}
-        \amp\amp \blert{\text{Apply the first law of exponents.}}\\
-        \amp  = v^{1/3}
-        \end{aligned}</me><!--*****-->
-    </p></li>
+                            v \cdot v^{-2/3}\amp= v^{1+(-2/3)}
+                            \amp\amp \blert{\text{Apply the first law of exponents.}}\\
+                            \amp  = v^{1/3}
+                            \end{aligned}</me><!--*****--></p></li>
     <li><p><!--*****--><me>\begin{aligned}[t]
-        \left(x^8\right)^{0.5}\amp= x^{8(0.5))} = x^4
-        \amp\amp \blert{\text{Apply the third law of exponents.}}
-        \end{aligned}</me><!--*****-->
-    </p></li>
+                            \left(x^8\right)^{0.5}\amp= x^{8(0.5)} = x^4
+                            \amp\amp \blert{\text{Apply the third law of exponents.}}
+                            \end{aligned}</me><!--*****--></p></li>
     <li><p><!--*****--><me>\begin{aligned}[t]
-        \frac{\left(5^{1/2}y^2\right)^2}{\left(5^{2/3} y\right)^3}  \amp= \frac{5y^4}{5^2 y^3}
-        \amp\amp \blert{\text{Apply the fourth law of exponents.}}\\
-        \amp = \frac{y^{4-3}}{5^{2-1}}=\frac{y}{5}
-        \amp\amp \blert{\text{Apply the second law of exponents.}}\\
-        \end{aligned}</me><!--*****-->
-    </p></li>
+                            \frac{\left(5^{1/2}y^2\right)^2}{\left(5^{2/3} y\right)^3}  \amp= \frac{5y^4}{5^2 y^3}
+                            \amp\amp \blert{\text{Apply the fourth law of exponents.}}\\
+                            \amp = \frac{y^{4-3}}{5^{2-1}}=\frac{y}{5}
+                            \amp\amp \blert{\text{Apply the second law of exponents.}}\\
+                            \end{aligned}</me><!--*****--></p></li>
 </ol></p></statement></example>
 
-<exercise>
-    <title>Practice 6</title>
+<exercise component="webwork"><title>Practice 6</title>
     <webwork>
          <pg-code>
             Context()->flags->set(reduceConstants=>0);
@@ -555,11 +671,22 @@ and arrived at the figure <m>297</m> g of LSD. Unfortunately, the elephant did n
                 <li><p><m>\dfrac{n^{3/2}}{4} </m></p></li>
             </ol></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
+
+<exercise component="main"><title>Practice 6</title>
+<statement><p>Simplify by applying the laws of exponents.</p>
+    <p><ol marker="a." cols="2">
+            <li><p><m> x^{1/3}\left(x + x^{2/3}\right)</m></p></li>
+            <li><p><m> \dfrac{n^{9/4}}{4n^{3/4}}</m></p></li>
+    </ol></p></statement>
+
+<solution><p><ol marker="a." cols="2">
+                <li><p><m>x^{4/3}+x </m></p></li>
+                <li><p><m>\dfrac{n^{3/2}}{4} </m></p></li>
+        </ol></p></solution></exercise>
 
 <!-- The following is a misleading exercise for calculators with sticky operators  -->
-<exercise><title>QuickCheck 4</title>
+<exercise component="webwork"><title>QuickCheck 4</title>
 <webwork>
      <pg-code>       
             $evalcal = RadioButtons(
@@ -578,6 +705,15 @@ and arrived at the figure <m>297</m> g of LSD. Unfortunately, the elephant did n
         <p><m>15 \wedge (3 \div 5)</m></p>
     </solution>
 </webwork></exercise>
+
+<exercise component="main"><title>QuickCheck 4</title>
+<statement><p>Which of the following is the solution to <m>x^{-3/5} = 8</m> ?</p>
+    <p><ol marker="a.">
+        <li><m>8^{-2/5}</m></li>
+        <li><m>8^{3/5}</m></li>
+        <li><m>8^{-5/3}</m></li>
+        <li><m>8^{5/3}</m></li>
+    </ol></p></statement></exercise>
 </subsection>
 
 <subsection><title>Solving Equations</title>
@@ -588,21 +724,22 @@ This observation can help us to solve equations involving fractional exponents. 
     <me>x^{2/3} = 4</me>
 we raise both sides of the equation to the reciprocal power, <m>3/2</m>. This gives us
     <!--*****--><me>\begin{aligned}[t]
-    \left(x^{2/3}\right)^{3/2} \amp = 4^{3/2} \\
-    x \amp = 8
-    \end{aligned}</me><!--*****-->
+                    \left(x^{2/3}\right)^{3/2} \amp = 4^{3/2} \\
+                    x \amp = 8
+                    \end{aligned}</me><!--*****-->
 The solution is <m>8</m>.</p>
 
 <example xml:id="example-equation-with-rational-exponents"><statement><p>Solve <m>~~(2x + 1)^{3/4} = 27</m></p></statement>
+
 <solution><p>We raise both sides of the equation to the reciprocal power, <m>\dfrac{4}{3}</m>.
     <!--*****--><me>\begin{aligned}[t]
-    \left[(2x + 1)^{3/4}\right]^{4/3} \amp= 27^{4/3} 
-    \amp\amp  \blert{\text{Apply the third law of exponents.}} \\
-    2x + 1 \amp = 81 \amp\amp \blert{\text{Solve as usual.}} \\
-    x \amp = 40
-    \end{aligned}</me><!--*****--></p></solution></example>
+                    \left[(2x + 1)^{3/4}\right]^{4/3} \amp= 27^{4/3} 
+                    \amp\amp  \blert{\text{Apply the third law of exponents.}} \\
+                    2x + 1 \amp = 81 \amp\amp \blert{\text{Solve as usual.}} \\
+                    x \amp = 40
+                    \end{aligned}</me><!--*****--></p></solution></example>
 
-<exercise><title>QuickCheck 5</title>
+<exercise component="webwork"><title>QuickCheck 5</title>
 <webwork>
      <pg-code>       
             $recipex = RadioButtons(
@@ -622,8 +759,16 @@ The solution is <m>8</m>.</p>
     </solution>
 </webwork></exercise>
 
-<exercise>
-    <title>Practice 7</title>
+<exercise component="main"><title>QuickCheck 5</title>
+<statement><p>To solve the equation <m>x^{2/3}=k</m> we should</p>
+<p><ol marker="a.">
+        <li><p>Raise both sides to the negative of the exponent.</p></li>
+        <li><p>Divide both sides by the exponent.</p></li>
+        <li><p>Raise both sides to the reciprocal of the exponent.</p></li>
+        <li><p>Raise the right side to the given exponent.</p></li>
+    </ol></p></statement></exercise>
+
+<exercise component="webwork"><title>Practice 7</title>
     <webwork>
          <pg-code>
             $answer = Compute("(18.4/3.2)**(1/0.6) ")->with(
@@ -643,10 +788,14 @@ The solution is <m>8</m>.</p>
         <solution>
             <p><m>18.45</m></p>
         </solution>
-    </webwork>
-</exercise>
+    </webwork></exercise>
 
-<exercise><title>Pause and Reflect</title>
+<exercise component="main"><title>Practice 7</title>
+<statement><p>Solve the equation <m>~3.2z^{0.6} - 9.7 = 8.7~</m>. Round your answer to two decimal places.</p></statement>
+        
+<solution><p>Isolate the power, then raise both sides to the reciprocal power to get <m>18.45</m></p></solution></exercise>
+
+<exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
      <pg-code>                      
         </pg-code> 
@@ -656,18 +805,21 @@ The solution is <m>8</m>.</p>
     </statement>    
 </webwork></exercise>
 
+<exercise component="main"><title>Pause and Reflect</title>
+<statement><p>Explain why <m>x\sqrt{x}=x^{1.5}</m>.</p></statement></exercise>
+
 <investigation><title>Vampire Bats</title>
 
 <statement><p>Small animals such as bats cannot survive for long without eating. The graph below shows how the weight, <m>W</m>, of a typical vampire bat decreases over time until its next meal, until the bat reaches the point of starvation. The curve is the graph of the function
     <me>W(h) = 130.25h^{-0.126}</me>
 where <m>h</m> is the number of hours since the bat’s most recent meal. (Source: Wilkinson, 1984)</p>
-<sidebyside  width="50%"><image source="images/fig-vampire-bats" ><description>bat weight</description></image></sidebyside>
+    <image width="60%" source="images/fig-vampire-bats" ><description>bat weight</description></image>
 <p><ol>
     <li>Use the graph to estimate answers to the following questions: How long can the bat survive after eating until its next meal? What is the bat’s weight at the point of starvation?</li>
     <li>Use the formula for <m>W(h)</m> to verify your answers.</li>
     <li>Write and solve an equation to answer the question: When the bat's weight has dropped to <m>90</m> grams, how long can it survive before eating again?</li>
     <li><p>Complete the table showing the number of hours since the bat last ate when its weight has dropped to the given values.</p>
-    <sidebyside><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
+    <tabular top="major" halign="center" right="minor" left="minor" bottom="minor">
         <row bottom="minor">
             <cell>Weight (grams)</cell>
             <cell><m>97.5</m></cell>
@@ -686,10 +838,9 @@ where <m>h</m> is the number of hours since the bat’s most recent meal. (Sourc
             <cell><m>B</m></cell>
             <cell><m>C</m></cell>
             <cell><m>D</m></cell></row>
-    </tabular></sidebyside></li>
+    </tabular></li>
     <li><p>Compute the slope of the line segments from point <m>A</m> to point <m>B</m>, and from point <m>C</m> to point <m>D</m>. Include units in your answers.</p>
-    <sidebyside  width="50%"><image source="images/fig-vampire-bats2"><description>bat weight</description></image></sidebyside>
-    </li>
+        <image width="60%" source="images/fig-vampire-bats2"><description>bat weight</description></image></li>
     <li>What happens to the slope of the curve as <m>h</m> increases? What does this tell you about the concavity of the curve?</li>
     <li>Suppose a bat that weighs <m>80</m> grams consumes <m>5</m> grams of blood. How many hours of life does it gain? Suppose a bat that weighs <m>97.5</m> grams gives up a meal of <m>5</m> grams of blood. How many hours of life does it forfeit?</li>
     <li>Vampire bats sometimes donate blood (through regurgitation) to other bats that are close to starvation. Suppose a bat at point <m>A</m> on the curve donates <m>5</m> grams of blood to a bat at point <m>D</m>. Explain why this strategy is effective for the survival of the bat community.</li>
