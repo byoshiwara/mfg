@@ -32,11 +32,15 @@
 
 <math-package latex-name="cancel" mathjax-name="cancel"/>
 
+<!-- tikz package and libraries for images -->
 <latex-image-preamble>
-  \usepackage{tikz}
-  \usetikzlibrary{arrows}
-  \usetikzlibrary{decorations.pathreplacing}
-  \usetikzlibrary{calc,intersections,through,backgrounds}
+    \usepackage{tikz}
+    \usetikzlibrary{calc}
+    \usetikzlibrary{arrows}
+    \usetikzlibrary{decorations.pathreplacing}
+    \usetikzlibrary{patterns}
+    \usetikzlibrary{calc,intersections,through,backgrounds}
+    \usetikzlibrary{shapes.geometric}
 </latex-image-preamble>
 
    <macros>
@@ -49,16 +53,6 @@
         \newcommand\abs[1]{\left|#1\right|}
     </macros>
 
-    <!-- tikz package and libraries for images -->
-      <latex-image-preamble>
-        \usepackage{tikz}
-        \usetikzlibrary{calc}
-        \usetikzlibrary{arrows}
-        \usetikzlibrary{decorations.pathreplacing}
-        \usetikzlibrary{patterns}
-        \usetikzlibrary{calc,intersections,through,backgrounds}
-        \usetikzlibrary{shapes.geometric}
-    </latex-image-preamble>
 
     <macros>
         \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
