@@ -436,20 +436,18 @@ How much should the Healthy Food Store purchase from each company in order to mi
                     <!--<image source="images/fig-unbounded-feasible-set"><description>unbunded set of feasible solutions</description></image>-->
             <image width="60%" xml:id="fig-unbounded-feasible-set"><description>unbounded set of feasible solutions</description>
                         <latex-image>
-                        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
-                        <![CDATA[\tikzset{%
-                        }
-                        \begin{tikzpicture} [scale=.7]
+                        <![CDATA[
+                        \begin{tikzpicture} [scale=.5]
                         \draw[cyan] (0,0) grid (10,7);
                         \draw[black,thick] (0,0)--(10.,0);
                         \draw[red,very thick,->,>=stealth'] (9,0)--(10.7,0) node[right, black]{$x$};
                         \draw[black,thick] (0,0)--(0,7);
                         \draw[red,very thick,->,>=stealth'] (0,4)--(0,7.7) node[above, black]{$y$};
                         \foreach \x in {5,10} {
-                        \draw[black,thick] (\x,.1)--++(0,-.2) node[below, fill=white, inner sep=1, yshift=-2]{$\x$};
+                        \draw[black,thick] (\x,.1)--++(0,-.2) node[below]{$\x$};
                         }
                         \foreach \y in {5} {
-                        \draw[black,thick] (.1,\y)--++(-.2,0) node[left, fill=white, inner sep=1, xshift=-2]{$\y$};
+                        \draw[black,thick] (.1,\y)--++(-.2,0) node[left]{$\y$};
                         }
                         \node[blue!50!black,fill=white, inner sep=2] at (5,5) {$C=15x+25y$};
                         \filldraw[magenta!50!white, opacity=.2] (0,4)--(0,7)--(10,7)--(10,0)--(9,0)--(3,2)--cycle;
