@@ -218,8 +218,10 @@
         <md><mrow>(a+b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4</mrow></md>
         from the Investigation and let <m>a=2m</m> and <m>b = -n</m>.
         <md>
-            <mrow>(2m-n)^4 \amp = (2m)^4 + 4(2m)^3(-n) + 6(2m)^2(-n)^2 + 4(2m)(-n)^3 + (-n)^4</mrow>
-            <mrow>\amp = 16m^4 + 4(8m^3)(-n) + 6(4m^2)(n^2) + 4(2m)(-n^3) + n^4</mrow>
+            <mrow>(2m-n)^4 \amp = (2m)^4 + 4(2m)^3(-n) + 6(2m)^2(-n)^2 + \\ 
+            \amp \qquad\qquad\qquad\qquad\qquad\quad{}+ 4(2m)(-n)^3 + (-n)^4</mrow>
+            <mrow>\amp = 16m^4 + 4(8m^3)(-n) + 6(4m^2)(n^2) + \\ 
+            \amp \qquad\qquad\qquad\qquad\qquad\quad{}+ 4(2m)(-n^3) + n^4</mrow>
             <mrow>\amp = 16m^4 - 32m^3n + 24m^2n^2 - 8mn^3 + n^4</mrow>
         </md></p></li>
     </ol></p>                 
@@ -250,8 +252,10 @@
 <p>Now we continue our study of powers of binomials. What should the expansion of <m>(a+b)^6</m> look like?  From the Iinvestigation we know that it should have 7 terms, with the exponents on <m>a</m> decreasing from 6 down to 0, and the exponents on <m>b</m> increasing from 0 up to 6.</p>
 
 <p>Thus, the expansion should have the form
-    <me>(a+b)^6 =<fillin characters="3"/>a^6 + <fillin characters="4"/>a^5b+<fillin characters="3"/>a^4b^2+<fillin characters="4"/>a^3b^3+<fillin characters="3"/>a^2b^4+<fillin characters="4"/>ab^5+<fillin characters="3"/>b^6</me>
-
+    <md>
+        <mrow> (a+b)^6 \amp = <fillin characters="2"/>a^6 + <fillin characters="2"/>a^5b+<fillin characters="2"/>a^4b^2+<fillin characters="2"/>a^3b^3 +  \\
+    \amp \qquad\qquad\qquad\qquad\qquad\qquad{}+ <fillin characters="2"/>a^2b^4+ <fillin characters="2"/>ab^5+<fillin characters="2"/>b^6</mrow>
+    </md>
 But what about the numerical coefficients of the terms?  We will use the notation <m>_nC_k </m> for the coefficient of the <m>k^{\text{th}}</m> term in the expansion of <m>(a+b)^n</m>. For example, in the expansion of <m>(a+b)^6</m> above,</p>
 <p><ul>
     <li>the coefficient of <m>a^6</m> is denoted by <m>_6C_0</m>,</li> 
@@ -360,7 +364,8 @@ But what about the numerical coefficients of the terms?  We will use the notatio
 
 <example><statement><p>Find the expanded form of <m>(3r-q)^6</m> without performing the multiplication.</p></statement>
     
-<solution><p><md><mrow>(a+b)^6 = a^6 + <fillin characters="3"/>a^5b+<fillin characters="3"/>a^4b^2+<fillin characters="3"/>a^3b^3+<fillin characters="3"/>+a^2b^4+<fillin characters="3"/>ab^5+b^6</mrow></md>
+<solution><p><md><mrow>(a+b)^6 \amp = a^6 + <fillin characters="2"/>a^5b+<fillin characters="2"/>a^4b^2+<fillin characters="2"/>a^3b^3+  \\
+\amp \qquad\qquad\qquad\qquad\qquad\qquad\hphantom{+} {}+ {}<fillin characters="2"/>a^2b^4+<fillin characters="2"/>ab^5+b^6</mrow></md>
             
 Next, fill in the blanks with the binomial coefficients from Pascal's triangle.
             <md><mrow>
@@ -368,9 +373,9 @@ Next, fill in the blanks with the binomial coefficients from Pascal's triangle.
             </mrow></md>
 Finally, replace <m>a</m> by <m>3r</m> and replace <m>b</m> by <m>-q</m>, then simplify to find
             <md>
-                <mrow>(3r-q)^6 \amp = (3r)^6 + 6(3r)^5(-q) + 15(3r)^4(-q)^2 + 20(3r)^3(-q)^3</mrow>
-                <mrow>\amp\qquad\qquad  + 15(3r)^2(-6)^4 + 6(3r)(-q)^5 + (-q)^6</mrow>
-                <mrow>\amp = 729r^6 - 1458r^5q + 1215r^4q^2 - 540r^3q^3 + 135r^2q^2 - 18rq^5 + q^6</mrow>
+                <mrow>(3r-q)^6 \amp = (3r)^6 + 6(3r)^5(-q) + 15(3r)^4(-q)^2 + 20(3r)^3(-q)^3 +{} \\
+                \amp\qquad\qquad \qquad\qquad\quad  + 15(3r)^2(-6)^4 + 6(3r)(-q)^5 + (-q)^6</mrow>
+                <mrow>\amp = 729r^6 - 1458r^5q + 1215r^4q^2 - 540r^3q^3 +{} \\ \amp\qquad\qquad\qquad\qquad\quad   + 135r^2q^2 - 18rq^5 + q^6</mrow>
             </md></p>
 </solution></example>          
 
@@ -384,12 +389,15 @@ Finally, replace <m>a</m> by <m>3r</m> and replace <m>b</m> by <m>-q</m>, then s
         <p><var name="$p" width="75"/></p>
         <instruction>Do not enter any commas. For example, use "10000" rather than "10,000".</instruction>
     </statement>
-    <solution><p><m>w^6 + 60w^5z+1500w^4z^2+20,000w^3z^3+150,000w^2z^4+{}</m><m> 600,000wz^5+1,000,000z^6</m></p></solution>
+    <solution><p><md><mrow>w^6 + 60w^5z+1500w^4z^2+20,000w^3z^3 \amp +150,000w^2z^4+{} \\ \amp{} + 600,000wz^5+1,000,000z^6</mrow></md></p>
+    </solution>
 </webwork></exercise> 
 
 <exercise component="main"><title>Practice 3</title>
 <statement><p>Expand <m>(w+10z)^6</m>.</p></statement>
-    <solution><p><m>w^6 + 60w^5z+1500w^4z^2+20,000w^3z^3+150,000w^2z^4+{}</m><m> 600,000wz^5+1,000,000z^6</m></p></solution></exercise>
+    <solution><p><md><mrow>w^6 + 60w^5z+1500w^4z^2+20,000w^3z^3 \amp +150,000w^2z^4+{} \\ \amp{} + 600,000wz^5+1,000,000z^6</mrow></md></p>
+    </solution>
+</exercise>
 </subsection>
 
 <subsection><title>Factorial Notation</title>
@@ -607,13 +615,9 @@ The coefficient of <m>m^{11}n^3</m> is <m>364</m>.</p></solution></example>
 <subsection><title>The Binomial Theorem</title>
 
 <p>Consider the expansion of <m>(a+b)^6</m> written with the <m>~_nC_k~</m> notation for the coefficients.
-<!--     <md>
+     <md>
         <mrow>\small(a+b)^6  \amp={}\small a^6b^0 + {}_6C_1~ a^5b^1 +{}_6C_2~ a^4b^2 + {}_6C_3~ a^3b^3 + {}_6C_4 ~a^2b^4 + {}_6C_5~ a^1b^5 + {}_6C_6~ a^0b^6</mrow>
-        <mrow>\amp\quad \small k = 0~~~~~~k = 1~~~~~~~~~~~k = 2~~~~~~~~~~~ k = 3~~~~~~~~~~~~ k = 4~~~~~~~~~~~~ k = 5~~~~~~~~~~~ k = 6</mrow>
-    </md> -->
-    <md>
-        <mrow>(a+b)^6 = \amp ~a^6b^0 + ~_6C_1~ a^5b^1 +~_6C_2~ a^4b^2 + ~_6C_3~ a^3b^3 + ~_6C_4~ a^2b^4 + ~_6C_5~ a^1b^5 + ~_6C_6~ a^0b^6</mrow>
-        <mrow>\amp k = 0~~~~~~~~k = 1~~~~~~~~~~~k = 2~~~~~~~~~~~~ k = 3~~~~~~~~~~~~ k = 4~~~~~~~~~~~~ k = 5~~~~~~~~~~~~ k = 6</mrow>
+        <mrow>\amp\quad \small k = 0~~~~~~~k = 1~~~~~~~~~~~~k = 2~~~~~~~~~~~~ k = 3~~~~~~~~~~~~ k = 4~~~~~~~~~~~~ k = 5~~~~~~~~~~~ k = 6</mrow>
     </md>
 Check that each term can be written in the form
     <md><mrow>{}_6C_k~ a^{6-k}b^k</mrow></md>

@@ -288,7 +288,7 @@ How many answers did he get right?</p></statement></exercise>
         x \ge 0, ~y \le 0
     \end{aligned}
     </m></p></statement>
-<answer><image width="45%" source="images/fig-ans-chap8-rev-41"><description>system of inequalities</description></image> 
+<answer><image width="70%" source="images/fig-ans-chap8-rev-41"><description>system of inequalities</description></image> 
 </answer></exercise>
 
 <exercise number="42"><statement>
@@ -306,7 +306,7 @@ How many answers did he get right?</p></statement></exercise>
         y \ge 2, ~x \ge 0
     \end{aligned}
     </m></p></statement>
-<answer><image width="45%" source="images/fig-ans-chap8-rev-43"><description>system of inequalities</description></image>
+<answer><image width="70%" source="images/fig-ans-chap8-rev-43"><description>system of inequalities</description></image>
 </answer></exercise>
 
 <exercise number="44"><statement>
@@ -338,7 +338,33 @@ How many answers did he get right?</p></statement></exercise>
                 <mrow>x + 5y \amp\le 15</mrow>
                 <mrow>x\ge 0, ~ ~ y \amp\ge 0 </mrow></md></p>
 </statement>
-<answer><p>(b) <m>(1, 0)</m>; <m>18\hphantom{00000}</m>  (c) <m>(5, 2)</m>; <m>186</m></p></answer></exercise>
+<answer><p><ol marker = "a.">
+    <li><image width="60%" margins="0% 40%" xml:id="fig-ans-chap8-rev-47"><description>set of feasible solutions</description>
+        <latex-image>
+        <![CDATA[
+        \begin{tikzpicture} [scale=.35]
+        \draw[cyan] (0,0) grid (16,13);
+        \draw[black,thick,->,>=stealth'] (0,0)--(16,0) node[right, black]{$x$};
+        \draw[black,thick,->,>=stealth'] (0,0)--(0,13) node[above, black]{$y$};
+        \foreach \x in {5,10,15} {
+        \draw[black,thick] (\x,.1)--++(0,-.2) node[below]{$\x$};
+        }
+        \foreach \y in {5,10} {
+        \draw[black,thick] (.1,\y)--++(-.2,0) node[left]{$\y$};
+        }
+        \node[blue!50!black,fill=white, inner sep=2] at (7,6) {$C=18x+48y$};
+        \filldraw[magenta!50!white, opacity=.2] (1,0)--(6,0)--(5,2)--(0,3)--cycle;
+        \draw[black, thick] (0,12) -- (6,0);
+        \draw[black, thick] (5,2) -- (15,0);
+        \draw[red, very thick](1,0)--(6,0)--(5,2)--(0,3)--cycle;
+        \filldraw[black] (1,0) circle (.1cm) node[anchor=north] {$P$};            
+        \filldraw[black] (5,2) circle (.1cm) node[anchor=south west, xshift=3,yshift=3, inner sep=0pt] {$Q$};            
+        \end{tikzpicture}]]>
+    </latex-image>
+    </image></li>
+    <li><m>P(1, 0)</m>; <m>18</m> </li>
+    <li><m>Q(5, 2)</m>; <m>186</m></li></ol></p>
+</answer></exercise>
 
 <exercise number="48"><statement><p>Objective function <m>C = 10x - 8y</m> with constraints
             <md><mrow>5x - y \amp\ge 2</mrow>

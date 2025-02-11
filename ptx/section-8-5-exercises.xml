@@ -1,11 +1,5 @@
 <?xml version="1.0"?>
 
-
-<!-- This file was originally part of the book     -->
-<!--   Modeling, Functions, and Graphs   -->
-<!--           4th                                     -->
-<!-- Copyright (C) Katherine Yoshiwara      -->
-
 <exercises xml:id="section-8-5-exercises"  xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Homework 8.5</title>
 
@@ -148,10 +142,30 @@ the department must sell in order to raise its required funds.</p></statement></
 
 <exercise number="21"><statement><p>Jeannette has <m>180</m> acres of farmland for growing wheat or soy. Each acre of wheat requires two hours of labor at harvest time, and each acre of soy needs one hour of labor. Jeannette will have <m>240</m> hours of labor available at harvest time. Find the maximum profit Jeannette can make from her two crops if she can get a profit of
 $<m>36</m> per acre for wheat and $<m>24</m> per acre for soy.</p></statement>
-<answer><p><ol marker="a." cols="2">
+<answer><p><ol marker="a.">
     <li><p><m>P = 36x + 24y</m></p></li>
     <li><p><m>x \ge 0</m>, <m>~y \ge 0</m>, <m>~x + y \le 180</m>, <m>~2x+y\le 240</m></p></li>
-    <li><p>vertices at <m>(0,0)</m>, <m>(120,0)</m>, <m>(60,120)</m>, <m>(0,180) </m> </p></li>
+    <li><image width="60%" margins="0% 40%" xml:id="fig-ans-8-4-39"><description>set of feasible solutions</description>
+        <latex-image>
+        <![CDATA[
+        \begin{tikzpicture} [scale=.3]
+        \draw[cyan] (0,0) grid (19,25);
+        \draw[black,thick,->,>=stealth'] (0,0)--(19,0) node[right, black]{$x$};
+        \draw[black,thick,->,>=stealth'] (0,0)--(0,25) node[above, black]{$y$};
+        \foreach \x [evaluate=\x as \xi using int(10*\x)]  in {5,10,15} {
+        \draw[black,thick] (\x,.1)--++(0,-.2) node[below]{$\xi$};
+        }
+        \foreach \y [evaluate=\y as \yi using int(10*\y)]  in {5,10,15,20,25} {
+        \draw[black,thick] (.1,\y)--++(-.2,0) node[left]{$\yi$};
+        }
+        \filldraw[magenta!50!white, opacity=.2] (0,0)--(12,0)--(6,12)--(0,18)--cycle;
+        \draw[black, thick] (0,18) -- (18,0);
+        \draw[black, thick] (0,24) -- (12,0);
+        \draw[red, very thick](0,0)--(12,0)--(6,12)--(0,18)--cycle;
+        \filldraw[black] (6,12) circle (.1cm) node[anchor=south west, xshift=3,yshift=3, inner sep=0pt] {$P$};            
+        \end{tikzpicture}]]>
+    </latex-image>
+    </image></li>
     <li><p>$<m>5040</m></p></li>
 </ol></p></answer></exercise>
 
