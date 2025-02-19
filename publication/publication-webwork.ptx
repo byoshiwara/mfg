@@ -4,7 +4,6 @@
 	<common>
 		<tableofcontents level="2"/>
         <exercise-divisional answer="no" solution="no"/>
-        <fillin textstyle="underline" mathstyle="underline"/>
 	</common>
     <numbering>
         <divisions level="2"/>
@@ -13,7 +12,7 @@
     </numbering>
     <source>
         <directories external="../ext" generated="../gen"/>
-        <version include="main"/> <!-- no webwork reading questions -->
+    <version include="webwork"/> <!-- include only webwork reading questions -->
     </source>
 <!--            <epub cover="../ext/images/cover.png"/> -->
     <epub>
@@ -23,17 +22,18 @@
     <!-- HTML-Specific Options -->
     <html>
         <calculator model="geogebra-graphing"/>
-        <index-page ref="preface"/>
+        <index-page ref="frontmatter"/>
         <css style="oscarlevin"/>
         <css style="default" colors="default"/>
 <!--        <css style="default" colors="blue_red"/> -->
-        <knowl example="no" example-solution="no" exercise-inline="no"/>
+        <knowl example="no"/>
+        <knowl exercise-inline="no"/>
         <!-- Magic IDs identify HTML pages to analytics services   -->
         <!-- Presence implies relevant Javascript will be added    -->
         <!-- StatCounter requires both values to be set            -->
         <analytics google-gst="G-MLHBE6655J"
-                   statcounter-project="13069512"
-                   statcounter-security="3c431ca7"/>
+                   statcounter-project="12421177"
+                   statcounter-security="3189a41a"/>
         <video privacy="yes"/>
         <search variant="default"/>
     </html>
