@@ -1,9 +1,13 @@
+# <!-- Managed automatically by PreTeXt authoring tools -->
+# (delete the above line to manage this file manually)
+
 # Boilerplate list of files in a PreTeXt project for git to ignore
 # ensure this file is tracked
 !.gitignore
 
-# don't track unpublished builds or stage
+# don't track unpublished builds or stage (note: Runestone uses `published`)
 output
+published
 
 # don't track assets generated from source
 generated-assets
@@ -95,18 +99,9 @@ GitHub.sublime-settings
 # Don't track codechat config (will be generated automatically)
 codechat_config.yaml
 
+# Don't track deprecated workflows
+.github/workflows/deploy.yml
+.github/workflows/test-build.yml
 
-# author-managed gitignores
-
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-# latex output
-.aux
-.idx
-*.html
+# Don't include cli cache
+.cache
