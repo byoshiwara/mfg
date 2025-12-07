@@ -170,7 +170,7 @@
                 </ol></p>
     <image width="50%" source="images/fig-ex-1-4-22"><description>four lines</description></image></statement></exercise>
     
-<exercisegroup cols="2"><introduction><p>Compute the slope of the line in Problems 23-26. Note the scales on the axes.</p></introduction>
+<exercisegroup cols="2"><introduction><p>Compute the slope of the line in Problems 23<ndash/>26. Note the scales on the axes.</p></introduction>
 
     <exercise number="23"><statement>
         <image width="60%" source="images/fig-ex-1-4-23"><description>four lines</description></image></statement>
@@ -404,7 +404,24 @@
             </ol></p></answer></exercise>
 
     <exercise number="38"><statement><p>The graph shows the number of ounces, <m>z</m>, that correspond to various weights measured in pounds, <m>p</m>.</p>
-        <image width="35%" source="images/fig-ex-1-4-38"><description>ounces vs pounds</description></image></statement></exercise>
+        <image width="35%" xml:id="fig-ex-1-4-28"><!--<image width="35%" source="images/fig-ex-1-4-38">--><description>ounces vs pounds</description>
+        <latex-image>
+        <![CDATA[
+        \begin{tikzpicture}[scale=.4]
+        \draw[lightgray] (0,0) grid (10,16);
+        \draw[black, thick, ->, >=stealth'] (0,0)--(10.7,0) node[right]{$p$};
+        \draw[black, thick, ->, >=stealth'] (0,0)--(0,16.9) node[above]{$z$};
+        \foreach \x  in {2,4,6,8,10} {
+            \draw[black, thick] (\x,.156) --++(0,-.3) node[below] {$\x$};
+        }
+        \foreach \x [evaluate=\x as \xi using int( 10* \x )] in  {2,4,6,8,10,12,14,16} {
+        \draw[black, thick] (.15,\x) --++(-.3,0) node[left]   {$\xi$};
+        }
+        \draw[samples=65,domain=0:10,smooth,variable=\x,red!80!black, very thick, ->, >=stealth'] plot (\x,{1.6*(\x)});
+        \fill[draw= red, fill=red!80!black] (0,0) circle (.17);
+        \fill[draw= red, fill=red!80!black] (5,8) circle (.17);
+        \end{tikzpicture}]]>
+    </latex-image></image></statement></exercise>
 
     <exercise number="39"><statement><p>The graph shows the cost, <m>C</m> (in dollars), of coffee beans in terms of the amount of coffee, <m>b</m> (in kilograms).</p>
         <image width="35%" source="images/fig-ex-1-4-39"><description>dollars vs kg</description></image></statement>
@@ -557,22 +574,22 @@
             <col  halign="center" />
                 <row bottom="minor">
                     <cell>Weight, kg</cell>
-                    <cell><m>3</m></cell>
+                    <cell><m>2</m></cell>
                     <cell><m>4</m></cell>
                     <cell><m>8</m></cell>
                     <cell><m>10</m></cell>
                     <cell><m>12</m></cell>
-                    <cell><m>15</m></cell>
-                    <cell><m>22</m></cell></row>
+                    <cell><m>16</m></cell>
+                    <cell><m>20</m></cell></row>
                 <row>
                     <cell>Length, cm</cell>
-                    <cell><m>25.87 </m> </cell>
+                    <cell><m>25.72 </m> </cell>
                     <cell><m>25.88</m> </cell>
+                    <cell><m>26.2</m> </cell>
                     <cell><m>26.36</m> </cell>
-                    <cell><m>26.6</m> </cell>
+                    <cell><m>26.52</m> </cell>
                     <cell><m>26.84</m> </cell>
-                    <cell><m>27.2</m> </cell>
-                    <cell><m>28.04</m> </cell></row>
+                    <cell><m>27.16</m> </cell></row>
         </tabular>
         <p><ol marker="a.">
             <li><p>If you plot the data, will the points lie on a straight line? Why or why not?</p></li>
