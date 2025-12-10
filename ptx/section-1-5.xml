@@ -341,8 +341,23 @@ The graphs of these three functions all have the same <m>y</m>-intercept, but th
 </exercise>
 
 <exercise component="main"><title>Practice 3</title>
-<statement><sidebyside widths="50% 40%" valigns="middle middle"><p>Find an equation for the line shown at right.</p>
-        <image source="images/fig-lin-equation-from-graph2" ><description>graph of line</description></image></sidebyside>
+<statement><p>Find an equation for the line shown.</p>
+        <image width="35%" xml:id="fig-lin-equation-from-graph2" ><description>graph of line</description>
+        <latex-image>
+    <![CDATA[
+    \begin{tikzpicture}[scale=.3]
+    \draw[lightgray] (-2,-2) grid (10,10);
+    \draw[black, thick, ->, >=stealth'] (-2,0)--(10.7,0) node[right]{$x$};
+    \draw[black, thick, ->, >=stealth'] (0,-2)--(0,10.7) node[above]{$y$};
+    \foreach \x [evaluate=\x as \xi using int( 5* \x )] in {4,8} {
+        \draw[black, thick] (\x,.156) --++(0,-.3) node[below] {$\xi$};
+    }
+    \foreach \x [evaluate=\x as \xi using int( 10* \x )] in  {4,8} {
+    \draw[black, thick] (.15,\x) --++(-.3,0) node[left]   {$\xi$};
+    }
+    \draw[samples=65,domain={max(-2,-8/5):min(10,8)},smooth,variable=\x,red, very thick, <->, >=stealth'] plot (\x,{8-5/4*(\x)});
+    \end{tikzpicture}]]>
+</latex-image></image>
 </statement>
 <solution><p>We can read the <m>y</m>-intercept from the graph, so <m>b = 80</m>. Another point is <m>(20,30)</m>, and from those two points we can compute the slope,  <m>m =\dfrac{-5}{2}</m>. So the slope-intercept form for the equation of the line is  
 <me>y = 80 - \dfrac{5}{2}x</me></p></solution>
