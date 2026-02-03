@@ -83,7 +83,7 @@
     <exercise number="18"><statement><p><m>H(v)=\dfrac{1}{v^2}-2 </m></p></statement></exercise>
 </exercisegroup>
 
-<exercisegroup cols="2"><introduction><p>For Problems 19-22, identify the graph as a stretch, compression, or reflection of a basic function, and write a formula for the graph.</p></introduction>
+<exercisegroup cols="2"><introduction><p>For Problems 19<ndash/>22, identify the graph as a stretch, compression, or reflection of a basic function, and write a formula for the graph.</p></introduction>
 
     <exercise number="19"><statement><image width="70%" source="images/fig-2-3-19"><description>transformed reciprocal</description></image>
     </statement>
@@ -602,7 +602,7 @@
         </ol></p></statement></exercise>
 </exercisegroup>
 
-<exercisegroup cols="4"><introduction><p>For Problems 43-50, write the function in the form <m>y = kf(x)</m>, where <m>f (x)</m> is one of the basic functions. Describe how the graph differs from that of the basic function.</p></introduction>
+<exercisegroup cols="4"><introduction><p>For Problems 43<ndash/>50, write the function in the form <m>y = kf(x)</m>, where <m>f (x)</m> is one of the basic functions. Describe how the graph differs from that of the basic function.</p></introduction>
 
 <exercise number="43"><statement><p><m>y=\dfrac{1}{2x^2} </m></p></statement>
 <answer><p><m>y = \dfrac{1}{2}\cdot\dfrac{1}{x^2}</m> is a vertical compression with factor <m>dfrac{1}{2} </m> of <m>y = \dfrac{1}{x^2}</m>.</p></answer></exercise>
@@ -743,13 +743,47 @@
     <li><p><m>y = 1.5 f(x)</m>: The class is about <m>50\%</m> larger than Hilbert's, but the classes scored the same.</p></li>
 </ol></p></answer></exercise>
 
-<exercise number="72"><statement><sidebyside widths="50% 45%">
+<exercise number="72"><statement><sidebyside widths="50% 45%"  margins="0% 0%">
     <p>The graph of <m>f(x)</m> shows the number of men at Tyler College who are <m>x</m> inches tall. Write a formula for each transformation of <m>f</m> ; then explain how the heights in that population compare to the Tyler College men.</p>
-    <image source="images/fig-2-3-72"><description>bell-shaped curve</description></image></sidebyside>
-
-    <sidebyside widths="45% 45%"><image source="images/fig-2-3-72a"><description>bell-shaped curve</description></image>
-    <image source="images/fig-2-3-72b"><description>bell-shaped curve</description></image></sidebyside></statement>
-</exercise>
+    
+    <image xml:id="fig-2-3-72"><description>bell-shaped curve centered above x=70</description><latex-image>
+        <![CDATA[
+        \begin{tikzpicture}[xscale=.8,yscale=.4]
+        \draw[lightgray] (0,0) grid (7,7);
+        \draw[black, thick, ->, >=stealth'] (0,0)--(7.7,0) node[right]{$x$};
+        \foreach \x   [evaluate=\x as \xi using int( 5* \x +50)]  in  {0,2,4,6}  {
+         \draw[black, thick] (\x,.156) --++(0,-.3) node[below]   {$\xi$};
+        }
+        \draw[samples=65,domain={2}:{6},smooth,variable=\x,red, very thick] plot (\x,{3*e^(-(\x-4)^2)});
+         \node[text=red, align=center] at (3,3.2){$f(x)$};
+        \end{tikzpicture}]]>
+    </latex-image></image></sidebyside>
+    <sidebyside widths="48% 48%" margins="0% 0%"><image xml:id="fig-2-3-72-a"><description>bell-shaped curve centered above x=70</description><latex-image>
+        <![CDATA[
+        \begin{tikzpicture}[xscale=.8,yscale=.4]
+        \draw[lightgray] (0,0) grid (7,7);
+        \draw[black, thick, ->, >=stealth'] (0,0)--(7.7,0) node[right]{$x$};
+        \foreach \x   [evaluate=\x as \xi using int( 5* \x +50)]  in  {0,2,4,6}  {
+         \draw[black, thick] (\x,.156) --++(0,-.3) node[below]   {$\xi$};
+        }
+        \draw[samples=65,domain={2}:{6},smooth,variable=\x,blue, very thick] plot (\x,{5*e^(-(\x-4)^2)});
+         \node[text=black, align=right] at (-.7,7){(a)};
+        \end{tikzpicture}]]>
+    </latex-image></image>
+    <image xml:id="fig-2-3-72-b"><description>bell-shaped curve centered above x=60</description><latex-image>
+        <![CDATA[
+        \begin{tikzpicture}[xscale=.8,yscale=.4]
+        \draw[lightgray] (0,0) grid (7,7);
+        \draw[black, thick, ->, >=stealth'] (0,0)--(7.7,0) node[right]{$x$};
+        \foreach \x   [evaluate=\x as \xi using int( 5* \x +50)]  in  {0,2,4,6}  {
+         \draw[black, thick] (\x,.156) --++(0,-.3) node[below]   {$\xi$};
+        }
+        \draw[samples=65,domain={0}:{4},smooth,variable=\x,blue, very thick] plot (\x,{3*e^(-(\x-2)^2)});
+         \node[text=black, align=right] at (-.7,7){(b)};
+        \end{tikzpicture}]]>
+    </latex-image></image>
+    </sidebyside>
+</statement></exercise>
 
 <exercise number="73"><statement><sidebyside widths="50% 40%">
     <p>The graph of <m>f (x)</m> shows the California state income tax rate, in percent, for a single taxpayer whose annual taxable income is <m>x</m> dollars. Write a formula for each transformation of <m>f</m>; then explain what it tells you about the income tax scheme in that state.</p>
