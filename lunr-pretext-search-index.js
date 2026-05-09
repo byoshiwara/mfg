@@ -15910,7 +15910,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.1",
   "title": "Exponential Growth and Decay",
-  "body": " Exponential Growth and Decay  Exponential Growth  The functions in describe exponential growth . During each time interval of a fixed length, the population is multiplied by a certain constant amount. In Part A, the bacteria population grows by a factor of every day.  table of bacteria population  For this reason, we say that is the growth factor growth factor for the function. Functions that describe exponential growth can be expressed in a standard form.  Exponential Growth  initial value growth factor     For the bacteria population, we have so and .  QuickCheck 1 How can you tell from a table of values that a function describes exponential growth?   During each equal time interval, the output increases by the same amount.  During each equal time interval, the output increases by the same factor.  During each equal time interval, the output increases as .  During each equal time interval, the output increases towards an asymptote.   A colony of bacteria starts with organisms and doubles every week.  Write a formula for the population of the bacteria colony after weeks.  How many bacteria will there be after weeks? After days?    The initial value of the population was , and its weekly growth factor is . Thus, a formula for the population after weeks is  After weeks, the population will be Because days is of a week, after days the population will be We cannot have a fraction of a bacterium, so we round to the nearest whole number, .   In a, note that According to the order of operations, we compute the power first, then multiply by .   Practice 1 A population of 24 fruit flies triples every month.  Write a formula for the population of fruit flies after months.  How many fruit flies will there be after 6 months? After 3 weeks?    After 6 months: 17,496; after 3 weeks: 55   QuickCheck 2 Is equivalent to ?   Yes, we can simplify the product.  Yes, it is exponential growth.  No, powers are performed before products.  No, it should be .    Growth Factors  In Part B of , the rabbit population grew by a factor of every months.  table of rabbit population  The variable is given in months, so to write the growth formula for this population, we divide the value of by The value of gives us the number of doubling periods. Now we need some algebra to see the growth factor for the function. We use the third law of exponents to write in another form. Recall that to raise a power to a power, we multiply exponents, so The growth law for the rabbit population is thus The initial value of the function is , and the growth factor is , or approximately . The rabbit population grows by a factor of about every month.  QuickCheck 3 A population triples every four years. What is its annual growth factor?        If the units are the same, a population with a larger growth factor grows faster than one with a smaller growth factor.  A lab technician compares the growth of species of bacteria. She starts colonies of bacteria each. Species A doubles in population every days, and species B triples every days. Find the growth factor for each species.  A function describing the growth of species A is so the growth factor for species A is , or approximately .  For species B, so the growth factor for species B is , or approximately . Species B grows faster than species A.  Practice 2 In 1999, analysts expected the number of Internet service providers to double in five years. Source: LA Times, Sept. 6, 1999   What was the annual growth factor for the number of Internet service providers?  If there were Internet service providers in April 1999, estimate the number of providers in April 2000 and in April 2001.  Write a formula for , the number of Internet service providers years after 1999.    and     Percent Increase  Exponential growth occurs in other circumstances, too. For example, if the interest on a savings account is compounded annually, the amount of money in the account grows exponentially.  Consider a principal of $100 invested at 5% interest compounded annually. At the end of year, the amount is It will be more useful to write the formula for the amount after year in factored form. With this version of the formula, the calculation for the amount at the end of year looks like this:  The amount, $105, becomes the new principal for the second year. To find the amount at the end of the second year, we apply the formula again, with . Observe that to find the amount at the end of each year, we multiply the principal by a factor of . Thus, we can express the amount at the end of the second year as and at the end of the third year as   At the end of each year, we multiply the old balance by another factor of to get the new amount. We organize our results into a table, where represents the amount of money in the account after years. For this example, a formula for the amount after years is                        In general, for an initial investment of dollars at an interest rate compounded annually, we have the following formula for the amount accumulated after years.  Compound Interest compound interest  The amount accumulated (principal plus interest) in an account bearing interest compounded annually is where  This function describes exponential growth with an initial value of and a growth factor of .  The notion of percent increase percent increase is often used to describe the growth factor for quantities that grow exponentially. Note carefully the distinction between the percent increase, , and the growth factor, .  QuickCheck 4 A population grows by 4.5% per year. What is its annual growth factor?         During a period of rapid inflation, prices rose by % over months. At the beginning of the inflationary period, a pound of butter cost $ .   Make a table of values showing the rise in the cost of butter over the next years.  Write a function that gives the price of a pound of butter years after inflation began.  How much did a pound of butter cost after years? After months?  Graph the function you found in part (b).    The percent increase in the price of butter is % every months. Therefore, the growth factor for the price of butter is every half-year. If represents the price of butter after years, then , and every half-year we multiply the price by , as shown in the table.  table for inflation  Look closely at the second column of the table. After years of inflation, the original price of $ has been multiplied by factors of . Thus,  To find the price of butter at any time after inflation began, we evaluate the function at the appropriate value of . After years, the price was $ . Fifteen months is years, so we evaluate . After months, the price of butter was $ .  Evaluate the function for several values, as shown in the table below. We plot the points and connect them with a smooth curve to obtain the graph shown in the figure at right below.                       graph of inflation   In , we can rewrite the formula for as follows: Thus, the annual growth factor for the price of butter is , and the annual percent growth rate is %.  Practice 3 In 2010, the average annual cost of tuition and fees at an in-state public college was $7,130, and costs were climbing by 2.8% per year.   Write a formula for , in thousands of dollars, the cost of one year of college years after 2010.  Complete the table and sketch a graph of .                    If the percent growth rate remained steady, how much did a year of college cost in 2020?  If the percent growth rate continues to remain steady, how much will a year of college cost in 2030?               7.130  8.186  9.398  10.789  12.387  14.221    exponential growth  $9,398  $12,387   Pause and Reflect Describe carefully the meanings of and in the formulas for exponential growth.   Exponential Decay  In the preceding examples, exponential growth was modeled by increasing functions of the form where . The function is a decreasing function if . In this case, we say that the function describes exponential decay , and the constant is called the decay factor decay factor . In , we consider two examples of exponential decay.  Exponential Decay   A small coal-mining town has been losing population since 1940, when 5000 people lived there. At each census thereafter (taken at 10-year intervals), the population declined to approximately 0.90 of its earlier figure.   Fill in the table showing the population of the town years after 1940.                                       Plot the data points and connect them with a smooth curve.  50x5000 grid  Write a function that gives the population of the town at any time in years after 1940.  Hint: Express the values you calculated in part (1) using powers of . Do you see a connection between the value of and the exponent on ?  Graph your function from part (3) using a calculator. (Use the table to choose an appropriate domain and range.) The graph should resemble your hand-drawn graph from part (2).  Evaluate your function to find the population of the town in 1995. What was the population in 2000?    A plastic window coating millimeter thick decreases the light coming through a window by %. This means that % of the original amount of light comes through millimeter of the coating. Each additional millimeter of coating reduces the light by another %.   Fill in the table showing the percent of the light, , that shines through millimeters of the window coating.                                       Plot the data points and connect them with a smooth curve. 5x100 grid  Write a function that gives the percent of the light that shines through millimeters of the coating.  Hint: Express the values you calculated in part (1) using powers of . Do you see a connection between the value of and the exponent on ?  Graph your function from part (3) using a calculator. (Use your table of values to choose an appropriate domain and range.) The graph should resemble your hand-drawn graph from part (2).  Evaluate your function to find the percent of the light that comes through 6 millimeters of plastic coating. What percent comes through millimeter?      Decay Factors  Before , we noted that a percent increase of (in decimal form) corresponds to a growth factor of . A percent decrease of corresponds to a decay factor of . In Part B of , each millimeter of plastic reduced the amount of light by %, so , and the decay factor for the function is  Note the difference in the two expressions for :  A percent increase of produces a growth factor of .  A percent decrease of produces a decay factor of .   QuickCheck 5 A population decreases by 12% per year. What is its annual decay factor?        David Reed writes in Context magazine: \"Computing prices have been falling exponentially—50% every 18 months—for the past 30 years and will probably stay on that curve for another couple of decades.\" An accounting firm invests $50,000 in new computer equipment.   Write a formula for the value of the equipment years from now.  By what percent does the equipment depreciate each year?  What will the equipment be worth in years?    The initial value of the equipment is . Every months, the value of the equipment is multiplied by However, because months is years, we must divide by in our formula, giving us  After year, we have The equipment is worth % of its original value, so it has depreciated by , or %.  After years, To the nearest dollar, the equipment is worth $4961.   Practice 4 The number of butterflies visiting a nature station is declining by 18% per year. In 1998, 3600 butterflies visited the nature station.   What is the decay factor in the annual butterfly count?  Write a formula for , the number of butterflies years after 1998.  Complete the table and sketch a graph of .                                  3600  2421  1628  1094  736  495   decreasing exponential graph   We summarize our observations about exponential growth and decay functions as follows.  Exponential Growth and Decay exponential growth and decay  The function models exponential growth and decay.   is the initial value initial value of ;  is the growth  growth factor or decay factor decay factor .   If , then is increasing, and , where represents percent increase.  If , then is decreasing, and , where represents percent decrease.   QuickCheck 6 The function is decreasing if   is negative.  is negative.      Comparing Linear Growth and Exponential Growth  It may be helpful to compare linear growth linear growth and exponential growth exponential growth. Consider the two functions whose graphs are shown below.                      Slope                     Growth factor  graph of linear and exponential   is a linear function with initial value and slope ; is an exponential function with initial value and growth factor . In a way, the growth factor of an exponential function is analogous to the slope of a linear function: Each measures how quickly the function is increasing (or decreasing).  However, for each unit increase in , units are added to the value of , whereas the value of is multiplied by . An exponential function with growth factor eventually grows much more rapidly than a linear function with slope , as you can see by comparing the graphs in the figure or the function values in the tables.  QuickCheck 7 The graph of , where , , and is always   increasing.  concave up.  decreasing.  concave down.    A solar energy company sold $ worth of solar collectors last year, its first year of operation. This year its sales rose to $ , an increase of %. The marketing department must estimate its projected sales for the next years.  If the marketing department predicts that sales will grow linearly, what should it expect the sales total to be next year? Graph the projected sales figures over the next years, assuming that sales will grow linearly.  If the marketing department predicts that sales will grow exponentially, what should it expect the sales total to be next year? Graph the projected sales figures over the next years, assuming that sales will grow exponentially.    Let represent the company's total sales years after starting business, where is the first year of operation. If sales grow linearly, then has the form Now , so the intercept is . The slope of the graph is where is the increase in sales during the first year. Thus, and sales grow by adding $ each year. The expected sales total for the next year is  Let represent the company's sales assuming that sales will grow exponentially. Then has the form . The percent increase in sales over the first year was , so the growth rate is The initial value, , is . Thus, , and sales grow by being multiplied each year by . The expected sales total for the next year is   We evaluate each function at several points to obtain the graphs shown in the figure.                             linear and exponential growth  Practice 5 A new car begins to depreciate in value as soon as you drive it off the lot. Some models depreciate linearly, and others depreciate exponentially. Suppose you buy a new car for $20,000, and year later its value has decreased to $17,000.   If the value decreased linearly, what was its annual rate of decrease?  If the value decreased exponentially, what was its annual decay factor? What was its annual percent depreciation?  Calculate the value of your car when it is years old under each assumption, linear or exponential depreciation.   per year  ;  Linear: ; Exponential:   Pause and Reflect Explain the difference between constant slope and constant growth factor.    Section Summary  Vocabulary  Look up the definitions of new terms in the Glossary.  Exponential growth  Initial value  Exponential decay  Percent increase  Compound interest  Growth factor  Amount     CONCEPTS    If a quantity is multiplied by a constant factor, , in each time period, we say that it undergoes exponential growth or decay . The constant is called the growth factor if and the decay factor if .  Quantities that increase or decrease by a constant percent in each time period grow or decay exponentially.   Exponential Growth and Decay The function models exponential growth and decay.  is the initial value of ;  is the growth or decay factor .  If , then is increasing, and , where represents percent increase.  If , then is decreasing, and , where represents percent decrease.      Compound Interest The amount accumulated (principal plus interest) in an account bearing interest compounded annually is where      is the principal invested,      is the interest rate,      is the time period, in years      In linear growth, a constant amount is added to the output for each unit increase in the input. In exponential growth, the output is multiplied by a constant factor for each unit increase in the input.    STUDY QUESTIONS   Is it possible for two populations with the same initial value to grow at different percent rates?  If you know the percent growth rate, how can you find the growth factor? If you know the percent decay rate, how can you find the decay factor?  What is the growth factor for a population that grows annually?  What is the decay factor for a population that declines by annually?  What is the growth factor for a population that grows by annually?  Explain the difference between the slope in linear growth and the growth factor in exponential growth.    SKILLS Practice each skill in the Homework problems listed.  Calculate percent increase or decrease: #1 10 6  Write a formula for exponential growth or decay: #11 22  Evaluate an exponential growth or decay function: #11 22  Simplify exponential expressions: #23 32  Solve power equations: #33 40  Find the growth factor or initial value: #41 58  Solve for percent increase or decrease: #63 66       Homework 4.1   A parking permit at Huron College cost $ last year, but this year the price increased by . What is the price this year?  If the price of a parking permit increases by again next year, what will the price be then?   $  $    The computer you want cost $ when it first came on the market, but after months the price was reduced by . What was the price then?  If the price falls by another next month, what will the price be then?   The value of your stock portfolio fell last year, but this year it increased by . How does the current value of your portfolio compare to what it was two years ago? It is of what it was years ago.  You got a raise in January, but then in March everyone took a pay cut of . How does your new salary compare to what it was last December?  The population of Summerville is currently hundred people.  Write a formula for the population if it grows at a constant rate of hundred people per year. What is the population after years?  Write a formula for the population if it has a constant growth factor of per year. What is the population after years?   ;  ;   Delbert's sports car was worth $ when he bought it.  Write a formula for the value of the car if it depreciates at a constant rate of $ per year. What is the value of the car after years?  Write a formula for the value of the car if it has a constant depreciation factor of per year. What is the value of the car after years?   Francine's truck was worth $ when she bought it.  Write a formula for the value of the truck if it depreciates by $ per year. What is the value of the truck after years?  Write a formula for the value of the truck if it depreciates by per year. What is the value of the truck after years?   ; $  ; $   The population of Lakeview is currently people.  Write a formula for the population if it grows by people per year. What is the population after years?  Write a formula for the population if grows by per year. What is the population after years?   The table shows the growth factor for a number of different populations. For each population, find the percent growth rate.    Population        Growth factor        Percent growth rate       A: ; B: ; C: ; D: ; E:  The table shows the decay factor for a number of different populations. For each population, find the percent decay rate.    Population        Decay factor        Percent decay rate        For Problems 11 16,  Write a function that describes exponential growth.  Graph the function.  Evaluate the function at the given values.   A typical beehive contains insects. The population can increase in size by a factor of every weeks. How many bees could there be after weeks? After weeks?   exponential growth  bees; bees   A rancher who started with head of cattle finds that his herd increases by a factor of every years. How many head of cattle will he have after year? After years?  A sum of $ is invested in an account that pays interest compounded annually. How much is in the account after years? After years?   exponential growth  $ ; $   Otto invests $ in an account that pays interest compounded annually. How much is in Otto's account after years? After years?  Paul bought a house for $ in . Since , housing prices have risen an average of per year. How much was the house worth in ? How much will it be worth in 2030?   exponential growth  $ ; $   Sales of Windsurfers have increased per year since . If Sunsails sold Windsurfers in , how many did it sell in ? How many should it expect to sell in ?   For Problems 17 22,  Write a function that describes exponential decay.  Graph the function.  Evaluate the function at the given values.   During a vigorous spraying program, the mosquito population was reduced to of its previous size every weeks. If the mosquito population was originally estimated at , how many mosquitoes remained after weeks of spraying? After weeks?   exponential decay  ;   The number of perch in Hidden Lake has declined to half of its previous value every years since 1985, when the perch population was estimated at . How many perch were there in 1995? In 2013?  Scuba divers find that the water in Emerald Lake filters out of the sunlight for each feet that they descend. How much sunlight penetrates to a depth of feet? To a depth of feet?   exponential decay  ;   Arch's motorboat cost $ in and has depreciated by every years. How much was the boat worth in ? In ?  Plutonium-238 is a radioactive element that decays over time into a less harmful element at a rate of per year. A power plant has pounds of plutonium-238 to dispose of. How much plutonium-238 will be left after years? After years?   exponential decay  lb; lb   Iodine-131 is a radioactive element that decays at a rate of per day. How much of a -gram sample will be left after week? After days?   In Problems 23 26, use the laws of exponents to simplify.                               Let . Show that .  Let . Show that  Let . Show that .  Let . Show that   Explain why and are not the same function.  Complete the table of values for and , showing that their values are not the same.                    In the expression , only the is raised to a power , and the result is doubled, but if both the and the were raised to the power , the result would be .                     Explain why and are not the same function.  Complete the table of values for and , showing that their values are not the same.                    Solve the equation. (See to review solving equations involving powers of the variable.) Round your answer to two places if necessary.             Riverside County is the fastest growing county in California. In , the population was . Write a formula for the population of Riverside County. (You do not know the value of the growth factor, , yet.)  In , the population had grown to . Find the growth factor and the percent rate of growth, rounded to the nearest tenth of a percent.  Estimate the population of Riverside County in .    Growth factor ; Percent rate of growth     In , a new Ford Focus cost . The value of a Focus decreases exponentially over time. Write a formula for the value of a Focus. (You do not know the value of the decay factor, , yet.)  A -year old Focus cost . Find the decay factor and the percent rate of depreciation, rounded to the nearest tenth of a percent.  About how much would a -year old Focus cost?   In the 1940s, David Lack undertook a study of the European robin. He tagged one-year-old robins and found that on average of the birds survived each year. (Source: Burton, 1998)  According to the data, how many robins would have originally hatched to produce one-year-olds?  Write a formula for the number of the original robins still alive after years.  Graph your function.  One of the original robins actually survived for years. How many robins does the model predict will survive for years?     decay  . (Therefore, none)   Many insects grow by discrete amounts each time they shed their exoskeletons. Dyar's rule says that the size of the insect increases by a constant ratio at each stage. (Source: Burton, 1998)  Dyar measured the width of the head of a caterpillar of a swallowtail butterfly at each stage. The caterpillar's head was initially approximately millimeters wide, and millimeters wide after its first stage. Find the growth ratio.  Write a formula for the width of the caterpillar's head at the th stage.  Graph your function.  What head width does the model predict after stages?   For Problems 45 54,  Each table describes exponential growth or decay. Find the growth or decay factor.  Complete the table. Round values to two decimal places if necessary.                   The growth factor is .                                                   The growth factor is .                                                   The decay factor is .                                                   The decay factor is .                                                   The growth factor is .                                    Each graph in Problems 55 58 represents exponential growth or decay.  Find the initial value and the growth or decay factor.  Write a formula for the function.   growth  Initial value , growth factor    growth  decay   Initial value , decay factor    decay    If of the air leaks out of Brian's bicycle tire every day, what percent of the air will be left after days? After a week? ,  If housing prices are increasing by per year, by what percent will they increase in years? In years?  Francine says that if a population grew by in years, then it grew by per year. Is she correct? Either justify or correct her calculation. No, an increase of in years corresponds to a growth factor of , or an annual growth rate of about .  Delbert says that if a population decreased by in 5 years, then it decreased by per year. Is he correct? Either justify or correct his calculation.  In Problems 63 66, assume that each population grows exponentially with constant annual percent increase, .   The population of the state of Texas was in . Write a formula in terms of for the population of Texas years later.  In , the population was . Write an equation and solve for . What was the annual percent increase to the nearest hundredth of a percent?       The population of the state of Florida was in . Write a formula in terms of for the population of Florida years later.  In , the population was . Write an equation and solve for . What was the annual percent increase to the nearest hundredth of a percent?    The population of Rainville was in and doubled in years. What was the annual percent increase to the nearest hundredth percent?  The population of Elmira was in and doubled in years. What was the annual percent increase to the nearest hundredth of a percent?  If a population doubles in years, does the percent increase depend on the size of the original population?  The population of Grayling doubled in years. What was the annual percent increase to the nearest hundredth of a percent?     No     The population of Boomtown was in and tripled in years. What was the annual percent increase to the nearest hundredth of a percent?  The population of Fairview was in and tripled in years. What was the annual percent increase to the nearest hundredth of a percent?  If a population triples in years, does the percent increase depend on the size of the original population?  The population of Pleasant Lake tripled in years. What was the annual percent increase to the nearest hundredth of a percent?   A researcher starts 2 populations of fruit flies of different species, each with flies. Species A increases by in days and species B increases by in days.  What was the population of species A after days? Find the daily growth factor for species A.  What was the population of species B after days? Find the daily growth factor for species B.  Which species multiplies more rapidly?   ;  ;  Species B   A biologist isolates two strains of a particular virus and monitors the growth of each, starting with samples of gram. Strain A increases by in hours and strain B increases by in hours.  How much did the sample of strain A weigh after hours? What was its hourly growth factor?  How much did the sample of strain B weigh after hours? What was its hourly growth factor?  Which strain of virus grows more rapidly?    In Problems 69 72, we compare linear and exponential growth.  At a large university students start a rumor that final exams have been canceled. After hours, students (including the first ) have heard the rumor.  Assuming that the rumor grows linearly, complete the table below for , the number of students who have heard the rumor after hours. Then write a formula for the function . Graph the function.                  Complete the table below, assuming that the rumor grows exponentially. Write a formula for the function and graph it on the same set of axes with .                                    linear and exponential                    Over the weekend the Midland Infirmary identifies four cases of Asian flu. Three days later it has treated a total of ten cases.  Assuming that the number of flu cases grows linearly, complete the table below for , the number of people infected after days. Then write a formula for the function . Graph the function.                  Complete the table below, assuming that the flu grows exponentially. Write a formula for the function and graph it on the same set of axes with .                   The world’s population of tigers declined from in to in .  If the population declined linearly, what was its annual rate of decrease?  If the population declined exponentially, what was its annual decay factor? What was its annual percent decrease?  Predict the number of tigers in under each assumption, linear or exponential decline.   tigers per year  ;  Linear: ; Exponential:   In 2003, the Center for Biological Diversity filed a lawsuit against the federal government for failing to protect Alaskan sea otters. The population of sea otters, which numbered between 150,000 and 300,000 before hunting began in 1741, declined from about 20,000 in 1992 to 6000 in 2000. (Source: Center for Biological Diversity)  If the population declined linearly after 1992, what was its annual rate of decrease?  If the population declined exponentially after 1992, what was its annual rate of decrease?  Predict the number of sea otters in 2010 under each assumption, linear or exponential decline      "
+  "body": " Exponential Growth and Decay  Exponential Growth  The functions in describe exponential growth . During each time interval of a fixed length, the population is multiplied by a certain constant amount. In Part A, the bacteria population grows by a factor of every day.  table of bacteria population  For this reason, we say that is the growth factor growth factor for the function. Functions that describe exponential growth can be expressed in a standard form.  Exponential Growth  initial value growth factor     For the bacteria population, we have so and .  QuickCheck 1 How can you tell from a table of values that a function describes exponential growth?   During each equal time interval, the output increases by the same amount.  During each equal time interval, the output increases by the same factor.  During each equal time interval, the output increases as .  During each equal time interval, the output increases towards an asymptote.   A colony of bacteria starts with organisms and doubles every week.  Write a formula for the population of the bacteria colony after weeks.  How many bacteria will there be after weeks? After days?    The initial value of the population was , and its weekly growth factor is . Thus, a formula for the population after weeks is  After weeks, the population will be Because days is of a week, after days the population will be We cannot have a fraction of a bacterium, so we round to the nearest whole number, .   In a, note that According to the order of operations, we compute the power first, then multiply by .   Practice 1 A population of 24 fruit flies triples every month.  Write a formula for the population of fruit flies after months.  How many fruit flies will there be after 6 months? After 3 weeks?    After 6 months: 17,496; after 3 weeks: 55   QuickCheck 2 Is equivalent to ?   Yes, we can simplify the product.  Yes, it is exponential growth.  No, powers are performed before products.  No, it should be .    Growth Factors  In Part B of , the rabbit population grew by a factor of every months.  table of rabbit population  The variable is given in months, so to write the growth formula for this population, we divide the value of by The value of gives us the number of doubling periods. Now we need some algebra to see the growth factor for the function. We use the third law of exponents to write in another form. Recall that to raise a power to a power, we multiply exponents, so The growth law for the rabbit population is thus The initial value of the function is , and the growth factor is , or approximately . The rabbit population grows by a factor of about every month.  QuickCheck 3 A population triples every four years. What is its annual growth factor?        If the units are the same, a population with a larger growth factor grows faster than one with a smaller growth factor.  A lab technician compares the growth of species of bacteria. She starts colonies of bacteria each. Species A doubles in population every days, and species B triples every days. Find the growth factor for each species.  A function describing the growth of species A is so the growth factor for species A is , or approximately .  For species B, so the growth factor for species B is , or approximately . Species B grows faster than species A.  Practice 2 In 1999, analysts expected the number of Internet service providers to double in five years. Source: LA Times, Sept. 6, 1999   What was the annual growth factor for the number of Internet service providers?  If there were Internet service providers in April 1999, estimate the number of providers in April 2000 and in April 2001.  Write a formula for , the number of Internet service providers years after 1999.    and     Percent Increase  Exponential growth occurs in other circumstances, too. For example, if the interest on a savings account is compounded annually, the amount of money in the account grows exponentially.  Consider a principal of $100 invested at 5% interest compounded annually. At the end of year, the amount is It will be more useful to write the formula for the amount after year in factored form. With this version of the formula, the calculation for the amount at the end of year looks like this:  The amount, $105, becomes the new principal for the second year. To find the amount at the end of the second year, we apply the formula again, with . Observe that to find the amount at the end of each year, we multiply the principal by a factor of . Thus, we can express the amount at the end of the second year as and at the end of the third year as   At the end of each year, we multiply the old balance by another factor of to get the new amount. We organize our results into a table, where represents the amount of money in the account after years. For this example, a formula for the amount after years is                        In general, for an initial investment of dollars at an interest rate compounded annually, we have the following formula for the amount accumulated after years.  Compound Interest compound interest  The amount accumulated (principal plus interest) in an account bearing interest compounded annually is where  This function describes exponential growth with an initial value of and a growth factor of .  The notion of percent increase percent increase is often used to describe the growth factor for quantities that grow exponentially. Note carefully the distinction between the percent increase, , and the growth factor, .  QuickCheck 4 A population grows by 4.5% per year. What is its annual growth factor?         During a period of rapid inflation, prices rose by % over months. At the beginning of the inflationary period, a pound of butter cost $ .   Make a table of values showing the rise in the cost of butter over the next years.  Write a function that gives the price of a pound of butter years after inflation began.  How much did a pound of butter cost after years? After months?  Graph the function you found in part (b).    The percent increase in the price of butter is % every months. Therefore, the growth factor for the price of butter is every half-year. If represents the price of butter after years, then , and every half-year we multiply the price by , as shown in the table.  table for inflation  Look closely at the second column of the table. After years of inflation, the original price of $ has been multiplied by factors of . Thus,  To find the price of butter at any time after inflation began, we evaluate the function at the appropriate value of . After years, the price was $ . Fifteen months is years, so we evaluate . After months, the price of butter was $ .  Evaluate the function for several values, as shown in the table below. We plot the points and connect them with a smooth curve to obtain the graph shown in the figure at right below.                       graph of inflation   In , we can rewrite the formula for as follows: Thus, the annual growth factor for the price of butter is , and the annual percent growth rate is %.  Practice 3 In 2010, the average annual cost of tuition and fees at an in-state public college was $7,130, and costs were climbing by 2.8% per year.   Write a formula for , in thousands of dollars, the cost of one year of college years after 2010.  Complete the table and sketch a graph of .                    If the percent growth rate remained steady, how much did a year of college cost in 2020?  If the percent growth rate continues to remain steady, how much will a year of college cost in 2030?               7.130  8.186  9.398  10.789  12.387  14.221    exponential growth  $9,398  $12,387   Pause and Reflect Describe carefully the meanings of and in the formulas for exponential growth.   Exponential Decay  In the preceding examples, exponential growth was modeled by increasing functions of the form where . The function is a decreasing function if . In this case, we say that the function describes exponential decay , and the constant is called the decay factor decay factor . In , we consider two examples of exponential decay.  Exponential Decay   A small coal-mining town has been losing population since 1940, when 5000 people lived there. At each census thereafter (taken at 10-year intervals), the population declined to approximately 0.90 of its earlier figure.   Fill in the table showing the population of the town years after 1940.                                       Plot the data points and connect them with a smooth curve.  50x5000 grid  Write a function that gives the population of the town at any time in years after 1940.  Hint: Express the values you calculated in part (1) using powers of . Do you see a connection between the value of and the exponent on ?  Graph your function from part (3) using a calculator. (Use the table to choose an appropriate domain and range.) The graph should resemble your hand-drawn graph from part (2).  Evaluate your function to find the population of the town in 1995. What was the population in 2000?    A plastic window coating millimeter thick decreases the light coming through a window by %. This means that % of the original amount of light comes through millimeter of the coating. Each additional millimeter of coating reduces the light by another %.   Fill in the table showing the percent of the light, , that shines through millimeters of the window coating.                                       Plot the data points and connect them with a smooth curve. 5x100 grid  Write a function that gives the percent of the light that shines through millimeters of the coating.  Hint: Express the values you calculated in part (1) using powers of . Do you see a connection between the value of and the exponent on ?  Graph your function from part (3) using a calculator. (Use your table of values to choose an appropriate domain and range.) The graph should resemble your hand-drawn graph from part (2).  Evaluate your function to find the percent of the light that comes through 6 millimeters of plastic coating. What percent comes through millimeter?      Decay Factors  Before , we noted that a percent increase of (in decimal form) corresponds to a growth factor of . A percent decrease of corresponds to a decay factor of . In Part B of , each millimeter of plastic reduced the amount of light by %, so , and the decay factor for the function is  Note the difference in the two expressions for :  A percent increase of produces a growth factor of .  A percent decrease of produces a decay factor of .   QuickCheck 5 A population decreases by 12% per year. What is its annual decay factor?        David Reed writes in Context magazine: \"Computing prices have been falling exponentially—50% every 18 months—for the past 30 years and will probably stay on that curve for another couple of decades.\" An accounting firm invests $50,000 in new computer equipment.   Write a formula for the value of the equipment years from now.  By what percent does the equipment depreciate each year?  What will the equipment be worth in years?    The initial value of the equipment is . Every months, the value of the equipment is multiplied by However, because months is years, we must divide by in our formula, giving us  After year, we have The equipment is worth % of its original value, so it has depreciated by , or %.  After years, To the nearest dollar, the equipment is worth $4961.   Practice 4 The number of butterflies visiting a nature station is declining by 18% per year. In 1998, 3600 butterflies visited the nature station.   What is the decay factor in the annual butterfly count?  Write a formula for , the number of butterflies years after 1998.  Complete the table and sketch a graph of .                                  3600  2421  1628  1094  736  495   decreasing exponential graph   We summarize our observations about exponential growth and decay functions as follows.  Exponential Growth and Decay exponential growth and decay  The function models exponential growth and decay.   is the initial value initial value of ;  is the growth  growth factor or decay factor decay factor .   If , then is increasing, and , where represents percent increase.  If , then is decreasing, and , where represents percent decrease.   QuickCheck 6 The function is decreasing if   is negative.  is negative.      Comparing Linear Growth and Exponential Growth  It may be helpful to compare linear growth linear growth and exponential growth exponential growth. Consider the two functions whose graphs are shown below.                      Slope                     Growth factor  graph of linear and exponential   is a linear function with initial value and slope ; is an exponential function with initial value and growth factor . In a way, the growth factor of an exponential function is analogous to the slope of a linear function: Each measures how quickly the function is increasing (or decreasing).  However, for each unit increase in , units are added to the value of , whereas the value of is multiplied by . An exponential function with growth factor eventually grows much more rapidly than a linear function with slope , as you can see by comparing the graphs in the figure or the function values in the tables.  QuickCheck 7 The graph of , where , , and is always   increasing.  concave up.  decreasing.  concave down.    A solar energy company sold $ worth of solar collectors last year, its first year of operation. This year its sales rose to $ , an increase of %. The marketing department must estimate its projected sales for the next years.  If the marketing department predicts that sales will grow linearly, what should it expect the sales total to be next year? Graph the projected sales figures over the next years, assuming that sales will grow linearly.  If the marketing department predicts that sales will grow exponentially, what should it expect the sales total to be next year? Graph the projected sales figures over the next years, assuming that sales will grow exponentially.    Let represent the company's total sales years after starting business, where is the first year of operation. If sales grow linearly, then has the form Now , so the intercept is . The slope of the graph is where is the increase in sales during the first year. Thus, and sales grow by adding $ each year. The expected sales total for the next year is  Let represent the company's sales assuming that sales will grow exponentially. Then has the form . The percent increase in sales over the first year was , so the growth rate is The initial value, , is . Thus, , and sales grow by being multiplied each year by . The expected sales total for the next year is   We evaluate each function at several points to obtain the graphs shown in the figure.                             linear and exponential growth  Practice 5 A new car begins to depreciate in value as soon as you drive it off the lot. Some models depreciate linearly, and others depreciate exponentially. Suppose you buy a new car for $20,000, and year later its value has decreased to $17,000.   If the value decreased linearly, what was its annual rate of decrease?  If the value decreased exponentially, what was its annual decay factor? What was its annual percent depreciation?  Calculate the value of your car when it is years old under each assumption, linear or exponential depreciation.   per year  ;  Linear: ; Exponential:   Pause and Reflect Explain the difference between constant slope and constant growth factor.    Section Summary  Vocabulary  Look up the definitions of new terms in the Glossary.  Exponential growth  Initial value  Exponential decay  Percent increase  Compound interest  Growth factor  Amount     CONCEPTS    If a quantity is multiplied by a constant factor, , in each time period, we say that it undergoes exponential growth or decay . The constant is called the growth factor if and the decay factor if .  Quantities that increase or decrease by a constant percent in each time period grow or decay exponentially.   Exponential Growth and Decay The function models exponential growth and decay.  is the initial value of ;  is the growth or decay factor .  If , then is increasing, and , where represents percent increase.  If , then is decreasing, and , where represents percent decrease.      Compound Interest The amount accumulated (principal plus interest) in an account bearing interest compounded annually is where      is the principal invested,      is the interest rate,      is the time period, in years      In linear growth, a constant amount is added to the output for each unit increase in the input. In exponential growth, the output is multiplied by a constant factor for each unit increase in the input.    STUDY QUESTIONS   Is it possible for two populations with the same initial value to grow at different percent rates?  If you know the percent growth rate, how can you find the growth factor? If you know the percent decay rate, how can you find the decay factor?  What is the growth factor for a population that grows annually?  What is the decay factor for a population that declines by annually?  What is the growth factor for a population that grows by annually?  Explain the difference between the slope in linear growth and the growth factor in exponential growth.    SKILLS Practice each skill in the Homework problems listed.  Calculate percent increase or decrease: #1 10 6  Write a formula for exponential growth or decay: #11 22  Evaluate an exponential growth or decay function: #11 22  Simplify exponential expressions: #23 32  Solve power equations: #33 40  Find the growth factor or initial value: #41 58  Solve for percent increase or decrease: #63 66       Homework 4.1   A parking permit at Huron College cost $ last year, but this year the price increased by . What is the price this year?  If the price of a parking permit increases by again next year, what will the price be then?   $  $    The computer you want cost $ when it first came on the market, but after months the price was reduced by . What was the price then?  If the price falls by another next month, what will the price be then?   The value of your stock portfolio fell last year, but this year it increased by . How does the current value of your portfolio compare to what it was two years ago? It is of what it was years ago.  You got a raise in January, but then in March everyone took a pay cut of . How does your new salary compare to what it was last December?  The population of Summerville is currently hundred people.  Write a formula for the population if it grows at a constant rate of hundred people per year. What is the population after years?  Write a formula for the population if it has a constant growth factor of per year. What is the population after years?   ;  ;   Delbert's sports car was worth $ when he bought it.  Write a formula for the value of the car if it depreciates at a constant rate of $ per year. What is the value of the car after years?  Write a formula for the value of the car if it has a constant depreciation factor of per year. What is the value of the car after years?   Francine's truck was worth $ when she bought it.  Write a formula for the value of the truck if it depreciates by $ per year. What is the value of the truck after years?  Write a formula for the value of the truck if it depreciates by per year. What is the value of the truck after years?   ; $  ; $   The population of Lakeview is currently people.  Write a formula for the population if it grows by people per year. What is the population after years?  Write a formula for the population if grows by per year. What is the population after years?   The table shows the growth factor for a number of different populations. For each population, find the percent growth rate.    Population        Growth factor        Percent growth rate       A: ; B: ; C: ; D: ; E:  The table shows the decay factor for a number of different populations. For each population, find the percent decay rate.    Population        Decay factor        Percent decay rate        For Problems 11 16,  Write a function that describes exponential growth.  Graph the function.  Evaluate the function at the given values.   A typical beehive contains insects. The population can increase in size by a factor of every weeks. How many bees could there be after weeks? After weeks?   exponential growth  bees; bees   A rancher who started with head of cattle finds that his herd increases by a factor of every years. How many head of cattle will he have after year? After years?  A sum of $ is invested in an account that pays interest compounded annually. How much is in the account after years? After years?   exponential growth  $ ; $   Otto invests $ in an account that pays interest compounded annually. How much is in Otto's account after years? After years?  Paul bought a house for $ in . Since , housing prices have risen an average of per year. How much was the house worth in ? How much will it be worth in 2030?   exponential growth  $ ; $   Sales of Windsurfers have increased per year since . If Sunsails sold Windsurfers in , how many did it sell in ? How many should it expect to sell in ?   For Problems 17 22,  Write a function that describes exponential decay.  Graph the function.  Evaluate the function at the given values.   During a vigorous spraying program, the mosquito population was reduced to of its previous size every weeks. If the mosquito population was originally estimated at , how many mosquitoes remained after weeks of spraying? After weeks?   exponential decay  ;   The number of perch in Hidden Lake has declined to half of its previous value every years since 1985, when the perch population was estimated at . How many perch were there in 1995? In 2013?  Scuba divers find that the water in Emerald Lake filters out of the sunlight for each feet that they descend. How much sunlight penetrates to a depth of feet? To a depth of feet?   exponential decay  ;   Arch's motorboat cost $ in and has depreciated by every years. How much was the boat worth in ? In ?  Plutonium-238 is a radioactive element that decays over time into a less harmful element at a rate of per year. A power plant has pounds of plutonium-238 to dispose of. How much plutonium-238 will be left after years? After years?   exponential decay  lb; lb   Iodine-131 is a radioactive element that decays at a rate of per day. How much of a -gram sample will be left after week? After days?   In Problems 23 26, use the laws of exponents to simplify.                               Let . Show that .  Let . Show that  Let . Show that .  Let . Show that   Explain why and are not the same function.  Complete the table of values for and , showing that their values are not the same.                    In the expression , only the is raised to a power , and the result is doubled, but if both the and the were raised to the power , the result would be .                     Explain why and are not the same function.  Complete the table of values for and , showing that their values are not the same.                    Solve the equation. (See to review solving equations involving powers of the variable.) Round your answer to two places if necessary.             Riverside County is the fastest growing county in California. In , the population was . Write a formula for the population of Riverside County. (You do not know the value of the growth factor, , yet.)  In , the population had grown to . Find the growth factor and the percent rate of growth, rounded to the nearest tenth of a percent.  Estimate the population of Riverside County in .    Growth factor ; Percent rate of growth     In , a new Ford Focus cost . The value of a Focus decreases exponentially over time. Write a formula for the value of a Focus. (You do not know the value of the decay factor, , yet.)  A -year old Focus cost . Find the decay factor and the percent rate of depreciation, rounded to the nearest tenth of a percent.  About how much would a -year old Focus cost?   In the 1940s, David Lack undertook a study of the European robin. He tagged one-year-old robins and found that on average of the birds survived each year. (Source: Burton, 1998)  According to the data, how many robins would have originally hatched to produce one-year-olds?  Write a formula for the number of the original robins still alive after years.  Graph your function.  One of the original robins actually survived for years. How many robins does the model predict will survive for years?     decay  . (Therefore, none)   Many insects grow by discrete amounts each time they shed their exoskeletons. Dyar's rule says that the size of the insect increases by a constant ratio at each stage. (Source: Burton, 1998)  Dyar measured the width of the head of a caterpillar of a swallowtail butterfly at each stage. The caterpillar's head was initially approximately millimeters wide, and millimeters wide after its first stage. Find the growth ratio.  Write a formula for the width of the caterpillar's head at the th stage.  Graph your function.  What head width does the model predict after stages?   For Problems 45 54,  Each table describes exponential growth or decay. Find the growth or decay factor.  Complete the table. Round values to two decimal places if necessary.                   The growth factor is .                                                   The growth factor is .                                                   The decay factor is .                                                   The decay factor is .                                                   The growth factor is .                                    Each graph in Problems 55 58 represents exponential growth or decay.  Find the initial value and the growth or decay factor.  Write a formula for the function.   growth  Initial value , growth factor    growth  decay   Initial value , decay factor    decay    If of the air leaks out of Brian's bicycle tire every day, what percent of the air will be left after days? After a week? ,  If housing prices are increasing by per year, by what percent will they increase in years? In years?  Francine says that if a population grew by in years, then it grew by per year. Is she correct? Either justify or correct her calculation. No, an increase of in years corresponds to a growth factor of , or an annual growth rate of about .  Delbert says that if a population decreased by in 5 years, then it decreased by per year. Is he correct? Either justify or correct his calculation.  In Problems 63 66, assume that each population grows exponentially with constant annual percent increase, .   The population of the state of Texas was in . Write a formula in terms of for the population of Texas years later.  In , the population was . Write an equation and solve for . What was the annual percent increase to the nearest hundredth of a percent?       The population of the state of Florida was in . Write a formula in terms of for the population of Florida years later.  In , the population was . Write an equation and solve for . What was the annual percent increase to the nearest hundredth of a percent?    The population of Rainville was in and doubled in years. What was the annual percent increase to the nearest hundredth percent?  The population of Elmira was in and doubled in years. What was the annual percent increase to the nearest hundredth of a percent?  If a population doubles in years, does the percent increase depend on the size of the original population?  The population of Grayling doubled in years. What was the annual percent increase to the nearest hundredth of a percent?     No     The population of Boomtown was in and tripled in years. What was the annual percent increase to the nearest hundredth of a percent?  The population of Fairview was in and tripled in years. What was the annual percent increase to the nearest hundredth of a percent?  If a population triples in years, does the percent increase depend on the size of the original population?  The population of Pleasant Lake tripled in years. What was the annual percent increase to the nearest hundredth of a percent?   A researcher starts 2 populations of fruit flies of different species, each with flies. Species A increases by in days and species B increases by in days.  What was the population of species A after days? Find the daily growth factor for species A.  What was the population of species B after days? Find the daily growth factor for species B.  Which species multiplies more rapidly?   ;  ;  Species B   A biologist isolates two strains of a particular virus and monitors the growth of each, starting with samples of gram. Strain A increases by in hours and strain B increases by in hours.  How much did the sample of strain A weigh after hours? What was its hourly growth factor?  How much did the sample of strain B weigh after hours? What was its hourly growth factor?  Which strain of virus grows more rapidly?    In Problems 69 72, we compare linear and exponential growth.  At a large university students start a rumor that final exams have been canceled. After hours, students (including the first ) have heard the rumor.  Assuming that the rumor grows linearly, complete the table below for , the number of students who have heard the rumor after hours. Then write a formula for the function . Graph the function.                  Complete the table below, assuming that the rumor grows exponentially. Write a formula for the function and graph it on the same set of axes with .                                    linear and exponential                    Over the weekend the Midland Infirmary identifies four cases of Asian flu. Three days later it has treated a total of ten cases.  Assuming that the number of flu cases grows linearly, complete the table below for , the number of people infected after days. Then write a formula for the function . Graph the function.                  Complete the table below, assuming that the flu grows exponentially. Write a formula for the function and graph it on the same set of axes with .                   The world’s population of tigers declined from in to in .  If the population declined linearly, what was its annual rate of decrease?  If the population declined exponentially, what was its annual decay factor? What was its annual percent decrease?  Predict the number of tigers in under each assumption, linear or exponential decline.   tigers per year  ;  Linear: ; Exponential:   In 2003, the Center for Biological Diversity filed a lawsuit against the federal government for failing to protect Alaskan sea otters. The population of sea otters, which numbered between 150,000 and 300,000 before hunting began in 1741, declined from about 20,000 in 1992 to 6000 in 2000. (Source: Center for Biological Diversity)  If the population declined linearly after 1992, what was its annual rate of change in population?  If the population declined exponentially after 1992, what was its annual decay factor?  Predict the number of sea otters in 2010 under each assumption, linear or exponential decline      "
 },
 {
   "id": "Exponential-Growth-and-Decay-2-2",
@@ -16819,7 +16819,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "72",
   "title": "",
-  "body": "In 2003, the Center for Biological Diversity filed a lawsuit against the federal government for failing to protect Alaskan sea otters. The population of sea otters, which numbered between 150,000 and 300,000 before hunting began in 1741, declined from about 20,000 in 1992 to 6000 in 2000. (Source: Center for Biological Diversity)  If the population declined linearly after 1992, what was its annual rate of decrease?  If the population declined exponentially after 1992, what was its annual rate of decrease?  Predict the number of sea otters in 2010 under each assumption, linear or exponential decline  "
+  "body": "In 2003, the Center for Biological Diversity filed a lawsuit against the federal government for failing to protect Alaskan sea otters. The population of sea otters, which numbered between 150,000 and 300,000 before hunting began in 1741, declined from about 20,000 in 1992 to 6000 in 2000. (Source: Center for Biological Diversity)  If the population declined linearly after 1992, what was its annual rate of change in population?  If the population declined exponentially after 1992, what was its annual decay factor?  Predict the number of sea otters in 2010 under each assumption, linear or exponential decline  "
 },
 {
   "id": "Exponential-Functions",
@@ -16828,7 +16828,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.2",
   "title": "Exponential Functions",
-  "body": " Exponential Functions  Introduction In , we studied functions that describe exponential growth or decay. More formally, we define an exponential function as follows.  Exponential Function     Some examples of exponential functions are The constant is the -intercept of the graph because For the examples above, we find that the -intercepts are  The positive constant is called the base of the exponential function.  QuickCheck 1 Which of the following is an exponential function?         We do not allow to be negative, because if , then is not a real number for some values of . For example, if and , then is an imaginary number.  We also exclude as a base because for all values of ; hence the function is actually the constant function .    Graphs of Exponential Functions  The graphs of exponential functions have two characteristic shapes, depending on whether the base, , is greater than or less than . As typical examples, consider the graphs of and shown below. Some values for and are recorded in the tables.                                                       increasing and decreasing exponential graphs  Notice that is an increasing function and is a decreasing function. Both are concave up. In general, exponential functions have the following properties.  Properties of Exponential Functions, ,   Domain: all real numbers.  Range: all positive numbers.  If , the function is increasing and concave up;  if , the function is decreasing and concave up.  The -intercept is . There is no -intercept.   In the table for , you can see that as the -values decrease toward negative infinity, the corresponding -values decrease toward zero. As a result, the graph of decreases toward the -axis as we move to the left. Thus, the negative -axis is a horizontal asymptote for exponential functions with , as shown in figure (a).  For exponential functions with , the positive -axis is an asymptote, as illustrated in figure (b). (See to review asymptotes.)  In , we compare two increasing exponential functions. The larger the value of the base, , the faster the function grows. In this example, both functions have .  Compare the graphs of and .   We evaluate each function for several convenient values, as shown in the table.  Then we plot the points for each function and connect them with smooth curves. For positive -values, is always larger than , and is increasing more rapidly. In the figure, we can see that climbs more rapidly than . Both graphs cross the -axis at (0, 1).                             two increasing exponential functions   For decreasing exponential functions, those with bases between and , the smaller the base, the more steeply the graph decreases. For example, compare the graphs of and shown in the figure at right.  two decreasing exponential functions   Practice 1  State the ranges of the functions and from the previous Example on the domain .  State the ranges of the functions and shown in the Note above on the domain . Round your answers to two decimal places.   ;  ;    Transformations of Exponential Functions  In , we considered transformations of the basic graphs. For instance, the graphs of the functions and are shifts of the basic parabola, . In a similar way, we can shift or stretch the graph of an exponential function while the basic shape is preserved.  Use your calculator to graph the following functions. Describe how these graphs compare with the graph of .      Enter the formulas for the three functions as shown below. Note the parentheses around the exponent in the keying sequence for   ^     ^   + 3   ^  (   + 3 )  The graphs of , , and in the standard window are shown below.  calculator graphs of transformations of exponential functions   The graph of , shown in figure (b), has the same basic shape as that of , but it has a horizontal asymptote at instead of at (the -axis). In fact, , so the graph of is a vertical translation of the graph of by units. If every point on the graph of is moved units upward, the result is the graph of .  First note that . In fact, the graph of shown in figure (c) has the same basic shape as but has been translated units to the left.   QuickCheck 3 Which function translates the graph of two units to the right?        What about reflections? Recall that the graph of is the reflection about the -axis of the graph of . The graphs of and are shown at left below.   vertical reflection of an exponential function  horizontal reflection of an exponential function   You may have also noticed a relationship between the graphs of and , which are shown at right above. The graph of is the reflection of the graph of about the -axis. We can see why this is true by writing the formula for in another way: We see that is the same function as . Replacing by in the formula for a function switches every point on the graph with the point and thus reflects the graph about the -axis.  Reflections of Graphs reflections of graphs  The graph of is the reflection of the graph of about the -axis.  The graph of is the reflection of the graph of about the -axis.   Pause and Reflect How are the graphs of and related?   Comparing Exponential and Power Functions  Exponential functions exponential function are not the same as the power functions power function we studied in . Although both involve expressions with exponents, it is the location of the variable that makes the difference.  Power Functions vs Exponential Functions        Power Functions  Exponential Functions   General formula     Description  variable base and constant exponent  constant base and variable exponent   Example     These two families of functions have very different properties, as well.  Compare the power function and the exponential function .  First, compare the values for these two functions shown in the table.   The scaling exponent for is , so that when doubles, say, from to , the output is multiplied by , or .  On the other hand, we can tell that is exponential because its values increase by a factor of for each unit increase in . (To see this, divide any function value by the previous one.)                                     As you would expect, the graphs of the two functions are also quite different. For starters, note that the power function goes through the origin, while the exponential function has -intercept as shown at left below.   power function vs exponential from -2 to 3  power function vs exponential from 0 to 6   From the table, we see that , so the two graphs intersect at . (They also intersect at approximately .) However, if you compare the values of and for larger values of , you will see that eventually the exponential function overtakes the power function, as shown at right above.   power function vs exponential from 0 to 50  The relationship in holds true for all increasing power and exponential functions: For large enough values of , the exponential function will always be greater than the power function, regardless of the parameters in the functions. The figure at left shows the graphs of and . At first, , but at around , overtakes , and for all .   QuickCheck 4 Which function grows faster in the long run?        Practice 3 Which of the following functions are exponential functions, and which are power functions?       Exponential: (a) and (c); power: (b) and (d)  Pause and Reflect Discuss the differences between a power function and an exponential function.   Exponential Equations  An exponential equation exponential equation is one in which the variable is part of an exponent. For example, the equation is exponential.  Many exponential equations can be solved by writing both sides of the equation as powers with the same base. To solve the equation above, we write which is true if and only if .  In general, if two equivalent powers have the same base, then their exponents must be equal also, as long as the base is not or .  Sometimes the laws of exponents can be used to express both sides of an equation as single powers of a common base.  Solve the following equations.      Using the fact that , we write each side of the equation as a power of : Now we equate the exponents to obtain  We write each factor as a power of . We use the laws of exponents to simplify each side: Now we equate the exponents to obtain The solution is .   QuickCheck 5 Which is a good strategy for solving ?   Divide both sides by 3.  Add to both sides.  Simplify the left side.  Write the right side as a power of 3.   Practice 4 Solve the equation . Write each side as a power of 2, then equate exponents to find  Exponential equations arise frequently in the study of exponential growth.  During the summer a population of fleas doubles in number every days. If a population starts with fleas, how long will it be before there are fleas?  Let represent the number of fleas present after days. The original population of is multiplied by a factor of every days, or We set and solve for : We equate the exponents to get , or . The population will grow to fleas in days.  Practice 5 During an advertising campaign in a large city, the makers of Chip-O's corn chips estimate that the number of people who have heard of Chip-O's increases by a factor of every 4 days.   If 100 people are given trial bags of Chip-O's to start the campaign, write a function, , for the number of people who have heard of Chip-O's after days of advertising.  Use your calculator to graph the function on the domain .  How many days should the makers run the campaign in order for Chip-O's to be familiar to people? Use algebraic methods to find your answer and verify on your graph.    calculator graph of exponential growth  12 days   QuickCheck 6 Suppose is an exponential function, with and . What is ?        Graphical Solution of Exponential Equations  It is not always so easy to express both sides of the equation as powers of the same base. In the following sections, we will develop more general methods for finding exact solutions to exponential equations. But we can use a graphing utility to obtain approximate solutions.   intersect Use the graph of to find an approximate solution to the equation accurate to the nearest hundredth.  Enter  ^ X and use the standard graphing window ( ZOOM 6) to obtain the graph shown in figure (a). We are looking for a point on this graph with -coordinate .  Using the TRACE feature, we see that the -coordinates are too small when and too large when . The solution we want lies somewhere between and , but this approximation is not accurate enough.  two calculator displays of exponential function with point  To improve our approximation, we will use the intersect feature. Set and press GRAPH . The -coordinate of the intersection point of the two graphs is the solution of the equation Activating the intersect command results in figure (b), and we see that, to the nearest hundredth, the solution is .  We can verify that our estimate is reasonable by substituting into the equation: We enter 2 ^ 2.32 ENTER to get . This number is not equal to , but it is close, so we believe that is a reasonable approximation to the solution of the equation .   Practice 6 Use the graph of to find an approximate solution to , accurate to two decimal places. The point on the graph where has  Pause and Reflect Give an example of an exponential equation, and describe how to solve it.    Section Summary  Vocabulary  Look up the definitions of new terms in the Glossary.  Exponential function  Base  Exponential equation     CONCEPTS    An exponential function has the form   Quantities that increase or decrease by a constant percent in each time period grow or decay exponentially.   Properties of Exponential Functions   Domain: all real numbers.  Range: all positive numbers.  If , the function is increasing and concave up; if , the function is decreasing and concave up.  The -intercept is . There is no -intercept.     The graphs of exponential functions can be transformed by shifts, stretches, and reflections.   Reflections of Graphs   The graph of is the reflection of the graph of about the -axis.  The graph of is the reflection of the graph of about the -axis.     Exponential functions have different properties than power functions .  We can solve some exponential equations by writing both sides with the same base and equating the exponents.  We can use graphs to find approximate solutions to exponential equations.    STUDY QUESTIONS   Give the general form for an exponential function. What restrictions do we place on the base of the function?  Explain why the output of an exponential function is always positive, even if is negative.  How are the graphs of the functions and related?  How is an exponential function different from a power function?  Delbert says that is equivalent to . Convince him that he is mistaken.  Explain the algebraic technique for solving exponential equations described in this section.    SKILLS Practice each skill in the Homework problems listed.  Describe the graph of an exponential function: #1 14  Graph transformations of exponential functions: #15 18, 53 60  Evaluate exponential functions: #19 22  Find the equation of an exponential function from its graph: #23 26  Solve exponential equations: #27 44  Distinguish between power and exponential functions: #45 52, 65, and 66       Homework 4.2  For Problems 1 and 2, find the -intercept of each exponential function and decide whether the graph is increasing or decreasing.        ; increasing  ; decreasing  ; decreasing  ; increasing          For Problems 3 6, make a table of values and graph each pair of functions by hand on the domain . Describe the similarities and differences between the two graphs.                                  exponential growth and decay  The two graphs are reflections of each other across the -axis. is increasing, is decreasing. has the negative -axis as an asymptote, and has the positive -axis as its asymptote.                                      exponential decay and negative of growth  The graphs are reflections of each other across the origin. Both are decreasing, but has the negative -axis as an asymptote, and has the positive t-axis as its asymptote.       For Problems 7 12, match each function with its graph.   four exponentials        I  IV  III  II    four exponentials         For Problems 9 12,  Use a graphing calculator to graph the functions on the domain .  Give the range of the function on that domain, accurate to hundredths.    growth      decay      For Problems 13 and 14, in each group of functions, which have identical graphs? Explain why.       Because they are defined by equivalent expressions, (b), (c), and (d) have identical graphs         For Problems 15 18,  Use the order of operations to explain why the two functions are different.  Complete the table of values and graph both functions in the same window.  Describe each as a transformation of or .   ,                                  To evaluate we subtract from the input before evaluating the exponential function; to evaluate we subtract from the output of the exponential function.                                  two shifts of growth  The graph of is translated unit to the right; the graph of is shifted unit down.   ,                                  ,                                  To evaluate we take the negative of the output of the exponential function; to evaluate we take the negative of the input.                                  two shifts of growth  The graph of is reflected about the -axis; the graph of is reflected about the -axis.   ,                                   In Problems 19 22, for the given function, evaluate each pair of expressions. Are they equivalent?    and  and   is not equivalent to .  is not equivalent to .     and  and     and  and   is not equivalent to .  is equivalent to .     and  and    The graph of is shown in the figure.  growth   Read the value of from the graph.  Make a short table of values for the function by reading values from the graph. Does your table confirm that the function is exponential?  Use your table to calculate the growth factor, .  Using your answers to parts (a) and (c), write a formula for .                   The graph of is shown in the figure.  decay   Read the value of from the graph.  Make a short table of values for the function by reading values from the graph. Does your table confirm that the function is exponential?  Use your table to calculate the decay factor, .  Using your answers to parts (a) and (c), write a formula for .   For several days after the Northridge earthquake on January 17, 1994, the area received a number of significant aftershocks. The red graph shows that the number of aftershocks decreased exponentially over time. The graph of the function , shown in black, approximates the data. (Source: Los Angeles Times , June 27, 1995)  decay   Read the value of from the graph.  Find an approximation for the decay factor, , by comparing two points on the graph. (Some of the points on the graph of are approximately , , , and .)  Using your answers to (a) and (b), write a formula for .       The frequency of a musical note depends on its pitch. The graph shows that the frequency increases exponentially. The function gives the frequency as a function of the number of half-tones, , above the starting point on the scale  growth   Read the value of from the graph. (This is the frequency of the note A above middle C.)  Find an approximation for the growth factor, , by comparing two points on the graph. (Some of the points on the graph of are approximately , , , and .)  Using your answers to (a) and (b), write a formula for .  The frequency doubles when you raise a note by one octave, which is equivalent to half-tones. Use this information to find an exact value for .   Solve the equation algebraically.             Before the advent of antibiotics, an outbreak of cholera might spread through a city so that the number of cases doubled every days.  Twenty-six cases were discovered on July 5. Write a function for the number of cases of cholera days later.  Use your calculator to graph your function on the interval .  When should hospitals expect to be treating cases? Use algebraic methods to find your answer, and verify it on your graph.    GC growth  days later   An outbreak of ungulate fever can sweep through the livestock in a region so that the number of animals affected triples every days.  A rancher discovers cases of ungulate fever among his herd. Write a function for the number of cases of ungulate fever days later.  Use your calculator to graph your function on the interval .  If the rancher does not act quickly, how long will it be until head are affected? Use algebraic methods to find your answer, and verify it on your graph.   A smart television set loses of its value every years.  Write a function for the value of a television set years after it was purchased if it cost originally.  Use your calculator to graph your function on the interval .  How long will it be before a television set depreciates to ? Use algebraic methods to find your answer, and verify it on your graph.    GC decay  yr   A mobile home loses of its value every years.  A certain mobile home costs . Write a function for its value after years.  Use your calculator to graph your function on the interval .  How long will it be before a mobile home depreciates to ? Use algebraic methods to find your answer, and verify it on your graph.   For Problems 41 44, use a graph to find an approximate solution accurate to the nearest hundredth.       For Problems 45 and 46, decide whether each function is an exponential function, a power function, or neither.        Power  Exponential  Power  Neither          For Problems 47 50, decide whether the table could describe a linear function, a power function, an exponential function, or none of these. Find a formula for each linear, power, or exponential function.                                            Exponential  Power                                                                                       Power  Exponential                                              For Problems 51 and 52, fill in the tables. Graph each pair of functions in the same window. Then answer the questions below.  Give the range of and the range of .  For how many values of does ?  Estimate the value(s) of for which .  For what values of is ?  Which function grows more rapidly for large values of ?                                                         1                       exponential growth and qudratic   Range of : ; Range of :   , ,  and  g                                           For Problems 53 60, sketch the graph of each transformation of the given function, then write a formula and check your sketch with a graphing calculator. State the domain and range of each transformation, its intercept(s), and any asymptotes.         shifted growth  Domain: ; range: , -intercept ; -intercept ; horizontal asymptote  ,  growth  Domain: ; range: , no -intercept; -intercept ; the -axis is the horizontal asymptote.  ,  growth reflected  Domain: ; range: , no -intercept; -intercept ; the -axis is the horizontal asymptote.                reflected growth  Domain: ; range: , no -intercept; -intercept ; the -axis is the horizontal asymptote.  ,  decay  Domain: ; range: , no -intercept; -intercept ; the -axis is the horizontal asymptote.  ,  decay reflected  Domain: ; range: , no -intercept; -intercept ; the -axis is the horizontal asymptote.               growth  Domain: ; range: , no -intercept; -intercept ; the -axis is the horizontal asymptote.  ,  shifted growth  Domain: ; range: , no -intercept; -intercept ; horizontal asymptote               reflected decay  Domain: ; range: , no -intercept; -intercept ; the -axis is the horizontal asymptote.  ,  shifted reflected decay  Domain: ; range: , -intercept approximately ; -intercept ; horizontal asymptote is         For Problems 61 64,  Describe the graph as a transformation of .  Give an equation for the function graphed.    shifted decay  The graph of has been reflected about the -axis and shifted up units.     decay   reflected and translated growth  The graph of has been reflected about the -axis and shifted up units.     growth   For Problems 65 and 66, match the graph of each function to its formula. In each formula, and .       three curves  I  III  II        three curves   The function describes a volunteer's heart rate during a treadmill test. The heart rate is given in beats per minute and is in minutes. (See to review functions defined piecewise.) (Source: Davis, Kimmet, and Autry, 1986)  Evaluate the function to complete the table.                  Sketch the graph of the function.  The treadmill test began with walking at kilometers per hour, then jogging, starting at kilometers per hour and increasing to kilometers per hour, and finished with a cool-down walking period. Identify each of these activities on the graph and describe the volunteer's heart rate during each phase.                   piecewise  From to minutes, the volunteer is walking with heart rate beats per minute. The volunteer jogged at a steady pace from to minutes, and the heart rate increased to about beats per minutes. From to minutes, the jogging pace increased, and the heart rate rose to about beats per minute. The cooldown started at minutes, and the heart rate decreased rapidly and leveled off to about beats per minute.   Carbon dioxide ( ) is called a greenhouse gas because it traps part of the Earth's outgoing energy. Animals release into the atmosphere, and plants remove through photosynthesis. In modern times, deforestation and the burning of fossil fuels both contribute to levels. The figure shows atmospheric concentrations of , in parts per million, measured at the Mauna Loa Observatory in Hawaii.  The red curve shows annual oscillations in levels. Can you explain why levels vary throughout the year? Hint: Why would photosynthesis vary throughout the year?  The blue curve shows the average annual readings. By approximately how much does the level vary from its average value during the year?  In 1960, the average level was parts per million, and the average level has been rising by per year. If the level continues to rise at this rate, what readings can we expect in the year 2100?   CO2 concentrations    "
+  "body": " Exponential Functions  Introduction In , we studied functions that describe exponential growth or decay. More formally, we define an exponential function as follows.  Exponential Function     Some examples of exponential functions are The constant is the -intercept of the graph because For the examples above, we find that the -intercepts are  The positive constant is called the base of the exponential function.  QuickCheck 1 Which of the following is an exponential function?         We do not allow to be negative, because if , then is not a real number for some values of . For example, if and , then is an imaginary number.  We also exclude as a base because for all values of ; hence the function is actually the constant function .    Graphs of Exponential Functions  The graphs of exponential functions have two characteristic shapes, depending on whether the base, , is greater than or less than . As typical examples, consider the graphs of and shown below. Some values for and are recorded in the tables.                                                       increasing and decreasing exponential graphs  Notice that is an increasing function and is a decreasing function. Both are concave up. In general, exponential functions have the following properties.  Properties of Exponential Functions, ,   Domain: all real numbers.  Range: all positive numbers.  If , the function is increasing and concave up;  if , the function is decreasing and concave up.  The -intercept is . There is no -intercept.   In the table for , you can see that as the -values decrease toward negative infinity, the corresponding -values decrease toward zero. As a result, the graph of decreases toward the -axis as we move to the left. Thus, the negative -axis is a horizontal asymptote for exponential functions with , as shown in figure (a).  For exponential functions with , the positive -axis is an asymptote, as illustrated in figure (b). (See to review asymptotes.)  QuickCheck 2 Which statement is true?   An exponential function is not defined for negative inputs.  The outputs of an exponential function cannot be negative.  The -intercept of the function is .  The function decreases by each time we increase by .   In , we compare two increasing exponential functions. The larger the value of the base, , the faster the function grows. In this example, both functions have .  Compare the graphs of and .   We evaluate each function for several convenient values, as shown in the table.  Then we plot the points for each function and connect them with smooth curves. For positive -values, is always larger than , and is increasing more rapidly. In the figure, we can see that climbs more rapidly than . Both graphs cross the -axis at (0, 1).                             two increasing exponential functions   For decreasing exponential functions, those with bases between and , the smaller the base, the more steeply the graph decreases. For example, compare the graphs of and shown in the figure at right.  two decreasing exponential functions   Practice 1  State the ranges of the functions and from the previous Example on the domain .  State the ranges of the functions and shown in the Note above on the domain . Round your answers to two decimal places.   ;  ;    Transformations of Exponential Functions  In , we considered transformations of the basic graphs. For instance, the graphs of the functions and are shifts of the basic parabola, . In a similar way, we can shift or stretch the graph of an exponential function while the basic shape is preserved.  Use your calculator to graph the following functions. Describe how these graphs compare with the graph of .      Enter the formulas for the three functions as shown below. Note the parentheses around the exponent in the keying sequence for   ^     ^   + 3   ^  (   + 3 )  The graphs of , , and in the standard window are shown below.  calculator graphs of transformations of exponential functions   The graph of , shown in figure (b), has the same basic shape as that of , but it has a horizontal asymptote at instead of at (the -axis). In fact, , so the graph of is a vertical translation of the graph of by units. If every point on the graph of is moved units upward, the result is the graph of .  First note that . In fact, the graph of shown in figure (c) has the same basic shape as but has been translated units to the left.   QuickCheck 3 Which function translates the graph of two units to the right?        What about reflections? Recall that the graph of is the reflection about the -axis of the graph of . The graphs of and are shown at left below.   vertical reflection of an exponential function  horizontal reflection of an exponential function   You may have also noticed a relationship between the graphs of and , which are shown at right above. The graph of is the reflection of the graph of about the -axis. We can see why this is true by writing the formula for in another way: We see that is the same function as . Replacing by in the formula for a function switches every point on the graph with the point and thus reflects the graph about the -axis.  Reflections of Graphs reflections of graphs  The graph of is the reflection of the graph of about the -axis.  The graph of is the reflection of the graph of about the -axis.   Practice 2 Which of the functions below have the same graph? Explain why.      (a) and (c) are the same function.  Pause and Reflect How are the graphs of and related?   Comparing Exponential and Power Functions  Exponential functions exponential function are not the same as the power functions power function we studied in . Although both involve expressions with exponents, it is the location of the variable that makes the difference.  Power Functions vs Exponential Functions        Power Functions  Exponential Functions   General formula     Description  variable base and constant exponent  constant base and variable exponent   Example     These two families of functions have very different properties, as well.  Compare the power function and the exponential function .  First, compare the values for these two functions shown in the table.   The scaling exponent for is , so that when doubles, say, from to , the output is multiplied by , or .  On the other hand, we can tell that is exponential because its values increase by a factor of for each unit increase in . (To see this, divide any function value by the previous one.)                                     As you would expect, the graphs of the two functions are also quite different. For starters, note that the power function goes through the origin, while the exponential function has -intercept as shown at left below.   power function vs exponential from -2 to 3  power function vs exponential from 0 to 6   From the table, we see that , so the two graphs intersect at . (They also intersect at approximately .) However, if you compare the values of and for larger values of , you will see that eventually the exponential function overtakes the power function, as shown at right above.   power function vs exponential from 0 to 50  The relationship in holds true for all increasing power and exponential functions: For large enough values of , the exponential function will always be greater than the power function, regardless of the parameters in the functions. The figure at left shows the graphs of and . At first, , but at around , overtakes , and for all .   QuickCheck 4 Which function grows fastest in the long run?        Practice 3 Which of the following functions are exponential functions, and which are power functions?       Exponential: (a) and (c); power: (b) and (d)  Pause and Reflect Discuss the differences between a power function and an exponential function.   Exponential Equations  An exponential equation exponential equation is one in which the variable is part of an exponent. For example, the equation is exponential.  Many exponential equations can be solved by writing both sides of the equation as powers with the same base. To solve the equation above, we write which is true if and only if .  In general, if two equivalent powers have the same base, then their exponents must be equal also, as long as the base is not or .  Sometimes the laws of exponents can be used to express both sides of an equation as single powers of a common base.  Solve the following equations.      Using the fact that , we write each side of the equation as a power of : Now we equate the exponents to obtain  We write each factor as a power of . We use the laws of exponents to simplify each side: Now we equate the exponents to obtain The solution is .   QuickCheck 5 Which is a good strategy for solving ?   Divide both sides by 3.  Add to both sides.  Simplify the left side.  Write the right side as a power of 3.   Practice 4 Solve the equation . Write each side as a power of 2, then equate exponents to find  Exponential equations arise frequently in the study of exponential growth.  During the summer a population of fleas doubles in number every days. If a population starts with fleas, how long will it be before there are fleas?  Let represent the number of fleas present after days. The original population of is multiplied by a factor of every days, or We set and solve for : We equate the exponents to get , or . The population will grow to fleas in days.  Practice 5 During an advertising campaign in a large city, the makers of Chip-O's corn chips estimate that the number of people who have heard of Chip-O's increases by a factor of every 4 days.   If 100 people are given trial bags of Chip-O's to start the campaign, write a function, , for the number of people who have heard of Chip-O's after days of advertising.  Use your calculator to graph the function on the domain .  How many days should the makers run the campaign in order for Chip-O's to be familiar to people? Use algebraic methods to find your answer and verify on your graph.    calculator graph of exponential growth  12 days   QuickCheck 6 Suppose is an exponential function, with and . What is ?        Graphical Solution of Exponential Equations  It is not always so easy to express both sides of the equation as powers of the same base. In the following sections, we will develop more general methods for finding exact solutions to exponential equations. But we can use a graphing utility to obtain approximate solutions.   intersect Use the graph of to find an approximate solution to the equation accurate to the nearest hundredth.  Enter  ^ X and use the standard graphing window ( ZOOM 6) to obtain the graph shown in figure (a). We are looking for a point on this graph with -coordinate .  Using the TRACE feature, we see that the -coordinates are too small when and too large when . The solution we want lies somewhere between and , but this approximation is not accurate enough.  two calculator displays of exponential function with point  To improve our approximation, we will use the intersect feature. Set and press GRAPH . The -coordinate of the intersection point of the two graphs is the solution of the equation Activating the intersect command results in figure (b), and we see that, to the nearest hundredth, the solution is .  We can verify that our estimate is reasonable by substituting into the equation: We enter 2 ^ 2.32 ENTER to get . This number is not equal to , but it is close, so we believe that is a reasonable approximation to the solution of the equation .   Practice 6 Use the graph of to find an approximate solution to , accurate to two decimal places. The point on the graph where has  Pause and Reflect Give an example of an exponential equation, and describe how to solve it.    Section Summary  Vocabulary  Look up the definitions of new terms in the Glossary.  Exponential function  Base  Exponential equation     CONCEPTS    An exponential function has the form   Quantities that increase or decrease by a constant percent in each time period grow or decay exponentially.   Properties of Exponential Functions   Domain: all real numbers.  Range: all positive numbers.  If , the function is increasing and concave up; if , the function is decreasing and concave up.  The -intercept is . There is no -intercept.     The graphs of exponential functions can be transformed by shifts, stretches, and reflections.   Reflections of Graphs   The graph of is the reflection of the graph of about the -axis.  The graph of is the reflection of the graph of about the -axis.     Exponential functions have different properties than power functions .  We can solve some exponential equations by writing both sides with the same base and equating the exponents.  We can use graphs to find approximate solutions to exponential equations.    STUDY QUESTIONS   Give the general form for an exponential function. What restrictions do we place on the base of the function?  Explain why the output of an exponential function is always positive, even if is negative.  How are the graphs of the functions and related?  How is an exponential function different from a power function?  Delbert says that is equivalent to . Convince him that he is mistaken.  Explain the algebraic technique for solving exponential equations described in this section.    SKILLS Practice each skill in the Homework problems listed.  Describe the graph of an exponential function: #1 14  Graph transformations of exponential functions: #15 18, 53 60  Evaluate exponential functions: #19 22  Find the equation of an exponential function from its graph: #23 26  Solve exponential equations: #27 44  Distinguish between power and exponential functions: #45 52, 65, and 66       Homework 4.2  For Problems 1 and 2, find the -intercept of each exponential function and decide whether the graph is increasing or decreasing.        ; increasing  ; decreasing  ; decreasing  ; increasing          For Problems 3 6, make a table of values and graph each pair of functions by hand on the domain . Describe the similarities and differences between the two graphs.                                  exponential growth and decay  The two graphs are reflections of each other across the -axis. is increasing, is decreasing. has the negative -axis as an asymptote, and has the positive -axis as its asymptote.                                      exponential decay and negative of growth  The graphs are reflections of each other across the origin. Both are decreasing, but has the negative -axis as an asymptote, and has the positive t-axis as its asymptote.       For Problems 7 12, match each function with its graph.   four exponentials        I  IV  III  II    four exponentials         For Problems 9 12,  Use a graphing calculator to graph the functions on the domain .  Give the range of the function on that domain, accurate to hundredths.    growth      decay      For Problems 13 and 14, in each group of functions, which have identical graphs? Explain why.       Because they are defined by equivalent expressions, (b), (c), and (d) have identical graphs         For Problems 15 18,  Use the order of operations to explain why the two functions are different.  Complete the table of values and graph both functions in the same window.  Describe each as a transformation of or .   ,                                  To evaluate we subtract from the input before evaluating the exponential function; to evaluate we subtract from the output of the exponential function.                                  two shifts of growth  The graph of is translated unit to the right; the graph of is shifted unit down.   ,                                  ,                                  To evaluate we take the negative of the output of the exponential function; to evaluate we take the negative of the input.                                  two shifts of growth  The graph of is reflected about the -axis; the graph of is reflected about the -axis.   ,                                   In Problems 19 22, for the given function, evaluate each pair of expressions. Are they equivalent?    and  and   is not equivalent to .  is not equivalent to .     and  and     and  and   is not equivalent to .  is equivalent to .     and  and    The graph of is shown in the figure.  growth   Read the value of from the graph.  Make a short table of values for the function by reading values from the graph. Does your table confirm that the function is exponential?  Use your table to calculate the growth factor, .  Using your answers to parts (a) and (c), write a formula for .                   The graph of is shown in the figure.  decay   Read the value of from the graph.  Make a short table of values for the function by reading values from the graph. Does your table confirm that the function is exponential?  Use your table to calculate the decay factor, .  Using your answers to parts (a) and (c), write a formula for .   For several days after the Northridge earthquake on January 17, 1994, the area received a number of significant aftershocks. The red graph shows that the number of aftershocks decreased exponentially over time. The graph of the function , shown in black, approximates the data. (Source: Los Angeles Times , June 27, 1995)  decay   Read the value of from the graph.  Find an approximation for the decay factor, , by comparing two points on the graph. (Some of the points on the graph of are approximately , , , and .)  Using your answers to (a) and (b), write a formula for .       The frequency of a musical note depends on its pitch. The graph shows that the frequency increases exponentially. The function gives the frequency as a function of the number of half-tones, , above the starting point on the scale.  growth   Read the value of from the graph. (This is the frequency of the note A above middle C.)  Find an approximation for the growth factor, , by comparing two points on the graph. (Some of the points on the graph of are approximately , , , and .)  Using your answers to (a) and (b), write a formula for .  The frequency doubles when you raise a note by one octave, which is equivalent to half-tones. Use this information to find an exact value for .   Solve the equation algebraically.             Before the advent of antibiotics, an outbreak of cholera might spread through a city so that the number of cases doubled every days.  Twenty-six cases were discovered on July 5. Write a function for the number of cases of cholera days later.  Use your calculator to graph your function on the interval .  When should hospitals expect to be treating cases? Use algebraic methods to find your answer, and verify it on your graph.    GC growth  days later   An outbreak of ungulate fever can sweep through the livestock in a region so that the number of animals affected triples every days.  A rancher discovers cases of ungulate fever among his herd. Write a function for the number of cases of ungulate fever days later.  Use your calculator to graph your function on the interval .  If the rancher does not act quickly, how long will it be until head are affected? Use algebraic methods to find your answer, and verify it on your graph.   A smart television set loses of its value every years.  Write a function for the value of a television set years after it was purchased if it cost originally.  Use your calculator to graph your function on the interval .  How long will it be before a television set depreciates to ? Use algebraic methods to find your answer, and verify it on your graph.    GC decay  yr   A mobile home loses of its value every years.  A certain mobile home costs . Write a function for its value after years.  Use your calculator to graph your function on the interval .  How long will it be before a mobile home depreciates to ? Use algebraic methods to find your answer, and verify it on your graph.   For Problems 41 44, use a graph to find an approximate solution accurate to the nearest hundredth.       For Problems 45 and 46, decide whether each function is an exponential function, a power function, or neither.        Power  Exponential  Power  Neither          For Problems 47 50, decide whether the table could describe a linear function, a power function, an exponential function, or none of these. Find a formula for each linear, power, or exponential function.                                            Exponential  Power                                                                                       Power  Exponential                                              For Problems 51 and 52, fill in the tables. Graph each pair of functions in the same window. Then answer the questions below.  Give the range of and the range of .  For how many values of does ?  Estimate the value(s) of for which .  For what values of is ?  Which function grows more rapidly for large values of ?                                                         1                       exponential growth and qudratic   Range of : ; Range of :   , ,  and  g                                           For Problems 53 60, sketch the graph of each transformation of the given function, then write a formula and check your sketch with a graphing calculator. State the domain and range of each transformation, its intercept(s), and any asymptotes.         shifted growth  Domain: ; range: , -intercept ; -intercept ; horizontal asymptote  ,  growth  Domain: ; range: , no -intercept; -intercept ; the -axis is the horizontal asymptote.  ,  growth reflected  Domain: ; range: , no -intercept; -intercept ; the -axis is the horizontal asymptote.                reflected growth  Domain: ; range: , no -intercept; -intercept ; the -axis is the horizontal asymptote.  ,  decay  Domain: ; range: , no -intercept; -intercept ; the -axis is the horizontal asymptote.  ,  decay reflected  Domain: ; range: , no -intercept; -intercept ; the -axis is the horizontal asymptote.               growth  Domain: ; range: , no -intercept; -intercept ; the -axis is the horizontal asymptote.  ,  shifted growth  Domain: ; range: , no -intercept; -intercept ; horizontal asymptote               reflected decay  Domain: ; range: , no -intercept; -intercept ; the -axis is the horizontal asymptote.  ,  shifted reflected decay  Domain: ; range: , -intercept approximately ; -intercept ; horizontal asymptote is         For Problems 61 64,  Describe the graph as a transformation of .  Give an equation for the function graphed.    shifted decay  The graph of has been reflected about the -axis and shifted up units.     decay   reflected and translated growth  The graph of has been reflected about the -axis and shifted up units.     growth   For Problems 65 and 66, match the graph of each function to its formula. In each formula, and .       three curves  I  III  II        three curves   The function describes a volunteer's heart rate during a treadmill test. The heart rate is given in beats per minute and is in minutes. (See to review functions defined piecewise.) (Source: Davis, Kimmet, and Autry, 1986)  Evaluate the function to complete the table.                  Sketch the graph of the function.  The treadmill test began with walking at kilometers per hour, then jogging, starting at kilometers per hour and increasing to kilometers per hour, and finished with a cool-down walking period. Identify each of these activities on the graph and describe the volunteer's heart rate during each phase.                   piecewise  From to minutes, the volunteer is walking with heart rate beats per minute. The volunteer jogged at a steady pace from to minutes, and the heart rate increased to about beats per minutes. From to minutes, the jogging pace increased, and the heart rate rose to about beats per minute. The cooldown started at minutes, and the heart rate decreased rapidly and leveled off to about beats per minute.   Carbon dioxide ( ) is called a greenhouse gas because it traps part of the Earth's outgoing energy. Animals release into the atmosphere, and plants remove through photosynthesis. In modern times, deforestation and the burning of fossil fuels both contribute to levels. The figure shows atmospheric concentrations of , in parts per million, measured at the Mauna Loa Observatory in Hawaii.  The red curve shows annual oscillations in levels. Can you explain why levels vary throughout the year? Hint: Why would photosynthesis vary throughout the year?  The blue curve shows the average annual readings. By approximately how much does the level vary from its average value during the year?  In 1960, the average level was parts per million, and the average level has been rising by per year. If the level continues to rise at this rate, what readings can we expect in the year 2100?   CO2 concentrations    "
 },
 {
   "id": "Exponential-Functions-2-2",
@@ -16876,29 +16876,38 @@ var ptx_lunr_docs = [
   "body": "horizontal asymptote "
 },
 {
+  "id": "Exponential-Functions-3-9",
+  "level": "2",
+  "url": "Exponential-Functions.html#Exponential-Functions-3-9",
+  "type": "Checkpoint",
+  "number": "4.25",
+  "title": "QuickCheck 2.",
+  "body": "QuickCheck 2 Which statement is true?   An exponential function is not defined for negative inputs.  The outputs of an exponential function cannot be negative.  The -intercept of the function is .  The function decreases by each time we increase by .  "
+},
+{
   "id": "example-two-exponential-growth",
   "level": "2",
   "url": "Exponential-Functions.html#example-two-exponential-growth",
   "type": "Example",
-  "number": "4.25",
-  "title": "",
-  "body": "Compare the graphs of and .   We evaluate each function for several convenient values, as shown in the table.  Then we plot the points for each function and connect them with smooth curves. For positive -values, is always larger than , and is increasing more rapidly. In the figure, we can see that climbs more rapidly than . Both graphs cross the -axis at (0, 1).                             two increasing exponential functions  "
-},
-{
-  "id": "Exponential-Functions-3-11",
-  "level": "2",
-  "url": "Exponential-Functions.html#Exponential-Functions-3-11",
-  "type": "Note",
   "number": "4.26",
   "title": "",
-  "body": "For decreasing exponential functions, those with bases between and , the smaller the base, the more steeply the graph decreases. For example, compare the graphs of and shown in the figure at right.  two decreasing exponential functions  "
+  "body": "Compare the graphs of and .   We evaluate each function for several convenient values, as shown in the table.  Then we plot the points for each function and connect them with smooth curves. For positive -values, is always larger than , and is increasing more rapidly. In the figure, we can see that climbs more rapidly than . Both graphs cross the -axis at (0, 1).                             two increasing exponential functions  "
 },
 {
   "id": "Exponential-Functions-3-12",
   "level": "2",
   "url": "Exponential-Functions.html#Exponential-Functions-3-12",
-  "type": "Checkpoint",
+  "type": "Note",
   "number": "4.27",
+  "title": "",
+  "body": "For decreasing exponential functions, those with bases between and , the smaller the base, the more steeply the graph decreases. For example, compare the graphs of and shown in the figure at right.  two decreasing exponential functions  "
+},
+{
+  "id": "Exponential-Functions-3-13",
+  "level": "2",
+  "url": "Exponential-Functions.html#Exponential-Functions-3-13",
+  "type": "Checkpoint",
+  "number": "4.28",
   "title": "Practice 1.",
   "body": "Practice 1  State the ranges of the functions and from the previous Example on the domain .  State the ranges of the functions and shown in the Note above on the domain . Round your answers to two decimal places.   ;  ;  "
 },
@@ -16907,7 +16916,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Functions.html#example-GC-shift-exponentials",
   "type": "Example",
-  "number": "4.28",
+  "number": "4.29",
   "title": "",
   "body": "Use your calculator to graph the following functions. Describe how these graphs compare with the graph of .      Enter the formulas for the three functions as shown below. Note the parentheses around the exponent in the keying sequence for   ^     ^   + 3   ^  (   + 3 )  The graphs of , , and in the standard window are shown below.  calculator graphs of transformations of exponential functions   The graph of , shown in figure (b), has the same basic shape as that of , but it has a horizontal asymptote at instead of at (the -axis). In fact, , so the graph of is a vertical translation of the graph of by units. If every point on the graph of is moved units upward, the result is the graph of .  First note that . In fact, the graph of shown in figure (c) has the same basic shape as but has been translated units to the left.  "
 },
@@ -16916,7 +16925,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Functions.html#Exponential-Functions-4-4",
   "type": "Checkpoint",
-  "number": "4.29",
+  "number": "4.30",
   "title": "QuickCheck 3.",
   "body": "QuickCheck 3 Which function translates the graph of two units to the right?       "
 },
@@ -16925,7 +16934,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Functions.html#Exponential-Functions-4-9",
   "type": "Checkpoint",
-  "number": "4.30",
+  "number": "4.31",
+  "title": "Practice 2.",
+  "body": "Practice 2 Which of the functions below have the same graph? Explain why.      (a) and (c) are the same function. "
+},
+{
+  "id": "Exponential-Functions-4-10",
+  "level": "2",
+  "url": "Exponential-Functions.html#Exponential-Functions-4-10",
+  "type": "Checkpoint",
+  "number": "4.32",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect How are the graphs of and related? "
 },
@@ -16952,7 +16970,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Functions.html#example-power-vs-exponential",
   "type": "Example",
-  "number": "4.31",
+  "number": "4.33",
   "title": "",
   "body": "Compare the power function and the exponential function .  First, compare the values for these two functions shown in the table.   The scaling exponent for is , so that when doubles, say, from to , the output is multiplied by , or .  On the other hand, we can tell that is exponential because its values increase by a factor of for each unit increase in . (To see this, divide any function value by the previous one.)                                     As you would expect, the graphs of the two functions are also quite different. For starters, note that the power function goes through the origin, while the exponential function has -intercept as shown at left below.   power function vs exponential from -2 to 3  power function vs exponential from 0 to 6   From the table, we see that , so the two graphs intersect at . (They also intersect at approximately .) However, if you compare the values of and for larger values of , you will see that eventually the exponential function overtakes the power function, as shown at right above. "
 },
@@ -16961,16 +16979,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Functions.html#Exponential-Functions-5-7",
   "type": "Checkpoint",
-  "number": "4.32",
+  "number": "4.34",
   "title": "QuickCheck 4.",
-  "body": "QuickCheck 4 Which function grows faster in the long run?       "
+  "body": "QuickCheck 4 Which function grows fastest in the long run?       "
 },
 {
   "id": "exercise-identify-power-and-exponential-functions",
   "level": "2",
   "url": "Exponential-Functions.html#exercise-identify-power-and-exponential-functions",
   "type": "Checkpoint",
-  "number": "4.33",
+  "number": "4.35",
   "title": "Practice 3.",
   "body": "Practice 3 Which of the following functions are exponential functions, and which are power functions?       Exponential: (a) and (c); power: (b) and (d) "
 },
@@ -16979,7 +16997,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Functions.html#Exponential-Functions-5-9",
   "type": "Checkpoint",
-  "number": "4.34",
+  "number": "4.36",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect Discuss the differences between a power function and an exponential function. "
 },
@@ -16997,7 +17015,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Functions.html#example-exponential-equations",
   "type": "Example",
-  "number": "4.35",
+  "number": "4.37",
   "title": "",
   "body": "Solve the following equations.      Using the fact that , we write each side of the equation as a power of : Now we equate the exponents to obtain  We write each factor as a power of . We use the laws of exponents to simplify each side: Now we equate the exponents to obtain The solution is .  "
 },
@@ -17006,7 +17024,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Functions.html#Exponential-Functions-6-7",
   "type": "Checkpoint",
-  "number": "4.36",
+  "number": "4.38",
   "title": "QuickCheck 5.",
   "body": "QuickCheck 5 Which is a good strategy for solving ?   Divide both sides by 3.  Add to both sides.  Simplify the left side.  Write the right side as a power of 3.  "
 },
@@ -17015,7 +17033,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Functions.html#Exponential-Functions-6-8",
   "type": "Checkpoint",
-  "number": "4.37",
+  "number": "4.39",
   "title": "Practice 4.",
   "body": "Practice 4 Solve the equation . Write each side as a power of 2, then equate exponents to find "
 },
@@ -17024,7 +17042,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Functions.html#example-flea-population",
   "type": "Example",
-  "number": "4.38",
+  "number": "4.40",
   "title": "",
   "body": "During the summer a population of fleas doubles in number every days. If a population starts with fleas, how long will it be before there are fleas?  Let represent the number of fleas present after days. The original population of is multiplied by a factor of every days, or We set and solve for : We equate the exponents to get , or . The population will grow to fleas in days. "
 },
@@ -17033,7 +17051,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Functions.html#Exponential-Functions-6-11",
   "type": "Checkpoint",
-  "number": "4.39",
+  "number": "4.41",
   "title": "Practice 5.",
   "body": "Practice 5 During an advertising campaign in a large city, the makers of Chip-O's corn chips estimate that the number of people who have heard of Chip-O's increases by a factor of every 4 days.   If 100 people are given trial bags of Chip-O's to start the campaign, write a function, , for the number of people who have heard of Chip-O's after days of advertising.  Use your calculator to graph the function on the domain .  How many days should the makers run the campaign in order for Chip-O's to be familiar to people? Use algebraic methods to find your answer and verify on your graph.    calculator graph of exponential growth  12 days  "
 },
@@ -17042,7 +17060,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Functions.html#Exponential-Functions-6-12",
   "type": "Checkpoint",
-  "number": "4.40",
+  "number": "4.42",
   "title": "QuickCheck 6.",
   "body": "QuickCheck 6 Suppose is an exponential function, with and . What is ?       "
 },
@@ -17051,7 +17069,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Functions.html#Exponential-Functions-6-13",
   "type": "Technology",
-  "number": "4.41",
+  "number": "4.43",
   "title": "Graphical Solution of Exponential Equations.",
   "body": "Graphical Solution of Exponential Equations  It is not always so easy to express both sides of the equation as powers of the same base. In the following sections, we will develop more general methods for finding exact solutions to exponential equations. But we can use a graphing utility to obtain approximate solutions.   intersect Use the graph of to find an approximate solution to the equation accurate to the nearest hundredth.  Enter  ^ X and use the standard graphing window ( ZOOM 6) to obtain the graph shown in figure (a). We are looking for a point on this graph with -coordinate .  Using the TRACE feature, we see that the -coordinates are too small when and too large when . The solution we want lies somewhere between and , but this approximation is not accurate enough.  two calculator displays of exponential function with point  To improve our approximation, we will use the intersect feature. Set and press GRAPH . The -coordinate of the intersection point of the two graphs is the solution of the equation Activating the intersect command results in figure (b), and we see that, to the nearest hundredth, the solution is .  We can verify that our estimate is reasonable by substituting into the equation: We enter 2 ^ 2.32 ENTER to get . This number is not equal to , but it is close, so we believe that is a reasonable approximation to the solution of the equation .  "
 },
@@ -17060,7 +17078,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Functions.html#Exponential-Functions-6-14",
   "type": "Checkpoint",
-  "number": "4.43",
+  "number": "4.45",
   "title": "Practice 6.",
   "body": "Practice 6 Use the graph of to find an approximate solution to , accurate to two decimal places. The point on the graph where has "
 },
@@ -17069,7 +17087,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Functions.html#Exponential-Functions-6-15",
   "type": "Checkpoint",
-  "number": "4.44",
+  "number": "4.46",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect Give an example of an exponential equation, and describe how to solve it. "
 },
@@ -17314,7 +17332,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "26",
   "title": "",
-  "body": "The frequency of a musical note depends on its pitch. The graph shows that the frequency increases exponentially. The function gives the frequency as a function of the number of half-tones, , above the starting point on the scale  growth   Read the value of from the graph. (This is the frequency of the note A above middle C.)  Find an approximation for the growth factor, , by comparing two points on the graph. (Some of the points on the graph of are approximately , , , and .)  Using your answers to (a) and (b), write a formula for .  The frequency doubles when you raise a note by one octave, which is equivalent to half-tones. Use this information to find an exact value for .  "
+  "body": "The frequency of a musical note depends on its pitch. The graph shows that the frequency increases exponentially. The function gives the frequency as a function of the number of half-tones, , above the starting point on the scale.  growth   Read the value of from the graph. (This is the frequency of the note A above middle C.)  Find an approximation for the growth factor, , by comparing two points on the graph. (Some of the points on the graph of are approximately , , , and .)  Using your answers to (a) and (b), write a formula for .  The frequency doubles when you raise a note by one octave, which is equivalent to half-tones. Use this information to find an exact value for .  "
 },
 {
   "id": "section-4-2-exercises-13-2",
@@ -17735,7 +17753,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#LogExp-8",
   "type": "Note",
-  "number": "4.45",
+  "number": "4.47",
   "title": "",
   "body": "It will help to keep in mind that a logarithm is just an exponent. "
 },
@@ -17744,7 +17762,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#example-easy-logarithm",
   "type": "Example",
-  "number": "4.46",
+  "number": "4.48",
   "title": "",
   "body": "Compute the logarithms.        To evaluate , we ask what exponent on base will produce . Or, 3 to what power equals 9? The exponent we need is , so We use similar reasoning to compute the other logarithms.     "
 },
@@ -17753,7 +17771,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#LogExp-11",
   "type": "Checkpoint",
-  "number": "4.47",
+  "number": "4.49",
   "title": "Practice 1.",
   "body": "Practice 1 Find each logarithm.        "
 },
@@ -17762,7 +17780,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#LogExp-12",
   "type": "Checkpoint",
-  "number": "4.48",
+  "number": "4.50",
   "title": "QuickCheck 1.",
   "body": "QuickCheck 1 A logarithm is the same as   an exponent.  a coefficient.  a quotient.  a radical.  "
 },
@@ -17771,7 +17789,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#example-useful-logarithms",
   "type": "Example",
-  "number": "4.49",
+  "number": "4.51",
   "title": "",
   "body": "    "
 },
@@ -17780,7 +17798,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#LogExp-20",
   "type": "Checkpoint",
-  "number": "4.50",
+  "number": "4.52",
   "title": "Practice 2.",
   "body": "Practice 2 Find each logarithm.        "
 },
@@ -17789,7 +17807,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#LogExp-21",
   "type": "Checkpoint",
-  "number": "4.51",
+  "number": "4.53",
   "title": "QuickCheck 2.",
   "body": "QuickCheck 2 because       "
 },
@@ -17798,7 +17816,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#Logarithms-3-4",
   "type": "Checkpoint",
-  "number": "4.52",
+  "number": "4.54",
   "title": "QuickCheck 3.",
   "body": "QuickCheck 3 To find means to find an exponent that satisfies the equation       "
 },
@@ -17807,7 +17825,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#example-exponential-to-log-form",
   "type": "Example",
-  "number": "4.53",
+  "number": "4.55",
   "title": "",
   "body": "Rewrite each equation in logarithmic form.        First identify the base , and then the exponent or logarithm . Use the conversion equations to rewrite in the form .  The base is and the exponent is . Thus, .  The base is and the exponent is . Thus, .  The base is and the exponent is . Thus, .  The base is and the exponent is . Thus, .  "
 },
@@ -17816,7 +17834,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#Logarithms-3-6",
   "type": "Checkpoint",
-  "number": "4.54",
+  "number": "4.56",
   "title": "Practice 3.",
   "body": "Practice 3 Rewrite each equation in logarithmic form.        "
 },
@@ -17825,7 +17843,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#Logarithms-3-7",
   "type": "Checkpoint",
-  "number": "4.55",
+  "number": "4.57",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect If is negative, what can you say about ? "
 },
@@ -17834,7 +17852,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#example-approximate-log",
   "type": "Example",
-  "number": "4.56",
+  "number": "4.58",
   "title": "",
   "body": "Approximate to the nearest hundredth.  If , then . We will use the graph of to approximate a solution to .  We graph ^ X and in the standard window ( ZOOM 6) to obtain the graph shown below. Next we activate the intersect feature to find that the two graphs intersect at the point . Because this point lies on the graph of , we know that To the nearest hundredth, .  GC intersection of exponential curve and horizontal line  "
 },
@@ -17843,7 +17861,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#Logarithms-4-7",
   "type": "Checkpoint",
-  "number": "4.57",
+  "number": "4.59",
   "title": "Practice 4.",
   "body": "Practice 4  Rewrite the equation in logarithmic form.  Use a graph to approximate the solution to the equation in part (a). Round your answer to three decimal places.     "
 },
@@ -17861,7 +17879,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#Logarithms-5-3",
   "type": "Checkpoint",
-  "number": "4.58",
+  "number": "4.60",
   "title": "QuickCheck 4.",
   "body": "QuickCheck 4 If , what can you say about ?    is between 20 and 30.  is between 100 and 1000.   "
 },
@@ -17870,7 +17888,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#example-calculator-log",
   "type": "Example",
-  "number": "4.59",
+  "number": "4.61",
   "title": "",
   "body": "Approximate the following logarithms to decimal places.      The keying sequence LOG   ) ENTER produces the display            so .  The keying sequence LOG   )  ENTER yields , so .  "
 },
@@ -17879,7 +17897,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#Logarithms-5-6",
   "type": "Note",
-  "number": "4.60",
+  "number": "4.62",
   "title": "",
   "body": "We can check the approximations found in with our conversion equations. Remember that a logarithm is an exponent, and in this example the base is . We find that so our approximations are reasonable, although you can see that rounding a logarithm to decimal places does lose some accuracy.  For this reason, rounding logarithms to decimal places is customary. "
 },
@@ -17888,7 +17906,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#Logarithms-5-7",
   "type": "Checkpoint",
-  "number": "4.61",
+  "number": "4.63",
   "title": "Practice 5.",
   "body": "Practice 5  Evaluate , and round your answer to two decimal places. Check your answer using the conversion equations.  Evaluate , and round your answer to four decimal places. Check your answer using the conversion equations.     "
 },
@@ -17897,7 +17915,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#Logarithms-5-8",
   "type": "Checkpoint",
-  "number": "4.62",
+  "number": "4.64",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect Explain how to estimate between two integers. "
 },
@@ -17906,7 +17924,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#example-solve-exponential",
   "type": "Example",
-  "number": "4.63",
+  "number": "4.65",
   "title": "",
   "body": "Solve the equation   First, we isolate the power of : We subtract from both sides of the equation and divide by to obtain Next, we convert the equation to logarithmic form as Solving for yields We can evaluate this expression on the calculator by entering  LOG   )  ÷   ENTER  which yields . Thus, to four decimal places, . "
 },
@@ -17915,7 +17933,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#Logarithms-6-6",
   "type": "Caution",
-  "number": "4.64",
+  "number": "4.66",
   "title": "",
   "body": "Be careful when using a calculator to evaluate expressions involving logs. We can evaluate a single logarithm like by entering LOG  ENTER without an ending parenthesis, so that the calculator shows            But if we want to evaluate , we must enclose in parentheses, as shown in . If we omit the parenthesis after , the calculator will interpret the expression as , which is not the expression we wanted. "
 },
@@ -17924,7 +17942,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#Logarithms-6-7",
   "type": "Checkpoint",
-  "number": "4.65",
+  "number": "4.67",
   "title": "QuickCheck 5.",
   "body": "QuickCheck 5 What is the first step in solving the equation ?   Multiply 5 times 10.  Take the log of both sides.  Get zero on one side of the equation.  Divide both sides by 5.  "
 },
@@ -17933,7 +17951,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#Logarithms-6-8",
   "type": "Checkpoint",
-  "number": "4.66",
+  "number": "4.68",
   "title": "Practice 6.",
   "body": "Practice 6 Solve "
 },
@@ -17942,7 +17960,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#example-tractor-depreciates",
   "type": "Example",
-  "number": "4.67",
+  "number": "4.69",
   "title": "",
   "body": "The value of a large tractor originally worth $ depreciates exponentially according to the formula where is in years. When will the tractor be worth half its original value?  We want to find the value of for which . That is, we want to solve the equation We divide both sides by 30,000 to obtain We convert the equation to logarithmic form as and divide by to obtain To evaluate this expression, we key in  LOG   )  ÷  (-)   ENTER  to find . The tractor will be worth $15,000 in approximately years.  "
 },
@@ -17951,7 +17969,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#Logarithms-7-4",
   "type": "Checkpoint",
-  "number": "4.68",
+  "number": "4.70",
   "title": "Practice 7.",
   "body": "Practice 7 The percentage of American homes with computers grew exponentially from 1994 to 1999. For in 1994, the growth law was [Source: Los Angeles Times, August 20, 1999]   What percent of American homes had computers in 1994?  If the percentage of homes with computers continued to grow at the same rate, when did 90% of American homes have a computer?  Do you think that the function will continue to model the percentage of American homes with computers? Why or why not?   25.85%  (year 2004)  No, the percent of homes with computers cannot exceed .  "
 },
@@ -17960,7 +17978,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithms.html#Logarithms-7-6",
   "type": "Checkpoint",
-  "number": "4.69",
+  "number": "4.71",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect The population of rabbits on an island grows according to . Explain the difference between the two problems: (1) given find , and (2) given find . "
 },
@@ -18581,7 +18599,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-2-8",
   "type": "Checkpoint",
-  "number": "4.70",
+  "number": "4.72",
   "title": "QuickCheck 1.",
   "body": "QuickCheck 1 Which statement is true?       "
 },
@@ -18590,7 +18608,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#example-use-log-property",
   "type": "Example",
-  "number": "4.71",
+  "number": "4.73",
   "title": "",
   "body": "Simplify .  First, we write using a fractional exponent: Then we apply Property (3) to rewrite the exponent as a coefficient: Finally, by Property (1) we write the log of a product as a sum of logs: Thus, . "
 },
@@ -18599,7 +18617,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-3-4",
   "type": "Checkpoint",
-  "number": "4.72",
+  "number": "4.74",
   "title": "Practice 1.",
   "body": "Practice 1 Simplify .  "
 },
@@ -18608,7 +18626,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-3-5",
   "type": "Caution",
-  "number": "4.73",
+  "number": "4.75",
   "title": "",
   "body": "Be careful when using the properties of logarithms! Compare the statements below:   but    but   "
 },
@@ -18617,7 +18635,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#example-rewrite-as-single-log",
   "type": "Example",
-  "number": "4.74",
+  "number": "4.76",
   "title": "",
   "body": "Express as a single logarithm with a coefficient of .  We begin by applying Property (2) to combine the logs. Then, using Property (3), we replace the coefficient by an exponent . "
 },
@@ -18626,7 +18644,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-3-8",
   "type": "Checkpoint",
-  "number": "4.75",
+  "number": "4.77",
   "title": "Practice 2.",
   "body": "Practice 2 Express as a single logarithm with a coefficient of . "
 },
@@ -18635,7 +18653,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-3-9",
   "type": "Checkpoint",
-  "number": "4.76",
+  "number": "4.78",
   "title": "QuickCheck 2.",
   "body": "QuickCheck 2 Which expression is equivalent to ?       "
 },
@@ -18644,7 +18662,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-4-5",
   "type": "Caution",
-  "number": "4.77",
+  "number": "4.79",
   "title": "",
   "body": "Do not confuse the expression with ; they are not the same!  Property (2) allows us to simplify , but not . We cannot rewrite , so we must evaluate it as . You can check on your calculator that . "
 },
@@ -18653,7 +18671,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-4-6",
   "type": "Checkpoint",
-  "number": "4.78",
+  "number": "4.80",
   "title": "QuickCheck 3.",
   "body": "QuickCheck 3 How can we solve ?   Divide both sides by 4.  Take log base 10 of both sides.  Take the fourth root of 60.  This equation has no solution.  "
 },
@@ -18662,7 +18680,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#example-solve-exp-equation",
   "type": "Example",
-  "number": "4.79",
+  "number": "4.81",
   "title": "",
   "body": "Solve  First we divide both sides by to obtain Next, we take the base logarithm of both sides of the equation and use Property (3) of logarithms to get On the right side of the equation, is multiplied by two constants, and . So, to solve for we must divide both sides of the equation by . We use a calculator to evaluate the answer: (On your calculator, remember to enclose the denominator, , in parentheses.) "
 },
@@ -18671,7 +18689,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-4-8",
   "type": "Caution",
-  "number": "4.80",
+  "number": "4.82",
   "title": "",
   "body": "In , do not try to simplify Remember that the order of operations tells us to compute the power before multiplying by .  "
 },
@@ -18680,7 +18698,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-4-11",
   "type": "Checkpoint",
-  "number": "4.81",
+  "number": "4.83",
   "title": "Practice 3.",
   "body": "Practice 3 Solve Divide both sides by 5, then take the log of both sides. Simplify the left side and solve for to find "
 },
@@ -18689,7 +18707,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-4-12",
   "type": "Checkpoint",
-  "number": "4.82",
+  "number": "4.84",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect Explain why the distributive law does not apply to the expression . "
 },
@@ -18698,7 +18716,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#example-population-growth",
   "type": "Example",
-  "number": "4.83",
+  "number": "4.85",
   "title": "",
   "body": "The population of Silicon City was in and has been tripling every years. When will the population reach ?  The population of Silicon City grows according to the formula where is the number of years after . We want to find the value of for which ; that is, we want to solve the equation Now we take the base logarithm of both sides and solve for . The population of Silicon City will reach about years after , or in .  "
 },
@@ -18707,7 +18725,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-5-4",
   "type": "Checkpoint",
-  "number": "4.84",
+  "number": "4.86",
   "title": "Practice 4.",
   "body": "Practice 4 Traffic on U.S. highways is growing by 2.7% per year. (Source: Time , Jan. 25, 1999)   Write a formula for the volume, , of traffic as a function of time, using for the current volume.  How long will it take the volume of traffic to double? Hint: Find the value of that gives .    about years  "
 },
@@ -18716,7 +18734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-5-5",
   "type": "Checkpoint",
-  "number": "4.85",
+  "number": "4.87",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect How does Property (3) of logarithms help us solve exponential equations? "
 },
@@ -18725,7 +18743,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#example-compound-interest",
   "type": "Example",
-  "number": "4.86",
+  "number": "4.88",
   "title": "",
   "body": "Rashad deposited $ in an account that pays % interest. Calculate the amount in his account after years if the interest is compounded  semiannually  quarterly  monthly    Semiannually means \"twice a year,\"\" so we use the formula for compound interest with , , , and . If interest is compounded semiannually, the balance in the account after years is $ .  Quarterly means \"4 times a year,\"\" so we use the formula for compound interest with , , , and . If interest is compounded quarterly, the balance in the account after years is $ .  There are months in a year, so we use the formula for compound interest with , , , and . If interest is compounded monthly, the balance in the account after years is $ .  "
 },
@@ -18734,7 +18752,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-6-5",
   "type": "Checkpoint",
-  "number": "4.87",
+  "number": "4.89",
   "title": "QuickCheck 4.",
   "body": "QuickCheck 4 Which formula gives the amount when interest is compounded quarterly?       "
 },
@@ -18743,7 +18761,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-6-6",
   "type": "Note",
-  "number": "4.88",
+  "number": "4.90",
   "title": "",
   "body": "In , you can see that the larger the value of , the greater the value of , keeping the other parameters fixed. More frequent compounding periods result in a higher account balance. "
 },
@@ -18752,7 +18770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-6-7",
   "type": "Checkpoint",
-  "number": "4.89",
+  "number": "4.91",
   "title": "Practice 5.",
   "body": "Practice 5 Calculate the amount in Rashad's account after 5 years if the interest is compounded daily. (See . There are 365 days in a year.) $1221.39 "
 },
@@ -18761,7 +18779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#example-exponential-formula",
   "type": "Example",
-  "number": "4.90",
+  "number": "4.92",
   "title": "",
   "body": "Solve for . (Assume that and .)  First, we divide both sides by to isolate the power. Next, we take the log base of both sides. Finally, we divide both sides by to solve for . "
 },
@@ -18770,7 +18788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Properties-of-Logarithms.html#Properties-of-Logarithms-7-4",
   "type": "Checkpoint",
-  "number": "4.91",
+  "number": "4.93",
   "title": "Practice 6.",
   "body": "Practice 6 Solve for . "
 },
@@ -19400,7 +19418,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#example-fit-exponential",
   "type": "Example",
-  "number": "4.92",
+  "number": "4.94",
   "title": "",
   "body": "Find an exponential function that has the values and .  We would like to find values of and so that the given function values satisfy . By substituting the function values into the formula, we can write two equations. This is a system of equations in the two unknowns, and , but it is not a linear system. We can solve the system by the method of elimination, but we will divide one of the equations by the other. Note that by dividing the two equations, we eliminated , and we can now solve for . Next we substitute into either of the two equations and solve for . Thus, and , so the function is . "
 },
@@ -19409,7 +19427,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#Exponential-Models-2-4",
   "type": "Caution",
-  "number": "4.93",
+  "number": "4.95",
   "title": "",
   "body": "Knowing only two points on the graph of f is not enough to tell us what kind of function is. Through the two points in , we can also fit a linear function or a power function.  You can check that the three functions below all satisfy and . The graphs of the functions are shown at right.  three functions through the same two points  "
 },
@@ -19427,7 +19445,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#Exponential-Models-2-7",
   "type": "Checkpoint",
-  "number": "4.94",
+  "number": "4.96",
   "title": "Practice 1.",
   "body": "Practice 1 Use the ratio method to find an exponential function whose graph includes the points and . We solve the system to find "
 },
@@ -19436,7 +19454,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#Exponential-Models-2-8",
   "type": "Checkpoint",
-  "number": "4.95",
+  "number": "4.97",
   "title": "QuickCheck 1.",
   "body": "QuickCheck 1 You have written a system of equations to fit an exponential function through two points. What is the next step?   Calculate the slope.  Subtract one equation from the other.  Divide one equation by the other.  Take the log of both sides.  "
 },
@@ -19445,7 +19463,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#example-cedi-inflation",
   "type": "Example",
-  "number": "4.96",
+  "number": "4.98",
   "title": "",
   "body": "The unit of currency in Ghana is the cedi, denoted by ¢. Beginning in 1986, the cedi underwent a period of exponential inflation. In 1993, one U.S. dollar was worth ¢720, and in 1996, the dollar was worth about ¢1620. Find a formula for the number of cedi to the dollar as a function of time since 1986. What was the annual inflation rate?  We want to find a function for the number of cedi to the dollar, where in 1986. We have two function values, , and , and with these values we can write two equations. We divide the second equation by the first to find Now we can solve this last equation for to get . Finally, we substitute into the first equation to find . Thus, , and the annual inflation rate was %. "
 },
@@ -19454,7 +19472,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#Exponential-Models-2-11",
   "type": "Checkpoint",
-  "number": "4.97",
+  "number": "4.99",
   "title": "Practice 2.",
   "body": "Practice 2 The number of earthquakes that occur worldwide is a decreasing exponential function of their magnitude on the Richter scale. Between 2000 and 2005, there were 7480 earthquakes of magnitude 5 and 793 earthquakes of magnitude 6. (Source: National Earthquake Information Center, U.S. Geological Survey)   Find a formula for the number of earthquakes, , in terms of their magnitude.  It is difficult to keep an accurate count of small earthquakes. Use your formula to estimate the number of magnitude 1 earthquakes that occurred between 2000 and 2005. How many earthquakes of magnitude 8 occurred?   We solve the system to find  magnitude 1: ; magnitude 8:  "
 },
@@ -19463,7 +19481,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#example-doubling-time",
   "type": "Example",
-  "number": "4.98",
+  "number": "4.100",
   "title": "",
   "body": "In 2005, the population of Egypt was million and was growing by % per year.  If it continues to grow at the same rate, how long will it take the population of Egypt to double?  How long will it take the population to double again?  Illustrate the results on a graph.    The population of Egypt is growing according to the formula , where is in years and is in millions. We would like to know when the population will reach million (twice million), so we solve the equation It will take the population about years to double.  Twice 148 million is 296 million, so we solve the equation It will take the population about years to double again.  A graph of is shown below. Note that the population doubles every 35 years.  graph showing doubling time  "
 },
@@ -19481,7 +19499,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#Exponential-Models-3-6",
   "type": "Checkpoint",
-  "number": "4.99",
+  "number": "4.101",
   "title": "QuickCheck 2.",
   "body": "QuickCheck 2 Which statement is true?   The doubling time of a population depends on its initial value.  An increasing exponential function has a constant doubling time.  The doubling time is twice the percent growth rate.  The doubling time is half the percent growth rate.  "
 },
@@ -19490,7 +19508,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#Exponential-Models-3-7",
   "type": "Checkpoint",
-  "number": "4.100",
+  "number": "4.102",
   "title": "Practice 3.",
   "body": "Practice 3 In 2005, the population of Uganda was 26.9 million people and was growing by 3.2% per year.   Write a formula for the population of Uganda as a function of years since 2005.  How long will it take the population of Uganda to double?  Use your formula from part (a) to verify the doubling time for three doubling periods.   million  We solve to find years  and , so ;  , so ;  , so  "
 },
@@ -19499,7 +19517,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#Exponential-Models-3-10",
   "type": "Checkpoint",
-  "number": "4.101",
+  "number": "4.103",
   "title": "QuickCheck 3.",
   "body": "QuickCheck 3 The formula tells us that:   is twice the initial value.  After 2 years, .  After years, .  grows by a factor of .  "
 },
@@ -19508,7 +19526,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#example-US-population",
   "type": "Example",
-  "number": "4.102",
+  "number": "4.104",
   "title": "",
   "body": " At its current rate of growth, the population of the United States will double in years.  Write a formula for the population of the United States as a function of time.  What is the annual percent growth rate of the population?    The current population of the United States is not given, so we represent it by . With expressed in years, the formula is then  We write in the form to see that the growth factor is , or . For exponential growth, , so , or %.  "
 },
@@ -19517,7 +19535,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#Exponential-Models-3-13",
   "type": "Checkpoint",
-  "number": "4.103",
+  "number": "4.105",
   "title": "Practice 4.",
   "body": "Practice 4 At its current rate of growth, the population of Mexico will double in 36.8 years. What is its annual percent rate of growth? We use the doubling time formula with to find . "
 },
@@ -19526,7 +19544,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#Exponential-Models-3-14",
   "type": "Checkpoint",
-  "number": "4.104",
+  "number": "4.106",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect How can you find the growth factor for an exponential function when you know its doubling time? "
 },
@@ -19544,7 +19562,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#example-ibuprofen",
   "type": "Example",
-  "number": "4.105",
+  "number": "4.107",
   "title": "",
   "body": " If you take mg of ibuprofen to relieve sore muscles, the amount of the drug left in your body after hours is .   What is the half-life of ibuprofen?  When will mg of ibuprofen remain in your body?  Use the half-life to sketch a graph of .    To find the half-life, we calculate the time elapsed when only half the original amount, or mg, is left. The half-life is hours.  After hours, mg of ibuprofen is left in the body. After another hours, half of that amount, or mg, is left. Thus, mg remain after hours.  We locate multiples of hours on the horizontal axis. After each interval of hours, the amount of ibuprofen is reduced to half its previous value. The graph is shown below.   graph showing half-life                  "
 },
@@ -19553,7 +19571,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#Exponential-Models-4-4",
   "type": "Checkpoint",
-  "number": "4.106",
+  "number": "4.108",
   "title": "QuickCheck 4.",
   "body": "QuickCheck 4  30 pounds of DDT dissolve in one year.  100 pounds of DDT dissolve in 30 years.  After 30 years, 100 pounds of DDT is reduced to 25 pounds.  Each half-pound of DDT takes 15 years to dissolve.  "
 },
@@ -19562,7 +19580,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#Exponential-Models-4-5",
   "type": "Checkpoint",
-  "number": "4.107",
+  "number": "4.109",
   "title": "Practice 5.",
   "body": "Practice 5 Alcohol is eliminated from the body at a rate of 15% per hour.   Write a decay formula for the amount of alcohol remaining in the body, using for the initial amount of alcohol.  What is the half-life of alcohol in the body?    hours  "
 },
@@ -19571,7 +19589,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#example-cobalt-60",
   "type": "Example",
-  "number": "4.108",
+  "number": "4.110",
   "title": "",
   "body": " Cobalt-60 is used in cold pasteurization to sterilize certain types of food. Gamma rays emitted by the isotope during radioactive decay kill any bacteria present without damaging the food. The half-life of cobalt-60 is years.  Write a decay law for cobalt-60.  What is the annual decay rate for cobalt-60?    We let denote the amount of cobalt-60 left after years, and let denote the initial amount. Every years, is reduced by a factor of , so  We rewrite the decay law in the form as follows: Thus, , so , or %.  "
 },
@@ -19580,7 +19598,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#Exponential-Models-4-10",
   "type": "Checkpoint",
-  "number": "4.109",
+  "number": "4.111",
   "title": "Practice 6.",
   "body": "Practice 6 Cesium-137, with a half-life of 30 years, is one of the most dangerous by-products of nuclear fission. What is the annual decay rate for cesium-137? We use the half-life formula with to find . "
 },
@@ -19589,7 +19607,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#Exponential-Models-4-11",
   "type": "Checkpoint",
-  "number": "4.110",
+  "number": "4.112",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect How can you use the half-life to sketch a graph of an exponential function? "
 },
@@ -19607,7 +19625,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#example-future-value",
   "type": "Example",
-  "number": "4.111",
+  "number": "4.113",
   "title": "",
   "body": "Greta plans to contribute $ a month to a retirement fund that pays % interest compounded monthly.  What is the future value of Greta's retirement fund after years?  For how many years must she contribute in order to accumulate $100,000?    We evaluate the formula for when , , , and . Substituting these values into the formula, we find In years, Greta's retirement fund will be worth $ .  We would like to find the value of when , , , and , so we must solve the equation Greta must contribute for over years in order to accumulate $ .  "
 },
@@ -19616,7 +19634,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#Exponential-Models-5-5",
   "type": "Checkpoint",
-  "number": "4.112",
+  "number": "4.114",
   "title": "Practice 7.",
   "body": "Practice 7 Rufus is saving for a new car. He puts $2500 a year into an account that pays 4% interest compounded annually. How many years will it take him to accumulate $20,000? (Round up to the next whole year.) We solve the future value formula for : to find years "
 },
@@ -19643,7 +19661,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#example-present-value",
   "type": "Example",
-  "number": "4.113",
+  "number": "4.115",
   "title": "",
   "body": "Candace Welthy is setting up a college fund for her nephew Delbert that will provide $ a month for the next years. If the interest rate is % compounded monthly, how much money should she deposit now to cover the fund?  We would like to find the present value of an annuity in which , , , and . Substituting these values into the formula gives Delbert's Aunt Welthy should deposit $ . "
 },
@@ -19661,7 +19679,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Exponential-Models.html#Exponential-Models-5-10",
   "type": "Checkpoint",
-  "number": "4.114",
+  "number": "4.116",
   "title": "Practice 8.",
   "body": "Practice 8 Use the formula for the present value of an annuity to calculate your monthly mortgage payment on a home loan of $250,000 amortized over 30 years at 6% interest compounded monthly. We solve the present value formula for : to find "
 },
