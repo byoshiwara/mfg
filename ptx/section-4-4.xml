@@ -28,21 +28,22 @@
     <li><p>
         Property (1):
         <!--*****--><me>\begin{aligned}[t]
-                        \log_{2}{32} =\blert{\log_{2}{(4 \cdot 8)}} \amp =\blert{\log_2 4 +\log_2 8} ~~  \text{ because } ~~ 2^{\alert{5}}  = 2^{\alert{2}} \cdot 2^{\alert{3}} \\
-                        \alert{5} \amp = \alert{2} + \alert{3}    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  32 = 4 \cdot 8\\
+                        \log_{2}{(32)} =\blert{\log_{2}{(4 \cdot 8)}} \amp =\blert{\log_2 4 +\log_2 8}  \text{ because }  2^{\alert{5}}  = 2^{\alert{2}} \cdot 2^{\alert{3}} \\
+                        \alert{5} \amp = \alert{2} + \alert{3}    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  32 = 4 \cdot 8\\
                         \end{aligned}</me><!--*****--></p></li>
     <li><p>
         Property (2):
         <!--*****--><me>\begin{aligned}[t]
-                        \log_{2}{8} =\blert{\log_{2}{\frac{16}{2}}} \amp=\blert{\log_2{16}-\log_2 {2}} ~~~~ \text{ because } ~~~~ 2^{\alert{3}}  = \frac{2^{\alert{4}}}{2^{\alert{1}}} \\
+                        \log_{2}{(8)} =\blert{\log_{2}{\left(\frac{16}{2}\right)}} \amp=\blert{\log_2{(16)}-\log_2 {(2)}} \text{ because } 2^{\alert{3}}  = \frac{2^{\alert{4}}}{2^{\alert{1}}} \\
                         \alert{3} \amp = \alert{4}-\alert{1}  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 8 = \frac{16}{2}\\
                         \end{aligned}</me><!--*****--></p></li>
     <li><p>
         Property (3):
+         Property (3):
         <!--*****--><me>\begin{aligned}[t]
-                        \log_{2}{64} =\blert{\log_{2}{(4)^3}} \amp = \blert{3\log_2 4} ~~~~  \text{ because }
-                        ~~~~ \left(2^{\alert{2}}\right)^{\alert{3}} = 2^{\alert{6}}  \\
-                        \alert{6}  \amp = \alert{3}\cdot \alert{2}  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  (4)^{\alert{3}} = 64\\
+                        \log_{2}{64} =\blert{\log_{2}{(4)^3}} \amp = \blert{3\log_2(4)}  \text{ because }
+                         \left(2^{\alert{2}}\right)^{\alert{3}} = 2^{\alert{6}}  \\
+                        \alert{6}  \amp = \alert{3}\cdot \alert{2}  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  (4)^{\alert{3}} = 64\\
                         \end{aligned}</me><!--*****--></p></li>
 </ol></p></assemblage>
 
@@ -62,17 +63,17 @@
         <p><var name="$logsum" form="buttons"/></p>      
     </statement>
     <solution>
-        <p><m>\log (8y)=\log 8+\log y</m></p>
+        <p><m>\log (8y)=\log (8)+\log (y)</m></p>
     </solution>
 </webwork></exercise>
 
 <exercise component="main"><title>QuickCheck 1</title>
 <statement><p>Which statement is true?</p>
 <p><ol marker="a.">
-    <li><m>\log (8+y)=\log 8+\log y</m></li>
-    <li><m>\log (8y)=\log 8+\log y</m></li>
-    <li><m>\log (8y)=\log 8 \cdot \log y</m></li>
-    <li><m>\log \left(\dfrac{8}{y}\right)=\dfrac{\log 8}{\log y}</m></li>
+    <li><m>\log (8+y)=\log (8)+\log (y)</m></li>
+    <li><m>\log (8y)=\log (8)+\log (y)</m></li>
+    <li><m>\log (8y)=\log (8)\cdot \log (y)</m></li>
+    <li><m>\log \left(\dfrac{8}{y}\right)=\dfrac{\log(8)}{\log (y)}</m></li>
 </ol></p></statement></exercise>
 </subsection>
 
@@ -80,15 +81,15 @@
 
 <p>Of course, these properties are useful not so much for computing logs but rather for simplifying expressions that contain variables. We will use them to solve exponential equations. But first, we will practice applying the properties. In the following <xref ref="example-use-log-property" text="custom">Example</xref>, we rewrite one log in terms of simpler logs.</p>
 
-<example xml:id="example-use-log-property"><statement><p>Simplify <m>~~\log_{b}\sqrt{{xy}}</m>.</p></statement>
+<example xml:id="example-use-log-property"><statement><p>Simplify <m>~~\log_{b}(\sqrt{{xy}})</m>.</p></statement>
 
 <solution><p>First, we write <m>\sqrt{xy}</m> using a fractional exponent:
-	<me>\log_{b}{xy} = \log_{b}{(xy)^{1/2}}</me>
+	<me>\log_{b}{(xy)} = \log_{b}{(xy)^{1/2}}</me>
 Then we apply Property (3) to rewrite the exponent as a coefficient:
 	<me>\log_{b}{(xy)^{1/2}} = \frac{1}{2}\log_{b}{(xy)}</me>
 Finally, by Property (1) we write the log of a product as a sum of logs:
-	<me>\frac{1}{2}(\log_{b}{xy}) = \frac{1}{2}(\log_{b}{x} + \log_{b}{y})</me>
-Thus, <m>~~\log_{b}\sqrt{xy} = \dfrac{1}{2}(\log_{b}{x} + \log_{b}{y})</m>.</p></solution></example>
+	<me>\frac{1}{2}(\log_{b}{(xy)}) = \frac{1}{2}(\log_{b}{(x)} + \log_{b}{(y)})</me>
+Thus, <m>~~\log_{b}(\sqrt{xy}) = \dfrac{1}{2}(\log_{b}{(x)} + \log_{b}{(y)})</m>.</p></solution></example>
 
 <exercise component="webwork"><title>Practice 1</title>
     <webwork>
@@ -99,7 +100,7 @@ Thus, <m>~~\log_{b}\sqrt{xy} = \dfrac{1}{2}(\log_{b}{x} + \log_{b}{y})</m>.</p><
             $a = Compute("-2");
         </pg-code> 
         <statement>
-            <p>Simplify <m>\log_{b}\dfrac{x}{y^2}</m>.</p>
+            <p>Simplify <m>\log_{b}\left(\dfrac{x}{y^2}\right)</m>.</p>
             <p>Answer: <m>\log_b</m><var name="$x" width="1"/><m>+</m><var name="$a" width="1"/><m>\cdot\log_b</m><var name="$y" width="1"/> </p>
         </statement>
         <solution>
@@ -108,27 +109,27 @@ Thus, <m>~~\log_{b}\sqrt{xy} = \dfrac{1}{2}(\log_{b}{x} + \log_{b}{y})</m>.</p><
     </webwork></exercise>
 
 <exercise component="main"><title>Practice 1</title>
-<statement><p>Simplify <m>\log_{b}\dfrac{x}{y^2}</m>.</p></statement>
+<statement><p>Simplify <m>\log_{b}\left(\dfrac{x}{y^2}\right)</m>.</p></statement>
         
-<solution> <p><m>\log_b x - 2\log_b y</m></p></solution></exercise>
+<solution> <p><m>\log_b (x) - 2\log_b (y)</m></p></solution></exercise>
 
 <warning><p>Be careful when using the properties of logarithms! Compare the statements below:<ol>
-		<li><p><m>\log_{b}{(2x)} = \log_{b}{2} + \log_{b}{x}~~~~    \text{ by Property 1,}</m></p>
+		<li><p><m>\log_{b}{(2x)} = \log_{b}{(2)} + \log_{b}{(x)}~~~~    \text{ by Property 1,}</m></p>
 		<p>but</p>
-		<p><m>\log_{b}{(2 + x)} \ne \log_{b}{2} + \log_{b}{x}</m></p><p></p></li>
-		<li><p><m>\log_{b}{\left(\dfrac{x}{5}\right)}= \log_b x - \log_b 5~~~~   \text{ by Property 2,}</m></p>
+		<p><m>\log_{b}{(2 + x)} \ne \log_{b}{(2)} + \log_{b}{(x)}</m></p><p></p></li>
+		<li><p><m>\log_{b}{\left(\dfrac{x}{5}\right)}= \log_b (x) - \log_b (5)~~~~   \text{ by Property 2,}</m></p>
 		<p>but</p>
-		<p><m>\log_{b}{\left(\dfrac{x}{5}\right)} \ne  \dfrac{\log_b x}{\log_b 5}</m></p></li>
+		<p><m>\log_{b}{\left(\dfrac{x}{5}\right)} \ne  \dfrac{\log_b (x)}{\log_b (5)}</m></p></li>
 	</ol></p></warning>
 
 <p>We can also use the properties of logarithms to combine sums and differences of logarithms into one logarithm.</p>
 
-<example xml:id="example-rewrite-as-single-log"><statement><p>Express <m>~~3(\log_b x - \log_b y)</m> as a single logarithm with a coefficient of <m>1</m>.</p></statement>
+<example xml:id="example-rewrite-as-single-log"><statement><p>Express <m>~~3(\log_b (x) - \log_b (y))</m> as a single logarithm with a coefficient of <m>1</m>.</p></statement>
 
 <solution><p>We begin by applying Property (2) to combine the logs.
-	<me>3(\log_b x - \log_b y) = 3 \log_{b}\left(\frac{x}{y}\right)</me>
+	<me>3(\log_b (x) - \log_b (y)) = 3 \log_{b}\left(\frac{x}{y}\right)</me>
 Then, using Property (3), we replace the coefficient <m>3</m> by an exponent <m>3</m>.
-	<me>3 \log_{b}\left(\frac{x}{y}\right)=\log_{b}\left(\frac{x}{y}\right)^3</me></p></solution></example>
+	<me>3 \log_{b}\left(\frac{x}{y}\right)=\log_{b}\left(\left(\frac{x}{y}\right)^3\right)</me></p></solution></example>
 
 <exercise component="webwork"><title>Practice 2</title>
     <webwork>
@@ -145,9 +146,9 @@ Then, using Property (3), we replace the coefficient <m>3</m> by an exponent <m>
     </webwork></exercise>
 
 <exercise component="main"><title>Practice 2</title>
-<statement><p>Express <m>~2\log_b x + 4\log_{b}{(x + 3)}~</m> as a single logarithm with a coefficient of <m>1</m>.</p></statement>
+<statement><p>Express <m>~2\log_b (x) + 4\log_{b}{(x + 3)}~</m> as a single logarithm with a coefficient of <m>1</m>.</p></statement>
         
-<solution><p><m>\log_b x^2(x+3)^4 </m></p></solution></exercise>
+<solution><p><m>\log_b \left(x^2(x+3)^4\right) </m></p></solution></exercise>
 
 <exercise component="webwork"><title>QuickCheck 2</title>
 <webwork>
@@ -161,21 +162,21 @@ Then, using Property (3), we replace the coefficient <m>3</m> by an exponent <m>
             );            
         </pg-code> 
     <statement>
-        <p>Which expression is equivalent to <m>3\log_2 H-\log_2 T</m>?</p>
+        <p>Which expression is equivalent to <m>3\log_2 (H)-\log_2 (T)</m>?</p>
         <p><var name="$logfrac" form="buttons"/></p>      
     </statement>
     <solution>
-        <p><m>\log_2 \dfrac{H^3}{T}</m></p>
+        <p><m>\log_2 \left(\dfrac{H^3}{T}\right)</m></p>
     </solution>
 </webwork></exercise>
 
 <exercise component="main"><title>QuickCheck 2</title>
-<statement><p>Which expression is equivalent to <m>3\log_2 H-\log_2 T</m>?</p>
+<statement><p>Which expression is equivalent to <m>3\log_2 (H)-\log_2 (T)</m>?</p>
 <p><ol marker="a." cols="2">
     <li><m>3\log_2 (H-T)</m></li>
     <li><m>\log_2 (H^3-T)</m></li>
-    <li><m>\log_2 \dfrac{H^3}{T}</m></li>
-    <li><m>\log_2\left (\dfrac{H}{T}\right)^3</m></li>
+    <li><m>\log_2 \left(\dfrac{H^3}{T}\right)</m></li>
+    <li><m>\log_2\left(\left(\dfrac{H}{T}\right)^3\right)</m></li>
 </ol></p></statement></exercise>
 </subsection>
 
@@ -184,20 +185,20 @@ Then, using Property (3), we replace the coefficient <m>3</m> by an exponent <m>
 <p>By using Property (3), we can now solve exponential equations in which the base is not <m>10</m>. For example, to solve the equation
 	<me>5^x = 7</me>
 we could rewrite the equation in logarithmic form to obtain the exact solution
-	<me>x = \log_{5}{7}</me>
-However, we cannot evaluate <m>\log_{5}{7}</m>; there is no log base <m>5</m> button on the calculator. If we want a decimal approximation for the solution, we begin by taking the base <m>10</m> logarithm of both sides, even though the base of the power is not <m>10</m>. This gives us
-	<me>\log_{10}{(5^x)} = \log_{10}{7}</me>
+	<me>x = \log_{5}{(7)}</me>
+However, we cannot evaluate <m>\log_{5}{(7)}</m>; there is no log base <m>5</m> button on the calculator. If we want a decimal approximation for the solution, we begin by taking the base <m>10</m> logarithm of both sides, even though the base of the power is not <m>10</m>. This gives us
+	<me>\log_{10}{(5^x)} = \log_{10}{(7)}</me>
 Then we use Property (3) to rewrite the left side as
-	<me>x \log_{10}{5} = \log_{10}{7}</me>
-Note how using Property (3) allows us to solve the equation: The variable, <m>x</m>, is no longer in the exponent, and it is multiplied by a constant, <m>\log_{10}{5}</m>. To finish the solution, we divide both sides by <m>\log_{10}{5}</m> to get
-	<me>x = \frac{\log_{10}{7}}{\log_{10}{5}}</me>
+	<me>x \log_{10}{(5)} = \log_{10}{(7)}</me>
+Note how using Property (3) allows us to solve the equation: The variable, <m>x</m>, is no longer in the exponent, and it is multiplied by a constant, <m>\log_{10}{(5)}</m>. To finish the solution, we divide both sides by <m>\log_{10}{(5)}</m> to get
+	<me>x = \frac{\log_{10}{(7)}}{\log_{10}{(5)}}</me>
 On your calculator, enter the sequence</p>
     <p><kbd>LOG</kbd> <m>7</m> <kbd>)</kbd> <kbd>÷</kbd> <kbd>LOG</kbd> <m>5</m> <kbd>)</kbd> <kbd>ENTER</kbd></p>
 <p>to find that <m>x \approx 1.2091</m>.</p>
 
-<warning><p>Do not confuse the expression <m>~\dfrac{\log_{10}{7}}{\log_{10}{5}}~</m> with <m>~\log_{10}{\left(\dfrac{7}{5}\right)}</m>; they are not the same!</p>
-<p> Property (2) allows us to simplify <m>~\log{\left(\dfrac{x}{y}\right)}</m>, but not <m>~\dfrac{\log x}{\log y}</m>. We cannot rewrite <m>~\dfrac{\log_{10}{7}}{\log_{10}{5}}</m>, so we must evaluate it as <m>~(\log 7)/(\log 5)</m>. You can check on your calculator that
-    <me>\dfrac{\log_{10}{7}}{\log_{10}{5}}\ne \log_{10}{\left(\dfrac{7}{5}\right)}= \log_{10}{1.4}</me>.</p></warning>
+<warning><p>Do not confuse the expression <m>~\dfrac{\log_{10}{(7)}}{\log_{10}{(5)}}~</m> with <m>~\log_{10}{\left(\dfrac{7}{5}\right)}</m>; they are not the same!</p>
+<p> Property (2) allows us to simplify <m>~\log{\left(\dfrac{x}{y}\right)}</m>, but not <m>~\dfrac{\log (x)}{\log (y)}</m>. We cannot rewrite <m>~\dfrac{\log_{10}{(7)}}{\log_{10}{(5)}}</m>, so we must evaluate it as <m>~(\log 7)/(\log (5))</m>. You can check on your calculator that
+    <me>\dfrac{\log_{10}{(7)}}{\log_{10}{(5)}}\ne \log_{10}{\left(\dfrac{7}{5}\right)}= \log_{10}{(1.4)}</me>.</p></warning>
 
 <exercise component="webwork"><title>QuickCheck 3</title>
 <webwork>
@@ -221,7 +222,7 @@ On your calculator, enter the sequence</p>
 
 <exercise component="main"><title>QuickCheck 3</title>
 <statement><p>How can we solve <m>~4^x=60</m>?</p>
-<p><ol marler="a.">
+<p><ol marker="a.">
     <li><p>Divide both sides by 4.</p></li>
     <li><p>Take log base 10 of both sides.</p></li>
     <li><p>Take the fourth root of 60.</p></li>
@@ -233,10 +234,10 @@ On your calculator, enter the sequence</p>
 <solution><p>First we divide both sides by <m>80</m> to obtain
 	<me>20.5 = 6^{0.03x}</me>
 Next, we take the base <m>10</m> logarithm of both sides of the equation and use Property (3) of logarithms to get
-	<me>\log_{10}{20.5} = \log_{10}{6^{0.03x}}= 0.03x \log_{10}{6}</me>
-On the right side of the equation, <m>x</m> is multiplied by two constants, <m>0.03</m> and <m>\log_{10}{6}</m>. So, to solve for <m>x</m> we must divide both sides of the equation by <m>0.03 \log_{10}{6}</m>. We use a calculator to evaluate the answer:
-	<me>x = \frac{\log_{10}{20.5}}{0.03 \log_{10}{6}}\approx 56.19</me>
-(On your calculator, remember to enclose the denominator, <m>0.03 \log_{10}{6}</m>, in parentheses.)</p></solution></example>
+	<me>\log_{10}{(20.5)} = \log_{10}{(6^{0.03x})}= 0.03x \log_{10}{(6)}</me>
+On the right side of the equation, <m>x</m> is multiplied by two constants, <m>0.03</m> and <m>\log_{10}{(6)}</m>. So, to solve for <m>x</m> we must divide both sides of the equation by <m>0.03 \log_{10}{(6)}</m>. We use a calculator to evaluate the answer:
+	<me>x = \frac{\log_{10}{(20.5)}}{0.03 \log_{10}{(6)}}\approx 56.19</me>
+(On your calculator, remember to enclose the denominator, <m>0.03 \log_{10}{(6)}</m>, in parentheses.)</p></solution></example>
 
 <warning><p>In <xref ref="example-solve-exp-equation" text="type-global"/>, do not try to simplify 
 		<me>80 \cdot 6^{0.03x} \rightarrow 480^{0.03x}~~ \blert{\text{ Incorrect!}}</me>
@@ -264,7 +265,7 @@ Remember that the order of operations tells us to compute the power <m>6^{0.03x}
             <p><m>\blert{\text{Solve for}~x.}</m></p>
         </hint>
         <solution>
-            <p><m>x=\dfrac{\log 15.4}{2.5\log 1.2}\approx 5.999 </m></p>
+            <p><m>x=\dfrac{\log (15.4)}{2.5\log (1.2)}\approx 5.999 </m></p>
         </solution>
     </webwork></exercise>
 
@@ -272,7 +273,7 @@ Remember that the order of operations tells us to compute the power <m>6^{0.03x}
 <statement><p>Solve <m>5(1.2)^{2.5x} = 77</m></p></statement>
         
 <solution><p>Divide both sides by 5, then take the log of both sides. Simplify the left side and solve for <m>x</m> to find
-        <m>~x=\dfrac{\log 15.4}{2.5\log 1.2}\approx 5.999 </m></p></solution></exercise>
+        <m>~x=\dfrac{\log (15.4)}{2.5\log (1.2)}\approx 5.999 </m></p></solution></exercise>
 
 <exercise component="webwork"><title>Pause and Reflect</title>
 <webwork>
@@ -303,14 +304,15 @@ where <m>t</m> is the number of years after <m>1990</m>. We want to find the val
 	               3^{t/12} \amp = \frac{150}{13} 
 	               \end{aligned}</me><!--*****-->
 Now we take the base <m>10</m> logarithm of both sides and solve for <m>t</m>.
-	<!--*****--><me>\begin{aligned}[t]
-	               \log_{10}{(3^{t/12})} \amp = \log_{10}\left(\frac{150}{13}\right)
-	               \amp\amp \blert{\text{Apply Property (3).}}\\
-	               \frac{t}{12}\log_{10}{3} \amp= \log_{10}\left(\frac{150}{13}\right)
-	               \amp\amp \blert{\text{Divide by }\log_{10}{3}\text{; multiply by 12.}}\\
-	               t \amp = \frac{12 \left(\log_{10}{\dfrac{150}{13}}\right)}{\log_{10}{3}}\\
-	               \amp\approx 26.71
-	               \end{aligned}</me><!--*****-->
+    <!--*****--><me>\begin{aligned}[t]
+                   \log_{10}{(3^{t/12})} \amp = \log_{10}\left(\frac{150}{13}\right)
+                   \amp\amp \blert{\text{Apply Property (3).}}\\
+                   \frac{t}{12}\log_{10}{(3)} \amp= \log_{10}\left(\frac{150}{13}\right)
+                   \amp\amp \blert{\text{Divide by }\log_{10}{(3)}\text{; multiply by 12.}}\\
+                   t \amp = \frac{12 \log_{10}\left(\dfrac{150}{13}\right)}{\log_{10}{(3)}}\\
+                   \amp\approx 26.71
+                   \end{aligned}</me>
+<!--*****-->
 The population of Silicon City will reach <m>75,000</m> about <m>27</m> years after <m>1990</m>, or in <m>2017</m>.</p></solution>
 </example>
 
@@ -468,11 +470,11 @@ The population of Silicon City will reach <m>75,000</m> about <m>27</m> years af
 		<me>b^{kt} = 2</me>
 Next, we take the log base <m>10</m> of both sides.
 		<!--*****--><me>\begin{aligned}[t]
-		              \log b^{kt} \amp = \log 2 \amp\amp \blert{\text{Apply Log Property (3).}}\\
-		              kt \log b \amp = \log 2 
+		              \log \left(b^{kt}\right) \amp = \log 2 \amp\amp \blert{\text{Apply Log Property (3).}}\\
+		              kt \log (b) \amp = \log 2 
 		              \end{aligned}</me><!--*****-->
-Finally, we divide both sides by <m>k \log b</m> to solve for <m>t</m>.
-		<me>t = \frac{\log 2}{k \log b}</me></p></solution></example>
+Finally, we divide both sides by <m>k \log (b)</m> to solve for <m>t</m>.
+		<me>t = \frac{\log (2)}{k \log (b)}</me></p></solution></example>
 
 <exercise component="webwork"><title>Practice 6</title>
     <webwork>
