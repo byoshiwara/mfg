@@ -553,13 +553,7 @@ Once again, you can check that this formula is equivalent to the decay function 
 
 <p>An <term>annuity</term><idx>annuity</idx> is a sequence of equal payments or deposits made at equal time intervals. A retirement fund is an example of an annuity. For ordinary annuities, payments are made at the end of each compounding period. The <term>future value</term><idx>future value</idx> of an annuity is the sum of all the payments plus all the interest earned.</p>
 
-<assemblage><title>To find an exponential function <m>f(x)=ab^x</m> through two points</title><p>
-    <ol marker="1.">
-        <li><p>Use the coordinates of the points to write two equations in <m>a</m> and <m>b</m>.</p></li>
-        <li><p>Divide one equation by the other to eliminate <m>a</m>.</p></li>
-        <li><p>Solve for <m>b</m>.</p></li>
-        <li><p>Substitute <m>b</m> into either equation and solve for <m>a</m>.</p></li>
-    </ol></p></assemblage>
+<xi:include href="./assemblage-future-value.xml" />
 
 <example xml:id="example-future-value"><statement><p>Greta plans to contribute $<m>200</m> a month to a retirement fund that pays <m>5</m>% interest compounded monthly.<ol marker="a.">
 		<li>What is the future value of Greta's retirement fund after <m>15</m> years?</li>
@@ -582,7 +576,7 @@ Once again, you can check that this formula is equivalent to the decay function 
 		                  \amp \blert{\text{Simplify. Add 1 to both sides.}} \\
 		                  2.08\overline{3} + 1 \amp = (1.0041\overline{6})^{12t}\\
 		                  \amp \blert{\text{Take the log of both sides.}}\\
-		                  \log (3.08\overline{3}) \amp = 12t\log((1.0041\overline{6}))
+		                  \log (3.08\overline{3}) \amp = 12t\log(1.0041\overline{6})
 		                  ~~~~~~~~ \blert{\text{Solve for } t.}\\
 		                  t\amp = \frac{\log (3.08\overline{3})}{12\log(1.0041\overline{6})}\\
 		                  \amp\approx 22.6
@@ -612,9 +606,9 @@ Once again, you can check that this formula is equivalent to the decay function 
 <exercise component="main"><title>Practice 7</title>
 <statement><p>Rufus is saving for a new car. He puts $2500 a year into an account that pays 4% interest compounded annually. How many years will it take him to accumulate $20,000? (Round up to the next whole year.)</p></statement>
         
-<solution><p>We solve the future value formula for <m>n</m>:
-    <me>20,000 = 2500\left(\dfrac{(1.04)^n-1}{0.4}\right)</me>
-    to find <m>= 8~</m> years</p></solution></exercise>
+<solution><p>We solve the future value formula for <m>t</m>:
+    <me>20,000 = 2500\left(\dfrac{(1.04)^t-1}{0.4}\right)</me>
+    to find <m>t= 8~</m> years</p></solution></exercise>
 
 <p>In <xref ref="example-future-value" text="type-global"/>, we knew the monthly deposits into the annuity and calculated how much the sum of all the deposits (plus interest) would be in the future. Now imagine that you have just retired and you want to begin drawing monthly payments from your retirement fund. The total amount accumulated in your fund is now its <term>present value</term>, and that amount must cover your future withdrawal payments.</p>
 
