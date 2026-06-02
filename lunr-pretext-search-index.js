@@ -19411,7 +19411,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.5",
   "title": "Exponential Models",
-  "body": " Exponential Models  Fitting an Exponential Function through Two Points  To write a formula for an exponential function, we need to know the initial value, , and the growth or decay factor, . We can find these two parameters if we know any two function values.  Find an exponential function that has the values and .  We would like to find values of and so that the given function values satisfy . By substituting the function values into the formula, we can write two equations. This is a system of equations in the two unknowns, and , but it is not a linear system. We can solve the system by the method of elimination, but we will divide one of the equations by the other. Note that by dividing the two equations, we eliminated , and we can now solve for . Next we substitute into either of the two equations and solve for . Thus, and , so the function is .  Knowing only two points on the graph of f is not enough to tell us what kind of function is. Through the two points in , we can also fit a linear function or a power function.  You can check that the three functions below all satisfy and . The graphs of the functions are shown at right.  three functions through the same two points   However, if we already know that we are looking for an exponential function, we can follow the steps below to find its formula. This method is sometimes called the ratio method ratio method . (Of course, if one of the known function values is the initial value, we can find without resorting to the ratio method.)  To find an exponential function through two points   Use the coordinates of the points to write two equations in and .  Divide one equation by the other to eliminate .  Solve for .  Substitute into either equation and solve for .   Practice 1 Use the ratio method to find an exponential function whose graph includes the points and . We solve the system to find  QuickCheck 1 You have written a system of equations to fit an exponential function through two points. What is the next step?   Calculate the slope.  Subtract one equation from the other.  Divide one equation by the other.  Take the log of both sides.   We can use the ratio method to find an exponential growth or decay model if we know two function values.  The unit of currency in Ghana is the cedi, denoted by ¢. Beginning in 1986, the cedi underwent a period of exponential inflation. In 1993, one U.S. dollar was worth ¢720, and in 1996, the dollar was worth about ¢1620. Find a formula for the number of cedi to the dollar as a function of time since 1986. What was the annual inflation rate?  We want to find a function for the number of cedi to the dollar, where in 1986. We have two function values, , and , and with these values we can write two equations. We divide the second equation by the first to find Now we can solve this last equation for to get . Finally, we substitute into the first equation to find . Thus, , and the annual inflation rate was %.  Practice 2 The number of earthquakes that occur worldwide is a decreasing exponential function of their magnitude on the Richter scale. Between 2000 and 2005, there were 7480 earthquakes of magnitude 5 and 793 earthquakes of magnitude 6. (Source: National Earthquake Information Center, U.S. Geological Survey)   Find a formula for the number of earthquakes, , in terms of their magnitude.  It is difficult to keep an accurate count of small earthquakes. Use your formula to estimate the number of magnitude 1 earthquakes that occurred between 2000 and 2005. How many earthquakes of magnitude 8 occurred?   We solve the system to find  magnitude 1: ; magnitude 8:    Doubling Time doubling time  Instead of giving the rate of growth of a population, we can specify its rate of growth by giving the time it takes for the population to double.  In 2005, the population of Egypt was million and was growing by % per year.  If it continues to grow at the same rate, how long will it take the population of Egypt to double?  How long will it take the population to double again?  Illustrate the results on a graph.    The population of Egypt is growing according to the formula , where is in years and is in millions. We would like to know when the population will reach million (twice million), so we solve the equation It will take the population about years to double.  Twice 148 million is 296 million, so we solve the equation It will take the population about years to double again.  A graph of is shown below. Note that the population doubles every 35 years.  graph showing doubling time   In , it took the population years to double. Notice that the calculations in parts (a) and (b) are identical after the first step. In fact, we can start at any point, and it will take the population years to double. We say that years is the doubling time for this population. In the Homework problems, you will show that any increasing exponential function has a constant doubling time.  QuickCheck 2 Which statement is true?   The doubling time of a population depends on its initial value.  An increasing exponential function has a constant doubling time.  The doubling time is twice the percent growth rate.  The doubling time is half the percent growth rate.   Practice 3 In 2005, the population of Uganda was 26.9 million people and was growing by 3.2% per year.   Write a formula for the population of Uganda as a function of years since 2005.  How long will it take the population of Uganda to double?  Use your formula from part (a) to verify the doubling time for three doubling periods.   million  We solve to find years  and , so ;  , so ;  , so   If we know the doubling time for a population, we can immediately write down its growth law. Because the population of Egypt doubles in 35 years, we can write In this form, the growth factor for the population is , and you can check that, to five decimal places, .  Doubling Time doubling time  If is the doubling time for an exponential function , then   QuickCheck 3 The formula tells us that:   is twice the initial value.  After 2 years, .  After years, .  grows by a factor of .   So, from knowing the doubling time, we can easily find the growth rate of a population.   At its current rate of growth, the population of the United States will double in years.  Write a formula for the population of the United States as a function of time.  What is the annual percent growth rate of the population?    The current population of the United States is not given, so we represent it by . With expressed in years, the formula is then  We write in the form to see that the growth factor is , or . For exponential growth, , so , or %.   Practice 4 At its current rate of growth, the population of Mexico will double in 36.8 years. What is its annual percent rate of growth? We use the doubling time formula with to find .  Pause and Reflect How can you find the growth factor for an exponential function when you know its doubling time?   Half-Life  The half-life half-life of a decreasing exponential function is the time it takes for the output to decrease to half its original value. For example, the half-life of a radioactive isotope is the time it takes for half of the substance to decay. The half-life of a drug is the time it takes for half of the drug to be eliminated from the body. Like the doubling time, the half-life is constant for a particular function; no matter where you start, it takes the same amount of time to reach half that value.   If you take mg of ibuprofen to relieve sore muscles, the amount of the drug left in your body after hours is .   What is the half-life of ibuprofen?  When will mg of ibuprofen remain in your body?  Use the half-life to sketch a graph of .    To find the half-life, we calculate the time elapsed when only half the original amount, or mg, is left. The half-life is hours.  After hours, mg of ibuprofen is left in the body. After another hours, half of that amount, or mg, is left. Thus, mg remain after hours.  We locate multiples of hours on the horizontal axis. After each interval of hours, the amount of ibuprofen is reduced to half its previous value. The graph is shown below.   graph showing half-life                   QuickCheck 4 The half-life of DDT is 15 years. This means that:   30 pounds of DDT dissolve in one year.  100 pounds of DDT dissolve in 30 years.  After 30 years, 100 pounds of DDT is reduced to 25 pounds.  Each half-pound of DDT takes 15 years to dissolve.   Practice 5 Alcohol is eliminated from the body at a rate of 15% per hour.   Write a decay formula for the amount of alcohol remaining in the body, using for the initial amount of alcohol.  What is the half-life of alcohol in the body?    hours   Just as we can write an exponential growth law in terms of its doubling time, we can use the half-life to write a formula for exponential decay. For example, the half-life of ibuprofen is hours, so every hours the amount remaining is reduced by a factor of . After hours a -mg dose will be reduced to Once again, you can check that this formula is equivalent to the decay function given in .  Half-Life half-life  If is the half-life for an exponential function , then   Radioactive isotopes are molecules that decay into more stable molecules, emitting radiation in the process. Although radiation in large doses is harmful to living things, radioactive isotopes are useful as tracers in medicine and industry, and as treatment against cancer. The decay laws for radioactive isotopes are often given in terms of their half-lives.   Cobalt-60 is used in cold pasteurization to sterilize certain types of food. Gamma rays emitted by the isotope during radioactive decay kill any bacteria present without damaging the food. The half-life of cobalt-60 is years.  Write a decay law for cobalt-60.  What is the annual decay rate for cobalt-60?    We let denote the amount of cobalt-60 left after years, and let denote the initial amount. Every years, is reduced by a factor of , so  We rewrite the decay law in the form as follows: Thus, , so , or %.   Practice 6 Cesium-137, with a half-life of 30 years, is one of the most dangerous by-products of nuclear fission. What is the annual decay rate for cesium-137? We use the half-life formula with to find .  Pause and Reflect How can you use the half-life to sketch a graph of an exponential function?   Annuities and Amortization  An annuity annuity is a sequence of equal payments or deposits made at equal time intervals. A retirement fund is an example of an annuity. For ordinary annuities, payments are made at the end of each compounding period. The future value future value of an annuity is the sum of all the payments plus all the interest earned.  Future Value of an Annuity  If you make payments per year for years into an annuity that pays interest rate compounded times per year, the future value future value , , of the annuity is where each payment is dollars.   Greta plans to contribute $ a month to a retirement fund that pays % interest compounded monthly.  What is the future value of Greta's retirement fund after years?  For how many years must she contribute in order to accumulate $100,000?    We evaluate the formula for when , , , and . Substituting these values into the formula, we find In years, Greta's retirement fund will be worth $ .  We would like to find the value of when , , , and , so we must solve the equation Greta must contribute for over years in order to accumulate $ .   Practice 7 Rufus is saving for a new car. He puts $2500 a year into an account that pays 4% interest compounded annually. How many years will it take him to accumulate $20,000? (Round up to the next whole year.) We solve the future value formula for : to find years  In , we knew the monthly deposits into the annuity and calculated how much the sum of all the deposits (plus interest) would be in the future. Now imagine that you have just retired and you want to begin drawing monthly payments from your retirement fund. The total amount accumulated in your fund is now its present value , and that amount must cover your future withdrawal payments.  Present Value of an Annuity  If you wish to receive payments per year for years from a fund that earns interest rate compounded times per year, the present value present value , , of the annuity must be where each payment is dollars.   Candace Welthy is setting up a college fund for her nephew Delbert that will provide $ a month for the next years. If the interest rate is % compounded monthly, how much money should she deposit now to cover the fund?  We would like to find the present value of an annuity in which , , , and . Substituting these values into the formula gives Delbert's Aunt Welthy should deposit $ .  Payments on a loan, such as a home mortgage, are also an annuity, but in this case the monthly payments do not collect interest; instead, we must pay interest on the present value of the loan. Repaying a loan (plus interest) by making a sequence of equal payments is called amortizing amortize the loan.  Practice 8 Use the formula for the present value of an annuity to calculate your monthly mortgage payment on a home loan of $250,000 amortized over 30 years at 6% interest compounded monthly. We solve the present value formula for : to find    Section Summary  Vocabulary  Look up the definitions of new terms in the Glossary.  Doubling time  Amortization  Half-life  Annuity     CONCEPTS    We can use the ratio method to fit an exponential function through two points.  To find an exponential function through two points   Use the coordinates of the points to write two equations in and .  Divide one equation by the other to eliminate .  Solve for .  Substitute into either equation and solve for .    Every increasing exponential has a fixed doubling time . Every decreasing exponential function has a fixed half-life .  If is the doubling time for a population, its growth law can be written as .  If is the half-life for a quantity, its decay law can be written as .  Future Value of an Annuity  If you make payments per year for years into an annuity that pays interest rate compounded times per year, the future value future value , , of the annuity is where each payment is dollars.   Present Value of an Annuity  If you wish to receive payments per year for years from a fund that earns interest rate compounded times per year, the present value present value , , of the annuity must be where each payment is dollars.     STUDY QUESTIONS   Compare the methods for fitting a line through two points and fitting an exponential function through two points.  A population of million people has a doubling time of years. What is the population years from now? years from now? years from now?  Francine says that because the half-life of radium-223 is days, after days it will have all decayed. Is she correct? Why or why not?  Which is larger: the sum of all the deposits you make into your retirement fund, or the future value of the fund? Why?  Which is larger: the sum of all the payments you make towards your mortgage, or the amount of the loan? Why?    SKILLS Practice each skill in the Homework problems listed.  Fit an exponential function through two points: #1 18  Find the doubling time or half-life: #19 26  Write an exponential function, given the doubling time or half-life: #27 34, #39 42  Use the formula for future value of an annuity: #43 and 44  Use the formula for present value of an annuity: #45 and 46       Homework 4.5  For Problems 1 8, find an exponential function that has the given values.  ,  ,  ,  ,  ,  ,  ,  ,   For Problems 9 12, find a formula for the exponential function shown.  growth  decay  decay  growth   For Problems 13 18,  Fit a linear function to the points.  Fit an exponential function to the points.  Graph both functions in the same window.      line and exponential decay       line and exponential decay       line and exponential growth     Nevada was the fastest growing state in the nation between and , with an annual growth rate of over .  Write a function for the population of Nevada as a function of time. Let the initial population be .  How long will it take for the population to double?  In , the population of Nevada was hundred thousand. Graph your function in the window , , , .  Use intersect to verify that the population doubles from to , from to , and from to hundred thousand people in equal periods of time.   ; is the number of years since .  years  growth   In 1986, the inflation rate in Bolivia was annually. The unit of currency in Bolivia is the boliviano.  Write a formula for the price of an item as a function of time. Let be its initial price.  How long did it take for prices to double? Give both an exact value and a decimal approximation rounded to two decimal places.  Suppose bolivianos. Graph your function in the window , , , .  Use intersect to verify that the price of the item doubles from to bolivianos, from to , and from to in equal periods of time.   The gross domestic product (GDP) of the United Kingdom was million pounds in the year and is growing at a rate of per year. (The unit of currency in the U.K. is the pound, denoted by £ .)  Write a formula for the GDP as a function of years since .  How long will it take for the GDP to grow to million pounds? Give both an exact value and a decimal approximation rounded to two decimal places.  How long should it take for the GDP to million pounds?  Using your answers to (b) and (c), make a rough sketch of the function.   million pounds  years  years  growth   The number of phishing Web sites (fraudulent Web sites designed to trick victims into revealing personal financial information) is growing by each month. In June , there were phishing Web sites. (Source: www.itnews.com.au\/newsstory)  Write a formula for the number of phishing Web sites as a function of months since June .  How long will it take for the number of sites to reach ? Give both an exact value and a decimal approximation rounded to two decimal places.  How long should it take for the number of sites to reach ?  Using your answers to (b) and (c), make a rough sketch of the function.   Radioactive potassium-42, which is used by cardiologists as a tracer, decays at a rate of per hour.  Find the half-life of potassium-42.  How long will it take for three-fourths of the sample to decay? For seven-eighths of the sample?  Suppose you start with milligrams of potassium-42. Using your answers to (a) and (b), make a rough sketch of the decay function.   hours  hours  decay   In October 2005, the Los Angeles Times published an article about efforts to save the endangered Channel Island foxes. \"Their population declined by to about between and , according to the park service.\"  What was the fox population in ?  Write a formula for the fox population as a function of time since , assuming that their numbers declined exponentially.  How long did it take for the fox population to be reduced to half its level? To one-quarter of the level?  Using your answers to part (c), make a rough sketch of the decay function.   Caffeine leaves the body at a rate of each hour. Your first cup of coffee in the morning has mg of caffeine.  How long will it take before you have mg of that caffeine in your body?  How long will it take before you have mg of that caffeine in your body?  Using your answers to (a) and (b), make a rough sketch of the decay function.   hours  hours  decay   Pregnant women should monitor their intake of caffeine, because it leaves the body more slowly during pregnancy and can be absorbed by the unborn child through the bloodstream. Caffeine leaves a pregnant woman's body at a rate of each hour.  How long will it take before the mg of caffeine in a cup of coffee is reduced to mg?  How long will it take before the mg of caffeine in a cup of coffee is reduced to mg?  Make a rough sketch of the decay function, and compare with the graph in Problem 25.   For Problems 27 30,  Write a growth or decay formula for the exponential function.  Find the percent growth or decay rate.   A population starts with and has a doubling time of years.     You have grams of a radioactive isotope whose half-life is years.  A certain medication has a half-life of hours in the body. You are given an initial dose of mg.     The doubling time of a certain financial investment is years. You invest an amount .   The half-life of radium-226 is years.  Write a decay law for radium-226.  What is the annual decay rate for radium-226?      Dichloro-diphenyl-trichloroethane (DDT) is a pesticide that was used in the middle decades of the twentieth century to control malaria. After 1945, it was also widely used on crops in the United States, and as much as one ton might be sprayed on a single cotton field. However, after the toxic effects of DDT on the environment began to appear, the chemical was banned in 1972.  A common estimate for the half-life of DDT in the soil is years. Write a decay law for DDT in the soil.  In 1970, many soil samples in the United States contained about mg of DDT per kg of soil. The NOAA (National Oceanic and Atmospheric Administration) safe level for DDT in the soil is mg\/kg. When will DDT content in the soil be reduced to a safe level?   In 1798, the English political economist Thomas R. Malthus claimed that human populations, unchecked by environmental or social constraints, double every years, regardless of the initial population size.  Write a growth law for human populations under these conditions.  What is the growth rate in unconstrained conditions?      David Sifry observed in 2005 that over the previous two years, the number of Weblogs, or blogs, was doubling every months. (Source: www.sifry.com\/alerts\/archives)  Write a formula for the number of blogs years after January 2005, assuming it continues to grow at the same rate.  What is the growth rate for the number of blogs?   Let be an exponential growth function, with and .  Suppose that the value of doubles from to , so that Rewrite this fact as an equation in terms of , , and .  What does your answer to (a) tell you about the value of ?  Use the first law of exponents and your result from (b) to rewrite in terms of .  Explain why your result from (c) shows that the doubling time is constant.      For any value of , after units of time, the new value of is times the old value.   Let be an exponential decay function, with and .  Suppose that the value of is halved from to , so that Rewrite this fact as an equation in terms of , , and .  What does your answer to (a) tell you about the value of ?  Use the first law of exponents and your result from (b) to rewrite in terms of .  Explain why your result from (c) shows that the half-life is constant.   Let be an exponential decay function, with and . In this problem, we will show that there is a fixed value such that is decreased by a factor of every units.  Suppose that . Rewrite this fact as an equation in terms of , , and .  What does your answer to (a) tell you about the value of ?  Use the first law of exponents and your result from (b) to rewrite in terms of .  Explain why your result from (c) shows that an exponential decay function has a constant \"one-third-life.\"      For any value of , after units of time, the new value of is times the old value.   Let be an exponential growth function, with and . In this problem, we will show that there is a fixed value such that triples every units.  Suppose that . Rewrite this fact as an equation in terms of , , and .  What does your answer to (a) tell you about the value of ?  Use the first law of exponents and your result from (b) to rewrite in terms of .  Explain why your result from (c) shows that an exponential decay function has a constant tripling time.   In Problems 39 42,  Write a decay law for the isotope.  Use the decay law to answer the question.   Carbon-14 occurs in living organisms with a fixed ratio to nonradioactive carbon-12. After a plant or animal dies, the carbon-14 decays into stable carbon with a half-life of years. When samples from the Shroud of Turin were analyzed in 1988, they were found to have of their original carbon-14. How old were those samples in 1988? Round to the nearest ten years.)   About years old   Rubidium-strontium radioactive dating is used in geologic studies to measure the age of minerals. Rubidium-87 decays into strontium-87 with a half-life of billion years. Several meteors were found to have of their original rubidium. How old are the meteors? (Round to the nearest billion years.)  Americium-241 (Am-241) is used in residential smoke detectors. Particles emitted as Am-241 decays cause the air in a smoke alarm to ionize, allowing current to flow between two electrodes. If smoke absorbs the particles, the current changes and sets off the alarm. The half-life of Am-241 is years. How long will it take for of the Am-241 to decay? (Round to the nearest ten years.)   About years   Doctors can measure the amount of blood in a patient by injecting a known volume of red blood cells tagged with chromium-51. After allowing the blood to mix, they measure the percentage of tagged cells in a sample of the patient's blood and use a proportion to compute the original blood volume. Chromium-51 has a half-life of days. How much of the original chromium-51 will still be present after days? (Round to the nearest day.)   For Problems 43 and 44, use the formula for future value of an annuity.  You want to retire with a nest egg of one million dollars. You plan to make fixed monthly payments of $ into a savings account until then. How long will you need to make payments if the account earns interest compounded monthly? What if the annual interest rate is ? years; years  Francine plans to make monthly payments into an account to save up for a cruise vacation. She wants to save $ for the trip. How many $ payments will she need if the account pays interest compounded monthly? What if the rate is ?   For Problems 45 and 46, use the formula for present value of an annuity.  You want to finance $ to purchase a new car, and your financing institution charges an annual interest rate of , compounded monthly. How large will your monthly payment be to pay off the loan in years? In years? $ ; $  Delbert has accumulated $ in credit card debt. The account charges an annual interest rate of , compounded monthly. Delbert decides not to make any further charges to his account and to pay it off in equal monthly payments. What will the payment be if Delbert decides to pay off the entire amount in years? In years?   Moore's law predicts that the number of transistors per computer chip will continue to grow exponentially, with a doubling time of months.  Write a formula for Moore's law, with in years and in .  From to , the number of transistors per chip was actually modeled approximately by . How does this function compare with your answer to part (a)?  Complete the table showing the number of transistors per chip in recent years, the number predicted by Moore's law, and the number predicted by .    Name of chip  Year  Moore's law   Actual number   Pentium IV       Pentium M (Banias)       Pentium M (Dothan)       What is the doubling time for ?    The given model has a smaller growth factor, , than .    Name of chip  Year  Moore's law   Actual number   Pentium IV       Pentium M (Banias)       Pentium M (Dothan)       About years   If the population of a particular animal is very small, inbreeding will cause a loss of genetic diversity. In a population of individuals, the percent of the species' original genetic variation that remains after generations is given by (Source: Chapman and Reiss, 1992)  Assuming , graph as a function of for three different values of : , , and .  Fill in the table to compare the values of after , , and generations.    Population size  Number of generations                       Studies of the cheetah have revealed variation at only of its genes. (Other species show variation at to of their genes.) The population of cheetah may be less than . Assuming the population can be maintained at its current level, how many generations will it take before the cheetah's genetic variation is reduced to ?     "
+  "body": " Exponential Models  Fitting an Exponential Function through Two Points  To write a formula for an exponential function, we need to know the initial value, , and the growth or decay factor, . We can find these two parameters if we know any two function values.  Find an exponential function that has the values and .  We would like to find values of and so that the given function values satisfy . By substituting the function values into the formula, we can write two equations. This is a system of equations in the two unknowns, and , but it is not a linear system. We can solve the system by the method of elimination, but we will divide one of the equations by the other. Note that by dividing the two equations, we eliminated , and we can now solve for . Next we substitute into either of the two equations and solve for . Thus, and , so the function is .  Knowing only two points on the graph of f is not enough to tell us what kind of function is. Through the two points in , we can also fit a linear function or a power function.  You can check that the three functions below all satisfy and . The graphs of the functions are shown at right.  three functions through the same two points   However, if we already know that we are looking for an exponential function, we can follow the steps below to find its formula. This method is sometimes called the ratio method ratio method . (Of course, if one of the known function values is the initial value, we can find without resorting to the ratio method.)  To find an exponential function through two points   Use the coordinates of the points to write two equations in and .  Divide one equation by the other to eliminate .  Solve for .  Substitute into either equation and solve for .   Practice 1 Use the ratio method to find an exponential function whose graph includes the points and . We solve the system to find  QuickCheck 1 You have written a system of equations to fit an exponential function through two points. What is the next step?   Calculate the slope.  Subtract one equation from the other.  Divide one equation by the other.  Take the log of both sides.   We can use the ratio method to find an exponential growth or decay model if we know two function values.  The unit of currency in Ghana is the cedi, denoted by ¢. Beginning in 1986, the cedi underwent a period of exponential inflation. In 1993, one U.S. dollar was worth ¢720, and in 1996, the dollar was worth about ¢1620. Find a formula for the number of cedi to the dollar as a function of time since 1986. What was the annual inflation rate?  We want to find a function for the number of cedi to the dollar, where in 1986. We have two function values, , and , and with these values we can write two equations. We divide the second equation by the first to find Now we can solve this last equation for to get . Finally, we substitute into the first equation to find . Thus, , and the annual inflation rate was %.  Practice 2 The number of earthquakes that occur worldwide is a decreasing exponential function of their magnitude on the Richter scale. Between 2000 and 2005, there were 7480 earthquakes of magnitude 5 and 793 earthquakes of magnitude 6. (Source: National Earthquake Information Center, U.S. Geological Survey)   Find a formula for the number of earthquakes, , in terms of their magnitude.  It is difficult to keep an accurate count of small earthquakes. Use your formula to estimate the number of magnitude 1 earthquakes that occurred between 2000 and 2005. How many earthquakes of magnitude 8 occurred?   We solve the system to find  magnitude 1: ; magnitude 8:    Doubling Time doubling time  Instead of giving the rate of growth of a population, we can specify its rate of growth by giving the time it takes for the population to double.  In 2005, the population of Egypt was million and was growing by % per year.  If it continues to grow at the same rate, how long will it take the population of Egypt to double?  How long will it take the population to double again?  Illustrate the results on a graph.    The population of Egypt is growing according to the formula , where is in years and is in millions. We would like to know when the population will reach million (twice million), so we solve the equation It will take the population about years to double.  Twice 148 million is 296 million, so we solve the equation It will take the population about years to double again.  A graph of is shown below. Note that the population doubles every 35 years.  graph showing doubling time   In , it took the population years to double. Notice that the calculations in parts (a) and (b) are identical after the first step. In fact, we can start at any point, and it will take the population years to double. We say that years is the doubling time for this population. In the Homework problems, you will show that any increasing exponential function has a constant doubling time.  QuickCheck 2 Which statement is true?   The doubling time of a population depends on its initial value.  An increasing exponential function has a constant doubling time.  The doubling time is twice the percent growth rate.  The doubling time is half the percent growth rate.   Practice 3 In 2005, the population of Uganda was 26.9 million people and was growing by 3.2% per year.   Write a formula for the population of Uganda as a function of years since 2005.  How long will it take the population of Uganda to double?  Use your formula from part (a) to verify the doubling time for three doubling periods.   million  We solve to find years  and , so ;  , so ;  , so   If we know the doubling time for a population, we can immediately write down its growth law. Because the population of Egypt doubles in 35 years, we can write In this form, the growth factor for the population is , and you can check that, to five decimal places, .  Doubling Time doubling time  If is the doubling time for an exponential function , then   QuickCheck 3 The formula tells us that:   is twice the initial value.  After 2 years, .  After years, .  grows by a factor of .   So, from knowing the doubling time, we can easily find the growth rate of a population.   At its current rate of growth, the population of the United States will double in years.  Write a formula for the population of the United States as a function of time.  What is the annual percent growth rate of the population?    The current population of the United States is not given, so we represent it by . With expressed in years, the formula is then  We write in the form to see that the growth factor is , or . For exponential growth, , so , or %.   Practice 4 At its current rate of growth, the population of Mexico will double in 36.8 years. What is its annual percent rate of growth? We use the doubling time formula with to find .  Pause and Reflect How can you find the growth factor for an exponential function when you know its doubling time?   Half-Life  The half-life half-life of a decreasing exponential function is the time it takes for the output to decrease to half its original value. For example, the half-life of a radioactive isotope is the time it takes for half of the substance to decay. The half-life of a drug is the time it takes for half of the drug to be eliminated from the body. Like the doubling time, the half-life is constant for a particular function; no matter where you start, it takes the same amount of time to reach half that value.   If you take mg of ibuprofen to relieve sore muscles, the amount of the drug left in your body after hours is .   What is the half-life of ibuprofen?  When will mg of ibuprofen remain in your body?  Use the half-life to sketch a graph of .    To find the half-life, we calculate the time elapsed when only half the original amount, or mg, is left. The half-life is hours.  After hours, mg of ibuprofen is left in the body. After another hours, half of that amount, or mg, is left. Thus, mg remain after hours.  We locate multiples of hours on the horizontal axis. After each interval of hours, the amount of ibuprofen is reduced to half its previous value. The graph is shown below.   graph showing half-life                   QuickCheck 4 The half-life of DDT is 15 years. This means that:   30 pounds of DDT dissolve in one year.  100 pounds of DDT dissolve in 30 years.  After 30 years, 100 pounds of DDT is reduced to 25 pounds.  Each half-pound of DDT takes 15 years to dissolve.   Practice 5 Alcohol is eliminated from the body at a rate of 15% per hour.   Write a decay formula for the amount of alcohol remaining in the body, using for the initial amount of alcohol.  What is the half-life of alcohol in the body?    hours   Just as we can write an exponential growth law in terms of its doubling time, we can use the half-life to write a formula for exponential decay. For example, the half-life of ibuprofen is hours, so every hours the amount remaining is reduced by a factor of . After hours a -mg dose will be reduced to Once again, you can check that this formula is equivalent to the decay function given in .  Half-Life half-life  If is the half-life for an exponential function , then   Radioactive isotopes are molecules that decay into more stable molecules, emitting radiation in the process. Although radiation in large doses is harmful to living things, radioactive isotopes are useful as tracers in medicine and industry, and as treatment against cancer. The decay laws for radioactive isotopes are often given in terms of their half-lives.   Cobalt-60 is used in cold pasteurization to sterilize certain types of food. Gamma rays emitted by the isotope during radioactive decay kill any bacteria present without damaging the food. The half-life of cobalt-60 is years.  Write a decay law for cobalt-60.  What is the annual decay rate for cobalt-60?    We let denote the amount of cobalt-60 left after years, and let denote the initial amount. Every years, is reduced by a factor of , so  We rewrite the decay law in the form as follows: Thus, , so , or %.   Practice 6 Cesium-137, with a half-life of 30 years, is one of the most dangerous by-products of nuclear fission. What is the annual decay rate for cesium-137? We use the half-life formula with to find .  Pause and Reflect How can you use the half-life to sketch a graph of an exponential function?   Annuities and Amortization  An annuity annuity is a sequence of equal payments or deposits made at equal time intervals. A retirement fund is an example of an annuity. For ordinary annuities, payments are made at the end of each compounding period. The future value future value of an annuity is the sum of all the payments plus all the interest earned.  Future Value of an Annuity  If you make payments per year for years into an annuity that pays interest rate compounded times per year, the future value future value , , of the annuity is where each payment is dollars.   Greta plans to contribute $ a month to a retirement fund that pays % interest compounded monthly.  What is the future value of Greta's retirement fund after years?  For how many years must she contribute in order to accumulate $100,000?    We evaluate the formula for when , , , and . Substituting these values into the formula, we find In years, Greta's retirement fund will be worth $ .  We would like to find the value of when , , , and , so we must solve the equation Greta must contribute for over years in order to accumulate $ .   Practice 7 Rufus is saving for a new car. He puts $2500 a year into an account that pays 4% interest compounded annually. How many years will it take him to accumulate $20,000? (Round up to the next whole year.) We solve the future value formula for : to find years  In , we knew the monthly deposits into the annuity and calculated how much the sum of all the deposits (plus interest) would be in the future. Now imagine that you have just retired and you want to begin drawing monthly payments from your retirement fund. The total amount accumulated in your fund is now its present value , and that amount must cover your future withdrawal payments.  Present Value of an Annuity  If you wish to receive payments per year for years from a fund that earns interest rate compounded times per year, the present value present value , , of the annuity must be where each payment is dollars.   Candace Welthy is setting up a college fund for her nephew Delbert that will provide $ a month for the next years. If the interest rate is % compounded monthly, how much money should she deposit now to cover the fund?  We would like to find the present value of an annuity in which , , , and . Substituting these values into the formula gives Delbert's Aunt Welthy should deposit $ .  Payments on a loan, such as a home mortgage, are also an annuity, but in this case the monthly payments do not collect interest; instead, we must pay interest on the present value of the loan. Repaying a loan (plus interest) by making a sequence of equal payments is called amortizing amortize the loan.  Practice 8 Use the formula for the present value of an annuity to calculate your monthly mortgage payment on a home loan of $250,000 amortized over 30 years at 6% interest compounded monthly. We solve the present value formula for : to find    Section Summary  Vocabulary  Look up the definitions of new terms in the Glossary.  Doubling time  Amortization  Half-life  Annuity     CONCEPTS    We can use the ratio method to fit an exponential function through two points.  To find an exponential function through two points   Use the coordinates of the points to write two equations in and .  Divide one equation by the other to eliminate .  Solve for .  Substitute into either equation and solve for .    Every increasing exponential has a fixed doubling time . Every decreasing exponential function has a fixed half-life .  If is the doubling time for a population, its growth law can be written as .  If is the half-life for a quantity, its decay law can be written as .  Future Value of an Annuity  If you make payments per year for years into an annuity that pays interest rate compounded times per year, the future value future value , , of the annuity is where each payment is dollars.   Present Value of an Annuity  If you wish to receive payments per year for years from a fund that earns interest rate compounded times per year, the present value present value , , of the annuity must be where each payment is dollars.     STUDY QUESTIONS   Compare the methods for fitting a line through two points and fitting an exponential function through two points.  A population of million people has a doubling time of years. What is the population years from now? years from now? years from now?  Francine says that because the half-life of radium-223 is days, after days it will have all decayed. Is she correct? Why or why not?  Which is larger: the sum of all the deposits you make into your retirement fund, or the future value of the fund? Why?  Which is larger: the sum of all the payments you make towards your mortgage, or the amount of the loan? Why?    SKILLS Practice each skill in the Homework problems listed.  Fit an exponential function through two points: #1 18  Find the doubling time or half-life: #19 26  Write an exponential function, given the doubling time or half-life: #27 34, #39 42  Use the formula for future value of an annuity: #43 and 44  Use the formula for present value of an annuity: #45 and 46       Homework 4.5  For Problems 1 8, find an exponential function that has the given values.  ,  ,  ,  ,  ,  ,  ,  ,   For Problems 9 12, find a formula for the exponential function shown.  growth  decay  decay  growth   For Problems 13 18,  Fit a linear function to the points.  Fit an exponential function to the points.  Graph both functions in the same window.      line and exponential decay       line and exponential decay       line and exponential growth     Nevada was the fastest growing state in the nation between and , with an annual growth rate of over .  Write a function for the population of Nevada as a function of time. Let the initial population be .  How long will it take for the population to double?  In , the population of Nevada was hundred thousand. Graph your function in the window , , , .  Use intersect to verify that the population doubles from to , from to , and from to hundred thousand people in equal periods of time.   ; is the number of years since .  years  growth   In 1986, the inflation rate in Bolivia was annually. The unit of currency in Bolivia is the boliviano.  Write a formula for the price of an item as a function of time. Let be its initial price.  How long did it take for prices to double? Give both an exact value and a decimal approximation rounded to two decimal places.  Suppose bolivianos. Graph your function in the window , , , .  Use intersect to verify that the price of the item doubles from to bolivianos, from to , and from to in equal periods of time.   The gross domestic product (GDP) of the United Kingdom was million pounds in the year and is growing at a rate of per year. (The unit of currency in the U.K. is the pound, denoted by £ .)  Write a formula for the GDP as a function of years since .  How long will it take for the GDP to grow to million pounds? Give both an exact value and a decimal approximation rounded to two decimal places.  How long should it take for the GDP to million pounds?  Using your answers to (b) and (c), make a rough sketch of the function.   million pounds  years  years  growth   The number of phishing Web sites (fraudulent Web sites designed to trick victims into revealing personal financial information) is growing by each month. In June , there were phishing Web sites. (Source: www.itnews.com.au\/newsstory)  Write a formula for the number of phishing Web sites as a function of months since June .  How long will it take for the number of sites to reach ? Give both an exact value and a decimal approximation rounded to two decimal places.  How long should it take for the number of sites to reach ?  Using your answers to (b) and (c), make a rough sketch of the function.   Radioactive potassium-42, which is used by cardiologists as a tracer, decays at a rate of per hour.  Find the half-life of potassium-42.  How long will it take for three-fourths of the sample to decay? For seven-eighths of the sample?  Suppose you start with milligrams of potassium-42. Using your answers to (a) and (b), make a rough sketch of the decay function.   hours  hours  decay   In October 2005, the Los Angeles Times published an article about efforts to save the endangered Channel Island foxes. \"Their population declined by to about between and , according to the park service.\"  What was the fox population in ?  Write a formula for the fox population as a function of time since , assuming that their numbers declined exponentially.  How long did it take for the fox population to be reduced to half its level? To one-quarter of the level?  Using your answers to part (c), make a rough sketch of the decay function.   Caffeine leaves the body at a rate of each hour. Your first cup of coffee in the morning has mg of caffeine.  How long will it take before you have mg of that caffeine in your body?  How long will it take before you have mg of that caffeine in your body?  Using your answers to (a) and (b), make a rough sketch of the decay function.   hours  hours  decay   Pregnant women should monitor their intake of caffeine, because it leaves the body more slowly during pregnancy and can be absorbed by the unborn child through the bloodstream. Caffeine leaves a pregnant woman's body at a rate of each hour.  How long will it take before the mg of caffeine in a cup of coffee is reduced to mg?  How long will it take before the mg of caffeine in a cup of coffee is reduced to mg?  Make a rough sketch of the decay function, and compare with the graph in Problem 25.   For Problems 27 30,  Write a growth or decay formula for the exponential function.  Find the percent growth or decay rate.   A population starts with and has a doubling time of years.     You have grams of a radioactive isotope whose half-life is years.  A certain medication has a half-life of hours in the body. You are given an initial dose of mg.     The doubling time of a certain financial investment is years. You invest an amount .   The half-life of radium-226 is years.  Write a decay law for radium-226.  What is the annual decay rate for radium-226?      Dichloro-diphenyl-trichloroethane (DDT) is a pesticide that was used in the middle decades of the twentieth century to control malaria. After 1945, it was also widely used on crops in the United States, and as much as one ton might be sprayed on a single cotton field. However, after the toxic effects of DDT on the environment began to appear, the chemical was banned in 1972.  A common estimate for the half-life of DDT in the soil is years. Write a decay law for DDT in the soil.  In 1970, many soil samples in the United States contained about mg of DDT per kg of soil. The NOAA (National Oceanic and Atmospheric Administration) safe level for DDT in the soil is mg\/kg. When will DDT content in the soil be reduced to a safe level?   In 1798, the English political economist Thomas R. Malthus claimed that human populations, unchecked by environmental or social constraints, double every years, regardless of the initial population size.  Write a growth law for human populations under these conditions.  What is the growth rate in unconstrained conditions?      David Sifry observed in 2005 that over the previous two years, the number of Weblogs, or blogs, was doubling every months. (Source: www.sifry.com\/alerts\/archives)  Write a formula for the number of blogs years after January 2005, assuming it continues to grow at the same rate.  What is the growth rate for the number of blogs?   Let be an exponential growth function, with and .  Suppose that the value of doubles from to , so that Rewrite this fact as an equation in terms of , , and .  What does your answer to (a) tell you about the value of ?  Use the first law of exponents and your result from (b) to rewrite in terms of .  Explain why your result from (c) shows that the doubling time is constant.      For any value of , after units of time, the new value of is times the old value.   Let be an exponential decay function, with and .  Suppose that the value of is halved from to , so that Rewrite this fact as an equation in terms of , , and .  What does your answer to (a) tell you about the value of ?  Use the first law of exponents and your result from (b) to rewrite in terms of .  Explain why your result from (c) shows that the half-life is constant.   Let be an exponential decay function, with and . In this problem, we will show that there is a fixed value such that is decreased by a factor of every units.  Suppose that . Rewrite this fact as an equation in terms of , , and .  What does your answer to (a) tell you about the value of ?  Use the first law of exponents and your result from (b) to rewrite in terms of .  Explain why your result from (c) shows that an exponential decay function has a constant \"one-third-life.\"      For any value of , after units of time, the new value of is times the old value.   Let be an exponential growth function, with and . In this problem, we will show that there is a fixed value such that triples every units.  Suppose that . Rewrite this fact as an equation in terms of , , and .  What does your answer to (a) tell you about the value of ?  Use the first law of exponents and your result from (b) to rewrite in terms of .  Explain why your result from (c) shows that an exponential decay function has a constant tripling time.   In Problems 39 42,  Write a decay law for the isotope.  Use the decay law to answer the question.   Carbon-14 occurs in living organisms with a fixed ratio to nonradioactive carbon-12. After a plant or animal dies, the carbon-14 decays into stable carbon with a half-life of years. When samples from the Shroud of Turin were analyzed in 1988, they were found to have of their original carbon-14. How old were those samples in 1988? Round to the nearest ten years.)   About years old   Rubidium-strontium radioactive dating is used in geologic studies to measure the age of minerals. Rubidium-87 decays into strontium-87 with a half-life of billion years. Several meteors were found to have of their original rubidium. How old are the meteors?  Americium-241 (Am-241) is used in residential smoke detectors. Particles emitted as Am-241 decays cause the air in a smoke alarm to ionize, allowing current to flow between two electrodes. If smoke absorbs the particles, the current changes and sets off the alarm. The half-life of Am-241 is years. How long will it take for of the Am-241 to decay?   About years   Doctors can measure the amount of blood in a patient by injecting a known volume of red blood cells tagged with chromium-51. After allowing the blood to mix, they measure the percentage of tagged cells in a sample of the patient's blood and use a proportion to compute the original blood volume. Chromium-51 has a half-life of days. How much of the original chromium-51 will still be present after days?   For Problems 43 and 44, use the formula for future value of an annuity.  You want to retire with a nest egg of one million dollars. You plan to make fixed monthly payments of $ into a savings account until then. How long will you need to make payments if the account earns interest compounded monthly? What if the annual interest rate is ? years; years  Francine plans to make monthly payments into an account to save up for a cruise vacation. She wants to save $ for the trip. How many $ payments will she need if the account pays interest compounded monthly? What if the rate is ?   For Problems 45 and 46, use the formula for present value of an annuity.  You want to finance $ to purchase a new car, and your financing institution charges an annual interest rate of , compounded monthly. How large will your monthly payment be to pay off the loan in years? In years? $ ; $  Delbert has accumulated $ in credit card debt. The account charges an annual interest rate of , compounded monthly. Delbert decides not to make any further charges to his account and to pay it off in equal monthly payments. What will the payment be if Delbert decides to pay off the entire amount in years? In years?   Moore's law predicts that the number of transistors per computer chip will continue to grow exponentially, with a doubling time of months.  Write a formula for Moore's law, with in years and in .  From to , the number of transistors per chip was actually modeled approximately by . How does this function compare with your answer to part (a)?  Complete the table showing the number of transistors per chip in recent years, the number predicted by Moore's law, and the number predicted by .    Name of chip  Year  Moore's law   Actual number   Pentium IV       Pentium M (Banias)       Pentium M (Dothan)       What is the doubling time for ?    The given model has a smaller growth factor, , than .    Name of chip  Year  Moore's law   Actual number   Pentium IV       Pentium M (Banias)       Pentium M (Dothan)       About years   If the population of a particular animal is very small, inbreeding will cause a loss of genetic diversity. In a population of individuals, the percent of the species' original genetic variation that remains after generations is given by (Source: Chapman and Reiss, 1992)  Assuming , graph as a function of for three different values of : , , and .  Fill in the table to compare the values of after , , and generations.    Population size  Number of generations                       Studies of the cheetah have revealed variation at only of its genes. (Other species show variation at to of their genes.) The population of cheetah may be less than . Assuming the population can be maintained at its current level, how many generations will it take before the cheetah's genetic variation is reduced to ?     "
 },
 {
   "id": "example-fit-exponential",
@@ -20059,7 +20059,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "40",
   "title": "",
-  "body": "Rubidium-strontium radioactive dating is used in geologic studies to measure the age of minerals. Rubidium-87 decays into strontium-87 with a half-life of billion years. Several meteors were found to have of their original rubidium. How old are the meteors? (Round to the nearest billion years.) "
+  "body": "Rubidium-strontium radioactive dating is used in geologic studies to measure the age of minerals. Rubidium-87 decays into strontium-87 with a half-life of billion years. Several meteors were found to have of their original rubidium. How old are the meteors? "
 },
 {
   "id": "section-4-5-exercises-22-4",
@@ -20068,7 +20068,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "41",
   "title": "",
-  "body": "Americium-241 (Am-241) is used in residential smoke detectors. Particles emitted as Am-241 decays cause the air in a smoke alarm to ionize, allowing current to flow between two electrodes. If smoke absorbs the particles, the current changes and sets off the alarm. The half-life of Am-241 is years. How long will it take for of the Am-241 to decay? (Round to the nearest ten years.)   About years  "
+  "body": "Americium-241 (Am-241) is used in residential smoke detectors. Particles emitted as Am-241 decays cause the air in a smoke alarm to ionize, allowing current to flow between two electrodes. If smoke absorbs the particles, the current changes and sets off the alarm. The half-life of Am-241 is years. How long will it take for of the Am-241 to decay?   About years  "
 },
 {
   "id": "section-4-5-exercises-22-5",
@@ -20077,7 +20077,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "42",
   "title": "",
-  "body": "Doctors can measure the amount of blood in a patient by injecting a known volume of red blood cells tagged with chromium-51. After allowing the blood to mix, they measure the percentage of tagged cells in a sample of the patient's blood and use a proportion to compute the original blood volume. Chromium-51 has a half-life of days. How much of the original chromium-51 will still be present after days? (Round to the nearest day.) "
+  "body": "Doctors can measure the amount of blood in a patient by injecting a known volume of red blood cells tagged with chromium-51. After allowing the blood to mix, they measure the percentage of tagged cells in a sample of the patient's blood and use a proportion to compute the original blood volume. Chromium-51 has a half-life of days. How much of the original chromium-51 will still be present after days? "
 },
 {
   "id": "section-4-5-exercises-23-2",
@@ -20995,7 +20995,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.1",
   "title": "Inverse Functions",
-  "body": " Inverse Functions  Introduction  When you buy a house, your monthly mortgage payment is a function of the size of the loan. The table shows mortgage payments on -year loans of various sizes at % interest.    Loan amount,        Mortgage payment,        For the function , the input value is the amount of the loan, and the output is the mortgage payment.  However, when you are shopping for a house, you may think of the mortgage payment as the input variable: If you can afford a certain monthly mortgage payment, how large a loan can you finance? Now the mortgage payment is the input value, and the loan amount is the output. By interchanging the inputs and outputs, we define a new function, , shown below.    Mortgage payment,        Loan amount,        This new function gives the same information as the original function, , but from a different point of view. We call the function the inverse function inverse function for .  The elements of the range of are used as the input values for , and the output values of are the corresponding domain elements of . For example, from the tables you can verify that , and . In fact, this property defines the inverse function.  Inverse Functions  Suppose is the inverse function inverse function for . Then   Suppose is the inverse function for , and we know the following function values for : Find and .  We know that because , and because . Tables may be helpful in visualizing the two functions, as shown below.                                    For the function , the input variable is and the output variable is . For the inverse function , the roles of the variables are interchanged: is now the input and is the output.  Practice 1 Suppose is the inverse function for , and suppose we know the following function values for f : Find and . ;   QuickCheck 1 If the point lies on the graph of , what point lies on the graph of its inverse function?         Finding a Formula for the Inverse Function  If a function is given by a table of values, we can interchange the columns (or rows) of the table to obtain the inverse function. Swapping the columns works because we are really interchanging the input and output variables. If a function is defined by an equation, we can find a formula for its inverse function in the same way: Interchange the roles of the variables in the equation so that the old output variable becomes the new input variable.   The function gives the height of corn seedlings, in inches, days after they are planted. Find a formula for the inverse function and explain its meaning in this context.  Make a table of values for and a table for its inverse function.    Write the equation for in the form In this equation, is the input and is the output. We interchange the roles of the variables by solving for to obtain In this equation, is the input and is the output. The formula for the inverse function is The function gives the number of days it will take the corn seedlings to grow to a height of inches.  To make a table for , we choose values for and evaluate at those -values, as shown at left below.                                         To make a table for , we could choose values for and evaluate , but because is the inverse function for , we can simply interchange the columns in our table for , as shown at right above.  You can check that the values in the second table do satisfy the formula for the inverse function, .   Note once again that the two tables show the same relationship between and , but the roles of input and output have been interchanged. The function tells us the height of the seedlings after days, and tells us how long it will take the seedlings to grow to height .  QuickCheck 2 Which of these is the inverse of the function ?        Practice 2 Carol can burn 600 calories per hour bicycling and 400 calories per hour swimming. She would like to lose 5 pounds, which is equivalent to 16,000 calories.   Write an equation relating the number of hours of cycling, , and the number of hours swimming, , that Carol must spend to lose 5 pounds.  Write as a function of , . What does tell you?  Find the inverse function, . What does tell you?    ; ; If Carol cycles for 10 hrs, she must swim for 25 hrs.  ; ; If Carol swims for hrs, she must cycle for hrs.    Inverse Function Notation inverse function notation  If the inverse of a function is also a function, we denote the inverse by the symbol , read \" inverse.\" This notation makes it clear that the two functions are related in a special way. For example, the function in has inverse function .  If find .  We first find the inverse function for by solving for : The inverse function is . Now we evaluate the inverse function at :   Although the same symbol, , is used for both reciprocals and inverse functions, the two notions are not equivalent. That is, the inverse of a given function is usually not the same as the reciprocal of that function. In , note that is not the same as the reciprocal of , because To avoid confusion, we use the notation to refer to the reciprocal of the function .   In , you can check that . In fact, the two statements are equivalent; they convey the same information. This fact is a restatement of our earlier observation about inverse functions, this time using inverse function notation.  QuickCheck 3 If , what is equal to?        Inverse Functions inverse function  Suppose the inverse of is a function, denoted by . Then   Practice 3  If , find .  Write two equations about the value of , one using and one using .  Show that is not equal to .    ,  , but   We can use a graph of a function to find values of the inverse function . The figure below shows the graph of .   You already know how to evaluate a function from its graph: We start with the horizontal axis. For instance, to evaluate , we find on the -axis, move vertically to the point on the graph with , in this case , and read the -coordinate of the point. We see that .  To evaluate the inverse function, we start with the vertical axis. For example, to find , we find on the vertical axis and move horizontally to the point on the graph with . In this case, the point is , so .  reading values of f-inverse from graph of f   The function gives Celsius temperature as a function of Fahrenheit temperature. The graph of the function is shown below. Use the graph to evaluate and , and then explain their meaning in this context.  graph of Celsius vs Fahrenheit  To evaluate , we find the input on the horizontal axis, then find the point on the graph with and read its vertical coordinate. We see that the point lies on the graph, so . When the Fahrenheit temperature is , the Celsius temperature is .  The inverse function reverses the roles of input and output. Because , , so the inverse function gives us the Fahrenheit temperature if we know the Celsius temperature. In particular, is the Fahrenheit temperature when the Celsius temperature is .  To use the graph of to find values of , we start with the vertical axis and find the point on the graph with . This point is , so when , or . When the Celsius temperature is , the Fahrenheit temperature is .  Practice 4  Use the graph of in to find .  Does ?  Write two equations, one using and one using , stating the Fahrenheit temperature when the Celsius temperature is .   : On the graph of , when , .  No  ,    Graph of the Inverse Function   In , we used a graph of to read values of . But we can also plot the graph of itself. Because is the input variable for , we plot on the horizontal axis and on the vertical axis. To find some points on the graph of , we interchange the coordinates of points on the graph of . The graph of is shown at right.                                       graph of Fahrenheit vs Celsius   The Park Service introduced a flock of endangered pheasant into a wildlife preserve. After years, the population of the flock was given by   Graph the function on the domain .  Find a formula for the inverse function, . What is the meaning of the inverse function in this context?  Sketch a graph of the inverse function.     The graph of is shown at right, with on the horizontal axis and on the vertical axis.  graph of pheasant population  We solve for in terms of . The inverse function is . It tells us the number of years it takes for the pheasant population to grow to size .  The graph of is shown below, with on the horizontal axis and on the vertical axis.  graph of time to achieve pheasant population   Practice 5 The formula gives the period in seconds, , of a pendulum as a function of its length in feet, .   Graph the function on the domain .  Find a formula for the inverse function, . What is the meaning of the inverse function in this context?  Sketch a graph of the inverse function.   both inverse and reciprocal   gives the length of a pendulum as a function of its period.  See graph for part(a).    When Is the Inverse a Function?  We can always find the inverse of a function simply by interchanging the input and output variables. In the preceding examples, interchanging the variables created a new function. However, the inverse of a function does not always turn out to be a function itself.  For example, to find the inverse of , we solve for to get . When we regard as the input and as the output, the relationship does not describe a function. The graphs of and its inverse are shown below. (Note that for the graph of the inverse, we plot on the horizontal axis and on the vertical axis.) Because the graph of the inverse does not pass the vertical line test, it is not a function.  graphs of x-squared and its inverse  For many applications, it is important to know whether or not the inverse of is a function. This can be determined from the graph of . When we interchange the roles of the input and output variables, horizontal lines of the form become vertical lines.  Thus, if the graph of the inverse is going to pass the vertical line test, the graph of the original function must pass the horizontal line test horizontal line test , namely, that no horizontal line should intersect the graph in more than one point.  Horizontal Line Test horizontal line test  If no horizontal line intersects the graph of a function more than once, then its inverse is also a function.   Notice that the graph of does not pass the horizontal line test, so we would not expect its inverse to be a function.  Which of the functions shown below have inverses that are also functions?  graphs for vertical line test  In each case, we apply the horizontal line test to determine whether the inverse is a function. Because no horizontal line intersects their graphs more than once, the functions pictured in figures (a) and (c) have inverses that are also functions. The functions in figures (b) and (d) do not have inverses that are functions.  Practice 6 Which of the functions whose graphs are shown below have inverses that are also functions?  graphs for vertical line test  (a) and (d)  A function that passes the horizontal line test is called one-to-one one-to-one , because each input has only one output and each output has only one input. A one-to-one function passes the horizontal line test as well as the vertical line test. With this terminology, we can state the following theorem.  One-to-one Functions  The inverse of a function is also a function if and only if is one-to-one.   A function may have an inverse function even if we cannot find its formula. The function shown in figure (a) is one-to-one, so it has an inverse function. We can even graph the inverse function, as shown in figure (b), by interchanging the coordinates of points on the graph of .  graphs of f and f-inverse  However, we cannot find a formula for the inverse function because we cannot solve the equation for in terms of .  Pause and Reflect What does the term one-to-one mean? Give an example.   Mathematical Properties of the Inverse Function  The inverse function undoes the effect of the function . In , the function multiplies the input by and then adds to the result. The inverse function undoes those operations in reverse order: It subtracts from the input and then divides the result by .  If we apply the function to a given input value and then apply the function to the output from , the end result will be the original input value. For example, if we choose as an input value, we find that  function and inverse diagram  We return to the original input value, , as illustrated above.  QuickCheck 4 An inverse function   makes the output negative.  makes the input negative.  interchanges the input and output.  takes the reciprocal of the output.   illustrates the fact that if is the inverse function for , then is also the inverse function for .  Consider the function and its inverse, .   Show that the inverse function undoes the effect of on .  Show that undoes the effect of the inverse function on .    We first evaluate the function for : Then we evaluate the inverse function at : We started and ended with .  We first evaluate the function for : Then we evaluate the function for : We started and ended with .   Practice 7  Find a formula for the inverse of the function .  Show that undoes the effect of on .  Show that undoes the effect of on .     , and  and   Functions and Inverse Functions  Suppose is the inverse function for . Then as long as is in the domain of , and is in the domain of .    Symmetry  So far we have been careful to keep track of the input and output variables when we work with inverse functions. This is important when we are dealing with applications; the names of the variables are usually chosen because they have a meaning in the context of the application, and it would be confusing to change them.  However, we can also study inverse functions purely as mathematical objects. There is a relationship between the graph of a function and the graph of its inverse that is easier to see if we plot them both on the same set of axes.  A graph does not change if we change the names of the variables, so we can let represent the input for both functions, and let represent the output. Consider the function from , and its inverse function, . The formulas for these functions are But their graphs are the same if we write them as The graphs are shown below.  graphs of function and inverse  Now, for every point on the graph of , the point is on the graph of the inverse function. Observe that the points and are always located symmetrically across the line . The graphs are symmetric about the line , which means that if we were to place a mirror along the line , each graph would be the reflection of the other.  QuickCheck 5 The graphs of and are symmetric about   the -axis  the -axis  the asymptote.  the line .   Graph the function on the domain . Graph its inverse function on the same grid.  The graph of has the same shape as the graph of , shifted units to the left and stretched vertically by a factor of . The figure at left below shows the graph of , along with a table of values. By interchanging the rows of the table, we obtain points on the graph of the inverse function, shown at right.  graphs and tables of a function and its inverse function  If we use as the input variable for both functions, and as the output, we can graph and on the same grid, as shown at right. The two graphs are symmetric about the line .  function and inverse on the same grid   Practice 8 Graph the function and its inverse on the same set of axes, along with the line . cubic and inverse  Pause and Reflect Explain the difference between the meaning of the notation if is a function or if is a variable.   Domain and Range  When we interchange the input and output variables to obtain the inverse function, we interchange the domain and range of the function. For the functions graphed in , you can see that This relationship between the domain and range of a function and its inverse holds in general.   Domain and Range of the Inverse Function  If is the inverse function for then     Graph the function in the window  Graph the inverse function in the same window, along with the line .  State the domain and range of , and of .    The graph of is shown below. It looks like the graph of , shifted units to the left.  To find the inverse function, we solve for . Take the reciprocal of both sides of the equation. The inverse function is , or, using for the input variable, . The graph of looks like the graph of , shifted down units, as shown below.  GC graph of function and inverse  Because is undefined at , the domain of is all real numbers except . The graph has a horizontal asymptote at , so the range is all real numbers except .  The inverse function is undefined at , so its domain is all real numbers except . The graph of has a horizontal asymptote at , so its range is all real numbers except .   Practice 9  Graph the function and its inverse function, (which you found above in Practice 7, on the same set of axes, along with the line .  State the domain and range of , and of .   function and invese  Domain of : all real numbers except , Range of : all real numbers except , Domain of : all real numbers except , Range of : all real numbers except     Section Summary  Vocabulary  Look up the definitions of new terms in the Glossary.  Inverse function  Horizontal line test  One-to-one     CONCEPTS    The inverse of a function describes the same relationship between two variables but interchanges the roles of the input and output.  Inverse Functions  If the inverse of a function is also a function, then the inverse is denoted by the symbol , and   We can make a table of values for the inverse function, , by interchanging the columns of a table for .  If a function is defined by a formula in the form , we can find a formula for its inverse function by solving the equation for to get .  The inverse function undoes the effect of the function , that is, if we apply the inverse function to the output of , we return to the original input value.  If is the inverse function for , then is also the inverse function for .  The graphs of and its inverse function are symmetric about the line .  Horizontal line test : If no horizontal line intersects the graph of a function more than once, then the inverse is also a function.  A function that passes the horizontal line test is called one-to-one .  The inverse of a function is also a function if and only if is one-to-one.  Functions and Inverse Functions  Suppose is the inverse function for . Then as long as is in the domain of , and is in the domain of .    Domain and Range of the Inverse Function  If is the inverse function for then      STUDY QUESTIONS   Explain how the terms inverse function , one-to-one , and horizontal line test are related.  If you know that , what can you say about the values of ?  Explain how to use a graph of the function to evaluate .  Evaluate .  Delbert says that if , then . Is he correct? Why or why not?    SKILLS Practice each skill in the Homework problems listed.  Given certain function values, find values of the inverse function: #1 4  Interpret values of the inverse function: #5 12  Find a formula for the inverse function: #9 22, 27 34  Graph the inverse function: #15 and 16, 23 34  Find the domain and range of the inverse function: #33 and 34  Use the horizontal line test to identify one-to-one functions: #35 42       Homework 5.1  Let , , , and .  Make a table of values for and another table for its inverse function.  Find  Find                                   Let , , , and .  Make a table of values for and another table for its inverse function.  Find  Find     Make a table of values for and another table for its inverse function.  Find  Find                                    Make a table of values for and another table for its inverse function.  Find  Find   For Problems 5-8, use the graph to evaluate each expression.  An insurance investigator measures the length, , of the skid marks at an accident scene, in feet. The graph shows the function , which gives the velocity, (mph), at which a car was traveling when it hit the brakes.  velocity vs skid marks length   Use the graph to estimate and explain its meaning in this context.  Use the graph to estimate and explain its meaning in this context.   . The car that left the -foot skid marks was traveling at mph.  . The car traveling at mph left -foot skid marks   The weight, , of a missile launched from a catapult is a function of the distance, , to the target. The graph shows the function , where is in meters and is in kilograms.  mass vs target distance   Use the graph to estimate and explain its meaning in this context.  Use the graph to estimate and explain its meaning in this context.   After eating, the weight of a vampire bat drops steadily until its next meal. The graph shows the function , which gives the weight, , of the bat in grams hours since its last meal.  bat weight vs time   Estimate the coordinates of the point of starvation. Include units in your answer.  Use the graph to estimate and explain what it tells us about vampire bats.    , so that the vampire bat's weight has dropped to grams about hours after its last meal.   The amount of money, , in an interest-bearing savings account is a function of the number of years, , it remains in the account. The graph shows , where is in thousands of dollars.  exponential growth   Use the graph to estimate and explain what it tells us about the account.  Use the graph to estimate and explain what it tells us about the account.    The function gives the interest, , that a dollar earns in years in terms of the interest rate, .  Evaluate and explain what it tells us about the interest.  Find the interest rate needed to earn by substituting in the formula and solving for .  Find a formula for the inverse function.  Write your answer to part (b) with inverse function notation.   . At interest, earns interest in years.      The function gives the Celsius temperature in terms of the Fahrenheit temperature .  Evaluate and explain what it tells us about the temperature.  Find the Fahrenheit temperature of Celsius by substituting in the formula and solving for .  Find a formula for the inverse function.  Write your answer to part (b) with inverse function notation.   If you are flying in an airplane at an altitude of miles, on a clear day you can see a distance of miles to the horizon, where .  Evaluate and explain what it tells us about the horizon.  Find the altitude needed in order to see a distance of mile by substituting in the formula and solving for .  Find a formula for the inverse function.  Write your answer to part (b) with inverse function notation.   . At an altitude of miles, you can see miles to the horizon.  mile, or feet     A moving ship creates waves that impede its own speed. The function gives the ship's maximum speed in knots in terms of its length, , in feet.  Evaluate and explain what it tells us about the ship's speed.  Find the length needed for a maximum speed of knots by substituting in the formula and solving for .  Find a formula for the inverse function.  Write your answer to part (b) with inverse function notation.     Use the graph of to find .  Find a formula for and evaluate .  transformed square root   ;     Use the graph of to find .  Find a formula for and evaluate .   transformed reciprocal function     Find for the function .  Show that undoes the effect of on .  Show that undoes the effect of on .  Graph the function and its inverse on the same grid, along with the graph of .      cubic and inverse     Find for the function .  Show that undoes the effect of on .  Show that undoes the effect of on .  Graph the function and its inverse on the same grid, along with the graph of .   If , find .  If , find .  If , find .  If , find .  If , find .  If , find .  For Problems 23 26,  Use the graph to make a table of values for the function .  Make a table of values and a graph of the inverse function.    line                      line    line    curve                          line    root    For Problems 27 32,  Find a formula for the inverse of the function.  Graph the function and its inverse on the same set of axes, along with the graph of .     function and inverse      function and inverse      function and inverse      Find the domain and range of the function .  Find a formula for .  State the domain and range of .  Graph and on the same grid.   Domain: ; Range:   Domain: ; Range:  function and inverse    Find the domain and range of the function .  Find a formula for .  State the domain and range of .  Graph and on the same grid.   Which of the functions in Problems 35 42 have inverses that are also functions?   four curves (a) and (d)   four curves     (a)         (a)         (a) and (b)       Find a formula for each function shown in (a) (d). Then match each function with its inverse from I IV.  two columns of four graphs  ; IV  ; III  ; I  ; II   Find a formula for each function shown in (a) (d). Then match each function with its inverse from I IV.  two columns of four graphs   For Problems 45 and 46, use the graph of to match the other graphs with the appropriate function. ( Hint : Look at the coordinates of some specific points.)   increasing curve        curve  curve  curve   III  II  I    curve        curve  curve  curve      "
+  "body": " Inverse Functions  Introduction  When you buy a house, your monthly mortgage payment is a function of the size of the loan. The table shows mortgage payments on -year loans of various sizes at % interest.    Loan amount,        Mortgage payment,        For the function , the input value is the amount of the loan, and the output is the mortgage payment.  However, when you are shopping for a house, you may think of the mortgage payment as the input variable: If you can afford a certain monthly mortgage payment, how large a loan can you finance? Now the mortgage payment is the input value, and the loan amount is the output. By interchanging the inputs and outputs, we define a new function, , shown below.    Mortgage payment,        Loan amount,        This new function gives the same information as the original function, , but from a different point of view. We call the function the inverse function inverse function for .  The elements of the range of are used as the input values for , and the output values of are the corresponding domain elements of . For example, from the tables you can verify that , and . In fact, this property defines the inverse function.  Inverse Functions  Suppose is the inverse function inverse function for . Then   Suppose is the inverse function for , and we know the following function values for : Find and .  We know that because , and because . Tables may be helpful in visualizing the two functions, as shown below.                                    For the function , the input variable is and the output variable is . For the inverse function , the roles of the variables are interchanged: is now the input and is the output.  Practice 1 Suppose is the inverse function for , and suppose we know the following function values for : Find and . ;   QuickCheck 1 If the point lies on the graph of , what point lies on the graph of its inverse function?         Finding a Formula for the Inverse Function  If a function is given by a table of values, we can interchange the columns (or rows) of the table to obtain the inverse function. Swapping the columns works because we are really interchanging the input and output variables. If a function is defined by an equation, we can find a formula for its inverse function in the same way: Interchange the roles of the variables in the equation so that the old output variable becomes the new input variable.   The function gives the height of corn seedlings, in inches, days after they are planted. Find a formula for the inverse function and explain its meaning in this context.  Make a table of values for and a table for its inverse function.    Write the equation for in the form In this equation, is the input and is the output. We interchange the roles of the variables by solving for to obtain In this equation, is the input and is the output. The formula for the inverse function is The function gives the number of days it will take the corn seedlings to grow to a height of inches.  To make a table for , we choose values for and evaluate at those -values, as shown at left below.                                         To make a table for , we could choose values for and evaluate , but because is the inverse function for , we can simply interchange the columns in our table for , as shown at right above.  You can check that the values in the second table do satisfy the formula for the inverse function, .   Note once again that the two tables show the same relationship between and , but the roles of input and output have been interchanged. The function tells us the height of the seedlings after days, and tells us how long it will take the seedlings to grow to height .  QuickCheck 2 Which of these is the inverse of the function ?        Practice 2 Carol can burn 600 calories per hour bicycling and 400 calories per hour swimming. She would like to lose 5 pounds, which is equivalent to 16,000 calories.   Write an equation relating the number of hours of cycling, , and the number of hours swimming, , that Carol must spend to lose 5 pounds.  Write as a function of , . What does tell you?  Find the inverse function, . What does tell you?    ; ; If Carol cycles for 10 hrs, she must swim for 25 hrs.  ; ; If Carol swims for hrs, she must cycle for hrs.    Inverse Function Notation inverse function notation  If the inverse of a function is also a function, we denote the inverse by the symbol , read \" inverse.\" This notation makes it clear that the two functions are related in a special way. For example, the function in has inverse function .  If find .  We first find the inverse function for by solving for : The inverse function is . Now we evaluate the inverse function at :   Although the same symbol, , is used for both reciprocals and inverse functions, the two notions are not equivalent. That is, the inverse of a given function is usually not the same as the reciprocal of that function. In , note that is not the same as the reciprocal of , because To avoid confusion, we use the notation to refer to the reciprocal of the function .   In , you can check that . In fact, the two statements are equivalent; they convey the same information. This fact is a restatement of our earlier observation about inverse functions, this time using inverse function notation.  QuickCheck 3 If , what is equal to?        Inverse Functions inverse function  Suppose the inverse of is a function, denoted by . Then   Practice 3  If , find .  Write two equations about the value of , one using and one using .  Show that is not equal to .    ,  , but   We can use a graph of a function to find values of the inverse function . The figure below shows the graph of .   You already know how to evaluate a function from its graph: We start with the horizontal axis. For instance, to evaluate , we find on the -axis, move vertically to the point on the graph with , in this case , and read the -coordinate of the point. We see that .  To evaluate the inverse function, we start with the vertical axis. For example, to find , we find on the vertical axis and move horizontally to the point on the graph with . In this case, the point is , so .  reading values of f-inverse from graph of f   The function gives Celsius temperature as a function of Fahrenheit temperature. The graph of the function is shown below. Use the graph to evaluate and , and then explain their meaning in this context.  graph of Celsius vs Fahrenheit  To evaluate , we find the input on the horizontal axis, then find the point on the graph with and read its vertical coordinate. We see that the point lies on the graph, so . When the Fahrenheit temperature is , the Celsius temperature is .  The inverse function reverses the roles of input and output. Because , , so the inverse function gives us the Fahrenheit temperature if we know the Celsius temperature. In particular, is the Fahrenheit temperature when the Celsius temperature is .  To use the graph of to find values of , we start with the vertical axis and find the point on the graph with . This point is , so when , or . When the Celsius temperature is , the Fahrenheit temperature is .  Practice 4  Use the graph of in to find .  Does ?  Write two equations, one using and one using , stating the Fahrenheit temperature when the Celsius temperature is .   : On the graph of , when , .  No  ,   Pause and Reflect If the function tells you how much money is in your account after years, what does the function tell you?    Graph of the Inverse Function   In , we used a graph of to read values of . But we can also plot the graph of itself. Because is the input variable for , we plot on the horizontal axis and on the vertical axis. To find some points on the graph of , we interchange the coordinates of points on the graph of . The graph of is shown at right.                                       graph of Fahrenheit vs Celsius   The Park Service introduced a flock of endangered pheasant into a wildlife preserve. After years, the population of the flock was given by   Graph the function on the domain .  Find a formula for the inverse function, . What is the meaning of the inverse function in this context?  Sketch a graph of the inverse function.     The graph of is shown at right, with on the horizontal axis and on the vertical axis.  graph of pheasant population  We solve for in terms of . The inverse function is . It tells us the number of years it takes for the pheasant population to grow to size .  The graph of is shown below, with on the horizontal axis and on the vertical axis.  graph of time to achieve pheasant population   Practice 5 The formula gives the period in seconds, , of a pendulum as a function of its length in feet, .   Graph the function on the domain .  Find a formula for the inverse function, . What is the meaning of the inverse function in this context?  Sketch a graph of the inverse function.   both inverse and reciprocal   gives the length of a pendulum as a function of its period.  See graph for part(a).    When Is the Inverse a Function?  We can always find the inverse of a function simply by interchanging the input and output variables. In the preceding examples, interchanging the variables created a new function. However, the inverse of a function does not always turn out to be a function itself.  For example, to find the inverse of , we solve for to get . When we regard as the input and as the output, the relationship does not describe a function. The graphs of and its inverse are shown below. (Note that for the graph of the inverse, we plot on the horizontal axis and on the vertical axis.) Because the graph of the inverse does not pass the vertical line test, it is not a function.  graphs of x-squared and its inverse  For many applications, it is important to know whether or not the inverse of is a function. This can be determined from the graph of . When we interchange the roles of the input and output variables, horizontal lines of the form become vertical lines.  Thus, if the graph of the inverse is going to pass the vertical line test, the graph of the original function must pass the horizontal line test horizontal line test , namely, that no horizontal line should intersect the graph in more than one point.  Horizontal Line Test horizontal line test  If no horizontal line intersects the graph of a function more than once, then its inverse is also a function.   Notice that the graph of does not pass the horizontal line test, so we would not expect its inverse to be a function.  Which of the functions shown below have inverses that are also functions?  graphs for vertical line test  In each case, we apply the horizontal line test to determine whether the inverse is a function. Because no horizontal line intersects their graphs more than once, the functions pictured in figures (a) and (c) have inverses that are also functions. The functions in figures (b) and (d) do not have inverses that are functions.  Practice 6 Which of the functions whose graphs are shown below have inverses that are also functions?  graphs for vertical line test  (a) and (d)  A function that passes the horizontal line test is called one-to-one one-to-one , because each input has only one output and each output has only one input. A one-to-one function passes the horizontal line test as well as the vertical line test. With this terminology, we can state the following theorem.  One-to-one Functions  The inverse of a function is also a function if and only if is one-to-one.   A function may have an inverse function even if we cannot find its formula. The function shown in figure (a) is one-to-one, so it has an inverse function. We can even graph the inverse function, as shown in figure (b), by interchanging the coordinates of points on the graph of .  graphs of f and f-inverse  However, we cannot find a formula for the inverse function because we cannot solve the equation for in terms of .  Pause and Reflect What does the term one-to-one mean? Give an example.   Mathematical Properties of the Inverse Function  The inverse function undoes the effect of the function . In , the function multiplies the input by and then adds to the result. The inverse function undoes those operations in reverse order: It subtracts from the input and then divides the result by .  If we apply the function to a given input value and then apply the function to the output from , the end result will be the original input value. For example, if we choose as an input value, we find that  function and inverse diagram  We return to the original input value, , as illustrated above.  QuickCheck 4 An inverse function   makes the output negative.  makes the input negative.  interchanges the input and output.  takes the reciprocal of the output.   illustrates the fact that if is the inverse function for , then is also the inverse function for .  Consider the function and its inverse, .   Show that the inverse function undoes the effect of on .  Show that undoes the effect of the inverse function on .    We first evaluate the function for : Then we evaluate the inverse function at : We started and ended with .  We first evaluate the function for : Then we evaluate the function for : We started and ended with .   Practice 7  Find a formula for the inverse of the function .  Show that undoes the effect of on .  Show that undoes the effect of on .     , and  and   Functions and Inverse Functions  Suppose is the inverse function for . Then as long as is in the domain of , and is in the domain of .    Symmetry  So far we have been careful to keep track of the input and output variables when we work with inverse functions. This is important when we are dealing with applications; the names of the variables are usually chosen because they have a meaning in the context of the application, and it would be confusing to change them.  However, we can also study inverse functions purely as mathematical objects. There is a relationship between the graph of a function and the graph of its inverse that is easier to see if we plot them both on the same set of axes.  A graph does not change if we change the names of the variables, so we can let represent the input for both functions, and let represent the output. Consider the function from , and its inverse function, . The formulas for these functions are But their graphs are the same if we write them as The graphs are shown below.  graphs of function and inverse  Now, for every point on the graph of , the point is on the graph of the inverse function. Observe that the points and are always located symmetrically across the line . The graphs are symmetric about the line , which means that if we were to place a mirror along the line , each graph would be the reflection of the other.  QuickCheck 5 The graphs of and are symmetric about   the -axis  the -axis  the asymptote.  the line .   Graph the function on the domain . Graph its inverse function on the same grid.  The graph of has the same shape as the graph of , shifted units to the left and stretched vertically by a factor of . The figure at left below shows the graph of , along with a table of values. By interchanging the rows of the table, we obtain points on the graph of the inverse function, shown at right.  graphs and tables of a function and its inverse function  If we use as the input variable for both functions, and as the output, we can graph and on the same grid, as shown at right. The two graphs are symmetric about the line .  function and inverse on the same grid   Practice 8 Graph the function and its inverse on the same set of axes, along with the line . cubic and inverse  Pause and Reflect Explain the difference between the meaning of the notation if is a function or if is a variable.   Domain and Range  When we interchange the input and output variables to obtain the inverse function, we interchange the domain and range of the function. For the functions graphed in , you can see that This relationship between the domain and range of a function and its inverse holds in general.   Domain and Range of the Inverse Function  If is the inverse function for then     Graph the function in the window  Graph the inverse function in the same window, along with the line .  State the domain and range of , and of .    The graph of is shown below. It looks like the graph of , shifted units to the left.  To find the inverse function, we solve for . Take the reciprocal of both sides of the equation. The inverse function is , or, using for the input variable, . The graph of looks like the graph of , shifted down units, as shown below.  GC graph of function and inverse  Because is undefined at , the domain of is all real numbers except . The graph has a horizontal asymptote at , so the range is all real numbers except .  The inverse function is undefined at , so its domain is all real numbers except . The graph of has a horizontal asymptote at , so its range is all real numbers except .   Practice 9  Graph the function and its inverse function, (which you found above in Practice 7, on the same set of axes, along with the line .  State the domain and range of , and of .   function and invese  Domain of : all real numbers except , Range of : all real numbers except , Domain of : all real numbers except , Range of : all real numbers except     Section Summary  Vocabulary  Look up the definitions of new terms in the Glossary.  Inverse function  Horizontal line test  One-to-one     CONCEPTS    The inverse of a function describes the same relationship between two variables but interchanges the roles of the input and output.  Inverse Functions  If the inverse of a function is also a function, then the inverse is denoted by the symbol , and   We can make a table of values for the inverse function, , by interchanging the columns of a table for .  If a function is defined by a formula in the form , we can find a formula for its inverse function by solving the equation for to get .  The inverse function undoes the effect of the function , that is, if we apply the inverse function to the output of , we return to the original input value.  If is the inverse function for , then is also the inverse function for .  The graphs of and its inverse function are symmetric about the line .  Horizontal line test : If no horizontal line intersects the graph of a function more than once, then the inverse is also a function.  A function that passes the horizontal line test is called one-to-one .  The inverse of a function is also a function if and only if is one-to-one.  Functions and Inverse Functions  Suppose is the inverse function for . Then as long as is in the domain of , and is in the domain of .    Domain and Range of the Inverse Function  If is the inverse function for then      STUDY QUESTIONS   Explain how the terms inverse function , one-to-one , and horizontal line test are related.  If you know that , what can you say about the values of ?  Explain how to use a graph of the function to evaluate .  Evaluate .  Delbert says that if , then . Is he correct? Why or why not?    SKILLS Practice each skill in the Homework problems listed.  Given certain function values, find values of the inverse function: #1 4  Interpret values of the inverse function: #5 12  Find a formula for the inverse function: #9 22, 27 34  Graph the inverse function: #15 and 16, 23 34  Find the domain and range of the inverse function: #33 and 34  Use the horizontal line test to identify one-to-one functions: #35 42       Homework 5.1  Let , , , and .  Make a table of values for and another table for its inverse function.  Find  Find                                   Let , , , and .  Make a table of values for and another table for its inverse function.  Find  Find     Make a table of values for and another table for its inverse function.  Find  Find                                    Make a table of values for and another table for its inverse function.  Find  Find   For Problems 5-8, use the graph to evaluate each expression.  An insurance investigator measures the length, , of the skid marks at an accident scene, in feet. The graph shows the function , which gives the velocity, (mph), at which a car was traveling when it hit the brakes.  velocity vs skid marks length   Use the graph to estimate and explain its meaning in this context.  Use the graph to estimate and explain its meaning in this context.   . The car that left the -foot skid marks was traveling at mph.  . The car traveling at mph left -foot skid marks   The weight, , of a missile launched from a catapult is a function of the distance, , to the target. The graph shows the function , where is in meters and is in kilograms.  mass vs target distance   Use the graph to estimate and explain its meaning in this context.  Use the graph to estimate and explain its meaning in this context.   After eating, the weight of a vampire bat drops steadily until its next meal. The graph shows the function , which gives the weight, , of the bat in grams hours since its last meal.  bat weight vs time   Estimate the coordinates of the point of starvation. Include units in your answer.  Use the graph to estimate and explain what it tells us about vampire bats.    , so that the vampire bat's weight has dropped to grams about hours after its last meal.   The amount of money, , in an interest-bearing savings account is a function of the number of years, , it remains in the account. The graph shows , where is in thousands of dollars.  exponential growth   Use the graph to estimate and explain what it tells us about the account.  Use the graph to estimate and explain what it tells us about the account.    The function gives the interest, , that a dollar earns in years in terms of the interest rate, .  Evaluate and explain what it tells us about the interest.  Find the interest rate needed to earn by substituting in the formula and solving for .  Find a formula for the inverse function.  Write your answer to part (b) with inverse function notation.   . At interest, earns interest in years.      The function gives the Celsius temperature in terms of the Fahrenheit temperature .  Evaluate and explain what it tells us about the temperature.  Find the Fahrenheit temperature of Celsius by substituting in the formula and solving for .  Find a formula for the inverse function.  Write your answer to part (b) with inverse function notation.   If you are flying in an airplane at an altitude of miles, on a clear day you can see a distance of miles to the horizon, where .  Evaluate and explain what it tells us about the horizon.  Find the altitude needed in order to see a distance of mile by substituting in the formula and solving for .  Find a formula for the inverse function.  Write your answer to part (b) with inverse function notation.   . At an altitude of miles, you can see miles to the horizon.  mile, or feet     A moving ship creates waves that impede its own speed. The function gives the ship's maximum speed in knots in terms of its length, , in feet.  Evaluate and explain what it tells us about the ship's speed.  Find the length needed for a maximum speed of knots by substituting in the formula and solving for .  Find a formula for the inverse function.  Write your answer to part (b) with inverse function notation.     Use the graph of to find .  Find a formula for and evaluate .  transformed square root   ;     Use the graph of to find .  Find a formula for and evaluate .   transformed reciprocal function     Find for the function .  Show that undoes the effect of on .  Show that undoes the effect of on .  Graph the function and its inverse on the same grid, along with the graph of .      cubic and inverse     Find for the function .  Show that undoes the effect of on .  Show that undoes the effect of on .  Graph the function and its inverse on the same grid, along with the graph of .   If , find .  If , find .  If , find .  If , find .  If , find .  If , find .  For Problems 23 26,  Use the graph to make a table of values for the function .  Make a table of values and a graph of the inverse function.    line                      line    line    curve                          line    root    For Problems 27 32,  Find a formula for the inverse of the function.  Graph the function and its inverse on the same set of axes, along with the graph of .     function and inverse      function and inverse      function and inverse      Find the domain and range of the function .  Find a formula for .  State the domain and range of .  Graph and on the same grid.   Domain: ; Range:   Domain: ; Range:  function and inverse    Find the domain and range of the function .  Find a formula for .  State the domain and range of .  Graph and on the same grid.   Which of the functions in Problems 35 42 have inverses that are also functions?   four curves (a) and (d)   four curves     (a)         (a)         (a) and (b)       Find a formula for each function shown in (a) (d). Then match each function with its inverse from I IV.  two columns of four graphs  ; IV  ; III  ; I  ; II   Find a formula for each function shown in (a) (d). Then match each function with its inverse from I IV.  two columns of four graphs   For Problems 45 and 46, use the graph of to match the other graphs with the appropriate function. ( Hint : Look at the coordinates of some specific points.)   increasing curve        curve  curve  curve   III  II  I    curve        curve  curve  curve      "
 },
 {
   "id": "Inverse-Functions-2-7",
@@ -21031,7 +21031,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "5.2",
   "title": "Practice 1.",
-  "body": "Practice 1 Suppose is the inverse function for , and suppose we know the following function values for f : Find and . ;  "
+  "body": "Practice 1 Suppose is the inverse function for , and suppose we know the following function values for : Find and . ;  "
 },
 {
   "id": "Inverse-Functions-2-12",
@@ -21142,11 +21142,20 @@ var ptx_lunr_docs = [
   "body": "Practice 4  Use the graph of in to find .  Does ?  Write two equations, one using and one using , stating the Fahrenheit temperature when the Celsius temperature is .   : On the graph of , when , .  No  ,  "
 },
 {
+  "id": "Inverse-Notation-14",
+  "level": "2",
+  "url": "Inverse-Functions.html#Inverse-Notation-14",
+  "type": "Checkpoint",
+  "number": "5.15",
+  "title": "Pause and Reflect.",
+  "body": "Pause and Reflect If the function tells you how much money is in your account after years, what does the function tell you?  "
+},
+{
   "id": "example-cubic-pheasant",
   "level": "2",
   "url": "Inverse-Functions.html#example-cubic-pheasant",
   "type": "Example",
-  "number": "5.15",
+  "number": "5.16",
   "title": "",
   "body": "The Park Service introduced a flock of endangered pheasant into a wildlife preserve. After years, the population of the flock was given by   Graph the function on the domain .  Find a formula for the inverse function, . What is the meaning of the inverse function in this context?  Sketch a graph of the inverse function.     The graph of is shown at right, with on the horizontal axis and on the vertical axis.  graph of pheasant population  We solve for in terms of . The inverse function is . It tells us the number of years it takes for the pheasant population to grow to size .  The graph of is shown below, with on the horizontal axis and on the vertical axis.  graph of time to achieve pheasant population  "
 },
@@ -21155,7 +21164,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Functions.html#Inverse-Functions-5-4",
   "type": "Checkpoint",
-  "number": "5.16",
+  "number": "5.17",
   "title": "Practice 5.",
   "body": "Practice 5 The formula gives the period in seconds, , of a pendulum as a function of its length in feet, .   Graph the function on the domain .  Find a formula for the inverse function, . What is the meaning of the inverse function in this context?  Sketch a graph of the inverse function.   both inverse and reciprocal   gives the length of a pendulum as a function of its period.  See graph for part(a).  "
 },
@@ -21173,7 +21182,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Functions.html#example-invertible-or-not",
   "type": "Example",
-  "number": "5.17",
+  "number": "5.18",
   "title": "",
   "body": "Which of the functions shown below have inverses that are also functions?  graphs for vertical line test  In each case, we apply the horizontal line test to determine whether the inverse is a function. Because no horizontal line intersects their graphs more than once, the functions pictured in figures (a) and (c) have inverses that are also functions. The functions in figures (b) and (d) do not have inverses that are functions. "
 },
@@ -21182,7 +21191,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Functions.html#Inverse-Functions-6-10",
   "type": "Checkpoint",
-  "number": "5.18",
+  "number": "5.19",
   "title": "Practice 6.",
   "body": "Practice 6 Which of the functions whose graphs are shown below have inverses that are also functions?  graphs for vertical line test  (a) and (d) "
 },
@@ -21200,7 +21209,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Functions.html#Inverse-Functions-6-13",
   "type": "Caution",
-  "number": "5.19",
+  "number": "5.20",
   "title": "",
   "body": "A function may have an inverse function even if we cannot find its formula. The function shown in figure (a) is one-to-one, so it has an inverse function. We can even graph the inverse function, as shown in figure (b), by interchanging the coordinates of points on the graph of .  graphs of f and f-inverse  However, we cannot find a formula for the inverse function because we cannot solve the equation for in terms of . "
 },
@@ -21209,7 +21218,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Functions.html#Inverse-Functions-6-14",
   "type": "Checkpoint",
-  "number": "5.20",
+  "number": "5.21",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect What does the term one-to-one mean? Give an example. "
 },
@@ -21218,7 +21227,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Functions.html#Inverse-Functions-7-6",
   "type": "Checkpoint",
-  "number": "5.21",
+  "number": "5.22",
   "title": "QuickCheck 4.",
   "body": "QuickCheck 4 An inverse function   makes the output negative.  makes the input negative.  interchanges the input and output.  takes the reciprocal of the output.  "
 },
@@ -21227,7 +21236,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Functions.html#example-inverse-of-inverse",
   "type": "Example",
-  "number": "5.22",
+  "number": "5.23",
   "title": "",
   "body": "Consider the function and its inverse, .   Show that the inverse function undoes the effect of on .  Show that undoes the effect of the inverse function on .    We first evaluate the function for : Then we evaluate the inverse function at : We started and ended with .  We first evaluate the function for : Then we evaluate the function for : We started and ended with .  "
 },
@@ -21236,7 +21245,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Functions.html#exercise-inverse-of-inverse",
   "type": "Checkpoint",
-  "number": "5.23",
+  "number": "5.24",
   "title": "Practice 7.",
   "body": "Practice 7  Find a formula for the inverse of the function .  Show that undoes the effect of on .  Show that undoes the effect of on .     , and  and  "
 },
@@ -21254,7 +21263,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Functions.html#Inverse-Functions-8-7",
   "type": "Checkpoint",
-  "number": "5.24",
+  "number": "5.25",
   "title": "QuickCheck 5.",
   "body": "QuickCheck 5 The graphs of and are symmetric about   the -axis  the -axis  the asymptote.  the line .  "
 },
@@ -21263,7 +21272,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Functions.html#example-graph-inverse",
   "type": "Example",
-  "number": "5.25",
+  "number": "5.26",
   "title": "",
   "body": "Graph the function on the domain . Graph its inverse function on the same grid.  The graph of has the same shape as the graph of , shifted units to the left and stretched vertically by a factor of . The figure at left below shows the graph of , along with a table of values. By interchanging the rows of the table, we obtain points on the graph of the inverse function, shown at right.  graphs and tables of a function and its inverse function  If we use as the input variable for both functions, and as the output, we can graph and on the same grid, as shown at right. The two graphs are symmetric about the line .  function and inverse on the same grid  "
 },
@@ -21272,7 +21281,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Functions.html#Inverse-Functions-8-9",
   "type": "Checkpoint",
-  "number": "5.26",
+  "number": "5.27",
   "title": "Practice 8.",
   "body": "Practice 8 Graph the function and its inverse on the same set of axes, along with the line . cubic and inverse "
 },
@@ -21281,7 +21290,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Functions.html#Inverse-Functions-8-10",
   "type": "Checkpoint",
-  "number": "5.27",
+  "number": "5.28",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect Explain the difference between the meaning of the notation if is a function or if is a variable. "
 },
@@ -21290,7 +21299,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Functions.html#example-GC-graph-inverse",
   "type": "Example",
-  "number": "5.28",
+  "number": "5.29",
   "title": "",
   "body": " Graph the function in the window  Graph the inverse function in the same window, along with the line .  State the domain and range of , and of .    The graph of is shown below. It looks like the graph of , shifted units to the left.  To find the inverse function, we solve for . Take the reciprocal of both sides of the equation. The inverse function is , or, using for the input variable, . The graph of looks like the graph of , shifted down units, as shown below.  GC graph of function and inverse  Because is undefined at , the domain of is all real numbers except . The graph has a horizontal asymptote at , so the range is all real numbers except .  The inverse function is undefined at , so its domain is all real numbers except . The graph of has a horizontal asymptote at , so its range is all real numbers except .  "
 },
@@ -21299,7 +21308,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Inverse-Functions.html#Inverse-Functions-9-5",
   "type": "Checkpoint",
-  "number": "5.29",
+  "number": "5.30",
   "title": "Practice 9.",
   "body": "Practice 9  Graph the function and its inverse function, (which you found above in Practice 7, on the same set of axes, along with the line .  State the domain and range of , and of .   function and invese  Domain of : all real numbers except , Range of : all real numbers except , Domain of : all real numbers except , Range of : all real numbers except  "
 },
@@ -21749,7 +21758,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-2-3",
   "type": "Example",
-  "number": "5.30",
+  "number": "5.31",
   "title": "",
   "body": "Write each logarithmic equation as an equivalent exponential equation.       The logarithm asks \"To what power must I raise 3 to get 81?\" The base is 3 and the logarithm (or exponent) is 4, so .  The logarithm asks \"To what power must I raise to get 32?\" The base is and the logarithm (or exponent) is 5, so .  "
 },
@@ -21758,7 +21767,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-2-5",
   "type": "Checkpoint",
-  "number": "5.31",
+  "number": "5.32",
   "title": "QuickCheck 1.",
   "body": "QuickCheck 1 Which of these could you use to estimate the value of ?   Find multiples of 5.  Find the fifth root of 378.  Find powers of 5.  Divide 378 by 5.  "
 },
@@ -21803,7 +21812,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#example-log10-and-exp",
   "type": "Example",
-  "number": "5.32",
+  "number": "5.33",
   "title": "",
   "body": "Graph the function and its inverse on the same axes.  We start by making a table of values for the function . We can make a table of values for the inverse function, , by interchanging the components of each ordered pair in the table for .                                           graph of common log and exponential  We plot each set of points and connect them with smooth curves to obtain the graphs shown above.  "
 },
@@ -21812,7 +21821,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-4-7",
   "type": "Checkpoint",
-  "number": "5.33",
+  "number": "5.34",
   "title": "Practice 1.",
   "body": "Practice 1 Complete the table of values and graph the function .                                  graph of y=log base 4   "
 },
@@ -21821,7 +21830,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-4-8",
   "type": "Checkpoint",
-  "number": "5.34",
+  "number": "5.35",
   "title": "QuickCheck 2.",
   "body": "QuickCheck 2 What is the -intercept of the graph of ?      There is none.  "
 },
@@ -21830,7 +21839,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-4-9",
   "type": "Caution",
-  "number": "5.35",
+  "number": "5.36",
   "title": "",
   "body": "Did you notice that the graphs of the log functions do not have any points with negative -coordinates? This is because an exponential function has no negative (or zero) output values, so a log function has no negative or zero input values.  For example, suppose that . Then . But this is impossible, because cannot be negative. Thus, the log of a negative number (or zero) is undefined. In other words,  "
 },
@@ -21839,7 +21848,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-4-13",
   "type": "Checkpoint",
-  "number": "5.36",
+  "number": "5.37",
   "title": "QuickCheck 3.",
   "body": "QuickCheck 3 The domain of the function is   all real numbers.  all multiples of 3.  all non-negative numbers.  all positive numbers.  "
 },
@@ -21848,7 +21857,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-4-14",
   "type": "Checkpoint",
-  "number": "5.37",
+  "number": "5.38",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect Why does the function grow so slowly? "
 },
@@ -21857,7 +21866,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#example-GC-evaluate-logs",
   "type": "Example",
-  "number": "5.38",
+  "number": "5.39",
   "title": "",
   "body": "Let . Evaluate the following expressions.         Because is not in the domain of , , or , is undefined.   "
 },
@@ -21866,7 +21875,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-5-4",
   "type": "Checkpoint",
-  "number": "5.39",
+  "number": "5.40",
   "title": "QuickCheck 4.",
   "body": "QuickCheck 4 Which statement is true?   The log of a number is never negative.  We cannot take the log of a negative number.  The log of a fraction is called a common log.  The log of 0 is 1.  "
 },
@@ -21875,7 +21884,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-5-5",
   "type": "Checkpoint",
-  "number": "5.40",
+  "number": "5.41",
   "title": "Practice 2.",
   "body": "Practice 2 The formula is used by X-ray technicians to calculate the doubling time of a malignant tumor. is the diameter of the tumor when first detected, is its diameter at the next reading, and is the time interval between readings, in days.  Calculate the doubling time of the following tumor: its diameter when first detected was 1 cm, and 7 days later its diameter was 1.05 cm. 33 days  "
 },
@@ -21884,7 +21893,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#example-life-expectancy",
   "type": "Example",
-  "number": "5.41",
+  "number": "5.42",
   "title": "",
   "body": "Life expectancy at birth is the average number of years a newborn child is expected to live. In 1900, the average life expectancy at birth in the U.S. was 47.3 years, and in 1910 it had risen to 50.0 years. During rest of the twentieth century, life expectancy was modeled by the formula where is the number of years after 1900.  Graph the life expectancy function for the years 1910 to 2000.  The life expectancy in 1950 was 68.2 years. What does the function predict for life expectancy in 1950?  According to the model, how much did life expectancy increase between 1920 and 1930? How much did it increase between 1990 and 2000?    We can make a table of values for and plot points to obtain the graph below, which also shows the actual data points for life expectancy for the decades from 1910 to 2000.                            average life expectancy  We substitute into the function to find The function predicts a life expectancy of 67.4 years in 1950.  Between 1920 and 1930, life expectancy increased from 56.1 to 61.1, or 5 years. Between 1990 and 2000 it increased from 74.6 to 75.9, or 1.3 years.  "
 },
@@ -21893,7 +21902,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-5-9",
   "type": "Checkpoint",
-  "number": "5.42",
+  "number": "5.43",
   "title": "Practice 3.",
   "body": "Practice 3 The CDC (Centers for Disease Control and Prevention) provides Growth Charts for the average height and weight of children from age 2 to 20. The average height of girl children is given in centimeters by where is age in years.   Graph the height function for .  Use the height function to complete the table.                  How much is a girl's height expected to increase between the ages of 5 and 10? Between the ages of 15 and 20?   logrithmic curve                  28 cm, 11 cm  "
 },
@@ -21911,7 +21920,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#example-log-equations",
   "type": "Example",
-  "number": "5.43",
+  "number": "5.44",
   "title": "",
   "body": "Solve for .       We isolate the logarithm, then rewrite the equation in exponential form:  First, we convert the equation to exponential form. Now we can solve for to find , or .  "
 },
@@ -21920,7 +21929,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-6-4",
   "type": "Checkpoint",
-  "number": "5.44",
+  "number": "5.45",
   "title": "Practice 4.",
   "body": "Practice 4 Solve for the unknown value in each equation.        "
 },
@@ -21929,7 +21938,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#example-common-log-equation",
   "type": "Example",
-  "number": "5.45",
+  "number": "5.46",
   "title": "",
   "body": "If , find so that .  We must solve the equation . Rewriting the equation in exponential form yields  "
 },
@@ -21938,7 +21947,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-6-6",
   "type": "Note",
-  "number": "5.46",
+  "number": "5.47",
   "title": "Evaluating <span class=\"process-math\">\\(10^x\\)<\/span>.",
   "body": "Evaluating  In , the expression can be evaluated in two different ways with a calculator. We can use the ^ key and press   ^  (-)   ENTER  which gives 6.30957344 E -4 , or approximately . Alternatively, because is the inverse function for , we can press  2nd  LOG  (-)   ENTER  which gives the same answer as before.  "
 },
@@ -21947,7 +21956,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-6-7",
   "type": "Checkpoint",
-  "number": "5.47",
+  "number": "5.48",
   "title": "Practice 5.",
   "body": "Practice 5 Imagine the graph of . How far must you travel along the -axis until the -coordinate reaches a height of 5.25? "
 },
@@ -21956,7 +21965,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#example-solve-log-equation",
   "type": "Example",
-  "number": "5.48",
+  "number": "5.49",
   "title": "",
   "body": "Solve .  We use Property (1) of logarithms (see Properties of Logarithms ) to rewrite the left-hand side as a single logarithm: Once the left-hand side is expressed as a single logarithm, we can rewrite the equation in exponential form as Simplifying the right side gives us a quadratic equation to solve. We find or . But let us check both of these values in the original equation.  For we have so is a solution.  But is not a solution of the original equation, because neither nor is defined for . (Remember that we cannot take a logarithm of a negative number or zero.) We say that the apparent solution is extraneous , and the only solution of the original equation is . extraneous solution "
 },
@@ -21974,7 +21983,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-6-12",
   "type": "Checkpoint",
-  "number": "5.49",
+  "number": "5.50",
   "title": "QuickCheck 5.",
   "body": "QuickCheck 5 Which of these is the first step in solving the equation ?       "
 },
@@ -21983,7 +21992,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-6-13",
   "type": "Checkpoint",
-  "number": "5.50",
+  "number": "5.51",
   "title": "Practice 6.",
   "body": "Practice 6 Solve . Follow the steps:  Rewrite the left side as a single logarithm.  Rewrite the equation in exponential form.  Solve for .  Check for extraneous solutions.  The solution is .  "
 },
@@ -21992,7 +22001,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-6-14",
   "type": "Checkpoint",
-  "number": "5.51",
+  "number": "5.52",
   "title": "QuickCheck 6.",
   "body": "QuickCheck 6 Fill in the blanks to complete each statement.  We cannot take a logarithm of .  After solving a logarithmic equation, we must check for .  If an equation contains more than one log, we must first combine them into .  If there is only one log involved, we rewrite the equation in form.  "
 },
@@ -22001,7 +22010,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-6-15",
   "type": "Checkpoint",
-  "number": "5.52",
+  "number": "5.53",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect What is an extraneous solution? "
 },
@@ -22010,7 +22019,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-7-4",
   "type": "Checkpoint",
-  "number": "5.53",
+  "number": "5.54",
   "title": "Practice 7.",
   "body": "Practice 7 In of Section 5.1 we found that the inverse of the function is   Show that  Show that  In each case, start by evaluating the innermost function.  "
 },
@@ -22019,7 +22028,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#example-log-of-exp",
   "type": "Example",
-  "number": "5.54",
+  "number": "5.55",
   "title": "",
   "body": "Simplify each expression.       In this expression, we start with , apply the exponential function with base , and then take a logarithm base . Because the logarithm is the inverse of the exponential function, we return to the original number, .  The input of the exponential function is the expression . Because the bases of the log and the exponential function are both , they are inverse functions, and applying them in succession returns us to the original input. Thus, .  "
 },
@@ -22028,7 +22037,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-7-11",
   "type": "Checkpoint",
-  "number": "5.55",
+  "number": "5.56",
   "title": "Practice 8.",
   "body": "Practice 8 Simplify each expression.    for     "
 },
@@ -22037,7 +22046,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#example-exp-of-log",
   "type": "Example",
-  "number": "5.56",
+  "number": "5.57",
   "title": "",
   "body": "Simplify each expression.       Think of simplifying the exponent first: . Then We first found the exponent on 10 that gives 1000, then we raised 10 to that exponent (namely 3), so we get 1000.  The expression asks for the exponent on that gives . Let's call that exponent , so that . Then , which gives us .  "
 },
@@ -22046,7 +22055,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-7-16",
   "type": "Checkpoint",
-  "number": "5.57",
+  "number": "5.58",
   "title": "Practice 9.",
   "body": "Practice 9 Simplify each expression.        "
 },
@@ -22055,7 +22064,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#example-invert-translated-exponential",
   "type": "Example",
-  "number": "5.58",
+  "number": "5.59",
   "title": "",
   "body": " Find the inverse of the function .  Graph and on the same grid.  State the domain and range of and of .    We write the function as , and solve for in terms of . First, we isolate the power: The inverse function is . However, to graph both and on the same grid, we write the inverse function as .  To graph , we translate the graph of by units to the right and units down. The graph of looks like the graph of , but shifted units to the left and units up. The graphs are shown below, along with the line .  graph of translated exponential and inverse  The function is a translation of an exponential function, and its domain consists of all real numbers. Because the graph is shifted units down, the range of is .  Because the log of a negative number or zero is undefined, for , we must have , so the domain of is . We can verify on the graph that the range of includes all real numbers. Thus,  "
 },
@@ -22064,7 +22073,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-7-21",
   "type": "Checkpoint",
-  "number": "5.59",
+  "number": "5.60",
   "title": "Practice 10.",
   "body": "Practice 10  Find the inverse function for .  Graph and in the window  State the domain and range of and .    log and inverse  Domain of : ; Range of : all real numbers; Domain of : all real numbers; Range of :  "
 },
@@ -22073,7 +22082,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithmic-Functions.html#Logarithmic-Functions-7-22",
   "type": "Checkpoint",
-  "number": "5.60",
+  "number": "5.61",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect Compare the graphs of and , and explain. "
 },
@@ -22775,7 +22784,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-4-6",
   "type": "Checkpoint",
-  "number": "5.61",
+  "number": "5.62",
   "title": "Practice 1.",
   "body": "Practice 1 Use your calculator to evaluate the following powers. Round to four decimal places.         "
 },
@@ -22784,7 +22793,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-4-9",
   "type": "Checkpoint",
-  "number": "5.62",
+  "number": "5.63",
   "title": "QuickCheck 1.",
   "body": "QuickCheck 1  The value of is closest to which of these?        The value of is closest to which of these?        "
 },
@@ -22802,7 +22811,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-4-12",
   "type": "Example",
-  "number": "5.63",
+  "number": "5.64",
   "title": "",
   "body": "The normal distribution above shows the heights of men in the US. The average or mean height for men is 70 inches, and the formula for the graph is The probability that a given man has a height between two values is the area under the curve between those values. Evaluate the function for and for .  To evaluate the function we follow the order of operations. For we have  For we have "
 },
@@ -22820,7 +22829,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-4-15",
   "type": "Checkpoint",
-  "number": "5.64",
+  "number": "5.65",
   "title": "Practice 2.",
   "body": "Practice 2 The logistic function shown above models the spread of Covid in China during the 2020 epidemic. It gives the number of infections , in thousands, reported days after January 21, 2020. The equation for this model is According to the model, how many cases of Covid were reported on February 20 (day )? 58,194 cases "
 },
@@ -22829,7 +22838,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#example-translate-exponential",
   "type": "Example",
-  "number": "5.65",
+  "number": "5.66",
   "title": "",
   "body": "Use technology to graph each function. How does each graph differ from the graph of ?     translations of the exponential  The graph of is shifted units to the left of . The graph of is shifted units up from . The graphs are shown above. "
 },
@@ -22856,7 +22865,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-5-7",
   "type": "Checkpoint",
-  "number": "5.66",
+  "number": "5.67",
   "title": "Practice 3.",
   "body": "Practice 3 Use your calculator to evaluate each logarithm. Round your answers to four decimal places.            "
 },
@@ -22865,7 +22874,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#example-ln-and-exponential",
   "type": "Example",
-  "number": "5.67",
+  "number": "5.68",
   "title": "",
   "body": "  Graph and on the same grid.  Give the domain and range of the natural log function.   Earlier we made a table of values to graph the fuction , and we can make a table of values for by interchanging the columns in that table. Plotting the points gives us the graph below.                              graphs of ln and natural exponential  You can see that the graph of is the reflection of the graph of about the line . In particular, notice that while the graph of has no points with negative -values, the graph of has no points with negative -values. Thus, the domain of the natural log function is the same as the range of , or all positive numbers. The range of is the same as the domain of , or all real numbers. "
 },
@@ -22874,7 +22883,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-6-6",
   "type": "Checkpoint",
-  "number": "5.68",
+  "number": "5.69",
   "title": "QuickCheck 2.",
   "body": "QuickCheck 2 Which of the following is equivalent to ?       "
 },
@@ -22883,7 +22892,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#example-simplify-ln-and-exp",
   "type": "Example",
-  "number": "5.69",
+  "number": "5.70",
   "title": "",
   "body": "Simplify each expression.      The natural log is the log base , and hence the inverse of . Therefore,  First, we simplify the exponent using the third property of logs to get Then .  "
 },
@@ -22892,7 +22901,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-6-12",
   "type": "Checkpoint",
-  "number": "5.70",
+  "number": "5.71",
   "title": "Practice 4.",
   "body": "Practice 4 Simplify each expression.      or   "
 },
@@ -22901,7 +22910,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-6-13",
   "type": "Checkpoint",
-  "number": "5.71",
+  "number": "5.72",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect Explain why . "
 },
@@ -22910,7 +22919,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#example-solve-ln-equation",
   "type": "Example",
-  "number": "5.72",
+  "number": "5.73",
   "title": "",
   "body": "Solve each equation for .      We convert the equation to logarithmic form and evaluate using a calculator.  We convert the equation to exponential form and evaluate.  "
 },
@@ -22919,7 +22928,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-7-4",
   "type": "Checkpoint",
-  "number": "5.73",
+  "number": "5.74",
   "title": "Practice 5.",
   "body": "Practice 5 Solve each equation. Round your answers to four decimal places.        "
 },
@@ -22928,7 +22937,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-7-5",
   "type": "Checkpoint",
-  "number": "5.74",
+  "number": "5.75",
   "title": "QuickCheck 3.",
   "body": "QuickCheck 3 Which statement below explains why the equation is easier to solve than ?   8 is larger than 6.5.  is a constant.  There is a button for log base on the calculator, but not a button for log base 8.  Because is an irrational number.   "
 },
@@ -22937,7 +22946,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#example-solve-natural-exponential",
   "type": "Example",
-  "number": "5.75",
+  "number": "5.76",
   "title": "",
   "body": "Solve  First, we isolate the power. Then we convert the equation to logarithmic form. Rounded to four decimal places, .  "
 },
@@ -22946,7 +22955,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-7-8",
   "type": "Note",
-  "number": "5.76",
+  "number": "5.77",
   "title": "",
   "body": "We can also solve the equation in , by taking the natural logarithm of both sides. This gives us because for any number . We then proceed with the solution as before. "
 },
@@ -22955,7 +22964,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-7-9",
   "type": "Checkpoint",
-  "number": "5.77",
+  "number": "5.78",
   "title": "Practice 6.",
   "body": "Practice 6 Solve  Isolate the power, take the natural log of both sides, and solve as usual to find  "
 },
@@ -22964,7 +22973,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#example-solve-logistic",
   "type": "Example",
-  "number": "5.78",
+  "number": "5.79",
   "title": "",
   "body": "The logistic function has its upper bound at . Find the value of for which .   We must solve the equation for . To begin, we multiply both sides of the equation by the denominator, , to get Then we isolate the power, , as follows: Next, we take the natural logarithm of both sides to get and recall that to simplify the left side. Finally, we divide both sides by to solve for .  "
 },
@@ -22973,7 +22982,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-7-11",
   "type": "Checkpoint",
-  "number": "5.79",
+  "number": "5.80",
   "title": "Practice 7.",
   "body": "Practice 7 Solve for .    "
 },
@@ -22982,7 +22991,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-7-12",
   "type": "Checkpoint",
-  "number": "5.80",
+  "number": "5.81",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect Delbert says that he will begin solving the equation by computing . Is this a good strategy? Why or why not?  "
 },
@@ -22991,7 +23000,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#example-population-growth-e",
   "type": "Example",
-  "number": "5.81",
+  "number": "5.82",
   "title": "",
   "body": "From 1990 to 2000, the population of Clark County, Nevada, grew by per year.  What was the growth factor for the population of Clark County from 1990 to 2000? If the population of Clark County was in 1990, write a formula for the population years later.  Write a growth formula for Clark County using base .    The growth factor was . The population years later was  We use the formula , where . Solving for , we find so .  "
 },
@@ -23000,7 +23009,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-8-7",
   "type": "Checkpoint",
-  "number": "5.82",
+  "number": "5.83",
   "title": "Practice 8.",
   "body": "Practice 8 From 1994 to 1998, the number of personal computers connected to the Internet grew according to the formula where in 1994 and is in millions. (Source: Los Angeles Times, September 6, 1999)   Evaluate . By what percent did the number of Internet users grow in one year?  Express the growth law in the form . (Hint: .)   ,   "
 },
@@ -23009,7 +23018,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-8-10",
   "type": "Checkpoint",
-  "number": "5.83",
+  "number": "5.84",
   "title": "QuickCheck 4.",
   "body": "QuickCheck 4 The natural log of a number between 0 and 1 is   positive.  negative.  undefined.  between and .   "
 },
@@ -23018,7 +23027,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#example-write-decay-with-e",
   "type": "Example",
-  "number": "5.84",
+  "number": "5.85",
   "title": "",
   "body": "Express the decay law in the form .  For this decay law, and . We would like to find a value for so that , that is, we must solve the equation Replacing with , we find that the decay law is  "
 },
@@ -23027,7 +23036,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-8-12",
   "type": "Checkpoint",
-  "number": "5.85",
+  "number": "5.86",
   "title": "Practice 9.",
   "body": "Practice 9 A scientist isolates grams of krypton-91, which decays according to the formula , where is in seconds.   Complete the table of values showing the amount of krypton-91 left at -second intervals over the first minute.                      Use the table to choose a suitable window and graph the function .  Write and solve an equation to answer the question: How long does it take for 60% of the krypton-91 to decay?  Hint: If of the krypton-91 has decayed, of the original grams remains.                        exponential decay  ; seconds  "
 },
@@ -23036,7 +23045,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-8-13",
   "type": "Checkpoint",
-  "number": "5.86",
+  "number": "5.87",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect Explain how to rewrite with the natural base. "
 },
@@ -23054,7 +23063,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#example-continuous-compounding",
   "type": "Example",
-  "number": "5.87",
+  "number": "5.88",
   "title": "",
   "body": "Suppose you invest $ in an account that pays interest compounded continuously. You leave the money in the account without making any additional deposits or withdrawals.   Write a formula that gives the value of your account after years.  Make a table of values showing for the first years.  Graph the function .  How much will the account be worth after years?  How long will it be before the account is worth $ ?    We substitute for , and for to find  We evaluate the formula for to obtain a table.                          graph of continuous compounded interest  The graph of is shown above.  We evaluate for . The account will be worth $ after years.  We substitute for and solve the equation. The account will be worth $ after approximately years.  "
 },
@@ -23063,7 +23072,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-9-4",
   "type": "Checkpoint",
-  "number": "5.88",
+  "number": "5.89",
   "title": "Practice 10.",
   "body": "Practice 10 Zelda invested $1000 in an account that pays 4.5% interest compounded continuously. How long will it be before the account is worth $2000?  About 15.4 years  "
 },
@@ -23072,7 +23081,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "The-Natural-Base.html#The-Natural-Base-9-5",
   "type": "Checkpoint",
-  "number": "5.89",
+  "number": "5.90",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect Explain why solving exponential equations in base is no harder than solving exponential equations in base 10. "
 },
@@ -23630,7 +23639,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#example-plot-logscale",
   "type": "Example",
-  "number": "5.90",
+  "number": "5.91",
   "title": "",
   "body": "Plot the values on a log scale.             We first compute the base logarithm of each number.                      Thus, for example, we see that . Then we use the logs to plot each number as a power of 10, estimating its position between integer powers of 10. For example, we plot the first value, , closer to than to . The finished plot is shown below.  points plotted on log scale  "
 },
@@ -23639,7 +23648,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-2-20",
   "type": "Checkpoint",
-  "number": "5.91",
+  "number": "5.92",
   "title": "QuickCheck 1.",
   "body": "QuickCheck 1 A value of 5682.7 would be plotted between which two integers on a log scale?   5682 and 5683  5000 and 6000  5 and 6  3 and 4  "
 },
@@ -23648,7 +23657,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-2-21",
   "type": "Checkpoint",
-  "number": "5.92",
+  "number": "5.93",
   "title": "Practice 1.",
   "body": "Practice 1 Complete the table by estimating the logarithm of each point plotted on the log scale below. Then use a calculator to give a decimal value for each point.  points on logscale                              "
 },
@@ -23657,7 +23666,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-2-22",
   "type": "Checkpoint",
-  "number": "5.93",
+  "number": "5.94",
   "title": "QuickCheck 2.",
   "body": "QuickCheck 2 What is a log scale used for?   To find the logarithm of a number.  To plot data that covers a wide range of values.  To highlight the curvature in the graph of an exponential function.  To convert logarithms to base 10.   To plot data that covers a wide range of values.  "
 },
@@ -23666,7 +23675,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#example-log-timeline",
   "type": "Example",
-  "number": "5.94",
+  "number": "5.95",
   "title": "",
   "body": "The figure shows a timeline for life on Earth, in units of Mya (million years ago).  timeline of events on a logscale  Approximately how long ago did each of the following events occur?   Formation of Earth  Dinosaurs became extinct  The last ice age  The Crusades    We read from the timeline that the Earth was formed between and , or between and million years ago. We estimate that Earth formed million years ago.  The extinction of the dinosaurs is plotted between and , or between and million years ago. Because the point is closer to , we estimate their extinction at million years ago.  The last ice age is plotted just after , or million years ago. One-hundredth of a million is , so we estimate that the ice age occurred a little more than years ago.  The Crusades occurred about , or about million years ago. One-thousandth of a million is , so the Crusades occurred about years ago, or about A.D.  "
 },
@@ -23675,7 +23684,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-3-6",
   "type": "Checkpoint",
-  "number": "5.95",
+  "number": "5.96",
   "title": "Practice 2.",
   "body": "Practice 2 Plot the following dollar values on a log scale.    Postage stamp    Notebook computer    One year at Harvard    2016 Lamborghini    Kobe Bryant salary    Bill Gates financial worth    U.S. National debt   logscale  "
 },
@@ -23684,7 +23693,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-3-7",
   "type": "Checkpoint",
-  "number": "5.96",
+  "number": "5.97",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect How does a log scale differ from a linear scale?  "
 },
@@ -23693,7 +23702,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-4-9",
   "type": "Checkpoint",
-  "number": "5.97",
+  "number": "5.98",
   "title": "QuickCheck 3.",
   "body": "QuickCheck 3 Which statement is false?   We use log scales to graph a variable that has a wide range of values.  On a log scale, we actually plot exponents.  Values less than one appear as negative numbers on a log scale.  Equal increments on a log scale correspond to equal differences in value.   \"Equal increments on a log scale correspond to equal differences in value\" is a false statement.  "
 },
@@ -23702,7 +23711,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#example-logscale-half-step",
   "type": "Example",
-  "number": "5.98",
+  "number": "5.99",
   "title": "",
   "body": "What number is halfway between and on a log scale?  On a log scale, the number is halfway between and , as shown below.  log scale showing point halfway between 10 and 100  Now, , or approximately . Note how equal increments of on the log scale correspond to equal factors of in the values plotted:  "
 },
@@ -23711,7 +23720,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-4-11",
   "type": "Checkpoint",
-  "number": "5.99",
+  "number": "5.100",
   "title": "Practice 3.",
   "body": "Practice 3 What number is halfway between and on a log scale? "
 },
@@ -23720,7 +23729,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#example-logscale-integer-labels",
   "type": "Example",
-  "number": "5.100",
+  "number": "5.101",
   "title": "",
   "body": "Plot the integer values 2 through 9 and 20 through 90 on a log scale.  We compute the logarithm of each integer value.                                              We plot on a log scale, as shown below.  log scale showing integer points  "
 },
@@ -23738,7 +23747,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-4-17",
   "type": "Checkpoint",
-  "number": "5.101",
+  "number": "5.102",
   "title": "Practice 4.",
   "body": "Practice 4 The opening page of shows the \"mouse-to-elephant\" curve, a graph of the metabolic rate of mammals as a function of their mass. Here it is again.  Kleiber mouse-to-elephant-curve  (The elephant does not appear on that graph, because its mass is too big.) The figure below shows the same function, graphed on log-log paper.  mouse-to-elephant curve on log-log graph  Use this graph to estimate the mass and metabolic rate for the following animals, labeled on the graph.    Animal  Mouse  Dog  Sheep  Cow  Elephant   Mass (kg)        Metabolic rate (kcal\/day)           Animal  Mouse  Dog  Sheep  Cow  Elephant   Mass (kg)        Metabolic rate (kcal\/day)        "
 },
@@ -23747,7 +23756,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-4-18",
   "type": "Checkpoint",
-  "number": "5.102",
+  "number": "5.103",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect If , the difference between and on a log scale is 2 units. Use the properties of logarithms to explain why this is true. "
 },
@@ -23765,7 +23774,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#example-pH",
   "type": "Example",
-  "number": "5.103",
+  "number": "5.104",
   "title": "",
   "body": " Calculate the pH of a solution with a hydrogen ion concentration of .  The water in a swimming pool should be maintained at a pH of . What is the hydrogen ion concentration of the water?    We use a calculator to evaluate the pH formula with .  We solve the equation for . First, we write Then we convert the equation to exponential form to get The hydrogen ion concentration of the water is .  "
 },
@@ -23774,7 +23783,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-5-5",
   "type": "Checkpoint",
-  "number": "5.104",
+  "number": "5.105",
   "title": "Practice 5.",
   "body": "Practice 5 The pH of the water in a tide pool is . What is the hydrogen ion concentration of the water?  "
 },
@@ -23792,7 +23801,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#example-decibels",
   "type": "Example",
-  "number": "5.105",
+  "number": "5.106",
   "title": "",
   "body": " Normal breathing generates about watts per square meter at a distance of feet. Find the number of decibels for a breath feet away.  Normal conversation registers at about decibels. How many times more intense than breathing is normal conversation?    We evaluate the decibel formula with to find  We let stand for the sound intensity of breathing, and stand for the intensity of normal conversation. We are looking for the ratio . From part (a), we know that and from the formula for decibels, we have which we can solve for . Dividing both sides of the equation by and rewriting in exponential form, we have Finally, we compute the ratio : Normal conversation is times more intense than breathing.  "
 },
@@ -23801,7 +23810,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-6-6",
   "type": "Checkpoint",
-  "number": "5.106",
+  "number": "5.107",
   "title": "Practice 6.",
   "body": "Practice 6 The noise of city traffic registers at about decibels.   What is the intensity of traffic noise, in watts per square meter?  How many times more intense is traffic noise than conversation?   watts\/m   "
 },
@@ -23810,7 +23819,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-6-7",
   "type": "Caution",
-  "number": "5.107",
+  "number": "5.108",
   "title": "",
   "body": "Both the decibel model and the Richter scale in the next example use expressions of the form . Be careful to follow the order of operations when using these models. We must compute the quotient before taking a logarithm. In particular, recall that is not equivalent to . "
 },
@@ -23819,7 +23828,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#example-northridge-earthquake",
   "type": "Example",
-  "number": "5.108",
+  "number": "5.109",
   "title": "",
   "body": " The Northridge earthquake of January 1994 registered 6.9 on the Richter scale. What would be the magnitude of an earthquake 100 times as powerful as the Northridge quake?  How many times more powerful than the Northridge quake was the San Francisco earthquake of 1989, which registered 7.1 on the Richter scale?    The amplitude of the Northridge quake is given by and by rewriting in exponential form we find An earthquake 100 times as powerful would have amplitude Thus, the magnitude of the more powerful quake is  In part (a) we used the Richter formula to find that the amplitude of the Northridge quake was Similarly, the amplitude of the San Francisco quake was So the ratio of their amplitudes is The San Francisco earthquake was , or approximately 1.58 times as powerful as the Northridge quake.  "
 },
@@ -23828,7 +23837,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-7-4",
   "type": "Checkpoint",
-  "number": "5.109",
+  "number": "5.110",
   "title": "Practice 7.",
   "body": "Practice 7 In October 2005, a magnitude 7.6 earthquake struck Pakistan. How much more powerful was this earthquake than the 1989 San Francisco earthquake of magnitude 7.1? "
 },
@@ -23837,7 +23846,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-7-5",
   "type": "Note",
-  "number": "5.110",
+  "number": "5.111",
   "title": "",
   "body": "An earthquake , or , times as strong is only two units greater in magnitude on the Richter scale. In general, a difference of units on the Richter scale (or any logarithmic scale) corresponds to a factor of units in the intensity of the quake. "
 },
@@ -23846,7 +23855,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-7-6",
   "type": "Checkpoint",
-  "number": "5.111",
+  "number": "5.112",
   "title": "QuickCheck 4.",
   "body": "QuickCheck 4 How much stronger is magnitude 4 earthquake than a magnitude 2 earthquake?   Twice as strong.  Four times as strong.  16 times as strong.  100 times as strong.  "
 },
@@ -23855,7 +23864,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#example-compare-logscale",
   "type": "Example",
-  "number": "5.112",
+  "number": "5.113",
   "title": "",
   "body": "On a log scale, the weights of two animals differ by units. What is the ratio of their actual weights?  A difference of on a log scale corresponds to a factor of in the actual weights. Thus, the heavier animal is , or times as heavy as the lighter animal. "
 },
@@ -23864,7 +23873,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-7-8",
   "type": "Checkpoint",
-  "number": "5.113",
+  "number": "5.114",
   "title": "Practice 8.",
   "body": "Practice 8 Two points, labeled and , differ by units on a log scale. What is the ratio of their decimal values? "
 },
@@ -23873,7 +23882,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Logarithm-Scales.html#Logarithm-Scales-7-9",
   "type": "Checkpoint",
-  "number": "5.114",
+  "number": "5.115",
   "title": "Pause and Reflect.",
   "body": "Pause and Reflect Explain what negative values on a log scale mean. "
 },
