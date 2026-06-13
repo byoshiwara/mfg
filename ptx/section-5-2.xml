@@ -642,7 +642,6 @@ where <m>t</m> is age in years.</p>
 </webwork>
 <conclusion><p>Graph for part (a):</p>
     <image width="45%" xml:id="child-heightw"><description>curve</description><latex-image>
-        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
         <![CDATA[\tikzset{%
         }
         \begin{tikzpicture} [scale=.35]
@@ -689,11 +688,9 @@ where <m>t</m> is age in years.</p>
 </ol></p></statement>
     
 <answer><p><ol marker="a.">
-        <li><image width="55%" xml:id="child-height"><description>logrithmic curve</description><latex-image>
-        <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
-        <![CDATA[\tikzset{%
-        }
-        \begin{tikzpicture} [scale=.35]
+        <li><image width="55%" xml:id="child-height" margins="0% 45%"><description>logrithmic curve</description><latex-image>
+        <![CDATA[
+        \begin{tikzpicture} [scale=.3]
         \draw[cyan] (2,4) grid (20,20);
         \draw[black,thick] (1,4)--(20,4);
         \draw[black,thick] (2,4)--(2,20);
@@ -708,7 +705,7 @@ where <m>t</m> is age in years.</p>
         \node[rotate=90,font=\bf] at (-1.6,12) {Height (cm)};
         \end{tikzpicture}]]>
         </latex-image></image></li>
-        <li><tabular top="major" halign="center" right="minor" left="minor" bottom="minor">              
+        <li><tabular top="major" halign="center" right="minor" left="minor" bottom="minor" margins="0% 15%">              
                     <row bottom="minor">
                         <cell><m>t</m></cell>
                         <cell><m>2</m></cell>
@@ -1206,7 +1203,7 @@ To see that this equation is true, we simplify the exponent first. We start with
 
 <exercise component="main"><title>Practice 10</title>
 <statement><p><ol marker="a.">
-        <li><p>Find the inverse function for <m>f(x) = 2 \log((x) + 1)</m>.</p></li>
+        <li><p>Find the inverse function for <m>f(x) = 2 \log(x + 1)</m>.</p></li>
         <li><p>Graph <m>f</m> and <m>f^{-1}</m> in the window
                     <me>\begin{aligned}[t]
                     \text{Xmin} \amp = -6 \amp\amp \text{Xmax} = 6\\
@@ -1232,7 +1229,7 @@ To see that this equation is true, we simplify the exponent first. We start with
 </webwork></exercise>
 
 <exercise component="main"><title>Pause and Reflect</title>
-<statement><p>Compare the graphs of <m>f(x)=\log \dfrac{1}{x}</m> and <m>g(x)=-\log (x)</m>, and explain.</p></statement></exercise>
+<statement><p>Compare the graphs of <m>f(x)=\left(\log \dfrac{1}{x}\right)</m> and <m>g(x)=-\log (x)</m>, and explain.</p></statement></exercise>
 </subsection>
 
 <xi:include href="./summary-5-2.xml" /> <!-- summary  -->
