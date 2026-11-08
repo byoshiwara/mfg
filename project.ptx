@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    This file, the project manifest, provides the overall configuration for
+    your PreTeXt project. To edit the content of your document, open
+    `source/main.ptx`. See
+    https://pretextbook.org/doc/guide/html/processing-CLI.html#cli-project-manifest.
+-->
+<project ptx-version="2" source="ptx">
+  <targets>
+    <target name="web" format="html" source="mfg.xml"/>
+    <target name="runestone" format="html" source="mfg.xml" output-dir="published/mfg" publication="runestone.xml" />
+    <target name="webwork" format="html" source="mfg.xml" publication="publication-ww.ptx"/>
+    <target name="mom" format="html" source="mfg.xml" publication="publication-mom.ptx"/>
+    <target name="instructor-web" format="html" source="mfg.xml" publication="publication-instructor.ptx"/>
+    <target name="print" format="pdf" source="mfg.xml"/>
+    <target name="print-latex" format="latex" source="mfg.xml"/>
+    <target name="subset" format="html" source="test-section.ptx" publication="publication-test.ptx" />
+  </targets>
+</project>
